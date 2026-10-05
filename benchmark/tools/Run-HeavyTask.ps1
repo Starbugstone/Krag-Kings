@@ -4,6 +4,15 @@ $spec=Get-Content -Raw $JobSpec | ConvertFrom-Json
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $local=Join-Path $repo 'benchmark\local'
 New-Item -ItemType Directory -Force $local | Out-Null
+function Preserve-PreviousTelemetry([string]$Path) {
+    if(Test-Path $Path){
+        $history=Join-Path $local 'telemetry-history'
+        New-Item -ItemType Directory -Force $history | Out-Null
+        $file=Get-Item $Path
+        $name=$file.BaseName+'-'+$file.LastWriteTimeUtc.ToString('yyyyMMdd-HHmmss-fffffff')+$file.Extension
+        Copy-Item -LiteralPath $Path -Destination (Join-Path $history $name) -ErrorAction Stop
+    }
+}
 $mutex=New-Object System.Threading.Mutex($false,'Local\KragKingsBenchmarkHeavyJob')
 $locked=$false
 try {
@@ -22,16 +31,18 @@ try {
     if($spec.gpuTelemetry){$gpuTool=Get-Command nvidia-smi.exe -ErrorAction SilentlyContinue}
     $gpuLog=Join-Path $local (($spec.name -replace '[^a-zA-Z0-9_-]','_')+'-gpu.csv')
     if($gpuTool){
+        Preserve-PreviousTelemetry $gpuLog
         'phase,timestamp,index,name,memory.used.MiB,memory.total.MiB,utilization.gpu.percent,temperature.gpu.C,power.draw.W,clocks.current.graphics.MHz' | Set-Content $gpuLog
         & $gpuTool.Source --query-gpu=timestamp,index,name,memory.used,memory.total,utilization.gpu,temperature.gpu,power.draw,clocks.current.graphics --format=csv,noheader,nounits | ForEach-Object {('before,'+$_)|Add-Content $gpuLog}
     }
+    $safeName=$spec.name -replace '[^a-zA-Z0-9_-]','_'
+    $telemetry=Join-Path $local ($safeName+'-memory.csv')
+    Preserve-PreviousTelemetry $telemetry
+    'time,processId,availableMB,commitPercent,privateMB,workingSetMB' | Set-Content $telemetry
     $process=Start-Process @params
     # Cache the native handle before the process can exit, so ExitCode remains readable.
     $null=$process.Handle
     try {$process.PriorityClass='BelowNormal'} catch {}
-    $safeName=$spec.name -replace '[^a-zA-Z0-9_-]','_'
-    $telemetry=Join-Path $local ($safeName+'-memory.csv')
-    'time,processId,availableMB,commitPercent,privateMB,workingSetMB' | Set-Content $telemetry
     Write-Output ('HEAVY_JOB_STARTED '+$safeName+' PID='+$process.Id)
     $terminated=$false
     while(-not $process.HasExited) {

@@ -1,0 +1,19 @@
+{
+  "name": "unreal-editor-probe",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\build_demo.ps1",
+    "-Stage",
+    "Probe"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-probe-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-probe-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10
+}

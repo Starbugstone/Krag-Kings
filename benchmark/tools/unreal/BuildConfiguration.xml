@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
+  <BuildConfiguration>
+    <MaxParallelActions>2</MaxParallelActions>
+    <bAllowUBAExecutor>false</bAllowUBAExecutor>
+  </BuildConfiguration>
+  <ParallelExecutor>
+    <MemoryPerActionBytes>2147483648</MemoryPerActionBytes>
+  </ParallelExecutor>
+</Configuration>

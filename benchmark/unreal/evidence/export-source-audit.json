@@ -1,0 +1,34 @@
+{
+  "observedUtc": "2026-10-05T22:04:48.751188+00:00",
+  "mode": "read-only source audit; not executed FBX/runtime validation",
+  "positiveSourceChecks": [
+    "Both assembled exporters set use_mesh_modifiers=False and use_armature_deform_only=False.",
+    "Both call facial acting before body-pose keyframes in all six body clips.",
+    "Both carry variant-specific deformation overrides and reusable PBR materials.",
+    "Nib fur uses opaque skinned geometry; no alpha-cutout requirement.",
+    "Explicit animations include Idle, Walk, Run, Melee, Shoot, Hit, FacePerformance."
+  ],
+  "findings": [
+    {
+      "species": "Krag",
+      "finding": "Standalone clip export flags differed from assembled variant scale/control flags.",
+      "status": "Artist fixed source; Natural and standalone clip roundtrips now pass. Independent binary FBX check confirms7 combined takes and1 skeletal take per standalone file; see krag-fbx-stacks.json."
+    },
+    {
+      "species": "Krag",
+      "finding": "Variant morph filtering could conceal missing authored facial targets.",
+      "status": "Artist fixed source; Natural and standalone clip roundtrips now pass. Independent binary FBX check confirms7 combined takes and1 skeletal take per standalone file; see krag-fbx-stacks.json."
+    },
+    {
+      "species": "Krag",
+      "finding": "Roundtrip checked embedded animation takes but not explicit skeleton-only files consumed by UE.",
+      "status": "Artist fixed source; Natural and standalone clip roundtrips now pass. Independent binary FBX check confirms7 combined takes and1 skeletal take per standalone file; see krag-fbx-stacks.json."
+    },
+    {
+      "species": "Nib",
+      "finding": "Export and validation left full orphan mesh datablocks between variants.",
+      "status": "Artist added targeted orphan cleanup; new export/roundtrip execution still pending."
+    }
+  ],
+  "acceptance": false
+}

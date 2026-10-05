@@ -1,0 +1,18 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "renderer": "NullRHI",
+  "is_render_evidence": false,
+  "native_variant_struct": "<Struct 'KKCharacterVariant' (0x000001BA1B348C00) {id: \"\", label: \"\", mesh: None, idle: None, run: None, walk: None, melee: None, shoot: None, hit: None, face_performance: None, morph_drivers: , walk_speed_meters: 1.150000, run_speed_meters: 3.200000, walk_cycle_seconds: 0.000000, run_cycle_seconds: 0.000000, walk_stance_fraction: 0.620000, run_stance_fraction: 0.420000, walk_left_contacts: (0.000000), walk_right_contacts: (0.500000), run_left_contacts: (0.000000), run_right_contacts: (0.500000)}>",
+  "native_driver_struct": "<Struct 'KKMorphDriver' (0x000001BA083B8D00) {morph: \"\", bone: \"\", channel: \"\", start: 0.000000, end: 1.000000, max_weight: 1.000000}>",
+  "morph_import_enabled": true,
+  "custom_animation_attributes_enabled": true,
+  "terrain_asset": "/Game/Benchmark/Environment/Dunes.Dunes",
+  "terrain_collision": "<CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+  "sand_material": "/Game/Benchmark/Environment/Materials/M_Sand.M_Sand",
+  "footstep_sound_counts": {
+    "Krag": 6,
+    "Nib": 6
+  },
+  "dust_material": "/Game/Benchmark/Effects/M_SandDust.M_SandDust",
+  "map_created": true
+}

@@ -1,0 +1,21 @@
+{
+  "name": "unreal-idle-performance",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\build_demo.ps1",
+    "-Stage",
+    "Launch",
+    "-Perf"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-performance-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-performance-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10,
+  "gpuTelemetry": true
+}

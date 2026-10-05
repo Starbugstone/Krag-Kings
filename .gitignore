@@ -26,6 +26,10 @@ __pycache__/
 # Imports are reproduced from benchmark/shared, preserving source assets once.
 benchmark/unity/Assets/Benchmark/Imported/
 benchmark/unity/Assets/Benchmark/Imported.meta
+# Deterministic Unity scene, prefabs and packed materials are rebuilt by Prepare.
+benchmark/unity/Assets/Benchmark/Generated/
+benchmark/unity/Assets/Benchmark/Scenes/
+benchmark/unity/Assets/Resources/PerformanceTestRun*.json*
 benchmark/unreal/KragKingsBenchmark/Content/Benchmark/
 # Local revision archives and derived Blender export assembly; current masters
 # and engine-neutral exported assets remain versioned through Git LFS.

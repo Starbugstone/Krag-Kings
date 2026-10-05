@@ -1,0 +1,19 @@
+{
+  "name": "vs2022-install",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\setup\\vs_BuildTools.exe",
+  "arguments": [
+    "--wait",
+    "--installPath",
+    "D:\\DevTools\\VS2022BuildTools",
+    "--add",
+    "Microsoft.VisualStudio.Workload.VCTools",
+    "--includeRecommended",
+    "--locale",
+    "en-US"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\setup",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\vs-install-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\vs-install-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4
+}

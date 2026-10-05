@@ -1,0 +1,55 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "GameFramework/GameModeBase.h"
+#include "GameFramework/HUD.h"
+#include "KKBenchmarkGameMode.generated.h"
+class UKKBenchmarkAssets;
+class AKKBenchmarkUnit;
+UCLASS()
+class KRAGKINGSBENCHMARK_API AKKBenchmarkGameMode : public AGameModeBase
+{
+    GENERATED_BODY()
+public:
+    AKKBenchmarkGameMode();
+    virtual void BeginPlay() override;
+    virtual void Tick(float DeltaSeconds) override;
+    virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+private:
+    UPROPERTY() TObjectPtr<UKKBenchmarkAssets> AssetSet;
+    TArray<float> FrameTimes;
+    float Elapsed=0;
+    double BenchmarkStartTime=0.0;
+    double LastFrameTime=0.0;
+    bool bSavedMetrics=false;
+    void WriteMetrics();
+    void TickSmoke();
+    void WriteInputState();
+    void TickShowcase();
+    void BeginShowcaseRecording();
+    void FinishShowcaseRecording();
+    void SmokeCheck(bool bPass,const FString& Name);
+    UPROPERTY() TArray<TObjectPtr<AKKBenchmarkUnit>> DemoUnits;
+    bool bSmoke=false;
+    bool bPerformancePass=false;
+    bool bInputState=false;
+    bool bShowcase=false;
+    bool bShowcaseWaiting=false;
+    bool bShowcaseComplete=false;
+    bool bShowcaseAudioRecording=false;
+    int32 ShowcasePhase=0;
+    double ShowcaseStartTime=0.0;
+    FString ShowcaseGate;
+    float NextInputStateTime=0.f;
+    int32 SmokePhase=0;
+    int32 SmokeFailures=0;
+    float NextSmokeTime=5;
+    FVector SmokeMoveStart=FVector::ZeroVector;
+    FString SmokeResults;
+};
+UCLASS()
+class KRAGKINGSBENCHMARK_API AKKBenchmarkHUD : public AHUD
+{
+    GENERATED_BODY()
+public:
+    virtual void DrawHUD() override;
+};

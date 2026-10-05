@@ -1,0 +1,22 @@
+{
+  "name": "unreal-import",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\import_shared_assets.py",
+    "-unattended",
+    "-nosplash",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\import.log",
+    "-NoSound",
+    "-NullRHI",
+    "-KKReuseMaterials"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-import-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-import-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true
+}

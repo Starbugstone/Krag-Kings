@@ -1,0 +1,21 @@
+{
+  "name": "vs-netfx-sdk",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\setup\\vs_BuildTools.exe",
+  "arguments": [
+    "modify",
+    "--wait",
+    "--passive",
+    "--norestart",
+    "--installPath",
+    "D:\\DevTools\\VS2022BuildTools",
+    "--add",
+    "Microsoft.Net.Component.4.8.SDK",
+    "--add",
+    "Microsoft.Net.Component.4.8.TargetingPack"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\setup",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\vs-netfx-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\vs-netfx-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4
+}

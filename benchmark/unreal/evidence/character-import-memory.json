@@ -1,0 +1,23 @@
+{
+  "status": "blocked by measured importer memory; no character render or package produced",
+  "rendererAttempt": {
+    "exit": 88,
+    "privateMiBAtGuard": 9233,
+    "availableMiBAtGuard": 6348,
+    "committedPercent": 72,
+    "stage": "Loading Krag_Natural.fbx"
+  },
+  "nullRhiAttempt": {
+    "exit": 88,
+    "privateMiBAtGuard": 9639,
+    "availableMiBAtGuard": 3997,
+    "committedPercent": 72,
+    "stage": "Triangulating skeletal mesh Krag_Natural_Mesh",
+    "renderer": "NullRHI",
+    "reusePreviouslyImportedMaterials": true,
+    "embeddedAnimationsDisabled": true
+  },
+  "source": "shared/characters/krag/Krag_Natural.fbx",
+  "sourceTriangles": 1757044,
+  "nextStep": "Use artist-created runtime derivatives retaining facial/body morphs, validate imports and actual rendered quality; preserve masters."
+}
