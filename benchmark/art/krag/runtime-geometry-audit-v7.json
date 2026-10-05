@@ -1,0 +1,200 @@
+{
+  "fbx": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
+  "fbxVersion": 7400,
+  "status": "Read-only geometry audit; source and shared exports unchanged",
+  "meshes": [
+    {
+      "name": "Dark structural pauldron.001",
+      "vertices": 881291,
+      "polygons": 878701,
+      "triangles": 1757044,
+      "bounds": {
+        "min": [
+          -0.671248197555542,
+          -0.25932952761650085,
+          0.004999995231628418
+        ],
+        "max": [
+          0.6712722778320312,
+          0.24743497371673584,
+          2.10675048828125
+        ]
+      },
+      "trianglesByMaterial": {
+        "Krag_BlackenedSteel": 9284,
+        "Krag_WeatheredTeal": 7912,
+        "Krag_AgedBrass": 9352,
+        "Krag_OiledLeather": 116728,
+        "Krag_DesertCanvas": 358424,
+        "Krag_SandstoneSkin": 763179,
+        "Krag_Recess": 13764,
+        "Krag_FacialSkin": 462021,
+        "Krag_Amber": 3680,
+        "Krag_EyeWhite": 5952,
+        "Krag_Ivory": 3528,
+        "Krag_OralTissue": 484,
+        "Krag_Tongue": 2736
+      },
+      "trianglesByOverlappingSpatialRegion": {
+        "Head above 1.84m": 457610,
+        "Neck and torso": 492634,
+        "Arms and hands": 400738,
+        "Legs and clothing below waist": 506268
+      },
+      "fullMeshMorphPositionBufferMB": 252.13937759399414,
+      "fullMeshMorphPositionAndNormalAndTangentMB": 756.4181327819824
+    }
+  ],
+  "shapeTargets": [
+    {
+      "name": "Blink_L",
+      "sparseAffectedVertices": 12699,
+      "deltaComponents": 38097,
+      "compressedDeltaBytes": 72249
+    },
+    {
+      "name": "Blink_R",
+      "sparseAffectedVertices": 12729,
+      "deltaComponents": 38187,
+      "compressedDeltaBytes": 72379
+    },
+    {
+      "name": "Squint_L",
+      "sparseAffectedVertices": 19579,
+      "deltaComponents": 58737,
+      "compressedDeltaBytes": 99698
+    },
+    {
+      "name": "Squint_R",
+      "sparseAffectedVertices": 19528,
+      "deltaComponents": 58584,
+      "compressedDeltaBytes": 99941
+    },
+    {
+      "name": "BrowRaise_L",
+      "sparseAffectedVertices": 45871,
+      "deltaComponents": 137613,
+      "compressedDeltaBytes": 352493
+    },
+    {
+      "name": "BrowRaise_R",
+      "sparseAffectedVertices": 45856,
+      "deltaComponents": 137568,
+      "compressedDeltaBytes": 350661
+    },
+    {
+      "name": "BrowLower_L",
+      "sparseAffectedVertices": 48135,
+      "deltaComponents": 144405,
+      "compressedDeltaBytes": 366694
+    },
+    {
+      "name": "BrowLower_R",
+      "sparseAffectedVertices": 48149,
+      "deltaComponents": 144447,
+      "compressedDeltaBytes": 369042
+    },
+    {
+      "name": "Smile_L",
+      "sparseAffectedVertices": 28986,
+      "deltaComponents": 86958,
+      "compressedDeltaBytes": 144076
+    },
+    {
+      "name": "Smile_R",
+      "sparseAffectedVertices": 29025,
+      "deltaComponents": 87075,
+      "compressedDeltaBytes": 143432
+    },
+    {
+      "name": "Frown_L",
+      "sparseAffectedVertices": 27229,
+      "deltaComponents": 81687,
+      "compressedDeltaBytes": 133223
+    },
+    {
+      "name": "Frown_R",
+      "sparseAffectedVertices": 27310,
+      "deltaComponents": 81930,
+      "compressedDeltaBytes": 132777
+    },
+    {
+      "name": "JawOpen",
+      "sparseAffectedVertices": 59755,
+      "deltaComponents": 179265,
+      "compressedDeltaBytes": 178054
+    },
+    {
+      "name": "LipPress",
+      "sparseAffectedVertices": 25276,
+      "deltaComponents": 75828,
+      "compressedDeltaBytes": 146921
+    },
+    {
+      "name": "Snarl_L",
+      "sparseAffectedVertices": 17609,
+      "deltaComponents": 52827,
+      "compressedDeltaBytes": 91224
+    },
+    {
+      "name": "Snarl_R",
+      "sparseAffectedVertices": 17630,
+      "deltaComponents": 52890,
+      "compressedDeltaBytes": 91862
+    },
+    {
+      "name": "NoseWrinkle",
+      "sparseAffectedVertices": 48958,
+      "deltaComponents": 146874,
+      "compressedDeltaBytes": 261436
+    },
+    {
+      "name": "Corrective_ShoulderRaise_L",
+      "sparseAffectedVertices": 140622,
+      "deltaComponents": 421866,
+      "compressedDeltaBytes": 1045591
+    },
+    {
+      "name": "Corrective_ShoulderRaise_R",
+      "sparseAffectedVertices": 140552,
+      "deltaComponents": 421656,
+      "compressedDeltaBytes": 1046119
+    },
+    {
+      "name": "Corrective_ElbowFlex_L",
+      "sparseAffectedVertices": 67806,
+      "deltaComponents": 203418,
+      "compressedDeltaBytes": 551318
+    },
+    {
+      "name": "Corrective_ElbowFlex_R",
+      "sparseAffectedVertices": 67753,
+      "deltaComponents": 203259,
+      "compressedDeltaBytes": 544676
+    },
+    {
+      "name": "Corrective_HipFlex_L",
+      "sparseAffectedVertices": 150400,
+      "deltaComponents": 451200,
+      "compressedDeltaBytes": 1143833
+    },
+    {
+      "name": "Corrective_HipFlex_R",
+      "sparseAffectedVertices": 150257,
+      "deltaComponents": 450771,
+      "compressedDeltaBytes": 1144595
+    },
+    {
+      "name": "Corrective_KneeFlex_L",
+      "sparseAffectedVertices": 61432,
+      "deltaComponents": 184296,
+      "compressedDeltaBytes": 473711
+    },
+    {
+      "name": "Corrective_KneeFlex_R",
+      "sparseAffectedVertices": 61378,
+      "deltaComponents": 184134,
+      "compressedDeltaBytes": 472953
+    }
+  ]
+}

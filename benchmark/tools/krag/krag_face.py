@@ -57,6 +57,29 @@ def geometry(c):
             o=mesh(('Upper' if upper else 'Lower')+' eyelid '+side,vs,fs,skin,'Eyelids_'+side,'Head');so=o.modifiers.new('Lid skin thickness','SOLIDIFY');so.thickness=.0015;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=so.name)
 
     bpy.context.view_layer.objects.active=head;edge=head.modifiers.new('Soft anatomical cavity rims','BEVEL');edge.width=.0011;edge.segments=3;edge.limit_method='ANGLE';edge.angle_limit=.70;bpy.ops.object.modifier_apply(modifier=edge.name)
+    # Low-relief facial creases are part of the same deforming skin surface.
+    # These follow the frown/nasolabial anatomy rather than a repeated crack tile.
+    for vertex in head.data.vertices:
+        x,y,z=vertex.co;front=max(0,min(1,(-y-.055)/.080))
+        if not front:continue
+        crease=0
+        for height,width,strength in [(2.020,.0020,.0010),(2.045,.0016,.0007)]:
+            line=height+.022*(abs(x)/.135)**1.5
+            crease+=strength*math.exp(-((z-line)/width)**2)*math.exp(-(x/.14)**6)
+        # Paired vertical glabellar furrows and cheek-to-mouth folds.
+        for side in [-1,1]:
+            crease+=.0015*math.exp(-((x-side*.021)/.0025)**2)*math.exp(-((z-1.997)/.030)**4)
+            t=max(0,min(1,(1.916-z)/.083));line=side*(.048+.048*t)
+            crease+=.0013*math.exp(-((x-line)/.0024)**2)*math.exp(-((z-1.876)/.046)**4)
+        vertex.co.y+=crease*front
+    # Preserve the quieter central facial material and assign fractured skin
+    # only to the outer skull/temple. Both are portable authored PBR materials.
+    if skin.name not in [material.name for material in head.data.materials]:head.data.materials.append(skin)
+    outer_index=next(i for i,material in enumerate(head.data.materials) if material==skin)
+    head.data.update()
+    for polygon in head.data.polygons:
+        x,y,z=polygon.center
+        if z>2.045 or abs(x)>.142 or y>-.025:polygon.material_index=outer_index
 
 def bones(bn):
     bn('FaceRoot',H((0,-.015,1.885)),H((0,-.015,1.985)),'Head')
@@ -133,9 +156,9 @@ def deform(group,v,name):
         elif 'ElbowFlex' in name:
             c=(s*.509,.008,1.300);r=(.14,.16,.15);amount=.008;allowed=group.startswith('BioArm_') or group.startswith('BioForearm_')
         elif 'HipFlex' in name:
-            c=(s*.167,.019,1.018);r=(.15,.20,.19);amount=.010;allowed=group in ['Body','Garments'] or group.startswith('TrouserLeg')
+            c=(s*.167,.019,1.018);r=(.15,.20,.19);amount=.010;allowed=group in ['Body','Garments','NaturalThigh_R'] or group.startswith('TrouserLeg')
         else:
-            c=(s*.188,-.016,.570);r=(.13,.16,.15);amount=.008;allowed=group=='Garments' or group.startswith(('TrouserLeg','BioLowerLeg'))
+            c=(s*.188,-.016,.570);r=(.13,.16,.15);amount=.008;allowed=group in ['Garments','NaturalThigh_R'] or group.startswith(('TrouserLeg','BioLowerLeg'))
         if not allowed:return delta
         w=_field(v,c,r);radial=v-np.array(c);radial[:,2]*=.25;radial/=np.maximum(np.linalg.norm(radial,axis=1)[:,None],.01);delta=radial*(w*amount)[:,None]
     return delta
@@ -170,10 +193,13 @@ def face_weights(modules):
         o=modules.get(name)
         if not o:continue
         jaw=o.vertex_groups.get('Jaw') or o.vertex_groups.new(name='Jaw');head=o.vertex_groups.get('Head') or o.vertex_groups.new(name='Head')
+        rigid_ivory=set()
+        for polygon in o.data.polygons:
+            if o.data.materials[polygon.material_index].name=='Krag_Ivory':rigid_ivory.update(polygon.vertices)
         for v in o.data.vertices:
             x,y,z=v.co
             rigid_indices={g.index for g in o.vertex_groups if g.name.startswith(('Eye_','Tongue_'))}
-            if any(g.group in rigid_indices and g.weight>.5 for g in v.groups):continue
+            if v.index in rigid_ivory or any(g.group in rigid_indices and g.weight>.5 for g in v.groups):continue
             if y<-.032 and z<H((0,0,1.857))[2]:
                 w=max(0,min(1,(H((0,0,1.857))[2]-z)/.030));jaw.add([v.index],w,'REPLACE');head.add([v.index],1-w,'REPLACE')
 

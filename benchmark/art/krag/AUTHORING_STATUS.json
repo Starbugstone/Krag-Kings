@@ -12,7 +12,7 @@
     "bones": 68,
     "derived": true
   },
-  "sharedReceipt": "benchmark/shared/characters/krag/delivery-v7.json",
+  "sharedReceipt": "benchmark/art/krag/delivery-v7-optimized.json",
   "currentAuthoringCode": "v8 code-only changes; not equivalent to the v7 generated source",
   "pendingChanges": [
     "Correct mouth aperture winding and narrow connected lip crease",
@@ -20,11 +20,17 @@
     "Continuous looped scarf instead of settled bib",
     "Broad canvas wear",
     "Embed authoring sources and losslessly compress future Blender saves",
-    "Source weapon marker bones matching existing v7 runtime markers"
+    "Source weapon marker bones matching existing v7 runtime markers",
+    "Preserve rigid Jaw tusk weights instead of applying soft lip/jaw skin-weight falloff to ivory",
+    "Replace voxel muscle-ball torso/arms/hands with connected CC0 anatomical control-cage adaptation, keeping Krag proportions",
+    "Regional quiet central facial skin, fractured outer skull and shaped frown/nasolabial creases",
+    "Refit natural hand joints/weights to the adapted hand topology before animation validation",
+    "Rounded ellipsoidal overlapping pauldron cap with fitted straps/edges/rivets",
+    "Complete right-leg module wired as Krag_FullLeg with removable natural right-thigh cloth; provisional review pending",
+    "Complete organic cinematic anatomy beneath clothing approved for a later source pass after first v8 review"
   ],
   "notIntegrated": [
-    "CC0 hand/body/head reference topology",
-    "Complete-leg helper krag_full_leg.py"
+    "V8 anatomy/face/armor/full-leg code not generated or reviewed yet; v7 binary/export pinned"
   ],
   "codeAtPin": {
     "add_finger_rig.py": "d6efd0fca4dbb27787170d47d30b921c3ba440e4db8b7596b432b46cba9ce4da",
@@ -86,6 +92,29 @@
       "peakPrivateMB": 796,
       "minimumAvailableMB": 11680,
       "peakCommitPercent": 53
+    },
+    "krag-runtime-reduction-v7-conservative": {
+      "exitCode": 0,
+      "peakPrivateMB": 1623,
+      "minimumAvailableMB": 12052,
+      "peakCommitPercent": 52
     }
-  }
+  },
+  "runtimeDerivative": {
+    "path": "benchmark/art/krag/Krag_Runtime_Optimized_v7.blend",
+    "sha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
+    "status": "Promoted to shared after matched front/head review and FBX/standalone roundtrips; native engine checks pending; art unaccepted",
+    "trianglesByVariant": {
+      "Krag_Natural": 1026672,
+      "Krag_Crusher": 987908,
+      "Krag_IronJaw": 1034000,
+      "Krag_Piston": 968616
+    },
+    "artisticAcceptance": false,
+    "receipt": "benchmark/art/krag/delivery-v7-optimized.json",
+    "precisionRecheck": "Pending read-only remeasurement: generic thin-triangle barycentric arithmetic was corrected from float32 to float64 after these files were generated. Existing renders/FBX/bind evidence remains valid; old numerical reports retain their exact helper hash."
+  },
+  "historicalBaselineReceipt": "benchmark/shared/characters/krag/delivery-v7.json",
+  "sharedExportsVersion": "v7-optimized; promoted technical derivative, artistic acceptance false",
+  "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged"
 }

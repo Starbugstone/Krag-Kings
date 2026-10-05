@@ -3,8 +3,8 @@ import bpy,sys,json,math,argparse,hashlib
 from pathlib import Path
 from mathutils import Vector
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
-ap=argparse.ArgumentParser();ap.add_argument('--variant',default='Krag_Natural');opt=ap.parse_args(args)
-ROOT=Path(__file__).resolve().parents[3];OUT=ROOT/'benchmark/shared/characters/krag';ART=ROOT/'benchmark/art/krag'
+ap=argparse.ArgumentParser();ap.add_argument('--variant',default='Krag_Natural');ap.add_argument('--directory',type=Path);ap.add_argument('--report-tag',default='');opt=ap.parse_args(args)
+ROOT=Path(__file__).resolve().parents[3];OUT=opt.directory or ROOT/'benchmark/shared/characters/krag';ART=ROOT/'benchmark/art/krag'
 manifest=json.loads((OUT/'manifest.json').read_text());contract=json.loads((OUT/'krag_asset_contract.json').read_text());variant=next(v for v in manifest['variants'] if v['name']==opt.variant);fbx=OUT/variant['fbx']
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False);bpy.ops.import_scene.fbx(filepath=str(fbx),use_anim=True)
 rigs=[o for o in bpy.data.objects if o.type=='ARMATURE'];meshes=[o for o in bpy.data.objects if o.type=='MESH'];errors=[]
@@ -58,5 +58,5 @@ for clip in contract['clips']:
     facial_per_clip[clip]={'animatedFaceBones':animated,'maxLocalRotationDegrees':max(x[0] for samples in values.values() for x in samples),'maxLocalTranslationMeters':max(x[1] for samples in values.values() for x in samples)}
     if not animated:errors.append('No varying imported facial performance in '+clip)
 data=dict(variant=opt.variant,fbx=str(fbx),fbx_sha256=hashlib.sha256(fbx.read_bytes()).hexdigest(),boneCount=len(rig.data.bones),meshCount=len(meshes),vertices=sum(len(o.data.vertices) for o in meshes),triangles=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in meshes),materialSlots=sum(len(o.data.materials) for o in meshes),morphs=keys,actions=actions,facialPerformanceByClip=facial_per_clip,boundsMeters=bounds,errors=errors,structuralValidationPassed=not errors,artisticAcceptance=False)
-(ART/(opt.variant+'-fbx-roundtrip.json')).write_text(json.dumps(data,indent=2));print(json.dumps(data,indent=2),flush=True)
+(ART/(opt.variant+'-fbx-roundtrip'+('-'+opt.report_tag if opt.report_tag else '')+'.json')).write_text(json.dumps(data,indent=2),newline='\n');print(json.dumps(data,indent=2),flush=True)
 if errors:raise RuntimeError('; '.join(errors))

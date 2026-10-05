@@ -1,16 +1,20 @@
 """Editable Krag sculpt, modular mechanisms, weighted rig and reusable motion clips.
 Run Blender 5.2 --background --python <this script>. All units metres, front -Y.
-Original concept sheets 01 and 07 are visual authority. No external assets.
+Original concept sheets 01 and 07 are visual authority. Authored geometry with
+provenance-recorded CC0 skin material inputs; pending source pass is unaccepted.
 """
 import bpy, math, random, json, os, sys, time
 from mathutils import Vector, Matrix
 from pathlib import Path
 from math import sin, cos, pi
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-import krag_face, krag_locomotion, krag_cloth
+import krag_face, krag_locomotion, krag_cloth, krag_anatomy, krag_armor, krag_full_leg
 random.seed(483)
 ROOT=Path(__file__).resolve().parents[3]
-ART=ROOT/'benchmark/art/krag'; OUT=ROOT/'benchmark/shared/characters/krag'; TEX=OUT/'textures'
+ART=ROOT/'benchmark/art/krag'
+def path_argument(name,default):return Path(sys.argv[sys.argv.index(name)+1]) if name in sys.argv else default
+OUT=path_argument('--output-dir',ROOT/'benchmark/shared/characters/krag');TEX=OUT/'textures'
+MASTER_PATH=path_argument('--master-path',ART/'Krag_Master.blend')
 for p in [ART,OUT,TEX,ART/'renders']: p.mkdir(parents=True,exist_ok=True)
 bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
 for x in list(bpy.data.materials): bpy.data.materials.remove(x)
@@ -71,6 +75,15 @@ face_skin=skin.copy();face_skin.name='Krag_FacialSkin';materials[face_skin.name]
 if face_skin.node_tree.nodes.get('Skin physical scale'):face_skin.node_tree.nodes['Skin physical scale'].inputs['Scale'].default_value=4.6
 for node in face_skin.node_tree.nodes:
     if node.type=='BUMP':node.inputs['Distance'].default_value*=.45
+# Central facial skin carries pores and shaped expression folds. Broken large
+# plates remain on the outer skull, rather than covering lips and eyelids.
+face_nodes=face_skin.node_tree.nodes;face_links=face_skin.node_tree.links
+face_bs=next(node for node in face_nodes if node.type=='BSDF_PRINCIPLED')
+face_color_source=face_bs.inputs['Base Color'].links[0].from_socket
+quiet=face_nodes.new('ShaderNodeMixRGB');quiet.name='Quieter central facial skin';quiet.blend_type='MIX';quiet.inputs[0].default_value=.76;quiet.inputs[2].default_value=(.185,.111,.054,1)
+face_links.new(face_color_source,quiet.inputs[1]);face_links.new(quiet.outputs[0],face_bs.inputs['Base Color'])
+for node in face_nodes:
+    if node.type=='BUMP' and node.inputs['Distance'].default_value>.0004:node.inputs['Distance'].default_value*=.35
 
 def finish(o,name,ma,group,bn=None,smooth=True):
     if ma==skin and group in ['Head','Face','Eyelids_L','Eyelids_R']:ma=face_skin
@@ -131,28 +144,14 @@ def ribbon(name,points,width,ma,group,bn=None,thick=.009):
         t=Vector(points[min(i+1,len(points)-1)])-Vector(points[max(0,i-1)]);w=Vector((t.z,0,-t.x)).normalized()*width*.5;verts.extend([Vector(p)-w,Vector(p)+w])
     o=mesh(name,verts,[(2*i,2*i+1,2*i+3,2*i+2) for i in range(len(points)-1)],ma,group,bn);sol=o.modifiers.new('Material thickness','SOLIDIFY');sol.thickness=thick;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=sol.name);bev=o.modifiers.new('Soft cut edges','BEVEL');bev.width=.003;bev.segments=2;bpy.ops.object.modifier_apply(modifier=bev.name);return o
 
-log('Body anatomical sculpt')
-# Connected torso shaped by overlapping muscle volumes, consolidated into one surface.
-base=[]
-def flesh(name,p,s):o=uvball(name,p,s);base.append(o);return o
-flesh('Thorax',(0,.015,1.435),(.335,.196,.292));flesh('Latissimus',(0,.08,1.45),(.35,.168,.23));flesh('Abdomen',(0,-.002,1.215),(.252,.18,.23));flesh('Pelvis',(0,.017,1.03),(.255,.19,.14));flesh('Neck',(0,.025,1.765),(.145,.13,.20))
-for side in [-1,1]:
-    flesh('Trapezius',(side*.19,.035,1.67),(.218,.13,.127));p=flesh('Pectoral',(side*.165,-.079,1.51),(.191,.121,.137))
-    p.rotation_euler.y=side*-.10
-    for v in p.data.vertices:
-        if v.co.z<0:v.co.z*=.68
-    for z,rx in [(1.29,.112),(1.18,.105)]:flesh('Abdominal segment',(side*.080,-.158,z),(rx,.027,.090))
-    flesh('External oblique',(side*.21,.005,1.275),(.075,.155,.17))
-body=join_sculpt(base,'Body_Anatomy',.006)
-for side in [-1,1]:
-    uvball('Pectoral skin detail',(side*.190,-.194,1.474),(.009,.004,.007),skin,'Body','Chest',seg=16,rings=10)
-uvball('Navel recess',(0,-.182,1.171),(.007,.003,.008),leather,'Body','Spine',seg=16,rings=10)
+log('Continuous Krag anatomical cage adaptation')
+anatomical_source=krag_anatomy.build(globals())
 # Head is a single unified sculpt; amber eyes are deliberately deep below the brow.
 headparts=[]
 def hp(name,p,s):o=uvball(name,p,s,skin,'Head','Head');headparts.append(o);return o
 hp('Cranium',(0,.009,1.932),(.166,.141,.175));hp('Frontal bone',(0,-.083,2.007),(.150,.085,.090));hp('Occiput',(0,.077,1.93),(.133,.099,.15));hp('Broad jaw',(0,-.040,1.811),(.149,.126,.103));hp('Chin',(0,-.162,1.801),(.119,.061,.068));hp('Muzzle',(0,-.139,1.870),(.125,.070,.054));hp('Nose bridge',(0,-.131,1.96),(.043,.052,.068));hp('Nose',(0,-.191,1.925),(.047,.042,.035))
 for s in [-1,1]:
-    hp('Zygomatic arch',(s*.094,-.117,1.914),(.057,.042,.062));hp('Temple',(s*.121,-.011,1.968),(.045,.102,.083));b=hp('Heavy angular brow',(s*.071,-.130,1.984),(.076,.049,.027));b.rotation_euler.y=s*-.32
+    hp('Zygomatic arch',(s*.094,-.117,1.914),(.057,.042,.062));hp('Temple',(s*.121,-.011,1.968),(.045,.102,.083));b=hp('Heavy angular brow',(s*.071,-.145,1.986),(.076,.049,.028));b.rotation_euler.y=s*-.40
     hp('Nasal wing',(s*.035,-.185,1.917),(.026,.038,.022));hp('Masseter',(s*.108,-.030,1.84),(.044,.091,.086));hp('Ear cartilage',(s*.155,.012,1.949),(.031,.021,.052));hp('Lower orbital tissue',(s*.070,-.144,1.946),(.042,.032,.024))
 head=join_sculpt(headparts,'Head_Sculpt',.0018,6);head['rig_bone']='Head'
 # Ear concha, lips, nostrils, folded creases, ivory lower tusks.
@@ -176,28 +175,10 @@ tube('Lower lip',[(-.080,-.183,1.819),(-.049,-.199,1.830),(0,-.207,1.833),(.049,
 facial_skin_parts=[bpy.data.objects['Head_Sculpt']]+[o for o in bpy.data.objects if o.type=='MESH' and o.get('module')=='Face' and len(o.data.materials)>0 and o.data.materials[0]==face_skin]
 head=join_sculpt(facial_skin_parts,'Head_Sculpt',.0018,4);head['module']='Head';head['rig_bone']='Head'
 krag_face.geometry(globals())
-# Massive bare arms, with forearms separate at elbow replacement boundary.
-for s,side in [(-1,'R'),(1,'L')]:
-    upper=[]
-    for name,p,sc in [('Deltoid',(s*.367,.012,1.593),(.155,.142,.190)),('Biceps',(s*.445,-.025,1.442),(.128,.111,.200)),('Triceps',(s*.429,.048,1.453),(.126,.124,.215)),('Elbow',(s*.509,.009,1.300),(.100,.099,.094))]:upper.append(uvball(name,p,sc,skin,'BioArm_'+side,'UpperArm_'+side))
-    o=join_sculpt(upper,'BioArm_'+side,.0047);o['rig_bone']='UpperArm_'+side
-    lower=[]
-    for name,p,sc in [('Forearm flexors',(s*.550,-.011,1.197),(.112,.108,.176)),('Brachioradialis',(s*.556,-.047,1.216),(.073,.083,.153)),('Wrist',(s*.599,-.019,1.045),(.077,.067,.116)),('Palm',(s*.621,-.033,.963),(.084,.050,.078))]:lower.append(uvball(name,p,sc,skin,'BioForearm_'+side,'LowerArm_'+side))
-    for j in range(4):
-        x=s*(.570+j*.035);z=.901+(abs(j-1.5)*.012);p=[(x,-.053,z),(x+s*.009,-.053,z-.048),(x+s*.006,-.078,z-.081),(x-s*.002,-.111,z-.091)];lower.append(tube('Sculpted finger',p,[.022,.020,.017,.012],skin,'BioForearm_'+side,'Hand_'+side,16))
-        uvball('Dusty nail',(x-s*.002,-.113,z-.083),(.008,.0025,.010),skin,'HandDetails_'+side,'Finger2_'+str(j)+'_'+side)
-    lower.append(tube('Opposed thumb',[(s*.687,-.038,.986),(s*.720,-.074,.953),(s*.719,-.112,.919),(s*.674,-.131,.920)],[.033,.027,.022,.016],skin,'BioForearm_'+side,'Hand_'+side,16))
-    o=join_sculpt(lower,'BioForearm_'+side,.0035);o['rig_bone']='LowerArm_'+side
-    for j in range(3):tube('Hand tendon',[(s*(.587+j*.028),-.087,.970),(s*(.584+j*.028),-.082,1.016)],[.003,.0018],skin,'HandDetails_'+side,'Hand_'+side,8)
-# Relaxed hands face inward; thumb is forward and fingers curl toward the palm.
-for o in list(bpy.data.objects):
-    if o.type=='MESH' and o.get('module','').startswith(('BioForearm_','HandDetails_')):
-        side=o['module'][-1];matrix=o.matrix_world.copy();inverse=matrix.inverted()
-        for v in o.data.vertices:v.co=inverse@hand_rest(matrix@v.co,side)
+# Partition the connected anatomical surface at the modular bionic boundaries.
 log('Continuous torso-arm surface and anatomical partition')
 skin_groups={'Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R'}
-skin_parts=[o for o in bpy.data.objects if o.type=='MESH' and o.get('module') in skin_groups]
-unified=join_sculpt(skin_parts,'Unified natural Krag anatomy',.0032,5)
+unified=anatomical_source
 bpy.context.view_layer.objects.active=unified;bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
 unified.data.update();src=unified.data
 bins={g:[] for g in skin_groups}
@@ -313,38 +294,8 @@ for i in range(21):
 o=mesh('Frayed clan waist sash',vs,fs,cloth,'Belt','Pelvis');so=o.modifiers.new('Woven thickness','SOLIDIFY');so.thickness=.004;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=so.name)
 for j in range(17):
     x=.062+j*.006;z=.665+.015*sin(j*2.5);tube('Frayed sash thread',[(x,-.153,z),(x+.002*sin(j),-.151,z-.013-random.random()*.024)],[.0011,.0007],cloth,'Belt','Pelvis',5)
-# Asymmetric curved layered left shoulder scrap armor.
-def shoulder_plate(name,xshift,zshift,scale,ma):
-    vs=[];fs=[];nx=14;na=32
-    for i in range(nx):
-        t=i/(nx-1);x=.20+ t*.34+xshift
-        for j in range(na):
-            a=-.10+(pi+.20)*j/(na-1);r=(.19-.065*t)*scale;vs.append((x,.012+r*cos(a),1.575+zshift+r*sin(a)-.040*t))
-    for i in range(nx-1):
-        for j in range(na-1):a=i*na+j;fs.append((a,a+1,a+1+na,a+na))
-    o=mesh(name,vs,fs,ma,'Armor','UpperArm_L');sol=o.modifiers.new('Forged steel shell','SOLIDIFY');sol.thickness=.011;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=sol.name);return o
-shoulder_plate('Dark structural pauldron',0,-.009,1.01,steel)
-for plate,x0,x1,radius,offset in [('Inner overlapping crown',.205,.350,.207,.008),('Middle overlapping crown',.321,.444,.195,.013),('Outer overlapping crown',.418,.548,.174,.016)]:
-    vs=[];fs=[];nx=17;ny=37
-    for i in range(nx):
-        t=i/(nx-1);x=x0+(x1-x0)*t
-        for j in range(ny):
-            a=-.03+(pi+.06)*j/(ny-1);r=radius-.035*t+.008*sin(pi*t);edge=.004*sin(a*5)*sin(pi*t)
-            vs.append((x,.012+(r+edge)*cos(a),1.578+offset+r*sin(a)-.033*(x-.20)/.34))
-    for i in range(nx-1):
-        for j in range(ny-1):k=i*ny+j;fs.append((k,k+1,k+ny+1,k+ny))
-    o=mesh(plate,vs,fs,paint,'Armor','UpperArm_L');solid=o.modifiers.new('Forged overlapping plate thickness','SOLIDIFY');solid.thickness=.007;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=solid.name)
-    tube(plate+' rolled outer edge',[vs[(nx-1)*ny+j] for j in range(ny)],.0045,steel,'Armor','UpperArm_L',10)
-for x in [.235,.49]:
-    pts=[]
-    for j in range(20):a=-.12+(pi+.24)*j/19;r=.196-.065*(x-.20)/.34;pts.append((x,.012+r*cos(a),1.58+r*sin(a)-.04*(x-.20)/.34))
-    tube('Pauldron rolled rim',pts,.008,steel,'Armor','UpperArm_L',10)
-for x in [.25,.38,.50]:
-    for a in [.24,.85,1.55,2.3,2.91]:
-        r=.208-.065*(x-.2)/.34;y=.012+r*cos(a);z=1.58+r*sin(a)-.04*(x-.2)/.34;uvball('Shoulder rivet',(x,y,z),(.009,.008,.008),brass,'Armor','UpperArm_L',seg=12,rings=8)
-# Teal outer overlapping plate at deltoid gives a strong asymmetric silhouette.
-o=box('Outer pauldron overlap',(.487,.005,1.627),(.153,.294,.030),paint,'Armor','UpperArm_L',bevel=.021);o.rotation_euler.y=.56
-for y in [-.122,.128]:uvball('Outer plate bolt',(.521,y,1.606),(.009,.009,.009),brass,'Armor','UpperArm_L',seg=12,rings=8)
+# Rounded layered cap with fitted retaining straps, rolled overlaps and rivets.
+krag_armor.build(globals())
 log('Crusher arm, iron jaw and piston leg')
 # Full left replacement. Visible open mechanics and narrow structural members contrast huge claw.
 G='BionicArm_L_Crusher'
@@ -416,9 +367,10 @@ for dx in [-.048,.048]:
 uvball('Mechanical ankle',(x,.021,.174),(.063,.067,.069),steel,G,'Foot_R');box('Mechanical armored foot',(x,-.078,.075),(.195,.283,.105),steel,G,'Foot_R',bevel=.023)
 box('Mechanical foot teal upper',(x,-.062,.130),(.175,.204,.025),paint,G,'Foot_R',bevel=.010)
 for j in range(4):box('Piston foot front claw',(x-.074+j*.049,-.207,.054),(.036,.065,.055),brass,G,'Foot_R',bevel=.007)
+krag_full_leg.geometry(globals())
 # Optical replacement stays small, an optional module.
 G='BionicEye_L';uvball('Optical prosthetic rim',(.069,-.174,1.971),(.041,.030,.034),steel,G,'Head');torus('Optical retaining brass ring',(.069,-.203,1.971),.023,.005,brass,G,'Head');uvball('Optical amber lens',(.069,-.206,1.971),(.018,.004,.017),iris,G,'Head')
-# Compatible right one-handed scrap firearm, stowed hidden except Shoot in applications.
+# Compatible right one-handed scrap firearm, visible in every runtime variant.
 G='Weapon_R';bn='Hand_R'
 o=box('Scrap hand cannon receiver',(-.628,-.159,.997),(.114,.173,.10),steel,G,bn,bevel=.011)
 cyl('Hand cannon thick barrel',(-.628,-.188,1.014),(-.628,-.415,1.014),.044,steel,G,bn)
@@ -433,6 +385,11 @@ for o in list(bpy.data.objects):
 for o in list(bpy.data.objects):
     if o.type=='MESH' and o.get('module')=='Weapon_R':
         pivot=Vector((-.599,-.019,1.043));rotation=Matrix.Rotation(pi/2,4,'Z');o.matrix_world=Matrix.Translation(pivot)@rotation@Matrix.Translation(-pivot)@o.matrix_world
+# Seat the rest grip against the adapted anatomical palm; marker bones below use
+# the same rigid offset. Actual closed-finger contact still needs posed review.
+WEAPON_REST_SHIFT=Vector((-.060,-.029,.010))
+for o in list(bpy.data.objects):
+    if o.type=='MESH' and o.get('module')=='Weapon_R':o.matrix_world=Matrix.Translation(WEAPON_REST_SHIFT)@o.matrix_world
 # Blend upper trouser cloth into one tailored surface; accessories remain separate.
 trouser_parts=[o for o in bpy.data.objects if o.type=='MESH' and (o.name=='Trouser seat' or o.name.startswith('Trousers_upper_'))]
 trousers=join_sculpt(trouser_parts,'Tailored trouser base',.0032,3);trousers['module']='Garments'
@@ -448,6 +405,7 @@ for v in trousers.data.vertices:
             distance=z-zz-slope*(xx-.18);across=math.exp(-((xx-.18)/.16)**4)
             delta+=amp*(math.exp(-(distance/width)**2)-.48*math.exp(-((distance-width*1.6)/(width*1.5))**2))*across
         v.co.y-=delta*front
+krag_full_leg.split_natural_thigh(globals(),trousers)
 # Reference-proportion head: compact adult cranium, broad bulldog jaw, fixed crown.
 for o in list(bpy.data.objects):
     if o.type=='MESH' and o.get('module') in {'Head','Face','BionicJaw_Iron','BionicEye_L','MouthInterior','Eyelids_L','Eyelids_R'}:
@@ -475,14 +433,10 @@ for g in list(groups):
     bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
     bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT');bpy.ops.uv.smart_project(angle_limit=1.1519,island_margin=.02);bpy.ops.object.mode_set(mode='OBJECT')
     o.data.uv_layers.active.name='UVMap'
-    if g=='Armor':
-        for v in o.data.vertices:v.co.z+=.061;v.co.y-=.008
 log('Skeletal rig')
 bpy.ops.object.select_all(action='DESELECT');ad=bpy.data.armatures.new('Krag_Skeleton');rig=bpy.data.objects.new('Krag_Rig',ad);bpy.context.collection.objects.link(rig);bpy.context.view_layer.objects.active=rig;rig.select_set(True);bpy.ops.object.mode_set(mode='EDIT')
 bones={}
 def bn(n,h,t,par=None):
-    if n.startswith(('Hand_','Finger','Thumb')):
-        side=n[-1];h=hand_rest(h,side);t=hand_rest(t,side)
     b=ad.edit_bones.new(n);b.head=h;b.tail=t
     if par:b.parent=ad.edit_bones[par]
     bones[n]=(Vector(h),Vector(t));return b
@@ -491,14 +445,17 @@ for s,side in [(-1,'R'),(1,'L')]:
     bn('Clavicle_'+side,(s*.055,.02,1.636),(s*.348,.012,1.613),'Chest');bn('UpperArm_'+side,(s*.348,.012,1.613),(s*.509,.008,1.300),'Clavicle_'+side);bn('LowerArm_'+side,(s*.509,.008,1.300),(s*.599,-.019,1.043),'UpperArm_'+side);bn('Hand_'+side,(s*.599,-.019,1.043),(s*.620,-.042,.927),'LowerArm_'+side)
     bn('Thigh_'+side,(s*.167,.019,1.018),(s*.188,-.016,.570),'Pelvis');bn('Shin_'+side,(s*.188,-.016,.570),(s*.19,.026,.240),'Thigh_'+side);bn('Foot_'+side,(s*.19,.026,.240),(s*.19,-.149,.082),'Shin_'+side);bn('Toe_'+side,(s*.19,-.149,.082),(s*.19,-.230,.067),'Foot_'+side)
 for s,side in [(-1,'R'),(1,'L')]:
+    landmarks=krag_anatomy.hand_landmarks(side)
     for j in range(4):
-        x=s*(.570+j*.035);z=.901+abs(j-1.5)*.012
-        a=(x,-.053,z);b=(x+s*.009,-.053,z-.048);c=(x-s*.002,-.111,z-.091)
-        bn('Finger1_'+str(j)+'_'+side,a,b,'Hand_'+side);bn('Finger2_'+str(j)+'_'+side,b,c,'Finger1_'+str(j)+'_'+side)
-    bn('Thumb1_'+side,(s*.687,-.038,.986),(s*.719,-.112,.919),'Hand_'+side);bn('Thumb2_'+side,(s*.719,-.112,.919),(s*.674,-.131,.920),'Thumb1_'+side)
+        a,b,c=landmarks['Finger_'+str(j)]
+        joint=bn('Finger1_'+str(j)+'_'+side,a,b,'Hand_'+side);joint.align_roll(Vector((s,0,0)))
+        joint=bn('Finger2_'+str(j)+'_'+side,b,c,'Finger1_'+str(j)+'_'+side);joint.align_roll(Vector((s,0,0)))
+    a,b,c=landmarks['Thumb']
+    joint=bn('Thumb1_'+side,a,b,'Hand_'+side);joint.align_roll(Vector((s,0,0)))
+    joint=bn('Thumb2_'+side,b,c,'Thumb1_'+side);joint.align_roll(Vector((s,0,0)))
 for j,dx in enumerate([-.106,0,.106]):bn('Claw_'+str(j),(.652+dx,-.063 if j!=1 else .072,.962),(.652+dx*.65,-.070 if j!=1 else .065,.82),'Hand_L')
-bn('WeaponMuzzle',(-.450,-.048,.567),(-.450,-.048,.542),'Hand_R').use_deform=False
-bn('WeaponAim',(-.450,-.048,.467),(-.450,-.048,.442),'Hand_R').use_deform=False
+bn('WeaponMuzzle',Vector((-.450,-.048,.567))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.542))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
+bn('WeaponAim',Vector((-.450,-.048,.467))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.442))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
 krag_face.bones(bn);ad.edit_bones['Jaw'].parent=ad.edit_bones['FaceRoot']
 bpy.ops.object.mode_set(mode='OBJECT');rig.show_in_front=True
 # Art-directed deformation skinning via nearest anatomical segment weights.
@@ -506,8 +463,7 @@ def distseg(p,a,b):
     t=max(0,min(1,(p-a).dot(b-a)/(b-a).length_squared));return (p-(a+(b-a)*t)).length
 for g,o in modules.items():
     if g in ['Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R']:allowed=['Pelvis','Spine','Chest','Neck']+[a+'_'+side for side in ['L','R'] for a in ['Clavicle','UpperArm','LowerArm','Hand']]
-    elif g=='Garments':allowed=['Pelvis','Thigh_L','Thigh_R','Shin_L','Shin_R']
-    elif g.startswith('TrouserLeg_') or g.startswith('BioLowerLeg_'):side=g[-1];allowed=['Pelvis','Thigh_'+side,'Shin_'+side]
+    elif g=='Garments' or g.startswith('TrouserLeg_') or g.startswith('BioLowerLeg_') or g=='NaturalThigh_R':allowed=['Pelvis','Thigh_L','Thigh_R','Shin_L','Shin_R']
     else:allowed=[]
     if allowed:
         o.vertex_groups.clear()
@@ -517,8 +473,12 @@ for g,o in modules.items():
             candidates=allowed
             if extra and abs(v.co.x)>.48 and v.co.z<1.05:
                 side='L' if v.co.x>0 else 'R';candidates=['Hand_'+side,'LowerArm_'+side]+[n for n in extra if n.endswith('_'+side)]
-            ds=sorted([(distseg(v.co,*bones[n]),n) for n in candidates]);pairs=ds[:2];ws=[1/max(.012,d)**6 for d,n in pairs];total=sum(ws)
-            for (d,n),w in zip(pairs,ws):vgs[n].add([v.index],w/total,'REPLACE')
+            weighted=krag_anatomy.anatomical_weights(v.co,bones) if extra else krag_anatomy.smooth_segment_weights(v.co,bones,candidates)
+            # Contract supports up to eight influences. Only very small far-chain
+            # tails can reach this cap; actual counts and deformation are reviewed.
+            weighted=sorted(weighted,key=lambda item:item[1],reverse=True)[:8]
+            total=sum(w for n,w in weighted)
+            for n,w in weighted:vgs[n].add([v.index],w/total,'REPLACE')
     elif not o.vertex_groups:
         vg=o.vertex_groups.new(name='Pelvis');vg.add(list(range(len(o.data.vertices))),1,'REPLACE')
     o.parent=rig;mod=o.modifiers.new('Krag weighted deformation','ARMATURE');mod.object=rig
@@ -571,15 +531,18 @@ for o in modules.values():
         if mod.type=='ARMATURE':mod.show_viewport=True
 log('Building portable facial and pose corrective targets')
 deformation=krag_face.add_morphs(modules,rig)
-(OUT/'facial-rig.json').write_text(json.dumps(deformation,indent=2))
+(OUT/'facial-rig.json').write_text(json.dumps(deformation,indent=2),newline='\n')
 reset();rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
-(ART/'locomotion-target-verification.json').write_text(json.dumps({'status':'Analytic skeleton targets only; actual rendered sole contact pending','samples':locomotion_metrics,'maxAnkleErrorMeters':max(m['errorMeters'] for m in locomotion_metrics)},indent=2))
+(ART/('locomotion-target-verification.json' if MASTER_PATH.name=='Krag_Master.blend' else MASTER_PATH.stem+'-locomotion-target-verification.json')).write_text(json.dumps({'status':'Analytic skeleton targets only; actual rendered sole contact pending','samples':locomotion_metrics,'maxAnkleErrorMeters':max(m['errorMeters'] for m in locomotion_metrics)},indent=2),newline='\n')
 # Variant visibility source contract and export list.
 variants={
 'Krag_Natural': {'off':['BionicArm_L_Crusher','BionicJaw_Iron','BionicLeg_R_Piston','BionicEye_L','Weapon_R']},
 'Krag_Crusher': {'off':['BioArm_L','BioForearm_L','HandDetails_L','BionicLeg_R_Piston','BionicEye_L','Weapon_R']},
 'Krag_IronJaw': {'off':['BionicArm_L_Crusher','BionicLeg_R_Piston','Weapon_R']},
 'Krag_Piston': {'off':['BionicArm_L_Crusher','BionicJaw_Iron','BionicEye_L','Boot_R','BioLowerLeg_R','Weapon_R']}}
+for variant in variants.values():variant['off'].append('BionicThigh_R_Full')
+variants['Krag_FullLeg']={'off':['BionicArm_L_Crusher','BionicJaw_Iron','BionicEye_L','Boot_R','BioLowerLeg_R','NaturalThigh_R','TrouserLeg_R','Weapon_R']}
+
 def variant(name):
     off=variants[name]['off']
     for g,o in modules.items():o.hide_render=g in off;o.hide_set(g in off)
@@ -595,13 +558,13 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
-bpy.ops.wm.save_as_mainfile(filepath=str(ART/'Krag_Master.blend'),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(ART/'Krag_Master.blend'),compress=True)
+bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')
 if '--skip-render' not in sys.argv:bpy.ops.render.render(write_still=True)
 log('Source saved; render '+('skipped' if '--skip-render' in sys.argv else 'finished'))
 # Manifest kept local to this asset; shared root manifest belongs to integration lead.
-data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.24],'Foot_R':[-.19,.026,.24]},'ground_z':0,'bones':list(bones),'clips':['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'],'deformation':deformation,'locomotionCycles':krag_locomotion.manifest(),'variants':variants,'modules':list(modules),'source':'benchmark/art/krag/Krag_Master.blend','materials':list(materials),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())}
-(OUT/'krag_asset_contract.json').write_text(json.dumps(data,indent=2))
+data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.24],'Foot_R':[-.19,.026,.24]},'ground_z':0,'bones':list(bones),'clips':['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'],'deformation':deformation,'locomotionCycles':krag_locomotion.manifest(),'variants':variants,'modules':list(modules),'source':str(MASTER_PATH.relative_to(ROOT)).replace('\\','/'),'materials':list(materials),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())}
+(OUT/'krag_asset_contract.json').write_text(json.dumps(data,indent=2),newline='\n')
 log('COMPLETE source creation; use export_krag.py for PBR texture baking and FBX.')

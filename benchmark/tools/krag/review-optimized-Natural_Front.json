@@ -1,0 +1,27 @@
+{
+  "name": "krag-review-optimized-v7-Natural_Front",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--runtime",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\runtime-candidate-v7.contract.json",
+    "--view",
+    "Natural_Front",
+    "--tag",
+    "v7-optimized"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-optimized-v7-Natural_Front.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-optimized-v7-Natural_Front.stderr.log",
+  "maxPrivateGB": 8
+}

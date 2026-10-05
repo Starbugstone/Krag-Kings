@@ -2,6 +2,30 @@
 Uses the same hip/knee/ankle chain; anatomical trouser removal must be wired before enabling.
 """
 import math
+import bpy
+
+
+def split_natural_thigh(c,trousers):
+    """Separate covered right-thigh cloth at the hip socket for module swapping.
+
+    The same sampled surface and normals are retained in the natural assembly.
+    The boundary sits under the socket/belt overlap and needs actual pose review.
+    """
+    original=trousers.data;original.update()
+    bins={'Garments':[],'NaturalThigh_R':[]}
+    for face in original.polygons:
+        group='NaturalThigh_R' if face.center.x<-.045 and face.center.z<1.016 else 'Garments'
+        bins[group].append(face)
+    for group,faces in bins.items():
+        used=sorted({int(i) for face in faces for i in face.vertices});index={i:j for j,i in enumerate(used)}
+        mesh=bpy.data.meshes.new(group+' modular tailored cloth')
+        mesh.from_pydata([original.vertices[i].co for i in used],[],[tuple(index[i] for i in face.vertices) for face in faces]);mesh.update()
+        for material in original.materials:mesh.materials.append(material)
+        for new,old in zip(mesh.polygons,faces):new.material_index=old.material_index;new.use_smooth=True
+        mesh.normals_split_custom_set_from_vertices([tuple(original.vertices[i].normal) for i in used])
+        obj=bpy.data.objects.new(group,mesh);bpy.context.collection.objects.link(obj);c['mark'](obj,group)
+    bpy.data.objects.remove(trousers,do_unlink=True)
+    if original.users==0:bpy.data.meshes.remove(original)
 
 def geometry(c):
     ball,tube,cyl,torus,box=c['uvball'],c['tube'],c['cyl'],c['torus'],c['box']

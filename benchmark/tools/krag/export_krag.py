@@ -1,22 +1,32 @@
 """Bake portable PBR material tiles, attach them, and export identical animated variants.
 No paid materials; provenance for CC0 scanned skin inputs is retained with the source. Source nodes remain in Krag_Master.blend; runtime saved separately.
 """
-import bpy, bmesh, json, math, sys, os
+import bpy, bmesh, json, math, sys, os, shutil
 from pathlib import Path
 from mathutils import Vector
 sys.path.insert(0,str(Path(__file__).parent));import material_cache
-ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/krag';OUT=ROOT/'benchmark/shared/characters/krag';TEX=OUT/'textures';TEX.mkdir(parents=True,exist_ok=True)
+def argument(name,default):return Path(sys.argv[sys.argv.index(name)+1]) if name in sys.argv else default
+ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/krag';BASE_OUT=ROOT/'benchmark/shared/characters/krag';OUT=argument('--output-dir',BASE_OUT);TEX=OUT/'textures';TEX.mkdir(parents=True,exist_ok=True)
 stage='export' if '--export-only' in sys.argv or '--animations-only' in sys.argv else 'bake'
-bpy.ops.wm.open_mainfile(filepath=str(ART/('Krag_Runtime.blend' if stage=='export' else 'Krag_Master.blend')))
+source_blend=argument('--source-runtime',ART/'Krag_Runtime.blend') if stage=='export' else ART/'Krag_Master.blend'
+bpy.ops.wm.open_mainfile(filepath=str(source_blend))
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=4;scene.render.bake.margin=4
-rig=bpy.data.objects['Krag_Rig'];modules={o.get('module'):o for o in bpy.data.objects if o.type=='MESH' and 'module' in o};contract=json.loads((OUT/'krag_asset_contract.json').read_text())
+rig=bpy.data.objects['Krag_Rig'];modules={o.get('module'):o for o in bpy.data.objects if o.type=='MESH' and 'module' in o};contract=json.loads(argument('--contract',BASE_OUT/'krag_asset_contract.json').read_text())
+if stage=='export' and OUT!=BASE_OUT:
+    for maps in contract['material_maps'].values():
+        for filename in maps.values():shutil.copy2(BASE_OUT/'textures'/filename,TEX/filename)
+    for image in bpy.data.images:
+        if image.filepath and (TEX/Path(bpy.path.abspath(image.filepath)).name).is_file():image.filepath=str(TEX/Path(bpy.path.abspath(image.filepath)).name)
 
 # Muzzle marker bones use two geometric points, avoiding engine-specific axis assumptions.
 weapon_contract={'muzzleBone':'WeaponMuzzle','aimBone':'WeaponAim','fireTimesNormalized':[.40,.58]}
 if stage=='bake':
     bpy.ops.object.select_all(action='DESELECT');rig.hide_set(False);rig.select_set(True);bpy.context.view_layer.objects.active=rig;bpy.ops.object.mode_set(mode='EDIT')
     for name,head in [('WeaponMuzzle',(-.450,-.048,.567)),('WeaponAim',(-.450,-.048,.467))]:
-        bone=rig.data.edit_bones.get(name) or rig.data.edit_bones.new(name);bone.head=head;bone.tail=(head[0],head[1],head[2]-.025);bone.parent=rig.data.edit_bones['Hand_R'];bone.use_deform=False
+        bone=rig.data.edit_bones.get(name)
+        if bone is None:
+            bone=rig.data.edit_bones.new(name);bone.head=head;bone.tail=(head[0],head[1],head[2]-.025)
+        bone.parent=rig.data.edit_bones['Hand_R'];bone.use_deform=False
     bpy.ops.object.mode_set(mode='OBJECT');contract['runtime_extra_bones']=['WeaponMuzzle','WeaponAim'];contract['weapon']=weapon_contract
 
 def attach_maps(m,maps):
@@ -31,7 +41,9 @@ def attach_maps(m,maps):
 
 def save_manifest():
     manifest={'materials':[dict(name=n,baseColor='textures/'+m['BaseColor'],normal='textures/'+m['Normal'],roughness='textures/'+m['Roughness'],metallic='textures/'+m['Metallic']) for n,m in material_maps.items()], 'variants':[{'name':n,'fbx':n+'.fbx','label':n.replace('Krag_',''),'deformation':v.get('deformation',contract['deformation'])} for n,v in contract['variants'].items()], 'animations':{n:'animations/'+n+'.fbx' for n in contract['clips']}, 'normalConvention':'OpenGL', 'authoringForward':'-Y','authoringUp':'Z','heightMeters':2.107,'weapon':weapon_contract,'weaponNode':None,'weaponSourceModule':'Weapon_R','weaponGeometryIncluded':True,'weaponDefaultVisible':True,'deformation':contract['deformation'],'locomotion':contract['locomotionCycles'],'status':'Review model, artistic acceptance pending'}
-    (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2))
+    if contract.get('runtime_derivative_sha256'):
+        manifest['runtimeDerivative']={'sha256':contract['runtime_derivative_sha256'],'status':contract.get('runtime_derivative_status'),'trianglesAllModules':contract.get('runtime_triangles_all_modules')}
+    (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),newline='\n')
 
 if stage=='bake':
     visibility={o.name:o.hide_render for o in bpy.data.objects}
@@ -95,15 +107,15 @@ if stage=='bake':
     for g,o in modules.items():o.hide_render=g in contract['variants']['Krag_Natural']['off'];o.hide_set(o.hide_render)
     rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
     contract['material_maps']=material_maps;contract['bone_count']=len(rig.data.bones);contract['runtime_triangles_all_modules']=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())
-    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2))
-    cache_path.write_text(json.dumps({'schemaVersion':1,'sourceBlendSha256':source_sha,'materials':new_cache},indent=2))
+    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2),newline='\n')
+    cache_path.write_text(json.dumps({'schemaVersion':1,'sourceBlendSha256':source_sha,'materials':new_cache},indent=2),newline='\n')
     contract['source_blend_sha256']=source_sha
-    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2))
+    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2),newline='\n')
     save_manifest();bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(ART/'Krag_Runtime.blend'),compress=True)
     print('BAKE/SAVE COMPLETE. Run a fresh process with -- --export-only next.',flush=True)
 else:
     material_maps=contract['material_maps']
-    # Export each character assembly with all five skeletal actions; weapons accompany each separately.
+    # Export each character assembly with all seven actions and its visible weapon.
     for name,v in ({} if '--animations-only' in sys.argv else contract['variants']).items():
         bpy.ops.object.select_all(action='DESELECT');rig.hide_set(False)
         copies=[];copy_meshes=[]
@@ -140,9 +152,9 @@ else:
         bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.context.view_layer.objects.active=rig;rig.animation_data.action=bpy.data.actions[clip];scene.frame_start=1;scene.frame_end=int(bpy.data.actions[clip].frame_range[1]);scene.frame_set(1);scene.name=clip;bind_mesh.select_set(True)
         bpy.ops.export_scene.fbx(filepath=str(OUT/'animations'/(clip+'.fbx')),use_selection=True,object_types={'MESH','ARMATURE'},use_mesh_modifiers=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=False,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0)
     bpy.data.objects.remove(bind_mesh,do_unlink=True);bpy.data.meshes.remove(bind_data)
-    # Separate modular firearm for action visibility attachment.
+    # Preserve a separate modular firearm source export; variant FBXs already include it.
     bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);modules['Weapon_R'].hide_set(False);modules['Weapon_R'].select_set(True)
     bpy.ops.export_scene.fbx(filepath=str(OUT/'Krag_Weapon.fbx'),use_selection=True,object_types={'MESH','ARMATURE'},axis_forward='-Z',axis_up='Y',apply_unit_scale=True,add_leaf_bones=False,bake_anim=False,path_mode='RELATIVE')
     contract['exports']=[n+'.fbx' for n in contract['variants']]+['Krag_Weapon.fbx'];contract['files_are_generated']=True
-    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2));save_manifest()
+    (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2),newline='\n');save_manifest()
     print('EXPORT COMPLETE. Render validation runs separately.',flush=True)

@@ -1,7 +1,8 @@
 """Verify standalone animation FBXs against imported natural-variant skeleton binding."""
-import bpy,json,math,hashlib
+import bpy,json,math,hashlib,argparse,sys
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[3];OUT=ROOT/'benchmark/shared/characters/krag';ART=ROOT/'benchmark/art/krag'
+ap=argparse.ArgumentParser();ap.add_argument('--directory',type=Path);ap.add_argument('--report-tag',default='');opt=ap.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+ROOT=Path(__file__).resolve().parents[3];OUT=opt.directory or ROOT/'benchmark/shared/characters/krag';ART=ROOT/'benchmark/art/krag'
 manifest=json.loads((OUT/'manifest.json').read_text());errors=[];results={}
 def angular_error(a,b):
     x=a.to_quaternion();y=b.to_quaternion();dot=sum(float(x[i])*float(y[i]) for i in range(4));norm=math.sqrt(sum(float(v)*float(v) for v in x)*sum(float(v)*float(v) for v in y));return math.degrees(2*math.acos(min(1,abs(dot)/norm)))
@@ -32,5 +33,5 @@ for clip,relative in manifest['animations'].items():
     result=dict(file=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bones=len(rig.data.bones),maxBindPositionErrorMeters=position_error,maxBindRotationErrorDegrees=rotation_error,missingBones=missing,frameRange=[lo,hi],fps=bpy.context.scene.render.fps,varyingFacialControls=varying)
     results[clip]=result;print('ANIMATION VALIDATED',clip,json.dumps(result),flush=True)
 report=dict(structuralValidationPassed=not errors,errors=errors,clips=results,artisticAcceptance=False)
-(ART/'standalone-animation-roundtrip.json').write_text(json.dumps(report,indent=2))
+(ART/('standalone-animation-roundtrip'+('-'+opt.report_tag if opt.report_tag else '')+'.json')).write_text(json.dumps(report,indent=2),newline='\n')
 if errors:raise RuntimeError('; '.join(errors))

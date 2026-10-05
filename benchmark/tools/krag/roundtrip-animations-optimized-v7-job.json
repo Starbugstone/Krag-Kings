@@ -1,0 +1,22 @@
+{
+  "name": "krag-roundtrip-animations-optimized-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\validate_animation_fbx.py",
+    "--",
+    "--directory",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-optimized",
+    "--report-tag",
+    "v7-optimized"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-roundtrip-animations-optimized-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-roundtrip-animations-optimized-v7.stderr.log",
+  "maxPrivateGB": 8
+}

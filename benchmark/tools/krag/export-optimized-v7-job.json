@@ -1,0 +1,25 @@
+{
+  "name": "krag-export-optimized-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\export_krag.py",
+    "--",
+    "--export-only",
+    "--source-runtime",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\runtime-candidate-v7.contract.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-optimized"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-export-optimized-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-export-optimized-v7.stderr.log",
+  "maxPrivateGB": 8
+}

@@ -15,7 +15,12 @@ OUT.mkdir(parents=True, exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(LIBRARY), load_ui=False)
 report = {'source': str(LIBRARY), 'sourceSha256': hashlib.sha256(LIBRARY.read_bytes()).hexdigest(),
           'status': 'Reference inventory only; no topology adopted into Krag',
-          'texts': {t.name: t.as_string() for t in bpy.data.texts}, 'objects': []}
+          'texts': {t.name: t.as_string() for t in bpy.data.texts}, 'objects': [],'collectionAssets':[]}
+for collection in bpy.data.collections:
+    if collection.asset_data:
+        report['collectionAssets'].append({'name':collection.name,
+            'objects':[obj.name for obj in collection.all_objects],
+            'asset':{key:getattr(collection.asset_data,key,'') for key in ['author','description','copyright','license','catalog_id']}})
 for obj in bpy.data.objects:
     if obj.type != 'MESH':
         continue
