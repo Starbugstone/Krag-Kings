@@ -5,7 +5,8 @@ $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 $project=Join-Path $repo 'benchmark\unity'
 $output=Join-Path $repo 'benchmark\local\unity-source-check'
 New-Item -ItemType Directory -Force $output | Out-Null
-$runtimeResponse=Get-ChildItem (Join-Path $project 'Library\Bee\artifacts') -Filter 'Assembly-CSharp.rsp' -Recurse | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$editorResponse=Get-ChildItem (Join-Path $project 'Library\Bee\artifacts') -Filter 'Assembly-CSharp-Editor.rsp' -Recurse | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$runtimeResponse=if($editorResponse){Get-Item (Join-Path $editorResponse.DirectoryName 'Assembly-CSharp.rsp')}
 if(-not $runtimeResponse){throw 'Run a real Unity compilation first to establish matching references.'}
 $compiler='D:\Unity\Hub\6000.4.4f1\Editor\Data\DotNetSdkRoslyn\csc.dll'
 $dotnet='D:\Unity\Hub\6000.4.4f1\Editor\Data\NetCoreRuntime\dotnet.exe'

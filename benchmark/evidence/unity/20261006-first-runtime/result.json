@@ -1,0 +1,27 @@
+{
+  "status": "Functional verification passed; visual review failed. No performance claim.",
+  "engine": "Unity 6000.4.4f1 HDRP 17.4.0",
+  "resolution": "1920x1080",
+  "api": "Direct3D12",
+  "buildResult": "Succeeded",
+  "buildReportedBytes": 1067866965,
+  "executableSha256": "413a04009d5fc13e03fe4e5c6941a8606c63c103edd08853efc6c9bd57e6151b",
+  "verifyExitCode": 0,
+  "peakProcessPrivateMiB": 4437,
+  "minimumSystemAvailableMiB": 11773,
+  "maximumCommitPercent": 59,
+  "gpuTelemetryScope": "Whole RTX 2060 device, including any other GPU activity; functional captures present. Not an isolated performance run.",
+  "failedVisualChecks": [
+    "Skin rendered red despite tan source base-color maps; generated HDRP diffusion profile shader hashes were zero. Fix prepared but not yet rerendered.",
+    "Krag: sealed mouth and rounded cheeks, rigid scarf flap, simple flat pauldron layers, narrow/primitive hands.",
+    "Nib: slit-like eyes, weak muzzle/lip construction, sparse head/ear fur, rigid bib/scarf, rectangular chin tuft.",
+    "Uniform sand ripples need a more natural surface review."
+  ],
+  "notYetValidated": [
+    "Native Windows mouse/keyboard inputs",
+    "Independent idle and movement/action frame-time sampling",
+    "Corrected skin rendering",
+    "Showcase audio/video recording",
+    "Unreal packaged character render"
+  ]
+}

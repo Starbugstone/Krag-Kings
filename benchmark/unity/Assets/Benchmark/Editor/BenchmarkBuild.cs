@@ -30,6 +30,37 @@ namespace KragKings.Editor
         public static void PrepareAndBuild()
         {
             Prepare();
+            BuildWindows();
+        }
+
+        // Reuse the already validated scene/imports for runtime-code and material
+        // fixes. Refuse stale shared content; changed FBXs require PrepareAndBuild.
+        [MenuItem("Krag Kings/Rebuild prepared Windows demo")]
+        public static void BuildPrepared()
+        {
+            string scenePath=AssetRoot+"/Scenes/Dunes.unity";
+            if(!File.Exists(scenePath))throw new Exception("Prepare the comparison scene first");
+            EditorSceneManager.OpenScene(scenePath,OpenSceneMode.Single);
+            var director=UnityEngine.Object.FindAnyObjectByType<DemoScene>();
+            if(!director||director.contentFingerprint!=ContentFingerprint(Path.Combine(Repo,"benchmark/shared")))
+                throw new Exception("Shared content changed since scene preparation; run PrepareAndBuild");
+            SetProjectSettings();
+            foreach(string path in Directory.GetFiles(Generated,"*.mat"))
+            {
+                var material=AssetDatabase.LoadAssetAtPath<Material>(path.Replace('\\','/'));
+                if(material&&IsSkin(material.name))ApplySkinProfile(material,material.name);
+            }
+            if(RenderSettings.sun)
+            {
+                var sun=RenderSettings.sun.GetComponent<HDAdditionalLightData>();
+                if(sun)sun.angularDiameter=1.5f;
+            }
+            EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene(),scenePath);
+            AssetDatabase.SaveAssets();
+            BuildWindows();
+        }
+        static void BuildWindows()
+        {
             string output=Path.Combine(Repo,"benchmark/builds/Unity/KragKings-Unity.exe");
             Directory.CreateDirectory(Path.GetDirectoryName(output));
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes=new[]{AssetRoot+"/Scenes/Dunes.unity"},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None });
@@ -60,7 +91,7 @@ namespace KragKings.Editor
             }
             Physics.SyncTransforms();
             var director=new GameObject("Demo controller").AddComponent<DemoScene>();
-            director.contentFingerprint=HashText(string.Join("\n",Directory.GetFiles(Imported,"*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta")).OrderBy(p=>p,StringComparer.Ordinal).Select(p=>Path.GetRelativePath(Imported,p).Replace('\\','/')+":"+HashFile(p))));
+            director.contentFingerprint=ContentFingerprint(Imported);
             var contacts=director.gameObject.AddComponent<DemoContacts>();
             var particleShader=AssetDatabase.LoadAssetAtPath<Shader>(AssetRoot+"/Shaders/ParticleLitSoft.shadergraph");
             if(!particleShader)throw new Exception("Lit soft-particle shader missing");
@@ -231,17 +262,23 @@ namespace KragKings.Editor
             material.SetTexture("_BaseColorMap",color);material.SetColor("_BaseColor",Color.white);material.SetTexture("_NormalMap",normal);material.SetFloat("_NormalScale",1);
             material.SetTexture("_MaskMap",Texture(maskPath,false,false,false));material.SetFloat("_Metallic",1);material.SetFloat("_Smoothness",1);
             material.SetFloat("_SmoothnessRemapMin",0);material.SetFloat("_SmoothnessRemapMax",1);material.SetFloat("_AORemapMin",0);material.SetFloat("_AORemapMax",1);
-            if(entry.name.Contains("Skin")||entry.name.Contains("Muzzle")||entry.name.Contains("EarInner"))
-            {
-                bool krag=entry.name.StartsWith("Krag_");
-                material.SetFloat("_MaterialID",0); // HDRP subsurface scattering material.
-                material.SetFloat("_SubsurfaceMask",krag?.25f:.6f);
-                material.SetFloat("_Thickness",entry.name.Contains("Ear")?.15f:.65f);
-                HDMaterial.SetDiffusionProfile(material,SkinProfile(krag));
-            }
+            if(IsSkin(entry.name))ApplySkinProfile(material,entry.name);
             material.SetFloat("_DoubleSidedEnable",1);HDMaterial.ValidateMaterial(material);EditorUtility.SetDirty(material);
             return material;
         }
+        static bool IsSkin(string name)=>name.Contains("Skin")||name.Contains("Muzzle")||name.Contains("EarInner");
+        static void ApplySkinProfile(Material material,string name)
+        {
+            bool krag=name.StartsWith("Krag_");
+            material.SetFloat("_MaterialID",0);
+            material.SetFloat("_SubsurfaceMask",krag?.25f:.6f);
+            material.SetFloat("_Thickness",name.Contains("Ear")?.15f:.65f);
+            HDMaterial.SetDiffusionProfile(material,SkinProfile(krag));
+            HDMaterial.ValidateMaterial(material);EditorUtility.SetDirty(material);
+        }
+        static string ContentFingerprint(string directory)=>HashText(string.Join("\n",Directory.GetFiles(directory,"*",SearchOption.AllDirectories)
+            .Where(p=>new[]{".png",".fbx",".json",".wav"}.Contains(Path.GetExtension(p).ToLowerInvariant()))
+            .OrderBy(p=>p,StringComparer.Ordinal).Select(p=>Path.GetRelativePath(directory,p).Replace('\\','/')+":"+HashFile(p))));
         static DiffusionProfileSettings SkinProfile(bool krag)
         {
             string path=Generated+(krag?"/KragSkinProfile.asset":"/NibSkinProfile.asset");
@@ -253,6 +290,20 @@ namespace KragKings.Editor
                 profile.scatteringDistance=krag?new Color(.45f,.25f,.13f):new Color(1.2f,.55f,.29f);
                 profile.transmissionTint=new Color(.82f,.43f,.20f);
                 profile.worldScale=1;
+                EditorUtility.SetDirty(profile);
+            }
+            // HDRP's asset menu performs this step after CreateAsset because the
+            // shader hash is derived from the persistent GUID. CreateInstance's
+            // earlier OnEnable sees no asset path and leaves hash zero.
+            var serialized=new SerializedObject(profile);
+            if(serialized.FindProperty("profile.hash").uintValue==0)
+            {
+                var hashTable=typeof(DiffusionProfileSettings).Assembly.GetType("UnityEditor.Rendering.HighDefinition.DiffusionProfileHashTable");
+                var update=hashTable?.GetMethod("UpdateDiffusionProfileHashNow",System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.Static);
+                if(update==null)throw new Exception("Pinned HDRP diffusion-profile hash initializer is unavailable");
+                update.Invoke(null,new object[]{profile});
+                serialized.Update();
+                if(serialized.FindProperty("profile.hash").uintValue==0)throw new Exception("Diffusion profile has no persistent shader hash: "+path);
                 EditorUtility.SetDirty(profile);
             }
             return profile;
@@ -286,7 +337,7 @@ namespace KragKings.Editor
         static void MakeLighting()
         {
             var light=new GameObject("Late afternoon sun").AddComponent<Light>();light.type=LightType.Directional;light.transform.rotation=Quaternion.Euler(42,-140,0);light.color=new Color(1,.89f,.73f);light.lightUnit=LightUnit.Lux;light.intensity=55000;light.shadows=LightShadows.Soft;
-            var hd=light.gameObject.AddComponent<HDAdditionalLightData>();hd.EnableShadows(true);hd.SetShadowResolution(2048);
+            var hd=light.gameObject.AddComponent<HDAdditionalLightData>();hd.EnableShadows(true);hd.SetShadowResolution(2048);hd.angularDiameter=1.5f;
             var volume=new GameObject("Desert lighting and grade").AddComponent<Volume>();volume.isGlobal=true;
             var profile=ScriptableObject.CreateInstance<VolumeProfile>();
             var visual=profile.Add<VisualEnvironment>(true);visual.skyType.Override((int)SkyType.PhysicallyBased);
@@ -338,7 +389,7 @@ namespace KragKings.Editor
                 if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path))File.Copy(sourcePath,path,true);
                 AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
                 EditorUtility.UnloadUnusedAssetsImmediate();GC.Collect();GC.WaitForPendingFinalizers();
-                Debug.Log("KRAG_MODEL_IMPORTED "+relative+" privateMB="+System.Diagnostics.Process.GetCurrentProcess().PrivateMemorySize64/(1024*1024));
+                Debug.Log("KRAG_MODEL_IMPORTED "+relative); // External guard records reliable native-process memory.
             }
         }
         static string HashFile(string path){using var hash=SHA256.Create();using var input=File.OpenRead(path);return BitConverter.ToString(hash.ComputeHash(input)).Replace("-","").ToLowerInvariant();}

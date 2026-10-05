@@ -46,13 +46,34 @@ namespace KragKings.Benchmark
         string contactClip;
         float previousContactTime;
         bool hasDestination;
+        static readonly HashSet<DemoUnit> activeUnits=new();
+        public float FootprintRadius=>species=="Krag"?.47f:.29f;
+        void OnEnable()=>activeUnits.Add(this);
+        void OnDisable()=>activeUnits.Remove(this);
+        bool ClearFootprint(Vector3 end,bool swept)
+        {
+            Vector3 start=transform.position;start.y=0;end.y=0;
+            Vector3 segment=end-start;
+            foreach(var other in activeUnits)
+            {
+                if(!other||other==this)continue;
+                Vector3 center=other.transform.position;center.y=0;
+                float radius=FootprintRadius+other.FootprintRadius+.025f;
+                float initial=(start-center).sqrMagnitude;
+                // Let either unit move out of an existing overlap during recovery.
+                if(swept&&initial<radius*radius&&(end-center).sqrMagnitude>initial)continue;
+                Vector3 nearest=swept?start+segment*Mathf.Clamp01(Vector3.Dot(center-start,segment)/Mathf.Max(.000001f,segment.sqrMagnitude)):end;
+                if((nearest-center).sqrMagnitude<radius*radius)return false;
+            }
+            return true;
+        }
         class Leg { public Transform hip, knee, ankle; public float sole;public string side;public bool planted;public Vector3 plantPosition; }
 
         public void Initialize()
         {
             var capsule = GetComponent<CapsuleCollider>() ?? gameObject.AddComponent<CapsuleCollider>();
             capsule.height = bodyHeight;
-            capsule.radius = species == "Krag" ? .47f : .29f;
+            capsule.radius = FootprintRadius;
             capsule.center = Vector3.up * bodyHeight * .5f;
             gameObject.layer = 9;
             Ground();
@@ -135,7 +156,7 @@ namespace KragKings.Benchmark
 
         public bool MoveTo(Vector3 destination, bool walk=false)
         {
-            if (!DemoScene.TryGround(destination, out var hit) || Vector3.Angle(hit.normal, Vector3.up) > 40) return false;
+            if (!DemoScene.TryGround(destination, out var hit) || Vector3.Angle(hit.normal, Vector3.up) > 40 || !ClearFootprint(hit.point,false)) return false;
             Destination = hit.point;
             IsWalking = walk;
             hasDestination = true;
@@ -145,6 +166,9 @@ namespace KragKings.Benchmark
         {
             if (action != "Melee" && action != "Shoot" && action != "Hit") return;
             if (!clips.TryGetValue(action, out var clip)) { Debug.LogError($"{Model.name} missing {action}"); return; }
+            // A new action supersedes the previous move. A fresh right-click during
+            // this action can still queue the next destination independently.
+            hasDestination = false;
             IsMoving = false;
             travelSpeed=0;
             actionRemaining = Mathf.Max(.15f, clip.length);
@@ -189,7 +213,7 @@ namespace KragKings.Benchmark
             travelSpeed=Mathf.MoveTowards(travelSpeed,Mathf.Min(turnLimit,stoppingSpeed),acceleration*Time.deltaTime);
             float speed=travelSpeed;
             Vector3 next=transform.position+delta.normalized*Mathf.Min(delta.magnitude,speed*Time.deltaTime);
-            if (DemoScene.TryGround(next,out var hit) && Vector3.Angle(hit.normal,Vector3.up)<40)
+            if (ClearFootprint(next,true) && DemoScene.TryGround(next,out var hit) && Vector3.Angle(hit.normal,Vector3.up)<40)
             {
                 Vector3 difference=hit.point-transform.position;
                 // Keep speed in surface meters/sec, including the hill's vertical component.

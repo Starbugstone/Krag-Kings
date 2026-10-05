@@ -29,7 +29,7 @@ Work in progress. This directory contains the shared asset pipeline and separate
 | Home | Reset camera |
 | Escape | Quit packaged demo |
 
-Keyboard actions are animation demonstrations, not the final tactical combat rules. This benchmark does not implement the depot mission or broader campaign. Quality, performance and behavior must be reported from actual runs, not inferred from settings or concept images.
+Keyboard actions are animation demonstrations, not the final tactical combat rules. An action cancels the prior movement command; a fresh right-click during an action queues its next destination. Unit footprints block overlap, but this open-dune study does not yet provide navigation around obstacles. This benchmark does not implement the depot mission or broader campaign. Quality, performance and behavior must be reported from actual runs, not inferred from settings or concept images.
 
 ## Environment
 
@@ -49,7 +49,7 @@ The generated backdrop extends to 760 meters in each direction, keeping the cent
 
 Unity's `-benchmarkVerify` exercises selection, variants, seven required clips, facial/body corrective activation, walk/run traversal and foot contacts. Captures remain visual review evidence; a functional pass does not establish concept likeness. `-inputProbe` enables a separate native Windows mouse/keyboard check through `tools/unity/Verify-WindowsInput.ps1`.
 
-Unity's separate `-benchmarkPerformance` mode uses the natural pair and default camera, warms for 15 seconds, then samples 30 seconds of idle animation at native resolution. It disables input-probe writes and takes its evidence capture after sampling. Both modes accept `-evidencePath <folder>`. Do not compare timings from functional capture runs as if they were this fixed workload.
+Unity's separate `-benchmarkPerformance` mode uses the natural pair and default camera, warms for 15 seconds, then samples 30 seconds of idle animation at native resolution. `-benchmarkPerformanceMoving` (launcher mode `PerformanceMoving`) uses the same timing and camera with a repeating 12-second dune run/melee/shoot/hit sequence. Both disable input-probe writes and take their evidence capture after sampling. All modes accept `-evidencePath <folder>`. Do not compare timings from functional capture runs as if they were these fixed workloads. These performance modes still require execution on the reference PC.
 
 `tools/unity/Run-Demo.ps1 -Mode Showcase` prepares a 72-second recording sequence using the same playable actors, assets and real-time clock. It waits for the capture tool to create `showcase-start.flag` in its evidence folder. The sequence covers dune movement, overlapping actions, bionic variants, natural-face portraits and camera movement. Game-only audio is recorded separately for muxing; desktop/microphone sound is not requested. Screenshots and an MP4 from each actual engine are required final deliverables and are not yet produced.
 
@@ -57,7 +57,11 @@ The user prioritizes concept fidelity and smooth framerate together. Tune each e
 
 ## Status
 
-Unity 6000.4.4f1, Blender 5.2 and Unreal 5.8.3 are installed. The initial Unity script/HDRP import and Unreal native editor-module compilation have passed. Subsequent source changes, character imports, runtime rendering and packaged demos still need validation. The current character renders remain unaccepted review candidates, with documented likeness/deformation defects; this is not a finished investor demonstration.
+Unity 6000.4.4f1, Blender 5.2 and Unreal 5.8.3 are installed. Unity's first Windows build succeeded, and its actual 1920 × 1080 Direct3D 12 runtime passed automated checks across seven variants: independent overlapping actions, ray selection, animation/facial/body corrective activation and dune traversal. [First-run evidence](evidence/unity/20261006-first-runtime/result.json) records the build identity, import counts, guard telemetry and failed visual checks. This is functional integration evidence, not visual acceptance or a framerate benchmark.
+
+The first Unity captures show incorrectly red skin; generated diffusion profiles had zero shader hashes. A source correction now performs HDRP's GUID-based profile initialization after the asset is saved, and rejects a zero result before assigning a material. That correction still needs a new build/render. Krag face/hand/scarf/armor construction and Nib face/clothing/groom likeness also remain visibly below the concepts. The current character renders remain unaccepted review candidates; this is not a finished investor demonstration.
+
+Unreal's native editor-module compilation has passed, but the dense character importer exceeded its guarded memory limit. Reduced runtime candidates are being validated independently of the detailed masters. Unreal character imports, packaged execution and the final screenshot/video evidence from both engines remain unfinished.
 
 The first full Unity character import on 6 October imported Nib Natural, then the task guard stopped Krag Piston at 9,595 MiB editor private memory, with 2,978 MiB system memory available and 77% commit. The first Unreal import with the renderer active also reached its private-memory cap while importing Krag Natural. These are importer costs, not game framerate or runtime VRAM measurements. Follow-up work applies import settings before the first load, processes models separately, and prepares lower-cost runtime derivatives while preserving the detailed masters. Unity's immediate import candidate keeps every position morph but omits per-shape normal/tangent buffers; facial lighting must be reviewed before retaining that tradeoff.
 

@@ -29,7 +29,7 @@ namespace KragKings.Benchmark
         readonly List<float> frameTimes=new();
         readonly List<string> runtimeErrors=new();
         bool verification;
-        bool performanceOnly,performanceSampling;
+        bool performanceOnly,performanceSampling,performanceMoving;
         long previousFrameTick;
         bool inputProbe;
         float nextProbe;
@@ -53,7 +53,8 @@ namespace KragKings.Benchmark
             ResetCamera();
             string[] args=Environment.GetCommandLineArgs();
             verification=args.Contains("-benchmarkVerify");
-            performanceOnly=args.Contains("-benchmarkPerformance");
+            performanceMoving=args.Contains("-benchmarkPerformanceMoving");
+            performanceOnly=args.Contains("-benchmarkPerformance")||performanceMoving;
             if(verification && performanceOnly)throw new InvalidOperationException("Run functional verification and performance sampling separately.");
             inputProbe=args.Contains("-inputProbe") && !performanceOnly;
             evidencePath=Path.Combine(Application.persistentDataPath,"Evidence");
@@ -382,23 +383,49 @@ namespace KragKings.Benchmark
         {
             foreach(var unit in units)unit.SetVariant(0);
             Select(units[0]);ResetCamera();
+            Coroutine movement=performanceMoving?StartCoroutine(PerformanceMotion()):null;
             yield return new WaitForSecondsRealtime(15);
             frameTimes.Clear();performanceSampling=true;
             yield return new WaitForSecondsRealtime(30);
             performanceSampling=false;
+            if(movement!=null)StopCoroutine(movement);
             var times=frameTimes.OrderBy(x=>x).ToArray();
             var report=new PerformanceReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,
                 contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,
                 graphicsAPI=SystemInfo.graphicsDeviceType.ToString(),cpu=SystemInfo.processorType,vramMB=SystemInfo.graphicsMemorySize,
                 resolution=$"{Screen.width}x{Screen.height}",warmupSeconds=15,sampleSeconds=30,frames=times.Length,
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
-                workload="Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
+                workload=performanceMoving?"Natural Krag and Nib, repeated 12-second run/melee/shoot/hit sequence, fixed default camera; no captures or input probes during sample":"Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
                 quality="HDRP High Fidelity, TAA, fixed native resolution, SSGI/SSR, no hardware ray tracing; VSync disabled",
                 failures=runtimeErrors.Distinct().ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"performance.json"),JsonUtility.ToJson(report,true));
             ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"performance-view.png"));
             yield return new WaitForSecondsRealtime(1);
             Application.Quit(report.failures.Length==0&&times.Length>0?0:1);
+        }
+        IEnumerator PerformanceMotion()
+        {
+            Vector3 kragOrigin=units[0].transform.position,nibOrigin=units[1].transform.position;
+            var offsets=new[]{new Vector3(.6f,0,2),new Vector3(-.4f,0,1.8f)};
+            float[] times={0,3,4.3f,6,9};
+            double cycleStart=Time.realtimeSinceStartupAsDouble;
+            while(true)
+            {
+                for(int stage=0;stage<times.Length;stage++)
+                {
+                    while(Time.realtimeSinceStartupAsDouble-cycleStart<times[stage])yield return null;
+                    switch(stage)
+                    {
+                        case 0: units[0].MoveTo(kragOrigin+offsets[0]);units[1].MoveTo(nibOrigin+offsets[1]);break;
+                        case 1: units[0].Trigger("Melee");units[1].Trigger("Shoot");break;
+                        case 2: units[0].Trigger("Hit");units[1].Trigger("Melee");break;
+                        case 3: units[0].MoveTo(kragOrigin);units[1].MoveTo(nibOrigin);break;
+                        case 4: units[0].Trigger("Shoot");units[1].Trigger("Hit");break;
+                    }
+                }
+                while(Time.realtimeSinceStartupAsDouble-cycleStart<12)yield return null;
+                cycleStart+=12;
+            }
         }
         static float Percentile(float[] sorted,float p)=>sorted.Length>0?sorted[Mathf.Clamp(Mathf.CeilToInt(sorted.Length*p)-1,0,sorted.Length-1)]:0;
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}

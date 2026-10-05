@@ -1,0 +1,185 @@
+{
+    "engine": "6000.4.4f1",
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "resolution": "1920x1080",
+    "contentFingerprint": "e0b7da174e1908bbc21552ac0c1c7c63fc8970e5eec6700d946a98e61b06a24d",
+    "buildGuid": "eed9e49a32964f35be37eb6a7e49597f",
+    "checks": [
+        "Independent overlapping Krag melee and Nib shooting while changing camera",
+        "Krag: ray selection",
+        "Krag_Natural: variants/actions exercised",
+        "Krag_Crusher: variants/actions exercised",
+        "Krag_IronJaw: variants/actions exercised",
+        "Krag_Piston: variants/actions exercised",
+        "Krag: dune traversal completed",
+        "Nib: ray selection",
+        "Nib_Natural: variants/actions exercised",
+        "Nib_GripReplacement: variants/actions exercised",
+        "Nib_LegReplacement: variants/actions exercised",
+        "Nib: dune traversal completed"
+    ],
+    "failures": [],
+    "deformation": [
+        {
+            "variant": "Krag_Natural",
+            "maximumBodyMorphWeight": 74.64566802978516,
+            "maximumFacialMorphWeight": 99.7288818359375,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 83.7966537475586
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.50357055664063
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.53475189208985
+                }
+            ]
+        },
+        {
+            "variant": "Krag_Crusher",
+            "maximumBodyMorphWeight": 75.5408935546875,
+            "maximumFacialMorphWeight": 99.12069702148438,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 84.7126235961914
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.21597290039063
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.66024780273438
+                }
+            ]
+        },
+        {
+            "variant": "Krag_IronJaw",
+            "maximumBodyMorphWeight": 75.59886932373047,
+            "maximumFacialMorphWeight": 99.31925201416016,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 82.1242904663086
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.51336669921875
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.72145080566406
+                }
+            ]
+        },
+        {
+            "variant": "Krag_Piston",
+            "maximumBodyMorphWeight": 74.12129974365235,
+            "maximumFacialMorphWeight": 99.7125015258789,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 81.66727447509766
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.42459106445313
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.78627014160156
+                }
+            ]
+        },
+        {
+            "variant": "Nib_Natural",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 97.78108978271485,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 76.03799438476563
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 54.00946807861328
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.92897033691406
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.70826721191406
+                }
+            ]
+        },
+        {
+            "variant": "Nib_GripReplacement",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 97.78653717041016,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 77.57473754882813
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 54.111045837402347
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.92835235595703
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.65670776367188
+                }
+            ]
+        },
+        {
+            "variant": "Nib_LegReplacement",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 97.82955932617188,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 73.15196228027344
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 53.95771408081055
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.91146850585938
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.56006622314453
+                }
+            ]
+        }
+    ]
+}

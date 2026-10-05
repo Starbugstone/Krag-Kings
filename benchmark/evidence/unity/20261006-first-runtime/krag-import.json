@@ -1,0 +1,262 @@
+{
+    "engine": "6000.4.4f1",
+    "species": "krag",
+    "variants": [
+        {
+            "name": "Krag_Natural",
+            "fbxSha256": "0778442610a5a0da8ebc4aec6a8975060a3e0cca8755291a2ab43951666bea9d",
+            "renderers": 1,
+            "vertices": 941192,
+            "triangles": 1756948,
+            "materialSlots": 13,
+            "bones": 68,
+            "morphTargets": 25,
+            "correctiveDrivers": 25,
+            "clips": [
+                "FacePerformance",
+                "Hit",
+                "Idle",
+                "Melee",
+                "Run",
+                "Shoot",
+                "Walk"
+            ],
+            "clipDetails": [
+                {
+                    "name": "FacePerformance",
+                    "seconds": 5.966667175292969,
+                    "varyingTransformCurves": 30,
+                    "varyingFaceCurves": 30
+                },
+                {
+                    "name": "Hit",
+                    "seconds": 0.9000000357627869,
+                    "varyingTransformCurves": 50,
+                    "varyingFaceCurves": 24
+                },
+                {
+                    "name": "Idle",
+                    "seconds": 2.0,
+                    "varyingTransformCurves": 28,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Melee",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 58,
+                    "varyingFaceCurves": 26
+                },
+                {
+                    "name": "Run",
+                    "seconds": 0.6000000238418579,
+                    "varyingTransformCurves": 73,
+                    "varyingFaceCurves": 18
+                },
+                {
+                    "name": "Shoot",
+                    "seconds": 1.0,
+                    "varyingTransformCurves": 35,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Walk",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 66,
+                    "varyingFaceCurves": 11
+                }
+            ]
+        },
+        {
+            "name": "Krag_Crusher",
+            "fbxSha256": "9071c05c7e83f927b11804cec4b6e2c1552a547271a12749833fa7d1359a280b",
+            "renderers": 1,
+            "vertices": 860776,
+            "triangles": 1592198,
+            "materialSlots": 14,
+            "bones": 68,
+            "morphTargets": 25,
+            "correctiveDrivers": 24,
+            "clips": [
+                "FacePerformance",
+                "Hit",
+                "Idle",
+                "Melee",
+                "Run",
+                "Shoot",
+                "Walk"
+            ],
+            "clipDetails": [
+                {
+                    "name": "FacePerformance",
+                    "seconds": 5.966667175292969,
+                    "varyingTransformCurves": 30,
+                    "varyingFaceCurves": 30
+                },
+                {
+                    "name": "Hit",
+                    "seconds": 0.9000000357627869,
+                    "varyingTransformCurves": 50,
+                    "varyingFaceCurves": 24
+                },
+                {
+                    "name": "Idle",
+                    "seconds": 2.0,
+                    "varyingTransformCurves": 28,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Melee",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 58,
+                    "varyingFaceCurves": 26
+                },
+                {
+                    "name": "Run",
+                    "seconds": 0.6000000238418579,
+                    "varyingTransformCurves": 73,
+                    "varyingFaceCurves": 18
+                },
+                {
+                    "name": "Shoot",
+                    "seconds": 1.0,
+                    "varyingTransformCurves": 35,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Walk",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 66,
+                    "varyingFaceCurves": 11
+                }
+            ]
+        },
+        {
+            "name": "Krag_IronJaw",
+            "fbxSha256": "3219a90bf02129a902e783608cb84bcfe8c54d440628a8cb0152c74824d9bc3a",
+            "renderers": 1,
+            "vertices": 946487,
+            "triangles": 1764276,
+            "materialSlots": 13,
+            "bones": 68,
+            "morphTargets": 25,
+            "correctiveDrivers": 25,
+            "clips": [
+                "FacePerformance",
+                "Hit",
+                "Idle",
+                "Melee",
+                "Run",
+                "Shoot",
+                "Walk"
+            ],
+            "clipDetails": [
+                {
+                    "name": "FacePerformance",
+                    "seconds": 5.966667175292969,
+                    "varyingTransformCurves": 30,
+                    "varyingFaceCurves": 30
+                },
+                {
+                    "name": "Hit",
+                    "seconds": 0.9000000357627869,
+                    "varyingTransformCurves": 50,
+                    "varyingFaceCurves": 24
+                },
+                {
+                    "name": "Idle",
+                    "seconds": 2.0,
+                    "varyingTransformCurves": 28,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Melee",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 58,
+                    "varyingFaceCurves": 26
+                },
+                {
+                    "name": "Run",
+                    "seconds": 0.6000000238418579,
+                    "varyingTransformCurves": 73,
+                    "varyingFaceCurves": 18
+                },
+                {
+                    "name": "Shoot",
+                    "seconds": 1.0,
+                    "varyingTransformCurves": 35,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Walk",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 66,
+                    "varyingFaceCurves": 11
+                }
+            ]
+        },
+        {
+            "name": "Krag_Piston",
+            "fbxSha256": "756a07826a627c261e29bb8fec79f857ead4a1e5750c43d062d25b5205c384f9",
+            "renderers": 1,
+            "vertices": 909716,
+            "triangles": 1698892,
+            "materialSlots": 13,
+            "bones": 68,
+            "morphTargets": 25,
+            "correctiveDrivers": 25,
+            "clips": [
+                "FacePerformance",
+                "Hit",
+                "Idle",
+                "Melee",
+                "Run",
+                "Shoot",
+                "Walk"
+            ],
+            "clipDetails": [
+                {
+                    "name": "FacePerformance",
+                    "seconds": 5.966667175292969,
+                    "varyingTransformCurves": 30,
+                    "varyingFaceCurves": 30
+                },
+                {
+                    "name": "Hit",
+                    "seconds": 0.9000000357627869,
+                    "varyingTransformCurves": 50,
+                    "varyingFaceCurves": 24
+                },
+                {
+                    "name": "Idle",
+                    "seconds": 2.0,
+                    "varyingTransformCurves": 28,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Melee",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 58,
+                    "varyingFaceCurves": 26
+                },
+                {
+                    "name": "Run",
+                    "seconds": 0.6000000238418579,
+                    "varyingTransformCurves": 73,
+                    "varyingFaceCurves": 18
+                },
+                {
+                    "name": "Shoot",
+                    "seconds": 1.0,
+                    "varyingTransformCurves": 35,
+                    "varyingFaceCurves": 11
+                },
+                {
+                    "name": "Walk",
+                    "seconds": 1.2000000476837159,
+                    "varyingTransformCurves": 66,
+                    "varyingFaceCurves": 11
+                }
+            ]
+        }
+    ]
+}
