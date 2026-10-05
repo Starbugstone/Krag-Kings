@@ -13,7 +13,7 @@ Start with the [full investor POC realization plan](krag-kings-design/15-poc-rea
 | [Realization and integration plan](krag-kings-design/15-poc-realisation-plan.md) | Scope, engine comparison, systems, production dependencies and deliverables |
 | [Characters and merchandise](krag-kings-design/16-character-and-merch-production.md) | Detailed anatomy, clothing, armor, tattoos, full limbs, rigging and quality gates |
 | [Decisions and acceptance](krag-kings-design/17-decisions-and-acceptance.md) | Open questions, traceability, verification and release requirements |
-| [New concept gallery and prompts](krag-kings-design/18-strategic-concept-art.md) | Campaign, base-building, world-map and modular barrel-shaped Tin Can explorations |
+| [New concept gallery and prompts](krag-kings-design/18-strategic-concept-art.md) | Campaign UX/UI, base-building, sparse regional map and approved modular barrel-shaped Tin Can direction; review status and prompt history |
 | [Audio and voices](krag-kings-design/19-poc-audio-and-voice-plan.md) | Music, effects, Krag/Nib personalities, speech, integration and mix testing |
 | [Original design pack](krag-kings-design/00-overview-and-campaign.md) | Wider rules and historical proposals; current decisions take precedence |
 

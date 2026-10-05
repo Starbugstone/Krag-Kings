@@ -23,6 +23,9 @@
 | D13 | Audio includes music, effects and AI-generated English character speech/quips. Krags are deep and gruff; Nibs higher-pitched and faster-speaking. Keep recordings replaceable with actors if finances allow. |
 | D14 | No budget/deadline set; prioritize quality and report real production dependencies. |
 | D15 | Use the user's ASUS ROG Strix G17 as the medium-range performance reference; its exact configuration is locally verified below. |
+| D16 | Campaign presentation must be a UX/UI concept showing management and travel decisions. The first cinematic campaign sheet does not satisfy this requirement. |
+| D17 | World map must show a much larger, sparser region, taking strategic viewing scale and spacing from Total War as a reference while retaining the original Krag Kings style. Geography remains provisional. |
+| D18 | Modular Tin Can sheet 14 is approved as the visual direction. Production turnarounds, clearances and module mechanics still need review. Base-building and revised campaign/map concepts remain awaiting user review. |
 
 ## 2. Resolved follow-up questions
 
@@ -64,7 +67,7 @@ These have not been silently approved. They are concrete review items for the pl
 | Boss/Nib scale | Art + geometry | Actual body/gear clears legal routes and seats; invalid fits explained; no temporary rescaling |
 | Persistent consequences | Campaign/persistence | Mission → debrief → treatment → restart application → completion → redeploy with same identity |
 | Audio personalities | Audio/voice + dialogue scheduler | Approved auditions, intelligible contextual speech, correct captions and no repeated/stale barks |
-| Wider-game vision | Concept art | Campaign, fort and map sheets retain original style and are labelled concepts |
+| Wider-game vision | Concept art | Campaign UX/UI shows management/travel decisions; the regional map has broad terrain and sparse small locations; fort and map concepts retain original style. All are labelled concepts and reviewed by the user. |
 | Windows delivery | Build engineering + QA | Clean-machine startup, offline play, settings, saves, complete run and reliable reset/exit |
 
 ## 5. Rule and state verification

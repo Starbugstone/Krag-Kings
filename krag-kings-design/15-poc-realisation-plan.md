@@ -26,7 +26,7 @@ The user has not set a budget or deadline. This plan therefore sequences quality
 | Signature machinery | Proposed core: heavy gun, crusher claw, iron jaw, burst jetpack and hostile wrecking-ball truck |
 | Consequences | Stable downed crew and recovery, persistent wound/history, debrief XP/perk, treatment time, deployment lock and return to readiness |
 | Audio | Original music direction and score, sound effects/ambience, distinct Krag/Nib speech and quips, subtitles, audio settings and a tested final mix |
-| Presentation of the wider game | Campaign vision, fort progression/modules and 3D world-map concept sheets, explicitly marked visual exploration |
+| Presentation of the wider game | Campaign UX/UI for management and travel decisions, fort progression/modules, and a broad sparse 3D regional map with small locations and extensive terrain between them. Explicitly marked visual exploration; cinematic key art does not fulfill the campaign interface requirement. |
 | Investor handoff | The tested build, a concise play guide, actual in-engine capture, art comparison sheets, roadmap, source/asset manifest and validation report |
 
 The old design's four friendly / three enemy roster and one standard truck / one bike-sidecar / one hostile wrecker are a strong **proposed content baseline**, not a requirement to reproduce story dialogue or personalities unchanged. Confirm the named cast and final catalogue at G0.
