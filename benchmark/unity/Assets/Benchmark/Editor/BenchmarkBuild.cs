@@ -72,6 +72,12 @@ namespace KragKings.Editor
             contacts.kragSteps=Enumerable.Range(1,6).Select(i=>AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Krag_Sand_"+i.ToString("00")+".wav")).ToArray();
             contacts.nibSteps=Enumerable.Range(1,6).Select(i=>AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Nib_Sand_"+i.ToString("00")+".wav")).ToArray();
             if(contacts.kragSteps.Any(c=>!c)||contacts.nibSteps.Any(c=>!c))throw new Exception("Shared sand contact audio missing");
+            var combat=director.gameObject.AddComponent<DemoCombatAudio>();
+            combat.kragShot=AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Krag_Shot.wav");
+            combat.nibShot=AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Nib_Shot.wav");
+            combat.kragHit=AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Krag_Hit.wav");
+            combat.nibHit=AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Nib_Hit.wav");
+            if(!combat.kragShot||!combat.nibShot||!combat.kragHit||!combat.nibHit)throw new Exception("Shared action audio missing");
             var camera=new GameObject("Camera").AddComponent<Camera>();camera.tag="MainCamera";camera.fieldOfView=38;camera.nearClipPlane=.08f;camera.farClipPlane=1800;
             camera.gameObject.AddComponent<DemoAudioRecorder>();camera.gameObject.AddComponent<AudioListener>();
             var hdCamera=camera.gameObject.AddComponent<HDAdditionalCameraData>();hdCamera.antialiasing=HDAdditionalCameraData.AntialiasingMode.TemporalAntialiasing;hdCamera.allowDynamicResolution=false;
@@ -300,7 +306,7 @@ namespace KragKings.Editor
         static void SetProjectSettings()
         {
             PlayerSettings.companyName="Krag Kings";PlayerSettings.productName="Krag Kings — Engine Comparison";PlayerSettings.colorSpace=ColorSpace.Linear;
-            PlayerSettings.defaultScreenWidth=1920;PlayerSettings.defaultScreenHeight=1080;PlayerSettings.fullScreenMode=FullScreenMode.Windowed;PlayerSettings.runInBackground=true;
+            PlayerSettings.defaultScreenWidth=1920;PlayerSettings.defaultScreenHeight=1080;PlayerSettings.fullScreenMode=FullScreenMode.FullScreenWindow;PlayerSettings.runInBackground=true;
             PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Standalone,ScriptingImplementation.Mono2x);
             PlayerSettings.SetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64,false);
             PlayerSettings.SetGraphicsAPIs(BuildTarget.StandaloneWindows64,new[]{GraphicsDeviceType.Direct3D12,GraphicsDeviceType.Direct3D11});
@@ -316,11 +322,23 @@ namespace KragKings.Editor
         }
         static void CopyTree(string source,string destination)
         {
-            foreach(var sourcePath in Directory.GetFiles(source,"*",SearchOption.AllDirectories))
+            var files=Directory.GetFiles(source,"*",SearchOption.AllDirectories);
+            foreach(var sourcePath in files.Where(p=>!p.EndsWith(".fbx",StringComparison.OrdinalIgnoreCase)))
             {
                 string ext=Path.GetExtension(sourcePath).ToLowerInvariant();if(ext!=".fbx"&&ext!=".png"&&ext!=".json"&&ext!=".wav")continue;
                 string relative=Path.GetRelativePath(source,sourcePath);string path=Path.Combine(destination,relative);Directory.CreateDirectory(Path.GetDirectoryName(path));
                 if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path)) File.Copy(sourcePath,path,true);
+            }
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            // Process high-resolution FBXs separately, releasing temporary model
+            // allocations between imports instead of retaining the entire batch.
+            foreach(var sourcePath in files.Where(p=>p.EndsWith(".fbx",StringComparison.OrdinalIgnoreCase)).OrderBy(p=>new FileInfo(p).Length))
+            {
+                string relative=Path.GetRelativePath(source,sourcePath);string path=Path.Combine(destination,relative).Replace('\\','/');Directory.CreateDirectory(Path.GetDirectoryName(path));
+                if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path))File.Copy(sourcePath,path,true);
+                AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
+                EditorUtility.UnloadUnusedAssetsImmediate();GC.Collect();GC.WaitForPendingFinalizers();
+                Debug.Log("KRAG_MODEL_IMPORTED "+relative+" privateMB="+System.Diagnostics.Process.GetCurrentProcess().PrivateMemorySize64/(1024*1024));
             }
         }
         static string HashFile(string path){using var hash=SHA256.Create();using var input=File.OpenRead(path);return BitConverter.ToString(hash.ComputeHash(input)).Replace("-","").ToLowerInvariant();}

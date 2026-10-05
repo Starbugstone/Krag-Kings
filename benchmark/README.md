@@ -43,7 +43,7 @@ z = 0.8 + 1.1*sin(0.105*x + 0.035*y)
 
 The runtime collision mesh is authoritative for grounding and destination placement. Terrain movement must be checked uphill, downhill and across dune crests, including the run animation's feet.
 
-The source generator extends the backdrop to 760 meters in each direction, keeping the central comparison surface unchanged. Distant rolling dunes prevent the terrain edge appearing in the camera. Regenerate with `tools/environment/Run-Environment.ps1` through the shared memory guard.
+The generated backdrop extends to 760 meters in each direction, keeping the central comparison surface unchanged. Distant rolling dunes are intended to prevent the terrain edge appearing in the camera; actual engine framing still needs review. Regenerate with `tools/environment/Run-Environment.ps1` through the shared memory guard.
 
 ## Runtime verification
 
@@ -59,6 +59,8 @@ The user prioritizes concept fidelity and smooth framerate together. Tune each e
 
 Unity 6000.4.4f1, Blender 5.2 and Unreal 5.8.3 are installed. The initial Unity script/HDRP import and Unreal native editor-module compilation have passed. Subsequent source changes, character imports, runtime rendering and packaged demos still need validation. The current character renders remain unaccepted review candidates, with documented likeness/deformation defects; this is not a finished investor demonstration.
 
+The first full Unity character import on 6 October imported Nib Natural, then the task guard stopped Krag Piston at 9,595 MiB editor private memory, with 2,978 MiB system memory available and 77% commit. The first Unreal import with the renderer active also reached its private-memory cap while importing Krag Natural. These are importer costs, not game framerate or runtime VRAM measurements. Follow-up work applies import settings before the first load, processes models separately, and prepares lower-cost runtime derivatives while preserving the detailed masters. Unity's immediate import candidate keeps every position morph but omits per-shape normal/tangent buffers; facial lighting must be reviewed before retaining that tradeoff.
+
 The host rebooted during initial work. See [the crash investigation](CRASH-INVESTIGATION.md) for observed Windows stop-code and Blender memory-error evidence. Heavy generation/import/build/render steps now run serially through `tools/Run-HeavyTask.ps1`, with memory telemetry in ignored local files.
 
 ## Reproducible assets
@@ -66,5 +68,7 @@ The host rebooted during initial work. See [the crash investigation](CRASH-INVES
 Large Blender/FBX/texture assets use Git LFS. After cloning, install Git LFS and run `git lfs pull` before rebuilding assets or opening the projects. Engine caches, installers, build outputs and local diagnostics are excluded from version control.
 
 Sand contact candidates derive from Fantozzi's CC0 recordings, with preserved originals, checksums and processing recipes under `art/audio/` and `shared/audio/manifest.json`. `tools/environment/build_contacts.py` also creates the shared analytic dust mask. Sound balance and visual contact effects require an actual engine review. These are not voice recordings or an approved final mix.
+
+Candidate shot and hit sounds use the CC0 Free Firearm Sound Library and Kenney Impact Sounds. The four selected originals and provenance are preserved under `art/audio/combat/`; `tools/environment/build_action_audio.py` records cropping, pitch/filtering and non-clipping output checks in `shared/audio/action-audio.json`. Actual synchronization and game mix remain review items.
 
 The Unity lit soft-particle shader comes from its pinned HDRP package and stays inside the Unity project, with its source/license record beside it. It is not a shared Unreal asset.

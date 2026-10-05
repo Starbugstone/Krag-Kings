@@ -1,0 +1,53 @@
+{
+  "status": "Candidate effects; mix and synchronization review pending",
+  "sources": {
+    "free-firearm": {
+      "title": "The Free Firearm Sound Library",
+      "authors": [
+        "Ben Jaszczak",
+        "Brian Nelson",
+        "Kevin Heras",
+        "Matthew Nanney"
+      ],
+      "assetPage": "https://opengameart.org/content/the-free-firearm-sound-library",
+      "download": "https://opengameart.org/sites/default/files/Prepared%20SFX%20Library.7z",
+      "archiveSha256": "cc1ab5a99a0a365105c7c5dd783f4b0b1fe90938114d3ceec53856bfe005f7d6",
+      "license": "CC0"
+    },
+    "kenney-impact": {
+      "title": "Impact Sounds",
+      "author": "Kenney",
+      "assetPage": "https://kenney.nl/assets/impact-sounds",
+      "download": "https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip",
+      "archiveSha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "license": "CC0"
+    }
+  },
+  "files": [
+    {
+      "file": "FreeFirearm_K17.wav",
+      "originalPath": "Prepared SFX Library/Model 12/K_17P.wav",
+      "pack": "free-firearm",
+      "sha256": "df18e60e5742bc18373ff46e5c471ef71849b138120d165f26104b249679ace0"
+    },
+    {
+      "file": "FreeFirearm_A42.wav",
+      "originalPath": "Prepared SFX Library/1911/A_42P.wav",
+      "pack": "free-firearm",
+      "sha256": "8e84438e771c157155a6a1ff47a6a7a7d81b6f39b185d41e426c57337a82254a"
+    },
+    {
+      "file": "impactPunch_heavy_000.ogg",
+      "originalPath": "Audio/impactPunch_heavy_000.ogg",
+      "pack": "kenney-impact",
+      "sha256": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8"
+    },
+    {
+      "file": "impactSoft_medium_000.ogg",
+      "originalPath": "Audio/impactSoft_medium_000.ogg",
+      "pack": "kenney-impact",
+      "sha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3"
+    }
+  ],
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+}

@@ -34,6 +34,7 @@ namespace KragKings.Benchmark
         bool inputProbe;
         float nextProbe;
         string evidencePath;
+        DemoCombatAudio combatAudio;
 
         public static bool TryGround(Vector3 point,out RaycastHit hit) => Physics.Raycast(new Vector3(point.x,60,point.z),Vector3.down,out hit,120,1<<8,QueryTriggerInteraction.Ignore);
 
@@ -43,6 +44,7 @@ namespace KragKings.Benchmark
             QualitySettings.vSyncCount=0;
             Application.targetFrameRate=-1;
             var contacts=GetComponent<DemoContacts>();
+            combatAudio=GetComponent<DemoCombatAudio>();
             foreach(var unit in units) {unit.Initialize();unit.ActionStarted+=Effect;if(contacts)contacts.Attach(unit);}
             selectionRing=Ring("Selection",teal,.023f);
             destinationRing=Ring("Destination",new Color(1,.60f,.22f),.017f);
@@ -209,7 +211,7 @@ namespace KragKings.Benchmark
         }
         [Serializable] class InputUnit {public string species,action;public bool facePlaying;public Vector3 position,screen;}
         [Serializable] class InputProbe {public int frame,width,height,variant;public string selected,action;public bool moving,walking,facePlaying;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
-        void Effect(DemoUnit unit,string action) { if(action=="Shoot") StartCoroutine(Tracer(unit)); }
+        void Effect(DemoUnit unit,string action) { if(combatAudio)combatAudio.Action(unit,action);if(action=="Shoot")StartCoroutine(Tracer(unit)); }
         IEnumerator Tracer(DemoUnit unit)
         {
             int version=unit.ActionVersion;float began=Time.time;
@@ -219,6 +221,7 @@ namespace KragKings.Benchmark
                 while(Time.time<due){if(unit.ActionVersion!=version)yield break;yield return null;}
                 yield return new WaitForEndOfFrame();
                 if(unit.ActionVersion!=version)yield break;
+                if(combatAudio)combatAudio.Shot(unit);
                 Vector3 start=unit.ShotOrigin,direction=unit.ShotDirection,end=start+direction*7;
                 if(Physics.Raycast(start,direction,out var ground,7,1<<8))end=ground.point;
                 var go=new GameObject("Shot tracer");var line=go.AddComponent<LineRenderer>();

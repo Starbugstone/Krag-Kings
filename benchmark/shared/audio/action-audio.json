@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "Candidate action effects; actual game mix and listening review pending",
+  "source": "../../../art/audio/combat/source.json",
+  "sampleRate": 48000,
+  "channels": 1,
+  "timing": "Shots use each character weapon.fireTimesNormalized; Hit uses normalized 0.22, provisional tuning.",
+  "effects": [
+    {
+      "name": "Krag_Shot",
+      "file": "Krag_Shot.wav",
+      "source": "FreeFirearm_K17.wav",
+      "sourceOnsetSeconds": 0.9074166666666666,
+      "filterRecipe": "atrim=start=0.901417:duration=2.3,asetpts=PTS-STARTPTS,asetrate=40800,aresample=48000,highpass=f=45,bass=g=3:f=100:w=0.8,afade=t=out:st=2.1399999999999997:d=0.16,alimiter=limit=0.72:level=false:latency=true",
+      "durationSeconds": 5.411770833333334,
+      "peakLinear": 0.720001220703125,
+      "runtimeGain": 0.55,
+      "sha256": "8e19df68e12555e106ae1f2dc6e885fa9e2e03ad0ff8215867d397b1c93cc294"
+    },
+    {
+      "name": "Nib_Shot",
+      "file": "Nib_Shot.wav",
+      "source": "FreeFirearm_A42.wav",
+      "sourceOnsetSeconds": 0.9414583333333333,
+      "filterRecipe": "atrim=start=0.935458:duration=1.6,asetpts=PTS-STARTPTS,highpass=f=110,afade=t=out:st=1.4400000000000002:d=0.16,alimiter=limit=0.72:level=false:latency=true",
+      "durationSeconds": 1.6,
+      "peakLinear": 0.724334716796875,
+      "runtimeGain": 0.55,
+      "sha256": "0f81688bada45e9842c615b77b45be07d3daed40708f794641330d6ca9dc2dcb"
+    },
+    {
+      "name": "Krag_Hit",
+      "file": "Krag_Hit.wav",
+      "source": "impactPunch_heavy_000.ogg",
+      "sourceOnsetSeconds": 0.002125,
+      "filterRecipe": "atrim=start=0.000000:duration=0.9,asetpts=PTS-STARTPTS,asetrate=43200,aresample=48000,highpass=f=45,afade=t=out:st=0.74:d=0.16,alimiter=limit=0.72:level=false:latency=true",
+      "durationSeconds": 0.6625625,
+      "peakLinear": 0.720001220703125,
+      "runtimeGain": 0.6,
+      "sha256": "da4cc3676451725022a8b3a7d0e7d380fa21b1a5c644ec3ae9a00a2aeb55307b"
+    },
+    {
+      "name": "Nib_Hit",
+      "file": "Nib_Hit.wav",
+      "source": "impactSoft_medium_000.ogg",
+      "sourceOnsetSeconds": 0.0003541666666666667,
+      "filterRecipe": "atrim=start=0.000000:duration=0.65,asetpts=PTS-STARTPTS,highpass=f=110,afade=t=out:st=0.49:d=0.16,alimiter=limit=0.72:level=false:latency=true",
+      "durationSeconds": 0.11510416666666666,
+      "peakLinear": 0.535919189453125,
+      "runtimeGain": 0.6,
+      "sha256": "24b5e8cc9dddb5625041e58e8d52d406cd2fa76d2e715eb81c19e15a87c2315e"
+    }
+  ]
+}
