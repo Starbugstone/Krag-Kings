@@ -1,0 +1,26 @@
+{
+  "name": "krag-review-walk_contact-v6",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--view",
+    "Natural_Side",
+    "--tag",
+    "v6_Walk_Contact",
+    "--clip",
+    "Walk",
+    "--frame",
+    "1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-walk_contact-v6.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-walk_contact-v6.stderr.log",
+  "maxPrivateGB": 8
+}

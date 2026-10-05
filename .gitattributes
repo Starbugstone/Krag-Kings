@@ -8,6 +8,7 @@ benchmark/unity/**/*.asset whitespace=-blank-at-eol
 benchmark/unity/**/*.unity whitespace=-blank-at-eol
 benchmark/unity/**/*.wlt whitespace=-blank-at-eol
 benchmark/unity/**/*.shadergraph whitespace=-blank-at-eof
+benchmark/art/reference-anatomy/**/official-listing-excerpt.html whitespace=-blank-at-eol
 benchmark/**/*.fbx filter=lfs diff=lfs merge=lfs -text
 benchmark/shared/**/*.png filter=lfs diff=lfs merge=lfs -text
 benchmark/art/**/*.png filter=lfs diff=lfs merge=lfs -text

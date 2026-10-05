@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "faceRoot": "FaceRoot",
+  "drivers": [
+    {
+      "morph": "Blink_L",
+      "bone": "LidUpper_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Squint_L",
+      "bone": "LidLower_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.004,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowRaise_L",
+      "bone": "BrowOuter_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.009,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowLower_L",
+      "bone": "BrowInner_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.006,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Smile_L",
+      "bone": "MouthCorner_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.008,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "CheekTension_L",
+      "bone": "Cheek_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.005,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Frown_L",
+      "bone": "MouthCorner_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 12,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Corrective_ShoulderRaise_L",
+      "bone": "UpperArm_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 90,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_ElbowFlex_L",
+      "bone": "LowerArm_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 30,
+      "end": 95,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_HipFlex_L",
+      "bone": "Thigh_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 75,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_KneeFlex_L",
+      "bone": "Shin_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 100,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Blink_R",
+      "bone": "LidUpper_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Squint_R",
+      "bone": "LidLower_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.004,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowRaise_R",
+      "bone": "BrowOuter_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.009,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowLower_R",
+      "bone": "BrowInner_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.006,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Smile_R",
+      "bone": "MouthCorner_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.008,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "CheekTension_R",
+      "bone": "Cheek_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.005,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Frown_R",
+      "bone": "MouthCorner_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 12,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "Corrective_ShoulderRaise_R",
+      "bone": "UpperArm_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 90,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_ElbowFlex_R",
+      "bone": "LowerArm_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 30,
+      "end": 95,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_HipFlex_R",
+      "bone": "Thigh_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 75,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_KneeFlex_R",
+      "bone": "Shin_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 100,
+      "maxWeight": 1,
+      "kind": "body"
+    },
+    {
+      "morph": "JawOpen",
+      "bone": "Jaw",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 24,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "LipPress",
+      "bone": "LipUpper",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.003,
+      "maxWeight": 1,
+      "kind": "facial"
+    },
+    {
+      "morph": "TongueOut",
+      "bone": "TongueTip",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.03,
+      "maxWeight": 1,
+      "kind": "facial"
+    }
+  ],
+  "personality": "Playful, technically capable adult engineer; physically weak and somewhat cowardly. Cautious glances and flinches coexist with cheeky tongue gestures.",
+  "tongueColor": "dark blue",
+  "mouthAnatomyStatus": "provisional; expression-sheet review required",
+  "coordinateConvention": "All drivers use magnitude of local transform delta from bind. Translation values are meters; angles are degrees. Never interpret raw imported Euler axes."
+}

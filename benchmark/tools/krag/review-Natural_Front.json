@@ -1,0 +1,22 @@
+{
+  "name": "krag-review-natural-front-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--view",
+    "Natural_Front",
+    "--tag",
+    "v7"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-natural-front-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-natural-front-v7.stderr.log",
+  "maxPrivateGB": 8
+}

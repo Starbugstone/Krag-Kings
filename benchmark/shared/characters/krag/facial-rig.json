@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "faceRoot": "FaceRoot",
+  "drivers": [
+    {
+      "morph": "Blink_L",
+      "bone": "LidUpper_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.012,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Squint_L",
+      "bone": "LidLower_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.006,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowRaise_L",
+      "bone": "BrowOuter_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.01,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowLower_L",
+      "bone": "BrowInner_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Smile_L",
+      "bone": "MouthCorner_L",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Frown_L",
+      "bone": "MouthCorner_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 18,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Snarl_L",
+      "bone": "Cheek_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 18,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Corrective_ShoulderRaise_L",
+      "bone": "UpperArm_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 95,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_ElbowFlex_L",
+      "bone": "LowerArm_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 105,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_HipFlex_L",
+      "bone": "Thigh_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 80,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_KneeFlex_L",
+      "bone": "Shin_L",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 105,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Blink_R",
+      "bone": "LidUpper_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.012,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Squint_R",
+      "bone": "LidLower_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.006,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowRaise_R",
+      "bone": "BrowOuter_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.01,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "BrowLower_R",
+      "bone": "BrowInner_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Smile_R",
+      "bone": "MouthCorner_R",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.007,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Frown_R",
+      "bone": "MouthCorner_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 18,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Snarl_R",
+      "bone": "Cheek_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 18,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "Corrective_ShoulderRaise_R",
+      "bone": "UpperArm_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 25,
+      "end": 95,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_ElbowFlex_R",
+      "bone": "LowerArm_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 105,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_HipFlex_R",
+      "bone": "Thigh_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 80,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "Corrective_KneeFlex_R",
+      "bone": "Shin_R",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 20,
+      "end": 105,
+      "maxWeight": 1.0,
+      "kind": "body"
+    },
+    {
+      "morph": "JawOpen",
+      "bone": "Jaw",
+      "channel": "rotationMagnitudeDegrees",
+      "start": 0,
+      "end": 25,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "LipPress",
+      "bone": "LipUpper",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.006,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    },
+    {
+      "morph": "NoseWrinkle",
+      "bone": "NoseTip",
+      "channel": "translationDistanceMeters",
+      "start": 0,
+      "end": 0.005,
+      "maxWeight": 1.0,
+      "kind": "facial"
+    }
+  ],
+  "morphs": [
+    "Blink_L",
+    "Blink_R",
+    "Squint_L",
+    "Squint_R",
+    "BrowRaise_L",
+    "BrowRaise_R",
+    "BrowLower_L",
+    "BrowLower_R",
+    "Smile_L",
+    "Smile_R",
+    "Frown_L",
+    "Frown_R",
+    "JawOpen",
+    "LipPress",
+    "Snarl_L",
+    "Snarl_R",
+    "NoseWrinkle",
+    "Corrective_ShoulderRaise_L",
+    "Corrective_ShoulderRaise_R",
+    "Corrective_ElbowFlex_L",
+    "Corrective_ElbowFlex_R",
+    "Corrective_HipFlex_L",
+    "Corrective_HipFlex_R",
+    "Corrective_KneeFlex_L",
+    "Corrective_KneeFlex_R"
+  ],
+  "controls": "Jaw and eye bones deform directly; expression controls drive soft-tissue morphs and fine geometry wrinkles.",
+  "interiorsStatus": "Provisional anatomy for review; serious Krag expression direction. No playful tongue extension."
+}

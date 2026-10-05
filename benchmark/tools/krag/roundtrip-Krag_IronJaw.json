@@ -1,0 +1,20 @@
+{
+  "name": "krag-roundtrip-krag_ironjaw-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\validate_fbx.py",
+    "--",
+    "--variant",
+    "Krag_IronJaw"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-roundtrip-krag_ironjaw-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-roundtrip-krag_ironjaw-v7.stderr.log",
+  "maxPrivateGB": 8
+}

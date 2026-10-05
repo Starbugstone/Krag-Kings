@@ -1,0 +1,18 @@
+{
+  "name": "nib-validate-v3",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\validate_exports.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\nib-validate-v3.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\nib-validate-v3.stderr.log"
+}

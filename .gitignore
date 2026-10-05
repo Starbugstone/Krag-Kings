@@ -31,3 +31,7 @@ benchmark/unreal/KragKingsBenchmark/Content/Benchmark/
 # and engine-neutral exported assets remain versioned through Git LFS.
 benchmark/art/**/versions/
 benchmark/art/krag/Krag_Runtime.blend
+# Download archives and derived anatomy inspection arrays; extracted originals
+# and provenance remain versioned.
+benchmark/art/reference-anatomy/**/*.zip
+benchmark/art/**/anatomy-study/*.npz

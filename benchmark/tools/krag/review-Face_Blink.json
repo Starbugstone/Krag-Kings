@@ -1,0 +1,26 @@
+{
+  "name": "krag-review-face_blink-v6",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--view",
+    "Natural_Head",
+    "--tag",
+    "v6_Face_Blink",
+    "--clip",
+    "FacePerformance",
+    "--frame",
+    "21"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-face_blink-v6.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-face_blink-v6.stderr.log",
+  "maxPrivateGB": 8
+}

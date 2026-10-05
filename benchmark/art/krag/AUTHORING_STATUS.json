@@ -1,0 +1,91 @@
+{
+  "generatedVersion": "v7-review-candidate",
+  "artisticAcceptance": false,
+  "master": {
+    "path": "benchmark/art/krag/Krag_Master.blend",
+    "sha256": "9d33ed9359caff1dd24f77a0848ac0456ce6e5e2ee7909db31f3fc435203758a",
+    "bones": 66
+  },
+  "runtime": {
+    "path": "benchmark/art/krag/Krag_Runtime.blend",
+    "sha256": "5ad0ef497773402ef4eb7b8774bdcaaa4b19090e3db6e3d6ca9b8413486df45d",
+    "bones": 68,
+    "derived": true
+  },
+  "sharedReceipt": "benchmark/shared/characters/krag/delivery-v7.json",
+  "currentAuthoringCode": "v8 code-only changes; not equivalent to the v7 generated source",
+  "pendingChanges": [
+    "Correct mouth aperture winding and narrow connected lip crease",
+    "Flatten cheek planes",
+    "Continuous looped scarf instead of settled bib",
+    "Broad canvas wear",
+    "Embed authoring sources and losslessly compress future Blender saves",
+    "Source weapon marker bones matching existing v7 runtime markers"
+  ],
+  "notIntegrated": [
+    "CC0 hand/body/head reference topology",
+    "Complete-leg helper krag_full_leg.py"
+  ],
+  "codeAtPin": {
+    "add_finger_rig.py": "d6efd0fca4dbb27787170d47d30b921c3ba440e4db8b7596b432b46cba9ce4da",
+    "build_krag.py": "5fc85965f6de2adecdbbf2f991a7e7e8f8088e5d69d786b5e84d99b9d0f80871",
+    "export_krag.py": "a5310c89dea81a0b0acdfd299b39299af3b2edce5a91df47a475b9bef2b126a3",
+    "inspect_anatomy_library.py": "91c0452e5369f77f9af995d83c408b4354e47e49d45a681359fcc99ce58df25f",
+    "krag_cloth.py": "842e4e42c8df74f71e6ed916d0834981d108317dbdedad768dbfa81eca3605eb",
+    "krag_face.py": "d66bfa9e9fcb57228766f248d4f5c3083a21fbaedcd4859548807ee4bdb86fdc",
+    "krag_full_leg.py": "2e48bb4dedd3e28d884f55468874484c2789e56553a434b5b41334c8c82e390d",
+    "krag_locomotion.py": "a9cf9057b2531213e8358434c34bc89443b127a2ac053f845c68f9743aa69dae",
+    "material_cache.py": "e45f0f22d6252c5f229bd8053e3015ba58f527d3292e804d4af7b8f232ac777b",
+    "review_krag.py": "079e9967d7146e2322a6991e3af51456097f934942fb70958c9864a5e3f6addb",
+    "revise_anatomy_pass.py": "25a3bc0cdf240eb871bceaf61e7ef5655d318ed3b1319ce108ed7a321f04e7c0",
+    "revise_authoring.py": "31dbdea16956c6ea473214a2a82d96c7f9c258b39c270e411279e26b1bcc45c5",
+    "revise_second_pass.py": "c1745c00e95753040b1b83b412edeb5fea8d2baa1c13b7d5b830e662d9c7ec2f",
+    "revise_third_pass.py": "31f1f421e36d594bba1d1b874f2f8f68609f4a3cd73362e4c721bb8d1b131066",
+    "revise_v6.py": "e98d98e4d10a5ecb0cd6a9d49a88384c8373c8e1ae341bd90c39528579b5c7c4",
+    "revise_v7.py": "6ad03a705abb805d0d2fc236105ad18253b83e37fe4a132bda9e5297e2fe6379",
+    "seed_material_cache.py": "a79658149a0db139f409d3f077537617e2d38c1f73fa9afc3b67844491c484c6",
+    "validate_animation_fbx.py": "443d0db464d8751c7d89f949041e9bfcf415e2795c0fbd95b8e53e0fa199d2b0",
+    "validate_fbx.py": "6f00ceaded930ee8e784ab36e14b79adab661856cbf2a85ad2d78836b141b64e"
+  },
+  "validation": [
+    "Krag_Natural-fbx-roundtrip.json",
+    "standalone-animation-roundtrip.json"
+  ],
+  "recommendedVersionedEvidence": [
+    "Krag_Master.blend",
+    "README.md",
+    "AUTHORING_STATUS.json",
+    "Krag_Natural-fbx-roundtrip.json",
+    "standalone-animation-roundtrip.json",
+    "locomotion-target-verification.json",
+    "v7-bake-receipt.json",
+    "material-cache.json",
+    "renders/Krag_Natural_Front_v7.png",
+    "renders/Krag_Natural_Front_v7.meta.json",
+    "renders/Krag_Natural_Head_v7.png",
+    "renders/Krag_Natural_Head_v7.meta.json",
+    "reference-materials/mud_cracked_dry_03/",
+    "anatomy-study/library-inventory.json"
+  ],
+  "localDerivedOrHistory": [
+    "Krag_Runtime.blend",
+    "versions/",
+    "anatomy-study/*.npz",
+    "*.log",
+    "*.blend1"
+  ],
+  "heavyJobResults": {
+    "krag-seed-material-cache-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 960,
+      "minimumAvailableMB": 11670,
+      "peakCommitPercent": 53
+    },
+    "krag-anatomy-library-inventory": {
+      "exitCode": 0,
+      "peakPrivateMB": 796,
+      "minimumAvailableMB": 11680,
+      "peakCommitPercent": 53
+    }
+  }
+}
