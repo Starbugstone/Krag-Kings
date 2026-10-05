@@ -13,7 +13,9 @@ namespace KragKings.Benchmark
         public Camera demoCamera;
         public DemoUnit[] units;
         public Material indicatorMaterial;
+        public string contentFingerprint;
         public DemoUnit Selected { get; private set; }
+        public bool AutomatedView {get;set;}
         LineRenderer selectionRing, destinationRing;
         Vector3 cameraFocus;
         float yaw=165, pitch=22, distance=8.5f;
@@ -57,6 +59,11 @@ namespace KragKings.Benchmark
             Directory.CreateDirectory(evidencePath);
             if(verification) StartCoroutine(Verify());
             if(performanceOnly) StartCoroutine(MeasurePerformance());
+            if(args.Contains("-benchmarkShowcase"))
+            {
+                if(verification||performanceOnly)throw new InvalidOperationException("Record showcase separately from verification/performance.");
+                gameObject.AddComponent<DemoShowcase>().Begin(this,evidencePath,args.Contains("-showcaseWait"));
+            }
             previousFrameTick=System.Diagnostics.Stopwatch.GetTimestamp();
             Debug.Log("KRAG_KINGS_DEMO_READY "+SystemInfo.graphicsDeviceName+" "+Screen.width+"x"+Screen.height);
         }
@@ -76,8 +83,9 @@ namespace KragKings.Benchmark
         {
             // HDRP/Unlit does not consume the LineRenderer's vertex tint by default.
             var material=new Material(indicatorMaterial);
-            material.SetColor("_UnlitColor",color);
-            material.SetColor("_EmissiveColor",color*.35f);
+            material.SetColor("_UnlitColor",Color.black);
+            material.SetColor("_EmissiveColor",color);
+            material.SetFloat("_EmissiveExposureWeight",0);
             return material;
         }
         void PositionRing(LineRenderer line,Vector3 center,float radius)
@@ -115,18 +123,20 @@ namespace KragKings.Benchmark
             }
             return false;
         }
-        void ResetCamera()
+        public void ResetCamera()
         {
             cameraFocus=(units[0].transform.position+units[1].transform.position)*.5f+Vector3.up*.95f;
             yaw=165;pitch=22;distance=8.5f;
         }
-        void PortraitCamera()
+        public void PortraitCamera()
         {
             if(!Selected)return;
             cameraFocus=Selected.PortraitFocus;
             yaw=Selected.transform.eulerAngles.y+165;pitch=7;
             distance=Selected.species=="Krag"?1.35f:1.05f;
         }
+        public void SetView(Vector3 focus,float viewYaw,float viewPitch,float viewDistance)
+        {cameraFocus=focus;yaw=viewYaw;pitch=viewPitch;distance=viewDistance;}
         void Update()
         {
             long tick=System.Diagnostics.Stopwatch.GetTimestamp();
@@ -134,7 +144,7 @@ namespace KragKings.Benchmark
             previousFrameTick=tick;
             smoothedFrame=Mathf.Lerp(smoothedFrame,frameSeconds,.06f);
             if(performanceSampling)frameTimes.Add(frameSeconds*1000);
-            if(performanceOnly){if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)Application.Quit();return;}
+            if(performanceOnly||AutomatedView){if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)Application.Quit();return;}
             var keyboard=Keyboard.current;var mouse=Mouse.current;
             if(keyboard!=null)
             {
@@ -213,8 +223,14 @@ namespace KragKings.Benchmark
                 if(Physics.Raycast(start,direction,out var ground,7,1<<8))end=ground.point;
                 var go=new GameObject("Shot tracer");var line=go.AddComponent<LineRenderer>();
                 var material=StrokeMaterial(new Color(1,.73f,.25f));line.sharedMaterial=material;
+                material.SetFloat("_EmissiveExposureWeight",1);material.SetColor("_EmissiveColor",new Color(1,.73f,.25f)*100000);
                 line.startColor=new Color(1,.85f,.35f);line.endColor=new Color(1,.6f,.15f,0);line.startWidth=.022f;line.endWidth=.008f;line.positionCount=2;
                 line.SetPosition(0,start);line.SetPosition(1,end);
+                var flash=GameObject.CreatePrimitive(PrimitiveType.Sphere);flash.name="Muzzle flash";
+                Destroy(flash.GetComponent<Collider>());flash.transform.SetPositionAndRotation(start+direction*.035f,Quaternion.LookRotation(direction));
+                flash.transform.localScale=unit.species=="Krag"?new Vector3(.035f,.035f,.10f):new Vector3(.023f,.023f,.07f);
+                var flashRenderer=flash.GetComponent<MeshRenderer>();flashRenderer.sharedMaterial=material;flashRenderer.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
+                Destroy(flash,.035f);
                 Destroy(go,.055f);Destroy(material,.06f);
             }
         }
@@ -354,7 +370,7 @@ namespace KragKings.Benchmark
             ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"Unity-Dunes-Final.png"));
             yield return new WaitForSeconds(1);
             failures.AddRange(runtimeErrors);
-            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray()};
+            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"verification.json"),JsonUtility.ToJson(report,true));
             Debug.Log("BENCHMARK_VERIFICATION "+(report.failures.Length==0?"PASS":"FAIL"));
             Application.Quit(report.failures.Length==0?0:1);
@@ -369,6 +385,7 @@ namespace KragKings.Benchmark
             performanceSampling=false;
             var times=frameTimes.OrderBy(x=>x).ToArray();
             var report=new PerformanceReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,
+                contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,
                 graphicsAPI=SystemInfo.graphicsDeviceType.ToString(),cpu=SystemInfo.processorType,vramMB=SystemInfo.graphicsMemorySize,
                 resolution=$"{Screen.width}x{Screen.height}",warmupSeconds=15,sampleSeconds=30,frames=times.Length,
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
@@ -383,7 +400,7 @@ namespace KragKings.Benchmark
         static float Percentile(float[] sorted,float p)=>sorted.Length>0?sorted[Mathf.Clamp(Mathf.CeilToInt(sorted.Length*p)-1,0,sorted.Length-1)]:0;
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
-        [Serializable] class VerificationReport { public string engine,gpu,resolution;public string[] checks,failures;public DeformationEvidence[] deformation; }
-        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,workload,quality;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
+        [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation; }
+        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,workload,quality,contentFingerprint,buildGuid;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }

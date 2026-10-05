@@ -1,6 +1,6 @@
 # Krag Kings — persistent project context
 
-Updated 5 October 2026. This file records explicit user direction for future work.
+Updated 6 October 2026. This file records explicit user direction for future work.
 
 ## Confirmed direction
 
@@ -16,6 +16,8 @@ Updated 5 October 2026. This file records explicit user direction for future wor
 | Species locomotion | Krags walk with convincing weight and ground impact. Nibs are light-footed, stealthy and nimble. Express the distinction through animation, foot contact, body weight transfer and appropriate sound/effects; validate it on dune slopes. |
 | Action expressions and inspection | Facial expressions must accompany every animation, not only a separate expression demonstration. Each unit acts independently: selecting and triggering the other unit while the first finishes must work. Pan, orbit and zoom remain available during actions so full motion and close-ups can be inspected. |
 | Nib fur and cinematic masters | Follow the concept: visible mottled skin with fine facial/body fuzz, fuller ear/head fur. Do not redesign Nibs as fully fur-covered. The runtime representation must remain realistic and responsive on the user's RTX 2060 reference machine; avoid costly full fur simulation and measure actual frame time/VRAM. Also retain detailed editable Blender masters for a realistically furry Nib and muscular Krag for animation/cinematics. Runtime and cinematic detail must preserve the same character identity and coverage. |
+| Visual/performance balance | The user explicitly prioritizes satisfying visuals and fluid framerate together, authorizing sensible sacrifices in each engine to achieve the best feasible requirement coverage. Tune from actual results on the reference rig; preserve identity, faces, silhouette and readable movement while reducing costly details/effects where justified. Maximum settings or exact parity of renderer features are not acceptance goals in themselves. Record the tradeoffs and actual internal/output resolution. |
+| Final demo evidence | Deliver screenshots and a demo video from each running engine, showing rendering, dune movement, camera inspection, animations/facial acting and the different models. Record separately from performance sampling; Blender renders supplement, but do not replace, actual Unity/Unreal evidence. |
 | Nib tongue color | Nibs have dark blue tongues. This is an explicit character-design requirement for mouth models, materials and facial-expression review. |
 | Personality and acting | Nibs are playful engineers: physically weak, a little cowardly, light-footed and nimble. They may cheekily stick out their dark blue tongues while retaining the capable adult identity of the concepts. Krags are serious brute force: they love big guns and smashing skulls, are fearless and feel little pain; they do not clown around like Nibs. Carry the contrast through facial/body animation, close-ups, cutscenes, voices and quips. Nib caution/flinching is acting direction; automatic panic, routing or loss of player control is not approved by this personality decision. |
 | Customization | Authored clothing and armor pieces; authored tattoo designs; clothing/tattoo color and tattoo placement controls; fixed body proportions. Equipped armor must be visible. |

@@ -26,3 +26,8 @@ __pycache__/
 # Imports are reproduced from benchmark/shared, preserving source assets once.
 benchmark/unity/Assets/Benchmark/Imported/
 benchmark/unity/Assets/Benchmark/Imported.meta
+benchmark/unreal/KragKingsBenchmark/Content/Benchmark/
+# Local revision archives and derived Blender export assembly; current masters
+# and engine-neutral exported assets remain versioned through Git LFS.
+benchmark/art/**/versions/
+benchmark/art/krag/Krag_Runtime.blend

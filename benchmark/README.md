@@ -51,6 +51,10 @@ Unity's `-benchmarkVerify` exercises selection, variants, seven required clips, 
 
 Unity's separate `-benchmarkPerformance` mode uses the natural pair and default camera, warms for 15 seconds, then samples 30 seconds of idle animation at native resolution. It disables input-probe writes and takes its evidence capture after sampling. Both modes accept `-evidencePath <folder>`. Do not compare timings from functional capture runs as if they were this fixed workload.
 
+`tools/unity/Run-Demo.ps1 -Mode Showcase` prepares a 72-second recording sequence using the same playable actors, assets and real-time clock. It waits for the capture tool to create `showcase-start.flag` in its evidence folder. The sequence covers dune movement, overlapping actions, bionic variants, natural-face portraits and camera movement. Game-only audio is recorded separately for muxing; desktop/microphone sound is not requested. Screenshots and an MP4 from each actual engine are required final deliverables and are not yet produced.
+
+The user prioritizes concept fidelity and smooth framerate together. Tune each engine from measurements on the reference PC, document rendering/resolution tradeoffs, and preserve the agreed proportions, faces, materials, bionics, fur coverage and personalities. Maximum settings alone do not establish the best result.
+
 ## Status
 
 Unity 6000.4.4f1, Blender 5.2 and Unreal 5.8.3 are installed. The initial Unity script/HDRP import and Unreal native editor-module compilation have passed. Subsequent source changes, character imports, runtime rendering and packaged demos still need validation. The current character renders remain unaccepted review candidates, with documented likeness/deformation defects; this is not a finished investor demonstration.

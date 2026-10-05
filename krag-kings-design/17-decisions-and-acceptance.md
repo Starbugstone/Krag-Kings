@@ -35,6 +35,8 @@
 | D25 | Nibs are playful engineers, physically weak and a little cowardly; playful tongue-out acting is appropriate. Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain; they do not clown around like Nibs. Apply this to personality/animation/audio, without silently introducing panic or forced-retreat rules. |
 | D26 | Every animation needs facial expressions. Both units act independently while selection, pan/orbit/zoom and commands remain available; test starting a second unit's action before the first has finished. |
 | D27 | Nib fur follows the concept: fuller head/ear fur, fine facial/body fuzz and visible mottled skin. Keep realistic runtime fur responsive on the reference machine and provide denser editable Blender cinematic masters for the furry Nib and muscular Krag. |
+| D28 | Optimize each engine for the best feasible balance of satisfying visuals and fluid framerate; the user authorizes measured sacrifices rather than requiring all rendering features at maximum. Preserve concept identity and report quality/resolution tradeoffs. |
+| D29 | Final evidence includes screenshots and a demo video from each actual running engine, showing movement, render quality, animations/faces, camera inspection and different models. Capture separately from performance measurements. |
 
 ## 2. Resolved follow-up questions
 

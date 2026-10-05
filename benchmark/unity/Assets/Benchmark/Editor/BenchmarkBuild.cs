@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEditor.SceneManagement;
@@ -22,7 +23,8 @@ namespace KragKings.Editor
         [Serializable] public class MaterialEntry { public string name,baseColor,normal,roughness,metallic; }
         [Serializable] public class VariantEntry { public string name,fbx,label;public DemoDeformation.Contract deformation; }
         [Serializable] class ImportReport {public string engine,species;public ImportedMeshReport[] variants;}
-        [Serializable] class ImportedMeshReport {public string name;public int renderers,vertices,triangles,materialSlots,bones,morphTargets,correctiveDrivers;public string[] clips;}
+        [Serializable] class ImportedMeshReport {public string name,fbxSha256;public int renderers,vertices,triangles,materialSlots,bones,morphTargets,correctiveDrivers;public string[] clips;public ClipReport[] clipDetails;}
+        [Serializable] class ClipReport {public string name;public float seconds;public int varyingTransformCurves,varyingFaceCurves;}
 
         [MenuItem("Krag Kings/Prepare scene and build Windows")]
         public static void PrepareAndBuild()
@@ -58,6 +60,7 @@ namespace KragKings.Editor
             }
             Physics.SyncTransforms();
             var director=new GameObject("Demo controller").AddComponent<DemoScene>();
+            director.contentFingerprint=HashText(string.Join("\n",Directory.GetFiles(Imported,"*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta")).OrderBy(p=>p,StringComparer.Ordinal).Select(p=>Path.GetRelativePath(Imported,p).Replace('\\','/')+":"+HashFile(p))));
             var contacts=director.gameObject.AddComponent<DemoContacts>();
             var particleShader=AssetDatabase.LoadAssetAtPath<Shader>(AssetRoot+"/Shaders/ParticleLitSoft.shadergraph");
             if(!particleShader)throw new Exception("Lit soft-particle shader missing");
@@ -70,7 +73,7 @@ namespace KragKings.Editor
             contacts.nibSteps=Enumerable.Range(1,6).Select(i=>AssetDatabase.LoadAssetAtPath<AudioClip>(Imported+"/audio/Nib_Sand_"+i.ToString("00")+".wav")).ToArray();
             if(contacts.kragSteps.Any(c=>!c)||contacts.nibSteps.Any(c=>!c))throw new Exception("Shared sand contact audio missing");
             var camera=new GameObject("Camera").AddComponent<Camera>();camera.tag="MainCamera";camera.fieldOfView=38;camera.nearClipPlane=.08f;camera.farClipPlane=1800;
-            camera.gameObject.AddComponent<AudioListener>();
+            camera.gameObject.AddComponent<DemoAudioRecorder>();camera.gameObject.AddComponent<AudioListener>();
             var hdCamera=camera.gameObject.AddComponent<HDAdditionalCameraData>();hdCamera.antialiasing=HDAdditionalCameraData.AntialiasingMode.TemporalAntialiasing;hdCamera.allowDynamicResolution=false;
             director.demoCamera=camera;
             director.units=new[]{CreateUnit("Krag",krag,new Vector3(-1.35f,0,0),2.1f,3.2f),CreateUnit("Nib",nib,new Vector3(1.2f,0,.1f),1.45f,3.9f)};
@@ -154,10 +157,24 @@ namespace KragKings.Editor
                 deformation.contract=variant.deformation??manifest.deformation;
                 var clips=AssetDatabase.LoadAllAssetsAtPath(path).OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
                 var names=new HashSet<string>();
+                var clipDetails=new List<ClipReport>();
                 foreach(var clip in clips)
                 {
                     string canonical=DemoUnit.CanonicalClip(clip.name);if(canonical==null)continue;
-                    player.AddClip(clip,canonical);names.Add(canonical);
+                    if(!names.Add(canonical))throw new Exception(path+": ambiguous duplicate canonical take "+canonical);
+                    var detail=new ClipReport{name=canonical,seconds=clip.length};
+                    foreach(var binding in AnimationUtility.GetCurveBindings(clip))
+                    {
+                        if(binding.type!=typeof(Transform))continue;
+                        var curve=AnimationUtility.GetEditorCurve(clip,binding);
+                        if(curve==null||curve.length<2)continue;
+                        var keys=curve.keys;
+                        if(keys.Max(k=>k.value)-keys.Min(k=>k.value)<.000001f)continue;
+                        detail.varyingTransformCurves++;
+                        if(binding.path.Contains("/FaceRoot"))detail.varyingFaceCurves++;
+                    }
+                    if(detail.varyingTransformCurves==0||detail.varyingFaceCurves==0)throw new Exception(path+": "+canonical+" lost animated body/facial transform curves");
+                    clipDetails.Add(detail);player.AddClip(clip,canonical);
                     if(canonical=="Idle") player.clip=clip;
                 }
                 foreach(string clip in new[]{"Idle","Walk","Run","Melee","Shoot","Hit","FacePerformance"}) if(!names.Contains(clip)) throw new Exception(path+": missing animation "+clip+"; imported "+string.Join(",",clips.Select(c=>c.name)));
@@ -175,10 +192,10 @@ namespace KragKings.Editor
                     }
                     if(!found)throw new Exception(path+": missing corrective morph "+driver.morph);
                 }
-                reportEntries.Add(new ImportedMeshReport{name=variant.name,renderers=meshes.Length,
+                reportEntries.Add(new ImportedMeshReport{name=variant.name,fbxSha256=HashFile(path),renderers=meshes.Length,
                     vertices=meshes.Sum(r=>r.sharedMesh.vertexCount),triangles=meshes.Sum(r=>Enumerable.Range(0,r.sharedMesh.subMeshCount).Sum(s=>(int)r.sharedMesh.GetIndexCount(s)/3)),
                     materialSlots=meshes.Sum(r=>r.sharedMaterials.Length),bones=meshes.SelectMany(r=>r.bones).Distinct().Count(),
-                    morphTargets=meshes.Sum(r=>r.sharedMesh.blendShapeCount),correctiveDrivers=deformation.contract.drivers.Length,clips=names.OrderBy(n=>n).ToArray()});
+                    morphTargets=meshes.Sum(r=>r.sharedMesh.blendShapeCount),correctiveDrivers=deformation.contract.drivers.Length,clips=names.OrderBy(n=>n).ToArray(),clipDetails=clipDetails.ToArray()});
                 player.playAutomatically=true;
                 Directory.CreateDirectory(Generated+"/Prefabs");
                 string prefabPath=Generated+"/Prefabs/"+variant.name+".prefab";
@@ -306,5 +323,7 @@ namespace KragKings.Editor
                 if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path)) File.Copy(sourcePath,path,true);
             }
         }
+        static string HashFile(string path){using var hash=SHA256.Create();using var input=File.OpenRead(path);return BitConverter.ToString(hash.ComputeHash(input)).Replace("-","").ToLowerInvariant();}
+        static string HashText(string value){using var hash=SHA256.Create();return BitConverter.ToString(hash.ComputeHash(System.Text.Encoding.UTF8.GetBytes(value))).Replace("-","").ToLowerInvariant();}
     }
 }
