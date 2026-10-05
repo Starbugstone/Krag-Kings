@@ -1,0 +1,24 @@
+{
+  "mesh": "Dunes.fbx",
+  "units": "meters",
+  "grid": 233,
+  "extent_m": [
+    -760,
+    760
+  ],
+  "comparison_extent_m": [
+    -40,
+    40
+  ],
+  "foreground_grid": 193,
+  "vertices": 54289,
+  "triangles": 107648,
+  "uv_tile_m": 4,
+  "height_blender_xy": ".8+1.1*sin(.105*x+.035*y)+.65*sin(.055*x-.145*y)+.30*cos(.22*x+.13*y)",
+  "height_formula_scope": "central comparison area; distant dunes smoothly added outside 40 meters",
+  "material": "Sand",
+  "baseColor": "Sand_BaseColor.png",
+  "normalOpenGL": "Sand_Normal.png",
+  "roughness": "Sand_Roughness.png",
+  "hdrpMask": "Sand_MaskHDRP.png"
+}

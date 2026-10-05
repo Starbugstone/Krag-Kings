@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "Contact presentation candidates; in-engine synchronization and listening review pending",
+  "species": {
+    "Krag": {
+      "sandSteps": [
+        "Krag_Sand_01.wav",
+        "Krag_Sand_02.wav",
+        "Krag_Sand_03.wav",
+        "Krag_Sand_04.wav",
+        "Krag_Sand_05.wav",
+        "Krag_Sand_06.wav"
+      ],
+      "filterRecipe": "asetrate=37485,aresample=48000,highpass=f=45,bass=g=6:f=110:w=0.8,alimiter=limit=0.8:level=false,volume=0.85",
+      "runtimeGain": 1.0,
+      "runtimePitchVariation": [
+        0.97,
+        1.03
+      ]
+    },
+    "Nib": {
+      "sandSteps": [
+        "Nib_Sand_01.wav",
+        "Nib_Sand_02.wav",
+        "Nib_Sand_03.wav",
+        "Nib_Sand_04.wav",
+        "Nib_Sand_05.wav",
+        "Nib_Sand_06.wav"
+      ],
+      "filterRecipe": "asetrate=45423,aresample=48000,highpass=f=160,alimiter=limit=0.8:level=false,volume=0.42",
+      "runtimeGain": 1.0,
+      "runtimePitchVariation": [
+        0.97,
+        1.03
+      ]
+    }
+  },
+  "source": {
+    "title": "Fantozzi's Footsteps (Grass/Sand & Stone)",
+    "author": "Fantozzi",
+    "editingContributor": "qubodup",
+    "assetPage": "https://opengameart.org/content/fantozzis-footsteps-grasssand-stone",
+    "download": "https://opengameart.org/sites/default/files/Fantozzi-footsteps.7z",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "archiveSha256": "415d360e0911c1c1c5355ee94023b772e6f4044f59b9b580610e7dbffd1840fd",
+    "inputFiles": [
+      {
+        "name": "Fantozzi-SandL1.flac",
+        "sha256": "93a2630579a82507e3c6ceab9b012f71a50cf8922f4beadb14057dcc0636b099"
+      },
+      {
+        "name": "Fantozzi-SandL2.flac",
+        "sha256": "9bb57478cc96e1410cae27d926aa8d77d5f2d368d9776822f63cf0b37c6d2faf"
+      },
+      {
+        "name": "Fantozzi-SandL3.flac",
+        "sha256": "042820e65cc947d8bb8adf18524ffff7cdf5fc310f9412cbf8bdf7a139984c21"
+      },
+      {
+        "name": "Fantozzi-SandR1.flac",
+        "sha256": "3514d12f3369297233e915814364ed02902003d4103b010371c2ac15c2aa48fe"
+      },
+      {
+        "name": "Fantozzi-SandR2.flac",
+        "sha256": "0356f659313887f01a9f21fd5bedf57a77073d0d74d57b5621279ee453a80f3c"
+      },
+      {
+        "name": "Fantozzi-SandR3.flac",
+        "sha256": "7535306b6ff3b9e071256f12789eb53fb90769a913ff7e00b271298727e0f521"
+      }
+    ]
+  }
+}

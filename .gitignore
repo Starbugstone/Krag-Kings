@@ -1,0 +1,28 @@
+# Editor caches and generated build outputs
+**/Library/
+**/Temp/
+**/Obj/
+**/Logs/
+**/UserSettings/
+**/.vs/
+**/Binaries/
+**/Intermediate/
+**/DerivedDataCache/
+**/Saved/
+benchmark/builds/
+benchmark/local/
+benchmark/art/**/*.log
+benchmark/**/evidence/*.log
+# Installer screenshots are local setup diagnostics, not game-art evidence.
+benchmark/unreal/evidence/engine-download-active.png
+benchmark/unreal/evidence/epic-*.png
+benchmark/unreal/evidence/vs-*.png
+*.blend1
+*.blend2
+*.sln
+*.csproj
+*.vcxproj*
+__pycache__/
+# Imports are reproduced from benchmark/shared, preserving source assets once.
+benchmark/unity/Assets/Benchmark/Imported/
+benchmark/unity/Assets/Benchmark/Imported.meta

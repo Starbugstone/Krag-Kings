@@ -1,0 +1,19 @@
+{
+  "name": "unity-initialize-after-reboot",
+  "executable": "D:\\Unity\\Hub\\6000.4.4f1\\Editor\\Unity.exe",
+  "arguments": [
+    "-batchmode",
+    "-quit",
+    "-nographics",
+    "-job-worker-count",
+    "2",
+    "-projectPath",
+    "D:\\Dev\\Krag-Kings\\benchmark\\unity",
+    "-logFile",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unity-initialize-after-reboot.log",
+    "-accept-apiupdate"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "maxPrivateGB": 8,
+  "minAvailableGB": 10
+}
