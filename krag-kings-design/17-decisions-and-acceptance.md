@@ -33,6 +33,8 @@
 | D23 | Krag walking must convey weight and ground impact; Nib movement is light-footed, stealthy and nimble. |
 | D24 | Nib tongues are dark blue. |
 | D25 | Nibs are playful engineers, physically weak and a little cowardly; playful tongue-out acting is appropriate. Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain; they do not clown around like Nibs. Apply this to personality/animation/audio, without silently introducing panic or forced-retreat rules. |
+| D26 | Every animation needs facial expressions. Both units act independently while selection, pan/orbit/zoom and commands remain available; test starting a second unit's action before the first has finished. |
+| D27 | Nib fur follows the concept: fuller head/ear fur, fine facial/body fuzz and visible mottled skin. Keep realistic runtime fur responsive on the reference machine and provide denser editable Blender cinematic masters for the furry Nib and muscular Krag. |
 
 ## 2. Resolved follow-up questions
 
@@ -105,6 +107,8 @@ Cross body profile with supported anatomy state, clothing/armor layer, weapon/pa
 Review face and silhouette at close workshop zoom, normal tactical distance, during motion, in shadow and at LOD transitions. Pair a technical reviewer with an art review; a passing import validator is not sufficient likeness evidence.
 
 Facial reviews cover blinks, gaze, lip closure, speech shapes, jaw/teeth/tongue fit, asymmetry and species personality. Include the Nib's dark blue tongue-out gesture and cautious/flinching responses, versus serious, fearless Krag acting. Validate portable facial/muscle corrective drivers in both engines and body volume during shoulder/elbow/hip/knee extremes. Gait reviews require heavy, planted Krag impacts and light, nimble Nib contacts on actual dune slopes.
+
+Verify expressions during each body action, not just a dedicated facial clip. Start actions on both units with overlapping playback, then pan, orbit and zoom while both finish. Review runtime fur at close and tactical distances in motion, with measured frame times and VRAM; compare the denser cinematic Blender groom to the same approved coverage.
 
 Audio checks include cue truthfulness, clean looping, voice priority, cooldown, race/individual distinction, subtitles, mechanical jaw speech, effect synchronization, volume settings and absence of stuck loops after reset/load. Test the loudest supported encounter on headphones and ordinary speakers. See [19](19-poc-audio-and-voice-plan.md).
 

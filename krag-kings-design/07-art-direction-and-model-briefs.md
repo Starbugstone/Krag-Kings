@@ -51,6 +51,8 @@ Preserve the sandstone surface, small tusks and broad proportions. Separate the 
 
 Keep exactly one pair of large ears. The refined sheet avoids extra human ears and a childlike human face. Build ear geometry so goggles and head turns do not clip it. Preserve the angular adult face during playful expressions; rig tongue extension/retraction and use the confirmed dark blue tongue color. The spanner is a separate prop, not fused to the hand.
 
+Confirmed fur coverage follows this sheet: fuller ear/head fur, fine facial/body fuzz and visible mottled skin. Keep that identity in both an efficient game groom and a denser Blender cinematic groom. Review motion shimmer, clumping, hairline/skin transitions and ear silhouette; test actual frame time and VRAM on the user's RTX 2060 before accepting runtime density. Full-body fur coverage is not approved.
+
 ### Truck
 
 ![Scrapjaw truck and removable-part concepts](concept-art/03-scrapjaw-truck-sheet.png)

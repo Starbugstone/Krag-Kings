@@ -142,6 +142,8 @@ Provide main deformation bones plus approved twist/shoulder/hip corrections, eye
 
 ### Facial performance and muscle deformation
 
+Every benchmark clip—Idle, Walk, Run, Melee, Shoot and Hit—needs appropriate facial acting, in addition to the separate FacePerformance review clip. Author expressions with the action so aiming, exertion, impact and recovery have coherent timing and species personality. Triggering another unit or moving the inspection camera must not stop the first unit's performance.
+
 Very expressive facial animation, credible facial skeletons and muscle-aware mesh deformation are user requirements for actions, close-ups and future cutscenes. A jaw hinge and static eyeballs do not meet them. Use anatomically informed brow, eyelid, cheek, lip, jaw, eye and tongue articulation supported by sculpted expression and pose correctives. Build connected facial topology and fit lids/lips over the underlying anatomy; do not substitute floating facial parts for deforming skin. The implementation may combine bones and blend shapes, but must preserve likeness at the extremes as well as at rest.
 
 Nib tongue articulation includes extension/retraction for playful acting and speech poses; preserve its confirmed dark blue color. Nib expression coverage includes cheekiness, curiosity, caution, flinch and unease. Krag coverage emphasizes serious focus, intimidation, contained combat satisfaction and irritation, retaining low-pain and fearless behavior. Both need blinks, gaze changes, asymmetric expressions and speech shapes. Provisional mouth interiors, teeth, gums, tongues and expression sheets are authorized for review; this is not final anatomy approval.
@@ -166,6 +168,8 @@ Deliver real-mesh expression sheets and short facial/body motion reviews under n
 Every clip family has tests for biological, partial and whole replacement states, heavy weapon, armor and relevant cloth. Start from shared actions but author enough variant motion to convey mass and fit. A complete lower-body machine assembly cannot simply inherit a foot slide from the biological walk.
 
 ## 9. Asset validation and quality gate
+
+**Confirmed Nib fur coverage:** retain the concept's visible mottled skin with fine facial/body fuzz and fuller ear/head fur. Develop an efficient runtime groom and a denser editable Blender groom for cinematic rendering with the same coverage and silhouette. Cards, short strand geometry and selective bone-driven motion are implementation candidates; do not assume expensive full fur simulation is needed. Inspect close-ups, motion shimmer, alpha edges, self-shadowing and silhouette transitions in each engine. Measure actual GPU/CPU frame times, overdraw and VRAM on the RTX 2060 reference rig before choosing density and LOD transitions. The cinematic Krag master must likewise retain muscular anatomy and deformation detail beyond any measured runtime reductions.
 
 Verify scale/orientation with a known-size axis asset; joint names/rest transforms; weights and zero unweighted vertices; sockets; stable material slots; normals/tangents; seams; required texture presence; bounds; LOD transitions; and collision/fit metadata. Use deterministic import settings and stable content IDs.
 
