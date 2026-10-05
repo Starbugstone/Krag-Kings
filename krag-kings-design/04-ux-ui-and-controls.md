@@ -119,7 +119,7 @@ Treatment preview names the part, socket, species fit, strain before/after, func
 
 Display total implant strain and anatomical fit separately: Brok 7/8; a Nib with two light implants 2/2. Heavy Krag-only part and Implant allowance exceeded are different rejection reasons. Entry servo parts explicitly show Strain 1, restored functions and their named equipment perk. Elective fitting previews the same perk and downtime on healthy anatomy; label XP-learned and implant-granted perks separately. Deployment filtering must also be enforced by game rules, not just a disabled UI button. See [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md).
 
-Krag hit reactions should suggest irritation, amusement or renewed enthusiasm rather than fear and prolonged pain. They may bark an eager response to a fight or admire a ridiculous gun. Keep knockdown and incapacitation unmistakable when they occur; personality animation never delays the turn or changes the result.
+Krag hit reactions should suggest serious irritation, braced determination or renewed combat focus rather than fear, prolonged pain or clowning. They may deliver a dry response or show contained appreciation for a large gun. Nibs may use playful, cheeky expressions, including showing a dark blue tongue in an appropriate personality beat; keep urgent injury and combat states readable. Keep knockdown and incapacitation unmistakable when they occur; personality animation never delays the turn or changes the result.
 
 ## 10. Cargo, objectives and extraction
 

@@ -22,6 +22,8 @@ The proposed ranged dodge rule converts some successful hits to grazes. Reflex c
 
 ### Krag physiology and temperament
 
+**Confirmed performance update — 5 October 2026:** Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain. They are grounded and expressive without clowning. Show weight and ground impact in their walking, supported by planted feet, believable weight transfer and muscle/joint deformation. Their enjoyment of combat can read as a determined scowl, controlled grin or contained satisfaction; playful tongue-out gestures belong to Nibs. These performance cues do not create automatic combat actions or new numerical bonuses.
+
 | Established trait | Proposed gameplay expression | What continues to matter |
 | --- | --- | --- |
 | Very little pain | No action, aim or movement penalty caused solely by pain; minor hits receive a short confident reaction | Broken limbs, incapacitation and damaged implants still have their physical effects |
@@ -35,6 +37,12 @@ The no-pain-penalty rule is a POC abstraction for feeling very little pain, not 
 Use explicit cause tags for effects. Pain and fear are filtered by these traits; structural injury, bleeding, unconsciousness, physical stun and knockback use their own rules. Do not label all disabling effects as pain or fear to simplify the implementation.
 
 The first POC does not need a morale minigame. Trait data, status validation and a small debug fixture can prove these interactions while the normal encounter demonstrates Krags fighting confidently through ordinary hits.
+
+### Nib personality and performance
+
+Nibs are playful adult engineers who are physically weak and a little cowardly, while remaining light-footed, stealthy and nimble. Their practical technical competence coexists with caution around danger, cheeky expressions and a tongue-out gesture. **Their tongues are dark blue.** Show alert glances, flinching or a cautious posture when appropriate; technical confidence does not make them fearless fighters. Do not translate playfulness into a childish mascot face, constant slapstick or perpetual hostility toward allies. Automatic panic, routing, action loss or forced retreat is not established by this personality direction.
+
+Use responsive eye/brow/ear acting, expressive lips and a controllable tongue for close-ups and future cutscenes. Author light contacts and agile balance changes in walk/run cycles. Facial and body deformation must preserve the selected concept likeness in motion. Mouth interiors and expression sheets may be developed provisionally for user review; only the explicitly specified tongue color and personality direction are settled by this update. See [16](16-character-and-merch-production.md) for rig requirements and [19](19-poc-audio-and-voice-plan.md) for voice direction.
 
 ### Big guns as a playable preference
 

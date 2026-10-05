@@ -84,9 +84,9 @@ A missing wheel, empty driver's seat or bionic leg should communicate meaningful
 
 | Element | Established identity or requirement |
 | --- | --- |
-| Krags | Large bodies, resistant sandstone skin, small tusks, very little pain, fearless temperament, love of fighting and oversized guns |
+| Krags | Serious brute force: large bodies, resistant sandstone skin, small tusks, very little pain, fearless, love of big guns and smashing skulls; weighty movement with ground impact |
 | Clan boss | A Krag who is physically larger and broader than ordinary Krags; size must be visible on the model, not only conveyed by equipment |
-| Nibs | Smaller bodies, light sandy skin, large fennec-like ears; dodge, mechanics and advanced technology; fragile in hand-to-hand combat |
+| Nibs | Playful engineers, physically weak and a little cowardly; small wiry bodies, sandy skin, large fennec-like ears, dark blue tongues; light-footed, stealthy and nimble |
 | Jetpacks | Characters can equip them to improve access to height and vertical routes |
 | Bionics | Krags willingly accept heavy replacements; fragile Nib bodies permit only limited lightweight bionics; all implants retain anatomical compatibility |
 | Progression and recovery | XP grants learned perks; bionics grant equipment perks, including elective replacements; fitting takes time during which campaign events can occur |
@@ -152,9 +152,9 @@ The existing setting proposal is **the Scour**, a desert world of glass flats, c
 
 These names and that conflict have not been locked. Krag Kings is the current project label; the earlier name shortlist was not a final naming decision.
 
-The intended tone mixes dangerous scrap-built machinery with dry humour and overconfident crews. Krags could use radio handles and trucker slang; Nibs could use impatient, mangled engineering jargon. Humour should come from character and consequences as much as dialogue.
+The intended tone mixes dangerous scrap-built machinery with dry humour and distinct crew personalities. **Confirmed personality update — 5 October 2026:** Nibs are playful engineers, physically weak and a little cowardly, as well as light-footed, stealthy and nimble; they may cheekily stick out their dark blue tongues. Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain. They do not clown around like Nibs. Nib playfulness retains adult engineering competence, and Krag seriousness retains expressive acting and enthusiasm for combat. Radio handles, slang and specific accents remain audition proposals; do not make mangled jargon or clowning a species requirement. Humour should come from character and consequences as much as dialogue. Nib caution is not an approved automatic panic/routing mechanic.
 
-Krags actively relish a good fight. Their dialogue, confident hit reactions and delight in oversized guns should communicate that appetite, without involuntary attacks overriding the player's commands. The boss's bulk and appetite for the biggest gun should announce leadership before a nameplate does. Whether bosses grow through age, dominance or another biological process remains open; their larger physical size is established.
+Krags actively relish a good fight. Their dialogue, confident hit reactions and pride in oversized guns should communicate that appetite through grounded, serious confidence and contained satisfaction. Avoid playful tongue-out taunts or broad clowning. No involuntary attack overrides the player's commands. The boss's bulk and appetite for the biggest gun should announce leadership before a nameplate does. Whether bosses grow through age, dominance or another biological process remains open; their larger physical size is established.
 
 The earlier idea of mistreated Nibs retaliating through sabotage is also unconfirmed. If explored, it needs a visible relationship system and player agency; unexplained friendly sabotage would conflict with tactical readability.
 

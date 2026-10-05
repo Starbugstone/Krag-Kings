@@ -6,7 +6,7 @@ Draft 0.5 · 4 October 2026 · [Pack overview](00-overview-and-campaign.md)
 
 Ten concept sheets accompany this pack. They were created with the built-in image generator for this project. They are visual development references, not finished 3D meshes or exact orthographic blueprints. Use the written scale, handedness, attachment and collision requirements below when a generated view leaves mechanical detail ambiguous.
 
-The POC can start with primitives. These sheets guide later greybox proportions and production assets; polished models are not a prerequisite for testing movement.
+Internal movement tests may use primitives, but the currently requested investor engine demos require detailed concept-faithful characters. Primitive tests do not satisfy their art acceptance.
 
 ## 1. Shared visual direction
 
@@ -18,7 +18,9 @@ Semi-realistic textured characters and assembled machinery, readable from an ele
 
 Wounds, implants, external passengers, damaged wheels and empty stations must be visible at gameplay distance. Avoid copied faction symbols, signature silhouettes or language from the inspiration franchises. The new designs need their own identity.
 
-Original anatomy remains visible under equipment. A Krag is broad and heavy, with a low head and small tusks. A Nib is a compact adult desert creature with large fennec-like ears, a wiry frame and practical mechanical gear. The Nib sheet explores a more animal-like face; that facial treatment is a proposal, while sandy skin and large ears are established.
+Original anatomy remains visible under equipment. A Krag is broad and heavy, with a low head and small tusks. A Nib is a compact adult desert creature with large fennec-like ears, a wiry frame and practical mechanical gear. The selected Nib sheet is the current facial-likeness target; preserve its mature creature face, sandy skin and large ears. Unshown anatomy remains subject to review.
+
+**Confirmed acting update — 5 October 2026:** preserve the selected character sheets' likeness in detailed 3D and expressive animation. Krags are serious brute force, fearless and low-pain, loving big guns and smashing skulls; show heavy foot contacts and forceful combat satisfaction without playful tongue-out clowning. Nibs are playful engineers, physically weak and a little cowardly, as well as stealthy, light-footed and nimble. Their expression range includes cautious glances and flinching alongside cheekiness and sticking out a **dark blue tongue**. Both need credible facial rigs and muscle-aware body deformation for actions, close-ups and future cutscenes. Develop unseen mouth interiors and expression sheets provisionally for review; do not treat an unreviewed interior design as final canon.
 
 **Revision 0.4:** keep the ten selected sheets as references while applying species-specific bionic limits. Heavy claws, the iron jaw and Brok's reinforced piston leg are Krag fittings. Nib alternatives need deliberately lightweight construction, not a uniformly shrunken Krag mechanism. A normal restorative Nib limb restores function without implying heavy combat ability. Krags should appear comfortable or pleased about replacement parts; recovery poses still communicate a body not yet ready for deployment.
 
@@ -47,7 +49,7 @@ Preserve the sandstone surface, small tusks and broad proportions. Separate the 
 
 ![Nib front, side, back, portrait and tool concept](concept-art/02-nib-character-sheet.png)
 
-Keep exactly one pair of large ears. The refined sheet avoids extra human ears and a childlike human face. Build ear geometry so goggles and head turns do not clip it. The spanner is a separate prop, not fused to the hand.
+Keep exactly one pair of large ears. The refined sheet avoids extra human ears and a childlike human face. Build ear geometry so goggles and head turns do not clip it. Preserve the angular adult face during playful expressions; rig tongue extension/retraction and use the confirmed dark blue tongue color. The spanner is a separate prop, not fused to the hand.
 
 ### Truck
 
@@ -99,7 +101,7 @@ Keep four sockets in a 2 × 2 rack, with projectiles independently hideable afte
 
 Build the boss with a broader torso, thicker neck and larger limbs as well as greater height. Compare the two bodies on the same floor at the same camera distance. The boss's anatomical left arm carries the optional crusher claw; his right hand holds an oversized gun with an integral recoil brace. The jaw is an optional implant. Gorr uses this larger body in the POC; show only equipment actually present in his selected loadout. The fully equipped concept is one loadout, not mandatory starting inventory.
 
-Author body bounds and seated poses from the approved greybox. Skin texture should communicate toughness while preserving visible wounds. Keep a delighted, combative expression and confident stance. Size does not silently multiply weapon damage or grant extra actions; the gameplay profiles remain authoritative.
+Author body bounds and seated poses from the approved greybox. Skin texture should communicate toughness while preserving visible wounds. Keep a serious, combative expression and confident stance, with contained satisfaction in powerful equipment. Size does not silently multiply weapon damage or grant extra actions; the gameplay profiles remain authoritative.
 
 ## 3. Authoritative initial scale targets
 
@@ -146,11 +148,11 @@ Use authored metadata to map sockets to gameplay nodes. Do not infer station cap
 
 The first vehicle set needs an intact wheel, disabled/missing wheel state, damaged mount, disabled engine cue and a wreck state, plus the ball's stow/deploy/swing poses. The character set needs a healthy variant, wound marker, oversized claw and animated metal jaw. The missile follow-on adds four/two/zero loaded states. More elaborate deformation can follow once those states are playable.
 
-Minimum reusable character clips: idle, locomotion, seated driver, seated passenger, aim/fire, melee, interact/repair, mount/dismount, climb/board, brace, hit/downed and powered-jump take-off/landing. Start with simple blocked poses and short interpolations where full animation would delay proving a rule. Keep logical arrival separate from animation timing.
+Minimum reusable character clips for the wider POC: idle, walk/run, seated driver, seated passenger, aim/fire, melee, interact/repair, mount/dismount, climb/board, brace, hit/downed and powered-jump take-off/landing, plus expressive facial acting. Internal blocked poses can prove a rule, but the investor demos require polished movement and deformation. Keep logical arrival separate from animation timing; see [16](16-character-and-merch-production.md) for the current facial/muscle contract.
 
-Krag hit reactions express irritation or enthusiasm without repeated pain flinches that imply lost actions. Physical displacement, disabled limbs and downed states must remain unmistakable. Add an eager combat idle and a weighty heavy-gun recoil pose; the larger boss needs proportion-appropriate stance and grip rather than extra attacks. Fear immunity does not remove physical impact animation.
+Krag hit reactions express serious irritation or forceful determination without fearful or exaggerated pain reactions. Physical displacement, disabled limbs and downed states must remain unmistakable. Add a serious combat-ready idle and a weighty heavy-gun recoil pose; the larger boss needs proportion-appropriate stance and grip rather than extra attacks. Fearlessness does not remove physical impact animation. Nibs show lighter support and appropriate caution/flinching alongside playful engineering personality.
 
-Initial budgets to measure rather than blindly enforce: roughly 15–30k triangles per character, 20–50k per truck, 10–25k per bike outfit, and 2k texture sets for hero assets with simpler shared materials for terrain. Use small material counts and simple gameplay colliders. These are provisional art targets, not measured browser performance limits.
+The earlier browser-oriented 15–30k character triangle and 2K hero texture proposals are superseded for the current Windows comparison. The user prioritizes premium hero characters on limited-unit, turn-based battlefields. Set runtime budgets from measured Unity/Unreal quality, deformation and performance; preserve detailed masters and avoid reducing visible likeness to meet obsolete numbers. Vehicle budgets remain separate future measurements. Keep gameplay colliders simple regardless of render-mesh detail.
 
 Do not bake huge sheet textures or painted labels into game models. Preserve believable surface scale: rust, skin cracks and cloth weave should not change size between nearby assets.
 

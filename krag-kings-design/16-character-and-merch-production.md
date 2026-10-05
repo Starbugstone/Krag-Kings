@@ -10,11 +10,13 @@ The selected concepts define the visual target: premium semi-realistic 3D surfac
 
 **Latest user direction:** Krags prefer armor and bionics, with little clothing because their hardy skin resists the desert. Make armor and mechanical replacements their principal equipment expression; retain recognizable anatomy and exposed cracked skin/tattoos where the selected armor leaves them visible. Minimal clothing does not mean lightly armored. Nibs have fewer bionic options and should express more variation through practical desert clothing and equipment. This is a deliberate species distinction; it is not a requirement to fully dress the Krags or cover the Nib's defining ears with generic helmets.
 
+**Confirmed personality and motion:** Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain. Their walk conveys mass and ground impact. Nibs are playful engineers, physically weak and a little cowardly, with light-footed, stealthy, nimble movement. They may cheekily stick out their **dark blue tongues**; Krags do not clown around that way. Preserve the adult concept identities while expressing this contrast through face, posture, voice and movement. No automatic fear/routing rule follows from these acting requirements.
+
 | Profile | Non-negotiable appearance | Production implication |
 | --- | --- | --- |
 | Regular Krag | Low broad head, small tusks, massive shoulders/arms, sandstone skin, amber eyes, assured physical stance | Original sculpt and skin materials; biological hands/feet must exist beneath replacement variants; minimal wardrobe exposes seams and tattoos |
 | Boss Krag | Taller **and** broader body, thicker neck and limbs, commanding heavy stance; same species | Separate approved proportions and fit profile, not uniform scaling; dedicated seated/grip corrections and station bounds |
-| Nib | Small wiry adult creature, sandy mottled skin, mature muzzle, exactly two large fennec ears, pale hair, goggles, dexterous arms | Separate anatomy/rig proportions, ear/hair shading and motion; more desert garments; lightweight bionics with distinct construction |
+| Nib | Small wiry adult creature, sandy mottled skin, mature muzzle, exactly two large fennec ears, pale hair, goggles, dexterous arms, dark blue tongue | Separate anatomy/rig proportions, expressive ears/face/tongue, fine hair shading and motion; more desert garments; lightweight restorative bionics with distinct construction |
 
 Use the old 2.2 m regular Krag / 2.75 m boss / 1.15 m Nib body as blockout proposals only. Approve measurements alongside the concept and fit scene. Do not distort proportions to meet a provisional numeric height or seat dimension.
 
@@ -138,16 +140,28 @@ Use a shared semantic naming scheme, with profile-specific rest proportions and 
 
 Provide main deformation bones plus approved twist/shoulder/hip corrections, eyes/jaw, Nib ears, mechanical pincer and joint controls. Clothing follows compatible deformation. Mechanical assemblies need explicit drivers for pistons/hinges without unpredictable stretching. Weapon and station alignment use authored contact targets and controlled IK; the resolver still owns actual position.
 
+### Facial performance and muscle deformation
+
+Very expressive facial animation, credible facial skeletons and muscle-aware mesh deformation are user requirements for actions, close-ups and future cutscenes. A jaw hinge and static eyeballs do not meet them. Use anatomically informed brow, eyelid, cheek, lip, jaw, eye and tongue articulation supported by sculpted expression and pose correctives. Build connected facial topology and fit lids/lips over the underlying anatomy; do not substitute floating facial parts for deforming skin. The implementation may combine bones and blend shapes, but must preserve likeness at the extremes as well as at rest.
+
+Nib tongue articulation includes extension/retraction for playful acting and speech poses; preserve its confirmed dark blue color. Nib expression coverage includes cheekiness, curiosity, caution, flinch and unease. Krag coverage emphasizes serious focus, intimidation, contained combat satisfaction and irritation, retaining low-pain and fearless behavior. Both need blinks, gaze changes, asymmetric expressions and speech shapes. Provisional mouth interiors, teeth, gums, tongues and expression sheets are authorized for review; this is not final anatomy approval.
+
+Body skinning needs volume-preserving shoulders, elbows, hips and knees, supported muscle/tendon changes, and stable hands gripping equipment. Show weight transfer and contact compression for Krags; lighter support, nimble balance and restrained bounce for Nibs. Test start/stop/turn and uphill/downhill support, not only a loop on a flat plane. Muscular deformations must follow joints without moving rigid armor as though it were flesh.
+
+Export named morph targets and an explicit portable driver manifest for pose correctives, including source bone/local axis, activation range and weight mapping. Blender drivers do not automatically survive FBX into either engine. Reproduce the required drivers in Unity and Unreal, and compare equivalent poses. Keep facial performance on its own rig/layer so a blink, gaze or expression does not reset walking or weapon handling. Preserve speech/expression controls independently of audio files.
+
+Deliver real-mesh expression sheets and short facial/body motion reviews under neutral and desert lighting, plus imported-engine close-ups. Check lip closure, tooth/tongue clearance, eyelid contact, eye aim, scarf/jaw fit, bionic-jaw range, joint volume and skin/cloth intersections. Bone count, morph count or a successful import alone is not a facial-quality pass.
+
 | Animation group | Minimum coverage |
 | --- | --- |
-| Identity/inspection | Breathing, idle variants, Krag eager combat stance, boss weight, Nib alert mechanic behavior, close facial/ear/jaw reactions |
-| Foot travel | Walk, faster travel, starts/stops/turns, stairs, uneven support, bionic and wounded variants |
+| Identity/inspection | Breathing, idle variants, serious Krag combat readiness, boss weight, playful/cautious Nib engineer behavior, expressive face/eye/ear/jaw/tongue performances |
+| Foot travel | Walk, faster travel, starts/stops/turns, stairs, uneven support, bionic and wounded variants; heavy Krag impacts and light, nimble Nib contacts |
 | Vehicle | Nib driving, boss gunner, regular Krag sidecar, passenger and supported rail poses, mount/dismount, station transfer |
 | Combat | Aim/fire/recoil by weapon support, melee, crusher, supported jaw bite, brace, impact, downed |
 | Traversal | Climb/board, hanging support, jet launch/flight/landing and interrupted landing |
 | Interaction | Console, repair, loading/handling, recovery sling attach/drag/release |
 | Recovery | Injured inspection/limp, fitted but recovering presentation, ready mechanical gait |
-| Speech | Short race-appropriate facial/jaw motion for actual barks, including iron jaw; captions and audio timing remain independent of AP |
+| Speech | Expressive species-appropriate lip/jaw/tongue/eye acting for actual barks, including iron jaw; captions and audio timing remain independent of AP |
 
 Every clip family has tests for biological, partial and whole replacement states, heavy weapon, armor and relevant cloth. Start from shared actions but author enough variant motion to convey mass and fit. A complete lower-body machine assembly cannot simply inherit a foot slide from the biological walk.
 

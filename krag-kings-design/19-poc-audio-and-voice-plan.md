@@ -6,11 +6,15 @@
 
 **Confirmed voice direction:** English, using AI-generated voices for the POC. Krags are deep and gruff; Nibs are higher-pitched and speak faster. Nibs remain capable adults, and both races must be intelligible. Actor recordings may replace generated voices later if finances allow. No particular accent or generation provider has been selected; choose through auditions. Original music style also requires an audition. All dialogue below is proposed tone testing, not a final scenario or story script.
 
+**Confirmed personality update:** Nibs are playful engineers, physically weak and a little cowardly; they may cheekily stick out their dark blue tongues. Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain; they do not clown around that way. Apply this distinction to vocal delivery, quips and synchronized facial acting without making Nibs childish or Krags expressionless.
+
 ## 1. Sonic identity
 
 The world should sound heavy, repairable and inhabited: loose metal, piston weight, rough engines, cloth, boots on grit, wind through industrial gaps and machinery with distinctive rhythms. Keep the oversized equipment memorable without turning each action into a prolonged gag. Sound should communicate control, contact, failure and consequence at the same moment as the rules and visuals.
 
 Use the same physical language across foot gear, replacement limbs, vehicles and the workshop. A piston-leg character has an identifiable mechanical accent in their footsteps; a dead engine is audibly different from an idling one; an empty/disabled gun does not keep playing a ready loop. A Nib remains an adult person inside a Tin Can, not a separately voiced robot.
+
+Krag footfalls communicate mass and firm ground contact; Nib footfalls are lighter and quieter, supporting stealthy, nimble movement. Synchronize weight, sole contact, gear movement and restrained surface effects to the actual walk/run animation and terrain. Do not use loud sound or camera shake to conceal floating feet or missing body weight transfer.
 
 ## 2. Music production
 
@@ -54,27 +58,28 @@ Author perspective layers for close workshop, normal tactical view and distant a
 
 | Voice aspect | Krags | Nibs |
 | --- | --- | --- |
-| Core personality | Fearless, hardy, delighted by combat and enormous machinery | Capable adult desert technicians; practical, quick-thinking and often impatient with bad engineering |
-| Delivery | Deep, gruff voice; weight, confidence, economical words, dry literal humor and amused enthusiasm | Higher-pitched, faster speech; clear articulation, technical specificity, dry corrections and contained exasperation |
-| Physical damage | Annoyance at lost function, determined exertion and physical impact | Alert practical response, vulnerability without childish squeaks |
-| What to avoid | Constant screaming, fear/panic barks, mindless stupidity, repeated copied catchphrases | Helpless mascot voice, incoherent jargon, sneering at every ally, “small means infant” casting |
-| Equipment relationship | Pride in louder/heavier tools and willing augmentation | Affection for functioning systems, lightweight bodily enhancements and externally supported machinery |
+| Core personality | Serious, fearless brute force; loves big guns and smashing skulls, feels little pain | Playful adult engineers; physically weak, a little cowardly, technically capable, cheeky and nimble |
+| Delivery | Deep, gruff voice; weight, economical words, dry understatement and contained satisfaction | Higher-pitched, faster speech; clear articulation, playful timing, technical confidence and occasional teasing |
+| Physical damage | Annoyance at lost function, determined exertion and physical impact; low pain does not remove structural injury | Flinch, nervous caution and practical concern appropriate to vulnerability, without childish squeaks |
+| Facial performance | Serious focus, weighty scowl, restrained battle grin or irritation; no fearful flinching or playful tongue-out clowning | Expressive eyes/brows/ears; cheeky dark-blue-tongue gestures in suitable moments, cautious glances and unease around danger |
+| What to avoid | Clowning, constant screaming, fear/panic barks, mindless stupidity, repeated copied catchphrases | Helpless mascot voice, baby talk, constant slapstick, incoherent jargon, sneering at every ally, “small means infant” casting |
+| Equipment relationship | Pride in louder/heavier tools and willing augmentation | Affection for functioning systems, lightweight restorative replacements and externally supported machinery; no bodily upgrade implants |
 
 Species tone is a shared direction, not one identical voice for every member. Provisional roster characterization:
 
-- **Gorr:** expansive boss confidence; appreciates a good weapon; fewer words carry authority.
-- **Brok:** direct, physical and literal; satisfied by a machine doing exactly one forceful job.
-- **Fiz:** seasoned mechanic; precise, protective of the gang's transport, dry corrections rather than constant anger.
-- **Tikk:** agile, curious and technically confident; enthusiasm for clever solutions rather than sheer scale.
+- **Gorr:** serious boss confidence; appreciates a good weapon; fewer words carry authority.
+- **Brok:** direct, physical and literal; contained satisfaction in a machine doing exactly one forceful job.
+- **Fiz:** seasoned mechanic; precise and protective of the gang's transport, with playful teasing and dry corrections rather than constant anger.
+- **Tikk:** agile, curious and technically confident; cheeky enthusiasm for clever solutions rather than sheer scale.
 
-These are performance briefs to review, not final character biographies. Additional enemy voices may use the same race grammar while remaining distinguishable.
+Fiz and Tikk can be confident about engineering while nervous about direct physical danger; do not give them Krag fearlessness through their individual briefs. These are performance briefs to review, not final character biographies. Additional enemy voices may use the same race grammar while remaining distinguishable. Personality does not authorize an automatic panic/routing system.
 
 ### Tone auditions — proposed short lines
 
 | Situation | Krag example | Nib example |
 | --- | --- | --- |
-| Selected | “Point me at something.” | “What's the problem?” |
-| Good boarding route | “That rail looks friendly.” | “Grip first. Boasting later.” |
+| Selected | “Point me at something.” | “Need clever hands?” |
+| Good boarding route | “Rail's solid. Moving.” | “Grip first. Boasting later.” |
 | Heavy weapon ready | “Now that's a proper barrel.” | “Support locked. Try to keep it that way.” |
 | Structural limb impairment | “Leg won't listen.” | “Joint's gone. Need a different route.” |
 | Repair completed | “Still loud. Good.” | “Fixed. Please stop testing it with bullets.” |
@@ -92,6 +97,8 @@ Cover selection, move/board acknowledgement, target/weapon support, action succe
 Use a central dialogue scheduler: one foreground line at a time, with critical gameplay information above optional quips. Set global/speaker/category cooldowns, no immediate line repeats, capped ambient frequency, and a mute/verbosity setting. Save recent-line history only as needed for continuity; reloading must not replay every event in the saved ledger. A stale queued bark is cancelled if the speaker is downed, extracted, no longer present or its factual condition has changed.
 
 Barks do not block input or extend AP resolution. Subtitles identify the speaker, scale with UI settings and remain readable over the tactical scene. Nonverbal critical sounds receive a text/visual equivalent. Iron-jaw processing can add a restrained mechanical resonance while preserving intelligibility; retain clean masters. Lip/jaw motion must fit the actual jaw variant without detaching teeth or cloth. A Tin Can pilot uses the same Nib voice with optional intelligible radio filtering.
+
+Face performances use species-appropriate expression ranges and actual lip/jaw/tongue articulation. Nib tongue-out acting is an optional playful beat, not a default mouth pose during every line or a replacement for intelligible speech shapes. Krags use their own serious expression set. Keep the facial rig, viseme/expression data and audio timing independently editable, and check eyelid contact, teeth, tongue, scarf and bionic-jaw clearances in close-up. Provisional mouth anatomy needs review; the Nib tongue's dark blue color is confirmed.
 
 ## 6. Recording and implementation pipeline
 

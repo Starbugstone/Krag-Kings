@@ -26,6 +26,13 @@
 | D16 | Campaign presentation must be a UX/UI concept showing management and travel decisions. The first cinematic campaign sheet does not satisfy this requirement. |
 | D17 | World map must show a much larger, sparser region, taking strategic viewing scale and spacing from Total War as a reference while retaining the original Krag Kings style. Geography remains provisional. |
 | D18 | Modular Tin Can sheet 14 is approved as the visual direction. Production turnarounds, clearances and module mechanics still need review. Base-building and revised campaign/map concepts remain awaiting user review. |
+| D19 | Implement matched Windows Unity and Unreal character/dune demos with selection, terrain-following run movement, melee/shoot/hit demonstration keys and multiple bionic variants, including the Krag crusher claw. Nib implants restore function without upgrades. This is the engine comparison, not an expansion of the depot mission. |
+| D20 | Limited battlefield character counts and turn-based combat support prioritizing detailed hero models. Continue natural-character likeness and animation passes against the selected concepts, then give bionic add-ons the same quality review. No specific simultaneous unit count has been set. |
+| D21 | Implement very expressive facial animation for actions, close-ups and future cutscenes, supported by credible facial skeletons and muscle-aware body deformation. Validate facial and body deformation in both engines; a basic body skeleton or static facial likeness is insufficient. |
+| D22 | Develop provisional concept-consistent mouth interiors and expression sheets for user review while continuing the rigs. This authorizes exploration, not final approval of unseen anatomy. |
+| D23 | Krag walking must convey weight and ground impact; Nib movement is light-footed, stealthy and nimble. |
+| D24 | Nib tongues are dark blue. |
+| D25 | Nibs are playful engineers, physically weak and a little cowardly; playful tongue-out acting is appropriate. Krags are serious brute force who love big guns and smashing skulls, are fearless and feel little pain; they do not clown around like Nibs. Apply this to personality/animation/audio, without silently introducing panic or forced-retreat rules. |
 
 ## 2. Resolved follow-up questions
 
@@ -54,6 +61,7 @@ These have not been silently approved. They are concrete review items for the pl
 | P09 / audio preproduction | Music/performance direction and exact line inventory | Short theme and voice auditions plus contextual bark test |
 | P10 / merchandising | Figure scale/process/pose/articulation and print formats | Vendor requirements, a selected loadout/pose and proof plan; runtime asset is not a manufacturing signoff |
 | P11 / source completeness | Location of the cited original `game-design-notes.md`, if it is still relevant | Review it if supplied; this audit covers only the available pack |
+| P12 / facial authoring | Mouth interiors, complete teeth and tongue are unseen in the supplied concepts | User authorized provisional designs and expression sheets; review their actual mesh rendering before treating new anatomy as final |
 
 ## 4. Traceability from requirement to evidence
 
@@ -95,6 +103,8 @@ Full-limb checks must cover nested overlap (arm plus forearm), bilateral fitting
 Cross body profile with supported anatomy state, clothing/armor layer, weapon/pack and pose. Exhaustively cover interface hazards: shoulder/claw/sleeve, hip/full leg/trousers, mechanical foot/boot, eye/lid, jaw/scarf/tusks, Nib ears/headwear, pack/harness, seat clearance and hand grip. Cover the remaining catalogue with systematic combination sampling and every canonical outfit. Store the matrix and captures with asset versions.
 
 Review face and silhouette at close workshop zoom, normal tactical distance, during motion, in shadow and at LOD transitions. Pair a technical reviewer with an art review; a passing import validator is not sufficient likeness evidence.
+
+Facial reviews cover blinks, gaze, lip closure, speech shapes, jaw/teeth/tongue fit, asymmetry and species personality. Include the Nib's dark blue tongue-out gesture and cautious/flinching responses, versus serious, fearless Krag acting. Validate portable facial/muscle corrective drivers in both engines and body volume during shoulder/elbow/hip/knee extremes. Gait reviews require heavy, planted Krag impacts and light, nimble Nib contacts on actual dune slopes.
 
 Audio checks include cue truthfulness, clean looping, voice priority, cooldown, race/individual distinction, subtitles, mechanical jaw speech, effect synchronization, volume settings and absence of stuck loops after reset/load. Test the loudest supported encounter on headphones and ordinary speakers. See [19](19-poc-audio-and-voice-plan.md).
 
