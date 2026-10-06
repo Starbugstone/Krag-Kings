@@ -1,0 +1,49 @@
+{
+  "status": "Prepared targeted cowl-pattern/pinning correction after actual v9ma silhouette failure; not generated",
+  "inputSourceSha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650",
+  "changes": [
+    "Retain actual repaired neck/Body and exact collision surfaces",
+    "Exclude front chest sheet from vertical shoulder-support projection; preserve its original deep drape/rest width",
+    "Distribute upper-edge pins over rear neck and both shoulders; remove concentrated broad end tuck",
+    "Increase provisional textile bending stiffness0.12 to0.45 for broad heavy folds"
+  ],
+  "unchanged": [
+    "Body coordinates/morphs/bind",
+    "Mouth repair",
+    "Weapon",
+    "54simulationframes",
+    "55mm contact-fit limit",
+    "Shared exports"
+  ],
+  "artisticAcceptance": false,
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_cowl_v9mb.py",
+      "sha256": "0b00f0f6229584340f2d7bc420853454023b1f2666c290cfbea3af18e5a9faf2"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v7.py",
+      "sha256": "ae1a756fc7404006a4e0b87a127e1f2afa94c0a4116d326e027cc7241ebca66a"
+    },
+    {
+      "path": "benchmark/tools/krag/build-cowl-v9mb-job.json",
+      "sha256": "f8dbb93c4a40da684c0e26351a3ef977e1330e36f9e62ded0e0360de6f85a7c9"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mb-Front.json",
+      "sha256": "511b6cbca6ff0993bc97e1754ab4ce7b788e5c5360d085ac144202951db7bd29"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mb-OpenMouth.json",
+      "sha256": "77f1ea55ab5e3495352a1b6519b7dc6cfbac6eab0e82f6eed1e32802a80d6fe7"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mb-OpenProfile.json",
+      "sha256": "5ba0c2bc1fc7f8d59106c75433b29f943eb6cba40b14e994fdcf40f9edc8a7ad"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mb-Shoot.json",
+      "sha256": "b8e10353ad248026fd3fd34bf6ad73ad048a36d323136f60e170d2d8234bb79c"
+    }
+  ]
+}

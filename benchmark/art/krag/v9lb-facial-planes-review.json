@@ -1,0 +1,86 @@
+{
+  "status": "Actual facial source and first HeadSide reviewed; structural profile/likeness failure, further views stopped",
+  "source": {
+    "path": "benchmark/art/krag/Krag_FacialPlanes_v9lb_WIP.blend",
+    "sha256": "d8a0705d277883f0d8536673d37e271799fcf0b4c8797317e98e3998f4d6bab4",
+    "bytes": 117790693
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/facial-planes-v9lb.json",
+      "sha256": "d94f738bd64637863a830c1127ec8ac4ff17ada364c1306b03b7b05e37e7194a",
+      "bytes": 1999
+    },
+    {
+      "path": "benchmark/art/krag/v9lb-facial-planes-prepared.json",
+      "sha256": "3ef1e5d66498da99ea2a29fb0249cd9389a075296e5aa73430a599ba6301c158",
+      "bytes": 2794
+    },
+    {
+      "path": "benchmark/art/krag/v9lb-before-normal-readiness.json",
+      "sha256": "c9285569cfe22ed073d877336e18aa1da40eecc8c21f3331f7cf9c0ecaadcc7e",
+      "bytes": 6363
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lb-facial-planes.png",
+      "sha256": "def245138fc6e7bf6a94d4c0290322f61498fc191aa2afdedd0fcca11fff4210",
+      "bytes": 1141538
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lb-facial-planes.meta.json",
+      "sha256": "2541d1b6f2ed7a84e5e9f73e056c27aaf3276ba88f0a348cd9d3e30f6e1fb1f1",
+      "bytes": 581
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_face_v9lb.py",
+      "sha256": "5772cd8bf1c224d3ae4acf8454df2361efdd5f45f561933231cd773b47cdbf9c",
+      "bytes": 4033
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/anatomical_planes.py",
+      "sha256": "dd481e93d68e391b4208e7cfbc0466f5f2affcb3b963e9397d07cec1a49405b2",
+      "bytes": 3682
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/ocular_surface.py",
+      "sha256": "fd3e1642a175162061864eea4a1eaa5fde3fd3112fcb0aa498f2b851247b8dd6",
+      "bytes": 2823
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-face-v9lb-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 978.0,
+      "minimumAvailableMB": 11027.0
+    },
+    {
+      "path": "benchmark/local/krag-review-face-v9lb-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2102.0,
+      "minimumAvailableMB": 10141.0
+    }
+  ],
+  "findings": [
+    "Head has no custom split normals; stale imported normals are not the source of its smooth appearance",
+    "Local displacement fields create a thin pointed brow shelf and triangular cheek protrusion instead of distributed anatomical mass",
+    "Tusk root appears as an external wedge on the lower muzzle rather than a natural lower-gum/lip eruption",
+    "Existing failed v9ma tight band/side-knot scarf is intentionally unchanged",
+    "Actual iris material fields exist, but the stopped portrait means iris visual acceptance remains untested"
+  ],
+  "stoppedViews": [
+    "Head",
+    "Front",
+    "Blink",
+    "OpenMouth",
+    "OpenProfile"
+  ],
+  "next": [
+    "Use broad topology/geodesic feathering across neighboring brow/forehead and cheek/masseter regions",
+    "Pin true anatomical eye/lip margins with continuous transition derivatives and inspect displacement gradients/normals",
+    "Preserve proven neck composition, correct tusk root transition separately and retain cowl failure gate",
+    "Actual HeadSide first after next sculpt correction"
+  ]
+}

@@ -254,3 +254,19 @@ The first v9k generation stopped before saving because its lateral lower-rim cor
 The separate prepared v9m job composes the neck surfaces by removing only concealed high-neck Body faces, preserving all Body vertices/morph coordinates and rig bind. It replaces Scarf with a new broad asymmetrical sheet, physically settled with self-collision against actual head, corrected neck, armor and harness, then baked and weighted to Chest/Neck. This has not run. It is not a lowered copy of the failed terrace collar. The prepared v9l facial-plane/iris study is also ungenerated and needs an explicit rebase onto the next corrected source before use. Shared engine exports remain unchanged; realistic mouth, likeness, clothing and IronJaw acceptance are open.
 
 The first v9m attempt subsequently cleared all 40 Body occlusion rays in memory, then stopped before simulation/save/render at the cloth initial-contact bound (56.910 mm required, unchanged55 mm maximum). `v9m-failed-generation-review.json` preserves the result. The next short read-only diagnostic will localize the actual cloth vertex and collider contact; no larger tolerance or successful drape is claimed.
+
+
+## v9ma actual corrected neck and failed cloth silhouette
+
+`Krag_NeckScarf_v9ma_WIP.blend` now exists (SHA-256 `e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650`). Its first launch ended with Windows interrupt code0xC000013A, without a Python/geometry failure or memory-limit event; source was not saved. The single fresh-name retry completed successfully. Both the interruption and retry evidence are preserved.
+
+Exact repaired skin surfaces replaced the temporary coarse neck cut, reducing initial cloth correction from56.91mm to0.923mm under the same55mm bound. The source removes2,611 concealed Body faces while preserving all59,859 Body vertices, shape coordinates and rig bind. All40 prior oral Body occlusion rays resolve. The actual OpenMouth portrait confirms rock skin no longer blocks the cavity and the lower jaw is visible. Final mouth acceptance still requires profile/tusk eruption and tongue/gum review.
+
+**The cloth remains failed.** Although54 self-colliding simulation frames completed, the result is a tight neck band and a bunched side knot rather than the broad concept cowl. The front sheet was incorrectly projected upward by a support ray intended for the shoulders before its rest width was recorded. The separate prepared v9mb recipe preserves the front drape, uses distributed upper-shoulder pins and broader textile bending. The prepared v9lb recipe separately rebases the existing face-plane/iris work onto the structurally repaired neck so garment iteration does not delay face progress. Neither is generated; shared engine assets remain unchanged.
+
+
+## v9lb actual plane/iris source: profile rejected
+
+`Krag_FacialPlanes_v9lb_WIP.blend` (SHA-256 `d8a0705d277883f0d8536673d37e271799fcf0b4c8797317e98e3998f4d6bab4`) and the first actual HeadSide view are preserved in `v9lb-facial-planes-review.json`. The source has no custom split normals; stale imported normals do not explain its smooth appearance. The new local fields move23,802 vertices with a34.19mm peak, but the actual profile rejects the result: a thin pointed brow shelf and triangular cheek projection replace coherent broad anatomical mass. Tusk root/lip emergence also fails. Remaining portraits and expressions were stopped at that gate; iris fields exist but have no portrait acceptance.
+
+The next sculpt must spread volume through neighboring brow/forehead and cheek/masseter topology, with smoothly feathered geodesic support and fixed true eyelid/lip margins. Displacement-gradient/normal continuity and actual profile review are required. The structurally repaired v9ma neck stays; its failed cowl and the external-looking tusk roots remain separate known defects. No source or geometry from these studies has reached shared engine assets.

@@ -1,0 +1,355 @@
+{
+  "status": "Actual isolated neck/cloth source; mouth, fabric and pose acceptance requires renders",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+    "sha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_NeckScarf_v9ma_WIP.blend",
+    "sha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650"
+  },
+  "neck": {
+    "status": "Prepared concealed-face composition executed; actual open-mouth/neck review required",
+    "removedFaces": 2611,
+    "beforeFaces": 59155,
+    "afterFaces": 56544,
+    "selection": "All face corners are in the Neck skin domain, above Neck joint midpoint and strictly inside external Head surface",
+    "neckJointMidpointZ": 1.7319499850273132,
+    "retainedVertexCount": 59859,
+    "shapeCoordinatesPreserved": true,
+    "unchanged": [
+      "Limbs",
+      "Torso",
+      "Head anatomy",
+      "Body vertex order",
+      "Rig bind"
+    ],
+    "pending": "Actual visibility/neck seam review; cinematic seam welding is not claimed"
+  },
+  "mouthRays": {
+    "originalBodyOcclusions": 40,
+    "remainingBodyOcclusions": 0,
+    "resolved": [
+      {
+        "pixel": [
+          342,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          342,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          374,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          438,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          438,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          438,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          438,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          454,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          470,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          486,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      }
+    ]
+  },
+  "cloth": {
+    "status": "Actual simulated source study; visual/intersection/pose acceptance pending",
+    "simulationFrames": 54,
+    "quality": 8,
+    "selfCollision": true,
+    "pinDomain": "Own u/v rear neckline and shoulder tuck",
+    "colliders": "Exact repaired neutral Body, Head exterior, armor and harness geometry; no artificial horizontal neck crop",
+    "bodyColliderVertices": 59859,
+    "bodyColliderFaces": 56544,
+    "headColliderVertices": 51794,
+    "shoulderSurfaceLiftedVertices": 996,
+    "maxShoulderSurfaceLiftMeters": 0.035324225425720224,
+    "radialEnvelopeFittedVertices": 0,
+    "maxRadialEnvelopeAdjustmentMeters": 0.0,
+    "initialPenetrationAdjustedVertices": 98,
+    "maxInitialAdjustmentMeters": 0.0009234506276811961,
+    "settledBoundsMeters": [
+      [
+        -0.1405062973499298,
+        -0.19232363998889923,
+        1.7042218446731567
+      ],
+      [
+        0.16090776026248932,
+        0.18667003512382507,
+        1.8526414632797241
+      ]
+    ],
+    "postSimulationSubdivisions": 2,
+    "thicknessMeters": 0.0024
+  },
+  "preservedGeometryShapesBindFingerprint": "270626d0a451737a116392b0deb67be2de17b02d53cdf6b9f6e4335806253074",
+  "pending": [
+    "Actual open-mouth/front/profile/scarf contact review",
+    "Cinematic final neck seam integration",
+    "Concept face/iris/cloth material fidelity",
+    "IronJaw anatomical replacement"
+  ]
+}

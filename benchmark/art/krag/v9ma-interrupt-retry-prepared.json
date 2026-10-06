@@ -1,0 +1,12 @@
+{
+  "status": "Prepared single retry after interrupted0xC000013A run; no Python/geometry gate failure and no OOM evidence",
+  "unchangedRecipe": "benchmark/art/krag/v9ma-neck-scarf-prepared.json",
+  "job": {
+    "path": "benchmark/tools/krag/build-neck-scarf-v9ma-retry1-job.json",
+    "sha256": "9317348eadb83d1dacb7e28466c56cda311bad0cdf3c3ee1306aa28e56c4e1f7"
+  },
+  "originalLogPathsPreserved": true,
+  "scriptArgumentsUnchanged": true,
+  "resourceGatesUnchanged": true,
+  "onRepeatedInterruption": "Stop retries; inspect foreground/process ancestry before further Blender launch"
+}

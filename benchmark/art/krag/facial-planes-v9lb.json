@@ -1,0 +1,63 @@
+{
+  "status": "Generated isolated facial/ocular source; actual likeness and expression review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_NeckScarf_v9ma_WIP.blend",
+    "sha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_FacialPlanes_v9lb_WIP.blend",
+    "sha256": "d8a0705d277883f0d8536673d37e271799fcf0b4c8797317e98e3998f4d6bab4"
+  },
+  "planes": {
+    "status": "Prepared source geometry; actual neutral/profile/blink likeness review mandatory",
+    "maxDisplacementMeters": 0.03419139792911857,
+    "orbitalSetsRetainedForSculpt": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "oralRimPinned": true,
+    "opticalOpeningProtected": true,
+    "changedVertices": 23802,
+    "customNormalsBeforeSculpt": false,
+    "customNormalsResetToGeometry": false,
+    "normalSource": "Geometry-derived smooth loop normals after the new sculpt"
+  },
+  "eyes": {
+    "status": "Actual source material fields; runtime atlas/coat integration pending",
+    "irisSurfaces": [
+      {
+        "side": "L",
+        "points": 1600,
+        "sourceRadiusMeters": 0.007057659708108627
+      },
+      {
+        "side": "R",
+        "points": 1600,
+        "sourceRadiusMeters": 0.007063365092522638
+      }
+    ],
+    "radialReliefMeters": 1.8e-05,
+    "coatRoughness": 0.065,
+    "coatIOR": 1.376,
+    "geometryUnchanged": true,
+    "runtimeRequirement": "Bake actual Face UV atlas; preserve ocular wet-coat response explicitly in engine materials"
+  },
+  "preserved": [
+    "Mouth interior/real oral rim",
+    "Optical geometry",
+    "Body anatomy and rig",
+    "Actions",
+    "Current weapon",
+    "Shared exports"
+  ],
+  "next": [
+    "HeadSide first: no pointed brow/chin profile",
+    "Neutral portrait and full-body proportion check",
+    "Actual Blink/OpenMouth folded-lid and oral contact review",
+    "Actual Face UV bake before runtime export"
+  ]
+}

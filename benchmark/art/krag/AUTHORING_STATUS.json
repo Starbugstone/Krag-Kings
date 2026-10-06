@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Actual v9ka assembled mouth fails; all-mesh rays prove duplicate Body neck occlusion. v9m generation cleared all40 Body rays in memory but stopped before cloth simulation/save at a56.91mm initial-fit correction exceeding unchanged55mm bound. A read-only collider attribution is prepared. Root owns actual CMU body-motion studies; shared unchanged.",
+  "currentAuthoringCode": "Actual v9ma removes duplicate neck from oral cavity but cloth silhouette fails. Actual v9lb face/iris source and HeadSide now fail due thin brow shelf/triangular cheek projection; no stale custom normals found. Broad topology-based sculpt transition and cowl/tusk corrections remain. Shared unchanged.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -420,5 +420,27 @@
   "failedV9kGeneration": "benchmark/art/krag/v9k-failed-generation-review.json",
   "preparedNeckScarfStudy": "benchmark/art/krag/v9m-neck-scarf-prepared.json",
   "preparedFacialPlaneStudy": "benchmark/art/krag/v9l-facial-planes-prepared.json",
-  "failedNeckScarfGeneration": "benchmark/art/krag/v9m-failed-generation-review.json"
+  "failedNeckScarfGeneration": "benchmark/art/krag/v9m-failed-generation-review.json",
+  "neckScarfStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_NeckScarf_v9ma_WIP.blend",
+      "sha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650",
+      "bytes": 117670534
+    },
+    "review": "benchmark/art/krag/v9ma-neck-scarf-review.json",
+    "status": "Actual corrected-neck/cloth source and first OpenMouth review; oral occluder fixed, garment silhouette fails",
+    "accepted": false
+  },
+  "preparedFaceRebase": "benchmark/art/krag/v9lb-facial-planes-prepared.json",
+  "preparedCowlStudy": "benchmark/art/krag/v9mb-cowl-prepared.json",
+  "facialPlaneStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_FacialPlanes_v9lb_WIP.blend",
+      "sha256": "d8a0705d277883f0d8536673d37e271799fcf0b4c8797317e98e3998f4d6bab4",
+      "bytes": 117790693
+    },
+    "review": "benchmark/art/krag/v9lb-facial-planes-review.json",
+    "status": "Actual facial source and first HeadSide reviewed; structural profile/likeness failure, further views stopped",
+    "accepted": false
+  }
 }

@@ -1,0 +1,60 @@
+{
+  "status": "Prepared explicit rebase of frozen v9l plane/iris recipe onto actual corrected-neck v9ma; not generated",
+  "inputSourceSha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650",
+  "retainedKnownFailure": "v9ma cloth is an unaccepted tight neck band; this isolated study changes only face/iris",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "firstReview": "HeadSide; stop if pointed profile or structural failure",
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_face_v9lb.py",
+      "sha256": "5772cd8bf1c224d3ae4acf8454df2361efdd5f45f561933231cd773b47cdbf9c"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/anatomical_planes.py",
+      "sha256": "dd481e93d68e391b4208e7cfbc0466f5f2affcb3b963e9397d07cec1a49405b2"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/ocular_surface.py",
+      "sha256": "fd3e1642a175162061864eea4a1eaa5fde3fd3112fcb0aa498f2b851247b8dd6"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/face_relief.py",
+      "sha256": "a40566f93270a65c9d1c6465766972f29579cfd24490015cf6968793c083e0f4"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_iris_material.py",
+      "sha256": "358bce48f4fe88d3c21eb390759e2e8197dcc7fe39f03932c288d6cf7d963804"
+    },
+    {
+      "path": "benchmark/tools/krag/build-face-v9lb-job.json",
+      "sha256": "9a5f88b6848c2e07df66b6f97d4c9dce7bfa11ab1a832710ff35cd0e6b991fef"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-Blink.json",
+      "sha256": "275a347f198c7b257b7dd5e65ad589cb069dd8edb38b0bda3045073555913ace"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-Front.json",
+      "sha256": "57efaf6125910909e6832cda5e191d390fadc87e7fffc71235835dcb4d021249"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-Head.json",
+      "sha256": "7109001dc3f036e7dd27aca78cea7c2a201631ad663940a02d9b992e16dd732b"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-HeadSide.json",
+      "sha256": "72bd635bfb1e3e78112a3822d97ac611959a49c761e3fd543a09224e18d67f22"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-OpenMouth.json",
+      "sha256": "c564770c9b052bb0627a6412a9d2a12211b8a7ab03dd131652f12a589c5cff89"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9lb-OpenProfile.json",
+      "sha256": "2127c3f820f28f1070c78ba51438aed9549ccf9b16a7aacc29b15840901c0cb4"
+    }
+  ],
+  "additionalReview": "OpenProfile for actual tusk eruption and tongue/gum contact once neutral HeadSide is structurally coherent",
+  "amendment": "Before first generation, record imported custom-normal flag; if present, reset to automatic geometry-derived Head loop normals after sculpt. Eye geometry/normals unchanged. Prior prepared generator preserved separately."
+}

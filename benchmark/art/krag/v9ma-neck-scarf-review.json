@@ -1,0 +1,95 @@
+{
+  "status": "Actual corrected-neck/cloth source and first OpenMouth review; oral occluder fixed, garment silhouette fails",
+  "source": {
+    "path": "benchmark/art/krag/Krag_NeckScarf_v9ma_WIP.blend",
+    "sha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650",
+    "bytes": 117670534
+  },
+  "artisticAcceptance": false,
+  "mouthFinalAcceptance": false,
+  "clothAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/neck-scarf-v9ma.json",
+      "sha256": "140234f1300f35ea1f2fd50d62e0790446d7d782eb10190ef2eb13ce24686b6a",
+      "bytes": 7055
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9ma-neck-scarf.png",
+      "sha256": "b37344f959ea5eb06fa8445420404f337fb30e9f51a472cd6286016344699e88",
+      "bytes": 1309877
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9ma-neck-scarf.meta.json",
+      "sha256": "f81ee87bd441fe2e72f04184af6f9ccd19b14b2496dc6007289a6605ef6f7e32",
+      "bytes": 583
+    },
+    {
+      "path": "benchmark/art/krag/v9ma-neck-scarf-prepared.json",
+      "sha256": "d172f04b04d3ecfba65318dde6cabd9a9a7e92e7f5c5be7dd4c0cdad378e2e79",
+      "bytes": 2076
+    },
+    {
+      "path": "benchmark/art/krag/v9ma-interrupted-generation.json",
+      "sha256": "e3d98e95f9601c104d32cf1ecc4be84f169d7ad608a878c6011e6da4bb5d772c",
+      "bytes": 664
+    },
+    {
+      "path": "benchmark/art/krag/v9ma-interrupt-retry-prepared.json",
+      "sha256": "ccd012afaca7d095ff538d13cbda9b3184c62d62e91186ecb75b1f3de2cd5c94",
+      "bytes": 587
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_neck_scarf_v9ma.py",
+      "sha256": "bc09eb9bbd390fd1f839ddcfc30e1c946607a70713bec2a3b87d89339bdb31f5",
+      "bytes": 6403
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v6.py",
+      "sha256": "de1f2f147ca1dec1f320b8ac8874f05e409422c1d79c1a2686f4a1e6486f3688",
+      "bytes": 11800
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/neck_composition.py",
+      "sha256": "14204d317782b642a5be645cbdbdf3ff50ec3045ab2eba7d0178ca870c60c0db",
+      "bytes": 3630
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-neck-scarf-v9ma-retry1-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1220.0,
+      "minimumAvailableMB": 10857.0
+    },
+    {
+      "path": "benchmark/local/krag-review-neck-scarf-v9ma-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2100.0,
+      "minimumAvailableMB": 10319.0
+    }
+  ],
+  "observedImprovements": [
+    "All40 previously Body-occluded mouth rays now resolve to intended oral/face surfaces",
+    "Actual image no longer shows rock skin blocking the cavity",
+    "Lower lip/mandible is visible after removal of the high rigid collar",
+    "54-frame physical cloth simulation completed using actual repaired body/head and equipment collision"
+  ],
+  "failedChecks": [
+    "Scarf bunched into a tight neck band and side knot, losing the broad loose multilayer chest cowl from concept01",
+    "The front sheet was incorrectly lifted by the shoulder-support ray before cloth rest lengths were established; front drape/pinning need correction",
+    "Face remains smooth and spherical with weak brow/glabellar/cheek planes and flat yellow iris disks",
+    "Tusk eruption at lower lip/gum and tongue/gum visibility need actual profile/closeup review; mouth is not finally accepted"
+  ],
+  "stoppedViews": [
+    "OpenProfile",
+    "Front",
+    "Shoot"
+  ],
+  "next": [
+    "Prepared v9lb face/iris isolated rebase onto this corrected neck, HeadSide first",
+    "Prepared v9mb cowl preserves free front drape and distributed shoulder support, actual garment review required",
+    "No shared export until anatomical/art/pose gates pass"
+  ]
+}
