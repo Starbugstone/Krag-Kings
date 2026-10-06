@@ -661,7 +661,15 @@
       },
       "runtime_triangles": 1026672,
       "runtime_material_slots": 13,
-      "runtime_mesh_count": 1
+      "runtime_mesh_count": 1,
+      "triangulation": {
+        "vertices": 516105,
+        "triangles": 1026672,
+        "restoredShapeCoordinates": 26,
+        "vertexIndicesPreserved": true,
+        "basisCoordinatesUnchanged": true,
+        "normals": "Original corner normals transported through temporary corner attributes"
+      }
     },
     "Krag_Crusher": {
       "off": [
@@ -924,7 +932,15 @@
       },
       "runtime_triangles": 987908,
       "runtime_material_slots": 14,
-      "runtime_mesh_count": 1
+      "runtime_mesh_count": 1,
+      "triangulation": {
+        "vertices": 496305,
+        "triangles": 987908,
+        "restoredShapeCoordinates": 26,
+        "vertexIndicesPreserved": true,
+        "basisCoordinatesUnchanged": true,
+        "normals": "Original corner normals transported through temporary corner attributes"
+      }
     },
     "Krag_IronJaw": {
       "off": [
@@ -1194,7 +1210,15 @@
       },
       "runtime_triangles": 1034000,
       "runtime_material_slots": 13,
-      "runtime_mesh_count": 1
+      "runtime_mesh_count": 1,
+      "triangulation": {
+        "vertices": 519805,
+        "triangles": 1034000,
+        "restoredShapeCoordinates": 26,
+        "vertexIndicesPreserved": true,
+        "basisCoordinatesUnchanged": true,
+        "normals": "Original corner normals transported through temporary corner attributes"
+      }
     },
     "Krag_Piston": {
       "off": [
@@ -1467,7 +1491,15 @@
       },
       "runtime_triangles": 968616,
       "runtime_material_slots": 13,
-      "runtime_mesh_count": 1
+      "runtime_mesh_count": 1,
+      "triangulation": {
+        "vertices": 487039,
+        "triangles": 968616,
+        "restoredShapeCoordinates": 26,
+        "vertexIndicesPreserved": true,
+        "basisCoordinatesUnchanged": true,
+        "normals": "Original corner normals transported through temporary corner attributes"
+      }
     }
   },
   "modules": [
@@ -1629,5 +1661,16 @@
   "files_are_generated": true,
   "runtime_derivative_sha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
   "runtime_derivative": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
-  "runtime_derivative_status": "Unaccepted derived candidate; structural/surface transfer checks only"
+  "runtime_derivative_status": "Unaccepted derived candidate; structural/surface transfer checks only",
+  "geometryExport": {
+    "triangulated": true,
+    "method": "Temporary assembly BMesh triangulation with cached shape coordinates and corner normals restored",
+    "payloadPreservation": {
+      "sparseMorphs": "Pinned baseline arrays restored with verified Blender FBX serialization",
+      "normals": "Baseline corner normals proven identical per vertex and preserved as equivalent ByVertice/Direct mapping",
+      "pointPayloadsByteIdentical": true,
+      "mappedNormalMaxError": 0,
+      "uvMaterialCornerCoveragePreserved": true
+    }
+  }
 }

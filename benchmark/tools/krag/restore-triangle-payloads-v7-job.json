@@ -1,0 +1,24 @@
+{
+  "name": "krag-restore-triangle-payloads-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\python\\bin\\python.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\preserve_fbx_point_payloads.py",
+    "--source-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag",
+    "--candidate-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\triangulated-payload-restoration-v7.json",
+    "--names",
+    "Krag_Natural",
+    "Krag_Crusher",
+    "Krag_IronJaw",
+    "Krag_Piston",
+    "--addons",
+    "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\scripts\\addons_core"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-restore-triangle-payloads-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-restore-triangle-payloads-v7.stderr.log",
+  "maxPrivateGB": 5
+}

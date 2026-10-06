@@ -7,27 +7,28 @@ import numpy as np
 from mathutils import Vector
 from math import sin,cos,pi
 
-def H(p):return (p[0]*.86,p[1]*.87,2.107+(p[2]-2.107)*.78)
+def H(p):return (p[0]*.93,p[1]*.94,2.107+(p[2]-2.107)*.85)
 FACIAL=['Blink_L','Blink_R','Squint_L','Squint_R','BrowRaise_L','BrowRaise_R','BrowLower_L','BrowLower_R','Smile_L','Smile_R','Frown_L','Frown_R','JawOpen','LipPress','Snarl_L','Snarl_R','NoseWrinkle']
 BODY=[f'Corrective_{kind}_{side}' for kind in ['ShoulderRaise','ElbowFlex','HipFlex','KneeFlex'] for side in ['L','R']]
 MORPHS=FACIAL+BODY
 
-def geometry(c):
+def geometry(c,continuous=False):
     ball,mesh,tube,box=c['uvball'],c['mesh'],c['tube'],c['box'];skin,bone,dark=c['skin'],c['bone'],c['dark']
     gum=c['mat']('Krag_OralTissue',(.13,.041,.025),0,.43);tongue=c['mat']('Krag_Tongue',(.115,.045,.032),0,.37)
-    # Sculpt an actual frowning mouth aperture. Dark oral bag lies behind this cavity.
-    vs=[];N=48
-    for y in [-.275,-.064]:
-        for j in range(N):
-            a=2*pi*j/N;x=.096*cos(a);z=1.845-.018*(abs(x)/.096)**1.5+.0035*sin(a);vs.append((x,y,z))
-    fs=[tuple(range(N)),tuple(reversed(range(N,2*N)))]+[(i,i+N,(i+1)%N+N,(i+1)%N) for i in range(N)]
-    cutter=mesh('Provisional mouth aperture cutter',vs,fs,skin,'TEMP')
-    head=bpy.data.objects.get('Head_Sculpt');bpy.context.view_layer.objects.active=head
-    boolean=head.modifiers.new('Anatomical mouth aperture','BOOLEAN');boolean.operation='DIFFERENCE';boolean.solver='EXACT';boolean.object=cutter;bpy.ops.object.modifier_apply(modifier=boolean.name);bpy.data.objects.remove(cutter,do_unlink=True)
-    for side in [-1,1]:
-        cutter=ball('Nostril cavity cutter',(side*.026,-.215,1.912),(.012,.023,.007),skin,'TEMP','Head',seg=32,rings=20)
-        bpy.context.view_layer.objects.active=head;boolean=head.modifiers.new('Recessed nostril','BOOLEAN');boolean.operation='DIFFERENCE';boolean.solver='EXACT';boolean.object=cutter;bpy.ops.object.modifier_apply(modifier=boolean.name);bpy.data.objects.remove(cutter,do_unlink=True)
-        ball('Inner nasal shadow',(side*.026,-.194,1.912),(.010,.005,.005),dark,'Face','Head',seg=24,rings=16)
+    if not continuous:
+        # Sculpt an actual frowning mouth aperture. Dark oral bag lies behind this cavity.
+        vs=[];N=48
+        for y in [-.275,-.064]:
+            for j in range(N):
+                a=2*pi*j/N;x=.096*cos(a);z=1.845-.018*(abs(x)/.096)**1.5+.0035*sin(a);vs.append((x,y,z))
+        fs=[tuple(range(N)),tuple(reversed(range(N,2*N)))]+[(i,i+N,(i+1)%N+N,(i+1)%N) for i in range(N)]
+        cutter=mesh('Provisional mouth aperture cutter',vs,fs,skin,'TEMP')
+        head=bpy.data.objects.get('Head_Sculpt');bpy.context.view_layer.objects.active=head
+        boolean=head.modifiers.new('Anatomical mouth aperture','BOOLEAN');boolean.operation='DIFFERENCE';boolean.solver='EXACT';boolean.object=cutter;bpy.ops.object.modifier_apply(modifier=boolean.name);bpy.data.objects.remove(cutter,do_unlink=True)
+        for side in [-1,1]:
+            cutter=ball('Nostril cavity cutter',(side*.026,-.215,1.912),(.012,.023,.007),skin,'TEMP','Head',seg=32,rings=20)
+            bpy.context.view_layer.objects.active=head;boolean=head.modifiers.new('Recessed nostril','BOOLEAN');boolean.operation='DIFFERENCE';boolean.solver='EXACT';boolean.object=cutter;bpy.ops.object.modifier_apply(modifier=boolean.name);bpy.data.objects.remove(cutter,do_unlink=True)
+            ball('Inner nasal shadow',(side*.026,-.194,1.912),(.010,.005,.005),dark,'Face','Head',seg=24,rings=16)
     ball('Oral cavity lining',(0,-.024,1.829),(.105,.138,.111),dark,'MouthInterior','Head',seg=40,rings=28)
     for upper in [True,False]:
         z=1.851 if upper else 1.809;bn='Head' if upper else 'Jaw'
@@ -39,6 +40,7 @@ def geometry(c):
     ball('Tongue body',(0,-.073,1.808),(.050,.065,.010),tongue,'MouthInterior','Tongue_01',seg=40,rings=20)
     ball('Tongue front',(0,-.129,1.810),(.038,.035,.009),tongue,'MouthInterior','Tongue_02',seg=32,rings=20)
     tube('Tongue median groove',[(0,-.063,1.818),(0,-.097,1.818),(0,-.129,1.817)],[.0008,.001,.0005],gum,'MouthInterior','Tongue_02',8)
+    if continuous:return  # Continuous cage already contains eyelids, nostrils and lip loops.
     # Physical lid ribbons attach into orbital skin; blink morphs cover cornea completely.
     for s,side in [(1,'L'),(-1,'R')]:
         cutter=ball('Orbital cavity cutter',(s*.071,-.161,1.964),(.026,.024,.019),skin,'TEMP','Head',seg=40,rings=28)
@@ -81,17 +83,21 @@ def geometry(c):
         x,y,z=polygon.center
         if z>2.045 or abs(x)>.142 or y>-.025:polygon.material_index=outer_index
 
-def bones(bn):
+def bones(bn,landmarks=None):
+    landmarks=landmarks or {}
     bn('FaceRoot',H((0,-.015,1.885)),H((0,-.015,1.985)),'Head')
     # Existing Jaw is reparented by caller after this function.
     for s,side in [(1,'L'),(-1,'R')]:
         points={'Eye':(s*.071,-.165,1.964),'LidUpper':(s*.071,-.184,1.974),'LidLower':(s*.071,-.184,1.954),'BrowInner':(s*.040,-.170,1.990),'BrowOuter':(s*.108,-.141,1.993),'Cheek':(s*.111,-.129,1.908),'MouthCorner':(s*.090,-.184,1.830)}
         for n,p in points.items():
+            p=landmarks.get(n+'_'+side,p)
             tail=(p[0],p[1]-.040,p[2]) if n=='Eye' else (p[0],p[1],p[2]+.030)
             b=bn(n+'_'+side,H(p),H(tail),'FaceRoot');b.use_deform=n=='Eye'
     for n,p in [('LipUpper',(0,-.198,1.853)),('LipLower',(0,-.202,1.830)),('NoseTip',(0,-.220,1.925))]:
+        p=landmarks.get(n,p)
         b=bn(n,H(p),H((p[0],p[1],p[2]+.025)),'FaceRoot');b.use_deform=False
-    bn('Tongue_01',H((0,-.025,1.81)),H((0,-.095,1.81)),'Jaw');bn('Tongue_02',H((0,-.095,1.81)),H((0,-.158,1.81)),'Tongue_01')
+    base=landmarks.get('TongueBase',(0,-.025,1.81));middle=landmarks.get('TongueMiddle',(0,-.095,1.81));tip=landmarks.get('TongueTip',(0,-.158,1.81))
+    bn('Tongue_01',H(base),H(middle),'Jaw');bn('Tongue_02',H(middle),H(tip),'Tongue_01')
 
 def driver_manifest():
     drivers=[]
@@ -171,6 +177,21 @@ def add_morphs(modules,rig):
         o.shape_key_add(name='Basis',from_mix=False)
         for name in MORPHS:
             k=o.shape_key_add(name=name,from_mix=False);delta=deform(group,v,name)
+            if group=='Head' and name.startswith('Blink') and 'krag_reference_position' in o.data.attributes:
+                # Continuous eyelid loops close together; the old primitive
+                # head's small crease corrective cannot substitute for a blink.
+                raw=np.empty(len(v)*3,dtype=np.float32)
+                o.data.attributes['krag_reference_position'].data.foreach_get('vector',raw)
+                raw=raw.reshape(-1,3);side=1 if name.endswith('_L') else -1
+                envelope=np.exp(-((raw[:,0]-side*.0358764)/.023)**6-((raw[:,2]-.3100375)/.021)**6)
+                envelope*=np.clip((-raw[:,1]-.045)/.040,0,1)
+                from krag_head_v9 import fit
+                eye=json.loads(o['krag_reference_eye_surfaces'])['L' if side>0 else 'R']
+                center=np.asarray(eye['center']);closed=raw.copy();closed[:,2]=center[2]
+                sphere_front=center[1]-np.sqrt(np.maximum(0,eye['radius']**2-(raw[:,0]-center[0])**2))-.0008
+                closed[:,1]=np.minimum(raw[:,1],sphere_front)
+                target=fit(closed);target[:,0]*=.93;target[:,1]*=.94;target[:,2]=2.107+(target[:,2]-2.107)*.85
+                delta=(target-v)*envelope[:,None]
             if name in FACIAL:
                 rigid_indices={g.index for g in o.vertex_groups if g.name.startswith(('Eye_','Tongue_'))}
                 for vertex in o.data.vertices:
@@ -200,6 +221,18 @@ def face_weights(modules):
             x,y,z=v.co
             rigid_indices={g.index for g in o.vertex_groups if g.name.startswith(('Eye_','Tongue_'))}
             if v.index in rigid_ivory or any(g.group in rigid_indices and g.weight>.5 for g in v.groups):continue
+            if name=='Head' and 'krag_reference_position' in o.data.attributes:
+                raw=o.data.attributes['krag_reference_position'].data[v.index].vector
+                if raw.z<.168:
+                    neck=o.vertex_groups.get('Neck') or o.vertex_groups.new(name='Neck')
+                    t=max(0,min(1,(raw.z-.125)/.043));t=t*t*(3-2*t)
+                    head.add([v.index],t,'REPLACE');neck.add([v.index],1-t,'REPLACE');jaw.add([v.index],0,'REPLACE')
+                    continue
+                w=max(0,min(1,(.239-raw.z)/.011));w=w*w*(3-2*w)
+                depth=max(0,min(1,(.055-raw.y)/.075));depth=depth*depth*(3-2*depth)
+                w*=depth
+                jaw.add([v.index],w,'REPLACE');head.add([v.index],1-w,'REPLACE')
+                continue
             if y<-.032 and z<H((0,0,1.857))[2]:
                 w=max(0,min(1,(H((0,0,1.857))[2]-z)/.030));jaw.add([v.index],w,'REPLACE');head.add([v.index],1-w,'REPLACE')
 

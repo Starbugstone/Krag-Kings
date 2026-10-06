@@ -1,0 +1,3206 @@
+[
+  {
+    "file": "benchmark/local/candidates/krag-v7-triangulated/Krag_Natural.fbx",
+    "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+    "fbxVersion": 7400,
+    "meshes": [
+      {
+        "name": "Dark structural pauldron.001",
+        "attributes": {
+          "Vertices": [
+            {
+              "count": 1548315,
+              "type": "d",
+              "sha256": "b38ea3d930fabbd8377dea9012d9544001c61002c3819fce0af5cd861d0b21f2"
+            }
+          ],
+          "PolygonVertexIndex": [
+            {
+              "count": 3080016,
+              "type": "i",
+              "sha256": "1efea5093e598678b64818dae699a14df3c774915f672e947776e61043c5598e",
+              "polygonSizes": {
+                "3": 1026672
+              }
+            }
+          ],
+          "Edges": [
+            {
+              "count": 1541980,
+              "type": "i",
+              "sha256": "810c895a70206d5f005f8d29713dc7328cad120d3fe9a81dcfbc583528a9effa"
+            }
+          ]
+        },
+        "polygonCount": 1026672,
+        "triangleCount": 1026672,
+        "allTriangles": true,
+        "vertexCount": 516105,
+        "layers": [
+          {
+            "name": "LayerElementNormal",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  ""
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByVertice"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "Direct"
+                ],
+                "children": []
+              },
+              {
+                "name": "Normals",
+                "properties": [
+                  {
+                    "count": 1548315,
+                    "type": "d",
+                    "sha256": "99e281a5cc9e725b67641ec87cec64d9d0d26329eb37aa0d88486cd83e0ca083"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "LayerElementUV",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  "UVMap"
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByPolygonVertex"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "IndexToDirect"
+                ],
+                "children": []
+              },
+              {
+                "name": "UV",
+                "properties": [
+                  {
+                    "count": 1152028,
+                    "type": "d",
+                    "sha256": "3c0e4ba8c9a1dbb4fe20203011982313827f44dc10de0e56a9377c5b7d94b49d"
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "UVIndex",
+                "properties": [
+                  {
+                    "count": 3080016,
+                    "type": "i",
+                    "sha256": "173f5194be3f320021e5fa1115cd937933af6d062bf4d814f4c37128219bd607"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shapeCount": 25,
+    "shapes": [
+      {
+        "name": "Blink_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8211,
+              "type": "i",
+              "sha256": "3f903bf383fca3793cdcb491bfbc5958898181d3568d197bd9236e9b459dc5c1"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24633,
+              "type": "d",
+              "sha256": "6a3d6e1f7dc36aa370311150d984fe0e0e63a6230931d1e854a4efd47811e035"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24636,
+              "type": "d",
+              "sha256": "53f1d01a22f445f3f8c2ed7911d9263684b04e9728dc8d4f6e41c10b478c4fd6"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blink_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8263,
+              "type": "i",
+              "sha256": "6e520993c2365f7be5369fa397e9e19d7117c7d035586e8556f804d3027cbeed"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24789,
+              "type": "d",
+              "sha256": "a5f956bb4d69fd6584eefd18c4eb57112563e83f8df4c16e64d344e62b7013db"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24792,
+              "type": "d",
+              "sha256": "acde1cb7d1b2e5c33f0635ce11abb4ebb3a516d06abf96901f0cf01b5e77225a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12799,
+              "type": "i",
+              "sha256": "9ef8d4294033bf07513e036eac6e8753cb10ecfd1524e72125b6d1008abaf4e2"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38397,
+              "type": "d",
+              "sha256": "d9322eba208953cb50ad9cbf538b54c0b1bbc26ddb4d734bf252dce21bef0efd"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38442,
+              "type": "d",
+              "sha256": "f5abcb18a2106cee8edf7bd3f1d9e14202ac33ebb1a23c93682b06c0be417a2e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12796,
+              "type": "i",
+              "sha256": "2665814bedc586184c8df7e0dea537ece5e7e0a00d811b6e4eed76e705b732f7"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38388,
+              "type": "d",
+              "sha256": "3727094842642252cc970376ffb76756a2e7a8eda48c3efcefa8f8b914048204"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38439,
+              "type": "d",
+              "sha256": "2486020143d601caa80502a132448d6600e58c77f09ee85078a4f15e63d6fb83"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22945,
+              "type": "i",
+              "sha256": "48bf6826847851fafac764ab5137c38f8382ca1b458cd682d99313466903c362"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68835,
+              "type": "d",
+              "sha256": "54c34dd3d2925cbeae5a210824d09cec699e4ea083a0fda95ce289621bf96c90"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68910,
+              "type": "d",
+              "sha256": "5cbd20bce31e9dfcdbcb80fe8703a87511b2a2cea5745081785d44d848635da3"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22895,
+              "type": "i",
+              "sha256": "dcb54eedd265e0396ffc054ed994576b0d47427a42cae483e124b2cedcd86fdc"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68685,
+              "type": "d",
+              "sha256": "4ca6a833d4c0d7455db259d7d6268c22df2fc65f93d46ab538f906b64ab6b9e4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68763,
+              "type": "d",
+              "sha256": "8f0cb2ec2360aaece4bb67303dfe425518b8dff29f2d365f9d54ccc6522e141e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24420,
+              "type": "i",
+              "sha256": "2fe1a35b38ec0d608d9fd7ab50a793e18b1bdb01a5ab4a2073079879803382db"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73260,
+              "type": "d",
+              "sha256": "1708595e79f7902e565bb18754f5bfb11675e58f2a7228f674dde66f4a29b76d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73272,
+              "type": "d",
+              "sha256": "ca66d4c75193404e9e39c81b12c7637b31e8232267cab641ea29640904c507ef"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24384,
+              "type": "i",
+              "sha256": "482500a9ca4d8b618d01c4f3777288e73cf2c300ba2cb6f82bb7ab91e170d9ab"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73152,
+              "type": "d",
+              "sha256": "5efed9d20ece60c18495d624da2294a08f722097bf40fad1c6b0d0bb963551ca"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73164,
+              "type": "d",
+              "sha256": "f10ceeb53cbd139f8a78c90c42e605f70886007b94107c2a39994c054db7312f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16106,
+              "type": "i",
+              "sha256": "8207cddb582da38cb5f83a24a60761cc2cb11ddd47a76422b337f99e91c067f2"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48318,
+              "type": "d",
+              "sha256": "a30041ff829894c0e106b430cb20587b632f2ccb288c4693732ba80b241d322e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48471,
+              "type": "d",
+              "sha256": "04c983b0ca68e00a35fa883c05f8a06786b109a17f765f9819fc07a33fd6734a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16031,
+              "type": "i",
+              "sha256": "d39b8cf5ed06465317f6e945c6c01c71c0f7f266b6fdc8f92f52c1a1917053fe"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48093,
+              "type": "d",
+              "sha256": "1f9514d697c67dca79645d116c970a74a277565e54109fb095252abf8a218c41"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48273,
+              "type": "d",
+              "sha256": "b4d9d29e2c4a89b3e7bdf2b1e12836e8132b264a86c3b24fbab6f345d89dc29d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15251,
+              "type": "i",
+              "sha256": "ab553b987a23aeae81473c1f6b35e8822de7f65567e1a9d0f34acfdea86c1d85"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45753,
+              "type": "d",
+              "sha256": "d957112f8378fbe0c9d9b0d3fb3d2d76b05aa2d714342cd4e82a8821ccda2dbb"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45909,
+              "type": "d",
+              "sha256": "ef4d123ac86605c63785f276239228b3b96f4e51ef7c3ee6eb3e5c47b0df8a95"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15149,
+              "type": "i",
+              "sha256": "07de4cb679edb5814a05b5e0ed565b4e446cb59d4a3b62e14c44f9fbc771b690"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45447,
+              "type": "d",
+              "sha256": "751784d454ef19ac955c70119c55be834bcedfefe8053f93d3f189992e3efc3d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45588,
+              "type": "d",
+              "sha256": "967789602b2c64ffa06322452e80b12f8574b3be6efd13e132fcd806d175a43b"
+            }
+          ]
+        }
+      },
+      {
+        "name": "JawOpen",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 28551,
+              "type": "i",
+              "sha256": "d6dc941033541e12b46e5fb838c041b7ff257de23086bd0511bd580eadd3accb"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 85653,
+              "type": "d",
+              "sha256": "d85c314943aa04663d6e1afa845b6d5a08153951f48a3dae2c73adc163defefe"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 85677,
+              "type": "d",
+              "sha256": "9921b813ff9188dd951e53818d497137fc9bf448b82eaecefe8652fde1da72de"
+            }
+          ]
+        }
+      },
+      {
+        "name": "LipPress",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15276,
+              "type": "i",
+              "sha256": "3166637257ff583e874bc697fd36580b79bccc6b6158aac0104eb7de6b8e2847"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "189f6c306d38308c0bd37fbb2e36b2a8745274ec02a259f112555272d746fd65"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "c804f7aa59067da784674e48eb8b8e1525ed5690604d085a0d63531b302c1ec2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11576,
+              "type": "i",
+              "sha256": "575a663e572777eb9d342a571b88748b61e124ba8d25743a62afe799628bd41e"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34728,
+              "type": "d",
+              "sha256": "da2dacd704be7052d32bb206179b995b10f4433d1877affb6a43010917c2828f"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34782,
+              "type": "d",
+              "sha256": "30d0d887d6f0aef1a87b24063d5ce41efcaab50845f3c69d1611a4202c66238f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11553,
+              "type": "i",
+              "sha256": "b47aaf0b53544c2e8a93c8bbefab7576bf7cdf626c2200020594b5b7a7f01771"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34659,
+              "type": "d",
+              "sha256": "8d9e5364a36e485fce88be6f853a84796b70324e5cc82a786d637a1141f807ed"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34710,
+              "type": "d",
+              "sha256": "1849f23d37cb99f49de5ea883d6a2e65808d84eaa2d82acdfcbc91863ea5e372"
+            }
+          ]
+        }
+      },
+      {
+        "name": "NoseWrinkle",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 30828,
+              "type": "i",
+              "sha256": "54353e51afe0e71aec4fb89ab28c53206a115d9469b07012267442fb00a70f44"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "df86e715488c3b4ae669ba0d326f444505b6917cf3d160645f4de661de33ccac"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "ddc9a4f938c35d3b1ce4cfc0744c7f88a9df68a041e751388826030b8e8f2c5f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 53908,
+              "type": "i",
+              "sha256": "9fbad3127cefd519fc5ccd5c941586245796ad352735f1ec9b22ddb7275f9e7f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "2df37907035b36e437908890a5cae4859402cf3be69d29278eeb2749ff3aa4b0"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "5a2254d32579a0b94aa48962f4ebbec887b6fe5f1ebd3649ae0998545e2b8357"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 54087,
+              "type": "i",
+              "sha256": "991e71d43264f78d77db7feaf902ab52aaa9cbfd54d3fa570815959a2a44a4f5"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b2eb7fd5e2165168c520fafb6f6f8971a74db8f2ce5408a760bd3a038a41d70c"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b0f70d1485f96176dd4a2b33931a9ae386875c590617472f30ddc520f016df0f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17971,
+              "type": "i",
+              "sha256": "6b2207513155efb63c352560a3e9c6bd21ca10d6eb9d717b5893580409dded75"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "d7f0c11da80360b094756497ea84aa29fff09cc20d665b34781edfefa8baf52e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "e0d74da79ba0188e15cba5ae763b447395d332bd06aaf77c75d5776f4b342416"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17977,
+              "type": "i",
+              "sha256": "e317aa266e34167fdacaefa2351949cf76e1659c107fb7a2aaf8c88739ebb587"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "3a1aa54f811608ff3e8994fd762dfb1f79ed287b26f97dd33e76d489a0876582"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "95adbaf83e2ed385959c7e1ab6f5ff9ed2e9b6d40d61982d31c81143a5d0be0e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125306,
+              "type": "i",
+              "sha256": "fc479a1870014031d7cf5a7ab90fc6e85c36ebd5fb464af87ca240caa215330a"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "52aa6a575d9bb0c91afbc58b615407cbe2d394ddae7160194246514fa45aed50"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "a10a6ac1bfe177a4674e643fd954f4f7ae1c5ee1941056dd7a72a8cf25c0e8e2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125238,
+              "type": "i",
+              "sha256": "cc14c6d0c7db3038925f196b75499eb60f16f5a1b0c20a285c82fd05b86b58e7"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "26a66a16bbe77b8b15f208e17242de7ba924ab6b5591a524f7666ebd7984703d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "c03056a8cc1f0e70723ff02b1605e626876df9551dc9c07f3a9bf2e2a1e4b52d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61432,
+              "type": "i",
+              "sha256": "32b99827cf38979f3e7fbb9a9459b9ae8bc4d891ce8740f2d6dbf4a26850af35"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184296,
+              "type": "d",
+              "sha256": "8784c66f9961b87bda5a5cdaf2fedc1f20eff804645db804458e7f8ec0f28cd4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184290,
+              "type": "d",
+              "sha256": "c670b413a055e122532599e76761dfa8c181e910e27e802b8660efbfeef140a8"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61378,
+              "type": "i",
+              "sha256": "e428afae9cabb11d25de520284f76a3e5b930a2ecfed0d0bdc9bf3b624a48ef9"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184134,
+              "type": "d",
+              "sha256": "45e61f7f438dd7b38d94acc563f7009e1162e94e3a67a3cbd20df8bca3942593"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184125,
+              "type": "d",
+              "sha256": "0e217e93c1d27f33a05d1935737b36c776f4e70b11c7815508423521ee348b64"
+            }
+          ]
+        }
+      }
+    ],
+    "allMeshesTriangular": true
+  },
+  {
+    "file": "benchmark/local/candidates/krag-v7-triangulated/Krag_Crusher.fbx",
+    "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+    "fbxVersion": 7400,
+    "meshes": [
+      {
+        "name": "Dark structural pauldron.001",
+        "attributes": {
+          "Vertices": [
+            {
+              "count": 1488915,
+              "type": "d",
+              "sha256": "b72901953ce29019191899dc6bacb959aa01b3ce047f0faf8fd23322ef8d93d4"
+            }
+          ],
+          "PolygonVertexIndex": [
+            {
+              "count": 2963724,
+              "type": "i",
+              "sha256": "6c51991b1fafe50184ed5920ba6e487d956d6b99c2879a93f06c3bd8b7724ec4",
+              "polygonSizes": {
+                "3": 987908
+              }
+            }
+          ],
+          "Edges": [
+            {
+              "count": 1483215,
+              "type": "i",
+              "sha256": "2efdd9156c21061af3605e198360fa62e9017f2ce5eed585a9fb18c1aaa81d2e"
+            }
+          ]
+        },
+        "polygonCount": 987908,
+        "triangleCount": 987908,
+        "allTriangles": true,
+        "vertexCount": 496305,
+        "layers": [
+          {
+            "name": "LayerElementNormal",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  ""
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByVertice"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "Direct"
+                ],
+                "children": []
+              },
+              {
+                "name": "Normals",
+                "properties": [
+                  {
+                    "count": 1488915,
+                    "type": "d",
+                    "sha256": "ebdfabdf4650bdd9970401f661d5955564c983aee85788870023937dbce8fbca"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "LayerElementUV",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  "UVMap"
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByPolygonVertex"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "IndexToDirect"
+                ],
+                "children": []
+              },
+              {
+                "name": "UV",
+                "properties": [
+                  {
+                    "count": 1117346,
+                    "type": "d",
+                    "sha256": "001a2a523ac25e9cd71483fd4f7369cfc029a471b3f2b9e0de04d7fa673f0ff0"
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "UVIndex",
+                "properties": [
+                  {
+                    "count": 2963724,
+                    "type": "i",
+                    "sha256": "8f37de1f893da4dbe3ab99002ea46319a97136d8ef8aad8b0af22ec5541f5cfd"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shapeCount": 25,
+    "shapes": [
+      {
+        "name": "Blink_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8211,
+              "type": "i",
+              "sha256": "7d5a39c8faa98b9a08c48d8490b343a37b11b6b79dfd3e6542e7ae92012d5895"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24633,
+              "type": "d",
+              "sha256": "6a3d6e1f7dc36aa370311150d984fe0e0e63a6230931d1e854a4efd47811e035"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24636,
+              "type": "d",
+              "sha256": "53f1d01a22f445f3f8c2ed7911d9263684b04e9728dc8d4f6e41c10b478c4fd6"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blink_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8263,
+              "type": "i",
+              "sha256": "9af65dd32a48e56625a5564917b02bb98f597c7efb32904368cdefde1eecd213"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24789,
+              "type": "d",
+              "sha256": "a5f956bb4d69fd6584eefd18c4eb57112563e83f8df4c16e64d344e62b7013db"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24792,
+              "type": "d",
+              "sha256": "acde1cb7d1b2e5c33f0635ce11abb4ebb3a516d06abf96901f0cf01b5e77225a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12799,
+              "type": "i",
+              "sha256": "1176863c5ad9fee31e2a2d0b92eae104c6944ec70cdbf15373c71d2e87e215de"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38397,
+              "type": "d",
+              "sha256": "d9322eba208953cb50ad9cbf538b54c0b1bbc26ddb4d734bf252dce21bef0efd"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38442,
+              "type": "d",
+              "sha256": "f5abcb18a2106cee8edf7bd3f1d9e14202ac33ebb1a23c93682b06c0be417a2e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12796,
+              "type": "i",
+              "sha256": "58428a7aca03882a9760ee2a01b99932d02e460119b5f4affc01db2dbb924ee1"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38388,
+              "type": "d",
+              "sha256": "3727094842642252cc970376ffb76756a2e7a8eda48c3efcefa8f8b914048204"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38439,
+              "type": "d",
+              "sha256": "2486020143d601caa80502a132448d6600e58c77f09ee85078a4f15e63d6fb83"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22945,
+              "type": "i",
+              "sha256": "53101aae98a3b556f9d19ff05d81e9217c7b059a9d50956c71f305b37f52bd12"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68835,
+              "type": "d",
+              "sha256": "54c34dd3d2925cbeae5a210824d09cec699e4ea083a0fda95ce289621bf96c90"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68910,
+              "type": "d",
+              "sha256": "5cbd20bce31e9dfcdbcb80fe8703a87511b2a2cea5745081785d44d848635da3"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22895,
+              "type": "i",
+              "sha256": "825fab5687090118850e2fe1f290496b9f96f079a1b4031ba03741ac12abd122"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68685,
+              "type": "d",
+              "sha256": "4ca6a833d4c0d7455db259d7d6268c22df2fc65f93d46ab538f906b64ab6b9e4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68763,
+              "type": "d",
+              "sha256": "8f0cb2ec2360aaece4bb67303dfe425518b8dff29f2d365f9d54ccc6522e141e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24420,
+              "type": "i",
+              "sha256": "600ff2899977aa6e9eebe2dba9155c479c43d2f59ca06406b6ae2ee12c393eaa"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73260,
+              "type": "d",
+              "sha256": "1708595e79f7902e565bb18754f5bfb11675e58f2a7228f674dde66f4a29b76d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73272,
+              "type": "d",
+              "sha256": "ca66d4c75193404e9e39c81b12c7637b31e8232267cab641ea29640904c507ef"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24384,
+              "type": "i",
+              "sha256": "55752b4b4016302ef866128a71c76dc56afa7efdb120fbc56daa34f90e09e281"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73152,
+              "type": "d",
+              "sha256": "5efed9d20ece60c18495d624da2294a08f722097bf40fad1c6b0d0bb963551ca"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73164,
+              "type": "d",
+              "sha256": "f10ceeb53cbd139f8a78c90c42e605f70886007b94107c2a39994c054db7312f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16106,
+              "type": "i",
+              "sha256": "983c5385353adb6c7a630df00690784a7159faaa7cb242fce45d752c0367861f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48318,
+              "type": "d",
+              "sha256": "a30041ff829894c0e106b430cb20587b632f2ccb288c4693732ba80b241d322e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48471,
+              "type": "d",
+              "sha256": "04c983b0ca68e00a35fa883c05f8a06786b109a17f765f9819fc07a33fd6734a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16031,
+              "type": "i",
+              "sha256": "89cd45a7c245dcf608c51128b7b99785aa1157e4c7a7449f9d85a54b02787f71"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48093,
+              "type": "d",
+              "sha256": "1f9514d697c67dca79645d116c970a74a277565e54109fb095252abf8a218c41"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48273,
+              "type": "d",
+              "sha256": "b4d9d29e2c4a89b3e7bdf2b1e12836e8132b264a86c3b24fbab6f345d89dc29d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15251,
+              "type": "i",
+              "sha256": "952c1a1b52c3d9bb2c6c69752bf568b499e3b56178b0612b7338add8ed9913bd"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45753,
+              "type": "d",
+              "sha256": "d957112f8378fbe0c9d9b0d3fb3d2d76b05aa2d714342cd4e82a8821ccda2dbb"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45909,
+              "type": "d",
+              "sha256": "ef4d123ac86605c63785f276239228b3b96f4e51ef7c3ee6eb3e5c47b0df8a95"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15149,
+              "type": "i",
+              "sha256": "fb210cdc616b8b4a2301e6df54bf60d59049dd4f9a5e25780ddc927b6fb4bdfc"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45447,
+              "type": "d",
+              "sha256": "751784d454ef19ac955c70119c55be834bcedfefe8053f93d3f189992e3efc3d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45588,
+              "type": "d",
+              "sha256": "967789602b2c64ffa06322452e80b12f8574b3be6efd13e132fcd806d175a43b"
+            }
+          ]
+        }
+      },
+      {
+        "name": "JawOpen",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 28551,
+              "type": "i",
+              "sha256": "cc56c7aca7bbdf4d3519b2f45a3749abd88434f0e65c9f52d2b6dd49280dd3cf"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 85653,
+              "type": "d",
+              "sha256": "d85c314943aa04663d6e1afa845b6d5a08153951f48a3dae2c73adc163defefe"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 85677,
+              "type": "d",
+              "sha256": "9921b813ff9188dd951e53818d497137fc9bf448b82eaecefe8652fde1da72de"
+            }
+          ]
+        }
+      },
+      {
+        "name": "LipPress",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15276,
+              "type": "i",
+              "sha256": "0b355802ef69b64b5d13cd11bf8fb0b631bbfedd435b99989e3d89fa80abfcfb"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "189f6c306d38308c0bd37fbb2e36b2a8745274ec02a259f112555272d746fd65"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "c804f7aa59067da784674e48eb8b8e1525ed5690604d085a0d63531b302c1ec2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11576,
+              "type": "i",
+              "sha256": "fdc2f705f144b84934dc18048aaaecff3dde479c25ce3c737acebf8d72fe9c90"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34728,
+              "type": "d",
+              "sha256": "da2dacd704be7052d32bb206179b995b10f4433d1877affb6a43010917c2828f"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34782,
+              "type": "d",
+              "sha256": "30d0d887d6f0aef1a87b24063d5ce41efcaab50845f3c69d1611a4202c66238f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11553,
+              "type": "i",
+              "sha256": "9ab93def6c0e23426053a6723e2d3361e59bb85f4186dddba5bb9622618e9915"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34659,
+              "type": "d",
+              "sha256": "8d9e5364a36e485fce88be6f853a84796b70324e5cc82a786d637a1141f807ed"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34710,
+              "type": "d",
+              "sha256": "1849f23d37cb99f49de5ea883d6a2e65808d84eaa2d82acdfcbc91863ea5e372"
+            }
+          ]
+        }
+      },
+      {
+        "name": "NoseWrinkle",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 30828,
+              "type": "i",
+              "sha256": "c43b9d0bc5e32184c5a9d9fcbb1a895e3e58b9fe86e65e53d0728d104e71dd45"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "df86e715488c3b4ae669ba0d326f444505b6917cf3d160645f4de661de33ccac"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "ddc9a4f938c35d3b1ce4cfc0744c7f88a9df68a041e751388826030b8e8f2c5f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 45964,
+              "type": "i",
+              "sha256": "4456ad1b173b420a62351a82b6bfac6e765a10cdfd9276ac8faa970c97f21d27"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 137892,
+              "type": "d",
+              "sha256": "7ee9f84d0249a98cb74ded8e11a32c682a1c13942ebb546e5a11bb781642dfbc"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 137892,
+              "type": "d",
+              "sha256": "69bf3b4c17843dd57c426bbcdcb1f4ca8513ae738920430cffe3ad374e4dd82e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 54087,
+              "type": "i",
+              "sha256": "30983f32b47d80e9b2e5e04908feafc082e3b2ac487ce996c2ce103f9c0a2dd9"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b2eb7fd5e2165168c520fafb6f6f8971a74db8f2ce5408a760bd3a038a41d70c"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b0f70d1485f96176dd4a2b33931a9ae386875c590617472f30ddc520f016df0f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 1,
+              "type": "i",
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 3,
+              "type": "d",
+              "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 3,
+              "type": "d",
+              "sha256": "4c7ed5d9659663a206e6e7f3bd636d5205604e0967ff2e6e9c2a4398a7122fad"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17977,
+              "type": "i",
+              "sha256": "c0f83d41f4f691beb23742cf77b089f45ff3db9da5ecb9b50c560e8d7af94d5c"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "3a1aa54f811608ff3e8994fd762dfb1f79ed287b26f97dd33e76d489a0876582"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "95adbaf83e2ed385959c7e1ab6f5ff9ed2e9b6d40d61982d31c81143a5d0be0e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125306,
+              "type": "i",
+              "sha256": "c019ca85e5e7f07593d8bed52469fc2c5efdb89d0dda625fe15973ccc53155b4"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "52aa6a575d9bb0c91afbc58b615407cbe2d394ddae7160194246514fa45aed50"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "a10a6ac1bfe177a4674e643fd954f4f7ae1c5ee1941056dd7a72a8cf25c0e8e2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125238,
+              "type": "i",
+              "sha256": "16b95155e7478e65dafa2a52c1405419f35682630b35eb3508606bb33bfcc36d"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "26a66a16bbe77b8b15f208e17242de7ba924ab6b5591a524f7666ebd7984703d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "c03056a8cc1f0e70723ff02b1605e626876df9551dc9c07f3a9bf2e2a1e4b52d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61432,
+              "type": "i",
+              "sha256": "9d46e6eb08298e616067b1d092507af6733b2b7347ae1c7bfd6cf8ea625bc882"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184296,
+              "type": "d",
+              "sha256": "8784c66f9961b87bda5a5cdaf2fedc1f20eff804645db804458e7f8ec0f28cd4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184290,
+              "type": "d",
+              "sha256": "c670b413a055e122532599e76761dfa8c181e910e27e802b8660efbfeef140a8"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61378,
+              "type": "i",
+              "sha256": "5d2e11df6a498cec66d177e70448b9afcde935c5bb16c91c3dc9f6e4f853ec98"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184134,
+              "type": "d",
+              "sha256": "45e61f7f438dd7b38d94acc563f7009e1162e94e3a67a3cbd20df8bca3942593"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184125,
+              "type": "d",
+              "sha256": "0e217e93c1d27f33a05d1935737b36c776f4e70b11c7815508423521ee348b64"
+            }
+          ]
+        }
+      }
+    ],
+    "allMeshesTriangular": true
+  },
+  {
+    "file": "benchmark/local/candidates/krag-v7-triangulated/Krag_IronJaw.fbx",
+    "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+    "fbxVersion": 7400,
+    "meshes": [
+      {
+        "name": "Dark structural pauldron.001",
+        "attributes": {
+          "Vertices": [
+            {
+              "count": 1559415,
+              "type": "d",
+              "sha256": "2f456e91970524997425b61034893efea1b261e665bfa4d6facb9aab7ef84b21"
+            }
+          ],
+          "PolygonVertexIndex": [
+            {
+              "count": 3102000,
+              "type": "i",
+              "sha256": "9eaa9732f826f5374f09d365900b8db6fdaf9977ab045a5a51a67ff4f4db6487",
+              "polygonSizes": {
+                "3": 1034000
+              }
+            }
+          ],
+          "Edges": [
+            {
+              "count": 1552972,
+              "type": "i",
+              "sha256": "67d473abe7e9fc58a1be55c78f6b453159e75d0221cf3daa24341a423e2b83af"
+            }
+          ]
+        },
+        "polygonCount": 1034000,
+        "triangleCount": 1034000,
+        "allTriangles": true,
+        "vertexCount": 519805,
+        "layers": [
+          {
+            "name": "LayerElementNormal",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  ""
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByVertice"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "Direct"
+                ],
+                "children": []
+              },
+              {
+                "name": "Normals",
+                "properties": [
+                  {
+                    "count": 1559415,
+                    "type": "d",
+                    "sha256": "708ca33dc0440d22f2a3f5d24e8deaf3ff18d1b7ac475d09f09d5d7acb86f52c"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "LayerElementUV",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  "UVMap"
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByPolygonVertex"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "IndexToDirect"
+                ],
+                "children": []
+              },
+              {
+                "name": "UV",
+                "properties": [
+                  {
+                    "count": 1162618,
+                    "type": "d",
+                    "sha256": "3d7c6f2b93a7a3b7a09c44b9b4287031aec8750eb4b599be626a65cce0866a82"
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "UVIndex",
+                "properties": [
+                  {
+                    "count": 3102000,
+                    "type": "i",
+                    "sha256": "65d37dda3147a6ab66128c40da3fa4bdd7daeb9f6ed6eb59509751089bce65d2"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shapeCount": 25,
+    "shapes": [
+      {
+        "name": "Blink_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8211,
+              "type": "i",
+              "sha256": "4b8a2bab511dede3a2500ad96cdb4046d1dbab2ce6176daada124f988516c678"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24633,
+              "type": "d",
+              "sha256": "6a3d6e1f7dc36aa370311150d984fe0e0e63a6230931d1e854a4efd47811e035"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24636,
+              "type": "d",
+              "sha256": "53f1d01a22f445f3f8c2ed7911d9263684b04e9728dc8d4f6e41c10b478c4fd6"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blink_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8263,
+              "type": "i",
+              "sha256": "c9391712d36b08d816c95af8d5196d7c8a120aa47b29dadf40fbcd3c9eac12fc"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24789,
+              "type": "d",
+              "sha256": "a5f956bb4d69fd6584eefd18c4eb57112563e83f8df4c16e64d344e62b7013db"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24792,
+              "type": "d",
+              "sha256": "acde1cb7d1b2e5c33f0635ce11abb4ebb3a516d06abf96901f0cf01b5e77225a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12799,
+              "type": "i",
+              "sha256": "06e9aae8535f9de1126fd9ea63db01b641773e801c8b17c79442ff9bbe49e1a7"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38397,
+              "type": "d",
+              "sha256": "d9322eba208953cb50ad9cbf538b54c0b1bbc26ddb4d734bf252dce21bef0efd"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38442,
+              "type": "d",
+              "sha256": "f5abcb18a2106cee8edf7bd3f1d9e14202ac33ebb1a23c93682b06c0be417a2e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12796,
+              "type": "i",
+              "sha256": "5ea92a27b6f73abfd11bc94f0b96e22778e76900b8f19b126fd783f1735332ee"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38388,
+              "type": "d",
+              "sha256": "3727094842642252cc970376ffb76756a2e7a8eda48c3efcefa8f8b914048204"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38439,
+              "type": "d",
+              "sha256": "2486020143d601caa80502a132448d6600e58c77f09ee85078a4f15e63d6fb83"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22945,
+              "type": "i",
+              "sha256": "04345770f8e4bf1e40293e6b7567c76d0e7b27a4f75f27089031cbf26be6ca13"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68835,
+              "type": "d",
+              "sha256": "54c34dd3d2925cbeae5a210824d09cec699e4ea083a0fda95ce289621bf96c90"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68910,
+              "type": "d",
+              "sha256": "5cbd20bce31e9dfcdbcb80fe8703a87511b2a2cea5745081785d44d848635da3"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22895,
+              "type": "i",
+              "sha256": "f255718057265ed2b6404c28594fc4aa2ecf42b1a3084144d2f8984708980961"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68685,
+              "type": "d",
+              "sha256": "4ca6a833d4c0d7455db259d7d6268c22df2fc65f93d46ab538f906b64ab6b9e4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68763,
+              "type": "d",
+              "sha256": "8f0cb2ec2360aaece4bb67303dfe425518b8dff29f2d365f9d54ccc6522e141e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24420,
+              "type": "i",
+              "sha256": "6696334f029ea7cab91b3684cb26e43143589753fae26c97a5d02feffb951165"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73260,
+              "type": "d",
+              "sha256": "1708595e79f7902e565bb18754f5bfb11675e58f2a7228f674dde66f4a29b76d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73272,
+              "type": "d",
+              "sha256": "ca66d4c75193404e9e39c81b12c7637b31e8232267cab641ea29640904c507ef"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24384,
+              "type": "i",
+              "sha256": "c2fcdcf4f7c6e8c0c2d5a3928950ff5216650295b22662d5b20c3c5e22afea96"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73152,
+              "type": "d",
+              "sha256": "5efed9d20ece60c18495d624da2294a08f722097bf40fad1c6b0d0bb963551ca"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73164,
+              "type": "d",
+              "sha256": "f10ceeb53cbd139f8a78c90c42e605f70886007b94107c2a39994c054db7312f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16106,
+              "type": "i",
+              "sha256": "1f899487af0730a9efb8b2373d7570d34699ee8e745b84a237db902c892aad0a"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48318,
+              "type": "d",
+              "sha256": "a30041ff829894c0e106b430cb20587b632f2ccb288c4693732ba80b241d322e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48471,
+              "type": "d",
+              "sha256": "04c983b0ca68e00a35fa883c05f8a06786b109a17f765f9819fc07a33fd6734a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16031,
+              "type": "i",
+              "sha256": "aa98432ca5074563fad0620391d5d93b28278dbca48bf60da7017030476ca94f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48093,
+              "type": "d",
+              "sha256": "1f9514d697c67dca79645d116c970a74a277565e54109fb095252abf8a218c41"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48273,
+              "type": "d",
+              "sha256": "b4d9d29e2c4a89b3e7bdf2b1e12836e8132b264a86c3b24fbab6f345d89dc29d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15251,
+              "type": "i",
+              "sha256": "be7402fc68c08792da8bd0c40b5adb971a12c01a4bf263921851df8cee5bd83b"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45753,
+              "type": "d",
+              "sha256": "d957112f8378fbe0c9d9b0d3fb3d2d76b05aa2d714342cd4e82a8821ccda2dbb"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45909,
+              "type": "d",
+              "sha256": "ef4d123ac86605c63785f276239228b3b96f4e51ef7c3ee6eb3e5c47b0df8a95"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15149,
+              "type": "i",
+              "sha256": "5eb72f34620e6ab33081bb47bebc7cf7a0d13386bb9119dd36dffe747ab0b3d4"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45447,
+              "type": "d",
+              "sha256": "751784d454ef19ac955c70119c55be834bcedfefe8053f93d3f189992e3efc3d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45588,
+              "type": "d",
+              "sha256": "967789602b2c64ffa06322452e80b12f8574b3be6efd13e132fcd806d175a43b"
+            }
+          ]
+        }
+      },
+      {
+        "name": "JawOpen",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 28551,
+              "type": "i",
+              "sha256": "b3893c257d5e3b032da27f5ff2e3c489a620238bbe3aedf82c796f32dcaaf8b7"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 85653,
+              "type": "d",
+              "sha256": "d85c314943aa04663d6e1afa845b6d5a08153951f48a3dae2c73adc163defefe"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 85677,
+              "type": "d",
+              "sha256": "9921b813ff9188dd951e53818d497137fc9bf448b82eaecefe8652fde1da72de"
+            }
+          ]
+        }
+      },
+      {
+        "name": "LipPress",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15276,
+              "type": "i",
+              "sha256": "962595f734d387bd5f2a80a095e163b98b0c917f5658f47083fb1bf92a7a6d97"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "189f6c306d38308c0bd37fbb2e36b2a8745274ec02a259f112555272d746fd65"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "c804f7aa59067da784674e48eb8b8e1525ed5690604d085a0d63531b302c1ec2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11576,
+              "type": "i",
+              "sha256": "b50a887ee37a7d1e3139f34a6a8d2c8cf6953d023ff011d02b71eba9c09ef3e1"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34728,
+              "type": "d",
+              "sha256": "da2dacd704be7052d32bb206179b995b10f4433d1877affb6a43010917c2828f"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34782,
+              "type": "d",
+              "sha256": "30d0d887d6f0aef1a87b24063d5ce41efcaab50845f3c69d1611a4202c66238f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11553,
+              "type": "i",
+              "sha256": "7d141b3f191dd4136d54193ed52294f70c5102e0dffe6fbc29c827bfa3790e6e"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34659,
+              "type": "d",
+              "sha256": "8d9e5364a36e485fce88be6f853a84796b70324e5cc82a786d637a1141f807ed"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34710,
+              "type": "d",
+              "sha256": "1849f23d37cb99f49de5ea883d6a2e65808d84eaa2d82acdfcbc91863ea5e372"
+            }
+          ]
+        }
+      },
+      {
+        "name": "NoseWrinkle",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 30828,
+              "type": "i",
+              "sha256": "a9b9c41b54d9b1a645ff28c2358f85dd856632629024be9f62e2833a735eea5c"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "df86e715488c3b4ae669ba0d326f444505b6917cf3d160645f4de661de33ccac"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "ddc9a4f938c35d3b1ce4cfc0744c7f88a9df68a041e751388826030b8e8f2c5f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 53908,
+              "type": "i",
+              "sha256": "5e1b9203243a39fb5bd0ea0cb9a798a85dd6830ea3dd09e12f6dbec06fa374ea"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "2df37907035b36e437908890a5cae4859402cf3be69d29278eeb2749ff3aa4b0"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "5a2254d32579a0b94aa48962f4ebbec887b6fe5f1ebd3649ae0998545e2b8357"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 54087,
+              "type": "i",
+              "sha256": "ab47e27c5a06dbf5856a9c0dc2435158c530b2676a3def17ec4aa11ed61da7a1"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b2eb7fd5e2165168c520fafb6f6f8971a74db8f2ce5408a760bd3a038a41d70c"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b0f70d1485f96176dd4a2b33931a9ae386875c590617472f30ddc520f016df0f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17971,
+              "type": "i",
+              "sha256": "6b2207513155efb63c352560a3e9c6bd21ca10d6eb9d717b5893580409dded75"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "d7f0c11da80360b094756497ea84aa29fff09cc20d665b34781edfefa8baf52e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "e0d74da79ba0188e15cba5ae763b447395d332bd06aaf77c75d5776f4b342416"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17977,
+              "type": "i",
+              "sha256": "e317aa266e34167fdacaefa2351949cf76e1659c107fb7a2aaf8c88739ebb587"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "3a1aa54f811608ff3e8994fd762dfb1f79ed287b26f97dd33e76d489a0876582"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "95adbaf83e2ed385959c7e1ab6f5ff9ed2e9b6d40d61982d31c81143a5d0be0e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125306,
+              "type": "i",
+              "sha256": "9764e6b9090aac1e5005df3bf38e2234f3c719c4da551fd365e5e903dea0bd50"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "52aa6a575d9bb0c91afbc58b615407cbe2d394ddae7160194246514fa45aed50"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "a10a6ac1bfe177a4674e643fd954f4f7ae1c5ee1941056dd7a72a8cf25c0e8e2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125238,
+              "type": "i",
+              "sha256": "efd301069530a048b59a5d1bffb4abc4d756eec5bbede9eb901da667d2f1a82f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "26a66a16bbe77b8b15f208e17242de7ba924ab6b5591a524f7666ebd7984703d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "c03056a8cc1f0e70723ff02b1605e626876df9551dc9c07f3a9bf2e2a1e4b52d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61432,
+              "type": "i",
+              "sha256": "e8706c88501e8d00e501aa76aa84334b41a2bc691ad6ce7a3ff51f4dae67ad77"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184296,
+              "type": "d",
+              "sha256": "8784c66f9961b87bda5a5cdaf2fedc1f20eff804645db804458e7f8ec0f28cd4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184290,
+              "type": "d",
+              "sha256": "c670b413a055e122532599e76761dfa8c181e910e27e802b8660efbfeef140a8"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61378,
+              "type": "i",
+              "sha256": "bd1b6940729551197f637d5c6288bd48ff1ec8606cef6665a5273ec3705794ff"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 184134,
+              "type": "d",
+              "sha256": "45e61f7f438dd7b38d94acc563f7009e1162e94e3a67a3cbd20df8bca3942593"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 184125,
+              "type": "d",
+              "sha256": "0e217e93c1d27f33a05d1935737b36c776f4e70b11c7815508423521ee348b64"
+            }
+          ]
+        }
+      }
+    ],
+    "allMeshesTriangular": true
+  },
+  {
+    "file": "benchmark/local/candidates/krag-v7-triangulated/Krag_Piston.fbx",
+    "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+    "fbxVersion": 7400,
+    "meshes": [
+      {
+        "name": "Dark structural pauldron.001",
+        "attributes": {
+          "Vertices": [
+            {
+              "count": 1461117,
+              "type": "d",
+              "sha256": "0f12d07079ee2e891036fdf8228ae3033c6337352ca184941a6ea575b45d7b3b"
+            }
+          ],
+          "PolygonVertexIndex": [
+            {
+              "count": 2905848,
+              "type": "i",
+              "sha256": "ec251ff0749152e1caf00cbf8acc62644134a109e0b9d47b3441837efe4ee856",
+              "polygonSizes": {
+                "3": 968616
+              }
+            }
+          ],
+          "Edges": [
+            {
+              "count": 1454896,
+              "type": "i",
+              "sha256": "e73dc032e05c11d82720916af83af4064b396607c81de9555eafb489649fdacd"
+            }
+          ]
+        },
+        "polygonCount": 968616,
+        "triangleCount": 968616,
+        "allTriangles": true,
+        "vertexCount": 487039,
+        "layers": [
+          {
+            "name": "LayerElementNormal",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  ""
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByVertice"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "Direct"
+                ],
+                "children": []
+              },
+              {
+                "name": "Normals",
+                "properties": [
+                  {
+                    "count": 1461117,
+                    "type": "d",
+                    "sha256": "474f0df4939dcc522afac14ea113feecad4e4226675d2c308460c4729378c193"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "LayerElementUV",
+            "properties": [
+              0
+            ],
+            "children": [
+              {
+                "name": "Version",
+                "properties": [
+                  101
+                ],
+                "children": []
+              },
+              {
+                "name": "Name",
+                "properties": [
+                  "UVMap"
+                ],
+                "children": []
+              },
+              {
+                "name": "MappingInformationType",
+                "properties": [
+                  "ByPolygonVertex"
+                ],
+                "children": []
+              },
+              {
+                "name": "ReferenceInformationType",
+                "properties": [
+                  "IndexToDirect"
+                ],
+                "children": []
+              },
+              {
+                "name": "UV",
+                "properties": [
+                  {
+                    "count": 1089078,
+                    "type": "d",
+                    "sha256": "423825c02163a8be9573b705ad9120c50df8671aab6ac8f1e0475aced22661c0"
+                  }
+                ],
+                "children": []
+              },
+              {
+                "name": "UVIndex",
+                "properties": [
+                  {
+                    "count": 2905848,
+                    "type": "i",
+                    "sha256": "d4b90c7aa4745f35a4ff589e63bfea5f4b7d15f152627d5011b53edc08d27e86"
+                  }
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "shapeCount": 25,
+    "shapes": [
+      {
+        "name": "Blink_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8211,
+              "type": "i",
+              "sha256": "26a57e73147dcc0a969626340237e90c43deb07f666d94f8b41da2f9db50035c"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24633,
+              "type": "d",
+              "sha256": "6a3d6e1f7dc36aa370311150d984fe0e0e63a6230931d1e854a4efd47811e035"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24636,
+              "type": "d",
+              "sha256": "53f1d01a22f445f3f8c2ed7911d9263684b04e9728dc8d4f6e41c10b478c4fd6"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blink_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 8263,
+              "type": "i",
+              "sha256": "e8a647e88e867559deeeb6d4236c6045ea2f9670e716a1bca1f959cacaf62262"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 24789,
+              "type": "d",
+              "sha256": "a5f956bb4d69fd6584eefd18c4eb57112563e83f8df4c16e64d344e62b7013db"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 24792,
+              "type": "d",
+              "sha256": "acde1cb7d1b2e5c33f0635ce11abb4ebb3a516d06abf96901f0cf01b5e77225a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12799,
+              "type": "i",
+              "sha256": "ed31dab602646d96a65aee8f3acf642a10aec7e6e7d36fbbbf5dba5b25b3a53c"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38397,
+              "type": "d",
+              "sha256": "d9322eba208953cb50ad9cbf538b54c0b1bbc26ddb4d734bf252dce21bef0efd"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38442,
+              "type": "d",
+              "sha256": "f5abcb18a2106cee8edf7bd3f1d9e14202ac33ebb1a23c93682b06c0be417a2e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Squint_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 12796,
+              "type": "i",
+              "sha256": "b4739d7930142bb0939c6dcbf32a6b27bf20345e3d9393cf9b2722b17b998e9d"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 38388,
+              "type": "d",
+              "sha256": "3727094842642252cc970376ffb76756a2e7a8eda48c3efcefa8f8b914048204"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 38439,
+              "type": "d",
+              "sha256": "2486020143d601caa80502a132448d6600e58c77f09ee85078a4f15e63d6fb83"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22945,
+              "type": "i",
+              "sha256": "fa92a13331709b9883480aae01fcef4ee450a9fd2f19c06a046a47f1a22c1821"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68835,
+              "type": "d",
+              "sha256": "54c34dd3d2925cbeae5a210824d09cec699e4ea083a0fda95ce289621bf96c90"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68910,
+              "type": "d",
+              "sha256": "5cbd20bce31e9dfcdbcb80fe8703a87511b2a2cea5745081785d44d848635da3"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 22895,
+              "type": "i",
+              "sha256": "661e36564532d0610cba2b0da3fca3a010ec2d934d8d8e6d913131ad789fe611"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 68685,
+              "type": "d",
+              "sha256": "4ca6a833d4c0d7455db259d7d6268c22df2fc65f93d46ab538f906b64ab6b9e4"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 68763,
+              "type": "d",
+              "sha256": "8f0cb2ec2360aaece4bb67303dfe425518b8dff29f2d365f9d54ccc6522e141e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24420,
+              "type": "i",
+              "sha256": "0dbccaa9c2bc953090ca7cfefe3d340b9a7009f75b60aae528ec8ad3bd87eeca"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73260,
+              "type": "d",
+              "sha256": "1708595e79f7902e565bb18754f5bfb11675e58f2a7228f674dde66f4a29b76d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73272,
+              "type": "d",
+              "sha256": "ca66d4c75193404e9e39c81b12c7637b31e8232267cab641ea29640904c507ef"
+            }
+          ]
+        }
+      },
+      {
+        "name": "BrowLower_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 24384,
+              "type": "i",
+              "sha256": "0a5a07afa39b6e7d4be7e2cc9cfc3d2e0bbcba77a1c6bfb87d7be3ac9bdca5ce"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 73152,
+              "type": "d",
+              "sha256": "5efed9d20ece60c18495d624da2294a08f722097bf40fad1c6b0d0bb963551ca"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 73164,
+              "type": "d",
+              "sha256": "f10ceeb53cbd139f8a78c90c42e605f70886007b94107c2a39994c054db7312f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16106,
+              "type": "i",
+              "sha256": "3e6275bf64edd51197e9c6946dcff4b18396390ea1985483acc2a67cee3fc35f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48318,
+              "type": "d",
+              "sha256": "a30041ff829894c0e106b430cb20587b632f2ccb288c4693732ba80b241d322e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48471,
+              "type": "d",
+              "sha256": "04c983b0ca68e00a35fa883c05f8a06786b109a17f765f9819fc07a33fd6734a"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Smile_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 16031,
+              "type": "i",
+              "sha256": "283c25b02a80c6a8509b70ee108c478c8c666383593d9698bca81113825a03df"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 48093,
+              "type": "d",
+              "sha256": "1f9514d697c67dca79645d116c970a74a277565e54109fb095252abf8a218c41"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 48273,
+              "type": "d",
+              "sha256": "b4d9d29e2c4a89b3e7bdf2b1e12836e8132b264a86c3b24fbab6f345d89dc29d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15251,
+              "type": "i",
+              "sha256": "5a511ccd5072bf6c7e63b064096701c197a7d8fe9d2cbe72152eb532a96d872f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45753,
+              "type": "d",
+              "sha256": "d957112f8378fbe0c9d9b0d3fb3d2d76b05aa2d714342cd4e82a8821ccda2dbb"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45909,
+              "type": "d",
+              "sha256": "ef4d123ac86605c63785f276239228b3b96f4e51ef7c3ee6eb3e5c47b0df8a95"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Frown_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15149,
+              "type": "i",
+              "sha256": "e16fe7151829c34950b554d23285406701ebeefb927b2c99e379dcf834dfd41b"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45447,
+              "type": "d",
+              "sha256": "751784d454ef19ac955c70119c55be834bcedfefe8053f93d3f189992e3efc3d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45588,
+              "type": "d",
+              "sha256": "967789602b2c64ffa06322452e80b12f8574b3be6efd13e132fcd806d175a43b"
+            }
+          ]
+        }
+      },
+      {
+        "name": "JawOpen",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 28551,
+              "type": "i",
+              "sha256": "bbe1ff5736657b54921577df9ff588597eebaf8352bac8f7b76baa94313fe721"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 85653,
+              "type": "d",
+              "sha256": "d85c314943aa04663d6e1afa845b6d5a08153951f48a3dae2c73adc163defefe"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 85677,
+              "type": "d",
+              "sha256": "9921b813ff9188dd951e53818d497137fc9bf448b82eaecefe8652fde1da72de"
+            }
+          ]
+        }
+      },
+      {
+        "name": "LipPress",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 15276,
+              "type": "i",
+              "sha256": "498cacfba4368451d86ceaa0a248560141a32ddc0c6ccd856c0803b0e2a3b85f"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "189f6c306d38308c0bd37fbb2e36b2a8745274ec02a259f112555272d746fd65"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 45828,
+              "type": "d",
+              "sha256": "c804f7aa59067da784674e48eb8b8e1525ed5690604d085a0d63531b302c1ec2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11576,
+              "type": "i",
+              "sha256": "b43b2f7c1984186538de22ac89fb678a4aeec1af6a6b8cd1e3ef8f2a6bd89c3a"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34728,
+              "type": "d",
+              "sha256": "da2dacd704be7052d32bb206179b995b10f4433d1877affb6a43010917c2828f"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34782,
+              "type": "d",
+              "sha256": "30d0d887d6f0aef1a87b24063d5ce41efcaab50845f3c69d1611a4202c66238f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Snarl_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 11553,
+              "type": "i",
+              "sha256": "5f2004aec83f936171db5c7cfeb2b9d74b4733c8e084018a75599b2d46d9abbd"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 34659,
+              "type": "d",
+              "sha256": "8d9e5364a36e485fce88be6f853a84796b70324e5cc82a786d637a1141f807ed"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 34710,
+              "type": "d",
+              "sha256": "1849f23d37cb99f49de5ea883d6a2e65808d84eaa2d82acdfcbc91863ea5e372"
+            }
+          ]
+        }
+      },
+      {
+        "name": "NoseWrinkle",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 30828,
+              "type": "i",
+              "sha256": "2a125a874269f69166394f5dae89f74aa70a1a8713046e3a90c65d83e5440c70"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "df86e715488c3b4ae669ba0d326f444505b6917cf3d160645f4de661de33ccac"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 92484,
+              "type": "d",
+              "sha256": "ddc9a4f938c35d3b1ce4cfc0744c7f88a9df68a041e751388826030b8e8f2c5f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 53908,
+              "type": "i",
+              "sha256": "6388c8cd7f576c5807c1f05df193517e01dc0d3017f2037f17bf5fde080dabfc"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "2df37907035b36e437908890a5cae4859402cf3be69d29278eeb2749ff3aa4b0"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 161724,
+              "type": "d",
+              "sha256": "5a2254d32579a0b94aa48962f4ebbec887b6fe5f1ebd3649ae0998545e2b8357"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ShoulderRaise_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 54087,
+              "type": "i",
+              "sha256": "d276d894c3febfd93eb4728540570a563359837c5fb9c88550368db26d3e9d91"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b2eb7fd5e2165168c520fafb6f6f8971a74db8f2ce5408a760bd3a038a41d70c"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 162261,
+              "type": "d",
+              "sha256": "b0f70d1485f96176dd4a2b33931a9ae386875c590617472f30ddc520f016df0f"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17971,
+              "type": "i",
+              "sha256": "6b2207513155efb63c352560a3e9c6bd21ca10d6eb9d717b5893580409dded75"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "d7f0c11da80360b094756497ea84aa29fff09cc20d665b34781edfefa8baf52e"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53913,
+              "type": "d",
+              "sha256": "e0d74da79ba0188e15cba5ae763b447395d332bd06aaf77c75d5776f4b342416"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_ElbowFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 17977,
+              "type": "i",
+              "sha256": "e317aa266e34167fdacaefa2351949cf76e1659c107fb7a2aaf8c88739ebb587"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "3a1aa54f811608ff3e8994fd762dfb1f79ed287b26f97dd33e76d489a0876582"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 53931,
+              "type": "d",
+              "sha256": "95adbaf83e2ed385959c7e1ab6f5ff9ed2e9b6d40d61982d31c81143a5d0be0e"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125306,
+              "type": "i",
+              "sha256": "42c0030005d50ce0ad34dbdf47040b54aeb8e4d04a5e807a59f4ea793a200e15"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "52aa6a575d9bb0c91afbc58b615407cbe2d394ddae7160194246514fa45aed50"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375918,
+              "type": "d",
+              "sha256": "a10a6ac1bfe177a4674e643fd954f4f7ae1c5ee1941056dd7a72a8cf25c0e8e2"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_HipFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 125238,
+              "type": "i",
+              "sha256": "d7f56fb95872710ace5791c4d66be47a7648ca81f37ba536eed498adc18835d3"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "26a66a16bbe77b8b15f208e17242de7ba924ab6b5591a524f7666ebd7984703d"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 375714,
+              "type": "d",
+              "sha256": "c03056a8cc1f0e70723ff02b1605e626876df9551dc9c07f3a9bf2e2a1e4b52d"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_L",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 61115,
+              "type": "i",
+              "sha256": "8f307618322ddb3b8e7c20a410de2d259e649d31afb6f2b0deb73ec10e30d0f4"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 183345,
+              "type": "d",
+              "sha256": "9eeb4526e55b3239e91020e94f8fe47b432edb890de5af7039d215bcaa2e4a25"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 183339,
+              "type": "d",
+              "sha256": "3d0901bd1d081133b700aee94b6cdc4e4ae54b7ddf48cf39b9117ee87caea7ca"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corrective_KneeFlex_R",
+        "attributes": {
+          "Indexes": [
+            {
+              "count": 59183,
+              "type": "i",
+              "sha256": "159a3d4c262efa63e66af193b2eefbd0f6dbaed769d5a799bf64aa0d135b3dfe"
+            }
+          ],
+          "Vertices": [
+            {
+              "count": 177549,
+              "type": "d",
+              "sha256": "30a87b459a8ef4939461549075d61bf86fc09ef4bb698e068ee84263b7ec4dfc"
+            }
+          ],
+          "Normals": [
+            {
+              "count": 177540,
+              "type": "d",
+              "sha256": "c0d66f9be49d444e42d994013d53afc2058ffd31fd1da55070ecd1dc0eb98a64"
+            }
+          ]
+        }
+      }
+    ],
+    "allMeshesTriangular": true
+  }
+]

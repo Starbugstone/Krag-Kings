@@ -26,6 +26,18 @@ def build(context):
     faces=[list(face.vertices) for face in original.polygons if all(keep[i] for i in face.vertices)]
     used=sorted({i for face in faces for i in face});index={old:new for new,old in enumerate(used)}
     vertices=warp(raw[used]);polygons=[[index[i] for i in face] for face in faces]
+    # The source crop cuts through several sloping neck loops. Extend those
+    # boundary vertices into the enclosed skull instead of leaving a visible
+    # sawtooth opening underneath the chin. Preserve the shoulder topology.
+    from collections import Counter
+    edge_uses=Counter(tuple(sorted((a,b))) for face in polygons for a,b in zip(face,face[1:]+face[:1]))
+    neck_boundary={i for edge,count in edge_uses.items() if count==1 for i in edge if vertices[i,2]>1.70}
+    for i in neck_boundary:
+        vertices[i,2]=1.925
+    collar=np.clip((vertices[:,2]-1.68)/.17,0,1)
+    collar*=np.clip((.24-np.abs(vertices[:,0]))/.09,0,1)
+    vertices[:,0]*=1+.11*collar
+    vertices[:,1]=.016+(vertices[:,1]-.016)*(1+.10*collar)
     mesh=bpy.data.meshes.new('Krag continuous anatomical control cage')
     mesh.from_pydata(vertices,[],polygons);mesh.update()
     mesh.materials.append(context['skin'])

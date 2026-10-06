@@ -26,15 +26,16 @@ def wrapped(c):
     mesh,cloth=c['mesh'],c['cloth'];vs=[];fs=[];longitudinal=361;across=25;turns=2.35
     for i in range(longitudinal):
         turn=turns*i/(longitudinal-1);a=math.pi/2+2*math.pi*turn;front=max(0,-math.sin(a));side=abs(math.cos(a))
-        centre_radius=.153+.017*turn+.042*front
-        centre_z=1.814-.025*turn-front*(.094+.011*turn)+.007*math.sin(3*a+.7*turn)
+        centre_radius=.151+.022*turn+.068*front+.012*math.sin(2*a+.85*turn)
+        centre_z=1.864-.032*turn-front*(.193+.009*turn)+.019*math.cos(a+.9*turn)+.009*math.sin(3*a+.7*turn)
         for j in range(across):
-            u=j/(across-1)-.5;gather=.0045*math.sin(7*a+4*u)*side**2
-            radius=centre_radius+.014*math.cos(2*math.pi*u)+.003*math.sin(6*math.pi*u+a)*math.sin(math.pi*(u+.5))
-            z=centre_z+u*(.096+.012*math.sin(a+turn))+.004*math.sin(4*math.pi*u+.6*a)+gather
+            u=j/(across-1)-.5;gather=.009*math.sin(5*a+4*u+.6*turn)*side**2
+            radius=centre_radius+.012*math.cos(2*math.pi*u)+.005*math.sin(6*math.pi*u+a)*math.sin(math.pi*(u+.5))
+            radius+=.010*front*math.sin(3*a+2.8*turn+2*u)
+            z=centre_z+u*(.113+.029*math.sin(a+.4*turn))+.008*math.sin(4*math.pi*u+.6*a)+gather
             vs.append((radius*math.cos(a),.019+radius*math.sin(a),z))
     for i in range(longitudinal-1):
-        for j in range(across-1):k=i*across+j;fs.append((k,k+1,k+across+1,k+across))
+        for j in range(across-1):k=i*across+j;fs.append((k,k+across,k+across+1,k+1))
     o=mesh('Continuous layered desert scarf wrap',vs,fs,cloth,'Scarf','Chest');solid=o.modifiers.new('Woven scarf edge thickness','SOLIDIFY');solid.thickness=.003;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=solid.name)
     o['construction']='Continuous 2.35-turn textile strip; deep front sag and irregular rolled folds; unaccepted review geometry'
     return o

@@ -1,0 +1,192 @@
+{
+  "structuralValidationPassed": true,
+  "errors": [],
+  "clips": {
+    "Idle": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Idle.fbx",
+      "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        62.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Eye_L",
+        "LidUpper_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ]
+    },
+    "Walk": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Walk.fbx",
+      "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        38.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Eye_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ]
+    },
+    "Run": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Run.fbx",
+      "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        20.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "NoseTip"
+      ]
+    },
+    "Melee": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Melee.fbx",
+      "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        38.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ]
+    },
+    "Shoot": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Shoot.fbx",
+      "sha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        32.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ]
+    },
+    "Hit": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\Hit.fbx",
+      "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        29.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ]
+    },
+    "FacePerformance": {
+      "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\animations\\FacePerformance.fbx",
+      "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344",
+      "bones": 68,
+      "maxBindPositionErrorMeters": 0,
+      "maxBindRotationErrorDegrees": 0,
+      "missingBones": [],
+      "frameRange": [
+        2.0,
+        181.0
+      ],
+      "fps": 30,
+      "varyingFacialControls": [
+        "Jaw",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ]
+    }
+  },
+  "artisticAcceptance": false
+}

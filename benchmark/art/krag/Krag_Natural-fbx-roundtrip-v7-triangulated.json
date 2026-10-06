@@ -1,0 +1,192 @@
+{
+  "variant": "Krag_Natural",
+  "fbx": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-triangulated\\Krag_Natural.fbx",
+  "fbx_sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+  "boneCount": 68,
+  "meshCount": 1,
+  "vertices": 516105,
+  "triangles": 1026672,
+  "materialSlots": 13,
+  "morphs": [
+    "Blink_L",
+    "Blink_R",
+    "BrowLower_L",
+    "BrowLower_R",
+    "BrowRaise_L",
+    "BrowRaise_R",
+    "Corrective_ElbowFlex_L",
+    "Corrective_ElbowFlex_R",
+    "Corrective_HipFlex_L",
+    "Corrective_HipFlex_R",
+    "Corrective_KneeFlex_L",
+    "Corrective_KneeFlex_R",
+    "Corrective_ShoulderRaise_L",
+    "Corrective_ShoulderRaise_R",
+    "Frown_L",
+    "Frown_R",
+    "JawOpen",
+    "LipPress",
+    "NoseWrinkle",
+    "Smile_L",
+    "Smile_R",
+    "Snarl_L",
+    "Snarl_R",
+    "Squint_L",
+    "Squint_R"
+  ],
+  "actions": [
+    "Key|Krag_Rig|FacePerformance",
+    "Key|Krag_Rig|Hit",
+    "Key|Krag_Rig|Idle",
+    "Key|Krag_Rig|Melee",
+    "Key|Krag_Rig|Run",
+    "Key|Krag_Rig|Shoot",
+    "Key|Krag_Rig|Walk",
+    "Krag_Rig|Krag_Rig|FacePerformance",
+    "Krag_Rig|Krag_Rig|Hit",
+    "Krag_Rig|Krag_Rig|Idle",
+    "Krag_Rig|Krag_Rig|Melee",
+    "Krag_Rig|Krag_Rig|Run",
+    "Krag_Rig|Krag_Rig|Shoot",
+    "Krag_Rig|Krag_Rig|Walk"
+  ],
+  "facialPerformanceByClip": {
+    "Idle": {
+      "animatedFaceBones": [
+        "Eye_L",
+        "LidUpper_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ],
+      "maxLocalRotationDegrees": 0.8021017710765664,
+      "maxLocalTranslationMeters": 0.009333396939262783
+    },
+    "Walk": {
+      "animatedFaceBones": [
+        "Eye_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ],
+      "maxLocalRotationDegrees": 1.0849711740665884,
+      "maxLocalTranslationMeters": 0.002344883211434534
+    },
+    "Run": {
+      "animatedFaceBones": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "NoseTip"
+      ],
+      "maxLocalRotationDegrees": 1.9695347794880709,
+      "maxLocalTranslationMeters": 0.003761052373942753
+    },
+    "Melee": {
+      "animatedFaceBones": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ],
+      "maxLocalRotationDegrees": 9.278237397798394,
+      "maxLocalTranslationMeters": 0.004868647220703162
+    },
+    "Shoot": {
+      "animatedFaceBones": [
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "MouthCorner_L",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "MouthCorner_R",
+        "LipUpper"
+      ],
+      "maxLocalRotationDegrees": 2.040966391931945,
+      "maxLocalTranslationMeters": 0.004410139201807993
+    },
+    "Hit": {
+      "animatedFaceBones": [
+        "Jaw",
+        "Eye_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ],
+      "maxLocalRotationDegrees": 2.6965629531892654,
+      "maxLocalTranslationMeters": 0.00499605956313773
+    },
+    "FacePerformance": {
+      "animatedFaceBones": [
+        "Jaw",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "NoseTip"
+      ],
+      "maxLocalRotationDegrees": 22.990797529309148,
+      "maxLocalTranslationMeters": 0.006159080117705989
+    }
+  },
+  "boundsMeters": {
+    "min": [
+      -0.671248197555542,
+      -0.25932955741882324,
+      0.004999932367354631
+    ],
+    "max": [
+      0.6712722778320312,
+      0.2474285364151001,
+      2.1067447662353516
+    ]
+  },
+  "errors": [],
+  "structuralValidationPassed": true,
+  "artisticAcceptance": false
+}

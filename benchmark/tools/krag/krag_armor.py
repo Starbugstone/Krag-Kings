@@ -27,7 +27,7 @@ def build(c):
                 vs.append(point(phi,theta,offset+hammer))
         for i in range(nx-1):
             for j in range(ny-1):
-                k=i*ny+j;faces.append((k,k+ny,k+ny+1,k+1))
+                k=i*ny+j;faces.append((k,k+1,k+ny+1,k+ny))
         obj=mesh(name,vs,faces,material,group,bone)
         bpy.context.view_layer.objects.active=obj
         solid=obj.modifiers.new('Forged overlapping steel thickness','SOLIDIFY');solid.thickness=.007;bpy.ops.object.modifier_apply(modifier=solid.name)
@@ -51,7 +51,7 @@ def build(c):
         for i in range(steps):
             phi=-.89+2.25*i/(steps-1)
             for edge in [-1,1]:vs.append(point(phi,theta+edge*.095,.025))
-        for i in range(steps-1):k=2*i;faces.append((k,k+2,k+3,k+1))
+        for i in range(steps-1):k=2*i;faces.append((k,k+1,k+3,k+2))
         obj=mesh('Pauldron retaining leather strap',vs,faces,leather,group,bone)
         bpy.context.view_layer.objects.active=obj
         solid=obj.modifiers.new('Thick leather retention','SOLIDIFY');solid.thickness=.005;bpy.ops.object.modifier_apply(modifier=solid.name)

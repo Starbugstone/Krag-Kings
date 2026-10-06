@@ -8,7 +8,7 @@ from mathutils import Vector, Matrix
 from pathlib import Path
 from math import sin, cos, pi
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-import krag_face, krag_locomotion, krag_cloth, krag_anatomy, krag_armor, krag_full_leg
+import krag_face, krag_locomotion, krag_cloth, krag_anatomy, krag_armor, krag_full_leg, krag_harness, krag_head_v9
 random.seed(483)
 ROOT=Path(__file__).resolve().parents[3]
 ART=ROOT/'benchmark/art/krag'
@@ -146,35 +146,38 @@ def ribbon(name,points,width,ma,group,bn=None,thick=.009):
 
 log('Continuous Krag anatomical cage adaptation')
 anatomical_source=krag_anatomy.build(globals())
-# Head is a single unified sculpt; amber eyes are deliberately deep below the brow.
-headparts=[]
-def hp(name,p,s):o=uvball(name,p,s,skin,'Head','Head');headparts.append(o);return o
-hp('Cranium',(0,.009,1.932),(.166,.141,.175));hp('Frontal bone',(0,-.083,2.007),(.150,.085,.090));hp('Occiput',(0,.077,1.93),(.133,.099,.15));hp('Broad jaw',(0,-.040,1.811),(.149,.126,.103));hp('Chin',(0,-.162,1.801),(.119,.061,.068));hp('Muzzle',(0,-.139,1.870),(.125,.070,.054));hp('Nose bridge',(0,-.131,1.96),(.043,.052,.068));hp('Nose',(0,-.191,1.925),(.047,.042,.035))
-for s in [-1,1]:
-    hp('Zygomatic arch',(s*.094,-.117,1.914),(.057,.042,.062));hp('Temple',(s*.121,-.011,1.968),(.045,.102,.083));b=hp('Heavy angular brow',(s*.071,-.145,1.986),(.076,.049,.028));b.rotation_euler.y=s*-.40
-    hp('Nasal wing',(s*.035,-.185,1.917),(.026,.038,.022));hp('Masseter',(s*.108,-.030,1.84),(.044,.091,.086));hp('Ear cartilage',(s*.155,.012,1.949),(.031,.021,.052));hp('Lower orbital tissue',(s*.070,-.144,1.946),(.042,.032,.024))
-head=join_sculpt(headparts,'Head_Sculpt',.0018,6);head['rig_bone']='Head'
-# Ear concha, lips, nostrils, folded creases, ivory lower tusks.
-for s in [-1,1]:
-    uvball('Ear concha',(s*.163,-.006,1.947),(.013,.009,.029),dark,'Face','Head')
-    torus('Ear helix',(s*.161,-.007,1.949),.022,.006,skin,'Face','Head').scale=(.62,1,1.45)
-    uvball('Eye globe',(s*.071,-.165,1.964),(.022,.020,.016),eye,'Face','Head',seg=48,rings=32)
-    uvball('Amber iris',(s*.071,-.1852,1.964),(.0078,.0017,.0078),iris,'Face','Head',seg=40,rings=24)
-    uvball('Pupil',(s*.071,-.187,1.964),(.0028,.0008,.0030),dark,'Face','Head',seg=32,rings=20)
-    eye_bone='Eye_'+('L' if s>0 else 'R')
-    torus('Iris limbal edge',(s*.071,-.1864,1.964),.0078,.00045,dark,'Face',eye_bone)
-    for ray in range(28):
-        a=2*pi*ray/28;radius=.0068+.0007*sin(ray*2.8);r0=.0034+.0005*cos(ray*1.8)
-        tube('Fine iris stria',[(s*.071+r0*cos(a),-.1867,1.964+r0*sin(a)),(s*.071+radius*cos(a+.025),-.1862,1.964+radius*sin(a+.025))],[.00009,.00015],brass if ray%4 else dark,'Face',eye_bone,5)
-    uvball('Eye glint',(s*.068,-.188,1.967),(.00075,.0004,.00075),bone,'Face','Head',seg=12,rings=8)
-    tube('Lower ivory tusk',[(s*.078,-.195,1.838),(s*.079,-.212,1.855),(s*.075,-.212,1.873)],[.009,.005,.0005],bone,'Face','Head',16)
-    tube('Nose to jaw fold',[(s*.047,-.190,1.907),(s*.073,-.189,1.889),(s*.098,-.161,1.863)],[.003,.0035,.0015],skin,'Face','Head',8)
-# Mouth line depressed between broad lips.
-tube('Lower lip',[(-.080,-.183,1.819),(-.049,-.199,1.830),(0,-.207,1.833),(.049,-.199,1.830),(.080,-.183,1.819)],[.004,.007,.009,.007,.004],skin,'Face','Head',16)
-# Merge lip/ear/fold skin into the same deforming facial surface before cutting cavities.
-facial_skin_parts=[bpy.data.objects['Head_Sculpt']]+[o for o in bpy.data.objects if o.type=='MESH' and o.get('module')=='Face' and len(o.data.materials)>0 and o.data.materials[0]==face_skin]
-head=join_sculpt(facial_skin_parts,'Head_Sculpt',.0018,4);head['module']='Head';head['rig_bone']='Head'
-krag_face.geometry(globals())
+if '--continuous-head' in sys.argv:
+    head=krag_head_v9.build(globals())
+else:
+    # Head is a single unified sculpt; amber eyes are deliberately deep below the brow.
+    headparts=[]
+    def hp(name,p,s):o=uvball(name,p,s,skin,'Head','Head');headparts.append(o);return o
+    hp('Cranium',(0,.009,1.932),(.166,.141,.175));hp('Frontal bone',(0,-.083,2.007),(.150,.085,.090));hp('Occiput',(0,.077,1.93),(.133,.099,.15));hp('Broad jaw',(0,-.040,1.811),(.149,.126,.103));hp('Chin',(0,-.162,1.801),(.119,.061,.068));hp('Muzzle',(0,-.139,1.870),(.125,.070,.054));hp('Nose bridge',(0,-.131,1.96),(.043,.052,.068));hp('Nose',(0,-.191,1.925),(.047,.042,.035))
+    for s in [-1,1]:
+        hp('Zygomatic arch',(s*.094,-.117,1.914),(.057,.042,.062));hp('Temple',(s*.121,-.011,1.968),(.045,.102,.083));b=hp('Heavy angular brow',(s*.071,-.145,1.986),(.076,.049,.028));b.rotation_euler.y=s*-.40
+        hp('Nasal wing',(s*.035,-.185,1.917),(.026,.038,.022));hp('Masseter',(s*.108,-.030,1.84),(.044,.091,.086));hp('Ear cartilage',(s*.155,.012,1.949),(.031,.021,.052));hp('Lower orbital tissue',(s*.070,-.144,1.946),(.042,.032,.024))
+    head=join_sculpt(headparts,'Head_Sculpt',.0018,6);head['rig_bone']='Head'
+    # Ear concha, lips, nostrils, folded creases, ivory lower tusks.
+    for s in [-1,1]:
+        uvball('Ear concha',(s*.163,-.006,1.947),(.013,.009,.029),dark,'Face','Head')
+        torus('Ear helix',(s*.161,-.007,1.949),.022,.006,skin,'Face','Head').scale=(.62,1,1.45)
+        uvball('Eye globe',(s*.071,-.165,1.964),(.022,.020,.016),eye,'Face','Head',seg=48,rings=32)
+        uvball('Amber iris',(s*.071,-.1852,1.964),(.0078,.0017,.0078),iris,'Face','Head',seg=40,rings=24)
+        uvball('Pupil',(s*.071,-.187,1.964),(.0028,.0008,.0030),dark,'Face','Head',seg=32,rings=20)
+        eye_bone='Eye_'+('L' if s>0 else 'R')
+        torus('Iris limbal edge',(s*.071,-.1864,1.964),.0078,.00045,dark,'Face',eye_bone)
+        for ray in range(28):
+            a=2*pi*ray/28;radius=.0068+.0007*sin(ray*2.8);r0=.0034+.0005*cos(ray*1.8)
+            tube('Fine iris stria',[(s*.071+r0*cos(a),-.1867,1.964+r0*sin(a)),(s*.071+radius*cos(a+.025),-.1862,1.964+radius*sin(a+.025))],[.00009,.00015],brass if ray%4 else dark,'Face',eye_bone,5)
+        uvball('Eye glint',(s*.068,-.188,1.967),(.00075,.0004,.00075),bone,'Face','Head',seg=12,rings=8)
+        tube('Lower ivory tusk',[(s*.078,-.195,1.838),(s*.079,-.212,1.855),(s*.075,-.212,1.873)],[.009,.005,.0005],bone,'Face','Head',16)
+        tube('Nose to jaw fold',[(s*.047,-.190,1.907),(s*.073,-.189,1.889),(s*.098,-.161,1.863)],[.003,.0035,.0015],skin,'Face','Head',8)
+    # Mouth line depressed between broad lips.
+    tube('Lower lip',[(-.080,-.183,1.819),(-.049,-.199,1.830),(0,-.207,1.833),(.049,-.199,1.830),(.080,-.183,1.819)],[.004,.007,.009,.007,.004],skin,'Face','Head',16)
+    # Merge lip/ear/fold skin into the same deforming facial surface before cutting cavities.
+    facial_skin_parts=[bpy.data.objects['Head_Sculpt']]+[o for o in bpy.data.objects if o.type=='MESH' and o.get('module')=='Face' and len(o.data.materials)>0 and o.data.materials[0]==face_skin]
+    head=join_sculpt(facial_skin_parts,'Head_Sculpt',.0018,4);head['module']='Head';head['rig_bone']='Head'
+    krag_face.geometry(globals())
 # Partition the connected anatomical surface at the modular bionic boundaries.
 log('Continuous torso-arm surface and anatomical partition')
 skin_groups={'Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R'}
@@ -269,18 +272,8 @@ for a in range(0,360,24):
 torus('Circular clan buckle',(0,-.199,1.073),.048,.010,brass,'Belt','Pelvis');uvball('Buckle steel hub',(0,-.205,1.073),(.026,.012,.026),steel,'Belt','Pelvis')
 for x in [-.208,.203]:
     box('Belt utility pouch',(x,-.139,1.062),(.077,.064,.105),leather,'Belt','Pelvis',bevel=.009);box('Pouch flap',(x,-.178,1.095),(.075,.011,.034),leather,'Belt','Pelvis',bevel=.005);uvball('Pouch clasp',(x,-.187,1.086),(.008,.003,.009),brass,'Belt','Pelvis',seg=12,rings=8)
-# Diagonal front harness conforms to pectoral and abdomen, with parallel stitched edges.
-strap=[(-.263,-.093,1.252),(-.214,-.180,1.301),(-.119,-.213,1.367),(-.004,-.229,1.430),(.112,-.222,1.498),(.220,-.183,1.574),(.304,-.110,1.664),(.324,.015,1.716),(.275,.154,1.654)]
-ribbon('Cross body leather harness',strap,.082,leather,'Harness','Chest')
-for i in range(len(strap)-1):
-    p=Vector(strap[i]);q=Vector(strap[i+1]);delta=q-p
-    for k in range(4):
-        a=p+delta*(k+.22)/4;b=p+delta*(k+.60)/4
-        for shift in [-.031,.031]:tube('Harness edge stitching',[a+Vector((shift,-.005,-shift)),b+Vector((shift,-.005,-shift))],[.0015,.0015],cloth,'Harness','Chest',6)
-for x,y,z in [(.19,-.209,1.57),(-.13,-.220,1.38)]:
-    o=box('Harness buckle',(x,y,z),(.094,.018,.057),brass,'Harness','Chest',bevel=.006);o.rotation_euler.y=-.51
-    o=box('Harness buckle aperture',(x,y-.011,z),(.068,.009,.030),leather,'Harness','Chest',bevel=.003);o.rotation_euler.y=-.51
-ribbon('Back harness',[(-.29,.11,1.63),(-.16,.191,1.48),(0,.208,1.38),(.23,.129,1.25)],.07,leather,'Harness','Chest')
+# Harness surface is fitted to the actual continuous anatomy.
+krag_harness.build(globals())
 # Scarf follows the reference's thick looped fabric construction.
 krag_cloth.wrapped(globals())
 # Hanging front sash, hem with cut irregularity.
@@ -411,7 +404,7 @@ for o in list(bpy.data.objects):
     if o.type=='MESH' and o.get('module') in {'Head','Face','BionicJaw_Iron','BionicEye_L','MouthInterior','Eyelids_L','Eyelids_R'}:
         head_transform=o.matrix_world.copy();inv=head_transform.inverted()
         for v in o.data.vertices:
-            q=head_transform@v.co;q.x*=.86;q.y*=.87;q.z=2.107+(q.z-2.107)*.78;v.co=inv@q
+            q=head_transform@v.co;v.co=inv@Vector(krag_face.H(q))
 # Consolidate modules while preserving bone membership per vertex.
 log('Module consolidation and UV unwrapping')
 # Mark rigid weights before joining. Skin forearms and cloth will be reweighted later.
@@ -440,7 +433,7 @@ def bn(n,h,t,par=None):
     b=ad.edit_bones.new(n);b.head=h;b.tail=t
     if par:b.parent=ad.edit_bones[par]
     bones[n]=(Vector(h),Vector(t));return b
-bn('Root',(0,0,0),(0,0,.18));bn('Pelvis',(0,.015,1.015),(0,.015,1.175),'Root');bn('Spine',(0,.015,1.175),(0,.015,1.39),'Pelvis');bn('Chest',(0,.015,1.39),(0,.02,1.64),'Spine');bn('Neck',(0,.02,1.64),(0,.014,1.84),'Chest');bn('Head',(0,.014,1.84),(0,.014,2.105),'Neck');bn('Jaw',(0,-.0348,1.9026),(0,-.1479,1.8597),'Head')
+bn('Root',(0,0,0),(0,0,.18));bn('Pelvis',(0,.015,1.015),(0,.015,1.175),'Root');bn('Spine',(0,.015,1.175),(0,.015,1.39),'Pelvis');bn('Chest',(0,.015,1.39),(0,.02,1.64),'Spine');bn('Neck',(0,.02,1.64),(0,.014,1.84),'Chest');bn('Head',(0,.014,1.84),(0,.014,2.105),'Neck');bn('Jaw',krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawPivot',(0,-.040,1.845))),krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawTail',(0,-.170,1.790))),'Head')
 for s,side in [(-1,'R'),(1,'L')]:
     bn('Clavicle_'+side,(s*.055,.02,1.636),(s*.348,.012,1.613),'Chest');bn('UpperArm_'+side,(s*.348,.012,1.613),(s*.509,.008,1.300),'Clavicle_'+side);bn('LowerArm_'+side,(s*.509,.008,1.300),(s*.599,-.019,1.043),'UpperArm_'+side);bn('Hand_'+side,(s*.599,-.019,1.043),(s*.620,-.042,.927),'LowerArm_'+side)
     bn('Thigh_'+side,(s*.167,.019,1.018),(s*.188,-.016,.570),'Pelvis');bn('Shin_'+side,(s*.188,-.016,.570),(s*.19,.026,.240),'Thigh_'+side);bn('Foot_'+side,(s*.19,.026,.240),(s*.19,-.149,.082),'Shin_'+side);bn('Toe_'+side,(s*.19,-.149,.082),(s*.19,-.230,.067),'Foot_'+side)
@@ -456,7 +449,7 @@ for s,side in [(-1,'R'),(1,'L')]:
 for j,dx in enumerate([-.106,0,.106]):bn('Claw_'+str(j),(.652+dx,-.063 if j!=1 else .072,.962),(.652+dx*.65,-.070 if j!=1 else .065,.82),'Hand_L')
 bn('WeaponMuzzle',Vector((-.450,-.048,.567))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.542))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
 bn('WeaponAim',Vector((-.450,-.048,.467))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.442))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
-krag_face.bones(bn);ad.edit_bones['Jaw'].parent=ad.edit_bones['FaceRoot']
+krag_face.bones(bn,globals().get('continuous_head_landmarks')); ad.edit_bones['Jaw'].parent=ad.edit_bones['FaceRoot']
 bpy.ops.object.mode_set(mode='OBJECT');rig.show_in_front=True
 # Art-directed deformation skinning via nearest anatomical segment weights.
 def distseg(p,a,b):
@@ -558,7 +551,7 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
 bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')
@@ -566,5 +559,6 @@ if '--skip-render' not in sys.argv:bpy.ops.render.render(write_still=True)
 log('Source saved; render '+('skipped' if '--skip-render' in sys.argv else 'finished'))
 # Manifest kept local to this asset; shared root manifest belongs to integration lead.
 data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.24],'Foot_R':[-.19,.026,.24]},'ground_z':0,'bones':list(bones),'clips':['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'],'deformation':deformation,'locomotionCycles':krag_locomotion.manifest(),'variants':variants,'modules':list(modules),'source':str(MASTER_PATH.relative_to(ROOT)).replace('\\','/'),'materials':list(materials),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())}
+if globals().get('continuous_head_landmarks'):data['facialFitLandmarksMeters']={name:list(krag_face.H(point)) for name,point in continuous_head_landmarks.items()}
 (OUT/'krag_asset_contract.json').write_text(json.dumps(data,indent=2),newline='\n')
 log('COMPLETE source creation; use export_krag.py for PBR texture baking and FBX.')

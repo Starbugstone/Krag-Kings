@@ -12,8 +12,8 @@
     "bones": 68,
     "derived": true
   },
-  "sharedReceipt": "benchmark/art/krag/delivery-v7-optimized.json",
-  "currentAuthoringCode": "v8 code-only changes; not equivalent to the v7 generated source",
+  "sharedReceipt": "benchmark/art/krag/delivery-v7-triangulated.json",
+  "currentAuthoringCode": "v9 continuous-face branch plus v8b structural corrections, not yet generated; v8 WIP and shared optimized v7 are preserved",
   "pendingChanges": [
     "Correct mouth aperture winding and narrow connected lip crease",
     "Flatten cheek planes",
@@ -30,7 +30,10 @@
     "Complete organic cinematic anatomy beneath clothing approved for a later source pass after first v8 review"
   ],
   "notIntegrated": [
-    "V8 anatomy/face/armor/full-leg code not generated or reviewed yet; v7 binary/export pinned"
+    "v8 actual source is isolated from shared and not accepted",
+    "v8b neckline/harness/scarf/head proportion fixes are code only and folded into the next v9 build",
+    "v9 continuous CC0 face, refitted eye/jaw/tongue pivots and provisional mouth anatomy are code only",
+    "Shared uses triangulated optimized-v7 appearance; v9 anatomy changes remain ungenerated and unaccepted"
   ],
   "codeAtPin": {
     "add_finger_rig.py": "d6efd0fca4dbb27787170d47d30b921c3ba440e4db8b7596b432b46cba9ce4da",
@@ -116,5 +119,27 @@
   },
   "historicalBaselineReceipt": "benchmark/shared/characters/krag/delivery-v7.json",
   "sharedExportsVersion": "v7-optimized; promoted technical derivative, artistic acceptance false",
-  "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged"
+  "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged",
+  "workInProgressSource": {
+    "path": "benchmark/art/krag/Krag_Master_v8_WIP.blend",
+    "sha256": "bb6954eb75a10cf50b486d54e64ccc0b4c85d879d1569d250ae8d6f2b002dca2",
+    "status": "Generated and front/head rendered; failed artistic review",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v8-wip.png",
+      "renders/Krag_Natural_Head_v8-wip.png"
+    ],
+    "defects": [
+      "Open serrated neck crop beneath jaw",
+      "Harness intersects revised anatomy",
+      "Scarf too concentric and rigid",
+      "Primitive convex face forms remain unlike concept",
+      "Hands and animation require posed close review"
+    ]
+  },
+  "triangulatedTechnicalCandidate": {
+    "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
+    "directory": "benchmark/local/candidates/krag-v7-triangulated",
+    "status": "Root promoted after verifying all 71 hashes and LF JSON; engine ingestion pending",
+    "artisticAcceptance": false
+  }
 }

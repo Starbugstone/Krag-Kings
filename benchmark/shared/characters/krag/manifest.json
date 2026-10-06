@@ -1475,6 +1475,17 @@
     }
   },
   "status": "Review model, artistic acceptance pending",
+  "geometryExport": {
+    "triangulated": true,
+    "method": "Temporary assembly BMesh triangulation with cached shape coordinates and corner normals restored",
+    "payloadPreservation": {
+      "sparseMorphs": "Pinned baseline arrays restored with verified Blender FBX serialization",
+      "normals": "Baseline corner normals proven identical per vertex and preserved as equivalent ByVertice/Direct mapping",
+      "pointPayloadsByteIdentical": true,
+      "mappedNormalMaxError": 0,
+      "uvMaterialCornerCoveragePreserved": true
+    }
+  },
   "runtimeDerivative": {
     "sha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
     "status": "Unaccepted derived candidate; structural/surface transfer checks only",

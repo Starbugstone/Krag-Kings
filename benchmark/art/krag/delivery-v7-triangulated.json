@@ -1,0 +1,426 @@
+{
+  "status": "Validated pretriangulated technical import candidate; engine import and artistic acceptance pending",
+  "artisticAcceptance": false,
+  "baselineMasterSha256": "9d33ed9359caff1dd24f77a0848ac0456ce6e5e2ee7909db31f3fc435203758a",
+  "baselineRuntimeSha256": "5ad0ef497773402ef4eb7b8774bdcaaa4b19090e3db6e3d6ca9b8413486df45d",
+  "runtimeDerivativeSha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
+  "baselineReceipt": "benchmark/art/krag/delivery-v7-optimized.json",
+  "sourceRuntime": "benchmark/art/krag/Krag_Runtime_Optimized_v7.blend",
+  "candidateDirectory": "benchmark/local/candidates/krag-v7-triangulated",
+  "trianglesByVariant": {
+    "Krag_Natural": 1026672,
+    "Krag_Crusher": 987908,
+    "Krag_IronJaw": 1034000,
+    "Krag_Piston": 968616
+  },
+  "allAssembledVariantsTriangular": true,
+  "indexedPointAndMorphPayloadsByteIdentical": true,
+  "mappedNormalMaxError": 0,
+  "mappedUvMaterialCornerSetPreserved": true,
+  "uvQuantization": 1e-07,
+  "texturesUnchanged": true,
+  "restBindUnchanged": true,
+  "rawPayloadEvidence": "benchmark/art/krag/triangulated-payload-validation-v7.json",
+  "payloadRestorationEvidence": "benchmark/art/krag/triangulated-payload-restoration-v7.json",
+  "binaryPolygonEvidence": "benchmark/art/krag/fbx-polygon-triangulated-v7.json",
+  "geometryRoundtripEvidence": "benchmark/art/krag/Krag_Natural-fbx-roundtrip-v7-triangulated.json",
+  "standaloneRoundtripEvidence": "benchmark/art/krag/standalone-animation-roundtrip-v7-triangulated.json",
+  "reproductionJobs": [
+    "benchmark/tools/krag/export-triangulated-v7-job.json",
+    "benchmark/tools/krag/restore-triangle-payloads-v7-job.json",
+    "benchmark/tools/krag/triangle-payload-validation-v7-job.json",
+    "benchmark/tools/krag/roundtrip-triangulated-v7-job.json",
+    "benchmark/tools/krag/roundtrip-animations-triangulated-v7-job.json"
+  ],
+  "telemetry": {
+    "krag-export-triangulated-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 3642,
+      "minAvailableMB": 9930,
+      "maxCommitPercent": 57
+    },
+    "krag-restore-triangle-payloads-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 883,
+      "minAvailableMB": 12456,
+      "maxCommitPercent": 51
+    },
+    "krag-triangle-payload-validation-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 738,
+      "minAvailableMB": 12671,
+      "maxCommitPercent": 50
+    },
+    "krag-roundtrip-triangulated-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 799,
+      "minAvailableMB": 12677,
+      "maxCommitPercent": 50
+    },
+    "krag-roundtrip-animations-triangulated-v7": {
+      "exitCode": 0,
+      "peakPrivateMB": 817,
+      "minAvailableMB": 12650,
+      "maxCommitPercent": 50
+    }
+  },
+  "files": [
+    {
+      "path": "Krag_Crusher.fbx",
+      "bytes": 50993820,
+      "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6"
+    },
+    {
+      "path": "Krag_IronJaw.fbx",
+      "bytes": 53286348,
+      "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b"
+    },
+    {
+      "path": "Krag_Natural.fbx",
+      "bytes": 53076748,
+      "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d"
+    },
+    {
+      "path": "Krag_Piston.fbx",
+      "bytes": 51294364,
+      "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c"
+    },
+    {
+      "path": "Krag_Weapon.fbx",
+      "bytes": 201436,
+      "sha256": "350950cb3285c6351fa474c67e52322596d19adb5dbee8e9502efbd9f1ed2511"
+    },
+    {
+      "path": "animations/FacePerformance.fbx",
+      "bytes": 1096236,
+      "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344"
+    },
+    {
+      "path": "animations/Hit.fbx",
+      "bytes": 643692,
+      "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38"
+    },
+    {
+      "path": "animations/Idle.fbx",
+      "bytes": 749740,
+      "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39"
+    },
+    {
+      "path": "animations/Melee.fbx",
+      "bytes": 650764,
+      "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100"
+    },
+    {
+      "path": "animations/Run.fbx",
+      "bytes": 585932,
+      "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae"
+    },
+    {
+      "path": "animations/Shoot.fbx",
+      "bytes": 662332,
+      "sha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf"
+    },
+    {
+      "path": "animations/Walk.fbx",
+      "bytes": 649324,
+      "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c"
+    },
+    {
+      "path": "facial-rig.json",
+      "bytes": 5873,
+      "sha256": "1ea4e52b4683b4a7ec3f9c1acdc6e1f10f86e079281f893101090e818f0fff66"
+    },
+    {
+      "path": "krag_asset_contract.json",
+      "bytes": 46184,
+      "sha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 42772,
+      "sha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917"
+    },
+    {
+      "path": "textures/Krag_AgedBrass_BaseColor.png",
+      "bytes": 1318648,
+      "sha256": "68508fcb06ef32ac789d5b430d17b4d5ab5560cbcc58e07a65e943d21f1cef20"
+    },
+    {
+      "path": "textures/Krag_AgedBrass_Metallic.png",
+      "bytes": 671,
+      "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d"
+    },
+    {
+      "path": "textures/Krag_AgedBrass_Normal.png",
+      "bytes": 1326622,
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc"
+    },
+    {
+      "path": "textures/Krag_AgedBrass_Roughness.png",
+      "bytes": 670,
+      "sha256": "7c14dae4a1be5f62bef1f6735527ca4e0dca63c0dc1d0db57eb0df975d720ea7"
+    },
+    {
+      "path": "textures/Krag_Amber_BaseColor.png",
+      "bytes": 92700,
+      "sha256": "6b07b52631a4eaf473dd64a8d7f70fc9aa4a1af852870e903b64feec3b0b2106"
+    },
+    {
+      "path": "textures/Krag_Amber_Metallic.png",
+      "bytes": 304,
+      "sha256": "31a6b1f0a431573153df3389b7bcee163d8a9f7e45094d2e6442907a54693cae"
+    },
+    {
+      "path": "textures/Krag_Amber_Normal.png",
+      "bytes": 72177,
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f"
+    },
+    {
+      "path": "textures/Krag_Amber_Roughness.png",
+      "bytes": 304,
+      "sha256": "40d8c60d41a13bc16c871a3a8709aff9f668a7f4cf42da94b846c696b1ef48cf"
+    },
+    {
+      "path": "textures/Krag_BlackenedSteel_BaseColor.png",
+      "bytes": 1211061,
+      "sha256": "53bc90e240a728437734c21a8e867d5e50bc4b080203f846873bd95b9591703c"
+    },
+    {
+      "path": "textures/Krag_BlackenedSteel_Metallic.png",
+      "bytes": 671,
+      "sha256": "5d13cd7656afd45cdd2dcf431dd89dac831571ec0e691410064697fc28c0458d"
+    },
+    {
+      "path": "textures/Krag_BlackenedSteel_Normal.png",
+      "bytes": 1326622,
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc"
+    },
+    {
+      "path": "textures/Krag_BlackenedSteel_Roughness.png",
+      "bytes": 670,
+      "sha256": "25ca1d79469c4a26b9f3204dc8b115dd189c50655417b1889cabb55f19346721"
+    },
+    {
+      "path": "textures/Krag_CopperHose_BaseColor.png",
+      "bytes": 1325770,
+      "sha256": "ce7b2156bcf1a87f6d81945b891281b860aa179188d0124fe85a5bac4c586444"
+    },
+    {
+      "path": "textures/Krag_CopperHose_Metallic.png",
+      "bytes": 671,
+      "sha256": "cc468da0217c494e6b689bf78ee02c4bed0d7a5132092ffebff9273ffbb0c405"
+    },
+    {
+      "path": "textures/Krag_CopperHose_Normal.png",
+      "bytes": 1326622,
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc"
+    },
+    {
+      "path": "textures/Krag_CopperHose_Roughness.png",
+      "bytes": 671,
+      "sha256": "e051386f21d4b2c36ec7f2739b373a6fef3126fd09b11ba4441177b04450bb4f"
+    },
+    {
+      "path": "textures/Krag_DesertCanvas_BaseColor.png",
+      "bytes": 1271197,
+      "sha256": "b44f123c84f2c27feb1c146897f145cf89e5939507293b159bfd90d5488d3fd9"
+    },
+    {
+      "path": "textures/Krag_DesertCanvas_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_DesertCanvas_Normal.png",
+      "bytes": 1493547,
+      "sha256": "54ee0da5da9cc21f8c3ee60fa7d6370729685a716f2236d8113dcea6e1ac1d3d"
+    },
+    {
+      "path": "textures/Krag_DesertCanvas_Roughness.png",
+      "bytes": 671,
+      "sha256": "4f5cabf2ffc9a8cef0ec091483db5ad741b95ac54445d821b7ad7f03e69f8bb9"
+    },
+    {
+      "path": "textures/Krag_EyeWhite_BaseColor.png",
+      "bytes": 74859,
+      "sha256": "fa1a1cd2de88ef4efa8bc1ba6559ddb35e86519a5f252a1cc57ee806e4c89392"
+    },
+    {
+      "path": "textures/Krag_EyeWhite_Metallic.png",
+      "bytes": 275,
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c"
+    },
+    {
+      "path": "textures/Krag_EyeWhite_Normal.png",
+      "bytes": 72177,
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f"
+    },
+    {
+      "path": "textures/Krag_EyeWhite_Roughness.png",
+      "bytes": 304,
+      "sha256": "3195366d40c99e13ca9b7d6716f86211ad678e9374d633df5a99283ee82be6af"
+    },
+    {
+      "path": "textures/Krag_FacialSkin_BaseColor.png",
+      "bytes": 2030417,
+      "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1"
+    },
+    {
+      "path": "textures/Krag_FacialSkin_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_FacialSkin_Normal.png",
+      "bytes": 1831777,
+      "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18"
+    },
+    {
+      "path": "textures/Krag_FacialSkin_Roughness.png",
+      "bytes": 10783,
+      "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d"
+    },
+    {
+      "path": "textures/Krag_Ivory_BaseColor.png",
+      "bytes": 93212,
+      "sha256": "33f017fbf5862b1ae71e9e2ca628111011fc24cb69782d20b339bd9d924e8d8e"
+    },
+    {
+      "path": "textures/Krag_Ivory_Metallic.png",
+      "bytes": 275,
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c"
+    },
+    {
+      "path": "textures/Krag_Ivory_Normal.png",
+      "bytes": 72177,
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f"
+    },
+    {
+      "path": "textures/Krag_Ivory_Roughness.png",
+      "bytes": 304,
+      "sha256": "dba7a2dbde5c5a6a16c03162e2082ff7bb814d87acd447a7fa63b3a78684cbe9"
+    },
+    {
+      "path": "textures/Krag_OiledLeather_BaseColor.png",
+      "bytes": 1127334,
+      "sha256": "5c89d0593da62969048b4a8dbda0115a9a936127c4c4195ba78614338f36c8b6"
+    },
+    {
+      "path": "textures/Krag_OiledLeather_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_OiledLeather_Normal.png",
+      "bytes": 1384041,
+      "sha256": "4aa7fbe2e764ccfced4adb0191b6becfc48e3cd507b63bb206687154cf723044"
+    },
+    {
+      "path": "textures/Krag_OiledLeather_Roughness.png",
+      "bytes": 671,
+      "sha256": "0664bd804439f72e8a7d69dddf7e69ff63656ebf94c31867d3738c66edde5f68"
+    },
+    {
+      "path": "textures/Krag_OralTissue_BaseColor.png",
+      "bytes": 955107,
+      "sha256": "2c1dd7e4f65c8cefe2d16bdf491211897a1aba1e67fd52f7791d6f07c54c7e36"
+    },
+    {
+      "path": "textures/Krag_OralTissue_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_OralTissue_Normal.png",
+      "bytes": 1074697,
+      "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce"
+    },
+    {
+      "path": "textures/Krag_OralTissue_Roughness.png",
+      "bytes": 671,
+      "sha256": "b23f437cc1a28c49a4b1aba51ba7026a5107554639e91e28c0c1c2525a1288f9"
+    },
+    {
+      "path": "textures/Krag_Recess_BaseColor.png",
+      "bytes": 69601,
+      "sha256": "9a3e6a96f13a6a3d6be610c89cc13783dffb47be955779a367064e7e14a01840"
+    },
+    {
+      "path": "textures/Krag_Recess_Metallic.png",
+      "bytes": 275,
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c"
+    },
+    {
+      "path": "textures/Krag_Recess_Normal.png",
+      "bytes": 72177,
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f"
+    },
+    {
+      "path": "textures/Krag_Recess_Roughness.png",
+      "bytes": 304,
+      "sha256": "9a96c2f6dffebf877ebea04a3aa52982e75daf76f74c343d7221f7407d299cb5"
+    },
+    {
+      "path": "textures/Krag_SandstoneSkin_BaseColor.png",
+      "bytes": 7457768,
+      "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f"
+    },
+    {
+      "path": "textures/Krag_SandstoneSkin_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_SandstoneSkin_Normal.png",
+      "bytes": 7522343,
+      "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca"
+    },
+    {
+      "path": "textures/Krag_SandstoneSkin_Roughness.png",
+      "bytes": 10912,
+      "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5"
+    },
+    {
+      "path": "textures/Krag_Tongue_BaseColor.png",
+      "bytes": 954264,
+      "sha256": "17f2dcf7888742d903bb4309f6a0f05aa53a22e3dd0781cd55990ca8625d1e3d"
+    },
+    {
+      "path": "textures/Krag_Tongue_Metallic.png",
+      "bytes": 473,
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+    },
+    {
+      "path": "textures/Krag_Tongue_Normal.png",
+      "bytes": 1074697,
+      "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce"
+    },
+    {
+      "path": "textures/Krag_Tongue_Roughness.png",
+      "bytes": 671,
+      "sha256": "58172b32174b6003b8f8ae1ad6711bd176835ac94a68dc2e52b9b7c0c0943eba"
+    },
+    {
+      "path": "textures/Krag_WeatheredTeal_BaseColor.png",
+      "bytes": 483781,
+      "sha256": "d0689e9e6a8d5a154b431e146f772479d6f2d7c43290033dfc8d5eb3a3fcfaf0"
+    },
+    {
+      "path": "textures/Krag_WeatheredTeal_Metallic.png",
+      "bytes": 671,
+      "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d"
+    },
+    {
+      "path": "textures/Krag_WeatheredTeal_Normal.png",
+      "bytes": 803373,
+      "sha256": "e11000bffc8b6b2f9fe79c4342e64abbd96085dffd1d1be67b79039ea3736278"
+    },
+    {
+      "path": "textures/Krag_WeatheredTeal_Roughness.png",
+      "bytes": 671,
+      "sha256": "681b49bcdaae0ec07b2822263556690b208e9809f8e1355439ae88639caac443"
+    }
+  ],
+  "promotion": "Root verified all 71 candidate hashes and canonical LF JSON, copied changed payloads to shared and verified all 71 again. Engine import and artistic acceptance remain pending.",
+  "knownArtDefects": "Pinned v7 appearance unchanged and unaccepted. v8 actual source and v9 ungenerated code remain separate."
+}
