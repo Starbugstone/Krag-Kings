@@ -22,6 +22,7 @@ from nib_groom_v5 import build_groom, deepen_ears
 from nib_cloth_v5 import revise_cloth
 from nib_hand_v5 import rebuild_hands
 from nib_opaque_eyes import fit_opaque_eye
+from nib_ocular_materials import create_ocular_materials
 from nib_groom_materials import create_regions
 from audit_face_coordinates import facial_snapshot
 
@@ -52,7 +53,7 @@ report={'status':'Work in progress: native geometry review required','artisticAc
         'changes':[]}
 report['authoringCode']={}
 for filename in ['rebuild_head_v5.py','fit_head.py','nib_groom_v5.py','nib_cloth_v5.py',
-                 'nib_hand_v5.py','nib_opaque_eyes.py','nib_groom_materials.py','audit_face_coordinates.py']:
+                 'nib_hand_v5.py','nib_opaque_eyes.py','nib_ocular_materials.py','nib_groom_materials.py','audit_face_coordinates.py']:
     path=Path(__file__).with_name(filename)
     report['authoringCode'][filename]=sha(path)
     text_name='Nib source '+args.revision+' '+filename
@@ -221,6 +222,7 @@ report['changes'].append({'part':'Face','vertices':len(head.data.vertices),'tria
 # Applying the identical regional warp to eyes and lids preserves their relation.
 fitted_eye_centers={}
 report['opaqueEyeProjection']={}
+ocular_materials,report['ocularMaterials']=create_ocular_materials()
 for side in ['L','R']:
     source_matrices={part:head_matrix.inverted()@reference_world['GEO-head_animation_realistic.'+part+'.'+side] for part in ['sclera','iris']}
     report['opaqueEyeProjection'][side]=fit_opaque_eye(
@@ -234,7 +236,7 @@ for side in ['L','R']:
             center=np.asarray([tuple(source_transform.translation)])
             fitted_eye_centers[side]=Vector(fit_head(center)[0])+Vector((0,0,HEAD_DROP))
         obj.name='Nib v5 fitted '+part+' '+side
-        setmaterial(obj,'Nib_Dark' if part=='sclera' else 'Nib_Eye')
+        obj.data.materials.clear();obj.data.materials.append(ocular_materials[part])
         bind(obj,'Eye_'+side)
         eye_points=np.asarray([tuple(obj.matrix_world@v.co) for v in obj.data.vertices])
         head_points=np.asarray([tuple(head.matrix_world@v.co) for v in head.data.vertices])

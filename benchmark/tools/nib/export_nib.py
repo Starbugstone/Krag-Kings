@@ -7,16 +7,19 @@ ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/nib';OUT=ROOT/'
 parser=argparse.ArgumentParser()
 parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--out',type=Path,default=OUT)
+parser.add_argument('--baseline-dir',type=Path,default=OUT,help='Matching reference FBXs for point-domain normal preservation; new topology needs its own isolated reference export')
+parser.add_argument('--texture-dir',type=Path,help='Explicit baked PBR directory for a new source; otherwise use baseline-dir/textures')
 parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
 parser.add_argument('--triangulate',action='store_true',help='Export a temporary triangulated mesh while retaining source vertices and shape keys')
 parser.add_argument('--preserve-baseline-morphs',action='store_true',help='Historical exact-payload conversion only; never use when correcting morphs')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
-SOURCE=args.source;BASELINE_OUT=OUT;OUT=args.out
+SOURCE=args.source;SHARED_OUT=OUT;BASELINE_OUT=args.baseline_dir;OUT=args.out
 OUT.mkdir(parents=True,exist_ok=True)
-candidate=OUT.resolve()!=BASELINE_OUT.resolve()
+candidate=OUT.resolve()!=SHARED_OUT.resolve()
 if candidate:
     if SOURCE.resolve()==(ART/'Nib_Master.blend').resolve():raise RuntimeError('Candidate export requires an explicit derivative source')
-    shutil.copytree(BASELINE_OUT/'textures',OUT/'textures',dirs_exist_ok=True)
+    texture_source=args.texture_dir or BASELINE_OUT/'textures'
+    if texture_source.resolve()!=(OUT/'textures').resolve():shutil.copytree(texture_source,OUT/'textures',dirs_exist_ok=True)
 legacy=ART/'versions/pre-v4-shared';legacy.mkdir(parents=True,exist_ok=True)
 for filename in ([] if candidate else ['asset_manifest.json','manifest.json','Nib_Natural.fbx','Nib_GripReplacement.fbx','Nib_LegReplacement.fbx']):
     old=OUT/filename
@@ -58,6 +61,7 @@ manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','fur
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
 if args.triangulate:
     manifest['geometryExport']={'triangulated':True,'method':'Disposable assembly triangulation; validated baseline vertex-domain normal layer preserved, corrected target morphs retained unless explicitly requested otherwise','sourceVertexOrderUnchanged':True,'mappedNormalMaxVectorError':0,'pointAndMorphPayloadsByteIdentical':args.preserve_baseline_morphs}
+    manifest['geometryExport']['referenceDirectory']=os.path.relpath(BASELINE_OUT,OUT).replace('\\','/')
 manifest['shapeUnion']={'creation':'from_mix=False','copiedDriversClearedBeforeCreation':True,'copiedWeightsZeroedBeforeCreation':True,'bodyCorrectivesOnFacialVerticesChecked':True}
 for m in bpy.data.materials:
     if not m.name.startswith('Nib_'):continue

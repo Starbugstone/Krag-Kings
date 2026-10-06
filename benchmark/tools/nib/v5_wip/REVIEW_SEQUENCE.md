@@ -46,4 +46,14 @@ this sequence. Those require an actual reviewed source, updated materials and
 matching clips, plus new engine verification.
 
 
-The critical v4b morph repair has now been generated, independently validated, posed and promoted by root. The separate repaired source is `Nib_Runtime_Optimized_v4b_MorphRepair.blend`; original source remains preserved. All source shape creation is explicitly unmixed. The current generator requires new revision v5d and defaults to that repaired source. Historical v5c jobs correspond to the embedded/checkpointed source revision and must not overwrite the failed v5c evidence. Next art preparation is lightweight only while UE owns the guard. Preserved v5c profile/three-quarter diagnostic captures need explicit slot allocation before the next face warp. Smooth ocular materials are prepared but not yet connected/generated or baked.
+The critical v4b morph repair has now been generated, independently validated, posed and promoted by root. The separate repaired source is `Nib_Runtime_Optimized_v4b_MorphRepair.blend`; original source remains preserved. All source shape creation is explicitly unmixed. The current generator requires new revision v5d and defaults to that repaired source. Historical v5c jobs correspond to the embedded/checkpointed source revision and must not overwrite the failed v5c evidence. Next art preparation is lightweight only while UE owns the guard. Preserved v5c profile/three-quarter diagnostic captures need explicit slot allocation before the next face warp. Smooth ocular materials are connected in the next v5d recipe but have not been generated, reviewed or baked. The separate `native-v5c-diagnostic-depth.job.json` is ready for the next allocated review slot; it preserves the failed structural gate and does not overwrite the existing Face image.
+
+## Future changed-topology export preparation (not executed)
+
+A v5 source cannot use the promoted v4b FBX as its normal/morph preservation reference. After a v5 source passes its actual shape/pose review and its new ocular/face/groom PBR maps are baked:
+
+1. Export that exact saved source and matching source report to an isolated `benchmark/local/candidates/nib-v5-reference` using explicit `--texture-dir` for the new PBR set, without `--triangulate`.
+2. Export the same unchanged source to a separate isolated triangle candidate with `--triangulate --baseline-dir .../nib-v5-reference`. The helper must prove identical Basis vertex coordinates/order before transporting that source's own point-domain normals. The default retains newly exported morphs; `--preserve-baseline-morphs` is reserved for an independently validated same-source conversion.
+3. Run raw mapped UV/material/normal/shape checks against the new v5 reference, then fresh bind/clip/morph roundtrip and posed proof before asking root to promote.
+
+The explicit baseline/texture CLI options are syntax-checked preparation only. They have not produced a v5 export. The validated v4b repair remains reproducible from checkpoint f85c4f6 (exporter fix introduced in 761b3af), its recorded source and tool hashes.
