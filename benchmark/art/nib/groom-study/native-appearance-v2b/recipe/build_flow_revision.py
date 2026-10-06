@@ -49,12 +49,9 @@ class PathClearanceError(RuntimeError):
         self.detail = detail
 
 
-def lift_ear_path(points, outward, tree, *, front):
+def lift_ear_path(points, outward, tree):
     """One smooth whole-path lift, not independent nearest-surface snapping."""
-    # Use the same explicit surface side as the successful root visibility
-    # test. Near the rim, interpolated vertex normals can cross Y=0 even when
-    # the sampled triangle belongs to the rear surface. That sign must not
-    # silently switch a valid rear root to a front occlusion test.
+    front = outward.y < 0
     ray = Vector((0, 1 if front else -1, 0))
     direction = -ray
     # Tangent-plane guides can re-enter the cup as the actual surface curves.
@@ -247,7 +244,7 @@ def main():
                 points = [strand_point(roots[i], normals[i], guide, j / 8, length, phase, guide['undercoat']) for j in range(9)]
                 if ear:
                     try:
-                        points, lift = lift_ear_path(points, normals[i], tree, front=inner)
+                        points, lift = lift_ear_path(points, normals[i], tree)
                     except PathClearanceError as error:
                         detail = {'status': 'Actual isolated path attribution; no source save or geometric gate relaxation',
                             'sourceSha256': source_sha, 'region': region['name'], 'part': name,
@@ -305,7 +302,7 @@ def main():
     if args.diagnostic_only:
         raise RuntimeError('Diagnostic did not reproduce the preserved path failure; do not save a source')
     rig.animation_data.action = bpy.data.actions['Idle']; bpy.context.scene.frame_set(1)
-    target = args.output_dir / 'Nib_NativeFlow_Study_v2c.blend'
+    target = args.output_dir / 'Nib_NativeFlow_Study_v2b.blend'
     bpy.ops.wm.save_as_mainfile(filepath=str(target), compress=True)
     bpy.ops.wm.open_mainfile(filepath=str(target), load_ui=False)
     if rig_contract(bpy.data.objects['Nib_Rig']) != before_rig:

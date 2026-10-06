@@ -1,0 +1,380 @@
+{
+  "status": "Actual source-generation failure before save; no source or renders",
+  "nativeExitCode": 2,
+  "guardExitCode": 2,
+  "pid": 12848,
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "sourceChanged": false,
+  "runtimeTargetChanged": false,
+  "artisticAcceptance": false,
+  "failureRegion": "EarOuterTawny_R",
+  "failureCurve": 670,
+  "cause": "Rear-root sampling followed by inconsistent front clearance selection from near-tangent smoothed normal",
+  "files": [
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/.gitattributes",
+      "bytes": 192,
+      "sha256": "73a9ad7f6d8d0db404012164c31dd03dc0eac42cd627f1d02315cbe9b2b576fa"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/README.md",
+      "bytes": 1001,
+      "sha256": "507c7338f947a41859a168a83a2c86abfecd9c2377f0917f42a489b27659ed7b"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/execution/nib-native-appearance-v2b-generate-memory.csv",
+      "bytes": 563,
+      "sha256": "791c8eb338ab95f9c1dee5fad62455eff314f5ebcf124c8acb041887415d7db2"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/execution/nib-native-appearance-v2b-generate.log",
+      "bytes": 227,
+      "sha256": "3c68150fb07e171bc13f5c60ff486a6cd47a372b535a99b6ed7670f7f747fb22"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/execution/nib-native-appearance-v2b-generate.stderr.log",
+      "bytes": 922,
+      "sha256": "ff55e527e75d41c67e218b9a5b122ef004fbf5f2cd588c181e93c233d5167f14"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/flow-failure.json",
+      "bytes": 2843,
+      "sha256": "2c3736d74fd570a9084e183dce6ff3bff3b39a1e5302b74b319ba4039c9681e4"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/build_flow_revision.py",
+      "bytes": 22917,
+      "sha256": "c8fdd2ad13a97a23b2954b36fc2582f51894e6ab9ee15cb06dbd8851abc099ab"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/flow_recipe.py",
+      "bytes": 6261,
+      "sha256": "30ef76fb85a0231fe6a6212cd0ed44a5ef124f56e4c79d135da72fe508eb6ead"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/generate-v2b.job.json",
+      "bytes": 1306,
+      "sha256": "621b9e9047b5a6a489a5615894b5e8eeb9ad6b092507d046a37c432e9c5ce842"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/neutral-v2b.job.json",
+      "bytes": 1186,
+      "sha256": "f3913a4e143341d47fcf8263c2016ec528bb1065b14707d9eb3703f1834dec37"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/profile-v2b.job.json",
+      "bytes": 1186,
+      "sha256": "35fc87444f54326f4c251df0567afe490b81cd34bcdc6b6c84040a8a32076063"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/recipe/readiness-v2b.json",
+      "bytes": 4299,
+      "sha256": "4614f8effe83337d222d0bd58c3935c6d62793cb3143a1736c914060c48cc3c6"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.colorLinearRgb.bin",
+      "bytes": 378000,
+      "sha256": "75fa0bc3c2acf6e2116d1dd3ac4e3b59c46802f129b16ca11b8a05b2ccb05154"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.curveCounts.bin",
+      "bytes": 14000,
+      "sha256": "e717ffd314e2a0170b4b12c109a4f72458e7658cbbef9e322c78a60bbd55673e"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.positions.bin",
+      "bytes": 378000,
+      "sha256": "635fc1cb4281dca02096b723d5359200798fbccee30d26ee5155419d4ec70dfe"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.radii.bin",
+      "bytes": 126000,
+      "sha256": "af6cf499451215fb37a698119c22a4dd63d8dbbf95c92c21af51fbf718fc2012"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootBarycentrics.bin",
+      "bytes": 42000,
+      "sha256": "2952a7e3c0d6848e42c9b418f3a93d8bd4b050693dbb660b26dee1f179c3b95a"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootBoneIndices.bin",
+      "bytes": 22204,
+      "sha256": "8fb6069088f820f08945d7a180547a6103141559c548a0793dc078ed3dd7072a"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootBoneWeights.bin",
+      "bytes": 22204,
+      "sha256": "00f38de92b4b8c641900b1bff0e9290dd8fed95f936a8623bd0a8a5d761b2e68"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootSurfaceUv.bin",
+      "bytes": 28000,
+      "sha256": "22a45e19e91e1bf6ef9c3a9cea2c5a1e8226fc8764d2c710d92687a366af0254"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootTriangleVertexIndices.bin",
+      "bytes": 42000,
+      "sha256": "21ed70d0dc8a7aab8b0ba0b02a64a70a419c2d752bb5a601e84c5e8aae2b0e8d"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootUv.bin",
+      "bytes": 28000,
+      "sha256": "b60b55412193e97d04106129f3c6825f50bcaaa1bbd521f16db734246e4a3aa3"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_L.rootWeightOffsets.bin",
+      "bytes": 14004,
+      "sha256": "83605c991da32794dcfd1f518aa575d1892393f283c5fd6933c1291a13752217"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.colorLinearRgb.bin",
+      "bytes": 378000,
+      "sha256": "d35a84ec349ad6441000dab3949efc5fe95e46d6c49dcc3f888e569dfab54a87"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.curveCounts.bin",
+      "bytes": 14000,
+      "sha256": "e717ffd314e2a0170b4b12c109a4f72458e7658cbbef9e322c78a60bbd55673e"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.positions.bin",
+      "bytes": 378000,
+      "sha256": "19d508467d4d0fb771cbf35e679b9454ec5e703775680f4b7c827c892cd6bd84"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.radii.bin",
+      "bytes": 126000,
+      "sha256": "e464c427fba4713f59f054e9fe48f28f3b8b6b9fb31ac28e6fcedc078b84afae"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootBarycentrics.bin",
+      "bytes": 42000,
+      "sha256": "375a4bb5e66c6417861089700cab24f492e3c881c429835275142fa9efde354d"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootBoneIndices.bin",
+      "bytes": 22236,
+      "sha256": "d27f05d3c7f3bc3012454cc4e5936ac96e4315758e76d2bd29ef58962a0ed53c"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootBoneWeights.bin",
+      "bytes": 22236,
+      "sha256": "e10f0b8a1722268012e16b0a2f8fa5f620dd7de08d46c0fda8fb32f1407b5da0"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootSurfaceUv.bin",
+      "bytes": 28000,
+      "sha256": "5d6d9a5d11776d1de14946c333b10ddfc953273b3485a6e905d152591cb2f8c9"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootTriangleVertexIndices.bin",
+      "bytes": 42000,
+      "sha256": "2bd7ffdb49b3e6d82faaea21445b19bd5d93911197c502c64f09655bd47efa26"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootUv.bin",
+      "bytes": 28000,
+      "sha256": "30f2542809f1badfe5026626aca96b8ff7e0234e0396aa05ea570c9ade3d5fe1"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarInnerCream_R.rootWeightOffsets.bin",
+      "bytes": 14004,
+      "sha256": "07d99794c8a932b796676b0ba2f1fa1aca28fc02e362a935f04b9a826bc7f682"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.colorLinearRgb.bin",
+      "bytes": 486000,
+      "sha256": "d983dd6d85fe993a542d24bc7893ef145b59328542bf6333b2214487589f263e"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.curveCounts.bin",
+      "bytes": 18000,
+      "sha256": "fa15ce07e241b3853359e1883fb4c9ffedfa82fc6c9c52a1d4a4a039d1508c52"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.positions.bin",
+      "bytes": 486000,
+      "sha256": "f5f5b60fea2a35d76b47c41cecb188355f81d73edd44ea8a23e8d84faebd6c76"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.radii.bin",
+      "bytes": 162000,
+      "sha256": "aea5badcdd555aad5c4e6a8cc857d4e54d3ed54f0ab8f1d20d7b55fc3852c34d"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootBarycentrics.bin",
+      "bytes": 54000,
+      "sha256": "66b4f6395860f59d3f3929b533def7ff83590263e59ececb7a3789abb6ddb8cf"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootBoneIndices.bin",
+      "bytes": 27804,
+      "sha256": "df1217bc7c9456d367dacfeda2a40d2a830b59d6241d3344859f6d3d0a609e55"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootBoneWeights.bin",
+      "bytes": 27804,
+      "sha256": "7a1a04f476ef37b060319b966164fb167e60c72816dbc9d71d0d9ba2f9c5f3b9"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootSurfaceUv.bin",
+      "bytes": 36000,
+      "sha256": "978a9555631a0bc4c719a4a20c0a11549952207861e74981c2fb2c2779adc4fb"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootTriangleVertexIndices.bin",
+      "bytes": 54000,
+      "sha256": "1fe1a85fa91489374d6eff8fc367cc8d6012f0a2c0772a59bfeb26d250468e1b"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootUv.bin",
+      "bytes": 36000,
+      "sha256": "4c815dcd17bb587125c40d5a1a9e44914f1b3117a2e77c80c1c6fe1238e72da9"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_L.rootWeightOffsets.bin",
+      "bytes": 18004,
+      "sha256": "8a311f1ded96a2f06d8d534be54a78498f9276ac2a91f302a92da94cd8883c68"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.colorLinearRgb.bin",
+      "bytes": 486000,
+      "sha256": "e463b0071f4346bab55649c10d71b1cc8bb6006b0ae9bbfaff7dd945b167eb9a"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.curveCounts.bin",
+      "bytes": 18000,
+      "sha256": "fa15ce07e241b3853359e1883fb4c9ffedfa82fc6c9c52a1d4a4a039d1508c52"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.positions.bin",
+      "bytes": 486000,
+      "sha256": "c63795142b577c4445f940005d599ebfec4da51374e711a1e72626308b9757cb"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.radii.bin",
+      "bytes": 162000,
+      "sha256": "07baffa89259a722f6a659f5526b63305b3d8775e04f9d9fa59cbcb0ec3eba7c"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootBarycentrics.bin",
+      "bytes": 54000,
+      "sha256": "53394d402a0707c3f8a0eaa4c29f4e8596e83ddd39671e0aaa98cc616ae6f1fd"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootBoneIndices.bin",
+      "bytes": 27528,
+      "sha256": "4ca8498781f4dfdd3288df3d98d5f1c9b5a439bb63c7345b46e2069fa96c339c"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootBoneWeights.bin",
+      "bytes": 27528,
+      "sha256": "fdca0a4c45c73a713af3e0a2e42ffd6aa76ec2d0dec043fd01fdec58fad2c8d3"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootSurfaceUv.bin",
+      "bytes": 36000,
+      "sha256": "5a2eae8bb28f79eaaa8898a81f5fa7fbb14c920c2c3e100eec99065134f011e5"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootTriangleVertexIndices.bin",
+      "bytes": 54000,
+      "sha256": "9e5d281950ad63f0a988f9840797dea8be7d54cfd4c83e2a2e58d0f207aab307"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootUv.bin",
+      "bytes": 36000,
+      "sha256": "945abc9edd915d312849495104c55524d14eebe4d9006abe8012b587313fabe7"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/EarOuterTawny_R.rootWeightOffsets.bin",
+      "bytes": 18004,
+      "sha256": "913928e488a8738a84f810ca9ccf38a5269d1125abd4ed09382ede4b5b9e4088"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.colorLinearRgb.bin",
+      "bytes": 1080000,
+      "sha256": "2bb0b8f3231126da4971607baaabcfefde911ccd992171a542d7340bbc0be6c5"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.curveCounts.bin",
+      "bytes": 40000,
+      "sha256": "c09a504ce195fd3c4029bcf46e59176afa894f9acb7e400340f1c27428983ff9"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.positions.bin",
+      "bytes": 1080000,
+      "sha256": "e0530632538441d53e72134eec1816454429a86efcb91c1d00ea954741ab228a"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.radii.bin",
+      "bytes": 360000,
+      "sha256": "ae81f29a72524d5ee73f249e1e8d6bce99b72b88832560549a6bba4284ce18cc"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootBarycentrics.bin",
+      "bytes": 120000,
+      "sha256": "3482ea7bc1ae9d7d9c39ecf62cb5f466671eaa6f860dd5481285dfebeb6aa043"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootBoneIndices.bin",
+      "bytes": 40792,
+      "sha256": "53b931bc6f4f1c8f039b78103f196717ded24234727fc467b777cc48320ce13b"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootBoneWeights.bin",
+      "bytes": 40792,
+      "sha256": "2ee20b584564fc39299292a70f491a5a0afedb010d752f3ee8ca2575f3eec664"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootSurfaceUv.bin",
+      "bytes": 80000,
+      "sha256": "67f6e9ab0dbd572fb7317f997b7e1449bdfcfae334cbf3be39b1ab7d3d2485db"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootTriangleVertexIndices.bin",
+      "bytes": 120000,
+      "sha256": "e282d6b18b4b71b45b01a225c35c0d936d199f06464509a2ce363ca19e693f9b"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootUv.bin",
+      "bytes": 80000,
+      "sha256": "66b42f2ca81fcd6ea0e9fe6c8c1002c1226a1fb69ef1cdb2e38935fe4ef2523b"
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-appearance-v2b/strands/HeadCream.rootWeightOffsets.bin",
+      "bytes": 40004,
+      "sha256": "d9aadabbf16876fea683f7e7a1f7fb68712998ec09e814170fd816b59d29b474"
+    }
+  ],
+  "peakPrivateMB": 727,
+  "minimumAvailableMB": 10806,
+  "clearanceLimitMeters": 0.025,
+  "strandBudget": 26000,
+  "preservedVisibilityExclusions": [
+    "Auricle basal cartilage fold",
+    "Auricle basal cartilage fold.001"
+  ],
+  "partialPositionArrays": [
+    {
+      "region": "HeadCream",
+      "matchesOriginal": false
+    },
+    {
+      "region": "EarInnerCream_L",
+      "matchesOriginal": false
+    },
+    {
+      "region": "EarOuterTawny_L",
+      "matchesOriginal": false
+    },
+    {
+      "region": "EarInnerCream_R",
+      "matchesOriginal": false
+    },
+    {
+      "region": "EarOuterTawny_R",
+      "matchesOriginal": true
+    }
+  ]
+}

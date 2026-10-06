@@ -1,0 +1,116 @@
+{
+  "status": "Actual isolated path attribution; no source save or geometric gate relaxation",
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "region": "EarOuterTawny_R",
+  "part": "ear_exterior",
+  "curveIndex": 670,
+  "sourceSurface": "Fennec cupped ear -1",
+  "root": {
+    "point": [
+      -0.09580777585506439,
+      -0.008651336655020714,
+      1.2784700393676758
+    ],
+    "normal": [
+      0.7142220735549927,
+      -0.016549002379179,
+      0.6997235417366028
+    ],
+    "sourceHint": [
+      -0.09580777585506439,
+      -0.008651336655020714,
+      1.2784700393676758
+    ],
+    "triangle": 8437,
+    "polygon": 4218,
+    "vertices": [
+      4242,
+      665,
+      1735
+    ],
+    "barycentric": [
+      0.6733807763221369,
+      0.2828172704854742,
+      0.04380195319238888
+    ],
+    "attachmentUv": [
+      0.9157631993293762,
+      0.9648150205612183
+    ],
+    "sourceUv": [
+      0.948564887046814,
+      0.7232885360717773
+    ],
+    "weights": {
+      "Ear_R": 1.0
+    }
+  },
+  "guideIndex": 4385,
+  "guide": {
+    "region": "ear_exterior",
+    "root": [
+      -0.0930812805891037,
+      -0.006903191562741995,
+      1.2746775150299072
+    ],
+    "normal": [
+      0.6925778388977051,
+      0.37527161836624146,
+      0.6160414814949036
+    ],
+    "middle": [
+      -0.09614972025156021,
+      -0.004394480958580971,
+      1.2798972129821777
+    ],
+    "tip": [
+      -0.10043136030435562,
+      -0.006854943931102753,
+      1.285494327545166
+    ],
+    "seed": 822005,
+    "lengthProposalMeters": 0.012972340442416103,
+    "tipLiftProposalMeters": 0.001591213404524571,
+    "undercoat": true
+  },
+  "lengthScale": 0.6818174552020957,
+  "curlPhase": 2.486685657327069,
+  "exception": "Proposed root lies under another skin surface",
+  "path": {
+    "front": true,
+    "rootNormal": [
+      0.7142220735549927,
+      -0.016549002379179,
+      0.6997235417366028
+    ],
+    "intersections": [
+      {
+        "pointIndex": 0,
+        "point": [
+          -0.09580777585506439,
+          -0.008651336655020714,
+          1.2784700393676758
+        ],
+        "hit": [
+          -0.09580777585506439,
+          -0.01073545217514038,
+          1.2784700393676758
+        ],
+        "hitNormal": [
+          0.6938393115997314,
+          -0.157754585146904,
+          0.7026381492614746
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.157754585146904,
+        "hitSource": "Rounded auricle cartilage rim",
+        "hitTriangle": 10142,
+        "depthMeters": 0.002084115520119667,
+        "hitDistanceMeters": 0.39791589975357056
+      }
+    ]
+  },
+  "recipeSha256": "c8fdd2ad13a97a23b2954b36fc2582f51894e6ab9ee15cb06dbd8851abc099ab",
+  "flowRecipeSha256": "30ef76fb85a0231fe6a6212cd0ed44a5ef124f56e4c79d135da72fe508eb6ead",
+  "sourceChanged": false,
+  "artisticAcceptance": false
+}
