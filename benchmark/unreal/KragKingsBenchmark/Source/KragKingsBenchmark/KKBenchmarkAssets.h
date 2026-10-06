@@ -60,6 +60,10 @@ public:
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetMeshBoneNames(USkeletalMesh* Mesh);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static TMap<FName,FName> GetMeshBoneParents(USkeletalMesh* Mesh);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static TMap<FName,FTransform> GetMeshBoneReferenceTransforms(USkeletalMesh* Mesh);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TMap<FName,FVector> GetMeshBoneReferenceScales(USkeletalMesh* Mesh);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static FVector GetMeshImportedSizeMeters(USkeletalMesh* Mesh);

@@ -1,7 +1,8 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,[switch]$ModifierOnly,
+param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,[switch]$ModifierOnly,[switch]$CameraPanOnly,
  [ValidateSet('Packaged','EditorGame')][string]$ExecutionMode='Packaged')
 $ErrorActionPreference='Stop'
+if($ModifierOnly -and $CameraPanOnly){throw 'Choose only one focused native-input scope.'}
 . (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
 . (Join-Path $PSScriptRoot 'InputGroundTargets.ps1')
 Add-Type @'
@@ -53,6 +54,7 @@ if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible Unreal demo is 
 if($ExecutionMode -eq 'EditorGame' -and $game.ProcessName -notlike 'UnrealEditor*'){throw 'EditorGame evidence requires the explicitly selected Unreal editor game process.'}
 if($ExecutionMode -eq 'Packaged' -and $game.ProcessName -notlike 'KragKingsBenchmark*'){throw 'Packaged evidence requires the actual standalone KragKingsBenchmark process.'}
 $windowLease=$null;$pointerEvidence=New-Object System.Collections.Generic.List[object]
+$keyboardEvidence=New-Object System.Collections.Generic.List[object]
 function Assert-Foreground {$windowLease.AssertForeground()}
 function Assert-Pointer {
  try{$point=$windowLease.AssertPointer();$pointerEvidence.Add($point)}
@@ -72,7 +74,9 @@ function Send-Key([byte]$Code,[bool]$Up=$false) {
  $mapped=[KKInput]::MapVirtualKeyEx($Code,4,$layout)
  if($mapped -eq 0){throw "No scan code for virtual key $Code in the demo keyboard layout."}
  if(($Code -ge 0x21 -and $Code -le 0x28) -or $Code -eq 0x2D -or $Code -eq 0x2E){$mapped=$mapped -bor 0xE000}
- [KKInput]::SendScan($mapped,$Up)
+ $edge=[ordered]@{virtualKey=[int]$Code;scan=[uint32]$mapped;keyUp=$Up;layout=$layout.ToInt64();utcBefore=[DateTime]::UtcNow.ToString('o');foregroundBefore=[KKInput]::GetForegroundWindow().ToInt64();accepted=$false}
+ try {[KKInput]::SendScan($mapped,$Up);$edge.accepted=$true}
+ finally {$edge['utcAfter']=[DateTime]::UtcNow.ToString('o');$edge['foregroundAfter']=[KKInput]::GetForegroundWindow().ToInt64();$keyboardEvidence.Add([pscustomobject]$edge)}
 }
 function Press-Key([byte]$Code) {
  Assert-Foreground
@@ -83,6 +87,26 @@ function Hold-Key([byte]$Code,[int]$Milliseconds=250) {
  Assert-Foreground
  Send-Key $Code
  try {Start-Sleep -Milliseconds $Milliseconds} finally {Send-Key $Code $true}
+}
+function Observe-CameraState {
+ $watch=[Diagnostics.Stopwatch]::StartNew();$state=Read-State;$watch.Stop()
+ [pscustomobject]@{observedUtc=[DateTime]::UtcNow.ToString('o');readMilliseconds=$watch.Elapsed.TotalMilliseconds;fileWriteUtc=(Get-Item -LiteralPath $StatePath).LastWriteTimeUtc.ToString('o');state=$state;frameIndexAvailable=$false}
+}
+function Hold-ObservedPan {
+ Assert-Foreground
+ $before=Observe-CameraState;$during=New-Object System.Collections.Generic.List[object]
+ $watch=[Diagnostics.Stopwatch]::StartNew();Send-Key 0x27
+ try {
+  while($watch.ElapsedMilliseconds -lt 250){
+   $remaining=250-$watch.ElapsedMilliseconds
+   if($remaining -gt 0){Start-Sleep -Milliseconds ([Math]::Min(40,[int]$remaining))}
+   Assert-Foreground
+   $during.Add((Observe-CameraState))
+  }
+ } finally {
+  Send-Key 0x27 $true;$watch.Stop()
+  $cameraProbes.Add([pscustomobject]@{control='RightArrow';requestedHeldMilliseconds=250;actualHeldIncludingInjectionMilliseconds=$watch.Elapsed.TotalMilliseconds;before=$before;during=@($during.ToArray());after=(Observe-CameraState);diagnosticOnly=$true})
+ }
 }
 function Orbit-Camera {
  Assert-Foreground
@@ -127,7 +151,7 @@ $cameraProbes=New-Object System.Collections.Generic.List[object]
 $inputComplete=$false;$inputError=$null
 function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000) {
  $end=[DateTime]::UtcNow.AddMilliseconds($TimeoutMs);$pass=$false
- do {$state=Read-State;if(& $Predicate $state){$pass=$true;break};Start-Sleep -Milliseconds 75}while([DateTime]::UtcNow -lt $end)
+ do {Assert-Foreground;$state=Read-State;if(& $Predicate $state){$pass=$true;break};Start-Sleep -Milliseconds 75}while([DateTime]::UtcNow -lt $end)
  $checks.Add([pscustomobject]@{check=$Name;passed=$pass;runtimeElapsed=$state.elapsed;camera=$state.camera;selectedAction=($state.units|Where-Object selected).action})
  Write-Output "$Name : $pass"
  if(-not $pass){throw "Runtime input check failed: $Name"}
@@ -200,9 +224,11 @@ try {
   }
  }
  Press-Key 0x41
+ Expect-State 'Melee observed before pan hold' {param($s)($s.units|Where-Object selected).action -eq 'Melee'}
  $camera=(Read-State).camera
- Hold-Key 0x27
+ Hold-ObservedPan
  Expect-State 'Arrow pans camera during action' {param($s)([math]::Abs($s.camera.x-$camera.x)+[math]::Abs($s.camera.y-$camera.y) -gt 5) -and (($s.units|Where-Object selected).action -eq 'Melee')}
+ if($CameraPanOnly){$inputComplete=$true;return}
  Press-Key 0x41
  Expect-State 'Melee remains active for orbit test' {param($s)($s.units|Where-Object selected).action -eq 'Melee'}
  $orbitBefore=Read-State;$camera=$orbitBefore.camera
@@ -273,6 +299,6 @@ try {
 } catch {$inputError=$_.Exception.Message;throw} finally {
  $finalState=$null;try{$finalState=Read-State}catch{}
  $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
- $report=[ordered]@{scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}else{'Full native suite'});originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
+ $report=[ordered]@{scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}elseif($CameraPanOnly){'Focused observed-action pan diagnostic'}else{'Full native suite'});originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());keyboardEdges=@($keyboardEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
  $report|ConvertTo-Json -Depth 9|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }

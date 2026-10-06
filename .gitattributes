@@ -28,3 +28,6 @@ benchmark/art/animation/nib-human-motion-v4/**/*.json -text whitespace=cr-at-eol
 benchmark/art/animation/nib-human-motion-v4/**/*.csv -text whitespace=cr-at-eol
 benchmark/art/animation/nib-human-motion-v5/**/*.json -text whitespace=cr-at-eol
 benchmark/art/animation/nib-human-motion-v5/**/*.csv -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-pan-observation-failure/*.json -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-pan-observation-failure/*.csv -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-pan-observation-failure/*.log -text whitespace=cr-at-eol,-blank-at-eol

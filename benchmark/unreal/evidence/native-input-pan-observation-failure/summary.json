@@ -1,0 +1,46 @@
+{
+  "exeSha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+  "scope": "Actual unchanged-package full native retry",
+  "completed": false,
+  "passedChecks": 9,
+  "failedChecks": [
+    "Arrow pans camera during action"
+  ],
+  "gameProcessId": 29872,
+  "gameClosed": true,
+  "guardExitCode": 0,
+  "windowLeaseRestored": true,
+  "keyboardArrowReceiptRecorded": false,
+  "keyboardInjectionTimestampsRecorded": false,
+  "inferenceNotProof": "The 250ms arrow hold may have fallen within a delayed input frame; Melee was not observed before the hold. Exact arrow receipt was not logged.",
+  "observations": {
+    "lastHitUtc": "2026-10-06T08:41:04.630Z",
+    "lastHitFrame": 199,
+    "nextMeleeUtc": "2026-10-06T08:41:05.155Z",
+    "nextMeleeFrame": 203,
+    "wallMillisecondsBetweenTheseEvents": 525,
+    "cameraUnchangedAtFailure": true,
+    "finalRuntimeElapsedSeconds": 6.799,
+    "minimumAvailableMB": 10389.0,
+    "peakPrivateMB": 3915.0
+  },
+  "screenshotsTaken": false,
+  "clearancePlannerReached": false,
+  "performanceMeasurement": false,
+  "visualAcceptance": false,
+  "repeatRunExecuted": false,
+  "artifactHashes": {
+    "native-input-result.json": "e347f82f1c382b5f2e9b5fc7d198cb9ccff3aa23301a528f2dd0ea0a3a26e39e",
+    "input-smoke-report.json": "0fe96cfc318b2bb0159a795988352843072f74ba1ec3e551ae9913e68e2ba681",
+    "input-state.json": "703aae74957ee8e5305e398c1f57e66d1a9bc7f72ab1c8f5f114938af8d3a15d",
+    "package-result.json": "5b0e6e58f89036a0a14d01ba73babd70693cf18728452ed5c744cb3e2e775f36",
+    "run-conditions.json": "c78715a39d3b54236ab960604f681fdb80873aa51ee270fd8a00b123277ecdaf",
+    "job.json": "1179ac89436931e0ff42191373f21698213d5d5f75bf4c995841470f1a3334cd",
+    "guard-stdout.log": "6d287963955c2235fec85bbed5e14167dea37f6583045bd317f1f481763ad119",
+    "guard-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.log": "cd7c3d2f7f7ab2ede0c782b44404a3fd08f6a331733922632c0cbded1232aa78",
+    "memory.csv": "4c9a27c1c140363efb950736e9a9aed5bb103d124c4244cedb66ad0c28e1b91e",
+    "gpu.csv": "523542139939d99a79485a82fe8b2467c9251df418d05d3ecb185ebd71b17e64",
+    "input-stdout.log": "291b4bdc4bf8eb7d6b67c8b6226df845c3700bfe02420820c689423a05be6867"
+  }
+}

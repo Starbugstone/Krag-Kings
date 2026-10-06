@@ -1,0 +1,17 @@
+﻿{
+    "engine":  "Unreal",
+    "scope":  "Full native suite",
+    "completed":  false,
+    "visualAcceptance":  false,
+    "performanceMeasurement":  false,
+    "startedUtc":  "2026-10-06T08:40:54.8836551Z",
+    "exeSha256":  "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+    "inputScriptSha256":  "e9a99ccc20d0202687c5684c0971416db75b02cc5804df7c1d2f467b9a10146c",
+    "guardMarkerMeaning":  "Readiness only; inputReportCompleted and gameClosed are also required.",
+    "gameProcessId":  29872,
+    "error":  "Runtime input check failed: Arrow pans camera during action",
+    "errorStack":  "à Expect-State, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 133\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 205\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\Run-NativeInput.ps1 : ligne 57\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-gait-phase-build\\run-full-retry.ps1 : ligne 9",
+    "gameClosed":  true,
+    "guardExitCode":  0,
+    "finishedUtc":  "2026-10-06T08:41:11.1469528Z"
+}

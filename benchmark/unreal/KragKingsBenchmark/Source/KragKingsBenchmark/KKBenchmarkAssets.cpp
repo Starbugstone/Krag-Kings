@@ -15,6 +15,30 @@ TArray<FName> UKKBenchmarkAssets::GetMeshBoneNames(USkeletalMesh* Mesh)
     }
     return Names;
 }
+TMap<FName,FName> UKKBenchmarkAssets::GetMeshBoneParents(USkeletalMesh* Mesh)
+{
+    TMap<FName,FName> Parents;
+    if(Mesh)
+    {
+        const FReferenceSkeleton& Ref=Mesh->GetRefSkeleton();
+        for(int32 Index=0;Index<Ref.GetNum();++Index)
+        {
+            const int32 Parent=Ref.GetParentIndex(Index);
+            Parents.Add(Ref.GetBoneName(Index),Parent==INDEX_NONE?NAME_None:Ref.GetBoneName(Parent));
+        }
+    }
+    return Parents;
+}
+TMap<FName,FTransform> UKKBenchmarkAssets::GetMeshBoneReferenceTransforms(USkeletalMesh* Mesh)
+{
+    TMap<FName,FTransform> Transforms;
+    if(Mesh)
+    {
+        const FReferenceSkeleton& Ref=Mesh->GetRefSkeleton();
+        for(int32 Index=0;Index<Ref.GetNum();++Index)Transforms.Add(Ref.GetBoneName(Index),Ref.GetRefBonePose()[Index]);
+    }
+    return Transforms;
+}
 TArray<FName> UKKBenchmarkAssets::GetAnimationBoneNames(UAnimSequence* Clip)
 {
     TArray<FName> Names;
