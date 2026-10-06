@@ -1,0 +1,17 @@
+{
+  "preparedUtc": "2026-10-06T10:43:28.890343+00:00",
+  "status": "Cached runtime/Editor compile plus PowerShell parse/native-helper C# compile passed; no updated package or native execution",
+  "currentWindowsBuildGuid": "b54531eae98c42ac9f0f20cf513bb0db",
+  "sourceSha256": {
+    "benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs": "ae90e6af9544819599214aaf3b2f64799f4139c0ca68222dac00248f18ab6b5f",
+    "benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs": "4b4d66e14d1b9dca4e6df3b2d4e4b76871397342cb693c7e6a261f58b9eb06ed",
+    "benchmark/tools/unity/Verify-WindowsInput.ps1": "9613ad5e588c90505b26215a5571dfc510114097a65fa7fa7b4c8521e494f782"
+  },
+  "compileLogSha256": {
+    "Assembly-CSharp.log": "6a55aac5baf42ee3af122ea0686e0bff27e9c5e79f313ad7b593437d5e7ea0de",
+    "Assembly-CSharp-Editor.log": "ee44127585a2f1a55e3533859f396d4002a090c49285b03eb257304fe8d89dd7"
+  },
+  "nativeInputSent": false,
+  "diagnosticScope": "inputProbe only: bounded Shift/RMB event edges with native backend event IDs/times and raw pre-state; helper-owned game client/DPI/pointer geometry. No general keyboard text.",
+  "pointerGuard": "Abort before clicks when observed cursor moved more than two pixels from injected screen destination. Gameplay and original post-capture two-pixel test tolerance unchanged."
+}

@@ -25,3 +25,17 @@ The [installed merger audit](second-editor-attempt/merger-attribution.json) attr
 The compiled source now leases `InputSettings.disableRedundantEventsMerging` while an interactive movement queue exists. Overlapping leases share ownership and the final disposal restores the exact original value. Automated views retain their prior setting. The standard performance launcher explicitly requests the shipped interactive input profile; startup/profile-change JSON records the actual setting, and performance results also record it. Timed samples still exclude captures and probe writes.
 
 The next frozen v3 job retains all eight strict event cases and checks nested ownership/restoration from both original values. One bounded editor diagnostic queues 1000 pointer reports across 60 updates with merging, then with the production queue/unmerged setting. Its timings measure editor backend dispatch only, without real-time cadence or rendering; they cannot establish native FPS or high-frequency-mouse responsiveness. Real v3 execution, Windows rebuilding and focused native regression remain pending. See the [source preparation receipt](merger-lease-prepared/preparation.json).
+
+## Third real check and Windows build passed
+
+Build `b54531eae98c42ac9f0f20cf513bb0db` now exists. The [third editor run](third-editor-pass/queued-event-report.json) passes all eight real Input System cases, including the original `(120,220)` press cursor, both Shift keys and lifecycle clearing. Nested leases restore both original setting values correctly. Windows BuildPrepared and the guard exit 0 with a fresh success marker. The [receipt](third-editor-pass/build-receipt.json) pins all 174 package files and the unchanged shared fingerprint. No new character assets were imported.
+
+The editor-only diagnostic observed 60 merged and 1000 unmerged callbacks from 1000 reports across 60 updates. Aggregate dispatch times were approximately 0.80 and 0.67 ms respectively. This tiny, single-pass, order-sensitive measurement includes warmup effects and is not evidence that unmerged input is faster, nor any native FPS result.
+
+## First new-package native regression failed
+
+The [focused native run](native-rightshift-failure/native-input-result.json) stopped on its first zero-hold RightShift case. It retained exactly one accepted move, but captured `walk=false` and entered Run; the reported press cursor `(730,208)` also differed from the planned `(689.54,197.65)`. The keyboard probe observed RightShift. Foreground/pointer ownership checks passed and no Windows/Ctrl/Alt modifier was observed held. This is distinct from the passing queued backend checks: native backend event order has not been established.
+
+Actual profile evidence records unmerged reports enabled during play and the original disabled-setting value restored on shutdown. The owned game closed, launcher exited 0, and window restoration passed. The suite is **incomplete/failed**, with no passing native group. No held duration or cursor/modifier threshold has been relaxed.
+
+InputProbe-only Shift/RMB event-edge diagnostics and helper client/DPI/pointer observations are now prepared to attribute native ordering versus coordinate/injection behavior. They have not been built or executed. These diagnostics record only relevant modifiers and pointer/button events, never general typed text. Existing current art remains rejected, and the previous 17 functional checks belong to the earlier c394 build until repeated.

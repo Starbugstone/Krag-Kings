@@ -17,21 +17,9 @@ namespace KragKings.Benchmark
             public int mouseDeviceId,eventId;
             public double eventTime;
         }
-        [Serializable] public struct DiagnosticEdge
-        {
-            public string utc,deviceKind,eventType,updateType;
-            public int frame,eventId,deviceId,keyboardDeviceId;
-            public uint inputUpdateCount;
-            public double eventTime;
-            public float leftShiftBefore,rightShiftBefore,leftShiftEvent,rightShiftEvent,rightButtonBefore,rightButtonEvent;
-            public bool hasLeftShift,hasRightShift,hasRightButton,leftShiftPressedBefore,rightShiftPressedBefore;
-            public Vector2 eventPosition,currentPosition;
-        }
         readonly Queue<Press> pending=new();
-        readonly Queue<DiagnosticEdge> diagnosticEdges=new();
         readonly Func<bool> acceptEvents;
         readonly IDisposable mergingLease;
-        readonly bool recordDiagnostics;
         bool disposed;
 
         sealed class LeaseState {public int users;public bool original;}
@@ -63,50 +51,19 @@ namespace KragKings.Benchmark
         }
         public static IDisposable AcquirePressPositionLease()=>new MergingLease();
 
-        public DemoMovePressQueue(Func<bool> acceptEvents,bool recordDiagnostics=false)
+        public DemoMovePressQueue(Func<bool> acceptEvents)
         {
             this.acceptEvents=acceptEvents??throw new ArgumentNullException(nameof(acceptEvents));
-            this.recordDiagnostics=recordDiagnostics;
             mergingLease=AcquirePressPositionLease();
             InputSystem.onEvent+=OnEvent;
             InputSystem.onDeviceChange+=OnDeviceChange;
         }
         public bool TryDequeue(out Press press)=>pending.TryDequeue(out press);
-        public DiagnosticEdge[] SnapshotDiagnosticEdges()=>diagnosticEdges.ToArray();
         public void Clear()=>pending.Clear();
-
-        void RecordDiagnostic(InputEventPtr input,InputDevice device)
-        {
-            if(!recordDiagnostics||input.handled||!device.enabled||(!input.IsA<StateEvent>()&&!input.IsA<DeltaStateEvent>()))return;
-            var keyboard=Keyboard.current;
-            var edge=new DiagnosticEdge {utc=DateTime.UtcNow.ToString("o"),frame=Time.frameCount,eventId=input.id,eventTime=input.time,deviceId=device.deviceId,
-                eventType=input.type.ToString(),updateType=InputState.currentUpdateType.ToString(),inputUpdateCount=InputState.updateCount,keyboardDeviceId=keyboard?.deviceId??0,
-                leftShiftBefore=keyboard?.leftShiftKey.ReadValue()??0,rightShiftBefore=keyboard?.rightShiftKey.ReadValue()??0,
-                leftShiftPressedBefore=keyboard?.leftShiftKey.isPressed??false,rightShiftPressedBefore=keyboard?.rightShiftKey.isPressed??false};
-            if(device is Keyboard keys)
-            {
-                edge.deviceKind="KeyboardShift";
-                edge.hasLeftShift=keys.leftShiftKey.ReadValueFromEvent(input,out edge.leftShiftEvent);
-                edge.hasRightShift=keys.rightShiftKey.ReadValueFromEvent(input,out edge.rightShiftEvent);
-                if(!(edge.hasLeftShift&&edge.leftShiftEvent!=keys.leftShiftKey.ReadValue())&&!(edge.hasRightShift&&edge.rightShiftEvent!=keys.rightShiftKey.ReadValue()))return;
-            }
-            else if(device is Mouse pointer)
-            {
-                edge.deviceKind="MouseRightButton";edge.rightButtonBefore=pointer.rightButton.ReadValue();
-                edge.hasRightButton=pointer.rightButton.ReadValueFromEvent(input,out edge.rightButtonEvent);
-                if(!edge.hasRightButton||edge.rightButtonEvent==edge.rightButtonBefore)return;
-                edge.currentPosition=pointer.position.ReadValue();
-                edge.eventPosition=pointer.position.ReadValueFromEvent(input,out Vector2 position)?position:edge.currentPosition;
-            }
-            else return;
-            if(diagnosticEdges.Count==48)diagnosticEdges.Dequeue();
-            diagnosticEdges.Enqueue(edge);
-        }
 
         void OnEvent(InputEventPtr input,InputDevice device)
         {
             if(disposed||!acceptEvents()) {pending.Clear();return;}
-            RecordDiagnostic(input,device);
             if(input.handled||!device.enabled||device is not Mouse mouse ||
                 (!input.IsA<StateEvent>()&&!input.IsA<DeltaStateEvent>()))return;
             if(!mouse.rightButton.ReadValueFromEvent(input,out float value) ||

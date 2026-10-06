@@ -1,0 +1,26 @@
+{
+  "name": "unity-press-context-build-v3",
+  "executable": "D:\\Unity\\Hub\\6000.4.4f1\\Editor\\Unity.exe",
+  "arguments": [
+    "-projectPath",
+    "D:\\Dev\\Krag-Kings\\benchmark\\unity",
+    "-batchmode",
+    "-quit",
+    "-nographics",
+    "-job-worker-count",
+    "2",
+    "-logFile",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-press-context-build-v3\\editor.log",
+    "-executeMethod",
+    "KragKings.Editor.DemoPressContextCheck.RunAndBuildPrepared",
+    "-pressContextReport",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-press-context-build-v3\\queued-event-report.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\unity",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-press-context-build-v3\\stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-press-context-build-v3\\stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-press-context-build-v3\\editor.log",
+  "successMarker": "KRAG_BUILD_RESULT Succeeded"
+}

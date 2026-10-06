@@ -1,0 +1,183 @@
+{
+    "completed": true,
+    "nativeWindowsInputSent": false,
+    "artisticAcceptance": false,
+    "originalMergingDisabled": false,
+    "mergingSettingRestored": true,
+    "overlappingLeaseChecksPassed": true,
+    "startedUtc": "2026-10-06T10:33:20.9416958Z",
+    "finishedUtc": "2026-10-06T10:33:21.0874008Z",
+    "error": "",
+    "inputSystemVersion": "1.19.0",
+    "checks": [
+        {
+            "name": "LeftShift released in the same update retains Walk and press cursor",
+            "updateType": "Editor",
+            "inputUpdateCount": 2,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 4,
+                    "eventTime": 0.2976150999999998
+                }
+            ]
+        },
+        {
+            "name": "RightShift released in the same update retains Walk and press cursor",
+            "updateType": "Editor",
+            "inputUpdateCount": 4,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 10,
+                    "eventTime": 0.30060619999999896
+                }
+            ]
+        },
+        {
+            "name": "Multiple presses preserve ordered Walk/Run/Walk",
+            "updateType": "Editor",
+            "inputUpdateCount": 6,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 16,
+                    "eventTime": 0.3006335
+                },
+                {
+                    "position": {
+                        "x": 300.0,
+                        "y": 400.0
+                    },
+                    "walk": false,
+                    "mouseDeviceId": 2,
+                    "eventId": 19,
+                    "eventTime": 0.30063579999999848
+                },
+                {
+                    "position": {
+                        "x": 500.0,
+                        "y": 600.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 22,
+                    "eventTime": 0.30063829999999927
+                }
+            ]
+        },
+        {
+            "name": "Held-button pointer reports do not duplicate a press",
+            "updateType": "Editor",
+            "inputUpdateCount": 8,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 120.0,
+                        "y": 220.0
+                    },
+                    "walk": false,
+                    "mouseDeviceId": 2,
+                    "eventId": 27,
+                    "eventTime": 0.30065959999999949
+                }
+            ]
+        },
+        {
+            "name": "Device reset clears pending commands",
+            "updateType": "Editor",
+            "inputUpdateCount": 10,
+            "passed": true,
+            "finalShift": true,
+            "finalPressedThisFrame": false,
+            "retained": []
+        },
+        {
+            "name": "Inactive/focus-cleared capture retains no commands",
+            "updateType": "Editor",
+            "inputUpdateCount": 13,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": []
+        },
+        {
+            "name": "Re-enabled ordinary press does not inherit Shift",
+            "updateType": "Editor",
+            "inputUpdateCount": 15,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 350.0,
+                        "y": 450.0
+                    },
+                    "walk": false,
+                    "mouseDeviceId": 2,
+                    "eventId": 44,
+                    "eventTime": 0.31091419999999916
+                }
+            ]
+        },
+        {
+            "name": "Device removal clears pending commands",
+            "updateType": "Editor",
+            "inputUpdateCount": 17,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": []
+        }
+    ],
+    "editorDispatchDiagnostics": [
+        {
+            "scope": "Editor backend queued dispatch only; no real-time cadence, rendering or native FPS measurement",
+            "updateType": "Editor",
+            "disableRedundantEventsMerging": false,
+            "productionQueueActive": false,
+            "queuedReports": 1000,
+            "simulatedUpdates": 60,
+            "eventCallbacks": 60,
+            "totalDispatchMilliseconds": 0.7963000000000006
+        },
+        {
+            "scope": "Editor backend queued dispatch only; no real-time cadence, rendering or native FPS measurement",
+            "updateType": "Editor",
+            "disableRedundantEventsMerging": true,
+            "productionQueueActive": true,
+            "queuedReports": 1000,
+            "simulatedUpdates": 60,
+            "eventCallbacks": 1000,
+            "totalDispatchMilliseconds": 0.6722999999999999
+        }
+    ]
+}

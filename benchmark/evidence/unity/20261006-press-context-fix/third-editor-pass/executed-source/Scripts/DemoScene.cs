@@ -55,7 +55,7 @@ namespace KragKings.Benchmark
         {
             if(!sceneReady)return;
             bool interactive=!performanceOnly&&!AutomatedView&&!verification;
-            if(interactive&&movePresses==null)movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!performanceOnly&&!AutomatedView&&!verification,inputProbe);
+            if(interactive&&movePresses==null)movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!performanceOnly&&!AutomatedView&&!verification);
             if(!interactive&&movePresses!=null){movePresses.Dispose();movePresses=null;}
             if(profileInteractiveInput&&inputProfileLease==null)inputProfileLease=DemoMovePressQueue.AcquirePressPositionLease();
             RecordInputProfile("active");
@@ -279,8 +279,6 @@ namespace KragKings.Benchmark
                 selected=Selected.species,variant=Selected.VariantIndex,action=Selected.CurrentAction,facePlaying=Selected.FacePlaying,
                 moving=Selected.IsMoving,walking=Selected.IsWalking,cameraDistance=distance,cameraYaw=yaw,cameraFocus=cameraFocus,moveScreen=demoCamera.WorldToScreenPoint(destination),
                 movePressCount=movePressDispatchCount,movePressFrame=lastMoveDispatchFrame,movePress=lastMovePress,movePressAccepted=lastMoveAccepted,
-                movementInputEdges=movePresses?.SnapshotDiagnosticEdges(),inputMergingDisabled=InputSystem.settings.disableRedundantEventsMerging,
-                currentMousePosition=Mouse.current?.position.ReadValue()??Vector2.zero,
                 units=units.Select(u=>new InputUnit {species=u.species,position=u.transform.position,
                     action=u.CurrentAction,facePlaying=u.FacePlaying,
                     screen=demoCamera.WorldToScreenPoint(u.transform.position+Vector3.up*u.bodyHeight*.5f)}).ToArray()};
@@ -290,7 +288,7 @@ namespace KragKings.Benchmark
             if(File.Exists(path)) File.Replace(temp,path,null);else File.Move(temp,path);
         }
         [Serializable] class InputUnit {public string species,action;public bool facePlaying;public Vector3 position,screen;}
-        [Serializable] class InputProbe {public int frame,width,height,variant,movePressCount,movePressFrame;public string selected,action,keyboardLayout,physicalAKeyLabel,lastKey,buildGuid,contentFingerprint;public bool moving,walking,facePlaying,movePressAccepted,inputMergingDisabled;public DemoMovePressQueue.Press movePress;public DemoMovePressQueue.DiagnosticEdge[] movementInputEdges;public Vector2 currentMousePosition;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
+        [Serializable] class InputProbe {public int frame,width,height,variant,movePressCount,movePressFrame;public string selected,action,keyboardLayout,physicalAKeyLabel,lastKey,buildGuid,contentFingerprint;public bool moving,walking,facePlaying,movePressAccepted;public DemoMovePressQueue.Press movePress;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
         void Effect(DemoUnit unit,string action) { if(combatAudio)combatAudio.Action(unit,action);if(action=="Shoot")StartCoroutine(Tracer(unit)); }
         IEnumerator Tracer(DemoUnit unit)
         {

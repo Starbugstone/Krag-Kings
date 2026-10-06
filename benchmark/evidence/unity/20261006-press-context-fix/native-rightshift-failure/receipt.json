@@ -1,0 +1,79 @@
+{
+  "capturedUtc": "2026-10-06T10:41:49.649189+00:00",
+  "completed": false,
+  "buildGuid": "b54531eae98c42ac9f0f20cf513bb0db",
+  "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "gameClosed": true,
+  "launcherExitCode": 0,
+  "ownedWindowRestored": true,
+  "passedNativeGroups": 0,
+  "failure": "First zero-hold RightShift press captured walk=false and entered Run; captured pointer differs from planned cursor. Native event dispatch order is not yet known.",
+  "artisticAcceptance": false,
+  "artifacts": {
+    "native-rightshift-failure/windows-input-verification.json": {
+      "sha256": "9dfffc9380972d0294f9643da60f889d46c981582bb4e27c22dc9ab71f3a8ba1",
+      "bytes": 22363,
+      "source": "benchmark/local/evidence/unity-interactive/20261006-123544/windows-input-verification.json"
+    },
+    "native-rightshift-failure/input-profile.jsonl": {
+      "sha256": "c16bae9cd9133a6a3923fce04b6c75827c009da69337bc8c30ad218aadd18d27",
+      "bytes": 518,
+      "source": "benchmark/local/evidence/unity-interactive/20261006-123544/input-profile.jsonl"
+    },
+    "native-rightshift-failure/input-probe.json": {
+      "sha256": "71aa00e2b9b20d6ea099d20229a9d8b632ed07368553a46e82b1f22e7c90df76",
+      "bytes": 1198,
+      "source": "benchmark/local/evidence/unity-interactive/20261006-123544/input-probe.json"
+    },
+    "native-rightshift-failure/player.log": {
+      "sha256": "f526a82cfd6dec76f57695f07ffee15cd7328c0b8ae0806471aa4e37e0652a54",
+      "bytes": 2511,
+      "source": "benchmark/local/evidence/unity-interactive/20261006-123544/player.log"
+    },
+    "native-rightshift-failure/run-conditions.json": {
+      "sha256": "35de08d03ccd1bbcceb4bd3c14599df32a0e35eebf12179f57630948e1bea3b0",
+      "bytes": 635,
+      "source": "benchmark/local/evidence/unity-interactive/20261006-123544/run-conditions.json"
+    },
+    "native-rightshift-failure/native-input-result.json": {
+      "sha256": "6ada90436735450b05e0e90773835f12ecd52ac8b0c63274edef8bb47ad46716",
+      "bytes": 929,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/native-input-result.json"
+    },
+    "native-rightshift-failure/executed-Verify-WindowsInput.ps1": {
+      "sha256": "0f0e9ccdddaa10bd560e773fe0ec03da87fe992a96e4637ead0fd9b76625cea3",
+      "bytes": 20487,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/executed-Verify-WindowsInput.ps1"
+    },
+    "native-rightshift-failure/executed-OwnedGameWindow.ps1": {
+      "sha256": "022a1f1a3be3c1cba9907401e5c062907710d09d486d4d30a33e49d0fc8e9512",
+      "bytes": 5529,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/executed-OwnedGameWindow.ps1"
+    },
+    "native-rightshift-failure/launcher-stdout.log": {
+      "sha256": "2c6fae89afa76f0e7441d4c97a4ce5ae986824a820e93cd4f6c2d99e49a4edea",
+      "bytes": 324,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/launcher-stdout.log"
+    },
+    "native-rightshift-failure/launcher-stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/launcher-stderr.log"
+    },
+    "native-rightshift-failure/memory.csv": {
+      "sha256": "7712cc9b1031924077347954a2d8563789742d4d351b6dd6a4ebc9055ff39ca7",
+      "bytes": 573,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/memory.csv"
+    },
+    "native-rightshift-failure/gpu.csv": {
+      "sha256": "fe59739fd475dca43cb32cd06b740f399f8c36d763b1fd6f6a46d43ec8df5c45",
+      "bytes": 792,
+      "source": "benchmark/local/evidence/unity-native-input/20261006-123543-33508/gpu.csv"
+    },
+    "native-rightshift-failure/frozen-package-and-tools.json": {
+      "sha256": "177afe7a947df5fb11db411e8e2187e3dc32dc02abf94700977f1769d2fbb82c",
+      "bytes": 36143,
+      "source": "benchmark/local/evidence/unity-press-context-native-plan/plan.json"
+    }
+  }
+}

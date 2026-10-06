@@ -16,12 +16,6 @@ public static class DemoInput {
  [DllImport("user32.dll")] public static extern IntPtr GetForegroundWindow();
  [DllImport("user32.dll")] public static extern short GetAsyncKeyState(int key);
  [DllImport("user32.dll")] public static extern bool ClientToScreen(IntPtr h,ref POINT p);
- [DllImport("user32.dll")] public static extern bool ScreenToClient(IntPtr h,ref POINT p);
- [DllImport("user32.dll")] public static extern bool GetCursorPos(out POINT p);
- [DllImport("user32.dll")] public static extern uint GetDpiForWindow(IntPtr h);
- [DllImport("user32.dll")] public static extern IntPtr GetWindowDpiAwarenessContext(IntPtr h);
- [DllImport("user32.dll")] public static extern IntPtr GetThreadDpiAwarenessContext();
- [DllImport("user32.dll")] public static extern int GetAwarenessFromDpiAwarenessContext(IntPtr h);
  [DllImport("user32.dll")] public static extern bool GetClientRect(IntPtr h,out RECT r);
  [DllImport("user32.dll")] public static extern bool SetCursorPos(int x,int y);
  [DllImport("user32.dll")] public static extern void mouse_event(uint flags,uint x,uint y,uint data,UIntPtr extra);
@@ -87,15 +81,6 @@ function Record-InputEdge([string]$Kind,$Detail) {
     }
     $inputEdges.Add(@{utc=[DateTime]::UtcNow.ToString('o');kind=$Kind;detail=$Detail;foregroundHwnd=$front.ToInt64();foregroundPid=$owner;modifiers=$modifiers})
 }
-function Read-PointerGeometry($Probe) {
-    $r=New-Object DemoInput+RECT;$origin=New-Object DemoInput+POINT;$screen=New-Object DemoInput+POINT
-    if(-not [DemoInput]::GetClientRect($window,[ref]$r) -or -not [DemoInput]::ClientToScreen($window,[ref]$origin) -or -not [DemoInput]::GetCursorPos([ref]$screen)){throw 'Cannot record owned game client/pointer geometry'}
-    $client=New-Object DemoInput+POINT;$client.X=$screen.X;$client.Y=$screen.Y
-    if(-not [DemoInput]::ScreenToClient($window,[ref]$client)){throw 'Cannot transform the pointer into the owned game client'}
-    return @{clientWidth=$r.Right-$r.Left;clientHeight=$r.Bottom-$r.Top;clientOrigin=@{x=$origin.X;y=$origin.Y};screenCursor=@{x=$screen.X;y=$screen.Y};clientCursor=@{x=$client.X;y=$client.Y};
-        outputWidth=$Probe.width;outputHeight=$Probe.height;expectedUnityCursor=@{x=$client.X*$Probe.width/($r.Right-$r.Left);y=($r.Bottom-$r.Top-$client.Y)*$Probe.height/($r.Bottom-$r.Top)};
-        windowDpi=[DemoInput]::GetDpiForWindow($window);windowDpiAwareness=[DemoInput]::GetAwarenessFromDpiAwarenessContext([DemoInput]::GetWindowDpiAwarenessContext($window));threadDpiAwareness=[DemoInput]::GetAwarenessFromDpiAwarenessContext([DemoInput]::GetThreadDpiAwarenessContext())}
-}
 function Send-Key([byte]$Key,[bool]$Up=$false) {
     # Raw-input consumers need a real scan code, including the extended flag
     # for Home and arrows. Resolve against the target window's keyboard layout.
@@ -125,15 +110,12 @@ function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWa
     [DemoInput]::SetCursorPos($point.X,$point.Y)|Out-Null
     Start-Sleep -Milliseconds 60
     $pointerEvidence.Add($windowLease.AssertPointer())
-    $pointerGeometry=Read-PointerGeometry $probe
-    Record-InputEdge 'PointerBeforeClick' @{requestedUnity=$ScreenPoint;requestedScreen=@{x=$point.X;y=$point.Y};geometry=$pointerGeometry}
-    if([Math]::Abs($pointerGeometry.screenCursor.x-$point.X) -gt 2 -or [Math]::Abs($pointerGeometry.screenCursor.y-$point.Y) -gt 2){throw 'Pointer moved away from the injected destination before the click; stopped without sending mouse input.'}
     if($QuickWalk){
         if(-not $Right -or $Walk -ne ($QuickShiftScan -ne 0)){throw 'The immediate movement probe requires a consistent Shift mode.'}
         Focus-Demo
-        Record-InputEdge 'ImmediateMoveBefore' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0;geometry=(Read-PointerGeometry $probe)}
+        Record-InputEdge 'ImmediateMoveBefore' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0}
         [DemoInput]::SendQuickMoveClick($QuickShiftScan)
-        Record-InputEdge 'ImmediateMoveAfter' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0;geometry=(Read-PointerGeometry $probe)}
+        Record-InputEdge 'ImmediateMoveAfter' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0}
         return
     }
     $down=if($Right){8}else{2};$up=if($Right){16}else{4}
