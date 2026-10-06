@@ -27,6 +27,16 @@ function Get-TaskProcessTree([int]$RootProcessId) {
     } while($added)
     @(Get-Process -Id @($ids) -ErrorAction SilentlyContinue)
 }
+function Get-TaskCompletionFailure([string]$Path,[string]$Marker) {
+    if(-not(Test-Path -LiteralPath $Path -PathType Leaf)){return 'Completion log was not created.'}
+    if(-not(Select-String -LiteralPath $Path -Pattern $Marker -SimpleMatch -Quiet)){
+        return ('Native process exited successfully, but required completion marker is absent: '+$Marker)
+    }
+    return $null
+}
+$hasCompletionLog=-not[string]::IsNullOrWhiteSpace([string]$spec.successLog)
+$hasCompletionMarker=-not[string]::IsNullOrWhiteSpace([string]$spec.successMarker)
+if($hasCompletionLog -ne $hasCompletionMarker){throw 'successLog and successMarker must be specified together.'}
 $mutex=New-Object System.Threading.Mutex($false,'Local\KragKingsBenchmarkHeavyJob')
 $locked=$false
 try {
@@ -55,6 +65,18 @@ try {
     $telemetry=Join-Path $local ($safeName+'-memory.csv')
     Preserve-PreviousTelemetry $telemetry
     'time,processId,availableMB,commitPercent,privateMB,workingSetMB,treeTracked,treePrivateMB,treeWorkingSetMB,treeProcessCount' | Set-Content $telemetry
+    if($hasCompletionLog){
+        # This is an explicitly designated task output, not an arbitrary user log.
+        # Archive and clear it before launch so a stale success token cannot pass.
+        if(Test-Path -LiteralPath $spec.successLog){
+            $history=Join-Path $local 'completion-log-history'
+            New-Item -ItemType Directory -Force $history | Out-Null
+            $previous=Get-Item -LiteralPath $spec.successLog
+            $archive=$safeName+'-'+(Get-Date).ToUniversalTime().ToString('yyyyMMdd-HHmmss-fffffff')+'-'+$previous.Name
+            Copy-Item -LiteralPath $spec.successLog -Destination (Join-Path $history $archive)
+            Clear-Content -LiteralPath $spec.successLog
+        }
+    }
     $process=Start-Process @params
     # Cache the native handle before the process can exit, so ExitCode remains readable.
     $null=$process.Handle
@@ -90,6 +112,11 @@ try {
     if($terminated){exit 88}
     if($null -eq $process.ExitCode){throw 'Task ended but its exit code was unavailable; inspect the task log before treating it as successful.'}
     Write-Output ('HEAVY_JOB_FINISHED '+$safeName+' exit='+$process.ExitCode)
+    if($process.ExitCode -eq 0 -and $hasCompletionLog){
+        $failure=Get-TaskCompletionFailure $spec.successLog $spec.successMarker
+        if($failure){Write-Output ('HEAVY_JOB_COMPLETION_FAILED '+$failure);exit 89}
+        Write-Output ('HEAVY_JOB_COMPLETION_VERIFIED '+$spec.successMarker)
+    }
     exit $process.ExitCode
 } finally {
     if($locked){$mutex.ReleaseMutex()}
