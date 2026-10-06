@@ -1,0 +1,32 @@
+{
+  "status": "Prepared unchanged actual v9s neutral/profile review; not yet generated",
+  "source": {
+    "path": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "sha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd"
+  },
+  "views": [
+    "ClosedFront",
+    "ClosedRight",
+    "OpenRight"
+  ],
+  "reason": "Distinguish widened neutral envelope and canine emergence from full-open cheek/corner deformation",
+  "artisticAcceptance": false,
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-ClosedFront-job.json",
+      "sha256": "e6a1c867a1ab3aef8aa890ac7829d8e5506a4c67264c2812d4cafc0be5710bad"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-ClosedRight-job.json",
+      "sha256": "b4d880c37df8d928a148b2b18b3df0d88b70edb39f8757e7e6853d26179db6ad"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-OpenRight-job.json",
+      "sha256": "fa46a01648744f67908f9d335b9b9923042f5962b3aad1f68fc1ce440b1f83ea"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_broad_oral_v9s.py",
+      "sha256": "168be3c22d3df2d9c59e3c88bd6acdf7aaf96466d005f844c85f37318e3cda4a"
+    }
+  ]
+}

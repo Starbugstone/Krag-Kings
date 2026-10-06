@@ -1,0 +1,64 @@
+{
+  "status": "Actual broad oral-envelope source; closed/open views still required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+    "sha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "sha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd"
+  },
+  "externalConstraint": "Concept front lip/interocular interval; provisional dental arch does not set mouth width",
+  "neutralWidthMeters": 0.15,
+  "restSurface": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.6583651709435161,
+    "normalChangeDegreesP99": 31.40940204159138,
+    "normalChangeDegreesMaximum": 51.26375500875518,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.027030066483586496
+  },
+  "monotoneLateralJacobianLowerBound": 0.5278041623744874,
+  "heldOpticalVerticesExact": 7922,
+  "mandibularSupport": {
+    "iterations": 1095,
+    "freeVertices": 3462,
+    "maximumSolvedWeightDelta": 0.15782598074497567,
+    "maximumIterationResidualWeight": 2.9866734511246884e-07,
+    "method": "True lower-rim quartic mandibular support plus bounded graph-harmonic neighborhood",
+    "lowerRimVertices": 81,
+    "fixedUpperNoseVertices": 16353,
+    "maxWeightChange": 0.15782598074497567,
+    "artisticAcceptance": false
+  },
+  "posedLowerLip": {
+    "iterations": 873,
+    "freeVertices": 3462,
+    "maximumPosedCorrectionMeters": 0.020145352029970035,
+    "maximumIterationResidualMeters": 2.984037855801973e-07,
+    "method": "Posed residual through inverse actual linear-blend skinning; no duplicate jaw rotation",
+    "unchangedJawRotationDegrees": 22.990797529309148,
+    "unchangedDriverValue": 0.9196327328681946,
+    "lowerRimVertices": 81,
+    "maximumSourceResidualChangeMeters": 0.022347032245608543,
+    "actualBlenderReproductionErrorMeters": 3.182841194775616e-07,
+    "upperLipNoseHeld": true,
+    "actualMouthAcceptance": false
+  },
+  "dentalGumTongueCaninePayloadsExact": true,
+  "motionLineage": "Preserved pre-v4 actions from v9r; separate verified body merge required",
+  "allExistingBindActionsUnrelatedMeshesPreserved": "84cff50b3e8cfccff357fd36d43897c1a70253f19467325908b9703c699d9169",
+  "savedReopenedChecksPassed": true,
+  "recipeHashes": {
+    "build_broad_oral_v9s.py": "37805db55ad30a0cc43bd9ad466d864183648607cff57cb5509538a43f08b9c1",
+    "broad_oral_v9s.py": "4c57cae4dbf7a834139953d43efbe553b7bb23be76f0ca5a36d020404547bc35",
+    "posed_lip_corrective_v9s.py": "cebf3285ae9ca8afcece860fb9889135cffc90ef15b51e071e27614fff0d4000",
+    "profile_and_lip.py": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+  },
+  "pending": [
+    "Actual closed/open lip and canine/dental fit",
+    "Concept likeness and IronJaw compatibility"
+  ]
+}
