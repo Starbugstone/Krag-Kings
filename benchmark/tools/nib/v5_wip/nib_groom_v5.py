@@ -102,7 +102,7 @@ def strand_mesh(name,guide_clumps,collection,rig,material,bone='Head',cinematic=
     vertices=[];faces=[];uvs=[];face_materials=[];rng=random.Random(8141)
     count=0;rings=(4 if cinematic else 3) if short_nap else (8 if cinematic else 5);sides=3
     for guide in guide_clumps:
-        root,normal,mid,tip,width,seed=guide[:7];material_index=guide[7] if len(guide)>7 else 0
+        root,normal,mid,tip,width,seed=guide[:6];material_index=guide[6] if len(guide)>6 else 0
         rng.seed(seed)
         tangent=normal.cross(Vector((0,0,1)))
         if tangent.length<.01:tangent=normal.cross(Vector((0,1,0)))

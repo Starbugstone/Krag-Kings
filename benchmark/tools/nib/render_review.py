@@ -8,13 +8,15 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--output-dir',type=Path,default=ART/'renders')
 parser.add_argument('--coordinate-report',type=Path,help='Require a matching saved-source structural pre-render gate')
+parser.add_argument('--diagnostic-allow-failed-gate',action='store_true',help='Explicit diagnostic render only; retains failed gate and cannot establish acceptance')
 parser.add_argument('views',nargs='*',default=['Perspective','Face'])
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source;RENDER_OUT=args.output_dir;RENDER_OUT.mkdir(parents=True,exist_ok=True)
+if args.diagnostic_allow_failed_gate and not args.coordinate_report:raise RuntimeError('Diagnostic override requires an explicit source coordinate report')
 if args.coordinate_report:
     gate_report=json.loads(args.coordinate_report.read_text())
     if gate_report.get('candidateSha256')!=hashlib.sha256(SOURCE.read_bytes()).hexdigest():raise RuntimeError('Coordinate report does not match this saved source')
-    if not gate_report.get('preRenderGate',{}).get('passed',False):raise RuntimeError('Saved source has unresolved pre-render structural blockers: '+str(gate_report.get('preRenderGate')))
+    if not gate_report.get('preRenderGate',{}).get('passed',False) and not args.diagnostic_allow_failed_gate:raise RuntimeError('Saved source has unresolved pre-render structural blockers: '+str(gate_report.get('preRenderGate')))
 bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
 report_path=ART/'source-report.json'
 if report_path.exists() and SOURCE.resolve()==(ART/'Nib_Master.blend').resolve():
@@ -65,5 +67,9 @@ for view in requested:
         scene.render.resolution_x=1200;scene.render.resolution_y=1000
     scene.render.filepath=str(RENDER_OUT/output);bpy.ops.render.render(write_still=True)
     metadata={'source':SOURCE.name,'sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'view':view,'action':rig.animation_data.action.name,'frame':scene.frame_current,'variant':variant,'renderer':'Blender Cycles CPU','samples':scene.cycles.samples,'status':'Visual review evidence; no artistic approval implied'}
+    if args.coordinate_report:
+        metadata['coordinateReport']=str(args.coordinate_report);metadata['preRenderGate']=gate_report.get('preRenderGate')
+        metadata['diagnosticOverride']=args.diagnostic_allow_failed_gate
+        if args.diagnostic_allow_failed_gate:metadata['status']='Diagnostic image of structurally flagged source; gate failure retained, no acceptance or export authorization'
     (RENDER_OUT/(output+'.json')).write_text(json.dumps(metadata,indent=2),newline='\n')
 print('NIB_REVIEW_RENDER_COMPLETE')

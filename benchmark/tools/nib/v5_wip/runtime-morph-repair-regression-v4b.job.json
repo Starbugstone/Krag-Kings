@@ -1,0 +1,20 @@
+{
+  "name": "nib-runtime-morph-repair-regression-v4b",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\python\\bin\\python.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\validate_corrected_morph_union.py",
+    "--source-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib",
+    "--candidate-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-regression-v4b.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-regression-v4b.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-regression-v4b.stderr.log",
+  "successMarker": "NIB_BODY_MORPH_REGRESSION_PASSED",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-regression-v4b.log"
+}

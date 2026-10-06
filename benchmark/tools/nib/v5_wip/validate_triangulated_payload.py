@@ -121,7 +121,8 @@ def uv_corner_set(mesh):
     return np.unique(rows)
 
 
-def compare(source, target):
+def compare(source, target, expected_changed_morphs=None):
+    expected_changed_morphs=set(expected_changed_morphs or [])
     before, after = geometry(source), geometry(target)
     bm = [n for n in before if n['props'][2] == 'Mesh']
     am = [n for n in after if n['props'][2] == 'Mesh']
@@ -151,14 +152,15 @@ def compare(source, target):
                       'worstVertices':worst.tolist(),'sourceDeltas':old[worst].tolist(),'targetDeltas':new[worst].tolist()}),flush=True)
                 # Root authorized a practical 1 micrometre limit after one
                 # exact-restoration attempt; record every measured difference.
-                if delta_max>1e-6:raise AssertionError('Sparse morph delta exceeds 1 micrometre: '+name+'/'+field)
+                if delta_max>1e-6 and name not in expected_changed_morphs:raise AssertionError('Sparse morph delta exceeds 1 micrometre: '+name+'/'+field)
                 break
         shapes.append({'name':name,'indicesSha256':sha(data(bs[name],'Indexes')),
                        'deltaSha256':sha(data(bs[name],'Vertices')),
                        'candidateIndicesSha256':sha(data(ass[name],'Indexes')),
                        'candidateDeltaSha256':sha(data(ass[name],'Vertices')),
                        'payloadByteIdentical':identical,'denseDeltaMaxErrorMeters':delta_max,
-                       'denseDeltaRmsErrorMeters':delta_rms,'toleranceMeters':1e-6})
+                       'denseDeltaRmsErrorMeters':delta_rms,'expectedCorrection':name in expected_changed_morphs,
+                       'toleranceMeters':None if name in expected_changed_morphs else 1e-6})
     ends = np.flatnonzero(data(a,'PolygonVertexIndex') < 0)
     sizes = np.diff(np.r_[-1,ends])
     if not np.all(sizes==3): raise AssertionError('Nontriangular exported polygon')

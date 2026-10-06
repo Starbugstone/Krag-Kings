@@ -1,0 +1,3132 @@
+{
+  "status": "Work in progress: native geometry review required",
+  "artisticAcceptance": false,
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b.blend",
+  "sourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
+  "referenceLibrarySha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "referenceLicense": "CC0 per Blender Studio bundle README; retained in original reference directory.",
+  "borrowedTopology": "GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept.",
+  "changes": [
+    {
+      "part": "Face",
+      "vertices": 41753,
+      "triangles": 83328,
+      "removedHumanEarPatches": 2
+    },
+    {
+      "part": "Nib v5 fitted sclera L",
+      "vertices": 2178,
+      "worldBoundsMin": [
+        0.024563321843743324,
+        -0.05232841148972511,
+        1.126467227935791
+      ],
+      "worldBoundsMax": [
+        0.056765567511320114,
+        -0.03642734885215759,
+        1.142713189125061
+      ]
+    },
+    {
+      "part": "Nib v5 fitted iris L",
+      "vertices": 1600,
+      "worldBoundsMin": [
+        0.03170492500066757,
+        -0.05241943523287773,
+        1.1299128532409668
+      ],
+      "worldBoundsMax": [
+        0.04767625406384468,
+        -0.049996718764305115,
+        1.1375576257705688
+      ]
+    },
+    {
+      "part": "Nib v5 fitted sclera R",
+      "vertices": 2178,
+      "worldBoundsMin": [
+        -0.05677861347794533,
+        -0.05232683941721916,
+        1.1264688968658447
+      ],
+      "worldBoundsMax": [
+        -0.024576280266046524,
+        -0.0364297553896904,
+        1.1427172422409058
+      ]
+    },
+    {
+      "part": "Nib v5 fitted iris R",
+      "vertices": 1600,
+      "worldBoundsMin": [
+        -0.04766824096441269,
+        -0.05241832882165909,
+        1.1299118995666504
+      ],
+      "worldBoundsMax": [
+        -0.03169778361916542,
+        -0.049991823732852936,
+        1.137556552886963
+      ]
+    }
+  ],
+  "authoringCode": {
+    "rebuild_head_v5.py": "db88263bac1d37c8668fe5416d824d21613391be9cc82158fdefd714f1277113",
+    "fit_head.py": "bf727d80861720fff3b89bee34db0c964c205728b869bfc15970d37eb8faf601",
+    "nib_groom_v5.py": "843a26d41bb1c52302376674db01d4294e34c0964e9d0ba5263448f9a84f47b6",
+    "nib_cloth_v5.py": "a5a405119b33c29542e1929709b18e1b64c493e7874bee8bed9f43512c26dc5e",
+    "nib_hand_v5.py": "f356517d546caf577939821eb93d5d5f6f6707330b9caf2d9154196a2fbc4c07",
+    "nib_opaque_eyes.py": "c4f5b360d4538c94aeecb93feda8b83674e6dd4aa958036be151558f5316b4e8",
+    "nib_groom_materials.py": "ec78312421621d0308941128852413d6f43df866b11970a4eb7d87ccb7ab6e36",
+    "audit_face_coordinates.py": "b664746898dedc61dc819fd3c11f35402f8b4fec2cec7d3bb4a9360391c79471"
+  },
+  "originalReferenceMatrices": {
+    "GEO-head_animation_realistic": [
+      [
+        0.8999999761581421,
+        0.0,
+        0.0,
+        1.4625719785690308
+      ],
+      [
+        0.0,
+        0.8999999761581421,
+        0.0,
+        -0.021928103640675545
+      ],
+      [
+        0.0,
+        0.0,
+        0.8999999761581421,
+        0.4876616895198822
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.iris.L": [
+      [
+        0.6379984021186829,
+        0.04461317136883736,
+        0.0,
+        1.4948607683181763
+      ],
+      [
+        -0.04461317136883736,
+        0.6379984021186829,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.766695499420166
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.iris.R": [
+      [
+        0.6379706859588623,
+        -0.04500812292098999,
+        0.0,
+        1.4302829504013062
+      ],
+      [
+        0.04500812292098999,
+        0.6379706859588623,
+        0.0,
+        -0.125771164894104
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666953802108765
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.sclera.L": [
+      [
+        0.639556348323822,
+        0.0,
+        0.0,
+        1.4948607683181763
+      ],
+      [
+        0.0,
+        0.639556348323822,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666954398155212
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.sclera.R": [
+      [
+        0.6395564079284668,
+        0.0,
+        0.0,
+        1.4302829504013062
+      ],
+      [
+        0.0,
+        0.6395564079284668,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666954398155212
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "referenceEyeLocalCenters": {
+    "L": [
+      0.03587651252746582,
+      -0.11538119614124298,
+      0.3100374937057495
+    ],
+    "R": [
+      -0.03587663173675537,
+      -0.11538119614124298,
+      0.3100374937057495
+    ]
+  },
+  "opaqueEyeProjection": {
+    "L": {
+      "representation": "Opaque anterior iris pigment over dark globe; existing pupil opening retained",
+      "sourceCenter": [
+        0.03587651252746582,
+        -0.11538119614124298,
+        0.3100374937057495
+      ],
+      "sourceProjectionShiftYRangeMeters": [
+        -0.0033531635999679565,
+        -0.00034473836421966553
+      ],
+      "sourceGlobeClearanceMeters": 0.00015,
+      "scleraVertices": 2178,
+      "irisVertices": 1600,
+      "subdivisionAfterProjection": false
+    },
+    "R": {
+      "representation": "Opaque anterior iris pigment over dark globe; existing pupil opening retained",
+      "sourceCenter": [
+        -0.03587663173675537,
+        -0.11538119614124298,
+        0.3100374937057495
+      ],
+      "sourceProjectionShiftYRangeMeters": [
+        -0.0033516883850097656,
+        -0.000342637300491333
+      ],
+      "sourceGlobeClearanceMeters": 0.00015,
+      "scleraVertices": 2178,
+      "irisVertices": 1600,
+      "subdivisionAfterProjection": false
+    }
+  },
+  "fittedEyeCentersMeters": {
+    "L": [
+      0.040494389832019806,
+      -0.04436040297150612,
+      1.1329971551895142
+    ],
+    "R": [
+      -0.040494538843631744,
+      -0.044360410422086716,
+      1.1329971551895142
+    ]
+  },
+  "provisionalOralShiftMeters": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "oralFitNote": "Retained v4b oral meshes and Jaw/Tongue pivots already include HEAD_DROP. No second drop or guessed forward offset; neutral world bounds/occlusion are audited before any review render.",
+  "deepenedAuricleParts": [
+    "Fennec cupped ear -1",
+    "Ear inner velvet -1",
+    "Rounded auricle cartilage rim",
+    "Rounded auricle cartilage rim.001",
+    "Auricle basal cartilage fold",
+    "Fennec cupped ear 1",
+    "Ear inner velvet 1",
+    "Rounded auricle cartilage rim.002",
+    "Rounded auricle cartilage rim.003",
+    "Auricle basal cartilage fold.001"
+  ],
+  "groomColorRegions": {
+    "status": "Ungenerated palette proposal until next native review",
+    "reference": "concept-art/02-nib-character-sheet.png",
+    "paletteColorSpace": "sRGB converted to linear shader colors",
+    "palettesSRGB": {
+      "head": [
+        [
+          0.48,
+          0.39,
+          0.29
+        ],
+        [
+          0.8,
+          0.74,
+          0.63
+        ]
+      ],
+      "innerWisps": [
+        [
+          0.56,
+          0.45,
+          0.34
+        ],
+        [
+          0.88,
+          0.82,
+          0.71
+        ]
+      ],
+      "outerEar": [
+        [
+          0.36,
+          0.22,
+          0.13
+        ],
+        [
+          0.67,
+          0.46,
+          0.25
+        ]
+      ],
+      "innerSkin": [
+        [
+          0.43,
+          0.25,
+          0.23
+        ],
+        [
+          0.7,
+          0.46,
+          0.39
+        ]
+      ],
+      "outerUndercoat": [
+        [
+          0.39,
+          0.25,
+          0.14
+        ],
+        [
+          0.62,
+          0.43,
+          0.24
+        ]
+      ]
+    },
+    "earSurfaceAssignments": [
+      {
+        "object": "Fennec cupped ear -1",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Ear inner velvet -1",
+        "region": "innerSkin",
+        "material": "Nib_v5_DustyPinkEar"
+      },
+      {
+        "object": "Rounded auricle cartilage rim",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Rounded auricle cartilage rim.001",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Auricle basal cartilage fold",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Fennec cupped ear 1",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Ear inner velvet 1",
+        "region": "innerSkin",
+        "material": "Nib_v5_DustyPinkEar"
+      },
+      {
+        "object": "Rounded auricle cartilage rim.002",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Rounded auricle cartilage rim.003",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      },
+      {
+        "object": "Auricle basal cartilage fold.001",
+        "region": "outerUndercoat",
+        "material": "Nib_v5_TawnyEarUndercoat"
+      }
+    ],
+    "sharedMapsUpdated": false
+  },
+  "cloth": {
+    "scarfTriangles": 69888,
+    "bibPiecesReformed": [
+      "Bib pocket flap",
+      "Bib stitched outer seam",
+      "Bib hand stitching",
+      "Bib hand stitching.001",
+      "Bib hand stitching.002",
+      "Bib hand stitching.003",
+      "Bib hand stitching.004",
+      "Bib hand stitching.005",
+      "Bib hand stitching.006",
+      "Bib hand stitching.007",
+      "Bib hand stitching.008",
+      "Bib hand stitching.009",
+      "Bib hand stitching.010",
+      "Bib hand stitching.011",
+      "Bib hand stitching.012",
+      "Bib hand stitching.013",
+      "Bib hand stitching.014",
+      "Bib hand stitching.015",
+      "Bib hand stitching.016",
+      "Bib hand stitching.017",
+      "Bib stitched outer seam.001",
+      "Bib hand stitching.018",
+      "Bib hand stitching.019",
+      "Bib hand stitching.020",
+      "Bib hand stitching.021",
+      "Bib hand stitching.022",
+      "Bib hand stitching.023",
+      "Bib hand stitching.024",
+      "Bib hand stitching.025",
+      "Bib hand stitching.026",
+      "Bib hand stitching.027",
+      "Bib hand stitching.028",
+      "Bib hand stitching.029",
+      "Bib hand stitching.030",
+      "Bib hand stitching.031",
+      "Bib hand stitching.032",
+      "Bib hand stitching.033",
+      "Bib hand stitching.034",
+      "Bib hand stitching.035",
+      "Overalls draped bib",
+      "Bib sewn chest pocket"
+    ],
+    "trousersReformed": [
+      "Shaped overalls trouser L",
+      "Shaped overalls trouser R"
+    ],
+    "status": "Native cloth review required in Front/Back/Side/Shoot; no simulation."
+  },
+  "hands": {
+    "referenceObject": "Hand  - Realistic",
+    "referenceAuthor": "Dan Ulrich",
+    "license": "CC0 in asset metadata and bundle README",
+    "rightFingerOrderCorrected": true,
+    "requiresMatchingReexportedClips": true,
+    "hands": [
+      {
+        "side": "L",
+        "vertices": 13194,
+        "triangles": 26384
+      },
+      {
+        "side": "R",
+        "vertices": 13194,
+        "triangles": 26384
+      }
+    ],
+    "status": "Native hand/grip review required; this changes right finger bind positions and cannot reuse old standalone FBX clips."
+  },
+  "groom": {
+    "cinematic": false,
+    "guideCount": 2634,
+    "strands": 23256,
+    "triangles": 511224,
+    "representation": "Opaque skinned tapered strands; no simulation; identical deterministic guide field between densities.",
+    "mainStrandRadiusRangeMeters": [
+      3.5e-05,
+      8e-05
+    ],
+    "retainedEarCoordinatesIncludeHeadDrop": true,
+    "goggleAvoidance": "Measured lens world centers/back bounds",
+    "groups": [
+      {
+        "name": "Nib v5 scalp clumped coat",
+        "strands": 10220,
+        "triangles": 245280,
+        "materials": [
+          "Nib_v5_HeadFur"
+        ]
+      },
+      {
+        "name": "Nib v5 auricle clumped coat L",
+        "strands": 4620,
+        "triangles": 110880,
+        "materials": [
+          "Nib_v5_InnerEarWisps",
+          "Nib_v5_TawnyEarFur"
+        ]
+      },
+      {
+        "name": "Nib v5 outer auricle short nap L",
+        "strands": 1280,
+        "triangles": 15360,
+        "materials": [
+          "Nib_v5_TawnyEarFur"
+        ]
+      },
+      {
+        "name": "Nib v5 auricle clumped coat R",
+        "strands": 4620,
+        "triangles": 110880,
+        "materials": [
+          "Nib_v5_InnerEarWisps",
+          "Nib_v5_TawnyEarFur"
+        ]
+      },
+      {
+        "name": "Nib v5 outer auricle short nap R",
+        "strands": 1280,
+        "triangles": 15360,
+        "materials": [
+          "Nib_v5_TawnyEarFur"
+        ]
+      },
+      {
+        "name": "Nib v5 tapered chin tuft",
+        "strands": 336,
+        "triangles": 8064,
+        "materials": [
+          "Nib_v5_HeadFur"
+        ]
+      },
+      {
+        "name": "Nib v5 fine facial fuzz",
+        "strands": 900,
+        "triangles": 5400,
+        "materials": [
+          "Nib_v5_HeadFur"
+        ]
+      }
+    ]
+  },
+  "neutralCoordinates": {
+    "headWorld": {
+      "count": 41753,
+      "minimum": [
+        -0.09105587750673294,
+        -0.09729935228824615,
+        1.0226894617080688
+      ],
+      "maximum": [
+        0.09111806750297546,
+        0.07088489085435867,
+        1.2271316051483154
+      ],
+      "mean": [
+        3.556359912421595e-06,
+        -0.041155241328697995,
+        1.1134404639348303
+      ]
+    },
+    "upperLipRegionWorld": {
+      "count": 1223,
+      "minimum": [
+        -0.042502474039793015,
+        -0.0952828973531723,
+        1.0785889625549316
+      ],
+      "maximum": [
+        0.0425126776099205,
+        -0.06475864350795746,
+        1.0897905826568604
+      ],
+      "mean": [
+        -0.00010529207007398635,
+        -0.08173391473337167,
+        1.083203920066503
+      ]
+    },
+    "lowerLipRegionWorld": {
+      "count": 3313,
+      "minimum": [
+        -0.042547933757305145,
+        -0.09452077746391296,
+        1.0724157094955444
+      ],
+      "maximum": [
+        0.042540520429611206,
+        -0.06601143628358841,
+        1.0804686546325684
+      ],
+      "mean": [
+        3.401009176365807e-05,
+        -0.07874884290652731,
+        1.0760486198990071
+      ]
+    },
+    "oral": {
+      "Provisional recessed oral cavity": {
+        "world": {
+          "count": 1082,
+          "minimum": [
+            -0.028000017628073692,
+            -0.039000004529953,
+            1.0690001249313354
+          ],
+          "maximum": [
+            0.028000008314847946,
+            -0.010999989695847034,
+            1.0870000123977661
+          ],
+          "mean": [
+            -2.5534506577349166e-09,
+            -0.025000000089344995,
+            1.0780000686645508
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          -0.02500000037252903,
+          1.0780000686645508
+        ],
+        "frontalSamples": 271,
+        "unoccludedSamples": 2,
+        "unoccludedVertexIds": [
+          656,
+          980
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 3,
+          "right": 3
+        }
+      },
+      "Upper provisional gum ridge": {
+        "world": {
+          "count": 582,
+          "minimum": [
+            -0.032619114965200424,
+            -0.07154107093811035,
+            1.0807230472564697
+          ],
+          "maximum": [
+            0.03261911869049072,
+            -0.03951651602983475,
+            1.0872774124145508
+          ],
+          "mean": [
+            2.7259837762417457e-11,
+            -0.05697980546152469,
+            1.084000191123215
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 291,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.028351597487926483,
+            -0.05670808255672455,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.022948402911424637,
+            -0.051939304918050766,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.025649999928039808,
+            -0.0543236939702183,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.02565000019967556,
+          -0.054323695600032806,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.001": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.022630875930190086,
+            -0.06273811310529709,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.017269127070903778,
+            -0.058025822043418884,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.019950000996080536,
+            -0.0603819644699494,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.019950000569224358,
+          -0.06038196384906769,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.002": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.01690908521413803,
+            -0.06705345213413239,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.01159091666340828,
+            -0.06239951774477959,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.014250001792485515,
+            -0.06472648563794792,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.01425000000745058,
+          -0.06472648680210114,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.003": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.011186239309608936,
+            -0.0700257197022438,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.005913763307034969,
+            -0.06543198972940445,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.008550001143400246,
+            -0.06772885968287785,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.008550000376999378,
+          -0.06772885471582413,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.004": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.005462339147925377,
+            -0.07229804247617722,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.0002376608899794519,
+            -0.06776634603738785,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.0028499999904549136,
+            -0.07003219968949755,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.002850000048056245,
+          -0.07003219425678253,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.005": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.0002376608899794519,
+            -0.07229804247617722,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.005462339147925377,
+            -0.06776634603738785,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.0028499999904549136,
+            -0.07003219968949755,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.002850000048056245,
+          -0.07003219425678253,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.006": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.005913763307034969,
+            -0.0700257197022438,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.011186239309608936,
+            -0.06543198972940445,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.008550001143400246,
+            -0.06772885968287785,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.008550000376999378,
+          -0.06772885471582413,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.007": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.01159091666340828,
+            -0.06705345213413239,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.01690908521413803,
+            -0.06239951774477959,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.014250001792485515,
+            -0.06472648563794792,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.01425000000745058,
+          -0.06472648680210114,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.008": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.017269127070903778,
+            -0.06273811310529709,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.022630875930190086,
+            -0.058025822043418884,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.019950000996080536,
+            -0.0603819644699494,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.019950000569224358,
+          -0.06038196384906769,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.009": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.022948402911424637,
+            -0.05670808255672455,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.028351597487926483,
+            -0.051939304918050766,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.025649999928039808,
+            -0.0543236939702183,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.02565000019967556,
+          -0.054323695600032806,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional gum ridge": {
+        "world": {
+          "count": 582,
+          "minimum": [
+            -0.03252303972840309,
+            -0.06580653041601181,
+            1.0687228441238403
+          ],
+          "maximum": [
+            0.03252303972840309,
+            -0.042352911084890366,
+            1.0752772092819214
+          ],
+          "mean": [
+            1.1658096862828864e-10,
+            -0.05583197972977284,
+            1.0720001346466876
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 291,
+        "unoccludedSamples": 2,
+        "unoccludedVertexIds": [
+          70,
+          280
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 2,
+          "right": 3
+        }
+      },
+      "Lower provisional tooth": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.028351597487926483,
+            -0.058056142181158066,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.022948402911424637,
+            -0.05328736826777458,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.025650001286218565,
+            -0.05567175708711147,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.02565000019967556,
+          -0.055671755224466324,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.001": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.022630875930190086,
+            -0.06304731965065002,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.017269127070903778,
+            -0.05833502858877182,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.019950001034885645,
+            -0.060691173964490495,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.019950000569224358,
+          -0.06069117411971092,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.002": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.01690908707678318,
+            -0.06626695394515991,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.011590917594730854,
+            -0.061613019555807114,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.014250001967108497,
+            -0.06393999001011252,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.01425000000745058,
+          -0.06393998116254807,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.003": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.011186238378286362,
+            -0.0684347078204155,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.005913763307034969,
+            -0.06384097784757614,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.008550000842660666,
+            -0.06613784500708182,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.008550000376999378,
+          -0.06613784283399582,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.004": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.005462339147925377,
+            -0.0698448121547699,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.00023766096273902804,
+            -0.06531311571598053,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.0028499999646858973,
+            -0.06757896409059565,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.002850000048056245,
+          -0.06757896393537521,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.005": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.00023766096273902804,
+            -0.0698448121547699,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.005462339147925377,
+            -0.06531311571598053,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.0028499999646858973,
+            -0.06757896409059565,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.002850000048056245,
+          -0.06757896393537521,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.006": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.005913763307034969,
+            -0.0684347078204155,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.011186238378286362,
+            -0.06384097784757614,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.008550000842660666,
+            -0.06613784500708182,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.008550000376999378,
+          -0.06613784283399582,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.007": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.011590917594730854,
+            -0.06626695394515991,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.01690908707678318,
+            -0.061613019555807114,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.014250001967108497,
+            -0.06393999001011252,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.01425000000745058,
+          -0.06393998116254807,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 8,
+        "unoccludedVertexIds": [
+          61,
+          62,
+          66,
+          70,
+          85,
+          86,
+          90,
+          94
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 16,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.008": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.017269127070903778,
+            -0.06304731965065002,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.022630875930190086,
+            -0.05833502858877182,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.019950001034885645,
+            -0.060691173964490495,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.019950000569224358,
+          -0.06069117411971092,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 16,
+        "unoccludedVertexIds": [
+          12,
+          14,
+          16,
+          21,
+          37,
+          38,
+          42,
+          46,
+          61,
+          62,
+          66,
+          70
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 9,
+          "right": 8
+        }
+      },
+      "Lower provisional tooth.009": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.022948402911424637,
+            -0.058056142181158066,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.028351597487926483,
+            -0.05328736826777458,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.025650001286218565,
+            -0.05567175708711147,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.02565000019967556,
+          -0.055671755224466324,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 8,
+        "unoccludedVertexIds": [
+          12,
+          14,
+          16,
+          21,
+          37,
+          38,
+          42,
+          46
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 16
+        }
+      },
+      "Canonical dark blue Nib tongue": {
+        "world": {
+          "count": 1346,
+          "minimum": [
+            -0.011678335256874561,
+            -0.05975088104605675,
+            1.0700935125350952
+          ],
+          "maximum": [
+            0.011678335256874561,
+            -0.03024902753531933,
+            1.077906608581543
+          ],
+          "mean": [
+            -5.28383838457686e-12,
+            -0.04500000175077573,
+            1.0740000982872622
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 270,
+        "unoccludedSamples": 25,
+        "unoccludedVertexIds": [
+          20,
+          75,
+          130,
+          135,
+          275,
+          280,
+          285,
+          335,
+          430,
+          475,
+          480,
+          580
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 20,
+          "right": 23
+        }
+      }
+    },
+    "bones": {
+      "Head": {
+        "restHeadWorld": [
+          0.0,
+          0.0,
+          1.0230000019073486
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.0,
+          1.0230000019073486
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "FaceRoot": {
+        "restHeadWorld": [
+          0.0,
+          0.0,
+          1.0980000495910645
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.0,
+          1.0980000495910645
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Jaw": {
+        "restHeadWorld": [
+          0.0,
+          0.009999999776482582,
+          1.0830000638961792
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.009999999776482582,
+          1.0830000638961792
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "TongueBase": {
+        "restHeadWorld": [
+          0.0,
+          -0.032999999821186066,
+          1.0740000009536743
+        ],
+        "posedHeadWorld": [
+          0.0,
+          -0.032999999821186066,
+          1.0740000009536743
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "TongueTip": {
+        "restHeadWorld": [
+          0.0,
+          -0.04800000041723251,
+          1.0740000009536743
+        ],
+        "posedHeadWorld": [
+          0.0,
+          -0.04800000041723251,
+          1.0740000009536743
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Eye_L": {
+        "restHeadWorld": [
+          0.040494389832019806,
+          -0.04436040297150612,
+          1.1329971551895142
+        ],
+        "posedHeadWorld": [
+          0.040494389832019806,
+          -0.04436040297150612,
+          1.1329971551895142
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Eye_R": {
+        "restHeadWorld": [
+          -0.040494538843631744,
+          -0.044360410422086716,
+          1.1329971551895142
+        ],
+        "posedHeadWorld": [
+          -0.040494538843631744,
+          -0.044360410422086716,
+          1.1329971551895142
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "LidUpper_L": {
+        "restHeadWorld": [
+          0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "posedHeadWorld": [
+          0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "LidUpper_R": {
+        "restHeadWorld": [
+          -0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "posedHeadWorld": [
+          -0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "morphValues": {
+      "Basis": 1.0,
+      "Blink_L": 0.0,
+      "Blink_R": 0.0,
+      "Squint_L": 0.0,
+      "Squint_R": 0.0,
+      "BrowRaise_L": 0.0,
+      "BrowRaise_R": 0.0,
+      "BrowLower_L": 0.0,
+      "BrowLower_R": 0.0,
+      "Smile_L": 0.0,
+      "Smile_R": 0.0,
+      "Frown_L": 0.0,
+      "Frown_R": 0.0,
+      "JawOpen": 0.0,
+      "LipPress": 0.0,
+      "TongueOut": 0.0,
+      "CheekTension_L": 0.0,
+      "CheekTension_R": 0.0
+    },
+    "ocularVisibility": {
+      "L": {
+        "grid": [
+          49,
+          33
+        ],
+        "frontmostSurfaceSamples": {
+          "skin": 1224,
+          "sclera": 195,
+          "iris": 198,
+          "empty": 0
+        },
+        "visibleOcularBounds": {
+          "count": 393,
+          "minimum": [
+            0.026575962081551552,
+            -0.052418291568756104,
+            1.1295133829116821
+          ],
+          "maximum": [
+            0.056094687432050705,
+            -0.04608064889907837,
+            1.1356055736541748
+          ],
+          "mean": [
+            0.041954993381717126,
+            -0.05063872058276305,
+            1.1326356731904978
+          ]
+        },
+        "scleraWorld": {
+          "count": 2178,
+          "minimum": [
+            0.024563321843743324,
+            -0.05232841148972511,
+            1.126467227935791
+          ],
+          "maximum": [
+            0.056765567511320114,
+            -0.03642734885215759,
+            1.142713189125061
+          ],
+          "mean": [
+            0.0403925566066012,
+            -0.045100572371053194,
+            1.1336650248510889
+          ]
+        },
+        "irisWorld": {
+          "count": 1600,
+          "minimum": [
+            0.03170492500066757,
+            -0.05241943523287773,
+            1.1299128532409668
+          ],
+          "maximum": [
+            0.04767625406384468,
+            -0.049996718764305115,
+            1.1375576257705688
+          ],
+          "mean": [
+            0.03955654837191105,
+            -0.051706876307725906,
+            1.1332785203307867
+          ]
+        }
+      },
+      "R": {
+        "grid": [
+          49,
+          33
+        ],
+        "frontmostSurfaceSamples": {
+          "skin": 1224,
+          "sclera": 195,
+          "iris": 198,
+          "empty": 0
+        },
+        "visibleOcularBounds": {
+          "count": 393,
+          "minimum": [
+            -0.05610772967338562,
+            -0.05241674184799194,
+            1.1295154094696045
+          ],
+          "maximum": [
+            -0.0265889260917902,
+            -0.04607433080673218,
+            1.1356085538864136
+          ],
+          "mean": [
+            -0.04196799837014906,
+            -0.050639067442362545,
+            1.1326382451385033
+          ]
+        },
+        "scleraWorld": {
+          "count": 2178,
+          "minimum": [
+            -0.05677861347794533,
+            -0.05232683941721916,
+            1.1264688968658447
+          ],
+          "maximum": [
+            -0.024576280266046524,
+            -0.0364297553896904,
+            1.1427172422409058
+          ],
+          "mean": [
+            -0.04040104325234726,
+            -0.04510084961098854,
+            1.133665859535049
+          ]
+        },
+        "irisWorld": {
+          "count": 1600,
+          "minimum": [
+            -0.04766824096441269,
+            -0.05241832882165909,
+            1.1299118995666504
+          ],
+          "maximum": [
+            -0.03169778361916542,
+            -0.049991823732852936,
+            1.137556552886963
+          ],
+          "mean": [
+            -0.03954884031554684,
+            -0.05170546550070867,
+            1.1332775539159774
+          ]
+        }
+      }
+    },
+    "noseMask": {
+      "min": 0.0,
+      "max": 1.0,
+      "overHalf": 680,
+      "worldBoundsAboveHalf": {
+        "count": 680,
+        "minimum": [
+          -0.013517355546355247,
+          -0.09729935228824615,
+          1.0981377363204956
+        ],
+        "maximum": [
+          0.013587801717221737,
+          -0.0791577398777008,
+          1.1135255098342896
+        ],
+        "mean": [
+          5.788863488894148e-06,
+          -0.09097983435015468,
+          1.1047393914531258
+        ]
+      },
+      "materialSlots": [
+        "Nib_v5_FacialSkin",
+        "Nib_EarInner",
+        "Nib_MouthInterior"
+      ]
+    },
+    "neutralStructuralBlockersIfClosedMouthExpected": [
+      "Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ]
+  },
+  "idleCoordinates": {
+    "headWorld": {
+      "count": 41753,
+      "minimum": [
+        -0.09105587750673294,
+        -0.09729935228824615,
+        1.0226894617080688
+      ],
+      "maximum": [
+        0.09111806750297546,
+        0.07088489085435867,
+        1.2271316051483154
+      ],
+      "mean": [
+        3.556359912421595e-06,
+        -0.04114456014382584,
+        1.113536592974873
+      ]
+    },
+    "upperLipRegionWorld": {
+      "count": 1223,
+      "minimum": [
+        -0.042502474039793015,
+        -0.0952828973531723,
+        1.0785889625549316
+      ],
+      "maximum": [
+        0.0425126776099205,
+        -0.06475864350795746,
+        1.0897905826568604
+      ],
+      "mean": [
+        -0.00010529207007398635,
+        -0.08173391473337167,
+        1.083203920066503
+      ]
+    },
+    "lowerLipRegionWorld": {
+      "count": 3313,
+      "minimum": [
+        -0.042547933757305145,
+        -0.09452077746391296,
+        1.0724157094955444
+      ],
+      "maximum": [
+        0.042540520429611206,
+        -0.06601143628358841,
+        1.0804686546325684
+      ],
+      "mean": [
+        3.401009176365807e-05,
+        -0.07874884290652731,
+        1.0760486198990071
+      ]
+    },
+    "oral": {
+      "Provisional recessed oral cavity": {
+        "world": {
+          "count": 1082,
+          "minimum": [
+            -0.028000017628073692,
+            -0.039000004529953,
+            1.0690001249313354
+          ],
+          "maximum": [
+            0.028000008314847946,
+            -0.010999989695847034,
+            1.0870000123977661
+          ],
+          "mean": [
+            -2.5534506577349166e-09,
+            -0.025000000089344995,
+            1.0780000686645508
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          -0.02500000037252903,
+          1.0780000686645508
+        ],
+        "frontalSamples": 271,
+        "unoccludedSamples": 2,
+        "unoccludedVertexIds": [
+          656,
+          980
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 3,
+          "right": 3
+        }
+      },
+      "Upper provisional gum ridge": {
+        "world": {
+          "count": 582,
+          "minimum": [
+            -0.032619114965200424,
+            -0.07154107093811035,
+            1.0807230472564697
+          ],
+          "maximum": [
+            0.03261911869049072,
+            -0.03951651602983475,
+            1.0872774124145508
+          ],
+          "mean": [
+            2.7259837762417457e-11,
+            -0.05697980546152469,
+            1.084000191123215
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 291,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.028351597487926483,
+            -0.05670808255672455,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.022948402911424637,
+            -0.051939304918050766,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.025649999928039808,
+            -0.0543236939702183,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.02565000019967556,
+          -0.054323695600032806,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.001": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.022630875930190086,
+            -0.06273811310529709,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.017269127070903778,
+            -0.058025822043418884,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.019950000996080536,
+            -0.0603819644699494,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.019950000569224358,
+          -0.06038196384906769,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.002": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.01690908521413803,
+            -0.06705345213413239,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.01159091666340828,
+            -0.06239951774477959,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.014250001792485515,
+            -0.06472648563794792,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.01425000000745058,
+          -0.06472648680210114,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.003": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.011186239309608936,
+            -0.0700257197022438,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.005913763307034969,
+            -0.06543198972940445,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.008550001143400246,
+            -0.06772885968287785,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.008550000376999378,
+          -0.06772885471582413,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.004": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.005462339147925377,
+            -0.07229804247617722,
+            1.0780000686645508
+          ],
+          "maximum": [
+            -0.0002376608899794519,
+            -0.06776634603738785,
+            1.0840001106262207
+          ],
+          "mean": [
+            -0.0028499999904549136,
+            -0.07003219968949755,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          -0.002850000048056245,
+          -0.07003219425678253,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.005": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.0002376608899794519,
+            -0.07229804247617722,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.005462339147925377,
+            -0.06776634603738785,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.0028499999904549136,
+            -0.07003219968949755,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.002850000048056245,
+          -0.07003219425678253,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.006": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.005913763307034969,
+            -0.0700257197022438,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.011186239309608936,
+            -0.06543198972940445,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.008550001143400246,
+            -0.06772885968287785,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.008550000376999378,
+          -0.06772885471582413,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.007": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.01159091666340828,
+            -0.06705345213413239,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.01690908521413803,
+            -0.06239951774477959,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.014250001792485515,
+            -0.06472648563794792,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.01425000000745058,
+          -0.06472648680210114,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.008": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.017269127070903778,
+            -0.06273811310529709,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.022630875930190086,
+            -0.058025822043418884,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.019950000996080536,
+            -0.0603819644699494,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.019950000569224358,
+          -0.06038196384906769,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Upper provisional tooth.009": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.022948402911424637,
+            -0.05670808255672455,
+            1.0780000686645508
+          ],
+          "maximum": [
+            0.028351597487926483,
+            -0.051939304918050766,
+            1.0840001106262207
+          ],
+          "mean": [
+            0.025649999928039808,
+            -0.0543236939702183,
+            1.0810000896453857
+          ]
+        },
+        "objectLocation": [
+          0.02565000019967556,
+          -0.054323695600032806,
+          1.0810000896453857
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional gum ridge": {
+        "world": {
+          "count": 582,
+          "minimum": [
+            -0.03252303972840309,
+            -0.06580653041601181,
+            1.0687228441238403
+          ],
+          "maximum": [
+            0.03252303972840309,
+            -0.042352911084890366,
+            1.0752772092819214
+          ],
+          "mean": [
+            1.1658096862828864e-10,
+            -0.05583197972977284,
+            1.0720001346466876
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 291,
+        "unoccludedSamples": 2,
+        "unoccludedVertexIds": [
+          70,
+          280
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 2,
+          "right": 3
+        }
+      },
+      "Lower provisional tooth": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.028351597487926483,
+            -0.058056142181158066,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.022948402911424637,
+            -0.05328736826777458,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.025650001286218565,
+            -0.05567175708711147,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.02565000019967556,
+          -0.055671755224466324,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.001": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.022630875930190086,
+            -0.06304731965065002,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.017269127070903778,
+            -0.05833502858877182,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.019950001034885645,
+            -0.060691173964490495,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.019950000569224358,
+          -0.06069117411971092,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.002": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.01690908707678318,
+            -0.06626695394515991,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.011590917594730854,
+            -0.061613019555807114,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.014250001967108497,
+            -0.06393999001011252,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.01425000000745058,
+          -0.06393998116254807,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.003": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.011186238378286362,
+            -0.0684347078204155,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.005913763307034969,
+            -0.06384097784757614,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.008550000842660666,
+            -0.06613784500708182,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.008550000376999378,
+          -0.06613784283399582,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.004": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            -0.005462339147925377,
+            -0.0698448121547699,
+            1.0724999904632568
+          ],
+          "maximum": [
+            -0.00023766096273902804,
+            -0.06531311571598053,
+            1.0775001049041748
+          ],
+          "mean": [
+            -0.0028499999646858973,
+            -0.06757896409059565,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          -0.002850000048056245,
+          -0.06757896393537521,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.005": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.00023766096273902804,
+            -0.0698448121547699,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.005462339147925377,
+            -0.06531311571598053,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.0028499999646858973,
+            -0.06757896409059565,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.002850000048056245,
+          -0.06757896393537521,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.006": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.005913763307034969,
+            -0.0684347078204155,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.011186238378286362,
+            -0.06384097784757614,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.008550000842660666,
+            -0.06613784500708182,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.008550000376999378,
+          -0.06613784283399582,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 0,
+        "unoccludedVertexIds": [],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.007": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.011590917594730854,
+            -0.06626695394515991,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.01690908707678318,
+            -0.061613019555807114,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.014250001967108497,
+            -0.06393999001011252,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.01425000000745058,
+          -0.06393998116254807,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 8,
+        "unoccludedVertexIds": [
+          61,
+          62,
+          66,
+          70,
+          85,
+          86,
+          90,
+          94
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 16,
+          "right": 0
+        }
+      },
+      "Lower provisional tooth.008": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.017269127070903778,
+            -0.06304731965065002,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.022630875930190086,
+            -0.05833502858877182,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.019950001034885645,
+            -0.060691173964490495,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.019950000569224358,
+          -0.06069117411971092,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 16,
+        "unoccludedVertexIds": [
+          12,
+          14,
+          16,
+          21,
+          37,
+          38,
+          42,
+          46,
+          61,
+          62,
+          66,
+          70
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 9,
+          "right": 8
+        }
+      },
+      "Lower provisional tooth.009": {
+        "world": {
+          "count": 96,
+          "minimum": [
+            0.022948402911424637,
+            -0.058056142181158066,
+            1.0724999904632568
+          ],
+          "maximum": [
+            0.028351597487926483,
+            -0.05328736826777458,
+            1.0775001049041748
+          ],
+          "mean": [
+            0.025650001286218565,
+            -0.05567175708711147,
+            1.0750000476837158
+          ]
+        },
+        "objectLocation": [
+          0.02565000019967556,
+          -0.055671755224466324,
+          1.0750000476837158
+        ],
+        "frontalSamples": 96,
+        "unoccludedSamples": 8,
+        "unoccludedVertexIds": [
+          12,
+          14,
+          16,
+          21,
+          37,
+          38,
+          42,
+          46
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 0,
+          "right": 16
+        }
+      },
+      "Canonical dark blue Nib tongue": {
+        "world": {
+          "count": 1346,
+          "minimum": [
+            -0.011678335256874561,
+            -0.05975088104605675,
+            1.0700935125350952
+          ],
+          "maximum": [
+            0.011678335256874561,
+            -0.03024902753531933,
+            1.077906608581543
+          ],
+          "mean": [
+            -5.28383838457686e-12,
+            -0.04500000175077573,
+            1.0740000982872622
+          ]
+        },
+        "objectLocation": [
+          0.0,
+          0.0,
+          -0.03200000151991844
+        ],
+        "frontalSamples": 270,
+        "unoccludedSamples": 25,
+        "unoccludedVertexIds": [
+          20,
+          75,
+          130,
+          135,
+          275,
+          280,
+          285,
+          335,
+          430,
+          475,
+          480,
+          580
+        ],
+        "obliqueUnoccludedSamples": {
+          "left": 20,
+          "right": 23
+        }
+      }
+    },
+    "bones": {
+      "Head": {
+        "restHeadWorld": [
+          0.0,
+          0.0,
+          1.0230000019073486
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.0,
+          1.0230000019073486
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "FaceRoot": {
+        "restHeadWorld": [
+          0.0,
+          0.0,
+          1.0980000495910645
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.0,
+          1.0980000495910645
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Jaw": {
+        "restHeadWorld": [
+          0.0,
+          0.009999999776482582,
+          1.0830000638961792
+        ],
+        "posedHeadWorld": [
+          0.0,
+          0.009999999776482582,
+          1.0830000638961792
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "TongueBase": {
+        "restHeadWorld": [
+          0.0,
+          -0.032999999821186066,
+          1.0740000009536743
+        ],
+        "posedHeadWorld": [
+          0.0,
+          -0.032999999821186066,
+          1.0740000009536743
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "TongueTip": {
+        "restHeadWorld": [
+          0.0,
+          -0.04800000041723251,
+          1.0740000009536743
+        ],
+        "posedHeadWorld": [
+          0.0,
+          -0.04800000041723251,
+          1.0740000009536743
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Eye_L": {
+        "restHeadWorld": [
+          0.040494389832019806,
+          -0.04436040297150612,
+          1.1329971551895142
+        ],
+        "posedHeadWorld": [
+          0.040494389832019806,
+          -0.04436040297150612,
+          1.1329971551895142
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Eye_R": {
+        "restHeadWorld": [
+          -0.040494538843631744,
+          -0.044360410422086716,
+          1.1329971551895142
+        ],
+        "posedHeadWorld": [
+          -0.040494538843631744,
+          -0.044360410422086716,
+          1.1329971551895142
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "LidUpper_L": {
+        "restHeadWorld": [
+          0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "posedHeadWorld": [
+          0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "LidUpper_R": {
+        "restHeadWorld": [
+          -0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "posedHeadWorld": [
+          -0.039000000804662704,
+          -0.04399999976158142,
+          1.1400001049041748
+        ],
+        "basisTranslation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basisQuaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "morphValues": {
+      "Basis": 1.0,
+      "Blink_L": 0.0,
+      "Blink_R": 0.0,
+      "Squint_L": 0.0,
+      "Squint_R": 0.0,
+      "BrowRaise_L": 0.13332897424697876,
+      "BrowRaise_R": 0.13332897424697876,
+      "BrowLower_L": 0.0,
+      "BrowLower_R": 0.0,
+      "Smile_L": 0.0,
+      "Smile_R": 0.0,
+      "Frown_L": 0.0,
+      "Frown_R": 0.0,
+      "JawOpen": 0.0,
+      "LipPress": 0.0,
+      "TongueOut": 0.0,
+      "CheekTension_L": 0.0,
+      "CheekTension_R": 0.0
+    },
+    "ocularVisibility": {
+      "L": {
+        "grid": [
+          49,
+          33
+        ],
+        "frontmostSurfaceSamples": {
+          "skin": 1211,
+          "sclera": 201,
+          "iris": 205,
+          "empty": 0
+        },
+        "visibleOcularBounds": {
+          "count": 406,
+          "minimum": [
+            0.026575962081551552,
+            -0.052418291568756104,
+            1.1295133829116821
+          ],
+          "maximum": [
+            0.056094687432050705,
+            -0.045547306537628174,
+            1.1361132860183716
+          ],
+          "mean": [
+            0.04208552147367318,
+            -0.050629362977784254,
+            1.1327957927887076
+          ]
+        },
+        "scleraWorld": {
+          "count": 2178,
+          "minimum": [
+            0.024563321843743324,
+            -0.05232841148972511,
+            1.126467227935791
+          ],
+          "maximum": [
+            0.056765567511320114,
+            -0.03642734885215759,
+            1.142713189125061
+          ],
+          "mean": [
+            0.0403925566066012,
+            -0.045100572371053194,
+            1.1336650248510889
+          ]
+        },
+        "irisWorld": {
+          "count": 1600,
+          "minimum": [
+            0.03170492500066757,
+            -0.05241943523287773,
+            1.1299128532409668
+          ],
+          "maximum": [
+            0.04767625406384468,
+            -0.049996718764305115,
+            1.1375576257705688
+          ],
+          "mean": [
+            0.03955654837191105,
+            -0.051706876307725906,
+            1.1332785203307867
+          ]
+        }
+      },
+      "R": {
+        "grid": [
+          49,
+          33
+        ],
+        "frontmostSurfaceSamples": {
+          "skin": 1211,
+          "sclera": 200,
+          "iris": 206,
+          "empty": 0
+        },
+        "visibleOcularBounds": {
+          "count": 406,
+          "minimum": [
+            -0.05610772967338562,
+            -0.05241674184799194,
+            1.1295154094696045
+          ],
+          "maximum": [
+            -0.0265889260917902,
+            -0.04555386304855347,
+            1.1361163854599
+          ],
+          "mean": [
+            -0.04212000825685527,
+            -0.05064115676973841,
+            1.1328071432160627
+          ]
+        },
+        "scleraWorld": {
+          "count": 2178,
+          "minimum": [
+            -0.05677861347794533,
+            -0.05232683941721916,
+            1.1264688968658447
+          ],
+          "maximum": [
+            -0.024576280266046524,
+            -0.0364297553896904,
+            1.1427172422409058
+          ],
+          "mean": [
+            -0.04040104325234726,
+            -0.04510084961098854,
+            1.133665859535049
+          ]
+        },
+        "irisWorld": {
+          "count": 1600,
+          "minimum": [
+            -0.04766824096441269,
+            -0.05241832882165909,
+            1.1299118995666504
+          ],
+          "maximum": [
+            -0.03169778361916542,
+            -0.049991823732852936,
+            1.137556552886963
+          ],
+          "mean": [
+            -0.03954884031554684,
+            -0.05170546550070867,
+            1.1332775539159774
+          ]
+        }
+      }
+    },
+    "noseMask": {
+      "min": 0.0,
+      "max": 1.0,
+      "overHalf": 680,
+      "worldBoundsAboveHalf": {
+        "count": 680,
+        "minimum": [
+          -0.013517355546355247,
+          -0.09729935228824615,
+          1.0981377363204956
+        ],
+        "maximum": [
+          0.013587801717221737,
+          -0.07915769517421722,
+          1.1135261058807373
+        ],
+        "mean": [
+          5.788863488894148e-06,
+          -0.09097982848830083,
+          1.1047394419417662
+        ]
+      },
+      "materialSlots": [
+        "Nib_v5_FacialSkin",
+        "Nib_EarInner",
+        "Nib_MouthInterior"
+      ]
+    },
+    "neutralStructuralBlockersIfClosedMouthExpected": [
+      "Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ]
+  },
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too"
+  },
+  "candidateSha256": "e56d8a16218562f14f0e1ba6866751abacc27ab32adaa20b347fb5b93a2d8711",
+  "pending": [
+    "Inspect Side/Back ear patch silhouette",
+    "Eye and eyelid collisions/neutral mouth fit",
+    "Review scalp/ear clumps and morph-following fine facial fuzz",
+    "Review coherent hands and corrected right-hand ordering/grip",
+    "Review compressed scarf loops, back and action cloth fit",
+    "Final portable PBR/morph export and both-engine checks"
+  ]
+}

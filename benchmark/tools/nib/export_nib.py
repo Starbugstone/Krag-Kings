@@ -1,6 +1,7 @@
 """Consolidate editable Nib source into three efficient, self-contained FBX variants."""
 import bpy,bmesh,json,shutil,hashlib,sys,argparse,os
 import numpy as np
+from mathutils import Matrix
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/nib';OUT=ROOT/'benchmark/shared/characters/nib'
 parser=argparse.ArgumentParser()
@@ -8,6 +9,7 @@ parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--out',type=Path,default=OUT)
 parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
 parser.add_argument('--triangulate',action='store_true',help='Export a temporary triangulated mesh while retaining source vertices and shape keys')
+parser.add_argument('--preserve-baseline-morphs',action='store_true',help='Historical exact-payload conversion only; never use when correcting morphs')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source;BASELINE_OUT=OUT;OUT=args.out
 OUT.mkdir(parents=True,exist_ok=True)
@@ -21,6 +23,9 @@ for filename in ([] if candidate else ['asset_manifest.json','manifest.json','Ni
     if old.exists() and not (legacy/filename).exists():shutil.copy2(old,legacy/filename)
 bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
 rig=bpy.data.objects['Nib_Rig'];scene=bpy.context.scene
+rig.animation_data_create();rig.animation_data.action=None
+for bone in rig.pose.bones:bone.matrix_basis=Matrix.Identity(4)
+scene.frame_set(1);bpy.context.view_layer.update()
 for required in ['FaceRoot','WeaponMuzzle','WeaponAim']:
     if required not in rig.data.bones:raise RuntimeError('Saved source is missing current required bone '+required)
 sources=list(bpy.data.collections['Nib_Authored_Components'].objects)
@@ -52,7 +57,8 @@ if candidate:
 manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','furStrands','furTriangles','cinematic']}
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
 if args.triangulate:
-    manifest['geometryExport']={'triangulated':True,'method':'Disposable assembly triangulation; validated baseline vertex-domain normal and sparse shape payloads preserved with Blender binary FBX parser/writer','sourceVertexOrderUnchanged':True,'mappedNormalMaxVectorError':0,'pointAndMorphPayloadsByteIdentical':True}
+    manifest['geometryExport']={'triangulated':True,'method':'Disposable assembly triangulation; validated baseline vertex-domain normal layer preserved, corrected target morphs retained unless explicitly requested otherwise','sourceVertexOrderUnchanged':True,'mappedNormalMaxVectorError':0,'pointAndMorphPayloadsByteIdentical':args.preserve_baseline_morphs}
+manifest['shapeUnion']={'creation':'from_mix=False','copiedDriversClearedBeforeCreation':True,'copiedWeightsZeroedBeforeCreation':True,'bodyCorrectivesOnFacialVerticesChecked':True}
 for m in bpy.data.materials:
     if not m.name.startswith('Nib_'):continue
     manifest['materials'].append({'name':m.name,'baseColor':'textures/'+m.name+'_BaseColor.png','normal':'textures/'+m.name+'_Normal.png','roughness':'textures/'+m.name+'_Roughness.png','metallic':'textures/'+m.name+'_Metallic.png'})
@@ -71,15 +77,35 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
     # components are joined as their Basis, preserving both face and body targets.
     active=next(o for o in copies if o.get('bone')=='FaceSurface')
     names=sorted({key.name for o in copies if o.data.shape_keys for key in o.data.shape_keys.key_blocks if key.name!='Basis'})
-    for name in names:
-        if name not in active.data.shape_keys.key_blocks:active.shape_key_add(name=name)
     for obj in copies:
         if obj.data.shape_keys:
             obj.data.shape_keys.animation_data_clear()
             for key in obj.data.shape_keys.key_blocks:key.value=0
+    # Missing union keys must equal Basis. from_mix=True can capture copied live
+    # facial drivers recursively, contaminating body correctives with brow deltas.
+    for name in names:
+        if name not in active.data.shape_keys.key_blocks:active.shape_key_add(name=name,from_mix=False)
+    face_marker='NibExportFacialRegion'
+    for obj in copies:
+        if obj.get('bone') not in ['FaceSurface','FaceSurfaceFuzz']:continue
+        attribute=obj.data.attributes.get(face_marker) or obj.data.attributes.new(face_marker,'FLOAT','POINT')
+        attribute.data.foreach_set('value',np.ones(len(obj.data.vertices),dtype=np.float32))
     bpy.context.view_layer.objects.active=active;bpy.ops.object.join();mesh=active;mesh.name='Nib_'+label+'_Mesh'
     if not mesh.data.shape_keys:raise RuntimeError('Morphs lost while consolidating '+label)
     basis=np.empty(len(mesh.data.vertices)*3,dtype=np.float32);mesh.data.shape_keys.key_blocks['Basis'].data.foreach_get('co',basis)
+    marker=mesh.data.attributes.get(face_marker)
+    if marker is None:raise RuntimeError('Joined facial-region regression marker was lost')
+    marked=np.empty(len(mesh.data.vertices),dtype=np.float32);marker.data.foreach_get('value',marked);facial=marked>.5
+    if not np.any(facial):raise RuntimeError('No joined facial vertices for body-corrective regression')
+    isolation={}
+    for key in mesh.data.shape_keys.key_blocks:
+        if not key.name.startswith('Corrective_'):continue
+        values=np.empty_like(basis);key.data.foreach_get('co',values)
+        magnitude=float(np.linalg.norm((values-basis).reshape((-1,3))[facial],axis=1).max())
+        isolation[key.name]=magnitude
+        if magnitude>1e-7:raise RuntimeError(f'{label}: body morph {key.name} contaminates facial vertices by {magnitude}m')
+    mesh.data.attributes.remove(marker)
+    manifest.setdefault('shapeUnionValidation',[]).append({'variant':label,'facialVertices':int(facial.sum()),'maxFacialDeltaPerBodyTargetMeters':isolation})
     present=[]
     for key in mesh.data.shape_keys.key_blocks:
         if key.name=='Basis':continue
@@ -137,7 +163,7 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
         if not candidate:raise RuntimeError('Pretriangulation must first be exported to an isolated candidate')
         sys.path.insert(0,str(Path(__file__).parent/'v5_wip'))
         from preserve_fbx_point_payloads import preserve
-        preservation=preserve(BASELINE_OUT/fbx,OUT/fbx,Path(bpy.utils.system_resource('SCRIPTS'))/'addons_core')
+        preservation=preserve(BASELINE_OUT/fbx,OUT/fbx,Path(bpy.utils.system_resource('SCRIPTS'))/'addons_core',preserve_morphs=args.preserve_baseline_morphs)
         manifest.setdefault('pointPayloadPreservation',[]).append(preservation)
     manifest['variants'].append({'name':'Nib_'+label,'fbx':fbx,'label':{'Natural':'Natural','GripReplacement':'Grip replacement','LegReplacement':'Leg replacement'}[label],'species':'Nib','sourceRestBoundsMeters':bounds,'fur':variant_fur,'deformation':deformation,'morphs':present,'triangles':triangles,'vertices':len(mesh.data.vertices),'preTriangulated':args.triangulate,'skinnedMeshCount':1,'materialSlots':len(mesh.data.materials),'weightedVertices':len(mesh.data.vertices),'maxInfluences':max(len(v.groups) for v in mesh.data.vertices),'bionics':[] if variant=='natural' else [{'region':'left forearm/hand' if variant=='grip' else 'right lower leg/foot','function':'restoration only','upgrade':False}]})
     temporary_mesh=mesh.data

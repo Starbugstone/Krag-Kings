@@ -1,0 +1,35 @@
+{
+  "source": "Nib_Master_v5c_WIP.blend",
+  "sourceSha256": "e56d8a16218562f14f0e1ba6866751abacc27ab32adaa20b347fb5b93a2d8711",
+  "stages": [
+    {
+      "name": "nib-v5b-coordinate-audit",
+      "guardExitCode": null,
+      "peakPrivateMB": 626,
+      "completionMarkerObserved": true
+    },
+    {
+      "name": "nib-native-v5c-generate",
+      "guardExitCode": 0,
+      "peakPrivateMB": 741,
+      "completionMarkerObserved": true
+    },
+    {
+      "name": "nib-native-v5c-diagnostic-face",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2591,
+      "completionMarkerObserved": true
+    }
+  ],
+  "auditExitNote": "First audit session handle was not retained; actual fresh completion marker and Blender quit were observed, but numeric guard exit was not recorded.",
+  "render": "native-v5c-diagnostic-renders/Nib_FaceReview.png",
+  "gatePassed": false,
+  "artisticAcceptance": false,
+  "findings": [
+    "Teeth no longer float below chin; tiny sampled aperture exposure remains and is not evidence of the old displacement.",
+    "Amber irises visible, goggles clear.",
+    "Stretched human mask, human nose, narrow eye apertures and flattened muzzle remain wrong.",
+    "Ear/head fur and ear cartilage still fail; inner pink looks overly clean; scarf looks rigid."
+  ],
+  "priority": "Fix corrupted v4b exported body-morph union before further v5 likeness work; current shared Shoot has forehead spikes."
+}

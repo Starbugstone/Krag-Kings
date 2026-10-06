@@ -1,6 +1,9 @@
 # Isolated Nib v5c review sequence
 
-Status: code prepared; v5c has not been generated, rendered, baked or exported.
+Status: v5c generation and one explicit diagnostic Face render completed; the
+source failed likeness and its strict numeric aperture gate remains false.
+Remaining views, poses, baking and exports have not run. The immediate priority
+is the separate v4b runtime morph-union repair, not promotion of this art pass.
 Current shared v4b triangle exports remain pinned. Launch only after root grants
 the serialized heavy slot, using `benchmark/tools/Run-HeavyTask.ps1 -JobSpec`.
 Every job below uses four Blender threads, an eight-GiB private-memory cap,

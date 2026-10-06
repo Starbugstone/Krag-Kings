@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 
 
-def preserve(source,target,addons,preserve_normals=True):
+def preserve(source,target,addons,preserve_normals=True,preserve_morphs=True):
     package='io_scene_fbx'
     if package not in sys.modules:
         module=types.ModuleType(package);module.__path__=[str(addons/package)];sys.modules[package]=module
@@ -54,9 +54,10 @@ def preserve(source,target,addons,preserve_normals=True):
     def shapes(root):return {n.props[1]:n for n in child(root,b'Objects').elems if n.id==b'Geometry' and n.props[2]==b'Shape'}
     bs,ass=shapes(before),shapes(after)
     if set(bs)!=set(ass):raise ValueError('Morph names differ')
-    for name,node in ass.items():
-        for field in [b'Indexes',b'Vertices']:
-            old=child(node,field);node.elems[node.elems.index(old)]=child(bs[name],field)
+    if preserve_morphs:
+        for name,node in ass.items():
+            for field in [b'Indexes',b'Vertices']:
+                old=child(node,field);node.elems[node.elems.index(old)]=child(bs[name],field)
     methods={'Z':'add_int8','Y':'add_int16','I':'add_int32','L':'add_int64',
              'B':'add_bool','C':'add_char','F':'add_float32','D':'add_float64',
              'R':'add_bytes','S':'add_string','i':'add_int32_array','l':'add_int64_array',
@@ -87,7 +88,8 @@ def preserve(source,target,addons,preserve_normals=True):
             'pointCoordinatesByteIdentical':True,'restoredSourcePointNormalLayer':preserve_normals,
             'sourceNormalMapping':source_normal_mapping.decode() if source_normal_mapping else None,
             'sourceNormalVertexCollapseMaxError':normal_collapse_error,
-            'restoredSparseMorphPayloads':len(bs),'allOtherSerializedPropertiesVerifiedUnchanged':True}
+            'restoredSparseMorphPayloads':len(bs) if preserve_morphs else 0,
+            'targetMorphPayloadsPreserved':not preserve_morphs,'allOtherSerializedPropertiesVerifiedUnchanged':True}
 
 
 if __name__=='__main__':
@@ -98,8 +100,10 @@ if __name__=='__main__':
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--names',nargs='+',default=['Nib_Natural','Nib_GripReplacement','Nib_LegReplacement'])
     parser.add_argument('--morphs-only',action='store_true',help='Leave the target normal layer unchanged; caller must validate it independently')
+    parser.add_argument('--normals-only',action='store_true',help='Preserve new target morph payloads; copy only the validated baseline shading layer')
     args=parser.parse_args();results=[]
+    if args.morphs_only and args.normals_only:raise ValueError('Choose at most one payload subset')
     for name in args.names:
-        result=preserve(args.source_dir/(name+'.fbx'),args.candidate_dir/(name+'.fbx'),args.addons,not args.morphs_only)
+        result=preserve(args.source_dir/(name+'.fbx'),args.candidate_dir/(name+'.fbx'),args.addons,not args.morphs_only,not args.normals_only)
         results.append(result);print(json.dumps(result),flush=True)
     args.output.write_text(json.dumps({'variants':results},indent=2)+'\n',newline='\n')

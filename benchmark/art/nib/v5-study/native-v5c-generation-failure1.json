@@ -1,0 +1,8 @@
+{
+  "status": "Failed before saved v5c source or render; corrected code awaits one bounded retry",
+  "guardExitCode": 2,
+  "peakPrivateMB": 648,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\rebuild_head_v5.py\", line 278, in <module>\n    groom=build_groom(head,collection,rig,groom_materials,args.cinematic)\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\nib_groom_v5.py\", line 208, in build_groom\n    output.append(strand_mesh('Nib v5 auricle clumped coat '+side,clumps,collection,rig,\n                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                              [materials['innerWisps'],materials['outerEar']],'Ear_'+side,cinematic))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\nib_groom_v5.py\", line 105, in strand_mesh\n    root,normal,mid,tip,width,seed=guide[:7];material_index=guide[7] if len(guide)>7 else 0\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 6)\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\rebuild_head_v5.py', exiting.\n",
+  "correction": "Use guide[:6] and optional guide[6] for the six fields plus optional region material index.",
+  "pinnedSharedChanged": false
+}
