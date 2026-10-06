@@ -1,0 +1,50 @@
+{
+  "source": "benchmark/art/nib/restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend",
+  "baked": "benchmark/local/candidates/nib-coherent79-socket-pathfix-v3/pbr/Nib_Runtime_PBR.blend",
+  "outputRoot": "benchmark/local/candidates/nib-coherent79-socket-pathfix-v3/pbr-review",
+  "savedPbrSnapshotReceipt": "benchmark/local/candidates/nib-coherent79-socket-pathfix-v3/receipts/snapshot-pbr.json",
+  "pins": [
+    {
+      "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend",
+      "sha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-pathfix-v3/pbr/Nib_Runtime_PBR.blend",
+      "sha256": "2a3ab4703b62982af81f8a98ae0216f23baa69267a70a0f933f8188a3fdd7dc3"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-pathfix-v3/pbr/pbr-bake-report.json",
+      "sha256": "cbac7b398a8e9bc53d93108fd9111c0fb8536d2c5a5d8211e2f57bf91dfb9022"
+    },
+    {
+      "path": "benchmark/tools/nib/render_review.py",
+      "sha256": "5bfda201bef5742aeb414c8142cfe8459fa83a7eaefadf7b74d15a2eb21caced"
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/review_pbr.py",
+      "sha256": "d4a6366704955acda2f89aa77ec2c56a20ad784c6009fe32f2a5a16be2da883a"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr-review/source/Nib_ExpressionTongue.png",
+      "sha256": "89eacfa4c9287dd79c283aa014c04e9dbf463875ba0b0cddfd8ebec1d7424d76"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr-review/source/Nib_FaceReview.png",
+      "sha256": "82bdbca13baa665ced70839809a5838a03b112f1294874af06b91064c32c0eaf"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr-review/source/Nib_ReviewFront.png",
+      "sha256": "f114b53e583dd30f369a103e214f48332c0df1227d0511f6e8905927c4c069aa"
+    }
+  ],
+  "views": [
+    "Face",
+    "Tongue",
+    "Front"
+  ],
+  "artisticAcceptance": false,
+  "actualRenderingPending": true,
+  "sourceComparison": "Reuse exact original-source views, source/renderer hashes unchanged",
+  "sourceReviewReceipt": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr-review/source/review-receipt.json",
+  "sourceReviewReceiptSha256": "889368e0d36efbef800303bc6a78b235ec8bac31230aac166976751b75689202"
+}

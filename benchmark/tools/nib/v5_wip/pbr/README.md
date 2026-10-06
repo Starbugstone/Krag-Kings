@@ -1,13 +1,13 @@
 # Prepared v5 material transfer
 
-Status: source `1b992ebb…` passed the first actual bake (`d3b682d4…`,
-26 materials/98 maps) and saved structural comparison. Actual reopened rendering
-then failed: all 98 image paths resolved under the old source folder. The first
-magenta frame and process stop are [preserved evidence](../../../../unreal/evidence/nib-coherent79-pbr-reopen-failure/README.md).
-The source, failed file and map bytes remain intact. A separate path-only repair
-is prepared, with explicit no-remap save and reopened image path/hash/color-space/
-dimension checks; its execution and visible parity remain pending. No new FBX or
-engine import has run. Overall art is unaccepted and shared v4b remains unchanged.
+Status: the first source bake (`d3b682d4…`) passed structural checks but
+failed reopened rendering because its texture paths were remapped from the old
+source root. The preserved failure is now followed by an actual path-only
+derivative (`2a3ab470…`): all98 original maps decode with matching hashes/color
+spaces, and rig/action/mesh parity passes. Three matched Face/Tongue/Front views
+retain the source materials without an obvious new regression. See the
+[actual repair and parity evidence](../../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md).
+No new FBX/engine import or art acceptance is implied; shared v4b stays unchanged.
 Use the current [isolated integration plan](../../../unreal/nib_candidate/README.md),
 not historical `v5d-pbr-prepared.job.json` paths.
 
@@ -69,9 +69,9 @@ Run order, after the serialized heavy slot is allocated:
    identified honestly; structural validity does not mean artistic approval.
    Both engines need actual material/pose captures and memory/frame-time checks.
 
-Known limits: sampled material parity, atlas-seam quality and engine appearance
-remain unverified. The bake operator executed, but the first saved-path failure
-blocked visual acceptance. The prepared resolutions are tuning values, not approved asset
+Known limits: the three sampled front views establish limited material parity,
+not all back/UV seams or engine shading. Full variant/clip export and actual
+engine appearance remain unverified. The prepared resolutions are tuning values, not approved asset
 budgets. The proposed regional color treatment does not fix the current face
 shape, flat ear construction or insufficient groom volume.
 

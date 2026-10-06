@@ -1,6 +1,6 @@
 """Resolve a disposable Windows-only TripoSR environment; no inference/install of runtime deps.
 
-Run as a guarded job. Creates only a new task venv/cache, bootstraps a pinned pip,
+Run as a guarded job. Creates only a new task venv/cache, bootstraps pinned packaging tools,
 then downloads dependency metadata/wheels for a dry-run resolution. A separate
 reviewed installation step must consume the resulting hashes and licenses.
 """
@@ -60,7 +60,7 @@ def main():
     bootstrap=[];bootstrap_wheels=[]
     # Explicit build tools avoid an unpinned isolated backend for OmegaConf's
     # pure-Python antlr dependency, which PyPI publishes only as an sdist.
-    for name,version in [('pip','25.3'),('setuptools','75.6.0'),('wheel','0.45.1')]:
+    for name,version in [('pip','25.3'),('setuptools','75.6.0'),('wheel','0.45.1'),('packaging','24.2')]:
         url=f'https://pypi.org/pypi/{name}/{version}/json'
         meta=read_json(url)
         wheel=next(x for x in meta['urls'] if x['filename'].endswith('py3-none-any.whl'))

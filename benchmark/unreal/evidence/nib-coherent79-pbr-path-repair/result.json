@@ -1,0 +1,245 @@
+{
+  "status": "Path repair and limited matched material-transfer review PASS; artistic acceptance remains FAIL",
+  "candidateSha256": "2a3ab4703b62982af81f8a98ae0216f23baa69267a70a0f933f8188a3fdd7dc3",
+  "sourceSha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732",
+  "preservedOriginalFailedPbrSha256": "d3b682d455832dcc153f5e41c7b65c5cdfad1911b5706a1b6b73a426bb1870d2",
+  "mapPayloadsRebaked": false,
+  "byteIdenticalMaps": 98,
+  "reopenedImagesDecoded": 98,
+  "sourceBoneCount": 79,
+  "sourceCanonicalClips": 7,
+  "sampledPosesPerClip": 17,
+  "sourceRigActionsGeometryWeightsMorphsUnchanged": true,
+  "v2Failure": "Validator incorrectly interpreted Blender //textures\\filename as Windows UNC and obtained an empty basename. Actual saved path was correct; v3 normalizes slashes before extracting filename.",
+  "images": [
+    {
+      "view": "Nib_ExpressionTongue",
+      "repairedFile": "Nib_ExpressionTongue.png",
+      "sha256": "760820ceebcf9485fe4b1ddf474d0f2d171bc477f76c04238791e9b891201d4a",
+      "sourceComparison": "benchmark/unreal/evidence/nib-coherent79-pbr-reopen-failure/source/Nib_ExpressionTongue.png",
+      "sourceComparisonSha256": "89eacfa4c9287dd79c283aa014c04e9dbf463875ba0b0cddfd8ebec1d7424d76",
+      "visuallyInspected": true
+    },
+    {
+      "view": "Nib_FaceReview",
+      "repairedFile": "Nib_FaceReview.png",
+      "sha256": "693b115cea0cb2fa67ea5e1dcca1bc88db1ee8449ab98b76ab412b04aa3d751f",
+      "sourceComparison": "benchmark/unreal/evidence/nib-coherent79-pbr-reopen-failure/source/Nib_FaceReview.png",
+      "sourceComparisonSha256": "82bdbca13baa665ced70839809a5838a03b112f1294874af06b91064c32c0eaf",
+      "visuallyInspected": true
+    },
+    {
+      "view": "Nib_ReviewFront",
+      "repairedFile": "Nib_ReviewFront.png",
+      "sha256": "4a3e0addc834dfb7828015389f847d809b080bb45638ee757959aaf025bf2a0d",
+      "sourceComparison": "benchmark/unreal/evidence/nib-coherent79-pbr-reopen-failure/source/Nib_ReviewFront.png",
+      "sourceComparisonSha256": "f114b53e583dd30f369a103e214f48332c0df1227d0511f6e8905927c4c069aa",
+      "visuallyInspected": true
+    }
+  ],
+  "observations": [
+    "No obvious new mismatch in nose pigment, skin mottling, pink/tawny ear regions, pale groom, smooth eyes/goggles, dark-blue tongue or clothing in the three matched views.",
+    "No visible magenta missing-map areas; exact map content and decoding verified separately."
+  ],
+  "limits": [
+    "Three front-facing views do not prove every back/UV seam or future engine shader.",
+    "Facial likeness, anatomy, eye/groom construction and hand/clothing quality remain unaccepted.",
+    "No FBX export or engine import has run for this candidate."
+  ],
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "jobs": [
+    {
+      "stage": "snapshot-source",
+      "version": "v2",
+      "pid": 34640,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v2-snapshot-source.log",
+          "rawSha256": "40bab8a4727b2d8a292b70b07481c1090fc01641193b13b4867bc2bc4cfc9c93",
+          "curatedFile": "v2-snapshot-source.log",
+          "curatedSha256": "c852645f41d4fa27c52d713cfec28d768584833d838340b662ada8aab0abf10a",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v2-snapshot-source.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "v2-snapshot-source.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v2-snapshot-source-memory.csv",
+          "rawSha256": "114a1d84b86ee2bd0c13bfab525f3c594876fd03a20958e46da959aee0e4ba64",
+          "curatedFile": "v2-snapshot-source-memory.csv",
+          "curatedSha256": "49c2386e345783062cd8c0b737675a2f1c8e126de4c0020f26bf5011c32ad37c",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 621.0,
+      "minAvailableMB": 12076.0
+    },
+    {
+      "stage": "repair-paths",
+      "version": "v2",
+      "pid": 25472,
+      "nativeExit": 2,
+      "guardExit": 2,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v2-repair-paths.log",
+          "rawSha256": "79733535971b1b77655eb709ff5ca32819a3526af17e43415c3a9f34a157b59c",
+          "curatedFile": "v2-repair-paths.log",
+          "curatedSha256": "69301fbcc6ef138d1bea5fe17878faf8c3024ea05f6385ce37ecc2499b9e8bde",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v2-repair-paths.stderr.log",
+          "rawSha256": "5fcc1bfe0dbb884126381811fb93dc566c1c509147118f77f2853980dc242c93",
+          "curatedFile": "v2-repair-paths.stderr.log",
+          "curatedSha256": "7df1110c7b1e82f8321c8e75dee670cb7dc9fc0500602e700707f372d496adb3",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v2-repair-paths-memory.csv",
+          "rawSha256": "fe93547cc6ff0e2083206564fb53e8fcb64e2f189e252c5d9c2e11a7a78f1a87",
+          "curatedFile": "v2-repair-paths-memory.csv",
+          "curatedSha256": "c3aafcdef89847fca8c091030d0277d6df42b5c8b7eed7ff63d5bc8b66b33c75",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 620.0,
+      "minAvailableMB": 11852.0
+    },
+    {
+      "stage": "snapshot-source",
+      "version": "v3",
+      "pid": 22000,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-snapshot-source.log",
+          "rawSha256": "060138032989011076510a92dd39aab0e1d9a9753a5e9c6ca94fd8f10b62ca4f",
+          "curatedFile": "v3-snapshot-source.log",
+          "curatedSha256": "ece1c6300acd56795bb05edc3103503fed94e8339339a9d2175b8d19aa26ab40",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-snapshot-source.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "v3-snapshot-source.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v3-snapshot-source-memory.csv",
+          "rawSha256": "49a4ff9f3640b2e7e8abb73faf88241efde2196dc25f922cc45320898c5bca14",
+          "curatedFile": "v3-snapshot-source-memory.csv",
+          "curatedSha256": "4324075a42fcf5880ad3bebf6d6c16b07fce2205e83ecb68902db14b24fe3928",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 621.0,
+      "minAvailableMB": 12203.0
+    },
+    {
+      "stage": "repair-paths",
+      "version": "v3",
+      "pid": 26888,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-repair-paths.log",
+          "rawSha256": "e085fa7ef6c423e1df465df919191fa181170f59d945bd795b61abe8feb555d5",
+          "curatedFile": "v3-repair-paths.log",
+          "curatedSha256": "2501a766111d66294a8d30823434754a79fa857ba3002a5683b28c1d0ef33811",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-repair-paths.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "v3-repair-paths.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v3-repair-paths-memory.csv",
+          "rawSha256": "d34463b5d927ea21acd802327ecf987e629cc903a5b743b50cc46c969f0ca234",
+          "curatedFile": "v3-repair-paths-memory.csv",
+          "curatedSha256": "7e027dbc6fa8e6d9be9bc453d5bb02a23f72f8783ddd820ba15936e16e22f72e",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 1345.0,
+      "minAvailableMB": 11365.0
+    },
+    {
+      "stage": "snapshot-pbr",
+      "version": "v3",
+      "pid": 28688,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-snapshot-pbr.log",
+          "rawSha256": "81663be712ad4d2a1131abf502f87174fcdf037664085355e53824cc4c9c46f9",
+          "curatedFile": "v3-snapshot-pbr.log",
+          "curatedSha256": "1e7798b6d9c226b2a2e391b55f7c441ab5eb3bcfb7a5e40595b1d3e6609f6b96",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-snapshot-pbr.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "v3-snapshot-pbr.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v3-snapshot-pbr-memory.csv",
+          "rawSha256": "56014f85ff75f90c81f596096a4ef3645c8393844b1d8768078417ec9630c64b",
+          "curatedFile": "v3-snapshot-pbr-memory.csv",
+          "curatedSha256": "b93f6263426e9f31cb43ff2f3fa83c9cdc08232f6871177fa72fdf951248a764",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 619.0,
+      "minAvailableMB": 12130.0
+    },
+    {
+      "stage": "review-baked",
+      "version": "v3",
+      "pid": 27308,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-review-baked.log",
+          "rawSha256": "d23dc6be91c2bc145f20618de1f2f6bf40fe783f7d7b37207c8d179d896003f2",
+          "curatedFile": "v3-review-baked.log",
+          "curatedSha256": "21e6989c99a573cf6c8af0703882d7acdbee923d5377fa99ef6e4e75c4099193",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pathfix-v3-review-baked.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "v3-review-baked.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pathfix-v3-review-baked-memory.csv",
+          "rawSha256": "52706baa97ec1b6d3106be5826ff6099ca12ad315c95097c82e5aa491aad4479",
+          "curatedFile": "v3-review-baked-memory.csv",
+          "curatedSha256": "c4134b21d8bccba43657a4c7a166fef82057865b1078c4f0c36e5705f5f3cd1d",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 2906.0,
+      "minAvailableMB": 10129.0
+    }
+  ]
+}

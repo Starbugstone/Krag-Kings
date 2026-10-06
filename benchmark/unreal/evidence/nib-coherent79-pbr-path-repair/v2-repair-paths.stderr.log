@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 160, in <module>
+    main()
+    ~~~~^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 98, in main
+    invoke('benchmark/tools/unreal/nib_candidate/repair_pbr_paths.py',[
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        '--prior-pbr',local(plan['repairBakeRoot']),'--out',output])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 33, in invoke
+    runpy.run_path(str(path), run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\repair_pbr_paths.py", line 48, in <module>
+    report['savedPbrImageValidation'] = save_and_validate_pbr(target, report)
+                                        ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\v5_wip\pbr\portable_save.py", line 86, in save_and_validate_pbr
+    return validate_saved_pbr(target, report)
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\v5_wip\pbr\portable_save.py", line 50, in validate_saved_pbr
+    raise RuntimeError('Reopened image has wrong relative root: ' + image.filepath)
+RuntimeError: Reopened image has wrong relative root: //textures\Nib_Brass_BaseColor.png
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py', exiting.

@@ -45,7 +45,7 @@ def validate_saved_pbr(target, report):
     for image in sorted(images, key=lambda item: item.name):
         if image.source != 'FILE':
             raise RuntimeError('Used image is not a portable file: ' + image.name)
-        name = Path(image.filepath).name
+        name = image.filepath.replace('\\', '/').rsplit('/', 1)[-1]
         if name not in expected or image.filepath.replace('\\', '/') != '//textures/' + name:
             raise RuntimeError('Reopened image has wrong relative root: ' + image.filepath)
         actual = Path(bpy.path.abspath(image.filepath, library=image.library)).resolve()
@@ -76,7 +76,7 @@ def save_and_validate_pbr(target, report):
     expected = expected_maps(report)
     _, images = material_images()
     for image in images:
-        name = Path(image.filepath).name
+        name = image.filepath.replace('\\', '/').rsplit('/', 1)[-1]
         local = target.parent / 'textures' / name
         if name not in expected or not local.is_file() or sha(local) != expected[name]['sha256']:
             raise RuntimeError('Image not covered by the portable content contract: ' + name)

@@ -1,8 +1,8 @@
 ## Latest actual boundary
 
-The original bake and saved structural snapshot pass. Matched source Face/Tongue/Front renders completed, but the first reopened baked frame fails: all98 texture paths resolve under the old source directory. [Actual failure and images](../../../unreal/evidence/nib-coherent79-pbr-reopen-failure/README.md) are preserved. No FBX/engine import occurred.
+The original saved-path failure and v2 Windows-basename validation failure are preserved. Path-only v3 candidate `2a3ab470…` now passes reopened98-map path/hash/color/decode checks and exact79-bone/seven-action/mesh parity. All three matched baked views were inspected against the original source, without an obvious new material-transfer regression. [Actual repair/parity evidence](../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md) contains the images and failures. No maps were rebaked and shared assets remain unchanged.
 
-`plans/nib-coherent79-socket-pathfix-v2` is a new frozen194-input plan. It replaces `bake` with `repair-paths`, preserving the failed file and reusing all98 map bytes. The common save helper disables relative remapping, reopens and decodes each connected image, and validates its path, content hash and color space. A separate source/PBR snapshot still checks exact rig/action/geometry parity before export. This correction is prepared, not yet executed.
+`plans/nib-coherent79-socket-pathfix-v3` is the current frozen194-input plan. Its material stage is `repair-paths`; it preserves the failed original file and copies exact map bytes. Full79 mesh/seven-clip exports and actual engine imports remain required after the next coherent-art handoff. This technical check does not approve the current likeness, anatomy, groom or hand/clothing.
 
 # Isolated coherent Nib PBR/FBX preparation
 
