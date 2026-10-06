@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\macroface_wip\build_macroface.py", line 40, in <module>
+    images={i.name:{'path':str(Path(bpy.path.abspath(i.filepath)).resolve()),'sha256':sha(Path(bpy.path.abspath(i.filepath)).resolve()),'colorspace':i.colorspace_settings.name}for i in bpy.data.images if i.source=='FILE'and i.filepath}
+                                                                                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\macroface_wip\build_macroface.py", line 15, in <lambda>
+    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--source-sha256',required=True);p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--allow-combination-diagnostic',action='store_true');args=p.parse_args(sys.argv[sys.argv.index('--')+1:]);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+                                                                                                                                                                                                                                                                                                                                                ~~~~~~~~~~~~^^
+  File "D:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\pathlib\_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "D:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\textures\\Nib_EarInner_BaseColor.png'
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\macroface_wip\build_macroface.py', exiting.

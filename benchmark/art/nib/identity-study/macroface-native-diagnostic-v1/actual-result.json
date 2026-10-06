@@ -1,0 +1,260 @@
+{
+  "status": "Actual diagnostic source and four reviewed views; technically preserved contracts, artistic acceptance FAILED",
+  "sourceSha256": "ed53df0741441724ea84b09af8124132a1be6f33c1d02a31b9b377ddb53c8903",
+  "candidateSha256": "e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592",
+  "sourceReportSha256": "5caca76858c33c40183c83ab644c72e3ecb9bbc520d64c79149ae73d7aca2c94",
+  "jobs": [
+    {
+      "stage": "generate",
+      "processId": 6464,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1435,
+      "minimumAvailableMB": 10447,
+      "maximumCommitPercent": 57.0,
+      "successMarker": "NIB_MACROFACE_DIAGNOSTIC_SAVED_AND_REOPENED"
+    },
+    {
+      "stage": "neutral",
+      "processId": 25504,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2685,
+      "minimumAvailableMB": 9415,
+      "maximumCommitPercent": 60.0,
+      "successMarker": "NIB_MACROFACE_DIAGNOSTIC_ACTUAL_VIEW_COMPLETE"
+    },
+    {
+      "stage": "profile",
+      "processId": 22484,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2668,
+      "minimumAvailableMB": 9472,
+      "maximumCommitPercent": 60.0,
+      "successMarker": "NIB_MACROFACE_DIAGNOSTIC_ACTUAL_VIEW_COMPLETE"
+    },
+    {
+      "stage": "tongue",
+      "processId": 28272,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2669,
+      "minimumAvailableMB": 9454,
+      "maximumCommitPercent": 60.0,
+      "successMarker": "NIB_MACROFACE_DIAGNOSTIC_ACTUAL_VIEW_COMPLETE"
+    },
+    {
+      "stage": "blink",
+      "processId": 33396,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2676,
+      "minimumAvailableMB": 9453,
+      "maximumCommitPercent": 60.0,
+      "successMarker": "NIB_MACROFACE_DIAGNOSTIC_ACTUAL_VIEW_COMPLETE"
+    }
+  ],
+  "views": {
+    "Neutral": {
+      "imageSha256": "c747dc749e153e07fd4e47d236bba28d2852750b5d5ef2c6988802344331846f",
+      "action": "Idle",
+      "frame": 1,
+      "nonzeroHeadMorphValues": {
+        "BrowRaise_L": 0.13332897424697876,
+        "BrowRaise_R": 0.13332897424697876
+      }
+    },
+    "Profile": {
+      "imageSha256": "5b169cec3710a95f71658c5ed26681b77a65a0d919c0c9259c6ec25300a6e174",
+      "action": "Idle",
+      "frame": 1,
+      "nonzeroHeadMorphValues": {
+        "BrowRaise_L": 0.13332897424697876,
+        "BrowRaise_R": 0.13332897424697876
+      }
+    },
+    "Tongue": {
+      "imageSha256": "9dcd1919c636971452f2f1b008b460f2c0463a2f271dd4d99ca894ad19d06a4e",
+      "action": "FacePerformance",
+      "frame": 103,
+      "nonzeroHeadMorphValues": {
+        "Squint_L": 0.49999356269836426,
+        "Squint_R": 0.49999356269836426,
+        "Smile_L": 1.0,
+        "Smile_R": 0.7199999094009399,
+        "JawOpen": 0.625,
+        "TongueOut": 0.933334231376648
+      }
+    },
+    "Blink": {
+      "imageSha256": "15a9325938ec3f2c68ca6bdd07e180ecf89dde8f30b3c4ed8f18333572243aa0",
+      "action": "FacePerformance",
+      "frame": 16,
+      "nonzeroHeadMorphValues": {
+        "Blink_L": 1.0,
+        "Blink_R": 1.0,
+        "BrowRaise_L": 0.27451249957084656,
+        "BrowRaise_R": 0.27451249957084656,
+        "Frown_L": 0.24019606411457062,
+        "Frown_R": 0.24019606411457062,
+        "LipPress": 0.34312406182289124
+      }
+    }
+  },
+  "passedConstructionEvidence": [
+    "Saved/reopened exact changed mesh hashes and380 unrelated mesh hashes",
+    "Other74 global bind matrices exactly unchanged;5 explicit facial pivots migrated",
+    "All7 canonical action curves unchanged; archival actions also retained",
+    "All70 source image bytes/color spaces decoded after isolated immutable archive remap",
+    "Tongue pose retains open aperture/dark-blue tongue without old skin-curtain regression",
+    "Blink image closes eye openings without visible iris or earlier medial wedge"
+  ],
+  "failures": [
+    "Overall adult character likeness remains far below sheet02",
+    "Smooth projected rodent/human muzzle and abrupt brow/cheek planes",
+    "Straight artificial lid crease and broad puppet-like open-mouth expression",
+    "Flat pink ears, sparse/stiff groom, rigid collar and earlier body/garment issues retained",
+    "Full-weight Smile/JawOpen0.493993mm nonlinear warning remains unresolved; actualTongue is JawOpen.625 not1",
+    "Neutral coordinate ray audit retains oral-visibility flags; actualNeutral is not a quantitative occlusion pass"
+  ],
+  "firstAttemptFailure": "../macroface-preparation-failures/01-shared-map-dependency",
+  "reusableImageHelperStatus": "source_image_archive.py is prepared/syntax checked; current actual generation used the preserved inline equivalent",
+  "requiresMatchingFullMeshAndClipExport": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "artifactHashes": {
+    "Nib_Coherent_Macroface_Diagnostic_v1.blend": {
+      "sha256": "e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592",
+      "bytes": 65127121
+    },
+    "actual-views/Blink.json": {
+      "sha256": "5864aca1ca531dfadd1c1e45149748a73d6720491ef1ef738590c943106bfe16",
+      "bytes": 1926
+    },
+    "actual-views/Blink.png": {
+      "sha256": "15a9325938ec3f2c68ca6bdd07e180ecf89dde8f30b3c4ed8f18333572243aa0",
+      "bytes": 1919148
+    },
+    "actual-views/Neutral.json": {
+      "sha256": "a6c87242cc6a610416667a982aa0a4a769c9b0a0d74eb4dba187e81885f58f94",
+      "bytes": 1868
+    },
+    "actual-views/Neutral.png": {
+      "sha256": "c747dc749e153e07fd4e47d236bba28d2852750b5d5ef2c6988802344331846f",
+      "bytes": 1915134
+    },
+    "actual-views/Profile.json": {
+      "sha256": "1a0631a3d24951ce97ec3a3556e800e1f2be8eb204b098ace437e9fd179a81e8",
+      "bytes": 1868
+    },
+    "actual-views/Profile.png": {
+      "sha256": "5b169cec3710a95f71658c5ed26681b77a65a0d919c0c9259c6ec25300a6e174",
+      "bytes": 1486204
+    },
+    "actual-views/Tongue.json": {
+      "sha256": "1a15660e1c2c489e4c5b04c5a44d8dca6bfdb0a2a18d56c9b2128c541913d31f",
+      "bytes": 1911
+    },
+    "actual-views/Tongue.png": {
+      "sha256": "9dcd1919c636971452f2f1b008b460f2c0463a2f271dd4d99ca894ad19d06a4e",
+      "bytes": 1928108
+    },
+    "executed-recipe/blink-macroface-diagnostic-v1.job.json": {
+      "sha256": "97e6317dea6f2cc59e36593b8e0387e51852385893fa39a0c8cdfa0d1093aeda",
+      "bytes": 1231
+    },
+    "executed-recipe/build_macroface.py": {
+      "sha256": "4b2aaa4f5ff7dc8c40b0fd24a74fc80ca4733e24771384ca20627498fd433092",
+      "bytes": 12625
+    },
+    "executed-recipe/generate-macroface-diagnostic-v1.job.json": {
+      "sha256": "d346d3cafbbfe5bc53e741beb92635dddbb02b40cb8a21199fdc6512fd319014",
+      "bytes": 1190
+    },
+    "executed-recipe/macro_field_candidate.py": {
+      "sha256": "f8b44f2f57080d9e0f723f3607cd165acaac4677b9cece2fb154b228a5dd4842",
+      "bytes": 4552
+    },
+    "executed-recipe/neutral-macroface-diagnostic-v1.job.json": {
+      "sha256": "e7b60e193513be5b3409eadcf14248cd7bd38f44dd4fd4504cacb0291a75cc3f",
+      "bytes": 1241
+    },
+    "executed-recipe/profile-macroface-diagnostic-v1.job.json": {
+      "sha256": "b87b945cbff6d14f0f05c08065b652ea99ae1925cf8eec369d14dc1aa2307c40",
+      "bytes": 1241
+    },
+    "executed-recipe/review_macroface.py": {
+      "sha256": "5809df8c73e4f4044b10d22a08a94a0a27bc9e0857a2cd4b4520d7325f46875b",
+      "bytes": 5628
+    },
+    "executed-recipe/tongue-macroface-diagnostic-v1.job.json": {
+      "sha256": "61e39d2104c2f1efd49d97994e85623d2031eef01722e5b3cb2f57c1d027e8d6",
+      "bytes": 1236
+    },
+    "logs/nib-macroface-diagnostic-v1-blink-memory.csv": {
+      "sha256": "2ccbd08500e5876463b9f3ee5156883c8a0f61e1d1465ec8ba3d261110ae7150",
+      "bytes": 1578
+    },
+    "logs/nib-macroface-diagnostic-v1-blink.log": {
+      "sha256": "4071073c13aa98b3cd023a31ab327deece06a1145c3d94fc67569d2c14d5441c",
+      "bytes": 438
+    },
+    "logs/nib-macroface-diagnostic-v1-blink.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-macroface-diagnostic-v1-generate-memory.csv": {
+      "sha256": "2cd2c5b4117d0ffc73a09734f3f4978efab92bf88997925aa8762ab4eadc5770",
+      "bytes": 1222
+    },
+    "logs/nib-macroface-diagnostic-v1-generate.log": {
+      "sha256": "d0430d20a7e7450c7522756b569078cf8cdfceb6eb3a7105f0a8346ca01899eb",
+      "bytes": 505
+    },
+    "logs/nib-macroface-diagnostic-v1-generate.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-macroface-diagnostic-v1-neutral-memory.csv": {
+      "sha256": "a5583a2636edf12256a496eb2cafeee38185444c95032b81cc05194fb54fd25a",
+      "bytes": 1746
+    },
+    "logs/nib-macroface-diagnostic-v1-neutral.log": {
+      "sha256": "88cd9f4280e1ffa597ad1e44f2f686287db67999c9e997e663b66ce369c781b5",
+      "bytes": 440
+    },
+    "logs/nib-macroface-diagnostic-v1-neutral.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-macroface-diagnostic-v1-profile-memory.csv": {
+      "sha256": "3e87a191556dd59c62d63ca304188176fad9a49ec6eb0d75e97b73b5794d0e02",
+      "bytes": 810
+    },
+    "logs/nib-macroface-diagnostic-v1-profile.log": {
+      "sha256": "1d414b7169f757d05e3f37ffd93853f84bd17a53d28cb757448bba8781a85394",
+      "bytes": 440
+    },
+    "logs/nib-macroface-diagnostic-v1-profile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-macroface-diagnostic-v1-tongue-memory.csv": {
+      "sha256": "36a4d9862f4d98f3e128f0e6d2cace4ef8d2c01adac6e3c7f4485cf1103fb7e5",
+      "bytes": 1512
+    },
+    "logs/nib-macroface-diagnostic-v1-tongue.log": {
+      "sha256": "3ff8004753f320d6317c0b84544ca2fab59576c08125a4515d0db01f791cec4c",
+      "bytes": 439
+    },
+    "logs/nib-macroface-diagnostic-v1-tongue.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "source.json": {
+      "sha256": "5caca76858c33c40183c83ab644c72e3ecb9bbc520d64c79149ae73d7aca2c94",
+      "bytes": 217642
+    }
+  }
+}

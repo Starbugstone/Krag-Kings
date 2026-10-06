@@ -1,0 +1,2524 @@
+{
+  "sha": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+  "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0441fce32f6c836ad6a5a6b2172a22c4c9b0114",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/d0441fce32f6c836ad6a5a6b2172a22c4c9b0114"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26ff1e28fd3bfc438e4b3b88c7d0703026acfaed",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/26ff1e28fd3bfc438e4b3b88c7d0703026acfaed"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b7ebd3c77cdbab5ca5b99760c8d4362a48e84a",
+      "size": 4722,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/67b7ebd3c77cdbab5ca5b99760c8d4362a48e84a"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7faf403d915ca307532bb0eb9cceaf0214e8e5b",
+      "size": 4688,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b7faf403d915ca307532bb0eb9cceaf0214e8e5b"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11da70baf0634103157fd411ad6a400269bfe32",
+      "size": 119,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d11da70baf0634103157fd411ad6a400269bfe32"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79656060de00aa4659ad2c276d5be8830664d544",
+      "size": 1140,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/79656060de00aa4659ad2c276d5be8830664d544"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c0ad06b5dcb3f0ed57ec83bda599c7b00559325",
+      "size": 16212,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/1c0ad06b5dcb3f0ed57ec83bda599c7b00559325"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e751608fcd55622cc1f88f30833bffe3e0aed236",
+      "size": 542,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e751608fcd55622cc1f88f30833bffe3e0aed236"
+    },
+    {
+      "path": "app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74b882bdf87aeec9b3053f9b93190780d4697b07",
+      "size": 20749,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/74b882bdf87aeec9b3053f9b93190780d4697b07"
+    },
+    {
+      "path": "app_texturing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50b28739bc79988afa5e749c7bbdf62a6a23891f",
+      "size": 5183,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/50b28739bc79988afa5e749c7bbdf62a6a23891f"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83caa80c937595c382fed5330080a5d20422e51d",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/83caa80c937595c382fed5330080a5d20422e51d"
+    },
+    {
+      "path": "assets/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4e10b3aa8d5b8e67eead00ac8f11f018ce4fdbe",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/c4e10b3aa8d5b8e67eead00ac8f11f018ce4fdbe"
+    },
+    {
+      "path": "assets/app/basecolor.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7dbeaf6344b4b292757964eca2c6960e7e10a68",
+      "size": 4955,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e7dbeaf6344b4b292757964eca2c6960e7e10a68"
+    },
+    {
+      "path": "assets/app/clay.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e02866a15d1101d1d1cd3f6098c7025c0763cfdb",
+      "size": 4463,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e02866a15d1101d1d1cd3f6098c7025c0763cfdb"
+    },
+    {
+      "path": "assets/app/hdri_city.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43e1c2a54c3bb8aa376613c698268fca0aea9b29",
+      "size": 8771,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/43e1c2a54c3bb8aa376613c698268fca0aea9b29"
+    },
+    {
+      "path": "assets/app/hdri_courtyard.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4261ad62862163d32c22ac38495defdbdf3bebd0",
+      "size": 9375,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4261ad62862163d32c22ac38495defdbdf3bebd0"
+    },
+    {
+      "path": "assets/app/hdri_forest.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7617fe19adf536c12db3f4bf7bc1f6a42f54f8b7",
+      "size": 10637,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7617fe19adf536c12db3f4bf7bc1f6a42f54f8b7"
+    },
+    {
+      "path": "assets/app/hdri_interior.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e00c1d656c94c71402e93067cac64725425754d0",
+      "size": 9273,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e00c1d656c94c71402e93067cac64725425754d0"
+    },
+    {
+      "path": "assets/app/hdri_night.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0423d221069904b0de32c82956675a210e8c375",
+      "size": 6933,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f0423d221069904b0de32c82956675a210e8c375"
+    },
+    {
+      "path": "assets/app/hdri_studio.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f5a4e8d5c5717b6ca4217e6e081e695e2bec264",
+      "size": 6381,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0f5a4e8d5c5717b6ca4217e6e081e695e2bec264"
+    },
+    {
+      "path": "assets/app/hdri_sunrise.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cee3bb066a0f01ddf84b088da31fba1af6648d0",
+      "size": 8403,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9cee3bb066a0f01ddf84b088da31fba1af6648d0"
+    },
+    {
+      "path": "assets/app/hdri_sunset.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd67070912b846b7cb353d13696f4aff4be40831",
+      "size": 8103,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bd67070912b846b7cb353d13696f4aff4be40831"
+    },
+    {
+      "path": "assets/app/normal.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "352e92b5750414ee1c2562d1c719468ce5da2883",
+      "size": 3862,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/352e92b5750414ee1c2562d1c719468ce5da2883"
+    },
+    {
+      "path": "assets/example_image",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38c38f91fc6c72a8e356cdeecf7769961c19aed7",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/38c38f91fc6c72a8e356cdeecf7769961c19aed7"
+    },
+    {
+      "path": "assets/example_image/0a34fae7ba57cb8870df5325b9c30ea474def1b0913c19c596655b85a79fdee4.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4522b5944964827868b5d82a6954472f014c99c5",
+      "size": 108096,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4522b5944964827868b5d82a6954472f014c99c5"
+    },
+    {
+      "path": "assets/example_image/0e4984a9b3765ce80e9853443f9319ecedf90885c74b56cccfebc09402740f8a.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "712c0e0c9054c3d4448f3f91e9bff58b4ffbd52d",
+      "size": 184424,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/712c0e0c9054c3d4448f3f91e9bff58b4ffbd52d"
+    },
+    {
+      "path": "assets/example_image/0f168a4b1b6e96c72e9627c97a212c27a4572250ff58e25703b9d0c2bc74191a.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d565e59280e661dee2d9b5d02b581ef82fe3a6da",
+      "size": 156794,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d565e59280e661dee2d9b5d02b581ef82fe3a6da"
+    },
+    {
+      "path": "assets/example_image/130c2b18f1651a70f8aa15b2c99f8dba29bb943044d92871f9223bd3e989e8b1.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07fa20c0f6ab5a0fb9774f6dcfe163b0f725d4d7",
+      "size": 100332,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/07fa20c0f6ab5a0fb9774f6dcfe163b0f725d4d7"
+    },
+    {
+      "path": "assets/example_image/154c88671d9e8785bd909e9283bc87fb2709ac7ce13890832603ea7533981a46.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c3ac5dfc7a6d30528928e30eca04f36870f33c3",
+      "size": 87452,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/3c3ac5dfc7a6d30528928e30eca04f36870f33c3"
+    },
+    {
+      "path": "assets/example_image/1c359e94f2d699055c78487c90626cf5f1d7460c8fc04e60a286507e5286a28d.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e596271b736281ad07491dd7b7d3544214e2c7aa",
+      "size": 54428,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e596271b736281ad07491dd7b7d3544214e2c7aa"
+    },
+    {
+      "path": "assets/example_image/22a868bac8e62511fccd2bc82ed31ae77ed31ae2a8a149be7150957f11b30c9b.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "679c0e7812fda862201cf811b38f98cf35b7ad1a",
+      "size": 159636,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/679c0e7812fda862201cf811b38f98cf35b7ad1a"
+    },
+    {
+      "path": "assets/example_image/25d412fe36aab9f33913bc9f5e2fb1ff6458bdb286bf14397162c672c95d3697.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79631f5b601783d4874ab39dba6c4f5c83d639b5",
+      "size": 167372,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/79631f5b601783d4874ab39dba6c4f5c83d639b5"
+    },
+    {
+      "path": "assets/example_image/26717a7dad644a5cf7554e8e6d06cf82d3dd9bbae31620b36cc7eb38b8de7ac9.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b833f8e0148026bb6abb5268c52d2498fc3a5084",
+      "size": 207084,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b833f8e0148026bb6abb5268c52d2498fc3a5084"
+    },
+    {
+      "path": "assets/example_image/290af2dd390c95db88a35b8062fdd2ac1a9c28edc6533bc6a26ab2c83c523c61.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9c24a440b08d875b46f77251cc69659b768a703",
+      "size": 109042,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c9c24a440b08d875b46f77251cc69659b768a703"
+    },
+    {
+      "path": "assets/example_image/2bb0932314bae71eec94d0d01a20d3f761ade9664e013b9a9a43c00a2f44163a.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58d29d8c2645bbb95cfa36cdf0775e33c8025f1d",
+      "size": 169506,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/58d29d8c2645bbb95cfa36cdf0775e33c8025f1d"
+    },
+    {
+      "path": "assets/example_image/3723615e3766742ae35b09517152a58c36d62b707bc60d7f76f8a6c922add2c0.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a05f7c67cdac0b63af472d6a5161dda3f2138e69",
+      "size": 115508,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a05f7c67cdac0b63af472d6a5161dda3f2138e69"
+    },
+    {
+      "path": "assets/example_image/3903b87907a6b4947006e6fc7c0c64f40cd98932a02bf0ecf7d6dfae776f3a38.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7411bc618bfd5af692073d70281a857df6932b22",
+      "size": 92512,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7411bc618bfd5af692073d70281a857df6932b22"
+    },
+    {
+      "path": "assets/example_image/39488b45bb4820ff0f31bb07cb8d0a19ebd991adbcb22a10fc89ee41c59219ee.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f00cc2b4562fb026033a555cf95c946a3922246",
+      "size": 76812,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5f00cc2b4562fb026033a555cf95c946a3922246"
+    },
+    {
+      "path": "assets/example_image/454e7d8a30486c0635369936e7bec5677b78ae5f436d0e46af0d533738be859f.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c7d46edc79beb295682b5b76081e2bca21bed5",
+      "size": 140210,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/84c7d46edc79beb295682b5b76081e2bca21bed5"
+    },
+    {
+      "path": "assets/example_image/4bc7abe209c8673dd3766ee4fad14d40acbed02d118e7629f645c60fd77313f1.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f5902c0a9299d3cb45e06c3a63c7372124bd6f3",
+      "size": 167670,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8f5902c0a9299d3cb45e06c3a63c7372124bd6f3"
+    },
+    {
+      "path": "assets/example_image/4dae7ef0224e9305533c4801ce8144d5b3a89d883ca5d35bdb0aebb860ff705f.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "016b45bc63206d4af9f975f564466e5a029b9461",
+      "size": 175080,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/016b45bc63206d4af9f975f564466e5a029b9461"
+    },
+    {
+      "path": "assets/example_image/50b70c5f88a5961d2c786158655d2fce5c3b214b2717956500a66a4e5b5fbe37.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dd5403fcb738876fab2bcd96a9433927d0cf37b",
+      "size": 131488,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2dd5403fcb738876fab2bcd96a9433927d0cf37b"
+    },
+    {
+      "path": "assets/example_image/51b1b31d40476b123db70a51ae0b5f8b8d0db695b616bc2ec4e6324eb178fc14.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9886218a477a5e30c13f35791c595bce242ad991",
+      "size": 136872,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9886218a477a5e30c13f35791c595bce242ad991"
+    },
+    {
+      "path": "assets/example_image/52284bf45134c59a94be150a5b18b9cc3619ada4b30ded8d8d0288383b8c016f.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd577dc36144c94f86316dcefe406618d2fbd4c6",
+      "size": 150020,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fd577dc36144c94f86316dcefe406618d2fbd4c6"
+    },
+    {
+      "path": "assets/example_image/5a020584b95cf3db3b6420e9b09fb93e7c0f4046e61076e5b4c65c63dc1f5837.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b66d25ebc1b05944c57c89c12ec0cf680a504b8",
+      "size": 128572,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/1b66d25ebc1b05944c57c89c12ec0cf680a504b8"
+    },
+    {
+      "path": "assets/example_image/5a6c81d3b2afca4323e4b8b379e2cf06d18371a57fc8c5dc24b57e60e3216690.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c4cb395c276894c65c23aabe374eb777a372c32",
+      "size": 178460,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4c4cb395c276894c65c23aabe374eb777a372c32"
+    },
+    {
+      "path": "assets/example_image/5c80e5e03a3b60b6f03eaf555ba1dafc0e4230c472d7e8c8e2c5ca0a0dfcef10.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79b922128f216216d80ed934f166628f8b01b213",
+      "size": 126914,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/79b922128f216216d80ed934f166628f8b01b213"
+    },
+    {
+      "path": "assets/example_image/61fea9d08e0bd9a067c9f696621dc89165afb5aab318d0701bc025d7863dabf0.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57b1643f63ff877164d30c52da29cd858b7ec122",
+      "size": 110562,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/57b1643f63ff877164d30c52da29cd858b7ec122"
+    },
+    {
+      "path": "assets/example_image/65433d02fc56dae164719ec29cb9646c0383aa1d0e24f0bb592899f08428d68e.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5204c8686e89f0aa8dc43fb268e27f0f73cbe642",
+      "size": 124876,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5204c8686e89f0aa8dc43fb268e27f0f73cbe642"
+    },
+    {
+      "path": "assets/example_image/6b6d89d46d7f53e6409dbe695a9ef8f97c5257e641da35015a78579e903acdad.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f787a298a8ba70c64beff1ad88cc9b96d4d58b9",
+      "size": 95672,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8f787a298a8ba70c64beff1ad88cc9b96d4d58b9"
+    },
+    {
+      "path": "assets/example_image/74fe541e8c8eac8d0b5d8ba144307f6c07ed832cd19bf1d431c74292002028cd.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54a78c84746298a677529c8abe5858d6d734bbe7",
+      "size": 92942,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/54a78c84746298a677529c8abe5858d6d734bbe7"
+    },
+    {
+      "path": "assets/example_image/799ab13a23fe319a6876b8bf48007d0374d514f5e7aa31210e9b2cecfbace082.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f25880aa9515444d43b6e310f7f80bfbf9dcdd62",
+      "size": 169830,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f25880aa9515444d43b6e310f7f80bfbf9dcdd62"
+    },
+    {
+      "path": "assets/example_image/7b540da337f576ffce2adc36c7459b9bbbfd845ab2160a6abbe986f1f906f6cd.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7a521fcdb71be9f5b095bd0c2a3a8b3ed9a32fc",
+      "size": 99630,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b7a521fcdb71be9f5b095bd0c2a3a8b3ed9a32fc"
+    },
+    {
+      "path": "assets/example_image/7baa867b4790b8596ee120f9b171b727fd9428c41980577a518505507c99d8a0.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baba6cefa56ae1fd51b2ef83590c63f7663eaf63",
+      "size": 111992,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/baba6cefa56ae1fd51b2ef83590c63f7663eaf63"
+    },
+    {
+      "path": "assets/example_image/7bd0521d20ee4805d1462a0ffb7d9aacc15180c2b741c9ac42a0d82ad3d340cb.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0de4b3c87163722345c4f7fa9da4ceb1fea3c05c",
+      "size": 111836,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0de4b3c87163722345c4f7fa9da4ceb1fea3c05c"
+    },
+    {
+      "path": "assets/example_image/7d585a8475db078593486367d98b5efa9368a60a3528c555b96026a1a674aa54.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883d922f0d427cd4d55663929170ce68386089f9",
+      "size": 195232,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/883d922f0d427cd4d55663929170ce68386089f9"
+    },
+    {
+      "path": "assets/example_image/7d6f4da4eafcc60243daf6ed210853df394a8bad7e701cadf551e21abcc77869.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2843ff28197eed78665aca57f190dd78504b2205",
+      "size": 191642,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2843ff28197eed78665aca57f190dd78504b2205"
+    },
+    {
+      "path": "assets/example_image/7d7659d5943e85a73a4ffe33c6dd48f5d79601e9bf11b103516f419ce9fbf713.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a90b8acee5d8ea01fb67426f993bf53ed89d627",
+      "size": 108942,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7a90b8acee5d8ea01fb67426f993bf53ed89d627"
+    },
+    {
+      "path": "assets/example_image/80ad7988fc2ce62fc655b21a8950865566ec3f5a8b4398f2502db6414a3e6834.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f268f16adae388fb929c493536f65bcc2f7ff3c0",
+      "size": 117870,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f268f16adae388fb929c493536f65bcc2f7ff3c0"
+    },
+    {
+      "path": "assets/example_image/8aa698c59aab48d4ce69a558d9159107890e3d64e522af404d9635ad0be21f88.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e5c91a2242c2ebbb442d426e18ccd333a316b2d",
+      "size": 100414,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0e5c91a2242c2ebbb442d426e18ccd333a316b2d"
+    },
+    {
+      "path": "assets/example_image/8ce83f6a28910e755902de10918672e77dd23476f43f0f1521c48667de6cea84.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0aa5bea76244a9d7863de5cd2b3f6bce51fad07",
+      "size": 179774,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f0aa5bea76244a9d7863de5cd2b3f6bce51fad07"
+    },
+    {
+      "path": "assets/example_image/8e12cf0977c0476396e7112f04b73d4d73569421173fcb553213d45030bddec3.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be60e0f518d852f5693d0374be92d818008f4642",
+      "size": 114408,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/be60e0f518d852f5693d0374be92d818008f4642"
+    },
+    {
+      "path": "assets/example_image/901d8de4c2011a8502a0decd0adec0fc7418f26165cd52ced64fd44f720353ef.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcee0eec96b0c7377162d6f928228686996fdd03",
+      "size": 103346,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bcee0eec96b0c7377162d6f928228686996fdd03"
+    },
+    {
+      "path": "assets/example_image/95db3c13622788ec311ae4dfa24dd88732c66ca5e340a0bf3465d2a528204037.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b782b40791de98757f426264d7bbf5dc4547b46",
+      "size": 187208,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2b782b40791de98757f426264d7bbf5dc4547b46"
+    },
+    {
+      "path": "assets/example_image/9c306c7bd0e857285f536fb500c0828e5fad4e23c3ceeab92c888c568fa19101.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b82e77b4b977ceb1ac110a1212046c336cc58c2",
+      "size": 115424,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9b82e77b4b977ceb1ac110a1212046c336cc58c2"
+    },
+    {
+      "path": "assets/example_image/T.png",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "187c772a56de21959caa62b1a90b92ddbf18091f",
+      "size": 1718470,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/187c772a56de21959caa62b1a90b92ddbf18091f"
+    },
+    {
+      "path": "assets/example_image/a13d176cd7a7d457b42d1b32223bcff1a45dafbbb42c6a272b97d65ac2f2eb52.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "112d8a226d8e8ae08a02be46ca7e5550d5a2c57f",
+      "size": 103072,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/112d8a226d8e8ae08a02be46ca7e5550d5a2c57f"
+    },
+    {
+      "path": "assets/example_image/a306e2ee5cbc3da45e7db48d75a0cade0bb7eee263a74bc6820c617afaba1302.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf6e730bc8e1d08eb423f740d5558d27a3e903df",
+      "size": 101638,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bf6e730bc8e1d08eb423f740d5558d27a3e903df"
+    },
+    {
+      "path": "assets/example_image/a3d0c28c7d9c6f23adb941c4def2523572c903a94469abcaa7dd1398d28af8f1.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677c79b4d8e1cf644db46812ca7f4afa0ed6352f",
+      "size": 208094,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/677c79b4d8e1cf644db46812ca7f4afa0ed6352f"
+    },
+    {
+      "path": "assets/example_image/a63d2595e10229067b19cb167fe2bdc152dabfd8b62ae45fc1655a4cf66509bc.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5123114a232c8dd3e9acf23002de39cd5b1d5cee",
+      "size": 180294,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5123114a232c8dd3e9acf23002de39cd5b1d5cee"
+    },
+    {
+      "path": "assets/example_image/ab3bb3e183991253ae66c06d44dc6105f3c113a1a1f819ab57a93c6f60b0d32b.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e8a0990dbd5588b6117fe65ba8ba734f1a527af",
+      "size": 180186,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6e8a0990dbd5588b6117fe65ba8ba734f1a527af"
+    },
+    {
+      "path": "assets/example_image/b205f4483c47bd1fec8e229163361e4fdff9f77923c5e968343b8f1dd76b61dc.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe4f2571f9108b76a8d375c1fddb852f375ed066",
+      "size": 130468,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fe4f2571f9108b76a8d375c1fddb852f375ed066"
+    },
+    {
+      "path": "assets/example_image/b358d0eb96a68ac4ba1f2fb6d44ea2225f95fdfbf9cf4e0da08650c3704f1d23.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbff41b5b497cfae37bb7cb5aa7c2a5fb7c5abcd",
+      "size": 106998,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bbff41b5b497cfae37bb7cb5aa7c2a5fb7c5abcd"
+    },
+    {
+      "path": "assets/example_image/bb3190891dd8341c9d6d3d4faa6525c6ecdac19945526904928f6bcd2f3f45f1.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb1adadb2205875776dda59d62a57a253c004bc",
+      "size": 155612,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/dcb1adadb2205875776dda59d62a57a253c004bc"
+    },
+    {
+      "path": "assets/example_image/be7deb26f4fdd2080d4288668af4c39e526564282c579559ff8a4126ca4ed6c1.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fcff55a3912a56f1c8934bfa1a393b43dc92192",
+      "size": 155628,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/3fcff55a3912a56f1c8934bfa1a393b43dc92192"
+    },
+    {
+      "path": "assets/example_image/c2125d086c2529638841f38918ae1defbf33e6796d827253885b4c51e601034f.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ada14ed1a86b0de7efbfbc1d50d32a2dcbc6339a",
+      "size": 206140,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/ada14ed1a86b0de7efbfbc1d50d32a2dcbc6339a"
+    },
+    {
+      "path": "assets/example_image/c3d714bc125f06ce1187799d5ca10736b4064a24c141e627089aad2bdedf7aa5.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213fe683bee2361c517071c56e0a88223189bc57",
+      "size": 151940,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/213fe683bee2361c517071c56e0a88223189bc57"
+    },
+    {
+      "path": "assets/example_image/c9340e744541f310bf89838f652602961d3e5950b31cd349bcbfc7e59e15cd2e.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c33a0bca879e9662758687c8239870c86edd485",
+      "size": 142682,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6c33a0bca879e9662758687c8239870c86edd485"
+    },
+    {
+      "path": "assets/example_image/cd3c309f17eee5ad6afe4e001765893ade20b653f611365c93d158286b4cee96.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6532f7c41f0280243f48ed5fd3de59c96f55de96",
+      "size": 764638,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6532f7c41f0280243f48ed5fd3de59c96f55de96"
+    },
+    {
+      "path": "assets/example_image/cdf996a6cc218918eeb90209891ce306a230e6d9cca2a3d9bbb37c6d7b6bd318.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5d7046ff9002580702bc355be11798cc31ac820",
+      "size": 217676,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a5d7046ff9002580702bc355be11798cc31ac820"
+    },
+    {
+      "path": "assets/example_image/d39c2bd426456bd686de33f924524d18eb47343a5f080826aa3cb8e77de5147b.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc233f0185620d98e5554f092985a62d2f3a5c22",
+      "size": 235370,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/dc233f0185620d98e5554f092985a62d2f3a5c22"
+    },
+    {
+      "path": "assets/example_image/d64c94dffdadf82d46004d11412b5a3b2a17f1b4ddb428477a7ba38652adf973.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e78c05871cf5b9468d3f979c26c3ca86ede9fb23",
+      "size": 153922,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e78c05871cf5b9468d3f979c26c3ca86ede9fb23"
+    },
+    {
+      "path": "assets/example_image/dd4c51c13a996b9eec9c954a45cd5cd457059bf9f030aadde48d88225a9f3321.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b852da0703baeaee573de95f33b9ce366731d8",
+      "size": 79022,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/65b852da0703baeaee573de95f33b9ce366731d8"
+    },
+    {
+      "path": "assets/example_image/e10465728ebea1e055524f97ac5d47cebf82a672f07a05409aa07d826c9d9f37.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a773e5c7e9a3e0078acdf30dbace00de6e22cd18",
+      "size": 86120,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a773e5c7e9a3e0078acdf30dbace00de6e22cd18"
+    },
+    {
+      "path": "assets/example_image/e134444178eae855cfdefb9e5259d076df5e34f780ee44d4ad604483ff69cc74.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6430da99258895d9b6ff5821c54f54c37af8e97e",
+      "size": 167178,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6430da99258895d9b6ff5821c54f54c37af8e97e"
+    },
+    {
+      "path": "assets/example_image/e3c57169ce3d5ce10b3c10acef20b81ca774b54a17aabe74e8aca320c7b07b55.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9492191804b645cb0da9d41344ce8288bd79971c",
+      "size": 182650,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9492191804b645cb0da9d41344ce8288bd79971c"
+    },
+    {
+      "path": "assets/example_image/e4d6b2f3a18c3e0f5146a5b40cda6c95d7f69372b2e741c023e5ec9661deda2b.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "689df6018aabd3e8628abe6f1aa5ff76ce153d8c",
+      "size": 229896,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/689df6018aabd3e8628abe6f1aa5ff76ce153d8c"
+    },
+    {
+      "path": "assets/example_image/e513fcd6c897b249fc4bff54268b4d0bbab6403503ecf3846d92feb892536e5e.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e64acdec6e24981b82c80f35bafb44766ac6cc31",
+      "size": 96118,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e64acdec6e24981b82c80f35bafb44766ac6cc31"
+    },
+    {
+      "path": "assets/example_image/ebd09565cf0b6593aced573dffdfff34915aa359c60ec5dd0b30cd91a7f153c8.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9fb3fb22d84ec9c145210d0933860f6638243ca",
+      "size": 106434,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c9fb3fb22d84ec9c145210d0933860f6638243ca"
+    },
+    {
+      "path": "assets/example_image/ee8ecf658fde9c58830c021b2e30d0d5e7e492ef52febe7192a6c74fbf1b0472.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e161b24444ff28ff80682f63047f615bceac043",
+      "size": 304284,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2e161b24444ff28ff80682f63047f615bceac043"
+    },
+    {
+      "path": "assets/example_image/f351569ddc61116da4a7b929bccdab144d011f56b9603e6e72abea05236160f4.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb2ea881d3914a4b95edc825d0b91f398560644f",
+      "size": 254674,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bb2ea881d3914a4b95edc825d0b91f398560644f"
+    },
+    {
+      "path": "assets/example_image/f5332118a0cda9cd13fe13d4be2b00437e702d1f9af51ebb6b75219a572a6ce9.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e6a55a9ee85b4b35d7f8ad5e979c57e860e882",
+      "size": 186202,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/73e6a55a9ee85b4b35d7f8ad5e979c57e860e882"
+    },
+    {
+      "path": "assets/example_image/f8920788b704531f7a7e875afd7c5c423d62e0a987e9495c63893c2cb4d2b5dc.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f6cbd0f25853ad9a902ff78e5997b118160c43e",
+      "size": 247040,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4f6cbd0f25853ad9a902ff78e5997b118160c43e"
+    },
+    {
+      "path": "assets/example_image/f8a7eafe26a4f3ebd26a9e7d0289e4a40b5a93e9234e94ec3e1071c352acc65a.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e144a545c52dde29deed6188713c7e2a26c9545",
+      "size": 208356,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2e144a545c52dde29deed6188713c7e2a26c9545"
+    },
+    {
+      "path": "assets/example_image/f94e2b76494ce2cf1874611273e5fb3d76b395793bb5647492fa85c2ce0a248b.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c24d0eb0a3d0c2c7ddc69e3ae39f4e9d85b9243",
+      "size": 99576,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9c24d0eb0a3d0c2c7ddc69e3ae39f4e9d85b9243"
+    },
+    {
+      "path": "assets/example_image/fdf979f5227f24b554fca28aa71c351beb7b1be2be236b50bbe07f59e9b8a50c.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90db415387320470e55cc5bdcf62635e7b45726",
+      "size": 89244,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f90db415387320470e55cc5bdcf62635e7b45726"
+    },
+    {
+      "path": "assets/example_texturing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7daf0e7f8d544bcd5ca86c6a70128950f674e43",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/c7daf0e7f8d544bcd5ca86c6a70128950f674e43"
+    },
+    {
+      "path": "assets/example_texturing/image.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a69f81dc924ae63e0c0a4f3212f476280d95439b",
+      "size": 63284,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a69f81dc924ae63e0c0a4f3212f476280d95439b"
+    },
+    {
+      "path": "assets/example_texturing/readme",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f6c799d95a410000c9116e459665339a701c88a",
+      "size": 380,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7f6c799d95a410000c9116e459665339a701c88a"
+    },
+    {
+      "path": "assets/example_texturing/the_forgotten_knight.ply",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b243a8f0496dba00dc8ca3eed8f855dc5fee3bae",
+      "size": 4753123,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b243a8f0496dba00dc8ca3eed8f855dc5fee3bae"
+    },
+    {
+      "path": "assets/hdri",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcd0db4e6c172d4967f7070a4bee13c8ca474f1e",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/dcd0db4e6c172d4967f7070a4bee13c8ca474f1e"
+    },
+    {
+      "path": "assets/hdri/city.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d922066af8bc7270fef6fed376d4e409adad475e",
+      "size": 204863,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d922066af8bc7270fef6fed376d4e409adad475e"
+    },
+    {
+      "path": "assets/hdri/courtyard.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70a0e77a5e94723aa55bcc895eecd404eff8d4a",
+      "size": 255126,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b70a0e77a5e94723aa55bcc895eecd404eff8d4a"
+    },
+    {
+      "path": "assets/hdri/forest.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "846b87d97c675d8861f2470e539f86a079e57e06",
+      "size": 552641,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/846b87d97c675d8861f2470e539f86a079e57e06"
+    },
+    {
+      "path": "assets/hdri/interior.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d40ca2d89fad1c95dbfe415a45a54bb03b6d87",
+      "size": 189416,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/92d40ca2d89fad1c95dbfe415a45a54bb03b6d87"
+    },
+    {
+      "path": "assets/hdri/license.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba5cb8037c9eb45e8c8638c99b39f7160a69214",
+      "size": 722,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/eba5cb8037c9eb45e8c8638c99b39f7160a69214"
+    },
+    {
+      "path": "assets/hdri/night.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a207d99da154ce40180f0651dfdfe084f3e44522",
+      "size": 139959,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a207d99da154ce40180f0651dfdfe084f3e44522"
+    },
+    {
+      "path": "assets/hdri/studio.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baf478da00acddbd70593e36d90146eb15c8939d",
+      "size": 98015,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/baf478da00acddbd70593e36d90146eb15c8939d"
+    },
+    {
+      "path": "assets/hdri/sunrise.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "985a9a56f8455a1c250b97c8c3a392add5e87724",
+      "size": 251877,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/985a9a56f8455a1c250b97c8c3a392add5e87724"
+    },
+    {
+      "path": "assets/hdri/sunset.exr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e86206eec24f2a8c19f89176f20dd671e469e7a3",
+      "size": 171164,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e86206eec24f2a8c19f89176f20dd671e469e7a3"
+    },
+    {
+      "path": "assets/teaser.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40a04319290937aaaeff716904b46ca39ec9298d",
+      "size": 290204,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/40a04319290937aaaeff716904b46ca39ec9298d"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bbbfdd40df2391b4685e3093c45ba4002be7f45",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/4bbbfdd40df2391b4685e3093c45ba4002be7f45"
+    },
+    {
+      "path": "configs/gen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75e45e74e402d1859f6ace9daf87e82aca27bda2",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/75e45e74e402d1859f6ace9daf87e82aca27bda2"
+    },
+    {
+      "path": "configs/gen/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8c5f28640b66911772c953a2b5e79d049c73ad85",
+      "size": 3473,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8c5f28640b66911772c953a2b5e79d049c73ad85"
+    },
+    {
+      "path": "configs/gen/slat_flow_img2shape_dit_1_3B_512_bf16_ft1024.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "997563a974a54e82cbfd1f0ebfc2b3f5a2b69578",
+      "size": 3569,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/997563a974a54e82cbfd1f0ebfc2b3f5a2b69578"
+    },
+    {
+      "path": "configs/gen/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "746c5260a4f6eab23d070ddad3b64762b4d3612b",
+      "size": 4691,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/746c5260a4f6eab23d070ddad3b64762b4d3612b"
+    },
+    {
+      "path": "configs/gen/slat_flow_imgshape2tex_dit_1_3B_512_bf16_ft1024.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d9aba8df1b287e3afc24f7d99f4535abba761c0e",
+      "size": 4724,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d9aba8df1b287e3afc24f7d99f4535abba761c0e"
+    },
+    {
+      "path": "configs/gen/ss_flow_img_dit_1_3B_64_bf16.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fb04dbadb0b45dfc164903c005d9c65f990227d5",
+      "size": 2330,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fb04dbadb0b45dfc164903c005d9c65f990227d5"
+    },
+    {
+      "path": "configs/scvae",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c45d62d32baa5be173b0cf3aedd883f054fd4fb2",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/c45d62d32baa5be173b0cf3aedd883f054fd4fb2"
+    },
+    {
+      "path": "configs/scvae/shape_vae_next_dc_f16c32_fp16.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "916a0d99d0d1ecb709553d83246aa9043e25f6be",
+      "size": 4200,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/916a0d99d0d1ecb709553d83246aa9043e25f6be"
+    },
+    {
+      "path": "configs/scvae/shape_vae_next_dc_f16c32_fp16_ft_512.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "907d87ec2f53d17f2bfbff793b021d4a62dc4135",
+      "size": 4418,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/907d87ec2f53d17f2bfbff793b021d4a62dc4135"
+    },
+    {
+      "path": "configs/scvae/tex_vae_next_dc_f16c32_fp16.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bd1565e37853df70464c058d335484cdcb238434",
+      "size": 4142,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bd1565e37853df70464c058d335484cdcb238434"
+    },
+    {
+      "path": "configs/scvae/tex_vae_next_dc_f16c32_fp16_ft_512.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "76c07c875a3960b3276ba0191b2289af2af2ece1",
+      "size": 4493,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/76c07c875a3960b3276ba0191b2289af2af2ece1"
+    },
+    {
+      "path": "data_toolkit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76f7d0dfc27d3c51a63187a8f0f54367afda93fd",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/76f7d0dfc27d3c51a63187a8f0f54367afda93fd"
+    },
+    {
+      "path": "data_toolkit/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eb09fad15bc9f960a81952631483879d2766a5e",
+      "size": 6102,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0eb09fad15bc9f960a81952631483879d2766a5e"
+    },
+    {
+      "path": "data_toolkit/asset_stats.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e269333f6d9b4d205e93a8443d3f813e3f54b41",
+      "size": 6263,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8e269333f6d9b4d205e93a8443d3f813e3f54b41"
+    },
+    {
+      "path": "data_toolkit/blender_script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94b69b95e92c90d27e152377ad546f5ad49fea11",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/94b69b95e92c90d27e152377ad546f5ad49fea11"
+    },
+    {
+      "path": "data_toolkit/blender_script/dump_mesh.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eaa5d5596a2a8fb94ed041e93588792d2fb58341",
+      "size": 7940,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/eaa5d5596a2a8fb94ed041e93588792d2fb58341"
+    },
+    {
+      "path": "data_toolkit/blender_script/dump_pbr.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "302df2c355f687fc7a8a077d24cf1d37a015150b",
+      "size": 18565,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/302df2c355f687fc7a8a077d24cf1d37a015150b"
+    },
+    {
+      "path": "data_toolkit/blender_script/install_pillow.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b0b0b0c4a7c345ed2c86a80307840805eb64bd47",
+      "size": 142,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b0b0b0c4a7c345ed2c86a80307840805eb64bd47"
+    },
+    {
+      "path": "data_toolkit/blender_script/io_scene_usdz.zip",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f2e2fdbc193c58e8b8860dfcd3a9dbf9dc6905df",
+      "size": 34685,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f2e2fdbc193c58e8b8860dfcd3a9dbf9dc6905df"
+    },
+    {
+      "path": "data_toolkit/blender_script/render_cond.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3f87e23f7a2217619b13e1982c04224aa5bfc13",
+      "size": 15239,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c3f87e23f7a2217619b13e1982c04224aa5bfc13"
+    },
+    {
+      "path": "data_toolkit/build_metadata.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7ffee647385cf0b302a497d9fd602f059cb10cbb",
+      "size": 11308,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7ffee647385cf0b302a497d9fd602f059cb10cbb"
+    },
+    {
+      "path": "data_toolkit/download.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "32acd698f7f92ac133e4041b59ed7a21a06f9284",
+      "size": 3070,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/32acd698f7f92ac133e4041b59ed7a21a06f9284"
+    },
+    {
+      "path": "data_toolkit/dual_grid.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f9a3621a9ea93a24a4658daa0e2430ac922d9363",
+      "size": 8590,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f9a3621a9ea93a24a4658daa0e2430ac922d9363"
+    },
+    {
+      "path": "data_toolkit/dump_mesh.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c3200bfe0b350efb42e03387afd08078f31ee460",
+      "size": 6105,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c3200bfe0b350efb42e03387afd08078f31ee460"
+    },
+    {
+      "path": "data_toolkit/dump_pbr.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aee6084e28b5a8d3e9391fc7e360046ca6163e5c",
+      "size": 6193,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/aee6084e28b5a8d3e9391fc7e360046ca6163e5c"
+    },
+    {
+      "path": "data_toolkit/encode_pbr_latent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2469f7c886376df59221595161795074ca96cc5",
+      "size": 8757,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b2469f7c886376df59221595161795074ca96cc5"
+    },
+    {
+      "path": "data_toolkit/encode_shape_latent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a39bb3c0a6db8c93ada8f3c850adcfa4c712555",
+      "size": 9028,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7a39bb3c0a6db8c93ada8f3c850adcfa4c712555"
+    },
+    {
+      "path": "data_toolkit/encode_ss_latent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90f7fd96ff93bd6f16f29c5c4b0fe827644f03fe",
+      "size": 7931,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/90f7fd96ff93bd6f16f29c5c4b0fe827644f03fe"
+    },
+    {
+      "path": "data_toolkit/render_cond.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8a0dc2b4c8b4f777668578f62b38cb4fe340ecf",
+      "size": 6947,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d8a0dc2b4c8b4f777668578f62b38cb4fe340ecf"
+    },
+    {
+      "path": "data_toolkit/setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3cb14278024d2d6df62448028e086d2bb910efaa",
+      "size": 140,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/3cb14278024d2d6df62448028e086d2bb910efaa"
+    },
+    {
+      "path": "data_toolkit/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4ee3f3e0661aaa0e03562f22a928b34e3958e848",
+      "size": 17335,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4ee3f3e0661aaa0e03562f22a928b34e3958e848"
+    },
+    {
+      "path": "data_toolkit/voxelize_pbr.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23b75e269a6074d5bdab10e5a404995b4dc01742",
+      "size": 8722,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/23b75e269a6074d5bdab10e5a404995b4dc01742"
+    },
+    {
+      "path": "example.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "475a3b17eef04ab527385f2c8df922dc302fd84e",
+      "size": 1584,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/475a3b17eef04ab527385f2c8df922dc302fd84e"
+    },
+    {
+      "path": "example_texturing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cb5ffcde46103d6c940f45b18dd396fa2a920f0",
+      "size": 611,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5cb5ffcde46103d6c940f45b18dd396fa2a920f0"
+    },
+    {
+      "path": "o-voxel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "031a93a91962f698e71029d59b745f8e134957fa",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/031a93a91962f698e71029d59b745f8e134957fa"
+    },
+    {
+      "path": "o-voxel/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dba0bf9e3ff5ac02a9c780338fce1a0d05ecb1b",
+      "size": 7212,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0dba0bf9e3ff5ac02a9c780338fce1a0d05ecb1b"
+    },
+    {
+      "path": "o-voxel/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1a5402d172e77e27daffb32ba876b72a314e8d3",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/a1a5402d172e77e27daffb32ba876b72a314e8d3"
+    },
+    {
+      "path": "o-voxel/assets/overview.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e8fb75db9f69796ec557a2d4584293c29a5ded8",
+      "size": 391770,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0e8fb75db9f69796ec557a2d4584293c29a5ded8"
+    },
+    {
+      "path": "o-voxel/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fa72f43511ad0c1e5eb00f90a25d2cb801aca17",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/0fa72f43511ad0c1e5eb00f90a25d2cb801aca17"
+    },
+    {
+      "path": "o-voxel/examples/mesh2ovox.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54d0c9b9d94941bd3d6854002264d636f64a1338",
+      "size": 2269,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/54d0c9b9d94941bd3d6854002264d636f64a1338"
+    },
+    {
+      "path": "o-voxel/examples/ovox2glb.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "230631084997d686e9c66468d3314e8c142571a3",
+      "size": 1418,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/230631084997d686e9c66468d3314e8c142571a3"
+    },
+    {
+      "path": "o-voxel/examples/ovox2mesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb5a6be5a91c6af9b8152051a1badcbd7fb73074",
+      "size": 1103,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/eb5a6be5a91c6af9b8152051a1badcbd7fb73074"
+    },
+    {
+      "path": "o-voxel/examples/render_ovox.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4a27c09c7fda6183dca42099e78b375f29f2515",
+      "size": 1014,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a4a27c09c7fda6183dca42099e78b375f29f2515"
+    },
+    {
+      "path": "o-voxel/examples/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9a8a6a26271d6fd37d53b039d5e8bedb8548280",
+      "size": 836,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f9a8a6a26271d6fd37d53b039d5e8bedb8548280"
+    },
+    {
+      "path": "o-voxel/o_voxel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee528b7e9dd8e310f2c7f0b9dd66e1aafdd8fe51",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/ee528b7e9dd8e310f2c7f0b9dd66e1aafdd8fe51"
+    },
+    {
+      "path": "o-voxel/o_voxel/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263b753ebc61659e08715a9c329c1449a28769f9",
+      "size": 84,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/263b753ebc61659e08715a9c329c1449a28769f9"
+    },
+    {
+      "path": "o-voxel/o_voxel/convert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4dad21b724596247bc1a311c39d85b87b80805a9",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/4dad21b724596247bc1a311c39d85b87b80805a9"
+    },
+    {
+      "path": "o-voxel/o_voxel/convert/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7b6d8c01e90897af20dbe751527f1854e81ecc1",
+      "size": 63,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f7b6d8c01e90897af20dbe751527f1854e81ecc1"
+    },
+    {
+      "path": "o-voxel/o_voxel/convert/flexible_dual_grid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cf1397e58e42b9d66b2230f5b3d55fee708514d",
+      "size": 14939,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7cf1397e58e42b9d66b2230f5b3d55fee708514d"
+    },
+    {
+      "path": "o-voxel/o_voxel/convert/volumetic_attr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77c71c1f6ba0176d0286b7906c67279097395511",
+      "size": 30010,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/77c71c1f6ba0176d0286b7906c67279097395511"
+    },
+    {
+      "path": "o-voxel/o_voxel/io",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90f2a5227688cf478151d8ab07d085620079966b",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/90f2a5227688cf478151d8ab07d085620079966b"
+    },
+    {
+      "path": "o-voxel/o_voxel/io/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f29541bbbf8ef8275a31b45f7b0144d366ba1250",
+      "size": 1336,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f29541bbbf8ef8275a31b45f7b0144d366ba1250"
+    },
+    {
+      "path": "o-voxel/o_voxel/io/npz.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "900904555061aca9fbc8f941c70112d0a663a804",
+      "size": 1171,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/900904555061aca9fbc8f941c70112d0a663a804"
+    },
+    {
+      "path": "o-voxel/o_voxel/io/ply.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e7fb82db86760eeb3e524e3f2cce93f9533414",
+      "size": 2232,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c8e7fb82db86760eeb3e524e3f2cce93f9533414"
+    },
+    {
+      "path": "o-voxel/o_voxel/io/vxz.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc34cda8eeee8633ddb107f79edbcdb4947aa430",
+      "size": 13151,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/bc34cda8eeee8633ddb107f79edbcdb4947aa430"
+    },
+    {
+      "path": "o-voxel/o_voxel/postprocess.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce82271bab56dc757b3cd45ceea4f88d1bea551",
+      "size": 13770,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/1ce82271bab56dc757b3cd45ceea4f88d1bea551"
+    },
+    {
+      "path": "o-voxel/o_voxel/rasterize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c27134add4ba1935e03308d82a06ee5e77faa5c3",
+      "size": 3535,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c27134add4ba1935e03308d82a06ee5e77faa5c3"
+    },
+    {
+      "path": "o-voxel/o_voxel/serialize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "452b5dc89e082cacabb7b12ed3bd443233e0bf80",
+      "size": 2574,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/452b5dc89e082cacabb7b12ed3bd443233e0bf80"
+    },
+    {
+      "path": "o-voxel/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b13d4322c69d02cdf32b2bbf5f88d5f49eeff32",
+      "size": 639,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6b13d4322c69d02cdf32b2bbf5f88d5f49eeff32"
+    },
+    {
+      "path": "o-voxel/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91cb5cecd3e230e8e44adb6c9c742b9c47a6740a",
+      "size": 1855,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/91cb5cecd3e230e8e44adb6c9c742b9c47a6740a"
+    },
+    {
+      "path": "o-voxel/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84a1fc3786db4ece24fb6e0f4fa927c6cd9587e8",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/84a1fc3786db4ece24fb6e0f4fa927c6cd9587e8"
+    },
+    {
+      "path": "o-voxel/src/convert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7048e755c00fdc96046127250a929dccd2b3cad",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/a7048e755c00fdc96046127250a929dccd2b3cad"
+    },
+    {
+      "path": "o-voxel/src/convert/api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70551c896b1eea7de24375a051ecfa38badf0b5",
+      "size": 7124,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b70551c896b1eea7de24375a051ecfa38badf0b5"
+    },
+    {
+      "path": "o-voxel/src/convert/flexible_dual_grid.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad89edc01d1efb9d2644f251560c60de243cb1dd",
+      "size": 33739,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/ad89edc01d1efb9d2644f251560c60de243cb1dd"
+    },
+    {
+      "path": "o-voxel/src/convert/volumetic_attr.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64c3d0984500128fbd82a68341a47e8acd6fb6cf",
+      "size": 36283,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/64c3d0984500128fbd82a68341a47e8acd6fb6cf"
+    },
+    {
+      "path": "o-voxel/src/ext.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2ac946de4ccc50206c104899cb7e9d59c76177b",
+      "size": 2539,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e2ac946de4ccc50206c104899cb7e9d59c76177b"
+    },
+    {
+      "path": "o-voxel/src/hash",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3bd07634ac8fa10f13b11608805403c31a5bb05",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/d3bd07634ac8fa10f13b11608805403c31a5bb05"
+    },
+    {
+      "path": "o-voxel/src/hash/api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7693667b591c2c3f1fd871ba4a57020530aec755",
+      "size": 3528,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7693667b591c2c3f1fd871ba4a57020530aec755"
+    },
+    {
+      "path": "o-voxel/src/hash/hash.cu",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c56d2239f71242f200d43f11f30b341e5e43139d",
+      "size": 16644,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c56d2239f71242f200d43f11f30b341e5e43139d"
+    },
+    {
+      "path": "o-voxel/src/hash/hash.cuh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7bcf1b57c16fec09374d39f63288a947530403f",
+      "size": 2173,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b7bcf1b57c16fec09374d39f63288a947530403f"
+    },
+    {
+      "path": "o-voxel/src/io",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3caa2da9790af2944f23db481077c7489f06938e",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/3caa2da9790af2944f23db481077c7489f06938e"
+    },
+    {
+      "path": "o-voxel/src/io/api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "116eb177a26a1ce698a25bf047fd419cf05d82b4",
+      "size": 3271,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/116eb177a26a1ce698a25bf047fd419cf05d82b4"
+    },
+    {
+      "path": "o-voxel/src/io/filter_neighbor.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3af406eb5f5ae5a54fa7a572c601322a0c72e577",
+      "size": 7024,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/3af406eb5f5ae5a54fa7a572c601322a0c72e577"
+    },
+    {
+      "path": "o-voxel/src/io/filter_parent.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0beadaf4cb27d398388e6b6e6fde9e8357bacd3d",
+      "size": 4910,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0beadaf4cb27d398388e6b6e6fde9e8357bacd3d"
+    },
+    {
+      "path": "o-voxel/src/io/lut.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d790ae9b29074e52d0c070aa05005e1928474214",
+      "size": 947,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d790ae9b29074e52d0c070aa05005e1928474214"
+    },
+    {
+      "path": "o-voxel/src/io/svo.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6775284d130ca902ff119e12fdf9198eae504e18",
+      "size": 4172,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6775284d130ca902ff119e12fdf9198eae504e18"
+    },
+    {
+      "path": "o-voxel/src/rasterize",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f95ad54169c7d814c4eb4f8a29d93ec7df00a2c3",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/f95ad54169c7d814c4eb4f8a29d93ec7df00a2c3"
+    },
+    {
+      "path": "o-voxel/src/rasterize/api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26212fd9c5bf8e61c2315027edbc6be4eb78428d",
+      "size": 1743,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/26212fd9c5bf8e61c2315027edbc6be4eb78428d"
+    },
+    {
+      "path": "o-voxel/src/rasterize/auxiliary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4abfbc6c4792c21a59a2a637b49066946ae1586",
+      "size": 8391,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f4abfbc6c4792c21a59a2a637b49066946ae1586"
+    },
+    {
+      "path": "o-voxel/src/rasterize/config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf4bab2805019d65dd1ed203096693bc70cfb60",
+      "size": 76,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0bf4bab2805019d65dd1ed203096693bc70cfb60"
+    },
+    {
+      "path": "o-voxel/src/rasterize/rasterize.cu",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc7291d0ded215fd94458a27e48a3bc9c787f792",
+      "size": 13753,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/cc7291d0ded215fd94458a27e48a3bc9c787f792"
+    },
+    {
+      "path": "o-voxel/src/serialize",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fb70f72c7612de3df2e0e23171113185b21a05d",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/4fb70f72c7612de3df2e0e23171113185b21a05d"
+    },
+    {
+      "path": "o-voxel/src/serialize/api.cu",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a973bc4543ddb5751112006b9349769a0040872",
+      "size": 5422,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8a973bc4543ddb5751112006b9349769a0040872"
+    },
+    {
+      "path": "o-voxel/src/serialize/api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70da702f3776354a7984169798ca9fdbf9d2d1a9",
+      "size": 2923,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/70da702f3776354a7984169798ca9fdbf9d2d1a9"
+    },
+    {
+      "path": "o-voxel/src/serialize/hilbert.cu",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715b0569d1e0c803cf2742475b47b3ef07de25cd",
+      "size": 5424,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/715b0569d1e0c803cf2742475b47b3ef07de25cd"
+    },
+    {
+      "path": "o-voxel/src/serialize/hilbert.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f5bc000474361045cdb4a2202b41045d4a0a03",
+      "size": 1652,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/55f5bc000474361045cdb4a2202b41045d4a0a03"
+    },
+    {
+      "path": "o-voxel/src/serialize/z_order.cu",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4ae1181fee2ffed19576ac3b38e6f2d39533d2e",
+      "size": 2346,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d4ae1181fee2ffed19576ac3b38e6f2d39533d2e"
+    },
+    {
+      "path": "o-voxel/src/serialize/z_order.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ae9c22ccac43fb78609795c7cbd54b8e822cd7a",
+      "size": 1652,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5ae9c22ccac43fb78609795c7cbd54b8e822cd7a"
+    },
+    {
+      "path": "o-voxel/third_party",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e57b6f7fdd5c882da5a95b23f637afb376ea7a7",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/5e57b6f7fdd5c882da5a95b23f637afb376ea7a7"
+    },
+    {
+      "path": "o-voxel/third_party/eigen",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "21e4582d1739107337a03460c81412981130373e"
+    },
+    {
+      "path": "setup.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e09e2b1d8bd3f2e89b87c211ebbaa0b3ce881d8d",
+      "size": 4506,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e09e2b1d8bd3f2e89b87c211ebbaa0b3ce881d8d"
+    },
+    {
+      "path": "train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "258be3c4126c16c92e6a8370900b0d4d342bfeab",
+      "size": 5836,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/258be3c4126c16c92e6a8370900b0d4d342bfeab"
+    },
+    {
+      "path": "trellis2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27e6bd709351f9f336efd8f14169fdf1f3100bda",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/27e6bd709351f9f336efd8f14169fdf1f3100bda"
+    },
+    {
+      "path": "trellis2/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20d240afc9c26a21aee76954628b3d4ef9a1ccbd",
+      "size": 141,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/20d240afc9c26a21aee76954628b3d4ef9a1ccbd"
+    },
+    {
+      "path": "trellis2/datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7994a2dbfb0320b30fd827d211dfade0b3deb9de",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/7994a2dbfb0320b30fd827d211dfade0b3deb9de"
+    },
+    {
+      "path": "trellis2/datasets/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8f7d9487d8d83f085146d037ccd5291bfb9419b",
+      "size": 1697,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b8f7d9487d8d83f085146d037ccd5291bfb9419b"
+    },
+    {
+      "path": "trellis2/datasets/components.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c593cee959ed91de1c3c11b8930b98ec0967582",
+      "size": 7433,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6c593cee959ed91de1c3c11b8930b98ec0967582"
+    },
+    {
+      "path": "trellis2/datasets/flexi_dual_grid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f870d83bfd3d51856943e1dec215bbf7d5b1924b",
+      "size": 6774,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f870d83bfd3d51856943e1dec215bbf7d5b1924b"
+    },
+    {
+      "path": "trellis2/datasets/sparse_structure_latent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "498e1158c429f0eed723c36f263a56719e9124fa",
+      "size": 5876,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/498e1158c429f0eed723c36f263a56719e9124fa"
+    },
+    {
+      "path": "trellis2/datasets/sparse_voxel_pbr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "053cc729678b844b595d68e92305ed055e8bea8e",
+      "size": 11828,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/053cc729678b844b595d68e92305ed055e8bea8e"
+    },
+    {
+      "path": "trellis2/datasets/structured_latent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e18a275830cd331664f5e21bfcd5306d70079a1",
+      "size": 8280,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/2e18a275830cd331664f5e21bfcd5306d70079a1"
+    },
+    {
+      "path": "trellis2/datasets/structured_latent_shape.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c58611957b1dcb16b0d9c368a2fa7e88ddb63be5",
+      "size": 3737,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c58611957b1dcb16b0d9c368a2fa7e88ddb63be5"
+    },
+    {
+      "path": "trellis2/datasets/structured_latent_svpbr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a43a87b65deee7091c1506cc3a6c4e24a0a4f8",
+      "size": 12642,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c2a43a87b65deee7091c1506cc3a6c4e24a0a4f8"
+    },
+    {
+      "path": "trellis2/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a19d332b7551a6aab3251ddddb03c74f55cfa63d",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/a19d332b7551a6aab3251ddddb03c74f55cfa63d"
+    },
+    {
+      "path": "trellis2/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4fed035ed7c1f6352d93e9787f1aaed072876d5",
+      "size": 2836,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d4fed035ed7c1f6352d93e9787f1aaed072876d5"
+    },
+    {
+      "path": "trellis2/models/sc_vaes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f691d65fc35e09709de601fc922a0629a5d15ae",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/7f691d65fc35e09709de601fc922a0629a5d15ae"
+    },
+    {
+      "path": "trellis2/models/sc_vaes/fdg_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0209e690ea6f4096dd42a4d137dbc0bee1f51367",
+      "size": 3820,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0209e690ea6f4096dd42a4d137dbc0bee1f51367"
+    },
+    {
+      "path": "trellis2/models/sc_vaes/sparse_unet_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9902a155a8a85c5c616a4503be92f43f6fdde27",
+      "size": 19879,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b9902a155a8a85c5c616a4503be92f43f6fdde27"
+    },
+    {
+      "path": "trellis2/models/sparse_elastic_mixin.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66d204c89bedabc2afd1795cdfc6f5d58a6b1ac0",
+      "size": 882,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/66d204c89bedabc2afd1795cdfc6f5d58a6b1ac0"
+    },
+    {
+      "path": "trellis2/models/sparse_structure_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c976656e389ef31664d1c2327cf159ee6501633",
+      "size": 9973,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/6c976656e389ef31664d1c2327cf159ee6501633"
+    },
+    {
+      "path": "trellis2/models/sparse_structure_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e09136cf294c4c1b47b0f09fa6ee57bad2166d",
+      "size": 9886,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c3e09136cf294c4c1b47b0f09fa6ee57bad2166d"
+    },
+    {
+      "path": "trellis2/models/structured_latent_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9378ff777033ae064d4f1fa5265de41c09c560d5",
+      "size": 7966,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9378ff777033ae064d4f1fa5265de41c09c560d5"
+    },
+    {
+      "path": "trellis2/modules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d49a12c3a3bac1a19ed9affeeb14f8e81abf36d",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/7d49a12c3a3bac1a19ed9affeeb14f8e81abf36d"
+    },
+    {
+      "path": "trellis2/modules/attention",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f096c5ad309254195ddbf56ce2063f737a5e065",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/6f096c5ad309254195ddbf56ce2063f737a5e065"
+    },
+    {
+      "path": "trellis2/modules/attention/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90e901f9b942e18aaa5022b3ea167784e52d42a",
+      "size": 68,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e90e901f9b942e18aaa5022b3ea167784e52d42a"
+    },
+    {
+      "path": "trellis2/modules/attention/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6d5180cfc92d0121aa9edd8b7f07f72c4f7ad9f",
+      "size": 724,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a6d5180cfc92d0121aa9edd8b7f07f72c4f7ad9f"
+    },
+    {
+      "path": "trellis2/modules/attention/full_attn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2f9b2af8dfb90f43298042f607c16258516df4c",
+      "size": 5389,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e2f9b2af8dfb90f43298042f607c16258516df4c"
+    },
+    {
+      "path": "trellis2/modules/attention/modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "492784c7ba8f572c4820b604f51c924ed564ab00",
+      "size": 4208,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/492784c7ba8f572c4820b604f51c924ed564ab00"
+    },
+    {
+      "path": "trellis2/modules/attention/rope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cf6c5b321c2417443ffad3804df97ff5fbe6658",
+      "size": 1986,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/1cf6c5b321c2417443ffad3804df97ff5fbe6658"
+    },
+    {
+      "path": "trellis2/modules/image_feature_extractor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3cb515ad1152752b09fef9999cc5ff44bd885f7",
+      "size": 4460,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c3cb515ad1152752b09fef9999cc5ff44bd885f7"
+    },
+    {
+      "path": "trellis2/modules/norm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78675d0f850d2e34d3c90b5d6bc14db708e5b400",
+      "size": 915,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/78675d0f850d2e34d3c90b5d6bc14db708e5b400"
+    },
+    {
+      "path": "trellis2/modules/sparse",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1d2a18a164acc6344931561e91b46bbc7529e16",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/a1d2a18a164acc6344931561e91b46bbc7529e16"
+    },
+    {
+      "path": "trellis2/modules/sparse/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73f232abc6f31cafeac4172a96150906ba20b7b",
+      "size": 2234,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e73f232abc6f31cafeac4172a96150906ba20b7b"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2537d2c3a336f39573dbb7d348cba9cc7c6c740",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/d2537d2c3a336f39573dbb7d348cba9cc7c6c740"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18ab3cc0a2c96b430009c3b709db3eb28ce7ccc0",
+      "size": 77,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/18ab3cc0a2c96b430009c3b709db3eb28ce7ccc0"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention/full_attn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eb74d24c37c1951b579ecce5fabe97c4f0d02bf",
+      "size": 9645,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4eb74d24c37c1951b579ecce5fabe97c4f0d02bf"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention/modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d762b4b2e01335d26d856b3fe82eca31a2735123",
+      "size": 6333,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d762b4b2e01335d26d856b3fe82eca31a2735123"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention/rope.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb877291f3430f2cff4329a67b3592e0e3c3f137",
+      "size": 2626,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fb877291f3430f2cff4329a67b3592e0e3c3f137"
+    },
+    {
+      "path": "trellis2/modules/sparse/attention/windowed_attn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "043078899833e52ebf29d3ba1898cbd90e03f1d4",
+      "size": 9227,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/043078899833e52ebf29d3ba1898cbd90e03f1d4"
+    },
+    {
+      "path": "trellis2/modules/sparse/basic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880973b8dd6bdafcfca4ca7c529308d2ef2ad266",
+      "size": 31307,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/880973b8dd6bdafcfca4ca7c529308d2ef2ad266"
+    },
+    {
+      "path": "trellis2/modules/sparse/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5f4d532316efcf989ab70b9b5218ba962bafe07",
+      "size": 1255,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a5f4d532316efcf989ab70b9b5218ba962bafe07"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67946ee1d6d962ed39d20f2d8f45d0d7d9ad66f9",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/67946ee1d6d962ed39d20f2d8f45d0d7d9ad66f9"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7f5911f2cb266f93e52cfcdea9f63f39be172c6",
+      "size": 73,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a7f5911f2cb266f93e52cfcdea9f63f39be172c6"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac0848906703e7811300235e32d14e50ad5aac51",
+      "size": 344,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/ac0848906703e7811300235e32d14e50ad5aac51"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/conv.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c7d40707a24e26ba2a11a90c41dbc9eb11e7ab2",
+      "size": 1346,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4c7d40707a24e26ba2a11a90c41dbc9eb11e7ab2"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/conv_flex_gemm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d25619475e4bf39307f97d47b3828b19c48cd7da",
+      "size": 2681,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d25619475e4bf39307f97d47b3828b19c48cd7da"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/conv_spconv.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f709708d4f8ee3bb98930c68b28e7f3b897fc591",
+      "size": 3370,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f709708d4f8ee3bb98930c68b28e7f3b897fc591"
+    },
+    {
+      "path": "trellis2/modules/sparse/conv/conv_torchsparse.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5234bd15553aa8d71df280672475a898ffe56af7",
+      "size": 1425,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5234bd15553aa8d71df280672475a898ffe56af7"
+    },
+    {
+      "path": "trellis2/modules/sparse/linear.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44317709ab16b17fa0132fd48e48519ea0ef9ea9",
+      "size": 387,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/44317709ab16b17fa0132fd48e48519ea0ef9ea9"
+    },
+    {
+      "path": "trellis2/modules/sparse/nonlinearity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "950e5c03c997905162e39fec701db49a2640700c",
+      "size": 875,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/950e5c03c997905162e39fec701db49a2640700c"
+    },
+    {
+      "path": "trellis2/modules/sparse/norm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95711203f0adbae1c7ea845e2500a3823997d652",
+      "size": 2216,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/95711203f0adbae1c7ea845e2500a3823997d652"
+    },
+    {
+      "path": "trellis2/modules/sparse/spatial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32966b6af21b0d5282d812b0c34e93e096429387",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/32966b6af21b0d5282d812b0c34e93e096429387"
+    },
+    {
+      "path": "trellis2/modules/sparse/spatial/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27425f165d271fd16a2c6f7b7684d4a81202ebd",
+      "size": 52,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e27425f165d271fd16a2c6f7b7684d4a81202ebd"
+    },
+    {
+      "path": "trellis2/modules/sparse/spatial/basic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaeb8afefd889d8a94812c579383e528b8b56699",
+      "size": 4279,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/eaeb8afefd889d8a94812c579383e528b8b56699"
+    },
+    {
+      "path": "trellis2/modules/sparse/spatial/spatial2channel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "577f36d208726f64422f8774c3556a1d643f1e2d",
+      "size": 4417,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/577f36d208726f64422f8774c3556a1d643f1e2d"
+    },
+    {
+      "path": "trellis2/modules/sparse/transformer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "785cedca22c9b4846087254436e2005bfa389387",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/785cedca22c9b4846087254436e2005bfa389387"
+    },
+    {
+      "path": "trellis2/modules/sparse/transformer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08b0d4e5bc24060a2cdc8df75d06dce122972bd",
+      "size": 46,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b08b0d4e5bc24060a2cdc8df75d06dce122972bd"
+    },
+    {
+      "path": "trellis2/modules/sparse/transformer/blocks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1ec600404fba490894872109d44be6b6477186",
+      "size": 4848,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9d1ec600404fba490894872109d44be6b6477186"
+    },
+    {
+      "path": "trellis2/modules/sparse/transformer/modulated.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e616932ef7714f0ec8ae3add655411971978eb54",
+      "size": 6147,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e616932ef7714f0ec8ae3add655411971978eb54"
+    },
+    {
+      "path": "trellis2/modules/spatial.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79e268d36c2ba49b0275744022a1a1e19983dae3",
+      "size": 1763,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/79e268d36c2ba49b0275744022a1a1e19983dae3"
+    },
+    {
+      "path": "trellis2/modules/transformer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d20ee1d837c262977a6ff92c5e8a255cfc0eb410",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/d20ee1d837c262977a6ff92c5e8a255cfc0eb410"
+    },
+    {
+      "path": "trellis2/modules/transformer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08b0d4e5bc24060a2cdc8df75d06dce122972bd",
+      "size": 46,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b08b0d4e5bc24060a2cdc8df75d06dce122972bd"
+    },
+    {
+      "path": "trellis2/modules/transformer/blocks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb6f5eb5462fec62aa5edc062104f643fca03bfa",
+      "size": 6287,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fb6f5eb5462fec62aa5edc062104f643fca03bfa"
+    },
+    {
+      "path": "trellis2/modules/transformer/modulated.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d71e584a4e137e88010023981271b2906efa30f",
+      "size": 6287,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0d71e584a4e137e88010023981271b2906efa30f"
+    },
+    {
+      "path": "trellis2/modules/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d92d7d5b0ab07972fb6e0397c9c8e525e196211",
+      "size": 1918,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5d92d7d5b0ab07972fb6e0397c9c8e525e196211"
+    },
+    {
+      "path": "trellis2/pipelines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f7348959d57d326404f66b20b37b4fcb87963327",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/f7348959d57d326404f66b20b37b4fcb87963327"
+    },
+    {
+      "path": "trellis2/pipelines/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bb68352304f064cf21feb22b2aa9e39b1db396d",
+      "size": 1581,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9bb68352304f064cf21feb22b2aa9e39b1db396d"
+    },
+    {
+      "path": "trellis2/pipelines/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "331e1ed979b47b23ef1d45c8851658df5d49fb69",
+      "size": 2068,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/331e1ed979b47b23ef1d45c8851658df5d49fb69"
+    },
+    {
+      "path": "trellis2/pipelines/rembg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e6aeafdd26dc6a0ef17637c4ac19ae8cc1f2471",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/6e6aeafdd26dc6a0ef17637c4ac19ae8cc1f2471"
+    },
+    {
+      "path": "trellis2/pipelines/rembg/BiRefNet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c71a99274823aefe6f18ab921a5beb074177de18",
+      "size": 1270,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c71a99274823aefe6f18ab921a5beb074177de18"
+    },
+    {
+      "path": "trellis2/pipelines/rembg/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc1eed1ba0c962478fc48132432f2e649fe03411",
+      "size": 24,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/fc1eed1ba0c962478fc48132432f2e649fe03411"
+    },
+    {
+      "path": "trellis2/pipelines/samplers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a5a9444af4c555f37c4db430cb502d919ba63f1",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/8a5a9444af4c555f37c4db430cb502d919ba63f1"
+    },
+    {
+      "path": "trellis2/pipelines/samplers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a69b95e5963c6d3a837518ed9c3cf6972235d60",
+      "size": 138,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/4a69b95e5963c6d3a837518ed9c3cf6972235d60"
+    },
+    {
+      "path": "trellis2/pipelines/samplers/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1966ce787009a5ee0c1ed06dce491525ff1dbcbf",
+      "size": 286,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/1966ce787009a5ee0c1ed06dce491525ff1dbcbf"
+    },
+    {
+      "path": "trellis2/pipelines/samplers/classifier_free_guidance_mixin.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c7a4da4c1324bed5319f89916b532a159471d84",
+      "size": 1373,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8c7a4da4c1324bed5319f89916b532a159471d84"
+    },
+    {
+      "path": "trellis2/pipelines/samplers/flow_euler.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff72b84221f210f6cb06684bdf13aedc6cf20c3",
+      "size": 7501,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5ff72b84221f210f6cb06684bdf13aedc6cf20c3"
+    },
+    {
+      "path": "trellis2/pipelines/samplers/guidance_interval_mixin.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f57869a17d1626f5b2c58eb3c477127bf464abf",
+      "size": 543,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/3f57869a17d1626f5b2c58eb3c477127bf464abf"
+    },
+    {
+      "path": "trellis2/pipelines/trellis2_image_to_3d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7b84b988f996875d895432c27848dfa0ad08a6c",
+      "size": 24143,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a7b84b988f996875d895432c27848dfa0ad08a6c"
+    },
+    {
+      "path": "trellis2/pipelines/trellis2_texturing.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c184b5e73ab49d5f29256e16ff900abc92be73be",
+      "size": 16203,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c184b5e73ab49d5f29256e16ff900abc92be73be"
+    },
+    {
+      "path": "trellis2/renderers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c94d0aed6ff6f5a46d0665e72d3f8b2d585d139e",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/c94d0aed6ff6f5a46d0665e72d3f8b2d585d139e"
+    },
+    {
+      "path": "trellis2/renderers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de3203d1bb16065f912bff039e431f609911782d",
+      "size": 976,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/de3203d1bb16065f912bff039e431f609911782d"
+    },
+    {
+      "path": "trellis2/renderers/mesh_renderer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e20efc59c26fadcbd9c11cbafa2e31b78eec395c",
+      "size": 24183,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e20efc59c26fadcbd9c11cbafa2e31b78eec395c"
+    },
+    {
+      "path": "trellis2/renderers/pbr_mesh_renderer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b465532cb15ec69c651a3814cd9b42dfb3171e",
+      "size": 22451,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b3b465532cb15ec69c651a3814cd9b42dfb3171e"
+    },
+    {
+      "path": "trellis2/renderers/voxel_renderer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe28ad8d341ed62c1d7a5ab739fed6cace30a5f",
+      "size": 2096,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/dfe28ad8d341ed62c1d7a5ab739fed6cace30a5f"
+    },
+    {
+      "path": "trellis2/representations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35f451d1f6866241c8b98ce25c464325e3afc43b",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/35f451d1f6866241c8b98ce25c464325e3afc43b"
+    },
+    {
+      "path": "trellis2/representations/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e7d9299f866c344e81e27f748f837e5ce81ed8b",
+      "size": 866,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0e7d9299f866c344e81e27f748f837e5ce81ed8b"
+    },
+    {
+      "path": "trellis2/representations/mesh",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "901a1745630599b33e1ce4449dae89153f8fe7f4",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/901a1745630599b33e1ce4449dae89153f8fe7f4"
+    },
+    {
+      "path": "trellis2/representations/mesh/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aff4c99a97f764a7c695d87d6a60bd03d61e2106",
+      "size": 128,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/aff4c99a97f764a7c695d87d6a60bd03d61e2106"
+    },
+    {
+      "path": "trellis2/representations/mesh/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70e4cca19d65b47d07f297894b831d3506be5ff",
+      "size": 7919,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b70e4cca19d65b47d07f297894b831d3506be5ff"
+    },
+    {
+      "path": "trellis2/representations/voxel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2fe401ed86ac2dff5068b961e4557ac1155a024",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/e2fe401ed86ac2dff5068b961e4557ac1155a024"
+    },
+    {
+      "path": "trellis2/representations/voxel/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5792ea14b2371a96c4130371eb976f0aff4b5dd",
+      "size": 30,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/b5792ea14b2371a96c4130371eb976f0aff4b5dd"
+    },
+    {
+      "path": "trellis2/representations/voxel/voxel_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9317ab22db61c5da96514ca46a780378392f3cc8",
+      "size": 1532,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/9317ab22db61c5da96514ca46a780378392f3cc8"
+    },
+    {
+      "path": "trellis2/trainers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01b0253290841583e4e6c7f18af95030c82aff61",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/01b0253290841583e4e6c7f18af95030c82aff61"
+    },
+    {
+      "path": "trellis2/trainers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f25130f045b255496364d0f4b95d66ef8cddaab",
+      "size": 2476,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/8f25130f045b255496364d0f4b95d66ef8cddaab"
+    },
+    {
+      "path": "trellis2/trainers/basic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e4b4c56247e33a0a73917ea010acf684e6d700",
+      "size": 40108,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c8e4b4c56247e33a0a73917ea010acf684e6d700"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00bdca3842d07055685d2459ba51b6bd7d6c677f",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/00bdca3842d07055685d2459ba51b6bd7d6c677f"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/flow_matching.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b4390e0fd5bb611f407887db0f3586b15ac741c",
+      "size": 13631,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/7b4390e0fd5bb611f407887db0f3586b15ac741c"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/mixins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2bbf237189a7d972a1e8575d2debdf51eeb33f6",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/f2bbf237189a7d972a1e8575d2debdf51eeb33f6"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/mixins/classifier_free_guidance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548e007bbf3122d818fe05041fba171665d7e450",
+      "size": 2349,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/548e007bbf3122d818fe05041fba171665d7e450"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/mixins/image_conditioned.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13b932eb714084ad7fc4ac56d3136d5c90db4350",
+      "size": 8906,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/13b932eb714084ad7fc4ac56d3136d5c90db4350"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/mixins/text_conditioned.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85f1dcf2582c07edd9b629c07181265f24a90134",
+      "size": 2449,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/85f1dcf2582c07edd9b629c07181265f24a90134"
+    },
+    {
+      "path": "trellis2/trainers/flow_matching/sparse_flow_matching.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6735d08740ef4548116e46f0d594724e07def6d",
+      "size": 13504,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/c6735d08740ef4548116e46f0d594724e07def6d"
+    },
+    {
+      "path": "trellis2/trainers/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23e4286d02b6fc102c364d2ef7571ef97c9fcd41",
+      "size": 2724,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/23e4286d02b6fc102c364d2ef7571ef97c9fcd41"
+    },
+    {
+      "path": "trellis2/trainers/vae",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7aa98b352b0b1f6e992a4940c6a04e0824090c16",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/7aa98b352b0b1f6e992a4940c6a04e0824090c16"
+    },
+    {
+      "path": "trellis2/trainers/vae/pbr_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "552723652714a7bc0fc9eeec7620992d4d07a2b5",
+      "size": 11480,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/552723652714a7bc0fc9eeec7620992d4d07a2b5"
+    },
+    {
+      "path": "trellis2/trainers/vae/shape_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9441fabd0d9629f69e540f9b627e67950e56f48",
+      "size": 11359,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/f9441fabd0d9629f69e540f9b627e67950e56f48"
+    },
+    {
+      "path": "trellis2/trainers/vae/sparse_structure_vae.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5563641c2423b578a487fe98e22f09abf2524202",
+      "size": 4939,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5563641c2423b578a487fe98e22f09abf2524202"
+    },
+    {
+      "path": "trellis2/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2abfeb11a597141f60ab4a27b44658685f9573d2",
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/trees/2abfeb11a597141f60ab4a27b44658685f9573d2"
+    },
+    {
+      "path": "trellis2/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "trellis2/utils/data_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "805b6cc118106857e7ef767ab4bfd133dbd78e6f",
+      "size": 8887,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/805b6cc118106857e7ef767ab4bfd133dbd78e6f"
+    },
+    {
+      "path": "trellis2/utils/dist_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "348799c064804ed3ae1a98144249bd9b6bfb9915",
+      "size": 2533,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/348799c064804ed3ae1a98144249bd9b6bfb9915"
+    },
+    {
+      "path": "trellis2/utils/elastic_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba3cf83836e5b58f5bc3333e809ffc932375a04",
+      "size": 8022,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/cba3cf83836e5b58f5bc3333e809ffc932375a04"
+    },
+    {
+      "path": "trellis2/utils/general_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "589c103de8a777aea9994a899f97431cbab5447a",
+      "size": 13486,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/589c103de8a777aea9994a899f97431cbab5447a"
+    },
+    {
+      "path": "trellis2/utils/grad_clip_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "990a4352e24fc73bf732d8eb0f8ca9a07365b49e",
+      "size": 3285,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/990a4352e24fc73bf732d8eb0f8ca9a07365b49e"
+    },
+    {
+      "path": "trellis2/utils/loss_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52049f69543f2700bc5525b09cbf2fb25c08aa9e",
+      "size": 2983,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/52049f69543f2700bc5525b09cbf2fb25c08aa9e"
+    },
+    {
+      "path": "trellis2/utils/mesh_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9f1451ebd8b89879eee79cc61a6f4161136f245",
+      "size": 9776,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/a9f1451ebd8b89879eee79cc61a6f4161136f245"
+    },
+    {
+      "path": "trellis2/utils/random_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b668c277b51f4930991912a80573adc79364028",
+      "size": 867,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/5b668c277b51f4930991912a80573adc79364028"
+    },
+    {
+      "path": "trellis2/utils/render_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6fb3e9c3b0d826f77ff56d65ccf4adbc247cf0d",
+      "size": 5981,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/d6fb3e9c3b0d826f77ff56d65ccf4adbc247cf0d"
+    },
+    {
+      "path": "trellis2/utils/vis_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e5f58e564aea50e4d80b0265220ee3fb382cd69",
+      "size": 1297,
+      "url": "https://api.github.com/repos/microsoft/TRELLIS.2/git/blobs/0e5f58e564aea50e4d80b0265220ee3fb382cd69"
+    }
+  ],
+  "truncated": false
+}

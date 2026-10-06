@@ -1,0 +1,242 @@
+{
+  "sha": "0196744a1c630fa5c95141d8f6808ba4f7c8e487",
+  "url": "https://api.github.com/repos/rms80/trellis2cpp/git/trees/0196744a1c630fa5c95141d8f6808ba4f7c8e487",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b600824ab76c6415b79e3c2c50d3d05df81374c3",
+      "size": 520,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/b600824ab76c6415b79e3c2c50d3d05df81374c3"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4831ad0ce729bfa66d12acb1bb5b1f5e2d133e79",
+      "size": 77,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/4831ad0ce729bfa66d12acb1bb5b1f5e2d133e79"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1c48c5f02f6b70e4f2ebcf7327cb50d5edcd22b",
+      "size": 2647,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/f1c48c5f02f6b70e4f2ebcf7327cb50d5edcd22b"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47bc91c6d0c57d6c60a64ea3a1dc3db0c5c8c89a",
+      "size": 1062,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/47bc91c6d0c57d6c60a64ea3a1dc3db0c5c8c89a"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbc7f648f5c0df30c17a448c2b8087f45c3c90b4",
+      "size": 6922,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/cbc7f648f5c0df30c17a448c2b8087f45c3c90b4"
+    },
+    {
+      "path": "convert_ss_dec_to_gguf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6a7df9d47c2eeda3c808fb60adfee0498ad6f55",
+      "size": 8767,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/e6a7df9d47c2eeda3c808fb60adfee0498ad6f55"
+    },
+    {
+      "path": "convert_ss_flow_to_gguf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eef815b95707f96c25610c8077b9cf7accde96a",
+      "size": 9486,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/4eef815b95707f96c25610c8077b9cf7accde96a"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6d039a418c20040bafb43e3caf6f0078142111c",
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/trees/c6d039a418c20040bafb43e3caf6f0078142111c"
+    },
+    {
+      "path": "examples/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24bcf45bdd6df182e4768922ae5346eb9d8d75c8",
+      "size": 1092,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/24bcf45bdd6df182e4768922ae5346eb9d8d75c8"
+    },
+    {
+      "path": "examples/dino_info.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3554769a19e2babc5b275155ac77e584d3b611ad",
+      "size": 1844,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/3554769a19e2babc5b275155ac77e584d3b611ad"
+    },
+    {
+      "path": "examples/marching_cubes.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2575eadd5bea13a61164effe4d701f4b6dff60ad",
+      "size": 11752,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/2575eadd5bea13a61164effe4d701f4b6dff60ad"
+    },
+    {
+      "path": "examples/ss_decode.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65c602b84f6676293ff770aa2cee41c6e03a6889",
+      "size": 3167,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/65c602b84f6676293ff770aa2cee41c6e03a6889"
+    },
+    {
+      "path": "examples/ss_flow_info.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459365168e8a835b04ef55f44884c2f55fd730b9",
+      "size": 3937,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/459365168e8a835b04ef55f44884c2f55fd730b9"
+    },
+    {
+      "path": "examples/ss_mesh.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e1e194cc3ab66cb3f5f6ae79072439d52eb798a",
+      "size": 3834,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/1e1e194cc3ab66cb3f5f6ae79072439d52eb798a"
+    },
+    {
+      "path": "examples/ss_sample.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7da67c443fd67cab1dab7c0d056ded66cc8b2a47",
+      "size": 3091,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/7da67c443fd67cab1dab7c0d056ded66cc8b2a47"
+    },
+    {
+      "path": "ggml",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "331b9cba52b23d895bc4ad218c007eb5e667540f"
+    },
+    {
+      "path": "stb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3bbdcc2122be15db843969a9074a89b955302f55",
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/trees/3bbdcc2122be15db843969a9074a89b955302f55"
+    },
+    {
+      "path": "stb/stb_image.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eedabedc45b3e6fd88fae6f14a160b4d53272ec",
+      "size": 283010,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/9eedabedc45b3e6fd88fae6f14a160b4d53272ec"
+    },
+    {
+      "path": "stb/stb_image_write.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4b32ed1bc32ef9c962acbf47a9d10af01939e08",
+      "size": 71221,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/e4b32ed1bc32ef9c962acbf47a9d10af01939e08"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b48a1def67ff765786d22506e336dc9b9d4a4a6f",
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/trees/b48a1def67ff765786d22506e336dc9b9d4a4a6f"
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d6fa3fcda06cf8d93e6b8b4cb5ae8bb566de857",
+      "size": 1172,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/7d6fa3fcda06cf8d93e6b8b4cb5ae8bb566de857"
+    },
+    {
+      "path": "tests/ref_ss_dec.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e45324b21f7c741242711dfb28f76e7f72027c",
+      "size": 3662,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/32e45324b21f7c741242711dfb28f76e7f72027c"
+    },
+    {
+      "path": "tests/ref_ss_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42fbe6c4490a0b33d4d47e90b46a2a53a4972c92",
+      "size": 4838,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/42fbe6c4490a0b33d4d47e90b46a2a53a4972c92"
+    },
+    {
+      "path": "tests/ref_ss_sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbddffc608b3b8fd2b5d1b24a68385e25c111a9b",
+      "size": 4916,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/bbddffc608b3b8fd2b5d1b24a68385e25c111a9b"
+    },
+    {
+      "path": "tests/test_marching_cubes.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a74c5edc4202fd515de088cf910de9ba4e574f21",
+      "size": 5679,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/a74c5edc4202fd515de088cf910de9ba4e574f21"
+    },
+    {
+      "path": "tests/test_ss_dec.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61c777169defc891ab1b796043b368da082b1269",
+      "size": 3550,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/61c777169defc891ab1b796043b368da082b1269"
+    },
+    {
+      "path": "tests/test_ss_flow_forward.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fce8bdd6a2956442f294b62e5e6c3070f164912",
+      "size": 4036,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/4fce8bdd6a2956442f294b62e5e6c3070f164912"
+    },
+    {
+      "path": "tests/test_ss_sample.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9002eb4461d09a458117d1a993cf268dfb2fc7f",
+      "size": 3828,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/c9002eb4461d09a458117d1a993cf268dfb2fc7f"
+    },
+    {
+      "path": "trellis2.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "405c33412f7399f39e98fa0b358464729e68ef14",
+      "size": 45015,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/405c33412f7399f39e98fa0b358464729e68ef14"
+    },
+    {
+      "path": "trellis2.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39e71f523c5c6372553cc9941eccd9b9e89fcc1",
+      "size": 13665,
+      "url": "https://api.github.com/repos/rms80/trellis2cpp/git/blobs/f39e71f523c5c6372553cc9941eccd9b9e89fcc1"
+    }
+  ],
+  "truncated": false
+}

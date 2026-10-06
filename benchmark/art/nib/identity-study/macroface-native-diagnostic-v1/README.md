@@ -1,0 +1,13 @@
+# Actual macroface diagnostic v1 — artistic acceptance failed
+
+The isolated source was generated from regional `ed53df07…` using symmetric numerical proposal v6, saved/reopened and reviewed in **Neutral, Profile, Tongue and Blink**. Candidate SHA256 is `e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592`. It is not exported or promoted; current engine content is unchanged.
+
+Construction evidence:42 components follow the same facial volume field, with380 unrelated mesh hashes retained. Five named Eye/Jaw/Tongue pivots migrate coherently; the other74 global bind matrices are exactly unchanged. Seven canonical action curves and retained historical actions match. Any future export requires matching full meshes and animation takes because the facial rest matrices changed.
+
+Actual Neutral has a clearer eye aperture and stronger brow/cheek volume. Profile preserves the forward nose and repaired neck boundary. Neither establishes likeness: the muzzle remains smooth and rodent/human-like, brow/cheek planes are abrupt, the nose lacks the concept's leathery animal form, and ears/fur/scarf still fail. Tongue retains a true aperture and visible dark-blue tongue without the old skin curtain, but the grin reads broad and puppet-like. Blink closes both openings without exposed irises or the old medial wedge, but the straight crease lacks believable orbital volume.
+
+The0.493993 mm full Smile/JawOpen superposition warning remains explicit. Actual Tongue uses JawOpen0.625 and Smile_R0.72, so it does not clear the all-targets1 stress case. The neutral coordinate audit also retains oral visibility flags; no quantitative closed-mouth/contact pass is claimed. The inherited receipt's old neck-review-pending text is historical; the prior actual neck review exists and this Profile does not reintroduce the sawtooth boundary.
+
+The initial generation stopped2 before mutation because engine promotion removed historical shared texture paths. Its exact failure recipe/logs are preserved separately. One diagnosed retry archives all70 images against their original receipt hashes and remaps only the new source to `art/nib/source-textures/macroface-regional-ed53df`. Every saved image decodes with exact bytes/color space. No old source or shared file was overwritten. A reusable remap helper is prepared separately; the exact inline implementation used by this successful run is preserved in `executed-recipe`.
+
+All five successful guarded jobs exited0; logs and memory CSVs are retained. Review diagnostics are evidence of this mesh, not concept illustrations. Broader camera jobs remain unexecuted. Root received the heavy slot after final Blink process33396 closed.

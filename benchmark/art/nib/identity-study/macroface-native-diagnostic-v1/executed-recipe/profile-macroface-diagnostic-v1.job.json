@@ -1,0 +1,29 @@
+{
+  "name": "nib-macroface-diagnostic-v1-profile",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\macroface_wip\\review_macroface.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\macroface-native-diagnostic-v1\\Nib_Coherent_Macroface_Diagnostic_v1.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\macroface-native-diagnostic-v1\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\macroface-native-diagnostic-v1\\actual-views",
+    "--view",
+    "Profile"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-macroface-diagnostic-v1-profile.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-macroface-diagnostic-v1-profile.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-macroface-diagnostic-v1-profile.log",
+  "successMarker": "NIB_MACROFACE_DIAGNOSTIC_ACTUAL_VIEW_COMPLETE"
+}

@@ -23,15 +23,6 @@ allowed=['Morph-combination nonlinear error exceeds0.25mm Playful']
 if numerical['blockingIssues']!=allowed or not args.allow_combination_diagnostic:raise RuntimeError('Explicit known-warning diagnostic required; no general gate bypass')
 inherited=json.loads((args.source.parent/'source.json').read_text())
 bpy.ops.wm.open_mainfile(filepath=str(args.source),load_ui=False);scene=bpy.context.scene;rig=bpy.data.objects['Nib_Rig'];head=bpy.data.objects['Nib v5 fitted animation face'];collection=bpy.data.collections['Nib_Authored_Components']
-# Engine promotion replaced historical shared textures. Remap this isolated
-# derivative to immutable byte-identical source dependencies, never new maps.
-image_archive=ROOT/'benchmark/art/nib/source-textures/macroface-regional-ed53df/manifest.json'
-archive=json.loads(image_archive.read_text())
-if archive['sourceSha256']!=args.source_sha256:raise RuntimeError('Wrong image archive source')
-for name,entry in archive['images'].items():
- i=bpy.data.images.get(name);path=ROOT/entry['relativePath']
- if i is None or sha(path)!=entry['sha256'] or i.colorspace_settings.name!=entry['colorspace']:raise RuntimeError('Exact source texture missing '+name)
- i.filepath=str(path);i.reload()
 for n in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance']:
  if n not in bpy.data.actions:raise RuntimeError('Missing canonical action '+n)
  bpy.data.actions[n].use_fake_user=True
@@ -117,5 +108,4 @@ for name,entry in images.items():
  if str(path)!=entry['path']or sha(path)!=entry['sha256']or i.colorspace_settings.name!=entry['colorspace']or not i.has_data or min(size)<=0:raise RuntimeError('Saved connected texture differs '+name)
 if sha(args.source)!=args.source_sha256:raise RuntimeError('Pinned regional source changed')
 report={'status':'Actual diagnostic source only; known composition warning retained and all visual checks pending','source':str(args.source),'sourceSha256':args.source_sha256,'candidate':str(target),'candidateSha256':sha(target),'savedSourceReopened':True,'numericalReportSha256':sha(proposal_dir/'numerical.json'),'numericalWarnings':numerical['blockingIssues'],'preRenderGate':{'passed':False,'blockingIssues':list(inherited['preRenderGate']['blockingIssues'])+numerical['blockingIssues'],'diagnosticOverride':'Known combined morph nonlinearity '+str(numerical['combined']['Playful']['maximumMorphSuperpositionErrorMeters'])+' metres; no topology/Jacobian override'},'neutralCoordinates':audit,'preservedActions':after['actions'],'beforeRig':before,'afterRig':after,'allowedFacialBindMigration':sorted(allowed_bones),'maximumUnrelatedBindMatrixError':unchanged_error,'retainedMeshHashes':retained,'changedMeshHashes':expected,'objects':records,'connectedImages':images,'artisticAcceptance':False,'sharedChanged':False,'requiresMatchingFullMeshAndClipExport':True,'pending':['Neutral/Profile/ThreeQuarter identity','Actual Tongue and Blink contact, not only numerical correspondence','Updated source/baked ocular and face PBR comparison','No current engine promotion'],'codeSha256':{p.name:sha(p)for p in [Path(__file__),HERE/'macro_field_candidate.py']}}
-report['sourceImageArchiveSha256']=sha(image_archive)
 (args.output_dir/'source.json').write_text(json.dumps(report,indent=2)+'\n',newline='\n');print('NIB_MACROFACE_DIAGNOSTIC_SAVED_AND_REOPENED',flush=True)

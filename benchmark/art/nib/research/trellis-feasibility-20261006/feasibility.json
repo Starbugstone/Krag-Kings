@@ -1,0 +1,30 @@
+{
+  "status": "Read-only primary-source feasibility review; no install, weights, build, inference or concept upload",
+  "decision": "Do not install AISmith wholesale or treat its FP8 worker as RTX2060-compatible. Native6GB and host-RAM claims remain unverified.",
+  "hardware": {
+    "gpu": "RTX2060 Turing SM7.5,6GiB",
+    "hostRamGiB": 31.8,
+    "measuredInference": false
+  },
+  "pins": {
+    "AISmith": "8af574dd3011ff5668e572798a644996b79b93d8",
+    "rms80_trellis2cpp": "0196744a1c630fa5c95141d8f6808ba4f7c8e487",
+    "MicrosoftTRELLIS2": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+    "AISmithWrapperGitlink": "438fe4e2a15bd29620a1cedad0a87c5afad6f81d",
+    "FP8ModelMetadata": "b867be02d3dd9a73f460b576f12d44e9bdd4a370"
+  },
+  "findings": [
+    "AISmith Generate invokes separate ilintar/trellis.cpp runtime with --no-texture; GitHub repo and API returned404.",
+    "rms80 public main implements only stage1 coarse occupancy/mesh, not complete TRELLIS2 or PBR.",
+    "AISmith has a different expanded vendored trellis2cpp, author benchmark16GB RTX50-series;1024 path cites10GBVRAM/14GBhost spike.",
+    "Comfy wrapper is gitlink mode160000; AISmith root has no.gitmodules. Plain documented clone does not populate its required source/wheels.",
+    "Worker low_vram=True/keep_models_loaded=False is real on-demand stage loading, not evidence of bounded total RAM.",
+    "Pinned FP8 wrapper casts FP8 weights and execution activations to BF16, with no SM7.5 FP16 fallback in inspected path.",
+    "Worker uses dense SDPA but hardcodes sparse FlashAttention and FlexGEMM/Triton; standard dependencies do not establish Turing compatibility.",
+    "FP8 model safetensors total8118964605bytes, plus DINOv3 and legacydecoder; file size is not peak resident RAM.",
+    "Official TRELLIS2 model/code MIT; FP8 model metadata MIT. DINOv3 separate license/access gate; native GGUF model metadata license other.",
+    "No observed6GB/Turing end-to-end test or defensible hostRAM upper bound in inspected source; no pilot run."
+  ],
+  "pendingArtTask": "Prepared Nib macroface diagnostic ae97e97 remains next art boundary; this review does not replace it.",
+  "sharedChanged": false
+}
