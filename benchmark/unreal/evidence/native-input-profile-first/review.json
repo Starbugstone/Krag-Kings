@@ -1,0 +1,72 @@
+{
+  "completed": false,
+  "nativeProcessExitCode": 0,
+  "guardExitCode": 0,
+  "guardSuccessMarker": "KK_READY",
+  "guardMarkerMeaning": "Readiness only; this is not a successful input suite.",
+  "inputScriptExitCode": 1,
+  "packagedExecutableSha256": "4ef237f078b64981ffe3157786d2749028b95f7f89a96dcaf65967a1d09af2d1",
+  "passedChecks": 10,
+  "failedChecks": [
+    {
+      "check": "MMB orbits camera",
+      "passed": false,
+      "runtimeElapsed": 30.963
+    }
+  ],
+  "windowLeaseRestored": true,
+  "allPointerGuardsOwned": true,
+  "lastArchivedStateElapsed": 94.636,
+  "lastArchivedCamera": {
+    "x": -246.207,
+    "y": -554.22,
+    "z": 433.448,
+    "pitch": -22.245,
+    "yaw": 75.942
+  },
+  "cameraCaveat": "Archived state was copied after the failed gate, before normal game closure; the original probe did not persist immediate before/after camera snapshots.",
+  "diagnosis": {
+    "deliveredEvents": "Native MMB down/up plus MouseX/Y are present in runtime.log. The final movement and button release occurred in the same frame688.",
+    "notZeroMotion": "Reset yaw75/pitch-22; last archived yaw75.942/pitch-22.245. Gate required more than1 degree.",
+    "sourceFactors": {
+      "mouseAxisSensitivity": 0.07,
+      "controllerYawFactor": 0.35,
+      "controllerPitchFactor": 0.25,
+      "fovScaling": true,
+      "fovScaleCoefficient": 0.01111,
+      "smoothing": true
+    },
+    "scope": "Low sensitivity is established by installed engine source and project settings. Exact per-frame raw/processed deltas were not recorded in this run.",
+    "installedSourceReferences": [
+      {
+        "path": "D:/Games/UE_5.8/Engine/Source/Runtime/Engine/Private/PlayerController.cpp",
+        "line": 6198,
+        "finding": "GetInputMouseDelta reads processed PlayerInput GetKeyValue for MouseX/Y."
+      },
+      {
+        "path": "D:/Games/UE_5.8/Engine/Source/Runtime/Engine/Private/UserInterface/PlayerInput.cpp",
+        "line": 2337,
+        "finding": "MassageAxisInput multiplies axis sensitivity, then optional FOV scale, then optional smoothing."
+      }
+    ]
+  },
+  "pending": [
+    "Explicit unit-sensitivity camera correction, build and native retest",
+    "Action-active orbit/zoom proof",
+    "Remaining variant, expression, portrait, run/walk and Nib input checks"
+  ],
+  "visualQualityAccepted": false,
+  "preparedCorrection": {
+    "status": "Source only; native compile/package/retest pending",
+    "mouseAxisSensitivity": 1,
+    "yawDegreesPerCount": 0.17,
+    "pitchDegreesPerCount": 0.13,
+    "fovScaling": false,
+    "smoothing": false,
+    "gateDegreesUnchanged": 1,
+    "requiresActionActive": true,
+    "finalDragHeldMilliseconds": 80,
+    "powershellParser": "Passed",
+    "scopeDiffWhitespaceCheck": "Passed"
+  }
+}

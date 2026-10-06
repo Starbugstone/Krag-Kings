@@ -13,6 +13,7 @@
 #include "HAL/FileManager.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
+#include "GameFramework/PlayerInput.h"
 
 AKKBenchmarkController::AKKBenchmarkController()
 {
@@ -163,7 +164,16 @@ void AKKBenchmarkController::PlayerTick(float DeltaTime)
     if(!bPerformanceLocked && IsInputKeyDown(EKeys::MiddleMouseButton))
     {
         float DX,DY;GetInputMouseDelta(DX,DY);
-        Yaw+=DX*.35f;Pitch=FMath::Clamp(Pitch+DY*.25f,-75.f,bPortrait?25.f:-8.f);
+        // DefaultInput supplies unit mouse axes without template FOV scaling or
+        // smoothing. These explicit degrees/count match the Unity inspection camera.
+        Yaw+=DX*.17f;Pitch=FMath::Clamp(Pitch+DY*.13f,-75.f,bPortrait?25.f:-8.f);
+        if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")) && (!FMath::IsNearlyZero(DX) || !FMath::IsNearlyZero(DY)))
+        {
+            UE_LOG(LogTemp,Display,TEXT("KK_INPUT_ORBIT raw=(%.3f,%.3f) processed=(%.3f,%.3f) sensitivity=(%.3f,%.3f) yaw=%.3f pitch=%.3f action=%s"),
+                PlayerInput?PlayerInput->GetRawKeyValue(EKeys::MouseX):0.f,PlayerInput?PlayerInput->GetRawKeyValue(EKeys::MouseY):0.f,DX,DY,
+                PlayerInput?PlayerInput->GetMouseSensitivityX():0.f,PlayerInput?PlayerInput->GetMouseSensitivityY():0.f,Yaw,Pitch,
+                Selected?*Selected->GetActionLabel():TEXT("None"));
+        }
     }
     const FRotator PanRotation(0,Yaw,0);
     const FVector Forward=PanRotation.Vector(),Right=FRotationMatrix(PanRotation).GetUnitAxis(EAxis::Y);

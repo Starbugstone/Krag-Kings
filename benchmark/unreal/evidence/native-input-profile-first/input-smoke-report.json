@@ -1,0 +1,296 @@
+﻿{
+    "originalTopmost":  false,
+    "completed":  false,
+    "error":  "Runtime input check failed: MMB orbits camera",
+    "windowLeaseRestored":  true,
+    "windowRestoreError":  null,
+    "pointerGuards":  [
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  668,
+                              "y":  529
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  668,
+                              "y":  529
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  1276,
+                              "y":  588
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  960,
+                              "y":  540
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  960,
+                              "y":  540
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  974,
+                              "y":  544
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  994,
+                              "y":  552
+                          },
+                          {
+                              "gameHwnd":  6161308,
+                              "foregroundHwnd":  6161308,
+                              "pointerHwnd":  6161308,
+                              "gamePid":  31116,
+                              "foregroundPid":  31116,
+                              "pointerPid":  31116,
+                              "x":  1015,
+                              "y":  560
+                          }
+                      ],
+    "source":  "Windows mouse and keyboard delivered to visible Unreal demo",
+    "executionMode":  "Packaged",
+    "packagedBuildTested":  true,
+    "mouse_keyboard_delivery_tested":  true,
+    "visual_quality_accepted":  false,
+    "timestampUtc":  "2026-10-06T05:35:01.0892060Z",
+    "checks":  [
+                   {
+                       "check":  "LMB selects Nib",
+                       "passed":  true,
+                       "runtimeElapsed":  25.383
+                   },
+                   {
+                       "check":  "Tab changes selected unit",
+                       "passed":  true,
+                       "runtimeElapsed":  25.606
+                   },
+                   {
+                       "check":  "Krag melee begins for overlap test",
+                       "passed":  true,
+                       "runtimeElapsed":  25.717
+                   },
+                   {
+                       "check":  "Nib shoots while Krag melee remains active",
+                       "passed":  true,
+                       "runtimeElapsed":  26.032
+                   },
+                   {
+                       "check":  "Melee key triggers authored action",
+                       "passed":  true,
+                       "runtimeElapsed":  26.349
+                   },
+                   {
+                       "check":  "Shoot key triggers authored action",
+                       "passed":  true,
+                       "runtimeElapsed":  26.451
+                   },
+                   {
+                       "check":  "Krag emits both authored discharges before another action interrupts",
+                       "passed":  true,
+                       "runtimeElapsed":  27.088
+                   },
+                   {
+                       "check":  "Krag actual discharge markers pass repaired-aim 10-degree regression",
+                       "passed":  true,
+                       "runtimeElapsed":  27.088
+                   },
+                   {
+                       "check":  "Hit key triggers authored action",
+                       "passed":  true,
+                       "runtimeElapsed":  27.295
+                   },
+                   {
+                       "check":  "Arrow pans camera during action",
+                       "passed":  true,
+                       "runtimeElapsed":  27.607
+                   },
+                   {
+                       "check":  "MMB orbits camera",
+                       "passed":  false,
+                       "runtimeElapsed":  30.963
+                   }
+               ],
+    "finalUnits":  [
+                       {
+                           "species":  "Krag",
+                           "variant":  "Krag / Natural",
+                           "action":  "Idle",
+                           "selected":  true,
+                           "face_active":  false,
+                           "facial_morph_weight":  0.03245,
+                           "body_morph_weight":  0.07706,
+                           "screen_visible":  true,
+                           "screen_x":  1028.480,
+                           "screen_y":  554.993,
+                           "x":  -135.000,
+                           "y":  0.000,
+                           "z":  196.185,
+                           "shots":  {
+                                         "count":  2,
+                                         "phase":  0.580360,
+                                         "angle_degrees":  1.966326,
+                                         "maximum_angle_degrees":  2.470739,
+                                         "muzzle":  [
+                                                        -106.900262,
+                                                        -92.758632,
+                                                        243.108190
+                                                    ],
+                                         "direction":  [
+                                                           -0.000029,
+                                                           -0.999411,
+                                                           0.034312
+                                                       ],
+                                         "actor_forward":  [
+                                                               0.000000,
+                                                               -1.000000,
+                                                               0.000000
+                                                           ],
+                                         "events":  [
+                                                        {
+                                                            "event":  1,
+                                                            "variant":  "Krag_Natural",
+                                                            "authored_phase":  0.400000,
+                                                            "phase":  0.410563,
+                                                            "angle_degrees":  2.470739,
+                                                            "muzzle_cm":  [
+                                                                              -106.912158,
+                                                                              -92.273115,
+                                                                              243.772898
+                                                                          ],
+                                                            "direction":  [
+                                                                              -0.000163,
+                                                                              -0.999070,
+                                                                              0.043109
+                                                                          ],
+                                                            "actor_forward":  [
+                                                                                  0.000000,
+                                                                                  -1.000000,
+                                                                                  0.000000
+                                                                              ]
+                                                        },
+                                                        {
+                                                            "event":  2,
+                                                            "variant":  "Krag_Natural",
+                                                            "authored_phase":  0.580000,
+                                                            "phase":  0.580360,
+                                                            "angle_degrees":  1.966326,
+                                                            "muzzle_cm":  [
+                                                                              -106.900262,
+                                                                              -92.758632,
+                                                                              243.108190
+                                                                          ],
+                                                            "direction":  [
+                                                                              -0.000029,
+                                                                              -0.999411,
+                                                                              0.034312
+                                                                          ],
+                                                            "actor_forward":  [
+                                                                                  0.000000,
+                                                                                  -1.000000,
+                                                                                  0.000000
+                                                                              ]
+                                                        }
+                                                    ]
+                                     }
+                       },
+                       {
+                           "species":  "Nib",
+                           "variant":  "Nib / Natural",
+                           "action":  "Idle",
+                           "selected":  false,
+                           "face_active":  false,
+                           "facial_morph_weight":  0.00000,
+                           "body_morph_weight":  0.00000,
+                           "screen_visible":  true,
+                           "screen_x":  429.856,
+                           "screen_y":  501.362,
+                           "x":  120.000,
+                           "y":  -10.000,
+                           "z":  198.708,
+                           "shots":  {
+                                         "count":  1,
+                                         "phase":  0.473348,
+                                         "angle_degrees":  0.007516,
+                                         "maximum_angle_degrees":  0.007516,
+                                         "muzzle":  [
+                                                        119.997749,
+                                                        -48.495678,
+                                                        223.071317
+                                                    ],
+                                         "direction":  [
+                                                           0.000085,
+                                                           -1.000000,
+                                                           0.000100
+                                                       ],
+                                         "actor_forward":  [
+                                                               0.000000,
+                                                               -1.000000,
+                                                               0.000000
+                                                           ],
+                                         "events":  [
+                                                        {
+                                                            "event":  1,
+                                                            "variant":  "Nib_Natural",
+                                                            "authored_phase":  0.460000,
+                                                            "phase":  0.473348,
+                                                            "angle_degrees":  0.007516,
+                                                            "muzzle_cm":  [
+                                                                              119.997749,
+                                                                              -48.495678,
+                                                                              223.071317
+                                                                          ],
+                                                            "direction":  [
+                                                                              0.000085,
+                                                                              -1.000000,
+                                                                              0.000100
+                                                                          ],
+                                                            "actor_forward":  [
+                                                                                  0.000000,
+                                                                                  -1.000000,
+                                                                                  0.000000
+                                                                              ]
+                                                        }
+                                                    ]
+                                     }
+                       }
+                   ]
+}
