@@ -14,6 +14,7 @@
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "GameFramework/PlayerInput.h"
+#include "Framework/Application/SlateApplication.h"
 
 AKKBenchmarkController::AKKBenchmarkController()
 {
@@ -56,12 +57,31 @@ void AKKBenchmarkController::SetupInputComponent()
 }
 bool AKKBenchmarkController::InputKey(const FInputKeyEventArgs& Params)
 {
+    if(!bPerformanceLocked && Params.Key==EKeys::RightMouseButton && (Params.Event==IE_Pressed || Params.Event==IE_DoubleClick))
+    {
+        // PlayerInput evaluates delegates after collecting this frame's events.
+        // Shift may already have been released then. Capture its platform event
+        // state and the actual press position now, preserving multiple presses.
+        FRightPressContext Press;
+        Press.bPointerValid=GetMousePosition(Press.ScreenPosition.X,Press.ScreenPosition.Y);
+        Press.bWalk=FSlateApplication::IsInitialized()?FSlateApplication::Get().GetModifierKeys().IsShiftDown():
+            (IsInputKeyDown(EKeys::LeftShift)||IsInputKeyDown(EKeys::RightShift));
+        Press.Frame=GFrameCounter;
+        RightPresses.Add(Press);
+        if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")))
+            UE_LOG(LogTemp,Display,TEXT("KK_MOVE_PRESS walk=%d pointer=%d xy=(%.2f,%.2f) frame=%llu queued=%d"),Press.bWalk?1:0,Press.bPointerValid?1:0,Press.ScreenPosition.X,Press.ScreenPosition.Y,Press.Frame,RightPresses.Num());
+    }
     if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")) && Params.Key.IsMouseButton())
     {
         float X=0,Y=0;const bool bPointer=GetMousePosition(X,Y);
         UE_LOG(LogTemp,Display,TEXT("KK_INPUT_MOUSE key=%s event=%d pointer=%d xy=(%.2f,%.2f)"),*Params.Key.ToString(),int32(Params.Event),bPointer?1:0,X,Y);
     }
     return Super::InputKey(Params);
+}
+void AKKBenchmarkController::FlushPressedKeys()
+{
+    RightPresses.Reset();
+    Super::FlushPressedKeys();
 }
 void AKKBenchmarkController::ResetCamera()
 {
@@ -93,8 +113,22 @@ void AKKBenchmarkController::SelectAtCursor()
 void AKKBenchmarkController::MoveAtCursor()
 {
     if(bPerformanceLocked || !Selected) return;
+    if(RightPresses.IsEmpty())
+    {
+        if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")))UE_LOG(LogTemp,Warning,TEXT("KK_MOVE_DISPATCH missing press snapshot"));
+        return;
+    }
+    const FRightPressContext Press=RightPresses[0];
+    RightPresses.RemoveAt(0,1,EAllowShrinking::No);
     FHitResult Result;
-    if(GetHitResultUnderCursor(ECC_Visibility,true,Result) && !Cast<AKKBenchmarkUnit>(Result.GetActor())) Selected->MoveTo(Result.ImpactPoint,IsInputKeyDown(EKeys::LeftShift)||IsInputKeyDown(EKeys::RightShift));
+    const bool bHit=Press.bPointerValid && GetHitResultAtScreenPosition(Press.ScreenPosition,ECC_Visibility,true,Result);
+    if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")))
+    {
+        FVector ViewPosition;FRotator ViewRotation;GetPlayerViewPoint(ViewPosition,ViewRotation);
+        UE_LOG(LogTemp,Display,TEXT("KK_MOVE_DISPATCH walk=%d currentShift=%d pressFrame=%llu hit=%d actor=%s point=%s normal=%s view=%s rotation=%s"),
+            Press.bWalk?1:0,(IsInputKeyDown(EKeys::LeftShift)||IsInputKeyDown(EKeys::RightShift))?1:0,Press.Frame,bHit?1:0,*GetNameSafe(Result.GetActor()),*Result.ImpactPoint.ToString(),*Result.ImpactNormal.ToString(),*ViewPosition.ToString(),*ViewRotation.ToString());
+    }
+    if(bHit && !Cast<AKKBenchmarkUnit>(Result.GetActor()))Selected->MoveTo(Result.ImpactPoint,Press.bWalk);
 }
 void AKKBenchmarkController::NextUnit()
 {
@@ -160,6 +194,9 @@ void AKKBenchmarkController::Quit(){UKismetSystemLibrary::QuitGame(this,this,EQu
 void AKKBenchmarkController::PlayerTick(float DeltaTime)
 {
     Super::PlayerTick(DeltaTime);
+    // Discard any press consumed by another input component; it must not attach
+    // to a future click. Focus loss also clears this queue through FlushPressedKeys.
+    RightPresses.Reset();
     if(!BenchmarkCamera) return;
     if(!bPerformanceLocked && IsInputKeyDown(EKeys::MiddleMouseButton))
     {

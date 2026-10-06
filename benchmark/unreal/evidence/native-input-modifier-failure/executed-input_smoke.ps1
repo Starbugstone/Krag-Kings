@@ -90,7 +90,7 @@ function Orbit-Camera {
  }
  finally {[KKInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
 }
-function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false,[int]$HeldMilliseconds=60,[byte]$ShiftVirtualKey=0xA0) {
+function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false,[int]$HeldMilliseconds=60) {
  Assert-Foreground
  $bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
  if($X -lt 0 -or $Y -lt 0 -or $X -ge $bounds.Right -or $Y -ge $bounds.Bottom){throw 'Requested click lies outside game client; input stopped.'}
@@ -100,12 +100,12 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  # Let Slate observe the new pointer position before dispatching its click.
  Start-Sleep -Milliseconds 100
  Assert-Pointer
- if($Shift){Send-Key $ShiftVirtualKey}
+ if($Shift){Send-Key 0xA0}
  try {
   [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
   if($HeldMilliseconds -gt 0){Start-Sleep -Milliseconds $HeldMilliseconds}
   [KKInput]::mouse_event($(if($Right){0x10}else{0x4}),0,0,0,[UIntPtr]::Zero)
- }finally{if($Shift){Send-Key $ShiftVirtualKey $true}}
+ }finally{if($Shift){Send-Key 0xA0 $true}}
 }
 $checks=New-Object System.Collections.Generic.List[object]
 $cameraProbes=New-Object System.Collections.Generic.List[object]
@@ -215,14 +215,6 @@ try {
  $cameraProbes.Add([pscustomobject]@{control='NibQuickRunClick';before=(Read-State);clientPoint=@(($rect.Right*.24),($rect.Bottom*.85));heldMilliseconds=0})
  Click-Client ($rect.Right*.24) ($rect.Bottom*.85) $true $false 0
  Expect-State 'Immediate RMB down/up changes Nib Walk to Run' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
- $cameraProbes.Add([pscustomobject]@{control='NibQuickRightShiftWalk';before=(Read-State);clientPoint=@(($rect.Right*.65),($rect.Bottom*.85));heldMilliseconds=0;modifier='RightShift'})
- Click-Client ($rect.Right*.65) ($rect.Bottom*.85) $true $true 0 0xA1
- Expect-State 'Immediate Right Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
- Click-Client ($rect.Right*.24) ($rect.Bottom*.85) $true $false 0
- Expect-State 'Unmodified quick RMB clears previous Walk modifier' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
- $cameraProbes.Add([pscustomobject]@{control='NibQuickLeftShiftWalk';before=(Read-State);clientPoint=@(($rect.Right*.6),($rect.Bottom*.85));heldMilliseconds=0;modifier='LeftShift'})
- Click-Client ($rect.Right*.6) ($rect.Bottom*.85) $true $true 0 0xA0
- Expect-State 'Immediate Left Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  $inputComplete=$true
 } catch {$inputError=$_.Exception.Message;throw} finally {
  $finalState=$null;try{$finalState=Read-State}catch{}

@@ -164,18 +164,23 @@ float AKKBenchmarkUnit::GetMaximumAppliedMorphWeight(const FName& Kind) const
 
 void AKKBenchmarkUnit::MoveTo(const FVector& Destination,bool bWalk)
 {
-    if(FMath::Abs(Destination.X)>70000.f || FMath::Abs(Destination.Y)>70000.f)return;
+    const auto Reject=[&](const TCHAR* Reason)
+    {
+        if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")))
+            UE_LOG(LogTemp,Display,TEXT("KK_MOVE_REJECT species=%s reason=%s requested=%s walk=%d"),bKrag?TEXT("Krag"):TEXT("Nib"),Reason,*Destination.ToString(),bWalk?1:0);
+    };
+    if(FMath::Abs(Destination.X)>70000.f || FMath::Abs(Destination.Y)>70000.f){Reject(TEXT("bounds"));return;}
     FHitResult Ground;FCollisionQueryParams Params;Params.AddIgnoredActor(this);
-    if(!GetWorld()->LineTraceSingleByObjectType(Ground,FVector(Destination.X,Destination.Y,6000.f),FVector(Destination.X,Destination.Y,-6000.f),FCollisionObjectQueryParams(ECC_WorldStatic),Params)
-        || Ground.ImpactNormal.Z<FMath::Cos(FMath::DegreesToRadians(40.f)))return;
+    if(!GetWorld()->LineTraceSingleByObjectType(Ground,FVector(Destination.X,Destination.Y,6000.f),FVector(Destination.X,Destination.Y,-6000.f),FCollisionObjectQueryParams(ECC_WorldStatic),Params)){Reject(TEXT("no terrain hit"));return;}
+    if(Ground.ImpactNormal.Z<FMath::Cos(FMath::DegreesToRadians(40.f))){Reject(TEXT("slope"));return;}
     for(TActorIterator<AKKBenchmarkUnit> It(GetWorld());It;++It)
-        if(*It!=this && FVector::DistSquared2D(Ground.ImpactPoint,It->GetActorLocation())<FMath::Square(GetCapsuleComponent()->GetScaledCapsuleRadius()+It->GetCapsuleComponent()->GetScaledCapsuleRadius()+2.5f))return;
+        if(*It!=this && FVector::DistSquared2D(Ground.ImpactPoint,It->GetActorLocation())<FMath::Square(GetCapsuleComponent()->GetScaledCapsuleRadius()+It->GetCapsuleComponent()->GetScaledCapsuleRadius()+2.5f)){Reject(TEXT("occupied footprint"));return;}
     bWalking=bWalk;
     const auto* V=Variant();
     GetCharacterMovement()->MaxWalkSpeed=V?100.f*(bWalking?V->WalkSpeedMeters:V->RunSpeedMeters):(bWalking?(bKrag?115.f:90.f):(bKrag?320.f:270.f));
     MoveTarget=Ground.ImpactPoint;
     bMoving=true;
-    UE_LOG(LogTemp,Display,TEXT("KK_MOVE species=%s target=%s"),bKrag?TEXT("Krag"):TEXT("Nib"),*MoveTarget.ToString());
+    UE_LOG(LogTemp,Display,TEXT("KK_MOVE species=%s target=%s walk=%d"),bKrag?TEXT("Krag"):TEXT("Nib"),*MoveTarget.ToString(),bWalk?1:0);
 }
 
 void AKKBenchmarkUnit::PlayLocomotion(bool bRunning)

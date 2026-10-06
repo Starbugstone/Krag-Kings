@@ -1,0 +1,27 @@
+{
+  "engine": "Unreal5.8.3",
+  "testedPackageExeSha256": "f15ff67baa06bca1bbaac1c98090f28873702d95467d871422f43af89a6868f8",
+  "method": "Read PE import table with objdump; enumerate only the current Windows package and installed Engine/Extras/Redist/en-us.",
+  "dynamicCrtImports": [
+    "MSVCP140.dll",
+    "VCRUNTIME140.dll",
+    "VCRUNTIME140_1.dll"
+  ],
+  "currentPackageContainsCrtInstaller": false,
+  "currentPackageContainsAppLocalCrt": false,
+  "installedRedistributables": [
+    "vc_redist.x64.exe",
+    "vc_redist.arm64.exe",
+    "GameInputRedist.msi"
+  ],
+  "installedSource": {
+    "path": "D:/Games/UE_5.8/Engine/Source/Programs/AutomationTool/Win/WinPlatform.Automation.cs",
+    "line": 207,
+    "finding": "Params.Prereqs stages x64 and arm64 Visual C++ redistributables and invokes GameInput staging."
+  },
+  "preparedRecipeChange": "BuildCookRun -prereqs; require staged x64 installer and include staged .exe/.msi in artifact receipt.",
+  "recipeSyntaxChecked": true,
+  "recipeExecuted": false,
+  "cleanMachineValidated": false,
+  "installerExecutedByThisAudit": false
+}

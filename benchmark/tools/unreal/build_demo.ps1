@@ -121,7 +121,7 @@ if($Stage -in @('Package','All')){
         }
     }
     $PackageStarted=[DateTime]::UtcNow
-    & $UAT BuildCookRun "-project=$Project" -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive "-archivedirectory=$PackageRoot" -utf8output 2>&1 | Tee-Object -FilePath $PackageLog
+    & $UAT BuildCookRun "-project=$Project" -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -prereqs -archive "-archivedirectory=$PackageRoot" -utf8output 2>&1 | Tee-Object -FilePath $PackageLog
     if($LASTEXITCODE -ne 0){throw "Unreal Windows package failed: $LASTEXITCODE"}
     if(-not(Select-String -LiteralPath $PackageLog -SimpleMatch 'BUILD SUCCESSFUL' -Quiet)){throw 'UAT returned without its fresh BUILD SUCCESSFUL marker.'}
     $WindowsPackage=Join-Path $PackageRoot 'Windows'
@@ -139,7 +139,13 @@ if($Stage -in @('Package','All')){
         if(-not $Matches.Count){throw "Packaged data container missing or empty: $Extension"}
         $Containers+=$Matches
     }
-    $PackagedFiles=@($GameFile)+$Containers
+    # The development laptop already has the CRT. Keep its installer in the
+    # downloadable package as well; local launch success is not clean-PC proof.
+    $PrerequisiteRoot=Join-Path $WindowsPackage 'Engine\Extras\Redist\en-us'
+    $X64Prerequisite=Join-Path $PrerequisiteRoot 'vc_redist.x64.exe'
+    if(-not(Test-Path -LiteralPath $X64Prerequisite -PathType Leaf)){throw 'Windows package lacks its x64 Visual C++ redistributable.'}
+    $Prerequisites=@(Get-ChildItem -LiteralPath $PrerequisiteRoot -File|Where-Object {$_.Extension -in @('.exe','.msi')})
+    $PackagedFiles=@($GameFile)+$Containers+$Prerequisites
     $ArtifactRecords=@($PackagedFiles|ForEach-Object {
         [ordered]@{path=$_.FullName.Substring($WindowsPackage.Length+1).Replace('\','/');bytes=$_.Length;sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
     })
@@ -147,7 +153,7 @@ if($Stage -in @('Package','All')){
         complete=$true;stage='Windows Development package';startedUtc=$PackageStarted.ToString('o');completedUtc=[DateTime]::UtcNow.ToString('o')
         engineVersion=$Manifest.engineVersion;packageRoot=$WindowsPackage;artifacts=$ArtifactRecords
         importedSourceSnapshotSha256=(Get-FileHash -LiteralPath (Join-Path $Evidence 'import-source-snapshot.json') -Algorithm SHA256).Hash.ToLowerInvariant()
-        runtimeExecuted=$false;visualAcceptance=$false
+        runtimeExecuted=$false;visualAcceptance=$false;prerequisitesBundled=$true;cleanMachineValidated=$false
     }|ConvertTo-Json -Depth 6|Set-Content -LiteralPath $PackageReport -Encoding UTF8
     'KK_PACKAGE_COMPLETE'|Set-Content -LiteralPath $CompletionLog -Encoding UTF8
     Write-Output 'KK_PACKAGE_COMPLETE'

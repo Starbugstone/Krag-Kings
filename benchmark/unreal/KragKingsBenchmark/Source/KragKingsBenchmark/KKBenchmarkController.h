@@ -13,6 +13,7 @@ public:
     virtual void BeginPlay() override;
     virtual void SetupInputComponent() override;
     virtual bool InputKey(const FInputKeyEventArgs& Params) override;
+    virtual void FlushPressedKeys() override;
     virtual void PlayerTick(float DeltaTime) override;
     AKKBenchmarkUnit* SelectedUnit() const { return Selected; }
     void SelectUnit(AKKBenchmarkUnit* Unit);
@@ -37,4 +38,12 @@ private:
     bool bPortrait=false;
     bool bPerformanceLocked=false;
     FVector PortraitPan=FVector::ZeroVector;
+    struct FRightPressContext
+    {
+        FVector2D ScreenPosition=FVector2D::ZeroVector;
+        bool bPointerValid=false;
+        bool bWalk=false;
+        uint64 Frame=0;
+    };
+    TArray<FRightPressContext> RightPresses;
 };

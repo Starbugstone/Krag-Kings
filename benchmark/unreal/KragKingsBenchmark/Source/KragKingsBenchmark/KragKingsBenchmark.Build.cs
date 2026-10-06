@@ -5,5 +5,6 @@ public class KragKingsBenchmark : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AnimGraphRuntime", "RHI", "Json", "SlateCore", "AudioMixer" });
+        PrivateDependencyModuleNames.Add("Slate");
     }
 }

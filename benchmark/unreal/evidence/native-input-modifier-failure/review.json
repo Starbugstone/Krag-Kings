@@ -1,0 +1,44 @@
+{
+  "completed": false,
+  "executableSha256": "f15ff67baa06bca1bbaac1c98090f28873702d95467d871422f43af89a6868f8",
+  "passedChecks": 23,
+  "failedChecks": [
+    {
+      "check": "Shift+RMB walks to terrain",
+      "passed": false,
+      "runtimeElapsed": 9.556,
+      "camera": {
+        "x": -161.083,
+        "y": -578.178,
+        "z": 444.799,
+        "pitch": -22.0,
+        "yaw": 75.0
+      },
+      "selectedAction": "Idle"
+    }
+  ],
+  "gameClosed": true,
+  "guardExitCode": 0,
+  "inputCoordinatorExitCode": 1,
+  "movementCommandAccepted": true,
+  "acceptedTargetCm": [
+    -130.549,
+    7.801,
+    89.394
+  ],
+  "mouseDownUpFrame": 403,
+  "walkNotObserved": true,
+  "diagnosis": {
+    "actualEvidence": "Shift+RMB cursor events arrived together; KK_MOVE records an accepted terrain command, but no Walk state was observed over the next three seconds. The click was not dropped or rejected for terrain.",
+    "sourceDefect": "MoveAtCursor samples IsInputKeyDown(Shift) during delayed delegate processing. Press and release can be collected in the same frame, clearing that final key state before the delegate executes.",
+    "directModifierValueRecorded": false,
+    "preparedCorrection": "Capture event-time platform Shift state and cursor for each RMB press/double-click, consume contexts FIFO through the existing IE_Pressed binding, clear unused contexts after input processing and on FlushPressedKeys. Add press/dispatch/terrain rejection logs.",
+    "preparedTests": "Keep ordinary 60ms taps, observe the camera after F8/Home, then test immediate unmodified, Right Shift and Left Shift down/up gestures.",
+    "correctionStatus": "Source prepared; not compiled or run yet"
+  },
+  "unreached": [
+    "Nib observed-wide-reset path",
+    "Immediate Nib RMB down/up probe"
+  ],
+  "artisticAcceptance": false
+}

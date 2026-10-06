@@ -1,0 +1,16 @@
+﻿{
+    "engine":  "Unreal",
+    "completed":  false,
+    "visualAcceptance":  false,
+    "performanceMeasurement":  false,
+    "startedUtc":  "2026-10-06T06:18:42.4163794Z",
+    "exeSha256":  "f15ff67baa06bca1bbaac1c98090f28873702d95467d871422f43af89a6868f8",
+    "inputScriptSha256":  "8da2cde0f28178a6aa298f2530810ddccaa8d6eb4bd573a898d04038b1c2f0df",
+    "guardMarkerMeaning":  "Readiness only; inputReportCompleted and gameClosed are also required.",
+    "gameProcessId":  22652,
+    "error":  "Runtime input check failed: Shift+RMB walks to terrain",
+    "errorStack":  "à Expect-State, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 118\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 189\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\Run-NativeInput.ps1 : ligne 56",
+    "gameClosed":  true,
+    "guardExitCode":  0,
+    "finishedUtc":  "2026-10-06T06:19:01.9738525Z"
+}
