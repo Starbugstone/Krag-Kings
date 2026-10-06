@@ -20,7 +20,7 @@ def read(path):
 def ident(name):return uuid.uuid5(uuid.NAMESPACE_URL,'krag-kings-unity-authored-strand-data-v1/'+name).hex
 
 def main():
-    out=PILOT/'prepared-authored-shader-v1'
+    out=PILOT/'prepared-authored-shader-v2'
     if out.exists():raise RuntimeError('Preserve prior authored shader preparation')
     objects=read(BASE);official=read(PHYSICAL);vertex=read(VERTEX)
     graph=objects[0];by={o['m_ObjectId']:o for o in objects};ob={o['m_ObjectId']:o for o in official}
@@ -30,10 +30,10 @@ def main():
     function['m_FunctionBody']='''uint width, height;
 Data.tex.GetDimensions(width, height);
 uint strand = min((uint)round(StrandIndex), height - 1);
-float point = saturate(SurfaceUV.y) * (width - 1);
-uint lo = (uint)floor(point);
+float curvePoint = saturate(SurfaceUV.y) * (width - 1);
+uint lo = (uint)floor(curvePoint);
 uint hi = min(lo + 1, width - 1);
-float4 value = lerp(Data.tex.Load(int3(lo, strand, 0)), Data.tex.Load(int3(hi, strand, 0)), frac(point));
+float4 value = lerp(Data.tex.Load(int3(lo, strand, 0)), Data.tex.Load(int3(hi, strand, 0)), frac(curvePoint));
 Color = value.rgb;
 WidthCm = value.a * 100.0;'''
     prop=copy.deepcopy(next(o for o in official if o['m_Type'].endswith('Texture2DShaderProperty')))

@@ -1,0 +1,30 @@
+{
+  "status": "Actual native static render passes technical execution; art remains rejected",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "pid": 33832,
+  "rootInspected": [
+    "Neutral.png",
+    "Neutral-without-native-groom.png",
+    "Profile.png"
+  ],
+  "findings": [
+    "Native strand head and ear coverage is clearly visible",
+    "Head hair remains a uniform combed veil",
+    "Ear guides form overly straight pale bands; original basal bars still present in this frozen v1 input",
+    "Face skin looks glossy/blotchy and eyelids/nose anatomy remain unaccepted",
+    "Scarf remains rigid and jagged",
+    "No antialiasing or native fur shadows in this diagnostic; not final lighting",
+    "One upstream CoreUtils.emptyBuffer persistent-allocation report at shutdown"
+  ],
+  "metrics": {
+    "peakEditorPrivateMiB": 4433.0,
+    "peakProcessTreePrivateMiB": 4663.0,
+    "minimumSystemAvailableMiB": 8361.0,
+    "peakSystemGpuUsedMiB": 1777.0,
+    "frameTimeMeasured": false
+  },
+  "artisticAcceptance": false,
+  "animatedAttachmentVerified": false,
+  "standalonePerformanceMeasured": false
+}

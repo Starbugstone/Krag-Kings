@@ -1,0 +1,1361 @@
+{
+  "status": "Prepared; C# compile passes, native shader/GPU untested",
+  "files": [
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/NibSkinProfile.asset",
+      "sha256": "80a7073782c51e7356fb3ff8228bbf0a05d3001ccfec8f2ad4d324a81229c1cf"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/NibSkinProfile.asset.meta",
+      "sha256": "bb7f64611bab922eeae725a8b94bb981bb2c6e74a1ed7bdad91252f39ae6eba6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Workwear.mat",
+      "sha256": "43384a369d5fb2ed9fc88f704d7d01f4c2d40f872ca664ae12382f0ad862e864"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Workwear.mat.meta",
+      "sha256": "f23bd5c566c10e8cd1206ed6b4cbbc00cbbff0108c4a6f6743e19e6311d32d72"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Workwear_BaseColor.png",
+      "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Workwear_BaseColor.png.meta",
+      "sha256": "895cc11cadeddc0848ce91f7aceba27fed98ae5f62225ee58e21c8c242e2dffd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Workwear_Normal.png",
+      "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Workwear_Normal.png.meta",
+      "sha256": "2d3b513fb9d114e7c32fe912f78d94b02adb7035446fb929ab6b86c617119ae5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Workwear_Mask.png",
+      "sha256": "05ddb8076df4ec60dd5417da941689107ef462393abb1091d3cd8401590d4fff"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Workwear_Mask.png.meta",
+      "sha256": "fa06aa82789aadc1d0a098b6050a9a50ce41aa005af666e5123476597cd0adba"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_TawnyEarFurCards.mat",
+      "sha256": "0907a0ce89f38f23d3871a84ab8ae27402f74e0bc2c42ecac8d3f85a2b30e713"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_TawnyEarFurCards.mat.meta",
+      "sha256": "318aa98d30e47f0809bbf35d498361b366d73c93bae6e1ca0b49d33cb7d07356"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_TawnyEarFurCards_BaseColor.png.meta",
+      "sha256": "5c5d0734f802fdade63126f89c41c79bb4e0e2af64706b0e35fee00f9d6b21fd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_FurCards_Normal.png",
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_FurCards_Normal.png.meta",
+      "sha256": "4e7fbe64b0e0f12bd23bdffe38b3244a73373a86cd52a1d19d8eecd08798ac30"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_TawnyEarFurCards_Mask.png",
+      "sha256": "971701675b1568a0f6767e8481f4c0de7d9121b0821f646e44f3b49e5f9b540e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_TawnyEarFurCards_Mask.png.meta",
+      "sha256": "f3f24fd4f53b4abd595ad02474fedd8bb1d86a0559e1ce86ff0e6a2de6c5fed1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_InnerEarWispsCards.mat",
+      "sha256": "58fbbbf8c352481a8d5adde3c64aa580ba7aa7f9dfcd44b4f7dd0c8a541b8bb4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_InnerEarWispsCards.mat.meta",
+      "sha256": "27764bc930f499c026a1fc3cfb7c6028f9543e0bdec34671fb4789cb730e9334"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_InnerEarWispsCards_BaseColor.png.meta",
+      "sha256": "462018137d02f5690381ebb9098fc5e8d8caa8ce28afaf7c2259fa58e18156ea"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_InnerEarWispsCards_Mask.png",
+      "sha256": "971701675b1568a0f6767e8481f4c0de7d9121b0821f646e44f3b49e5f9b540e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_InnerEarWispsCards_Mask.png.meta",
+      "sha256": "0ed0becfd331ac940eca5ab60bd88f871e72e8329f26f0091e96d51632e514a7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_HeadFurCards.mat",
+      "sha256": "6406474dfe46ae498abe81ea59623242403bea992b0acab0e88e8e363d9ce7df"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_HeadFurCards.mat.meta",
+      "sha256": "05c8a5312d1fe5fe16fa2dc49c4a23180fbd61b56461b70b69aa3504c989ab09"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_HeadFurCards_Mask.png",
+      "sha256": "971701675b1568a0f6767e8481f4c0de7d9121b0821f646e44f3b49e5f9b540e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v6_HeadFurCards_Mask.png.meta",
+      "sha256": "0644e062abc3ab08c17eb856e6eeb0f8afdcab216322cd0f9b32e56dadae4928"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v6_HeadFurCards_BaseColor.png.meta",
+      "sha256": "d81cbd1de535c1ac754b8abe07f318edfdf3c29ab1defd736ee880f8487ebff8"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarUndercoat.mat",
+      "sha256": "c21db4765774d5703e15d4dd5feec32f49145aa849bb864ebdbaa662390244ef"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarUndercoat.mat.meta",
+      "sha256": "1f069bfd478e63208d0e66bc7c746a2cea5c8e117c3fc3419101770eefda3969"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarUndercoat_Normal.png.meta",
+      "sha256": "0015e70ac624dbb74816840905a315b7b5e427083a908327e33bab688003870b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarUndercoat_Mask.png",
+      "sha256": "83cc2eec025a651052ae8672bca33538ce07c2309e1d91988fe318407cd09f97"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarUndercoat_Mask.png.meta",
+      "sha256": "3f6eefd2fc9a470a1ce8c548974263eba8dea629cfac762f61e87809da7b1c87"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarUndercoat_BaseColor.png.meta",
+      "sha256": "613d652b6e1f566648b18c8e76c71045c12de57edf755cb4c79936dd247bbb01"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarFur.mat",
+      "sha256": "322bbee61f123c85189c550f2273e881b178f414463df30b317ddd7dee12afc4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarFur.mat.meta",
+      "sha256": "b5be4be85a666d1308c02fedf8e1cc60404687772278500eb49422d3e5fbd43b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarFur_Normal.png.meta",
+      "sha256": "d687aee67b8be0ced2cfe999bc43e52324e3f6c3412a292d52ba4c38e95d51d3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarFur_Mask.png",
+      "sha256": "0bc2e8bc1540962d1ca0f4922d0a0ad09a33b853e6bbf0ed0b5fcb45b7db2f3c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_TawnyEarFur_Mask.png.meta",
+      "sha256": "935b6eb50321709f2089ae3a9b75c077363315058495a5204d9b6624f7d527b1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarFur_BaseColor.png",
+      "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_TawnyEarFur_BaseColor.png.meta",
+      "sha256": "a561745c0b84e945f7a677b270a5428839389ed2ae75c389a4ca5c12a1b2611c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_InnerEarWisps.mat",
+      "sha256": "e31dac3cfcb45921fbd63a41f4ecf9cd27326380e4f45513430bda90d4e60a79"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_InnerEarWisps.mat.meta",
+      "sha256": "a225df96a83a8b51d9f41747e05fb7983fbe8c5feb17d49f6b3c2595dfb7b41a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_InnerEarWisps_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_InnerEarWisps_Normal.png.meta",
+      "sha256": "8137e4e1d7877b307d33796c7920a0a2f4b7f41b39cc5004c3df754fceef7630"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_InnerEarWisps_Mask.png",
+      "sha256": "8294d05892b9116e2ab6f19fece048492245be9e993a106a46454e1212f20518"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_InnerEarWisps_Mask.png.meta",
+      "sha256": "6da37db3a9ed2bd12a4795f907c5973c4ec51c8087058c2199a9daa7ab0207fe"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_InnerEarWisps_BaseColor.png",
+      "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_InnerEarWisps_BaseColor.png.meta",
+      "sha256": "a5f48ea0f698d292339fc843e7419eb64aa7fae2cf1b37ee11c0dbdfc9766bc7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_HeadFur.mat",
+      "sha256": "a8a22e7a03d43ac330df4cc35a0830b70add113f00a1249267e301d0abffb665"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_HeadFur.mat.meta",
+      "sha256": "bc637df8b2ed90fa9209d6f662a9118fc9d8ec210367cecf5aa132ba95f71a49"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_HeadFur_BaseColor.png",
+      "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_HeadFur_BaseColor.png.meta",
+      "sha256": "7c999bb7175990b3c1b125e4453a439d767abb4be0c775cc5825a4509216710b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_HeadFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_HeadFur_Normal.png.meta",
+      "sha256": "947aa7993926b5413b1ad615eeac2e17b9559a2c1d45e602fb4baea95760d555"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_HeadFur_Mask.png",
+      "sha256": "0e45aa5a122438c5bc7b32f61b26b98d3d4450e1b8b458436832befedbe78062"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_HeadFur_Mask.png.meta",
+      "sha256": "725da81a99bff0e1eeab926bcfc51c7da84357e4db8b9fbd035464a8460fa065"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_FacialSkinAtlas.mat",
+      "sha256": "a7622f7b7bcc909335f53fdc15138d4b25af73fcdf02c1370486e02ce2d4d089"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_FacialSkinAtlas.mat.meta",
+      "sha256": "1ab6e6e8f4e3f50fd3c91ba8cb8fa69fc9540abd534e6f8522827f113c563fbe"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_FacialSkinAtlas_BaseColor.png.meta",
+      "sha256": "5e01ee6514bfefbffb87c3a9caad0c633420bbe2fd7f4da4634859bf3786be75"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_FacialSkinAtlas_Normal.png.meta",
+      "sha256": "2f6ac26cc9e265a580d8d81dccc9f54a33417fa96f2ef6736c6ca5d1d86d89c3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_FacialSkinAtlas_Mask.png",
+      "sha256": "95edc0910038c76ab455a8cf06afdb759132955dba43748274f1c91b39aca4ad"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_FacialSkinAtlas_Mask.png.meta",
+      "sha256": "fa624c789e1b6d516b8404ed9aaae7e621bcab7aee08f53ba1b6c15b0702dd46"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_DustyPinkEar.mat",
+      "sha256": "2636c0c4db77c1f5422c28ca1d979190f80fdf97e500dc892989b711971d4903"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_DustyPinkEar.mat.meta",
+      "sha256": "fae40e04039ca76c0913daac830d2c70cdb25384e5f9c5dbfa23cf53a20caf17"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_DustyPinkEar_Normal.png",
+      "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_DustyPinkEar_Normal.png.meta",
+      "sha256": "0460d6f0ed8ce520c1d1ca3f5f5aa927c1ada2efbe1aa3688016c4d93c792fee"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_DustyPinkEar_Mask.png",
+      "sha256": "fff5288ef7f339005dfbc6a53e8e435a76cd9fc9e3143f38ee804a6d69225e73"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_v5_DustyPinkEar_Mask.png.meta",
+      "sha256": "71737233b91e77ca52dd737fdb2dbb2d3ad194157fb28db7054f0d136301e94b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_v5_DustyPinkEar_BaseColor.png.meta",
+      "sha256": "c52b9f6afa4e99c236b163d41aaac289a25d32416fd1a0915fff957d240bd199"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tooth.mat",
+      "sha256": "f4e05e893a054a852645ec0f66c67b96a83a3e8304bf6c1c7e07cdd0786a7bba"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tooth.mat.meta",
+      "sha256": "32bea465ab3c913f80b92941809e1f4682ec4901b7ff8158b3609ce4357e266c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tooth_Normal.png",
+      "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tooth_Normal.png.meta",
+      "sha256": "5b7cebabee69d29d0d2680c26f7ba51d46154ddf71fe758a318aafe22e163631"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tooth_BaseColor.png",
+      "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tooth_BaseColor.png.meta",
+      "sha256": "88b970b64469ec0b1ac248be17172ba12f6463843d126410a126efb1762a1e40"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tooth_Mask.png",
+      "sha256": "ce262aee069439bff10f5f8c9abefdabce9a4f059d3c795a2c9cc6924fdd8cf7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tooth_Mask.png.meta",
+      "sha256": "d1b2727caca3acac627972b8689142f74606b29c3ddf26cdcb5fc5e59ac56c4e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tongue.mat",
+      "sha256": "c154d7ed301983e60a6f772aaa8de4a13e30f2d3f21d26ebd18843e5d1a3ba23"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tongue.mat.meta",
+      "sha256": "413eb4ecf4db969b03a311bad824f56ca6d662a1cfea0074d8f77adc3ba1b3af"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tongue_Normal.png",
+      "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tongue_Normal.png.meta",
+      "sha256": "212f779e688f48ab46bcea355d8a3ac7ae6576516838ae74bb76dbb6f2e40481"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tongue_Mask.png",
+      "sha256": "36b9b84fc046cf45c67730b975d8838b57af6908af616cb2143c1c978f299256"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Tongue_Mask.png.meta",
+      "sha256": "bc2cd4b3934865c51959e17a88f7b4a2d7e7d15802d55776ccc15ff673a7b212"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tongue_BaseColor.png",
+      "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Tongue_BaseColor.png.meta",
+      "sha256": "f7ed7a1fa295cc4063a1e0d4839042e3b9f29189fe8a20630f42c9aa6142a58d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Teal.mat",
+      "sha256": "7be6184f678c1e220fdfa6488052a52f2e2775b4da4058d537dde234c87d7146"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Teal.mat.meta",
+      "sha256": "05711976f7d54c3beb7a29ea6faddef42e8708552fb6817f30a75abbee7cedce"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Teal_Normal.png",
+      "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Teal_Normal.png.meta",
+      "sha256": "bfbf93c715833b7b0511bfacf86ed128cfc4c74b15ff84408288e6cd300c2ce0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Teal_BaseColor.png",
+      "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Teal_BaseColor.png.meta",
+      "sha256": "d5e253e355f736893836a6c0eda9009557c73ffee203b5515422bd7f73dfab66"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Teal_Mask.png",
+      "sha256": "8e05528f10f03db47a33ca0e34408182807260fab69a0d91a44d2bdb9702fc82"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Teal_Mask.png.meta",
+      "sha256": "e45419278376b0695caaa4fbfca4f85d05e3fac170fb06359109b9c3236ef1e9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Stitch.mat",
+      "sha256": "4ea3c1903d37f63f222ee8f3e277f1da17fac568f3355ae4aa6f9656e602bf70"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Stitch.mat.meta",
+      "sha256": "2782f92c825672548958d969f5398c97c1251e7b30a96dffbcc5c49888f9a3ba"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Stitch_Mask.png",
+      "sha256": "5e568fae7d65337e44c12f76565feff3f6707d29d6202ed0cc8bbfa3c88fab17"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Stitch_Mask.png.meta",
+      "sha256": "7c7c3f81b3352be94052ab8faffe4f02be9a1ae081cad60ab95cc01cbf947ff0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Stitch_Normal.png",
+      "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Stitch_Normal.png.meta",
+      "sha256": "f9398a2098d6c34de73c30844df1b85e36db24b929c9ccb42627a9978d8e6ddb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Stitch_BaseColor.png",
+      "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Stitch_BaseColor.png.meta",
+      "sha256": "0b136752e961c8e85f0caa8995d20e7d8267af40cfe8d28ddc12f739a04b9186"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Steel.mat",
+      "sha256": "1fa57b9843521222b2197aee06247e49e877ab6751408bee0c52bb75dce53365"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Steel.mat.meta",
+      "sha256": "92dca636fe054b69246c95d9cb9685fd8903b5b3efb7a4b330c3777afae38174"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Steel_BaseColor.png",
+      "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Steel_BaseColor.png.meta",
+      "sha256": "e143be31e4860daf4c0c48c3848057ec1731eedd5f180352b14c1801570d4627"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Steel_Mask.png",
+      "sha256": "fb0ec5ea7fe479b488e62957bf4a617afc47322f44ae1f8b102f45b2773c01f6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Steel_Mask.png.meta",
+      "sha256": "a895ed3c6553e7259ccd71c0ee6c3e231cea07955f959b02c749a4622492d0cf"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Steel_Normal.png",
+      "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Steel_Normal.png.meta",
+      "sha256": "e1f051f3f68e99810b5174f0fb2cef2374b6bc3a188395f6a535cf0950db97a6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Skin.mat",
+      "sha256": "bc23ab13711358fb7185de3172da5bdcdd3f3e8caeb4d7c0d4b02678d88c971d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Skin.mat.meta",
+      "sha256": "65f744ea5dccbf0408661393f8bb5a81571178ba62ec4138b0c7decaaf30864f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Skin_BaseColor.png",
+      "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Skin_BaseColor.png.meta",
+      "sha256": "bef334e045d655ed2dd5f2a0ee290b8c9b856d0684ed27b55248977d5744b529"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Skin_Mask.png",
+      "sha256": "6a9b822763b280184ca55a18f916c3a8b2748566db65c1796e9dbeb3c1a3da3f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Skin_Mask.png.meta",
+      "sha256": "00da3bbbf88a1e21c69e341f11240172d435bdeab3d1836300b896d71d41dd46"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Skin_Normal.png",
+      "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Skin_Normal.png.meta",
+      "sha256": "78ec3aa77ca0a037f0c5578fc7b7b451ca3e3b5fad1d1a88943f3146c3fcd38b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Muzzle.mat",
+      "sha256": "1c2e9826c60994c8f63535744e9a6843585e7f83a8fc94989e36b1930880e806"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Muzzle.mat.meta",
+      "sha256": "f8fb2393a842256b6e991a38006281f03161db12391871ce3c0e826c24dedb0d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Muzzle_Mask.png",
+      "sha256": "fdf847991536160136d993b5e049ac9a864bc6f9149b8d7447aa1d0ed8f76edf"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Muzzle_Mask.png.meta",
+      "sha256": "97657e21e6cf7ee1421d5d6105a9d5157abf3cbb70e7fadf6ae9710a29756ed5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_MouthInterior.mat",
+      "sha256": "4841889b5ace428eb8d585974594426475daf5aff78b0c69df566ccd361417f6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_MouthInterior.mat.meta",
+      "sha256": "46ec34a2a301af1968226edef9609e1f8f17932a3f7caa1427c19d9b9503164f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_MouthInterior_BaseColor.png",
+      "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_MouthInterior_BaseColor.png.meta",
+      "sha256": "6aefaaf3192f3a90a030d2a599fa23b7766cfc6e036a6aaad4a36680ff251f9d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_MouthInterior_Normal.png",
+      "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_MouthInterior_Normal.png.meta",
+      "sha256": "a2e129974e33921230839b88ea4ae9205a2699105079ec6b16bcf230b090345e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_MouthInterior_Mask.png",
+      "sha256": "15b607824a889c28ea6d7593af7a7c6a33dc3cdfb9dcb2e5b7db0337b684b7bb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_MouthInterior_Mask.png.meta",
+      "sha256": "5fc2323af008a26b7ba6b8edfb5c6c1e3a66a36d22f449649b42fcf84e5fc0c6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Lens.mat",
+      "sha256": "5b40faa9f2018fa0a54d9bd47b65e86c4b16c0dffdf380bb8aea3121c874e42a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Lens.mat.meta",
+      "sha256": "7f85fb19cb41e4b441dbbd701d464fd87482c02163e428f2b8ada91d885da67b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Lens_BaseColor.png",
+      "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Lens_BaseColor.png.meta",
+      "sha256": "6b8a6e2a8f3c4d61ee92d7469d918eb23f60b6b9334da9f7629ce61442232ba8"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Lens_Normal.png",
+      "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Lens_Normal.png.meta",
+      "sha256": "f4c04803bf906bf16b8d3996f393615f67bf8b0c071d50cee797e913b6bbb134"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Lens_Mask.png",
+      "sha256": "a86e9cebfa1dcf93e83bc2a39391ba9385f55cd178d808076c5fe33bcafdc299"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Lens_Mask.png.meta",
+      "sha256": "618f5740b22b89b9475b34e46d7e3f536e89cae5b87d87c44e5fd79ea9ce85f3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Leather.mat",
+      "sha256": "5dbca6aa4ffb6cd322c0824fe9955a553762db8749f99529ceafc3d647a79b0a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Leather.mat.meta",
+      "sha256": "fe5e22d1c05c732e0d062232b9f6d0b78abee698fe36565d8fe70e9d9575d6b0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Leather_Mask.png",
+      "sha256": "94538b500032dc0ec751567c94413d1c7588976a7cf79e1fc553dd8b50dbf8c3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Leather_Mask.png.meta",
+      "sha256": "d58e6b29bb543defebee567e3520b217835080786d959a4058830aafd536667a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Leather_Normal.png",
+      "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Leather_Normal.png.meta",
+      "sha256": "6124d0a527225d54f2e467129301bb009261de8b315a067d4cc28fe3cc8767e1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Leather_BaseColor.png",
+      "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Leather_BaseColor.png.meta",
+      "sha256": "262740e1181f648ad21fd2290959616ad43e1a50882e87f72f6e557fdb0ae599"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_R.mat",
+      "sha256": "67f08ba97a1c8b81e194986993c50b145b551ffa4bb72d118c5f51550dc92d4f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_R.mat.meta",
+      "sha256": "8c03d3ae272d54b3f24058bf6d91d4b43b0db9534ceffa186e6372af6267374b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_R_Mask.png",
+      "sha256": "cdc19d9fe335e37a7eecc7cb93139312b29366bb9c39d2d1c34ed8ccdf63119c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_R_Mask.png.meta",
+      "sha256": "2c0444fb2591473bd55202a65430732f305edd6c6f4f58ea654513a3cd49ff2a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_R_Normal.png",
+      "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_R_Normal.png.meta",
+      "sha256": "ece2407bf2059ee78e951d1c34aaf7ac4e67d671db2932e53ad2504570b9b895"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_R_BaseColor.png.meta",
+      "sha256": "4fe5d560298c491ad9c8180cc9956162a09f1b9deac214f1fa4b09c16cb52348"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_L.mat",
+      "sha256": "e32e76b7fc3a9b428b7c526c65f8fd45d5c258d7273c718d2718a2790fde5ffd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_L.mat.meta",
+      "sha256": "3d249717158978664172395f3f62307459b874bd3547938b13bcaec3744b2a10"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_L_Mask.png",
+      "sha256": "c9fd630139ad7997cd95de5fdc845ff381613cc70ebdf17b608437c68567705b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularIris_L_Mask.png.meta",
+      "sha256": "7f1e679f38f7c3f8f49548471a70c6003b8b59acd3c66f31092c9ea546cbb05b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_L_Normal.png",
+      "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_L_Normal.png.meta",
+      "sha256": "388d0bdf523c09f2a5dc18b5a063e6c15e2adbe521680907677b6d42a68923ca"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularIris_L_BaseColor.png.meta",
+      "sha256": "aa84c931aeb8c1808634786027bcbce7529a868c08127d551141a5757ab8f304"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularGlobe.mat",
+      "sha256": "b4ed33af447d587cf5f3962e60e19882eb5ad1fd049542bb6a37dc9b8b9f4e06"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularGlobe.mat.meta",
+      "sha256": "c6e25ad87b0ef8eda7b2ec11eca0b7bfbf1f0e80caad9dd2968efddc8bfd552a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularGlobe_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularGlobe_Normal.png.meta",
+      "sha256": "27091a9d3137e8583ca5f777d4602778fef4d3ae79ac3e469ba510d5c2cffe06"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_IdentityOcularGlobe_BaseColor.png.meta",
+      "sha256": "1685d0b1874082bad13bef1d304b4707f2ed62ea77a85d3d6d59328d6a3d442a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularGlobe_Mask.png",
+      "sha256": "22352d67f6aefca77f492b7862efd4d6e15a54a03ddac89e9d45f622a4bf62b9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_IdentityOcularGlobe_Mask.png.meta",
+      "sha256": "ca237a33a0a63c63e84771af8def0cfab125615a227516b4b36d5664277a81a9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Hair.mat",
+      "sha256": "62a4e5950f730120dd5e0d30feab833c0844af8ea866ca48b75d8fcb0b6bd1e9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Hair.mat.meta",
+      "sha256": "6a5499e8fe8ca06743cb3b86fb025148f20b3f895ddb6afd56810383c74402ef"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Hair_Normal.png",
+      "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Hair_Normal.png.meta",
+      "sha256": "9aab27872aba10b6eaab26e54d2874bc79f13b1cda494e4b08464e759f2cc4ad"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Hair_BaseColor.png",
+      "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Hair_BaseColor.png.meta",
+      "sha256": "8322d3c5019952ccfc15e4c1c88f20abf1b0bc4cf6c7c5a2ffa6640b7ca74140"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Hair_Mask.png",
+      "sha256": "dfe5e968f174973e8a14d922bd5dba18ddfb3af0c3386bcb209979fd9e7e1937"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Hair_Mask.png.meta",
+      "sha256": "7b44c2dced0989e1a293f78ae174a8a689b4e3ea7ce6c83f36336806b080aafa"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Gum.mat",
+      "sha256": "df4820527170f34f032311331bdddacc115eb40914de5cc79c436e07413d2619"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Gum.mat.meta",
+      "sha256": "55868f41a15ff2e626a257977d030a1de2a59860e306e779088e026b99088d2a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Gum_BaseColor.png",
+      "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Gum_BaseColor.png.meta",
+      "sha256": "7b5fa292562eac512feee02b2b16f9f69195d158d4f19434fabc0c212f60da7d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Gum_Normal.png",
+      "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Gum_Normal.png.meta",
+      "sha256": "c605365e70e1fd536eb68cf76f1a0d02552c3c5fbdff9d437ad03a39408d2e99"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Gum_Mask.png",
+      "sha256": "06d5edccb5cad8835b20e49a97e5d811fcdac5f96e0c6fb50fc639a1bf8c2eca"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Gum_Mask.png.meta",
+      "sha256": "b8f9be3edb6de4fb68066e9c53728229bbdc3462d3c0cf6c476e70332c056cb0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Eye.mat",
+      "sha256": "f3c93f54f190b9b3880fa35dafb0ed5f08bb92016d09f2e259c85103812ade35"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Eye.mat.meta",
+      "sha256": "b2c0a0c41ef5a40e0a3b32d5ffa69d25a068e65e05ece9bf96f9d5b076134bf7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Eye_Mask.png",
+      "sha256": "55f0f70e8142401629fb3d7a7ac28d3a050b7745524f0c62896d75cac81d1501"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Eye_Mask.png.meta",
+      "sha256": "b64d857796b71aabc27a54a726f5f0e0ca37b8dcf25110c0541a22e61ed59729"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_EarInner.mat",
+      "sha256": "671d82988d84156419e32cbd40d3014cb768cd07e2759b15518e16d92ce1f914"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_EarInner.mat.meta",
+      "sha256": "824cd3e4d6f81cc4f64a910151a51f4a898570201512080eb68a8fb8d35bc7fb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_EarInner_Mask.png",
+      "sha256": "68d10d418a008fc5f8784b324863e6b6279585a11a9715e0d9fd998f86535347"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_EarInner_Mask.png.meta",
+      "sha256": "dd7ac59d7961fa8b936568d9a513cff168045abbacc838368e7738365fd03d31"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Dark.mat",
+      "sha256": "bebc600adb8d758934fdadd85d0d7bdefad1dd4bc21d4edfefb0af429519fdaa"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Dark.mat.meta",
+      "sha256": "7c4657cbc315133b932b341d59bb678651c9c26973b038cfe596c2321446dc65"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Dark_Normal.png",
+      "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Dark_Normal.png.meta",
+      "sha256": "f0a5684d6ccd7bc508ca8cd1dc0add14c2a7ca4f0f2a20f4b8b8056e19ec770c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Dark_Mask.png",
+      "sha256": "629d586686efdac13f6a9d96efa759c03e3fa61902e370ae9f8ee2dd8bf7dd66"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Dark_Mask.png.meta",
+      "sha256": "a577c2a915dbbc7c40beebcea6ac9ad8530f68307f9e28fb221374333ab2d22e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Dark_BaseColor.png",
+      "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Dark_BaseColor.png.meta",
+      "sha256": "1f3b091347706a99aa156824ac301f912a2979daee42bf7f5626c9d5b043b6bf"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Cloth.mat",
+      "sha256": "d1c84ee4645838cc7df807fd9b21f8e0f14333ed2540fe377a883573ca5f4d6e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Cloth.mat.meta",
+      "sha256": "2597c74decd4895c1aeaf364a6a751d935a5cfb72e18f50c12a0fa0900e1b55f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Cloth_BaseColor.png",
+      "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Cloth_BaseColor.png.meta",
+      "sha256": "9222fa8c3d3843013fd1d0bda3882e85d5df949a95c44dcb415674865c5fe5ec"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Cloth_Normal.png",
+      "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Cloth_Normal.png.meta",
+      "sha256": "6b2454ce91c19ccef3c148d53f3ede3c6b1607df51d72f00937fbffc738aabef"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Cloth_Mask.png",
+      "sha256": "c559d30db2ea1acb93162c8783f74eb40767073cb0f17bec133ab26293eb204f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Cloth_Mask.png.meta",
+      "sha256": "12f68931abe682380301790a99531d8d68a23ad995f459dbddeb3af0bcdfde6e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Brass.mat",
+      "sha256": "86c6d9f163fbead883bbabeaad93c95165862f738fabdb128af0afa9428747fb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Brass.mat.meta",
+      "sha256": "cff839e1665d97deda7138a1bbb11e7875616235936251f910d48a01ef95cf13"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Brass_Mask.png",
+      "sha256": "e33f9deb363c2f89f9d914b03153455e1dd86050569c77fdb35ed94107975904"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Generated/Nib_Brass_Mask.png.meta",
+      "sha256": "cf7b321c65bda24088d92b633693eaa880ac1209d0b3addcdb5ac1ec44b75361"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Brass_BaseColor.png",
+      "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Brass_BaseColor.png.meta",
+      "sha256": "279ca31d10a19a2313baa0d2495622aad11d99c97fdda3a4beeea29545207174"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Brass_Normal.png",
+      "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Benchmark/Imported/characters/nib/textures/Nib_Brass_Normal.png.meta",
+      "sha256": "f6f5e16b663376e169a5f70cfe40836241935e6294291b18d408ab16b268e0c5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_L-hair.asset",
+      "sha256": "e9582a13010e7eb9668e55d3f137eead09cf7999aeb5dc38cf8c4c0872b76907"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_L-hair.asset.meta",
+      "sha256": "383c3e38331e032c31d2a98f21bb117c6f38905c4539bd4196eff0248b07e334"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_L-provider.asset",
+      "sha256": "9e60cf9f09f4c33ae283666e488e400f0cacb070e1ab8b7a60c788825cda829e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_L-provider.asset.meta",
+      "sha256": "c9b20a78f6ad9e88d45037e00c60c8cf75b81d506a93374e5d19a036ff616637"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_R-hair.asset",
+      "sha256": "16fac2f12801d7589a47f7d86af431332f3f7deecda0a01b876ea586b45da804"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_R-hair.asset.meta",
+      "sha256": "6d7c55fbffc08ecc0201e11c060e468e1a9a3248118db3d4c6809fe9aed3986b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_R-provider.asset",
+      "sha256": "b603d55bf971e896639304e58a08f5871272cc9ef14d4738ac05d7a8b382c481"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarInnerCream_R-provider.asset.meta",
+      "sha256": "0d75411c0e40764002361388763eb24e1e48cc71d91ef4fa4dd6741e5a980962"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_L-hair.asset",
+      "sha256": "2df7ec1547672703a3fb7be07991c346d683d86864a9f685ac5da9187b21c6e5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_L-hair.asset.meta",
+      "sha256": "d39e8d588bd16f9a291c16307a2a32a9ed3a9faf7209b2ea86aedb29b99adbe1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_L-provider.asset",
+      "sha256": "960f6a2d25d1bee0625bb5442a257115320db9f93cdf22da9af179948bc97d2d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_L-provider.asset.meta",
+      "sha256": "3484a69b2e69722b138b84d067aa732935010f419005d271dbaffc0e8adfa49f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_R-hair.asset",
+      "sha256": "e2445d8d17c42b682efe4fe45fef4fb0b0ab4bc43d121213cdff83f3e214ce48"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_R-hair.asset.meta",
+      "sha256": "43da38ffea05cb3ada1433d030cf845dd0d8b825fb52bd64c116ead6af2d515e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_R-provider.asset",
+      "sha256": "4a935be577c918a8a3328076b2f664a97050665a5dd2041cd38b93cbf36bb703"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/EarOuterTawny_R-provider.asset.meta",
+      "sha256": "3f3622b9c2bce479a8c0172b108c750f8119f6b9a36e2c363b3c6bdd3a7cd1c5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/HeadCream-hair.asset",
+      "sha256": "2fd89ed3d3dfb9c6b9f3c194afc2e64ef925f141978fef4b823a8181a59d6d4a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/HeadCream-hair.asset.meta",
+      "sha256": "cd2fa6ca232dbd4b8c8272b0e26a623c48ac53999f22218e36f82c747b1f1c5e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/HeadCream-provider.asset",
+      "sha256": "50860a947a11f13716eaa44d2719862ceaba1f8fceb08e9c4ceb4fe00c9e1655"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/CharacterProbeOutput/HeadCream-provider.asset.meta",
+      "sha256": "c5f9d0a92e7ce803f92a71ca478bd8c2bcd841533ee1d531d125cdd8c5442de5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Nib_Natural.fbx",
+      "sha256": "3f15ce613f116122bc756b442d5d3742ac2361c9fc405bc3789eb4f4dfe2f32a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Nib_Natural.fbx.meta",
+      "sha256": "a800a6c2467517c666bbac80c3c7a345158246b203a572fde4851c1d051a9f83"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.colorLinearRgb.bytes",
+      "sha256": "75fa0bc3c2acf6e2116d1dd3ac4e3b59c46802f129b16ca11b8a05b2ccb05154"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.colorLinearRgb.bytes.meta",
+      "sha256": "4e2c4528c202f9dc66084df24a8f1a60af4b95304b4086e02aa6a887eaec0cff"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.curveCounts.bytes",
+      "sha256": "e717ffd314e2a0170b4b12c109a4f72458e7658cbbef9e322c78a60bbd55673e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.curveCounts.bytes.meta",
+      "sha256": "968bb09843981bf5cba69f823191ca09cd5f6ddce7302b1f189d45fbf3b3bf2f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.positions.bytes",
+      "sha256": "2a3a4e79821312ac945551ccaf2012bf5efd59b1ed88ea7a75b6ccb7bee154a1"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.positions.bytes.meta",
+      "sha256": "b421a08d09b1725c369fed8f02d089c8692e2d68a36e4685112f1cec1806de01"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.radii.bytes",
+      "sha256": "af6cf499451215fb37a698119c22a4dd63d8dbbf95c92c21af51fbf718fc2012"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.radii.bytes.meta",
+      "sha256": "3b31f4e18f018762b0078befafe5a030439fc324a307cf7fb5446e871599dc3e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneIndices.bytes",
+      "sha256": "f7ff1ae944790c9bd44833520a074bcc7c42d10341fa8b040912f6abeb65169f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneIndices.bytes.meta",
+      "sha256": "6a55867b5547a98a65c3d327a0b274eaec707df301174febfaeaf75c8a75e9d4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneWeights.bytes",
+      "sha256": "ea67a5a3d8a7fd2a489fba9bf16b6a78a6c3a20461c184f0d58df48106f5126e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneWeights.bytes.meta",
+      "sha256": "9efd0f1eee54dc710852fac8d50dc8daed36c707fcd127d61b45fda07ae932ed"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootUv.bytes",
+      "sha256": "bc71484c8bad705e1d166fa1938133b1936fdd7c2bd90562d9fb2d4829053fe4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootUv.bytes.meta",
+      "sha256": "31679cba5239a11c2ae097c334f025485c4cb4b4cea10b3ea2abfe567302526b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootWeightOffsets.bytes",
+      "sha256": "3f042cd168727f836c0e5b45fb1efffe10cdc2ad7cfbe7ff34adc1f6db714399"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootWeightOffsets.bytes.meta",
+      "sha256": "9469cfb6f891e7d12f31ca0b1fe416f47fb199be72d4bb17b709bd3422e71730"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.colorLinearRgb.bytes",
+      "sha256": "d35a84ec349ad6441000dab3949efc5fe95e46d6c49dcc3f888e569dfab54a87"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.colorLinearRgb.bytes.meta",
+      "sha256": "77c20ecdcf6f0f32d5eedcb3b2b102fa035dc30ea7c147928aa162323c693053"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.curveCounts.bytes",
+      "sha256": "e717ffd314e2a0170b4b12c109a4f72458e7658cbbef9e322c78a60bbd55673e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.curveCounts.bytes.meta",
+      "sha256": "a25eae735fe6348fed44ea7f5e44881f40c327d8eb5c9a3a70c990a84e9abb90"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.positions.bytes",
+      "sha256": "a7471d88327dca1f823373dd8e9b8f3df6b53c4aef2b5d9a73e43c8183689671"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.positions.bytes.meta",
+      "sha256": "2762982b7f553fbf104c697c5596579698840b34f05747d0246f7aab8bb3a17e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.radii.bytes",
+      "sha256": "e464c427fba4713f59f054e9fe48f28f3b8b6b9fb31ac28e6fcedc078b84afae"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.radii.bytes.meta",
+      "sha256": "858d7cd26f6c6a29ace66c9e36bdb07b8425e7ee7de65176c066b3b1aa2a443f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneIndices.bytes",
+      "sha256": "e61664d2c371f7b424745ffc04c232e3dff26523eefe6b8eeec4d1549867d4a9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneIndices.bytes.meta",
+      "sha256": "c8f2857a9e8d3bb9b31ea722eaadfb83980a7dc6cc51949ebd8fb69028d03943"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneWeights.bytes",
+      "sha256": "e74360c9c00686d9648a1ba20691ad595ae66585be5d03d8925e405456413667"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneWeights.bytes.meta",
+      "sha256": "ba9028f3eeb1dc794b951c64bb5f76746ff59067ea4f3e9ab54c6530cbfed4f7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootUv.bytes",
+      "sha256": "ed25ccd39a763e5d85960942db0b9ed8e2e620400e29e50630281c39ebe56727"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootUv.bytes.meta",
+      "sha256": "7486fdf5eaa8803241c1f02b268341e856eeb03baeb2f37359a16a27a29cb5b7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootWeightOffsets.bytes",
+      "sha256": "1f5489a4c7be27c122544287f704b2c5ec31e04e6142825d074610763270efe5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootWeightOffsets.bytes.meta",
+      "sha256": "89c973247aa151dbfbde13c9f434d8bd4c82919aa92d01d68a22e4a28544f2b3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.colorLinearRgb.bytes",
+      "sha256": "d983dd6d85fe993a542d24bc7893ef145b59328542bf6333b2214487589f263e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.colorLinearRgb.bytes.meta",
+      "sha256": "d0bd4908b92289a409ff73ad69b12f9eed2bb8ad2893b2c7ec8bf83f001e39ac"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.curveCounts.bytes",
+      "sha256": "fa15ce07e241b3853359e1883fb4c9ffedfa82fc6c9c52a1d4a4a039d1508c52"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.curveCounts.bytes.meta",
+      "sha256": "ebe4185b0c231dbfc9bf95f76887c0d9473370312c5d98b29d21c020d5d88938"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.positions.bytes",
+      "sha256": "8c9ffd4dad3f796bf88ce903f7fab0089c40799066efeaa33f865d44ba5811e0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.positions.bytes.meta",
+      "sha256": "270a616d9cca5cce0d66f89ed469368b36c960474d0cca44330827222ef98365"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.radii.bytes",
+      "sha256": "aea5badcdd555aad5c4e6a8cc857d4e54d3ed54f0ab8f1d20d7b55fc3852c34d"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.radii.bytes.meta",
+      "sha256": "571314c059354fb9b063e7aa52e286538411e37886892dba28bac8ceb0ff9d37"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneIndices.bytes",
+      "sha256": "1e9cee7c9a1f2077dd6528683d88ede2935795497546e8d2eb495ad366375e0b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneIndices.bytes.meta",
+      "sha256": "cf27f56d386e05463d7d559a5036c6d595130b1ebe83a2861a9fc4cba1984344"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneWeights.bytes",
+      "sha256": "10617ffaab8c6cd0cd218d1ee7df8d8047cfe34a6839a34065656c01115e13fe"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneWeights.bytes.meta",
+      "sha256": "d073edca297fc850fafdb69ce47eb11dbed3d61a23f6df58e41bf4ac949426f2"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootUv.bytes",
+      "sha256": "948116a2c707b41d0c8f9ce1d53e0bcf8a53c0002880736bd3479ec641e67a7b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootUv.bytes.meta",
+      "sha256": "702169f4344111bc2d2a0e173ca0eacfd3298bfb2ca5c08f5754b98e2ae3fff4"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootWeightOffsets.bytes",
+      "sha256": "ae7e88cf177663227a3dabfbf6038400ccbee872872bfa1483297539e7f8cc0e"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootWeightOffsets.bytes.meta",
+      "sha256": "22bf6255e410d0baecdef4eca5c4d7b3bceac0b68d8820f8b106bdc5c816db41"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.colorLinearRgb.bytes",
+      "sha256": "e463b0071f4346bab55649c10d71b1cc8bb6006b0ae9bbfaff7dd945b167eb9a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.colorLinearRgb.bytes.meta",
+      "sha256": "26977beac9310194a8de457b37c094ce06f5c9253e7dc03ab905612f67baef1a"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.curveCounts.bytes",
+      "sha256": "fa15ce07e241b3853359e1883fb4c9ffedfa82fc6c9c52a1d4a4a039d1508c52"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.curveCounts.bytes.meta",
+      "sha256": "1edbc546073c65a71db33b4b0a8bf7a3a1b1668e557b77a84335c901eab7c6fb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.positions.bytes",
+      "sha256": "c63795142b577c4445f940005d599ebfec4da51374e711a1e72626308b9757cb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.positions.bytes.meta",
+      "sha256": "120744ea99db1ab938e7750b56eb47ec792f795b6c9c072debe3f7bba8e55229"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.radii.bytes",
+      "sha256": "07baffa89259a722f6a659f5526b63305b3d8775e04f9d9fa59cbcb0ec3eba7c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.radii.bytes.meta",
+      "sha256": "f2969437573f05c4fd7d00b82e52c51a962b51666f62b491635feae1d48631a6"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneIndices.bytes",
+      "sha256": "4ca8498781f4dfdd3288df3d98d5f1c9b5a439bb63c7345b46e2069fa96c339c"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneIndices.bytes.meta",
+      "sha256": "8f5a6bb84438eb168c9bee881e472cb60de01815d247d829cfc7197473abd367"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneWeights.bytes",
+      "sha256": "fdca0a4c45c73a713af3e0a2e42ffd6aa76ec2d0dec043fd01fdec58fad2c8d3"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneWeights.bytes.meta",
+      "sha256": "ab84f434b47c4974ae5c007f8c3b136b11aa349466c7b180bae28d2111fbb0e9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootUv.bytes",
+      "sha256": "945abc9edd915d312849495104c55524d14eebe4d9006abe8012b587313fabe7"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootUv.bytes.meta",
+      "sha256": "aae9fce04c72bd7e4c2ae9c6c1e99a462431307d42482914be2cd59d9a6861cc"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootWeightOffsets.bytes",
+      "sha256": "913928e488a8738a84f810ca9ccf38a5269d1125abd4ed09382ede4b5b9e4088"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootWeightOffsets.bytes.meta",
+      "sha256": "4ccf85c4500e7309dc716a77fcbca110c1a792ea2ce8811cdba8e68fdd799441"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.colorLinearRgb.bytes",
+      "sha256": "2bb0b8f3231126da4971607baaabcfefde911ccd992171a542d7340bbc0be6c5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.colorLinearRgb.bytes.meta",
+      "sha256": "06985203409a6bb32684f00856e4b235060206c630a49ba8e171e93f52a6a199"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.curveCounts.bytes",
+      "sha256": "c09a504ce195fd3c4029bcf46e59176afa894f9acb7e400340f1c27428983ff9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.curveCounts.bytes.meta",
+      "sha256": "5e0171a69e33c46b6e74742349215a5a2daff54dd82236ac30990d4e3a7da890"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.positions.bytes",
+      "sha256": "8293d2767a93e75928c238a9baec10fecd0ca429457309c8e4c6c5d9e9ea59ef"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.positions.bytes.meta",
+      "sha256": "a5fbca042e1a289c85647c2cfe84c0d9449c1cd5268afcd0110e064f89fa094f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.radii.bytes",
+      "sha256": "ae81f29a72524d5ee73f249e1e8d6bce99b72b88832560549a6bba4284ce18cc"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.radii.bytes.meta",
+      "sha256": "a37b517b31a142932aaa15d107024f5bba4028657ef6f18639490ac5ff6992b9"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootBoneIndices.bytes",
+      "sha256": "53b931bc6f4f1c8f039b78103f196717ded24234727fc467b777cc48320ce13b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootBoneIndices.bytes.meta",
+      "sha256": "862188c74fd78d6e0b20cb839d253ecbfd7f9e7eb7911c5bcf4d55ba25889708"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootBoneWeights.bytes",
+      "sha256": "2ee20b584564fc39299292a70f491a5a0afedb010d752f3ee8ca2575f3eec664"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootBoneWeights.bytes.meta",
+      "sha256": "ec4b2604ccab6c26ae483e3280c724e2d03976b62ab6cd7972704036a373b458"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootUv.bytes",
+      "sha256": "66b42f2ca81fcd6ea0e9fe6c8c1002c1226a1fb69ef1cdb2e38935fe4ef2523b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootUv.bytes.meta",
+      "sha256": "788d50c2e8d5a61cc842a3ee35e8ddab15729c408a0805b7abcd6e7d4f2e7a66"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootWeightOffsets.bytes",
+      "sha256": "d9aadabbf16876fea683f7e7a1f7fb68712998ec09e814170fd816b59d29b474"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands/HeadCream.rootWeightOffsets.bytes.meta",
+      "sha256": "a4660ec556a1f4558996ffb836c4d018805a347597591d96b8230a77c55fac70"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/Strands.meta",
+      "sha256": "9b213b8c8bb16e5e8b7bf0f1c02776a6da1713f5d459a527b919775ea383f4cb"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/config.json",
+      "sha256": "dcadf90d19d15359c77bee6eaf70a2dbee96a3ee541418f6223ff6e782d9c13f"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/config.json.meta",
+      "sha256": "ba43dab10d7d0859f1e7de2be36e93507c6d09cd57b62c20bc4a309c666155f5"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/preparation.json",
+      "sha256": "01ce1fa5103e37d5d3b5997344cae6b85276d8b424c0c22a4af5f2f23969e986"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/preparation.json.meta",
+      "sha256": "17c40a63fea8acc92125d671ed35033221da3c59e6e96d60bc2775f5800038fd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/topology-attribution.json",
+      "sha256": "edbe9ec25807d9c48b4c8e304c44b7f491f8e5762cac6f2865dbe655f2abec2b"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/Character/topology-attribution.json.meta",
+      "sha256": "44272a39fd5e79d9af5bde487d04ddd3e1ac5b422b71fc62914b39cee5faf1f0"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/CharacterRenderProbe.cs",
+      "sha256": "56a3b394fd48524efbf66cadd75c06203385f4034949ac421c02be8cf8f68f74"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/NativeFurAuthored.shadergraph",
+      "sha256": "3869856c466dccd030809d0ffe8f81375236a4ca545a7a34c423a69cf45896dd"
+    },
+    {
+      "path": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/HairVertexHDRP174.shadersubgraph",
+      "sha256": "c46ca98c26d69da57304403088f6a498c981a33d13d2c22b1cc6332e06630728"
+    },
+    {
+      "path": "benchmark/tools/unity/strand_pilot/character-render-v1.job.json",
+      "sha256": "26794742e770178f0e9894f570ac6cca5333ac0481d218c36086c8d42879ed75"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+failure.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
