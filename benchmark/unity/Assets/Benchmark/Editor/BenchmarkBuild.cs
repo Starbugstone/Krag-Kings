@@ -85,6 +85,11 @@ namespace KragKings.Editor
             var dunesAsset=AssetDatabase.LoadAssetAtPath<GameObject>(Imported+"/environment/Dunes.fbx");
             if(!dunesAsset) throw new Exception("Shared Dunes.fbx missing");
             var dunes=(GameObject)PrefabUtility.InstantiatePrefab(dunesAsset);dunes.name="Shared dune terrain";
+            // Measured FBX import maps source (x,y,z) to Unity (-x,z,y).
+            // Our common scene uses Unity (x,z,y), Unreal (100x,-100y,100z).
+            // Correct only the terrain adapter; preserve the shared source mesh.
+            Vector3 terrainScale=dunes.transform.localScale;
+            terrainScale.x=-terrainScale.x;dunes.transform.localScale=terrainScale;
             var sand=MakeSand();
             foreach(var filter in dunes.GetComponentsInChildren<MeshFilter>())
             {
@@ -93,6 +98,8 @@ namespace KragKings.Editor
                 var renderer=filter.GetComponent<MeshRenderer>();renderer.sharedMaterial=sand;
             }
             Physics.SyncTransforms();
+            foreach(var sample in DemoTerrainReference.Sample())
+                if(!sample.passed)throw new Exception("Imported dune coordinate/collision mismatch: "+JsonUtility.ToJson(sample));
             var director=new GameObject("Demo controller").AddComponent<DemoScene>();
             director.contentFingerprint=ContentFingerprint(Imported);
             var contacts=director.gameObject.AddComponent<DemoContacts>();

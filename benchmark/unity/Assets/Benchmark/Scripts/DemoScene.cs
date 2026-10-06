@@ -337,6 +337,9 @@ namespace KragKings.Benchmark
             yield return new WaitForSeconds(12);
             var checks=new List<string>();var failures=new List<string>();
             var deformationChecks=new List<DeformationEvidence>();
+            var terrain=DemoTerrainReference.Sample();
+            if(terrain.All(s=>s.passed))checks.Add("Imported dune coordinates and upward collision normals match the shared source");
+            else failures.Add("Imported dune coordinates/collision normals differ from the shared source");
             // These are separate actors. Selection and camera inspection must not
             // serialize their actions or reset a previously selected performance.
             Select(units[0]);units[0].Trigger("Melee");
@@ -452,7 +455,7 @@ namespace KragKings.Benchmark
                     else checks.Add(model.name+": actual firing markers aim within diagnostic forward tolerance");
                 }
             failures.AddRange(runtimeErrors);
-            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray(),shots=verificationShots.ToArray()};
+            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray(),shots=verificationShots.ToArray(),terrain=terrain};
             File.WriteAllText(Path.Combine(evidencePath,"verification.json"),JsonUtility.ToJson(report,true));
             Debug.Log("BENCHMARK_VERIFICATION "+(report.failures.Length==0?"PASS":"FAIL"));
             Application.Quit(report.failures.Length==0?0:1);
@@ -515,7 +518,7 @@ namespace KragKings.Benchmark
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}
         [Serializable] class ShotEvidence {public string species,variant;public float requestedNormalizedTime,observedNormalizedTime,forwardDeviationDegrees;public Vector3 origin,direction,unitForward;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
-        [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation;public ShotEvidence[] shots; }
+        [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation;public ShotEvidence[] shots;public DemoTerrainReference.Evidence[] terrain; }
         [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }
