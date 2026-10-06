@@ -1,0 +1,27 @@
+{
+  "name": "krag-human-motion-v2b-sole-audit",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\audit_sole_contacts.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v2b\\Krag_HumanMotion_Study_v2b.blend",
+    "--species",
+    "Krag",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v2b\\actual-sole-audit.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b-sole-audit.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b-sole-audit.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b-sole-audit.stdout.log",
+  "successMarker": "KRAG_KINGS_SOLE_AUDIT_COMPLETE"
+}

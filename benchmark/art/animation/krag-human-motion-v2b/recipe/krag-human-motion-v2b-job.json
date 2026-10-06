@@ -1,0 +1,29 @@
+{
+  "name": "krag-human-motion-v2b",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\retarget_cmu_study.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9h_WIP.blend",
+    "--species",
+    "Krag",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v2b",
+    "--generation",
+    "v2b"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v2b.stdout.log",
+  "successMarker": "KRAG_KINGS_HUMAN_MOTION_STUDY_COMPLETE"
+}

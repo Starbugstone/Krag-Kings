@@ -1,0 +1,28 @@
+{
+  "name": "krag-human-motion-v1-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\review_motion.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v1\\Krag_HumanMotion_Study_v1.blend",
+    "--species",
+    "Krag",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\animation\\krag-human-motion-v1-review",
+    "--poses-only"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v1-review.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v1-review.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v1-review.stdout.log",
+  "successMarker": "KRAG_KINGS_MOTION_REVIEW_COMPLETE"
+}

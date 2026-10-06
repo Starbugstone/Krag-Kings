@@ -1,0 +1,23 @@
+{
+  "status": "Actual source and mesh views; artistic/engine acceptance pending",
+  "sourceSha256": "998277599d1a4654c1b139c1f7f90267db60fb4da5b615dc4be178549ba645bf",
+  "geometryPreserved": true,
+  "bindBonesPreserved": 68,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "improvements": [
+    "Human arm/leg opposition and coordinated trunk motion",
+    "Restrained six-second standing idle"
+  ],
+  "remainingIssues": [
+    "Free-hand relaxation and palm orientation",
+    "Actual sole contact and ground-travel fit",
+    "Concept likeness and natural shoulder deformation",
+    "Native engine integration/transition/performance review"
+  ],
+  "actualSoleAudit": "actual-sole-audit.json",
+  "actualSolePenetrationMeters": {
+    "Walk": 0.009418420160943047,
+    "Run": 0.03968457320773469
+  }
+}

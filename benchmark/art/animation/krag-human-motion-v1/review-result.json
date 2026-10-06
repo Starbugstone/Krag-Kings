@@ -1,0 +1,16 @@
+{
+  "status": "Actual human-motion source and24 clay poses; not accepted",
+  "improvements": [
+    "Coordinated pelvis/trunk/arm motion",
+    "Arms fall naturally beside torso",
+    "Six-second idle with fixed feet"
+  ],
+  "failures": [
+    "Open splayed left hand",
+    "Walk foot hovering/sliding needs contact fit",
+    "104_01 jog swing contains source knee noise;09_01 acquired for comparison"
+  ],
+  "meshAndBindChanged": false,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false
+}
