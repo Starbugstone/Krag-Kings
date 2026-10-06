@@ -1,0 +1,38 @@
+{
+  "nativeExit": 0,
+  "guardExit": 0,
+  "processId": 34540,
+  "files": [
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/probe_hair_curves.py",
+      "file": "probe_hair_curves.py",
+      "bytes": 7538,
+      "sha256": "cf5fb678cdffc2810bc2e29c5c5c578202684604ea71980f0a0bc43ad01cfe26"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/probe-native-hair-v1.job.json",
+      "file": "probe-native-hair-v1.job.json",
+      "bytes": 875,
+      "sha256": "db97d94370575a51d5ebd6c05bffbbe22237eb7e8f924f9c99540fc1a3837485"
+    },
+    {
+      "source": "benchmark/local/nib-native-hair-fixture-v1.log",
+      "file": "nib-native-hair-fixture-v1.log",
+      "bytes": 1105,
+      "sha256": "7e4c9e7ac3903a379040711c98fa6b7877c8f5bf7e21b7d33c0f2bf1f8ea533b"
+    },
+    {
+      "source": "benchmark/local/nib-native-hair-fixture-v1.stderr.log",
+      "file": "nib-native-hair-fixture-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "benchmark/local/nib-native-hair-curves-fixture-v1-memory.csv",
+      "file": "nib-native-hair-curves-fixture-v1-memory.csv",
+      "bytes": 259,
+      "sha256": "75f399180ff13d16e25e26d137957a11d6dffa9073ba65f75b048356d15bbb30"
+    }
+  ],
+  "note": "Memory polling did not sample the short peak; do not claim the recorded16MB is peak Blender memory."
+}

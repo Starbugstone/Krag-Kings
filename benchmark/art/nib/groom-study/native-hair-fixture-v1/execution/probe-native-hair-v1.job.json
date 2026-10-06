@@ -1,0 +1,23 @@
+{
+  "name": "nib-native-hair-curves-fixture-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\native_groom_wip\\probe_hair_curves.py",
+    "--",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-hair-fixture-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-hair-fixture-v1.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-hair-fixture-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-hair-fixture-v1.log",
+  "successMarker": "NIB_NATIVE_HAIR_CURVES_FIXTURE_COMPLETE"
+}
