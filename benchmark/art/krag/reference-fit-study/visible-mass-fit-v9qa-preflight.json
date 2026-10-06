@@ -1,0 +1,37 @@
+{
+  "status": "Cached actual source full area/normal preflight; no native source/render yet",
+  "flowDuration": 0.68,
+  "minimumTriangleAreaRatio": 0.21366713211831856,
+  "minimumNormalCosine": 0.26053140390571017,
+  "maxDisplacementMeters": 0.022831089763718067,
+  "flippedTriangles": 0,
+  "areaGateFailures": 0,
+  "artisticAcceptance": false,
+  "nativeSurfaceGate": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.21366713211831856,
+    "normalChangeDegreesP99": 50.21576825571023,
+    "normalChangeDegreesMaximum": 74.89840390001265,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.022831089763718067
+  },
+  "passed": true,
+  "actualV9pNeutralModules": {
+    "Head": {
+      "flippedTriangles": 0,
+      "minimumTriangleAreaRatio": 0.21366709573037612,
+      "normalChangeDegreesP99": 50.215765990045504,
+      "normalChangeDegreesMaximum": 74.89853660889715,
+      "preexistingDegenerateTriangles": 0,
+      "maxDisplacementMeters": 0.022831089749077518
+    },
+    "Mouth": {
+      "flippedTriangles": 0,
+      "minimumTriangleAreaRatio": 0.7152020265881084,
+      "normalChangeDegreesP99": 27.615535995198723,
+      "normalChangeDegreesMaximum": 33.35370809399211,
+      "preexistingDegenerateTriangles": 0,
+      "maxDisplacementMeters": 0.02062647485316506
+    }
+  }
+}

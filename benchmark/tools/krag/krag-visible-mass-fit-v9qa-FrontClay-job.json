@@ -1,0 +1,23 @@
+{
+  "name": "krag-visible-mass-fit-v9qa-FrontClay",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\reference_fit_wip\\review_visible_masses_v9qa.py",
+    "--",
+    "--view",
+    "FrontClay"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-visible-mass-fit-v9qa-FrontClay.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-visible-mass-fit-v9qa-FrontClay.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-visible-mass-fit-v9qa-FrontClay.stdout.log",
+  "successMarker": "KRAG_VISIBLE_MASS_FIT_REVIEW_COMPLETE FrontClay"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "Native source generation safely rejected before save; no review renders attempted",
+  "guardExitCode": 2,
+  "nativeExitCode": 2,
+  "processId": 32824,
+  "peakPrivateMB": 797.0,
+  "minimumAvailableMB": 11398.0,
+  "sourceOutputExists": false,
+  "failure": "Head orbital triangles compress below unchanged20% area gate; no inverted triangles",
+  "failedHeadTriangles": 145,
+  "minimumTriangleAreaRatio": 0.15930740170795954,
+  "affectedFaceSets": [
+    9,
+    10
+  ],
+  "priorPreflightGap": "Previous cached preflight checked normal reversal but omitted native triangle area ratio",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/krag-visible-mass-fit-v9q-source.stdout.log",
+      "sha256": "f5b569daa787ab44da1ba10bb8eedfe2469929f04bdb1ab4a406a8456ac4eec8"
+    },
+    {
+      "path": "benchmark/art/krag/krag-visible-mass-fit-v9q-source.stderr.log",
+      "sha256": "ec622d8c81dde4ed79165b53fd9ab2247ea1a148d3cc995aaee98f513520d9ed"
+    },
+    {
+      "path": "benchmark/local/krag-visible-mass-fit-v9q-source-memory.csv",
+      "sha256": "b92b97fcb79f868ed110d633fc7cab39e26c1fc16831a5c006eb6ca810f43794"
+    },
+    {
+      "path": "benchmark/tools/krag/reference_fit_wip/build_visible_masses_v9q.py",
+      "sha256": "bab0cf831e241005e261d4da63bbcb96b5056e8ea45b58dd5a9fe402befe84bd"
+    },
+    {
+      "path": "benchmark/tools/krag/reference_fit_wip/fit_visible_masses.py",
+      "sha256": "27ca583624dc3344a180cf57a1e525a980394b24e707679e83a4c2a09ffe7f43"
+    },
+    {
+      "path": "benchmark/art/krag/reference-fit-study/visible-mass-fit-v9q-area-failure.json",
+      "sha256": "3e68effdea7ff5ef3484ffe27036196e048af6383c2128a745727f5bf376bc65"
+    }
+  ]
+}
