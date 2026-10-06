@@ -1,0 +1,20 @@
+{
+  "name": "nib-native-v5h-eyelid-repair",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\repair_saved_eyelids_v5h.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-repair.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-repair.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-repair.log",
+  "successMarker": "NIB_V5H_EYELID_REPAIR_SAVED"
+}

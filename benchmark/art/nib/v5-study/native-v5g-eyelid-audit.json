@@ -1,0 +1,1161 @@
+{
+  "status": "Actual saved-pose diagnosis; no repair, render acceptance or source save",
+  "sources": {
+    "Nib_Master_v5f_JawRepair_WIP.blend": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e",
+    "Nib_Master_v5g_FacePlanes_WIP.blend": "1586cb3a4c66897be5d1b2c5ba43fdb34a462a6fc96d6d51d90fa417dd185db9"
+  },
+  "codeSha256": "b3c30b967b94bd4c288079b1f1c004fe6e3b7c816a72e1ae1731297b56cd9304",
+  "vertexCount": 42874,
+  "nasalVertices": 2209,
+  "nasalBoundaryEdges": 132,
+  "keyBoundaryGradients": {
+    "Blink_L": {
+      "v5f": {
+        "nasalMaximumDeltaMeters": 0.009945708756575751,
+        "maximumBoundaryDeltaJumpMeters": 0.0004073392631422125,
+        "maximumBoundaryGradient": 0.35453439813350074,
+        "worstEdge": 70135,
+        "worstEdgeVertices": [
+          7099,
+          37014
+        ]
+      },
+      "v5g": {
+        "nasalMaximumDeltaMeters": 0.0,
+        "maximumBoundaryDeltaJumpMeters": 0.010154712430903363,
+        "maximumBoundaryGradient": 7.215749698183789,
+        "worstEdge": 65615,
+        "worstEdgeVertices": [
+          5009,
+          35322
+        ]
+      }
+    },
+    "Blink_R": {
+      "v5f": {
+        "nasalMaximumDeltaMeters": 0.009940127899250162,
+        "maximumBoundaryDeltaJumpMeters": 0.00040904882945333964,
+        "maximumBoundaryGradient": 0.3556415855140223,
+        "worstEdge": 38550,
+        "worstEdgeVertices": [
+          13213,
+          25154
+        ]
+      },
+      "v5g": {
+        "nasalMaximumDeltaMeters": 0.0,
+        "maximumBoundaryDeltaJumpMeters": 0.010149493464105853,
+        "maximumBoundaryGradient": 7.192810038491409,
+        "worstEdge": 34028,
+        "worstEdgeVertices": [
+          8660,
+          23454
+        ]
+      }
+    },
+    "Squint_L": {
+      "v5f": {
+        "nasalMaximumDeltaMeters": 0.0015856936156519693,
+        "maximumBoundaryDeltaJumpMeters": 0.00011173675465514706,
+        "maximumBoundaryGradient": 0.09690025710636992,
+        "worstEdge": 4652,
+        "worstEdgeVertices": [
+          2486,
+          6148
+        ]
+      },
+      "v5g": {
+        "nasalMaximumDeltaMeters": 0.0015856936156519693,
+        "maximumBoundaryDeltaJumpMeters": 0.00011173675465514706,
+        "maximumBoundaryGradient": 0.09690025710636992,
+        "worstEdge": 4652,
+        "worstEdgeVertices": [
+          2486,
+          6148
+        ]
+      }
+    },
+    "Squint_R": {
+      "v5f": {
+        "nasalMaximumDeltaMeters": 0.0015811761749500723,
+        "maximumBoundaryDeltaJumpMeters": 0.00011161230352259401,
+        "maximumBoundaryGradient": 0.09662451547367217,
+        "worstEdge": 14728,
+        "worstEdgeVertices": [
+          1231,
+          13705
+        ]
+      },
+      "v5g": {
+        "nasalMaximumDeltaMeters": 0.0015811761749500723,
+        "maximumBoundaryDeltaJumpMeters": 0.00011161230352259401,
+        "maximumBoundaryGradient": 0.09662451547367217,
+        "worstEdge": 14728,
+        "worstEdgeVertices": [
+          1231,
+          13705
+        ]
+      }
+    }
+  },
+  "poses": {
+    "Blink": {
+      "frame": 16,
+      "actualKeyValues": {
+        "Blink_L": 1.0,
+        "Blink_R": 1.0,
+        "Squint_L": 0.0,
+        "Squint_R": 0.0,
+        "BrowRaise_L": 0.27451249957084656,
+        "BrowRaise_R": 0.27451249957084656,
+        "BrowLower_L": 0.0,
+        "BrowLower_R": 0.0,
+        "Smile_L": 0.0,
+        "Smile_R": 0.0,
+        "Frown_L": 0.24019606411457062,
+        "Frown_R": 0.24019606411457062,
+        "JawOpen": 0.0,
+        "LipPress": 0.34312406182289124,
+        "TongueOut": 0.0,
+        "CheekTension_L": 0.0,
+        "CheekTension_R": 0.0
+      },
+      "full": {
+        "maximum": 7.474865825689467,
+        "p99": 1.967317258071164,
+        "worstEdges": [
+          {
+            "edge": 65615,
+            "vertices": [
+              5009,
+              35322
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.00137843894850351,
+            "posedLengthMeters": 0.01030364618896821
+          },
+          {
+            "edge": 34028,
+            "vertices": [
+              8660,
+              23454
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013816087387270419,
+            "posedLengthMeters": 0.01029469920240393
+          },
+          {
+            "edge": 65616,
+            "vertices": [
+              5010,
+              35321
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014088643138025104,
+            "posedLengthMeters": 0.010485357892467113
+          },
+          {
+            "edge": 65614,
+            "vertices": [
+              5008,
+              35323
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013424863001797315,
+            "posedLengthMeters": 0.009973153379411001
+          },
+          {
+            "edge": 34027,
+            "vertices": [
+              8661,
+              23457
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001412121476336463,
+            "posedLengthMeters": 0.010478599672083238
+          },
+          {
+            "edge": 34029,
+            "vertices": [
+              8659,
+              23451
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013453219381671458,
+            "posedLengthMeters": 0.009960832803956073
+          },
+          {
+            "edge": 17907,
+            "vertices": [
+              16089,
+              1707
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014321505264242433,
+            "posedLengthMeters": 0.01054423842193659
+          },
+          {
+            "edge": 7252,
+            "vertices": [
+              452,
+              8098
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014355363124010448,
+            "posedLengthMeters": 0.010538949711961162
+          },
+          {
+            "edge": 5499,
+            "vertices": [
+              6783,
+              1843
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001302669785956827,
+            "posedLengthMeters": 0.009472576422340704
+          },
+          {
+            "edge": 10947,
+            "vertices": [
+              10869,
+              588
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013052776333738658,
+            "posedLengthMeters": 0.009456666254685431
+          },
+          {
+            "edge": 64704,
+            "vertices": [
+              4996,
+              34979
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001260986967494806,
+            "posedLengthMeters": 0.008793657190334052
+          },
+          {
+            "edge": 33109,
+            "vertices": [
+              8518,
+              23111
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0012633740772911924,
+            "posedLengthMeters": 0.008773724246410802
+          }
+        ]
+      },
+      "skeletalOnly": {
+        "maximum": 1.0,
+        "p99": 1.0,
+        "worstEdges": [
+          {
+            "edge": 83565,
+            "vertices": [
+              6573,
+              42047
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.001387369912340157,
+            "posedLengthMeters": 0.001387369912340157
+          },
+          {
+            "edge": 83564,
+            "vertices": [
+              6572,
+              42050
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.001345595314062452,
+            "posedLengthMeters": 0.001345595314062452
+          },
+          {
+            "edge": 83563,
+            "vertices": [
+              6571,
+              42053
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013024046617645796,
+            "posedLengthMeters": 0.0013024046617645796
+          },
+          {
+            "edge": 83562,
+            "vertices": [
+              8352,
+              42053
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.001305421622066908,
+            "posedLengthMeters": 0.001305421622066908
+          },
+          {
+            "edge": 83561,
+            "vertices": [
+              8351,
+              42054
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013362188385358366,
+            "posedLengthMeters": 0.0013362188385358366
+          },
+          {
+            "edge": 83560,
+            "vertices": [
+              8350,
+              42055
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013747728835540284,
+            "posedLengthMeters": 0.0013747728835540284
+          },
+          {
+            "edge": 83559,
+            "vertices": [
+              8686,
+              42055
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0011138971128687289,
+            "posedLengthMeters": 0.0011138971128687289
+          },
+          {
+            "edge": 83558,
+            "vertices": [
+              8687,
+              42052
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0011684164708969365,
+            "posedLengthMeters": 0.0011684164708969365
+          },
+          {
+            "edge": 83557,
+            "vertices": [
+              8688,
+              42049
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0012205660331274914,
+            "posedLengthMeters": 0.0012205660331274914
+          },
+          {
+            "edge": 83556,
+            "vertices": [
+              3486,
+              42049
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013837368389252405,
+            "posedLengthMeters": 0.0013837368389252405
+          },
+          {
+            "edge": 83555,
+            "vertices": [
+              3485,
+              42048
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013479531872690688,
+            "posedLengthMeters": 0.0013479531872690688
+          },
+          {
+            "edge": 83554,
+            "vertices": [
+              3484,
+              42047
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0013205249167774276,
+            "posedLengthMeters": 0.0013205249167774276
+          }
+        ]
+      },
+      "morphOnly": {
+        "maximum": 7.474865825689467,
+        "p99": 1.967317258071164,
+        "worstEdges": [
+          {
+            "edge": 65615,
+            "vertices": [
+              5009,
+              35322
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.00137843894850351,
+            "posedLengthMeters": 0.01030364618896821
+          },
+          {
+            "edge": 34028,
+            "vertices": [
+              8660,
+              23454
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013816087387270419,
+            "posedLengthMeters": 0.01029469920240393
+          },
+          {
+            "edge": 65616,
+            "vertices": [
+              5010,
+              35321
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014088643138025104,
+            "posedLengthMeters": 0.010485357892467113
+          },
+          {
+            "edge": 65614,
+            "vertices": [
+              5008,
+              35323
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013424863001797315,
+            "posedLengthMeters": 0.009973153379411001
+          },
+          {
+            "edge": 34027,
+            "vertices": [
+              8661,
+              23457
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001412121476336463,
+            "posedLengthMeters": 0.010478599672083238
+          },
+          {
+            "edge": 34029,
+            "vertices": [
+              8659,
+              23451
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013453219381671458,
+            "posedLengthMeters": 0.009960832803956073
+          },
+          {
+            "edge": 17907,
+            "vertices": [
+              16089,
+              1707
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014321505264242433,
+            "posedLengthMeters": 0.01054423842193659
+          },
+          {
+            "edge": 7252,
+            "vertices": [
+              452,
+              8098
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0014355363124010448,
+            "posedLengthMeters": 0.010538949711961162
+          },
+          {
+            "edge": 5499,
+            "vertices": [
+              6783,
+              1843
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001302669785956827,
+            "posedLengthMeters": 0.009472576422340704
+          },
+          {
+            "edge": 10947,
+            "vertices": [
+              10869,
+              588
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0013052776333738658,
+            "posedLengthMeters": 0.009456666254685431
+          },
+          {
+            "edge": 64704,
+            "vertices": [
+              4996,
+              34979
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.001260986967494806,
+            "posedLengthMeters": 0.008793657190334052
+          },
+          {
+            "edge": 33109,
+            "vertices": [
+              8518,
+              23111
+            ],
+            "nasalBoundary": true,
+            "neutralLengthMeters": 0.0012633740772911924,
+            "posedLengthMeters": 0.008773724246410802
+          }
+        ]
+      },
+      "oldBlinkCounterfactual": {
+        "maximum": 5.3048691971500554,
+        "p99": 1.6748577149198427,
+        "worstEdges": [
+          {
+            "edge": 23336,
+            "vertices": [
+              19449,
+              19452
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0008634125154756736,
+            "posedLengthMeters": 0.004580290457780746
+          },
+          {
+            "edge": 23335,
+            "vertices": [
+              19448,
+              19451
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0008915745203346234,
+            "posedLengthMeters": 0.004728135601616907
+          },
+          {
+            "edge": 55021,
+            "vertices": [
+              31351,
+              31354
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0008616520233648256,
+            "posedLengthMeters": 0.004559970562169823
+          },
+          {
+            "edge": 55020,
+            "vertices": [
+              31350,
+              31353
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0008899291126143563,
+            "posedLengthMeters": 0.004709505614044315
+          },
+          {
+            "edge": 3411,
+            "vertices": [
+              5217,
+              82
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000847498001799213,
+            "posedLengthMeters": 0.004481785981173904
+          },
+          {
+            "edge": 1175,
+            "vertices": [
+              3540,
+              1337
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0008459459331221999,
+            "posedLengthMeters": 0.004460564944151133
+          },
+          {
+            "edge": 23334,
+            "vertices": [
+              19447,
+              19450
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000917944382001375,
+            "posedLengthMeters": 0.004788155042402118
+          },
+          {
+            "edge": 55019,
+            "vertices": [
+              31349,
+              31352
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000916349062130487,
+            "posedLengthMeters": 0.004771240701784449
+          },
+          {
+            "edge": 7634,
+            "vertices": [
+              8384,
+              8385
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0009397782750259513,
+            "posedLengthMeters": 0.00477392118385858
+          },
+          {
+            "edge": 53360,
+            "vertices": [
+              30727,
+              30730
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0010727226293140494,
+            "posedLengthMeters": 0.005365128262737063
+          },
+          {
+            "edge": 23107,
+            "vertices": [
+              17586,
+              19359
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000817722492858895,
+            "posedLengthMeters": 0.004087187369298413
+          },
+          {
+            "edge": 12837,
+            "vertices": [
+              12286,
+              12287
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0009249658156280263,
+            "posedLengthMeters": 0.004620643083830824
+          }
+        ]
+      },
+      "oldBlinkSubstitutionMaximumDifferenceMeters": 0.009956621361959362,
+      "nasalMaximumFullDisplacementMeters": 0.0006789997555314025
+    },
+    "Tongue": {
+      "frame": 103,
+      "actualKeyValues": {
+        "Blink_L": 0.0,
+        "Blink_R": 0.0,
+        "Squint_L": 0.49999356269836426,
+        "Squint_R": 0.49999356269836426,
+        "BrowRaise_L": 0.0,
+        "BrowRaise_R": 0.0,
+        "BrowLower_L": 0.0,
+        "BrowLower_R": 0.0,
+        "Smile_L": 1.0,
+        "Smile_R": 0.7199999094009399,
+        "Frown_L": 0.0,
+        "Frown_R": 0.0,
+        "JawOpen": 0.625,
+        "LipPress": 0.0,
+        "TongueOut": 0.9333347082138062,
+        "CheekTension_L": 0.0,
+        "CheekTension_R": 0.0
+      },
+      "full": {
+        "maximum": 9.740657955523359,
+        "p99": 1.0946504077776649,
+        "worstEdges": [
+          {
+            "edge": 11048,
+            "vertices": [
+              1526,
+              10945
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00024776107280870827,
+            "posedLengthMeters": 0.0024133558649231464
+          },
+          {
+            "edge": 18380,
+            "vertices": [
+              271,
+              16444
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000248891653914087,
+            "posedLengthMeters": 0.002408599471637409
+          },
+          {
+            "edge": 8196,
+            "vertices": [
+              284,
+              8806
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002926913584078623,
+            "posedLengthMeters": 0.0023810695244297453
+          },
+          {
+            "edge": 11459,
+            "vertices": [
+              11253,
+              1539
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002944352752657915,
+            "posedLengthMeters": 0.0023808187905881174
+          },
+          {
+            "edge": 5418,
+            "vertices": [
+              6722,
+              6723
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021287356677990963,
+            "posedLengthMeters": 0.001540742312807886
+          },
+          {
+            "edge": 20353,
+            "vertices": [
+              17923,
+              17924
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021653232593683313,
+            "posedLengthMeters": 0.0015351331718984973
+          },
+          {
+            "edge": 75692,
+            "vertices": [
+              39105,
+              39106
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003152839156029555,
+            "posedLengthMeters": 0.0022113787377538155
+          },
+          {
+            "edge": 44135,
+            "vertices": [
+              27252,
+              27255
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003162394133315457,
+            "posedLengthMeters": 0.0022087239060907295
+          },
+          {
+            "edge": 49603,
+            "vertices": [
+              29318,
+              29321
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022131551659876721,
+            "posedLengthMeters": 0.0015330910342724296
+          },
+          {
+            "edge": 80145,
+            "vertices": [
+              40776,
+              40777
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022479860283299726,
+            "posedLengthMeters": 0.0015281098950070216
+          },
+          {
+            "edge": 52177,
+            "vertices": [
+              9690,
+              30281
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023359503775439717,
+            "posedLengthMeters": 0.0015295916108266012
+          },
+          {
+            "edge": 82623,
+            "vertices": [
+              15013,
+              41704
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023771833060034294,
+            "posedLengthMeters": 0.0015227783618469585
+          }
+        ]
+      },
+      "skeletalOnly": {
+        "maximum": 1.0027418930798955,
+        "p99": 1.0,
+        "worstEdges": [
+          {
+            "edge": 38327,
+            "vertices": [
+              13025,
+              25068
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.003551220180607049,
+            "posedLengthMeters": 0.0035609572466454406
+          },
+          {
+            "edge": 69923,
+            "vertices": [
+              7688,
+              36938
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.003552495715856694,
+            "posedLengthMeters": 0.003561846867671307
+          },
+          {
+            "edge": 38328,
+            "vertices": [
+              13026,
+              25069
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.003576929173748569,
+            "posedLengthMeters": 0.003583220532401554
+          },
+          {
+            "edge": 69922,
+            "vertices": [
+              7689,
+              36939
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0035813208475957477,
+            "posedLengthMeters": 0.0035873388112791175
+          },
+          {
+            "edge": 9676,
+            "vertices": [
+              917,
+              9916
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0035375861347961956,
+            "posedLengthMeters": 0.003541508191755033
+          },
+          {
+            "edge": 4928,
+            "vertices": [
+              2172,
+              6355
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.003545839349453428,
+            "posedLengthMeters": 0.0035495605607642152
+          },
+          {
+            "edge": 69911,
+            "vertices": [
+              36934,
+              36937
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.004213375194180754,
+            "posedLengthMeters": 0.004216845511291064
+          },
+          {
+            "edge": 38317,
+            "vertices": [
+              25068,
+              25071
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.004288307417069335,
+            "posedLengthMeters": 0.004289222014239911
+          },
+          {
+            "edge": 69912,
+            "vertices": [
+              36935,
+              36938
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.004292525634731415,
+            "posedLengthMeters": 0.004293292518248315
+          },
+          {
+            "edge": 39957,
+            "vertices": [
+              8154,
+              25685
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.005251565837083677,
+            "posedLengthMeters": 0.005251890624142228
+          },
+          {
+            "edge": 71548,
+            "vertices": [
+              3783,
+              37549
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0052633254892084395,
+            "posedLengthMeters": 0.005263572669451842
+          },
+          {
+            "edge": 55,
+            "vertices": [
+              2700,
+              384
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0010084900080757832,
+            "posedLengthMeters": 0.0010084900080757832
+          }
+        ]
+      },
+      "morphOnly": {
+        "maximum": 9.740657955523359,
+        "p99": 1.0946504077776649,
+        "worstEdges": [
+          {
+            "edge": 11048,
+            "vertices": [
+              1526,
+              10945
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00024776107280870827,
+            "posedLengthMeters": 0.0024133558649231464
+          },
+          {
+            "edge": 18380,
+            "vertices": [
+              271,
+              16444
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000248891653914087,
+            "posedLengthMeters": 0.002408599471637409
+          },
+          {
+            "edge": 8196,
+            "vertices": [
+              284,
+              8806
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002926913584078623,
+            "posedLengthMeters": 0.0023810695244297453
+          },
+          {
+            "edge": 11459,
+            "vertices": [
+              11253,
+              1539
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002944352752657915,
+            "posedLengthMeters": 0.0023808187905881174
+          },
+          {
+            "edge": 5418,
+            "vertices": [
+              6722,
+              6723
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021287356677990963,
+            "posedLengthMeters": 0.001540742312807886
+          },
+          {
+            "edge": 20353,
+            "vertices": [
+              17923,
+              17924
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021653232593683313,
+            "posedLengthMeters": 0.0015351331718984973
+          },
+          {
+            "edge": 75692,
+            "vertices": [
+              39105,
+              39106
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003152839156029555,
+            "posedLengthMeters": 0.0022113787377538155
+          },
+          {
+            "edge": 44135,
+            "vertices": [
+              27252,
+              27255
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003162394133315457,
+            "posedLengthMeters": 0.0022087239060907295
+          },
+          {
+            "edge": 49603,
+            "vertices": [
+              29318,
+              29321
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022131551659876721,
+            "posedLengthMeters": 0.0015330910342724296
+          },
+          {
+            "edge": 80145,
+            "vertices": [
+              40776,
+              40777
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022479860283299726,
+            "posedLengthMeters": 0.0015281098950070216
+          },
+          {
+            "edge": 52177,
+            "vertices": [
+              9690,
+              30281
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023359503775439717,
+            "posedLengthMeters": 0.0015295916108266012
+          },
+          {
+            "edge": 82623,
+            "vertices": [
+              15013,
+              41704
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023771833060034294,
+            "posedLengthMeters": 0.0015227783618469585
+          }
+        ]
+      },
+      "oldBlinkCounterfactual": {
+        "maximum": 9.740657955523359,
+        "p99": 1.0946504077776649,
+        "worstEdges": [
+          {
+            "edge": 11048,
+            "vertices": [
+              1526,
+              10945
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00024776107280870827,
+            "posedLengthMeters": 0.0024133558649231464
+          },
+          {
+            "edge": 18380,
+            "vertices": [
+              271,
+              16444
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.000248891653914087,
+            "posedLengthMeters": 0.002408599471637409
+          },
+          {
+            "edge": 8196,
+            "vertices": [
+              284,
+              8806
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002926913584078623,
+            "posedLengthMeters": 0.0023810695244297453
+          },
+          {
+            "edge": 11459,
+            "vertices": [
+              11253,
+              1539
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0002944352752657915,
+            "posedLengthMeters": 0.0023808187905881174
+          },
+          {
+            "edge": 5418,
+            "vertices": [
+              6722,
+              6723
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021287356677990963,
+            "posedLengthMeters": 0.001540742312807886
+          },
+          {
+            "edge": 20353,
+            "vertices": [
+              17923,
+              17924
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00021653232593683313,
+            "posedLengthMeters": 0.0015351331718984973
+          },
+          {
+            "edge": 75692,
+            "vertices": [
+              39105,
+              39106
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003152839156029555,
+            "posedLengthMeters": 0.0022113787377538155
+          },
+          {
+            "edge": 44135,
+            "vertices": [
+              27252,
+              27255
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.0003162394133315457,
+            "posedLengthMeters": 0.0022087239060907295
+          },
+          {
+            "edge": 49603,
+            "vertices": [
+              29318,
+              29321
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022131551659876721,
+            "posedLengthMeters": 0.0015330910342724296
+          },
+          {
+            "edge": 80145,
+            "vertices": [
+              40776,
+              40777
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00022479860283299726,
+            "posedLengthMeters": 0.0015281098950070216
+          },
+          {
+            "edge": 52177,
+            "vertices": [
+              9690,
+              30281
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023359503775439717,
+            "posedLengthMeters": 0.0015295916108266012
+          },
+          {
+            "edge": 82623,
+            "vertices": [
+              15013,
+              41704
+            ],
+            "nasalBoundary": false,
+            "neutralLengthMeters": 0.00023771833060034294,
+            "posedLengthMeters": 0.0015227783618469585
+          }
+        ]
+      },
+      "oldBlinkSubstitutionMaximumDifferenceMeters": 0.0,
+      "nasalMaximumFullDisplacementMeters": 0.002801429596018855
+    }
+  },
+  "sharedChanged": false,
+  "cacheSha256": "c4e7df1ecff67fa628cf4264b50f4861e2153a65186285c1db0d7e2b3c25e7ac"
+}

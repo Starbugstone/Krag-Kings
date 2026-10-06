@@ -1,0 +1,115 @@
+{
+  "status": "Actual isolated continuous Blink support repair and three views; remaining wedge/pinches fail visual review; no promotion",
+  "source": "benchmark/art/nib/Nib_Master_v5h_EyelidRepair_WIP.blend",
+  "sourceSha256": "3a7eeec4ff6ca61f5fb1c084af38302e94a17a308b9267676d8fc58c3c6c9e9e",
+  "sourceReportSha256": "ca7b8bfd795762b66409d68d4e3d8c28fbe7e5d9d860f540360d74398436b184",
+  "audit": "benchmark/art/nib/v5-study/native-v5g-eyelid-audit.json",
+  "auditSha256": "110d08de96eaf5620c97f8655dc43e53992019ad964720db0277cbf58c032c1b",
+  "preserved": {
+    "unrelatedComponents": 374,
+    "basisTopologyWeightsUVBindAndMaterials": true,
+    "jawRepairAndOtherExpressions": true,
+    "clips": true
+  },
+  "fineFuzzMaximumBasisDifferenceMeters": 0.0,
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Strict neutral/Idle oral visibility and irises; diagnostic failure retained"
+  },
+  "processes": {
+    "eyelid-audit": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_V5G_EYELID_AUDIT_COMPLETE",
+      "logSha256": "57936c6001eee6f290076fe55a733ef207778ada0987f3eb5465c45445906386",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5g-eyelid-audit-memory.csv",
+      "memoryTraceSha256": "31dcb1f1aca8510ea33d81f73dd133cd0e86d46c929721d074a7d6c95b78237d",
+      "peakPrivateMB": 652.0,
+      "lowestAvailableMB": 13526.0,
+      "peakCommitPercent": 48.0
+    },
+    "eyelid-repair": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_V5H_EYELID_REPAIR_SAVED",
+      "logSha256": "a0418201f4597d9abae9dab069567c2962f9f81823c696a4a1a2efc87e6c49d0",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5h-eyelid-repair-memory.csv",
+      "memoryTraceSha256": "2a60b67d57c15caece7a04e0e12e48fef472f943dc65d962b4b2d72400176c3d",
+      "peakPrivateMB": 609.0,
+      "lowestAvailableMB": 13765.0,
+      "peakCommitPercent": 48.0
+    },
+    "eyelid-review": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "logSha256": "3b7d919955f9fbabdec75ebcdff21eb967fa7f1689aaac407943f5c7a42e0c7b",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5h-eyelid-review-memory.csv",
+      "memoryTraceSha256": "3671037c18232b79d31e13d77df031eef7d1fa806649b7d57ec903bc1f9cbf17",
+      "peakPrivateMB": 2633.0,
+      "lowestAvailableMB": 12118.0,
+      "peakCommitPercent": 53.0
+    }
+  },
+  "images": [
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5h-diagnostic-renders/Nib_ExpressionBlink.png",
+      "sha256": "563ca39291ff919e9ac959df43ab7e475c44829f94224483233c820b69211e79",
+      "metadataSha256": "dc2277f9d1f8cbce0ddd05e2df6a8f14d43c9483f108a790b78a5d855c31a0a6",
+      "view": "Blink",
+      "action": "FacePerformance",
+      "frame": 16,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5h-diagnostic-renders/Nib_ExpressionTongue.png",
+      "sha256": "34a16d89b6f8656a0863e75701062f19439e7f880b152e11288012c138615409",
+      "metadataSha256": "825f9a81ec723c92f4a02e066c5fdadb1be4059ba83e73039a973ceb2669388e",
+      "view": "Tongue",
+      "action": "FacePerformance",
+      "frame": 103,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5h-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "5a4f167f8b39ab66f2a9ce34b58dc4a321c9bf38b6573687fdce354e5106b83a",
+      "metadataSha256": "6916c2244985721fda10f085d46be1667f0a032455a749d8583e5c2878768df1",
+      "view": "Face",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    }
+  ],
+  "visualFindings": {
+    "neutral": "Unchanged v5g geometry/materials; overall face/groom/cloth remains unaccepted.",
+    "tongue": "Preserved real aperture and dark-blue tongue without prior curtain. Boxy corners and long squint crease remain.",
+    "blink": "Eyes close, but the nasal/cheek wedge and bridge pinch remain visibly objectionable despite continuous support. This is not a visual pass. Further blind mask-width tuning is not justified; inherited closure shape must be rebuilt against actual orbital/lid geometry.",
+    "scope": "No maps, FBX exports, shared promotion or engine validation from this pass."
+  },
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}

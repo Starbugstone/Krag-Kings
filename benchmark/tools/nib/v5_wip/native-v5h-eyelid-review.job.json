@@ -1,0 +1,31 @@
+{
+  "name": "nib-native-v5h-eyelid-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\render_review.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5h_EyelidRepair_WIP.blend",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-diagnostic-renders",
+    "--coordinate-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-head-v5h-eyelid-repair.json",
+    "--diagnostic-allow-failed-gate",
+    "Face",
+    "Tongue",
+    "Blink"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5h-eyelid-review.log",
+  "successMarker": "NIB_REVIEW_RENDER_COMPLETE"
+}
