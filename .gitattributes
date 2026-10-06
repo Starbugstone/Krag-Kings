@@ -38,3 +38,6 @@ benchmark/art/weapons/surface-study-v3/*.json -text whitespace=cr-at-eol
 benchmark/art/weapons/surface-study-v3/*.csv -text whitespace=cr-at-eol
 benchmark/art/animation/nib-human-motion-v6/**/*.json -text whitespace=cr-at-eol
 benchmark/art/animation/nib-human-motion-v6/**/*.csv -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-full-pass/*.json -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-full-pass/*.csv -text whitespace=cr-at-eol
+benchmark/unreal/evidence/native-input-full-pass/*.log -text whitespace=cr-at-eol,-blank-at-eol

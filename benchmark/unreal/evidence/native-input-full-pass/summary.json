@@ -1,0 +1,100 @@
+{
+  "scope": "Full native suite",
+  "completed": true,
+  "passedChecks": 40,
+  "failedChecks": 0,
+  "exeSha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+  "sourceFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "startedUtc": "2026-10-06T09:17:30.8455980Z",
+  "finishedUtc": "2026-10-06T09:17:56.7130582Z",
+  "gameProcessId": 19928,
+  "gameClosed": true,
+  "guardExitCode": 0,
+  "windowLeaseRestored": true,
+  "keyboardEdgeCount": 58,
+  "pointerGuardCount": 17,
+  "pan": {
+    "requestedHoldMilliseconds": 250,
+    "actualHoldFromDownReturnMilliseconds": 256.6288,
+    "firstPassingObservationUtc": "2026-10-06T09:17:40.3177858Z",
+    "firstPassingObservationAfterDownMilliseconds": 101.631,
+    "firstPassingCameraManhattanDeltaCm": 31.14399999999995,
+    "selectedAction": "Melee",
+    "bothEdgesAccepted": true,
+    "bothEdgesGameForeground": true,
+    "scanCode": 57421,
+    "observationLimit": "Observed state-file response, not an exact input-to-photon latency measurement."
+  },
+  "sameFrameModifierProof": [
+    {
+      "frame": 813,
+      "key": "RightShift",
+      "capturedWalk": 1,
+      "currentShiftAtDispatch": 0
+    },
+    {
+      "frame": 929,
+      "key": "None",
+      "capturedWalk": 0,
+      "currentShiftAtDispatch": 0
+    },
+    {
+      "frame": 1001,
+      "key": "LeftShift",
+      "capturedWalk": 1,
+      "currentShiftAtDispatch": 0
+    }
+  ],
+  "captures": [
+    {
+      "file": "krag-expression.png",
+      "original": "benchmark/builds/unreal/Windows/KragKingsBenchmark/Saved/Benchmark/input-review00010.png",
+      "fileModifiedUtc": "2026-10-06T09:17:42.399184+00:00",
+      "review": "Krag Crusher expression portrait; face anatomy and material likeness remain rejected.",
+      "artisticAcceptance": false
+    },
+    {
+      "file": "krag-walk.png",
+      "original": "benchmark/builds/unreal/Windows/KragKingsBenchmark/Saved/Benchmark/input-review00011.png",
+      "fileModifiedUtc": "2026-10-06T09:17:44.627062+00:00",
+      "review": "Krag Crusher walking state on dune with Nib visible; one still does not accept gait quality.",
+      "artisticAcceptance": false
+    },
+    {
+      "file": "nib-expression.png",
+      "original": "benchmark/builds/unreal/Windows/KragKingsBenchmark/Saved/Benchmark/input-review00012.png",
+      "fileModifiedUtc": "2026-10-06T09:17:45.997472+00:00",
+      "review": "Nib GripReplacement expression portrait; old protruding eyes, sparse groom and cloth remain rejected.",
+      "artisticAcceptance": false
+    }
+  ],
+  "limits": [
+    "Earlier failure evidence retained; the original 525ms gap remains unattributed.",
+    "Current shared assets and package unchanged; no new 79-bone Nib or whole-body motion clips imported.",
+    "Settled-scene movement commands do not test an active Walk-to-Run or Run-to-Walk switch.",
+    "No complete-cycle natural breathing, hand-pose, anatomical deformation or new-clip visual acceptance is established.",
+    "Diagnostic run includes state writes and captures; it is not a controlled performance sample."
+  ],
+  "visualAcceptance": false,
+  "performanceMeasurement": false,
+  "artifactHashes": {
+    "frozen-plan.json": "ed3d8a7d174b5bea8bc68c164be4dba3979d4334a9601732fb1e6a39eb0ea819",
+    "gpu.csv": "1298a73c175dbd0a1db3181e18b63dde402673230d164a6955ddcf76a7fa2659",
+    "guard-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-stdout.log": "e2ad7314b2ed9e0f649fe9397fae9b687480a4a7f3a5a77df58ab2405d05caa7",
+    "input-smoke-report.json": "f13c059f0a58da4a3e9f985dd7cd938ad568e7e1467beceb7df09606c13433a5",
+    "input-state.json": "f817cad950755c07dd543ac754ad11412b8c568b3983ce9224364b95c91eab82",
+    "input-stdout.log": "ae6ad2f368f7301bd7b49d4a8368c7f06679a31c3f4b293ae42a7817d3590adf",
+    "job.json": "e19e0eb8c8dbe62903bbbb14fa248eadcee3fcbd4363819fbfe723ba36e00e52",
+    "krag-expression.png": "79007ef735d1ef255a9238944e9f29dd297db60a81e00c7f15769792fab36a49",
+    "krag-walk.png": "816b1630e5644bf8b1d7d23c05d222a0d672613f5dd878597cc23abba753a245",
+    "memory.csv": "0850f7a1d13db8b4b85d47b4cec8fa611908418e8137add122b5024b0549f691",
+    "native-input-result.json": "f19c4d84f46a5d1ac1cbc0ddc3da6eba61294f4f269564926795a96808cc46a4",
+    "native-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-stdout.log": "4eb765dd09cd00a57797fd3a4c0887d35ca690800d4fc1205efe1d920fb02f19",
+    "nib-expression.png": "6142026c3d64966ee9775edffe3afe8762c0cfd300c8f442c874361d28cb2325",
+    "package-result.json": "5b0e6e58f89036a0a14d01ba73babd70693cf18728452ed5c744cb3e2e775f36",
+    "run-conditions.json": "2a21c9948874bebbae19feeff2dc625ec6ac5acec0e1d72d43f624b1bfc35413",
+    "runtime.log": "c9951770ff956684036d30213c3820b1eff225ae5161a3f34a65226c7d780a5e"
+  }
+}

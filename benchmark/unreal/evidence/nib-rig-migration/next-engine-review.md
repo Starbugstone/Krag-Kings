@@ -1,0 +1,32 @@
+# Next matching character and motion review
+
+The current Windows package remains `fe65cc4a…`, using the earlier 75-authored-bone Nib. Its frozen full native input suite now passes all 40 checks on that unchanged executable. This plan addresses the future expanded rig and whole-body clips; it is not a promotion or a claim that current anatomy is acceptable.
+
+## Exact available motion candidate
+
+The independently checked source is `Nib_HumanMotion_Study_v5.blend`, SHA256 `b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da`. Its isolated `fbx-v2/export.json` hashes to `5ee1fae62000e112db8bc59e99246a319d2e2f696a087fbd8b5e1a2ecb6051d2`; `roundtrip.json` hashes to `aae6d88f3e98c665833ebf4552bf17085b392a0f326100a9ff76856fefea133b`. All seven clips plus RestBinding match their recorded FBX hashes. The roundtrip reports 79 authored bones, matching parent maps and 17 skeletal samples per clip, with maximum sampled position error 0.000000724 m. Idle is 6 s, Walk 0.8 s and Run 0.6 s. [Exact file receipt and limits](candidate-motion-check.json).
+
+Blender's inferred connected-bone flags were restored to the saved source settings for playback comparison, without changing any bind matrix or FBX bytes. This addresses Blender's suppression of valid child translation tracks. Neither game engine has yet validated these new poses. The isolated exports contain a tiny rest-bind carrier, not a coherent clothed/furred character mesh.
+
+## Import gates and sequence
+
+1. Obtain the reviewed coherent character source and all three matching assembled variant FBXs. Each needs the same authored hierarchy/bind, seven embedded takes for Unity, matching explicit clips for Unreal, valid mesh weights/morphs, equipment and new garment/groom materials. A later assembled source will have a different file hash; its delivery receipt must explicitly link the retained motion/bind data to this candidate or provide a new passing motion receipt. Do not pair old 75-bone shared meshes with these 79-bone clips.
+2. Freeze the full delivery receipt, all FBX/texture/manifest hashes, importer/native source and previous packaged build. Confirm the per-variant deformation overrides, muzzle markers, discharge times and new locomotion metadata. Keep new material alpha fields explicit. Art acceptance, even after technical checks, remains a separate gate.
+3. Compile the prepared native rig-audit helpers and Idle-offset source. Use the reversible cache migration at a reserved process boundary, then import each Nib in a fresh guarded editor process with the established memory cap and process-local core limit. No unattended same-name skeleton merge across inserted twist bones.
+4. Compare imported authored names/parents against that exact source contract, treating UE's extra `Nib_Rig` wrapper separately. Verify full bind transforms/scales and seven clip durations. Run the prepared read-only audit to capture local Pelvis, TongueTip, ear, forearm-twist and hand tracks. Apply parent/root and component scales before interpreting local translation units; presence or a nonzero span alone is not source-to-world pose parity.
+5. In Unity, import the complete variants and inspect the full Transform hierarchy, not only weighted renderer bones. Both engines must consume the same reviewed delivery hashes before a new comparison. Reassemble the scene/data assets, then inspect actual standing, frontal/profile locomotion and key action poses before expensive final packaging.
+6. Review the first actual new-package sequence: independent full 6 s Idle cycles, Idle→Walk→Idle, Idle→Run→Idle, active Walk↔Run, ordinary stop/start and simultaneous independent actions. Include flat foreground and both directions over dune slopes. Record actual rendered poses/foot contacts and a short video, independently from timed performance.
+
+## What current native checks establish
+
+| Behavior | Existing actual assertion | Limit |
+| --- | --- | --- |
+| Independent actions | Native click selects Nib while Krag Melee is active; F then requires Krag=`Melee` and Nib=`Shoot` in the same observed state. This passes in the completed 40-check full native run. | Confirms simultaneous action state. It does not numerically compare evaluated skeletal motion or prove every possible action pair. |
+| Shooting | Counts both Krag discharge events and verifies animated muzzle direction within the diagnostic 10° regression limit. | Actual event/marker evidence; no combat damage/accuracy system is implied. |
+| Camera during action | Requires Melee plus measured pan/orbit/zoom change, with an observed-action barrier and foreground guards. | All three pass in the completed full native suite; the requested 250 ms arrow hold measures 256.6288 ms. |
+| Gait command and movement | Observes Run/Walk labels, actual Krag horizontal displacement and applied running body-corrective weights; it waits for movement to settle before each new target. | Confirms fresh command dispatch. It deliberately does **not** exercise an active Walk↔Run switch. |
+| Return to Idle | Movement-settle helper rejects Walk/Run and requires stable positions in a newer telemetry sample. | This is a planning precondition, not a recorded assertion of a natural stopping pose or a full breathing cycle. |
+| New Idle offset | Both adapters have prepared phase 0/0.37 initialization; Unity source compilation passes. | Not present in the current package and not rendered yet. |
+| Natural motion | None of the state-label assertions accepts human-like arm swing, muscle deformation, cloth contact or visual continuity. | Must be judged from the new source and actual rendered motion. |
+
+The [completed full native suite](../native-input-full-pass/README.md) is a control regression result. The next motion-specific probe should remain separate from that frozen click/input suite. It needs evaluated phase/serial, action progress and frame timestamps; local/world pelvis, hand and sole samples; and actual ground traces. With those observations, assert that a new Nib action does not restart the Krag action serial, that active Walk↔Run preserves the documented contact-relative phase, and that settled feet follow the rendered dunes. Idle phase should advance through a complete cycle without repeated reseeking. Phase agreement and geometric contact can be checked numerically; naturalness and deformation still require reviewed video. No such new runtime assertions have been executed or silently substituted for visual acceptance.

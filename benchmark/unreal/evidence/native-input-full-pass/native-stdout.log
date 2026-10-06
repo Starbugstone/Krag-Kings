@@ -1,0 +1,289 @@
+LogIoDispatcher: Display: Mounted container '../../../KragKingsBenchmark/Content/Paks/global.utoc', Id='ffffffffffffffff', Order=0, Slot=0, Options=(None), Flags=(), HasSoftRefs=False
+LogPakFile: Display: Initialized I/O dispatcher file backend. Mounted the global container: ../../../KragKingsBenchmark/Content/Paks/global.utoc
+LogPakFile: Display: Found Pak file ../../../KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak attempting to mount.
+LogPakFile: Display: Mounting pak file ../../../KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak.
+LogIoDispatcher: Display: Mounted container '../../../KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc', Id='1873d80d9add4d3d', Order=4, Slot=0, Options=(None), Flags=(Compressed|Indexed), HasSoftRefs=False
+LogPakFile: Display: Mounted IoStore container "../../../KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc"
+LogPakFile: Display: Mounted Pak file '../../../KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak', mount point: '../../../'
+LogCsvProfiler: Display: Metadata set : zenstreaming="0"
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+LogAudio: Display: Pre-Initializing Audio Device Manager...
+LogAudio: Display: AudioInfo: 'OPUS' Registered
+LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+LogAudio: Display: AudioInfo: 'OGG' Registered
+LogAudio: Display: AudioInfo: 'ADPCM' Registered
+LogAudio: Display: AudioInfo: 'PCM' Registered
+LogAudio: Display: AudioInfo: 'BINKA' Registered
+LogAudio: Display: AudioInfo: 'RADA' Registered
+LogAudio: Display: Audio Device Manager Pre-Initialized
+RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: true, Async Post Load: true, Multithreaded: false
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1920"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="1080"
+LogConsoleManager: Warning: Setting the console variable 'r.Streaming.PoolSize' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '3000'
+LogHAL: Display: Platform has ~ 32 GB [34134720512 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+LogConsoleManager: Warning: Setting the console variable 'r.ScreenPercentage' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '100'
+LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+LogWindowsTouchpad: Display: CacheForceMaxTouchpadSensitivityMode SetMaxTouchpadSensitivity
+LogObj: Display: Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogD3D12RHI: Display: Creating D3D12 RHI with Max Feature Level SM6
+LogRHI: Display: Timeout Detection and Recovery (TDR) summary: 
+	- TDR settings OK - Level: Recover, Delay: 2, DdiDelay: 5
+LogD3D12RHI: Display: Not using pipeline state disk cache per r.D3D12.PSO.DiskCache=0
+LogD3D12RHI: Display: Not using driver-optimized pipeline state disk cache per r.D3D12.PSO.DriverOptimizedDiskCache=0
+LogD3D12RHI: Warning: TSR 16-bit VALU is disabled on NVIDIA due to known compiler bugs in drivers older than 610.00.
+LogCsvProfiler: Display: Metadata set : verbatimrhiname="D3D12"
+LogCsvProfiler: Display: Metadata set : rhiname="D3D12"
+LogCsvProfiler: Display: Metadata set : rhifeaturelevel="SM6"
+LogCsvProfiler: Display: Metadata set : shaderplatform="PCD3D_SM6"
+LogCsvProfiler: Display: Metadata set : gpu="NVIDIA GeForce RTX 2060"
+LogCsvProfiler: Display: Metadata set : gpudriver="591.44"
+LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 8939 unique shaders.
+LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+LogTemp: Display: Clearing the OS Cache
+LogShaderLibrary: Display: Using IoDispatcher for shader code library KragKingsBenchmark. Total 1687 unique shaders.
+LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library KragKingsBenchmark
+LogShaderLibrary: Display: Logical shader library 'KragKingsBenchmark' has been created as a monolithic library, components 1
+LogShaderLibrary: Display: Tried to open again shader library 'KragKingsBenchmark', but could not find new components for it (existing components: 1).
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+LogCsvProfiler: Display: Metadata set : deviceprofile="Windows"
+LogStreaming: Display: FlushAsyncLoading(8): 8 QueuedPackages, 0 AsyncPackages
+LogStreaming: Display: Partially loaded package /Engine/EngineMaterials/WorldGridMaterial (state: WaitingForIo) to avoid deadlock when it was recursively flushed by package /Engine/EngineMaterials/DefaultTextMaterialOpaque (state: PostLoad). UniqueCallstack(-1).
+LogStreaming: Display: Partially loaded package /Engine/EngineMaterials/DefaultDeferredDecalMaterial (state: WaitingForIo) to avoid deadlock when it was recursively flushed by package /Engine/EngineMaterials/DefaultTextMaterialOpaque (state: PostLoad). UniqueCallstack(-1).
+LogStreaming: Display: Partially loaded package /Engine/EngineMaterials/DefaultLightFunctionMaterial (state: WaitingForIo) to avoid deadlock when it was recursively flushed by package /Engine/EngineMaterials/DefaultTextMaterialOpaque (state: PostLoad). UniqueCallstack(-1).
+LogStreaming: Display: Partially loaded package /Engine/EngineMaterials/DefaultPostProcessMaterial (state: WaitingForIo) to avoid deadlock when it was recursively flushed by package /Engine/EngineMaterials/DefaultTextMaterialOpaque (state: PostLoad). UniqueCallstack(-1).
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogMetaSound: Display: MetaSound Page Target Initialized to 'Default'
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogAudio: Display: Registering Engine Module Parameter Interfaces...
+LogAudio: Display: Initializing Audio Device Manager...
+LogAudio: Display: Loading Default Audio Settings Objects...
+LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+LogAudio: Display: Audio Device Manager Initialized
+LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+LogAudioMixer: Display: bUseRenderScheduler set to true.
+LogAudioMixer: Display: Audio Mixer Platform Settings:
+LogAudioMixer: Display: 	Sample Rate:						  48000
+LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+LogAudioMixer: Display: 	Number of buffers to queue:			  1
+LogAudioMixer: Display: 	Max Channels (voices):				  32
+LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+LogAudio: Display: AudioDevice MaxSources: 32
+LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+LogAudio: Display: Audio Reverb Plugin: None (built-in).
+LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+LogAudioEnumeration: Display: Refreshing FWindowsMMDeviceCache
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Render Role='Console', Device='Casque pour téléphone (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Capture Role='Console', Device='Microphone sur casque (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Render Role='Multimedia', Device='Casque pour téléphone (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Capture Role='Multimedia', Device='Microphone sur casque (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Render Role='Communications', Device='Casque pour téléphone (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioEnumeration: Display: FWindowsMMDeviceCache: Default Capture Role='Communications', Device='Microphone sur casque (CORSAIR HS55 Wireless Core Receiver)'
+LogAudioMixerWasapi: Display: FWasapiServiceWatcher started.
+LogAudioMixerWasapi: Display: FWasapiServiceWatcher initial state: Audiosrv=RUNNING, AudioEndpointBuilder=RUNNING
+LogAudioMixer: Display: Initializing audio mixer using platform API: 'WASAPIMixer'
+LogAudioMixerWasapi: Display: FAudioMixerWasapiRenderStream::InitializeHardware audio mixer requested num channels: 2, Wasapi render stream hardware supports num channels: 2
+LogAudioMixerWasapi: Display: FAudioMixerWasapiRenderStream::InitializeHardware succeeded with sample rate: 48000, buffer period: 1024
+LogAudioMixer: Display: FAudioMixerWasapi initialized: SampleRate=48000 NumChannels=2 NumDirectOutChannels=0 bIsAggregateDevice=0 StreamParams.Num()=1
+LogAudioMixer: Display: Using Audio Hardware Device Casque pour téléphone (CORSAIR HS55 Wireless Core Receiver)
+LogAudioMixer: Display: Initializing Sound Submixes...
+LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+LogInit: Display: Game Engine Initialized.
+LogCsvProfiler: Display: Metadata set : raytracing="0"
+LogInit: Display: Starting Game.
+LogAudio: Display: Audio Device unregistered from world 'Untitled'.
+LogAudio: Display: Audio Device (ID: 1) registered with world 'Dunes'.
+LogTemp: Display: KK_LIGHTING sun_lux=55000.0 color=(R=1.000000,G=1.000000,B=1.000000,A=1.000000) rotation=P=-42.000000 Y=130.000000 R=0.000000 rayleigh_scale=0.033100
+LogTemp: Display: KK_START_GROUND point=X=-135.000 Y=0.000 Z=88.306 normal=X=-0.168 Y=-0.041 Z=0.985
+LogTemp: Display: KK_START_GROUND point=X=120.000 Y=-10.000 Z=126.380 normal=X=-0.134 Y=-0.067 Z=0.989
+LogTemp: Display: KK_SKIN_MODE species=Krag mode=Generic overrides=0
+LogTemp: Display: KK_VARIANT species=Krag id=Krag_Natural height_cm=210.17
+LogTemp: Display: KK_SKIN_MODE species=Nib mode=Generic overrides=0
+LogTemp: Display: KK_VARIANT species=Nib id=Nib_Natural height_cm=139.41
+LogTemp: Display: KK_SKIN_MODE species=Krag mode=Profile overrides=2
+LogTemp: Display: KK_SKIN_MODE species=Nib mode=Profile overrides=3
+LogTemp: Display: KK_SELECTED Krag / Natural
+LogTemp: Display: KK_EVIDENCE_PATH D:/Dev/Krag-Kings/benchmark/builds/unreal/Windows/KragKingsBenchmark/Saved/Benchmark
+LogTemp: Display: KK_READY shared dune mesh, two species, keyboard actions and variant swapping
+LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CaptureDuringMouseDown
+LogSlate: Display: Synchronously lazy loading font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' with subface index 0 in Game thread.
+LogSlate: Display: Took 0.001273 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K) on Game thread.
+LogSlate: Display: Freetype font face in memory successfully created with synchronously loaded raw font file '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface 0 in Game thread.
+LogSlate: Display: Font face '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' subface index 0 successfully added to font face map in Game thread.
+LogRHI: Display: ShaderPipelineCache: Paused Batching. 1
+LogRHI: Display: ShaderPipelineCache: Resumed Batching. 0
+LogRHI: Display: ShaderPipelineCache: Batching Resumed.
+LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+LogCsvProfiler: Display: Metadata set : streamingpoolsizemb="3000"
+LogRHI: Display: Encountered a new graphics PSO: 612552170 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2237898254 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1633530832 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2983643578 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2110166719 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 564257618 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 594019150 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3729233333 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3809084492 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 92315905 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1695767551 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 244749455 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 906350611 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1440837915 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3610102574 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new compute PSO: 1245117727 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 72865529 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3769264551 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new compute PSO: 4089058298 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3869606958 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1452607166 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 440354576 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 80858211 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1174277617 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3887415891 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3779571617 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1710521888 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3028422806 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2680570085 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 3072112024 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2469921806 (PSOPrecacheState: Missed)
+LogEngine: Warning: UEngine::TickDeferredCommands took 213.08ms to execute 3 commands!
+LogEngine: Warning: 	sg.GlobalIlluminationQuality 2
+LogEngine: Warning: 	sg.ReflectionQuality 2
+LogEngine: Warning: 	r.vsync 0
+LogTrace: Display: Control listening on port 37173
+LogRHI: Display: Encountered a new graphics PSO: 2468804879 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 1722787606 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2159740998 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 344189995 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 4236381197 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 2821379609 (PSOPrecacheState: Missed)
+LogRHI: Display: Encountered a new graphics PSO: 911887466 (PSOPrecacheState: Missed)
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=0 pointer=1 xy=(668.00,529.00)
+LogTemp: Display: KK_SELECT_TRACE hit=1 actor=KKBenchmarkUnit_2147482374 point=X=97.662 Y=-55.190 Z=218.296
+LogTemp: Display: KK_SELECTED Nib / Natural
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=1 pointer=1 xy=(668.00,529.00)
+LogTemp: Display: KK_SELECTED Krag / Natural
+LogTemp: Display: KK_ACTION species=Krag action=Melee duration=1.20
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=0 pointer=1 xy=(668.00,529.00)
+LogTemp: Display: KK_SELECT_TRACE hit=1 actor=KKBenchmarkUnit_2147482374 point=X=97.665 Y=-55.184 Z=218.294
+LogTemp: Display: KK_SELECTED Nib / Natural
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=1 pointer=1 xy=(668.00,529.00)
+LogTemp: Display: KK_ACTION species=Nib action=Shoot duration=1.00
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=0 pointer=1 xy=(1276.00,588.00)
+LogTemp: Display: KK_SELECT_TRACE hit=1 actor=KKBenchmarkUnit_2147482380 point=X=-139.803 Y=-107.812 Z=242.432
+LogTemp: Display: KK_SELECTED Krag / Natural
+LogTemp: Display: KK_INPUT_MOUSE key=LeftMouseButton event=1 pointer=1 xy=(1276.00,588.00)
+LogTemp: Display: KK_ACTION species=Krag action=Melee duration=1.20
+LogTemp: Display: KK_ACTION species=Krag action=Shoot duration=1.00
+LogTemp: Display: KK_SHOT_DIAGNOSTIC species=Nib {"event":1,"variant":"Nib_Natural","authored_phase":0.460000,"phase":0.470511,"angle_degrees":0.007933,"muzzle_cm":[119.997634,-48.506150,223.066890],"direction":[0.000089,-1.000000,0.000106],"actor_forward":[-0.000000,-1.000000,0.000000]}
+LogTemp: Display: KK_SKYLIGHT visible=1 registered=1 affects_world=1 affects_gi=1 mobility=2 source=0 realtime_requested=1 realtime_effective=1 intensity=0.8500 indirect=1.0000 lower_solid=1 lower_color=(R=0.000000,G=0.000000,B=0.000000,A=1.000000) cubemap_resolution=128 sky_distance_cm=150000.0 occlusion_max_cm=1000.0 min_occlusion=0.000 position=X=0.000 Y=0.000 Z=0.000
+LogTemp: Display: KK_TERRAIN_INDIRECT df_present=1 df_valid=1 df_async=0 df_two_sided=0 df_grid=X=18 Y=18 Z=18 card_count=1 affects_df=1 cast_shadow=1 bounds_cm=X=76000.000 Y=76000.000 Z=1246.568
+LogTemp: Display: KK_LIGHTING_CVAR r.SkyLight.RealTimeReflectionCapture=1
+LogTemp: Display: KK_LIGHTING_CVAR r.SkyLight.RealTimeReflectionCapture.TimeSlice=1
+LogTemp: Display: KK_LIGHTING_CVAR r.SkyLightingQuality=1
+LogTemp: Display: KK_LIGHTING_CVAR r.DynamicGlobalIlluminationMethod=1
+LogTemp: Display: KK_LIGHTING_CVAR r.Lumen.DiffuseIndirect.Allow=1
+LogTemp: Display: KK_LIGHTING_CVAR r.LumenScene.Radiosity=1
+LogTemp: Display: KK_LIGHTING_CVAR r.Lumen.ScreenProbeGather.ShortRangeAO=1
+LogTemp: Display: KK_LIGHTING_CVAR r.DistanceFieldAO=1
+LogTemp: Display: KK_LIGHTING_CVAR r.GenerateMeshDistanceFields=1
+LogTemp: Display: KK_LIGHTING_CVAR r.Lumen.TraceMeshSDFs.Allow=0
+LogTemp: Display: KK_SHOT_DIAGNOSTIC species=Krag {"event":1,"variant":"Krag_Natural","authored_phase":0.400000,"phase":0.414781,"angle_degrees":3.992174,"muzzle_cm":[-106.902078,-90.793363,245.798640],"direction":[-0.000025,-0.997574,0.069620],"actor_forward":[-0.000000,-1.000000,0.000000]}
+LogTemp: Display: KK_SHOT_DIAGNOSTIC species=Krag {"event":2,"variant":"Krag_Natural","authored_phase":0.580000,"phase":0.584564,"angle_degrees":1.530078,"muzzle_cm":[-106.908218,-93.174403,242.525133],"direction":[-0.000138,-0.999643,0.026701],"actor_forward":[-0.000000,-1.000000,0.000000]}
+LogTemp: Display: KK_ACTION species=Krag action=Hit duration=0.90
+LogTemp: Display: KK_ACTION species=Krag action=Melee duration=1.20
+LogTemp: Display: KK_ACTION species=Krag action=Melee duration=1.20
+LogTemp: Display: KK_INPUT_MOUSE key=MiddleMouseButton event=0 pointer=1 xy=(960.00,540.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseX event=4 pointer=1 xy=(974.00,544.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseY event=4 pointer=1 xy=(974.00,544.00)
+LogTemp: Display: KK_INPUT_ORBIT raw=(14.000,-4.000) processed=(14.000,-4.000) sensitivity=(1.000,1.000) yaw=77.380 pitch=-22.520 action=Melee
+LogTemp: Display: KK_INPUT_MOUSE key=MouseX event=4 pointer=1 xy=(994.00,552.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseY event=4 pointer=1 xy=(994.00,552.00)
+LogTemp: Display: KK_INPUT_ORBIT raw=(20.000,-8.000) processed=(20.000,-8.000) sensitivity=(1.000,1.000) yaw=80.780 pitch=-23.560 action=Melee
+LogTemp: Display: KK_INPUT_MOUSE key=MouseX event=4 pointer=1 xy=(1014.00,560.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseY event=4 pointer=1 xy=(1014.00,560.00)
+LogTemp: Display: KK_INPUT_ORBIT raw=(20.000,-8.000) processed=(20.000,-8.000) sensitivity=(1.000,1.000) yaw=84.180 pitch=-24.600 action=Melee
+LogTemp: Display: KK_INPUT_MOUSE key=MouseX event=4 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseY event=4 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_INPUT_ORBIT raw=(21.000,-7.000) processed=(21.000,-7.000) sensitivity=(1.000,1.000) yaw=87.750 pitch=-25.510 action=Melee
+LogTemp: Display: KK_INPUT_MOUSE key=MiddleMouseButton event=1 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_ACTION species=Krag action=Melee duration=1.20
+LogTemp: Display: KK_INPUT_MOUSE key=MouseScrollUp event=0 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseScrollUp event=1 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_INPUT_MOUSE key=MouseWheelAxis event=4 pointer=1 xy=(1035.00,567.00)
+LogTemp: Display: KK_SKIN_MODE species=Krag mode=Profile overrides=2
+LogTemp: Display: KK_VARIANT species=Krag id=Krag_Crusher height_cm=210.17
+LogTemp: Display: KK_FACE_START species=Krag duration=5.97
+LogTemp: Display: KK_SELECTED Krag / Crusher
+LogTemp: Display: KK_MOVE_PRESS walk=0 pointer=1 xy=(935.00,734.00) frame=361 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(935.00,734.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=0 currentShift=0 pressFrame=361 hit=1 actor=StaticMeshActor_2147482386 point=X=5.075 Y=-0.119 Z=110.745 normal=X=-0.146 Y=-0.060 Z=0.987 view=X=-161.083 Y=-578.178 Z=444.799 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Krag target=X=5.075 Y=-0.119 Z=110.745 walk=0
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(935.00,734.00)
+LogTemp: Display: KK_MOVE_PRESS walk=1 pointer=1 xy=(895.00,959.00) frame=438 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(895.00,959.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=1 currentShift=1 pressFrame=438 hit=1 actor=StaticMeshActor_2147482386 point=X=-19.863 Y=-140.136 Z=98.937 normal=X=-0.141 Y=-0.060 Z=0.988 view=X=-161.083 Y=-578.178 Z=444.799 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Krag target=X=-19.863 Y=-140.136 Z=98.937 walk=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(895.00,959.00)
+LogTemp: Display: KK_SELECTED Nib / Natural
+LogTemp: Display: KK_ACTION species=Nib action=Melee duration=1.07
+LogTemp: Display: KK_ACTION species=Nib action=Shoot duration=1.00
+LogTemp: Display: KK_ACTION species=Nib action=Hit duration=0.93
+LogTemp: Display: KK_SKIN_MODE species=Nib mode=Profile overrides=3
+LogTemp: Display: KK_VARIANT species=Nib id=Nib_GripReplacement height_cm=139.41
+LogTemp: Display: KK_FACE_START species=Nib duration=5.00
+LogTemp: Display: KK_SELECTED Nib / GripReplacement
+LogTemp: Display: KK_MOVE_PRESS walk=0 pointer=1 xy=(730.00,827.00) frame=554 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(730.00,827.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=0 currentShift=0 pressFrame=554 hit=1 actor=StaticMeshActor_2147482386 point=X=119.911 Y=-149.866 Z=116.584 normal=X=-0.123 Y=-0.072 Z=0.990 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=119.911 Y=-149.866 Z=116.584 walk=0
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(730.00,827.00)
+LogTemp: Display: KK_MOVE_PRESS walk=1 pointer=1 xy=(562.00,642.00) frame=623 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=1 currentShift=1 pressFrame=623 hit=1 actor=StaticMeshActor_2147482386 point=X=241.156 Y=-55.313 Z=137.696 normal=X=-0.111 Y=-0.079 Z=0.991 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=241.156 Y=-55.313 Z=137.696 walk=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_MOVE_PRESS walk=0 pointer=1 xy=(793.00,822.00) frame=738 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(793.00,822.00)
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(793.00,822.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=0 currentShift=0 pressFrame=738 hit=1 actor=StaticMeshActor_2147482386 point=X=98.430 Y=-137.458 Z=114.815 normal=X=-0.123 Y=-0.072 Z=0.990 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=98.430 Y=-137.458 Z=114.815 walk=0
+LogTemp: Display: KK_MOVE_PRESS walk=1 pointer=1 xy=(562.00,642.00) frame=813 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=1 currentShift=0 pressFrame=813 hit=1 actor=StaticMeshActor_2147482386 point=X=241.156 Y=-55.313 Z=137.696 normal=X=-0.111 Y=-0.079 Z=0.991 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=241.156 Y=-55.313 Z=137.696 walk=1
+LogTemp: Display: KK_MOVE_PRESS walk=0 pointer=1 xy=(793.00,822.00) frame=929 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(793.00,822.00)
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(793.00,822.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=0 currentShift=0 pressFrame=929 hit=1 actor=StaticMeshActor_2147482386 point=X=98.430 Y=-137.458 Z=114.815 normal=X=-0.123 Y=-0.072 Z=0.990 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=98.430 Y=-137.458 Z=114.815 walk=0
+LogTemp: Display: KK_MOVE_PRESS walk=1 pointer=1 xy=(562.00,642.00) frame=1001 queued=1
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=0 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_INPUT_MOUSE key=RightMouseButton event=1 pointer=1 xy=(562.00,642.00)
+LogTemp: Display: KK_MOVE_DISPATCH walk=1 currentShift=0 pressFrame=1001 hit=1 actor=StaticMeshActor_2147482386 point=X=241.156 Y=-55.313 Z=137.696 normal=X=-0.111 Y=-0.079 Z=0.991 view=X=-103.516 Y=-635.791 Z=450.773 rotation=P=-22.000000 Y=75.000000 R=-0.000000
+LogTemp: Display: KK_MOVE species=Nib target=X=241.156 Y=-55.313 Z=137.696 walk=1
+LogInit: Display: PreExit Game.
+LogTemp: Display: KK_METRICS mode=performance-diagnostic samples=479 average_fps=62.06
+LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerWasapi)...
+LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+LogAudio: Display: Audio Device unregistered from world 'Dunes'.
+LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+LogAudioMixer: Display: FAudioMixerWasapi::StopAudioStream() InstanceID=1, StreamState=4
+LogAudioMixerWasapi: Display: FWasapiServiceWatcher stopped.
+LogAudio: Display: Audio Device Manager Shutdown
+LogShaderLibrary: Display: Closing logical shader library 'Global' with 1 components
+LogShaderLibrary: Display: Closing logical shader library 'KragKingsBenchmark' with 1 components
