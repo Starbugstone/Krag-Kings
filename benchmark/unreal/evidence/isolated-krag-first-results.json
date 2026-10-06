@@ -1,0 +1,1299 @@
+{
+  "completeSceneImport": false,
+  "rendered": false,
+  "packaged": false,
+  "completedVariants": [
+    {
+      "variant": "Krag_Natural",
+      "mode": "saved package repair/revalidation without FBX import",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMiB": 3002.0,
+      "minimumAvailableMiB": 13167.0,
+      "maximumCommitPercent": 48.0,
+      "savedPackages": 10,
+      "morphCount": 25,
+      "clipCount": 7,
+      "mappedMaterialSlots": 13,
+      "materialBindingRepairs": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_Recess",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_FacialSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Amber",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_EyeWhite",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_Ivory",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_OralTissue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "characterInputs": {
+        "characters/krag/animations/FacePerformance.fbx": {
+          "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344",
+          "bytes": 1096236
+        },
+        "characters/krag/animations/Hit.fbx": {
+          "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38",
+          "bytes": 643692
+        },
+        "characters/krag/animations/Idle.fbx": {
+          "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39",
+          "bytes": 749740
+        },
+        "characters/krag/animations/Melee.fbx": {
+          "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100",
+          "bytes": 650764
+        },
+        "characters/krag/animations/Run.fbx": {
+          "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae",
+          "bytes": 585932
+        },
+        "characters/krag/animations/Shoot.fbx": {
+          "sha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+          "bytes": 662332
+        },
+        "characters/krag/animations/Walk.fbx": {
+          "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c",
+          "bytes": 649324
+        },
+        "characters/krag/delivery-v7.json": {
+          "sha256": "e8bbba6a2de350a4566844676c3c9556cd30ec09f57d06b435bf8a767ddcf20b",
+          "bytes": 12791
+        },
+        "characters/krag/facial-rig.json": {
+          "sha256": "1ea4e52b4683b4a7ec3f9c1acdc6e1f10f86e079281f893101090e818f0fff66",
+          "bytes": 5873
+        },
+        "characters/krag/krag_asset_contract.json": {
+          "sha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+          "bytes": 46184
+        },
+        "characters/krag/Krag_Crusher.fbx": {
+          "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+          "bytes": 50993820
+        },
+        "characters/krag/Krag_IronJaw.fbx": {
+          "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+          "bytes": 53286348
+        },
+        "characters/krag/Krag_Natural.fbx": {
+          "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+          "bytes": 53076748
+        },
+        "characters/krag/Krag_Piston.fbx": {
+          "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+          "bytes": 51294364
+        },
+        "characters/krag/Krag_Weapon.fbx": {
+          "sha256": "350950cb3285c6351fa474c67e52322596d19adb5dbee8e9502efbd9f1ed2511",
+          "bytes": 201436
+        },
+        "characters/krag/manifest.json": {
+          "sha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+          "bytes": 42772
+        },
+        "characters/krag/textures/Krag_AgedBrass_BaseColor.png": {
+          "sha256": "68508fcb06ef32ac789d5b430d17b4d5ab5560cbcc58e07a65e943d21f1cef20",
+          "bytes": 1318648
+        },
+        "characters/krag/textures/Krag_AgedBrass_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_AgedBrass_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_AgedBrass_Roughness.png": {
+          "sha256": "7c14dae4a1be5f62bef1f6735527ca4e0dca63c0dc1d0db57eb0df975d720ea7",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_Amber_BaseColor.png": {
+          "sha256": "6b07b52631a4eaf473dd64a8d7f70fc9aa4a1af852870e903b64feec3b0b2106",
+          "bytes": 92700
+        },
+        "characters/krag/textures/Krag_Amber_Metallic.png": {
+          "sha256": "31a6b1f0a431573153df3389b7bcee163d8a9f7e45094d2e6442907a54693cae",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_Amber_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Amber_Roughness.png": {
+          "sha256": "40d8c60d41a13bc16c871a3a8709aff9f668a7f4cf42da94b846c696b1ef48cf",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_BaseColor.png": {
+          "sha256": "53bc90e240a728437734c21a8e867d5e50bc4b080203f846873bd95b9591703c",
+          "bytes": 1211061
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Metallic.png": {
+          "sha256": "5d13cd7656afd45cdd2dcf431dd89dac831571ec0e691410064697fc28c0458d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Roughness.png": {
+          "sha256": "25ca1d79469c4a26b9f3204dc8b115dd189c50655417b1889cabb55f19346721",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_CopperHose_BaseColor.png": {
+          "sha256": "ce7b2156bcf1a87f6d81945b891281b860aa179188d0124fe85a5bac4c586444",
+          "bytes": 1325770
+        },
+        "characters/krag/textures/Krag_CopperHose_Metallic.png": {
+          "sha256": "cc468da0217c494e6b689bf78ee02c4bed0d7a5132092ffebff9273ffbb0c405",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_CopperHose_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_CopperHose_Roughness.png": {
+          "sha256": "e051386f21d4b2c36ec7f2739b373a6fef3126fd09b11ba4441177b04450bb4f",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_DesertCanvas_BaseColor.png": {
+          "sha256": "b44f123c84f2c27feb1c146897f145cf89e5939507293b159bfd90d5488d3fd9",
+          "bytes": 1271197
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Normal.png": {
+          "sha256": "54ee0da5da9cc21f8c3ee60fa7d6370729685a716f2236d8113dcea6e1ac1d3d",
+          "bytes": 1493547
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Roughness.png": {
+          "sha256": "4f5cabf2ffc9a8cef0ec091483db5ad741b95ac54445d821b7ad7f03e69f8bb9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_EyeWhite_BaseColor.png": {
+          "sha256": "fa1a1cd2de88ef4efa8bc1ba6559ddb35e86519a5f252a1cc57ee806e4c89392",
+          "bytes": 74859
+        },
+        "characters/krag/textures/Krag_EyeWhite_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_EyeWhite_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_EyeWhite_Roughness.png": {
+          "sha256": "3195366d40c99e13ca9b7d6716f86211ad678e9374d633df5a99283ee82be6af",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_FacialSkin_BaseColor.png": {
+          "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1",
+          "bytes": 2030417
+        },
+        "characters/krag/textures/Krag_FacialSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_FacialSkin_Normal.png": {
+          "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18",
+          "bytes": 1831777
+        },
+        "characters/krag/textures/Krag_FacialSkin_Roughness.png": {
+          "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d",
+          "bytes": 10783
+        },
+        "characters/krag/textures/Krag_Ivory_BaseColor.png": {
+          "sha256": "33f017fbf5862b1ae71e9e2ca628111011fc24cb69782d20b339bd9d924e8d8e",
+          "bytes": 93212
+        },
+        "characters/krag/textures/Krag_Ivory_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Ivory_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Ivory_Roughness.png": {
+          "sha256": "dba7a2dbde5c5a6a16c03162e2082ff7bb814d87acd447a7fa63b3a78684cbe9",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_OiledLeather_BaseColor.png": {
+          "sha256": "5c89d0593da62969048b4a8dbda0115a9a936127c4c4195ba78614338f36c8b6",
+          "bytes": 1127334
+        },
+        "characters/krag/textures/Krag_OiledLeather_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OiledLeather_Normal.png": {
+          "sha256": "4aa7fbe2e764ccfced4adb0191b6becfc48e3cd507b63bb206687154cf723044",
+          "bytes": 1384041
+        },
+        "characters/krag/textures/Krag_OiledLeather_Roughness.png": {
+          "sha256": "0664bd804439f72e8a7d69dddf7e69ff63656ebf94c31867d3738c66edde5f68",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_OralTissue_BaseColor.png": {
+          "sha256": "2c1dd7e4f65c8cefe2d16bdf491211897a1aba1e67fd52f7791d6f07c54c7e36",
+          "bytes": 955107
+        },
+        "characters/krag/textures/Krag_OralTissue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OralTissue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_OralTissue_Roughness.png": {
+          "sha256": "b23f437cc1a28c49a4b1aba51ba7026a5107554639e91e28c0c1c2525a1288f9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_Recess_BaseColor.png": {
+          "sha256": "9a3e6a96f13a6a3d6be610c89cc13783dffb47be955779a367064e7e14a01840",
+          "bytes": 69601
+        },
+        "characters/krag/textures/Krag_Recess_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Recess_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Recess_Roughness.png": {
+          "sha256": "9a96c2f6dffebf877ebea04a3aa52982e75daf76f74c343d7221f7407d299cb5",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_BaseColor.png": {
+          "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f",
+          "bytes": 7457768
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Normal.png": {
+          "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca",
+          "bytes": 7522343
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Roughness.png": {
+          "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5",
+          "bytes": 10912
+        },
+        "characters/krag/textures/Krag_Tongue_BaseColor.png": {
+          "sha256": "17f2dcf7888742d903bb4309f6a0f05aa53a22e3dd0781cd55990ca8625d1e3d",
+          "bytes": 954264
+        },
+        "characters/krag/textures/Krag_Tongue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_Tongue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_Tongue_Roughness.png": {
+          "sha256": "58172b32174b6003b8f8ae1ad6711bd176835ac94a68dc2e52b9b7c0c0943eba",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_BaseColor.png": {
+          "sha256": "d0689e9e6a8d5a154b431e146f772479d6f2d7c43290033dfc8d5eb3a3fcfaf0",
+          "bytes": 483781
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Normal.png": {
+          "sha256": "e11000bffc8b6b2f9fe79c4342e64abbd96085dffd1d1be67b79039ea3736278",
+          "bytes": 803373
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Roughness.png": {
+          "sha256": "681b49bcdaae0ec07b2822263556690b208e9809f8e1355439ae88639caac443",
+          "bytes": 671
+        }
+      },
+      "packages": {
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/FacePerformance/FacePerformance.uasset": {
+          "sha256": "502f33759bd2bb3ccac57f5560f770758ba8ce48b70fa4c3c01990552d1ef37c",
+          "bytes": 382936
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Hit/Hit.uasset": {
+          "sha256": "ec699fbb2ef0731b95eda8e0a1c0917adee8f6cb7d0e1e4502bebd9d9822c055",
+          "bytes": 292125
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Idle/Idle.uasset": {
+          "sha256": "d10c883333b575e69bfad26054157fa8fd35ac2439c37bc59ba1225ba841a846",
+          "bytes": 310487
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Melee/Melee.uasset": {
+          "sha256": "09f2ff2831d7e0edd46319867b98007fa4aee34a145891609dff26120eaf8e90",
+          "bytes": 304337
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Run/Run.uasset": {
+          "sha256": "a49df5b2476c1375ba4049af469fa33fc54606c563e8acef52cbd45c682a5c69",
+          "bytes": 288413
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Shoot/Shoot.uasset": {
+          "sha256": "dce556365a1f8c2ca86a4495eb4cd0a62c5432576dc4c319c02a27248bbf826f",
+          "bytes": 284529
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Walk/Walk.uasset": {
+          "sha256": "329c4be7151bfec783a4c36900e7c4f84e5de6ada41b2767a8ad6f18b31cec23",
+          "bytes": 312599
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.uasset": {
+          "sha256": "f7901263f7ae100d5ab2b486d37087b28b894293958a059bd603a083da87e160",
+          "bytes": 166171479
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_PhysicsAsset.uasset": {
+          "sha256": "1669fac87f9964d20ebdecaf122185de6f8512915994ef3b693b6be15672a5fa",
+          "bytes": 8682
+        },
+        "Content/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_Skeleton.uasset": {
+          "sha256": "f9b43b20f9b4cd29e0bd3823b9b0c6c5160020887c16b30f91c96860ebeeb227",
+          "bytes": 22603
+        }
+      }
+    },
+    {
+      "variant": "Krag_Crusher",
+      "mode": "saved package repair/revalidation without FBX import",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMiB": 2980.0,
+      "minimumAvailableMiB": 13245.0,
+      "maximumCommitPercent": 48.0,
+      "savedPackages": 10,
+      "morphCount": 24,
+      "clipCount": 7,
+      "mappedMaterialSlots": 14,
+      "materialBindingRepairs": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_CopperHose",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_CopperHose.M_Krag_CopperHose"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_Recess",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Ivory",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_FacialSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_Amber",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_EyeWhite",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_OralTissue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 13,
+          "name": "Krag_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "characterInputs": {
+        "characters/krag/animations/FacePerformance.fbx": {
+          "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344",
+          "bytes": 1096236
+        },
+        "characters/krag/animations/Hit.fbx": {
+          "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38",
+          "bytes": 643692
+        },
+        "characters/krag/animations/Idle.fbx": {
+          "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39",
+          "bytes": 749740
+        },
+        "characters/krag/animations/Melee.fbx": {
+          "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100",
+          "bytes": 650764
+        },
+        "characters/krag/animations/Run.fbx": {
+          "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae",
+          "bytes": 585932
+        },
+        "characters/krag/animations/Shoot.fbx": {
+          "sha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+          "bytes": 662332
+        },
+        "characters/krag/animations/Walk.fbx": {
+          "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c",
+          "bytes": 649324
+        },
+        "characters/krag/delivery-v7.json": {
+          "sha256": "e8bbba6a2de350a4566844676c3c9556cd30ec09f57d06b435bf8a767ddcf20b",
+          "bytes": 12791
+        },
+        "characters/krag/facial-rig.json": {
+          "sha256": "1ea4e52b4683b4a7ec3f9c1acdc6e1f10f86e079281f893101090e818f0fff66",
+          "bytes": 5873
+        },
+        "characters/krag/krag_asset_contract.json": {
+          "sha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+          "bytes": 46184
+        },
+        "characters/krag/Krag_Crusher.fbx": {
+          "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+          "bytes": 50993820
+        },
+        "characters/krag/Krag_IronJaw.fbx": {
+          "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+          "bytes": 53286348
+        },
+        "characters/krag/Krag_Natural.fbx": {
+          "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+          "bytes": 53076748
+        },
+        "characters/krag/Krag_Piston.fbx": {
+          "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+          "bytes": 51294364
+        },
+        "characters/krag/Krag_Weapon.fbx": {
+          "sha256": "350950cb3285c6351fa474c67e52322596d19adb5dbee8e9502efbd9f1ed2511",
+          "bytes": 201436
+        },
+        "characters/krag/manifest.json": {
+          "sha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+          "bytes": 42772
+        },
+        "characters/krag/textures/Krag_AgedBrass_BaseColor.png": {
+          "sha256": "68508fcb06ef32ac789d5b430d17b4d5ab5560cbcc58e07a65e943d21f1cef20",
+          "bytes": 1318648
+        },
+        "characters/krag/textures/Krag_AgedBrass_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_AgedBrass_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_AgedBrass_Roughness.png": {
+          "sha256": "7c14dae4a1be5f62bef1f6735527ca4e0dca63c0dc1d0db57eb0df975d720ea7",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_Amber_BaseColor.png": {
+          "sha256": "6b07b52631a4eaf473dd64a8d7f70fc9aa4a1af852870e903b64feec3b0b2106",
+          "bytes": 92700
+        },
+        "characters/krag/textures/Krag_Amber_Metallic.png": {
+          "sha256": "31a6b1f0a431573153df3389b7bcee163d8a9f7e45094d2e6442907a54693cae",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_Amber_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Amber_Roughness.png": {
+          "sha256": "40d8c60d41a13bc16c871a3a8709aff9f668a7f4cf42da94b846c696b1ef48cf",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_BaseColor.png": {
+          "sha256": "53bc90e240a728437734c21a8e867d5e50bc4b080203f846873bd95b9591703c",
+          "bytes": 1211061
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Metallic.png": {
+          "sha256": "5d13cd7656afd45cdd2dcf431dd89dac831571ec0e691410064697fc28c0458d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Roughness.png": {
+          "sha256": "25ca1d79469c4a26b9f3204dc8b115dd189c50655417b1889cabb55f19346721",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_CopperHose_BaseColor.png": {
+          "sha256": "ce7b2156bcf1a87f6d81945b891281b860aa179188d0124fe85a5bac4c586444",
+          "bytes": 1325770
+        },
+        "characters/krag/textures/Krag_CopperHose_Metallic.png": {
+          "sha256": "cc468da0217c494e6b689bf78ee02c4bed0d7a5132092ffebff9273ffbb0c405",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_CopperHose_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_CopperHose_Roughness.png": {
+          "sha256": "e051386f21d4b2c36ec7f2739b373a6fef3126fd09b11ba4441177b04450bb4f",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_DesertCanvas_BaseColor.png": {
+          "sha256": "b44f123c84f2c27feb1c146897f145cf89e5939507293b159bfd90d5488d3fd9",
+          "bytes": 1271197
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Normal.png": {
+          "sha256": "54ee0da5da9cc21f8c3ee60fa7d6370729685a716f2236d8113dcea6e1ac1d3d",
+          "bytes": 1493547
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Roughness.png": {
+          "sha256": "4f5cabf2ffc9a8cef0ec091483db5ad741b95ac54445d821b7ad7f03e69f8bb9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_EyeWhite_BaseColor.png": {
+          "sha256": "fa1a1cd2de88ef4efa8bc1ba6559ddb35e86519a5f252a1cc57ee806e4c89392",
+          "bytes": 74859
+        },
+        "characters/krag/textures/Krag_EyeWhite_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_EyeWhite_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_EyeWhite_Roughness.png": {
+          "sha256": "3195366d40c99e13ca9b7d6716f86211ad678e9374d633df5a99283ee82be6af",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_FacialSkin_BaseColor.png": {
+          "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1",
+          "bytes": 2030417
+        },
+        "characters/krag/textures/Krag_FacialSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_FacialSkin_Normal.png": {
+          "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18",
+          "bytes": 1831777
+        },
+        "characters/krag/textures/Krag_FacialSkin_Roughness.png": {
+          "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d",
+          "bytes": 10783
+        },
+        "characters/krag/textures/Krag_Ivory_BaseColor.png": {
+          "sha256": "33f017fbf5862b1ae71e9e2ca628111011fc24cb69782d20b339bd9d924e8d8e",
+          "bytes": 93212
+        },
+        "characters/krag/textures/Krag_Ivory_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Ivory_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Ivory_Roughness.png": {
+          "sha256": "dba7a2dbde5c5a6a16c03162e2082ff7bb814d87acd447a7fa63b3a78684cbe9",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_OiledLeather_BaseColor.png": {
+          "sha256": "5c89d0593da62969048b4a8dbda0115a9a936127c4c4195ba78614338f36c8b6",
+          "bytes": 1127334
+        },
+        "characters/krag/textures/Krag_OiledLeather_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OiledLeather_Normal.png": {
+          "sha256": "4aa7fbe2e764ccfced4adb0191b6becfc48e3cd507b63bb206687154cf723044",
+          "bytes": 1384041
+        },
+        "characters/krag/textures/Krag_OiledLeather_Roughness.png": {
+          "sha256": "0664bd804439f72e8a7d69dddf7e69ff63656ebf94c31867d3738c66edde5f68",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_OralTissue_BaseColor.png": {
+          "sha256": "2c1dd7e4f65c8cefe2d16bdf491211897a1aba1e67fd52f7791d6f07c54c7e36",
+          "bytes": 955107
+        },
+        "characters/krag/textures/Krag_OralTissue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OralTissue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_OralTissue_Roughness.png": {
+          "sha256": "b23f437cc1a28c49a4b1aba51ba7026a5107554639e91e28c0c1c2525a1288f9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_Recess_BaseColor.png": {
+          "sha256": "9a3e6a96f13a6a3d6be610c89cc13783dffb47be955779a367064e7e14a01840",
+          "bytes": 69601
+        },
+        "characters/krag/textures/Krag_Recess_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Recess_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Recess_Roughness.png": {
+          "sha256": "9a96c2f6dffebf877ebea04a3aa52982e75daf76f74c343d7221f7407d299cb5",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_BaseColor.png": {
+          "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f",
+          "bytes": 7457768
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Normal.png": {
+          "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca",
+          "bytes": 7522343
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Roughness.png": {
+          "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5",
+          "bytes": 10912
+        },
+        "characters/krag/textures/Krag_Tongue_BaseColor.png": {
+          "sha256": "17f2dcf7888742d903bb4309f6a0f05aa53a22e3dd0781cd55990ca8625d1e3d",
+          "bytes": 954264
+        },
+        "characters/krag/textures/Krag_Tongue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_Tongue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_Tongue_Roughness.png": {
+          "sha256": "58172b32174b6003b8f8ae1ad6711bd176835ac94a68dc2e52b9b7c0c0943eba",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_BaseColor.png": {
+          "sha256": "d0689e9e6a8d5a154b431e146f772479d6f2d7c43290033dfc8d5eb3a3fcfaf0",
+          "bytes": 483781
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Normal.png": {
+          "sha256": "e11000bffc8b6b2f9fe79c4342e64abbd96085dffd1d1be67b79039ea3736278",
+          "bytes": 803373
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Roughness.png": {
+          "sha256": "681b49bcdaae0ec07b2822263556690b208e9809f8e1355439ae88639caac443",
+          "bytes": 671
+        }
+      },
+      "packages": {
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/FacePerformance/FacePerformance.uasset": {
+          "sha256": "72b34542edd12868cd908508d0841467b6b94377d89d9130b58ea5d8d6363729",
+          "bytes": 191289
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Hit/Hit.uasset": {
+          "sha256": "b47d03d98e1bfbcc7aad9f48b885da7d20f254a411dfbea0872452cd68647c38",
+          "bytes": 100670
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Idle/Idle.uasset": {
+          "sha256": "234d253ea8033ed5c0b2c2681e442c8c78fdcb70e3530642eab79521f3ca7966",
+          "bytes": 119016
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Melee/Melee.uasset": {
+          "sha256": "7f2e5a1bbcee2ed1382f448e96888ec8444381fc494a9d3546b78e5ee8a0b49f",
+          "bytes": 112850
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Run/Run.uasset": {
+          "sha256": "f9fb554099dca840a79a37f4c7f37c1902972a439f49d83c9e2806981fc32422",
+          "bytes": 96958
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Shoot/Shoot.uasset": {
+          "sha256": "b270fe93c7211398d9f03582c13cfa8f0fc875a5fdecbfb87e54c705bf1102bc",
+          "bytes": 93042
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Walk/Walk.uasset": {
+          "sha256": "8b895b9bcbbb2c14f0a0e2de63723eaffb2dee4d08dbe38e4de01373b017f6c0",
+          "bytes": 121128
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher.uasset": {
+          "sha256": "c161bd7134c6af79e7323ad94a2af6f103c0b32ed7ca6ff22c099d80ae563f6d",
+          "bytes": 160332040
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher_PhysicsAsset.uasset": {
+          "sha256": "ade8f2bfd362886bc9d4f638fb6db2bf413cd09abf67ad8401273e10d42f5478",
+          "bytes": 8682
+        },
+        "Content/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher_Skeleton.uasset": {
+          "sha256": "94ef2572779dd5834cef19a96dfd80cb64efff15ae4fa932965a8970e184dcc8",
+          "bytes": 22603
+        }
+      }
+    },
+    {
+      "variant": "Krag_IronJaw",
+      "mode": "fresh isolated FBX import",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMiB": 8194.0,
+      "minimumAvailableMiB": 8446.0,
+      "maximumCommitPercent": 61.0,
+      "savedPackages": 10,
+      "morphCount": 25,
+      "clipCount": 7,
+      "mappedMaterialSlots": 13,
+      "materialBindingRepairs": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_Amber",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_Ivory",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Recess",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_FacialSkin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_EyeWhite",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_OralTissue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "characterInputs": {
+        "characters/krag/animations/FacePerformance.fbx": {
+          "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344",
+          "bytes": 1096236
+        },
+        "characters/krag/animations/Hit.fbx": {
+          "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38",
+          "bytes": 643692
+        },
+        "characters/krag/animations/Idle.fbx": {
+          "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39",
+          "bytes": 749740
+        },
+        "characters/krag/animations/Melee.fbx": {
+          "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100",
+          "bytes": 650764
+        },
+        "characters/krag/animations/Run.fbx": {
+          "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae",
+          "bytes": 585932
+        },
+        "characters/krag/animations/Shoot.fbx": {
+          "sha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+          "bytes": 662332
+        },
+        "characters/krag/animations/Walk.fbx": {
+          "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c",
+          "bytes": 649324
+        },
+        "characters/krag/delivery-v7.json": {
+          "sha256": "e8bbba6a2de350a4566844676c3c9556cd30ec09f57d06b435bf8a767ddcf20b",
+          "bytes": 12791
+        },
+        "characters/krag/facial-rig.json": {
+          "sha256": "1ea4e52b4683b4a7ec3f9c1acdc6e1f10f86e079281f893101090e818f0fff66",
+          "bytes": 5873
+        },
+        "characters/krag/krag_asset_contract.json": {
+          "sha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+          "bytes": 46184
+        },
+        "characters/krag/Krag_Crusher.fbx": {
+          "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+          "bytes": 50993820
+        },
+        "characters/krag/Krag_IronJaw.fbx": {
+          "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+          "bytes": 53286348
+        },
+        "characters/krag/Krag_Natural.fbx": {
+          "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+          "bytes": 53076748
+        },
+        "characters/krag/Krag_Piston.fbx": {
+          "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+          "bytes": 51294364
+        },
+        "characters/krag/Krag_Weapon.fbx": {
+          "sha256": "350950cb3285c6351fa474c67e52322596d19adb5dbee8e9502efbd9f1ed2511",
+          "bytes": 201436
+        },
+        "characters/krag/manifest.json": {
+          "sha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+          "bytes": 42772
+        },
+        "characters/krag/textures/Krag_AgedBrass_BaseColor.png": {
+          "sha256": "68508fcb06ef32ac789d5b430d17b4d5ab5560cbcc58e07a65e943d21f1cef20",
+          "bytes": 1318648
+        },
+        "characters/krag/textures/Krag_AgedBrass_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_AgedBrass_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_AgedBrass_Roughness.png": {
+          "sha256": "7c14dae4a1be5f62bef1f6735527ca4e0dca63c0dc1d0db57eb0df975d720ea7",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_Amber_BaseColor.png": {
+          "sha256": "6b07b52631a4eaf473dd64a8d7f70fc9aa4a1af852870e903b64feec3b0b2106",
+          "bytes": 92700
+        },
+        "characters/krag/textures/Krag_Amber_Metallic.png": {
+          "sha256": "31a6b1f0a431573153df3389b7bcee163d8a9f7e45094d2e6442907a54693cae",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_Amber_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Amber_Roughness.png": {
+          "sha256": "40d8c60d41a13bc16c871a3a8709aff9f668a7f4cf42da94b846c696b1ef48cf",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_BaseColor.png": {
+          "sha256": "53bc90e240a728437734c21a8e867d5e50bc4b080203f846873bd95b9591703c",
+          "bytes": 1211061
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Metallic.png": {
+          "sha256": "5d13cd7656afd45cdd2dcf431dd89dac831571ec0e691410064697fc28c0458d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_BlackenedSteel_Roughness.png": {
+          "sha256": "25ca1d79469c4a26b9f3204dc8b115dd189c50655417b1889cabb55f19346721",
+          "bytes": 670
+        },
+        "characters/krag/textures/Krag_CopperHose_BaseColor.png": {
+          "sha256": "ce7b2156bcf1a87f6d81945b891281b860aa179188d0124fe85a5bac4c586444",
+          "bytes": 1325770
+        },
+        "characters/krag/textures/Krag_CopperHose_Metallic.png": {
+          "sha256": "cc468da0217c494e6b689bf78ee02c4bed0d7a5132092ffebff9273ffbb0c405",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_CopperHose_Normal.png": {
+          "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+          "bytes": 1326622
+        },
+        "characters/krag/textures/Krag_CopperHose_Roughness.png": {
+          "sha256": "e051386f21d4b2c36ec7f2739b373a6fef3126fd09b11ba4441177b04450bb4f",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_DesertCanvas_BaseColor.png": {
+          "sha256": "b44f123c84f2c27feb1c146897f145cf89e5939507293b159bfd90d5488d3fd9",
+          "bytes": 1271197
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Normal.png": {
+          "sha256": "54ee0da5da9cc21f8c3ee60fa7d6370729685a716f2236d8113dcea6e1ac1d3d",
+          "bytes": 1493547
+        },
+        "characters/krag/textures/Krag_DesertCanvas_Roughness.png": {
+          "sha256": "4f5cabf2ffc9a8cef0ec091483db5ad741b95ac54445d821b7ad7f03e69f8bb9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_EyeWhite_BaseColor.png": {
+          "sha256": "fa1a1cd2de88ef4efa8bc1ba6559ddb35e86519a5f252a1cc57ee806e4c89392",
+          "bytes": 74859
+        },
+        "characters/krag/textures/Krag_EyeWhite_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_EyeWhite_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_EyeWhite_Roughness.png": {
+          "sha256": "3195366d40c99e13ca9b7d6716f86211ad678e9374d633df5a99283ee82be6af",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_FacialSkin_BaseColor.png": {
+          "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1",
+          "bytes": 2030417
+        },
+        "characters/krag/textures/Krag_FacialSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_FacialSkin_Normal.png": {
+          "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18",
+          "bytes": 1831777
+        },
+        "characters/krag/textures/Krag_FacialSkin_Roughness.png": {
+          "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d",
+          "bytes": 10783
+        },
+        "characters/krag/textures/Krag_Ivory_BaseColor.png": {
+          "sha256": "33f017fbf5862b1ae71e9e2ca628111011fc24cb69782d20b339bd9d924e8d8e",
+          "bytes": 93212
+        },
+        "characters/krag/textures/Krag_Ivory_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Ivory_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Ivory_Roughness.png": {
+          "sha256": "dba7a2dbde5c5a6a16c03162e2082ff7bb814d87acd447a7fa63b3a78684cbe9",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_OiledLeather_BaseColor.png": {
+          "sha256": "5c89d0593da62969048b4a8dbda0115a9a936127c4c4195ba78614338f36c8b6",
+          "bytes": 1127334
+        },
+        "characters/krag/textures/Krag_OiledLeather_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OiledLeather_Normal.png": {
+          "sha256": "4aa7fbe2e764ccfced4adb0191b6becfc48e3cd507b63bb206687154cf723044",
+          "bytes": 1384041
+        },
+        "characters/krag/textures/Krag_OiledLeather_Roughness.png": {
+          "sha256": "0664bd804439f72e8a7d69dddf7e69ff63656ebf94c31867d3738c66edde5f68",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_OralTissue_BaseColor.png": {
+          "sha256": "2c1dd7e4f65c8cefe2d16bdf491211897a1aba1e67fd52f7791d6f07c54c7e36",
+          "bytes": 955107
+        },
+        "characters/krag/textures/Krag_OralTissue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_OralTissue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_OralTissue_Roughness.png": {
+          "sha256": "b23f437cc1a28c49a4b1aba51ba7026a5107554639e91e28c0c1c2525a1288f9",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_Recess_BaseColor.png": {
+          "sha256": "9a3e6a96f13a6a3d6be610c89cc13783dffb47be955779a367064e7e14a01840",
+          "bytes": 69601
+        },
+        "characters/krag/textures/Krag_Recess_Metallic.png": {
+          "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+          "bytes": 275
+        },
+        "characters/krag/textures/Krag_Recess_Normal.png": {
+          "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+          "bytes": 72177
+        },
+        "characters/krag/textures/Krag_Recess_Roughness.png": {
+          "sha256": "9a96c2f6dffebf877ebea04a3aa52982e75daf76f74c343d7221f7407d299cb5",
+          "bytes": 304
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_BaseColor.png": {
+          "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f",
+          "bytes": 7457768
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Normal.png": {
+          "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca",
+          "bytes": 7522343
+        },
+        "characters/krag/textures/Krag_SandstoneSkin_Roughness.png": {
+          "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5",
+          "bytes": 10912
+        },
+        "characters/krag/textures/Krag_Tongue_BaseColor.png": {
+          "sha256": "17f2dcf7888742d903bb4309f6a0f05aa53a22e3dd0781cd55990ca8625d1e3d",
+          "bytes": 954264
+        },
+        "characters/krag/textures/Krag_Tongue_Metallic.png": {
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "bytes": 473
+        },
+        "characters/krag/textures/Krag_Tongue_Normal.png": {
+          "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+          "bytes": 1074697
+        },
+        "characters/krag/textures/Krag_Tongue_Roughness.png": {
+          "sha256": "58172b32174b6003b8f8ae1ad6711bd176835ac94a68dc2e52b9b7c0c0943eba",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_BaseColor.png": {
+          "sha256": "d0689e9e6a8d5a154b431e146f772479d6f2d7c43290033dfc8d5eb3a3fcfaf0",
+          "bytes": 483781
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Metallic.png": {
+          "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+          "bytes": 671
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Normal.png": {
+          "sha256": "e11000bffc8b6b2f9fe79c4342e64abbd96085dffd1d1be67b79039ea3736278",
+          "bytes": 803373
+        },
+        "characters/krag/textures/Krag_WeatheredTeal_Roughness.png": {
+          "sha256": "681b49bcdaae0ec07b2822263556690b208e9809f8e1355439ae88639caac443",
+          "bytes": 671
+        }
+      },
+      "packages": {
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/FacePerformance/FacePerformance.uasset": {
+          "sha256": "2269c5c9f99b2add4de273df81943277891c9b730e6833c6b5014c5b8f5efbd5",
+          "bytes": 191289
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Hit/Hit.uasset": {
+          "sha256": "744525a6f7fecccdf56f5e0031d95a6f545010a2e7fcd9dfce159b4ce129aa1a",
+          "bytes": 100670
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Idle/Idle.uasset": {
+          "sha256": "6f73c084a23f194a50317d955246f9dac47a286c012d158f4be9660770733297",
+          "bytes": 119016
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Melee/Melee.uasset": {
+          "sha256": "fa4bbfbff7675434d74b1f4c546140af505787939ff5437198e8794aad754d0e",
+          "bytes": 112850
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Run/Run.uasset": {
+          "sha256": "c0bb61ab63f6c63c5bdee64eae8d1bcc1572bf643b6c26150e4f57cc9f3a2630",
+          "bytes": 96958
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Shoot/Shoot.uasset": {
+          "sha256": "65bd80e92daea3d9e29e13041465ab1c8f59b5003044747768a20ecfdd02a358",
+          "bytes": 93042
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Walk/Walk.uasset": {
+          "sha256": "84ed37f5e5912d440c23498773617721195af846df706a0152cf0e7ec1e6f9d5",
+          "bytes": 121128
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw.uasset": {
+          "sha256": "ad8ab001580bbe77897a9e3ca9184e8cd10437cb6f2dd3ab6071410252706a76",
+          "bytes": 167335195
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw_PhysicsAsset.uasset": {
+          "sha256": "106715208bcc1ec1d61162c3fd93eb99f1da16cf1f49cacb2b4504eb7dc80c95",
+          "bytes": 8682
+        },
+        "Content/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw_Skeleton.uasset": {
+          "sha256": "2bd8c56575952b01e5a93b81f2e6b6e93767ef42ae9596b13a27ee4c5ce0449c",
+          "bytes": 22603
+        }
+      }
+    }
+  ],
+  "remainingVariants": [
+    "Krag_Piston",
+    "Nib_Natural",
+    "Nib_GripReplacement",
+    "Nib_LegReplacement"
+  ],
+  "next": "Corrected Nib source promotion, remaining isolated imports, assembly, native showcase compile and actual editor game-mode render",
+  "knownArtStatus": "Rejected baseline; no artistic acceptance"
+}

@@ -5,6 +5,7 @@
 #include "Engine/StaticMeshActor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Engine/DirectionalLight.h"
 #include "Components/DirectionalLightComponent.h"
 #include "Engine/SkyLight.h"
@@ -255,7 +256,8 @@ void AKKBenchmarkHUD::DrawHUD()
     if(PC && PC->SelectedUnit())
     {
         DrawText(PC->SelectedUnit()->GetVariantLabel(),FLinearColor(.3f,.85f,.76f),X,Y+30,nullptr,1.2f);
-        DrawText(PC->SelectedUnit()->GetActionLabel(),FLinearColor(.7f,.73f,.71f),X,Y+55,nullptr,1.f);
+        const FString ActionLabel=PC->SelectedUnit()->IsFaceActing() && PC->SelectedUnit()->GetActionLabel()==TEXT("Idle")?TEXT("EXPRESSION"):PC->SelectedUnit()->GetActionLabel();
+        DrawText(ActionLabel,FLinearColor(.7f,.73f,.71f),X,Y+55,nullptr,1.f);
     }
     DrawRect(FLinearColor(.016f,.024f,.028f,.8f),20,Canvas->SizeY-62,Canvas->SizeX-40,42);
     DrawText(TEXT("LMB Select  RMB Run  SHIFT+RMB Walk  A Melee  F Shoot  H Hit  V Bionics  E Face  C Portrait  TAB Unit  Arrows Pan  MMB Orbit  Wheel Zoom  HOME Reset"),FLinearColor(.84f,.81f,.72f),32,Canvas->SizeY-49,nullptr,1.f);
@@ -300,7 +302,7 @@ void AKKBenchmarkGameMode::TickShowcase()
     auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0));if(!PC)return;
     auto* Krag=DemoUnits[0].Get();auto* Nib=DemoUnits[1].Get();
     const double Time=FPlatformTime::Seconds()-ShowcaseStartTime;
-    const double Times[]={0,6,10,14,16,18,20,24,28,36.5,38,45.5,47,48,52,56,60,62,65,68,72};
+    const double Times[]={0,6,10,14,16,18,20,24,26.5,28,36,36.5,38,45.5,47,48,52,56,60,62,65,68,72};
     while(ShowcasePhase<UE_ARRAY_COUNT(Times) && Time>=Times[ShowcasePhase])
     {
         switch(ShowcasePhase)
@@ -313,37 +315,42 @@ void AKKBenchmarkGameMode::TickShowcase()
         case 5:Krag->PlayDemoAction(TEXT("Hit"));Nib->PlayDemoAction(TEXT("Hit"));break;
         case 6:Krag->SetVariantIndex(2);Nib->SetVariantIndex(2);Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
         case 7:Krag->SetVariantIndex(3);Krag->PlayDemoAction(TEXT("Shoot"));Nib->PlayDemoAction(TEXT("Melee"));break;
-        case 8:Nib->SetVariantIndex(0);PC->FocusPortrait(Nib);Nib->PlayFacePerformance();break;
-        case 9:Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 10:Krag->SetVariantIndex(0);PC->FocusPortrait(Krag);Krag->PlayFacePerformance();break;
-        case 11:Krag->PlayDemoAction(TEXT("Melee"));break;
-        case 12:Krag->PlayDemoAction(TEXT("Shoot"));break;
-        case 13:case 14:case 15:case 16:
+        case 8:Nib->SetVariantIndex(0);Nib->MoveTo(Nib->GetActorLocation()+FVector(0,-60,0),true);break;
+        case 9:Nib->SetVariantIndex(0);PC->FocusPortrait(Nib);Nib->PlayFacePerformance();break;
+        case 10:Krag->SetVariantIndex(0);Krag->MoveTo(Krag->GetActorLocation()+FVector(0,-60,0),true);break;
+        case 11:Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 12:Krag->SetVariantIndex(0);PC->FocusPortrait(Krag);Krag->PlayFacePerformance();break;
+        case 13:Krag->PlayDemoAction(TEXT("Melee"));break;
+        case 14:Krag->PlayDemoAction(TEXT("Shoot"));break;
+        case 15:case 16:case 17:case 18:
         {
-            const int32 Cycle=ShowcasePhase-13;const float Side=Cycle%2==0?1.f:-1.f;
+            const int32 Cycle=ShowcasePhase-15;const float Side=Cycle%2==0?1.f:-1.f;
             Krag->SetVariantIndex(1+Cycle%3);Nib->SetVariantIndex(1+Cycle%2);
             Krag->MoveTo(PerformanceOrigins[0]+FVector(-70,-Side*200,0),Cycle%2==0);
             Nib->MoveTo(PerformanceOrigins[1]+FVector(70,-Side*200,0));break;
         }
-        case 17:PC->ResetCamera();Krag->SetVariantIndex(0);Nib->SetVariantIndex(0);Krag->MoveTo(PerformanceOrigins[0]+FVector(0,100,0));Nib->MoveTo(PerformanceOrigins[1]+FVector(0,100,0));break;
-        case 18:Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
-        case 19:PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 20:bShowcaseComplete=true;FinishShowcaseRecording();PC->EndShowcase();PC->ResetCamera();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_COMPLETE duration=72 visual_acceptance_pending=1"));break;
+        case 19:PC->ResetCamera();Krag->SetVariantIndex(0);Nib->SetVariantIndex(0);Krag->MoveTo(PerformanceOrigins[0]+FVector(0,100,0));Nib->MoveTo(PerformanceOrigins[1]+FVector(0,100,0));break;
+        case 20:Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
+        case 21:PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 22:bShowcaseComplete=true;FinishShowcaseRecording();PC->EndShowcase();PC->ResetCamera();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_COMPLETE duration=72 visual_acceptance_pending=1"));break;
         }
         ++ShowcasePhase;
     }
     if((Time<28 || Time>=48) && Time<72)
     {
-        const FVector KragFeet=Krag->GetActorLocation()-FVector(0,0,Krag->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
-        const FVector NibFeet=Nib->GetActorLocation()-FVector(0,0,Nib->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+        FBox VisibleBounds(ForceInit);
+        for(const AKKBenchmarkUnit* Unit:{Krag,Nib})
+        {
+            VisibleBounds+=Unit->GetMesh()->Bounds.GetBox();
+            VisibleBounds+=Unit->GetCapsuleComponent()->Bounds.GetBox();
+        }
         float CameraYaw=75.f+FMath::Sin(Time*.15)*30.f;
-        float CameraDistance=640.f+FMath::Sin(Time*.21)*40.f;
         if(Time>=62)
         {
             const float Settle=FMath::Clamp(float((Time-62)/7),0.f,1.f);
-            CameraYaw=FMath::Lerp(CameraYaw,75.f,Settle);CameraDistance=FMath::Lerp(CameraDistance,640.f,Settle);
+            CameraYaw=FMath::Lerp(CameraYaw,75.f,Settle);
         }
-        PC->SetShowcaseCamera((KragFeet+NibFeet)*.5f+FVector(0,0,95.f),CameraYaw,-22.f,CameraDistance);
+        PC->SetShowcaseFraming(VisibleBounds,CameraYaw,-22.f,GetWorld()->GetDeltaSeconds());
     }
 }
 void AKKBenchmarkGameMode::TickSmoke()

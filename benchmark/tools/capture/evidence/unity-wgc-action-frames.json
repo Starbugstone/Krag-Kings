@@ -1,0 +1,122 @@
+{
+  "source": "Frames decoded from actual recorded game video at measured engine-start offset",
+  "video": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\capture-wgc\\unity-showcase.mp4",
+  "videoSha256": "b2a9ee6c5671a80a4519af1af93a5f09f06733dcd9f03142bb9fddc850078443",
+  "audioOffsetSeconds": 0.7371885776519775,
+  "visualAcceptance": false,
+  "samples": [
+    {
+      "showcaseSeconds": 3,
+      "videoSeconds": 3.7371885776519775,
+      "purpose": "wide pair",
+      "file": "frame-03.png",
+      "sha256": "51626b9275bedacc7fb11e6eca02459972f41b0b18b1c4b60648e4c34cb8243f"
+    },
+    {
+      "showcaseSeconds": 7.7,
+      "videoSeconds": 8.437188577651977,
+      "purpose": "walk and run",
+      "file": "action-07.7-walk.png",
+      "sha256": "23fdbe87b9ba7b17b49e523a6ba544afca27263f73f3d6c5e9e498bb927d26e5"
+    },
+    {
+      "showcaseSeconds": 14.4,
+      "videoSeconds": 15.137188577651978,
+      "purpose": "concurrent melee and shooting",
+      "file": "action-14.4-overlap.png",
+      "sha256": "770ce6d517f0d53cc3ef3ca3966d5a34bf5d12b9b25cbf25f23a621e8156bdd0"
+    },
+    {
+      "showcaseSeconds": 16.4,
+      "videoSeconds": 17.137188577651976,
+      "purpose": "bionic action poses",
+      "file": "action-16.4-bionics.png",
+      "sha256": "253422e3c49986f406a4411863788f07c85cf625c8e5de2b8f8f54624e9d0783"
+    },
+    {
+      "showcaseSeconds": 18,
+      "videoSeconds": 18.737188577651978,
+      "purpose": "coarse hit boundary",
+      "file": "frame-18.png",
+      "sha256": "d39cc828543eb76624da817a5bc123b134b5e09d644fd007a937763de26a46ab"
+    },
+    {
+      "showcaseSeconds": 18.3,
+      "videoSeconds": 19.03718857765198,
+      "purpose": "hit reactions",
+      "file": "action-18.3-hit.png",
+      "sha256": "f3e935724c53bd07dc46f7522db29e3248f59ebd3ef3e4f09bf281f6e63d4af2"
+    },
+    {
+      "showcaseSeconds": 22,
+      "videoSeconds": 22.737188577651978,
+      "purpose": "variant movement",
+      "file": "frame-22.png",
+      "sha256": "a9fee25e48945e5f81d40d75c0f4c83ca5797a4f96f1a7f9ab741c9b3f352c17"
+    },
+    {
+      "showcaseSeconds": 24.4,
+      "videoSeconds": 25.137188577651976,
+      "purpose": "shooting and melee",
+      "file": "action-24.4-actions.png",
+      "sha256": "97c76312c7a96a3a01213465e6423dd678dda93a674a42a0bae6d89495b8ce39"
+    },
+    {
+      "showcaseSeconds": 26,
+      "videoSeconds": 26.737188577651978,
+      "purpose": "variant body view",
+      "file": "frame-26.png",
+      "sha256": "b4926524faa28b0658473f64000a6133aa1db5bb975089be50222e8ea6955dde"
+    },
+    {
+      "showcaseSeconds": 31,
+      "videoSeconds": 31.737188577651978,
+      "purpose": "Nib facial performance",
+      "file": "frame-31.png",
+      "sha256": "b5221c404d59bdccbf5defbab63e6e272d9a4314296b1b71cbc00112ed2ae222"
+    },
+    {
+      "showcaseSeconds": 36.9,
+      "videoSeconds": 37.637188577651976,
+      "purpose": "Nib shooting portrait",
+      "file": "action-36.9-nib-shoot.png",
+      "sha256": "9c4be64135c3d58ad869713456a3f5cb2b354397ba8d0892b9a9e7fe88875486"
+    },
+    {
+      "showcaseSeconds": 41,
+      "videoSeconds": 41.73718857765198,
+      "purpose": "Krag facial performance",
+      "file": "frame-41.png",
+      "sha256": "30d50f7cefceb3de29f9c95644f8b8e252d5d9f421751af75d68fb317d3712b8"
+    },
+    {
+      "showcaseSeconds": 46,
+      "videoSeconds": 46.73718857765198,
+      "purpose": "Krag melee portrait",
+      "file": "action-46.0-krag-melee.png",
+      "sha256": "1e389f0211cf41ac956e6045cd0dc4cebff6f81eadd09684f2e558e442d2aa73"
+    },
+    {
+      "showcaseSeconds": 47.4,
+      "videoSeconds": 48.137188577651976,
+      "purpose": "Krag shooting portrait",
+      "file": "action-47.4-krag-shoot.png",
+      "sha256": "1162d1ee03aa3f09dfe376017df98fd573336a47a729a03b9d278f68b8cb9429"
+    },
+    {
+      "showcaseSeconds": 54,
+      "videoSeconds": 54.73718857765198,
+      "purpose": "bionic carousel",
+      "file": "frame-54.png",
+      "sha256": "72a435776231ace71354d370fedb535eede33a3116f362a45f87200ca58b7526"
+    },
+    {
+      "showcaseSeconds": 64,
+      "videoSeconds": 64.73718857765198,
+      "purpose": "closing movement",
+      "file": "frame-64.png",
+      "sha256": "f56a807aee77d0e6fc4c42792d3fbd80bb313d92f867b104708dd921a2ade3e9"
+    }
+  ],
+  "observedDefect": "Independently viewed 36.9-second Nib shooting portrait: large forehead spikes are visible. This rejected-art baseline is preserved as a regression reference."
+}

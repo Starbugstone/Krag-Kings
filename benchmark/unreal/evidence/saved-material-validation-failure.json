@@ -1,0 +1,10 @@
+{
+  "completed": false,
+  "nativeExitCode": 0,
+  "guardExitCode": 89,
+  "mode": "saved Natural reload validation",
+  "peakPrivateMiB": 2202.0,
+  "minimumAvailableMiB": 14111.0,
+  "failure": "Krag_Natural saved material slot Krag_BlackenedSteel does not match its PBR asset",
+  "preparedFix": "Write modified SkeletalMaterial structs back to the reflected Array by index, save mesh and verify exact material paths. No FBX reimport."
+}

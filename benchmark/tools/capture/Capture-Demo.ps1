@@ -241,10 +241,8 @@ try {
     $video=$metadata.streams|Where-Object codec_type -eq 'video';$audio=$metadata.streams|Where-Object codec_type -eq 'audio'
     if(-not $video -or -not $audio -or [double]$metadata.format.duration -lt $ShowcaseSeconds){throw 'Muxed file lacks required video/audio/duration.'}
     $frames=Join-Path $OutputDirectory ($prefix+'-frames');New-Item -ItemType Directory -Force $frames|Out-Null
-    foreach($seconds in @(3,18,22,26,31,41,54,64)){
-        $time=($seconds+$audioOffset).ToString('F4',[Globalization.CultureInfo]::InvariantCulture)
-        Invoke-Native $Ffmpeg @('-hide_banner','-loglevel','error','-nostdin','-y','-ss',$time,'-i',$final,'-frames:v','1',(Join-Path $frames ("frame-{0:00}.png" -f $seconds))) ''|Out-Null
-    }
+    & (Join-Path $PSScriptRoot 'Export-ShowcaseFrames.ps1') -Video $final -AudioOffsetSeconds $audioOffset -OutputDirectory $frames -Ffmpeg $Ffmpeg
+    $report.reviewFrameSamples=Get-Content (Join-Path $frames 'review-frame-samples.json') -Raw|ConvertFrom-Json
     $report.completed=$true;$report.output=$final;$report.engineAudio=$EngineAudio;$report.rawVideo=$raw
     $report.media=$metadata;$report.reviewFrames=$frames;$report.outputSha256=(Get-FileHash $final -Algorithm SHA256).Hash.ToLower()
     Write-Output ('CAPTURE_COMPLETE '+$final)

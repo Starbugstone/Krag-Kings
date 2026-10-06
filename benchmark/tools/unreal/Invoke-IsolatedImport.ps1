@@ -54,9 +54,13 @@ function Test-Receipt([string]$Name){
 }
 function Invoke-EditorStage([string]$Name,[string]$Argument,[string]$Marker){
  $log=Join-Path $evidence ($Name+'.log')
+ $attempt=Join-Path $local ($Name+'-'+[DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss-fffffff'))
+ New-Item -ItemType Directory -Force $attempt|Out-Null
+ $importerSnapshot=Join-Path $attempt 'import_shared_assets.py'
+ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'import_shared_assets.py') -Destination $importerSnapshot
  $spec=[ordered]@{
   name=$Name;executable=$editor
-  arguments=@((Join-Path $project 'KragKingsBenchmark.uproject'),('-ExecutePythonScript='+(Join-Path $PSScriptRoot 'import_shared_assets.py')),
+  arguments=@((Join-Path $project 'KragKingsBenchmark.uproject'),('-ExecutePythonScript='+$importerSnapshot),
               '-unattended','-nosplash','-stdout','-FullStdOutLogOutput',('-abslog='+$log),'-NoSound','-NullRHI','-corelimit=2','-KKReuseMaterials',$Argument)
   workingDirectory=(Split-Path $benchmark);stdout=(Join-Path $evidence ($Name+'-stdout.log'));stderr=(Join-Path $evidence ($Name+'-stderr.log'))
   minAvailableGB=10;maxPrivateGB=9;gpuTelemetry=$true;successLog=$log;successMarker=$Marker

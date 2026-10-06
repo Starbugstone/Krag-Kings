@@ -110,11 +110,32 @@ void AKKBenchmarkController::TogglePortrait()
 void AKKBenchmarkController::FocusPortrait(AKKBenchmarkUnit* Unit)
 {
     if(!Unit)return;SelectUnit(Unit);
-    bPortrait=true;PortraitPan=FVector::ZeroVector;Distance=Unit->IsKrag()?135.f:95.f;
+    bPortrait=true;PortraitPan=FVector::ZeroVector;Distance=Unit->IsKrag()?135.f:145.f;
     Yaw=Unit->GetActorRotation().Yaw+180.f;Pitch=-3.f;
 }
-void AKKBenchmarkController::SetShowcaseCamera(const FVector& Target,float InYaw,float InPitch,float InDistance)
-{bPortrait=false;Focus=Target;Yaw=InYaw;Pitch=InPitch;Distance=InDistance;}
+void AKKBenchmarkController::SetShowcaseFraming(const FBox& VisibleBounds,float InYaw,float InPitch,float DeltaSeconds)
+{
+    if(!VisibleBounds.IsValid || !BenchmarkCamera)return;
+    bPortrait=false;Focus=VisibleBounds.GetCenter();Yaw=InYaw;Pitch=InPitch;
+    int32 Width=1920,Height=1080;GetViewportSize(Width,Height);
+    const float Aspect=Height>0?float(Width)/Height:16.f/9.f;
+    const float TanHorizontal=FMath::Tan(FMath::DegreesToRadians(BenchmarkCamera->GetCameraComponent()->FieldOfView*.5f));
+    const float TanVertical=TanHorizontal/FMath::Max(.01f,Aspect);
+    const FRotator ViewRotation(InPitch,InYaw,0.f);
+    float RequiredDistance=640.f;
+    for(int32 Corner=0;Corner<8;++Corner)
+    {
+        const FVector WorldPoint(Corner&1?VisibleBounds.Max.X:VisibleBounds.Min.X,
+                                 Corner&2?VisibleBounds.Max.Y:VisibleBounds.Min.Y,
+                                 Corner&4?VisibleBounds.Max.Z:VisibleBounds.Min.Z);
+        const FVector ViewPoint=ViewRotation.UnrotateVector(WorldPoint-Focus);
+        // Unreal view X is forward, Y right, Z up. Reserve matched HUD margins.
+        RequiredDistance=FMath::Max(RequiredDistance,float(FMath::Abs(ViewPoint.Y)/(TanHorizontal*.88f)-ViewPoint.X));
+        RequiredDistance=FMath::Max(RequiredDistance,float(FMath::Abs(ViewPoint.Z)/(TanVertical*.73f)-ViewPoint.X));
+    }
+    // Widen immediately to retain feet/ears; shrink gently at 0.55m/s.
+    Distance=RequiredDistance>Distance?RequiredDistance:FMath::Max(RequiredDistance,Distance-55.f*FMath::Max(0.f,DeltaSeconds));
+}
 void AKKBenchmarkController::Quit(){UKismetSystemLibrary::QuitGame(this,this,EQuitPreference::Quit,false);}
 void AKKBenchmarkController::PlayerTick(float DeltaTime)
 {

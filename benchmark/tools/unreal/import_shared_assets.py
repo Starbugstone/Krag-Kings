@@ -371,13 +371,26 @@ def variant_descriptor(variant):
     return result
 
 
-def restore_variant(descriptor):
+def restore_variant(descriptor, validation):
     variant = unreal.KKCharacterVariant()
     for key in VARIANT_ASSETS:
         asset = load(descriptor[key])
         if asset is None:
             raise RuntimeError('Saved character asset cannot be reloaded: ' + descriptor[key])
         variant.set_editor_property(key, asset)
+    mesh = variant.get_editor_property('mesh')
+    for dependency in ('skeleton', 'physics_asset'):
+        if mesh.get_editor_property(dependency) is None:
+            raise RuntimeError(descriptor['id'] + ': saved ' + dependency + ' is missing on final reload')
+    slots = mesh.get_editor_property('materials')
+    bindings = validation.get('material_bindings', [])
+    if len(slots) != len(bindings):
+        raise RuntimeError(descriptor['id'] + ': material count changed on final reload')
+    for binding in bindings:
+        actual = slots[binding['slot']].get_editor_property('material_interface')
+        if actual is None or actual.get_path_name() != binding['asset']:
+            raise RuntimeError(descriptor['id'] + ': material binding did not survive final package reload')
+    validation['material_bindings_verified_after_reload'] = True
     for key in VARIANT_STRINGS + VARIANT_FLOATS + VARIANT_ARRAYS:
         variant.set_editor_property(key, descriptor[key])
     drivers = []
@@ -464,21 +477,38 @@ def species(folder, only_variant=None, validate_saved=False):
                 raise RuntimeError(f'{fbx.stem}: dependency save left no package on disk: {package}')
             dependencies[property_name] = dependency.get_path_name()
         slots = mesh.get_editor_property('materials')
-        for slot in slots:
+        slots_changed = False
+        binding_repairs = []
+        for slot_index in range(len(slots)):
+            # Reflected Array iteration returns value-struct wrappers. Assign the
+            # edited struct back by index or the material binding can be lost.
+            slot = slots[slot_index]
             name = str(slot.get_editor_property('imported_material_slot_name'))
             if name not in material_map:
                 name = str(slot.get_editor_property('material_slot_name'))
             if name not in material_map:
                 raise RuntimeError('Unmapped PBR material slot ' + name + ' in ' + fbx.stem)
-            if validate_saved:
-                actual = slot.get_editor_property('material_interface')
-                if actual is None or actual.get_path_name() != material_map[name].get_path_name():
-                    raise RuntimeError(f'{fbx.stem}: saved material slot {name} does not match its PBR asset')
-            else:
+            actual = slot.get_editor_property('material_interface')
+            expected_path = material_map[name].get_path_name()
+            actual_path = actual.get_path_name() if actual else None
+            if actual_path != expected_path:
+                binding_repairs.append({'slot': slot_index, 'name': name,
+                                        'previous': actual_path, 'expected': expected_path})
                 slot.set_editor_property('material_interface', material_map[name])
-        if not validate_saved:
+                slots[slot_index] = slot
+                slots_changed = True
+        if slots_changed:
             mesh.set_editor_property('materials', slots)
             save(mesh)
+        material_bindings = []
+        for slot_index, slot in enumerate(mesh.get_editor_property('materials')):
+            name = str(slot.get_editor_property('imported_material_slot_name'))
+            if name not in material_map:
+                name = str(slot.get_editor_property('material_slot_name'))
+            actual = slot.get_editor_property('material_interface')
+            if actual is None or actual.get_path_name() != material_map[name].get_path_name():
+                raise RuntimeError(f'{fbx.stem}: indexed material assignment did not persist for {name}')
+            material_bindings.append({'slot': slot_index, 'name': name, 'asset': actual.get_path_name()})
         anims = [o for o in objects if isinstance(o, unreal.AnimSequence)]
         explicit_clips = manifest.get('animations', {})
         explicit_animations = {}
@@ -590,7 +620,7 @@ def species(folder, only_variant=None, validate_saved=False):
                 clip_validation[name] = {'varying_facial_bones': facial}
             else:
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
-        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies})
+        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies, 'material_bindings': material_bindings, 'material_binding_repairs': binding_repairs})
         descriptor = variant_descriptor(variant)
         write_variant_receipt(folder, descriptor, REPORT['meshes'][-1])
         return descriptor
@@ -703,8 +733,9 @@ def main():
     data.set_editor_property('weapon_flash_material', weapon_flash_material())
     # Blender -Y source forward convention: review this rotation in actual editor before accepting render.
     data.set_editor_property('mesh_rotation', unreal.Rotator(0, -90, 0))
-    data.set_editor_property('krags', [restore_variant(entry) for entry in krags])
-    data.set_editor_property('nibs', [restore_variant(entry) for entry in nibs])
+    validations = {entry['asset']: entry for entry in REPORT['meshes']}
+    data.set_editor_property('krags', [restore_variant(entry, validations[entry['mesh']]) for entry in krags])
+    data.set_editor_property('nibs', [restore_variant(entry, validations[entry['mesh']]) for entry in nibs])
     save(data)
     level_path = DEST + '/Maps/Dunes'
     unreal.EditorAssetLibrary.make_directory(DEST + '/Maps')
