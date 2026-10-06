@@ -11,7 +11,13 @@ ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT/'benchmark/tools/nib/v5_wip/pbr'))
 from portable_save import expected_maps, save_and_validate_pbr
 
-sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def sha(path):
+    # Large source/FBX files must not allocate a second full payload just to hash.
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
 parser = argparse.ArgumentParser()
 parser.add_argument('--prior-pbr', type=Path, required=True)
 parser.add_argument('--out', type=Path, required=True)

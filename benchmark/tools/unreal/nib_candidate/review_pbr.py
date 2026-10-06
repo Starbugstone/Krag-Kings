@@ -7,7 +7,13 @@ import runpy
 import sys
 
 ROOT=Path(__file__).resolve().parents[4]
-sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def sha(path):
+    # Large source/FBX files must not allocate a second full payload just to hash.
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
 parser=argparse.ArgumentParser()
 parser.add_argument('--contract',type=Path,required=True)
 parser.add_argument('--side',choices=['source','baked'],required=True)

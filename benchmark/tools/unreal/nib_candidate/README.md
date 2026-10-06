@@ -47,6 +47,12 @@ only; no new optical bake or comparison has run.
 
 Each Blender job uses four threads, an 8 GB private-memory cap, 10 GB available-memory preflight and Python failure exit code 2. No cap increase or automatic retry is included. Process boundaries allow interleaving scheduled art work.
 
+Candidate/PBR file hashes now stream in 1 MiB chunks instead of allocating a
+second entire source or FBX payload. All nine helper implementations compile
+and reproduce the exact committed reference GLB digest. This limits transient
+hashing allocations; it does not reclaim OS file cache or establish a new
+native bake/import memory measurement. Executed older recipes stay preserved.
+
 The full-mesh and standalone validators restore only source `use_connect` flags inside the disposable Blender import, recording unchanged bind matrices. Installed Blender infers connected edit bones and can otherwise suppress correctly exported pelvis/tongue translation. This normalization does not change any FBX or promise engine parity.
 
 Required follow-up after structural checks: actual matched source/baked Face, Tongue and full-body views; map/alpha/mip inspection; fresh UE Nib skeleton migration because the inserted twist bones change Hand parents; isolated Unity and UE imports; actual pose/ear/skin/fur review and measured performance. The existing cloth, mouth, axilla, right-hand grip and likeness failure gates remain. A technically valid export cannot close them.
