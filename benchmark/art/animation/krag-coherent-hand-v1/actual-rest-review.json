@@ -1,0 +1,48 @@
+{
+  "status": "Actual coherent anatomical source and three rest views; action/material review pending",
+  "sourceSha256": "7db2a08ff2d8130e2af87eb8fb5b0888b64f581115786b9131653ad35eeccd37",
+  "inspectedActualRestViews": [
+    "palm",
+    "back",
+    "edge"
+  ],
+  "finding": "The old broad transverse palmar ridge is removed. The coherent palm and thumb web are visibly more anatomical than the compressed legacy mesh. The wrist transition remains abrupt in these clay closeups and needs smoother contour/tangency. Knuckle/nail detail, all action poses and material/engine likeness remain unverified.",
+  "allOtherBindMatricesExact": true,
+  "allOtherMeshPayloadsPreserved": 30,
+  "allCanonicalNonDigitCurvesPreserved": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "sourceBoneCount": 72,
+  "driversPreserved": 25,
+  "mappingKeyCounts": [
+    2
+  ],
+  "priorFailuresPreserved": [
+    "initial-driver-migration-failure",
+    "driver-keyframe-migration-failure"
+  ],
+  "actionReviewCompleted": false,
+  "artisticAcceptance": false,
+  "engineIntegrated": false,
+  "sharedChanged": false,
+  "memory": {
+    "krag-coherent-hand-v1-complete-driver-mapping": {
+      "peakPrivateMB": 1452.0,
+      "minimumAvailableMB": 10459.0,
+      "guardExit": 0,
+      "nativeExit": 0
+    },
+    "krag-coherent-hand-v1-rest": {
+      "peakPrivateMB": 964.0,
+      "minimumAvailableMB": 11048.0,
+      "guardExit": 0,
+      "nativeExit": 0
+    }
+  }
+}

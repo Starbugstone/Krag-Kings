@@ -16,8 +16,8 @@ from surface_join import clip,cut_loop,connect
 from contracts import rig_contract,surface_hash
 from export_contract import CLIPS,select_action
 from nib_hand_v5 import SOURCE_CHAINS
-import hand_skin_domains,pose,morph_drivers
-p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--source-sha256',required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--resume-driver-failure',action='store_true');a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
+import hand_skin_domains,pose
+p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--source-sha256',required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 def sha(path):
  h=hashlib.sha256()
  with path.open('rb') as f:
@@ -25,8 +25,8 @@ def sha(path):
  return h.hexdigest()
 library=ROOT/'art/reference-anatomy/blender-studio-human-base-meshes/source/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend'
 if sha(a.source)!=a.source_sha256:raise RuntimeError('Pinned source changed')
-if a.output.exists() and not (a.resume_driver_failure and (a.output/'initial-driver-migration-failure/failure.json').exists() and not list(a.output.glob('*.blend'))):raise RuntimeError('Preserve previous candidate')
-a.output.mkdir(parents=True,exist_ok=a.resume_driver_failure);inputs={str(p):sha(p) for p in [a.source,library]}
+if a.output.exists():raise RuntimeError('Preserve previous candidate')
+a.output.mkdir(parents=True);inputs={str(p):sha(p) for p in [a.source,library]}
 bpy.ops.wm.open_mainfile(filepath=str(a.source),load_ui=False)
 rig=bpy.data.objects['Krag_Rig'];obj=bpy.data.objects['BioForearm_L'];old=obj.data;scene=bpy.context.scene
 before=rig_contract(rig);stable={o.name:surface_hash(o) for o in bpy.data.objects if o.type=='MESH' and o!=obj}
@@ -118,8 +118,8 @@ for name,metadata in key_meta.items():
  key=obj.shape_key_add(name=name,from_mix=False);key.data.foreach_set('co',(joined['points']+joined['fields']['morph:'+name]).astype(np.float32).ravel())
  for prop in ['slider_min','slider_max','interpolation','vertex_group','mute']:setattr(key,prop,metadata[prop])
 for name,metadata in key_meta.items():mesh.shape_keys.key_blocks[name].relative_key=mesh.shape_keys.key_blocks[metadata['relative_key']]
-driver_contract=morph_drivers.migrate(old.shape_keys,mesh.shape_keys) if old.shape_keys else []
 if old.shape_keys and old.shape_keys.animation_data:
+ if old.shape_keys.animation_data.drivers:raise RuntimeError('Source shape drivers require explicit migration')
  if old.shape_keys.animation_data.action:
   mesh.shape_keys.animation_data_create();mesh.shape_keys.animation_data.action=old.shape_keys.animation_data.action
 bpy.data.objects.remove(hand,do_unlink=True)
@@ -155,12 +155,8 @@ for clip_name in CLIPS:
  if untouched(action)!=expected:raise RuntimeError('Non-digit action changed '+clip_name)
  clip_report[clip_name]={'frameRange':[first,last],'unchangedOtherCurvesSha256':expected}
 after=rig_contract(rig)
-bind_error=0.
 for name,payload in before['bones'].items():
- if name in changed_bones:continue
- current=after['bones'][name]
- error=float(np.max(np.abs(np.asarray(payload['matrix'])-np.asarray(current['matrix']))));bind_error=max(bind_error,error)
- if error>2e-6 or any(current[k]!=payload[k] for k in ['parent','connected','rotationMode']):raise RuntimeError('Unrelated bind changed '+name)
+ if name not in changed_bones and after['bones'][name]!=payload:raise RuntimeError('Unrelated bind changed '+name)
 for name,digest in stable.items():
  if surface_hash(bpy.data.objects[name])!=digest:raise RuntimeError('Unrelated mesh changed '+name)
 select_action(bpy,rig,bpy.data.actions['Idle']);scene.frame_set(1)
@@ -168,10 +164,9 @@ expected_surface=surface_hash(obj);output=a.output/'Krag_CoherentHand_v1.blend';
 bpy.ops.wm.open_mainfile(filepath=str(output),load_ui=False)
 if rig_contract(bpy.data.objects['Krag_Rig'])!=after:raise RuntimeError('Saved rig/actions changed')
 if surface_hash(bpy.data.objects['BioForearm_L'])!=expected_surface:raise RuntimeError('Saved rebuilt surface changed')
-if morph_drivers.contract(bpy.data.objects['BioForearm_L'].data.shape_keys)!=driver_contract:raise RuntimeError('Saved corrective drivers changed')
 for name,digest in stable.items():
  if surface_hash(bpy.data.objects[name])!=digest:raise RuntimeError('Saved unrelated mesh changed '+name)
 for path,digest in inputs.items():
  if sha(Path(path))!=digest:raise RuntimeError('Input changed')
-report={'status':'Actual isolated coherent hand and welded wrist; visual and action contact review required','inputs':inputs,'output':str(output),'outputSha256':sha(output),'savedSourceReopened':True,'anatomyReference':'Blender Studio Human Base Meshes v1.4.1 / Hand  - Realistic / CC0','referenceFitScales':{'across':2.,'depth':1.5,'length':1.32},'sourceCageVertices':len(raw),'vertices':len(joined['points']),'triangles':len(tri),'wristJoin':joined['join'],'originalElbowBoundaryPreserved':True,'newNonManifoldEdges':nonmanifold,'newDegenerateTriangles':0,'minimumDoubleTriangleArea':float(areas.min()),'domainSolve':domain_report,'sourceWeights':weight_report,'maximumInfluences':4,'changedDigitBones':changed_bones,'totalBindBones':len(after['bones']),'maximumUnrelatedBindMatrixError':bind_error,'unrelatedBindMatrixTolerance':2e-6,'preservedMorphDrivers':len(driver_contract),'morphDrivers':driver_contract,'unchangedMeshComponents':len(stable),'clips':clip_report,'recipeHashes':{path.name:sha(path) for path in [Path(__file__),HERE/'surface_join.py',HERE/'pose.py',HERE/'morph_drivers.py',Path(hand_skin_domains.__file__)]},'artisticAcceptance':False,'surfaceIntersectionsProven':False,'engineExported':False,'sharedChanged':False}
+report={'status':'Actual isolated coherent hand and welded wrist; visual and action contact review required','inputs':inputs,'output':str(output),'outputSha256':sha(output),'savedSourceReopened':True,'anatomyReference':'Blender Studio Human Base Meshes v1.4.1 / Hand  - Realistic / CC0','referenceFitScales':{'across':2.,'depth':1.5,'length':1.32},'sourceCageVertices':len(raw),'vertices':len(joined['points']),'triangles':len(tri),'wristJoin':joined['join'],'originalElbowBoundaryPreserved':True,'newNonManifoldEdges':nonmanifold,'newDegenerateTriangles':0,'minimumDoubleTriangleArea':float(areas.min()),'domainSolve':domain_report,'sourceWeights':weight_report,'maximumInfluences':4,'changedDigitBones':changed_bones,'totalBindBones':len(after['bones']),'unchangedMeshComponents':len(stable),'clips':clip_report,'recipeHashes':{path.name:sha(path) for path in [Path(__file__),HERE/'surface_join.py',HERE/'pose.py',Path(hand_skin_domains.__file__)]},'artisticAcceptance':False,'surfaceIntersectionsProven':False,'engineExported':False,'sharedChanged':False}
 (a.output/'coherent-hand.json').write_text(json.dumps(report,indent=2)+'\n',newline='\n');print('KRAG_COHERENT_HAND_SAVED_AND_REOPENED',flush=True)

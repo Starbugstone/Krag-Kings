@@ -1,0 +1,28 @@
+{
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4.5,
+  "name": "krag-coherent-hand-v1-complete-driver-mapping",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\krag_hand_rebuild\\generate.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-relaxed-hand-v2\\Krag_RelaxedHand_v2.blend",
+    "--source-sha256",
+    "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-coherent-hand-v1",
+    "--resume-driver-failure"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent-hand-v1-complete-driver-mapping.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent-hand-v1-complete-driver-mapping.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent-hand-v1-complete-driver-mapping.stdout.log",
+  "successMarker": "KRAG_COHERENT_HAND_SAVED_AND_REOPENED"
+}

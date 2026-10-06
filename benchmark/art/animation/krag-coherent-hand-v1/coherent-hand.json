@@ -1,0 +1,2867 @@
+{
+  "status": "Actual isolated coherent hand and welded wrist; visual and action contact review required",
+  "inputs": {
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-relaxed-hand-v2\\Krag_RelaxedHand_v2.blend": "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\reference-anatomy\\blender-studio-human-base-meshes\\source\\human-base-meshes-bundle-v1.4.1\\human_base_meshes_bundle.blend": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137"
+  },
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-coherent-hand-v1\\Krag_CoherentHand_v1.blend",
+  "outputSha256": "7db2a08ff2d8130e2af87eb8fb5b0888b64f581115786b9131653ad35eeccd37",
+  "savedSourceReopened": true,
+  "anatomyReference": "Blender Studio Human Base Meshes v1.4.1 / Hand  - Realistic / CC0",
+  "referenceFitScales": {
+    "across": 2.0,
+    "depth": 1.5,
+    "length": 1.32
+  },
+  "sourceCageVertices": 831,
+  "vertices": 25882,
+  "triangles": 51582,
+  "wristJoin": {
+    "upperRingVertices": 184,
+    "lowerRingVertices": 90,
+    "intermediateRings": 2,
+    "weldedSharedIndices": true
+  },
+  "originalElbowBoundaryPreserved": true,
+  "newNonManifoldEdges": 0,
+  "newDegenerateTriangles": 0,
+  "minimumDoubleTriangleArea": 1.488711984511972e-10,
+  "domainSolve": {
+    "coordinateSource": "Original licensed cage",
+    "digitSeedCounts": {
+      "Index": 78,
+      "Middle": 81,
+      "Ring": 77,
+      "Little": 57,
+      "Thumb": 43
+    },
+    "palmSeedCount": 239,
+    "unknownVertices": 112,
+    "additionalProximalSeedCounts": {
+      "Index": 24,
+      "Middle": 19,
+      "Ring": 21,
+      "Little": 35,
+      "Thumb": 45
+    },
+    "iterations": 39,
+    "maximumRelativeResidual": 9.32405542877426e-10,
+    "maximumPartitionError": 1.2825966955176682e-09
+  },
+  "sourceWeights": {
+    "maximumHarmonicTailReturnedToPalm": 0.21810885767830715,
+    "maximumDiscardedWeightForFourInfluences": 0.0,
+    "jointTransitionHalfWidthMeters": 0.008
+  },
+  "maximumInfluences": 4,
+  "changedDigitBones": [
+    "Finger1_3_L",
+    "Finger2_3_L",
+    "Finger3_3_L",
+    "Finger1_2_L",
+    "Finger2_2_L",
+    "Finger3_2_L",
+    "Finger1_1_L",
+    "Finger2_1_L",
+    "Finger3_1_L",
+    "Finger1_0_L",
+    "Finger2_0_L",
+    "Finger3_0_L",
+    "Thumb1_L",
+    "Thumb2_L"
+  ],
+  "totalBindBones": 72,
+  "maximumUnrelatedBindMatrixError": 0.0,
+  "unrelatedBindMatrixTolerance": 2e-06,
+  "preservedMorphDrivers": 25,
+  "morphDrivers": [
+    {
+      "path": "key_blocks[\"Blink_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.012))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_L",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_L",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_L",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Blink_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.012))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_R",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_R",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidUpper_R",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"BrowLower_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.007))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_L",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_L",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_L",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"BrowLower_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.007))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_R",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_R",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowInner_R",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"BrowRaise_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.01))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_L",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_L",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_L",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"BrowRaise_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.01))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_R",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_R",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "BrowOuter_R",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_ElbowFlex_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/85))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_ElbowFlex_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/85))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LowerArm_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_HipFlex_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/60))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_HipFlex_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/60))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Thigh_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_KneeFlex_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/85))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_KneeFlex_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-20)/85))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Shin_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_ShoulderRaise_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-25)/70))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Corrective_ShoulderRaise_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-25)/70))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "UpperArm_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Frown_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-0)/18))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Frown_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-0)/18))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"JawOpen\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-0)/25))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Jaw",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Jaw",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Jaw",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"LipPress\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.006))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LipUpper",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LipUpper",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LipUpper",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"NoseWrinkle\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.005))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "NoseTip",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "NoseTip",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "NoseTip",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Smile_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.007))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_L",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Smile_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.007))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "MouthCorner_R",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Snarl_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-0)/18))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_L",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_L",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_L",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Snarl_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131)-0)/18))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_R",
+              "data_path": "",
+              "transform_type": "ROT_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_R",
+              "data_path": "",
+              "transform_type": "ROT_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "Cheek_R",
+              "data_path": "",
+              "transform_type": "ROT_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Squint_L\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.006))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_L",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_L",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_L",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    },
+    {
+      "path": "key_blocks[\"Squint_R\"].value",
+      "index": 0,
+      "mute": false,
+      "extrapolation": "LINEAR",
+      "type": "SCRIPTED",
+      "expression": "min(1.0,max(0.0,((sqrt(x*x+y*y+z*z))-0)/0.006))",
+      "use_self": false,
+      "variables": [
+        {
+          "name": "x",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_R",
+              "data_path": "",
+              "transform_type": "LOC_X",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "y",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_R",
+              "data_path": "",
+              "transform_type": "LOC_Y",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        },
+        {
+          "name": "z",
+          "type": "TRANSFORMS",
+          "targets": [
+            {
+              "id_type": "OBJECT",
+              "bone_target": "LidLower_R",
+              "data_path": "",
+              "transform_type": "LOC_Z",
+              "transform_space": "LOCAL_SPACE",
+              "rotation_mode": "AUTO",
+              "use_fallback_value": false,
+              "fallback_value": 0.0,
+              "id": "Krag_Rig"
+            }
+          ]
+        }
+      ],
+      "modifiers": [],
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "handle_left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "handle_right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "handle_left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "handle_right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ],
+          "interpolation": "BEZIER",
+          "handle_left_type": "AUTO_CLAMPED",
+          "handle_right_type": "AUTO_CLAMPED",
+          "easing": "AUTO",
+          "amplitude": 0.800000011920929,
+          "back": 1.7015800476074219,
+          "period": 4.099999904632568,
+          "type": "KEYFRAME"
+        }
+      ]
+    }
+  ],
+  "unchangedMeshComponents": 30,
+  "clips": {
+    "Idle": {
+      "frameRange": [
+        1,
+        181
+      ],
+      "unchangedOtherCurvesSha256": "7b5cfa813d5ce77d9f71188a327c202102c94d9e15110c6370357ac31cb4ecc2"
+    },
+    "Walk": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "unchangedOtherCurvesSha256": "aa2c4d259738217fafd8b1fc33d0c02f6652b03e3aa6b216c17b911ae6e331db"
+    },
+    "Run": {
+      "frameRange": [
+        1,
+        25
+      ],
+      "unchangedOtherCurvesSha256": "fdf704c6b2cdbfee4ac13aa307f7760fc28edbce9891923ec3418f44f78664ff"
+    },
+    "Melee": {
+      "frameRange": [
+        1,
+        37
+      ],
+      "unchangedOtherCurvesSha256": "4d2a67396348365efc8f4108907e73b5f190b4d0620fd823d999802890b6e019"
+    },
+    "Shoot": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "unchangedOtherCurvesSha256": "398fe44a92444cf9ec904d597f7a6f9de3df2c2f9fa8ec9c34b7b8976232e8f8"
+    },
+    "Hit": {
+      "frameRange": [
+        1,
+        28
+      ],
+      "unchangedOtherCurvesSha256": "b1738f75f34a2ede6173bd3c1d9c31fdb2a24c1d89da8da1590a07578ebcda95"
+    },
+    "FacePerformance": {
+      "frameRange": [
+        1,
+        180
+      ],
+      "unchangedOtherCurvesSha256": "417f13b3933069f1484cfe5f13e5d0db3a29e85402b1737deae1c3e191749901"
+    }
+  },
+  "recipeHashes": {
+    "generate.py": "5c97e602b6b197c2079f7e33a64353ab4796741db67e87842f0245c4ced65a52",
+    "surface_join.py": "c864ca723f6f9eeac8a22465aae9a3fa82512e5d76aa442321d24d2c05b02b95",
+    "pose.py": "b97250f458eb00687f1f51684376511fd733669cf24a0644d642ba6ef1d1f49e",
+    "morph_drivers.py": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5",
+    "hand_skin_domains.py": "71838999946aaeaf22ed20ec6e351a97fe1e471504519c9864431b94ed56e2ce"
+  },
+  "artisticAcceptance": false,
+  "surfaceIntersectionsProven": false,
+  "engineExported": false,
+  "sharedChanged": false
+}

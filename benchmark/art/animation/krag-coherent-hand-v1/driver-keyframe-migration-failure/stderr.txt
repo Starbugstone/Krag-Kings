@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\generate.py", line 121, in <module>
+    driver_contract=morph_drivers.migrate(old.shape_keys,mesh.shape_keys) if old.shape_keys else []
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\morph_drivers.py", line 24, in migrate
+    expected=contract(source)
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\morph_drivers.py", line 19, in contract
+    if curve.keyframe_points:raise RuntimeError('Corrective driver carries explicit keyframes requiring migration')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Corrective driver carries explicit keyframes requiring migration
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\generate.py', exiting.

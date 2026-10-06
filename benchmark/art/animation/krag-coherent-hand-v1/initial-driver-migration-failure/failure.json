@@ -1,0 +1,10 @@
+{
+  "status": "Actual native2 before save; explicit morph-driver migration required",
+  "guardExit": 2,
+  "nativeExit": 2,
+  "sceneOpened": true,
+  "candidateSaved": false,
+  "inputsUnmodified": true,
+  "failure": "Forearm shape-key datablock contains live transform-driven correctives. Replacement keys must preserve these drivers explicitly.",
+  "retryPlanned": "One scoped driver migration, with exact before/after and saved-file driver checks"
+}

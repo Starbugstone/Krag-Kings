@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\generate.py", line 122, in <module>
+    if old.shape_keys.animation_data.drivers:raise RuntimeError('Source shape drivers require explicit migration')
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Source shape drivers require explicit migration
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\animation\krag_hand_rebuild\generate.py', exiting.
