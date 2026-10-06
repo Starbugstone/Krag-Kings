@@ -1,0 +1,76 @@
+{
+  "status": "Prepared only; no new regional groom source or image exists",
+  "source": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "reference": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "atlas": "benchmark/art/nib/groom-study/fine-strands-v1/textures",
+  "actualBaselineViews": [
+    "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-views/Neutral.png",
+    "benchmark/art/nib/groom-study/fine-strands-v1/actual-views/EyeCloseup.png"
+  ],
+  "change": {
+    "headGuideCounts": {
+      "crown": 340,
+      "fringe": 170,
+      "temple_L": 140,
+      "temple_R": 140,
+      "nape": 210
+    },
+    "earGuideCountsPerEar": {
+      "outer_rim": 240,
+      "inner_wisps": 280
+    },
+    "rootWidthFactorPrevious": 0.72,
+    "rootWidthFactorCandidate": 0.18,
+    "headFullClumpWidthMeters": [
+      0.0021,
+      0.0033
+    ],
+    "earFullClumpWidthMeters": [
+      0.0022,
+      0.0035
+    ],
+    "earRootStrata": "180 outer inward rim,70 second inward rim,30 basal tufts per ear",
+    "flow": "Staggered continuous curves, actual ear tangent/inward direction, unequal card tips and low crossed angles; keep central membrane visible",
+    "rootAttachment": "Actual same-side support, burial limited by opposing surface, reject lens-bound roots",
+    "opaqueAccents": "One guide in eight; more narrow alpha cards do not require more thick opaque bundles",
+    "goggleCheck": "All new head and ear card/accent vertices checked, not only Head-bound groups"
+  },
+  "preserved": [
+    "Current adult face/eyes and fitted neck",
+    "Outer-ear short nap and chin tuft",
+    "Fine face/body skin fuzz and visible skin coverage",
+    "Current materials and fine-strands map bytes/colorspaces",
+    "All79bones and all7canonical clips",
+    "Clothing, natural/replacement Body, hands and socket"
+  ],
+  "firstActualBoundary": [
+    "Guarded generation with surface/UV/weight/lens/rig/image checks and actual save/reopen",
+    "Matched Neutral",
+    "Oblique left EarDetail"
+  ],
+  "laterRequired": [
+    "Actual back/head silhouette",
+    "Actual ear twitch extrema",
+    "Matched engine frame times/overdraw/VRAM and shader inspection"
+  ],
+  "codeSha256": {
+    "benchmark/tools/nib/regional_groom_wip/build_regional_groom.py": "1b666cfe3d404db3cc05d15e68f47b6a6482fcff9d335f4714af8c0047216a81",
+    "benchmark/tools/nib/regional_groom_wip/card_geometry.py": "fa313b27a818906b9d93874a2110ad93f4e7aa95ed02d0bfa9255c252d177a40",
+    "benchmark/tools/nib/regional_groom_wip/eardetail-regional-flow-v1.job.json": "211acd3e1128757408013d4caa74491a0db3fe9224c084e15b1755aa9179dabd",
+    "benchmark/tools/nib/regional_groom_wip/generate-regional-flow-v1.job.json": "1992eb9464a43cb14a8a19d1c598a10924aafa0dc6d464fdadf34b9815fdc64b",
+    "benchmark/tools/nib/regional_groom_wip/guide_recipe.py": "2bafe62dd14498f38aa70b4057b8a793084a7c79b65b261b6cbca8f619d4ccea",
+    "benchmark/tools/nib/regional_groom_wip/neutral-regional-flow-v1.job.json": "f8c346f6d4b9b826413aa6d408b9b0cbdd86c9168dbede3dbcf4feb0f59b8ef6",
+    "benchmark/tools/nib/regional_groom_wip/review_regional_groom.py": "48f708156c9644658e33944b5a3246c77472040484225593f59bdae8db6fe201"
+  },
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "canon": "Guide counts and fit dimensions are provisional production tuning, not new species design",
+  "estimatedCardDelta": {
+    "newLongGuides": 2040,
+    "oldLongGuides": 1150,
+    "additionalCards": 1780,
+    "additionalCardTriangles": 16020,
+    "note": "Opaque accent population is reduced on head; exact overall triangles and rendered coverage/cost require generation"
+  }
+}

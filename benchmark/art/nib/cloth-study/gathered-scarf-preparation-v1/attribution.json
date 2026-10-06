@@ -1,0 +1,24 @@
+{
+  "status": "Read-only construction attribution; future garment not generated",
+  "actualSource": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "retainedScarfGenerator": "benchmark/tools/nib/v5_wip/nib_cloth_v5.py",
+  "generatorSha256": "a5a405119b33c29542e1929709b18e1b64c493e7874bee8bed9f43512c26dc5e",
+  "reference": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "existingConstruction": {
+    "independentBands": 3,
+    "circumferentialSegments": 112,
+    "acrossRows": 13,
+    "solidifyMeters": 0.0015,
+    "subdivisionLevels": 1,
+    "skin": "100percent Chest",
+    "crossSection": "Monotonic radial/vertical descent with radial sine ridges, no returned sheet path"
+  },
+  "sharedConstructionReference": {
+    "path": "benchmark/tools/krag/v9m_wip/scarf_authored_v9me.py",
+    "sha256": "b181c2eaced6d23af397da84764d9637c27c35dea2245f9c4238cc4622c6a56c",
+    "status": "Krag-specific unaccepted returned-fold proposal; dimensions must not be reused"
+  },
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}
