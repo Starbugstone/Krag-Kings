@@ -1,0 +1,11 @@
+{
+  "status": "Failed exact-duration gate",
+  "decodedFrames": 391,
+  "expectedFrames": 396,
+  "segmentFrames": {
+    "Walk": 119,
+    "Run": 95,
+    "Idle": 177
+  },
+  "finding": "The hstack/fps filter ended at the last source timestamp instead of holding the last sample for its remaining duration. Corrected encoding must hold the final actual sample and explicitly limit encoded frame count. Original outputs are preserved."
+}

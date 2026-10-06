@@ -1,0 +1,96 @@
+{
+  "sourceSha256": "84822444a021194fc47e0360bfffc875c18687720bb8b8923588e486b9900607",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "generationAndReviewMarkersVerified": true,
+  "actualReviewImages": 228,
+  "inspectedImages": [
+    "Walk/front/0000.png",
+    "Walk/side/0014.png",
+    "Run/front/0000.png",
+    "Run/side/0006.png",
+    "Idle/front/0000.png",
+    "Idle/front/0015.png",
+    "Idle/side/0045.png"
+  ],
+  "savedCanonicalActions": [
+    "FacePerformance",
+    "Hit",
+    "Idle",
+    "Melee",
+    "Run",
+    "Shoot",
+    "Walk"
+  ],
+  "geometryAndBindPreserved": true,
+  "fullCycleFrameCount": 228,
+  "sourceVideo": "motion-video-v2/Actual_Blender_WholeBody_Motion.mp4",
+  "videoSha256": "c33efa30576d4bdb1a98713544905dff49998845da632a2c628bb406c86bc246",
+  "decodedFrames": 396,
+  "videoContinuousPlaybackVisuallyReviewed": false,
+  "videoFirstAttempt": "motion-video/failure.json",
+  "sampledMotion": {
+    "Walk": {
+      "durationSeconds": 1.0,
+      "minimumRecordedSoleClearanceMeters": -3.751946364149994e-07,
+      "maximumFootTargetErrorMeters": 6.198327820239386e-06,
+      "pelvisHeadExcursionMeters": [
+        0.05023140134289861,
+        0.029017661698162556,
+        0.06002551317214966
+      ]
+    },
+    "Run": {
+      "durationSeconds": 0.8,
+      "minimumRecordedSoleClearanceMeters": -1.8613804522726873e-07,
+      "maximumFootTargetErrorMeters": 6.220909105844086e-06,
+      "pelvisHeadExcursionMeters": [
+        0.0072112358175218105,
+        0.044154406525194645,
+        0.08536016941070557
+      ]
+    },
+    "Idle": {
+      "durationSeconds": 6,
+      "maximumFootTargetErrorMeters": 5.465395729271563e-07
+    }
+  },
+  "artisticAcceptance": false,
+  "findings": [
+    "Coordinated pelvis, torso, shoulder and limb motion is visible in actual front/side Walk and Run poses. The source contains a six-second breathing and weight-shift Idle with planted feet.",
+    "Long diagonal floor-reaching strips are visible in all three clips. Source attribution is pending; this is an unresolved visible defect, not accepted clothing motion.",
+    "The free hand remains splayed with an extended thumb. Rest-aware finger/thumb controls are required.",
+    "The old small weapon, cowl, muscle definition, mouth and overall concept likeness remain unaccepted.",
+    "Actual boots drive numerical ground fitting. These source checks do not prove dune contacts or transition quality in either game engine."
+  ],
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "memory": {
+    "krag-human-motion-v4": {
+      "peakPrivateMB": 1282.0,
+      "minimumAvailableMB": 11912.0
+    },
+    "krag-human-motion-v4-review": {
+      "peakPrivateMB": 1764.0,
+      "minimumAvailableMB": 11717.0
+    }
+  },
+  "frozenFiles": {
+    "executed-recipe/acclaim_motion.py": "a8ca99071984af72c538f3b1fb765be54b03b18e734d51e8284d3f71608820dc",
+    "executed-recipe/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "executed-recipe/humanoid_arms.py": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+    "executed-recipe/krag-human-motion-v4-job.json": "7d5b3c239c9e870d286ec8c762c9e09ec0e9feea527dd56782578858ee234e4f",
+    "executed-recipe/krag-human-motion-v4-review-job.json": "fe66aa3fac8da475e16a2c668776439e39ee8662882f4b477de70480c00014af",
+    "executed-recipe/krag_grip_v2.py": "795eb036e3e4f407f2caf155db60f8989de771d70e41e5f6df55f0486e27734e",
+    "executed-recipe/make_source_motion_video.py": "b68176c427cfd3a741612f0d6b4fc3ad6526a109a017856381cf787ec23fb003",
+    "executed-recipe/retarget_cmu_study.py": "4006dd5001e699a51fc00ecf9f0dad021d9a3a22a3bf7624b25cd8f3df0a79fd",
+    "executed-recipe/review_motion.py": "cc4ebb8a7a52152f6c1b785faa1544a9b68ea613c02be24f2c24fbf2452774de",
+    "executed-recipe/sole_geometry.py": "a7a59b3c6cc16a99d46f987310623d47f1077c17e19380b2476a124e14a5a1c9",
+    "evidence/krag-human-motion-v4-memory.csv": "67ab59e5afd7d02de2057f40591beab51bcf85706c9c5930c7a6ac904ff472d4",
+    "evidence/krag-human-motion-v4-review-memory.csv": "bc352267e9df6d67204d743d949820e62177f34fdd400953361066e5ab6b5cd1",
+    "evidence/krag-human-motion-v4-review.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-human-motion-v4-review.stdout.txt": "d5bb3a91a3879047c08246f2d4681f36bddd3183a03e20d99ac63d6f06d8f948",
+    "evidence/krag-human-motion-v4.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-human-motion-v4.stdout.txt": "833bc7ef36fe6a2591ab829affb73a5261df1c6f220a31f4d533aedfe8288dae"
+  }
+}

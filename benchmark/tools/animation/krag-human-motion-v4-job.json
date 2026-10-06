@@ -1,0 +1,32 @@
+{
+  "name": "krag-human-motion-v4",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\retarget_cmu_study.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_LandmarkRelief_v9o_WIP.blend",
+    "--species",
+    "Krag",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v4",
+    "--generation",
+    "v4",
+    "--source-sha256",
+    "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v4.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v4.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v4.stdout.log",
+  "successMarker": "KRAG_KINGS_HUMAN_MOTION_STUDY_COMPLETE",
+  "memoryBudgetReason": "Prior actual Krag full-body generation peaked1126MB and review1799MB; this isolated4GiB cap preserves at least4GiB launch headroom. Global emergency limits unchanged."
+}
