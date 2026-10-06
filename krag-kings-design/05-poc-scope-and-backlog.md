@@ -53,7 +53,7 @@ The revised first slice also needs a crusher strike against reachable exposed ta
 - The fort is represented by a loadout/debrief screen, not a construction game.
 - Injuries use one structural leg wound and stable downing without bleed-out. One saved first-incapacitation mortality roll demonstrates rare fatal outcomes; the exact 2% tune is provisional. Compatible bionics grant perks and require three campaign days of fitting/recovery, including elective installation.
 - Progression uses capped debrief XP, one threshold, three simple perk choices and a duplicate-award guard. One treatment place and event-aware day advancement enforce deployment downtime. Four eligible event entries, portable-scrap foot return and one rescue variant form the connected follow-on. A full item market, real-time waiting and economy remain outside scope.
-- Species compatibility uses anatomical sockets plus strain: Krag 8, Nib 2 with lightweight implants only; entry servo replacements also consume strain and grant a modest equipment perk. The POC supplies one compatible leg part for the recovery fixture.
+- Species compatibility uses anatomical sockets plus proposed strain: Krag 8, Nib 2 with lightweight restorations only. Entry servo replacements consume strain; only Krag upgrade versions grant an extra equipment perk. Nib implants restore ordinary function without upgrades. The POC supplies one compatible leg part for the recovery fixture.
 - The map and rival are hand-authored. Campaign map generation, raid construction, multiplayer, accounts, monetisation and mobile shipping are outside scope.
 
 ## 4. Rusthook depot completion rules

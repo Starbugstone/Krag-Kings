@@ -2,7 +2,9 @@
 
 Draft 0.5 · 4 October 2026 · [Pack overview](00-overview-and-campaign.md)
 
-**Established:** crew gain experience that can unlock perks; wounds impose debuffs; replacing Brok's damaged leg requires downtime. Krags readily accept machinery replacing body parts and can sustain heavy implants. Nibs have more fragile bodies, cannot sustain those heavy replacements, and support only limited bionics. Every bionic implant supplies a useful equipment perk/ability as well as restoring any linked function; elective replacement of a healthy body part is allowed. Campaign time can generate events, and downed crew need recovery or a rescue mission rather than a bleed-out timer.
+**Established:** crew gain experience that can unlock perks; wounds impose debuffs; replacing a damaged limb requires downtime. Krags readily accept machinery replacing body parts and can sustain heavy implants and elective upgrades. Nibs have more fragile bodies, cannot sustain those heavy replacements, and support only limited lightweight restorative bionics. Brok's injury and the narrated events are illustrations, not a mandatory POC outcome.
+
+**Confirmed user correction — 6 October 2026:** Nib implants restore ordinary anatomical function **without upgrades or additional equipment perks**. The earlier proposal that every implant grants an extra ability is superseded for Nibs. Krag upgrade effects remain draft candidates, and all numbers below remain tuning proposals.
 
 **Draft proposals:** every number, recovery duration, perk name and capacity rule below is a starting tune. These are fictional game rules. The [Rusthook narrated playthrough](09-rusthook-narrated-playthrough.md) demonstrates them; the character document owns core anatomy and combat compatibility.
 
@@ -92,26 +94,26 @@ No perk or higher rank increases these caps in the POC. The boss's greater size 
 
 | Item | Strain | Species fit | Function |
 | --- | ---: | --- | --- |
-| Servo hand / tool hand | 1 | Separate Krag and lightweight Nib variants | Restores ordinary hand function and grants Built-in Tool: satisfies repair/sabotage tool requirement without holding a separate tool; AP, access and repair-charge costs remain |
-| Servo leg | 1 | Separate Krag and lightweight Nib variants | Restores leg function and grants Assisted Step: +1 m ordinary foot Move |
-| Optical enhancement | 1 | Species-fitted versions | Existing aimed-shot benefit; restores that eye if linked to its wound |
-| Lightweight grip replacement | 1 | Species-fitted versions | Existing +10-point risky grip/boarding benefit; does not duplicate a same-arm claw bonus |
-| Precision tool-arm candidate | 1 | Nib or Krag fitted version | Future repair specialisation; detailed ability remains deferred |
+| Servo hand / tool hand | 1 | Krag upgrade; separate lightweight Nib restoration | Both restore ordinary hand function. Krag only: Built-in Tool satisfies the tool requirement without a separate tool; ordinary AP/access/charges remain. Nibs use carried tools normally. |
+| Servo leg | 1 | Krag upgrade; separate lightweight Nib restoration | Both restore ordinary leg function. Krag only: Assisted Step adds +1 m ordinary foot Move. |
+| Optical implant | 1 | Krag enhancement; separate Nib replacement eye | Krag candidate has the aimed-shot benefit. Nib version restores ordinary sight only. |
+| Lightweight grip replacement | 1 | Krag upgrade; separate Nib replacement hand | Krag candidate has the +10-point risky grip/boarding benefit, without duplicating a same-arm claw bonus. Nib version restores ordinary grip only. |
+| Precision tool-arm candidate | 1 | Krag only | Future implant repair specialisation; detailed ability remains deferred. Nibs may carry separate engineering tools. |
 | Iron jaw | 1 | Krag only | Existing Bite action; low strain does not override species fit |
 | Crusher claw | 3 | Krag only, heavy class | Existing Crusher strike and grip effects |
 | Reinforced piston leg — Brok's POC fitting | 3 | Krag only, heavy class | Restores leg function and grants Power Step: +2 m ordinary foot Move and +3 m Sprint |
 
-Brok's claw (3), jaw (1) and new piston leg (3) total **7/8 strain**. A Nib could use a lightweight grip arm (1) and an optical enhancement (1), reaching **2/2**. A third lightweight implant, including a servo replacement, is rejected. A heavy claw is rejected even if the Nib currently uses zero strain.
+Brok's claw (3), jaw (1) and new piston leg (3) total **7/8 strain**. A Nib could use a lightweight replacement hand (1) and replacement eye (1), reaching **2/2**, restoring ordinary grip and sight without bonuses. A third lightweight implant, including a servo replacement, is rejected in this provisional tune. A heavy claw is rejected even if the Nib currently uses zero strain.
 
-Entry-level servo replacements cost **1 strain** and grant the modest equipment perk stated above. Medical purpose does not bypass a Nib's limited capacity. A Nib may fit two lightweight implants in this initial tune, whether elected or used to restore a wound. At capacity, another replacement needs a compatible revised treatment/loadout plan. The edge case of a Nib requiring more replaced functions than this provisional allowance supports remains a later medical/retirement balance decision; do not silently allow heavy parts or pretend every multi-limb casualty is already solved.
+Entry-level servo replacements cost **1 strain**; only Krag upgrade versions grant the equipment perk stated above. Medical purpose does not bypass a Nib's limited capacity. A Nib may fit two lightweight restorations in this initial tune. At capacity, another replacement needs a compatible revised treatment/loadout plan. The edge case of a Nib requiring more replaced functions than this provisional allowance supports remains a later medical/retirement balance decision; do not silently allow heavy parts or pretend every multi-limb casualty is already solved.
 
 External equipment is checked separately. A compatible jetpack or vehicle-mounted heavy weapon remains available to Nibs because its harness/mount distributes the load. It does not turn a heavy anatomical replacement into a safe Nib implant. Future powered exoskeletons require a separately designed system and cannot be used as an undocumented bypass.
 
 ### Elective upgrades and perk ownership
 
-A healthy character can choose a compatible bionic replacement at the Sawbones. Preview the gained perk, lost hand/slot capabilities, strain, part cost and downtime. A prior injury is not a prerequisite and grants no discount in XP or free perk points. Record an elective modification event rather than fabricating a wound. The same three-day fitting/recovery rule applies initially.
+A healthy Krag can choose a compatible bionic upgrade at the Sawbones. Preview the gained perk, lost hand/slot capabilities, strain, part cost and downtime. A prior injury is not a prerequisite and grants no discount in XP or free perk points. Record an elective modification event rather than fabricating a wound. The same three-day fitting/recovery rule applies initially. Nib treatment restores ordinary function and does not use this upgrade/perk comparison.
 
-Equipment perks require the relevant implant to be installed, recovered and functional. They cost no learned perk point, and stop when that implant is disabled or replaced; previously learned XP perks remain. A replacement for an injured limb both restores its linked function and grants the same equipment perk a healthy elective recipient would receive.
+Equipment perks require the relevant Krag upgrade to be installed, recovered and functional. They cost no learned perk point, and stop when that implant is disabled or replaced; previously learned XP perks remain. A Krag upgrade replacing an injured limb both restores its linked function and grants the same equipment perk a healthy elective recipient would receive. A Nib restoration retains learned perks but grants no new implant perk.
 
 A disabled replacement also loses its declared anatomical function even when installed electively: a disabled leg uses the structural leg impairment, an unusable hand fails that hand's requirements, and a disabled replacement eye uses the eye penalty. Apply a missing function once, not once for the original injury and again for the broken implant. This need not fabricate a new injury-history entry.
 

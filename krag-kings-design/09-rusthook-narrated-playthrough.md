@@ -4,6 +4,8 @@ Draft 0.5 · 4 October 2026 · [Pack overview](00-overview-and-campaign.md)
 
 **User clarification — 5 October 2026:** this narrative is for understanding world, lore and tone, **not the final scenario**. Its dialogue, injuries, outcome and sequence are not mandatory POC events. The depot-salvage gameplay objective was selected separately in the current planning conversation.
 
+**Later bionic decision — 6 October 2026:** Nibs use limited lightweight replacements that restore ordinary function, without upgrades. The story below is preserved as a draft illustration; its older references to Nib optical/lightweight enhancements are superseded by the [current species rules](02-characters-jetpacks-and-bionics.md#4-bionics-replacement-and-augmentation).
+
 This is an illustrative playthrough of the current design: preparation, an engine-recovery raid, extraction, experience, wounds and Brok's leg replacement. Outcomes and dialogue are examples rather than scripted events. In particular, Brok is not guaranteed to suffer this injury in every Rusthook mission.
 
 The full game includes a fort and expeditions. The POC uses loadout, battle and debrief screens, followed by a small recovery/perk demonstration. Exact XP, wound, species compatibility and downtime rules live in [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md). This example begins with 0 XP on each crew member.

@@ -26,7 +26,7 @@ Optional overcharging can add explicit failure odds later. Do not make every att
 
 ### Who can carry the machinery
 
-Krags willingly accept heavy anatomical replacements, subject to sockets and their implant strain allowance. Nibs' fragile bodies cannot sustain Krag heavy parts and support only limited lightweight enhancements. The crusher claw and iron jaw below are Krag-only; a small strain value never overrides a species restriction. Mounted giant weapons and fitted jetpacks remain available to Nibs because their external supports are checked separately. Fitting a new limb has real campaign downtime even for a fearless Krag. [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md) defines the item compatibility, XP/perk, wound and recovery rules.
+Krags willingly accept heavy anatomical replacements, subject to sockets and their implant strain allowance. Nibs' fragile bodies support only limited lightweight **restorations, not upgrades**, as explicitly confirmed by the user. They cannot sustain Krag heavy parts or gain extra strength, aim, movement or tools through implants. The crusher claw and iron jaw below are Krag-only; a small strain value never overrides a species restriction. Mounted giant weapons and fitted jetpacks remain available to Nibs because their external supports are checked separately. Fitting a new limb has real campaign downtime even for a fearless Krag. [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md) defines the item compatibility, XP/perk, wound and recovery rules.
 
 ### Crusher claw
 

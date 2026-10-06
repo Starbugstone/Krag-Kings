@@ -2,7 +2,7 @@
 
 Draft 0.5 · 4 October 2026 · [Pack overview](00-overview-and-campaign.md)
 
-**Established:** Krags and Nibs have distinct physical identities and strengths; character wounds are visible and permanent; characters can equip jetpacks and have bionic implants. Krags feel very little pain, have resistant skin, love fighting, are fearless, prefer bigger guns, and their clan boss is physically bigger than ordinary Krags. Experience unlocks perks, wounds impose debuffs, and replacing a limb requires downtime. Krags readily accept heavy machinery in place of body parts; Nib bodies support only limited lightweight bionics. Bionics also grant useful equipment perks and may replace healthy anatomy electively. Downed crew have no bleed-out countdown; rare fatality, recovery and captive rescue rules are in file 11. Specific numerical modifiers and implementations below remain prototype proposals.
+**Established:** Krags and Nibs have distinct physical identities and strengths; character wounds are visible and permanent; characters can equip jetpacks and have bionic implants. Krags feel very little pain, have resistant skin, love fighting, are fearless, prefer bigger guns, and their clan boss is physically bigger than ordinary Krags. Experience unlocks perks, wounds impose debuffs, and replacing a limb requires downtime. Krags readily accept heavy machinery in place of body parts; Nib bodies support only limited lightweight bionics. Krag bionic upgrades may also grant equipment perks and replace healthy anatomy electively; Nib implants restore ordinary function without upgrades, as clarified below. Downed crew have no bleed-out countdown; rare fatality, recovery and captive rescue rules are in file 11. Specific numerical modifiers and implementations below remain prototype proposals.
 
 ## 1. Character identity and roles
 
@@ -126,7 +126,9 @@ Stairs, ladders, ramps and cover provide repeatable access without fuel. Jetpack
 
 ## 4. Bionics: replacement and augmentation
 
-Bionics serve two related purposes: restoring a wounded crew member's function and specialising a character. Each bionic replacement grants a named equipment perk as well as restoring its declared function. A healthy crew member can choose an elective replacement; strain, compatibility, parts and recovery time make this an equipment decision.
+**Confirmed user correction — 6 October 2026:** Nib bionics are lightweight **replacements, not upgrades**. Restore the ordinary function of the replaced anatomy without stronger grip, extra movement, better aim, built-in tools or another implant-granted capability. This supersedes the earlier draft's Nib enhancement examples. Krag upgrades and separately carried tools/equipment retain their own compatibility rules; numerical strain values remain proposals.
+
+Bionics restore a wounded crew member's function. Krag variants may also specialise a character through a named equipment perk or elective upgrade; strain, compatibility, parts and recovery time make this an equipment decision. A Nib's restored function is the benefit of its replacement and does not imply an extra perk.
 
 Installation is a between-battle Sawbones activity with real deployment downtime. Initial scenario equipment may be pre-authored, but earned wounds in a continuing run cannot be instantly cured by changing a loadout. The POC adds one part, one treatment place and a three-campaign-day fitting/recovery demonstration; it does not need surgery animation, item trading or a full economy. XP and selected perks remain during recovery.
 
@@ -134,9 +136,9 @@ Installation is a between-battle Sawbones activity with real deployment downtime
 
 Krags are physically suited to heavy replacement machinery and have no assumed aversion penalty for it. Nibs' smaller, more fragile frames require explicitly lightweight parts. This is an anatomical limit, not a restriction on learning to drive, shoot or use a suitably supported vehicle weapon.
 
-Prototype total implant strain is 8 for Krags, including the boss, and 2 for Nibs. Each Nib implant is lightweight and at most strain 1; heavy-class parts are forbidden regardless of spare capacity. A crusher claw uses 3 and is Krag-only; the iron jaw uses 1 but is also Krag-only. Brok's claw, jaw and reinforced piston leg total 7/8. A Nib may instead combine a lightweight grip arm and optical enhancement for 2/2.
+Prototype total implant strain is 8 for Krags, including the boss, and 2 for Nibs. Each Nib implant is lightweight and at most strain 1; heavy-class parts are forbidden regardless of spare capacity. A crusher claw uses 3 and is Krag-only; the iron jaw uses 1 but is also Krag-only. Brok's claw, jaw and reinforced piston leg total 7/8. A Nib may instead combine an ordinary-function replacement hand and replacement eye for 2/2, without grip or aiming upgrades.
 
-Body-fitted entry servo replacements cost 1 strain and grant a modest named perk: a servo hand supplies Built-in Tool, while a servo leg supplies Assisted Step (+1 m ordinary foot Move). They still need a free compatible socket, species-rated construction and recovery. Medical restorations count towards the same total: a Nib cannot exceed two lightweight implants by labelling additional parts restorative. Disabled installed parts still count. Ranks/perks do not increase these limits. [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md) owns the exact item table, progression and timing rules.
+Body-fitted entry servo replacements cost 1 strain in the draft tune. Krag versions may grant a named perk: a servo hand supplies Built-in Tool, while a servo leg supplies Assisted Step (+1 m ordinary foot Move). Nib versions restore ordinary function only. Both still need a free compatible socket, species-rated construction and recovery. Medical restorations count towards the same total: a Nib cannot exceed two lightweight implants by labelling additional parts restorative. Disabled installed parts still count. Ranks/perks do not increase these limits. [10-experience-wounds-and-recovery.md](10-experience-wounds-and-recovery.md) owns the exact item table, progression and timing rules.
 
 ### Proposed anatomical sockets
 
@@ -155,7 +157,7 @@ Begin the data model with left/right eye, left/right arm, left/right leg and jaw
 | Iron jaw | A bite attack while hands are occupied at a supported/hanging position | Requires reachable exposed target and ordinary AP; not a free follow-up |
 | Later neural/torso implant | A narrow specialised ability | Needs separate balance and art validation before inclusion |
 
-These are candidate families subject to species/socket/strain validation. The revised first POC features a Krag crusher claw and iron jaw, with species-fitted light grip and optical variants retained as optional loadout comparisons. A visibly wounded/replaced state still proves persistence. The heavy-bionic action rules and starting numbers are defined in [08-outrageous-machinery-and-weapons.md](08-outrageous-machinery-and-weapons.md).
+These are candidate families subject to species/socket/strain validation. All additional abilities in this table apply to Krag upgrade candidates; Nib versions may restore the corresponding ordinary anatomical function only. The revised first POC features a Krag crusher claw and iron jaw, with light restorative Nib variants as loadout comparisons. A visibly wounded/replaced state still proves persistence. The heavy-bionic action rules and starting numbers are defined in [08-outrageous-machinery-and-weapons.md](08-outrageous-machinery-and-weapons.md).
 
 ### Functional benefits, bounded stacking
 
