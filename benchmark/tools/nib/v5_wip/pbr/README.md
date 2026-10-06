@@ -1,8 +1,12 @@
 # Prepared v5 material transfer
 
-Status: source code and guarded job recipe only. No bake, v5d source, v5d
-render, FBX or engine import has been produced by these tools. Face shape review
-comes first. The current corrected v4b shared files remain unchanged.
+Status: portable bake/export preparation only; no current coherent-source PBR
+bake or engine import has run. Later saved Nib sources and actual renders now
+exist, including the coherent 79-bone garment/groom/hand source. Its first
+restorative assembly (`ba0048d0…`) fails the actual wrist/cuff interface and is
+held for correction. The existing corrected v4b shared files remain unchanged.
+Use the current [isolated integration plan](../../../unreal/nib_candidate/README.md),
+not the historical `v5d-pbr-prepared.job.json` paths.
 
 `prepare_runtime_pbr.py` reads an explicitly named saved source and its matching
 SHA-256 report. It writes a separate compressed `Nib_Runtime_PBR.blend`, textures
@@ -11,13 +15,18 @@ point, shape key, polygon index and skin weight remains unchanged. Original
 material sources and the untouched input `.blend` remain available for review.
 
 The portable map contract remains BaseColor (sRGB), Normal (OpenGL tangent +Y),
-Roughness and Metallic (linear), using opaque materials. No custom engine shader
-or alpha dependency is introduced.
+Roughness and Metallic (linear). Ordinary materials stay opaque. The current
+groom also uses the explicit MASK contract: BaseColor RGBA coverage in alpha,
+threshold 0.45, double-sided/Flip, and OpenGL +Y tangent normals. Original atlas
+PNGs are copied byte-identically via `--card-texture-dir`; alpha is not rebaked
+or converted to transparent blending. Shared normal/roughness/metal filenames
+remain explicit manifest paths rather than guessed per-material filenames.
 
 | Field | Prepared transfer | Reason |
 | --- | --- | --- |
 | Facial skin and brown nose mask | Bake the actual neutral face into `Nib_v5_FacialSkinAtlas`: 4096² color/normal, 1024² roughness, 128² metal | `NibNoseMask` is a point attribute. A generic material tile loses its geometry-specific placement. The tool verifies the mask exists and is connected to Base Color. |
 | Head fur, pale inner wisps, tawny rim fur | Separate maps evaluated over the exact original strand UV domain, 1024² color / 512² normal and roughness / 128² metal | U carries clump variation, V carries root-to-tip color. Original strand coordinates stay unchanged. |
+| Masked crown/inner-ear/tawny cards | Copy the actual original RGBA atlases and shared scalar/normal maps, with source hashes | Preserve fine coverage and regional color; both engine adapters require the declared MASK/Flip fields. |
 | Pink inner skin and tawny outer undercoat | Separate maps over their audited UV domain | Regional assignments and exposed skin color must remain distinct. |
 | Smooth opaque eye globe and iris | Separate maps for `Nib_OcularGlobe` and `Nib_OcularIris` | Ocular materials remove inherited skin/leather normal maps and skin subsurface response. Their actual appearance remains unreviewed. |
 | Unchanged legacy equipment/body materials | Copy the explicit existing maps by material name | Reuse retained sources without silently replacing new field-dependent shaders. A missing map stops preparation. |
@@ -35,15 +44,15 @@ attributes instead requires an actual-eye atlas and cannot use this carrier.
 
 Run order, after the serialized heavy slot is allocated:
 
-1. Inspect the preserved v5c profile/three-quarter and complete the bounded v5d
-   muzzle, nose-pad and eyelid correction. Review actual neutral/action/blink and
-   tongue geometry before spending time on material detail.
-2. Localize the inherited source surface defects and repair a separately saved
-   source if required. Recipe fixes in `create_nib.py` do not modify saved meshes.
-   The bake tool deliberately does not mutate topology to hide these defects.
-3. Review the exact source and report paths in `v5d-pbr-prepared.job.json`.
-   Those v5d inputs do not exist yet. Run one CPU/four-thread guarded bake only;
-   its eight-GiB private-memory cap remains enforced.
+1. Obtain the corrected actual coherent/restorative saved source and receipt.
+   Preserve the first failed wrist/cuff source and its three views. Overall face,
+   axilla, cloth, groom and right-hand grip failures remain separate art gates.
+2. Freeze the source SHA, all seven canonical actions, full matching 79-bone bind
+   and original card atlas directory in a new isolated plan. Recipe edits do
+   not repair an already saved mesh; the bake does not hide topology defects.
+3. Run the guarded source snapshot, CPU/four-thread bake and saved PBR snapshot.
+   The eight-GiB private-memory cap remains enforced. Require unchanged rig,
+   actions, geometry, weights and morphs; UV/material transfer is intentional.
 4. Read the actual field/hash receipts. Render source and baked derivative with
    identical source lighting/cameras. Compare nose location/contrast, eyelid and
    lip seams, fur color along strands, pink/tawny/pale separation, and smooth eye
@@ -52,8 +61,10 @@ Run order, after the serialized heavy slot is allocated:
    then to a separate pretriangulated candidate using that reference. Pass
    `--texture-dir` explicitly. Never transport v4b normal/morph payloads to changed
    v5 topology. Run mapped UV/normal/morph, fresh bind/clip and posed checks.
-6. Root reviews/promotes only the validated candidate. Both engines then need
-   actual material/pose captures and memory/frame-time measurements.
+6. Validate all three full variants and seven standalone takes against the
+   exact source bind and sampled motion. A separate technical promotion must be
+   identified honestly; structural validity does not mean artistic approval.
+   Both engines need actual material/pose captures and memory/frame-time checks.
 
 Known limits: atlas UV packing/overlap, sampled color parity, bake operator
 behavior on this exact source and engine appearance have not been executed or

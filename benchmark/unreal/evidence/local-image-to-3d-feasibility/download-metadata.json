@@ -1,0 +1,78 @@
+{
+  "queriedUtc": "2026-10-06T12:05:34.177384+00:00",
+  "metadataOnly": true,
+  "weightFilesDownloaded": false,
+  "sources": {
+    "model": {
+      "url": "https://huggingface.co/api/models/stabilityai/TripoSR/tree/main?recursive=true&expand=false",
+      "responseSha256": "9d789dff2898bbcdf4b3daaea335de1059fe366ba9ba143c1fc725c5c55e4316",
+      "selectedMetadata": [
+        {
+          "type": "file",
+          "oid": "fa3e59a701f02679bd1dca02fbaf97306174d291",
+          "size": 987,
+          "path": "config.yaml"
+        },
+        {
+          "type": "file",
+          "oid": "f78322668f0723c948059fe36edd9d1d815b7071",
+          "size": 1677246742,
+          "lfs": {
+            "oid": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+            "size": 1677246742,
+            "pointerSize": 135
+          },
+          "xetHash": "8e2712941eac80536e90324361866f96b721a058a3b5839fb15679f5bfe371cb",
+          "path": "model.ckpt"
+        }
+      ]
+    },
+    "dinoConfig": {
+      "url": "https://huggingface.co/api/models/facebook/dino-vitb16/tree/main?recursive=false&expand=false",
+      "responseSha256": "89d5d617c0cd624365a2e37ec55e5c4f743d23d2eb8ea012934962d851721dbb",
+      "selectedMetadata": [
+        {
+          "type": "file",
+          "oid": "77374d76174bf4b940cc485b61568ff27fcbbc0d",
+          "size": 454,
+          "path": "config.json"
+        }
+      ]
+    },
+    "repo": {
+      "url": "https://api.github.com/repos/VAST-AI-Research/TripoSR",
+      "responseSha256": "0e415d45eb3a1ab69eb5c26d4d16bf646d525268dc07461813f37d124c68b6f7",
+      "selectedMetadata": {
+        "full_name": "VAST-AI-Research/TripoSR",
+        "size": 37566,
+        "default_branch": "main",
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        }
+      }
+    },
+    "commit": {
+      "url": "https://api.github.com/repos/VAST-AI-Research/TripoSR/commits/main",
+      "responseSha256": "cc52f491060104646040c34e5f2814aea9e0631b8ddd12de58a7cc1e8d4fba85",
+      "selectedMetadata": {
+        "sha": "107cefdc244c39106fa830359024f6a2f1c78871",
+        "html_url": "https://github.com/VAST-AI-Research/TripoSR/commit/107cefdc244c39106fa830359024f6a2f1c78871"
+      }
+    },
+    "exampleTorchWheel": {
+      "url": "https://download.pytorch.org/whl/cu121/torch-2.5.1%2Bcu121-cp311-cp311-win_amd64.whl",
+      "method": "HEAD only",
+      "selectedMetadata": {
+        "status": 200,
+        "contentLength": "2449385544",
+        "etag": "\"ad9bfd4b102f6ce05d98c366a4b60fe0\""
+      },
+      "selectedForInstallation": false,
+      "note": "Historical Python3.11 Windows CUDA12.1 wheel, size illustration only; dependency resolution and compatibility untested."
+    }
+  }
+}
