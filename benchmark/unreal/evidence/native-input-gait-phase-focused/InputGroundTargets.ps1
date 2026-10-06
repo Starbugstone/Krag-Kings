@@ -45,17 +45,9 @@ function Get-KKGroundClickTarget($State,[int]$Width,[int]$Height) {
     $radius=if($unit.species -eq 'Krag'){47.0}else{29.0};$selectedRadius=if($selected.species -eq 'Krag'){47.0}else{29.0}
     if(-not $unit.selected){
      $vx=$x-$selected.x;$vy=$y-$selected.y
-     # Double literals are required: PowerShell otherwise selects Math's Int32
-     # overload and truncates the projection fraction to an endpoint.
-     $t=[Math]::Max(0.0,[Math]::Min(1.0,[double](($unit.x-$selected.x)*$vx+($unit.y-$selected.y)*$vy)/($vx*$vx+$vy*$vy)))
+     $t=[Math]::Max(0,[Math]::Min(1,(($unit.x-$selected.x)*$vx+($unit.y-$selected.y)*$vy)/($vx*$vx+$vy*$vy)))
      $separation=[Math]::Sqrt([Math]::Pow($selected.x+$t*$vx-$unit.x,2)+[Math]::Pow($selected.y+$t*$vy-$unit.y,2))
-     $initialSeparation=[Math]::Sqrt([Math]::Pow($selected.x-$unit.x,2)+[Math]::Pow($selected.y-$unit.y,2))
-     $targetSeparation=[Math]::Sqrt([Math]::Pow($x-$unit.x,2)+[Math]::Pow($y-$unit.y,2))
-     $physicalClearance=$radius+$selectedRadius+2.5;$preferredClearance=$radius+$selectedRadius+15
-     # From inside the extra planning margin, permit only outward paths whose
-     # minimum clearance never drops below the start or physical collision gap.
-     $pathClearance=[Math]::Max($physicalClearance,[Math]::Min($initialSeparation,$preferredClearance))
-     if($separation+0.000001 -lt $pathClearance -or $targetSeparation -lt $preferredClearance){$blocked=$true;break}
+     if($separation -lt ($radius+$selectedRadius+15)){$blocked=$true;break}
     }
     # Conservative bounds include arms/gear as well as the selection capsule.
     $extent=if($unit.species -eq 'Krag'){@(85,85,120)}else{@(48,48,82)}

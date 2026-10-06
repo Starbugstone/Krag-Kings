@@ -1,0 +1,695 @@
+{
+    "scope":  "Focused zero-hold modifier regression",
+    "originalTopmost":  false,
+    "completed":  true,
+    "error":  null,
+    "windowLeaseRestored":  true,
+    "windowRestoreError":  null,
+    "pointerGuards":  [
+                          {
+                              "gameHwnd":  658106,
+                              "foregroundHwnd":  658106,
+                              "pointerHwnd":  658106,
+                              "gamePid":  21932,
+                              "foregroundPid":  21932,
+                              "pointerPid":  21932,
+                              "x":  665,
+                              "y":  529
+                          },
+                          {
+                              "gameHwnd":  658106,
+                              "foregroundHwnd":  658106,
+                              "pointerHwnd":  658106,
+                              "gamePid":  21932,
+                              "foregroundPid":  21932,
+                              "pointerPid":  21932,
+                              "x":  986,
+                              "y":  761
+                          },
+                          {
+                              "gameHwnd":  658106,
+                              "foregroundHwnd":  658106,
+                              "pointerHwnd":  658106,
+                              "gamePid":  21932,
+                              "foregroundPid":  21932,
+                              "pointerPid":  21932,
+                              "x":  820,
+                              "y":  957
+                          },
+                          {
+                              "gameHwnd":  658106,
+                              "foregroundHwnd":  658106,
+                              "pointerHwnd":  658106,
+                              "gamePid":  21932,
+                              "foregroundPid":  21932,
+                              "pointerPid":  21932,
+                              "x":  622,
+                              "y":  731
+                          },
+                          {
+                              "gameHwnd":  658106,
+                              "foregroundHwnd":  658106,
+                              "pointerHwnd":  658106,
+                              "gamePid":  21932,
+                              "foregroundPid":  21932,
+                              "pointerPid":  21932,
+                              "x":  986,
+                              "y":  744
+                          }
+                      ],
+    "source":  "Windows mouse and keyboard delivered to visible Unreal demo",
+    "executionMode":  "Packaged",
+    "packagedBuildTested":  true,
+    "mouse_keyboard_delivery_tested":  true,
+    "visual_quality_accepted":  false,
+    "timestampUtc":  "2026-10-06T07:59:51.2488743Z",
+    "checks":  [
+                   {
+                       "check":  "LMB selects Nib",
+                       "passed":  true,
+                       "runtimeElapsed":  2.217,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Idle"
+                   },
+                   {
+                       "check":  "Focused modifier probe has observed wide camera",
+                       "passed":  true,
+                       "runtimeElapsed":  2.331,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Idle"
+                   },
+                   {
+                       "check":  "Focused Nib RMB establishes Run before modifier probes",
+                       "passed":  true,
+                       "runtimeElapsed":  2.954,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Run"
+                   },
+                   {
+                       "check":  "Immediate Right Shift+RMB preserves Walk intent",
+                       "passed":  true,
+                       "runtimeElapsed":  3.925,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Walk"
+                   },
+                   {
+                       "check":  "Unmodified quick RMB clears previous Walk modifier",
+                       "passed":  true,
+                       "runtimeElapsed":  5.785,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Run"
+                   },
+                   {
+                       "check":  "Immediate Left Shift+RMB preserves Walk intent",
+                       "passed":  true,
+                       "runtimeElapsed":  6.882,
+                       "camera":  {
+                                      "x":  -161.083,
+                                      "y":  -578.178,
+                                      "z":  444.799,
+                                      "pitch":  -22.000,
+                                      "yaw":  75.000
+                                  },
+                       "selectedAction":  "Walk"
+                   }
+               ],
+    "cameraProbes":  [
+                         {
+                             "control":  "FocusedNibRun",
+                             "before":  {
+                                            "elapsed":  2.432,
+                                            "portrait":  false,
+                                            "camera":  {
+                                                           "x":  -161.083,
+                                                           "y":  -578.178,
+                                                           "z":  444.799,
+                                                           "pitch":  -22.000,
+                                                           "yaw":  75.000
+                                                       },
+                                            "units":  [
+                                                          {
+                                                              "species":  "Krag",
+                                                              "variant":  "Krag / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  false,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.03245,
+                                                              "body_morph_weight":  0.07706,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  1276.219,
+                                                              "screen_y":  587.702,
+                                                              "x":  -135.000,
+                                                              "y":  0.000,
+                                                              "z":  196.185,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          },
+                                                          {
+                                                              "species":  "Nib",
+                                                              "variant":  "Nib / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  true,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.00000,
+                                                              "body_morph_weight":  0.00000,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  668.044,
+                                                              "screen_y":  529.040,
+                                                              "x":  120.000,
+                                                              "y":  -10.000,
+                                                              "z":  198.708,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          }
+                                                      ]
+                                        },
+                             "target":  {
+                                            "worldCentimeters":  [
+                                                                     -20,
+                                                                     -9.9999999999999822,
+                                                                     106.40336403379041
+                                                                 ],
+                                            "clientPoint":  [
+                                                                985.2515474306984488397584276,
+                                                                761.33564139380427986571647688
+                                                            ],
+                                            "projectionErrorsPixels":  [
+                                                                           0.0019847832423119079,
+                                                                           0.000996661867193351
+                                                                       ],
+                                            "distanceFromSelectedCm":  140,
+                                            "method":  "Observed camera checked against actual projected unit centers; predicted dune height; footprint/path and conservative unit occlusion exclusion. Actual game terrain trace remains authoritative."
+                                        },
+                             "observedMovementSettled":  true,
+                             "heldMilliseconds":  60,
+                             "walk":  false,
+                             "shiftVirtualKey":  160
+                         },
+                         {
+                             "control":  "QuickRightShiftWalk",
+                             "before":  {
+                                            "elapsed":  3.603,
+                                            "portrait":  false,
+                                            "camera":  {
+                                                           "x":  -161.083,
+                                                           "y":  -578.178,
+                                                           "z":  444.799,
+                                                           "pitch":  -22.000,
+                                                           "yaw":  75.000
+                                                       },
+                                            "units":  [
+                                                          {
+                                                              "species":  "Krag",
+                                                              "variant":  "Krag / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  false,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.03245,
+                                                              "body_morph_weight":  0.07706,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  1276.219,
+                                                              "screen_y":  587.702,
+                                                              "x":  -135.000,
+                                                              "y":  0.000,
+                                                              "z":  196.185,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          },
+                                                          {
+                                                              "species":  "Nib",
+                                                              "variant":  "Nib / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  true,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.16951,
+                                                              "body_morph_weight":  0.12249,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  928.552,
+                                                              "screen_y":  591.761,
+                                                              "x":  4.699,
+                                                              "y":  -9.620,
+                                                              "z":  182.539,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          }
+                                                      ]
+                                        },
+                             "target":  {
+                                            "worldCentimeters":  [
+                                                                     4.6989999999999741,
+                                                                     -149.62,
+                                                                     101.84521212630709
+                                                                 ],
+                                            "clientPoint":  [
+                                                                820.1963372576322500710264783,
+                                                                957.1241411236750783864234600
+                                                            ],
+                                            "projectionErrorsPixels":  [
+                                                                           0.0019847832423119079,
+                                                                           0.0023349040054612539
+                                                                       ],
+                                            "distanceFromSelectedCm":  140,
+                                            "method":  "Observed camera checked against actual projected unit centers; predicted dune height; footprint/path and conservative unit occlusion exclusion. Actual game terrain trace remains authoritative."
+                                        },
+                             "observedMovementSettled":  true,
+                             "heldMilliseconds":  0,
+                             "walk":  true,
+                             "shiftVirtualKey":  161
+                         },
+                         {
+                             "control":  "QuickUnmodifiedRun",
+                             "before":  {
+                                            "elapsed":  5.348,
+                                            "portrait":  false,
+                                            "camera":  {
+                                                           "x":  -161.083,
+                                                           "y":  -578.178,
+                                                           "z":  444.799,
+                                                           "pitch":  -22.000,
+                                                           "yaw":  75.000
+                                                       },
+                                            "units":  [
+                                                          {
+                                                              "species":  "Krag",
+                                                              "variant":  "Krag / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  false,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.03245,
+                                                              "body_morph_weight":  0.07706,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  1276.219,
+                                                              "screen_y":  587.702,
+                                                              "x":  -135.000,
+                                                              "y":  0.000,
+                                                              "z":  196.185,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          },
+                                                          {
+                                                              "species":  "Nib",
+                                                              "variant":  "Nib / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  true,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.00000,
+                                                              "body_morph_weight":  0.00000,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  837.224,
+                                                              "screen_y":  738.529,
+                                                              "x":  4.777,
+                                                              "y":  -124.581,
+                                                              "z":  175.777,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          }
+                                                      ]
+                                        },
+                             "target":  {
+                                            "worldCentimeters":  [
+                                                                     126.02055652982142,
+                                                                     -54.581000000000017,
+                                                                     124.15379333369722
+                                                                 ],
+                                            "clientPoint":  [
+                                                                621.99557477605770468207789995,
+                                                                730.69165471754886076441361019
+                                                            ],
+                                            "projectionErrorsPixels":  [
+                                                                           0.0019847832423119079,
+                                                                           0.0019219610436602235
+                                                                       ],
+                                            "distanceFromSelectedCm":  140,
+                                            "method":  "Observed camera checked against actual projected unit centers; predicted dune height; footprint/path and conservative unit occlusion exclusion. Actual game terrain trace remains authoritative."
+                                        },
+                             "observedMovementSettled":  true,
+                             "heldMilliseconds":  0,
+                             "walk":  false,
+                             "shiftVirtualKey":  160
+                         },
+                         {
+                             "control":  "QuickLeftShiftWalk",
+                             "before":  {
+                                            "elapsed":  6.558,
+                                            "portrait":  false,
+                                            "camera":  {
+                                                           "x":  -161.083,
+                                                           "y":  -578.178,
+                                                           "z":  444.799,
+                                                           "pitch":  -22.000,
+                                                           "yaw":  75.000
+                                                       },
+                                            "units":  [
+                                                          {
+                                                              "species":  "Krag",
+                                                              "variant":  "Krag / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  false,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.03245,
+                                                              "body_morph_weight":  0.07706,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  1276.219,
+                                                              "screen_y":  587.702,
+                                                              "x":  -135.000,
+                                                              "y":  0.000,
+                                                              "z":  196.185,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          },
+                                                          {
+                                                              "species":  "Nib",
+                                                              "variant":  "Nib / Natural",
+                                                              "action":  "Idle",
+                                                              "selected":  true,
+                                                              "face_active":  false,
+                                                              "facial_morph_weight":  0.00000,
+                                                              "body_morph_weight":  0.00000,
+                                                              "screen_visible":  true,
+                                                              "screen_x":  643.847,
+                                                              "screen_y":  598.752,
+                                                              "x":  104.339,
+                                                              "y":  -67.206,
+                                                              "z":  192.754,
+                                                              "shots":  {
+                                                                            "count":  0,
+                                                                            "phase":  0.000000,
+                                                                            "angle_degrees":  0.000000,
+                                                                            "maximum_angle_degrees":  0.000000,
+                                                                            "muzzle":  [
+                                                                                           0.000000,
+                                                                                           0.000000,
+                                                                                           0.000000
+                                                                                       ],
+                                                                            "direction":  [
+                                                                                              0.000000,
+                                                                                              0.000000,
+                                                                                              0.000000
+                                                                                          ],
+                                                                            "actor_forward":  [
+                                                                                                  0.000000,
+                                                                                                  0.000000,
+                                                                                                  0.000000
+                                                                                              ],
+                                                                            "events":  [
+
+                                                                                       ]
+                                                                        }
+                                                          }
+                                                      ]
+                                        },
+                             "target":  {
+                                            "worldCentimeters":  [
+                                                                     -16.90455652982142,
+                                                                     2.7939999999999827,
+                                                                     107.57407996671166
+                                                                 ],
+                                            "clientPoint":  [
+                                                                985.5553517103739631663220784,
+                                                                743.66693583935256092482076571
+                                                            ],
+                                            "projectionErrorsPixels":  [
+                                                                           0.0019847832423119079,
+                                                                           0.002791227166463068
+                                                                       ],
+                                            "distanceFromSelectedCm":  140,
+                                            "method":  "Observed camera checked against actual projected unit centers; predicted dune height; footprint/path and conservative unit occlusion exclusion. Actual game terrain trace remains authoritative."
+                                        },
+                             "observedMovementSettled":  true,
+                             "heldMilliseconds":  0,
+                             "walk":  true,
+                             "shiftVirtualKey":  160
+                         }
+                     ],
+    "finalCamera":  {
+                        "x":  -161.083,
+                        "y":  -578.178,
+                        "z":  444.799,
+                        "pitch":  -22.000,
+                        "yaw":  75.000
+                    },
+    "finalUnits":  [
+                       {
+                           "species":  "Krag",
+                           "variant":  "Krag / Natural",
+                           "action":  "Idle",
+                           "selected":  false,
+                           "face_active":  false,
+                           "facial_morph_weight":  0.03245,
+                           "body_morph_weight":  0.07706,
+                           "screen_visible":  true,
+                           "screen_x":  1276.219,
+                           "screen_y":  587.702,
+                           "x":  -135.000,
+                           "y":  0.000,
+                           "z":  196.185,
+                           "shots":  {
+                                         "count":  0,
+                                         "phase":  0.000000,
+                                         "angle_degrees":  0.000000,
+                                         "maximum_angle_degrees":  0.000000,
+                                         "muzzle":  [
+                                                        0.000000,
+                                                        0.000000,
+                                                        0.000000
+                                                    ],
+                                         "direction":  [
+                                                           0.000000,
+                                                           0.000000,
+                                                           0.000000
+                                                       ],
+                                         "actor_forward":  [
+                                                               0.000000,
+                                                               0.000000,
+                                                               0.000000
+                                                           ],
+                                         "events":  [
+
+                                                    ]
+                                     }
+                       },
+                       {
+                           "species":  "Nib",
+                           "variant":  "Nib / Natural",
+                           "action":  "Walk",
+                           "selected":  true,
+                           "face_active":  false,
+                           "facial_morph_weight":  0.03966,
+                           "body_morph_weight":  0.00000,
+                           "screen_visible":  true,
+                           "screen_x":  651.232,
+                           "screen_y":  598.506,
+                           "x":  101.873,
+                           "y":  -65.787,
+                           "z":  192.531,
+                           "shots":  {
+                                         "count":  0,
+                                         "phase":  0.000000,
+                                         "angle_degrees":  0.000000,
+                                         "maximum_angle_degrees":  0.000000,
+                                         "muzzle":  [
+                                                        0.000000,
+                                                        0.000000,
+                                                        0.000000
+                                                    ],
+                                         "direction":  [
+                                                           0.000000,
+                                                           0.000000,
+                                                           0.000000
+                                                       ],
+                                         "actor_forward":  [
+                                                               0.000000,
+                                                               0.000000,
+                                                               0.000000
+                                                           ],
+                                         "events":  [
+
+                                                    ]
+                                     }
+                       }
+                   ]
+}

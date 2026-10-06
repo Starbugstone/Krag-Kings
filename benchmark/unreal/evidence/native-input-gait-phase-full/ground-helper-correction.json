@@ -1,0 +1,43 @@
+{
+  "scope": "Offline helper evaluation on actual saved failure state; no Windows input or game launch",
+  "oldFailureInitialSeparationCm": 90.37448974683066,
+  "oldConservativePathClearanceCm": 91,
+  "actualGamePathClearanceCm": 78.5,
+  "destinationMarginCm": 91,
+  "target": {
+    "worldCentimeters": [
+      -157.87699999999995,
+      65.55555652982142,
+      87.13578837673879
+    ],
+    "clientPoint": [
+      1448.5267597829013,
+      725.1013620119061
+    ],
+    "projectionErrorsPixels": [
+      0.002176602344491181,
+      0.0014413219656011257
+    ],
+    "distanceFromSelectedCm": 140,
+    "method": "Observed camera checked against actual projected unit centers; predicted dune height; footprint/path and conservative unit occlusion exclusion. Actual game terrain trace remains authoritative."
+  },
+  "independentPythonSegmentCheck": {
+    "closestPointFraction": 0.0,
+    "minimumPathClearanceCm": 90.37448974683065,
+    "initialClearanceCm": 90.37448974683065,
+    "destinationClearanceCm": 227.41953862130467,
+    "requiredPathClearanceCm": 90.37448974683065,
+    "passed": true
+  },
+  "powerShellOverloadRegression": {
+    "scope": "Offline numeric regression, no input sent",
+    "rawProjection": 0.33792747865094536,
+    "oldIntLiteralResult": 0,
+    "oldType": "System.Int32",
+    "correctDoubleLiteralResult": 0.33792747865094536,
+    "correctType": "System.Double",
+    "candidateWasOnlyOffline": true
+  },
+  "correctedHelperSha256": "e27cbf22e40fbc7d0854a0290bfd20a46c9ea3733b1f98d2df2f35180e32c3b2",
+  "newNativeRunExecuted": false
+}

@@ -1,0 +1,92 @@
+{
+  "executed-input_smoke.ps1": {
+    "sourceSha256": "e9a99ccc20d0202687c5684c0971416db75b02cc5804df7c1d2f467b9a10146c",
+    "repositorySha256": "e9a99ccc20d0202687c5684c0971416db75b02cc5804df7c1d2f467b9a10146c",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "gpu.csv": {
+    "sourceSha256": "dab02e71b369cdb9095b3583e37f0ad23dcbeb28b669a910465addd8ca65d7d1",
+    "repositorySha256": "12c4b3da00f9483789fa030e64a4e71a4e6d574ec63bc51e7fc27d4a2662d7f7",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "guard-stderr.log": {
+    "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repositorySha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "guard-stdout.log": {
+    "sourceSha256": "181b987dd3a0e1d174c55fe7b26a98317890a07f4fbcf23b8ea194a4118ebb26",
+    "repositorySha256": "9711ca2b88628ed864678063330cbcfb7a5cea63c0bbb6099d3fd3d726ea623f",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "input-smoke-report.json": {
+    "sourceSha256": "cdf6a20c1e2d99e2ae1fcaeaab59e726acebea4dd4b7c0f58933e8ca12dbef03",
+    "repositorySha256": "b4a344c140acc942c63ab0cb7630d0d31b5f57b89990f7132ddd7b33dbe212da",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "input-state.json": {
+    "sourceSha256": "d61c1fc875e041a11117e7ff3031be8678c6fda936f6b4d97f052a26a99690cb",
+    "repositorySha256": "5c9f5988ec6083652af775c75439b8dcd3298300b16937bc37bac3922e233817",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "input-stdout.log": {
+    "sourceSha256": "9d0a20141be95a331322c61592e3502c805c7b9e0534b09f5e9d7f87eb58d52b",
+    "repositorySha256": "c275faaf611b83464e3a2b38ce660a63079757ba6202320b292763e5f7e29cfc",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "InputGroundTargets.ps1": {
+    "sourceSha256": "8df2eacd16f78693c94d56669e32a84600d220e89afb581ecf6f060713bf6147",
+    "repositorySha256": "8df2eacd16f78693c94d56669e32a84600d220e89afb581ecf6f060713bf6147",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "job.json": {
+    "sourceSha256": "4e9fce5e090c086ce895fda7ce7c8d032c1db899ffce1d64ad6ee7442a6aaf36",
+    "repositorySha256": "17a8207b34cead71d078d18e383780dbb76b5746c958c35f28e6a61e4c8b3d20",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "memory.csv": {
+    "sourceSha256": "5d99a5030921da3792f0113ee48b8d43ce825325cee00aa339dd43997b685ba9",
+    "repositorySha256": "012bba470b7f27458cb27175df5a118a37642665df6d8cc5ae1296e6a5b959a9",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "native-input-result.json": {
+    "sourceSha256": "9a9d43497f0c357acc97c7751047f9b247255c4323564234da807c9761a40f25",
+    "repositorySha256": "441badabb54b9fd4439e59d0740029674da791f1f4b23a2f5b067eed5d7866dc",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "native-stderr.log": {
+    "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repositorySha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "native-stdout.log": {
+    "sourceSha256": "d517df05f737e348f5ae5f72345eed346e0a38599604d610d436579e1dfd1f81",
+    "repositoryFileOmitted": true,
+    "reason": "Redundant native stdout uses a legacy Windows byte encoding; authoritative UTF-8 runtime.log retained. Raw stdout stays in the local run folder."
+  },
+  "package-result.json": {
+    "sourceSha256": "7acdaa2676a6837e6317f3a7c1646cb3cb8f30ccc5c4d94130be2221316b39b6",
+    "repositorySha256": "85becfea56402d0432b23b173271fe187b11f130511d0b2b0d10d1cde82f1293",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "previous-input-smoke-report.json": {
+    "sourceSha256": "750623c4d31d5aecd11a60e89bf720e65e3d7eef84914be2549adc6407dfe5ad",
+    "repositorySha256": "f14d37982f226b459f3d30e62cc806e61a0d905f8f2eaf1cc97e712ccaac1358",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "previous-input-state.json": {
+    "sourceSha256": "4c7edaa8d9e3cc87ad1322b231459f8d2789ab4d46cc74a6f1ff13880a62bac6",
+    "repositorySha256": "277a2df211fef89ea8e57626b2260da70e03b20dd75718cabc22cc6fdb27ee54",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "run-conditions.json": {
+    "sourceSha256": "d5c7ecbac2a92df7bf19816f3dea9199d4f97ff436eb7f85bec35aa4808d4f6a",
+    "repositorySha256": "e6667906baad7bb183095d8fcae48c87e7cfe4dcd3600054ba1606b6655968a9",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  },
+  "runtime.log": {
+    "sourceSha256": "69b39b329db322d220e08ad429fb91bfe5c2d835d140a540c2d4b3ece9a6f77f",
+    "repositorySha256": "67fb2e12b1214b3715c586c1a266922f5b7adf74158047d75b7a1eb633c52075",
+    "normalization": "UTF-8/LF and trailing whitespace only"
+  }
+}

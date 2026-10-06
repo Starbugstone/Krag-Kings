@@ -1,0 +1,17 @@
+{
+    "engine":  "Unreal",
+    "scope":  "Full native suite",
+    "completed":  false,
+    "visualAcceptance":  false,
+    "performanceMeasurement":  false,
+    "startedUtc":  "2026-10-06T08:00:20.7057137Z",
+    "exeSha256":  "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+    "inputScriptSha256":  "e9a99ccc20d0202687c5684c0971416db75b02cc5804df7c1d2f467b9a10146c",
+    "guardMarkerMeaning":  "Readiness only; inputReportCompleted and gameClosed are also required.",
+    "gameProcessId":  13012,
+    "error":  "No visible unoccupied ground target survived checks; no click sent.",
+    "errorStack":  "à Get-KKGroundClickTarget, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\InputGroundTargets.ps1 : ligne 61\r\nà Send-GroundMove, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 154\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 269\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\Run-NativeInput.ps1 : ligne 57",
+    "gameClosed":  true,
+    "guardExitCode":  0,
+    "finishedUtc":  "2026-10-06T08:00:46.5553707Z"
+}

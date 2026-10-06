@@ -1,0 +1,39 @@
+{
+    "engineRoot":  "D:\\Games\\UE_5.8",
+    "engineVersion":  "5.8.3",
+    "project":  "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "stage":  "BuildEditor",
+    "startedUtc":  "2026-10-06T07:55:22.0931854Z"
+}
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" KragKingsBenchmarkEditor Win64 Development -Project=D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: C:\Users\Matthew\AppData\Local\UnrealBuildTool\Log.txt
+Executing up to 2 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+UHT compiled-in object format Default
+UHT processed KragKingsBenchmarkEditor in 6.8594805 seconds (0 generated files written)
+Building KragKingsBenchmarkEditor...
+===== Toolchain Information =====
+Using ISPC compiler (D:\Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+Using Visual Studio 14.44.35229 toolchain (D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+=================================
+Using Unreal Build Accelerator local executor to run 8 action(s)
+  CPU 6 physical cores, 12 logical cores
+  Memory 31.79 GB physical, 22.92 GB/39.04 GB committed
+  UBA Storage capacity 40 GB
+[1/8] Compile [x64] KKBenchmarkController.cpp [NoUba]
+[2/8] Compile [x64] KKBenchmarkAnimInstance.cpp [NoUba]
+[3/8] Compile [x64] KKBenchmarkUnit.cpp [NoUba]
+[4/8] Compile [x64] Module.KragKingsBenchmark.gen.cpp [NoUba]
+[5/8] Compile [x64] KKBenchmarkGameMode.cpp [NoUba]
+[6/8] Link [x64] UnrealEditor-KragKingsBenchmark.lib [NoUba]
+[7/8] Link [x64] UnrealEditor-KragKingsBenchmark.dll [NoUba]
+[8/8] WriteMetadata KragKingsBenchmarkEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 43.49 seconds
+Output binary: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 52.22 seconds
+Trace written to file C:\Users\Matthew\AppData\Local\UnrealBuildTool\Trace.uba with size 8.7kb

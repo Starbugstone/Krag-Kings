@@ -1,0 +1,264 @@
+{
+  "complete": true,
+  "createdUtc": "2026-10-06T07:54:59.188993+00:00",
+  "source": "/mnt/d/Dev/Krag-Kings/benchmark/builds/unreal/Windows",
+  "archive": "/mnt/d/Dev/Krag-Kings/benchmark/local/package-archive/unreal-press-context-e538b28a/Windows",
+  "excludedDirectoryNames": [
+    "Saved"
+  ],
+  "sourceFilesMatchedFrozenPlan": true,
+  "verifiedPackageReceiptArtifacts": 8,
+  "allArchivedFilesComparedToSource": true,
+  "files": [
+    {
+      "path": "Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll",
+      "bytes": 2232688,
+      "sha256": "6c1484085a1f4223880c059fd093a468702d0ecb224981918336fe847f5af92f"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/MsQuic/v220/win64/msquic.dll",
+      "bytes": 2547080,
+      "sha256": "780959f289e380a21fdab0dba7ac468c8dd0606ea43b755865a7989f3c7221e9"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll",
+      "bytes": 5799024,
+      "sha256": "e3e777a9644452c2772336c4b35c39ed4d8abeb9b9c0c1dceb9e10bdb378e5a2"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Ogg/Win64/VS2015/libogg_64.dll",
+      "bytes": 59832,
+      "sha256": "cf34407ec00248c208aa4b156126a725b79a4bce9f5c8034550c798a9b7a1407"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll",
+      "bytes": 1724856,
+      "sha256": "1cd0eba3df4915ca6498917b91b78dc1dfda1c9155f2fd5b98dedd5b5ba918f3"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll",
+      "bytes": 48568,
+      "sha256": "a00e6b073cec241d85d590ee138906ef9fdf9efef8d0d4989813359cd048a6f9"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_api_dump.dll",
+      "bytes": 8161680,
+      "sha256": "9505e2c9a30f047eaa0066bb05453f263c478b5e88d01cac7ebf16a47a018dae"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_api_dump.json",
+      "bytes": 13848,
+      "sha256": "9e55221c225dce4b5448bac7dadb7e39fd216f51354dde02e58f950f4a0dd80b"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_crash_diagnostic.dll",
+      "bytes": 2890128,
+      "sha256": "7282bec52c8edb4b79a635753f46f7c8063b9277b1fad19e5dbea6526799e9df"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_crash_diagnostic.json",
+      "bytes": 23055,
+      "sha256": "578bde354874789671dee1a96468c965619c9f3ba16cfa65f850e81a80674087"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_gfxreconstruct.dll",
+      "bytes": 8166288,
+      "sha256": "13c8d7cb4e9bc687c3679435ca391d98854cccb0b76f080d587c4e3796239f2d"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_gfxreconstruct.json",
+      "bytes": 28099,
+      "sha256": "71d4e243a2af74874f4f61378bdfe3753cb01ce5eb9b98400d83612bf882a815"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_profiles.dll",
+      "bytes": 1485200,
+      "sha256": "4098135ce3063917f46a9ee97371761b8f1b971bf6c34a94256ffaf022b36457"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_profiles.json",
+      "bytes": 66696,
+      "sha256": "6095c28691757e083a8c1bef3c69ca76a8b5017e21acaf55d1bc7e82221a0fbe"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_shader_object.dll",
+      "bytes": 415632,
+      "sha256": "6d347c053a2edc506029b8588adc115f2eb0893f5fa86a0197c9ea413e142f72"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_shader_object.json",
+      "bytes": 4455,
+      "sha256": "18ecafc9a65e1b7af8cd0e36dc936026cdb3aed333c4ea5a7c17d6d9465cfaf4"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_synchronization2.dll",
+      "bytes": 397200,
+      "sha256": "b35160cea082cfbac48e62e229b8ec9a735f3427f402a293bb354d642eb2811d"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_synchronization2.json",
+      "bytes": 1910,
+      "sha256": "a1e980a24be9a16a826b00c27d61b85ee0e2e17226dc9c4e8eec031879e5f26a"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_validation.dll",
+      "bytes": 19509136,
+      "sha256": "1413d7211cb93a94d28172553cabe1fc609ecacb5cc79e2176d664fd0bbef625"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_validation.json",
+      "bytes": 95917,
+      "sha256": "5c464b84457776d92a674de506f7b7a489294583a7d7609f78fcc52bc4406d09"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64/WinPixEventRuntime.dll",
+      "bytes": 69056,
+      "sha256": "132284f41399e0186bb29c6c2655aba5403a42793500518b9ab8bfd0b1336a57"
+    },
+    {
+      "path": "Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll",
+      "bytes": 858144,
+      "sha256": "9d996ba84395c1e56604792a77775b0a7fa957d7b51b4d8b985040bcd80a6fd5"
+    },
+    {
+      "path": "Engine/Config/StagedBuild_KragKingsBenchmark.ini",
+      "bytes": 3,
+      "sha256": "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5"
+    },
+    {
+      "path": "Engine/Content/Renderer/TessellationTable.bin",
+      "bytes": 259568,
+      "sha256": "edc4f3b628a139c5e185bbaeca661c95c1f427368d3b92892c5cff36c56dd941"
+    },
+    {
+      "path": "Engine/Content/Slate/Cursor/invisible.cur",
+      "bytes": 326,
+      "sha256": "fef3980fa567e9c45d5d8dcaa432a2c1a3f3bb17fe67d7ab198164f56c142aa1"
+    },
+    {
+      "path": "Engine/Content/SlateDebug/Fonts/LastResort.tps",
+      "bytes": 930,
+      "sha256": "0f775fa99d05e21d43d2d06d55982b23dcdccdb512a9a5a07aff674f212c41b8"
+    },
+    {
+      "path": "Engine/Content/SlateDebug/Fonts/LastResort.ttf",
+      "bytes": 5395052,
+      "sha256": "fff0f8de0b868b964950fe97c9b60f893e9bc85a4f90b3629c5693db058b97b9"
+    },
+    {
+      "path": "Engine/Extras/GPUDumpViewer/GPUDumpViewer.html",
+      "bytes": 195428,
+      "sha256": "eb599b5171e99d7c2e35732abf9525baeb39b9c2ac86619522f307c57cc90384"
+    },
+    {
+      "path": "Engine/Extras/GPUDumpViewer/OpenGPUDumpViewer.bat",
+      "bytes": 879,
+      "sha256": "e8f7ef9c88697041bd87902b76e52558979ca866c7450b1da108a94a027f441b"
+    },
+    {
+      "path": "Engine/Extras/GPUDumpViewer/OpenGPUDumpViewer.sh",
+      "bytes": 2165,
+      "sha256": "1b222b5d5aad6dd9b5b9f0a1c72d38635149540f2c7a368600ec76c1d304390a"
+    },
+    {
+      "path": "Engine/Extras/Redist/en-us/vc_redist.arm64.exe",
+      "bytes": 11751688,
+      "sha256": "ba660394e40765c80b70178a33f07df81aefac2b6cb1f017b13880de88456de3"
+    },
+    {
+      "path": "Engine/Extras/Redist/en-us/vc_redist.x64.exe",
+      "bytes": 18569648,
+      "sha256": "1cf8e061174c320c8e125f1b09996ee0555ef450e515b06ab0fd99cb4c8db6ef"
+    },
+    {
+      "path": "Engine/Plugins/NNE/NNERuntimeORT/Binaries/ThirdParty/Onnxruntime/Win64/onnxruntime.dll",
+      "bytes": 17339384,
+      "sha256": "9fc1ca0e75480c7805b6d3c4653864eaaee2fca5daa609b5347adf0b4185791a"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/D3D12/x64/D3D12Core.dll",
+      "bytes": 4831768,
+      "sha256": "5d262c97239e1aff8b03a7150abcaa84cc7983d311946708f982227d146fbb37"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/D3D12/x64/d3d12SDKLayers.dll",
+      "bytes": 4943344,
+      "sha256": "66afc2d2918191f9b97026e3c630ac6e93f5f83e3bd0eab34349ec2f66a0b4af"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/DML/x64/DirectML.dll",
+      "bytes": 18538488,
+      "sha256": "579dd89146322ea2567de7db16b8e10f350eb0cf147ecaafe5b129d9fe175a84"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
+      "bytes": 331978752,
+      "sha256": "e538b28ac26d42c665e274a9aa15ec1e1185f5f4893a2c1bd63dbdbe475b4de5"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.pdb",
+      "bytes": 368644096,
+      "sha256": "c6ad15c8e158c757091b57fad1aeca7a684604891b1b1c8aceb19ea409a25c5c"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/tbb12.dll",
+      "bytes": 342456,
+      "sha256": "7e58ae38fd5d47c72b750dbdcf2978a1f36719663a0a4500a9cc857316612c34"
+    },
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/tbbmalloc.dll",
+      "bytes": 117176,
+      "sha256": "075ba2869e082ab5f1f159ad06614ce63c31ae51099e18b540822cc758697e56"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak",
+      "bytes": 11242697,
+      "sha256": "e7fc65e57c6f693a28bfedadffa41bc1c044fc0130a3731440e48390f14157e3"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.ucas",
+      "bytes": 330767104,
+      "sha256": "15f723a86fc84150ccff91faee787189743b3ab0cbf873381293d936d20c83a8"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc",
+      "bytes": 295441,
+      "sha256": "31e015d2bd7e018d068dfdee617a0cfdc7ee7273fc5554a8cd6611aafbf407bc"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.ucas",
+      "bytes": 3200240,
+      "sha256": "0f2231662ba0d68b3d3b4c8c205eb2463ed29ad2f27f1fd06ee238f032a9cfd2"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.utoc",
+      "bytes": 782,
+      "sha256": "159a4d036916d278b3ab99acc549ec8c864f350252feee7e8cf01c26921b9607"
+    },
+    {
+      "path": "KragKingsBenchmark.exe",
+      "bytes": 171520,
+      "sha256": "bba1c79adb8c22f8fc742bcee2a87094b5074162f6c247bea4580ee747869195"
+    },
+    {
+      "path": "Manifest_DebugFiles_Win64.txt",
+      "bytes": 453,
+      "sha256": "be20970abd183150f700e3a6f1a6eef3fe1dc059dc35bf61c79f09bb067716b4"
+    },
+    {
+      "path": "Manifest_NonUFSFiles_Win64.txt",
+      "bytes": 3118,
+      "sha256": "c4e773f9712565ea6f8d4cbecf9a5038097af3850a44ff828ded7e06f05702c4"
+    },
+    {
+      "path": "Manifest_UFSFiles_Win64.txt",
+      "bytes": 256913,
+      "sha256": "98a7bd1182428b468f479ca81ffab41d9d868a8acd2d8dbc0e79039443d32470"
+    },
+    {
+      "path": "NOTICES.txt",
+      "bytes": 111,
+      "sha256": "ba49ae5586f817b36a2772269f71f899cb1f54b5f2720fad951319edd5e140b8"
+    }
+  ]
+}

@@ -1,55 +1,55 @@
 {
-    "complete":  true,
-    "stage":  "Windows Development package",
-    "startedUtc":  "2026-10-06T07:02:22.2172587Z",
-    "completedUtc":  "2026-10-06T07:05:55.8600222Z",
-    "engineVersion":  "5.8.3",
-    "packageRoot":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows",
-    "artifacts":  [
-                      {
-                          "path":  "KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
-                          "bytes":  331978752,
-                          "sha256":  "e538b28ac26d42c665e274a9aa15ec1e1185f5f4893a2c1bd63dbdbe475b4de5"
-                      },
-                      {
-                          "path":  "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak",
-                          "bytes":  11242697,
-                          "sha256":  "e7fc65e57c6f693a28bfedadffa41bc1c044fc0130a3731440e48390f14157e3"
-                      },
-                      {
-                          "path":  "KragKingsBenchmark/Content/Paks/global.utoc",
-                          "bytes":  782,
-                          "sha256":  "159a4d036916d278b3ab99acc549ec8c864f350252feee7e8cf01c26921b9607"
-                      },
-                      {
-                          "path":  "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc",
-                          "bytes":  295441,
-                          "sha256":  "31e015d2bd7e018d068dfdee617a0cfdc7ee7273fc5554a8cd6611aafbf407bc"
-                      },
-                      {
-                          "path":  "KragKingsBenchmark/Content/Paks/global.ucas",
-                          "bytes":  3200240,
-                          "sha256":  "0f2231662ba0d68b3d3b4c8c205eb2463ed29ad2f27f1fd06ee238f032a9cfd2"
-                      },
-                      {
-                          "path":  "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.ucas",
-                          "bytes":  330767104,
-                          "sha256":  "15f723a86fc84150ccff91faee787189743b3ab0cbf873381293d936d20c83a8"
-                      },
-                      {
-                          "path":  "Engine/Extras/Redist/en-us/vc_redist.arm64.exe",
-                          "bytes":  11751688,
-                          "sha256":  "ba660394e40765c80b70178a33f07df81aefac2b6cb1f017b13880de88456de3"
-                      },
-                      {
-                          "path":  "Engine/Extras/Redist/en-us/vc_redist.x64.exe",
-                          "bytes":  18569648,
-                          "sha256":  "1cf8e061174c320c8e125f1b09996ee0555ef450e515b06ab0fd99cb4c8db6ef"
-                      }
-                  ],
-    "importedSourceSnapshotSha256":  "5d7da994b4d77c578e816cd9108708f8378162c9e8c02f62ace52fee894b3b32",
-    "runtimeExecuted":  false,
-    "visualAcceptance":  false,
-    "prerequisitesBundled":  true,
-    "cleanMachineValidated":  false
+  "complete": true,
+  "stage": "Windows Development package",
+  "startedUtc": "2026-10-06T07:56:34.5883434Z",
+  "completedUtc": "2026-10-06T07:59:10.9479930Z",
+  "engineVersion": "5.8.3",
+  "packageRoot": "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows",
+  "artifacts": [
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
+      "bytes": 331979776,
+      "sha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak",
+      "bytes": 11242697,
+      "sha256": "e7fc65e57c6f693a28bfedadffa41bc1c044fc0130a3731440e48390f14157e3"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.utoc",
+      "bytes": 782,
+      "sha256": "159a4d036916d278b3ab99acc549ec8c864f350252feee7e8cf01c26921b9607"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc",
+      "bytes": 295441,
+      "sha256": "31e015d2bd7e018d068dfdee617a0cfdc7ee7273fc5554a8cd6611aafbf407bc"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.ucas",
+      "bytes": 3200240,
+      "sha256": "0f2231662ba0d68b3d3b4c8c205eb2463ed29ad2f27f1fd06ee238f032a9cfd2"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.ucas",
+      "bytes": 330767104,
+      "sha256": "15f723a86fc84150ccff91faee787189743b3ab0cbf873381293d936d20c83a8"
+    },
+    {
+      "path": "Engine/Extras/Redist/en-us/vc_redist.arm64.exe",
+      "bytes": 11751688,
+      "sha256": "ba660394e40765c80b70178a33f07df81aefac2b6cb1f017b13880de88456de3"
+    },
+    {
+      "path": "Engine/Extras/Redist/en-us/vc_redist.x64.exe",
+      "bytes": 18569648,
+      "sha256": "1cf8e061174c320c8e125f1b09996ee0555ef450e515b06ab0fd99cb4c8db6ef"
+    }
+  ],
+  "importedSourceSnapshotSha256": "5d7da994b4d77c578e816cd9108708f8378162c9e8c02f62ace52fee894b3b32",
+  "runtimeExecuted": false,
+  "visualAcceptance": false,
+  "prerequisitesBundled": true,
+  "cleanMachineValidated": false
 }

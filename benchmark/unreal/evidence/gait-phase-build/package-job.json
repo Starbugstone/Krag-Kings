@@ -1,0 +1,23 @@
+{
+  "name": "unreal-gait-phase-package",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\build_demo.ps1",
+    "-Stage",
+    "Package"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-gait-phase-build\\package\\stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-gait-phase-build\\package\\stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\package-completion.log",
+  "successMarker": "KK_PACKAGE_COMPLETE"
+}
