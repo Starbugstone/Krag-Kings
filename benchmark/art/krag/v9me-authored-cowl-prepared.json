@@ -1,0 +1,55 @@
+{
+  "status": "Prepared returned-fold cowl only; ungenerated, no actual contact/silhouette proof",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nb_WIP.blend",
+    "sha256": "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7",
+    "bytes": 111981195
+  },
+  "method": "Authored continuous sheet with two unequal upward/inward returned folds, low front footprint and lower rear overlap; exact-skin conformance under unchanged55mm gate",
+  "preservation": "Only Scarf changes; all other mesh/shape coordinates, rig bind and action curves fingerprint exact",
+  "actualPoseLandmark": "Re-evaluate open-mouth lowered chin in the current input; do not reuse older global height as proof",
+  "knownRisks": [
+    "Exact-surface conformance may flatten inner return",
+    "Returned folds require actual self-contact and raised-arm review",
+    "Scanned weave/edge seams/weathering still outstanding"
+  ],
+  "reviewOrder": [
+    "Actual Front silhouette first",
+    "OpenMouth chin clearance",
+    "Side and raised-arm cloth contact before any export"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_authored_v9me.py",
+      "sha256": "b181c2eaced6d23af397da84764d9637c27c35dea2245f9c4238cc4622c6a56c",
+      "bytes": 6981
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_cowl_v9me.py",
+      "sha256": "80975f198a731b9eb9dc14bac56c7c8a64a88de23a0505b67c81f16160ad729b",
+      "bytes": 8241
+    },
+    {
+      "path": "benchmark/tools/krag/build-authored-cowl-v9me-job.json",
+      "sha256": "67ac9c3a459f9d4be5e0609ed3d072fb14a2de72e0d2f375b3d154f1136d36bc",
+      "bytes": 817
+    },
+    {
+      "path": "benchmark/tools/krag/review-authored-cowl-v9me-Front.json",
+      "sha256": "cc97e1d80a9107ba559bea8eff653a30bbd838d5e779de16eab610ed7bd2ce19",
+      "bytes": 940
+    },
+    {
+      "path": "benchmark/tools/krag/review-authored-cowl-v9me-HeadSide.json",
+      "sha256": "7fba005345e3ac84c0d9d09351b85069282766cdb665738432132637f9028a07",
+      "bytes": 952
+    },
+    {
+      "path": "benchmark/tools/krag/review-authored-cowl-v9me-OpenMouth.json",
+      "sha256": "6976ee441e0a8efd5d9c0cf7f7ae7fe9bf39c26d91c821bc6a30ad91f3ac8818",
+      "bytes": 1030
+    }
+  ]
+}

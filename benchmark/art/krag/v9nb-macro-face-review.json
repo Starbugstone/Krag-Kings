@@ -1,0 +1,84 @@
+{
+  "status": "Actual coherent macro source and HeadSide reviewed; reduced lip pout and fuller forehead support, concept likeness still failed",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nb_WIP.blend",
+    "sha256": "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7",
+    "bytes": 111981195
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/macro-face-v9nb.json",
+      "sha256": "e79ef29ca1128bc69dc632311630a0dc6dbf0d9d56ff7b78e25601a1aa5bbb24",
+      "bytes": 10117
+    },
+    {
+      "path": "benchmark/art/krag/v9nb-macro-face-prepared.json",
+      "sha256": "4a717fca611909fb4b15ff6390f44c41e1cf50188f374f205236c08d85aaa68b",
+      "bytes": 5017
+    },
+    {
+      "path": "benchmark/art/krag/v9nb-envelope-math-preflight.json",
+      "sha256": "09ce0f53a6c2b4e29a9c4d9d248c946037613db387999c8f2f1c92efa35c48e5",
+      "bytes": 3595
+    },
+    {
+      "path": "benchmark/art/krag/v9nb-envelope-math-preflight-75mm-failure.json",
+      "sha256": "c0ff91d60575109e59e2972629e18a48fa82d8ac2ca2d01a86c8287db9c94755",
+      "bytes": 4254
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9nb-macro-face.png",
+      "sha256": "33166c0a88809d52e88322054413cd668cf1a0069e50eaea5495b0a070131e9b",
+      "bytes": 1126860
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9nb-macro-face.meta.json",
+      "sha256": "cfc499e07203cef6238d004144e35a4e4de83fdd9f37a54493454b87eaf0e40b",
+      "bytes": 575
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-macro-face-v9nb-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 949.0,
+      "minimumAvailableMB": 12181.0
+    },
+    {
+      "path": "benchmark/local/krag-review-macro-face-v9nb-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2057.0,
+      "minimumAvailableMB": 11213.0
+    }
+  ],
+  "actualSourceMetrics": {
+    "maximumHeadDisplacementMillimeters": 31.026405265249405,
+    "flippedHeadTriangles": 0,
+    "minimumLocalScale": 0.28146127301257096,
+    "maximumLocalScale": 1.455720662781177,
+    "bodyBindActionsEquipmentExact": true
+  },
+  "improvements": [
+    "Lower-lip pout reduced by moving mandibular support below the oral rim",
+    "Forehead fills more continuously above narrow brow tip",
+    "Nasal projection further shortened; source field moves skin/oral/ocular shapes and facial pivots coherently"
+  ],
+  "failures": [
+    "Cheek/skull remains inflated and smooth rather than the concept angular anatomical construction",
+    "Brow still has a narrow overhang; paired front shape has not been rendered",
+    "Lip/philtrum/nasolabial construction remains shallow and featureless",
+    "Short tusk eruption remains deferred; retained v9le crowns are buried",
+    "Cowl retains regular ledges and stiff rear ends"
+  ],
+  "notRendered": [
+    "Head",
+    "OpenMouth",
+    "OpenProfile",
+    "Blink"
+  ],
+  "boundary": "Released after explicitly requested source/HeadSide boundary; no extra heavy job or shared mutation",
+  "next": "Inspect actual portrait before another profile-only sculpt; actual opening/Blink and short natural tusks remain required",
+  "sharedAssetsChanged": false
+}

@@ -1,0 +1,110 @@
+{
+  "status": "Numerical support-domain parameter sweep only; no saved source or visual proof",
+  "helperSha256": "7cb841560d65e788a2074c054ee1218fa4e6762df7cfd535e190bd1b72d77460",
+  "cachedEyeLandmarkSource": "benchmark\\art\\krag\\macro-face-v9na.json",
+  "cachedLandmarksMeasuredFromExactInputSource": true,
+  "otherLandmarks": "Measured input-source eyes/lip/nose plus a globe-radius +/-5mm and nose-height +/-14mm robustness sweep; not visual validation",
+  "supportBoundsMeters": [
+    [
+      -0.17,
+      -0.29,
+      1.695
+    ],
+    [
+      0.17,
+      0.1,
+      2.065
+    ]
+  ],
+  "pointsPerCase": 72283,
+  "cases": [
+    {
+      "radiusMeters": 0.015525468038010425,
+      "noseZ": 1.8616912765999185,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.18223983499596394, 'minScale': 0.1751961344479623, 'maxScale': 1.9587295032097742, 'maxScalePointMeters': [0.03578947368421054, -0.11449999999999999, 1.88], 'minScalePointMeters': [-0.00894736842105262, -0.08524999999999999, 1.8535714285714286]}"
+      }
+    },
+    {
+      "radiusMeters": 0.015525468038010425,
+      "noseZ": 1.8756912765999185,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.23707896518987012,
+        "minimumLocalScale": 0.22885358934037528,
+        "maximumLocalScale": 1.8195639314721743,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.015525468038010425,
+      "noseZ": 1.8896912765999185,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.306687030071722,
+        "minimumLocalScale": 0.2961776224727799,
+        "maximumLocalScale": 1.7064329848734454,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.020525468038010426,
+      "noseZ": 1.8616912765999185,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.18223983499596394, 'minScale': 0.1751961344479623, 'maxScale': 1.9969513543977382, 'maxScalePointMeters': [0.04473684210526316, -0.11449999999999999, 1.8711904761904763], 'minScalePointMeters': [-0.00894736842105262, -0.08524999999999999, 1.8535714285714286]}"
+      }
+    },
+    {
+      "radiusMeters": 0.020525468038010426,
+      "noseZ": 1.8756912765999185,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.23707896518987012,
+        "minimumLocalScale": 0.22151839812768873,
+        "maximumLocalScale": 1.8308096803616165,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.020525468038010426,
+      "noseZ": 1.8896912765999185,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.306687030071722,
+        "minimumLocalScale": 0.2964603450328108,
+        "maximumLocalScale": 1.7311885613311304,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.025525468038010427,
+      "noseZ": 1.8616912765999185,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.18223983499596394, 'minScale': 0.1751961344479623, 'maxScale': 2.048784316005538, 'maxScalePointMeters': [0.03578947368421054, -0.11449999999999999, 1.8711904761904763], 'minScalePointMeters': [-0.00894736842105262, -0.08524999999999999, 1.8535714285714286]}"
+      }
+    },
+    {
+      "radiusMeters": 0.025525468038010427,
+      "noseZ": 1.8756912765999185,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.23707896518987012, 'minScale': 0.19100108305672328, 'maxScale': 1.836288357198712, 'maxScalePointMeters': [0.026842105263157917, -0.11449999999999999, 1.88], 'minScalePointMeters': [0.04473684210526316, -0.16324999999999998, 1.888809523809524]}"
+      }
+    },
+    {
+      "radiusMeters": 0.025525468038010427,
+      "noseZ": 1.8896912765999185,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.306687030071722,
+        "minimumLocalScale": 0.28888685027986655,
+        "maximumLocalScale": 1.7142567115839653,
+        "sampleCount": 72283
+      }
+    }
+  ],
+  "allPass": false
+}

@@ -1,0 +1,20 @@
+{
+  "name": "krag-audit-actual-arm-domain-v9na",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\audit_actual_arm_domain.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-audit-actual-arm-domain-v9na.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-audit-actual-arm-domain-v9na.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-audit-actual-arm-domain-v9na.stdout.log",
+  "successMarker": "KRAG_ACTUAL_ARM_DOMAIN_AUDIT_COMPLETE"
+}

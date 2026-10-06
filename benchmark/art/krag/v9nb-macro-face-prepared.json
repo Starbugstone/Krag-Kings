@@ -1,0 +1,123 @@
+{
+  "status": "Prepared lower-lip/brow support refinement; whole-support numerical sweep passes, no native source or render",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "inputChoice": "Start from the same actual v9le source; replace the v9na field, do not compound two deformations",
+  "reference": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+  "aim": [
+    "Compress excessive nasal/upper-muzzle projection",
+    "Support broad mandibular front and continuous supraorbital mass",
+    "Move connected skin, ocular/oral surfaces, shape targets and facial pivots coherently",
+    "Preserve body bind/actions, cowl/equipment and shared engine assets"
+  ],
+  "tuningNotCanon": {
+    "nasalFieldRecessionMeters": 0.029,
+    "upperMuzzleFieldRecessionMeters": 0.007,
+    "broadChinFieldAdvanceMeters": 0.017,
+    "pairedBrowFieldAdvanceMeters": 0.0085,
+    "actualCombinedDisplacementBoundMeters": 0.035,
+    "ocularTransitionWidthMeters": 0.05,
+    "chinCenterBelowOralRimMeters": 0.044,
+    "chinVerticalSpreadMeters": 0.038,
+    "foreheadToBrowSupportMeters": 0.01,
+    "malarRecessionMeters": 0.004,
+    "posteriorFieldTransitionMeters": 0.095
+  },
+  "gates": [
+    "Actual globe geometry bounds establish moving rigid ocular neighborhoods; lids share the same field",
+    "Actual head surface has no newly flipped/collapsed triangles",
+    "Sampled field Jacobian preserves positive volume and bounded scale",
+    "Complete body bind/action curves and unrelated mesh/shape coordinates fingerprint exact"
+  ],
+  "reviewOrder": [
+    "HeadSide first; stop if macro silhouette fails",
+    "Head portrait",
+    "Serious OpenMouth and OpenProfile",
+    "Blink"
+  ],
+  "knownDeferred": [
+    "Short tusk emergence after face envelope is coherent",
+    "Normal dental/gingival/tongue appearance",
+    "Cowl returned-fold construction",
+    "Final facial material relief and runtime bake",
+    "IronJaw replacement/exclusion"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416",
+      "bytes": 5635
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/build_macro_face_v9nb.py",
+      "sha256": "7fe8cc019bbe8aff0c6823877dbd26d0f4ecf100bf15253fb61bcc68bf921304",
+      "bytes": 8772
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/preflight_envelope_v9nb.py",
+      "sha256": "3ef261d421fc055c9d41fe7169c0166d1e6edb8b225ef9954818b6410ed47050",
+      "bytes": 2067
+    },
+    {
+      "path": "benchmark/tools/krag/build-macro-face-v9nb-job.json",
+      "sha256": "f052f3bb1ca0df04a96dea7167895cda7886f64cbe1c308c6bdadd6fb46f9705",
+      "bytes": 613
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9nb-Blink.json",
+      "sha256": "7811ed3b296c917be73e2e483c621e25a3bce1eb8d1e2cc1a10b81cae3398937",
+      "bytes": 1013
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9nb-Head.json",
+      "sha256": "f30733599dfbd3395567dbfe4709a236e9fd8d9db5628092b5a649ec8566bd32",
+      "bytes": 929
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9nb-HeadSide.json",
+      "sha256": "7ace960a31d3ed4a934a96b7a3b776a9fe1c392db2319b77716b3f928b9e04a9",
+      "bytes": 945
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9nb-OpenMouth.json",
+      "sha256": "5dfb89fcf1ee945ca160cd68514467d373670d603f58d11fc03aff78180c8f0e",
+      "bytes": 1026
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9nb-OpenProfile.json",
+      "sha256": "10657ef26f2a0c6e2ce3cafbb6c7a5809c66e96836c1c2bd962ea69258750ae3",
+      "bytes": 1036
+    }
+  ],
+  "priorFailure": {
+    "path": "benchmark/art/krag/v9n-macro-face-failure.json",
+    "sha256": "bd6404823edc27c44e63a152fd6bb5bf4433a59fa068a075969f9276dd46222d",
+    "bytes": 1965
+  },
+  "numericalPreflight": {
+    "path": "benchmark/art/krag/v9nb-envelope-math-preflight.json",
+    "sha256": "09ce0f53a6c2b4e29a9c4d9d248c946037613db387999c8f2f1c92efa35c48e5",
+    "bytes": 3595
+  },
+  "priorNumericalFailure": {
+    "path": "benchmark/art/krag/v9nb-envelope-math-preflight-75mm-failure.json",
+    "sha256": "c0ff91d60575109e59e2972629e18a48fa82d8ac2ca2d01a86c8287db9c94755",
+    "bytes": 4254
+  },
+  "corrections": [
+    "Move broad mandibular support below the protruding outer lip",
+    "Fill broad frontal bone above the narrow brow point instead of extending the visor",
+    "Slightly shorten residual nasal projection and soften inflated malar front",
+    "Use smooth posterior/ocular transitions under unchanged scale/displacement bounds"
+  ],
+  "priorActualReview": {
+    "path": "benchmark/art/krag/v9na-macro-face-review.json",
+    "sha256": "52586bbdc2317334455080cc32bafb8addd7184eb5d8746b66e6b872248d5b2c",
+    "bytes": 3331
+  }
+}

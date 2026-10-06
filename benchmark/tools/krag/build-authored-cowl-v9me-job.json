@@ -1,0 +1,23 @@
+{
+  "name": "krag-build-authored-cowl-v9me",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9m_wip\\build_cowl_v9me.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_MacroFace_v9nb_WIP.blend",
+    "--source-sha256",
+    "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-authored-cowl-v9me.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-authored-cowl-v9me.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}

@@ -1,0 +1,255 @@
+{
+  "status": "Read-only exact original-cage semantic audit; no saved Krag pose/deformation claim",
+  "originalCageSha256": "2077bf5aef29d4398943efabe5a414dd019d1b6091dd71e417b6fcb663b991f5",
+  "auditedSemanticCacheSha256": "75391ec8fcad19c13f2d74060a6735e8161eeaa94ccc45c87ee00495a674d577",
+  "referenceVerticesExact": true,
+  "criterion": "Retained vertices belonging to upper-arm sets20/21 and not thorax1, hard-pinned as torso by current seed formula, but moved mostly by arm branch of current Krag geometry warp",
+  "mismatchedOriginalCageVertices": 50,
+  "geometryArmBlendRange": [
+    0.5074738264083862,
+    0.98513263463974
+  ],
+  "sample": [
+    {
+      "sourceVertex": 3911,
+      "originalPosition": [
+        -0.19975456595420837,
+        -0.046194691210985184,
+        1.2153280973434448
+      ],
+      "geometryArmBlend": 0.8835762739181519,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3912,
+      "originalPosition": [
+        -0.19370223581790924,
+        -0.04636450856924057,
+        1.2307637929916382
+      ],
+      "geometryArmBlend": 0.7028953433036804,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3915,
+      "originalPosition": [
+        -0.20530997216701508,
+        -0.03769100829958916,
+        1.1754472255706787
+      ],
+      "geometryArmBlend": 0.98513263463974,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3916,
+      "originalPosition": [
+        -0.1970442831516266,
+        -0.03649371862411499,
+        1.1893278360366821
+      ],
+      "geometryArmBlend": 0.8966532945632935,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3917,
+      "originalPosition": [
+        -0.18953534960746765,
+        -0.03522046282887459,
+        1.2030963897705078
+      ],
+      "geometryArmBlend": 0.7505221962928772,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3918,
+      "originalPosition": [
+        -0.18260347843170166,
+        -0.03254875913262367,
+        1.2194902896881104
+      ],
+      "geometryArmBlend": 0.5128238201141357,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3921,
+      "originalPosition": [
+        -0.20144224166870117,
+        -0.02216358482837677,
+        1.1688036918640137
+      ],
+      "geometryArmBlend": 0.9525629878044128,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3922,
+      "originalPosition": [
+        -0.19416044652462006,
+        -0.019966019317507744,
+        1.182234525680542
+      ],
+      "geometryArmBlend": 0.8507936596870422,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3923,
+      "originalPosition": [
+        -0.18756990134716034,
+        -0.017192598432302475,
+        1.1955499649047852
+      ],
+      "geometryArmBlend": 0.7249459624290466,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3927,
+      "originalPosition": [
+        -0.202209010720253,
+        -0.0036201411858201027,
+        1.1654936075210571
+      ],
+      "geometryArmBlend": 0.9603438377380371,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3928,
+      "originalPosition": [
+        -0.19512930512428284,
+        -0.001265678321942687,
+        1.1781351566314697
+      ],
+      "geometryArmBlend": 0.8669281005859375,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3929,
+      "originalPosition": [
+        -0.1876189112663269,
+        0.0014333431608974934,
+        1.1908749341964722
+      ],
+      "geometryArmBlend": 0.7259679436683655,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3932,
+      "originalPosition": [
+        -0.18708398938179016,
+        0.019748471677303314,
+        1.1878859996795654
+      ],
+      "geometryArmBlend": 0.7147580981254578,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3933,
+      "originalPosition": [
+        -0.19509251415729523,
+        0.01771395094692707,
+        1.1745697259902954
+      ],
+      "geometryArmBlend": 0.8663284182548523,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3934,
+      "originalPosition": [
+        -0.20341849327087402,
+        0.015414471738040447,
+        1.1628810167312622
+      ],
+      "geometryArmBlend": 0.9713191390037537,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3939,
+      "originalPosition": [
+        -0.20379415154457092,
+        0.03530433401465416,
+        1.160658359527588
+      ],
+      "geometryArmBlend": 0.9743944406509399,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3940,
+      "originalPosition": [
+        -0.19450843334197998,
+        0.03758304566144943,
+        1.172658920288086
+      ],
+      "geometryArmBlend": 0.8566694259643555,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3941,
+      "originalPosition": [
+        -0.1871461123228073,
+        0.03841770812869072,
+        1.1890318393707275
+      ],
+      "geometryArmBlend": 0.7160661220550537,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3942,
+      "originalPosition": [
+        -0.18167224526405334,
+        0.03558206930756569,
+        1.208975076675415
+      ],
+      "geometryArmBlend": 0.5478901267051697,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3946,
+      "originalPosition": [
+        -0.2002735286951065,
+        0.05664344131946564,
+        1.1777548789978027
+      ],
+      "geometryArmBlend": 0.9395266771316528,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3947,
+      "originalPosition": [
+        -0.1921735405921936,
+        0.05739625170826912,
+        1.1941884756088257
+      ],
+      "geometryArmBlend": 0.8156114816665649,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3948,
+      "originalPosition": [
+        -0.185825914144516,
+        0.05412840098142624,
+        1.212806224822998
+      ],
+      "geometryArmBlend": 0.6220725178718567,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3953,
+      "originalPosition": [
+        -0.20286250114440918,
+        0.07203242927789688,
+        1.2047877311706543
+      ],
+      "geometryArmBlend": 0.95571368932724,
+      "skinDomainTorsoSeed": true
+    },
+    {
+      "sourceVertex": 3954,
+      "originalPosition": [
+        -0.1920781433582306,
+        0.06998229026794434,
+        1.2222082614898682
+      ],
+      "geometryArmBlend": 0.7107943892478943,
+      "skinDomainTorsoSeed": true
+    }
+  ],
+  "next": "Inspect these actual Krag posed vertices and use one semantic shoulder-interface field for both source fitting and skinning if confirmed. Do not copy a species-specific Nib warp or modify source without actual review."
+}
