@@ -313,6 +313,15 @@ namespace KragKings.Benchmark
                 unit.TriggerFace();yield return new WaitForSeconds(unit.ActionDuration("FacePerformance")*.35f);
                 ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.species+"-Expression.png"));
                 yield return new WaitForSecondsRealtime(.5f);
+                while(unit.FacePlaying)yield return null;
+                foreach(string action in new[]{"Melee","Shoot","Hit"})
+                {
+                    unit.Trigger(action);PortraitCamera();
+                    float normalized=action=="Shoot"?unit.weapon.fireTimesNormalized[0]:.45f;
+                    yield return new WaitForSeconds(unit.ActionDuration(action)*normalized);
+                    ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.species+"-"+action+"-Expression.png"));
+                    yield return new WaitForSeconds(unit.ActionDuration(action)*(1-normalized)+.25f);
+                }
             }
             Debug.Log("BENCHMARK_VISUAL_REVIEW_CAPTURED "+contentFingerprint);
             Application.Quit(runtimeErrors.Count==0?0:1);
@@ -358,11 +367,19 @@ namespace KragKings.Benchmark
                     foreach(string action in new[]{"Melee","Shoot","Hit"})
                     {
                         unit.Trigger(action);
-                        float end=Time.time+unit.ActionDuration(action)+.2f;
+                        float actionStarted=Time.time;
+                        float end=actionStarted+unit.ActionDuration(action)+.2f;
+                        float captureDue=actionStarted+unit.ActionDuration(action)*(action=="Shoot"?unit.weapon.fireTimesNormalized[0]:.45f);
+                        bool actionCaptured=false;
                         var actionFace=new ActionExpressionEvidence{action=action};
                         while(Time.time<end)
                         {
                             yield return null;
+                            if(!actionCaptured && Time.time>=captureDue)
+                            {
+                                ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.Model.name+"-"+action+"-pose.png"));
+                                actionCaptured=true;
+                            }
                             observed.maximumBodyMorphWeight=Mathf.Max(observed.maximumBodyMorphWeight,unit.MaximumMorphWeight("body"));
                             actionFace.maximumFacialMorphWeight=Mathf.Max(actionFace.maximumFacialMorphWeight,unit.MaximumMorphWeight("facial"));
                         }

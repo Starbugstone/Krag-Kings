@@ -7,6 +7,7 @@ namespace KragKings.Benchmark
 {
     // This directs the real playable actors and camera. It does not alter time,
     // render offline frames, or substitute cinematic models for game assets.
+    [DefaultExecutionOrder(200)]
     public sealed class DemoShowcase : MonoBehaviour
     {
         DemoScene scene;
@@ -16,6 +17,7 @@ namespace KragKings.Benchmark
         float framedDistance=6.4f;
         Vector3[] origins;
         DemoAudioRecorder audioRecorder;
+        readonly FramingAudit framing=new();
         public void Begin(DemoScene controller,string path,bool wait)
         {scene=controller;evidence=path;StartCoroutine(Show(wait));}
         IEnumerator Until(float seconds)
@@ -72,6 +74,10 @@ namespace KragKings.Benchmark
             yield return Until(72);
             playing=false;scene.AutomatedView=false;scene.ResetCamera();
             if(audioRecorder)audioRecorder.EndRecording(Path.Combine(evidence,"showcase-engine-audio.wav"));
+            framing.buildGuid=Application.buildGUID;framing.contentFingerprint=scene.contentFingerprint;
+            framing.width=Screen.width;framing.height=Screen.height;
+            framing.passed=framing.wideFrames>0 && framing.clippedFrames==0;
+            File.WriteAllText(Path.Combine(evidence,"showcase-framing.json"),JsonUtility.ToJson(framing,true));
             File.WriteAllText(Path.Combine(evidence,"showcase-complete.json"),JsonUtility.ToJson(new CaptureState{state="complete",durationSeconds=72,width=Screen.width,height=Screen.height,utc=DateTime.UtcNow.ToString("o")},true));
             Debug.Log("UNITY_SHOWCASE_COMPLETE");
         }
@@ -106,6 +112,39 @@ namespace KragKings.Benchmark
                 required=Mathf.Max(required,Mathf.Max(Mathf.Abs(p.x)/(horizontal*.88f)-p.z,Mathf.Abs(p.y)/(vertical*.73f)-p.z));
             }
             return required;
+        }
+        void LateUpdate()
+        {
+            if(!playing)return;
+            float t=Time.unscaledTime-started;
+            if(t>=28&&t<48)return; // Portrait composition is reviewed separately.
+            framing.wideFrames++;
+            bool clipped=false;
+            foreach(var unit in scene.units)
+            {
+                Bounds bounds=unit.VisualBounds;
+                for(int i=0;i<8;i++)
+                {
+                    Vector3 corner=bounds.center+Vector3.Scale(bounds.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1));
+                    // Check the actual camera after terrain clearance, not the
+                    // distance formula used to compose the shot.
+                    Vector3 screen=scene.demoCamera.WorldToViewportPoint(corner);
+                    if(screen.z<=0 || screen.x<.04f || screen.x>.96f || screen.y<.105f || screen.y>.895f)clipped=true;
+                }
+            }
+            if(clipped)
+            {
+                framing.clippedFrames++;
+                if(framing.firstClippedSecond<0)framing.firstClippedSecond=t;
+            }
+        }
+        [Serializable] class FramingAudit
+        {
+            public string buildGuid,contentFingerprint;
+            public int width,height,wideFrames,clippedFrames;
+            public float firstClippedSecond=-1;
+            public bool passed;
+            public string scope="Actual wide-view renderer/capsule bounds projected through the game camera; excludes portrait composition and artistic acceptance.";
         }
         [Serializable] class CaptureState {public string state,utc;public int durationSeconds,width,height;}
     }
