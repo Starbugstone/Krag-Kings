@@ -12,10 +12,7 @@ HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
 sys.path[:0]=[str(HERE),str(HERE.parent/'restorative_wip'),str(HERE.parent/'identity_wip'),str(HERE.parent/'v6_groom_wip'),str(HERE.parent/'v5_wip')]
 from contracts import rig_contract,surface_hash
 from guide_recipe import replacement_groups,HEAD_COUNTS,COUNTS
-from importlib.util import spec_from_file_location,module_from_spec
-_card_spec=spec_from_file_location('nib_regional_card_geometry',HERE/'card_geometry.py')
-_card_module=module_from_spec(_card_spec);_card_spec.loader.exec_module(_card_module)
-emit=_card_module.emit
+from card_geometry import emit
 from fit_card_roots_v3 import surface_tree
 from ear_groom_weights import bind as bind_ear_groom
 from nib_groom_v5 import strand_mesh,GOGGLE_ENVELOPES

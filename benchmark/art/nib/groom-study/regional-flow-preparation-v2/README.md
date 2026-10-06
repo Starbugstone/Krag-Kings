@@ -1,4 +1,6 @@
-# Regional flowing groom — prepared only
+# Regional flowing groom — preparation record
+
+This recipe has now produced an [actual isolated source and two views](../regional-flow-native-v1/README.md). The initial import-shadowing failure is preserved in `failures/01-import-shadow`; a scoped module-loading correction enabled the successful retry. The source passes preservation checks but the ear coverage/flow still fails artistic review. The text below records the original prepared scope.
 
 Sheet02 has layered cream tufts concentrated on the inward rim and ear base, tawny exterior coverage, and irregular flowing head locks around the goggles. The current actual views instead show separated inner-ear comb strips and broad pale card-root bands. Finer alpha alone improved internal strand breakup, not these placement defects.
 

@@ -1,0 +1,88 @@
+{
+  "status": "Read-only planning measurements, no macroface source generated",
+  "sourceHeadCache": {
+    "path": "benchmark/local/nib-adult-neck-head.json",
+    "sha256": "aa952888419327f24e576fff69a8a18f058617128bc08350104d774eade9dac5"
+  },
+  "cacheSourceSha256": "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+  "headGeometryLineage": "Adult Head point geometry retained by fine-atlas and fitted-neck sources; neck patch changes only Head neck weights. Current rig pose/camera is not evaluated here.",
+  "currentOrbitalConstruction": {
+    "path": "benchmark/art/nib/identity-study/orbital-identity-v2-numerical.json",
+    "sha256": "4c27a4476b36b670c73371a4d2b8a7ba6e5b6e9882761bf753ece638f74ff9b4"
+  },
+  "eyes": {
+    "R": {
+      "widthMeters": 0.031026102602481842,
+      "maximumApertureMeters": 0.012852607293379892,
+      "widthToHeight": 2.413992888311676,
+      "widthToOrbitalBandAnteriorSkinWidth": 0.18335843277340785
+    },
+    "L": {
+      "widthMeters": 0.031356651335954666,
+      "maximumApertureMeters": 0.012842977433991098,
+      "widthToHeight": 2.4415406393975294,
+      "widthToOrbitalBandAnteriorSkinWidth": 0.18531191363761293
+    }
+  },
+  "headSections": [
+    {
+      "label": "orbital height",
+      "worldZRangeMeters": [
+        1.16,
+        1.17
+      ],
+      "selection": "worldY<0; all retained anterior skin points in the height band, not a matched camera silhouette",
+      "vertices": 872,
+      "xWidthMeters": 0.16921012103557587,
+      "frontmostYMeters": -0.06450192630290985
+    },
+    {
+      "label": "upper cheek envelope",
+      "worldZRangeMeters": [
+        1.14,
+        1.18
+      ],
+      "selection": "worldY<0; all retained anterior skin points in the height band, not a matched camera silhouette",
+      "vertices": 5981,
+      "xWidthMeters": 0.17673665285110474,
+      "frontmostYMeters": -0.0697118490934372
+    },
+    {
+      "label": "lower cheek/muzzle height",
+      "worldZRangeMeters": [
+        1.1,
+        1.13
+      ],
+      "selection": "worldY<0; all retained anterior skin points in the height band, not a matched camera silhouette",
+      "vertices": 11394,
+      "xWidthMeters": 0.17900875955820084,
+      "frontmostYMeters": -0.11053996533155441
+    }
+  ],
+  "reference": {
+    "image": {
+      "path": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+      "sha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80"
+    },
+    "manualLandmarks": {
+      "path": "benchmark/art/nib/v5-study/proportions/nib-reference-proportions.json",
+      "sha256": "bc4a46723fd16d14b5e2c59ddec52a88a704ba266b3feea72b9062783c14d91c"
+    },
+    "portraitOpeningWidthPixels": 63,
+    "portraitOpeningHeightPixels": 27,
+    "uncertaintyPixels": 3,
+    "portraitWidthToHeight": 2.3333333333333335
+  },
+  "interpretation": [
+    "Current opening aspect is already2.41\u20132.44, close to the rough portrait2.33; oldv5i3.22\u20133.26 values are superseded.",
+    "Current eye width is18.3\u201318.5% of the selected anterior orbital-band width. This is a 3D diagnostic; a camera-matched reference ratio still needs measured landmarks.",
+    "Continued small/slit impression cannot be attributed to height alone. Orbital size, framing, brow depth, cheek envelope and camera projection must be tested together."
+  ],
+  "pending": [
+    "Reference front/profile/portrait landmark picks and matched camera fit with uncertainty intervals",
+    "Broad facial envelope construction and exact full ocular/oral correspondence",
+    "Actual neutral/profile/three-quarter and Blink/Tongue source views"
+  ],
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "actual failure before source open",
+  "exitCode": 2,
+  "cause": "guide_recipe mutates sys.path; generic card_geometry resolves to old v6 module, which lacks emit",
+  "sourceChanged": false,
+  "fileHashes": {
+    "build_regional_groom.py": "1b666cfe3d404db3cc05d15e68f47b6a6482fcff9d335f4714af8c0047216a81",
+    "card_geometry.py": "fa313b27a818906b9d93874a2110ad93f4e7aa95ed02d0bfa9255c252d177a40",
+    "generate-regional-flow-v1.job.json": "1992eb9464a43cb14a8a19d1c598a10924aafa0dc6d464fdadf34b9815fdc64b",
+    "guide_recipe.py": "2bafe62dd14498f38aa70b4057b8a793084a7c79b65b261b6cbca8f619d4ccea",
+    "nib-regional-flow-v1-generate-memory.csv": "68066459346f915a623d89b51422457346e05c533fb0d92cdf5162378cc97c39",
+    "nib-regional-flow-v1-generate.log": "62aa68d052234759fcf2f662c9277a117896bb0a66d46f104de825c9b1ad1ecc",
+    "nib-regional-flow-v1-generate.stderr.log": "1773c663375b969a3048993b234f5b549349251aa73852be36c0cf2f611b6159",
+    "review_regional_groom.py": "48f708156c9644658e33944b5a3246c77472040484225593f59bdae8db6fe201"
+  }
+}
