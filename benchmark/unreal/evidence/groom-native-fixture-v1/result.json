@@ -1,0 +1,49 @@
+{
+  "status": "Actual compile pass; actual native ABC taper import failed strict gate",
+  "engine": "5.8.3-58210709",
+  "stages": {
+    "build": {
+      "pid": 22040,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 75.0,
+      "maxTreePrivateMiB": 4302.0,
+      "minAvailableMiB": 7126.0
+    },
+    "import": {
+      "pid": 30800,
+      "nativeExit": 0,
+      "guardExit": 89,
+      "completionMarkerPresent": false,
+      "maxPrivateMiB": 2389.0,
+      "maxTreePrivateMiB": 2389.0,
+      "minAvailableMiB": 8594.0
+    }
+  },
+  "processedRegions": [
+    "CreamHead"
+  ],
+  "unprocessedRegions": [
+    "PinkEarWisps",
+    "TawnyEarOuter"
+  ],
+  "actualCurves": 4,
+  "actualPoints": 36,
+  "maximumPositionComponentErrorCentimeters": 5.1209386842110405e-08,
+  "sourceDistinctPointRadii": 36,
+  "actualPointWidthsPresent": false,
+  "actualStrandWidthsCentimeters": [
+    0.007999999448657036,
+    0.007999999448657036,
+    0.007999999448657036,
+    0.007999999448657036
+  ],
+  "diagnosis": "Native standard-width values reached Unreal as constant strand widths, losing taper. Installed translator handles only constant/uniform or vertex-scope widths; Blender5.2 writer source audit finds setVals without explicit setScope. Exact sidecar adapter is being prepared; no native fix executed.",
+  "rendererTested": false,
+  "bindingTested": false,
+  "performanceMeasured": false,
+  "productionProjectChanged": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}
