@@ -1,0 +1,20 @@
+{
+  "status": "Actual native source generation stopped before save on float32 reconstruction tolerance; no candidate or render",
+  "pid": 13872,
+  "guardExit": 2,
+  "sourceSha256": "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+  "errorMeters": 2.384476811558792e-07,
+  "oldToleranceMeters": 2e-07,
+  "object": "Nib v6 cards outer_rim_R",
+  "vertex": 1240,
+  "sourceModified": false,
+  "sharedChanged": false,
+  "evidenceSha256": {
+    "logs/nib-rooted-cards-v3-generate-memory.csv": "daad9252e9f8f8dae0a46270f4a24caae8b69624b61a1377341a719e760702ce",
+    "logs/nib-rooted-cards-v3-generate.log": "18541ec4f37dc25ec57ba34783f35c71d18069a74de8712118149b10af351a6f",
+    "logs/nib-rooted-cards-v3-generate.stderr.log": "4cc4402bdac7dac821991d1ef75b55557be56518f990c9bd07c62d8311e96b68",
+    "recipe/build_rooted_cards_v3.py": "0e60320b7b6299f67541407bd8ae7afd77c7a08933e5bc5a3c0d2c14243441a2",
+    "recipe/fit_card_roots_v3.py": "525e26a45a4247740ede00c10d7f8ffd44d93b305b5aea1fa52858fb108ac6e4",
+    "recipe/generate-rooted-cards-v3.job.json": "81f070faba672802296a4bc7d9abd8adff46f7a0f8bfbe28b8be282ba1a0c569"
+  }
+}

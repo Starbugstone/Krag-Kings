@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards_v2.py", line 60, in <module>
+    results.append(repair(obj,group['guides'],trees[group['bone']]))
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\fit_card_roots_v2.py", line 106, in repair
+    if tree.geometric_normal(corner_face).dot(n)<=0:raise RuntimeError('Root corner smooth and geometric normals face opposite sides')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Root corner smooth and geometric normals face opposite sides
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards_v2.py', exiting.

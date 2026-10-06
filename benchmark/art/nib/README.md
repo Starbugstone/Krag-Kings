@@ -320,8 +320,11 @@ diagnostic import-path correction and successful audit are preserved in
 `groom-study/root-attachment-v1/actual-result.json`. No dependent image or
 changed model exists for that attempt. A separate v2 recipe retains the normal
 agreement threshold, compares the matching smooth surface field, and keeps an
-independent geometric wrong-side check. It is prepared for the next guarded
-source/Neutral/EyeCloseup boundary; the atlas remains unchanged.
+independent geometric wrong-side check. Its native v2 attempt then stopped on a wrong-side corner projection at a thin
+ear tip. The offline saved-surface attribution and failure are preserved in
+`groom-study/root-attachment-v2`. The separate v3 source now saves and reopens;
+its actual views and receipt are recorded in `groom-study/root-attachment-v3`.
+The atlas remains unchanged, and the source still fails artistic likeness.
 
 The following adult-face/ocular pass is also **prepared only**. Its second
 offline field has zero introduced neutral degenerates or inverted triangles,

@@ -1,0 +1,59 @@
+{
+  "status": "Native v2 stopped at a projected-corner geometric-side gate before save; offline attribution/proposal retained",
+  "sourceSha256": "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+  "sourceSaved": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "nativeJob": {
+    "name": "nib-rooted-cards-v2-generate",
+    "processId": 24592,
+    "exitCode": 2,
+    "peakPrivateMB": 646.0
+  },
+  "attribution": {
+    "method": "Read-only DNA extraction of actual saved ear topology/coordinates, reconstructed polygon normals and quad-fan nearest-surface preflight",
+    "nativeTraceLimitation": "The original native exception did not identify its card/triangle; offline reconstruction reproduces one hard normal-side failure and broader guide-side defects, requiring confirmation in the next native recipe.",
+    "reproducedHardCase": {
+      "region": "outer_nap_L",
+      "guide": 621,
+      "cornerSign": -1,
+      "rootPolygon": 3880,
+      "wrongSidePolygon": 3886,
+      "geometricGuideDot": -0.995083148236845,
+      "smoothGeometricDot": -0.08794981476929536,
+      "proposedSameSidePolygon": 3873,
+      "proposedFitDistanceMeters": 2.77503758290033e-05
+    },
+    "proposal": "Closest original-guide-facing support, remove blanket inward query bias, cap final geometric-normal burial by measured inward ray clearance. Existing6mm/normal0.4 gates retained."
+  },
+  "codeSha256": {
+    "build_rooted_cards_v2.py": "d4a82d8f57e8300a4288bb7cba454d2b982bc5c004cde54dd79cea2ae9702330",
+    "fit_card_roots_v2.py": "c582c224faf922525bfe2d686760ac5b6c09b5f794fa7f1cfcfee79205ee82ba",
+    "read_saved_root_surface.py": "ea4df813039f3e0a217cbf8b187475b1082bbbeae7dbd286cd7a1f3d252b22f8",
+    "preflight_saved_root_corners_v1.py": "0862b7208a814faa75b9ad8fe4235bdc569d2eecf2c64da5360d46b95c014927",
+    "preflight_saved_root_corners.py": "cd4d8eaa176bd4e87492db82eee9aa3fa8b9d6c5d64ffc99938506b67e575725"
+  },
+  "evidenceLineEndings": "LF archived text; original Windows logs remain in benchmark/local",
+  "evidence": {
+    "saved-corner-preflight.json": {
+      "sha256": "0a9743646a8c825087d6e2855b0032435fce275c52feaaa4bec24dc021a52fbc",
+      "bytes": 382059
+    },
+    "saved-corner-oriented-proposal.json": {
+      "sha256": "29617761fdcd279947b29a0ec8363667b58c23c40c2c098f38a5ede312bed638",
+      "bytes": 526962
+    },
+    "logs/nib-rooted-cards-v2-generate-memory.csv": {
+      "sha256": "dbe82b0809cacb842ba28e8505572daf3aa019051dc667ae6f802609f8c18b37",
+      "bytes": 483
+    },
+    "logs/nib-rooted-cards-v2-generate.log": {
+      "sha256": "b8c8bc2575ececb1bf6ea04a0067ce855bf28c5ad4b8127bc10997b6fac75e60",
+      "bytes": 229
+    },
+    "logs/nib-rooted-cards-v2-generate.stderr.log": {
+      "sha256": "f31acf45de70b8f4a343d785a09d51d28237dfaa1af0a96d9f6491fa0242bb6d",
+      "bytes": 843
+    }
+  }
+}

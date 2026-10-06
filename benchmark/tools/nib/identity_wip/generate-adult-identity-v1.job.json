@@ -1,0 +1,29 @@
+{
+  "name": "nib-adult-identity-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\build_adult_identity.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v3\\Nib_Coherent_RootedGroom_v3.blend",
+    "--source-sha256",
+    "b4eec1dfc7c1433b784e8eb8eb5e3b8fb79ac5415b352e4a26e0448836ea59ac",
+    "--source-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v3\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\adult-native-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-generate.log",
+  "successMarker": "NIB_ADULT_IDENTITY_SAVED_AND_REOPENED"
+}

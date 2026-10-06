@@ -1,0 +1,192 @@
+{
+  "status": "Actual saved root attachment and two inspected views; local construction improvement only, concept likeness remains failed",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "source": {
+    "path": "benchmark/art/nib/groom-study/root-attachment-v3/Nib_Coherent_RootedGroom_v3.blend",
+    "sha256": "b4eec1dfc7c1433b784e8eb8eb5e3b8fb79ac5415b352e4a26e0448836ea59ac",
+    "bytes": 63875138
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/groom-study/root-attachment-v3/source.json",
+    "sha256": "b1af926f365488f25f61b1e9d0324f8e791b40e938a64e923f4e3714980c5e16",
+    "bytes": 243416
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/Neutral.png",
+      "sha256": "a3852fbc10626d417566426a0348eee256b81ed3893380b690e0b82cd60a8429",
+      "bytes": 1913426
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/EyeCloseup.png",
+      "sha256": "ffbf108b322e763232de17209bcf7cb508ce0d903d1222f1f7693c23957f5a57",
+      "bytes": 1905341
+    }
+  ],
+  "viewMetadata": [
+    {
+      "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/Neutral.json",
+      "sha256": "2bf1753be392409289c56abbb6f8363ca2d1ac3694556c82fcd8d48102b75bc8",
+      "bytes": 4003
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/EyeCloseup.json",
+      "sha256": "d2d55804caff49b7157f25369b4883887e1f3ec33da3341de7ad85d53e475987",
+      "bytes": 4005
+    }
+  ],
+  "processes": [
+    {
+      "pid": 30612,
+      "guardExitCode": 0,
+      "peakPrivateMB": 898.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-generate.log",
+          "sha256": "893409cca789ac2dcc4ddaae8bf3bc56f970f4aed09f805ffba648d298a62641",
+          "bytes": 461,
+          "originalCaptureSha256": "83561444e78af700a1896f6d38dfd2f6ff3bd1f689e75626e23fe6e01dc26ce3"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-generate.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-generate-memory.csv",
+          "sha256": "8e7223a4602e13400bd9f1672fc8729cff346ba370483cbb6a06503aa60c47b9",
+          "bytes": 994,
+          "originalCaptureSha256": "5c2dac50246f6b0d3af184b173f4aa4f6ffe5e077075d301b9b647eb41fffce5"
+        }
+      ]
+    },
+    {
+      "pid": 13980,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2663.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-neutral.log",
+          "sha256": "38eb4bc9f4fe5aa0b2b889fe118e25d853fe80fda16df60c28050ca497994d37",
+          "bytes": 396,
+          "originalCaptureSha256": "230b2b745523dab0637cf2028cdc7c32df3c56e1dfd4a38b6b7ed8bc5bf34dc6"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-neutral.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-neutral-memory.csv",
+          "sha256": "c9598a32e291f002c7b1acded518fb91bb5ecdf6fe4729e8cd0d4d4493397cd5",
+          "bytes": 1569,
+          "originalCaptureSha256": "ef50caf8c784e0c656b54812c8ecaa9304616df1df58e31a771a29ad7a58118f"
+        }
+      ]
+    },
+    {
+      "pid": 3240,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2452.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-eyecloseup.log",
+          "sha256": "8ff0b1b85013fcf36b5a3e4898e01692c389a6a34d34de612d305108f445e30e",
+          "bytes": 399,
+          "originalCaptureSha256": "6d3d0c9ea0e62dfaca9e0164013b2bb0133bcd080580219c3fdcefdbe8ddae8b"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-eyecloseup.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/groom-study/root-attachment-v3/actual-evidence/nib-rooted-cards-v3-eyecloseup-memory.csv",
+          "sha256": "61b6ae38dcd00aa3979a0376edbc313862c92cb662e890cb2a0fee2db0a9f22c",
+          "bytes": 2006,
+          "originalCaptureSha256": "b1816374e064c4c2446e9de218e4ef11eac041686c7c994b447e305c1c4f86dc"
+        }
+      ]
+    }
+  ],
+  "preserved": {
+    "unrelatedMeshPayloads": 410,
+    "restBones": 79,
+    "allActionHashes": true,
+    "canonicalActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "savedSourceReopened": true,
+    "atlasUVTopologyWeightsMaterialsGuideTips": true
+  },
+  "attachment": {
+    "groups": 12,
+    "sameSideSupportSwitches": 208,
+    "maximumVertexMoveMeters": 0.0030674907332078863,
+    "maximumGuideReconstructionErrorMeters": 2.403028819392642e-07,
+    "introducedDegenerateTriangles": 0,
+    "trianglesRotatedOver90": 3,
+    "smallestTriangleAreaRatio": 0.06674011344067311,
+    "lensEnvelopeExceptions": 0
+  },
+  "actualReview": {
+    "Neutral": "No gross new surface break; attachment is locally tighter but the overall change is small. Sparse pale blade groom, flat pink ears, smooth juvenile face and simplified eye surfaces still fail sheet02.",
+    "EyeCloseup": "First-row skin attachment is closer, yet squared opaque root bands remain visible along the beginning of the cards. Atlas opacity and guide layering still need the separate controlled comparison. Brow/cheek/nose structure and glossy uniform irises remain failed."
+  },
+  "retainedWarnings": {
+    "passed": false,
+    "blockingIssues": [
+      "neutral: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "Full Blink normal rotation warning retained; actual folds/collisions require the native posed views"
+    ],
+    "scope": "Diagnostic normal-rotation and inherited oral flags retained, never hidden by numeric aperture improvement"
+  },
+  "priorFailure": {
+    "path": "benchmark/art/nib/groom-study/root-attachment-v3-failure1/actual-result.json",
+    "sha256": "afbf227be35273008c057bd4d4a28215f0df1991254e6f65a7661b4deb861028",
+    "bytes": 1137
+  },
+  "priorFailureExplanation": "Native correspondence differed by0.238micrometres, about two float32 ULPs; only that check became an explicit four-ULP bound capped at1micrometre. All normal-side/locality and movement gates remain.",
+  "nextWork": [
+    "Pinned broad adult-face and actual-surface ocular field study preserving repaired lid/Jaw contact",
+    "Root finer-alpha atlas comparison on the reviewed coherent source",
+    "Actual iris/skin attribute baking and fresh matched engine integration",
+    "Keep unresolved ears/clothing/axilla/hand and restorative quality failures explicit"
+  ],
+  "codeSha256": {
+    "build_rooted_cards_v3.py": "0e60320b7b6299f67541407bd8ae7afd77c7a08933e5bc5a3c0d2c14243441a2",
+    "fit_card_roots_v3.py": "4ecdc72ed27aa90d5332b19afa7fcec708f4d9f7fedb2ddf8325f94ee555d244"
+  },
+  "sharedPromotionAuthorized": false
+}

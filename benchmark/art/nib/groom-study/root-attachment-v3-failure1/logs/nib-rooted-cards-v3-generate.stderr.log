@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards_v3.py", line 60, in <module>
+    results.append(repair(obj,group['guides'],trees[group['bone']]))
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\fit_card_roots_v3.py", line 131, in repair
+    if error>2e-7:raise RuntimeError('Saved card/guide point correspondence differs '+str((obj.name,index,error)))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Saved card/guide point correspondence differs ('Nib v6 cards outer_rim_R', 1240, 2.384476811558792e-07)
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards_v3.py', exiting.

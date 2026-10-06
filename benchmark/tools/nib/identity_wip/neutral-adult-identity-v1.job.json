@@ -1,0 +1,29 @@
+{
+  "name": "nib-adult-identity-v1-neutral",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\review_adult_identity.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\adult-native-v1\\Nib_Coherent_AdultIdentity_v1.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\adult-native-v1\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\adult-native-v1\\actual-views",
+    "--view",
+    "Neutral"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-neutral.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-neutral.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-adult-identity-v1-neutral.log",
+  "successMarker": "NIB_ADULT_IDENTITY_ACTUAL_VIEW_COMPLETE"
+}
