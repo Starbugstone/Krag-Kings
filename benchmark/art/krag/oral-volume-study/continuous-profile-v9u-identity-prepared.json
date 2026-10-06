@@ -1,0 +1,19 @@
+{
+  "status": "Prepared unchanged-source identity views only; no native launch",
+  "source": {
+    "path": "benchmark/art/krag/Krag_ContinuousMandible_v9u_WIP.blend",
+    "sha256": "7c6d88870a8ac46112708147bce98f44b3516387a462b7536ccb117bf0883f19"
+  },
+  "script": {
+    "path": "benchmark/tools/krag/oral_volume_wip/review_continuous_profile_v9u_identity.py",
+    "sha256": "ee7589cc3a2b27df89e212782a6bd7689ab18a331378896edfd3dcdbcd290ac0"
+  },
+  "views": [
+    "NeutralFront",
+    "NeutralThreeQuarter",
+    "OpenFront"
+  ],
+  "artisticAcceptance": false,
+  "geometryChanges": false,
+  "sharedChanges": false
+}

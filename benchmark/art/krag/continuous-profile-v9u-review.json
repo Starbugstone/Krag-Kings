@@ -1,0 +1,112 @@
+{
+  "status": "Actual continuous profile source and two inspected views; local contour improvement retained, overall mouth/likeness unaccepted",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_ContinuousMandible_v9u_WIP.blend",
+    "sha256": "7c6d88870a8ac46112708147bce98f44b3516387a462b7536ccb117bf0883f19"
+  },
+  "sourceReceipt": {
+    "path": "benchmark/art/krag/continuous-profile-v9u.json",
+    "sha256": "d446d422d9dcb71289f62c24360cd989c3ea1bfee11202667028469e67ef273b"
+  },
+  "views": [
+    {
+      "view": "ClosedRight",
+      "path": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_ClosedRight.png",
+      "sha256": "e45a2d70abef579f27b5e5dca9e0e76494f4eea5232af730727af53c1dcac4be",
+      "metadata": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_ClosedRight.meta.json",
+      "metadataSha256": "53dbc04df9cbdd22763004310d5d3cbe82a0aaa4e24d53a65021cc35e8900d8e",
+      "inspected": true
+    },
+    {
+      "view": "OpenRight",
+      "path": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_OpenRight.png",
+      "sha256": "5a2ec125fc5e2ff9628401605c6dfc498261a1ae7af2ee1d2b3a94d40f791ce5",
+      "metadata": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_OpenRight.meta.json",
+      "metadataSha256": "0d1e0181427e5608853ebcb9e98f815a6efcb24cf28efcf63df1bc344c28a935",
+      "inspected": true
+    }
+  ],
+  "execution": [
+    {
+      "job": "krag-continuous-profile-v9u-source",
+      "processId": 32732,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 1263.0,
+      "minimumAvailableMB": 10168.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-source.stdout.txt",
+          "sha256": "f22181acb87973827e67c52c340df0c35727a02508e56f58aeed10a527071519"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-source.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-source-memory.csv",
+          "sha256": "1e6b6a9ca8dcf85059df4013e68b5c61f4a836667ae9f898fc13e99ef1d26c46"
+        }
+      ]
+    },
+    {
+      "job": "krag-continuous-profile-v9u-ClosedRight",
+      "processId": 32296,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2077.0,
+      "minimumAvailableMB": 9448.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-ClosedRight.stdout.txt",
+          "sha256": "757724377e7f03b1995dc970ffd1eabaddfc0c445dc05c47ee52452c703c18e8"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-ClosedRight.stderr.txt",
+          "sha256": "0c1a0541aa642da2a0ba3211489aee0bdff40901c99023225683f47105567743"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-ClosedRight-memory.csv",
+          "sha256": "6a3b3e0646579ed227057280671f64ce37f7ed8c15e72bd86735339de93dc74f"
+        }
+      ]
+    },
+    {
+      "job": "krag-continuous-profile-v9u-OpenRight",
+      "processId": 25636,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2098.0,
+      "minimumAvailableMB": 9532.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-OpenRight.stdout.txt",
+          "sha256": "713093c238940a6037d1efe60b3f8b7fac9f0e0e4d96b79e2d4d9f2a5d5f1649"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-OpenRight.stderr.txt",
+          "sha256": "0c1a0541aa642da2a0ba3211489aee0bdff40901c99023225683f47105567743"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-evidence/krag-continuous-profile-v9u-OpenRight-memory.csv",
+          "sha256": "4e490b105603f76e9b28d6d1aad30ffe8b5a58754127ee6fc8c9b68874426995"
+        }
+      ]
+    }
+  ],
+  "observedImprovements": [
+    "Repeated lower-lip/chin ledges removed in neutral profile; one continuous anterior mandibular contour",
+    "Improved contour retained through unchanged full-range opening",
+    "Compact canine and prior reduction of near-ear crease preserved"
+  ],
+  "observedFailures": [
+    "Whole head remains too uniformly domed and smooth",
+    "Upper muzzle/nose/brow/cheek planes remain weaker than the concept",
+    "Open lower face still reads too broad and flat from the side",
+    "Matched new front/three-quarter appearance and dental contact remain unverified"
+  ],
+  "nextReview": "Unchanged-source true-front, three-quarter and matched open-front before further coherent face decisions; no more isolated small profile bumps.",
+  "motionLineage": "Pre-v4 oral actions retained. Frozen coherent68fe15213d unchanged; no engine promotion."
+}
