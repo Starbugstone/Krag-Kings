@@ -119,14 +119,21 @@
       "source": "benchmark/local/query-foreground-coherent79.ps1",
       "bytes": 1230,
       "sha256": "b3fa197e89db74d2eef6ffac484fdde4e271b3c68da761880230784a7be728ea"
+    },
+    {
+      "path": "OwnedGameWindow.ps1",
+      "source": "benchmark/tools/capture/OwnedGameWindow.ps1",
+      "bytes": 5529,
+      "sha256": "022a1f1a3be3c1cba9907401e5c062907710d09d486d4d30a33e49d0fc8e9512"
     }
   ],
   "nativeLaunchAndClosePassed": true,
   "nativeInputSuiteCompleted": false,
   "checksCompleted": 0,
   "inputDelivered": false,
-  "windowLeaseAcquired": false,
-  "windowLeaseRestorationRequired": false,
   "performanceSample": false,
-  "artisticAcceptance": false
+  "artisticAcceptance": false,
+  "completedWindowLeaseReturned": false,
+  "ownedWindowFocusAttempted": true,
+  "cleanupInterpretation": "Pinned Acquire implementation catches failure, disposes/restores the owned window, then rethrows; no cleanup error superseded the original foreground error. Raw caller field remains false because assignment never completed."
 }
