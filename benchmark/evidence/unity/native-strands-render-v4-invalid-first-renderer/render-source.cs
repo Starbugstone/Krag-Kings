@@ -42,7 +42,7 @@ namespace KragKings.StrandPilot
         {
             public string stage,region;
             public int callback,unityFrame,completedCameraFrames,renderers,activeRenderers,lineRenderers,validLineRenderers;
-            public string[] shaderNames,vertexSetupNames;
+            public string[] shaderNames;
             public bool instanceActive;
         }
         [Serializable] class RegionCoverage { public string region; public int changedPixels; }
@@ -50,7 +50,7 @@ namespace KragKings.StrandPilot
         {
             try
             {
-                output=Path.GetFullPath("../fixture-render-v5");
+                output=Path.GetFullPath("../fixture-render-v4");
                 if(Directory.Exists(output))throw new Exception("Preserve previous render output");
                 Directory.CreateDirectory(output);
                 Application.logMessageReceived+=OnLog;
@@ -82,7 +82,7 @@ namespace KragKings.StrandPilot
                     if(Path.GetFileName(dataPath)=="conversion.json")continue;
                     var provider=ScriptableObject.CreateInstance<NativeCurveProvider>();provider.curveData=AssetDatabase.LoadAssetAtPath<TextAsset>(dataPath.Replace('\\','/'));
                     var data=provider.Read();
-                    string path="Assets/RenderProbeOutput/V5-"+data.region;
+                    string path="Assets/RenderProbeOutput/V4-"+data.region;
                     AssetDatabase.CreateAsset(provider,path+"-provider.asset");
                     var asset=ScriptableObject.CreateInstance<HairAsset>();asset.settingsBasic.type=HairAsset.Type.Custom;asset.settingsBasic.kLODClusters=false;asset.settingsBasic.memoryLayout=HairAsset.MemoryLayout.Sequential;
                     asset.settingsCustom.dataProvider=provider;asset.settingsCustom.settingsResolve.resampleCurves=false;
@@ -110,6 +110,10 @@ namespace KragKings.StrandPilot
                     // that same instance can leave its vertex-setup compute null.
                     // Prepare the actual live-vertex variant before registration.
                     material.EnableKeyword("HAIR_VERTEX_LIVE");
+                    int compiled=HairMaterialUtility.TryCompileCountPassesPending(material);
+                    if(HairMaterialUtility.AnyPassPendingCompilation(material) || ShaderUtil.ShaderHasError(shader))
+                        throw new Exception("Native hair material did not finish synchronous prewarming");
+                    Debug.Log("KK_NATIVE_HAIR_PREWARM "+data.region+" compiled="+compiled+" passCount="+material.passCount);
                     var instance=new GameObject(data.region).AddComponent<HairInstance>();
                     instance.settingsExecutive.updateMode=HairInstance.SettingsExecutive.UpdateMode.ExternalCall;
                     instance.settingsExecutive.updateSimulation=false;instance.settingsExecutive.updateSimulationInEditor=false;
@@ -138,17 +142,6 @@ namespace KragKings.StrandPilot
                 hd.renderingPathCustomFrameSettingsOverrideMask.mask[(uint)FrameSettingsField.HighQualityLineRendering]=true;
                 hd.antialiasing=HDAdditionalCameraData.AntialiasingMode.None;
                 target=new RenderTexture(1280,720,24,RenderTextureFormat.ARGB32,RenderTextureReadWrite.sRGB);target.Create();camera.targetTexture=target;
-                // Shader subshader/pass selection depends on the active pipeline.
-                // A prewarm before the first HDRP camera sees only the fallback.
-                RenderPipeline.SubmitRenderRequest(camera,new RenderPipeline.StandardRequest{destination=target});
-                if(!(RenderPipelineManager.currentPipeline is HDRenderPipeline))throw new Exception("HDRP camera did not initialize its pipeline");
-                foreach(var instance in hair)
-                {
-                    var material=instance.strandGroupDefaults.settingsRendering.materialAsset;
-                    int compiled=HairMaterialUtility.TryCompileCountPassesPending(material);
-                    if(HairMaterialUtility.AnyPassPendingCompilation(material) || ShaderUtil.ShaderHasError(shader))throw new Exception("Native HDRP material prewarm failed");
-                    Debug.Log("KK_NATIVE_HAIR_PREWARM "+instance.name+" compiled="+compiled+" passCount="+material.passCount);
-                }
                 AssetDatabase.SaveAssets();EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene(),"Assets/RenderProbeOutput/Fixture.unity");
                 began=EditorApplication.timeSinceStartup;frame=0;
                 RenderPipelineManager.endCameraRendering+=OnCameraRendered;
@@ -168,24 +161,6 @@ namespace KragKings.StrandPilot
                 // DispatchUpdate does not guard inactive objects. Calling it after
                 // OnDisable recreates buffers and re-registers HDRP line renderers.
                 foreach(var instance in hair)if(instance.isActiveAndEnabled)instance.DispatchUpdate();
-                if(frame==16)
-                {
-                    RecordRenderers("initial");
-                    // Narrow editor compatibility repair: HDRP only refreshes its
-                    // vertex setup when the material reference changes. Rebind a
-                    // ready material if the package's temporary shader left that
-                    // cache invalid. No engine/package source is altered.
-                    foreach(var instance in hair)foreach(var lines in instance.GetComponentsInChildren<HDAdditionalMeshRendererSettings>())
-                    {
-                        if(lines.LineRendererIsValid())continue;
-                        var renderer=lines.GetComponent<MeshRenderer>();var material=renderer.sharedMaterial;
-                        if(!material || HairMaterialUtility.AnyPassPendingCompilation(material))throw new Exception("Line material still compiling before rebind");
-                        renderer.sharedMaterial=null;lines.enableHighQualityLineRendering=true;
-                        renderer.sharedMaterial=material;lines.enableHighQualityLineRendering=true;
-                        Debug.Log("KK_NATIVE_LINE_REBIND "+instance.name+" valid="+lines.LineRendererIsValid());
-                    }
-                    RecordRenderers("initialized");
-                }
                 RenderPipeline.SubmitRenderRequest(camera,new RenderPipeline.StandardRequest{destination=target});
                 if(frame<72)return;
                 if(!captured)
@@ -219,7 +194,7 @@ namespace KragKings.StrandPilot
             {
                 var renderers=instance.GetComponentsInChildren<MeshRenderer>(true);
                 var lines=instance.GetComponentsInChildren<HDAdditionalMeshRendererSettings>(true);
-                rendererStates.Add(new RendererState{stage=stage,region=instance.name,callback=frame,unityFrame=Time.frameCount,completedCameraFrames=renderedFrames,renderers=renderers.Length,activeRenderers=renderers.Count(x=>x.enabled && x.gameObject.activeInHierarchy),lineRenderers=lines.Count(x=>x.isActiveAndEnabled && x.enableHighQualityLineRendering),validLineRenderers=lines.Count(x=>x.isActiveAndEnabled && x.LineRendererIsValid()),shaderNames=renderers.Select(x=>x.sharedMaterial && x.sharedMaterial.shader?x.sharedMaterial.shader.name:"missing").ToArray(),vertexSetupNames=lines.Select(x=>{var value=new SerializedObject(x).FindProperty("m_VertexSetupCompute").objectReferenceValue;return value?value.name:"missing";}).ToArray(),instanceActive=instance.isActiveAndEnabled});
+                rendererStates.Add(new RendererState{stage=stage,region=instance.name,callback=frame,unityFrame=Time.frameCount,completedCameraFrames=renderedFrames,renderers=renderers.Length,activeRenderers=renderers.Count(x=>x.enabled && x.gameObject.activeInHierarchy),lineRenderers=lines.Count(x=>x.isActiveAndEnabled && x.enableHighQualityLineRendering),validLineRenderers=lines.Count(x=>x.isActiveAndEnabled && x.LineRendererIsValid()),shaderNames=renderers.Select(x=>x.sharedMaterial && x.sharedMaterial.shader?x.sharedMaterial.shader.name:"missing").ToArray(),instanceActive=instance.isActiveAndEnabled});
             }
         }
         static int BackgroundRange(Color32[] pixels)

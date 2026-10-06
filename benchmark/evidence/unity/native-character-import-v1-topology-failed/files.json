@@ -1,0 +1,50 @@
+[
+  {
+    "path": "failure.txt",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v1/failure.txt",
+    "sha256": "b28936eeb722595197ca5168e9bd05158c17326780e8f7bcfdf5063256292f48",
+    "bytes": 230
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-character-import-v1.log",
+    "sha256": "67424291ad02f7bba871643b8d50d4ca8df42927c724306355895afba68be127",
+    "bytes": 74663
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-character-import-v1-memory.csv",
+    "sha256": "a311de2872bbb70acae8830cbc56d6919eafde3d38fe89db6ab8010e4f4a1718",
+    "bytes": 722
+  },
+  {
+    "path": "import-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/CharacterImportProbe.cs",
+    "sha256": "0fdc7770aa0502887e111bc7084b0a4285947e7f45f730e64d4fdeef2fc53f96",
+    "bytes": 11029
+  },
+  {
+    "path": "provider-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/NativeBinaryCurveProvider.cs",
+    "sha256": "65b59acc4bc25650d93ed31a015cd83dfa19e615a7275632d8e35d0591b650ba",
+    "bytes": 2855
+  },
+  {
+    "path": "preparation.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/prepared-character-v1/preparation.json",
+    "sha256": "01ce1fa5103e37d5d3b5997344cae6b85276d8b424c0c22a4af5f2f23969e986",
+    "bytes": 7891
+  },
+  {
+    "path": "config.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/prepared-character-v1/config.json",
+    "sha256": "dcadf90d19d15359c77bee6eaf70a2dbee96a3ee541418f6223ff6e782d9c13f",
+    "bytes": 11608
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/character-import-v1.job.json",
+    "sha256": "135d77859a5ce29ce1d9eca4fbb4e8a40af1d76e37968ff251f9a0e507ff8e30",
+    "bytes": 841
+  }
+]

@@ -1,0 +1,602 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'fr' Physical Memory: 32553 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+[Licensing::IpcConnector] Channel LicenseClient-Matthew doesn't exist
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T19:34:21Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 3028)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+-batchmode
+-nographics
+-job-worker-count
+2
+-projectPath
+D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+-logFile
+D:\Dev\Krag-Kings\benchmark\local\logs\unity-native-character-import-v1.log
+-executeMethod
+KragKings.StrandPilot.CharacterImportProbe.Run
+Successfully changed project path to: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [29908]  Target information:
+
+Player connection [29908]  * "[IP] 172.17.32.1 [Port] 55504 [Flags] 2 [Guid] 4134399235 [EditorId] 4134399235 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [29908]  * "[IP] 172.26.16.1 [Port] 55504 [Flags] 2 [Guid] 4134399235 [EditorId] 4134399235 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [29908]  * "[IP] 192.168.31.40 [Port] 55504 [Flags] 2 [Guid] 4134399235 [EditorId] 4134399235 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [29908] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [29908] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 2
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew" at "2026-10-06T19:34:22.0389828Z"
+[Package Manager] Connected to IPC stream "Upm-10512" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              8b0a03d2d0284656b7795c3c387a8ad4
+  Correlation Id:          505619d61a52ecb75eac9d1385a58372
+  External correlation Id: 2360540721853315593
+  Machine Id:              H9ywjWMk/aJPg3YR91m8eMuX6rE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Matthew" (connect: 0.37s, validation: 0.05s, handshake: 1.20s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew-notifications" at "2026-10-06T19:34:23.2881656Z"
+[Licensing::Module] Connected to LicensingClient (PId: 3028, launch time: 0.01, total connection time: 1.62s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 1.66s
+[Licensing::Module] Licensing is initialized (took 1.09s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001899 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.469 seconds
+Domain Reload Profiling: 1031ms
+	BeginReloadAssembly (171ms)
+		CreateAndSetChildDomain (6ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (261ms)
+		LoadAssemblies (165ms)
+		AnalyzeDomain (250ms)
+			TypeCache.Refresh (249ms)
+				TypeCache.ScanAssembly (232ms)
+	FinalizeReload (471ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (116ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 34 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.19.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.burst@1.8.29 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.timeline@1.8.12 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+    com.unity.searcher@4.9.4 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.searcher@d45a78918735)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition@4509f627d0da)
+    com.unity.ugui@2.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.wind@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.animation@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.audio@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.collections@6.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+    com.unity.render-pipelines.core@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.uielements@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.ui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.video@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.video)
+    com.unity.visualeffectgraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.modules.director@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.director)
+    com.unity.test-framework@1.6.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.modules.terrain@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.ext.nunit@2.0.5 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+  Local packages:
+    com.unity.demoteam.hair@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source)
+    com.unity.demoteam.digital-human@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 0s223ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[567/718    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (0.19 seconds), 1 items updated, 566 evaluated
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+ExitCode: 0 Duration: 2s823ms
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+ExitCode: 0 Duration: 2s304ms
+Finished compiling graph: 722 nodes, 11931 flattened edges (9875 ToBuild, 108 ToUse), maximum node priority 816
+[418/718    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.rsp
+[566/718    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[714/718    1s] Csc Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll (+2 others)
+Assets\Editor\RenderProbe.cs(73,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+
+Assets\Editor\RenderProbe.cs(75,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+[715/718    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/KragKings.StrandPilot.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll, with 137 defines and 288 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[716/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.pdb
+[717/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.dll
+*** Tundra build success (2.28 seconds), 6 items updated, 718 evaluated
+Assets\Editor\RenderProbe.cs(73,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+Assets\Editor\RenderProbe.cs(75,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+AssetDatabase: script compilation time: 5.870912s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp.dll at Library/ScriptAssemblies/Assembly-CSharp.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Editor.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Runtime.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Runtime.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Start importing Assets/NativeGroom/Character using Guid(93b8ba7d5de10574f8822710edf12a3c) (DefaultImporter) -> (Import Result ID: '4fbe2d9477b9005aab4744d9dcf5f31e') in 0.0313257 seconds [static dependencies only]. Details - ImportResultOutputID=f85db7b9f7f0555616a31f3f5df54d5b DependenciesID=0248bcf2890174c75e05c871f120c68a StaticDependenciesID=c71b767d88fb1b29089a36e1199e1ff5 
+Start importing Assets/NativeGroom/Character/Strands using Guid(d9722f9e96bce404f8fd82877da7407f) (DefaultImporter) -> (Import Result ID: '9dae0f7113ebfc13949524c611d37083') in 0.0066357 seconds [static dependencies only]. Details - ImportResultOutputID=47d986df9e1064c3923ff1ec08751049 DependenciesID=fa62cc458c13510637ef3d02651e5546 StaticDependenciesID=6e846d505f1aac43ae6f28c1262a12c3 
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.418 seconds
+Domain Reload Profiling: 4539ms
+	BeginReloadAssembly (385ms)
+		DisableScriptedObjects (27ms)
+		CreateAndSetChildDomain (174ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (184ms)
+	LoadAllAssembliesAndSetupDomain (491ms)
+		LoadAssemblies (364ms)
+		AnalyzeDomain (258ms)
+			TypeCache.Refresh (193ms)
+				TypeCache.ScanAssembly (180ms)
+			BuildScriptInfoCaches (52ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (3419ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (2446ms)
+			ProcessInitializeOnLoadMethodAttributes (524ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (24ms)
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeSamplingDebugMesh.fbx using Guid(20be25aac4e22ee49a7db76fb3df6de2) (FBXImporter) -> (Import Result ID: 'af2862789dd51ed5550059b113d4bd62') in 0.1013911 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b772565af024c73a4c6f11323cc42444 DependenciesID=f3f4bc43f285dcc64aa5503426bfa286 StaticDependenciesID=3642fe93ad707ee0684747ca15580cbf 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/SamplesFixture.fbx using Guid(b28fa67a0ff82c5478f27368dc627683) (FBXImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+ -> (Import Result ID: '20ea76c8643164b48efb0e2b74016647') in 0.2063634 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5301e3f82f537657a6ee2eca0538f799 DependenciesID=ee61eb46ee7ac8e822db27e4947fa567 StaticDependenciesID=94e223686f0930dfd9da576d1d4e1a13 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/TestBall_Base.fbx using Guid(232ab27f257e8524eacc2e73daf536f5) (FBXImporter) -> (Import Result ID: 'a99e19a379df2d502a0b43e2937c8569') in 0.0429733 seconds [static dependencies only]. Details - ImportResultOutputID=4b8a244654f2dad32e9c3cf85add8baf DependenciesID=adbf7f5ee8087aa99ccfcf524e1c0418 StaticDependenciesID=4af85b3bf55656070de032d0d22c4534 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/UnityMaterialBall.fbx using Guid(39857cfad1651644682ff5b772e6e697) (FBXImporter) -> (Import Result ID: '8e2c23d086e2eb9f63d7d557ace4608d') in 0.134109 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=37c10e97ff8021be140b7a84c7134160 DependenciesID=7aca319ee13482e8eec5c6be186e4e4b StaticDependenciesID=5b0da658fd80e2bbafaf5702fc00b1b0 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/BackgroundMesh.fbx using Guid(b9ae429aca254fa41966db24b9e53232) (FBXImporter) -> (Import Result ID: '8baad3476a855f490103a0f5d475e278') in 0.0390144 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d3329c7ab136c7b3c99133e450e24042 DependenciesID=5c30577aa3111e589b3bc05e2697d155 StaticDependenciesID=3e2a24f093274c852087215feaa9259f 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Disc.fbx using Guid(aa0197e8182e0924897ca6c14966b2d0) (FBXImporter) -> (Import Result ID: '54095d4a6b2550ef65b245d3c80f538b') in 0.0391102 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fd61e2d3925287540fd57a94814927ae DependenciesID=41893267bb23cfc460c92e6a1514e02f StaticDependenciesID=eb7f1484adb3819416df2bbc02c36f40 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/TestBall.fbx using Guid(abd6f93423e74814797118f1c6d9393b) (FBXImporter) -> (Import Result ID: '0e33e3b4d7945722e2a6ce70622ce4ac') in 0.067596 seconds [static dependencies only]. Details - ImportResultOutputID=6b95d6af4c0c86cdcc9325e5592a1c0c DependenciesID=4682e0c80b6d7d73f4b9b590653b16c4 StaticDependenciesID=802d001a0c0877518897c7f9f257aca9 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Cylinder.fbx using Guid(accb6d90f0d50fe4ca0f68159b4323de) (FBXImporter) -> (Import Result ID: 'f4c973c598e8d201205883dc2531539b') in 0.0326769 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a9f5a733354396431e97163d8fad0d3 DependenciesID=a871aa463b29996a16aa5cbf464ea2d0 StaticDependenciesID=da7c182438c9618ec5b7635e067f060c 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/HumanEyeModel.fbx using Guid(bc7f614d61b9b2a49a9ca3530b20da5c) (FBXImporter)Keyframe reduction: Ratio: 100.000000%;
+ -> (Import Result ID: 'cf58fed5ba35f06c7ee6aefe0848ce10') in 0.0553624 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb40e6822002f03e1fb924fde3ad1d92 DependenciesID=7f7dbc73d22475893b271ff6834d8302 StaticDependenciesID=a773c277e0f086076f2ccab0f63c193e 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Quad.fbx using Guid(1d5a8595286f94f4bb54171d49f473c3) (FBXImporter) -> (Import Result ID: '288d295e5ce48620d428ba03f762afd7') in 0.0349162 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a87610d0128f6522875cff81c4268f0 DependenciesID=81a309bec8912b62d3860288f975f97c StaticDependenciesID=064f4f82c40c08739d597a68282a5236 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/SamplesFloorSpotlight.fbx using Guid(1dbf28c1bb322474d981b2dc555e28b0) (FBXImporter) -> (Import Result ID: '34f34b90b2f7b7bec8b479c0aa0c5fff') in 0.0398274 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7208e0dc93e2db9a335ef19ef563d2fc DependenciesID=e0f4816a5edfb8e1b7ae720cd2316133 StaticDependenciesID=9b3e1ee9c80f6fbc02b10021fb575b24 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/Mesh/SamplesSpotlightModel.fbx using Guid(4e8732d4875cc0647b52b55a218072b6) (FBXImporter) -> (Import Result ID: '1bb4458dfaa84ac5eef3fa20d35d909c') in 0.0522885 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9d88fd6ce3595ee99683bb1a3154424 DependenciesID=7a450566740d7934b7f1d4b50012391e StaticDependenciesID=03f2fd72f733206894e49679de289006 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Sphere.fbx using Guid(9e0af751bc36ea146940ba245193e28c) (FBXImporter) -> (Import Result ID: '0243206da8596972216882a7b82b7aae') in 0.0381888 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5957fbb22e5aa76d5f0ef85101a8fa09 DependenciesID=48064f8ee169327beb2297148b2624dd StaticDependenciesID=36a249499828e60852e3276721725af8 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Resources/DebugProbe.fbx using Guid(9e1c97fc44f9a8744b61b58f72c56de4) (FBXImporter) -> (Import Result ID: 'cd9549487fd85d247d07e4a5a6363bac') in 0.0342177 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=178bcc56ca3670f9260053f41c495f27 DependenciesID=fcc150d77d87dc4dc199384361db697e StaticDependenciesID=7a9ae720732007519fb0177decd7d2dc 
+Start importing Assets/NativeGroom/Character/Nib_Natural.fbx using Guid(fe9057b86d016564fb5fe4feb4f0f6db) (FBXImporter)Keyframe reduction: Ratio: 1.839310%;
+Keyframe reduction: Ratio: 12.335719%;
+Keyframe reduction: Ratio: 3.552590%;
+Keyframe reduction: Ratio: 11.789595%;
+Keyframe reduction: Ratio: 19.860973%;
+Keyframe reduction: Ratio: 12.379792%;
+Keyframe reduction: Ratio: 13.901887%;
+ -> (Import Result ID: 'bed1a0e51993e02d1eb0b6590036a92e') in 8.4484167 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d566f626dd718c40c1d92e0c0b007b77 DependenciesID=0403c9eb48eba95f5878bbe9ed89cda2 StaticDependenciesID=f15c1db8a43aca1c7f471859a66c9e6b 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.curveCounts.bytes using Guid(407f1512e264b504d8c095a8eab76fca) (TextScriptImporter) -> (Import Result ID: '5bfc0d217a1b6652417d88a362474537') in 0.0085303 seconds [static dependencies only]. Details - ImportResultOutputID=690606407f4b0e93cf892bb7616b7add DependenciesID=eea2e8562affdacd220445d00cce8d52 StaticDependenciesID=57292f90ebfec30ef51bdac3a3f3cff3 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.positions.bytes using Guid(5076e8407c2c1f1428f3d40d2f04630d) (TextScriptImporter) -> (Import Result ID: 'ca3e09a0fc34b55e7e12e819d0360d8d') in 0.00879 seconds [static dependencies only]. Details - ImportResultOutputID=8154fc7e316e7d9255d16ef15e0551d1 DependenciesID=394a96c0e7134b08c2ddc0b960bb4b1b StaticDependenciesID=e03c70a1a0b2b48f5e304a30eb5e06d8 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootUv.bytes using Guid(60d463175417bd041b029daee4d91e21) (TextScriptImporter) -> (Import Result ID: '706d8f9763eaec3d1d467a6057cf9fc1') in 0.0084247 seconds [static dependencies only]. Details - ImportResultOutputID=695534ccee8abbc826c967e9dbefb4b3 DependenciesID=0586a2ad02b7305d4ba320ef293d959e StaticDependenciesID=5f33ba714e357a7553dd5a9b987b2e0f 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.colorLinearRgb.bytes using Guid(b0a91b147b6436f44bf994a02061f7fa) (TextScriptImporter) -> (Import Result ID: 'da1056dca6498883d7a6b2c68d227cbd') in 0.0099707 seconds [static dependencies only]. Details - ImportResultOutputID=e248a0170b1ec5e6e0fe6b272a5932af DependenciesID=b31bf611e31517f1cc4ba58ba8a3c08e StaticDependenciesID=1a388b11b580dfdd3da4a667293f0e40 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRays.urtshader using Guid(1142bbad8b9e8c44c83a9775ff120d37) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRays.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b61a11853fc2b01c85b821ba8aaf5c7e') in 0.12077 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=46687cccdc33168fce57c46918914a0e DependenciesID=ba78a0469f42bfec0b01e12118e1a492 StaticDependenciesID=b7859538b7c8061be2c1df0681a26cec 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneWeights.bytes using Guid(41d9bb0034620474f981f22e565e5488) (TextScriptImporter) -> (Import Result ID: '90b0f52fc78df22f82e346a1a6582b11') in 0.0090351 seconds [static dependencies only]. Details - ImportResultOutputID=023ef468050236087f3161571be7cf64 DependenciesID=2338b64bbbab31677d58a4ea99c79a3e StaticDependenciesID=cdd723f52db853e17c8a41d8514efebe 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.curveCounts.bytes using Guid(51ff017e09b760842ba1a20b445fdd9a) (TextScriptImporter) -> (Import Result ID: '536e1756050457e9f2bca26a3fc732df') in 0.0093046 seconds [static dependencies only]. Details - ImportResultOutputID=a8577b983007608c0d92bc91d902a41c DependenciesID=dcd8f04e5899e4ebc6c497fb088dfb4f StaticDependenciesID=a7497ca65b07d2c992f6c57ce8bc8d75 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RisEstimation.urtshader using Guid(713f6141bd66a134383b787f2eaa7c11) (ScriptedImporter)
+Compiling Ray Tracing Shader "RisEstimation.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd7ac51d7078c9d0f4518515a4bd89058') in 0.1565668 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e10568ab6bce9a97b28d8c885dc887c9 DependenciesID=7bda994a1075ee45a05df5fd39078a40 StaticDependenciesID=1251c416255850dca778d66927462604 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootWeightOffsets.bytes using Guid(910c0f7ca70122d4199f1de02a1c44ba) (TextScriptImporter) -> (Import Result ID: 'd47e4bce943476ac8a2fb7b6603be09b') in 0.0082699 seconds [static dependencies only]. Details - ImportResultOutputID=e9dc4a37fdc84fc03335025d91af22c4 DependenciesID=f6fced5476312ff029ecdd895555f1ff StaticDependenciesID=a1e10e18c70dc8ea57cb45a627ad3d4c 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapShadowMaskIntegration.urtshader using Guid(d19f4f8a13b6edb48b986a47ec96402e) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapShadowMaskIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6206f4b63d9d1dd6323401f03425e922') in 0.1989341 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b95ef19d50b21f939236f8de4f3b7c4 DependenciesID=3a4c5a758997883cb2c7a4dad415ebe1 StaticDependenciesID=dddefbaa39ba5d51a386df5433e82fa1 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.curveCounts.bytes using Guid(02df3a691a707ee4ba2361ab9130f9c0) (TextScriptImporter) -> (Import Result ID: '8c2534e28699ec2c396643bee7e62fb2') in 0.009073 seconds [static dependencies only]. Details - ImportResultOutputID=689519742879c141ea2c73beeedcbf2b DependenciesID=463e6cd106a437991f6acf6fdfbb7555 StaticDependenciesID=f26251e52e411299d25ff561dfe72fa9 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootBoneIndices.bytes using Guid(3251aa41bed59cc4589564a4e92d8a3c) (TextScriptImporter) -> (Import Result ID: '5fc8211b325e79269705d58be26fecc3') in 0.0104801 seconds [static dependencies only]. Details - ImportResultOutputID=247503fc682b09370179c110b3327216 DependenciesID=9e550bb53e8aa0cfded2b9bfda662ec8 StaticDependenciesID=ab9d26de00fdb1232f4e352113c7f31a 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.radii.bytes using Guid(f226ae8d403bd664eb44971bbc1be724) (TextScriptImporter) -> (Import Result ID: 'e0c95108d5d4f0746879bdbb2e0317a1') in 0.0114683 seconds [static dependencies only]. Details - ImportResultOutputID=dee49cfbdd5173fb32c2403c54ec8b2e DependenciesID=f76c42655335ec237f09763d0c03baf3 StaticDependenciesID=4aafa8f9050c90974bb3a1ef9c416a21 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.rootBoneWeights.bytes using Guid(23506afe4bc27c445b4313465ed74f8b) (TextScriptImporter) -> (Import Result ID: '4d5e60e9aa5de6cc514dce3f831a2f18') in 0.0087384 seconds [static dependencies only]. Details - ImportResultOutputID=34a157df13ba27758dce6ae9646bafb5 DependenciesID=6281bbd7628605b3db5035a53a0d3350 StaticDependenciesID=77442fd9d70fb34bbb9864b81935a84e 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.colorLinearRgb.bytes using Guid(23aadd0b745b44644a774e60a8d41c52) (TextScriptImporter) -> (Import Result ID: 'fd90460f5552edd4c2cfeb56bea5fcaf') in 0.0093891 seconds [static dependencies only]. Details - ImportResultOutputID=37b7d8dc167966af3a3fdc94c7c79491 DependenciesID=22d4576fe487b637af6ad2ca72ffb299 StaticDependenciesID=0a3a02e79edd1f974954c74af97e526f 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootUv.bytes using Guid(338085269bf3d2d419137b1d641f3ee8) (TextScriptImporter) -> (Import Result ID: 'ba83d616e38786625c6561dbafe198e2') in 0.0078924 seconds [static dependencies only]. Details - ImportResultOutputID=b4bad304c9299a9380481ed16af5193a DependenciesID=3afa643448860d3ac3f7266a60e7fcd6 StaticDependenciesID=5f7a587031ee2fcab8e3defcb984d094 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferDebug.urtshader using Guid(737a1597422c12547a8714d76a9406ec) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferDebug.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'babf3e30592708beedda850f6a16aa60') in 0.0390425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=091ab5fc811d0bb32fd83d24c76e3ade DependenciesID=a74f3d1e9dc51cb077ba856b7eab9889 StaticDependenciesID=62194a0448f2b8616e1214fb593272db 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.curveCounts.bytes using Guid(e38d7a0b9fdcdb14a9a8dbe3d1c7e18f) (TextScriptImporter) -> (Import Result ID: 'cf56a533c33027035ea5de8c50ee20f5') in 0.0096688 seconds [static dependencies only]. Details - ImportResultOutputID=4103d604a3ecc32b0d9734e0e257c90f DependenciesID=ace194ed71fe30d95538abc41a068407 StaticDependenciesID=ebcee47994936af951a8b1c8d28560c5 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapNormalIntegration.urtshader using Guid(1451d029813b192429211be28181beab) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapNormalIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '791a469038e49731e268afc65adafb0e') in 0.0296826 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceb98ab71ac413b56190ee84e02cff03 DependenciesID=c40fff4210f4795126824cb6cbd960bd StaticDependenciesID=cbe3820d9825e61936c3967ec27e4e90 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader using Guid(94a070d33e408384bafc1dea4a565df9) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRenderingLayerMask.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '86f5f30a5cada56579762dd325614ad9') in 0.0358864 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a05fb70609584037b92ffb7bbfa4513 DependenciesID=e4c04546dd7334f19deb336f5df7647d StaticDependenciesID=83d03f1fcc976b11b697d3bab0b97d8c 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/UniformEstimation.urtshader using Guid(94a39d12848d8d64ca962a72b74e7c50) (ScriptedImporter)
+Compiling Ray Tracing Shader "UniformEstimation.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '294fe8c4e2b40974f52434bf1a3e50d3') in 0.0316975 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63829e09c8421943158a5c8e22d7fb1c DependenciesID=a3615acec63a8869e35ea1a076121cb4 StaticDependenciesID=f100dc97879ef35876f7ad5427566dd9 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootWeightOffsets.bytes using Guid(f47728c65ec0b004d983ef78f2eef8e5) (TextScriptImporter) -> (Import Result ID: '127a5e13664321760606c2507199013e') in 0.0087549 seconds [static dependencies only]. Details - ImportResultOutputID=445500c173c8342f446e447eb687223e DependenciesID=2e58b420781b1456f1228a0ce06334a0 StaticDependenciesID=59a64ae02927b389422fbc79d405632f 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.radii.bytes using Guid(45d24d5a19a4c0b429d772cecbf2219e) (TextScriptImporter) -> (Import Result ID: 'a553ca3ac856c376766909418be0cf38') in 0.010154 seconds [static dependencies only]. Details - ImportResultOutputID=facb7606c143d3a3ca5379a3d6165f54 DependenciesID=8ab5c5eedb382bcefe8e87bdf9d40f9c StaticDependenciesID=63e7fb391a13598751c57e6c27d5bfe0 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneIndices.bytes using Guid(45a830cfcb7f1a14faf2cdef8c93b93f) (TextScriptImporter) -> (Import Result ID: '63f989f59ab9cf0c1bb57f0befbbc2a8') in 0.0088462 seconds [static dependencies only]. Details - ImportResultOutputID=03a0690dc9c7c0c1c4b73fc60b077569 DependenciesID=1cc5c9252236fb50732a956643d5653a StaticDependenciesID=0c5d45a2a45a4a5a7d0350447223fb04 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceTransparentRays.urtshader using Guid(6513c3b892e933c4f8d00c19d5c47532) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceTransparentRays.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ce98530d50922e273fe691dd13c2666f') in 0.0217416 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9a4f92c4b834443772f57e904b7b5318 DependenciesID=e2b5d4de0ad804a3b9ecae2a1ed8ba57 StaticDependenciesID=5e41b194f27d8b70c797e75555e2b1f0 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootWeightOffsets.bytes using Guid(b52a5c6f38c78334abd8f4c74ee06f6c) (TextScriptImporter) -> (Import Result ID: '43ceb6cb4cac70f23f76300390b48f43') in 0.0092508 seconds [static dependencies only]. Details - ImportResultOutputID=35a3e9a89bccd098e473bcf5aca30692 DependenciesID=6387be0c75c8ae467a34928111a109ae StaticDependenciesID=909404d90f54c1923cdd36dd9a4e478b 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapIndirectIntegration.urtshader using Guid(7624adbeb148b5c48ab5ab660cc2602a) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapIndirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '7636fca688e599403be3d3b12c440c22') in 0.0327256 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=331a21b109ee676710cbf634c8ef4c64 DependenciesID=a013b62f44319fe9498c0e871d3829fb StaticDependenciesID=6d19372de11b03798f093933090e79bb 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.colorLinearRgb.bytes using Guid(9601ee394f360664e9f856ab51f5a8d0) (TextScriptImporter) -> (Import Result ID: '3e662be4ca3955933e5510909197edc9') in 0.0111554 seconds [static dependencies only]. Details - ImportResultOutputID=6f297ba379663f547a2fd80f838aa721 DependenciesID=19310fe6bd99b425de74c03438a4b51b StaticDependenciesID=c346b6ce3eaf8e4ceda1df51d9124325 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.rootBoneIndices.bytes using Guid(c6c60a1370777e64fb2d837c64df550f) (TextScriptImporter) -> (Import Result ID: '8bc96d67e0a4c730c1abb0bde25dd2cf') in 0.0102813 seconds [static dependencies only]. Details - ImportResultOutputID=e72c2ca5fd85244a66f37afc9599fe5b DependenciesID=26de52e269ed6f365f0eb2c60e71a459 StaticDependenciesID=72e0e3c18a1a1ea87d6f98ae94652230 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneWeights.bytes using Guid(f6bc60e2a519aa14dad0ccd75321c1da) (TextScriptImporter) -> (Import Result ID: '338a3f6c25d107b8372491b91cd7b7e3') in 0.0096947 seconds [static dependencies only]. Details - ImportResultOutputID=f401bec25b4734bbb004b14b077b6da4 DependenciesID=84302e557efdd8ec6581aa7095b3c903 StaticDependenciesID=748b2bfacd152c57f9a8aab8c19d822b 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootUv.bytes using Guid(37919cc13431d13408258e613f98c05a) (TextScriptImporter) -> (Import Result ID: 'ece6362c012df969b3edc5a685d12e92') in 0.0090626 seconds [static dependencies only]. Details - ImportResultOutputID=f15d985c142ce389753360157aded337 DependenciesID=de72b4c9b1e38f5c1eb5494c17971eca StaticDependenciesID=1d21e3db33456cf97d729c14be55dd73 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.colorLinearRgb.bytes using Guid(77c45fa87609c674fb152d5a73f21077) (TextScriptImporter) -> (Import Result ID: '4fc9beddddb84e8a4970dbacc6d433f0') in 0.009162 seconds [static dependencies only]. Details - ImportResultOutputID=449b0a58edcc679181e1e4707ec6f409 DependenciesID=bf53f0e7558d9447e9265e6780cf522e StaticDependenciesID=225e1be523aff69e1033b02e5a4d4b22 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.radii.bytes using Guid(d793d5141c5b2af4197884ef6ab9b580) (TextScriptImporter) -> (Import Result ID: 'c0979f62ab0613191d002d21fd513f9d') in 0.0119166 seconds [static dependencies only]. Details - ImportResultOutputID=d071e1a86b4c721015cccfa65f07f602 DependenciesID=53a94ee6530d5281b10ddf3dc7fa2b38 StaticDependenciesID=159151c6347421916004c1809761fa16 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.rootUv.bytes using Guid(e7265b01aa3b57a4297560b2ec159be0) (TextScriptImporter) -> (Import Result ID: 'c630d4467c3a7677afdff0f2b80dda8e') in 0.0093879 seconds [static dependencies only]. Details - ImportResultOutputID=0ad93d3c9701cab0cf4c5ba71b615713 DependenciesID=4108d2a990c3e616fc055571c0fa27d1 StaticDependenciesID=246377cb6c6a1c447da10a54b2852997 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.colorLinearRgb.bytes using Guid(e7dc7851291c88449b4d7cd33a31247a) (TextScriptImporter) -> (Import Result ID: '7f451039a4afe474d4e198d038356114') in 0.010024 seconds [static dependencies only]. Details - ImportResultOutputID=59283f5db5222aac6dc945552c54dea7 DependenciesID=63f716f513ce8aa6b22b0879004a910e StaticDependenciesID=7f73f8304badd1300dcda172988d1ffb 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.positions.bytes using Guid(28f5274becd55ba44a3809d49654d68a) (TextScriptImporter) -> (Import Result ID: 'a5160ad90f43ab3c852088cbaec1f637') in 0.0119639 seconds [static dependencies only]. Details - ImportResultOutputID=bd72055ba223df52da81f2204d919e00 DependenciesID=cbc45e8d62cb647809f3edbc1769d4a2 StaticDependenciesID=4218e4d556874e66963559b904b8811f 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.positions.bytes using Guid(784662a48f15f8b4bbb8e77a435ed283) (TextScriptImporter) -> (Import Result ID: '803a8c6cea39e2c679a22b13e3abba7f') in 0.0124825 seconds [static dependencies only]. Details - ImportResultOutputID=d03451c1cd92309cc870b7f50c0190b5 DependenciesID=4e6b8467e2dc190cdc8eadf90c7611f9 StaticDependenciesID=1685e5dd87e5b14e341e8220d0793f7d 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.positions.bytes using Guid(b854a4de459b2b34d98c5e87e4592e0a) (TextScriptImporter) -> (Import Result ID: '3936c3b7ca2fef98037691d68b31f9f2') in 0.0109094 seconds [static dependencies only]. Details - ImportResultOutputID=c0b30ed3820699973c084d9d7cae3482 DependenciesID=e2c15ba1ce9bfc2804e45b94cf7b25aa StaticDependenciesID=123b818f8448a971a7fdcc9b4a5d6304 
+Start importing Assets/NativeGroom/Character/preparation.json using Guid(c8fa4d7213473df48b11e2a821d48bf9) (TextScriptImporter) -> (Import Result ID: '36cd65ebeca2e9071e352c41d716b7d7') in 0.010105 seconds [static dependencies only]. Details - ImportResultOutputID=170cd23146a0b2fd06bf6c3f56a055c2 DependenciesID=77b5366acd3449374dc77a289d4d7be0 StaticDependenciesID=cafd7e7b59f129c5ca62225970e43227 
+Start importing Assets/NativeGroom/Character/Strands/HeadCream.rootWeightOffsets.bytes using Guid(79e863211afc3d241ba29dce1c428ed4) (TextScriptImporter) -> (Import Result ID: '398bdb8c1b1c74ba2d987173aed51b0f') in 0.0090876 seconds [static dependencies only]. Details - ImportResultOutputID=2c34220b63fceacbe63c990a48c71b3e DependenciesID=2f6bc262354a938ac792207477b0430b StaticDependenciesID=c715b86ced6feaf4bd83ba2f31bf61f7 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferIntegration.urtshader using Guid(e9f4de6d1e07fb94f9a60d35b618f724) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6b095755af600b25dba257b1420adcfa') in 0.0436301 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=88abca16d66a7184f4c4b47027b43f11 DependenciesID=7e07fd4aeea28b90cf80df010e477915 StaticDependenciesID=66dc06979910318021783fcb4ccd3ecc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader using Guid(5a2a534753fbdb44e96c3c78b5a6999d) (ScriptedImporter)
+Compiling Ray Tracing Shader "DynamicGISkyOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6f054e61c1371e27dad04f659288b92e') in 0.0264372 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d00095a4a55ff2ec22e939f29df9180b DependenciesID=ff1535c0e2997a6039c548982004dd93 StaticDependenciesID=18974378deb0e4fc540e6b2321b0ff13 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectIntegration.urtshader using Guid(5bbebdef5916845478fcef13fa10d89f) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapDirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '16a5e83c3e0e5009ab394ab2b951fdd6') in 0.0285666 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a922f61de12ed04fdf9509350b340e48 DependenciesID=57ccbabcf65c829f2817a591a3ce9914 StaticDependenciesID=63188f79534be5f4b9e074ad4af5bfb7 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.rootWeightOffsets.bytes using Guid(9be21081e36570f4b8efceb785ddb912) (TextScriptImporter) -> (Import Result ID: 'd75da172691ac6528b4ef252614d7afa') in 0.0089667 seconds [static dependencies only]. Details - ImportResultOutputID=aa729de6ac2d71ec4f29e26f38632641 DependenciesID=8170da3b9801ab80fbc51ae15303b879 StaticDependenciesID=eb85daab620128f1a8aac3c67c0436ed 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRaysAndFetchAttributes.urtshader using Guid(fbc59f55df2416344b008dc23753cae2) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRaysAndFetchAttributes.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b176c8e4b623a9b1bca035cc8a457f3e') in 0.0240886 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b313a6c864bac4a92bdbdf353437986 DependenciesID=d21a282b89a2e496dfcce7cde4fed2ac StaticDependenciesID=aa8291e86ea82085a643681c1c779d39 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.positions.bytes using Guid(0c6ae24106765404dbffad104b9a80c8) (TextScriptImporter) -> (Import Result ID: '48f3d3525983eeabbd2d533a646b3431') in 0.0085583 seconds [static dependencies only]. Details - ImportResultOutputID=793f783994f8d8ae3c3a34864b3c183e DependenciesID=b19f66f3cb2221e447dd9ab1ba8ed713 StaticDependenciesID=f4a275f2263e2f82aac3ba57e26bcafb 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapAOIntegration.urtshader using Guid(1c410815c01ce1d4d82c645c0cd45747) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapAOIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9df1e187d4190f9957b2b561b03a969c') in 0.0286665 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5103f96431e842f7259bb0177de5374a DependenciesID=149050e4eae14bbf0824943226fef567 StaticDependenciesID=bcaf3aac9727a2ca27155e619d011e5f 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationValidity.urtshader using Guid(2c32233d92a2d0745930664c087c5c9a) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationValidity.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'bcf9a3db43d96e62931481948649ec6d') in 0.0258719 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7382f6ebace9db409d45bbf3f67db551 DependenciesID=c362f229ed9d3f4e8329bf893a13639b StaticDependenciesID=4aea10376946a8225ccdfdec15a70dac 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneWeights.bytes using Guid(2c93ff8695ceeea45b573558c69e217e) (TextScriptImporter) -> (Import Result ID: '867e4698cc7700f0ef0afe6bb7348b34') in 0.0081755 seconds [static dependencies only]. Details - ImportResultOutputID=608ab468180ece83b50ae73fff361dc1 DependenciesID=6d492dcd68689ad05a1fed389e3bad94 StaticDependenciesID=c6a7d732b4425ed2545bad59e79639f5 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapValidityIntegration.urtshader using Guid(ace95ac84e213794891b4bd7c9b3c158) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapValidityIntegration.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9cfefd2467c2f392ccaf70284f81d86a') in 0.0295781 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e4e1f52bf9adcad13f0bcdba75cec3b DependenciesID=57d9d38cd2a047f8b92a9651c6724631 StaticDependenciesID=46d905dacc01197a8e043a8ad4f9d21d 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.rootBoneIndices.bytes using Guid(cc9240e810001b742ae5dceb91fa3f02) (TextScriptImporter) -> (Import Result ID: 'bc357d6e7973cdb03759f6f86acfdf44') in 0.0096775 seconds [static dependencies only]. Details - ImportResultOutputID=db7cd7a5736ec1c912a5df035e5fc914 DependenciesID=3738f5d341edcf4535ee7a48b1eb78ba StaticDependenciesID=1adaf1186892313146a517466f3e48cf 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_L.rootBoneIndices.bytes using Guid(dcc95b339ec2a2c4d84e2bd5f3328c77) (TextScriptImporter) -> (Import Result ID: '265acc847c0efb91d199e3e2a724b7cc') in 0.008546 seconds [static dependencies only]. Details - ImportResultOutputID=f3aba220e85e7d1bc24569c1b218677b DependenciesID=38ddd352a537d1fc18eb8aa017c96360 StaticDependenciesID=2031eaf48bbff48afffa81a3107f82a4 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.curveCounts.bytes using Guid(1d10108bc923ac245a9d47edf0ed44d7) (TextScriptImporter) -> (Import Result ID: 'f8e907706669144da56deca1e271cd33') in 0.0105727 seconds [static dependencies only]. Details - ImportResultOutputID=1ec4513f67f7a5fc90550ce16b122a07 DependenciesID=a1bceb3e060c9e6669f6a6add71a0ecc StaticDependenciesID=8608b49e4272a9327db24188949f9580 
+Start importing Assets/NativeGroom/Character/config.json using Guid(4d1258d1144e7154d82c6207dff60d97) (TextScriptImporter) -> (Import Result ID: '5392f1beb032de0203d2f19b50c55711') in 0.0099431 seconds [static dependencies only]. Details - ImportResultOutputID=77f7e2167f77fa0b2080d5a02238b242 DependenciesID=47416b6d24d49aa763926f7a0e9cf14e StaticDependenciesID=2d4814a52a00f615a26d78c01ca58e73 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootBoneWeights.bytes using Guid(9d9bf4a84eba82747be88cbbd67b6093) (TextScriptImporter) -> (Import Result ID: '20a576912e1d9f328d10d2d4187d6652') in 0.012562 seconds [static dependencies only]. Details - ImportResultOutputID=a063e3050b5869518509ddce06a8ff45 DependenciesID=131c4a9fe1e5351df8a729bfee683967 StaticDependenciesID=c8e37fe894992d037f4846f02ab4724f 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RestirCandidateTemporal.urtshader using Guid(ad3a9f9982f8c4f4a839a78955e78458) (ScriptedImporter)
+Compiling Ray Tracing Shader "RestirCandidateTemporal.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ee1f626977a9995fa6dc3fe2cae85133') in 0.0405489 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ee7e16793f63ad4fa9bacccbdab596d DependenciesID=a54e69929afed86f408abe0f3a11f5a4 StaticDependenciesID=2beaac54fac463ee5ee15c00b0990d01 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_L.radii.bytes using Guid(fd0a84d0f3efe2445833962243727765) (TextScriptImporter) -> (Import Result ID: 'eec66ca2cffd5e357f5f55385ff2258a') in 0.0085237 seconds [static dependencies only]. Details - ImportResultOutputID=86462c9def079094a42749acb736c99e DependenciesID=554330460285fd55fb323962a327ce27 StaticDependenciesID=2ca591bd79387dab1f111ff278534754 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationIndirect.urtshader using Guid(5ecdabd800f05984696f22ba95284516) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationIndirect.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '889fc6615150a45fc63538a9546c0e35') in 0.0422065 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7b342ad6fce78607d4cb85fc02d9d19a DependenciesID=e68919762ba0a9e0f238cb17c5dcbebb StaticDependenciesID=83ecbbd61911181b4944eb7ac9eabee5 
+Start importing Assets/NativeGroom/Character/Strands/EarOuterTawny_R.rootUv.bytes using Guid(6e73467473980de4099425474b9d3834) (TextScriptImporter) -> (Import Result ID: '0489b9829671d49dd6f35cc9f405e88d') in 0.0096336 seconds [static dependencies only]. Details - ImportResultOutputID=d7e2c2f0a03315051995931da9438c95 DependenciesID=58445a45d9000b298b2f98adafe33300 StaticDependenciesID=900c1cae2c0322d0eb504ca4fcac3f19 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Runtime/PathTracing/PathIteratorTest.urtshader using Guid(6e0b547bab30a804c8123974120d583f) (ScriptedImporter)
+Compiling Ray Tracing Shader "PathIteratorTest.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '57d947cae0e8003fbc981ad74169efaa') in 0.0316424 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07420bf6446c0c205e272929d6eb81ee DependenciesID=594f11d35b7aba65962c7886d27a4981 StaticDependenciesID=cf2a33ce9b71ea08a4459556694e1323 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LiveGI.urtshader using Guid(ceb7a31b84722d144bbeff1c8cd88769) (ScriptedImporter)
+Compiling Ray Tracing Shader "LiveGI.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '12f1f33770683c6d22725c2f237e83ab') in 0.0310678 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c58ef83ec50830e9bfe040e930b3537e DependenciesID=efbcc06b527755efc51f17180af96016 StaticDependenciesID=628001b751fe9fddf64a203b1446575e 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationOcclusion.urtshader using Guid(de3013e16d99f2746ab1735ec06a660b) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'b8fb97ca364825a954794a7a33584bbe') in 0.0306152 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=34ea5cef2db8063219dc8fd537498cc0 DependenciesID=b4bdf7721efc399300aba8c6c0cc6ced StaticDependenciesID=183f3d853e4af89ec08f4e79696e167d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirect.urtshader using Guid(1f9bfe60b4ad75943a5281839c1a4e5c) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationDirect.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'f9e05b28fe00eb70f1cbd312b7b9c80e') in 0.0318211 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4cedefe6725f61ebfce8197635258855 DependenciesID=e4ee24474e83bb9a6d47c033a5149289 StaticDependenciesID=d3f99f9cc1ae2c0c0147c2fa8da668fc 
+Start importing Assets/NativeGroom/Character/Strands/EarInnerCream_R.radii.bytes using Guid(cf745d902f18cb045a05a3d0a5c2e051) (TextScriptImporter) -> (Import Result ID: '372e590b409dbc424599279feb5f3f4a') in 0.0104647 seconds [static dependencies only]. Details - ImportResultOutputID=48c8de83dee0530465018fcdb2203b7f DependenciesID=d05d7d295ccf41e99de4e4c039230456 StaticDependenciesID=934c8b1f78443c1a21f5912aedbf09f4 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader using Guid(ff2cbab5da58bf04d82c5f34037ed123) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceVirtualOffset.urtshader", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '6f29081014305158ffc1f553fe9ac97c') in 0.0339792 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7915af89c97778059399f61159182492 DependenciesID=4529efd1d999f927776004ba32005281 StaticDependenciesID=f51ff46b48d84884c883ac486ebfd7f9 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=38918b4dc3a415142a9f074fa8222f14): Total: 22.797 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=106 (actual=82, local cache=24, cache server=0)
+		Asset DB Process Time: managed=166 ms, native=14961 ms
+		Asset DB Callback time: managed=201 ms, native=421 ms
+		Scripting: domain reloads=1, domain reload time=1121 ms, compile time=5873 ms, other=49 ms
+		Project Asset Count: scripts=1166, non-scripts=2827
+		Asset File Changes: new=47, changed=47, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 25.003ms
+	ApplyChangesToAssetFolders: 0.895ms
+	Scan: 231.548ms
+	OnSourceAssetsModified: 1.027ms
+	CategorizeScriptCompilationAssets: 28.111ms
+	ProcessAssetsWithTransientArtifactChanges: 79.973ms
+	CategorizeAssets: 113.540ms
+	CompileScripts: 5872.851ms
+	ImportOutOfDateAssets: 14526.937ms (3423.932ms without children)
+		ImportManagerImport: 10985.679ms (7.210ms without children)
+			UpdateCategorizedAssets: 2.015ms
+		UnloadImportedAssets: 10.074ms
+		ReloadImportedAssets: 128.668ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.946ms
+		OnDemandSchedulerStart: 0.514ms
+	PostProcessAllAssets: 598.067ms
+		ComputeShaderImportPostprocess 244.806ms
+		RaytracingShaderImportPostprocess 117.978ms
+		VersionControlSettings.HiddenFilePostprocess 0.472ms
+		PostProcessCallbackCreateDeferredMaterials 0.194ms
+		ShaderAssetModifiedCallback 0.137ms
+		SpeedTreeImporter.PostprocessAllAssets 0.088ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.079ms
+		XRBuildSystem.XRAssetImported 0.078ms
+		BlockShaderImporter.PostprocessAllAssets 0.066ms
+		MonoPostProcessAllAssets: 199.536ms
+			AssetPostprocessor.OnPostprocessAllAssets 122.864ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 16.783ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 13.828ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.517ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 5.246ms
+			MaterialPostprocessor.OnPostprocessAllAssets 3.797ms
+			SyncVS.PostprocessSyncProject 2.536ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.156ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.052ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 1.838ms
+			AssetChangedListener.OnPostprocessAllAssets 1.555ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.210ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 1.073ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.827ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.780ms
+			PostProcessor.OnPostprocessAllAssets 0.778ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.667ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.665ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.643ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.371ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.316ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.281ms
+			AssetEvents.OnPostprocessAllAssets 0.262ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.210ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.179ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.159ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.149ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.145ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.134ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.075ms
+	PostAssetChangesProfiler: 3.462ms
+	UnloadStreamsBegin: 1.833ms
+	PersistCurrentRevisions: 0.897ms
+	GenerateScriptTypeHashes: 3.707ms
+	GenerateScriptTypeSerializationHashes: 7.161ms
+	Untracked: 1305.953ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 4.673ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Krag Kings — Engine Comparison
+Unloading 119 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5346 unused Assets / (13.0 MB). Loaded Objects now: 6351.
+Memory consumption went from 263.0 MB to 250.0 MB.
+Total: 15.553400 ms (FindLiveObjects: 0.657800 ms CreateObjectMapping: 1.068100 ms MarkObjects: 6.827500 ms  DeleteObjects: 6.996800 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (2.5 KB). Loaded Objects now: 6351.
+Memory consumption went from 223.7 MB to 223.7 MB.
+Total: 6.536300 ms (FindLiveObjects: 0.339600 ms CreateObjectMapping: 0.255700 ms MarkObjects: 5.911200 ms  DeleteObjects: 0.028900 ms)
+
+Exception: Cleaned character triangle mismatch
+  at KragKings.StrandPilot.CharacterImportProbe.Run () [0x0046a] in D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Assets\Editor\CharacterImportProbe.cs:85 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+KragKings.StrandPilot.CharacterImportProbe:Run() (at Assets\Editor\CharacterImportProbe.cs:116)
+
+(Filename: Assets/Editor/CharacterImportProbe.cs Line: 116)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Matthew-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Matthew channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791315289108,"processId":10512,"allocatedMemory":15532544,"memoryLabels":[{"Default":199968},{"Permanent":15276},{"NewDelete":69051},{"Thread":4230384},{"Manager":21245},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":845460},{"Material":24},{"GfxDevice":55313},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":952},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"MonoCode":64},{"ScriptingNativeRuntime":155052},{"BaseObject":1620368},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":1088},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":58230},{"StaticString":6718},{"Utility":2672774},{"Curl":2478},{"PoolAlloc":2168},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":23216},{"WebRequest":845},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":108696},{"VersionControl":4},{"Undo":931},{"AssetDatabase":4859297},{"EditorGi":328},{"UnityConnect":37753},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":213},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2884},{"Windowing":456},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

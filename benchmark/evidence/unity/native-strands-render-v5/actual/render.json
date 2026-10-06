@@ -1,0 +1,308 @@
+{
+    "status": "Actual static fixture render only; inspect images before acceptance. Character attachment and performance untested",
+    "engine": "6000.4.4f1",
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "api": "Direct3D12",
+    "shader": "Physical Hair / native HDRP High Quality Lines",
+    "radiusRepresentation": "Per-point diameters retained in HairAsset; current official HairVertex shader renders a fitted linear root-to-tip taper",
+    "colorRepresentation": "Regional constant colors for the fixture; authored per-point character colors not yet transferred",
+    "width": 1280,
+    "height": 720,
+    "regions": 3,
+    "strands": 12,
+    "points": 108,
+    "simulation": false,
+    "highQualityLines": true,
+    "maxImportedPositionErrorM": 0.0,
+    "maxImportedDiameterErrorM": 0.0,
+    "submittedFrames": 88,
+    "completedCameraFrames": 183,
+    "hiddenColorRange": 0,
+    "visibleCoverage": [
+        {
+            "region": "CreamHead",
+            "changedPixels": 27601
+        },
+        {
+            "region": "PinkEarWisps",
+            "changedPixels": 19584
+        },
+        {
+            "region": "TawnyEarOuter",
+            "changedPixels": 7739
+        }
+    ],
+    "rendererStates": [
+        {
+            "stage": "initial",
+            "region": "CreamHead",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "initial",
+            "region": "PinkEarWisps",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "initial",
+            "region": "TawnyEarOuter",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "initialized",
+            "region": "CreamHead",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "initialized",
+            "region": "PinkEarWisps",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "initialized",
+            "region": "TawnyEarOuter",
+            "callback": 16,
+            "unityFrame": 16,
+            "completedCameraFrames": 22,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "visible",
+            "region": "CreamHead",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "visible",
+            "region": "PinkEarWisps",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "visible",
+            "region": "TawnyEarOuter",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 1,
+            "lineRenderers": 1,
+            "validLineRenderers": 1,
+            "shaderNames": [
+                "Krag Kings/Native Groom/NativeFurPhysical"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": true
+        },
+        {
+            "stage": "disabled",
+            "region": "CreamHead",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        },
+        {
+            "stage": "disabled",
+            "region": "PinkEarWisps",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        },
+        {
+            "stage": "disabled",
+            "region": "TawnyEarOuter",
+            "callback": 72,
+            "unityFrame": 72,
+            "completedCameraFrames": 135,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        },
+        {
+            "stage": "hidden",
+            "region": "CreamHead",
+            "callback": 96,
+            "unityFrame": 96,
+            "completedCameraFrames": 183,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        },
+        {
+            "stage": "hidden",
+            "region": "PinkEarWisps",
+            "callback": 96,
+            "unityFrame": 96,
+            "completedCameraFrames": 183,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        },
+        {
+            "stage": "hidden",
+            "region": "TawnyEarOuter",
+            "callback": 96,
+            "unityFrame": 96,
+            "completedCameraFrames": 183,
+            "renderers": 1,
+            "activeRenderers": 0,
+            "lineRenderers": 0,
+            "validLineRenderers": 0,
+            "shaderNames": [
+                "missing"
+            ],
+            "vertexSetupNames": [
+                "ComputeShader-VertexSetup"
+            ],
+            "instanceActive": false
+        }
+    ],
+    "errors": []
+}

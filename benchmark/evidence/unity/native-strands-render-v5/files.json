@@ -1,0 +1,50 @@
+[
+  {
+    "path": "actual/render.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v5/render.json",
+    "sha256": "61bcce6cced2c266ac431b90eaa00766d9d333be53ddd3eb23a675fc39c3d5f7",
+    "bytes": 9347
+  },
+  {
+    "path": "actual/strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v5/strands.png",
+    "sha256": "d3c71e4a48422780c3aa9726779c1aae7d497ed156bd002adbf521fb5e26bd8b",
+    "bytes": 110133
+  },
+  {
+    "path": "actual/without-strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v5/without-strands.png",
+    "sha256": "f395bc6ce79ddee73daa45b2a1d428a901aec88789d2db43d6e1972bd789ad25",
+    "bytes": 13559
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-strand-fixture-render-v5.log",
+    "sha256": "8a0a157880e8fc69d305a055b567a1b04c0fb4eddce7d6ff83e42ae2bd23f919",
+    "bytes": 52171
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v5-memory.csv",
+    "sha256": "b1c78e5656d4c8bad99a3cf8e752c3937fd7d7c4eddf1c2b483f49608c15b2f3",
+    "bytes": 573
+  },
+  {
+    "path": "gpu.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v5-gpu.csv",
+    "sha256": "8edd81971c72ec1d8b14ad1ee89a73257ac016b00a91d05b2de5426d0f95e312",
+    "bytes": 782
+  },
+  {
+    "path": "render-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/RenderProbe.cs",
+    "sha256": "23353b58b330eec7025ae87094e2680e20a698c86e0bee5a60c13eac6986343c",
+    "bytes": 21588
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/render-v5.job.json",
+    "sha256": "40507ff0be653f12b946178181a03e5d7e6da14ffe9a7cfbf7675dc97bdb5dc3",
+    "bytes": 869
+  }
+]

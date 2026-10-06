@@ -1,0 +1,56 @@
+[
+  {
+    "path": "actual/render.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v4/render.json",
+    "sha256": "cd6dfa49f8e83c890a65ea0f5c43ecf13d3ca5a1a97fd31e270555259efa5091",
+    "bytes": 5180
+  },
+  {
+    "path": "actual/strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v4/strands.png",
+    "sha256": "ee6ad065544db952e972c0adea755d3964442d99134788cc44c6ad4cc55c210a",
+    "bytes": 73484
+  },
+  {
+    "path": "actual/without-strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v4/without-strands.png",
+    "sha256": "f395bc6ce79ddee73daa45b2a1d428a901aec88789d2db43d6e1972bd789ad25",
+    "bytes": 13559
+  },
+  {
+    "path": "actual/failure.txt",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v4/failure.txt",
+    "sha256": "f3cf3c5b98b3af11a9e01f9bbb48c3cbdde84bf82d6e3ee0d75bfe0e656ed89a",
+    "bytes": 232
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-strand-fixture-render-v4.log",
+    "sha256": "944797c0b78901ebb77afb7159ba4ca4ee1b6e539e50f0d99aac40f7ceaee832",
+    "bytes": 53918
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v4-memory.csv",
+    "sha256": "ae30295993e01934f1737b6f0696ebe8f537439b7c9bbd3cfc7163b2d8f375b3",
+    "bytes": 1164
+  },
+  {
+    "path": "gpu.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v4-gpu.csv",
+    "sha256": "b102749b73078c4773fd67d12ea5bc06a73e1c94ba7413e7240917840765a640",
+    "bytes": 1510
+  },
+  {
+    "path": "render-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/RenderProbe.cs",
+    "sha256": "e1b4e41fa1dfd09446dfced476777a58bdae70098a995c8431b20785192b2518",
+    "bytes": 19519
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/render-v4.job.json",
+    "sha256": "abf63ff99d802bbc165f72bf248f5adc19016db1a70d69bc8db3054824ab3e04",
+    "bytes": 869
+  }
+]

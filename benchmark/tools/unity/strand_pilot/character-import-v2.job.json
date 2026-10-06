@@ -1,0 +1,23 @@
+{
+  "name": "unity-native-character-import-v2",
+  "executable": "D:\\Unity\\Hub\\6000.4.4f1\\Editor\\Unity.exe",
+  "arguments": [
+    "-batchmode",
+    "-nographics",
+    "-job-worker-count",
+    "2",
+    "-projectPath",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\unity-strand-hair-pilot\\project",
+    "-logFile",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unity-native-character-import-v2.log",
+    "-executeMethod",
+    "KragKings.StrandPilot.CharacterImportProbe.Run"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unity-strand-hair-pilot\\project",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "maxTreePrivateGB": 10,
+  "trackProcessTree": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unity-native-character-import-v2.log",
+  "successMarker": "KK_NATIVE_CHARACTER_IMPORT_COMPLETE"
+}
