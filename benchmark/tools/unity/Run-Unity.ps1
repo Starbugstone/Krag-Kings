@@ -18,7 +18,12 @@ if (-not $Interactive) {
     # The shared wrapper handles quoting; retain raw paths in the JSON specification.
     $rawArguments=@($arguments | ForEach-Object { $_.Trim('"') })
     $specPath=Join-Path $repo 'benchmark\local\unity-job.json'
-    @{name='unity-batch';executable=$editor;arguments=$rawArguments;workingDirectory=$project;minAvailableGB=10;maxPrivateGB=8} | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 $specPath
+    $spec=@{name='unity-batch';executable=$editor;arguments=$rawArguments;workingDirectory=$project;minAvailableGB=10;maxPrivateGB=8}
+    if($Method -in @('KragKings.Editor.BenchmarkBuild.PrepareAndBuild','KragKings.Editor.BenchmarkBuild.BuildPrepared')){
+        $spec.successLog=Join-Path $logDir $LogName
+        $spec.successMarker='KRAG_BUILD_RESULT Succeeded'
+    }
+    $spec | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 $specPath
     & (Join-Path $PSScriptRoot '..\Run-HeavyTask.ps1') -JobSpec $specPath
     exit $LASTEXITCODE
 }
