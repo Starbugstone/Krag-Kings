@@ -1,0 +1,20 @@
+{
+  "recordType": "Frozen actually executed source recipes; see original job for dependency paths",
+  "recipes": [
+    {
+      "source": "benchmark/tools/animation/rebuild_nib_hand_fit.py",
+      "sha256": "ef0dede95d66aa1b4a723dfd2aa0545daf10e19e2f8e0a3d355f0eb08b5c324e",
+      "receiptField": "recipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/hand_skin_domains.py",
+      "sha256": "663329c11bf3ec187f23fa1c312fb1926e33c172889e3ccb2504cfe674b0663c",
+      "receiptField": "domainRecipeSha256"
+    },
+    {
+      "source": "benchmark/tools/nib/v5_wip/nib_hand_v5.py",
+      "sha256": "f356517d546caf577939821eb93d5d5f6f6707330b9caf2d9154196a2fbc4c07",
+      "receiptField": null
+    }
+  ]
+}

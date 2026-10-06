@@ -1,0 +1,35 @@
+{
+  "recordType": "Frozen actually executed source recipes; see original job for dependency paths",
+  "recipes": [
+    {
+      "source": "benchmark/tools/animation/retarget_cmu_study.py",
+      "sha256": "5818956e7b2f75732c1da3727d910e2ba75548e0bb00d67811aeaa48a0cd5ddc",
+      "receiptField": "recipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/sole_geometry.py",
+      "sha256": "a7a59b3c6cc16a99d46f987310623d47f1077c17e19380b2476a124e14a5a1c9",
+      "receiptField": "soleHelperSha256"
+    },
+    {
+      "source": "benchmark/tools/nib/motion_wip/ear_motion.py",
+      "sha256": "6365392ab2cd7c3dbb03dc8788b1cc35ea654f55d5131f17f561ca04267f26ef",
+      "receiptField": "earRecipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/export_contract.py",
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+      "receiptField": "animationChannelCompletionRecipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/acclaim_motion.py",
+      "sha256": "a8ca99071984af72c538f3b1fb765be54b03b18e734d51e8284d3f71608820dc",
+      "receiptField": null
+    },
+    {
+      "source": "benchmark/tools/animation/humanoid_arms.py",
+      "sha256": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+      "receiptField": null
+    }
+  ]
+}

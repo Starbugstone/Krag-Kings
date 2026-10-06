@@ -1,0 +1,36 @@
+{
+  "status": "Actual Blender clay motion review; unaccepted source, no engine or material proof",
+  "sourceReviewSha256": "1c60de67570498f19ace5ad23c9f7dc096244dafad78c4142f78dd3d0aab2bfe",
+  "segments": [
+    {
+      "clip": "Walk",
+      "sourceFramesPerView": 24,
+      "sourceSampleRate": 30,
+      "repeats": 4,
+      "file": "/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/Walk.mp4",
+      "sha256": "fab9b639ff64c6fab3967375af35acff7744e6d5b09c8205624a51fcecf1b2d8"
+    },
+    {
+      "clip": "Run",
+      "sourceFramesPerView": 18,
+      "sourceSampleRate": 30,
+      "repeats": 4,
+      "file": "/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/Run.mp4",
+      "sha256": "5ff3b4965ebeca01dab404af36485ca82a3050fc0c3362088e977c704dc26a5f"
+    },
+    {
+      "clip": "Idle",
+      "sourceFramesPerView": 60,
+      "sourceSampleRate": 10,
+      "repeats": 1,
+      "file": "/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/Idle.mp4",
+      "sha256": "936819939442ceb7cfecfe468540c8edab4aa811067626eca284fe6008621abf"
+    }
+  ],
+  "output": "/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/Nib_v7_Actual_Blender_Motion_Review.mp4",
+  "outputSha256": "0d6572026bb641e8eff034a5e0719004fabab2c19c25eafdb21b9e1e039ab7ec",
+  "outputFPS": 30,
+  "idleSampling": "Idle rendered10Hz; held at30fps without interpolation. This is not a facial timing or runtime FPS benchmark.",
+  "engineEvidence": false,
+  "artisticAcceptance": false
+}

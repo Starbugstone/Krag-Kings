@@ -1,0 +1,22 @@
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x335b5d80] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from '/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: 2142 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2142 kb/s, 30 fps, 30 tbr, 15360 tbn
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to '/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v7/motion-video/Nib_v7_Actual_Blender_Motion_Review.mp4':
+  Metadata:
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 2142 kb/s, 30 fps, 30 tbr, 15360 tbn
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x79348c002340] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x79348c006dc0] Auto-inserting h264_mp4toannexb bitstream filter
+[out#0/mp4 @ 0x3360fbc0] video:2063KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.238462%
+size=    2068KiB time=00:00:11.53 bitrate=1469.0kbits/s speed= 213x    
