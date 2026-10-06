@@ -1,0 +1,17 @@
+[2026.10.06-01.06.22:861][  2]LogPython: KK_IMPORT_BEGIN shared assets=D:\Dev\Krag-Kings\benchmark\shared
+[2026.10.06-01.07.03:057][  2]LogSkeletalMesh: Built Skeletal Mesh [14.36s] /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural
+[2026.10.06-01.08.00:492][  2]LogSkeletalMesh: Built Skeletal Mesh [46.97s] /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural
+[2026.10.06-01.08.03:251][  2]LogFileHelpers: Saving Package: /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_Skeleton
+[2026.10.06-01.08.03:263][  2]LogFileHelpers: Saving Package: /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_PhysicsAsset
+[2026.10.06-01.08.05:993][  2]LogPython: Error: Traceback (most recent call last):
+[2026.10.06-01.08.05:993][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 613, in <module>
+[2026.10.06-01.08.05:993][  2]LogPython: Error:     main()
+[2026.10.06-01.08.05:993][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 557, in main
+[2026.10.06-01.08.05:994][  2]LogPython: Error:     krags, nibs = species('krag'), species('nib')
+[2026.10.06-01.08.05:994][  2]LogPython: Error:                   ^^^^^^^^^^^^^^^
+[2026.10.06-01.08.05:994][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 528, in species
+[2026.10.06-01.08.05:994][  2]LogPython: Error:     variants.append(import_variant(fbx))
+[2026.10.06-01.08.05:994][  2]LogPython: Error:                     ^^^^^^^^^^^^^^^^^^^
+[2026.10.06-01.08.05:995][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 505, in import_variant
+[2026.10.06-01.08.05:995][  2]LogPython: Error:     raise RuntimeError(f'{fbx.stem}/{name}: missing skeletal pelvis track or varying FaceRoot performance; exact track data saved to import-validation-failure.json')
+[2026.10.06-01.08.05:995][  2]LogPython: Error: RuntimeError: Krag_Natural/Idle: missing skeletal pelvis track or varying FaceRoot performance; exact track data saved to import-validation-failure.json

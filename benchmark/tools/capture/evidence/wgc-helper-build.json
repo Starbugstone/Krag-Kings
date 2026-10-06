@@ -1,0 +1,26 @@
+{
+  "recordedUtc": "2026-10-06T00:44:24.820820+00:00",
+  "nativeCompile": {
+    "passed": true,
+    "toolset": "MSVC 14.44 / VS2022 Build Tools 17.14.41",
+    "windowsSdk": "10.0.26100.0",
+    "configuration": "C++17 x64 optimized",
+    "log": "benchmark/local/capture/native/build.log",
+    "executableSha256": "0ec03a0acc6b01f54dda84d4c45bfede313c506ce9514e3eed40f5be6208fe92"
+  },
+  "powershellSyntaxPassed": true,
+  "invalidTargetCheck": {
+    "executed": true,
+    "exitCode": 1,
+    "message": "WGC_FAILED Game window ownership, foreground, visibility or client dimensions changed",
+    "captureStarted": false
+  },
+  "actualGameCaptureExecuted": false,
+  "desktopCaptureImplemented": false,
+  "sources": {
+    "tools/capture/native/WindowCapture.cpp": "31cbe40caa407f9641ceac67faf1108ca70e34c7700c7bba1759b0633e658504",
+    "tools/capture/Build-WindowCapture.ps1": "2efa0aa3b14a7795552287fea0a8f05bb93f2d58a9a6ef7a11d0b106fe301d42",
+    "tools/capture/Capture-Demo.ps1": "84614cb6bf181ac281622fd7a76d308efb9e6152d517a73976b2f741d1d30da6",
+    "tools/capture/Test-ShowcaseMotion.ps1": "05ee467bbba16a2b514a549ed24c0cb7e30a5a3d34657642d5a40b0398eadef8"
+  }
+}

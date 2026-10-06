@@ -1,0 +1,100 @@
+{
+  "auditedUtc": "2026-10-06T00:42:29.539882+00:00",
+  "scope": "Independent raw FBX audit of stable isolated artist candidates; no Unreal import/render implied. Natural point/morph payload hashes compared with committed pretriangulation baseline. Artist reports separately validate normals, UV/material corners, rigs and animations.",
+  "files": [
+    {
+      "file": "Krag_Natural.fbx",
+      "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+      "meshes": [
+        {
+          "vertexCount": 516105,
+          "triangleCount": 1026672,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25,
+      "basisPayloadIdenticalToNontriangulatedBaseline": true,
+      "allSparseMorphPointPayloadsIdenticalToBaseline": true
+    },
+    {
+      "file": "Krag_Crusher.fbx",
+      "sha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+      "meshes": [
+        {
+          "vertexCount": 496305,
+          "triangleCount": 987908,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25
+    },
+    {
+      "file": "Krag_IronJaw.fbx",
+      "sha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+      "meshes": [
+        {
+          "vertexCount": 519805,
+          "triangleCount": 1034000,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25
+    },
+    {
+      "file": "Krag_Piston.fbx",
+      "sha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+      "meshes": [
+        {
+          "vertexCount": 487039,
+          "triangleCount": 968616,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25
+    },
+    {
+      "file": "Nib_Natural.fbx",
+      "sha256": "3e912b71e5ee1a908bb89bf0fe3b5b0faa3977ca08a3c396a5eea46e4a9d7898",
+      "meshes": [
+        {
+          "vertexCount": 304261,
+          "triangleCount": 538642,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25,
+      "basisPayloadIdenticalToNontriangulatedBaseline": true,
+      "allSparseMorphPointPayloadsIdenticalToBaseline": true
+    },
+    {
+      "file": "Nib_GripReplacement.fbx",
+      "sha256": "4b35892fcaec9456a9ff6f6f1209febcffae66ac4e05c3609017f810dace6ce8",
+      "meshes": [
+        {
+          "vertexCount": 301078,
+          "triangleCount": 532244,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25
+    },
+    {
+      "file": "Nib_LegReplacement.fbx",
+      "sha256": "fd1716cad09d15dbb52bec187512e793820963941465dcb7478acc8cc3f133f7",
+      "meshes": [
+        {
+          "vertexCount": 301669,
+          "triangleCount": 533534,
+          "allTriangles": true
+        }
+      ],
+      "morphCount": 25
+    }
+  ],
+  "nextImportChanges": [
+    "Pretriangulated source meshes bypass FBXSDK nontriangle conversion",
+    "Process-local -corelimit=2 reduces native morph-builder concurrency"
+  ],
+  "memoryGuardChanged": false,
+  "runtimeQualityChanged": false
+}

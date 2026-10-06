@@ -1,0 +1,22 @@
+{
+  "completed": false,
+  "nativeExitCode": 0,
+  "guardExitCode": 89,
+  "peakPrivateMiB": 8150.0,
+  "minimumAvailableMiB": 5192.0,
+  "skeletonAndPhysicsPersisted": true,
+  "idleLengthSeconds": 2.0,
+  "idleBoneTrackCount": 69,
+  "varyingFacialBones": [
+    "eye_l",
+    "lidupper_l",
+    "mouthcorner_l",
+    "eye_r",
+    "lidupper_r",
+    "mouthcorner_r"
+  ],
+  "semanticFailureCause": "Python checked case-sensitive Pelvis against Sequencer DataModel lowercase pelvis, although UE FName matching is case-insensitive",
+  "sourceFixPrepared": "casefold comparison for required pelvis track; no animation data or native reader change",
+  "fixExecuted": false,
+  "fullImportStillPending": true
+}

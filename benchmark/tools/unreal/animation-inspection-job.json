@@ -1,0 +1,24 @@
+{
+  "name": "unreal-animation-inspection",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\inspect_imported_character.py",
+    "-unattended",
+    "-nosplash",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\animation-inspection.log",
+    "-NoSound",
+    "-NullRHI",
+    "-corelimit=2"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-animation-inspection-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-animation-inspection-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\animation-inspection.log",
+  "successMarker": "KK_ANIMATION_INSPECTION_COMPLETE"
+}

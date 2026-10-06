@@ -1,0 +1,48 @@
+{
+  "archivedUtc": "2026-10-06T01:01:41.576604+00:00",
+  "source": "benchmark/unreal/KragKingsBenchmark/Content/Benchmark/Characters/krag/Krag_Natural",
+  "destination": "benchmark/local/unreal-invalid-import-samples/20261006-triangulated-missing-dependencies/Krag_Natural",
+  "reason": "Generated mesh/animation packages reference missing Skeleton and PhysicsAsset packages; preserve sample and prevent broken-package reload before corrected import",
+  "files": [
+    {
+      "file": "Animations/FacePerformance/FacePerformance.uasset",
+      "bytes": 191289,
+      "sha256": "3d2ef7b93016500acf678715d6c7e5da9c615e6080356fe518627cd0e818342d"
+    },
+    {
+      "file": "Animations/Hit/Hit.uasset",
+      "bytes": 100670,
+      "sha256": "9931279ca1224dbe991ec06651c813ae7bc0fabc396336ba1a386a180372adaa"
+    },
+    {
+      "file": "Animations/Idle/Idle.uasset",
+      "bytes": 119016,
+      "sha256": "2e736ddd8234e8c75ba57a5b352095e16530d8f83f30430bb6f9ebd98a82384c"
+    },
+    {
+      "file": "Animations/Melee/Melee.uasset",
+      "bytes": 112850,
+      "sha256": "f7ea4066366993194592b9a19b0b16feb600c9a832fcf48dfa68c5b4a6d061fc"
+    },
+    {
+      "file": "Animations/Run/Run.uasset",
+      "bytes": 96958,
+      "sha256": "7759a66e46049213d94327cd5900dd2cd8c37c0d808bfb4176a7efebf47f5da8"
+    },
+    {
+      "file": "Animations/Shoot/Shoot.uasset",
+      "bytes": 93042,
+      "sha256": "7917dd0c40584ea8216bdadec4c8958964fe95842264b7e2a264f306508798bd"
+    },
+    {
+      "file": "Animations/Walk/Walk.uasset",
+      "bytes": 121128,
+      "sha256": "dfea1c09b51c57efec0dff42997a3243fc42f0e9beb0183c9f87311620c44ee1"
+    },
+    {
+      "file": "Krag_Natural.uasset",
+      "bytes": 166113626,
+      "sha256": "c18c76de5caa6b2529ebe9306cf51d21df7de74becd5f1317e596e43a5b01820"
+    }
+  ]
+}

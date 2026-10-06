@@ -1,0 +1,30 @@
+{
+  "attemptUtc": "2026-10-06T02:48:54.1333202+02:00",
+  "finishedUtc": "2026-10-06T02:51:01.1140776+02:00",
+  "completed": false,
+  "nativeExitCode": 0,
+  "semanticSuccess": false,
+  "memoryGuardTerminated": false,
+  "peakPrivateMiB": 8280.0,
+  "minimumAvailableMiB": 5077.0,
+  "maximumCommitPercent": 70.0,
+  "importControls": {
+    "pretriangulated": true,
+    "reportedCores": 2,
+    "NullRHI": true,
+    "maxPrivateGiB": 9
+  },
+  "savedAssets": [
+    "Krag_Natural skeletal mesh with morphs",
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "failure": "Krag_Natural/Idle: missing skeletal pelvis track or varying FaceRoot performance",
+  "nextStep": "Inspect saved animation track names, lengths and facial transform ranges without reimport; no speculative import setting change",
+  "runtimeOrRenderValidated": false
+}

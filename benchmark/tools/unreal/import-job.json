@@ -11,6 +11,7 @@
     "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\import.log",
     "-NoSound",
     "-NullRHI",
+    "-corelimit=2",
     "-KKReuseMaterials"
   ],
   "workingDirectory": "D:\\Dev\\Krag-Kings",
@@ -18,5 +19,7 @@
   "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-import-stderr.log",
   "minAvailableGB": 10,
   "maxPrivateGB": 9,
-  "gpuTelemetry": true
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\import.log",
+  "successMarker": "KK_IMPORT_COMPLETE"
 }

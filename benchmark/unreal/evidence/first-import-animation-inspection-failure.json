@@ -1,0 +1,12 @@
+{
+  "nativeExitCode": 0,
+  "guardExitCode": 89,
+  "successMarkerPresent": false,
+  "inspectionCompleted": false,
+  "provenFailure": "Reload of saved Idle fails because its referenced Krag_Natural_Skeleton package does not exist on disk; PhysicsAsset is also absent",
+  "initialInMemoryTrackFailureExplained": false,
+  "apiAudit": "Installed UE5.8 UAnimSequenceBase::GetDataModel already returns IAnimationDataModel; no speculative native API replacement made",
+  "repairPrepared": "Explicitly save and disk-verify skeleton/physics dependencies before clips; preserve incomplete generated packages; log actual tracks/facial arrays if semantic check fails again",
+  "originalAssetsArchive": "benchmark/local/unreal-invalid-import-samples/20261006-triangulated-missing-dependencies/Krag_Natural",
+  "actualRepairImportExecuted": false
+}

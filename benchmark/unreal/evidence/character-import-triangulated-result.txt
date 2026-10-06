@@ -1,0 +1,32 @@
+[2026.10.06-00.48.55:663][  0]LogInit: CPU Page size=4096, Cores=2
+[2026.10.06-00.49.11:784][  2]LogPython: KK_IMPORT_BEGIN shared assets=D:\Dev\Krag-Kings\benchmark\shared
+[2026.10.06-00.49.17:898][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.49.19:261][  2]LogFbx: Bones digested - 69  Depth of hierarchy - 11
+[2026.10.06-00.49.53:291][  2]LogSkeletalMesh: Built Skeletal Mesh [14.63s] /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural
+[2026.10.06-00.50.52:643][  2]LogSkeletalMesh: Built Skeletal Mesh [48.50s] /Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural
+[2026.10.06-00.50.57:106][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:129][  2]LogFbx: Parsing AnimStack Idle
+[2026.10.06-00.50.57:293][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:311][  2]LogFbx: Parsing AnimStack Walk
+[2026.10.06-00.50.57:416][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:435][  2]LogFbx: Parsing AnimStack Run
+[2026.10.06-00.50.57:537][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:557][  2]LogFbx: Parsing AnimStack Melee
+[2026.10.06-00.50.57:660][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:678][  2]LogFbx: Parsing AnimStack Shoot
+[2026.10.06-00.50.57:772][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:794][  2]LogFbx: Parsing AnimStack Hit
+[2026.10.06-00.50.57:900][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.50.57:919][  2]LogFbx: Parsing AnimStack FacePerformance
+[2026.10.06-00.50.58:105][  2]LogPython: Error: Traceback (most recent call last):
+[2026.10.06-00.50.58:105][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 580, in <module>
+[2026.10.06-00.50.58:105][  2]LogPython: Error:     main()
+[2026.10.06-00.50.58:106][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 524, in main
+[2026.10.06-00.50.58:106][  2]LogPython: Error:     krags, nibs = species('krag'), species('nib')
+[2026.10.06-00.50.58:106][  2]LogPython: Error:                   ^^^^^^^^^^^^^^^
+[2026.10.06-00.50.58:106][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 506, in species
+[2026.10.06-00.50.58:107][  2]LogPython: Error:     variants.append(import_variant(fbx))
+[2026.10.06-00.50.58:107][  2]LogPython: Error:                     ^^^^^^^^^^^^^^^^^^^
+[2026.10.06-00.50.58:107][  2]LogPython: Error:   File "D:/Dev/Krag-Kings/benchmark/tools/unreal/import_shared_assets.py", line 483, in import_variant
+[2026.10.06-00.50.58:107][  2]LogPython: Error:     raise RuntimeError(f'{fbx.stem}/{name}: missing skeletal pelvis track or varying FaceRoot performance')
+[2026.10.06-00.50.58:107][  2]LogPython: Error: RuntimeError: Krag_Natural/Idle: missing skeletal pelvis track or varying FaceRoot performance

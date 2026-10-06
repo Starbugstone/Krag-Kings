@@ -1,0 +1,93 @@
+{
+  "passed": false,
+  "scope": "Known 72-second showcase camera/pose cues; excludes top and bottom HUD",
+  "visualAcceptance": false,
+  "minimumMeanAbsoluteDifference": 0.005,
+  "minimumChangedPixelFraction": 0.05,
+  "frames": [
+    {
+      "cueSeconds": 3,
+      "sha256": "d5fefd7f2267dcb6cec4f29d7b8f2bf9432254ba01269a11522ef3ef2afb447e",
+      "videoSeconds": 3.6762
+    },
+    {
+      "cueSeconds": 18,
+      "sha256": "cb8dbf056eb784ce96ffa8736ac70e5563a374e9d8e497657443553aff8c8739",
+      "videoSeconds": 18.6762
+    },
+    {
+      "cueSeconds": 31,
+      "sha256": "cb8dbf056eb784ce96ffa8736ac70e5563a374e9d8e497657443553aff8c8739",
+      "videoSeconds": 31.6762
+    },
+    {
+      "cueSeconds": 41,
+      "sha256": "cb8dbf056eb784ce96ffa8736ac70e5563a374e9d8e497657443553aff8c8739",
+      "videoSeconds": 41.6762
+    },
+    {
+      "cueSeconds": 54,
+      "sha256": "cb8dbf056eb784ce96ffa8736ac70e5563a374e9d8e497657443553aff8c8739",
+      "videoSeconds": 54.6762
+    },
+    {
+      "cueSeconds": 64,
+      "sha256": "cb8dbf056eb784ce96ffa8736ac70e5563a374e9d8e497657443553aff8c8739",
+      "videoSeconds": 64.6762
+    }
+  ],
+  "comparisons": [
+    {
+      "changedPixelFraction": 0,
+      "passed": false,
+      "fromCue": 3,
+      "meanAbsoluteDifference": 0.0009752859477124183,
+      "toCue": 18
+    },
+    {
+      "changedPixelFraction": 0,
+      "passed": false,
+      "fromCue": 3,
+      "meanAbsoluteDifference": 0.0009752859477124183,
+      "toCue": 31
+    },
+    {
+      "changedPixelFraction": 0,
+      "passed": false,
+      "fromCue": 3,
+      "meanAbsoluteDifference": 0.0009752859477124183,
+      "toCue": 41
+    },
+    {
+      "changedPixelFraction": 0,
+      "passed": false,
+      "fromCue": 31,
+      "meanAbsoluteDifference": 0,
+      "toCue": 41
+    },
+    {
+      "changedPixelFraction": 0,
+      "passed": false,
+      "fromCue": 54,
+      "meanAbsoluteDifference": 0,
+      "toCue": 64
+    }
+  ],
+  "freezeDetection": {
+    "longestPlateauSeconds": 74.833008,
+    "minimumDurationSeconds": 5,
+    "passed": false,
+    "intervals": [
+      {
+        "durationSeconds": 74.833008,
+        "endSeconds": 74.833008,
+        "startSeconds": 0
+      }
+    ],
+    "noiseThresholdDb": -60
+  },
+  "error": "Known moving/wide/portrait showcase cues are visually stale or too similar. Preserve raw evidence; reject this recording and inspect the capture backend.",
+  "sourceVideo": "benchmark/local/evidence/unity-showcase/20261006-024245/capture/unity-showcase-video-only.mp4",
+  "expectedOutcome": "Reject frozen recording",
+  "detectorRegressionPassed": true
+}

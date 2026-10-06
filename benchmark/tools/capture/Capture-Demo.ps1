@@ -8,6 +8,8 @@ param(
     [int]$GameProcessId=0,
     [string]$WindowTitle='',
     [string]$Ffmpeg='',
+    [ValidateSet('GDI','WGC')][string]$CaptureBackend='GDI',
+    [string]$WindowCaptureHelper='',
     [ValidateRange(15,60)][int]$FrameRate=30,
     [ValidateRange(30,180)][int]$ShowcaseSeconds=72,
     [int]$ReadyTimeoutSeconds=120
@@ -15,6 +17,8 @@ param(
 $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 if(-not $Ffmpeg){$Ffmpeg=Join-Path $repo 'benchmark\local\capture\ffmpeg-compatible\ffmpeg-8.0.1-essentials_build\bin\ffmpeg.exe'}
+if(-not $WindowCaptureHelper){$WindowCaptureHelper=Join-Path $repo 'benchmark\local\capture\native\KragKingsWindowCapture.exe'}
+if($CaptureBackend -eq 'WGC' -and -not(Test-Path $WindowCaptureHelper)){throw 'Build the optional WGC helper with Build-WindowCapture.ps1 before selecting that backend.'}
 $ffprobe=Join-Path (Split-Path $Ffmpeg) 'ffprobe.exe'
 foreach($tool in @($Ffmpeg,$ffprobe)){if(-not(Test-Path $tool)){throw "Capture tool missing: $tool"}}
 New-Item -ItemType Directory -Force $OutputDirectory | Out-Null
@@ -23,6 +27,9 @@ $prefix=$Engine.ToLower()+'-showcase'
 $raw=Join-Path $OutputDirectory ($prefix+'-video-only.mp4')
 $final=Join-Path $OutputDirectory ($prefix+'.mp4')
 $progress=Join-Path $OutputDirectory ($prefix+'-capture-progress.txt')
+$wgcMetadata=Join-Path $OutputDirectory ($prefix+'-wgc.json')
+$wgcStop=Join-Path $OutputDirectory ($prefix+'-wgc-stop.flag')
+$wgcReady=$wgcMetadata+'.pipe-ready'
 $reportPath=Join-Path $OutputDirectory ($prefix+'-capture.json')
 if(Test-Path $final){throw "Existing reviewed output preserved; choose another directory: $final"}
 if(Test-Path $StartFlag){throw 'Stale showcase start flag exists; relaunch the game in wait mode before recording.'}
@@ -72,13 +79,15 @@ function Has-Marker([string]$Marker){
 }
 function Assert-Window {
     if(-not[KKCaptureWindow]::IsWindow($script:window) -or [KKCaptureWindow]::IsIconic($script:window)){throw 'The selected game window closed or minimized; recording stopped.'}
+    $currentOwner=[uint32]0;[KKCaptureWindow]::GetWindowThreadProcessId($script:window,[ref]$currentOwner)|Out-Null
+    if($currentOwner -ne $script:windowOwner){throw 'Target HWND ownership changed; recording stopped.'}
     if([KKCaptureWindow]::GetForegroundWindow() -ne $script:window){throw 'Game lost foreground; recording stopped without following or capturing another application.'}
     $rect=New-Object KKCaptureWindow+RECT
     [KKCaptureWindow]::GetClientRect($script:window,[ref]$rect)|Out-Null
     if($rect.Right -ne $script:clientWidth -or $rect.Bottom -ne $script:clientHeight){throw 'Game client size changed during recording; repeat with a stable viewport.'}
 }
-$report=[ordered]@{engine=$Engine;source='real-time capture of explicit game HWND client area';desktopCapture=$false;systemAudioCapture=$false;microphoneCapture=$false;encoder='h264_nvenc';recordingFrameRate=$FrameRate;gameFrameRateClaim=$false;ffmpeg=$Ffmpeg;showcaseSeconds=$ShowcaseSeconds;completed=$false;visualAcceptance=$false;startedUtc=[DateTime]::UtcNow.ToString('o')}
-$capture=$null;$gateWritten=$false
+$report=[ordered]@{engine=$Engine;source='real-time capture of explicit game HWND client area';desktopCapture=$false;systemAudioCapture=$false;microphoneCapture=$false;captureBackend=$CaptureBackend;encoder='h264_nvenc';recordingFrameRate=$FrameRate;gameFrameRateClaim=$false;ffmpeg=$Ffmpeg;showcaseSeconds=$ShowcaseSeconds;completed=$false;visualAcceptance=$false;startedUtc=[DateTime]::UtcNow.ToString('o')}
+$capture=$null;$producer=$null;$gateWritten=$false
 try {
     $deadline=[DateTime]::UtcNow.AddSeconds($ReadyTimeoutSeconds)
     while(-not(Has-Marker 'SHOWCASE_READY')){
@@ -100,13 +109,28 @@ try {
     $report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
     $report.clientWidth=$clientWidth;$report.clientHeight=$clientHeight
     if(Test-Path $progress){Remove-Item $progress}
-    # gdigrab stamps packets in UTC microseconds. Preserve demux timestamps so
-    # encoder buffering does not bias the later engine-audio alignment.
-    $arguments=@('-hide_banner','-loglevel','info','-debug_ts','-y','-stats_period','0.1','-thread_queue_size','8','-f','gdigrab','-draw_mouse','0','-framerate',"$FrameRate",'-i',('hwnd='+$window.ToInt64()),'-an','-vf','crop=trunc(iw/2)*2:trunc(ih/2)*2,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p','-c:v','h264_nvenc','-preset','p4','-tune','hq','-rc','vbr','-cq','19','-b:v','0','-pix_fmt','yuv420p','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-color_range','tv','-movflags','+faststart','-progress',$progress,$raw)
-    $capture=Start-Native $Ffmpeg $arguments $true
+    # GDI remains the default. WGC is explicit opt-in after a real HWND/GDI
+    # failure; both backends target only this validated game window.
+    if($CaptureBackend -eq 'GDI'){
+        $inputArguments=@('-debug_ts','-thread_queue_size','8','-f','gdigrab','-draw_mouse','0','-framerate',"$FrameRate",'-i',('hwnd='+$window.ToInt64()))
+    }else{
+        foreach($stale in @($wgcStop,$wgcReady,$wgcMetadata)){if(Test-Path $stale){throw "Use a fresh WGC output directory; existing evidence preserved: $stale"}}
+        $pipe='\\.\pipe\KragKingsCapture-'+$PID+'-'+[guid]::NewGuid().ToString('N')
+        $producer=Start-Native $WindowCaptureHelper @('--hwnd',"$($window.ToInt64())",'--pid',"$windowOwner",'--width',"$clientWidth",'--height',"$clientHeight",'--fps',"$FrameRate",'--pipe',$pipe,'--stop',$wgcStop,'--metadata',$wgcMetadata)
+        $pipeDeadline=[DateTime]::UtcNow.AddSeconds(10)
+        while(-not(Test-Path $wgcReady)){
+            if($producer.process.HasExited){throw ('WGC helper failed: '+$producer.stderr.Result)}
+            if([DateTime]::UtcNow -gt $pipeDeadline){throw 'WGC helper did not create its output pipe.'}
+            Start-Sleep -Milliseconds 25
+        }
+        $inputArguments=@('-nostdin','-thread_queue_size','8','-f','rawvideo','-pixel_format','bgra','-video_size',"${clientWidth}x${clientHeight}",'-framerate',"$FrameRate",'-i',$pipe)
+    }
+    $arguments=@('-hide_banner','-loglevel','info','-y','-stats_period','0.1')+$inputArguments+@('-an','-vf','crop=trunc(iw/2)*2:trunc(ih/2)*2,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p','-c:v','h264_nvenc','-preset','p4','-tune','hq','-rc','vbr','-cq','19','-b:v','0','-pix_fmt','yuv420p','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-color_range','tv','-movflags','+faststart','-progress',$progress,$raw)
+    $capture=Start-Native $Ffmpeg $arguments ($CaptureBackend -eq 'GDI')
     $readyDeadline=[DateTime]::UtcNow.AddSeconds(15);$firstMediaSeconds=$null
     do {
         Assert-Window
+        if($producer -and $producer.process.HasExited){throw ('WGC helper ended before first frame: '+$producer.stderr.Result)}
         if($capture.process.HasExited){throw ('Capture encoder exited before first frame: '+$capture.stderr.Result)}
         if(Test-Path $progress){
             $line=Get-Content $progress -Tail 35 -ErrorAction SilentlyContinue|Where-Object {$_ -match '^out_time_us=\d+$'}|Select-Object -Last 1
@@ -124,20 +148,25 @@ try {
     $showcaseDeadline=$gateUtc.AddSeconds($ShowcaseSeconds+25);$completedAt=$null
     while($true){
         Assert-Window
+        if($producer -and $producer.process.HasExited){throw ('WGC helper ended early: '+$producer.stderr.Result)}
         if($capture.process.HasExited){throw ('Capture ended before showcase completion: '+$capture.stderr.Result)}
         if(-not $completedAt -and (Has-Marker 'SHOWCASE_COMPLETE')){$completedAt=[DateTime]::UtcNow}
         if($completedAt -and ([DateTime]::UtcNow-$completedAt).TotalSeconds -ge 2){break}
         if([DateTime]::UtcNow -gt $showcaseDeadline){throw 'No showcase completion marker within the recording deadline.'}
         Start-Sleep -Milliseconds 100
     }
-    $capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush()
+    if($producer){
+        [IO.File]::WriteAllText($wgcStop,[DateTime]::UtcNow.ToString('o'))
+        if(-not $producer.process.WaitForExit(15000)){$producer.process.Kill();throw 'WGC producer did not stop after its own signal.'}
+        if($producer.process.ExitCode -ne 0){throw ('WGC producer failed: '+$producer.stderr.Result)}
+    }else{$capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush()}
     if(-not $capture.process.WaitForExit(15000)){$capture.process.Kill();throw 'Capture encoder did not finalize after its own stop request.'}
     $captureLog=$capture.stderr.Result
     [IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-capture.log')),$captureLog)
     if($capture.process.ExitCode -ne 0){throw 'Capture encoder returned a failure exit code.'}
     $rawTimestamp=[regex]::Match($captureLog,'demuxer ->[^\r\n]*?pkt_pts:(\d+)')
     $normalizedTimestamp=[regex]::Match($captureLog,'demuxer\+tsfixup ->[^\r\n]*?pkt_pts:(-?\d+)')
-    if(-not $rawTimestamp.Success -or -not $normalizedTimestamp.Success){throw 'Capture lacks first-frame demux timestamps; raw video is preserved for explicit synchronization.'}
+    if($CaptureBackend -eq 'GDI' -and (-not $rawTimestamp.Success -or -not $normalizedTimestamp.Success)){throw 'Capture lacks first-frame demux timestamps; raw video is preserved for explicit synchronization.'}
     $epoch=[DateTimeOffset]::FromUnixTimeSeconds(0)
     $audioStartUtc=[DateTimeOffset]$gateUtc
     $startTimeSource='start gate'
@@ -155,14 +184,21 @@ try {
         }
     }
     $hadEngineUtc=$startTimeSource -ne 'start gate'
-    $frameEpochSeconds=[double]$rawTimestamp.Groups[1].Value/1000000.0
-    $frameMediaSeconds=[double]$normalizedTimestamp.Groups[1].Value/1000000.0
+    if($producer){
+        $wgc=Get-Content $wgcMetadata -Raw|ConvertFrom-Json
+        if(-not $wgc.completed -or $wgc.frames -lt 1){throw 'WGC producer did not confirm complete real-time frames.'}
+        $frameEpochSeconds=[double]$wgc.firstOutputUnixMicroseconds/1000000.0;$frameMediaSeconds=0.0
+        $report.wgc=$wgc
+    }else{
+        $frameEpochSeconds=[double]$rawTimestamp.Groups[1].Value/1000000.0
+        $frameMediaSeconds=[double]$normalizedTimestamp.Groups[1].Value/1000000.0
+    }
     $audioOffset=($audioStartUtc-$epoch).TotalSeconds-$frameEpochSeconds+$frameMediaSeconds
     if($audioOffset -lt 0 -or $audioOffset -gt 30){throw 'Captured UTC timestamp and engine/gate time disagree; refusing an unverified audio offset.'}
     $report.audioOffsetSeconds=$audioOffset
     $report.engineStartUtc=$audioStartUtc.ToString('o')
     $report.engineStartTimestampSource=$startTimeSource
-    $report.firstCapturedFrameUnixMicroseconds=$rawTimestamp.Groups[1].Value
+    $report.firstCapturedFrameUnixMicroseconds=$frameEpochSeconds*1000000.0
     $report.audioSync=if($hadEngineUtc){'UTC first captured-frame timestamp aligned to engine recording-start timestamp; residual audio-thread latency and frame rounding require listening review.'}else{'UTC first captured-frame timestamp aligned to start gate; runtime lacks explicit UTC, so engine polling/audio-start latency remains and requires listening review.'}
     $audioDeadline=[DateTime]::UtcNow.AddSeconds(30);$previousSize=0;$stable=0
     while([DateTime]::UtcNow -lt $audioDeadline){
@@ -191,6 +227,13 @@ try {
     $signalPresent=$rms.Groups[1].Value -notmatch 'inf' -and $peak.Groups[1].Value -notmatch 'inf' -and [double]::Parse($samples.Groups[1].Value,[Globalization.CultureInfo]::InvariantCulture) -gt 0
     $report.audioSignalCheck=[ordered]@{rmsDbFS=$rms.Groups[1].Value;peakDbFS=$peak.Groups[1].Value;samples=$samples.Groups[1].Value;nonzeroSignal=$signalPresent;listeningReviewPassed=$false}
     if(-not $signalPresent){throw 'Engine-only WAV is empty or silent; refusing final mux. Raw video/audio preserved for diagnosis.'}
+    $motionDirectory=Join-Path $OutputDirectory ($prefix+'-motion-check')
+    try{
+        & (Join-Path $PSScriptRoot 'Test-ShowcaseMotion.ps1') -Video $raw -Ffmpeg $Ffmpeg -OutputDirectory $motionDirectory -AudioOffsetSeconds $audioOffset
+    }finally{
+        $motionReport=Join-Path $motionDirectory 'motion-check.json'
+        if(Test-Path $motionReport){$report.motionCheck=Get-Content $motionReport -Raw|ConvertFrom-Json}
+    }
     $offset=$audioOffset.ToString('F4',[Globalization.CultureInfo]::InvariantCulture)
     $mux=@('-hide_banner','-loglevel','warning','-nostdin','-y','-i',$raw,'-itsoffset',$offset,'-i',$EngineAudio,'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart',$final)
     Invoke-Native $Ffmpeg $mux (Join-Path $OutputDirectory ($prefix+'-mux.log'))|Out-Null
@@ -209,9 +252,16 @@ try {
     $report.error=$_.Exception.Message
     throw
 } finally {
-    if($capture -and -not $capture.process.HasExited){
-        try{$capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush();if(-not $capture.process.WaitForExit(5000)){$capture.process.Kill()}}catch{}
+    if($producer){
+        try{
+            if(-not $producer.process.HasExited){[IO.File]::WriteAllText($wgcStop,[DateTime]::UtcNow.ToString('o'));if(-not $producer.process.WaitForExit(5000)){$producer.process.Kill();$producer.process.WaitForExit()}}
+            [IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-wgc.log')),$producer.stdout.Result+"`n"+$producer.stderr.Result)
+        }catch{}
     }
+    if($capture -and -not $capture.process.HasExited){
+        try{if($CaptureBackend -eq 'GDI'){$capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush()};if(-not $capture.process.WaitForExit(5000)){$capture.process.Kill();$capture.process.WaitForExit()}}catch{}
+    }
+    if($capture -and $capture.process.HasExited){try{[IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-capture.log')),$capture.stderr.Result)}catch{}}
     $report.finishedUtc=[DateTime]::UtcNow.ToString('o')
     $report|ConvertTo-Json -Depth 12|Set-Content $reportPath -Encoding UTF8
 }

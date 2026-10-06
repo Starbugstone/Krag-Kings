@@ -53,6 +53,17 @@ $Manifest=[ordered]@{engineRoot=$EngineRoot;engineVersion="$($EngineVersion.Majo
 $Manifest|ConvertTo-Json|Set-Content (Join-Path $Evidence 'last-build-attempt.json') -Encoding UTF8
 Write-Output ($Manifest|ConvertTo-Json)
 if($Stage -eq 'Detect'){exit 0}
+function Clear-CompletionLogs([string[]]$Paths){
+    $history=Join-Path $BenchmarkRoot 'local\completion-log-history'
+    foreach($path in $Paths){
+        if(Test-Path $path){
+            New-Item -ItemType Directory -Force $history|Out-Null
+            $name=[IO.Path]::GetFileNameWithoutExtension($path)+'-'+[DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss-fffffff')+[IO.Path]::GetExtension($path)
+            Copy-Item -LiteralPath $path -Destination (Join-Path $history $name)
+            Remove-Item -LiteralPath $path
+        }
+    }
+}
 # Per-project compile limit preserves memory after the machine's earlier crash.
 $UBTConfigDir=Join-Path $ProjectRoot 'Saved\UnrealBuildTool'
 New-Item -ItemType Directory -Force -Path $UBTConfigDir | Out-Null
@@ -72,18 +83,21 @@ if($Stage -eq 'Probe'){
     $ProbeScript=Join-Path $PSScriptRoot 'editor_probe.py'
     $Log=Join-Path $Evidence 'editor-probe.log'
     $ConsoleLog=Join-Path $Evidence 'editor-probe-console.log'
+    Clear-CompletionLogs @($Log,$ConsoleLog)
     & $Editor $Project "-ExecutePythonScript=$ProbeScript" -NullRHI -unattended -nosplash -stdout -FullStdOutLogOutput "-abslog=$Log" -NoSound 2>&1 | Tee-Object -FilePath $ConsoleLog
     if($LASTEXITCODE -ne 0){throw "Unreal editor probe failed: $LASTEXITCODE"}
     $Logs=@($Log,$ConsoleLog)|Where-Object {Test-Path $_}
     if(-not(Select-String -Path $Logs -Pattern 'KK_EDITOR_PROBE_COMPLETE' | Select-Object -First 1)){throw 'Editor probe returned without completion marker.'}
 }
 if($Stage -in @('Import','All')){
+    & (Join-Path $PSScriptRoot 'Prepare-ImportCache.ps1') -Apply
     $Importer=Join-Path $PSScriptRoot 'import_shared_assets.py'
     $Log=Join-Path $Evidence 'import.log'
     $ConsoleLog=Join-Path $Evidence 'import-console.log'
+    Clear-CompletionLogs @($Log,$ConsoleLog)
     # Importing source assets needs no viewport. Keep renderer/shader memory out of
     # the FBX import budget; the later cook/launch validates the real renderer.
-    & $Editor $Project "-ExecutePythonScript=$Importer" -NullRHI -unattended -nosplash -stdout -FullStdOutLogOutput "-abslog=$Log" -NoSound 2>&1 | Tee-Object -FilePath $ConsoleLog
+    & $Editor $Project "-ExecutePythonScript=$Importer" -NullRHI -corelimit=2 -unattended -nosplash -stdout -FullStdOutLogOutput "-abslog=$Log" -NoSound 2>&1 | Tee-Object -FilePath $ConsoleLog
     if($LASTEXITCODE -ne 0){throw "Unreal shared asset import failed: $LASTEXITCODE"}
     $Logs=@($Log,$ConsoleLog)|Where-Object {Test-Path $_}
     if(-not(Select-String -Path $Logs -Pattern 'KK_IMPORT_COMPLETE' | Select-Object -First 1)){throw 'Import returned without completion marker. Inspect import.log.'}

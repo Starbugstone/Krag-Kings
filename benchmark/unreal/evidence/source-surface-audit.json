@@ -1,0 +1,72 @@
+[
+  {
+    "file": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
+    "sha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+    "scope": "Neutral source geometry and authored normals only; does not diagnose importer tangents or morphed-pose degeneracy",
+    "meshes": [
+      {
+        "name": "Dark structural pauldron.001",
+        "vertices": 516105,
+        "triangles": 1026672,
+        "finiteVertexComponents": true,
+        "boundsDiagonalFileUnits": 2.5448962119846206,
+        "exactZeroAreaTriangles": 96,
+        "nearZeroAreaTriangles": 96,
+        "relativeDoubleAreaThreshold": 1e-12,
+        "minimumNonzeroDoubleAreaFileUnitsSquared": 4.173234618178188e-11,
+        "nearZeroTrianglesByMaterialSlot": {
+          "0": 64,
+          "1": 32
+        },
+        "authoredNormals": {
+          "count": 516105,
+          "finite": true,
+          "zeroLengthCount": 0,
+          "nonunitOutsideOnePercent": 0,
+          "minimumLength": 0.9999998354435267,
+          "maximumLength": 1.0000001823996345
+        },
+        "uvTriangles": {
+          "exactZeroArea": 96,
+          "nearZeroDoubleArea1eMinus12": 96,
+          "finite": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
+    "sha256": "3e912b71e5ee1a908bb89bf0fe3b5b0faa3977ca08a3c396a5eea46e4a9d7898",
+    "scope": "Neutral source geometry and authored normals only; does not diagnose importer tangents or morphed-pose degeneracy",
+    "meshes": [
+      {
+        "name": "Nib connected facial loops.001",
+        "vertices": 304261,
+        "triangles": 538642,
+        "finiteVertexComponents": true,
+        "boundsDiagonalFileUnits": 1.5407196259484224,
+        "exactZeroAreaTriangles": 128,
+        "nearZeroAreaTriangles": 128,
+        "relativeDoubleAreaThreshold": 1e-12,
+        "minimumNonzeroDoubleAreaFileUnitsSquared": 9.18889143982455e-11,
+        "nearZeroTrianglesByMaterialSlot": {
+          "13": 64,
+          "15": 64
+        },
+        "authoredNormals": {
+          "count": 304261,
+          "finite": true,
+          "zeroLengthCount": 0,
+          "nonunitOutsideOnePercent": 0,
+          "minimumLength": 0.9999998667988139,
+          "maximumLength": 1.000000130693874
+        },
+        "uvTriangles": {
+          "exactZeroArea": 1876,
+          "nearZeroDoubleArea1eMinus12": 1900,
+          "finite": true
+        }
+      }
+    ]
+  }
+]

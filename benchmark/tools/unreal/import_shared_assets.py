@@ -14,6 +14,9 @@ SHARED = BENCHMARK / 'shared'
 DEST = '/Game/Benchmark'
 TOOLS = unreal.AssetToolsHelpers.get_asset_tools()
 REPORT = {'engine': unreal.SystemLibrary.get_engine_version(), 'meshes': [], 'materials': [], 'warnings': []}
+REPORT['import_resource_controls'] = {'requestedLogicalCoreLimit': 2 if '-corelimit=2' in unreal.SystemLibrary.get_command_line().lower() else None,
+                                      'renderer': 'NullRHI' if '-nullrhi' in unreal.SystemLibrary.get_command_line().lower() else 'enabled',
+                                      'scope': 'Importer process only; runtime/performance jobs are unchanged'}
 CLIPS = ('Idle', 'Walk', 'Run', 'Melee', 'Shoot', 'Hit')
 FACIAL_CLIPS = ('FacePerformance',)
 REUSE_MATERIALS = '-KKReuseMaterials' in unreal.SystemLibrary.get_command_line()
@@ -385,6 +388,22 @@ def species(folder):
         if not meshes:
             raise RuntimeError('Skeletal mesh missing after import: ' + str(fbx))
         mesh = meshes[0]
+        # Legacy FBX tasks report/save the primary mesh but can leave newly
+        # generated Skeleton and PhysicsAsset packages unsaved. Persist them
+        # before animation import so the saved sample reloads independently.
+        dependencies = {}
+        for property_name in ('skeleton', 'physics_asset'):
+            dependency = mesh.get_editor_property(property_name)
+            if dependency is None:
+                raise RuntimeError(f'{fbx.stem}: imported mesh has no {property_name}')
+            save(dependency)
+            package = dependency.get_path_name().split('.', 1)[0]
+            if not package.startswith('/Game/'):
+                raise RuntimeError(f'{fbx.stem}: unexpected generated dependency path {package}')
+            disk_file = PROJECT / 'Content' / (package.removeprefix('/Game/') + '.uasset')
+            if not disk_file.is_file():
+                raise RuntimeError(f'{fbx.stem}: dependency save left no package on disk: {package}')
+            dependencies[property_name] = dependency.get_path_name()
         slots = mesh.get_editor_property('materials')
         for slot in slots:
             name = str(slot.get_editor_property('imported_material_slot_name'))
@@ -476,8 +495,17 @@ def species(folder):
             clip = candidates[0]
             tracks = [str(n) for n in unreal.KKBenchmarkAssets.get_animation_bone_names(clip)]
             facial = [str(n) for n in unreal.KKBenchmarkAssets.get_facially_animated_bones(clip, mesh)]
-            if 'Pelvis' not in tracks or not facial:
-                raise RuntimeError(f'{fbx.stem}/{name}: missing skeletal pelvis track or varying FaceRoot performance')
+            # Unreal FName equality ignores case; Sequencer DataModel emits
+            # lowercase track display strings even when mesh bone names retain case.
+            has_pelvis = any(track.casefold() == 'pelvis' for track in tracks)
+            if not has_pelvis or not facial:
+                failure = {'variant': fbx.stem, 'clip': name, 'asset': clip.get_path_name(),
+                           'lengthSeconds': clip.get_play_length(), 'tracks': tracks,
+                           'varyingFacialBones': facial, 'meshBones': bone_names,
+                           'savedDependencies': dependencies,
+                           'missingPelvisTrack': not has_pelvis, 'missingFacialVariation': not facial}
+                (BENCHMARK / 'unreal' / 'evidence' / 'import-validation-failure.json').write_text(json.dumps(failure, indent=2), encoding='utf-8')
+                raise RuntimeError(f'{fbx.stem}/{name}: missing skeletal pelvis track or varying FaceRoot performance; exact track data saved to import-validation-failure.json')
             ratios = {str(bone): [float(bounds.x), float(bounds.y)] for bone, bounds in unreal.KKBenchmarkAssets.get_animation_limb_translation_ratios(clip, mesh).items()}
             if len(ratios) < 4 or any(low < .1 or high > 10 for low, high in ratios.values()):
                 raise RuntimeError(f'{fbx.stem}/{name}: animation/bind limb lengths indicate a unit mismatch: {ratios}')
@@ -494,7 +522,7 @@ def species(folder):
                 clip_validation[name] = {'varying_facial_bones': facial}
             else:
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
-        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers)})
+        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies})
         return variant_descriptor(variant)
 
     for fbx in files:
@@ -514,6 +542,17 @@ def species(folder):
 def main():
     global SOURCE_SNAPSHOT
     unreal.log('KK_IMPORT_BEGIN shared assets=' + str(SHARED))
+    for folder in ('krag', 'nib'):
+        content = PROJECT / 'Content' / 'Benchmark' / 'Characters' / folder
+        for existing_mesh in content.glob('*/*.uasset'):
+            if existing_mesh.stem != existing_mesh.parent.name or not existing_mesh.stem.startswith(('Krag_', 'Nib_')):
+                continue
+            missing = [kind for kind in ('Skeleton', 'PhysicsAsset') if not existing_mesh.with_name(existing_mesh.stem + '_' + kind + '.uasset').is_file()]
+            if missing:
+                raise RuntimeError(f'Incomplete generated dependency cache for {existing_mesh.stem}: {missing}. Run Prepare-ImportCache.ps1 -Apply before editor startup to preserve/archive it and rebuild.')
+    progress = BENCHMARK / 'unreal' / 'evidence' / 'import-progress.json'
+    progress.parent.mkdir(parents=True, exist_ok=True)
+    progress.write_text(json.dumps({'complete': False, 'stage': 'started', 'import_resource_controls': REPORT['import_resource_controls']}, indent=2), encoding='utf-8')
     SOURCE_SNAPSHOT = source_snapshot()
     snapshot_file = BENCHMARK / 'unreal' / 'evidence' / 'import-source-snapshot.json'
     snapshot_file.parent.mkdir(parents=True, exist_ok=True)
