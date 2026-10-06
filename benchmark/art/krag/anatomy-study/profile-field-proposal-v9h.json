@@ -1,0 +1,66 @@
+{
+  "status": "Raw control-cage fitting measurements only; actual smooth source/profile required",
+  "preparedFitSha256": "51ca07002b53c6b552d43f28434796a67b67b5169ab50df57eeec4f66ae91af9",
+  "regions": {
+    "brow": {
+      "vertices": 164,
+      "oldAddedFieldFrontMaskRange": [
+        0.8075343370437622,
+        1.0
+      ],
+      "oldAddedFieldFrontMaskMean": 0.9825184345245361,
+      "oldAddedFieldMaxDeltaMeters": 0.009682795463178656,
+      "v9gRawCageMostForwardFinalY": -0.17624533738495535,
+      "proposedRawCageMostForwardFinalY": -0.14953354276753758,
+      "maxFinalChangeMeters": 0.02729759785784938
+    },
+    "glabella": {
+      "vertices": 30,
+      "oldAddedFieldFrontMaskRange": [
+        1.0,
+        1.0
+      ],
+      "oldAddedFieldFrontMaskMean": 1.0,
+      "oldAddedFieldMaxDeltaMeters": 0.003152422524496795,
+      "v9gRawCageMostForwardFinalY": -0.1492814796239902,
+      "proposedRawCageMostForwardFinalY": -0.14202555157134672,
+      "maxFinalChangeMeters": 0.007255928052643468
+    },
+    "cheek": {
+      "vertices": 168,
+      "oldAddedFieldFrontMaskRange": [
+        0.17650066316127777,
+        1.0
+      ],
+      "oldAddedFieldFrontMaskMean": 0.894769549369812,
+      "oldAddedFieldMaxDeltaMeters": 0.003985382332422516,
+      "v9gRawCageMostForwardFinalY": -0.15614491299969294,
+      "proposedRawCageMostForwardFinalY": -0.14289980636305522,
+      "maxFinalChangeMeters": 0.019556779801558413
+    },
+    "chin": {
+      "vertices": 200,
+      "oldAddedFieldFrontMaskRange": [
+        0.44602102041244507,
+        1.0
+      ],
+      "oldAddedFieldFrontMaskMean": 0.913981020450592,
+      "oldAddedFieldMaxDeltaMeters": 0.023981851482967997,
+      "v9gRawCageMostForwardFinalY": -0.22138001772258525,
+      "proposedRawCageMostForwardFinalY": -0.1757742360857002,
+      "maxFinalChangeMeters": 0.06710263790331536
+    },
+    "muzzle": {
+      "vertices": 459,
+      "oldAddedFieldFrontMaskRange": [
+        1.0,
+        1.0
+      ],
+      "oldAddedFieldFrontMaskMean": 1.0,
+      "oldAddedFieldMaxDeltaMeters": 0.012874371352240566,
+      "v9gRawCageMostForwardFinalY": -0.20828084144268003,
+      "proposedRawCageMostForwardFinalY": -0.20512030861376424,
+      "maxFinalChangeMeters": 0.01658712011122432
+    }
+  }
+}

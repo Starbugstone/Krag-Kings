@@ -1,0 +1,33 @@
+{
+  "name": "krag-review-v9h-scarf-study-Natural_Front-Shoot",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_ScarfPlacement_v9h_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9g-face-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Front",
+    "--tag",
+    "v9h-scarf-study",
+    "--neutral-light",
+    "--clip",
+    "Shoot",
+    "--frame",
+    "13",
+    "--keep-pose",
+    "--show-weapon"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9h-scarf-study-Natural_Front-Shoot.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9h-scarf-study-Natural_Front-Shoot.stderr.log",
+  "maxPrivateGB": 8
+}

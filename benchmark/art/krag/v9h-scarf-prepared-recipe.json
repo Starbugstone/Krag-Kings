@@ -1,0 +1,54 @@
+{
+  "status": "Prepared isolated cloth-only source from pinned actual v9g face master; ungenerated",
+  "source": "benchmark/art/krag/Krag_Master_v9gFace_WIP.blend",
+  "sourceSha256": "2898288570fa840f656986d1b7673cf1daaa5203347c5e65df21e6bd7651d875",
+  "basisEvidence": "benchmark/art/krag/v9g-scarf-placement-audit.json",
+  "changes": [
+    "High gathered side rows with deep front sag",
+    "Seat above actual torso shoulder surface before radial placement",
+    "Retain bounded radial clearance, actual head/body collision and self-collision"
+  ],
+  "preserves": [
+    "Input source file",
+    "All unrelated mesh and shape coordinates",
+    "Current weapon and rig"
+  ],
+  "requires": [
+    "Actual collar Front/Head/Profile/Back review",
+    "Raised-arm cloth/head clearance"
+  ],
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9h_wip/scarf_cloth_v4.py",
+      "sha256": "6f37e6a2778155c2121081f3350c8dc371ed9b93b2a8b144d8cdd18dd87ca14d"
+    },
+    {
+      "path": "benchmark/tools/krag/v9h_wip/build_scarf_study.py",
+      "sha256": "63f2c089ebeb321591744172e98baa10d1b3e0ca89bc4fbd0d9021dc7eef6be5"
+    },
+    {
+      "path": "benchmark/tools/krag/build-v9h-scarf-study-job.json",
+      "sha256": "765fc78a5bcb92ebe553bbbf8b36df15f36c47084d61bedc832ff945d4dbf92a"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-scarf-study-Natural_Back.json",
+      "sha256": "a529a6954f43caeeb40d8704ddb4a26b9dcff6e5ff87cea2979d9e42af31e793"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-scarf-study-Natural_Front-Shoot.json",
+      "sha256": "d0f521eaa97a430d9b24fc37c9e8dd78e3231ecff93c29e495b8df12b693539f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-scarf-study-Natural_Front.json",
+      "sha256": "1fb66ca6e1ead47f23438a86543f9e05c580cf86604f9abc6d6c896802adff90"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-scarf-study-Natural_Head.json",
+      "sha256": "a99b5f7e390a6858ccd4ebc83fb353c94515630e91d3601c35704eb459061976"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-scarf-study-Natural_HeadSide.json",
+      "sha256": "0b04b203be5ab5eebe9c62983856a08146c8f8c1e0d75705b4b470e65f00db55"
+    }
+  ]
+}

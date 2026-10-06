@@ -196,8 +196,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "Prepare isolated bounded profile and gum-root correction; source job not yet frozen",
-  "nextFirstReview": "Actual profile and Head, then paired mouth/blink after topology repair",
+  "nextSourceJob": "benchmark/tools/krag/build-v9h-profile-wip-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9h-profile-wip-Natural_HeadSide.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -349,5 +349,7 @@
       "Armor layering, trouser folds/pockets and boot construction/weathering remain simplified"
     ],
     "reviewReceipt": "v9f-source-review.json"
-  }
+  },
+  "preparedV9hRecipe": "benchmark/art/krag/v9h-prepared-recipe.json",
+  "preparedClothStudy": "benchmark/art/krag/v9h-scarf-prepared-recipe.json"
 }

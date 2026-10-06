@@ -1,0 +1,7 @@
+# Prepared profile / oral correction after actual v9g failure
+
+This directory is ungenerated. V9g's actual HeadSide render is the primary constraint: its narrow brow displacement becomes a pointed shelf, and its lower chin becomes a separate wedge. The next fit must shorten and broaden those peaks into a continuous heavy skull/jaw, with the chin within the nasal/labial envelope. Increasing the previous coefficients is inappropriate.
+
+`profile_fit.py` removes the exact old brow, chin and broad muzzle depth terms before substituting bounded wider mandibular, orbital and muzzle fields. It reuses the common fit for eyes, oral parts, controls and expression deltas. Nasolabial folds follow the actual mouth width. Its tusk roots use the existing lower gum formula and pass through the true aperture, replacing the failed ±0.036 source-X exterior anchors; the true rim ends near ±0.02427 m. These are prepared numerical shape changes, not a sculpt or contact pass.
+
+Keep the successful v9f overall head scale, hand/torso domains and current weapon. The new source should incorporate the separately prepared semantic Jaw field and restrict the JawOpen corrective to its mandibular support, preserving serious Krag acting. Actual neutral Head/Profile plus open-mouth and Blink views remain mandatory. The unchanged failed v9f scarf may be retained for the isolated facial comparison; cloth construction is a separate source study.

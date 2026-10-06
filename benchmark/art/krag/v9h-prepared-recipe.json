@@ -1,0 +1,66 @@
+{
+  "status": "Prepared isolated profile/gum/Jaw source; no generated source or accepted silhouette",
+  "basedOnActualReview": "benchmark/art/krag/v9g-face-source-review.json",
+  "baseRecipe": "benchmark/art/krag/v9f-prepared-recipe.json",
+  "rawCageFieldMeasurement": "benchmark/art/krag/anatomy-study/profile-field-proposal-v9h.json",
+  "changes": [
+    "Remove narrow old brow/chin depth peaks before broader connected profile",
+    "Lower gum-rooted tusks through actual oral aperture",
+    "Topology-aware Jaw weights and JawOpen support"
+  ],
+  "preserves": [
+    "v9f head scale",
+    "body/hand rig",
+    "weapon",
+    "known failed v9f scarf for isolated face comparison",
+    "serious Krag acting"
+  ],
+  "requiredFirstViews": [
+    "HeadSide",
+    "Head",
+    "OpenMouth",
+    "Blink"
+  ],
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9h_wip/build_v9h.py",
+      "sha256": "3f4fce81a9f718ef65304d5271f22f4cef434929556971ce037d71f1289f5738"
+    },
+    {
+      "path": "benchmark/tools/krag/v9h_wip/profile_fit.py",
+      "sha256": "51ca07002b53c6b552d43f28434796a67b67b5169ab50df57eeec4f66ae91af9"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/krag_jaw_domains.py",
+      "sha256": "159c9c85cac1f13c45b02adc49f71ca8babcb57659671a828113dca61f84ea97"
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/mouth_jaw_weights.py",
+      "sha256": "32e162941906005c49e32803739a4f38086b947e99ce3fa982620789a91845fb"
+    },
+    {
+      "path": "benchmark/tools/krag/build-v9h-profile-wip-job.json",
+      "sha256": "1ef6a66c076c619c0570c010b7fcf4603411d512b9c145b79e8d2d5df3b2fcd6"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-profile-wip-Natural_Front.json",
+      "sha256": "bd5b1f8ab480436baecf5160b4917a5c1d69506b7c8d05f9be482f6f22a915ef"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-profile-wip-Natural_Head.json",
+      "sha256": "8bd1720bae00b500dbf62934b79aed6783fa76e81ffc268546a89e7924d1ffb1"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-profile-wip-Natural_HeadSide.json",
+      "sha256": "4d2712f798bca76a7b9086cd9e65e7e845914642b204f828ec9ff31a2cdf9628"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-profile-wip-Blink.json",
+      "sha256": "031654d278373dc031d96a095bfd71d36032560d192dca6046b78bad88e8de01"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9h-profile-wip-OpenMouth.json",
+      "sha256": "82ff69f5b36b8c9723248f66982812fdf40e638ed710ef1b2dbfc1b60bc1bbc2"
+    }
+  ]
+}
