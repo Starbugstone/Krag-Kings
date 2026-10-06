@@ -1,0 +1,2 @@
+D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\audit_tuft_material.py:89: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  background=bpy.data.materials.new('Contrasting diagnostic checker');background.use_nodes=True;nodes=background.node_tree.nodes;nodes.clear();out=nodes.new('ShaderNodeOutputMaterial');emission=nodes.new('ShaderNodeEmission');checker=nodes.new('ShaderNodeTexChecker');coordinates=nodes.new('ShaderNodeTexCoord')
