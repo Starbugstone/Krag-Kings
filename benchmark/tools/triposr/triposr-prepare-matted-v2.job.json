@@ -1,0 +1,17 @@
+{
+  "name": "triposr-prepare-matted-v2",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\prepare_matted_input.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 4,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-prepare-matted-v2.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-prepare-matted-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-prepare-matted-v2.log",
+  "successMarker": "TRIPOSR_MATTED_INPUT_COMPLETE"
+}

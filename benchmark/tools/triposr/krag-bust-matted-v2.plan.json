@@ -1,0 +1,64 @@
+{
+  "status": "Prepared one authorized foreground-matted A/B; silhouette review required before inference",
+  "input": {
+    "source": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+    "sourceSha256": "c75202e0bc805bf866b0b9b18f79d1413aa72cea3ac916f2f71706ecb1c381a2",
+    "sourceDimensions": [
+      1774,
+      887
+    ],
+    "cropXYXY": [
+      1400,
+      0,
+      1774,
+      425
+    ],
+    "conditioningDimensions": [
+      512,
+      512
+    ],
+    "outputDirectory": "benchmark/local/triposr-reference-v1/input-krag-bust-matted-v2",
+    "processing": "Same source crop and512-square placement as v1. CPU U2Net alpha matte; original RGB retained in RGBA, alpha-composited over RGB128. No crop resizing, inpainting or design change.",
+    "originalCropSha256": "da3971ff1940ad1b17a881931b67cc54a7de02b8db5f369120a0e2c5fc9d186f"
+  },
+  "inferenceProposal": {
+    "sourceCommit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "modelSha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "Preflight selects GPU or CPU before loading",
+    "precision": "FP32 GPU only with6.5GiB free; otherwise FP16-autocast forward with4GiB free; otherwise CPU",
+    "chunkSize": 4096,
+    "marchingCubesResolution": 256,
+    "output": "Unrigged vertex-colored mesh",
+    "backgroundRemoval": false,
+    "onlineModelFetchDuringInference": false,
+    "cpuMarchingCubes": "Pinned original CPU extension; actual installation/sphere smoke passed",
+    "minimumFreeGiBForFp32": 6.5,
+    "minimumFreeGiBForAutocast": 4.0,
+    "extraction": "4096-position streamed queries; CPU float32 density volume and CPU marching cubes; no full GPU grid",
+    "requireFp16CudaForMatchedAB": true
+  },
+  "acceptance": "Inspect actual matte silhouette before inference; then color and clay input-facing/quarter/side/back mesh views. Inferred rear geometry is noncanonical, and generation does not imply sculpt or rig acceptance.",
+  "inferenceExecuted": false,
+  "sharedAssetsChanged": false,
+  "outputDirectory": "benchmark/local/triposr-reference-v1/pilot-krag-bust-matted-v2",
+  "mattingModel": {
+    "url": "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx",
+    "releaseAssetID": 85857932,
+    "bytes": 175997641,
+    "sha256": "8d10d2f3bb75ae3b6d527c77944fc5e7dcd94b29809d47a739a7a728a912b491",
+    "installedRembgExpectedMD5": "60024c5c889badc19c04ad937298a77b",
+    "actualMD5": "60024c5c889badc19c04ad937298a77b",
+    "upstreamCommit": "ac7e1c817ecab7c7dff5ce6b1abba61cd213ff29",
+    "upstreamLicense": "Apache-2.0",
+    "licenseURL": "https://raw.githubusercontent.com/xuebinqin/U-2-Net/ac7e1c817ecab7c7dff5ce6b1abba61cd213ff29/LICENSE",
+    "licenseSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "rembgVersion": "2.0.60",
+    "rembgLicense": "MIT",
+    "recipeSha256": "bf8adbcfb034dbb2c722a66a453f2d695b5b4c9a34da3065e7ddedf6d279bb7b",
+    "networkOnly": true,
+    "modelExecuted": false,
+    "taskLocalCacheOnly": true,
+    "elapsedSeconds": 21.3809652570053
+  }
+}

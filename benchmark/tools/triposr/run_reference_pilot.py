@@ -1,4 +1,5 @@
 """One local, offline, unrigged Krag-bust reference inference; no shared writes."""
+import argparse
 import datetime
 import contextlib
 import hashlib
@@ -22,10 +23,14 @@ def sha(path):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--plan', type=Path, default=PLAN)
+    args = parser.parse_args()
+    selected_plan = args.plan.resolve()
     if os.name != 'nt' or Path(sys.executable).resolve() != (BASE/'venv/Scripts/python.exe').resolve():
         raise RuntimeError('Use only the isolated Windows interpreter')
     installation = json.loads((BASE/'installation.json').read_text(encoding='utf-8'))
-    plan = json.loads(PLAN.read_text(encoding='utf-8'))
+    plan = json.loads(selected_plan.read_text(encoding='utf-8'))
     if not installation['pipCheckPassed'] or not installation['cpuExtensionSmokePassed']:
         raise RuntimeError('Actual isolated installation checks have not passed')
     model = BASE/'models/TripoSR'
@@ -34,9 +39,9 @@ def main():
     data = ROOT/plan['input']['outputDirectory']
     conditioning = data/'conditioning.png'
     input_receipt = json.loads((data/'input-receipt.json').read_text(encoding='utf-8'))
-    if input_receipt['planSha256'] != sha(PLAN) or sha(conditioning) != input_receipt['outputs']['conditioning.png']:
+    if input_receipt['planSha256'] != sha(selected_plan) or sha(conditioning) != input_receipt['outputs']['conditioning.png']:
         raise RuntimeError('Conditioning image differs from the approved preprocessing receipt')
-    output = BASE/'pilot-krag-bust-v1'
+    output = ROOT/plan.get('outputDirectory', 'benchmark/local/triposr-reference-v1/pilot-krag-bust-v1')
     if output.exists():
         raise RuntimeError('Preserve the first pilot result; no automatic second inference')
     output.mkdir()
@@ -50,7 +55,7 @@ def main():
         'OMP_NUM_THREADS':'2','TMP':str(BASE/'temp'),'TEMP':str(BASE/'temp')})
     sys.path.insert(0,str(BASE/'sources/TripoSR'))
     result={'status':'RUNNING','utcStarted':datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        'planSha256':sha(PLAN),'recipeSha256':sha(__file__),
+        'planSha256':sha(selected_plan),'recipeSha256':sha(__file__),
         'installationSha256':sha(BASE/'installation.json'),'inputReceiptSha256':sha(data/'input-receipt.json'),
         'inferenceProposal':plan['inferenceProposal'],'artisticAcceptance':False,
         'rigged':False,'sharedAssetsChanged':False,'imageUploaded':False}
@@ -79,6 +84,8 @@ def main():
             device='cuda:0';half=True
         else:
             device='cpu';half=False
+        if policy.get('requireFp16CudaForMatchedAB') and (device != 'cuda:0' or not half):
+            raise RuntimeError('Matched A/B requires sufficient free VRAM for the same FP16 CUDA forward; no model was loaded')
         result['device']={'selected':device,'torchVersion':torch.__version__,
             'cudaRuntime':torch.version.cuda,'selectedBeforeModelLoad':True}
         result['precision']='FP16 CUDA autocast forward; FP32 streamed field queries/CPU extraction' if half else 'FP32 '+device+' forward and streamed extraction'

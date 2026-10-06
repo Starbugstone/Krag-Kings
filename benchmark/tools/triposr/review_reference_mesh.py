@@ -1,10 +1,12 @@
 """Neutral views of an actual unrigged pilot mesh; never modifies the source GLB."""
+import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import bpy
-from mathutils import Vector
+from mathutils import Matrix, Vector
 
 ROOT = Path(__file__).resolve().parents[3]
 PILOT = ROOT / 'benchmark/local/triposr-reference-v1/pilot-krag-bust-v1'
@@ -17,6 +19,15 @@ def sha(path):
 
 
 def main():
+    global PILOT, SOURCE, OUTPUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pilot-directory', type=Path, default=PILOT)
+    parser.add_argument('--upright', action='store_true')
+    import sys
+    args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+    PILOT = args.pilot_directory.resolve()
+    SOURCE = PILOT/'Krag_Bust_Reference.glb'
+    OUTPUT = PILOT/'neutral-review'
     receipt = json.loads((PILOT / 'pilot-result.json').read_text(encoding='utf-8'))
     if not receipt['status'].startswith('REFERENCE_GEOMETRY_GENERATED') or sha(SOURCE) != receipt['outputSha256']:
         raise RuntimeError('The actual pilot output does not match its receipt')
@@ -28,6 +39,13 @@ def main():
     objects = [obj for obj in bpy.context.scene.objects if obj.type == 'MESH']
     if not objects:
         raise RuntimeError('The saved GLB contains no imported mesh')
+    if args.upright:
+        # Undo Blender's glTF Y-up conversion for this generator's Z-up mesh.
+        # This display-only transform is not written into the source GLB.
+        rotation = Matrix.Rotation(-math.pi/2, 4, 'X')
+        for obj in objects:
+            obj.matrix_world = rotation @ obj.matrix_world
+        bpy.context.view_layer.update()
     corners = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
     lower = Vector([min(point[axis] for point in corners) for axis in range(3)])
     upper = Vector([max(point[axis] for point in corners) for axis in range(3)])
@@ -88,8 +106,11 @@ def main():
         ('AxisPlusX', (3, 0, .15)), ('AxisPlusY', (0, 3, .15)),
         ('AxisMinusX', (-3, 0, .15)), ('AxisPlusZ', (0, -.01, 3)),
     ]
+    if args.upright:
+        views = [('InputFacingPlusX',(3,0,.12)), ('QuarterPlusXMinusY',(2.3,-1.8,.5)),
+                 ('SideMinusY',(0,-3,.12)), ('InferredBackMinusX',(-3,0,.12))]
     images = []
-    for mode, selected in [('VertexColor', views), ('Clay', views[:2])]:
+    for mode, selected in [('VertexColor', views), ('Clay', views if args.upright else views[:2])]:
         scene.view_layers[0].material_override = clay if mode == 'Clay' else None
         for label, direction in selected:
             camera.location = center + Vector(direction) * span
@@ -104,6 +125,8 @@ def main():
     report = {'sourceSha256':sha(SOURCE), 'recipeSha256':sha(__file__),
               'sourceUnchanged':True, 'engineEvidence':False, 'artisticAcceptance':False,
               'orientation':'Axis labels refer to actual Blender GLB import; likeness/front assignment requires inspection.',
+              'displayRotationXDegrees':-90 if args.upright else 0,
+              'inferredRearIsCanonical':False,
               'render':'Cycles CPU, 24 samples, denoising, neutral white area lights, AgX, smooth display normals',
               'importedBounds':[list(lower), list(upper)], 'images':images}
     (OUTPUT / 'review.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
