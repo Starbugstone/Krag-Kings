@@ -1,0 +1,23 @@
+{
+  "name": "krag-whole-face-v9v-NeutralFrontClay",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\oral_volume_wip\\review_whole_face_v9v.py",
+    "--",
+    "--view",
+    "NeutralFrontClay"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-NeutralFrontClay.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-NeutralFrontClay.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-NeutralFrontClay.stdout.log",
+  "successMarker": "KRAG_WHOLE_FACE_V9V_REVIEW_COMPLETE"
+}

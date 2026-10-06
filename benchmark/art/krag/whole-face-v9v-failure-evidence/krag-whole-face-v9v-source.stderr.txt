@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\build_whole_face_v9v.py", line 112, in <module>
+    opening = lip_residual(head, rig, held)
+  File "D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\oral_fit_v9v.py", line 153, in lip_residual
+    raise RuntimeError('Paired-lip residual exceeds25mm; preserve this failure for inspection')
+RuntimeError: Paired-lip residual exceeds25mm; preserve this failure for inspection
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\build_whole_face_v9v.py', exiting.

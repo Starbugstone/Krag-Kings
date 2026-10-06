@@ -1,0 +1,20 @@
+{
+  "name": "krag-whole-face-v9v-source",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\oral_volume_wip\\build_whole_face_v9v.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-source.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-source.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-whole-face-v9v-source.stdout.log",
+  "successMarker": "KRAG_WHOLE_FACE_V9V_SOURCE_COMPLETE"
+}

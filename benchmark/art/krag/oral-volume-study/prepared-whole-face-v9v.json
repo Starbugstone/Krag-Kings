@@ -1,0 +1,77 @@
+{
+  "status": "Frozen preparation only; no source or native review exists",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "inputSource": {
+    "path": "benchmark/art/krag/Krag_ContinuousMandible_v9u_WIP.blend",
+    "sha256": "7c6d88870a8ac46112708147bce98f44b3516387a462b7536ccb117bf0883f19"
+  },
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/whole_face_v9v.py",
+      "sha256": "9c18d58ccfb854ba39738e5805ddd55aa922dc23d8fbf632930a8424ea3dce16"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/oral_fit_v9v.py",
+      "sha256": "a549cd9cc3a7a02c093b2834fc21ef01acbcb19a3e759e7f7ecaf6f126f9f531"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/build_whole_face_v9v.py",
+      "sha256": "ea119dad4133c0962bbfab39db94b77c6af83a5c9bae7308887f6a048c0d53e3"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_whole_face_v9v.py",
+      "sha256": "d6835178da1eab14004e67b7f11a497d6c9c8f922b7212ac3f2f83ec5b928bdf"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+      "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/exterior_canines_v9t.py",
+      "sha256": "fb5fe35f0ed778a1b775ec3c6ed3d295b72a7ac5a3942f68cfb329b1d3e10b6d"
+    },
+    {
+      "path": "benchmark/tools/krag/landmark_wip/landmark_relief.py",
+      "sha256": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d"
+    },
+    {
+      "path": "benchmark/tools/krag/ironjaw_wip/replacement_surface.py",
+      "sha256": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/tusk_exterior_fit_v9lfa.py",
+      "sha256": "2495c1784a81325061549c8384fbcf0fff5e5e486d722055508686fc3d41ddf7"
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    },
+    {
+      "path": "benchmark/art/krag/oral-volume-study/whole-face-v9v-preflight.json",
+      "sha256": "94d4b96c6e32bc4188330994976eeba4c6f635690d868c4e8dd77c66abd687cf"
+    }
+  ],
+  "criticalChanges": [
+    "Coordinated supported brow/glabella/alar/cheek relief and modest outer-envelope narrowing",
+    "Monotone anterior lower arch expands with its short canines; closed bite height unchanged",
+    "Anterior tongue-floor volume brought forward/up beneath incisors",
+    "Actual paired upper/lower oral-rim full-range residual with shared commissures; full jaw angle preserved"
+  ],
+  "initialNumericalFailure": "whole-face-v9v-short-oral-transition-failure.json",
+  "firstBoundary": "Source save/reopen plus NeutralFrontClay and OpenFront; inspect before additional views",
+  "pending": [
+    "Actual neutral/profile/open likeness and dental occlusion",
+    "Any raw optical/oral skin contact revealed in source review",
+    "Verified v4 seven-action merge before eventual engine promotion"
+  ],
+  "motionLineage": "Retains pre-v4 oral actions. Frozen coherent68 fe15213d and UE PBR input unchanged."
+}
