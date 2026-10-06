@@ -1,0 +1,11 @@
+# Coherent identity studies
+
+These studies preserve the concept as the target and retain every failed result. They are not approved proportions or an accepted character. `coherent-head-ear-groom-readiness.json` compares the original sheet directly with the current actual face.
+
+The read-only orbital audit measures the actual prior neutral aperture at 9.63 mm high and approximately 31 mm wide. The first numerical enlargement failed because near-canthus targets left the actual globe silhouette; its exact recipe and failure record are preserved. The second proposal bounds each target with the real ocular triangle projection, keeps the canthi and nasal anchors fixed, and rebuilds Blink/Squint on that same surface. It has a 12.84–12.85 mm aperture, zero introduced neutral degenerate/inverted triangles, and a retained full-Blink normal-rotation warning. A changed normal orientation alone is not a self-intersection proof.
+
+The numerical proposal is archived in `art/nib/identity-study/orbital-identity-v2.npz`, with its receipt. Its input caches are the actual v5i geometry and neutral proposal recorded in `art/nib/v5-study/native-v5i-orbital-proposal-rotation.json`; the original extraction and closure recipes remain in `tools/nib/v5_wip`. The cached construction is not generated imagery.
+
+`build_orbital_identity.py` pins the current coherent source, requires exact facial Basis equality, and changes only the lid Basis/Blink/Squint plus corresponding fine facial fuzz. It preserves repaired Jaw weights, head topology/UV/material attributes, eyes, ears, all unrelated meshes and the complete rig/action contract. It saves and reopens the actual output before success. `review_orbital_identity.py` produces separate Neutral, Blink, Tongue and EyeCloseup diagnostic renders, retaining inherited oral and normal warnings. Jobs use the serialized memory guard and do not write shared assets.
+
+Current native execution and image judgments are recorded separately in `art/nib/identity-study/orbital-native-v1/actual-result.json` after all four views finish. Widening the aperture is not sufficient for adult likeness. Nose/cheek/brow planes, ear cup/orientation, fine flowing groom, neutral oral closure and inherited body/garment defects remain open. Root's isolated hand weight changes can be replayed later without changing the facial study's bind or geometry.

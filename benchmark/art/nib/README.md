@@ -296,3 +296,19 @@ This is a technical assembly improvement, **not artistic acceptance**. The old
 palm/shell/fingers remain overly simple; decorative hand rivets float after the
 earlier digit migration, and contact/shading need further review. Inherited
 axilla, garment, facial/ear/groom failures remain. No shared export changed.
+
+
+The isolated **coherent orbital identity v1** source and four actual views are
+now preserved at `identity-study/orbital-native-v1/`, source SHA-256
+`09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e`.
+All five guarded jobs exited 0. Save/reopen preserves 420 unrelated mesh payloads,
+all 79 rest bones and every action hash. The new neutral aperture is wider;
+frontal Blink closes without the old nasal/cheek wedge, and Tongue retains the
+repaired opening and dark-blue tongue. Full-Blink normal rotation and inherited
+oral occlusion warnings remain explicit, not hidden by these images.
+
+The actual eye closeup confirms continuing likeness failures: flat brow/cheek
+planes, a smooth human nose, simplistic glossy eyes and squared floating card
+roots. Ear cup/presentation and fuller fine-flowing groom remain open. Neither
+this source nor any shared engine asset is artistically accepted. Its complete
+receipt is `identity-study/orbital-native-v1/actual-result.json`.

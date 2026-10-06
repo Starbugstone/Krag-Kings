@@ -1,0 +1,28 @@
+{
+  "name": "nib-orbital-identity-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\build_orbital_identity.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\restorative-study\\socket-wrist-v1\\Nib_Coherent_RestorativeSocket_v1.blend",
+    "--source-sha256",
+    "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\orbital-native-v1",
+    "--diagnostic-normal-warning"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-orbital-identity-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-orbital-identity-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-orbital-identity-v1-generate.log",
+  "successMarker": "NIB_ORBITAL_IDENTITY_SAVED_AND_REOPENED"
+}
