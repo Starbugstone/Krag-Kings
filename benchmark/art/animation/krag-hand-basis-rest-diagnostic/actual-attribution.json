@@ -1,0 +1,16 @@
+{
+  "status": "Actual Basis-only attribution; no source modification",
+  "sourceSha256": "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "threeNativeViewsInspected": true,
+  "poseAndMorphsNeutralized": true,
+  "sourceCageProjectionsInspected": true,
+  "finding": "Broad transverse palmar ridge is present in the unposed actual saved mesh, with all pose transforms neutral and morphs zero. Original CC0 Body-hand cage projections already show the exaggerated thenar/transverse form; Krag anisotropic fitting amplifies it. A thumb-pose-only explanation is disproved. Finite-difference Jacobians at798 source points are positive, so that sample does not indicate a folded fitting map. The palmar surface itself needs sculpt correction.",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "memory": {
+    "peakPrivateMB": 980.0,
+    "minimumAvailableMB": 11199.0
+  }
+}

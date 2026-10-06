@@ -159,3 +159,11 @@ benchmark/art/animation/krag-relaxed-hand-v2/executed-recipe/contracts.py whites
 benchmark/unreal/evidence/triposr-krag-bust-matted-v2/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/triposr-krag-bust-matted-v2/*.json -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/triposr-krag-bust-matted-v2/*.glb filter=lfs diff=lfs merge=lfs -text
+
+benchmark/art/nib/groom-study/fine-strands-v1/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/nib/groom-study/fine-strands-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/nib/groom-study/fine-strands-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/nib/groom-study/fine-strands-v1/verification-recipe/contracts.py whitespace=-blank-at-eof

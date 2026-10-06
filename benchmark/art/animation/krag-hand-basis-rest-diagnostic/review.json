@@ -1,0 +1,74 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-relaxed-hand-v2\\Krag_RelaxedHand_v2.blend",
+  "sourceSha256": "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+  "recipeSha256": "328a8a170690a41ca5ceb4721f5095818ee02141ecfa44911322e8631495ccf5",
+  "visibleMeshes": [
+    {
+      "name": "BioForearm_L",
+      "vertices": 64858,
+      "handWeightedVertices": 49505
+    }
+  ],
+  "renderer": "BLENDER_WORKBENCH",
+  "materialReview": false,
+  "surfaceIntersectionProof": false,
+  "artisticAcceptance": false,
+  "sourceModified": false,
+  "restOnly": true,
+  "views": [
+    {
+      "clip": "BasisRest",
+      "phase": 0.0,
+      "frame": 1.0,
+      "view": "palm",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-hand-basis-rest-diagnostic\\BasisRest_00_palm.png",
+      "sha256": "aa0a447df5d02347f232302582293a10e4be8aa379e6543d71d904683337dad6",
+      "target": [
+        0.5975593328475952,
+        -0.04564167559146881,
+        0.9116268157958984
+      ],
+      "outward": [
+        -1.0,
+        0.0,
+        3.725290298461914e-09
+      ]
+    },
+    {
+      "clip": "BasisRest",
+      "phase": 0.0,
+      "frame": 1.0,
+      "view": "back",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-hand-basis-rest-diagnostic\\BasisRest_00_back.png",
+      "sha256": "3ec1e903aaa1b197648dc260a4bbe3479574b40e7683cba2d1a11deecc60b6f4",
+      "target": [
+        0.5975593328475952,
+        -0.04564167559146881,
+        0.9116268157958984
+      ],
+      "outward": [
+        1.0,
+        -0.0,
+        -3.725290298461914e-09
+      ]
+    },
+    {
+      "clip": "BasisRest",
+      "phase": 0.0,
+      "frame": 1.0,
+      "view": "edge",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-hand-basis-rest-diagnostic\\BasisRest_00_edge.png",
+      "sha256": "9d539cddad97c9a17a0b08c2cd935601b9b992955dd0ced85c362da7a843ad61",
+      "target": [
+        0.5975593328475952,
+        -0.04564167559146881,
+        0.9116268157958984
+      ],
+      "outward": [
+        7.403939128458603e-10,
+        -0.9800506234169006,
+        0.19874797761440277
+      ]
+    }
+  ]
+}

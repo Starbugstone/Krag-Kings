@@ -12,22 +12,15 @@ p=argparse.ArgumentParser()
 p.add_argument('--source',type=Path,required=True)
 p.add_argument('--source-sha256',required=True)
 p.add_argument('--output',type=Path,required=True)
-p.add_argument('--validate-existing',action='store_true',
-               help='Read-only recovery of a saved candidate after a validation-only failure')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest()
 if sha(a.source)!=a.source_sha256:raise RuntimeError('Pinned source changed')
-if a.output.exists() and not a.validate_existing:raise RuntimeError('Preserve previous groom comparison')
+if a.output.exists():raise RuntimeError('Preserve previous groom comparison')
 source_report=a.source.parent/'source.json'
 inherited=json.loads(source_report.read_text(encoding='utf-8'))
 if inherited['candidateSha256']!=a.source_sha256:raise RuntimeError('Source receipt mismatch')
-a.output.mkdir(parents=True,exist_ok=a.validate_existing)
-atlas=(json.loads((a.output/'groom-atlas.json').read_text()) if a.validate_existing
-       else nib_fur_atlas_study.generate(a.output/'textures'))
-saved_input=(a.output/'Nib_Coherent_FineStrands_v1.blend')
-saved_input_hash=sha(saved_input) if a.validate_existing else None
-if a.validate_existing and (a.output/'source.json').exists():
-    raise RuntimeError('Preserve previous completed verification')
+a.output.mkdir(parents=True)
+atlas=nib_fur_atlas_study.generate(a.output/'textures')
 bpy.ops.wm.open_mainfile(filepath=str(a.source),load_ui=False)
 rig=bpy.data.objects['Nib_Rig'];before=rig_contract(rig)
 surfaces={o.name:surface_hash(o) for o in bpy.data.objects if o.type=='MESH'}
@@ -69,8 +62,7 @@ for name in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance']:
     bpy.data.actions[name].use_fake_user=True
 scene['nib_fine_atlas_study']='Finer independent fibers; same card geometry and coverage regions; unaccepted'
 output=a.output/'Nib_Coherent_FineStrands_v1.blend'
-if not a.validate_existing:
-    bpy.ops.wm.save_as_mainfile(filepath=str(output),compress=True,relative_remap=False)
+bpy.ops.wm.save_as_mainfile(filepath=str(output),compress=True,relative_remap=False)
 bpy.ops.wm.open_mainfile(filepath=str(output),load_ui=False)
 if rig_contract(bpy.data.objects['Nib_Rig'])!=before:raise RuntimeError('Saved source changed rig/actions')
 for name,digest in surfaces.items():
@@ -84,19 +76,12 @@ for name,expected in expected_images.items():
     if image.colorspace_settings.name!=expected['colorSpace']:
         raise RuntimeError('Reopened image color space changed '+name)
     image.reload()
-    lazy_before=bool(image.has_data)
-    dimensions=list(image.size) # Request lazy pixel loading before checking has_data.
-    if not image.has_data or min(dimensions)<=0:raise RuntimeError('Reopened image failed decode '+name)
-    decoded.append({'name':name,'dimensions':dimensions,'hasDataBeforeSizeRequest':lazy_before,
-                    'hasDataAfterSizeRequest':bool(image.has_data),**expected})
+    if not image.has_data or min(image.size)<=0:raise RuntimeError('Reopened image failed decode '+name)
+    decoded.append({'name':name,'dimensions':list(image.size),**expected})
 if sha(a.source)!=a.source_sha256:raise RuntimeError('Input changed')
-if saved_input_hash and sha(output)!=saved_input_hash:raise RuntimeError('Read-only verification changed candidate')
 report={'status':'Actual unchanged-geometry atlas candidate; matched native views required',
         'source':str(a.source),'sourceSha256':a.source_sha256,
         'candidate':str(output),'candidateSha256':sha(output),'savedSourceReopened':True,
-        'readOnlyValidationRecovery':a.validate_existing,
-        'generationRecipeHashes':{p.name:sha(p) for p in (a.output/'generation-recipe').glob('*')}
-             if a.validate_existing else None,
         'preservedRig':before,'retainedMeshHashes':surfaces,'changedCardMaps':changed,
         'reopenedImages':decoded,'preRenderGate':inherited['preRenderGate'],
         'numericEvidence':inherited['numericEvidence'],

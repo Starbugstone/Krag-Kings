@@ -1,0 +1,38 @@
+{
+  "status": "Actual source/map integrity and three native views; artistic gate failed",
+  "sourceSha256": "b48666e19753109ac32c9de21020440980adfd964d9d811466687e04a8f86e60",
+  "guardExitAfterReadOnlyRecovery": 0,
+  "nativeExitAfterReadOnlyRecovery": 0,
+  "originalValidationNativeExit": 2,
+  "originalCandidateUnchangedByRecovery": true,
+  "validationCauseConfirmed": "All70 image datablocks reported has_data=False after reload until requesting image.size triggered lazy decoding. Size-first verification then passed dimensions, hashes, paths and color spaces. The saved candidate was not regenerated or resaved.",
+  "retainedMeshComponents": 422,
+  "rigAndAllSevenActionsPreserved": true,
+  "actualViewsInspected": [
+    "EyeCloseup",
+    "Neutral",
+    "Profile"
+  ],
+  "finding": "Finer fiber breakup is visible, particularly in outer-ear nap and hair tips. Broad rectangular root ends, coarse overlapping clumps, sparse inner-ear coverage, smooth juvenile face and jagged neck/collar remain. This atlas is a coherent technical candidate, not accepted final fur.",
+  "artisticAcceptance": false,
+  "engineIntegrated": false,
+  "sharedChanged": false,
+  "memory": {
+    "nib-fine-strands-v1-validation-retry": {
+      "peakPrivateMB": 1284.0,
+      "minimumAvailableMB": 10766.0
+    },
+    "nib-fine-strands-v1-eyecloseup": {
+      "peakPrivateMB": 2445.0,
+      "minimumAvailableMB": 9713.0
+    },
+    "nib-fine-strands-v1-neutral": {
+      "peakPrivateMB": 2656.0,
+      "minimumAvailableMB": 9454.0
+    },
+    "nib-fine-strands-v1-profile": {
+      "peakPrivateMB": 2658.0,
+      "minimumAvailableMB": 9437.0
+    }
+  }
+}

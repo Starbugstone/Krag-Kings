@@ -1,0 +1,9 @@
+D:\Dev\Krag-Kings\benchmark\tools\animation\apply_nib_fine_fur_atlas.py:51: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  images={node.image for material in materials if material.use_nodes
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\apply_nib_fine_fur_atlas.py", line 79, in <module>
+    if not image.has_data or min(image.size)<=0:raise RuntimeError('Reopened image failed decode '+name)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Reopened image failed decode Nib_v6_FurCards_Metallic.png.001
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\animation\apply_nib_fine_fur_atlas.py', exiting.

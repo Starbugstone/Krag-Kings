@@ -1,0 +1,9 @@
+{
+  "nativeExit": 2,
+  "guardExit": 2,
+  "sourceSavedButValidationFailed": true,
+  "exception": "Reopened image failed decode Nib_v6_FurCards_Metallic.png.001",
+  "causeToVerify": "Short-circuit tests image.has_data before reading image.size, so Blender may not have requested the lazily loaded pixels yet. Existing portable validator reads size first.",
+  "savedCandidateSha256": "b48666e19753109ac32c9de21020440980adfd964d9d811466687e04a8f86e60",
+  "candidateAccepted": false
+}

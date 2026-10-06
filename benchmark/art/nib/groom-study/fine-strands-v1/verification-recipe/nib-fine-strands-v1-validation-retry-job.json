@@ -1,0 +1,28 @@
+{
+  "name": "nib-fine-strands-v1-validation-retry",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4,
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\apply_nib_fine_fur_atlas.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\adult-native-v1\\Nib_Coherent_AdultIdentity_v1.blend",
+    "--source-sha256",
+    "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1",
+    "--validate-existing"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fine-strands-v1-validation-retry.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fine-strands-v1-validation-retry.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fine-strands-v1-validation-retry.stdout.log",
+  "successMarker": "NIB_FINE_FUR_ATLAS_SAVED_AND_REOPENED"
+}
