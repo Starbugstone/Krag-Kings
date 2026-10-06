@@ -1,0 +1,42 @@
+{
+  "engine": "Unity",
+  "buildGuid": "b5fa6342a69f462d8e2f6510ee0056e6",
+  "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "source": "Actual packaged game, explicit-HWND Windows Graphics Capture",
+  "videoSha256": "5a1894ee5b3b1f3daca3b520481085bac27e55241dc87e41a52499bfaa5d5837",
+  "technicalCapturePassed": true,
+  "wideFraming": {
+    "buildGuid": "b5fa6342a69f462d8e2f6510ee0056e6",
+    "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+    "width": 1920,
+    "height": 1080,
+    "wideFrames": 3165,
+    "clippedFrames": 0,
+    "firstClippedSecond": -1.0,
+    "passed": true,
+    "scope": "Actual wide-view renderer/capsule bounds projected through the game camera; excludes portrait composition and artistic acceptance."
+  },
+  "audioDurationCheck": {
+    "expectedSeconds": 72,
+    "actualSeconds": 71.978667,
+    "absoluteErrorSeconds": 0.021332999999998492,
+    "toleranceSeconds": 0.5,
+    "passed": true,
+    "silencePaddingOrTimeStretchApplied": false
+  },
+  "performanceMeasurement": false,
+  "artisticAcceptance": false,
+  "listeningAndFineSyncReviewed": false,
+  "actualExtractedFramesReviewed": 17,
+  "findings": [
+    "All sampled wide views retain both characters and feet; numerical audit records no clipped bounds in 3165 actual wide frames.",
+    "Movement, overlapping actions, bionic variants, camera changes and facial performances produce different actual poses. Still-frame sampling does not establish full gait or temporal quality.",
+    "Required dark-blue Nib tongue is visible at the playful-expression peak. Earlier Nib Shoot forehead spike is absent in the sampled repaired pose.",
+    "Nib eyes remain protruding strips, fur is sparse and dark, mouth and garment construction lack concept fidelity.",
+    "Krag retains primitive-like facial and body forms, severe raised-arm axillary stretching, unfinished cloth/armor and weak weapon grip.",
+    "Krag melee and shooting portraits crop the acting arm/weapon below the HUD. An action-bust view must be reviewed separately from face portraits.",
+    "Current sand has finer grain and quieter ridges, but current characters remain below investor quality."
+  ],
+  "gameClosed": true,
+  "windowLeaseRestored": true
+}

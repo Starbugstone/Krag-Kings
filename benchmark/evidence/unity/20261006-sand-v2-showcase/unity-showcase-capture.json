@@ -1,0 +1,428 @@
+﻿{
+    "engine":  "Unity",
+    "source":  "real-time capture of explicit game HWND client area",
+    "desktopCapture":  false,
+    "systemAudioCapture":  false,
+    "microphoneCapture":  false,
+    "captureBackend":  "WGC",
+    "encoder":  "h264_nvenc",
+    "recordingFrameRate":  30,
+    "gameFrameRateClaim":  false,
+    "ffmpeg":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\capture\\ffmpeg-compatible\\ffmpeg-8.0.1-essentials_build\\bin\\ffmpeg.exe",
+    "showcaseSeconds":  72,
+    "completed":  true,
+    "visualAcceptance":  false,
+    "startedUtc":  "2026-10-06T04:54:44.6058495Z",
+    "originalTopmost":  false,
+    "windowHandle":  11536796,
+    "gameProcessId":  23176,
+    "windowTitle":  "Krag Kings — Engine Comparison",
+    "clientWidth":  1920,
+    "clientHeight":  1080,
+    "gateUtc":  "2026-10-06T04:54:45.9190362Z",
+    "audioOffsetSeconds":  0.62914037704467773,
+    "audioSync":  "UTC first captured-frame timestamp aligned to engine recording-start timestamp; residual audio-thread latency and frame rounding require listening review.",
+    "wgc":  {
+                "backend":  "WindowsGraphicsCapture",
+                "explicitHwndOnly":  true,
+                "desktopCapture":  false,
+                "completed":  true,
+                "hwnd":  11536796,
+                "processId":  23176,
+                "width":  1920,
+                "height":  1080,
+                "frameRate":  30,
+                "pixelFormat":  "BGRA8 SDR",
+                "frames":  2245,
+                "duplicatedFrames":  2,
+                "firstOutputUnixMicroseconds":  1791262485336175.2,
+                "firstCompositorUnixMicroseconds":  1791262485329728.2,
+                "timing":  "Real-time CFR schedule; newest available compositor frame, repeat only when compositor has no newer frame"
+            },
+    "engineStartUtc":  "2026-10-06T04:54:45.9653157+00:00",
+    "engineStartTimestampSource":  "engine showcase-started.json",
+    "firstCapturedFrameUnixMicroseconds":  1791262485336175.3,
+    "blackFrameCheck":  {
+                            "minimumDurationSeconds":  1,
+                            "blackPixelFraction":  0.98,
+                            "pixelThreshold":  0.04,
+                            "intervals":  [
+
+                                          ],
+                            "passed":  true
+                        },
+    "audioSignalCheck":  {
+                             "rmsDbFS":  "-39.551551",
+                             "peakDbFS":  "-8.434957",
+                             "samples":  "3454976",
+                             "nonzeroSignal":  true,
+                             "listeningReviewPassed":  false
+                         },
+    "audioDurationCheck":  {
+                               "expectedSeconds":  72,
+                               "actualSeconds":  71.978667,
+                               "absoluteErrorSeconds":  0.021332999999998492,
+                               "toleranceSeconds":  0.5,
+                               "passed":  true,
+                               "silencePaddingOrTimeStretchApplied":  false
+                           },
+    "motionCheck":  {
+                        "passed":  true,
+                        "scope":  "Known 72-second showcase camera/pose cues; excludes top and bottom HUD",
+                        "visualAcceptance":  false,
+                        "minimumMeanAbsoluteDifference":  0.005,
+                        "minimumChangedPixelFraction":  0.05,
+                        "frames":  [
+                                       {
+                                           "cueSeconds":  3,
+                                           "sha256":  "99e62874697892df2fff743c769c76253ec2e2b4c54bab24c871d8081c156679",
+                                           "videoSeconds":  3.6291
+                                       },
+                                       {
+                                           "cueSeconds":  18,
+                                           "sha256":  "247488883d2d03a93ef59e2d08fe12689f83b5c623f458ab6ebf4032226bf8dd",
+                                           "videoSeconds":  18.6291
+                                       },
+                                       {
+                                           "cueSeconds":  31,
+                                           "sha256":  "99688bf2e4cd956e0ff707dd85d43af9af56d95f9c3f4bb1b121370b62c0a800",
+                                           "videoSeconds":  31.6291
+                                       },
+                                       {
+                                           "cueSeconds":  41,
+                                           "sha256":  "51560a934db4c247970c02f609f7bf684089e9c0c90e91e02ab5cbc21475f6d6",
+                                           "videoSeconds":  41.6291
+                                       },
+                                       {
+                                           "cueSeconds":  54,
+                                           "sha256":  "cc76c3133721454c193c81a0774553ff368ddd3c17e63270b62957cd4a617700",
+                                           "videoSeconds":  54.6291
+                                       },
+                                       {
+                                           "cueSeconds":  64,
+                                           "sha256":  "783d7b98a69e877af76016b2998ecc23a4aa78a83665d569e1e79a61ca7d02a1",
+                                           "videoSeconds":  64.6291
+                                       }
+                                   ],
+                        "comparisons":  [
+                                            {
+                                                "changedPixelFraction":  0.62760416666666663,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.04595503131808279,
+                                                "toCue":  18
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.92892795138888884,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.12308517156862746,
+                                                "toCue":  31
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.93131510416666663,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.12424257897603486,
+                                                "toCue":  41
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.59559461805555558,
+                                                "passed":  true,
+                                                "fromCue":  31,
+                                                "meanAbsoluteDifference":  0.085678785403050114,
+                                                "toCue":  41
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.78374565972222221,
+                                                "passed":  true,
+                                                "fromCue":  54,
+                                                "meanAbsoluteDifference":  0.05771207788671024,
+                                                "toCue":  64
+                                            }
+                                        ],
+                        "freezeDetection":  {
+                                                "longestPlateauSeconds":  0,
+                                                "minimumDurationSeconds":  5,
+                                                "passed":  true,
+                                                "intervals":  [
+
+                                                              ],
+                                                "noiseThresholdDb":  -60
+                                            }
+                    },
+    "reviewFrameSamples":  {
+                               "source":  "Frames decoded from actual recorded game video at measured engine-start offset",
+                               "video":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\capture-wgc\\unity-showcase.mp4",
+                               "videoSha256":  "5a1894ee5b3b1f3daca3b520481085bac27e55241dc87e41a52499bfaa5d5837",
+                               "audioOffsetSeconds":  0.62914037704467773,
+                               "visualAcceptance":  false,
+                               "samples":  [
+                                               {
+                                                   "showcaseSeconds":  3,
+                                                   "videoSeconds":  3.6291403770446777,
+                                                   "purpose":  "wide pair",
+                                                   "file":  "frame-03.png",
+                                                   "sha256":  "ec66eca076c0aa6b890dfd453740c38565762689d401fa6f05705ab56c9d40b8"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  7.7,
+                                                   "videoSeconds":  8.329140377044677,
+                                                   "purpose":  "walk and run",
+                                                   "file":  "action-07.7-walk.png",
+                                                   "sha256":  "72dc01066b50ff6fe839cf2cf8808088704451aa83dd4dce2bdc3c34d228fc16"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  14.4,
+                                                   "videoSeconds":  15.029140377044678,
+                                                   "purpose":  "concurrent melee and shooting",
+                                                   "file":  "action-14.4-overlap.png",
+                                                   "sha256":  "025aa3c89f770497918b1fc7074c5b188dcc96a1189f4d95005595cde41ef3d1"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  16.4,
+                                                   "videoSeconds":  17.029140377044676,
+                                                   "purpose":  "bionic action poses",
+                                                   "file":  "action-16.4-bionics.png",
+                                                   "sha256":  "50f4347bb61060f1f77a91069cf5bb7cb26ecdc107e9aea6dd95a802064797bc"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  18,
+                                                   "videoSeconds":  18.629140377044678,
+                                                   "purpose":  "coarse hit boundary",
+                                                   "file":  "frame-18.png",
+                                                   "sha256":  "d36962b2a31b6a433068a4accc628f115c97d5aa00a3a91396680ed3b00a8590"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  18.3,
+                                                   "videoSeconds":  18.929140377044678,
+                                                   "purpose":  "hit reactions",
+                                                   "file":  "action-18.3-hit.png",
+                                                   "sha256":  "fa9f1253512fa104a19142951b0298355c7ccd42e26236608fefab7d9da0d740"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  22,
+                                                   "videoSeconds":  22.629140377044678,
+                                                   "purpose":  "variant movement",
+                                                   "file":  "frame-22.png",
+                                                   "sha256":  "adfe1e5219ad4b5f43e2a18f3ab3096fb93d4a72e01f47cc553c87789b600966"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  24.4,
+                                                   "videoSeconds":  25.029140377044676,
+                                                   "purpose":  "shooting and melee",
+                                                   "file":  "action-24.4-actions.png",
+                                                   "sha256":  "65100e0a41ab3ba8d96240c956d6ce9210611723af320bbc36995e0b8ba4c4cc"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  26,
+                                                   "videoSeconds":  26.629140377044678,
+                                                   "purpose":  "variant body view",
+                                                   "file":  "frame-26.png",
+                                                   "sha256":  "8d9c2217df92b373ce4cca51b39caab46c4c826cff4416bd177463706f63ce4c"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  31,
+                                                   "videoSeconds":  31.629140377044678,
+                                                   "purpose":  "Nib facial performance",
+                                                   "file":  "frame-31.png",
+                                                   "sha256":  "344d9ddd9accfce5a2edb1602bb7efa610d43b5604bf5e757bb27a4f978f721f"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  31.4,
+                                                   "videoSeconds":  32.029140377044676,
+                                                   "purpose":  "Nib playful mouth and dark-blue tongue at authored facial peak",
+                                                   "file":  "expression-31.4-nib-playful.png",
+                                                   "sha256":  "8a60dacea9782a974b7b0b422a9d98f5cc6f78a65530bd7c962e404d71ca2f7c"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  36.9,
+                                                   "videoSeconds":  37.529140377044676,
+                                                   "purpose":  "Nib shooting portrait",
+                                                   "file":  "action-36.9-nib-shoot.png",
+                                                   "sha256":  "1c0167807fb32d067721adc3157b0e8486f9607c9e7e30981cc4c81d8959171f"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  41,
+                                                   "videoSeconds":  41.629140377044678,
+                                                   "purpose":  "Krag facial performance",
+                                                   "file":  "frame-41.png",
+                                                   "sha256":  "399caa665fd1de65bdb386ac643dbefd55cc64f704c1ea7325f69508baebb67b"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  46,
+                                                   "videoSeconds":  46.629140377044678,
+                                                   "purpose":  "Krag melee portrait",
+                                                   "file":  "action-46.0-krag-melee.png",
+                                                   "sha256":  "cbfa083ea1a3b93e365cdd9d24c0446a46e07756adc55a9ef2c8724e9b7c0199"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  47.4,
+                                                   "videoSeconds":  48.029140377044676,
+                                                   "purpose":  "Krag shooting portrait",
+                                                   "file":  "action-47.4-krag-shoot.png",
+                                                   "sha256":  "de9091d9b49951694bd6232308872afe7a6b7d96ec31d10c23e5dd4f1ce0732e"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  54,
+                                                   "videoSeconds":  54.629140377044678,
+                                                   "purpose":  "bionic carousel",
+                                                   "file":  "frame-54.png",
+                                                   "sha256":  "adb62a59a71ea0c2e770e0ab722b4857af7b9f12974bc334fb1655d78205bc43"
+                                               },
+                                               {
+                                                   "showcaseSeconds":  64,
+                                                   "videoSeconds":  64.629140377044678,
+                                                   "purpose":  "closing movement",
+                                                   "file":  "frame-64.png",
+                                                   "sha256":  "23ba457c101c6a9e9d836768a33962405ba7c62366c48ac327743f6529d2f8fa"
+                                               }
+                                           ]
+                           },
+    "output":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\capture-wgc\\unity-showcase.mp4",
+    "engineAudio":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\showcase-engine-audio.wav",
+    "rawVideo":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\capture-wgc\\unity-showcase-video-only.mp4",
+    "media":  {
+                  "streams":  [
+                                  {
+                                      "index":  0,
+                                      "codec_name":  "h264",
+                                      "codec_long_name":  "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+                                      "profile":  "Main",
+                                      "codec_type":  "video",
+                                      "codec_tag_string":  "avc1",
+                                      "codec_tag":  "0x31637661",
+                                      "width":  1920,
+                                      "height":  1080,
+                                      "coded_width":  1920,
+                                      "coded_height":  1080,
+                                      "has_b_frames":  2,
+                                      "sample_aspect_ratio":  "1:1",
+                                      "display_aspect_ratio":  "16:9",
+                                      "pix_fmt":  "yuv420p",
+                                      "level":  40,
+                                      "color_range":  "tv",
+                                      "color_space":  "bt709",
+                                      "chroma_location":  "left",
+                                      "field_order":  "progressive",
+                                      "refs":  1,
+                                      "is_avc":  "true",
+                                      "nal_length_size":  "4",
+                                      "id":  "0x1",
+                                      "r_frame_rate":  "30/1",
+                                      "avg_frame_rate":  "30/1",
+                                      "time_base":  "1/15360",
+                                      "start_pts":  0,
+                                      "start_time":  "0.000000",
+                                      "duration_ts":  1149435,
+                                      "duration":  "74.833008",
+                                      "bit_rate":  "7526910",
+                                      "bits_per_raw_sample":  "8",
+                                      "nb_frames":  "2245",
+                                      "extradata_size":  58,
+                                      "disposition":  {
+                                                          "default":  1,
+                                                          "dub":  0,
+                                                          "original":  0,
+                                                          "comment":  0,
+                                                          "lyrics":  0,
+                                                          "karaoke":  0,
+                                                          "forced":  0,
+                                                          "hearing_impaired":  0,
+                                                          "visual_impaired":  0,
+                                                          "clean_effects":  0,
+                                                          "attached_pic":  0,
+                                                          "timed_thumbnails":  0,
+                                                          "non_diegetic":  0,
+                                                          "captions":  0,
+                                                          "descriptions":  0,
+                                                          "metadata":  0,
+                                                          "dependent":  0,
+                                                          "still_image":  0,
+                                                          "multilayer":  0
+                                                      },
+                                      "tags":  {
+                                                   "language":  "und",
+                                                   "handler_name":  "VideoHandler",
+                                                   "vendor_id":  "[0][0][0][0]",
+                                                   "encoder":  "Lavc62.11.100 h264_nvenc"
+                                               }
+                                  },
+                                  {
+                                      "index":  1,
+                                      "codec_name":  "aac",
+                                      "codec_long_name":  "AAC (Advanced Audio Coding)",
+                                      "profile":  "LC",
+                                      "codec_type":  "audio",
+                                      "codec_tag_string":  "mp4a",
+                                      "codec_tag":  "0x6134706d",
+                                      "sample_fmt":  "fltp",
+                                      "sample_rate":  "48000",
+                                      "channels":  2,
+                                      "channel_layout":  "stereo",
+                                      "bits_per_sample":  0,
+                                      "initial_padding":  0,
+                                      "id":  "0x2",
+                                      "r_frame_rate":  "0/0",
+                                      "avg_frame_rate":  "0/0",
+                                      "time_base":  "1/48000",
+                                      "start_pts":  29136,
+                                      "start_time":  "0.607000",
+                                      "duration_ts":  3456000,
+                                      "duration":  "72.000000",
+                                      "bit_rate":  "75059",
+                                      "nb_frames":  "3375",
+                                      "extradata_size":  5,
+                                      "disposition":  {
+                                                          "default":  1,
+                                                          "dub":  0,
+                                                          "original":  0,
+                                                          "comment":  0,
+                                                          "lyrics":  0,
+                                                          "karaoke":  0,
+                                                          "forced":  0,
+                                                          "hearing_impaired":  0,
+                                                          "visual_impaired":  0,
+                                                          "clean_effects":  0,
+                                                          "attached_pic":  0,
+                                                          "timed_thumbnails":  0,
+                                                          "non_diegetic":  0,
+                                                          "captions":  0,
+                                                          "descriptions":  0,
+                                                          "metadata":  0,
+                                                          "dependent":  0,
+                                                          "still_image":  0,
+                                                          "multilayer":  0
+                                                      },
+                                      "tags":  {
+                                                   "language":  "und",
+                                                   "handler_name":  "SoundHandler",
+                                                   "vendor_id":  "[0][0][0][0]"
+                                               }
+                                  }
+                              ],
+                  "format":  {
+                                 "filename":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\capture-wgc\\unity-showcase.mp4",
+                                 "nb_streams":  2,
+                                 "nb_programs":  0,
+                                 "nb_stream_groups":  0,
+                                 "format_name":  "mov,mp4,m4a,3gp,3g2,mj2",
+                                 "format_long_name":  "QuickTime / MOV",
+                                 "start_time":  "0.000000",
+                                 "duration":  "74.833008",
+                                 "size":  "71165342",
+                                 "bit_rate":  "7607909",
+                                 "probe_score":  100,
+                                 "tags":  {
+                                              "major_brand":  "isom",
+                                              "minor_version":  "512",
+                                              "compatible_brands":  "isomiso2avc1mp41",
+                                              "encoder":  "Lavf62.3.100"
+                                          }
+                             }
+              },
+    "reviewFrames":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-065422\\capture-wgc\\unity-showcase-frames",
+    "outputSha256":  "5a1894ee5b3b1f3daca3b520481085bac27e55241dc87e41a52499bfaa5d5837",
+    "windowLeaseRestored":  true,
+    "finishedUtc":  "2026-10-06T04:56:51.6577126Z"
+}
