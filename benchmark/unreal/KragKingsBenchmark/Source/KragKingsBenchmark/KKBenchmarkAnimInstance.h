@@ -34,6 +34,8 @@ public:
     float RunStanceFraction=.42f;
     TArray<float> WalkLeftContacts,WalkRightContacts,RunLeftContacts,RunRightContacts;
     float LocomotionPhase=0.f;
+    uint32 LocomotionSerial=0;
+    bool bLocomotionPhaseRunning=false,bLocomotionPhaseWalking=false;
 protected:
     virtual FAnimInstanceProxy* CreateAnimInstanceProxy() override;
     virtual void DestroyAnimInstanceProxy(FAnimInstanceProxy* InProxy) override;

@@ -198,10 +198,21 @@ namespace KragKings.Benchmark
         void Play(string action, bool restart=false)
         {
             if (!restart && CurrentAction == action) return;
+            float phase=0;
+            bool oldGait=CurrentAction=="Walk"||CurrentAction=="Run";
+            bool newGait=action=="Walk"||action=="Run";
+            if(!restart && IsMoving && oldGait && newGait && animationPlayer[CurrentAction]!=null)
+            {
+                var oldCycle=CurrentAction=="Walk"?locomotion?.Walk:locomotion?.Run;
+                var newCycle=action=="Walk"?locomotion?.Walk:locomotion?.Run;
+                float oldLeft=oldCycle?.leftContacts?.Length>0?oldCycle.leftContacts[0]:0;
+                float newLeft=newCycle?.leftContacts?.Length>0?newCycle.leftContacts[0]:0;
+                phase=Mathf.Repeat(animationPlayer[CurrentAction].normalizedTime-oldLeft+newLeft,1);
+            }
             ActionVersion++;
             CurrentAction = action;
             if (!clips.ContainsKey(action)) return;
-            animationPlayer[action].time = 0;
+            animationPlayer[action].time = phase*clips[action].length;
             animationPlayer.CrossFade(action, .12f, PlayMode.StopSameLayer);
         }
         void Update()
@@ -249,7 +260,12 @@ namespace KragKings.Benchmark
             LocomotionCycle cycle=IsMoving?(IsWalking?locomotion?.Walk:locomotion?.Run):null;
             float cycleTime=cycle!=null && animationPlayer[CurrentAction]!=null?animationPlayer[CurrentAction].normalizedTime:0;
             bool changed=contactClip!=CurrentAction;
-            if(changed){contactClip=CurrentAction;previousContactTime=cycleTime-.001f;foreach(var leg in legs)leg.planted=false;}
+            if(changed)
+            {
+                bool switchedGait=(contactClip=="Walk"||contactClip=="Run")&&(CurrentAction=="Walk"||CurrentAction=="Run");
+                contactClip=CurrentAction;previousContactTime=cycleTime-(switchedGait?0:.001f);
+                foreach(var leg in legs)leg.planted=false;
+            }
             foreach(var leg in legs)
             {
                 if(!DemoScene.TryGround(leg.ankle.position,out var contact)) continue;

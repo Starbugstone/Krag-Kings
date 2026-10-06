@@ -94,7 +94,7 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     bool bFeetPlanted[2]={false,false};
     FVector PlantLocations[2]={FVector::ZeroVector,FVector::ZeroVector};
     FRotator GroundTilts[2]={FRotator::ZeroRotator,FRotator::ZeroRotator};
-    bool bRunning=false,bActionActive=false,bFaceActive=false;
+    bool bRunning=false,bPreviousWalking=false,bActionActive=false,bFaceActive=false;
     uint32 LastActionSerial=0;
     uint32 LastFaceSerial=0;
     explicit FKKBenchmarkAnimProxy(UAnimInstance* Instance):FAnimInstanceProxy(Instance)
@@ -147,17 +147,34 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     virtual void PreUpdate(UAnimInstance* Instance,float DeltaSeconds) override
     {
         FAnimInstanceProxy::PreUpdate(Instance,DeltaSeconds);
-        const auto* Anim=CastChecked<UKKBenchmarkAnimInstance>(Instance);
+        auto* Anim=CastChecked<UKKBenchmarkAnimInstance>(Instance);
         MorphCurves.Drivers=Anim->MorphDrivers;
         MorphCurves.MeshToWorld=GetComponentTransform();
-        IdlePlayer.SetSequence(Anim->IdleClip);RunPlayer.SetSequence(Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get());
+        IdlePlayer.SetSequence(Anim->IdleClip);
+        const UAnimSequence* PreviousMovingClip=Cast<UAnimSequence>(RunPlayer.GetSequence());
+        const float PreviousPhase=PreviousMovingClip && PreviousMovingClip->GetPlayLength()>0.f?FMath::Frac(RunPlayer.GetAccumulatedTime()/PreviousMovingClip->GetPlayLength()):0.f;
         const UAnimSequence* MovingClip=Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get();
+        RunPlayer.SetSequence(Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get());
+        if(Anim->bRunning && (!bRunning || bPreviousWalking!=Anim->bWalking))
+        {
+            float Phase=0.f;
+            if(bRunning)
+            {
+                const TArray<float>& OldLeft=bPreviousWalking?Anim->WalkLeftContacts:Anim->RunLeftContacts;
+                const TArray<float>& NewLeft=Anim->bWalking?Anim->WalkLeftContacts:Anim->RunLeftContacts;
+                Phase=FMath::Frac(PreviousPhase-(OldLeft.Num()?OldLeft[0]:0.f)+(NewLeft.Num()?NewLeft[0]:0.f)+1.f);
+            }
+            RunPlayer.SetAccumulatedTime(Phase*(MovingClip?MovingClip->GetPlayLength():0.f));
+            Anim->LocomotionPhase=Phase;++Anim->LocomotionSerial;
+            Anim->bLocomotionPhaseRunning=true;Anim->bLocomotionPhaseWalking=Anim->bWalking;
+            bFeetPlanted[0]=bFeetPlanted[1]=false;
+        }
         const float CycleSeconds=Anim->bWalking?Anim->WalkCycleSeconds:Anim->RunCycleSeconds;
         const float CycleRate=MovingClip && CycleSeconds>0.f?MovingClip->GetPlayLength()/CycleSeconds:1.f;
         RunPlayer.SetPlayRate(Anim->LocomotionSpeedRatio*CycleRate);
         ActionPlayer.SetSequence(Anim->ActionClip?Anim->ActionClip.Get():Anim->IdleClip.Get());
         FacePlayer.SetSequence(Anim->FaceClip?Anim->FaceClip.Get():Anim->IdleClip.Get());
-        bRunning=Anim->bRunning;bActionActive=Anim->bActionActive;
+        bRunning=Anim->bRunning;bPreviousWalking=Anim->bWalking;bActionActive=Anim->bActionActive;
         bFaceActive=Anim->bFaceActive && Anim->FaceClip;
         USkeletalMeshComponent* Mesh=Instance->GetSkelMeshComponent();
         if(Mesh && Mesh->GetSkeletalMeshAsset() && Mesh->GetWorld())
@@ -217,8 +234,9 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     {
         FAnimInstanceProxy::PostUpdate(Instance);
         auto* Anim=CastChecked<UKKBenchmarkAnimInstance>(Instance);
-        const UAnimSequence* Clip=Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get();
+        const UAnimSequence* Clip=Cast<UAnimSequence>(RunPlayer.GetSequence());
         if(Clip && Clip->GetPlayLength()>0.f)Anim->LocomotionPhase=FMath::Fmod(RunPlayer.GetAccumulatedTime()/Clip->GetPlayLength(),1.f);
+        Anim->bLocomotionPhaseRunning=bRunning;Anim->bLocomotionPhaseWalking=bPreviousWalking;
     }
     virtual void Update(float DeltaSeconds) override
     {

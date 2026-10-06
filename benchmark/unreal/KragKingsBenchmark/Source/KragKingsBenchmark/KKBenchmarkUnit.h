@@ -46,6 +46,7 @@ private:
     bool bWalking = false;
     float FootContactCooldown[2] = {0.f,0.f};
     float PreviousContactPhase=.99f;
+    uint32 PreviousLocomotionSerial=0;
     int32 FootSoundIndex=0;
     UPROPERTY() TObjectPtr<USoundAttenuation> FootstepAttenuation;
     UPROPERTY() TObjectPtr<USoundAttenuation> ActionAttenuation;

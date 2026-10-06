@@ -210,6 +210,19 @@ void AKKBenchmarkUnit::UpdateFootContacts(float DeltaSeconds)
     const auto* Anim=Cast<UKKBenchmarkAnimInstance>(GetMesh()->GetAnimInstance());const auto* V=Variant();
     if(!Anim || !V)return;
     const float Phase=Anim->LocomotionPhase;
+    // Actor input can change the desired gait before the mesh evaluates it.
+    // Never test a previous gait's phase against the new gait's contacts.
+    if(!Anim->bLocomotionPhaseRunning || Anim->bLocomotionPhaseWalking!=bWalking)
+    {
+        PreviousContactPhase=Phase;
+        return;
+    }
+    if(PreviousLocomotionSerial!=Anim->LocomotionSerial)
+    {
+        // A start or contact-aligned gait switch is a seek, not a foot crossing.
+        PreviousLocomotionSerial=Anim->LocomotionSerial;PreviousContactPhase=Phase;
+        return;
+    }
     if(GetVelocity().SizeSquared2D()<225.f){PreviousContactPhase=Phase;return;}
     const FReferenceSkeleton& Ref=GetMesh()->GetSkeletalMeshAsset()->GetRefSkeleton();
     const FName Feet[2]={TEXT("Foot_L"),TEXT("Foot_R")};
