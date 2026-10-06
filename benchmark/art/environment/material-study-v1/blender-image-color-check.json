@@ -1,0 +1,49 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\environment\\reference-materials\\sand_03\\sand_03_diff_2k.jpg",
+  "loadedPixel0": [
+    0.3960784673690796,
+    0.3607843220233917,
+    0.29411765933036804,
+    1.0
+  ],
+  "generated": [
+    {
+      "floatBuffer": false,
+      "pixels": [
+        0.501960813999176,
+        0.501960813999176,
+        0.501960813999176,
+        1.0
+      ],
+      "png": "D:\\Dev\\Krag-Kings\\benchmark\\local\\image-color-probe\\half-False.png",
+      "pngBytes": [
+        128,
+        128,
+        128,
+        255
+      ]
+    },
+    {
+      "floatBuffer": true,
+      "pixels": [
+        0.5,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "png": "D:\\Dev\\Krag-Kings\\benchmark\\local\\image-color-probe\\half-True.png",
+      "pngBytes": [
+        128,
+        128,
+        128,
+        255
+      ]
+    }
+  ],
+  "sourcePixelBottomLeftBytes": [
+    101,
+    92,
+    75
+  ],
+  "conclusion": "Blender image.pixels exposes normalized encoded bytes for this loaded sRGB JPEG and writes supplied sRGB image pixels directly to PNG; v2 explicitly decodes, filters in linear space, then encodes."
+}

@@ -1,0 +1,45 @@
+{
+  "status": "Actual Blender material comparison; visual acceptance and engine review pending",
+  "renderer": "Cycles CPU, 24 samples, 960x640",
+  "geometry": "Unmodified shared dune geometry",
+  "lighting": "Identical neutral white sun with blue ambient fill",
+  "images": [
+    {
+      "material": "baseline",
+      "view": "near",
+      "source": "benchmark\\art\\environment\\Dunes.blend",
+      "sourceSha256": "c1504576b7e6881f2ee49ca4d502582f746ff4d7611ce371fd31d8a71d810889",
+      "image": "baseline_near.png",
+      "imageSha256": "857d0484e3f4b629798ea32b2cc1c113fee0b95cd47dae561f1a44106c5e0c80"
+    },
+    {
+      "material": "baseline",
+      "view": "wide",
+      "source": "benchmark\\art\\environment\\Dunes.blend",
+      "sourceSha256": "c1504576b7e6881f2ee49ca4d502582f746ff4d7611ce371fd31d8a71d810889",
+      "image": "baseline_wide.png",
+      "imageSha256": "ee6d18ce869ebd612489e31831c15a14ed5d30b118fdf3ccf9ba3ee8a3093dc0"
+    },
+    {
+      "material": "scan_candidate",
+      "view": "near",
+      "source": "benchmark\\local\\candidates\\sand-scan-v1\\Dunes_ScanCandidate.blend",
+      "sourceSha256": "d209ec0614a4516fdc66e3c815c51dabc715fa9123426e180a3da9e96c8ac769",
+      "image": "scan_candidate_near.png",
+      "imageSha256": "f26f06a7f48a732d7247e2da33fb1d6e05466e9d2be310c0cc846423ccce604e"
+    },
+    {
+      "material": "scan_candidate",
+      "view": "wide",
+      "source": "benchmark\\local\\candidates\\sand-scan-v1\\Dunes_ScanCandidate.blend",
+      "sourceSha256": "d209ec0614a4516fdc66e3c815c51dabc715fa9123426e180a3da9e96c8ac769",
+      "image": "scan_candidate_wide.png",
+      "imageSha256": "9df25b5e2f312bc7a8efcbc487f1883fa32f3c8fa9f0ffaf641ea781fa1dbf35"
+    }
+  ],
+  "visualReview": {
+    "baseline": "Uniform fine wind ripples and relatively saturated tan color.",
+    "candidate": "More convincing irregular grains and restrained near-surface ripples, but too grey for the intended dry-desert palette in this lighting.",
+    "decision": "Do not promote yet; prepare a warmer, lighter color treatment preserving scanned detail and recheck actual engine appearance."
+  }
+}

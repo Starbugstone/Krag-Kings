@@ -12,7 +12,7 @@ import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[3]
-CANDIDATE = ROOT / 'benchmark/local/candidates/sand-scan-v1'
+CANDIDATE = ROOT / 'benchmark/local/candidates/sand-scan-v2'
 OUTPUT = CANDIDATE / 'review'
 OUTPUT.mkdir(parents=True, exist_ok=True)
 sources = {

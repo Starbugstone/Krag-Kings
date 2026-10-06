@@ -15,7 +15,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[3]
 REFERENCE = ROOT / 'benchmark/art/environment/reference-materials/sand_03'
 BASELINE = ROOT / 'benchmark/shared/environment'
-OUTPUT = ROOT / 'benchmark/local/candidates/sand-scan-v1'
+OUTPUT = ROOT / 'benchmark/local/candidates/sand-scan-v2'
 SOURCE = ROOT / 'benchmark/art/environment/Dunes.blend'
 OUTPUT.mkdir(parents=True, exist_ok=True)
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
@@ -32,7 +32,20 @@ def pixels(path, color):
     width, height = image.size
     values = np.empty(width * height * 4, dtype=np.float32)
     image.pixels.foreach_get(values)
-    return values.reshape(height, width, 4)
+    values = values.reshape(height, width, 4)
+    # Blender 5.2's loaded byte-image pixels preserve the encoded file values
+    # (verified against a Windows bitmap read). Decode before color filtering.
+    if color:
+        values[:, :, :3] = srgb_to_linear(values[:, :, :3])
+    return values
+
+def srgb_to_linear(values):
+    values = np.asarray(values, dtype=np.float32)
+    return np.where(values <= .04045, values / 12.92, ((values + .055) / 1.055) ** 2.4)
+
+def linear_to_srgb(values):
+    values = np.clip(values, 0, 1)
+    return np.where(values <= .0031308, values * 12.92, 1.055 * values ** (1 / 2.4) - .055)
 
 def repeat_scan(values):
     # The retained scan covers 2m. Existing mesh UVs cover 4m, so downsample
@@ -43,13 +56,18 @@ def repeat_scan(values):
     return np.tile(smaller, (2, 2, 1))
 
 base = repeat_scan(pixels(REFERENCE / 'sand_03_diff_2k.jpg', True))
+# V1 source review showed convincing grains but grey/damp color. Preserve the
+# scan's local variation while fitting a proposed dry, warm desert palette.
+target_srgb = np.array([.69, .57, .405], dtype=np.float32)
+scan_median = np.median(base[:, :, :3], axis=(0, 1))
+base[:, :, :3] = np.clip(base[:, :, :3] * (srgb_to_linear(target_srgb) / scan_median), 0, 1)
 rough = repeat_scan(pixels(REFERENCE / 'sand_03_rough_2k.jpg', False))[:, :, 0]
 scan_normal = repeat_scan(pixels(REFERENCE / 'sand_03_nor_gl_2k.jpg', False))[:, :, :3] * 2 - 1
 old_normal = pixels(BASELINE / 'Sand_Normal.png', False)[:, :, :3] * 2 - 1
 # Small-angle tangent-space slope addition keeps the scan grains and reduces
 # the original repeating ridge field. This adds no geometry or shader samples.
 normal = np.empty_like(scan_normal)
-normal[:, :, :2] = .7 * scan_normal[:, :, :2] + .22 * old_normal[:, :, :2]
+normal[:, :, :2] = .45 * scan_normal[:, :, :2] + .12 * old_normal[:, :, :2]
 normal[:, :, 2] = scan_normal[:, :, 2] * old_normal[:, :, 2]
 normal /= np.maximum(np.linalg.norm(normal, axis=2, keepdims=True), 1e-6)
 normal = np.dstack((normal * .5 + .5, np.ones_like(rough)))
@@ -59,7 +77,10 @@ rough_map = np.dstack((rough, rough, rough, np.ones_like(rough)))
 def save_map(name, values, color=False):
     image = bpy.data.images.new(name + '_ScanCandidate', width=2048, height=2048, alpha=True)
     image.colorspace_settings.name = 'sRGB' if color else 'Non-Color'
-    image.pixels.foreach_set(values.astype(np.float32).ravel())
+    values = values.astype(np.float32).copy()
+    if color:
+        values[:, :, :3] = linear_to_srgb(values[:, :, :3])
+    image.pixels.foreach_set(values.ravel())
     image.filepath_raw = str(OUTPUT / (name + '.png'))
     image.file_format = 'PNG'
     image.save()
@@ -85,9 +106,11 @@ manifest['materialRecipe'] = {
     'source': provenance,
     'runtimeTextureSize': 2048,
     'scanRepeatAcrossFourMeterTile': 2,
-    'scanNormalSlopeGain': .7,
-    'baselineRippleSlopeGain': .22,
-    'colorAdjustment': 'None; linear downsample of source sRGB scan',
+    'scanNormalSlopeGain': .45,
+    'baselineRippleSlopeGain': .12,
+    'colorAdjustment': 'Explicit sRGB decode, linear box filter, median-based dry-sand tint, explicit sRGB encode',
+    'proposedMedianColorSRGB': target_srgb.tolist(),
+    'sourceMedianLinear': scan_median.tolist(),
     'status': 'Candidate only; actual engine review pending',
 }
 (OUTPUT / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', newline='\n')
