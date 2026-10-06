@@ -1,0 +1,17 @@
+{
+  "status": "SILHOUETTE_REVIEW_PASSED_FOR_ONE_REFERENCE_INFERENCE",
+  "imagesInspected": [
+    "conditioning.png",
+    "alpha-mask.png"
+  ],
+  "foreheadBrowMuzzleEarScarfArmorRetained": true,
+  "rectangularBeigeBackgroundRemoved": true,
+  "limitations": [
+    "Original shoulder/bust crop boundaries remain, as in the approved input.",
+    "Tiny edge softness is expected from alpha matting; no interior facial feature was cut out."
+  ],
+  "sourceRGBUnchangedInRGBA": true,
+  "conditionedImageSha256": "303f9082b5785555f0393973ec6853f78962c3c41395da1dd75c2fd832b673d6",
+  "artisticAcceptance": false,
+  "inferenceExecuted": false
+}

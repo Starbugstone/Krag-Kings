@@ -155,3 +155,7 @@ benchmark/art/animation/krag-relaxed-hand-v2/**/*.json -text whitespace=cr-at-eo
 benchmark/art/animation/krag-relaxed-hand-v2/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-relaxed-hand-v2/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-relaxed-hand-v2/executed-recipe/contracts.py whitespace=-blank-at-eof
+
+benchmark/unreal/evidence/triposr-krag-bust-matted-v2/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/triposr-krag-bust-matted-v2/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/triposr-krag-bust-matted-v2/*.glb filter=lfs diff=lfs merge=lfs -text

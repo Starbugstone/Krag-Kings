@@ -11,6 +11,7 @@ from mathutils import Matrix
 sys.path.insert(0,str(Path(__file__).parent))
 from bake_fields import bake_maps,head_mask_receipt,make_face_uv,plane,portable_material,sha,uv_field_audit,source_uv_domain
 from portable_save import save_and_validate_pbr
+from bake_ocular import bake_actual_irises
 
 ROOT=Path(__file__).resolve().parents[5]
 parser=argparse.ArgumentParser()
@@ -52,7 +53,7 @@ report={'status':'PBR derivative requires actual matched render and both-engine 
         'source':str(args.source),'sourceSha256':source_hash,'sourceReportSha256':sha(args.source_report),
         'sourceStructuralGate':source_report.get('preRenderGate'),
         'normalConvention':'OpenGL +Y tangent space','materials':[],'fieldBakes':[],
-        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py'),Path(__file__).with_name('portable_save.py')]}}
+        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py'),Path(__file__).with_name('bake_ocular.py'),Path(__file__).with_name('portable_save.py')]}}
 mask=head_mask_receipt(head)
 source_materials=list(head.data.materials);head.data.materials.clear()
 for original in source_materials:
@@ -69,8 +70,12 @@ report['fieldBakes'].append({'material':atlas_name,'mode':'actual face geometry 
                             'mask':mask,'maps':maps,'uv':'Fresh packed UVMap; original shader UV isolated during bake, then removed to keep export UV0 correct',
                             'reviewRequired':'Nose pigment, eyelids, lip edge and UV seams in same-camera source/baked render'})
 baked_names={atlas_name}
+iris_bakes=bake_actual_irises(source_objects,textures,source_report)
+report['fieldBakes'].extend(iris_bakes)
+baked_names.update(entry['material'] for entry in iris_bakes)
 region_names=['Nib_v5_HeadFur','Nib_v5_InnerEarWisps','Nib_v5_TawnyEarFur',
-              'Nib_v5_DustyPinkEar','Nib_v5_TawnyEarUndercoat','Nib_OcularGlobe','Nib_OcularIris']
+              'Nib_v5_DustyPinkEar','Nib_v5_TawnyEarUndercoat','Nib_OcularGlobe','Nib_OcularIris',
+              'Nib_IdentityOcularGlobe']
 assigned_materials={m for obj in source_objects for m in obj.data.materials if m is not None}
 for name in region_names:
     original=bpy.data.materials.get(name)

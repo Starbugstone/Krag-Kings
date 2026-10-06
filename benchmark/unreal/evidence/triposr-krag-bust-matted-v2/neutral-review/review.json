@@ -1,0 +1,113 @@
+{
+  "sourceSha256": "f6513fa6cb0c50c07d9e1adad1a17e7c15a1f75bfa8dc0745593cb08ef5f0026",
+  "recipeSha256": "739b3aaa8f271f4611a63959772df0fd5c751b21062c6b28c13c8438f528357c",
+  "sourceUnchanged": true,
+  "engineEvidence": false,
+  "artisticAcceptance": false,
+  "orientation": "Axis labels refer to actual Blender GLB import; likeness/front assignment requires inspection.",
+  "displayRotationXDegrees": -90,
+  "inferredRearIsCanonical": false,
+  "render": "Cycles CPU, 24 samples, denoising, neutral white area lights, AgX, smooth display normals",
+  "importedBounds": [
+    [
+      -0.4264413118362427,
+      -0.4673825204372406,
+      -0.483014315366745
+    ],
+    [
+      0.3775966167449951,
+      0.4628260135650635,
+      0.4928191900253296
+    ]
+  ],
+  "images": [
+    {
+      "path": "VertexColor_InputFacingPlusX.png",
+      "sha256": "8b5a184ad578b8dc08aea17617bda02f8fad7005b6cfa290f162326f28316834",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        2.903078317642212,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InputFacingPlusX"
+    },
+    {
+      "path": "VertexColor_QuarterPlusXMinusY.png",
+      "sha256": "fb835b563d8d4da78a121fab04aa4f51d9bde86fbe73ee71dcdf7b8434c39e3b",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        2.2199947834014893,
+        -1.7587785720825195,
+        0.4928191900253296
+      ],
+      "axisLabel": "QuarterPlusXMinusY"
+    },
+    {
+      "path": "VertexColor_SideMinusY.png",
+      "sha256": "2d5054f72abd4489193ea210fba1c40df2578adb0de433262779eda4d9670593",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        -0.02442234754562378,
+        -2.929779052734375,
+        0.12200246006250381
+      ],
+      "axisLabel": "SideMinusY"
+    },
+    {
+      "path": "VertexColor_InferredBackMinusX.png",
+      "sha256": "17f679ff39c960bbc827a9fe2457183b48eac07070560adc26c7f5909cf647fd",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        -2.951923131942749,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InferredBackMinusX"
+    },
+    {
+      "path": "Clay_InputFacingPlusX.png",
+      "sha256": "73d7d6d004256a1dfde83a48f85e6ae9681af2dd1cf77ad91aa4bd3bb4d5c8b7",
+      "mode": "Clay",
+      "cameraPosition": [
+        2.903078317642212,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InputFacingPlusX"
+    },
+    {
+      "path": "Clay_QuarterPlusXMinusY.png",
+      "sha256": "266ee3b9a396d0f4b53576469cc9f58b2d40c06d2782771c828e5fc15f928865",
+      "mode": "Clay",
+      "cameraPosition": [
+        2.2199947834014893,
+        -1.7587785720825195,
+        0.4928191900253296
+      ],
+      "axisLabel": "QuarterPlusXMinusY"
+    },
+    {
+      "path": "Clay_SideMinusY.png",
+      "sha256": "f3eede71f48dbc05942750cefaac70886754591344b65d600cdca2db2ca1a429",
+      "mode": "Clay",
+      "cameraPosition": [
+        -0.02442234754562378,
+        -2.929779052734375,
+        0.12200246006250381
+      ],
+      "axisLabel": "SideMinusY"
+    },
+    {
+      "path": "Clay_InferredBackMinusX.png",
+      "sha256": "8048c23efc5641d3cb16fb727ef42da84f99b71b0feeddd14af1cc04c1581de4",
+      "mode": "Clay",
+      "cameraPosition": [
+        -2.951923131942749,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InferredBackMinusX"
+    }
+  ]
+}

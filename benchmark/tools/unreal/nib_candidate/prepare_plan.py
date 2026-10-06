@@ -35,6 +35,7 @@ def main():
     scripts=[*TOOLS.glob('*.py'), ROOT/'benchmark/tools/nib/export_nib.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/prepare_runtime_pbr.py',ROOT/'benchmark/tools/nib/v5_wip/pbr/bake_fields.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/portable_save.py',
+        ROOT/'benchmark/tools/nib/v5_wip/pbr/bake_ocular.py',
         ROOT/'benchmark/tools/nib/v5_wip/preserve_fbx_point_payloads.py',ROOT/'benchmark/tools/nib/v5_wip/validate_triangulated_payload.py',
         ROOT/'benchmark/tools/animation/export_contract.py',ROOT/'benchmark/tools/animation/validate_motion_candidate.py']
     prior=[]

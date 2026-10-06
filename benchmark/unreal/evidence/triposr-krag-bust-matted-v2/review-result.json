@@ -1,0 +1,133 @@
+{
+  "status": "LIMITED_FACIAL_VOLUME_REFERENCE_ONLY_FULL_ART_ACCEPTANCE_FAILED",
+  "matteVisuallyReviewedBeforeInference": true,
+  "technicalGenerationPassed": true,
+  "allEightActualViewsInspected": true,
+  "inferencesInThisAB": 1,
+  "priorReferenceInferences": 1,
+  "rigged": false,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "meshSha256": "f6513fa6cb0c50c07d9e1adad1a17e7c15a1f75bfa8dc0745593cb08ef5f0026",
+  "triangles": 188352,
+  "matchedSettings": {
+    "sameOriginalCrop": true,
+    "sameCropPixelsAndPlacement": true,
+    "change": "Local U2Net foreground alpha with RGB128 composite; no resize/inpainting",
+    "sameModelWeights": true,
+    "sameFP16Forward": true,
+    "same256Grid4096Chunks": true,
+    "sameTF32False": true
+  },
+  "findings": [
+    "The rectangular plaque is gone; there is a recognizable skull, face, neck and cowl volume.",
+    "Front/three-quarter clay shows useful gross brow, nose, muzzle, jaw and scarf massing closer to the supplied crop than the failed first output.",
+    "Eyes/lids are fused or shallow, tusks are not clean separate shapes, oral interior is absent, ears and surface anatomy remain blurred/noisy.",
+    "The rear invents a large block of armor/backpack-like geometry; this is noncanonical and unsuitable for direct transplantation.",
+    "No rig/topology/material or full-head acceptance follows from this limited reference usefulness. Existing authored anatomy/rig should remain authoritative."
+  ],
+  "recommendedUse": "Separate concept-visible facial volume/landmark comparison only; no automatic sculpt transfer or engine import.",
+  "colorLimit": "Both color and clay are generated-mesh review under neutral lights, not validated PBR texture matches.",
+  "orientation": "Display-only -90degree X undoes Blender glTF Y-up conversion; original GLB hash remains unchanged. Rear is inferred and noncanonical.",
+  "metadataNote": "inferenceProposal.backgroundRemoval=false means no further removal inside TSR invocation; the separately verified CPU alpha-matting stage is recorded in input receipt.",
+  "metrics": {
+    "triposr-prepare-matted-v2": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMiB": 11545.0,
+      "maximumSystemCommitPercent": 53.0,
+      "peakPrivateMiB": 466.0,
+      "processScope": "Full Python process tree"
+    },
+    "triposr-pilot-matted-v2": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMiB": 8075.0,
+      "maximumSystemCommitPercent": 67.0,
+      "peakPrivateMiB": 5868.0,
+      "processScope": "Full Python process tree"
+    },
+    "triposr-review-matted-v2": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMiB": 11247.0,
+      "maximumSystemCommitPercent": 54.0,
+      "peakPrivateMiB": 862.0,
+      "processScope": "Actual Blender process"
+    }
+  },
+  "torchPeakAllocatedBytes": 2711532032,
+  "torchPeakReservedBytes": 2768240640,
+  "logs": [
+    {
+      "rawPath": "benchmark/local/logs/triposr-prepare-matted-v2.log",
+      "rawSha256": "db2fd1b92e4559282164c93d359f5b8523bdc7518a4a387e29b8be7222ea6f0b",
+      "curatedFile": "triposr-prepare-matted-v2.log",
+      "curatedSha256": "e9d01b4b56adaeab91b0236fe107c9d98e46a54295c73e28ae616c0ba22e4a79",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-prepare-matted-v2.stderr.log",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "curatedFile": "triposr-prepare-matted-v2.stderr.log",
+      "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-prepare-matted-v2-memory.csv",
+      "rawSha256": "c0adc48c26bd808cc53bf367a97e2b1372a9e113f3479c1a027d841295ab67e3",
+      "curatedFile": "triposr-prepare-matted-v2-memory.csv",
+      "curatedSha256": "973120319726b5cea4f45ef14951cc6710d9ee16e3e24e19d7e7a63be7312ab7",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-pilot-matted-v2.log",
+      "rawSha256": "46efd925331e4a6edb4ddb40b1bd2b72883bf34931c07fed1c973b3399c09cfa",
+      "curatedFile": "triposr-pilot-matted-v2.log",
+      "curatedSha256": "0fe0e098f50658385f9e3942e5e3d591eeada9db7eed0517110b77137a5dfeca",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-pilot-matted-v2.stderr.log",
+      "rawSha256": "30842e8fd729f2df2e77ed1d4bcdb650792ad352986a920605e2655349e9d16d",
+      "curatedFile": "triposr-pilot-matted-v2.stderr.log",
+      "curatedSha256": "935df5c05666e7d83cfe0aabfad0d6d801da2260a664adaa326ead91e557b69e",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-pilot-matted-v2-memory.csv",
+      "rawSha256": "510b6df8056cb189ba319e7b297c26cd1b9aea14c5ff3ef13285521592838f05",
+      "curatedFile": "triposr-pilot-matted-v2-memory.csv",
+      "curatedSha256": "c0f5143c9ca404708ff546f3a73e2cfc22fce986e5593f945bf8da2bb33cdd87",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-pilot-matted-v2-gpu.csv",
+      "rawSha256": "3e168f200ca9aa5f32757f36d8d16e3fca36100cec2ce126f39bfd6e2ecd7005",
+      "curatedFile": "triposr-pilot-matted-v2-gpu.csv",
+      "curatedSha256": "5d853fe5c8acfaeb067942b8364d7460f2b393139b895cdaccd763164392ba8b",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-review-matted-v2.log",
+      "rawSha256": "e3575626594323e8811ae5b9eafc66d5351652689f62e48a91844103d92a1955",
+      "curatedFile": "triposr-review-matted-v2.log",
+      "curatedSha256": "7ef34787f026a4cf06a21be59735a1ec05e87028b23ceb47a687f79ca3e2954a",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-review-matted-v2.stderr.log",
+      "rawSha256": "68cb6ecad00e3f50a9d3ca40d0f267a100324d8e089a9440b04dcfe5025d95c9",
+      "curatedFile": "triposr-review-matted-v2.stderr.log",
+      "curatedSha256": "bcb631b05970cefea2dae61e5d9e4f1c774b10a4408c72a663bf333a25c9b522",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-review-matted-v2-memory.csv",
+      "rawSha256": "a549c9857a358994667b3978801fca55ab94cf2aeb210b990a40f75c5f736f2d",
+      "curatedFile": "triposr-review-matted-v2-memory.csv",
+      "curatedSha256": "ff2e6b629b41c96f81639028268f24a7cf1a5251fcfab378e0ce43d38a0511fe",
+      "normalization": "CRLF to LF only"
+    }
+  ]
+}

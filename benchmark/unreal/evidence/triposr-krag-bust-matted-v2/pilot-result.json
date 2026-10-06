@@ -1,0 +1,76 @@
+{
+  "status": "REFERENCE_GEOMETRY_GENERATED_REQUIRES_VISUAL_REVIEW",
+  "utcStarted": "2026-10-06T14:18:37.571428+00:00",
+  "planSha256": "91870a61462905e243d48b0daa21735b812c8ec577449da2395c42e9427a1810",
+  "recipeSha256": "073859c60a39606969d4a1952692b5df5c1970a64d1b445d1ed2bbc3550ea8dd",
+  "installationSha256": "4ae7d3d3abc9dd8c868bdd0dbe116a77ef144e17b949fa13b96c62678f911b72",
+  "inputReceiptSha256": "5bf1a783bbd4ec274dd4e1750de3a6e30f87b5d7f845f81dffccaeb66e3a4ab6",
+  "inferenceProposal": {
+    "sourceCommit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "modelSha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "Preflight selects GPU or CPU before loading",
+    "precision": "FP32 GPU only with6.5GiB free; otherwise FP16-autocast forward with4GiB free; otherwise CPU",
+    "chunkSize": 4096,
+    "marchingCubesResolution": 256,
+    "output": "Unrigged vertex-colored mesh",
+    "backgroundRemoval": false,
+    "onlineModelFetchDuringInference": false,
+    "cpuMarchingCubes": "Pinned original CPU extension; actual installation/sphere smoke passed",
+    "minimumFreeGiBForFp32": 6.5,
+    "minimumFreeGiBForAutocast": 4.0,
+    "extraction": "4096-position streamed queries; CPU float32 density volume and CPU marching cubes; no full GPU grid",
+    "requireFp16CudaForMatchedAB": true
+  },
+  "artisticAcceptance": false,
+  "rigged": false,
+  "sharedAssetsChanged": false,
+  "imageUploaded": false,
+  "gpuPreflight": {
+    "name": "NVIDIA GeForce RTX 2060",
+    "initialFreeBytes": 5352980480,
+    "totalBytes": 6442123264
+  },
+  "device": {
+    "selected": "cuda:0",
+    "torchVersion": "2.5.1+cu121",
+    "cudaRuntime": "12.1",
+    "selectedBeforeModelLoad": true
+  },
+  "precision": "FP16 CUDA autocast forward; FP32 streamed field queries/CPU extraction",
+  "extraction": {
+    "gridResolution": 256,
+    "maxPositionsPerQuery": 4096,
+    "densityStorage": "CPU float32",
+    "marchingCubes": "Pinned CPU extension",
+    "fullGpuGridAllocated": false
+  },
+  "modelLoadSeconds": 5.203000000001339,
+  "inferenceSeconds": 1.7189999999973224,
+  "sceneCodeDtype": "torch.float16",
+  "streamedGridOrderingCheckPassed": true,
+  "extractionSeconds": 10.296999999998661,
+  "vertices": 94336,
+  "triangles": 188352,
+  "bounds": [
+    [
+      -0.4264413118362427,
+      -0.46738240122795105,
+      -0.48301419615745544
+    ],
+    [
+      0.3775966167449951,
+      0.4628258943557739,
+      0.49281907081604004
+    ]
+  ],
+  "watertight": false,
+  "outputSha256": "f6513fa6cb0c50c07d9e1adad1a17e7c15a1f75bfa8dc0745593cb08ef5f0026",
+  "outputBytes": 3770628,
+  "torchPeakAllocatedBytes": 2711532032,
+  "torchPeakReservedBytes": 2768240640,
+  "tf32": false,
+  "neutralGeometryReviewExecuted": false,
+  "elapsedSeconds": 22.81300000000192,
+  "utcFinished": "2026-10-06T14:19:00.376741+00:00"
+}

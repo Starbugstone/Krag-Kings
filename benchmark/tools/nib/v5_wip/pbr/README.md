@@ -82,3 +82,5 @@ Keep visible mottled skin and fine body fuzz. Increasing strand width or count
 alone is not an acceptance measure; do not replace fur with a solid rolled rim.
 Use the same close-up/front/profile cameras for runtime and denser cinematic
 representations, then measure runtime cost separately from cinematic density.
+
+The adult identity source requires the prepared `bake_ocular.py` extension. Its two actual fitted iris surfaces receive separate small atlases from connected `Nib_IrisCoord` point attributes; the helper verifies source-report hashes and attribute retention. The original slit geometry, shell curvature, bind and weights remain subject to the existing unchanged-source gates. The uniform `Nib_IdentityOcularGlobe` uses its constant PBR field. This extension is syntax-checked only: no new iris bake, saved parity render or engine import has run. New plans pin the helper; previous executed plans/receipts are preserved.

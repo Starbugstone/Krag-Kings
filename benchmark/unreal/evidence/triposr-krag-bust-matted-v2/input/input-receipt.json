@@ -1,0 +1,27 @@
+{
+  "planSha256": "91870a61462905e243d48b0daa21735b812c8ec577449da2395c42e9427a1810",
+  "recipeSha256": "69f73878bb1edabde5069f5017e60f921035558f93df2cdeafeb201d23b35752",
+  "originalCropSha256": "da3971ff1940ad1b17a881931b67cc54a7de02b8db5f369120a0e2c5fc9d186f",
+  "modelSha256": "8d10d2f3bb75ae3b6d527c77944fc5e7dcd94b29809d47a739a7a728a912b491",
+  "foregroundRGBExactlyPreservedInRGBA": true,
+  "conditioning": "Original crop at identical512-square offset, alpha-composited over RGB128 gray. No crop resizing, inpainting or redesign.",
+  "paddingOffsetXY": [
+    69,
+    43
+  ],
+  "cropDimensions": [
+    374,
+    425
+  ],
+  "alphaCoverageAbove127": 0.7694558037118591,
+  "cpuProvider": [
+    "CPUExecutionProvider"
+  ],
+  "outputs": {
+    "foreground-original-rgb.png": "3733b77247fcabfab1dd715f0b13e06e27e15df8beb77deaa18ab528435ba8a2",
+    "alpha-mask.png": "4d8721138df61ad2bb094bdd2d68b566736a78baf2ff6b6e7d4e97a2400ba52e",
+    "conditioning.png": "303f9082b5785555f0393973ec6853f78962c3c41395da1dd75c2fd832b673d6"
+  },
+  "silhouetteVisuallyReviewed": false,
+  "inferenceExecuted": false
+}

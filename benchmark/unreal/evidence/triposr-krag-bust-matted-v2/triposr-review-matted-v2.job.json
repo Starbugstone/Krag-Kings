@@ -1,0 +1,24 @@
+{
+  "name": "triposr-review-matted-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\review_reference_mesh.py",
+    "--",
+    "--pilot-directory",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\pilot-krag-bust-matted-v2",
+    "--upright"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-review-matted-v2.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-review-matted-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-review-matted-v2.log",
+  "successMarker": "TRIPOSR_REFERENCE_MESH_REVIEW_COMPLETE"
+}
