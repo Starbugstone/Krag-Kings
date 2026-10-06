@@ -84,4 +84,7 @@ public:
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<USoundBase> NibHit;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<UMaterialInterface> SandDustMaterial;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<UMaterialInterface> WeaponFlashMaterial;
+    // Opt-in renderer review alternatives. Default Generic uses mesh materials.
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TMap<FName,TObjectPtr<UMaterialInterface>> SkinDefaultLit;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TMap<FName,TObjectPtr<UMaterialInterface>> SkinProfile;
 };

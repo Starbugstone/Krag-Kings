@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "recipe": "skin-ab-v1-defaultlit-burley-profile",
+  "status": "Provisional renderer experiment; not an accepted material/design",
+  "changes": "Alternative materials only; original generic materials, textures, meshes, lighting and exposure remain unchanged.",
+  "interpretation": "UE factory Burley/MFP enabled. Mean-free-path distances use documented cm fields. Default worldUnitScale .1 is retained. Per-species distances/masks are tuning candidates, not numerical equivalence to Unity diffusion profiles.",
+  "surfaceAlbedoMethod": "Per-channel mean after exact sRGB-to-linear decoding of all BaseColor pixels, clamped to UE profile field minimum .01; no image edits or tint multiplier.",
+  "profiles": [
+    {
+      "name": "Krag_FacialSkin",
+      "folder": "krag",
+      "baselineMaterial": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin",
+      "sourceTextures": {
+        "baseColor": {
+          "path": "shared/characters/krag/textures/Krag_FacialSkin_BaseColor.png",
+          "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1"
+        },
+        "normal": {
+          "path": "shared/characters/krag/textures/Krag_FacialSkin_Normal.png",
+          "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18"
+        },
+        "roughness": {
+          "path": "shared/characters/krag/textures/Krag_FacialSkin_Roughness.png",
+          "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d"
+        },
+        "metallic": {
+          "path": "shared/characters/krag/textures/Krag_FacialSkin_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+        }
+      },
+      "surfaceAlbedoLinear": [
+        0.3490072806726301,
+        0.14517137261399993,
+        0.042802760595352075
+      ],
+      "meanFreePathDistanceCm": 0.1,
+      "meanFreePathColor": [
+        1,
+        0.55,
+        0.28
+      ],
+      "worldUnitScale": 0.1,
+      "opacityMask": 0.25,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "transmissionTintColor": [
+        1,
+        1,
+        1
+      ],
+      "ior": 1.4
+    },
+    {
+      "name": "Krag_SandstoneSkin",
+      "folder": "krag",
+      "baselineMaterial": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin",
+      "sourceTextures": {
+        "baseColor": {
+          "path": "shared/characters/krag/textures/Krag_SandstoneSkin_BaseColor.png",
+          "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f"
+        },
+        "normal": {
+          "path": "shared/characters/krag/textures/Krag_SandstoneSkin_Normal.png",
+          "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca"
+        },
+        "roughness": {
+          "path": "shared/characters/krag/textures/Krag_SandstoneSkin_Roughness.png",
+          "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5"
+        },
+        "metallic": {
+          "path": "shared/characters/krag/textures/Krag_SandstoneSkin_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+        }
+      },
+      "surfaceAlbedoLinear": [
+        0.3491875587821756,
+        0.145281792157721,
+        0.042851410668015004
+      ],
+      "meanFreePathDistanceCm": 0.1,
+      "meanFreePathColor": [
+        1,
+        0.55,
+        0.28
+      ],
+      "worldUnitScale": 0.1,
+      "opacityMask": 0.25,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "transmissionTintColor": [
+        1,
+        1,
+        1
+      ],
+      "ior": 1.4
+    },
+    {
+      "name": "Nib_EarInner",
+      "folder": "nib",
+      "baselineMaterial": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner",
+      "sourceTextures": {
+        "baseColor": {
+          "path": "shared/characters/nib/textures/Nib_EarInner_BaseColor.png",
+          "sha256": "a4998bd324f7cc24df96894462a3a597e7ea65dd4c4995b04ed0a4b8f4df4d9c"
+        },
+        "normal": {
+          "path": "shared/characters/nib/textures/Nib_EarInner_Normal.png",
+          "sha256": "424143fc562dd1cf0284471bfaa521875f1a70f142be42002556073b45e7d028"
+        },
+        "roughness": {
+          "path": "shared/characters/nib/textures/Nib_EarInner_Roughness.png",
+          "sha256": "cbebe73da747e5d95dea1a69fca2f3d30ba3e5b809085ee1cb5487ae76eb6305"
+        },
+        "metallic": {
+          "path": "shared/characters/nib/textures/Nib_EarInner_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+        }
+      },
+      "surfaceAlbedoLinear": [
+        0.03931756298961751,
+        0.01,
+        0.01
+      ],
+      "meanFreePathDistanceCm": 0.18,
+      "meanFreePathColor": [
+        1,
+        0.46,
+        0.24
+      ],
+      "worldUnitScale": 0.1,
+      "opacityMask": 0.6,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "transmissionTintColor": [
+        1,
+        1,
+        1
+      ],
+      "ior": 1.4
+    },
+    {
+      "name": "Nib_Muzzle",
+      "folder": "nib",
+      "baselineMaterial": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle",
+      "sourceTextures": {
+        "baseColor": {
+          "path": "shared/characters/nib/textures/Nib_Muzzle_BaseColor.png",
+          "sha256": "d3a6ca8f2169a3df64b78d6a99325e90b7e21de919294d23cbf23df5f5b79854"
+        },
+        "normal": {
+          "path": "shared/characters/nib/textures/Nib_Muzzle_Normal.png",
+          "sha256": "6c264f47b3767e6c24ec60385f9fa88db7343f0cd4e55fad58708a4238beba17"
+        },
+        "roughness": {
+          "path": "shared/characters/nib/textures/Nib_Muzzle_Roughness.png",
+          "sha256": "0f98cfb73d9f5041bf0e35123a28044fc08cc16c32fa645ad7e61b0173c85f6b"
+        },
+        "metallic": {
+          "path": "shared/characters/nib/textures/Nib_Muzzle_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+        }
+      },
+      "surfaceAlbedoLinear": [
+        0.36105384014478076,
+        0.19475436241209754,
+        0.07977736888045948
+      ],
+      "meanFreePathDistanceCm": 0.18,
+      "meanFreePathColor": [
+        1,
+        0.46,
+        0.24
+      ],
+      "worldUnitScale": 0.1,
+      "opacityMask": 0.6,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "transmissionTintColor": [
+        1,
+        1,
+        1
+      ],
+      "ior": 1.4
+    },
+    {
+      "name": "Nib_Skin",
+      "folder": "nib",
+      "baselineMaterial": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin",
+      "sourceTextures": {
+        "baseColor": {
+          "path": "shared/characters/nib/textures/Nib_Skin_BaseColor.png",
+          "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040"
+        },
+        "normal": {
+          "path": "shared/characters/nib/textures/Nib_Skin_Normal.png",
+          "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81"
+        },
+        "roughness": {
+          "path": "shared/characters/nib/textures/Nib_Skin_Roughness.png",
+          "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6"
+        },
+        "metallic": {
+          "path": "shared/characters/nib/textures/Nib_Skin_Metallic.png",
+          "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37"
+        }
+      },
+      "surfaceAlbedoLinear": [
+        0.25076699828824134,
+        0.10377808471516325,
+        0.036174133261475526
+      ],
+      "meanFreePathDistanceCm": 0.18,
+      "meanFreePathColor": [
+        1,
+        0.46,
+        0.24
+      ],
+      "worldUnitScale": 0.1,
+      "opacityMask": 0.6,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "transmissionTintColor": [
+        1,
+        1,
+        1
+      ],
+      "ior": 1.4
+    }
+  ]
+}

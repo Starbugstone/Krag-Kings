@@ -13,6 +13,7 @@
 #include "Sound/SoundAttenuation.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
+#include "Materials/MaterialInterface.h"
 
 AKKBenchmarkUnit::AKKBenchmarkUnit()
 {
@@ -77,6 +78,7 @@ void AKKBenchmarkUnit::ApplyVariant()
     PreviousContactPhase=.99f;FootContactCooldown[0]=FootContactCooldown[1]=0.f;
     const float OldHalf=GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
     GetMesh()->SetSkeletalMesh(V->Mesh);
+    if(!SetSkinMode(SkinMode))UE_LOG(LogTemp,Error,TEXT("KK_SKIN_AB_FAILED variant=%s"),*V->Id);
     GetMesh()->SetAnimInstanceClass(UKKBenchmarkAnimInstance::StaticClass());
     if(auto* Anim=Cast<UKKBenchmarkAnimInstance>(GetMesh()->GetAnimInstance()))
     {
@@ -94,6 +96,36 @@ void AKKBenchmarkUnit::ApplyVariant()
     CurrentAction="Idle";ActionDuration=0;NextFireContact=0;bHitSoundPending=false;ActionTimeRemaining=0;FaceTimeRemaining=0; bWasRunning=false;
     PlayLocomotion(false);
     UE_LOG(LogTemp,Display,TEXT("KK_VARIANT species=%s id=%s height_cm=%.2f"),bKrag?TEXT("Krag"):TEXT("Nib"),*V->Id,Half*2);
+}
+
+bool AKKBenchmarkUnit::SetSkinMode(FName Mode)
+{
+    if(Mode!=TEXT("Generic") && Mode!=TEXT("DefaultLit") && Mode!=TEXT("Profile"))return false;
+    const FKKCharacterVariant* V=Variant();if(!V || !V->Mesh || !AssetSet)return false;
+    const auto* Overrides=Mode==TEXT("Profile")?&AssetSet->SkinProfile:Mode==TEXT("DefaultLit")?&AssetSet->SkinDefaultLit:nullptr;
+    if(Overrides && Overrides->IsEmpty())return false;
+    TArray<TPair<int32,UMaterialInterface*>> Pending;
+    if(Overrides)
+    {
+        const auto& Slots=V->Mesh->GetMaterials();
+        for(int32 Index=0;Index<Slots.Num();++Index)
+        {
+            UMaterialInterface* Original=Slots[Index].MaterialInterface;
+            if(!Original)continue;
+            if(const auto* Alternative=Overrides->Find(Original->GetFName()))
+            {
+                if(!Alternative->Get())return false;
+                Pending.Emplace(Index,Alternative->Get());
+            }
+            else if(Original->GetShadingModels().HasShadingModel(MSM_Subsurface))return false;
+        }
+        if(Pending.IsEmpty())return false;
+    }
+    GetMesh()->EmptyOverrideMaterials();
+    for(const auto& Override:Pending)GetMesh()->SetMaterial(Override.Key,Override.Value);
+    SkinMode=Mode;
+    UE_LOG(LogTemp,Display,TEXT("KK_SKIN_MODE species=%s mode=%s overrides=%d"),bKrag?TEXT("Krag"):TEXT("Nib"),*Mode.ToString(),Pending.Num());
+    return true;
 }
 
 void AKKBenchmarkUnit::CycleVariant()

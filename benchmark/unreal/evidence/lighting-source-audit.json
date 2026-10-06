@@ -1,0 +1,37 @@
+{
+  "actualRenderingReviewed": "skin-ab-review/review.json",
+  "configurationFromSource": {
+    "skylightMobility": "Movable",
+    "intensity": 0.85,
+    "source": "CapturedScene default",
+    "realtimeCaptureRequested": true,
+    "indirectLightingIntensityDefault": 1,
+    "affectsGlobalIlluminationDefault": true,
+    "lowerHemisphereDefault": "solid black",
+    "cubemapResolutionDefault": 128,
+    "lumenDiffuseIndirect": true
+  },
+  "actualExistingEvidence": [
+    "runtime.log shows renderer handling Skylight realtime-capture state changes",
+    "runtime.log applies r.Lumen.DiffuseIndirect.Allow=1"
+  ],
+  "notProven": [
+    "Useful realtime captured sky irradiance",
+    "Actual Lumen terrain surface-cache coverage and indirect bounce",
+    "Effective sky visibility/occlusion at shaded facial surfaces"
+  ],
+  "sourceReferences": [
+    "UE5.8.3 Engine/Source/Runtime/Engine/Private/Components/SkyLightComponent.cpp: constructor, IsRealTimeCaptureEnabled, realtime capture path",
+    "UE5.8.3 Engine/Source/Runtime/Renderer/Private/ReflectionEnvironmentRealTimeCapture.cpp: GPU capture and lower-hemisphere pass",
+    "KKBenchmarkGameMode.cpp: runtime Skylight and scene setup"
+  ],
+  "preparedDiagnostics": [
+    "effective visibility/registration/mobility/source/realtime capture, intensity, GI contribution and occlusion parameters",
+    "terrain distance-field presence, validity, dimensions and Lumen card count",
+    "effective sky/Lumen/DF/AO console variables before performance warmup ends"
+  ],
+  "diagnosticsCompiled": false,
+  "diagnosticsExecuted": false,
+  "lightingExposureTextureChanged": false,
+  "interpretation": "Hard dark shadows need actual lighting diagnosis. CPU AverageBrightness/irradiance are not authoritative for the GPU realtime capture. No ambient cause established yet."
+}

@@ -4,6 +4,10 @@
 #include "KKBenchmarkController.h"
 #include "Engine/StaticMeshActor.h"
 #include "Components/StaticMeshComponent.h"
+#include "Engine/StaticMesh.h"
+#include "StaticMeshResources.h"
+#include "DistanceFieldAtlas.h"
+#include "MeshCardBuild.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Engine/DirectionalLight.h"
@@ -58,6 +62,25 @@ void AKKBenchmarkGameMode::BeginPlay()
     bShowcase=!bPerformancePass && FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
     bSmoke=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKSmoke"));
     bInputState=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKInputState"));
+    bSkinReview=FParse::Param(FCommandLine::Get(),TEXT("KKSkinReview"));
+    if(bSkinReview && (bPerformancePass || bShowcase || bSmoke || bInputState))
+    {
+        UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED skin review must be a separate capture-only launch"));
+        UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);return;
+    }
+    if(bSkinReview)
+    {
+        if(!FParse::Value(FCommandLine::Get(),TEXT("KKSkinReviewOutput="),SkinReviewOutput))
+            SkinReviewOutput=FPaths::ProjectSavedDir()/TEXT("Benchmark/SkinAB")/FDateTime::UtcNow().ToString(TEXT("%Y%m%d-%H%M%S"));
+        IFileManager::Get().MakeDirectory(*SkinReviewOutput,true);
+    }
+    FString SkinModeArgument;
+    if(FParse::Value(FCommandLine::Get(),TEXT("KKSkinMode="),SkinModeArgument))RequestedSkinMode=FName(*SkinModeArgument);
+    if(RequestedSkinMode!=TEXT("Generic") && RequestedSkinMode!=TEXT("DefaultLit") && RequestedSkinMode!=TEXT("Profile"))
+    {
+        UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED unknown KKSkinMode"));
+        UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);return;
+    }
     if(auto* Settings=UGameUserSettings::GetGameUserSettings())
     {
         Settings->SetFullscreenMode(EWindowMode::WindowedFullscreen);
@@ -108,6 +131,7 @@ void AKKBenchmarkGameMode::BeginPlay()
     UE_LOG(LogTemp,Display,TEXT("KK_LIGHTING sun_lux=%.1f color=%s rotation=%s rayleigh_scale=%.6f"),
         SunComponent->Intensity,*SunComponent->GetLightColor().ToString(),*Sun->GetActorRotation().ToString(),Atmosphere->GetComponent()->RayleighScatteringScale);
     auto* Sky=GetWorld()->SpawnActor<ASkyLight>();
+    SkyLightActor=Sky;
     Sky->GetLightComponent()->SetMobility(EComponentMobility::Movable);
     Sky->GetLightComponent()->SetIntensity(.85f);
     Sky->GetLightComponent()->SetRealTimeCaptureEnabled(true);
@@ -153,6 +177,15 @@ bool AKKBenchmarkGameMode::TryStartDemo()
     };
     auto* Krag=SpawnUnit(true,Positions[0]);
     SpawnUnit(false,Positions[1]);
+    for(const auto& Unit:DemoUnits)
+    {
+        if(!Unit->SetSkinMode(RequestedSkinMode))
+        {
+            bWaitingForTerrain=false;
+            UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED requested skin alternatives are absent or invalid"));
+            UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);return false;
+        }
+    }
     bWaitingForTerrain=false;Elapsed=0.f;
     for(int32 Index=0;Index<2;++Index)PerformanceOrigins[Index]=DemoUnits[Index]->GetActorLocation();
     if(auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0))){PC->SelectUnit(Krag);PC->ResetCamera();}
@@ -183,6 +216,8 @@ void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
     }
     if(DemoUnits.Num()!=2)return;
     Elapsed+=DeltaSeconds;
+    // Startup diagnostics only; finish before either performance sample begins.
+    if(!bLightingDiagnosticsWritten && Elapsed>3.f){WriteLightingDiagnostics();bLightingDiagnosticsWritten=true;}
     if(!bWindowTitleApplied && Elapsed>1.f && GEngine && GEngine->GameViewport && GEngine->GameViewport->GetWindow().IsValid())
     {
         GEngine->GameViewport->GetWindow()->SetTitle(FText::FromString(TEXT("Krag Kings - Unreal Benchmark")));
@@ -195,6 +230,7 @@ void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
         bReviewFrameWritten=true;
     }
     if(bShowcase){TickShowcase();return;}
+    if(bSkinReview){TickSkinReview();return;}
     const double Now=FPlatformTime::Seconds();
     const double WallElapsed=Now-BenchmarkStartTime;
     const double Warmup=bPerformancePass?15.0:10.0;
@@ -209,6 +245,86 @@ void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
     }
     if(bSmoke) TickSmoke();
     if(bInputState && Elapsed>=NextInputStateTime){WriteInputState();NextInputStateTime=Elapsed+.1f;}
+}
+void AKKBenchmarkGameMode::WriteLightingDiagnostics()
+{
+    if(SkyLightActor)
+    {
+        const auto* Sky=SkyLightActor->GetLightComponent();
+        UE_LOG(LogTemp,Display,TEXT("KK_SKYLIGHT visible=%d registered=%d affects_world=%d affects_gi=%d mobility=%d source=%d realtime_requested=%d realtime_effective=%d intensity=%.4f indirect=%.4f lower_solid=%d lower_color=%s cubemap_resolution=%d sky_distance_cm=%.1f occlusion_max_cm=%.1f min_occlusion=%.3f position=%s"),
+            Sky->IsVisible(),Sky->IsRegistered(),Sky->bAffectsWorld,Sky->bAffectGlobalIllumination,int32(Sky->Mobility),int32(Sky->SourceType),Sky->bRealTimeCapture,Sky->IsRealTimeCaptureEnabled(),Sky->Intensity,Sky->IndirectLightingIntensity,Sky->bLowerHemisphereIsBlack,*Sky->LowerHemisphereColor.ToString(),Sky->CubemapResolution,Sky->SkyDistanceThreshold,Sky->OcclusionMaxDistance,Sky->MinOcclusion,*Sky->GetComponentLocation().ToString());
+        // CPU irradiance/AverageBrightness are not the real-time GPU capture result.
+    }
+    if(TerrainActor && AssetSet && AssetSet->Terrain)
+    {
+        const auto* Data=AssetSet->Terrain->GetRenderData();
+        if(Data && Data->LODResources.Num()>0)
+        {
+            const auto& LOD=Data->LODResources[0];
+            const auto* DF=LOD.DistanceFieldData;const auto* Cards=LOD.CardRepresentationData;
+            const auto* Ground=TerrainActor->GetStaticMeshComponent();
+            UE_LOG(LogTemp,Display,TEXT("KK_TERRAIN_INDIRECT df_present=%d df_valid=%d df_async=%d df_two_sided=%d df_grid=%s card_count=%d affects_df=%d cast_shadow=%d bounds_cm=%s"),
+                DF!=nullptr,DF && DF->IsValid(),DF && DF->bAsyncBuilding,DF && DF->bMostlyTwoSided,DF?*DF->Mips[0].IndirectionDimensions.ToString():TEXT("none"),Cards?Cards->MeshCardsBuildData.CardBuildData.Num():0,Ground->bAffectDistanceFieldLighting,Ground->CastShadow,*Ground->Bounds.BoxExtent.ToString());
+        }
+    }
+    for(const TCHAR* Name:{TEXT("r.SkyLight.RealTimeReflectionCapture"),TEXT("r.SkyLight.RealTimeReflectionCapture.TimeSlice"),TEXT("r.SkyLightingQuality"),TEXT("r.DynamicGlobalIlluminationMethod"),TEXT("r.Lumen.DiffuseIndirect.Allow"),TEXT("r.LumenScene.Radiosity"),TEXT("r.Lumen.ScreenProbeGather.ShortRangeAO"),TEXT("r.DistanceFieldAO"),TEXT("r.GenerateMeshDistanceFields"),TEXT("r.Lumen.TraceMeshSDFs.Allow")})
+        if(auto* CVar=IConsoleManager::Get().FindConsoleVariable(Name))UE_LOG(LogTemp,Display,TEXT("KK_LIGHTING_CVAR %s=%s"),Name,*CVar->GetString());
+}
+void AKKBenchmarkGameMode::TickSkinReview()
+{
+    const double Now=FPlatformTime::Seconds()-BenchmarkStartTime;
+    if(Now<SkinReviewNextTime)return;
+    auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0));if(!PC)return;
+    const TCHAR* Modes[]={TEXT("Generic"),TEXT("DefaultLit"),TEXT("Profile")};
+    const TCHAR* Views[]={TEXT("Wide"),TEXT("Nib"),TEXT("Krag")};
+    auto Fail=[this](const FString& Reason)
+    {
+        SkinReviewNextTime=DBL_MAX;UE_LOG(LogTemp,Error,TEXT("KK_SKIN_REVIEW_FAILED %s"),*Reason);
+        UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);
+    };
+    if(SkinReviewIndex>=9)
+    {
+        TArray<TSharedPtr<FJsonValue>> Images;
+        for(const TCHAR* Mode:Modes)for(const TCHAR* View:Views)
+        {
+            const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),Mode,View);
+            if(IFileManager::Get().FileSize(*File)<1024){Fail(TEXT("Missing actual screenshot ")+File);return;}
+            Images.Add(MakeShared<FJsonValueString>(File));
+        }
+        TSharedRef<FJsonObject> Report=MakeShared<FJsonObject>();
+        Report->SetStringField(TEXT("source"),TEXT("Actual running engine; same fixed idle pose across all skin material/view combinations"));
+        Report->SetBoolField(TEXT("visual_acceptance"),false);Report->SetBoolField(TEXT("performance_sample"),false);
+        Report->SetArrayField(TEXT("screenshots"),Images);
+        TSharedRef<FJsonObject> CVars=MakeShared<FJsonObject>();
+        for(const TCHAR* Name:{TEXT("r.Substrate"),TEXT("r.SSS.Scale"),TEXT("r.SSS.Quality"),TEXT("r.SSS.Burley.Quality"),TEXT("r.ScreenPercentage")})
+            if(const IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(Name))CVars->SetNumberField(Name,CVar->GetFloat());
+        Report->SetObjectField(TEXT("actual_cvars"),CVars);
+        const FIntPoint Size=GEngine->GameViewport->Viewport->GetSizeXY();
+        Report->SetNumberField(TEXT("width"),Size.X);Report->SetNumberField(TEXT("height"),Size.Y);
+        FString JSON;const auto Writer=TJsonWriterFactory<>::Create(&JSON);FJsonSerializer::Serialize(Report,Writer);
+        if(!FFileHelper::SaveStringToFile(JSON,*(SkinReviewOutput/TEXT("skin-review.json")))){Fail(TEXT("Cannot save report"));return;}
+        UE_LOG(LogTemp,Display,TEXT("KK_SKIN_REVIEW_COMPLETE %s"),*SkinReviewOutput);SkinReviewNextTime=DBL_MAX;
+        UKismetSystemLibrary::QuitGame(this,PC,EQuitPreference::Quit,false);return;
+    }
+    const FName Mode(Modes[SkinReviewIndex/3]);
+    const int32 View=SkinReviewIndex%3;
+    if(!bSkinReviewAwaitingCapture)
+    {
+        for(const auto& Unit:DemoUnits)
+        {
+            Unit->GetMesh()->bPauseAnims=true;
+            if(!Unit->SetSkinMode(Mode)){Fail(TEXT("Missing or invalid review material"));return;}
+        }
+        if(View==0){PC->SelectUnit(DemoUnits[0]);PC->ResetCamera();}
+        else PC->FocusPortrait(DemoUnits[View==1?1:0]);
+        bSkinReviewAwaitingCapture=true;SkinReviewNextTime=Now+3.0;
+        UE_LOG(LogTemp,Display,TEXT("KK_SKIN_REVIEW_VIEW mode=%s view=%s"),*Mode.ToString(),Views[View]);
+        return;
+    }
+    const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),*Mode.ToString(),Views[View]);
+    if(IFileManager::Get().FileExists(*File)){Fail(TEXT("Existing review image preserved ")+File);return;}
+    FScreenshotRequest::RequestScreenshot(File,true,false);
+    ++SkinReviewIndex;bSkinReviewAwaitingCapture=false;SkinReviewNextTime=Now+1.0;
 }
 void AKKBenchmarkGameMode::WriteInputState()
 {
@@ -277,10 +393,13 @@ void AKKBenchmarkGameMode::WriteMetrics()
     Report->SetStringField(TEXT("camera"),TEXT("distance6.4m; pitch22deg; verticalFOV38deg; fixedEV12.7"));
     Report->SetStringField(TEXT("requested_sun"),TEXT("55000lux; RGB(1,1,1); angular diameter1.5deg; pitch-42/yaw130deg in Unreal coordinates"));
     Report->SetStringField(TEXT("requested_profile"),TEXT("DX12 SM6; Epic; software Lumen; virtual shadow maps; TSR; 100% render scale"));
+    Report->SetStringField(TEXT("skin_mode"),RequestedSkinMode.ToString());
     TSharedRef<FJsonObject> Settings=MakeShared<FJsonObject>();
     for(const TCHAR* Name:{TEXT("r.ScreenPercentage"),TEXT("r.DynamicRes.OperationMode"),TEXT("r.VSync"),TEXT("r.AntiAliasingMethod"),TEXT("r.DynamicGlobalIlluminationMethod"),TEXT("r.ReflectionMethod"),TEXT("r.Shadow.Virtual.Enable"),TEXT("r.RayTracing"),TEXT("r.Lumen.HardwareRayTracing"),TEXT("r.VolumetricFog"),TEXT("sg.ResolutionQuality"),TEXT("sg.AntiAliasingQuality"),TEXT("sg.PostProcessQuality"),TEXT("sg.ViewDistanceQuality"),TEXT("sg.ShadowQuality"),TEXT("sg.GlobalIlluminationQuality"),TEXT("sg.ReflectionQuality"),TEXT("sg.TextureQuality"),TEXT("sg.EffectsQuality")})
         if(const IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(Name))Settings->SetNumberField(Name,CVar->GetFloat());
     Report->SetObjectField(TEXT("actual_cvars"),Settings);
+    for(const TCHAR* Name:{TEXT("r.Substrate"),TEXT("r.SSS.Scale"),TEXT("r.SSS.Quality"),TEXT("r.SSS.Burley.Quality"),TEXT("r.SSS.Checkerboard")})
+        if(const IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(Name))Settings->SetNumberField(Name,CVar->GetFloat());
     TArray<TSharedPtr<FJsonValue>> Variants;
     for(const auto& Unit:DemoUnits)if(Unit)Variants.Add(MakeShared<FJsonValueString>(Unit->GetVariantLabel()));
     Report->SetArrayField(TEXT("variants"),Variants);
@@ -341,7 +460,7 @@ void AKKBenchmarkHUD::DrawHUD()
         const auto* Unit=PC->SelectedUnit();
         const float UnitX=700.f*Scale;
         Label(Unit->GetVariantLabel().ToUpper(),Teal,UnitX,21.f*Scale,25.f,840.f*Scale);
-        Label(Unit->IsKrag()?TEXT("Heavy armor and industrial bionics."):TEXT("Nimble engineer. Light functional replacements."),Muted,UnitX,59.f*Scale,15.f,840.f*Scale);
+        Label(Unit->IsKrag()?TEXT("Heavy armor and industrial bionics."):TEXT("Restores ordinary function. No upgrades."),Muted,UnitX,59.f*Scale,15.f,840.f*Scale);
         const FString ActionLabel=Unit->IsFaceActing() && Unit->GetActionLabel()==TEXT("Idle")?TEXT("EXPRESSION"):Unit->GetActionLabel().ToUpper();
         Label(ActionLabel,Teal,Canvas->SizeX-Left,Bottom+30.f*Scale,24.f,280.f*Scale,true);
     }
@@ -422,7 +541,7 @@ void AKKBenchmarkGameMode::TickShowcase()
         case 10:Krag->SetVariantIndex(0);Krag->MoveTo(Krag->GetActorLocation()+FVector(0,-60,0),true);break;
         case 11:Nib->PlayDemoAction(TEXT("Shoot"));break;
         case 12:Krag->SetVariantIndex(0);PC->FocusPortrait(Krag);Krag->PlayFacePerformance();break;
-        case 13:Krag->PlayDemoAction(TEXT("Melee"));break;
+        case 13:PC->FocusActionPortrait(Krag);Krag->PlayDemoAction(TEXT("Melee"));break;
         case 14:Krag->PlayDemoAction(TEXT("Shoot"));break;
         case 15:case 16:case 17:case 18:
         {

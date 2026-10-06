@@ -6,6 +6,7 @@
 class UKKBenchmarkAssets;
 class AKKBenchmarkUnit;
 class AStaticMeshActor;
+class ASkyLight;
 UCLASS()
 class KRAGKINGSBENCHMARK_API AKKBenchmarkGameMode : public AGameModeBase
 {
@@ -18,10 +19,19 @@ public:
 private:
     UPROPERTY() TObjectPtr<UKKBenchmarkAssets> AssetSet;
     UPROPERTY() TObjectPtr<AStaticMeshActor> TerrainActor;
+    UPROPERTY() TObjectPtr<ASkyLight> SkyLightActor;
+    bool bLightingDiagnosticsWritten=false;
+    void WriteLightingDiagnostics();
     bool TryStartDemo();
     bool bWaitingForTerrain=false;
     bool bWindowTitleApplied=false;
     bool bReviewFrameWritten=false;
+    bool bSkinReview=false;
+    bool bSkinReviewAwaitingCapture=false;
+    int32 SkinReviewIndex=0;
+    double SkinReviewNextTime=16.0;
+    FString SkinReviewOutput;
+    void TickSkinReview();
     double TerrainWaitStarted=0.0;
     TArray<float> FrameTimes;
     float Elapsed=0;
@@ -40,6 +50,7 @@ private:
     bool bSmoke=false;
     bool bPerformancePass=false;
     bool bPerformanceMoving=false;
+    FName RequestedSkinMode=TEXT("Generic");
     int32 PerformanceWorkloadCycle=INDEX_NONE;
     int32 PerformanceWorkloadPhase=0;
     FVector PerformanceOrigins[2]={FVector::ZeroVector,FVector::ZeroVector};

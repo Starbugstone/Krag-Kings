@@ -22,7 +22,7 @@ AKKBenchmarkController::AKKBenchmarkController()
 void AKKBenchmarkController::BeginPlay()
 {
     Super::BeginPlay();
-    bPerformanceLocked=FParse::Param(FCommandLine::Get(),TEXT("KKPerf")) || FParse::Param(FCommandLine::Get(),TEXT("KKPerfMoving")) || FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
+    bPerformanceLocked=FParse::Param(FCommandLine::Get(),TEXT("KKPerf")) || FParse::Param(FCommandLine::Get(),TEXT("KKPerfMoving")) || FParse::Param(FCommandLine::Get(),TEXT("KKShowcase")) || FParse::Param(FCommandLine::Get(),TEXT("KKSkinReview"));
     FInputModeGameAndUI Mode;
     Mode.SetHideCursorDuringCapture(false);
     Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
@@ -124,6 +124,13 @@ void AKKBenchmarkController::FocusPortrait(AKKBenchmarkUnit* Unit)
     if(!Unit)return;SelectUnit(Unit);
     bPortrait=true;PortraitPan=FVector::ZeroVector;Distance=Unit->IsKrag()?135.f:145.f;
     Yaw=Unit->GetActorRotation().Yaw+180.f;Pitch=-3.f;
+}
+void AKKBenchmarkController::FocusActionPortrait(AKKBenchmarkUnit* Unit)
+{
+    if(!Unit)return;FocusPortrait(Unit);
+    // The fixed head portrait crops Krag's foreshortened firearm. This separate
+    // showcase view keeps the face and the active upper-body weapon together.
+    Distance=240.f;PortraitPan=FVector(0,0,-18.f);Yaw+=15.f;
 }
 void AKKBenchmarkController::SetShowcaseFraming(const FBox& VisibleBounds,float InYaw,float InPitch,float DeltaSeconds)
 {

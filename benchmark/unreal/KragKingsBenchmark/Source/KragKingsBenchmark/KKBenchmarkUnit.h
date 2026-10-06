@@ -26,6 +26,8 @@ public:
     bool IsKrag() const { return bKrag; }
     bool HasMovementTarget() const { return bMoving; }
     bool IsFaceActing() const { return FaceTimeRemaining>0.f; }
+    bool SetSkinMode(FName Mode);
+    FName GetSkinMode() const { return SkinMode; }
     float GetMaximumAppliedMorphWeight(const FName& Kind) const;
     FString GetShotDiagnosticsJson() const;
     int32 GetShotEventCount() const { return ShotEventCount; }
@@ -36,6 +38,7 @@ private:
     const FKKCharacterVariant* Variant() const;
     UPROPERTY() TObjectPtr<UKKBenchmarkAssets> AssetSet;
     int32 VariantIndex = 0;
+    FName SkinMode=TEXT("Generic");
     bool bKrag = true;
     bool bSelected = false;
     bool bMoving = false;

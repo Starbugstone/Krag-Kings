@@ -18,6 +18,7 @@ public:
     void SelectUnit(AKKBenchmarkUnit* Unit);
     void ResetCamera();
     void FocusPortrait(AKKBenchmarkUnit* Unit);
+    void FocusActionPortrait(AKKBenchmarkUnit* Unit);
     void SetShowcaseFraming(const FBox& VisibleBounds,float InYaw,float InPitch,float DeltaSeconds);
     void EndShowcase() { bPerformanceLocked=false; }
     bool IsPortraitView() const { return bPortrait; }

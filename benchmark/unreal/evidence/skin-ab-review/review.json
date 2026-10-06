@@ -1,0 +1,52 @@
+{
+  "execution": "Actual Unreal 5.8.3 editor -game rendering; not a packaged or performance pass",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "completionMarker": "KK_SKIN_REVIEW_COMPLETE",
+  "processId": 12712,
+  "allNineImagesVisuallyInspected": true,
+  "sharedFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "compiledSources": "../skin-ab-native-build/result.json",
+  "preparation": "../skin-ab-preparation.json",
+  "imageAlterations": false,
+  "samePoseAndPerViewCamera": true,
+  "originalMaterialsAndTexturesUnchanged": true,
+  "defaultSkinMode": "Generic",
+  "artisticAcceptance": false,
+  "shaderAcceptance": "Profile proposed for next measured candidate; no final acceptance or startup-default change",
+  "findings": [
+    "Generic subsurface washes out skin and reduces visible surface contrast in both species.",
+    "DefaultLit and Profile recover darker skin/ear colors and surface contrast; their visible difference is subtle at these provisional profile distances.",
+    "Both alternatives retain hard facial shadows; neither resolves the rejected anatomy, eyes, fur or clothing.",
+    "Rendered revised HUD is readable in all three camera views; the more explicit Nib replacement wording was edited after this build and is not pictured."
+  ],
+  "limitations": [
+    "Run-conditions snapshot was taken during review at 05:04:36 UTC, not before launch. This is not a performance sample.",
+    "No new Windows package, action-portrait recording or corrected audio capture was executed in this review.",
+    "Only Natural variants and one fixed Idle pose were compared.",
+    "Current packaged baseline remains Generic with its previously recorded audio defect."
+  ],
+  "memory": {
+    "peakPrivateMiB": 6544.0,
+    "minimumAvailableMiB": 12203.0,
+    "maximumCommitPercent": 58.0
+  },
+  "files": {
+    "DefaultLit-Krag.png": "c7687e7069e1ac1865da6461d5005c9347764670187d7e1fb8ecf002e1e24d93",
+    "DefaultLit-Nib.png": "c4ec85c137d457059dbda9499208716e69af452c0f0dc3b40c651596e5a5a11c",
+    "DefaultLit-Wide.png": "84df5bcfc0faf2bb7f41b3874b70116b0a1bf5c2b137f7d079c8395a6aa8252c",
+    "Generic-Krag.png": "e16d9e5c44cb1ec429071a69c3d1aa627e2138bcd764cf58374e0b6622ee92d9",
+    "Generic-Nib.png": "f07ebc41370c115a45ecd35e5b847fb9095ecd2715cb8294fb51685fede846bf",
+    "Generic-Wide.png": "91dd4e97c5a38c230a57faf5daa7c16cc096da190247dfe4114c7a819af0cb7d",
+    "Profile-Krag.png": "9bda18524e0865aaa94fec9b8cd12ff6d4e5fc7b686c43bdef5e4e4a87742d75",
+    "Profile-Nib.png": "72cbe849be70630d2f6e3b00e1a9792387dc7d8a7a888b77502b9c72f5bdf01e",
+    "Profile-Wide.png": "2efc41df50bc0343ff38d06590199c422db46ec9d5503044266820f7650fd764",
+    "gpu.csv": "608fc8fae408d517910fafc0ea22f831337bdae5d7f47d1dbe287ff4fb734119",
+    "job.json": "7f6794e84919d451c34f260cd223450d910e708864806f29c9d4f9db01dfa47b",
+    "memory.csv": "a0bd9bc9cafbbb943a028649bc8ad6e84e6c4724e1f8958b30a9a6b28dcf4fd5",
+    "run-conditions.json": "2230b5352fa82dc549b5f80d985e339b6b58e1cb2d027b95a15853219d239f14",
+    "runtime.log": "dbe95cbe0dea401483a694b7f2a843814ec6674cd5b2b84153a5f93fb974d0c3",
+    "skin-review.json": "2131d847db9c789423cc0fdb16a5fa6dbd3268168273110f0d51eb7863b5de95"
+  },
+  "textArchiveNormalization": "UTF-8 LF; trailing line whitespace stripped from runtime log. Original Windows log remains in local evidence; PNG bytes unchanged."
+}

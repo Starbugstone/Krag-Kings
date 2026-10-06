@@ -1,0 +1,23 @@
+{
+  "name": "unreal-skin-ab-editor-review",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-game",
+    "-ResX=1920",
+    "-ResY=1080",
+    "-NoVSync",
+    "-KKSkinReview",
+    "-KKSkinReviewOutput=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-skin-ab\\prepared-editor-review",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-skin-ab\\prepared-editor-review\\runtime.log",
+    "-ExecCmds=sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,r.VolumetricFog 1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-skin-ab\\prepared-editor-review\\guard-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-skin-ab\\prepared-editor-review\\guard-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-skin-ab\\prepared-editor-review\\runtime.log",
+  "successMarker": "KK_SKIN_REVIEW_COMPLETE"
+}
