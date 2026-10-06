@@ -1,0 +1,167 @@
+{
+  "status": "Manual concept surface-landmark reading for fitting; illustration camera is uncalibrated",
+  "reference": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+  "sha256": "c75202e0bc805bf866b0b9b18f79d1413aa72cea3ac916f2f71706ecb1c381a2",
+  "pixelOrigin": "top-left of original1774x887 sheet",
+  "points": {
+    "crown": {
+      "pixel": [
+        281,
+        16
+      ],
+      "uncertaintyPixels": 2
+    },
+    "eye_left_on_image": {
+      "pixel": [
+        265,
+        58
+      ],
+      "uncertaintyPixels": 2
+    },
+    "eye_right_on_image": {
+      "pixel": [
+        305,
+        58
+      ],
+      "uncertaintyPixels": 2
+    },
+    "glabella_lower": {
+      "pixel": [
+        285,
+        54
+      ],
+      "uncertaintyPixels": 2
+    },
+    "glabella_furrow": {
+      "pixel": [
+        285,
+        45
+      ],
+      "uncertaintyPixels": 2
+    },
+    "brow_medial_mass": {
+      "pixel": [
+        294,
+        51
+      ],
+      "uncertaintyPixels": 2
+    },
+    "brow_crest": {
+      "pixel": [
+        305,
+        50
+      ],
+      "uncertaintyPixels": 2
+    },
+    "brow_lateral_mass": {
+      "pixel": [
+        313,
+        52
+      ],
+      "uncertaintyPixels": 2
+    },
+    "nasal_bridge": {
+      "pixel": [
+        285,
+        63
+      ],
+      "uncertaintyPixels": 2
+    },
+    "nasal_tip": {
+      "pixel": [
+        285,
+        68
+      ],
+      "uncertaintyPixels": 2
+    },
+    "upper_cheek_crest": {
+      "pixel": [
+        316,
+        66
+      ],
+      "uncertaintyPixels": 2
+    },
+    "oblique_malar_plane": {
+      "pixel": [
+        314,
+        75
+      ],
+      "uncertaintyPixels": 2
+    },
+    "nasolabial_upper_valley": {
+      "pixel": [
+        300,
+        73
+      ],
+      "uncertaintyPixels": 2
+    },
+    "nasolabial_lower_valley": {
+      "pixel": [
+        307,
+        87
+      ],
+      "uncertaintyPixels": 2
+    },
+    "upper_muzzle_column": {
+      "pixel": [
+        295,
+        80
+      ],
+      "uncertaintyPixels": 2
+    },
+    "upper_lip_center": {
+      "pixel": [
+        285,
+        85
+      ],
+      "uncertaintyPixels": 2
+    },
+    "lower_lip_center": {
+      "pixel": [
+        285,
+        93
+      ],
+      "uncertaintyPixels": 2
+    },
+    "labiomental_recess": {
+      "pixel": [
+        285,
+        99
+      ],
+      "uncertaintyPixels": 2
+    },
+    "chin_supported_front": {
+      "pixel": [
+        285,
+        109
+      ],
+      "uncertaintyPixels": 2
+    },
+    "mandibular_plane": {
+      "pixel": [
+        316,
+        99
+      ],
+      "uncertaintyPixels": 2
+    },
+    "chin_bottom": {
+      "pixel": [
+        285,
+        115
+      ],
+      "uncertaintyPixels": 2
+    }
+  },
+  "rules": [
+    "Preserve the selected regular Krag, not the broader clan-boss proportions.",
+    "These approximate2D picks identify anatomical regions; they do not supply exact world-depth dimensions.",
+    "Keep current global head scale for this relief-only pass.",
+    "Existing true-front camera gives exact actual-surface ray picks; the65degree side remains a comparison proposal."
+  ],
+  "reliefIntent": [
+    "Paired brow mass is supported into forehead and glabella, rather than a narrow visor.",
+    "Upper malar crest turns into oblique cheek plane and nasolabial valley.",
+    "Continuous upper/lower lip rolls become distinct from the chin through a labiomental recess.",
+    "Preserve actual globe and fitted contact loops, not the surrounding whole brow."
+  ]
+}

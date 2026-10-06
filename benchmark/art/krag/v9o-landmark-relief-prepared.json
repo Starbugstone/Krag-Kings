@@ -1,0 +1,26 @@
+{
+  "status": "Prepared and syntax checked; actual cached Head preflight passes, no Blender source or rendered result exists",
+  "sourceInput": "benchmark/art/krag/Krag_MacroFace_v9nc_WIP.blend",
+  "sourceSha256": "f581fff1e1022ac268a69cb9a7b2026c8aa9d8ffa5d4a2d4d974d612706a4299",
+  "recipe": {
+    "benchmark/tools/krag/landmark_wip/landmark_relief.py": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d",
+    "benchmark/tools/krag/landmark_wip/build_landmark_relief_v9o.py": "2f46a438890f290a145158a989fc0de91786cc262dc677e0e1e707e837b9d59c",
+    "benchmark/tools/krag/landmark_wip/review_landmark_relief.py": "2eb9a107da46e453f0389776fc60f3063705263534cca715861d90f836664d43"
+  },
+  "cacheSha256": "8456afca1e1c6c7c0f7aa6a21976ad32f9e470bec8ef425f8241e5dbeb618fd9",
+  "headPreflight": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.6835460316147322,
+    "normalChangeDegreesP99": 57.62014103772867,
+    "normalChangeDegreesMaximum": 82.32042747583428,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.031558843953561816
+  },
+  "contact": {
+    "actualClosedRingVertices": 160,
+    "unchangedInnerOcularVertices": 7762,
+    "outerGeodesicTransitionMeters": 0.026
+  },
+  "artisticAcceptance": false,
+  "sharedMutation": false
+}

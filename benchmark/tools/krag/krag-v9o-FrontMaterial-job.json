@@ -1,0 +1,23 @@
+{
+  "name": "krag-v9o-FrontMaterial",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\landmark_wip\\review_landmark_relief.py",
+    "--",
+    "--view",
+    "FrontMaterial"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-v9o-FrontMaterial.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-v9o-FrontMaterial.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-v9o-FrontMaterial.stdout.log",
+  "successMarker": "KRAG_LANDMARK_RELIEF_REVIEW_COMPLETE FrontMaterial"
+}
