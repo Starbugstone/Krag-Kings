@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "v9e prepared but ungenerated: carries ungenerated v9d face/eye/neck/scarf improvements, adds explicit source-anatomy arm domain and articulated firearm grip/mount. v9d was never generated; v10 remains separate.",
+  "currentAuthoringCode": "v9e generated with all four actual source reviews; failed head/scarf/grip likeness and pose checks. v9d was never generated; v10 remains separate.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -23,7 +23,9 @@
     "Review complete right-leg provisional module and promote only after source/bind/pose/runtime validation",
     "Bake geometry-dependent face material region on actual head UVs instead of generic material tile",
     "Derive runtime from corrected detailed source, preserving face/silhouette and measured deformation quality",
-    "Remove the 96 exactly zero-area metal triangles from the next new export; current authored normals are finite/unit and MikkT warning causality remains unproven"
+    "Remove the 96 exactly zero-area metal triangles from the next new export; current authored normals are finite/unit and MikkT warning causality remains unproven",
+    "After Natural deformation review, replace the old X-based Body/BioArm partition with anatomical shoulder cut loops before full-arm variant acceptance; do not remove lateral ribs with an arm module.",
+    "After anatomy and grip correction, refine the hand cannon with a real recessed bore, trigger/guard and constructed mechanical details; current mesh resembles a capped pipe on a rectangular block."
   ],
   "notIntegrated": [
     "All v8/v9/v9b WIP anatomy sources remain isolated from shared and unaccepted",
@@ -114,29 +116,31 @@
     "precisionRecheck": "Pending read-only remeasurement: generic thin-triangle barycentric arithmetic was corrected from float32 to float64 after these files were generated. Existing renders/FBX/bind evidence remains valid; old numerical reports retain their exact helper hash."
   },
   "historicalBaselineReceipt": "benchmark/shared/characters/krag/delivery-v7.json",
-  "sharedExportsVersion": "v7-optimized-pretriangulated; promoted technical derivative, artistic acceptance false",
+  "sharedExportsVersion": "v7-optimized-pretriangulated plus bounded Shoot aim correction; root promoted; appearance and pose acceptance false",
   "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged",
   "workInProgressSource": {
-    "path": "benchmark/art/krag/Krag_Master_v9c_WIP.blend",
-    "sha256": "5596b2604a56c03a13b75aa1c79904ce5bc0c7114e014e5b0e32c7697725d65d",
-    "status": "Generated and Front/Head reviewed; artistic acceptance false",
+    "path": "benchmark/art/krag/Krag_Master_v9e_WIP.blend",
+    "sha256": "c0717f5a627185664aca87bfa80b938e1a6735fb33d23cdae66473eb29067353",
+    "bytes": 139698776,
+    "status": "Generated and actual Front/Head/ShootFront/ShootGrip reviewed; artistic and pose acceptance false",
     "actualRenders": [
-      "renders/Krag_Natural_Front_v9c-wip.png",
-      "renders/Krag_Natural_Head_v9c-wip.png"
+      "renders/Krag_Natural_Front_v9e-wip.png",
+      "renders/Krag_Natural_Head_v9e-wip.png",
+      "renders/Krag_Natural_Front_Shoot_f13_v9e-wip.png",
+      "renders/Krag_Natural_RightGrip_Shoot_f13_v9e-wip.png"
     ],
     "improvements": [
-      "Narrower rounded crown",
-      "Separated brow fitting fields and greater lip/chin projection retain visible amber eyes"
+      "Raised right arm no longer pulls a large lateral-rib/axillary sheet with it in Shoot frame13",
+      "Sloping paired brow ridges and broader raised nostrils visible",
+      "Reduced sternum strap clearance"
     ],
     "defects": [
-      "Brow still reads too horizontal and face too smooth/mask-like from front",
-      "Nasal mass sits too low: eye-to-nose interval long, nose-to-upper-lip interval short",
-      "Nose/alae/nasolabial and upper muzzle need clear broad volume, substantial chin and cupped visible ears",
-      "Scarf remains stiff nested collars; right sternum harness ends visibly float",
-      "v9b profile also exposes rear neck overlap; same junction needs inspection in current source",
-      "Original Shoot aim crosses body by approximately 50 degrees; action-only fix saved separately",
-      "Blink/open mouth, hands/grip and remaining body poses remain unverified"
-    ]
+      "Head remains oversized against recorded concept landmarks; smooth planar cheek/muzzle and cushion-like lower lip do not match reference",
+      "Scarf experiment produces parallel hollow tubes rather than broad asymmetrical folded cloth",
+      "Shoot right hand skin webs stretch between articulated finger chains; fingers remain splayed along an overlong handle",
+      "Armor layering and clothing construction/weathering still simplified"
+    ],
+    "reviewReceipt": "v9e-source-review.json"
   },
   "triangulatedTechnicalCandidate": {
     "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
@@ -249,7 +253,7 @@
   },
   "proportionReview": {
     "measurements": "anatomy-study/front-proportion-landmarks-v9c.json",
-    "status": "Approximate explicit manual reference landmarks; actual v9d review must precede separate full-face assembly scaling correction"
+    "status": "Actual v9e completed; next separate whole-head/oral/ocular/rig proportional reduction based on approximate recorded concept landmarks"
   },
   "sharedAimPromotion": {
     "status": "Root promoted bounded functional correction after artifact/hash verification; visual/pose acceptance remains failed",
@@ -259,8 +263,30 @@
     "domainHelper": "benchmark/tools/krag/krag_skin_domains.py",
     "gripHelper": "benchmark/tools/krag/krag_grip_v2.py",
     "codeOnlyDomainEvidence": "anatomy-study/skin-domain-v2-measurements.json",
-    "status": "Prepared options only; actual neutral/head and Shoot/Grip source reviews required",
+    "status": "Actual v9e generation and four views complete; torso-domain improvement visible, articulated grip fails due to skin/hand contact",
     "v9dGenerated": false,
     "v10MixedIntoCandidate": false
+  },
+  "historicalV9cSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9c_WIP.blend",
+    "sha256": "5596b2604a56c03a13b75aa1c79904ce5bc0c7114e014e5b0e32c7697725d65d",
+    "status": "Generated and Front/Head reviewed; artistic acceptance false",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v9c-wip.png",
+      "renders/Krag_Natural_Head_v9c-wip.png"
+    ],
+    "improvements": [
+      "Narrower rounded crown",
+      "Separated brow fitting fields and greater lip/chin projection retain visible amber eyes"
+    ],
+    "defects": [
+      "Brow still reads too horizontal and face too smooth/mask-like from front",
+      "Nasal mass sits too low: eye-to-nose interval long, nose-to-upper-lip interval short",
+      "Nose/alae/nasolabial and upper muzzle need clear broad volume, substantial chin and cupped visible ears",
+      "Scarf remains stiff nested collars; right sternum harness ends visibly float",
+      "v9b profile also exposes rear neck overlap; same junction needs inspection in current source",
+      "Original Shoot aim crosses body by approximately 50 degrees; action-only fix saved separately",
+      "Blink/open mouth, hands/grip and remaining body poses remain unverified"
+    ]
   }
 }

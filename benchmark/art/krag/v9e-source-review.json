@@ -1,0 +1,122 @@
+{
+  "version": "v9e-source-review",
+  "artisticAcceptance": false,
+  "poseAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_Master_v9e_WIP.blend",
+    "sha256": "c0717f5a627185664aca87bfa80b938e1a6735fb33d23cdae66473eb29067353",
+    "bytes": 139698776
+  },
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9e-wip.png",
+      "sha256": "dc9f397be935746f08e09c13695d046043141799f4defa2baad602b3b43758d5",
+      "bytes": 1309551
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9e-wip.png",
+      "sha256": "5547d85d88bfb1ea941c44be33e4e6d9f7fcc86f12352e286619a958f0d543da",
+      "bytes": 1351243
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Shoot_f13_v9e-wip.png",
+      "sha256": "c199d3e817e8bbd28cbf5dd4ecfa51b71f04a8f882221535d29161fc275b569d",
+      "bytes": 1295790
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_RightGrip_Shoot_f13_v9e-wip.png",
+      "sha256": "a4110a0eca16faf0dd75805ad1179af61ebeb590a5c93eb28f5c9c2da32a5faf",
+      "bytes": 1699195
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9e-wip.meta.json",
+      "sha256": "4ff7d4c257c00dbacfe8f277415a32314120eae5803ad26e481fdef8572ced7d",
+      "bytes": 560
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9e-wip.meta.json",
+      "sha256": "ec051c9b83636426912fae3b8db4ead15e33e9f3af1f1aa8fe82de908a9d3fb0",
+      "bytes": 559
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Shoot_f13_v9e-wip.meta.json",
+      "sha256": "71a8d537745c7ecdbc6657f536ebaabbbceb8a081c4b4b90a06d4197f729f52c",
+      "bytes": 560
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_RightGrip_Shoot_f13_v9e-wip.meta.json",
+      "sha256": "2c53c422e5f2a09cd0e72263b1020063e5d9a3c783332a04dc2a369066236da6",
+      "bytes": 564
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9e_WIP-locomotion-target-verification.json",
+      "sha256": "1e6dc54b1ad6d469d2c856e06671dc7f8784ddb129d206e1f646e7a32926dad0",
+      "bytes": 42935
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9e_WIP-grip-target-verification.json",
+      "sha256": "3bec41ecfa12fcfbcdb22d60f94df6be8934cccf97f81db42daf198bf2a4eae0",
+      "bytes": 48476
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9e_WIP-weapon-pose-verification.json",
+      "sha256": "3e02e612a34e94da749d9a322a01d2365a3fb22bd2dd368a3eed81f19920854d",
+      "bytes": 1775
+    }
+  ],
+  "observedImprovements": [
+    "Raised right arm no longer pulls a large lateral-rib/axillary sheet with it in Shoot frame13",
+    "Sloping paired brow ridges and broader raised nostrils visible",
+    "Reduced sternum strap clearance"
+  ],
+  "failedChecks": [
+    "Head remains oversized against recorded concept landmarks; smooth planar cheek/muzzle and cushion-like lower lip do not match reference",
+    "Scarf experiment produces parallel hollow tubes rather than broad asymmetrical folded cloth",
+    "Shoot right hand skin webs stretch between articulated finger chains; fingers remain splayed along an overlong handle",
+    "Armor layering and clothing construction/weathering still simplified"
+  ],
+  "notYetVerified": [
+    "Blink and open-mouth source views",
+    "Other posed body clips and bionic interfaces",
+    "Updated source runtime maps, exports, native engine deformation",
+    "Complete organic hidden lower-body master"
+  ],
+  "telemetry": [
+    {
+      "file": "benchmark/local/krag-build-v9e-wip-memory.csv",
+      "peakPrivateMB": 1140.0,
+      "minimumAvailableMB": 16316.0,
+      "maximumCommitPercent": 41.0,
+      "guardExitCode": 0
+    },
+    {
+      "file": "benchmark/local/krag-review-v9e-wip-Natural_Front-Shoot-memory.csv",
+      "peakPrivateMB": 2149.0,
+      "minimumAvailableMB": 15431.0,
+      "maximumCommitPercent": 44.0,
+      "guardExitCode": 0
+    },
+    {
+      "file": "benchmark/local/krag-review-v9e-wip-Natural_Front-memory.csv",
+      "peakPrivateMB": 2151.0,
+      "minimumAvailableMB": 15414.0,
+      "maximumCommitPercent": 44.0,
+      "guardExitCode": 0
+    },
+    {
+      "file": "benchmark/local/krag-review-v9e-wip-Natural_Head-memory.csv",
+      "peakPrivateMB": 2125.0,
+      "minimumAvailableMB": 15524.0,
+      "maximumCommitPercent": 44.0,
+      "guardExitCode": 0
+    },
+    {
+      "file": "benchmark/local/krag-review-v9e-wip-Natural_RightGrip-Shoot-memory.csv",
+      "peakPrivateMB": 2150.0,
+      "minimumAvailableMB": 15421.0,
+      "maximumCommitPercent": 44.0,
+      "guardExitCode": 0
+    }
+  ]
+}
