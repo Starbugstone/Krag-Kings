@@ -1,0 +1,102 @@
+{
+  "status": "Native garment generation failed before source save; no renders or acceptance",
+  "source": "benchmark/art/animation/nib-human-motion-v5/Nib_HumanMotion_Study_v5.blend",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "sharedChanged": false,
+  "sourceSaved": false,
+  "artisticAcceptance": false,
+  "attempts": [
+    {
+      "processId": 31540,
+      "exitCode": 2,
+      "peakPrivateMB": 594,
+      "logStatus": "Expected redirected logs absent; cause not established"
+    },
+    {
+      "processId": 7244,
+      "exitCode": 2,
+      "peakPrivateMB": 579,
+      "logStatus": "Redirected logs and explicit Python exception retained",
+      "completedStage": "42-frame undershirt cloth settle",
+      "failure": "Shoulder strap old/new radial support displacement exceeded 35 mm; no threshold relaxation",
+      "diagnosisLimit": "Original failure did not record the offending vertex or exact distance; ray correspondence attribution remains to be measured"
+    },
+    {
+      "processId": 23148,
+      "exitCode": 2,
+      "peakPrivateMB": 585,
+      "completedStage": "42-frame undershirt solve and first3strap local supports",
+      "failure": "Fourthstrap control localnearest support requires41.284mm beyond35mm",
+      "sourceSaved": false,
+      "evidence": [
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-garments-v1-generation.txt",
+          "sha256": "fc6e019ebeff43cd5036a15160a226f66747a3336ad6e31bf87a87d90b9153ba"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-garments-v1-generation.stderr.txt",
+          "sha256": "3b32923d1e700b4d9a21e7854fb442d428cfde1f68bd989a60e3b4f594f4e44e"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-strap-centreline-failure.json",
+          "sha256": "27e280057c11b1ee421ecc13f08460e3939b9c698d61096e8198f7e377db1af4"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-fitted-garments-v1-memory.csv",
+          "sha256": "6ec2a41d93ba2c280ad75ffcaaef720e0aec9da1c103d38292990e741e2c471c"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/build_garment_study.py",
+          "sha256": "65d9899822ef44a1c397f980e2ef4fca22347d2dce04591df8d570e216ebad43"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/fitted_fabric.py",
+          "sha256": "a400e2aeedc13aba447aa2b3be226dcfcbf891ea74b224bc8bba53ddd98e75bc"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/cloth_patterns.py",
+          "sha256": "6936633d87dd4b0b60ee16d1bd6a1afb99f3d4519504f3ec5a0206bc804aec61"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/build-garments-v1.job.json",
+          "sha256": "dd4d408c274f6b42bfbbcca6fbc32894276370da974c00181042967d87751aa3"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-generation.txt",
+      "sha256": "5050ec193b9f2c6ea832d4410bc1adae27fbc21f868f4143054f49557002019c"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-generation.stderr.txt",
+      "sha256": "5fb0b99a23f9592d696fdde4c542530f1e5f27b5722cb2f486547f0344097481"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-python-error.txt",
+      "sha256": "9662a16ec023cfe7a0565926dd5b94db6ba466caf062c1161686a035dbd70ee0"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-fitted-garments-v1-memory.csv",
+      "sha256": "d729fe9405b7f2dafeab995ba34a07e336d42a8ad8d19817642b24f5d691e12a"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/build_garment_study.py",
+      "sha256": "65d9899822ef44a1c397f980e2ef4fca22347d2dce04591df8d570e216ebad43"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/fitted_fabric.py",
+      "sha256": "04861fceb38e97e829e2dd968b4512d0a17a9fc36c772755f9d6caf436542b97"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/cloth_patterns.py",
+      "sha256": "6936633d87dd4b0b60ee16d1bd6a1afb99f3d4519504f3ec5a0206bc804aec61"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/build-garments-v1.job.json",
+      "sha256": "dd4d408c274f6b42bfbbcca6fbc32894276370da974c00181042967d87751aa3"
+    }
+  ],
+  "subsequentDiagnosis": "Actual native Basis audit proves backcontrol insidebody by29.275mm; nearestpoint returnsfront-facing skin. Fresh directional exterior strap construction prepared; obsolete oldroute is not canon."
+}

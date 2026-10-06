@@ -3,8 +3,7 @@
 Simulate only an isolated neutral authoring copy. Bake it to a skinned mesh;
 no runtime cloth solver or Blender-only deformation is part of the contract.
 """
-import math,json
-from pathlib import Path
+import math
 from collections import defaultdict
 import bpy
 import numpy as np
@@ -164,17 +163,7 @@ def refit_layer(obj,old_shirt,new_shirt,body,rig,rigid=False):
         if new is None:new,_,_,b=body_tree.ray_cast(origin,direction,.25);b=(b+.005) if b is not None else None
         if old is None or new is None:raise RuntimeError('Missing old/new garment support: '+obj.name)
         change=b-a
-        if abs(change)>.035:
-            nearest={}
-            for label,support in [('oldShirt',old_tree),('newShirt',new_tree),('body',body_tree)]:
-                q,n,triangle,d=support.find_nearest(Vector(p))
-                nearest[label]={'position':list(q) if q else None,'normal':list(n) if n else None,'triangle':triangle,'distanceMeters':d}
-            evidence={'object':obj.name,'vertex':i,'point':p.tolist(),'rayOrigin':list(origin),'rayDirection':list(direction),
-                'oldRayDistance':a,'newRayDistance':b,'requestedRadialShiftMeters':change,'nearestSurfaces':nearest,
-                'status':'Failed unchanged35mm gate; no source saved','repairApplied':False}
-            path=Path(__file__).resolve().parents[4]/'benchmark/local/nib-garment-support-failure.json'
-            path.write_text(json.dumps(evidence,indent=2)+'\n',newline='\n')
-            raise RuntimeError('Layer refit exceeds35mm: '+obj.name+'; diagnostic '+str(path))
+        if abs(change)>.035:raise RuntimeError('Layer refit exceeds35mm: '+obj.name)
         changes[i]=np.asarray(direction)*change
     if rigid:changes[:]=np.mean(changes,axis=0)
     inverse=np.asarray(obj.matrix_world.inverted().to_3x3());local=changes@inverse.T
@@ -184,5 +173,4 @@ def refit_layer(obj,old_shirt,new_shirt,body,rig,rigid=False):
     if obj.data.shape_keys:
         obj.data.vertices.foreach_set('co',np.asarray([v.co[:] for v in obj.data.shape_keys.key_blocks['Basis'].data],dtype=np.float32).ravel())
     obj.data.update();binding=bind_to_body(obj,rig,body,rigid)
-    return {'object':obj.name,'maximumShiftMeters':float(np.linalg.norm(changes,axis=1).max()),'binding':binding,
-        'supportMode':'radial torso layers; shoulder straps are authored separately'}
+    return {'object':obj.name,'maximumShiftMeters':float(np.linalg.norm(changes,axis=1).max()),'binding':binding}

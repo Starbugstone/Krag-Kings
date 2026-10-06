@@ -1,4 +1,12 @@
-# Prepared Nib garment refit
+# Nib garment refit — first native attempt failed
+
+The v5-pinned native attempt completed all 42 undershirt cloth frames, then
+stopped at the shoulder-strap fitting gate: old-to-new radial support requested
+more than 35 mm of displacement. No new source was saved or rendered. The
+threshold remains unchanged. `art/nib/garment-study/v1/failure.json` preserves
+the source identity, two process exits, final logs, code snapshots and memory.
+The next repair needs local shoulder correspondence that preserves strap
+thickness and layered placement; collision and appearance remain unverified.
 
 This is source preparation only. No new shirt, scarf, settled fabric or garment
 source has been generated. The new actual anatomical body exposes clipping in
@@ -67,3 +75,23 @@ quads / four closed loops; scarf 4,560 vertices / 4,302 quads, no zero corner
 areas and all sampled initial normals facing radially outward. It does not
 establish self-intersection clearance, solver stability or an actual cloth
 appearance. Those require the queued native generation and review.
+
+
+The second measured failure is preserved separately: the old back-shoulder
+control lies **inside** the new body. Unconstrained nearest support returns
+front-facing skin, so copying that displacement would route leather through
+the torso. `strap-support-v5.json` records the actual saved Basis triangle,
+normal and signed distance (−29.275 mm), not a proxy.
+
+The next prepared recipe intentionally replaces both obsolete strap meshes
+with closed 19 mm-wide / 3 mm-thick rounded leather ribbons. Front/shoulder
+crest/back directions select exterior actual shirt/body surfaces; no inside
+point may choose the opposite side. The crossed back has separate leather
+layer clearance. Old straps stay hidden in the preserved collection. New
+routing records support triangles, local clearances, curve lengths, per-row
+routing changes and curvature. This is an authorized clothing fit, not a body
+or canon change; the failed 35 mm old-mesh preservation assumption is no
+longer applied to the intentionally rebuilt straps. A separate 90 mm region
+bound and 70-degree adjacent-segment rejection catch routing jumps. These are
+conservative authoring guards, not artistic acceptance. Native review remains
+required. No new source from this recipe has yet been generated.

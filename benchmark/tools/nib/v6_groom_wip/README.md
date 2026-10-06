@@ -140,3 +140,29 @@ separate requirements. No shared export is produced by the groom builder.
 matting, expression and cloth-construction issues, including the actual Unreal
 playful capture. Scarf/bib/pockets/boots still require authored shape and later
 CC0 scan detail; neither the fur recipe nor denser cinematic fibers solve them.
+
+
+## Coherent79 composition — prepared, not generated
+
+New `generate-coherent79-runtime.job.json` and cinematic sibling target the
+same future v5-motion garment source. They cannot run before its actual
+Front/Back/Shoot evidence exists and an exact `composition-review.json` records
+the inspected source/review hashes and inherited facial failures. The template
+contains invalid pending hashes on purpose. This is an explicit diagnostic
+composition, not a fabricated pass of the old strict oral gate. No automatic
+shared promotion is authorized.
+
+The builder now preserves exact79-bone hierarchy/bind and every action-curve
+hash, in addition to face/body/fuzz/clothing geometry, UVs, weights and morphs.
+New ear cards/fibers retain the existing Head/Ear/EarTip field. The same runtime
+coverage and guide field feed the denser cinematic representation. These jobs
+remain unexecuted; texture generation, card alpha/backface/mip behavior, actual
+posed fur, frame times and VRAM are unverified.
+
+After actual clothes and groom review, root will apply the final captured-motion
+free-hand update to this coherent source, then export one matching mesh/PBR/
+79-bone/seven-clip package. New topology needs its own matching triangle-export
+reference, not restoration against the obsolete v4b payload. Natural anatomy
+is ahead of the unreviewed restoration variants; no final bionic-quality claim
+is implied. Keep all inherited face, cloth, hand and groom failures explicit
+until each actual source and engine view resolves them.

@@ -1,0 +1,301 @@
+{
+  "status": "Actual saved hand coordinates and weights; numerical hand-space LBS proposals only, not native posed proof",
+  "source": "/mnt/d/Dev/Krag-Kings/benchmark/art/animation/nib-human-motion-v5/Nib_HumanMotion_Study_v5.blend",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "cacheSha256": "b9197be954cbc1c7129baf107be0e67e824222516f8298970d91b87f37349623",
+  "savedMeshVertices": 13194,
+  "savedMeshFaces": 13192,
+  "maximumWeightSumError": 4.6566128730773926e-08,
+  "flexAxisHandBindSpace": [
+    -1.0,
+    0.0,
+    0.0
+  ],
+  "oppositionAxisHandBindSpace": [
+    0.0,
+    -1.0,
+    0.0
+  ],
+  "regions": {
+    "distalThumbVertices": 553,
+    "palmVertices": 3599,
+    "proximalIndexVertices": 371
+  },
+  "rows": [
+    {
+      "name": "Rest",
+      "fingerAnglesDegrees": {},
+      "thumbOppositionDegrees": 0,
+      "thumbFlexDegrees": [
+        0,
+        0
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.02764154717721477,
+          "thumbVertex": 2561,
+          "otherVertex": 9305
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.012684790094277318,
+          "thumbVertex": 8399,
+          "otherVertex": 9147
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.1899999976158142,
+        -0.06599999964237213,
+        0.5649999976158142
+      ],
+      "maximumMeshDisplacementMeters": 2.8324582357133025e-08
+    },
+    {
+      "name": "Walk fingers only",
+      "fingerAnglesDegrees": {
+        "Index": [
+          27,
+          42,
+          16
+        ],
+        "Middle": [
+          28,
+          42,
+          16
+        ],
+        "Ring": [
+          29,
+          44,
+          17
+        ],
+        "Little": [
+          30,
+          45,
+          18
+        ]
+      },
+      "thumbOppositionDegrees": 0,
+      "thumbFlexDegrees": [
+        0,
+        0
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.027367653455284007,
+          "thumbVertex": 2561,
+          "otherVertex": 9305
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.01360344116783876,
+          "thumbVertex": 8399,
+          "otherVertex": 9147
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.1899999976158142,
+        -0.06599999964237213,
+        0.5649999976158142
+      ],
+      "maximumMeshDisplacementMeters": 0.047469152006409096
+    },
+    {
+      "name": "Run fingers only",
+      "fingerAnglesDegrees": {
+        "Index": [
+          40,
+          55,
+          20
+        ],
+        "Middle": [
+          40,
+          50,
+          20
+        ],
+        "Ring": [
+          40,
+          52,
+          20
+        ],
+        "Little": [
+          42,
+          55,
+          20
+        ]
+      },
+      "thumbOppositionDegrees": 0,
+      "thumbFlexDegrees": [
+        0,
+        0
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.027139233830046103,
+          "thumbVertex": 8394,
+          "otherVertex": 9305
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.013932202247324527,
+          "thumbVertex": 8399,
+          "otherVertex": 3076
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.1899999976158142,
+        -0.06599999964237213,
+        0.5649999976158142
+      ],
+      "maximumMeshDisplacementMeters": 0.05778280593565271
+    },
+    {
+      "name": "Walk thumb restrained",
+      "fingerAnglesDegrees": {
+        "Index": [
+          27,
+          42,
+          16
+        ],
+        "Middle": [
+          28,
+          42,
+          16
+        ],
+        "Ring": [
+          29,
+          44,
+          17
+        ],
+        "Little": [
+          30,
+          45,
+          18
+        ]
+      },
+      "thumbOppositionDegrees": 12,
+      "thumbFlexDegrees": [
+        5,
+        8
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.02436219340890086,
+          "thumbVertex": 2561,
+          "otherVertex": 9305
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.013438373018753813,
+          "thumbVertex": 8402,
+          "otherVertex": 3080
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.19637907182347789,
+        -0.07067330627561164,
+        0.5663903920282617
+      ],
+      "maximumMeshDisplacementMeters": 0.047469152006409096
+    },
+    {
+      "name": "Run thumb restrained",
+      "fingerAnglesDegrees": {
+        "Index": [
+          40,
+          55,
+          20
+        ],
+        "Middle": [
+          40,
+          50,
+          20
+        ],
+        "Ring": [
+          40,
+          52,
+          20
+        ],
+        "Little": [
+          42,
+          55,
+          20
+        ]
+      },
+      "thumbOppositionDegrees": 20,
+      "thumbFlexDegrees": [
+        8,
+        10
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.022304220531137797,
+          "thumbVertex": 2561,
+          "otherVertex": 9305
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.01290551953675844,
+          "thumbVertex": 8402,
+          "otherVertex": 9129
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.20088349461594532,
+        -0.07261720545583819,
+        0.5674332679744228
+      ],
+      "maximumMeshDisplacementMeters": 0.05778280593565271
+    },
+    {
+      "name": "Run thumb stronger comparison",
+      "fingerAnglesDegrees": {
+        "Index": [
+          40,
+          55,
+          20
+        ],
+        "Middle": [
+          40,
+          50,
+          20
+        ],
+        "Ring": [
+          40,
+          52,
+          20
+        ],
+        "Little": [
+          42,
+          55,
+          20
+        ]
+      },
+      "thumbOppositionDegrees": 28,
+      "thumbFlexDegrees": [
+        10,
+        12
+      ],
+      "gaps": {
+        "palm": {
+          "minimumVertexCloudGapMeters": 0.020472216949509743,
+          "thumbVertex": 2561,
+          "otherVertex": 3157
+        },
+        "indexProximal": {
+          "minimumVertexCloudGapMeters": 0.012379320947098923,
+          "thumbVertex": 8402,
+          "otherVertex": 3041
+        }
+      },
+      "thumbBoneTipMeters": [
+        0.20548750437041532,
+        -0.07387423223512792,
+        0.5686594092859681
+      ],
+      "maximumMeshDisplacementMeters": 0.05778280593565271
+    }
+  ],
+  "interpretation": "Distances between semantic vertex clouds are upper bounds on surface separation; do not claim no intersections. Thumb opposition is an unaccepted bounded control proposal on the actual two-joint anatomy. Keep the thumb beside curled index rather than forced into the palm.",
+  "nativeReviewRequired": [
+    "Inspect relaxed thumb/web at Idle and Run extrema",
+    "Check true triangle-surface contact and side/front silhouette",
+    "Confirm no thumb-pad penetration or palm/web stretching"
+  ],
+  "codeSha256": "81bef6a575f338f3aacf9e186a136de6148e2070c8d88938e6a475000ddd1372",
+  "sharedChanged": false
+}

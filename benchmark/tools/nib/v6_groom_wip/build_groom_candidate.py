@@ -8,6 +8,7 @@ from pathlib import Path
 import bpy
 import numpy as np
 from mathutils import Matrix,Vector
+from bpy_extras.anim_utils import action_get_channelbag_for_slot
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[3]
@@ -24,12 +25,30 @@ parser.add_argument('--source',type=Path,required=True)
 parser.add_argument('--source-report',type=Path,required=True)
 parser.add_argument('--output-dir',type=Path,required=True)
 parser.add_argument('--representation',choices=['runtime','cinematic'],required=True)
+parser.add_argument('--composition-review',type=Path,help='Explicit diagnostic composition record preserving inherited face failures and actual garment-view provenance')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 source_hash=sha(args.source)
 source_report=json.loads(args.source_report.read_text())
-if source_report.get('candidateSha256')!=source_hash:raise RuntimeError('Saved source/report hash mismatch')
-if not source_report.get('preRenderGate',{}).get('passed'):raise RuntimeError('Face source has not passed its structural gate; do not conceal it with fur')
+if source_report.get('candidateSha256',source_report.get('outputSha256'))!=source_hash:raise RuntimeError('Saved source/report hash mismatch')
+composition=None
+if args.composition_review:
+    composition=json.loads(args.composition_review.read_text())
+    if composition.get('sourceSha256')!=source_hash or composition.get('scope')!='diagnostic groom over reviewed garment candidate':raise RuntimeError('Composition review does not identify this exact diagnostic source')
+    if composition.get('artisticAcceptance') is not False or not composition.get('inheritedFaceFailures'):raise RuntimeError('Diagnostic composition must preserve explicit failed face gates')
+    if composition.get('sharedPromotionAuthorized') is not False:raise RuntimeError('This recipe never authorizes shared promotion')
+    garment_review=Path(composition['garmentReview'])
+    if not garment_review.is_absolute():garment_review=ROOT/garment_review
+    if sha(garment_review)!=composition['garmentReviewSha256']:raise RuntimeError('Actual garment review hash differs')
+    reviewed=json.loads(garment_review.read_text())
+    if reviewed.get('sourceSha256')!=source_hash or {p['view'] for p in reviewed.get('poses',[])}!={'Front','Back','Shoot'}:raise RuntimeError('Actual matching garment views are required')
+    for pose in reviewed['poses']:
+        path=Path(pose['image'])
+        if not path.is_absolute():path=ROOT/path
+        if sha(path)!=pose['imageSha256']:raise RuntimeError('Garment image provenance differs')
+    if not source_report.get('preserved',{}).get('exactBind') or source_report['preserved'].get('boneCount')!=79:raise RuntimeError('Coherent composition requires the preserved79-bone garment source')
+elif not source_report.get('preRenderGate',{}).get('passed'):
+    raise RuntimeError('Face structural gate failed; only an explicitly recorded diagnostic composition can continue')
 if not args.output_dir.resolve().is_relative_to((ROOT/'benchmark/art/nib/groom-study').resolve()):
     raise RuntimeError('Groom study outputs must remain in the separate owned art/nib/groom-study directory')
 target=args.output_dir/('Nib_Groom_v6_'+args.representation+'_WIP.blend')
@@ -38,6 +57,16 @@ args.output_dir.mkdir(parents=True,exist_ok=True)
 textures=args.output_dir/'textures'
 bpy.ops.wm.open_mainfile(filepath=str(args.source),load_ui=False)
 scene=bpy.context.scene;rig=bpy.data.objects['Nib_Rig']
+def rig_contract():
+    old=rig.animation_data.action;actions={}
+    for action in bpy.data.actions:
+        rig.animation_data.action=action;bag=action_get_channelbag_for_slot(action,rig.animation_data.action_slot)
+        if bag is None:continue
+        rows=[(c.data_path,c.array_index,[(tuple(k.co),tuple(k.handle_left),tuple(k.handle_right),k.interpolation) for k in c.keyframe_points]) for c in bag.fcurves]
+        actions[action.name]=hashlib.sha256(json.dumps(sorted(rows),separators=(',',':')).encode()).hexdigest()
+    rig.animation_data.action=old
+    return {'bones':{b.name:{'parent':b.parent.name if b.parent else None,'matrix':[list(row) for row in b.matrix_local]} for b in rig.data.bones},'actionCurveHashes':actions}
+rig_before=rig_contract()
 if not np.allclose(np.asarray(rig.matrix_world),np.eye(4),atol=1e-8):raise RuntimeError('World-authored fur requires the established identity rig transform')
 rig.animation_data.action=None
 for bone in rig.pose.bones:bone.matrix_basis=Matrix.Identity(4)
@@ -133,6 +162,7 @@ ear_binding=[entry for o in generated if (entry:=bind_ear_groom(o,rig)) is not N
 geometry=[validate(o) for o in generated]
 after={o.name:surface_hash(o) for o in retained}
 if before!=after:raise RuntimeError('Retained face/body/fuzz/cloth topology, weights, UVs or morphs changed')
+if rig_before!=rig_contract():raise RuntimeError('Groom construction changed bone bind/hierarchy or captured/facial/ear actions')
 # Resolve all old relative image paths while the old source is still active,
 # then make them relative to this separate candidate file's directory.
 for image in bpy.data.images:
@@ -153,7 +183,8 @@ if sha(args.source)!=source_hash:raise RuntimeError('Pinned source file changed'
 report={'status':'Saved unaccepted groom candidate; actual views and engine verification required',
     'source':str(args.source),'sourceSha256':source_hash,'sourceReportSha256':sha(args.source_report),
     'candidate':str(target),'candidateSha256':sha(target),'representation':args.representation,
-    'preRenderGate':source_report['preRenderGate'],'artisticAcceptance':False,
+    'preRenderGate':source_report.get('preRenderGate',{'passed':False,'status':'Inherited explicit facial failures; diagnostic composition only'}),'artisticAcceptance':False,
+    'compositionReview':composition,'preservedRigAndActions':rig_before,
     'removedGroom':removed,'retainedSurfaceHashes':before,'retainedSurfacesUnchanged':True,
     'fineBodyAndFaceFuzz':'Retained unchanged, including all weights and morphs',
     'guideSha256':sha(guide_path),'groups':group_receipts,'geometry':geometry,'earBinding':ear_binding,

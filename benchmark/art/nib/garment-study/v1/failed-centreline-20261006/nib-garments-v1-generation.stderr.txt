@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py", line 82, in <module>
+    report['layers'].append(fabric.refit_layer(obj,old_shirt,shirt,body,rig,rigid))
+                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\fitted_fabric.py", line 206, in refit_layer
+    changes,support_receipt=strap_displacements(original,new_tree,body_tree)
+                            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\fitted_fabric.py", line 186, in strap_displacements
+    raise RuntimeError('Strap local centreline fit exceeds unchanged35mm gate; '+str(path))
+RuntimeError: Strap local centreline fit exceeds unchanged35mm gate; D:\Dev\Krag-Kings\benchmark\local\nib-strap-centreline-failure.json
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py', exiting.

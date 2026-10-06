@@ -153,10 +153,58 @@ def scarf_initial_fit(pattern,body,head,shirt):
         'status':'Initial actual-skin fitting; final contact and appearance still require native review'}
 
 
+def strap_displacements(original,new_tree,body_tree):
+    """Fit the authored strap centreline; preserve its cross-sectional shape.
+
+    A horizontal radial ray can leave the neck/arm opening and hit an unrelated
+    arm surface. Shoulder leather follows the nearest local shoulder support.
+    Deltas interpolate through the existing mesh, never flatten both faces onto
+    a single collider. The original 35 mm fitting limit is unchanged.
+    """
+    front=(original[:,1]<-.025)&(original[:,2]>.86)
+    if not front.any():raise RuntimeError('Cannot identify the authored strap front')
+    side=1 if original[front,0].mean()>0 else -1
+    guide=np.asarray([(side*.060,-.073,.880),(side*.073,-.065,.937),
+        (side*.082,-.029,.967),(side*.079,.025,.965),(side*.055,.067,.893),
+        (side*.017,.074,.816),(-side*.052,.067,.729)],dtype=float)
+    shifts=[];receipt=[]
+    for i,point in enumerate(guide):
+        # The upper leather crosses the exposed shoulder, while front/back
+        # lower sections lie on the undershirt. Query the actual local surface.
+        upper=float(smooth(.912,.95,point[2]));targets=[]
+        for name,support,clearance in [('shirt',new_tree,.005),('body',body_tree,.012)]:
+            hit,normal,triangle,distance=support.find_nearest(Vector(point))
+            if hit is None:raise RuntimeError('No actual strap centreline support')
+            targets.append(np.asarray(hit+normal*clearance))
+        target=targets[0]*(1-upper)+targets[1]*upper;delta=target-point
+        measured=float(np.linalg.norm(delta))
+        receipt.append({'control':i,'original':point.tolist(),'fitted':target.tolist(),
+            'displacementMeters':measured,'bodySupportBlend':upper})
+        if measured>.035:
+            path=Path(__file__).resolve().parents[4]/'benchmark/local/nib-strap-centreline-failure.json'
+            path.write_text(json.dumps(receipt,indent=2)+'\n',newline='\n')
+            raise RuntimeError('Strap local centreline fit exceeds unchanged35mm gate; '+str(path))
+        shifts.append(delta)
+    shifts=np.asarray(shifts);changes=[]
+    for point in original:
+        start=guide[:-1];edge=guide[1:]-start
+        t=np.clip(np.sum((point-start)*edge,axis=1)/np.sum(edge*edge,axis=1),0,1)
+        distance=np.linalg.norm(point-(start+t[:,None]*edge),axis=1);i=int(distance.argmin())
+        # Smooth endpoint interpolation avoids an abrupt displacement slope at
+        # each authored section while preserving the original closed leather.
+        blend=float(smooth(0,1,t[i]));changes.append(shifts[i]*(1-blend)+shifts[i+1]*blend)
+    changes=np.asarray(changes)
+    if np.linalg.norm(changes,axis=1).max()>.03500001:raise RuntimeError('Interpolated strap exceeds35mm')
+    return changes,receipt
+
+
 def refit_layer(obj,old_shirt,new_shirt,body,rig,rigid=False):
     old_tree=tree(old_shirt)[0];new_tree=tree(new_shirt)[0];body_tree=tree(body)[0]
     original=np.asarray([tuple(obj.matrix_world@v.co) for v in obj.data.vertices]);changes=np.zeros_like(original)
-    for i,p in enumerate(original):
+    support_receipt=None
+    if obj.name.startswith('Overalls shoulder strap'):
+        changes,support_receipt=strap_displacements(original,new_tree,body_tree)
+    for i,p in enumerate(original) if support_receipt is None else []:
         origin=Vector((0,.007,float(p[2])));direction=Vector(p)-origin
         if direction.length<1e-6:continue
         direction.normalize();old,_,_,a=old_tree.ray_cast(origin,direction,.25)
@@ -185,4 +233,4 @@ def refit_layer(obj,old_shirt,new_shirt,body,rig,rigid=False):
         obj.data.vertices.foreach_set('co',np.asarray([v.co[:] for v in obj.data.shape_keys.key_blocks['Basis'].data],dtype=np.float32).ravel())
     obj.data.update();binding=bind_to_body(obj,rig,body,rigid)
     return {'object':obj.name,'maximumShiftMeters':float(np.linalg.norm(changes,axis=1).max()),'binding':binding,
-        'supportMode':'radial torso layers; shoulder straps are authored separately'}
+        'supportMode':'actual local centreline' if support_receipt else 'radial torso layers','centreline':support_receipt}

@@ -142,3 +142,12 @@ The actual **v5i loop/globe eyelid repair** now exists as `Nib_Master_v5i_Orbita
 The actual **anatomical-body / half-twist study v1** now exists as `Nib_AnatomicalBodyStudy_v1.blend`, SHA-256 `21bae901ace9613c34c0482efc3e07b21e400cb650a6c552280e81052d05d00d`. It preserves v5i face/ears/hands and 374 unrelated geometry/UV/material/morph components while replacing the Natural tube-derived torso/arms with a licensed CC0 connected anatomical cage fitted to the same joints. The surface has 33,838 vertices / 67,008 triangles, four influences maximum and 2,300 fine-fuzz roots. ForearmTwist_L/R extend the rig to 79 bones: half pronation on Twist, full desired Hand orientation, preserving the original global bind within recorded float32 rounding (59.6 nm maximum translation; 0.00001618 degrees maximum rotation). Root must author fresh captured-body clips for this skeleton; old clips remain in the saved source.
 
 Three actual LBS clay views show improved continuous shoulders and no old gross elbow notch at 90-degree pronation. The bent-elbow extreme still compresses the inner crease (minimum triangle area ratio .130, maximum edge stretch 1.994, p99 1.147), with no new degenerate faces. The old garment now intersects the fitted chest and still needs real construction/refitting; neck cloth, face likeness, materials and fuller groom remain failed. `motion-study/anatomical-body-v1-review-result.json` preserves actual source/render hashes, successful stage memory and two earlier bind-check failures. This is a bounded native construction improvement, not artistic acceptance, a new shared package, or an engine-motion claim.
+
+
+The first **v5-pinned fitted-garment attempt failed before source save**. Its
+42-frame undershirt cloth solve completed, then the old/new radial support
+calculation for an overalls shoulder strap exceeded the unchanged 35 mm fitting
+gate. The diagnostic retry exited 2 with a 579 MB private peak; no candidate,
+render, shared asset or artistic pass exists. `garment-study/v1/failure.json`
+preserves the actual failure and recipe. A regional strap correspondence repair
+is next; the cloth solver's completion alone does not establish cloth quality.

@@ -22,7 +22,6 @@ HERE=Path(__file__).parent;ROOT=HERE.parents[3]
 sys.path[:0]=[str(HERE),str(HERE.parent),str(ROOT/'benchmark/tools/krag')]
 import cloth_patterns as patterns
 import fitted_fabric as fabric
-import shoulder_straps
 from nib_animation import body_correctives
 from runtime_reduction import attach_portable_drivers
 
@@ -74,17 +73,8 @@ report={'status':'Isolated fitted fabric source; actual neutral/action/contact r
 report['shirt']['settle']=fabric.settle(shirt,pin,[body,head],42)
 fabric.finish(shirt,.0013);report['shirt']['skin']=fabric.bind_to_body(shirt,rig,body)
 
-report['newStraps']=[]
-for old in list(collection.objects):
-    if old.type!='MESH' or not old.name.startswith('Overalls shoulder strap'):continue
-    name=old.name;points_old=np.asarray([tuple(old.matrix_world@v.co) for v in old.data.vertices])
-    front=(points_old[:,1]<-.025)&(points_old[:,2]>.86);side=1 if points_old[front,0].mean()>0 else -1
-    material=old.data.materials[0];collection.objects.unlink(old);archive.objects.link(old)
-    old.hide_render=True;old.hide_set(True);old.name='PRESERVED INPUT '+name
-    strap,entry=shoulder_straps.build(name,side,material,collection,rig,body,shirt);report['newStraps'].append(entry)
-
 prefixes=('Overalls draped bib','Bib sewn chest pocket','Bib pocket flap','Bib stitched outer seam','Bib hand stitching',
-    'Strap adjustment buckle','Buckle hollow insert')
+    'Overalls shoulder strap','Strap adjustment buckle','Buckle hollow insert')
 report['layers']=[]
 for obj in list(collection.objects):
     if obj.type!='MESH' or not obj.name.startswith(prefixes):continue
@@ -113,7 +103,7 @@ report['preserved']={'exactBind':True,'boneCount':len(rig.data.bones),'allAction
 report['garments']={obj.name:{'vertices':len(obj.data.vertices),'triangles':sum(len(p.vertices)-2 for p in obj.data.polygons),
     'boundsMin':np.asarray([v.co[:] for v in obj.data.vertices]).min(axis=0).tolist(),
     'boundsMax':np.asarray([v.co[:] for v in obj.data.vertices]).max(axis=0).tolist()} for obj in [shirt,scarf]}
-report['authoringCode']={name:sha(HERE/name) for name in ['build_garment_study.py','cloth_patterns.py','fitted_fabric.py','shoulder_straps.py']}
+report['authoringCode']={name:sha(HERE/name) for name in ['build_garment_study.py','cloth_patterns.py','fitted_fabric.py']}
 for name in report['authoringCode']:
     text=bpy.data.texts.new('Nib garment study '+name);text.write((HERE/name).read_text())
 rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)

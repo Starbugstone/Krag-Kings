@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py", line 82, in <module>
+    report['layers'].append(fabric.refit_layer(obj,old_shirt,shirt,body,rig,rigid))
+                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\fitted_fabric.py", line 166, in refit_layer
+    if abs(change)>.035:raise RuntimeError('Layer refit exceeds35mm: '+obj.name)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Layer refit exceeds35mm: Overalls shoulder strap
