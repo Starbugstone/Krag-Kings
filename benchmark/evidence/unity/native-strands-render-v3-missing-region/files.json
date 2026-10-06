@@ -1,0 +1,56 @@
+[
+  {
+    "path": "actual/render.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v3/render.json",
+    "sha256": "45266ee5bd2c0d99c7d76fd54b514dc3345a00a66f03999f98fb0c20b2442bef",
+    "bytes": 4115
+  },
+  {
+    "path": "actual/strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v3/strands.png",
+    "sha256": "ee6ad065544db952e972c0adea755d3964442d99134788cc44c6ad4cc55c210a",
+    "bytes": 73484
+  },
+  {
+    "path": "actual/without-strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v3/without-strands.png",
+    "sha256": "f395bc6ce79ddee73daa45b2a1d428a901aec88789d2db43d6e1972bd789ad25",
+    "bytes": 13559
+  },
+  {
+    "path": "actual/failure.txt",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v3/failure.txt",
+    "sha256": "4c75cfb9dc40e03e3ce02747f8eaf5d060efe95fe112a9688d6d68fb3f67b92e",
+    "bytes": 232
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-strand-fixture-render-v3.log",
+    "sha256": "9bd5fe607dad9e5feee507112251f2d0e2145096a27db05be73d99c9b496603b",
+    "bytes": 52038
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v3-memory.csv",
+    "sha256": "33c321f4d74a5052af458c2de81ea1d0f9a37cc9cd6600bee71abee262cb4f9d",
+    "bytes": 568
+  },
+  {
+    "path": "gpu.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v3-gpu.csv",
+    "sha256": "f71bdd6aaba48df34aafb74d060a09017c639a8f9c4ac1e829bde0807fd71b18",
+    "bytes": 783
+  },
+  {
+    "path": "render-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/RenderProbe.cs",
+    "sha256": "bc8dcc591dca80aebd04232bd22c906b3479dc5e2c203a5d49af8c01e6dfcec3",
+    "bytes": 18327
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/render-v3.job.json",
+    "sha256": "719f705259718d60e1a915e045318e6c2eb437250f0290956a0a97ab53ba811b",
+    "bytes": 869
+  }
+]

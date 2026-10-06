@@ -1,0 +1,68 @@
+[
+  {
+    "path": "actual/strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v2/strands.png",
+    "bytes": 73484,
+    "sha256": "ee6ad065544db952e972c0adea755d3964442d99134788cc44c6ad4cc55c210a"
+  },
+  {
+    "path": "actual/without-strands.png",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v2/without-strands.png",
+    "bytes": 110133,
+    "sha256": "d3c71e4a48422780c3aa9726779c1aae7d497ed156bd002adbf521fb5e26bd8b"
+  },
+  {
+    "path": "actual/render.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/fixture-render-v2/render.json",
+    "bytes": 811,
+    "sha256": "a7ae6b6774b643eccb1d0a0df0813950b8951ed2181908d418a4679a6e4a1319"
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-strand-fixture-render-v2.log",
+    "bytes": 71635,
+    "sha256": "f179c156428ab5abb47a23c79c6aa0121be39869f1408c3c8092351fd144c926"
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v2-memory.csv",
+    "bytes": 3188,
+    "sha256": "449f5c20f6ad1ce739e6f71d504285c1911abf8fa7a4142894efde47fb8785aa"
+  },
+  {
+    "path": "gpu.csv",
+    "source": "benchmark/local/unity-native-strand-fixture-render-v2-gpu.csv",
+    "bytes": 3881,
+    "sha256": "29e30ba80a35fb191c6fe5e774d1ca07abc78d5bf3fd661c4e1c4e8146c4b177"
+  },
+  {
+    "path": "render-source.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/RenderProbe.cs",
+    "bytes": 13025,
+    "sha256": "039c435acf13bf99b932517ebde39085ebbe37542a1b19d9bad1f7fd2a0a7568"
+  },
+  {
+    "path": "curve-provider.cs",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/Editor/NativeCurveProvider.cs",
+    "bytes": 3012,
+    "sha256": "75c407d6054516146defac3780ecbc9999cd094195777a3b7d607c9eda309045"
+  },
+  {
+    "path": "NativeFurPhysical.shadergraph",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/NativeFurPhysical.shadergraph",
+    "bytes": 37428,
+    "sha256": "bd11054a093c2a489ef9f516b0f4a49917fb2b3b258ad73f9f6d6d77c4cca1c2"
+  },
+  {
+    "path": "HairVertexHDRP174.shadersubgraph",
+    "source": "benchmark/local/unity-strand-hair-pilot/project/Assets/NativeGroom/HairVertexHDRP174.shadersubgraph",
+    "bytes": 49388,
+    "sha256": "c46ca98c26d69da57304403088f6a498c981a33d13d2c22b1cc6332e06630728"
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/render-v2.job.json",
+    "bytes": 869,
+    "sha256": "6315195c7267eba65bb6aa620bc36ee02103ff43855c4f37eef76e5434564fac"
+  }
+]

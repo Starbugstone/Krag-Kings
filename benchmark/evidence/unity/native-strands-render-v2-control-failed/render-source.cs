@@ -20,11 +20,6 @@ namespace KragKings.StrandPilot
         static double began;
         static string output;
         static bool captured;
-        static int renderedFrames;
-        static Color32[] visiblePixels;
-        static readonly List<Bounds> regionBounds=new List<Bounds>();
-        static readonly List<string> regionNames=new List<string>();
-        static readonly List<RendererState> rendererStates=new List<RendererState>();
         static float maxPositionError,maxDiameterError;
         static readonly List<string> errors=new List<string>();
         [Serializable] class Receipt
@@ -33,27 +28,16 @@ namespace KragKings.StrandPilot
             public int width,height,regions,strands,points;
             public bool simulation,highQualityLines;
             public float maxImportedPositionErrorM,maxImportedDiameterErrorM;
-            public int submittedFrames,completedCameraFrames,hiddenColorRange;
-            public RegionCoverage[] visibleCoverage;
-            public RendererState[] rendererStates;
             public string[] errors;
         }
-        [Serializable] class RendererState
-        {
-            public string stage,region;
-            public int callback,unityFrame,completedCameraFrames,renderers,activeRenderers,lineRenderers;
-            public bool instanceActive;
-        }
-        [Serializable] class RegionCoverage { public string region; public int changedPixels; }
         public static void Run()
         {
             try
             {
-                output=Path.GetFullPath("../fixture-render-v3");
+                output=Path.GetFullPath("../fixture-render-v2");
                 if(Directory.Exists(output))throw new Exception("Preserve previous render output");
                 Directory.CreateDirectory(output);
                 Application.logMessageReceived+=OnLog;
-                Unity.Collections.NativeLeakDetection.Mode=Unity.Collections.NativeLeakDetectionMode.EnabledWithStackTrace;
                 ShaderUtil.allowAsyncCompilation=false;
                 EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
                 var pipeline=AssetDatabase.LoadAssetAtPath<HDRenderPipelineAsset>("Assets/Settings/HDRP High Fidelity.asset");
@@ -81,7 +65,7 @@ namespace KragKings.StrandPilot
                     if(Path.GetFileName(dataPath)=="conversion.json")continue;
                     var provider=ScriptableObject.CreateInstance<NativeCurveProvider>();provider.curveData=AssetDatabase.LoadAssetAtPath<TextAsset>(dataPath.Replace('\\','/'));
                     var data=provider.Read();
-                    string path="Assets/RenderProbeOutput/V3-"+data.region;
+                    string path="Assets/RenderProbeOutput/"+data.region;
                     AssetDatabase.CreateAsset(provider,path+"-provider.asset");
                     var asset=ScriptableObject.CreateInstance<HairAsset>();asset.settingsBasic.type=HairAsset.Type.Custom;asset.settingsBasic.kLODClusters=false;asset.settingsBasic.memoryLayout=HairAsset.MemoryLayout.Sequential;
                     asset.settingsCustom.dataProvider=provider;asset.settingsCustom.settingsResolve.resampleCurves=false;
@@ -114,14 +98,11 @@ namespace KragKings.StrandPilot
                     instance.strandGroupProviders=new[]{new HairInstance.GroupProvider{hairAsset=asset}};
                     HairInstanceBuilder.BuildHairInstance(instance,instance.strandGroupProviders,HideFlags.None);
                     hair.Add(instance);
-                    Bounds region=new Bounds(new Vector3(data.positions[0],data.positions[1],data.positions[2]),Vector3.zero);
                     for(int i=0;i<data.radii.Length;i++)
                     {
                         var p=new Vector3(data.positions[3*i],data.positions[3*i+1],data.positions[3*i+2]);
-                        region.Encapsulate(p);
                         if(!hasBounds){bounds=new Bounds(p,Vector3.zero);hasBounds=true;}else bounds.Encapsulate(p);
                     }
-                    regionBounds.Add(region);regionNames.Add(data.region);
                 }
                 if(hair.Count!=3)throw new Exception("Expected three actual Blender fixture regions");
                 camera=new GameObject("Probe Camera").AddComponent<Camera>();camera.nearClipPlane=.001f;camera.farClipPlane=10;camera.fieldOfView=30;
@@ -132,9 +113,7 @@ namespace KragKings.StrandPilot
                 hd.antialiasing=HDAdditionalCameraData.AntialiasingMode.None;
                 target=new RenderTexture(1280,720,24,RenderTextureFormat.ARGB32,RenderTextureReadWrite.sRGB);target.Create();camera.targetTexture=target;
                 AssetDatabase.SaveAssets();EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene(),"Assets/RenderProbeOutput/Fixture.unity");
-                began=EditorApplication.timeSinceStartup;frame=0;
-                RenderPipelineManager.endCameraRendering+=OnCameraRendered;
-                EditorApplication.update+=Step;
+                began=EditorApplication.timeSinceStartup;frame=0;EditorApplication.update+=Step;
             }
             catch(Exception e){Fail(e);}
         }
@@ -147,76 +126,30 @@ namespace KragKings.StrandPilot
                 // Let ExecuteAlways setup run before dispatching the explicit
                 // GPU update. Camera rendering remains the actual HDRP path.
                 if(frame++<8)return;
-                // DispatchUpdate does not guard inactive objects. Calling it after
-                // OnDisable recreates buffers and re-registers HDRP line renderers.
-                foreach(var instance in hair)if(instance.isActiveAndEnabled)instance.DispatchUpdate();
+                foreach(var instance in hair)if(instance.enabled)instance.DispatchUpdate();
                 RenderPipeline.SubmitRenderRequest(camera,new RenderPipeline.StandardRequest{destination=target});
-                if(frame<72)return;
+                if(frame<32)return;
                 if(!captured)
                 {
-                    RecordRenderers("visible");
-                    visiblePixels=Save("strands.png");captured=true;
+                    Save("strands.png");captured=true;
                     foreach(var instance in hair)instance.gameObject.SetActive(false);
-                    RecordRenderers("disabled");
                     return;
                 }
-                if(frame<96)return;
-                RecordRenderers("hidden");
-                var hiddenPixels=Save("without-strands.png");
-                int hiddenRange=BackgroundRange(hiddenPixels);
-                var coverage=MeasureCoverage(visiblePixels,hiddenPixels);
-                var receipt=new Receipt{status="Actual static fixture render only; inspect images before acceptance. Character attachment and performance untested",engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,api=SystemInfo.graphicsDeviceType.ToString(),shader="Physical Hair / native HDRP High Quality Lines",radiusRepresentation="Per-point diameters retained in HairAsset; current official HairVertex shader renders a fitted linear root-to-tip taper",colorRepresentation="Regional constant colors for the fixture; authored per-point character colors not yet transferred",width=target.width,height=target.height,regions=3,strands=12,points=108,simulation=false,highQualityLines=true,maxImportedPositionErrorM=maxPositionError,maxImportedDiameterErrorM=maxDiameterError,submittedFrames=frame-8,completedCameraFrames=renderedFrames,hiddenColorRange=hiddenRange,visibleCoverage=coverage,rendererStates=rendererStates.ToArray(),errors=errors.ToArray()};
+                if(frame<36)return;
+                Save("without-strands.png");
+                var receipt=new Receipt{status="Actual static fixture render only; inspect images before acceptance. Character attachment and performance untested",engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,api=SystemInfo.graphicsDeviceType.ToString(),shader="Physical Hair / native HDRP High Quality Lines",radiusRepresentation="Per-point diameters retained in HairAsset; current official HairVertex shader renders a fitted linear root-to-tip taper",colorRepresentation="Regional constant colors for the fixture; authored per-point character colors not yet transferred",width=target.width,height=target.height,regions=3,strands=12,points=108,simulation=false,highQualityLines=true,maxImportedPositionErrorM=maxPositionError,maxImportedDiameterErrorM=maxDiameterError,errors=errors.ToArray()};
                 File.WriteAllText(Path.Combine(output,"render.json"),JsonUtility.ToJson(receipt,true));
-                if(hiddenRange>2)throw new Exception("Hidden fixture is not an empty uniform background");
-                if(coverage.Any(x=>x.changedPixels<100))throw new Exception("A fixture region is missing from the visible capture");
-                if(renderedFrames<80)throw new Exception("Insufficient completed camera frames");
                 if(errors.Count!=0)throw new Exception("Native renderer logged errors: "+string.Join(" | ",errors));
                 Debug.Log("KK_NATIVE_STRAND_RENDER_COMPLETE");Finish(0);
             }
             catch(Exception e){Fail(e);}
         }
-        static void OnCameraRendered(ScriptableRenderContext context,Camera renderedCamera)
-        {if(renderedCamera==camera)renderedFrames++;}
-        static void RecordRenderers(string stage)
-        {
-            foreach(var instance in hair)
-            {
-                var renderers=instance.GetComponentsInChildren<MeshRenderer>(true);
-                var lines=instance.GetComponentsInChildren<HDAdditionalMeshRendererSettings>(true);
-                rendererStates.Add(new RendererState{stage=stage,region=instance.name,callback=frame,unityFrame=Time.frameCount,completedCameraFrames=renderedFrames,renderers=renderers.Length,activeRenderers=renderers.Count(x=>x.enabled && x.gameObject.activeInHierarchy),lineRenderers=lines.Count(x=>x.isActiveAndEnabled && x.enableHighQualityLineRendering),instanceActive=instance.isActiveAndEnabled});
-            }
-        }
-        static int BackgroundRange(Color32[] pixels)
-        {
-            int minR=255,minG=255,minB=255,maxR=0,maxG=0,maxB=0;
-            foreach(var p in pixels){minR=Math.Min(minR,p.r);minG=Math.Min(minG,p.g);minB=Math.Min(minB,p.b);maxR=Math.Max(maxR,p.r);maxG=Math.Max(maxG,p.g);maxB=Math.Max(maxB,p.b);}
-            return Math.Max(maxR-minR,Math.Max(maxG-minG,maxB-minB));
-        }
-        static RegionCoverage[] MeasureCoverage(Color32[] visible,Color32[] hidden)
-        {
-            var result=new List<RegionCoverage>();
-            for(int n=0;n<regionBounds.Count;n++)
-            {
-                var b=regionBounds[n];var lo=new Vector2(float.PositiveInfinity,float.PositiveInfinity);var hi=new Vector2(float.NegativeInfinity,float.NegativeInfinity);
-                for(int corner=0;corner<8;corner++)
-                {
-                    var p=camera.WorldToScreenPoint(new Vector3((corner&1)==0?b.min.x:b.max.x,(corner&2)==0?b.min.y:b.max.y,(corner&4)==0?b.min.z:b.max.z));
-                    lo=Vector2.Min(lo,p);hi=Vector2.Max(hi,p);
-                }
-                int count=0;
-                for(int y=Math.Max(0,Mathf.FloorToInt(lo.y)-4);y<Math.Min(target.height,Mathf.CeilToInt(hi.y)+4);y++)
-                    for(int x=Math.Max(0,Mathf.FloorToInt(lo.x)-4);x<Math.Min(target.width,Mathf.CeilToInt(hi.x)+4);x++)
-                    {int i=y*target.width+x;var a=visible[i];var c=hidden[i];if(Math.Abs(a.r-c.r)+Math.Abs(a.g-c.g)+Math.Abs(a.b-c.b)>12)count++;}
-                result.Add(new RegionCoverage{region=regionNames[n],changedPixels=count});
-            }
-            return result.ToArray();
-        }
-        static Color32[] Save(string name)
+        static void Save(string name)
         {
             var old=RenderTexture.active;RenderTexture.active=target;
             var pixels=new Texture2D(target.width,target.height,TextureFormat.RGB24,false,false);
             pixels.ReadPixels(new Rect(0,0,target.width,target.height),0,0);pixels.Apply();
-            File.WriteAllBytes(Path.Combine(output,name),pixels.EncodeToPNG());var colors=pixels.GetPixels32();UnityEngine.Object.DestroyImmediate(pixels);RenderTexture.active=old;return colors;
+            File.WriteAllBytes(Path.Combine(output,name),pixels.EncodeToPNG());UnityEngine.Object.DestroyImmediate(pixels);RenderTexture.active=old;
         }
         static void OnLog(string message,string stack,LogType type)
         {if(type==LogType.Error || type==LogType.Exception || type==LogType.Assert)errors.Add(message);}
@@ -228,15 +161,6 @@ namespace KragKings.StrandPilot
         static void Finish(int code)
         {
             EditorApplication.update-=Step;Application.logMessageReceived-=OnLog;
-            RenderPipelineManager.endCameraRendering-=OnCameraRendered;
-            foreach(var instance in hair)if(instance)
-            {
-                instance.ResetSimulationState();
-                HairInstanceBuilder.ClearHairInstance(instance);
-                UnityEngine.Object.DestroyImmediate(instance.gameObject);
-            }
-            hair.Clear();AsyncGPUReadback.WaitAllRequests();
-            if(camera)camera.targetTexture=null;
             if(target){target.Release();UnityEngine.Object.DestroyImmediate(target);}
             EditorApplication.Exit(code);
         }

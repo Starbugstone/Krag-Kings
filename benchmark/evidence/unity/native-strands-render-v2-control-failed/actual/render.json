@@ -1,0 +1,19 @@
+{
+    "status": "Actual static fixture render only; inspect images before acceptance. Character attachment and performance untested",
+    "engine": "6000.4.4f1",
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "api": "Direct3D12",
+    "shader": "Physical Hair / native HDRP High Quality Lines",
+    "radiusRepresentation": "Per-point diameters retained in HairAsset; current official HairVertex shader renders a fitted linear root-to-tip taper",
+    "colorRepresentation": "Regional constant colors for the fixture; authored per-point character colors not yet transferred",
+    "width": 1280,
+    "height": 720,
+    "regions": 3,
+    "strands": 12,
+    "points": 108,
+    "simulation": false,
+    "highQualityLines": true,
+    "maxImportedPositionErrorM": 0.0,
+    "maxImportedDiameterErrorM": 0.0,
+    "errors": []
+}
