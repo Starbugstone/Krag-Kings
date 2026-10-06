@@ -312,3 +312,24 @@ planes, a smooth human nose, simplistic glossy eyes and squared floating card
 roots. Ear cup/presentation and fuller fine-flowing groom remain open. Neither
 this source nor any shared engine asset is artistically accepted. Its complete
 receipt is `identity-study/orbital-native-v1/actual-result.json`.
+
+The first **card-root attachment** generation stopped before saving. Its
+read-only support audit identifies an inconsistent comparison between authored
+interpolated guide normals and flat triangles at thin ear edges. The failure,
+diagnostic import-path correction and successful audit are preserved in
+`groom-study/root-attachment-v1/actual-result.json`. No dependent image or
+changed model exists for that attempt. A separate v2 recipe retains the normal
+agreement threshold, compares the matching smooth surface field, and keeps an
+independent geometric wrong-side check. It is prepared for the next guarded
+source/Neutral/EyeCloseup boundary; the atlas remains unchanged.
+
+The following adult-face/ocular pass is also **prepared only**. Its second
+offline field has zero introduced neutral degenerates or inverted triangles,
+fixes actual ocular/oral domains, and bounds broad brow/cheek/nasal relief to
+4.23 mm. The first rejected corner-discontinuity proposal is retained. These
+are numerical construction checks, not native visual proof. New opaque ocular
+materials require a real assigned-iris atlas for the `Nib_IrisCoord` attribute;
+the earlier yellow reference map or a generic UV carrier cannot substitute.
+The next native source is intended to retain the current socket, all seven
+clips, exact 79-bone bind and attached groom. Root's later hand-weight/thumb
+studies are independent and are not silently included in the orbital source.
