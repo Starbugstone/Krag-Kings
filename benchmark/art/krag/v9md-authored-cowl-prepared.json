@@ -1,0 +1,44 @@
+{
+  "status": "Prepared authored broad cowl rest surface; not generated",
+  "inputSourceSha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "construction": [
+    "Broad asymmetric shoulder/nape-supported surface with deep chest drape",
+    "Front upper edge explicitly below actual posed lower chin from exterior jaw topology",
+    "Wide cloth flats and unequal crossing rolls authored before bounded exact-surface conformance",
+    "No long-strip relaxation, front vertical lift or concentrated side-knot support",
+    "All other mesh/shape coordinates and rig binds preserved"
+  ],
+  "firstReview": "OpenMouth then Front if silhouette is coherent; stop further angles on structural failure",
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_cowl_v9md.py",
+      "sha256": "69bc1c901087b649f85850a8b213b3c6fa7a12fd86fe92dbeb4ce27a0f24e5e8"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_authored_v9md.py",
+      "sha256": "e121554ed7eba905efe79be477d66ebe6b3703c99b696e6a68b22477467fa110"
+    },
+    {
+      "path": "benchmark/tools/krag/build-cowl-v9md-job.json",
+      "sha256": "795d1abfcc5a9f17a991f2bb4641ae6301c483297c980286982a68b23e0c71a9"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9md-Front.json",
+      "sha256": "796b7366d59c697fe7aebd8096296e060528c6272be820f2335eb6c6c52e340a"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9md-OpenMouth.json",
+      "sha256": "85fac91cbda7232b54cfb5ff8777208894bda98d19b2ff813b55df079d4e5c3a"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9md-OpenProfile.json",
+      "sha256": "d2eb61f2cc37a963a44077f8823b9cbebad1b6cacfdc79109fad8284a41dd5f0"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9md-Shoot.json",
+      "sha256": "1491cf80bbccd4db67e2c2c053a0457e0d9e7d63a66b3e72135d2c2a0c7f1560"
+    }
+  ]
+}

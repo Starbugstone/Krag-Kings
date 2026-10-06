@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Actual v9lc geodesic face source has coherent profile transitions but still fails concept brow/jaw silhouette, cheek planes and tusk emergence. Actual HeadSide and Head preserved. Cowl remains failed tight band/side knot. Shared unchanged.",
+  "currentAuthoringCode": "Actual v9lc profile/portrait has better surface continuity but still fails concept likeness. Actual v9mc cowl rises across open jaw and fails broad chest drape; dependent views stopped. Authored-rest v9md cowl and bounded v9ld mandibular source are prepared, ungenerated. Shared unchanged.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -452,5 +452,17 @@
     "review": "benchmark/art/krag/v9lc-geodesic-face-review.json",
     "status": "Actual broad geodesic face source and profile/portrait reviewed; smoother continuity but likeness remains failed",
     "accepted": false
-  }
+  },
+  "cowlStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_Cowl_v9mc_WIP.blend",
+      "sha256": "4758e6b3d4ba1692616111fb39512d9adedacbf43e94039f7432c6ac89d37474",
+      "bytes": 117576795
+    },
+    "review": "benchmark/art/krag/v9mc-cowl-review.json",
+    "status": "Actual v9mc source and first OpenMouth inspected; cowl silhouette and open-jaw clearance fail",
+    "accepted": false
+  },
+  "preparedMandibularStudy": "benchmark/art/krag/v9ld-mandible-prepared.json",
+  "preparedAuthoredCowlStudy": "benchmark/art/krag/v9md-authored-cowl-prepared.json"
 }

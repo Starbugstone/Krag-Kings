@@ -1,0 +1,52 @@
+{
+  "status": "Prepared broad cowl rebase on actual v9lc; not generated",
+  "input": {
+    "path": "benchmark/art/krag/Krag_GeodesicFace_v9lc_WIP.blend",
+    "sha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60"
+  },
+  "output": "benchmark/art/krag/Krag_Cowl_v9mc_WIP.blend",
+  "originalUngeneratedRecipePreserved": "benchmark/art/krag/v9mb-cowl-prepared.json",
+  "changes": [
+    "Retain v9mb front drape, distributed rear/shoulder pinning and broader textile bending",
+    "Use actual v9lc face and corrected v9ma neck as collision surfaces",
+    "Preserve all non-Scarf mesh and shape coordinates, rig bind and actions",
+    "Preserve unchanged55mm initial fit bound and54frame self-colliding simulation"
+  ],
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "firstReview": "OpenMouth then Front and OpenProfile; completed simulation alone is not garment acceptance",
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_cowl_v9mc.py",
+      "sha256": "721fb26d245bb9531bc704275a95aba14a72a4e575e091780a1aad5b6d1447c0"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v7.py",
+      "sha256": "ae1a756fc7404006a4e0b87a127e1f2afa94c0a4116d326e027cc7241ebca66a"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/neck_composition.py",
+      "sha256": "14204d317782b642a5be645cbdbdf3ff50ec3045ab2eba7d0178ca870c60c0db"
+    },
+    {
+      "path": "benchmark/tools/krag/build-cowl-v9mc-job.json",
+      "sha256": "d910f3302b13a3dcb1e762252446812c271ca1298820a85e592fdb5df0adbbff"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mc-Front.json",
+      "sha256": "c4ddd1f687af26317aae2f650df5abd655d4f7fe62c112a764272067b3a97137"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mc-OpenMouth.json",
+      "sha256": "4d2c9ee84707dc17da775e0be84cd27a475df67a0b0122486067d6e876f3369f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mc-OpenProfile.json",
+      "sha256": "d710d98f5c7d204d104fb50d1ca7306cdc0395b9b15e2d13ad69a381d6ccc511"
+    },
+    {
+      "path": "benchmark/tools/krag/review-cowl-v9mc-Shoot.json",
+      "sha256": "6e8184b06b8f0b92aaff48870229e56bde2c6d3cda5f926835d5dedf50cc099a"
+    }
+  ]
+}

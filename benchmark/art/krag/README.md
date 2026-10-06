@@ -279,3 +279,10 @@ The next sculpt must spread volume through neighboring brow/forehead and cheek/m
 The broad screened-surface displacement reaches11.11mm, fixes7,020 actual oral/orbital/globe-contact vertices, and reports zero flipped triangles. This removes the previous thin visor and triangular cheek shield, but **does not pass concept likeness**. The profile brow still has too narrow an overhang, the smooth cheek/neck lacks a strong mandibular edge and chin, and the portrait lacks shaped glabellar/nasolabial planes. Tusks still appear applied to the lower muzzle. The actual iris material now includes radial pigment and a dark limbus, but optical likeness and actual runtime UV baking remain open.
 
 The intentionally retained v9ma scarf is still a failed tight band/side knot. Next construction work will rebase the prepared broad cowl onto this source and refine the coherent lower-jaw/tusk silhouette while preserving actual lip/eye contact margins. No shared assets, body motion or weapon were changed; remaining expressions and overall artistic acceptance are pending.
+
+
+## v9mc actual cowl: broader folds, silhouette still failed
+
+The isolated `Krag_Cowl_v9mc_WIP.blend` rebases the ungenerated v9mb pattern onto actual v9lc without altering other meshes, shape coordinates, rig bind or action curves. Generation and the first actual OpenMouth portrait exited0; `v9mc-cowl-review.json` records the exact source/image/recipe hashes and telemetry. All54 cloth frames completed and the maximum initial fit correction was2.55mm.
+
+**The garment still fails.** The broader front folds rise across the opened lower jaw, with a bunched side and no low broad chest cowl. The settled lower bound is1.691m. Front/profile/action dependent renders were stopped. The next garment will use a coherent authored rest silhouette below the actual opened chin, with high distributed shoulder support, broad cloth flats and asymmetric chest sag; physical simulation does not need to generate the whole shape. The separate v9ld mandibular recipe is prepared but ungenerated. Shared exports remain unchanged.

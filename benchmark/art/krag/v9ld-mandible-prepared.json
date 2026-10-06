@@ -1,0 +1,54 @@
+{
+  "status": "Prepared bounded mandibular study; not generated. May be explicitly rebased on a reviewed cowl before first execution.",
+  "inputSourceSha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "method": [
+    "Broad mental prominence and underside rather than narrow forward chin peak",
+    "Distributed mandibular angle/body support beneath masseter",
+    "Mild lower-cheek recession to separate the mandibular edge",
+    "True oral bag/rims, complete upper face/eyes and lower-neck transition fixed",
+    "16mm screened surface smoothing and22mm quintic geodesic margin blend",
+    "Unrelated mesh/shape coordinates, rig bind and action-key coordinates fingerprinted unchanged"
+  ],
+  "firstReview": "HeadSide then Head and actual serious OpenMouth/OpenProfile",
+  "stillUnchanged": [
+    "Tusk roots require fitted gum/lip eruption correction after mandibular shape review",
+    "Brow/glabella and broader likeness remain open",
+    "Cloth replacement separate"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_mandible_v9ld.py",
+      "sha256": "881334fe30c12169c388b538a2129e9998de383ee507a2a07a77267d173b75f7"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/mandibular_planes.py",
+      "sha256": "218acc372b999ec55b4cf561ea7f6e2a635bfc89b2371715e60fd945c7401443"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/geodesic_planes.py",
+      "sha256": "bebc9b3c677fe5278abb9cf64cc420b7ca1491ea3274e9b9164eabfdd8d44e65"
+    },
+    {
+      "path": "benchmark/tools/krag/build-mandible-v9ld-job.json",
+      "sha256": "a1e0b51206e325fe34eab622a8e6674ab090ab126c8e230b789a52a9a6bc87cd"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-v9ld-HeadSide.json",
+      "sha256": "2014de0ca8a38a258b9b5b15b6dbe1f10f287d498e1a69ba7ed29af00c26a222"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-v9ld-Head.json",
+      "sha256": "d2ccfa0bc8ba9324c37357ba0a4b1f47b83d80a4979cc1c13b9b1fdd49ed8724"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-v9ld-OpenMouth.json",
+      "sha256": "560392ecd7d5aba1fd3239c8e53bd111b4565b831ad06e810c0c02748ea50558"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-v9ld-OpenProfile.json",
+      "sha256": "14e8c4d3ec493f927a388a95dc58101350bfbb95c8fb2dc0321c2bfe2102f8bd"
+    }
+  ]
+}

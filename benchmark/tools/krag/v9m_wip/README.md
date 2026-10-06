@@ -9,3 +9,8 @@ Scarf is then rebuilt as a broad asymmetrical wrapped sheet, with a low front ed
 Generation and actual OpenMouth/profile/front/raised-arm reviews have not yet run. Neither a numerical ray check nor a completed simulation constitutes artistic acceptance. The complete Head neck is retained; final cinematic seam welding is not claimed. Shared assets and body-motion recipes remain unchanged.
 
 The first actual v9m generation has now stopped before simulation/save: the neck composition clears all 40 original Body occlusion rays in memory, but one initial cloth contact requires 56.910 mm correction and exceeds the unchanged 55 mm bound. No v9m blend or render exists. The read-only diagnostic preserves that failure and records the actual offending vertex/collider contact before any pattern correction.
+
+
+Actual v9ma repaired the duplicate Body-neck oral occluder, but its physically settled scarf bunched into a tight band/side knot. v9mc rebased the corrected front pattern on actual v9lc and completed54 simulation frames; the actual OpenMouth render still shows cloth across the lowered jaw. Both actual source studies and failures are preserved.
+
+The separate prepared v9md helper now authors a coherent broad rest silhouette directly: high shoulder/nape support, low open front below actual posed mandibular landmarks, asymmetric chest sag and wide flats/crossing folds. It uses bounded exact-surface conformance, not long-strip relaxation. `v9md-authored-cowl-prepared.json` records the source and script hashes. It has not generated a source or render, and neither numerical fit nor authored construction establishes artistic acceptance.

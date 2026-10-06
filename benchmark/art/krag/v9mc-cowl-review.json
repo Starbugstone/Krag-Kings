@@ -1,0 +1,74 @@
+{
+  "status": "Actual v9mc source and first OpenMouth inspected; cowl silhouette and open-jaw clearance fail",
+  "source": {
+    "path": "benchmark/art/krag/Krag_Cowl_v9mc_WIP.blend",
+    "sha256": "4758e6b3d4ba1692616111fb39512d9adedacbf43e94039f7432c6ac89d37474",
+    "bytes": 117576795
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/cowl-v9mc.json",
+      "sha256": "672c60f6434e71031e007709a7b66a0925626d50220b5d9e9584c37b758aa76f",
+      "bytes": 7180
+    },
+    {
+      "path": "benchmark/art/krag/v9mc-cowl-prepared.json",
+      "sha256": "a3092375a24f09c441ead159bda941ae1b42ba12ec1492c86ad7edd23239a6d2",
+      "bytes": 2226
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9mc-cowl.meta.json",
+      "sha256": "ae16d6212d8630be761d42281cdd43651545b5db1c0f5bf4c614c74d1076e5af",
+      "bytes": 572
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9mc-cowl.png",
+      "sha256": "9f1483dff43c5c51996b854796c4299a2cde8859b659f0b6d805b1a832f62489",
+      "bytes": 1318121
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_cowl_v9mc.py",
+      "sha256": "721fb26d245bb9531bc704275a95aba14a72a4e575e091780a1aad5b6d1447c0",
+      "bytes": 6475
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v7.py",
+      "sha256": "ae1a756fc7404006a4e0b87a127e1f2afa94c0a4116d326e027cc7241ebca66a",
+      "bytes": 12446
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-cowl-v9mc-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1105.0,
+      "minimumAvailableMB": 9762.0
+    },
+    {
+      "path": "benchmark/local/krag-review-cowl-v9mc-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2100.0,
+      "minimumAvailableMB": 8827.0
+    }
+  ],
+  "findings": [
+    "Front folds are broader than v9ma, but the settled strip still rises across the opened lower jaw",
+    "Opposite-side bunching remains; broad low chest cowl from concept01 is absent",
+    "Initial front pattern preserved its sag before simulation, but settled lower bound is1.691m",
+    "Physical completion and2.55mm initial fit correction do not establish garment likeness or action clearance",
+    "Actual v9lc face, repaired neck, other mesh/shape coordinates and rig bind/actions remain unchanged"
+  ],
+  "stoppedViews": [
+    "Front",
+    "OpenProfile",
+    "Shoot"
+  ],
+  "next": [
+    "Author a broad open-neck cowl rest silhouette directly instead of forcing the long strip to relax into the concept shape",
+    "Use actual opened mandible clearance, high wide shoulder support and low asymmetric chest drape",
+    "Retain broad cloth flats/crossing folds; no requirement to simulate all silhouette construction",
+    "Keep isolated mandibular correction separate until a coherent cowl source can be explicitly merged"
+  ]
+}

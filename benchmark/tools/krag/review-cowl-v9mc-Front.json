@@ -1,0 +1,28 @@
+{
+  "name": "krag-review-cowl-v9mc-Front",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Cowl_v9mc_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9h-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Front",
+    "--tag",
+    "v9mc-cowl",
+    "--neutral-light"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-cowl-v9mc-Front.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-cowl-v9mc-Front.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}
