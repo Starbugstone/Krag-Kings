@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$OutputDirectory)
+param([Parameter(Mandatory=$true)][string]$OutputDirectory,[switch]$ModifierOnly)
 $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 $packageRoot=Join-Path $repo 'benchmark\builds\unreal\Windows'
@@ -32,7 +32,8 @@ $jobPath=Join-Path $OutputDirectory 'job.json';$job|ConvertTo-Json -Depth 6|Set-
 & (Join-Path $PSScriptRoot '..\Write-RunConditions.ps1') -OutputPath (Join-Path $OutputDirectory 'run-conditions.json')
 $inputScript=Join-Path $PSScriptRoot 'input_smoke.ps1'
 Copy-Item $inputScript (Join-Path $OutputDirectory 'executed-input_smoke.ps1')
-$report=[ordered]@{engine='Unreal';completed=$false;visualAcceptance=$false;performanceMeasurement=$false;startedUtc=[DateTime]::UtcNow.ToString('o');exeSha256=(Get-FileHash $executable -Algorithm SHA256).Hash.ToLower();inputScriptSha256=(Get-FileHash $inputScript -Algorithm SHA256).Hash.ToLower();guardMarkerMeaning='Readiness only; inputReportCompleted and gameClosed are also required.'}
+Copy-Item (Join-Path $PSScriptRoot 'InputGroundTargets.ps1') (Join-Path $OutputDirectory 'InputGroundTargets.ps1')
+$report=[ordered]@{engine='Unreal';scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}else{'Full native suite'});completed=$false;visualAcceptance=$false;performanceMeasurement=$false;startedUtc=[DateTime]::UtcNow.ToString('o');exeSha256=(Get-FileHash $executable -Algorithm SHA256).Hash.ToLower();inputScriptSha256=(Get-FileHash $inputScript -Algorithm SHA256).Hash.ToLower();guardMarkerMeaning='Readiness only; inputReportCompleted and gameClosed are also required.'}
 $guard=$null;$game=$null;$guardOutput=Join-Path $OutputDirectory 'guard-stdout.log'
 try{
  $guardScript=Join-Path $PSScriptRoot '..\Run-HeavyTask.ps1'
@@ -53,7 +54,7 @@ try{
  }while($true)
  if($game.Path -ne $executable){throw 'Guard PID does not identify the intended native Unreal executable.'}
  $report.gameProcessId=$game.Id
- & $inputScript -StatePath $statePath -GameProcessId $game.Id -ExecutionMode Packaged|Tee-Object -FilePath (Join-Path $OutputDirectory 'input-stdout.log')
+ & $inputScript -StatePath $statePath -GameProcessId $game.Id -ExecutionMode Packaged -ModifierOnly:$ModifierOnly|Tee-Object -FilePath (Join-Path $OutputDirectory 'input-stdout.log')
  $inputResult=Get-Content $inputReportPath -Raw|ConvertFrom-Json
  if(-not $inputResult.completed){throw 'The actual native input suite did not complete successfully.'}
  $report.inputReportCompleted=$true;$report.checks=@($inputResult.checks).Count

@@ -1,9 +1,8 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,[switch]$ModifierOnly,
+param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,
  [ValidateSet('Packaged','EditorGame')][string]$ExecutionMode='Packaged')
 $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
-. (Join-Path $PSScriptRoot 'InputGroundTargets.ps1')
 Add-Type @'
 using System;using System.Runtime.InteropServices;
 public static class KKInput {
@@ -36,15 +35,6 @@ public static class KKInput {
   if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
  }
 
- public static void SendQuickRmb(uint shiftScan) {
-  var inputs=new System.Collections.Generic.List<INPUT>();
-  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)shiftScan,flags=8}}});
-  inputs.Add(new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=8}}});
-  inputs.Add(new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=16}}});
-  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)shiftScan,flags=10}}});
-  uint sent=SendInput((uint)inputs.Count,inputs.ToArray(),Marshal.SizeOf(typeof(INPUT)));
-  if(sent!=inputs.Count){if(shiftScan!=0)SendScan(shiftScan,true);throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());}
- }
 }
 '@
 [KKInput]::SetProcessDPIAware()|Out-Null
@@ -110,11 +100,6 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  # Let Slate observe the new pointer position before dispatching its click.
  Start-Sleep -Milliseconds 100
  Assert-Pointer
- if($Right -and $HeldMilliseconds -eq 0){
-  $shiftScan=if(-not $Shift){0}elseif($ShiftVirtualKey -eq 0xA1){0x36}elseif($ShiftVirtualKey -eq 0xA0){0x2A}else{throw 'Unsupported quick-click Shift key.'}
-  [KKInput]::SendQuickRmb([uint32]$shiftScan)
-  return
- }
  if($Shift){Send-Key $ShiftVirtualKey}
  try {
   [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
@@ -132,20 +117,6 @@ function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000
  Write-Output "$Name : $pass"
  if(-not $pass){throw "Runtime input check failed: $Name"}
 }
-function Send-GroundMove([string]$Name,[bool]$Walk=$false,[int]$HeldMilliseconds=60,[byte]$ShiftKey=0xA0) {
- $state=Read-State;$bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
- $target=Get-KKGroundClickTarget $state $bounds.Right $bounds.Bottom
- $cameraProbes.Add([pscustomobject]@{control=$Name;before=$state;target=$target;heldMilliseconds=$HeldMilliseconds;walk=$Walk;shiftVirtualKey=$ShiftKey})
- Click-Client $target.clientPoint[0] $target.clientPoint[1] $true $Walk $HeldMilliseconds $ShiftKey
-}
-function Test-ImmediateModifiers {
- Send-GroundMove 'QuickRightShiftWalk' $true 0 0xA1
- Expect-State 'Immediate Right Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
- Send-GroundMove 'QuickUnmodifiedRun' $false 0
- Expect-State 'Unmodified quick RMB clears previous Walk modifier' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
- Send-GroundMove 'QuickLeftShiftWalk' $true 0 0xA0
- Expect-State 'Immediate Left Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
-}
 try {
  $windowLease=[KKOwnedWindowLease]::Acquire($game.MainWindowHandle,[uint32]$game.Id)
  Start-Sleep -Milliseconds 200
@@ -154,15 +125,6 @@ try {
  $nib=$initial.units|Where-Object {$_.species -eq 'Nib'}
  Click-Client $nib.screen_x $nib.screen_y
  Expect-State 'LMB selects Nib' {param($s)($s.units|Where-Object {$_.species -eq 'Nib'}).selected}
- if($ModifierOnly){
-  Press-Key 0x24
-  Expect-State 'Focused modifier probe has observed wide camera' {param($s)(-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
-  Send-GroundMove 'FocusedNibRun' $false 60
-  Expect-State 'Focused Nib RMB establishes Run before modifier probes' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
-  Test-ImmediateModifiers
-  $inputComplete=$true
-  return
- }
  Press-Key 0x09
  Expect-State 'Tab changes selected unit' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).selected}
  Press-Key 0x41
@@ -215,7 +177,7 @@ try {
  Press-Key 0x24
  Expect-State 'Home resets portrait' {param($s)-not $s.portrait}
  $rect=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$rect)|Out-Null
- Send-GroundMove 'KragRun' $false
+ Click-Client ($rect.Right*.4) ($rect.Bottom*.8) $true $false
  Expect-State 'RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
  Expect-State 'Run activates applied body corrective weights' {param($s)($s.units|Where-Object selected).body_morph_weight -gt .01}
  $before=Read-State;Start-Sleep -Milliseconds 700;$after=Read-State
@@ -223,7 +185,7 @@ try {
  $moved=[math]::Sqrt([math]::Pow($u1.x-$u0.x,2)+[math]::Pow($u1.y-$u0.y,2))
  $checks.Add([pscustomobject]@{check='RMB causes world movement';passed=($moved -gt 25);distanceCm=$moved})
  if($moved -le 25){throw 'RMB failed to cause sufficient actual movement.'}
- Send-GroundMove 'KragWalk' $true
+ Click-Client ($rect.Right*.65) ($rect.Bottom*.75) $true $true
  Expect-State 'Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  Press-Key 0x77
  Press-Key 0x09
@@ -245,17 +207,26 @@ try {
  Expect-State 'Home restores wide camera before Nib movement' {param($s)(-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
  $wideResetElapsed=(Read-State).elapsed
  Expect-State 'Nib wide camera advances after reset' {param($s)$s.elapsed -gt $wideResetElapsed -and (-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
- Send-GroundMove 'NibRun' $false
+ $cameraProbes.Add([pscustomobject]@{control='NibRunClick';before=(Read-State);clientPoint=@(($rect.Right*.3),($rect.Bottom*.75));heldMilliseconds=60})
+ Click-Client ($rect.Right*.3) ($rect.Bottom*.75) $true $false
  Expect-State 'Nib RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
- Send-GroundMove 'NibWalk' $true
+ Click-Client ($rect.Right*.7) ($rect.Bottom*.72) $true $true
  Expect-State 'Nib Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
- Send-GroundMove 'NibQuickRun' $false 0
+ $cameraProbes.Add([pscustomobject]@{control='NibQuickRunClick';before=(Read-State);clientPoint=@(($rect.Right*.24),($rect.Bottom*.85));heldMilliseconds=0})
+ Click-Client ($rect.Right*.24) ($rect.Bottom*.85) $true $false 0
  Expect-State 'Immediate RMB down/up changes Nib Walk to Run' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
- Test-ImmediateModifiers
+ $cameraProbes.Add([pscustomobject]@{control='NibQuickRightShiftWalk';before=(Read-State);clientPoint=@(($rect.Right*.65),($rect.Bottom*.85));heldMilliseconds=0;modifier='RightShift'})
+ Click-Client ($rect.Right*.65) ($rect.Bottom*.85) $true $true 0 0xA1
+ Expect-State 'Immediate Right Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+ Click-Client ($rect.Right*.24) ($rect.Bottom*.85) $true $false 0
+ Expect-State 'Unmodified quick RMB clears previous Walk modifier' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ $cameraProbes.Add([pscustomobject]@{control='NibQuickLeftShiftWalk';before=(Read-State);clientPoint=@(($rect.Right*.6),($rect.Bottom*.85));heldMilliseconds=0;modifier='LeftShift'})
+ Click-Client ($rect.Right*.6) ($rect.Bottom*.85) $true $true 0 0xA0
+ Expect-State 'Immediate Left Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  $inputComplete=$true
 } catch {$inputError=$_.Exception.Message;throw} finally {
  $finalState=$null;try{$finalState=Read-State}catch{}
  $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
- $report=[ordered]@{scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}else{'Full native suite'});originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
+ $report=[ordered]@{originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
  $report|ConvertTo-Json -Depth 9|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }
