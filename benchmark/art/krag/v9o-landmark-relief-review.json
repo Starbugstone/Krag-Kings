@@ -1,0 +1,72 @@
+{
+  "status": "Actual source and three inspected neutral views complete; likeness remains unaccepted",
+  "source": {
+    "path": "benchmark/art/krag/Krag_LandmarkRelief_v9o_WIP.blend",
+    "sha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "jobs": [
+    {
+      "job": "krag-v9o-source",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 911.0,
+      "minimumAvailableMB": 11566.0
+    },
+    {
+      "job": "krag-v9o-FrontClay",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2124.0,
+      "minimumAvailableMB": 10719.0
+    },
+    {
+      "job": "krag-v9o-SideClay",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2127.0,
+      "minimumAvailableMB": 10715.0
+    },
+    {
+      "job": "krag-v9o-FrontMaterial",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2117.0,
+      "minimumAvailableMB": 10918.0
+    }
+  ],
+  "actualViews": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_v9o_FrontClay.png",
+      "sha256": "d0651fd845b6709e14a18d2d34c6258102d2bf9faf67f64b6311ecb4da91b888",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_v9o_SideClay.png",
+      "sha256": "762f04c00f406f5f4f79a7a23061fd03ef9ab4f89c68db9f57649b3c6999b628",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_v9o_FrontMaterial.png",
+      "sha256": "39f09883c8c072d859f1325f3937f343f2eb17bae7d90515ab1db97c8def3d8d",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    }
+  ],
+  "visibleImprovements": [
+    "Supported paired brow/glabella mass, rather than only surface crack noise.",
+    "Visible upper malar/nasolabial separation and a distinct lower-lip/labiomental fold.",
+    "Unchanged fitted ocular contact loops and intact continuous neutral surface."
+  ],
+  "remainingFailures": [
+    "Brow still too horizontal and heavily projecting; surrounding planes remain smooth.",
+    "Lower-lip fold is conspicuous and needs natural posed evaluation.",
+    "Tusks remain almost entirely buried.",
+    "Skin too pale with a uniform dry-mud crack pattern; garment/armor construction still unfinished."
+  ],
+  "unrun": [
+    "Actual serious OpenMouth and Blink on the new relief",
+    "Semantic IronJaw replacement, hinge fit and open/closed clearance"
+  ],
+  "priority": "The user-reported mouth opening and clipping IronJaw require actual posed checks next, before another prolonged neutral-only refinement."
+}
