@@ -23,6 +23,7 @@ $cues=@(
  @{seconds=24.4;label='shooting and melee';file='action-24.4-actions.png'},
  @{seconds=26;label='variant body view';file='frame-26.png'},
  @{seconds=31;label='Nib facial performance';file='frame-31.png'},
+ @{seconds=31.4;label='Nib playful mouth and dark-blue tongue at authored facial peak';file='expression-31.4-nib-playful.png'},
  @{seconds=36.9;label='Nib shooting portrait';file='action-36.9-nib-shoot.png'},
  @{seconds=41;label='Krag facial performance';file='frame-41.png'},
  @{seconds=46.0;label='Krag melee portrait';file='action-46.0-krag-melee.png'},

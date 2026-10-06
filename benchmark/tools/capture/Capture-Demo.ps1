@@ -109,8 +109,8 @@ try {
     $report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
     $report.clientWidth=$clientWidth;$report.clientHeight=$clientHeight
     if(Test-Path $progress){Remove-Item $progress}
-    # GDI remains the default. WGC is explicit opt-in after a real HWND/GDI
-    # failure; both backends target only this validated game window.
+    # WGC is the verified default; GDI remains available for diagnostics.
+    # Both backends target only this validated game window.
     if($CaptureBackend -eq 'GDI'){
         $inputArguments=@('-debug_ts','-thread_queue_size','8','-f','gdigrab','-draw_mouse','0','-framerate',"$FrameRate",'-i',('hwnd='+$window.ToInt64()))
     }else{
