@@ -1,0 +1,18 @@
+{
+  "name": "krag-build-anatomical-planes-v9nc",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9n_wip\\build_anatomical_planes_v9nc.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-anatomical-planes-v9nc.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-anatomical-planes-v9nc.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}

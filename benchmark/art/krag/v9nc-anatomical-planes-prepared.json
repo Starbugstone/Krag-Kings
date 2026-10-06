@@ -1,0 +1,90 @@
+{
+  "status": "Prepared coherent facial-plane source; no native geometry or render yet",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nb_WIP.blend",
+    "sha256": "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7",
+    "bytes": 111981195
+  },
+  "references": [
+    "krag-kings-design/concept-art/01-krag-character-sheet.png",
+    "krag-kings-design/concept-art/10-clan-boss-and-krag-comparison.png"
+  ],
+  "method": [
+    "Measure broad brow, cheek and chin depth anchors on the current actual skin",
+    "Shape distributed sloping brow/cheek/mandibular planes without increasing global head size",
+    "Separate nasolabial plane and compact lip/philtrum using smoothly ended fields",
+    "Apply one continuous field to all head/oral/ocular shape targets and facial pivots; keep actual globes rigid",
+    "Use a narrower26mm optical transition so protected spheres do not flatten the whole brow/cheek sculpt; validate unchanged Jacobian bounds"
+  ],
+  "notChanged": [
+    "Body bind and authored body action curves",
+    "Cowl/armor/weapon geometry and materials",
+    "Shared exports"
+  ],
+  "preflight": {
+    "path": "benchmark/art/krag/v9nc-planes-math-preflight.json",
+    "sha256": "c2e809b81541a11c79c72a34be91562e7c7773c29de4b6e01423875fb9a706ad",
+    "bytes": 4593
+  },
+  "preflightLimit": "Surrogate plane depths and means derived through the prior field, not actual current-source plane measurements. Native generation must measure again and enforce topology/contact bounds.",
+  "reviewOrder": [
+    "Head portrait and HeadSide: both must show useful plane/identity improvement",
+    "Actual serious OpenMouth and Blink before export"
+  ],
+  "knownDeferred": [
+    "Tusk eruption and dental/gum contact after facial envelope",
+    "Normal mouth opening and expression deformation remain unaccepted",
+    "Scarf returned-fold candidate separate",
+    "Regional restrained skin roughness/cracks and less toy-like metal finish",
+    "IronJaw semantic anatomy replacement"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9n_wip/anatomical_planes_v9nc.py",
+      "sha256": "735b74471d8090dd135210235551331475583fd8d2ab94697ecf45c6511d2c7c",
+      "bytes": 6648
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/build_anatomical_planes_v9nc.py",
+      "sha256": "0f12866182adffc8d89dbb222909caf92324963c39e6aaa5c45e8f346d9feb2a",
+      "bytes": 8904
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/preflight_planes_v9nc.py",
+      "sha256": "2e44af01f1eec8e554c678d93efa2d002172dc09e145dc58aa07ecef85ad45b2",
+      "bytes": 2579
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416",
+      "bytes": 5635
+    },
+    {
+      "path": "benchmark/tools/krag/build-anatomical-planes-v9nc-job.json",
+      "sha256": "3366d795ef5cf422a5a34798098ef5decb21d22cdc8c5f139424686080a36401",
+      "bytes": 641
+    },
+    {
+      "path": "benchmark/tools/krag/review-anatomical-planes-v9nc-Blink.json",
+      "sha256": "fa742e81f0b23fb6d8d0538016401be3bbe0b9fe92ba7f1b0a686ce7c774c1bf",
+      "bytes": 1041
+    },
+    {
+      "path": "benchmark/tools/krag/review-anatomical-planes-v9nc-Head.json",
+      "sha256": "36b1eb89e4c56beaadb6d3799e558f1c4e7f50931e85746bb38e6df19c1ca6aa",
+      "bytes": 957
+    },
+    {
+      "path": "benchmark/tools/krag/review-anatomical-planes-v9nc-HeadSide.json",
+      "sha256": "df025284f03990f24cbe3c8525cf13aaf0ae8a60320c8e5983702a1e709cc224",
+      "bytes": 973
+    },
+    {
+      "path": "benchmark/tools/krag/review-anatomical-planes-v9nc-OpenMouth.json",
+      "sha256": "63196b7537d7967c1d395353a8b96d0666c33d9ed8c2d99e3c1462a91613423d",
+      "bytes": 1054
+    }
+  ]
+}

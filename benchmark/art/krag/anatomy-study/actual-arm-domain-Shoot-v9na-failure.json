@@ -1,0 +1,25 @@
+{
+  "status": "Actual read-only audit stopped at correspondence gate; no native posed-surface attribution or repair",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9na_WIP.blend",
+    "sha256": "c9aec7f6678553a37dd48287a60a7df308e7b5620fd98af4d1026acc10d3d9b9",
+    "bytes": 111984169
+  },
+  "tool": {
+    "path": "benchmark/tools/krag/audit_actual_arm_domain.py",
+    "sha256": "0f72fd47a22452c72e157d37fb8ce72102eb80d87aa7f5db1d0319a2961571f5",
+    "bytes": 8179
+  },
+  "guardExitCode": 2,
+  "exception": "Subdivided source-cage indexing does not match actual Body",
+  "causeFromSourceReview": "The editable cage covers torso and arms, whereas saved skin is partitioned into Body, BioArm_L/R and BioForearm_L/R. The audit incorrectly compared whole-cage vertex count to Body alone.",
+  "sourceChanged": false,
+  "sharedChanged": false,
+  "nativePoseProof": false,
+  "telemetry": {
+    "path": "benchmark/local/krag-audit-actual-arm-domain-v9na-memory.csv",
+    "peakPrivateMB": 438.0,
+    "minimumAvailableMB": 9763.0
+  },
+  "next": "Replay the exact existing partition and assert coordinate/index correspondence per skin module before attributing actual Shoot deformation; do not relax the failed gate."
+}

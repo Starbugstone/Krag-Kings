@@ -335,3 +335,11 @@ A separate lightweight original-cage audit identifies50 retained upper-arm verti
 
 
 The independent `v9me-authored-cowl-prepared.json` pins the actual v9nb input for a garment-only candidate. It authors a continuous material path that turns upward/inward twice, with unequal diagonal sag and lower rear overlap, instead of radial bumps on a monotone U-bib. The actual open-mouth chin will be measured again; all other mesh/shape coordinates, bind and action curves must stay exact. This remains ungenerated. Exact skin conformance may flatten inner returns, so Front silhouette and real contact/pose views are required before any acceptance.
+
+
+The subsequent actual v9nb Head portrait also fails likeness: mid-cheeks/muzzle remain broad and flat, paired brow/glabellar structure shallow, and the thin straight mouth lacks believable lip/philtrum construction. Eyes are seated but optically simple, and the retained tusks are tiny slivers. The actual portrait is added to the same review receipt; open/Blink views remain unrun.
+
+The first saved-arm audit stopped safely at its correspondence gate before any pose attribution. Source review explains the mismatch: the editable cage contains torso and arms, while actual skin is split among Body/BioArm/BioForearm modules. Comparing that full cage directly to Body was an audit error. `anatomy-study/actual-arm-domain-Shoot-v9na-failure.json` preserves guard2 and the limitation; no native Krag shoulder finding or repair is claimed. The corrected audit must replay the existing partition and prove each actual skin module correspondence.
+
+
+The prepared `v9nc-anatomical-planes-prepared.json` pins actual v9nb for one coherent facial-plane pass. It measures brow/cheek/chin depth on the source, applies broad sloped planes and softly ended nasolabial/lip fields, and transforms head/oral/ocular targets and facial pivots together. It does not change global head scale or materials. The optical transition narrows from50mm to26mm so the rigid globe neighborhood does not flatten most surrounding brow shaping; unchanged topology/Jacobian/globe bounds remain required. Nine surrogate whole-support sweeps pass, explicitly separate from actual native geometry and rendered likeness. Source generation and front/profile/open/Blink review have not run.

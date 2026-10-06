@@ -1,0 +1,153 @@
+{
+  "status": "Numerical support-domain sweep only; actual landmarks/geometry and rendered identity remain unvalidated",
+  "allCasesPass": true,
+  "samplesPerCase": 79507,
+  "landmarkBasis": "Approximate current means through the known v9nb field; source job independently measures actual mesh planes",
+  "cases": [
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.187,
+        "cheek": -0.167,
+        "chin": -0.21400000000000002
+      },
+      "eyeRadiusOffsetMeters": -0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.431612338279184,
+        "minimumLocalScale": 0.4153945655361393,
+        "maximumLocalScale": 1.3845644530103018,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416711575314456,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.187,
+        "cheek": -0.167,
+        "chin": -0.21400000000000002
+      },
+      "eyeRadiusOffsetMeters": 0.0,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.431612338279184,
+        "minimumLocalScale": 0.4153945655361393,
+        "maximumLocalScale": 1.3845644530103018,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416711575314456,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.187,
+        "cheek": -0.167,
+        "chin": -0.21400000000000002
+      },
+      "eyeRadiusOffsetMeters": 0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.431612338279184,
+        "minimumLocalScale": 0.4153945655361393,
+        "maximumLocalScale": 1.3845644530103018,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416711575314456,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.175,
+        "cheek": -0.155,
+        "chin": -0.202
+      },
+      "eyeRadiusOffsetMeters": -0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.4323252117356033,
+        "minimumLocalScale": 0.4159592467902541,
+        "maximumLocalScale": 1.3830769897978807,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416834369757957,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.175,
+        "cheek": -0.155,
+        "chin": -0.202
+      },
+      "eyeRadiusOffsetMeters": 0.0,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.4323252117356033,
+        "minimumLocalScale": 0.4159592467902541,
+        "maximumLocalScale": 1.3830769897978807,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416834369757957,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.175,
+        "cheek": -0.155,
+        "chin": -0.202
+      },
+      "eyeRadiusOffsetMeters": 0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.4323252117356033,
+        "minimumLocalScale": 0.4159592467902541,
+        "maximumLocalScale": 1.3830769897978807,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.010416834369757957,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.16299999999999998,
+        "cheek": -0.143,
+        "chin": -0.19
+      },
+      "eyeRadiusOffsetMeters": -0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.4276094302021397,
+        "minimumLocalScale": 0.41140523665837603,
+        "maximumLocalScale": 1.3776078772977494,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.0104168667382906,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.16299999999999998,
+        "cheek": -0.143,
+        "chin": -0.19
+      },
+      "eyeRadiusOffsetMeters": 0.0,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.41060675646472145,
+        "minimumLocalScale": 0.39961224528304323,
+        "maximumLocalScale": 1.3776078772977494,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.0104168667382906,
+      "passes": true
+    },
+    {
+      "surrogatePlaneDepthsY": {
+        "brow": -0.16299999999999998,
+        "cheek": -0.143,
+        "chin": -0.19
+      },
+      "eyeRadiusOffsetMeters": 0.004,
+      "jacobian": {
+        "minimumJacobianDeterminant": 0.3046735327642846,
+        "minimumLocalScale": 0.28927550714038214,
+        "maximumLocalScale": 1.3776078772977494,
+        "sampleCount": 79507
+      },
+      "maximumDisplacementMeters": 0.0104168667382906,
+      "passes": true
+    }
+  ],
+  "helperSha256": "735b74471d8090dd135210235551331475583fd8d2ab94697ecf45c6511d2c7c"
+}

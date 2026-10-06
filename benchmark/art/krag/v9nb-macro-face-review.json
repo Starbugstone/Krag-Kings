@@ -1,5 +1,5 @@
 {
-  "status": "Actual coherent macro source and HeadSide reviewed; reduced lip pout and fuller forehead support, concept likeness still failed",
+  "status": "Actual coherent macro source, HeadSide and Head reviewed; modest profile gain, frontal concept likeness still failed",
   "source": {
     "path": "benchmark/art/krag/Krag_MacroFace_v9nb_WIP.blend",
     "sha256": "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7",
@@ -37,6 +37,16 @@
       "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9nb-macro-face.meta.json",
       "sha256": "cfc499e07203cef6238d004144e35a4e4de83fdd9f37a54493454b87eaf0e40b",
       "bytes": 575
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9nb-macro-face.png",
+      "sha256": "68ad7cd27494300ba96248bb3489aa5a8838640bfb4a28434525b9c4093eaf28",
+      "bytes": 1316280
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9nb-macro-face.meta.json",
+      "sha256": "a73a91c2d210fdb37f1909de63cdcd771ed49073df81b6af62afc25ccb5f53b2",
+      "bytes": 571
     }
   ],
   "telemetry": [
@@ -51,6 +61,12 @@
       "guardExitCode": 0,
       "peakPrivateMB": 2057.0,
       "minimumAvailableMB": 11213.0
+    },
+    {
+      "path": "benchmark/local/krag-review-macro-face-v9nb-Head-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2059.0,
+      "minimumAvailableMB": 8468.0
     }
   ],
   "actualSourceMetrics": {
@@ -73,12 +89,18 @@
     "Cowl retains regular ledges and stiff rear ends"
   ],
   "notRendered": [
-    "Head",
     "OpenMouth",
     "OpenProfile",
     "Blink"
   ],
   "boundary": "Released after explicitly requested source/HeadSide boundary; no extra heavy job or shared mutation",
-  "next": "Inspect actual portrait before another profile-only sculpt; actual opening/Blink and short natural tusks remain required",
-  "sharedAssetsChanged": false
+  "next": "Coherent anatomical plane/mouth field across head, oral and ocular targets and facial pivots; short tusks after envelope, no further global head scale",
+  "sharedAssetsChanged": false,
+  "portraitFindings": [
+    "Inflated mid-cheeks and broad flat muzzle obscure skeletal planes",
+    "Paired brow/glabellar mass remains too smooth and shallow",
+    "Mouth is a nearly straight thin seam without convincing philtrum/lip construction",
+    "Ocular surfaces are seated; iris depth/pigment still reads too simply",
+    "Retained tusks appear as tiny ivory slivers"
+  ]
 }
