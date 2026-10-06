@@ -1,0 +1,44 @@
+{
+  "status": "Offline numerical proposal; no Blender source, posed check or actual render",
+  "method": "Broad anatomical form controls with screened graph interpolation and exact semantic boundary constraints",
+  "fixedVertices": 22662,
+  "ocularAndOralMaximumDisplacementMeters": 0.0,
+  "maximumDisplacementMeters": 0.004227351737412333,
+  "edgeDisplacementGradientMaximum": 2.7057266972913614,
+  "edgeDisplacementGradientP99": 0.277073598169077,
+  "iterations": 23,
+  "relativeResidual": 9.092180890829028e-11,
+  "provisionalDimensions": true,
+  "unchanged": [
+    "topology",
+    "ocular shells",
+    "all bone bind transforms",
+    "repaired Jaw semantics",
+    "mouth opening",
+    "actual lid contact"
+  ],
+  "pending": [
+    "Neutral/profile/three-quarter adult likeness",
+    "Blink and Tongue actual mesh review",
+    "Nasal material and actual-geometry ocular atlas"
+  ],
+  "actualOrbitalSourceSha256": "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+  "geometryCacheSha256": "f03659a8742c390b6dc3ec796d2400df9458d38b174b1c83470c8e4323d0df7e",
+  "neutralCacheSha256": "8ff6010159ff333b7962966ba9f772838de395ee0897b4cd1140bdb6dd9a0f01",
+  "proposalReportSha256": "4c27a4476b36b670c73371a4d2b8a7ba6e5b6e9882761bf753ece638f74ff9b4",
+  "neutralMetrics": {
+    "introducedDegenerates": 0,
+    "trianglesRotatedOver90": 15,
+    "minimumAreaRatio": 0.4080038508626353,
+    "normalRotationP99Degrees": 16.12026914764082,
+    "normalRotationMaximumDegrees": 102.9909266787036
+  },
+  "hardStructuralFailure": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "codeSha256": {
+    "prepare_adult_face.py": "f152c6e1f8f06b5696576e0ef50fd444bd6814cdbe076ff83fdbf9cf3c0ec6b5",
+    "adult_face_field.py": "e8cf79a16eb3739ca21d343888492715b77d1bae75a0aef5a86a8519577a02e0"
+  },
+  "proposalCacheSha256": "1db632e060af5c508e7ddf7cd38eba87faf7b1df8a61935bf3f0b58935c59994"
+}

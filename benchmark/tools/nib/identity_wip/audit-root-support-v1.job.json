@@ -1,0 +1,25 @@
+{
+  "name": "nib-root-support-audit-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\audit_root_support.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\orbital-native-v1\\Nib_Coherent_OrbitalIdentity_v1.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v1\\support-audit.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-root-support-audit-v1.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-root-support-audit-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-root-support-audit-v1.log",
+  "successMarker": "NIB_ROOT_SUPPORT_AUDIT_COMPLETE"
+}

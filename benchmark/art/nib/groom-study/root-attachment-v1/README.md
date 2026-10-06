@@ -1,0 +1,7 @@
+# Failed root-attachment generation and actual support audit
+
+Input is the preserved orbital source `09da9c1e…`. Generation exited 2 before saving; no source or shared output changed and no dependent review image was made. Its logs and memory record are preserved, along with the subsequent read-only attribution. The diagnostic initially stopped on a missing local import path before opening the source, then completed after that ordinary script correction.
+
+All head/chin guides pass. Thirty-one left outer-nap guides and one right rim guide fail the original agreement threshold. The saved guide normals were barycentrically interpolated from vertex normals, whereas the new support check returned flat triangle normals at sharply turning ear edges. The failed roots remain within approximately 0.02–0.21 mm of the actual surface in the sampled cases; all reported geometric agreement values remain positive. This finding does not establish that every card corner is well fitted.
+
+The separate prepared v2 recipe compares interpolated normals consistently, retains the 0.4 agreement gate, and also requires the independent geometric support normal to face the correct side. It records triangle-plane burial and still rejects detached roots, excessive movement, changed guide correspondence or new degenerate triangles. That correction is ungenerated. Actual Neutral and EyeCloseup images remain required before combining a new atlas. Card flow, ear form, adult face and overall likeness still fail artistic acceptance.

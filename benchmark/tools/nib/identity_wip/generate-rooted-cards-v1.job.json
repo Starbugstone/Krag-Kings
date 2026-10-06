@@ -1,0 +1,27 @@
+{
+  "name": "nib-rooted-cards-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\build_rooted_cards.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\orbital-native-v1\\Nib_Coherent_OrbitalIdentity_v1.blend",
+    "--source-sha256",
+    "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v1-generate.log",
+  "successMarker": "NIB_ROOTED_CARDS_SAVED_AND_REOPENED"
+}

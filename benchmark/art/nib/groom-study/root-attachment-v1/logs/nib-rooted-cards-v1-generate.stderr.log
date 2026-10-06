@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards.py", line 60, in <module>
+    results.append(repair(obj,group['guides'],trees[group['bone']]))
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\fit_card_roots.py", line 49, in repair
+    if normal.dot(Vector(guide['normal']))<.4:raise RuntimeError('Actual root support faces away from authored guide')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Actual root support faces away from authored guide
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\identity_wip\build_rooted_cards.py', exiting.

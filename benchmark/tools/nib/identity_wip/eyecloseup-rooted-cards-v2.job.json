@@ -1,0 +1,29 @@
+{
+  "name": "nib-rooted-cards-v2-eyecloseup",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\review_orbital_identity.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v2\\Nib_Coherent_RootedGroom_v2.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v2\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\root-attachment-v2\\actual-views",
+    "--view",
+    "EyeCloseup"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v2-eyecloseup.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v2-eyecloseup.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-rooted-cards-v2-eyecloseup.log",
+  "successMarker": "NIB_ORBITAL_IDENTITY_ACTUAL_VIEW_COMPLETE"
+}

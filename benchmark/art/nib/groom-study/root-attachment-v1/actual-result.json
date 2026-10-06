@@ -1,0 +1,91 @@
+{
+  "status": "Actual generation rejected before save; read-only source support attribution complete",
+  "sourceSha256": "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+  "sourceSaved": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "jobs": [
+    {
+      "name": "nib-rooted-cards-v1-generate",
+      "processId": 28604,
+      "exitCode": 2,
+      "peakPrivateMB": 638.0
+    },
+    {
+      "name": "nib-root-support-audit-v1",
+      "processId": 28056,
+      "exitCode": 2,
+      "peakPrivateMB": 16.0
+    },
+    {
+      "name": "nib-root-support-audit-v1-retry",
+      "processId": 33584,
+      "exitCode": 0,
+      "peakPrivateMB": 323.0
+    }
+  ],
+  "attribution": {
+    "failureCounts": {
+      "crown": 0,
+      "fringe": 0,
+      "temple_L": 0,
+      "temple_R": 0,
+      "nape": 0,
+      "outer_rim_L": 0,
+      "inner_wisps_L": 0,
+      "outer_nap_L": 31,
+      "outer_rim_R": 1,
+      "inner_wisps_R": 0,
+      "outer_nap_R": 0,
+      "chin": 0
+    },
+    "finding": "Authored smooth guide normals were compared to flat ear side-wall triangle normals; nearest root positions remain near actual skin. Correction requires matching interpolated support normals plus an independent geometric side check, not relaxed threshold."
+  },
+  "codeSha256": {
+    "build_rooted_cards.py": "6d45499c50b55bf6621d1665a8b578cc5ffe81d80dabf0deb3bdd137554adde6",
+    "fit_card_roots.py": "6dae50823a8899fb13eb6c0fdbb193f8b0c19cba03dce447472dc4b20b4aafdc",
+    "audit_root_support.py": "715c370b7cdfff95986e108b249ddb478d1f229e363a439176ab9de2c172f935"
+  },
+  "evidence": {
+    "support-audit.json": {
+      "sha256": "b7b478e889102101f5e3e21e873f9677dce391dad5d0694a55d1c867d4d86759",
+      "bytes": 32788
+    },
+    "logs/nib-root-support-audit-v1-memory.csv": {
+      "sha256": "1a48cd1191cd67cf912ec20f4572b4eb334e4276aec7be27ce386a730cc52171",
+      "bytes": 193
+    },
+    "logs/nib-root-support-audit-v1-retry-memory.csv": {
+      "sha256": "d36904382be83d9775dfbb2f58284e6af66d8075a8918591ad08e6402b024677",
+      "bytes": 267
+    },
+    "logs/nib-root-support-audit-v1-retry.log": {
+      "sha256": "cbdc0d3e1cf2f76b73084ce040c647295436c7f4fe516442de2d6e7328f55f3c",
+      "bytes": 2044
+    },
+    "logs/nib-root-support-audit-v1-retry.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-root-support-audit-v1.log": {
+      "sha256": "62aa68d052234759fcf2f662c9277a117896bb0a66d46f104de825c9b1ad1ecc",
+      "bytes": 78
+    },
+    "logs/nib-root-support-audit-v1.stderr.log": {
+      "sha256": "5ccde0f5d6919a7245e2c4727f89c4f0c11aac16e2469ce4079aa201e77644b1",
+      "bytes": 354
+    },
+    "logs/nib-rooted-cards-v1-generate-memory.csv": {
+      "sha256": "a6729c21128f42deb7b20fb83f33498080b03f9572a73baf80e413b21963f58e",
+      "bytes": 489
+    },
+    "logs/nib-rooted-cards-v1-generate.log": {
+      "sha256": "4d318a3d5241327d539724eb0b0885a05b4104c905d5e15e04863945d032fb95",
+      "bytes": 229
+    },
+    "logs/nib-rooted-cards-v1-generate.stderr.log": {
+      "sha256": "7081099277ee4011f80c0c0a20feb24850ddc2ad0569acf3514a9108c43ebcc8",
+      "bytes": 799
+    }
+  }
+}
