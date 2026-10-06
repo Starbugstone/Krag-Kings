@@ -1,0 +1,445 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
+  "sourceSha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7_Aim.blend",
+  "outputSha256": "3b2c62336a284ae1d6f2087ecc9c79551713fb9917dba4b01b4718554ca2744b",
+  "status": "Actual rig-space aim correction; source mesh and grip review still required; artistic acceptance false",
+  "changed": "Shoot action UpperArm_R, LowerArm_R and Hand_R local rotation tracks only",
+  "meshFingerprintsBefore": {
+    "Back harness": "63e5e42e8571cdf4a7e7e8fc7699f4d1790e3ec9b0e8d84616bd7402d8a04104",
+    "BioArm_L continuous surface.001": "89f3e0dec811724b29c4d10a513382b2c43f89117738d3afe7c4a3853f599e7c",
+    "BioArm_R continuous surface.001": "5d431d1605e9462eb785ab2b62a31fa7a9a2e40046f0ecf5c110ebaf6f396bd6",
+    "BioForearm_L continuous surface.001": "d8b0707847da50f11c707bcc49ac1c9fdf33d83fa2df67fc509bea9c53429e70",
+    "BioForearm_R continuous surface.001": "e62ee7c66b5ea4adf54cb26ca442b4183b63694e96d770c6ef7c57a3c7f3e2a5",
+    "Body continuous surface.001": "8afd3d95199e16f1274e4690764a3ce29c4ce152a9dad9f149b388445d6b5aee",
+    "Cube.018": "a2fb7b3c4e741af93e9ea5730f0989abb908ea024ddb8110e5850524810a2f67",
+    "Cube.027": "da5532e6fb85388b31370303dba2f96bab97af01f5ad1ffaced42c99ae261ad0",
+    "Cube.034": "07eab53bb6e47a249fa69f310d639f0aa769330db75e3ecc8865a8639412a7c3",
+    "Cube.043": "95115a7163f9d571c1ba86b6adba21f7ae971b702bcf713a031be8ae7f8c258e",
+    "Cube.064": "9f4e5ec6bc322925ad8e079b09928a811fd651cddf3c07802a464312b6d08f33",
+    "Dark structural pauldron": "5b12d4724a13897440343f815ac3e19a359259ed6e55776fa11ad96e97de65c4",
+    "Hand cannon bore": "f8921f5bff14b62f6b004915f30c510f9afd91ef69b1df383e0003bbdfa62e91",
+    "Leg hydraulic cylinder": "2669c8016ba68f8a9d834c4223587b45c623eac5fdae2c753c095056dd071bcd",
+    "Loose U-fold desert scarf.001": "0a0dfa9a3c8c8ae156d27519b4a90eb562c7117b25da8668ee56816fe53d05ed",
+    "Lower eyelid L": "7b14c855877ab5f0a9626cac7ba2efb78bf8258d9eba8bca36fc8f694019c303",
+    "Lower eyelid R": "c874e8c39e4f88083642e7cf8213fdc762eaa571efd1a1e240b58d7e5b79d13b",
+    "Lower gum ridge": "c1163658d40fd19aa23a6849bf9c6dc700249f7c9a11dbbdbd6db0a2be24dc27",
+    "Plane": "62e9869994a38d5afaf35b8d92ed6c6ffe12fcca8fab7f0f7c6120aa522a0ad4",
+    "Sphere.001": "a63898155ba25487ee3b3ede02e656075a10695b1845baba00247f2ee649abf9",
+    "Sphere.042": "9978c44fc4dcfa22b1c22d5764f62a9fca7747a781626f9f8f45efe292bb5f91",
+    "Sphere.067": "cae9624636333c332d8b095dc5410f509649ce6f5b16961c0dcfb86f857cadab",
+    "Sphere.079": "50e6668b88a1d00a7f1f4af51f317b216fcb2e055765535cc2d16d00869b6e78",
+    "Sphere.087": "147e9aa01b677f1f40ad33b0cade065eed598a862082ab0320e4358860f9e7d3",
+    "Sphere.174": "5fad04d9a6093513df662c71b6989bfd707f166770ffcfe84681b5925aab4682",
+    "Torus.008": "74f735c6807dc5b67deb8a39d59bdb24c79930830f5309866cc8ce85a9168e10",
+    "Trouser seat": "b00dbd51e89e30f832b7936d05279cb2d57303b55059f5ca32597905cc39dc3b",
+    "Trouser side seam": "bb906af97e9f8c954e8cb1253e2968b655a65111161dd5a05696b07e1e8c1db9",
+    "Trouser side seam.020": "f1bd6c8f3c50ce8731a52fd67d419e4a9a3259a0b52c3a07a4ac0cd297437deb"
+  },
+  "meshFingerprintsAfter": {
+    "Back harness": "63e5e42e8571cdf4a7e7e8fc7699f4d1790e3ec9b0e8d84616bd7402d8a04104",
+    "BioArm_L continuous surface.001": "89f3e0dec811724b29c4d10a513382b2c43f89117738d3afe7c4a3853f599e7c",
+    "BioArm_R continuous surface.001": "5d431d1605e9462eb785ab2b62a31fa7a9a2e40046f0ecf5c110ebaf6f396bd6",
+    "BioForearm_L continuous surface.001": "d8b0707847da50f11c707bcc49ac1c9fdf33d83fa2df67fc509bea9c53429e70",
+    "BioForearm_R continuous surface.001": "e62ee7c66b5ea4adf54cb26ca442b4183b63694e96d770c6ef7c57a3c7f3e2a5",
+    "Body continuous surface.001": "8afd3d95199e16f1274e4690764a3ce29c4ce152a9dad9f149b388445d6b5aee",
+    "Cube.018": "a2fb7b3c4e741af93e9ea5730f0989abb908ea024ddb8110e5850524810a2f67",
+    "Cube.027": "da5532e6fb85388b31370303dba2f96bab97af01f5ad1ffaced42c99ae261ad0",
+    "Cube.034": "07eab53bb6e47a249fa69f310d639f0aa769330db75e3ecc8865a8639412a7c3",
+    "Cube.043": "95115a7163f9d571c1ba86b6adba21f7ae971b702bcf713a031be8ae7f8c258e",
+    "Cube.064": "9f4e5ec6bc322925ad8e079b09928a811fd651cddf3c07802a464312b6d08f33",
+    "Dark structural pauldron": "5b12d4724a13897440343f815ac3e19a359259ed6e55776fa11ad96e97de65c4",
+    "Hand cannon bore": "f8921f5bff14b62f6b004915f30c510f9afd91ef69b1df383e0003bbdfa62e91",
+    "Leg hydraulic cylinder": "2669c8016ba68f8a9d834c4223587b45c623eac5fdae2c753c095056dd071bcd",
+    "Loose U-fold desert scarf.001": "0a0dfa9a3c8c8ae156d27519b4a90eb562c7117b25da8668ee56816fe53d05ed",
+    "Lower eyelid L": "7b14c855877ab5f0a9626cac7ba2efb78bf8258d9eba8bca36fc8f694019c303",
+    "Lower eyelid R": "c874e8c39e4f88083642e7cf8213fdc762eaa571efd1a1e240b58d7e5b79d13b",
+    "Lower gum ridge": "c1163658d40fd19aa23a6849bf9c6dc700249f7c9a11dbbdbd6db0a2be24dc27",
+    "Plane": "62e9869994a38d5afaf35b8d92ed6c6ffe12fcca8fab7f0f7c6120aa522a0ad4",
+    "Sphere.001": "a63898155ba25487ee3b3ede02e656075a10695b1845baba00247f2ee649abf9",
+    "Sphere.042": "9978c44fc4dcfa22b1c22d5764f62a9fca7747a781626f9f8f45efe292bb5f91",
+    "Sphere.067": "cae9624636333c332d8b095dc5410f509649ce6f5b16961c0dcfb86f857cadab",
+    "Sphere.079": "50e6668b88a1d00a7f1f4af51f317b216fcb2e055765535cc2d16d00869b6e78",
+    "Sphere.087": "147e9aa01b677f1f40ad33b0cade065eed598a862082ab0320e4358860f9e7d3",
+    "Sphere.174": "5fad04d9a6093513df662c71b6989bfd707f166770ffcfe84681b5925aab4682",
+    "Torus.008": "74f735c6807dc5b67deb8a39d59bdb24c79930830f5309866cc8ce85a9168e10",
+    "Trouser seat": "b00dbd51e89e30f832b7936d05279cb2d57303b55059f5ca32597905cc39dc3b",
+    "Trouser side seam": "bb906af97e9f8c954e8cb1253e2968b655a65111161dd5a05696b07e1e8c1db9",
+    "Trouser side seam.020": "f1bd6c8f3c50ce8731a52fd67d419e4a9a3259a0b52c3a07a4ac0cd297437deb"
+  },
+  "meshMorphUVWeightDataUnchanged": true,
+  "samples": [
+    {
+      "frame": 1,
+      "aimWeight": 0.0,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.1175870895385742e-08,
+      "direction": [
+        2.9802333756379085e-07,
+        1.4901166878189542e-07,
+        -1.0
+      ],
+      "dotIntendedDirection": -1.4901166878189542e-07
+    },
+    {
+      "frame": 2,
+      "aimWeight": 0.15151515151515152,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.365778852490731e-08,
+      "direction": [
+        -0.015816394239664078,
+        -0.23575134575366974,
+        -0.9716847538948059
+      ],
+      "dotIntendedDirection": 0.23575134575366974
+    },
+    {
+      "frame": 3,
+      "aimWeight": 0.30303030303030304,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.4901161193847656e-08,
+      "direction": [
+        -0.026129206642508507,
+        -0.4581937789916992,
+        -0.8884680867195129
+      ],
+      "dotIntendedDirection": 0.4581937789916992
+    },
+    {
+      "frame": 4,
+      "aimWeight": 0.4545454545454546,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 9.541398640621973e-08,
+      "direction": [
+        -0.03023657761514187,
+        -0.6548007130622864,
+        -0.7551964521408081
+      ],
+      "dotIntendedDirection": 0.6548007130622864
+    },
+    {
+      "frame": 5,
+      "aimWeight": 0.6060606060606061,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.664001874625056e-08,
+      "direction": [
+        -0.028110189363360405,
+        -0.8145094513893127,
+        -0.5794689059257507
+      ],
+      "dotIntendedDirection": 0.8145094513893127
+    },
+    {
+      "frame": 6,
+      "aimWeight": 0.7575757575757576,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -0.020413730293512344,
+        -0.9283235669136047,
+        -0.371212363243103
+      ],
+      "dotIntendedDirection": 0.9283235669136047
+    },
+    {
+      "frame": 7,
+      "aimWeight": 0.9090909090909092,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -0.008459100499749184,
+        -0.9898119568824768,
+        -0.1421298235654831
+      ],
+      "dotIntendedDirection": 0.9898119568824768
+    },
+    {
+      "frame": 8,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 9,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 10,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 11,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 12,
+      "aimWeight": 1,
+      "kickWeight": 0.48717948717948645,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -2.980233659855003e-07,
+        -0.9994189739227295,
+        0.03408314287662506
+      ],
+      "dotIntendedDirection": 1.000000071944669
+    },
+    {
+      "frame": 13,
+      "aimWeight": 1,
+      "kickWeight": 1.0,
+      "wristErrorMeters": 6.664001874625056e-08,
+      "direction": [
+        2.98023280720372e-07,
+        -0.9975590109825134,
+        0.06982804834842682
+      ],
+      "dotIntendedDirection": 0.9999999548308551
+    },
+    {
+      "frame": 14,
+      "aimWeight": 1,
+      "kickWeight": 0.48717948717948734,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -2.980233659855003e-07,
+        -0.9994189739227295,
+        0.03408314287662506
+      ],
+      "dotIntendedDirection": 1.000000071944669
+    },
+    {
+      "frame": 15,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 16,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 17,
+      "aimWeight": 1,
+      "kickWeight": 0.10606060606060651,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.98023280720372e-07,
+        -0.999972403049469,
+        0.00742316385731101
+      ],
+      "dotIntendedDirection": 0.9999999755527824
+    },
+    {
+      "frame": 18,
+      "aimWeight": 1,
+      "kickWeight": 0.5303030303030306,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        0.0,
+        -0.9993118047714233,
+        0.03709437698125839
+      ],
+      "dotIntendedDirection": 1.0000000076834112
+    },
+    {
+      "frame": 19,
+      "aimWeight": 1,
+      "kickWeight": 0.44545454545454516,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        0.0,
+        -0.9995142817497253,
+        0.031166071072220802
+      ],
+      "dotIntendedDirection": 1.000000084983185
+    },
+    {
+      "frame": 20,
+      "aimWeight": 1,
+      "kickWeight": 0.021212121212121113,
+      "wristErrorMeters": 1.6049041769309353e-07,
+      "direction": [
+        2.9802353651575686e-07,
+        -0.999998927116394,
+        0.0014841571683064103
+      ],
+      "dotIntendedDirection": 1.000000057978923
+    },
+    {
+      "frame": 21,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 22,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 23,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 24,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 0.0,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        -1.1920940323761897e-06
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 25,
+      "aimWeight": 0.909090909090909,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -0.008459094911813736,
+        -0.989811897277832,
+        -0.14212973415851593
+      ],
+      "dotIntendedDirection": 0.989811897277832
+    },
+    {
+      "frame": 26,
+      "aimWeight": 0.7575757575757576,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.2644054553268208e-07,
+      "direction": [
+        -0.020413730293512344,
+        -0.9283235669136047,
+        -0.371212363243103
+      ],
+      "dotIntendedDirection": 0.9283235669136047
+    },
+    {
+      "frame": 27,
+      "aimWeight": 0.606060606060606,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.664001874625056e-08,
+      "direction": [
+        -0.028110189363360405,
+        -0.8145094513893127,
+        -0.5794689059257507
+      ],
+      "dotIntendedDirection": 0.8145094513893127
+    },
+    {
+      "frame": 28,
+      "aimWeight": 0.4545454545454546,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 7.450580596923828e-08,
+      "direction": [
+        -0.030235981568694115,
+        -0.6548007130622864,
+        -0.7551964521408081
+      ],
+      "dotIntendedDirection": 0.6548007130622864
+    },
+    {
+      "frame": 29,
+      "aimWeight": 0.3030303030303031,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.143906154658885e-08,
+      "direction": [
+        -0.026128895580768585,
+        -0.4581935405731201,
+        -0.8884682655334473
+      ],
+      "dotIntendedDirection": 0.4581935405731201
+    },
+    {
+      "frame": 30,
+      "aimWeight": 0.1515151515151516,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 7.450580596923828e-08,
+      "direction": [
+        -0.015816692262887955,
+        -0.23575131595134735,
+        -0.9716846346855164
+      ],
+      "dotIntendedDirection": 0.23575131595134735
+    },
+    {
+      "frame": 31,
+      "aimWeight": 1.1102230246251565e-16,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.1175870895385742e-08,
+      "direction": [
+        2.9802333756379085e-07,
+        2.2351750317284313e-07,
+        -1.0
+      ],
+      "dotIntendedDirection": -2.2351750317284313e-07
+    }
+  ]
+}

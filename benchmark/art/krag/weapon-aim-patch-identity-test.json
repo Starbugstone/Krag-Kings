@@ -1,0 +1,77 @@
+{
+  "donor": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\animations\\Shoot.fbx",
+  "donorSha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+  "files": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\animations\\Shoot.fbx",
+      "sourceSha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-aim-identity-test\\animations\\Shoot.fbx",
+      "targetSha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+      "changedRotationArrays": 0,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "maxEulerValueChangeDegrees": 0.0
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorRestTransformsMatch": true,
+      "sampleTimesByteIdentical": true
+    }
+  ],
+  "identityTestOnly": true,
+  "artisticAcceptance": false,
+  "status": "Raw property preservation passed; actual Blender roundtrip/grip review required separately"
+}

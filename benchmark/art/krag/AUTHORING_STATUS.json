@@ -12,7 +12,7 @@
     "bones": 68,
     "derived": true
   },
-  "sharedReceipt": "benchmark/art/krag/delivery-v7-triangulated.json",
+  "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
   "currentAuthoringCode": "v9d prepared but ungenerated: nasal mass lift/alar planes and ears, gathered scarf, lower hidden body-neck boundary, closer fitted harness and integrated measured aim solver. Latest actual geometry remains v9c.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
@@ -196,7 +196,7 @@
     ]
   },
   "nextSourceJob": "benchmark/tools/krag/build-v9d-wip-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9c-aim-Natural_Front.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9d-wip-Natural_Front.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -229,5 +229,30 @@
     "status": "Actual rig-space wrist/direction assertions passed; source Shoot front/grip renders still pending; no shared changes",
     "geometryChanged": false
   },
-  "sharedMorphAudit": "benchmark/art/krag/morph-region-audit-v7-triangulated.json"
+  "sharedMorphAudit": "benchmark/art/krag/morph-region-audit-v7-triangulated.json",
+  "currentRuntimeAimDefect": {
+    "evidence": "weapon-aim-raw-v7.json",
+    "priorFirstDischargeAngleFromForwardDegrees": 53.29,
+    "repairStatus": "Corrected saved source and patched exports pass raw preservation and actual imported aim/bind checks; root promoted",
+    "source": "benchmark/art/krag/Krag_Runtime_Optimized_v7_Aim.blend",
+    "sourceSha256": "3b2c62336a284ae1d6f2087ecc9c79551713fb9917dba4b01b4718554ca2744b",
+    "visualPoseAccepted": false,
+    "knownDefects": [
+      "Right hand fingers remain open beside firearm grip",
+      "Severe stretched axillary/chest sheet under raised right arm"
+    ]
+  },
+  "completeOrganicStudy": {
+    "tools": "benchmark/tools/krag/v10_wip",
+    "status": "Code and numerical fitting measurements only; no generated master or anatomy/pose acceptance",
+    "independentOfFrozenV9d": true
+  },
+  "proportionReview": {
+    "measurements": "anatomy-study/front-proportion-landmarks-v9c.json",
+    "status": "Approximate explicit manual reference landmarks; actual v9d review must precede separate full-face assembly scaling correction"
+  },
+  "sharedAimPromotion": {
+    "status": "Root promoted bounded functional correction after artifact/hash verification; visual/pose acceptance remains failed",
+    "rootReceipt": "benchmark/evidence/shared/20261006-krag-aim-repair-promotion.json"
+  }
 }

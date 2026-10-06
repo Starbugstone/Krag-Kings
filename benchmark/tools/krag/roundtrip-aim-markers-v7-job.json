@@ -1,0 +1,24 @@
+{
+  "name": "krag-roundtrip-aim-markers-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\validate_aim_clip.py",
+    "--",
+    "--directory",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\weapon-aim-roundtrip-v7.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\roundtrip-aim-markers-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\roundtrip-aim-markers-v7.stderr.log",
+  "maxPrivateGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\roundtrip-aim-markers-v7.stdout.log",
+  "successMarker": "KRAG_AIM_ROUNDTRIP_PASSED"
+}

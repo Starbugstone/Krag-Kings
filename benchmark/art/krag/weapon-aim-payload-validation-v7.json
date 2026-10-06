@@ -1,0 +1,784 @@
+{
+  "donor": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim-donor\\Shoot.fbx",
+  "donorSha256": "d00c45079fc21aab8655e0734a03a5f1ea0f3c2031e89620fc6a1d47057a0a58",
+  "files": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
+      "sourceSha256": "8fff5dd81863d377c486ce44391cee6a4498d36849a3a840d0c4da931a62550d",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim\\Krag_Natural.fbx",
+      "targetSha256": "197ba160f28061dc2f54c7f9cac6d572acd5498191db73bb3c6bead5b84158ff",
+      "changedRotationArrays": 9,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5180,
+            3
+          ],
+          "curveObjectId": 282652142,
+          "maxEulerValueChangeDegrees": 15.715866923332214
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5181,
+            3
+          ],
+          "curveObjectId": 39009167,
+          "maxEulerValueChangeDegrees": 6.461254119873047
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5182,
+            3
+          ],
+          "curveObjectId": 472968612,
+          "maxEulerValueChangeDegrees": 50.867430686950684
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5288,
+            3
+          ],
+          "curveObjectId": 487217025,
+          "maxEulerValueChangeDegrees": 55.278141021728516
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5289,
+            3
+          ],
+          "curveObjectId": 121654537,
+          "maxEulerValueChangeDegrees": 14.114451885223389
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5290,
+            3
+          ],
+          "curveObjectId": 969752923,
+          "maxEulerValueChangeDegrees": 46.365389347076416
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5396,
+            3
+          ],
+          "curveObjectId": 864417531,
+          "maxEulerValueChangeDegrees": 58.01757049560547
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5397,
+            3
+          ],
+          "curveObjectId": 256323976,
+          "maxEulerValueChangeDegrees": 35.2442569732666
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5398,
+            3
+          ],
+          "curveObjectId": 70036427,
+          "maxEulerValueChangeDegrees": 14.896778106689453
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorBindMatricesByteIdentical": true,
+      "sourceAndDonorRotationBasisMatch": true,
+      "targetSampleTimesPreservedByteIdentical": true,
+      "donorRelativeSampleTimeMaxResidualTicks": 1,
+      "donorRelativeSampleTimeMaxResidualSeconds": 2.165150866196751e-11,
+      "donorAbsoluteTimeOffsetTicks": [
+        1539538600
+      ]
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Crusher.fbx",
+      "sourceSha256": "ba73d54001bd0c3b254ff9abd33611302c4b9f98ab9dda2bdf05f556b2c31fe6",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim\\Krag_Crusher.fbx",
+      "targetSha256": "7009d481ca88898ca969a1fe1b7ad93a641583eeec31c605c32cd93107b4353d",
+      "changedRotationArrays": 9,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5189,
+            3
+          ],
+          "curveObjectId": 282652142,
+          "maxEulerValueChangeDegrees": 15.715866923332214
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5190,
+            3
+          ],
+          "curveObjectId": 39009167,
+          "maxEulerValueChangeDegrees": 6.461254119873047
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5191,
+            3
+          ],
+          "curveObjectId": 472968612,
+          "maxEulerValueChangeDegrees": 50.867430686950684
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5297,
+            3
+          ],
+          "curveObjectId": 487217025,
+          "maxEulerValueChangeDegrees": 55.278141021728516
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5298,
+            3
+          ],
+          "curveObjectId": 121654537,
+          "maxEulerValueChangeDegrees": 14.114451885223389
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5299,
+            3
+          ],
+          "curveObjectId": 969752923,
+          "maxEulerValueChangeDegrees": 46.365389347076416
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5405,
+            3
+          ],
+          "curveObjectId": 864417531,
+          "maxEulerValueChangeDegrees": 58.01757049560547
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5406,
+            3
+          ],
+          "curveObjectId": 256323976,
+          "maxEulerValueChangeDegrees": 35.2442569732666
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5407,
+            3
+          ],
+          "curveObjectId": 70036427,
+          "maxEulerValueChangeDegrees": 14.896778106689453
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorBindMatricesByteIdentical": true,
+      "sourceAndDonorRotationBasisMatch": true,
+      "targetSampleTimesPreservedByteIdentical": true,
+      "donorRelativeSampleTimeMaxResidualTicks": 1,
+      "donorRelativeSampleTimeMaxResidualSeconds": 2.165150866196751e-11,
+      "donorAbsoluteTimeOffsetTicks": [
+        1539538600
+      ]
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_IronJaw.fbx",
+      "sourceSha256": "df2346b2d55bf45bb19e3bbe132c0d7007bf2f982e41e69daaed186a65df102b",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim\\Krag_IronJaw.fbx",
+      "targetSha256": "5ca8604a5fad78ccd92e9418906c29d39b7390caba2c8346f9b89c7daa47a0fd",
+      "changedRotationArrays": 9,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5180,
+            3
+          ],
+          "curveObjectId": 282652142,
+          "maxEulerValueChangeDegrees": 15.715866923332214
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5181,
+            3
+          ],
+          "curveObjectId": 39009167,
+          "maxEulerValueChangeDegrees": 6.461254119873047
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5182,
+            3
+          ],
+          "curveObjectId": 472968612,
+          "maxEulerValueChangeDegrees": 50.867430686950684
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5288,
+            3
+          ],
+          "curveObjectId": 487217025,
+          "maxEulerValueChangeDegrees": 55.278141021728516
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5289,
+            3
+          ],
+          "curveObjectId": 121654537,
+          "maxEulerValueChangeDegrees": 14.114451885223389
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5290,
+            3
+          ],
+          "curveObjectId": 969752923,
+          "maxEulerValueChangeDegrees": 46.365389347076416
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5396,
+            3
+          ],
+          "curveObjectId": 864417531,
+          "maxEulerValueChangeDegrees": 58.01757049560547
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5397,
+            3
+          ],
+          "curveObjectId": 256323976,
+          "maxEulerValueChangeDegrees": 35.2442569732666
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5398,
+            3
+          ],
+          "curveObjectId": 70036427,
+          "maxEulerValueChangeDegrees": 14.896778106689453
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorBindMatricesByteIdentical": true,
+      "sourceAndDonorRotationBasisMatch": true,
+      "targetSampleTimesPreservedByteIdentical": true,
+      "donorRelativeSampleTimeMaxResidualTicks": 1,
+      "donorRelativeSampleTimeMaxResidualSeconds": 2.165150866196751e-11,
+      "donorAbsoluteTimeOffsetTicks": [
+        1539538600
+      ]
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Piston.fbx",
+      "sourceSha256": "121c2cc3ea46a11b4a48b312fb72bfd57a2df8a3976fce63cc227326e3fc657c",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim\\Krag_Piston.fbx",
+      "targetSha256": "144ff92cfc468ba63ccb85ecb8c3267142e5c7f09d60e15f059c767e89d0619f",
+      "changedRotationArrays": 9,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5180,
+            3
+          ],
+          "curveObjectId": 282652142,
+          "maxEulerValueChangeDegrees": 15.715866923332214
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5181,
+            3
+          ],
+          "curveObjectId": 39009167,
+          "maxEulerValueChangeDegrees": 6.461254119873047
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5182,
+            3
+          ],
+          "curveObjectId": 472968612,
+          "maxEulerValueChangeDegrees": 50.867430686950684
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5288,
+            3
+          ],
+          "curveObjectId": 487217025,
+          "maxEulerValueChangeDegrees": 55.278141021728516
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5289,
+            3
+          ],
+          "curveObjectId": 121654537,
+          "maxEulerValueChangeDegrees": 14.114451885223389
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5290,
+            3
+          ],
+          "curveObjectId": 969752923,
+          "maxEulerValueChangeDegrees": 46.365389347076416
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5396,
+            3
+          ],
+          "curveObjectId": 864417531,
+          "maxEulerValueChangeDegrees": 58.01757049560547
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5397,
+            3
+          ],
+          "curveObjectId": 256323976,
+          "maxEulerValueChangeDegrees": 35.2442569732666
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            5398,
+            3
+          ],
+          "curveObjectId": 70036427,
+          "maxEulerValueChangeDegrees": 14.896778106689453
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorBindMatricesByteIdentical": true,
+      "sourceAndDonorRotationBasisMatch": true,
+      "targetSampleTimesPreservedByteIdentical": true,
+      "donorRelativeSampleTimeMaxResidualTicks": 1,
+      "donorRelativeSampleTimeMaxResidualSeconds": 2.165150866196751e-11,
+      "donorAbsoluteTimeOffsetTicks": [
+        1539538600
+      ]
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\animations\\Shoot.fbx",
+      "sourceSha256": "be76644f20298cf0e03424516dfb2d545c36f8fb23ac8f502572e8813ff516cf",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim\\animations\\Shoot.fbx",
+      "targetSha256": "310aa63f0caaeb1aa04fdab1aa4db3dbaabf6c01902a38d7c09f553ff17cb0a6",
+      "changedRotationArrays": 9,
+      "allowedRotationArrays": 9,
+      "changes": [
+        {
+          "bone": "UpperArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            565,
+            3
+          ],
+          "curveObjectId": 778126147,
+          "maxEulerValueChangeDegrees": 58.01757049560547
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            566,
+            3
+          ],
+          "curveObjectId": 453770736,
+          "maxEulerValueChangeDegrees": 35.2442569732666
+        },
+        {
+          "bone": "UpperArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            567,
+            3
+          ],
+          "curveObjectId": 454390496,
+          "maxEulerValueChangeDegrees": 14.896778106689453
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            577,
+            3
+          ],
+          "curveObjectId": 765589299,
+          "maxEulerValueChangeDegrees": 55.278141021728516
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            578,
+            3
+          ],
+          "curveObjectId": 309359384,
+          "maxEulerValueChangeDegrees": 14.114451885223389
+        },
+        {
+          "bone": "LowerArm_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            579,
+            3
+          ],
+          "curveObjectId": 458366491,
+          "maxEulerValueChangeDegrees": 46.365389347076416
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "X",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            589,
+            3
+          ],
+          "curveObjectId": 429922405,
+          "maxEulerValueChangeDegrees": 15.715866923332214
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Y",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            590,
+            3
+          ],
+          "curveObjectId": 230406076,
+          "maxEulerValueChangeDegrees": 6.461254119873047
+        },
+        {
+          "bone": "Hand_R",
+          "axis": "Z",
+          "keys": 31,
+          "stack": "Shoot",
+          "channel": "Lcl Rotation",
+          "property": "KeyValueFloat",
+          "rawTreeChildIndexPath": [
+            8,
+            591,
+            3
+          ],
+          "curveObjectId": 234823126,
+          "maxEulerValueChangeDegrees": 50.867430686950684
+        }
+      ],
+      "unchangedAllOtherTreeProperties": true,
+      "unchangedGeometryMorphsUVNormalsWeightsBindAndOtherTakes": true,
+      "sourceAndDonorBindMatricesByteIdentical": true,
+      "sourceAndDonorRotationBasisMatch": true,
+      "targetSampleTimesPreservedByteIdentical": true,
+      "donorRelativeSampleTimeMaxResidualTicks": 0,
+      "donorRelativeSampleTimeMaxResidualSeconds": 0.0,
+      "donorAbsoluteTimeOffsetTicks": [
+        0
+      ]
+    }
+  ],
+  "identityTestOnly": false,
+  "artisticAcceptance": false,
+  "status": "Raw property preservation passed; actual Blender roundtrip/grip review required separately"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "krag-fix-aim-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\fix_krag_aim.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7_Aim.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\weapon-aim-correction-v7.json",
+    "--verify-mesh-invariants"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v7.stderr.log",
+  "maxPrivateGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v7.stdout.log",
+  "successMarker": "KRAG_AIM_CORRECTION_COMPLETE"
+}

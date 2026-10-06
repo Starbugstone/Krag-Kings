@@ -23,6 +23,12 @@ for name,pos,target,scale in [('Natural_Front',(0,-6,1.3),(0,0,1.06),2.38),('Nat
     if opt.clip=='Shoot':
         for o in bpy.data.objects:
             if o.get('module')=='Weapon_R':o.hide_render=False
+        if name=='Natural_RightGrip':
+            bpy.context.view_layer.update()
+            hand=rig.matrix_world@rig.pose.bones['Hand_R'].head
+            muzzle=rig.matrix_world@rig.pose.bones['WeaponMuzzle'].head
+            target=hand.lerp(muzzle,.35)
+            pos=target+Vector((-2.2,-3,.6));scale=.65
     cam.location=pos;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.ortho_scale=scale;scene.render.filepath=str(ART/'renders'/(('Krag_'+name if opt.variant=='Krag_Natural' else opt.variant+'_'+name.replace('Natural_',''))+('_Runtime' if opt.runtime else '')+('_'+opt.clip if opt.clip!='Idle' else '')+('_f'+str(opt.frame) if opt.frame!=1 else '')+('_'+opt.tag if opt.tag else '')+'.png'));bpy.ops.render.render(write_still=True)
     Path(scene.render.filepath).with_suffix('.meta.json').write_text(json.dumps({'source_file':str(source_path),'source_sha256':source_sha,'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'generation':opt.tag,'view':name,'variant':opt.variant,'clip':opt.clip,'frame':opt.frame,'keepAuthoredPose':opt.keep_pose,'showWeapon':opt.show_weapon,'lightRig':'neutral white key/fill/rim' if opt.neutral_light else 'saved source studio','engine':scene.render.engine,'samples':scene.cycles.samples,'status':'Actual mesh WIP; not accepted'},indent=2),newline='\n')
     print('REVIEW SAVED',name,flush=True)

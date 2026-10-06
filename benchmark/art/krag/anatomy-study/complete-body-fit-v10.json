@@ -1,0 +1,129 @@
+{
+  "status": "Code-only complete-body fit; no generated master, anatomy or pose acceptance",
+  "sourceSha256": "2077bf5aef29d4398943efabe5a414dd019d1b6091dd71e417b6fcb663b991f5",
+  "fitSha256": "7aecceedc219fbd7b88ab3bda0c32b22a420bdd0c6b8ada5f9a3e3377f5e4185",
+  "sourceAnchors": {
+    "hip": [
+      0.1,
+      -0.012,
+      0.78
+    ],
+    "knee": [
+      0.137,
+      0.02,
+      0.435
+    ],
+    "ankleShaft": [
+      0.171,
+      0.057,
+      0.135
+    ],
+    "forefoot": [
+      0.239,
+      -0.145,
+      0.02
+    ]
+  },
+  "targetAnchors": {
+    "hip": [
+      0.167,
+      0.019,
+      1.018
+    ],
+    "knee": [
+      0.188,
+      -0.016,
+      0.57
+    ],
+    "ankleControl": [
+      0.19,
+      0.026,
+      0.24
+    ],
+    "forefoot": [
+      0.19,
+      -0.205,
+      0.065
+    ]
+  },
+  "regions": {
+    "left_foot": {
+      "vertices": 1211,
+      "minimumMeters": [
+        0.13693707004761324,
+        -0.22855791145988705,
+        0.005000001461299901
+      ],
+      "maximumMeters": [
+        0.2958061934782759,
+        0.08909169445833649,
+        0.23836017157350264
+      ],
+      "sizeMeters": [
+        0.15886912343066267,
+        0.31764960591822355,
+        0.23336017011220275
+      ]
+    },
+    "right_foot": {
+      "vertices": 1211,
+      "minimumMeters": [
+        -0.2958071297619793,
+        -0.2285581255869181,
+        0.005001435473573308
+      ],
+      "maximumMeters": [
+        -0.1368211977763406,
+        0.08891109686997777,
+        0.2383414450713566
+      ],
+      "sizeMeters": [
+        0.1589859319856387,
+        0.31746922245689585,
+        0.23334000959778328
+      ]
+    },
+    "legs": {
+      "vertices": 3337,
+      "minimumMeters": [
+        -0.3328327063185734,
+        -0.2285581255869181,
+        0.005000001461299901
+      ],
+      "maximumMeters": [
+        0.33227364320908404,
+        0.2024327505447715,
+        1.015960946345675
+      ],
+      "sizeMeters": [
+        0.6651063495276575,
+        0.4309908761316896,
+        1.010960944884375
+      ]
+    },
+    "pelvis": {
+      "vertices": 260,
+      "minimumMeters": [
+        -0.3221814232273424,
+        -0.2037299798435656,
+        1.0191379503502564
+      ],
+      "maximumMeters": [
+        0.32162200149375053,
+        0.23247588171266131,
+        1.1604629327482212
+      ],
+      "sizeMeters": [
+        0.6438034247210929,
+        0.4362058615562269,
+        0.14132498239796476
+      ]
+    }
+  },
+  "maximumWeightSumError": 0.0,
+  "maximumInfluences": 3,
+  "notes": [
+    "Preserves current Foot control markers at z=.24m; a posed barefoot review must evaluate true anatomical ankle pivot/foot roll before final rig approval.",
+    "Concept foot/toe anatomy is covered; this is a provisional CC0-derived organic master study, excluded from runtime by default."
+  ]
+}

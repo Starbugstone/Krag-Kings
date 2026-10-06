@@ -1,0 +1,53 @@
+{
+  "status": "Manual 2D landmark picks on the actual images; approximate, reviewable and not approved canonical dimensions",
+  "convention": "Head includes visible auricles; shoulder width uses maximum outer deltoid/armor silhouette within roughly 73\u201383% of crown-to-sole height. Chin excludes scarf/neck. Identical definition matters more than fitting a chosen ratio.",
+  "caution": "Perspective, shoulder armor and source pose affect 2D ratios. Do not directly compare these to a 3D cage band that excludes or partly includes ears. Current v9d recipe is frozen until its actual render is judged.",
+  "images": [
+    {
+      "name": "Concept sheet 01 front",
+      "path": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+      "imageWidth": 1774,
+      "imageHeight": 887,
+      "headIncludingEars": {
+        "left": 239,
+        "right": 334,
+        "top": 15,
+        "chin": 120
+      },
+      "shoulderBandIncludingArmor": {
+        "left": 94,
+        "right": 491,
+        "top": 151,
+        "bottom": 231
+      },
+      "soleY": 805,
+      "endpointUncertaintyPixels": 4,
+      "imageSha256": "c75202e0bc805bf866b0b9b18f79d1413aa72cea3ac916f2f71706ecb1c381a2",
+      "headToShoulderPixelWidthRatio": 0.23929471032745592,
+      "headHeightToCrownSoleHeightRatio": 0.13291139240506328
+    },
+    {
+      "name": "Actual v9c Front",
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9c-wip.png",
+      "imageWidth": 1000,
+      "imageHeight": 1000,
+      "headIncludingEars": {
+        "left": 428,
+        "right": 571,
+        "top": 61,
+        "chin": 218
+      },
+      "shoulderBandIncludingArmor": {
+        "left": 263,
+        "right": 731,
+        "top": 214,
+        "bottom": 310
+      },
+      "soleY": 959,
+      "endpointUncertaintyPixels": 5,
+      "imageSha256": "c5aaa336783cd7992798593499af18b92b041e4a03f01f7c342370fba713f4da",
+      "headToShoulderPixelWidthRatio": 0.3055555555555556,
+      "headHeightToCrownSoleHeightRatio": 0.17483296213808464
+    }
+  ]
+}

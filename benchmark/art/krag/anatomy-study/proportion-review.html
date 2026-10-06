@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Krag front proportion review</title>
+<style>
+body{margin:24px;background:#202326;color:#eee;font:15px system-ui;max-width:1450px}h1{font-size:24px}p{max-width:1050px;line-height:1.45}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}svg{width:100%;max-height:780px;background:#333}fieldset{border:1px solid #555;margin:12px 0}label{display:inline-block;margin:5px}input{width:55px}output{display:block;font-weight:600;padding:8px}.head{fill:none;stroke:#30e3cc;stroke-width:2}.shoulder{fill:none;stroke:#feca57;stroke-width:2}.sole{stroke:#dd88ff;stroke-width:2}button{padding:8px}small{color:#bbb}
+</style>
+<h1>Krag front proportions — reviewable image landmarks</h1>
+<p>These are approximate manual 2D measurements, not canonical character dimensions. The cyan box includes the ears and ends at the chin; the amber box measures the deltoid/armor silhouette in the same normalized shoulder-height band. Purple marks the sole. Adjust the picks below while inspecting the images. Perspective and armor affect the result. No model is changed by this page.</p>
+<div class="grid" id="views"></div>
+<button id="download">Download current measurements</button>
+<script>
+const rows=[
+ {name:'Concept sheet 01 front',path:'../../../../krag-kings-design/concept-art/01-krag-character-sheet.png',w:1774,h:887,view:'0 0 560 887',head:{left:239,right:334,top:15,chin:120},shoulder:{left:94,right:491,top:151,bottom:231},sole:805,uncertainty:4},
+ {name:'Actual v9c Front · source remains unaccepted',path:'../renders/Krag_Natural_Front_v9c-wip.png',w:1000,h:1000,view:'170 0 650 1000',head:{left:428,right:571,top:61,chin:218},shoulder:{left:263,right:731,top:214,bottom:310},sole:959,uncertainty:5}
+];
+for(const row of rows){
+ const article=document.createElement('article');document.querySelector('#views').append(article);
+ article.innerHTML=`<h2>${row.name}</h2><svg viewBox="${row.view}"><image href="${row.path}" width="${row.w}" height="${row.h}"/><rect class="head"/><rect class="shoulder"/><line class="sole"/></svg><output></output><small>Initial endpoint uncertainty: approximately ±${row.uncertainty} px.</small>`;
+ for(const name of ['head','shoulder']){const field=document.createElement('fieldset');field.innerHTML=`<legend>${name} · original image pixels</legend>`;article.append(field);
+  for(const key of Object.keys(row[name])){const label=document.createElement('label');label.textContent=key+' ';const input=document.createElement('input');input.type='number';input.value=row[name][key];input.oninput=()=>{row[name][key]=Number(input.value);draw()};label.append(input);field.append(label)}
+ }
+ function draw(){const h=row.head,s=row.shoulder;for(const [cls,bottom,values] of [['head','chin',h],['shoulder','bottom',s]]){const r=article.querySelector('.'+cls);r.setAttribute('x',values.left);r.setAttribute('y',values.top);r.setAttribute('width',values.right-values.left);r.setAttribute('height',values[bottom]-values.top)}const sole=article.querySelector('.sole');for(const [key,value] of Object.entries({x1:0,x2:row.w,y1:row.sole,y2:row.sole}))sole.setAttribute(key,value);article.querySelector('output').textContent=`Head/shoulder width: ${((h.right-h.left)/(s.right-s.left)).toFixed(3)} · Head/crown-to-sole height: ${((h.chin-h.top)/(row.sole-h.top)).toFixed(3)}`}
+ draw();
+}
+document.querySelector('#download').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({status:'Manual image landmarks; no canonical dimension approval',images:rows},null,2)],{type:'application/json'}));a.download='krag-front-proportion-picks.json';a.click();URL.revokeObjectURL(a.href)};
+</script>

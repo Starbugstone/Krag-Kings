@@ -1,0 +1,23 @@
+{
+  "name": "krag-patch-aim-v7",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\python\\bin\\python.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\patch_fbx_shoot_curves.py",
+    "--source-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag",
+    "--candidate-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim",
+    "--donor",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v7-aim-donor\\Shoot.fbx",
+    "--addons",
+    "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\scripts\\addons_core",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\weapon-aim-payload-validation-v7.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\patch-aim-v7.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\patch-aim-v7.stderr.log",
+  "maxPrivateGB": 5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\patch-aim-v7.stdout.log",
+  "successMarker": "KRAG_SHOOT_CURVES_PATCHED"
+}
