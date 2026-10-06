@@ -1,0 +1,325 @@
+{
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "exportReceiptSha256": "c7fbaafd7aae5bdc86aabd3cc13be77839a5cb18082fefa119b0e710f92afef6",
+  "maxSourceRestMatrixElementError": 1.2040138244628906e-05,
+  "recipeSha256": "5a9a079663f419fe8d3f1b6bab016242e36d8e8a9be5dd86c777bbce9d64722e",
+  "structuralValidationPassed": false,
+  "errors": [
+    "Idle sampled motion differs from source",
+    "Walk sampled motion differs from source",
+    "Run sampled motion differs from source",
+    "FacePerformance sampled motion differs from source"
+  ],
+  "clips": {
+    "Idle": {
+      "sha256": "502371f1a4ec90e83b9558f3b2712d33807ca5c8eb8bdb649b999ebe971ad7a3",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Idle"
+      ],
+      "frameRange": [
+        2.0,
+        182.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 6.0,
+      "sourceDurationSeconds": 6.0,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 7.748603820800781e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 0.011656297196826294,
+      "worstPositionSample": {
+        "bone": "TongueBase",
+        "sourceFrame": 57
+      },
+      "maxPoseRotationErrorDegrees": 0.0005562831625123342,
+      "worstRotationSample": {
+        "bone": "Middle3_L",
+        "sourceFrame": 68
+      },
+      "varyingLocalFacialControls": [
+        "Eye_L",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Walk": {
+      "sha256": "523aef98491e2f2ef017285644a23ad96e716271253fd27f1e052488438743da",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Walk"
+      ],
+      "frameRange": [
+        2.0,
+        26.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.8,
+      "sourceDurationSeconds": 0.8,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 9.5367431640625e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 0.04815498780519638,
+      "worstPositionSample": {
+        "bone": "Toe_L",
+        "sourceFrame": 14
+      },
+      "maxPoseRotationErrorDegrees": 0.0005631334607296831,
+      "worstRotationSample": {
+        "bone": "Middle3_L",
+        "sourceFrame": 19
+      },
+      "varyingLocalFacialControls": [
+        "Eye_L",
+        "Eye_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Run": {
+      "sha256": "18d181ba860e8156db091df4cd3ba3ba4f18acff5e925d67f07d02b05ac78d0b",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Run"
+      ],
+      "frameRange": [
+        2.0,
+        20.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.6,
+      "sourceDurationSeconds": 0.6,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 9.5367431640625e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 0.032307810924942795,
+      "worstPositionSample": {
+        "bone": "EarTip_L",
+        "sourceFrame": 18
+      },
+      "maxPoseRotationErrorDegrees": 0.0006130927093440209,
+      "worstRotationSample": {
+        "bone": "Middle3_L",
+        "sourceFrame": 8
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Melee": {
+      "sha256": "d7d60eeedfbbb2b6d0e52d681e77e2e912f82d5bb385510aa50b06188c1c469e",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Melee"
+      ],
+      "frameRange": [
+        2.0,
+        34.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 1.0666666666666667,
+      "sourceDurationSeconds": 1.0666666666666667,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 1.1324882507324219e-06,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 5.497296674757217e-07,
+      "worstPositionSample": {
+        "bone": "Index3_L",
+        "sourceFrame": 11
+      },
+      "maxPoseRotationErrorDegrees": 0.00045366482038236973,
+      "worstRotationSample": {
+        "bone": "Middle3_L",
+        "sourceFrame": 25
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "LipUpper",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Shoot": {
+      "sha256": "73f5f2499369341001cfdd3932099794655856944fbb84f56c476be1403e2e26",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Shoot"
+      ],
+      "frameRange": [
+        2.0,
+        32.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 1.0,
+      "sourceDurationSeconds": 1.0,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 9.5367431640625e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 5.705899595780907e-07,
+      "worstPositionSample": {
+        "bone": "WeaponAim",
+        "sourceFrame": 5
+      },
+      "maxPoseRotationErrorDegrees": 0.00010981533881646564,
+      "worstRotationSample": {
+        "bone": "Index3_L",
+        "sourceFrame": 16
+      },
+      "varyingLocalFacialControls": [
+        "LipUpper",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Hit": {
+      "sha256": "e865fad8b5485f3aaefad8fefc4f38eb2cf96e68c12784ae1fc752bb347f7b9d",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|Hit"
+      ],
+      "frameRange": [
+        2.0,
+        30.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.9333333333333333,
+      "sourceDurationSeconds": 0.9333333333333333,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 8.940696716308594e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 6.997201968356309e-07,
+      "worstPositionSample": {
+        "bone": "WeaponAim",
+        "sourceFrame": 12
+      },
+      "maxPoseRotationErrorDegrees": 9.883144480909275e-05,
+      "worstRotationSample": {
+        "bone": "Middle3_R",
+        "sourceFrame": 12
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "FacePerformance": {
+      "sha256": "636383639b19fa32d5daa29781f124fec0d35a9c0fd8aff44c7c2cea3db828ac",
+      "boneCount": 79,
+      "missingBones": [],
+      "extraBones": [],
+      "actionNames": [
+        "Nib_Rig|FacePerformance"
+      ],
+      "frameRange": [
+        2.0,
+        152.0
+      ],
+      "fps": 30.0,
+      "durationSeconds": 5.0,
+      "sourceDurationSeconds": 5.0,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxBindMatrixElementError": 0.0,
+      "hierarchyMatches": true,
+      "maxPoseScaleError": 7.152557373046875e-07,
+      "sampledFrames": 17,
+      "maxPosePositionErrorMeters": 0.027537067907342262,
+      "worstPositionSample": {
+        "bone": "TongueTip",
+        "sourceFrame": 104
+      },
+      "maxPoseRotationErrorDegrees": 2.7639067497065907e-05,
+      "worstRotationSample": {
+        "bone": "Index2_R",
+        "sourceFrame": 1
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "LipUpper",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    }
+  },
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "limits": "17 skeletal samples per take; does not validate mesh deformation, slopes or engine rendering"
+}

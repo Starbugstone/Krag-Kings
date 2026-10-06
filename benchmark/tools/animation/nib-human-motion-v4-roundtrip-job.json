@@ -1,0 +1,23 @@
+{
+  "name": "nib-human-motion-v4-roundtrip",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\validate_motion_candidate.py",
+    "--",
+    "--directory",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v4\\fbx"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v4-roundtrip.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v4-roundtrip.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v4-roundtrip.stdout.log",
+  "successMarker": "KRAG_KINGS_MOTION_ROUNDTRIP_COMPLETE"
+}

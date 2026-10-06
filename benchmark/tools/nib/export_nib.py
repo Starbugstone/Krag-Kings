@@ -50,7 +50,9 @@ manifest['source']=os.path.relpath(SOURCE,OUT).replace('\\','/')
 manifest['sourceSha256']=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
 if 'v5_reference_provenance' in scene:
     manifest['adaptedTopologyProvenance']=json.loads(scene['v5_reference_provenance'])
-manifest['locomotion']=json.loads(scene['locomotion_contract'])
+sys.path.insert(0,str(Path(__file__).parent.parent/'animation'))
+import export_contract
+manifest['locomotion'],manifest['sourceAnimationContract']=export_contract.prepare(bpy,json.loads(scene['locomotion_contract']))
 manifest['facialPerformance']={name:{'authoredInBodyClip':True} for name in ['Idle','Walk','Run','Melee','Shoot','Hit']}
 source_report=json.loads(args.source_report.read_text())
 if source_report.get('candidateSha256',source_report['sourceSha256'])!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
@@ -186,7 +188,7 @@ carrier.vertex_groups.new(name='Root').add([0,1,2],1.0,'REPLACE');carrier.modifi
 manifest['animationBindCarrier']={'mesh':'Nib_AnimationBindCarrier','purpose':'Preserve identical FBX rest skeleton; animation import ignores carrier geometry.'}
 bpy.ops.object.select_all(action='DESELECT');rig.hide_set(False);rig.select_set(True);carrier.select_set(True);bpy.context.view_layer.objects.active=rig
 for clip in manifest['clips']:
-    name=clip['name'];scene.name=name;rig.animation_data.action=bpy.data.actions[name]
+    name=clip['name'];scene.name=name;export_contract.select_action(bpy,rig,bpy.data.actions[name])
     scene.frame_start=clip['startFrame'];scene.frame_end=clip['endFrame'];scene.frame_set(scene.frame_start)
     path=animation_dir/(name+'.fbx')
     bpy.ops.export_scene.fbx(filepath=str(path),use_selection=True,object_types={'ARMATURE','MESH'},use_mesh_modifiers=False,global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=False,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False)

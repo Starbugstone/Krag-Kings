@@ -100,7 +100,6 @@ report = {'source': str(args.source), 'sourceSha256': source_sha, 'species': arg
           'status': 'Actual isolated source study; visual/motion/import acceptance pending',
           'soleGeometry': sole_records, 'soleHelperSha256': sha(Path(sole_geometry.__file__)),
           'sharedAssetsChanged': False, 'artisticAcceptance': False, 'clips': {}}
-gaze_bias = {}
 
 
 def remove_body_curves(action, slot):
@@ -142,8 +141,6 @@ def retarget_rotations(quats, directions=None):
             desired[name] = rest_directions[name].rotation_difference(direction) @ rest[name]
         else:
             desired[name] = quats[source] @ neutral[source].inverted() @ rest[name]
-        if name in gaze_bias:
-            desired[name] = Quaternion(Vector((1,0,0)),gaze_bias[name]) @ desired[name]
     for side in ['L','R']:
         if 'ForearmTwist_'+side in rest:
             desired['ForearmTwist_'+side] = desired['LowerArm_'+side].copy()
@@ -226,19 +223,15 @@ def relax_free_hand(clip):
     if args.species == 'Nib':
         hand = rig.pose.bones['Hand_L']
         delta = hand.matrix.to_quaternion() @ hand.bone.matrix_local.to_quaternion().inverted()
-        # One actual knuckle-row flexion plane avoids the old per-segment
-        # axes' unintended lateral fingertip drift. These are authored loose
-        # fist controls, still subject to real fingertip/palm contact review.
-        axis=(rig.data.bones['Index1_L'].head_local-rig.data.bones['Little1_L'].head_local).normalized()
-        angles_by_digit=([('Index',(40,55,20)),('Middle',(40,50,20)),
-                          ('Ring',(40,52,20)),('Little',(42,55,20))] if clip=='Run' else
-                         [('Index',(25,40,15)),('Middle',(28,44,18)),
-                          ('Ring',(28,44,18)),('Little',(30,45,18))])
-        for finger, angles in angles_by_digit:
+        multiplier = 1.3 if clip == 'Run' else 1.
+        for finger, angles in [('Index', (18, 28, 12)), ('Middle', (22, 32, 15)),
+                               ('Ring', (24, 35, 16)), ('Little', (26, 38, 18))]:
             total = 0.; parent = hand.matrix.to_quaternion()
             for segment, angle in enumerate(angles, 1):
                 bone = rig.pose.bones[finger+str(segment)+'_L']
-                total += angle
+                direction = (bone.bone.tail_local-bone.bone.head_local).normalized()
+                axis = direction.cross(Vector((0, -1, 0))).normalized()
+                total += angle*multiplier
                 desired = delta @ Quaternion(axis, math.radians(total)) @ bone.bone.matrix_local.to_quaternion()
                 put_rotation(rig, bone.name, desired, parent)
                 bone.keyframe_insert('rotation_euler', frame=scene.frame_current, group=bone.name)
@@ -351,20 +344,6 @@ for clip, samples, first, last, frames, directions, source_skeleton in [
         for key in curve.keyframe_points:
             for point in [key.co, key.handle_left, key.handle_right]:
                 point.x = 1+(point.x-old_start)/(old_end-old_start)*frames
-    # A standing reference from another point in the take carries a look-down
-    # pose; subject09 also has a different neck/head calibration. Retain the
-    # captured cyclic attention, but author a forward locomotion gaze rather
-    # than inheriting a constant -16deg walk / +17deg run head pitch.
-    raw_pitch = {}
-    for name in ['Chest','Neck','Head']:
-        source = body_map[name];values=[]
-        for index in range(frames):
-            quats,_ = source_pose(samples,first,last,index/frames)
-            forward = (quats[source] @ neutral[source].inverted()) @ Vector((0,-1,0))
-            values.append(math.asin(max(-1.,min(1.,forward.z))))
-        raw_pitch[name] = sum(values)/len(values)
-    targets={'Neck':raw_pitch['Chest']*.5,'Head':math.radians(-3 if clip=='Walk' else -1)}
-    gaze_bias={name:raw_pitch[name]-target for name,target in targets.items()}
     poses = []
     for index in range(frames+1):
         phase = index/frames
@@ -416,14 +395,10 @@ for clip, samples, first, last, frames, directions, source_skeleton in [
                              'proposedSpeedMetersPerSecond': proposal_speed,
                              'groundOffsetMeters': ground_offset,
                              'sourceClip': action['motion_source'], 'contactTuning': contacts,
-                             'forwardGazeCalibration':{'rawMeanPitchDegrees':{n:math.degrees(v) for n,v in raw_pitch.items()},
-                                 'targetMeanPitchDegrees':{n:math.degrees(v) for n,v in targets.items()},
-                                 'status':'Authored forward attention; cyclic captured variation retained; visual review required'},
                              'contactFitAccepted': False, 'samples': evidence}
 
 # A restrained six-second standing performance. Body shape, facial controls and
 # the weapon grip are retained. Species differences remain tuning proposals.
-gaze_bias = {}
 original = bpy.data.actions['Idle']; action = original.copy()
 original.name = 'Preserved_Idle_BeforeHumanMotion'; action.name = 'Idle'; action.use_fake_user = True
 rig.animation_data.action = action; bag = remove_body_curves(action, rig.animation_data.action_slot)
@@ -507,15 +482,8 @@ for clip in ['Walk','Run']:
 scene['locomotion_contract'] = json.dumps(report['locomotionMetadata'])
 scene['retargeted_motion_generation'] = args.generation
 
-# Source masters also need self-contained actions: changing from a new gait to
-# an older action in Blender must not retain an unkeyed half-twist or scale.
-# Complete canonical tracks without removing any archived study actions.
-import export_contract
-report['animationChannelCompletion'] = export_contract.complete_transform_tracks(bpy)
-report['animationChannelCompletionRecipeSha256'] = sha(Path(export_contract.__file__))
-
 for name, visibility in mesh_visibility.items(): bpy.data.objects[name].hide_viewport = visibility
-export_contract.select_action(bpy,rig,bpy.data.actions['Walk']); scene.frame_set(1)
+rig.animation_data.action = bpy.data.actions['Walk']; scene.frame_set(1)
 if geometry_digest() != before_geometry: raise AssertionError('Motion study changed mesh/shape coordinates')
 if before_bind != {b.name: [list(row) for row in b.matrix_local] for b in rig.data.bones}:
     raise AssertionError('Motion study changed source bind skeleton')

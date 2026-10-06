@@ -16,6 +16,10 @@ texture_source=argument('--texture-source-dir',BASE_OUT/'textures')
 bpy.ops.wm.open_mainfile(filepath=str(source_blend))
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=4;scene.render.bake.margin=4
 rig=bpy.data.objects['Krag_Rig'];modules={o.get('module'):o for o in bpy.data.objects if o.type=='MESH' and 'module' in o};contract=json.loads(argument('--contract',BASE_OUT/'krag_asset_contract.json').read_text())
+sys.path.insert(0,str(Path(__file__).parent.parent/'animation'))
+import export_contract
+contract['locomotionCycles'],action_export=export_contract.prepare(bpy,contract['locomotionCycles'])
+contract['clips']=list(export_contract.CLIPS)
 if stage=='export' and OUT!=BASE_OUT:
     (OUT/'facial-rig.json').write_text(json.dumps(contract['deformation'],indent=2),newline='\n')
     for maps in contract['material_maps'].values():
@@ -48,6 +52,7 @@ def attach_maps(m,maps):
 
 def save_manifest():
     manifest={'materials':[dict(name=n,baseColor='textures/'+m['BaseColor'],normal='textures/'+m['Normal'],roughness='textures/'+m['Roughness'],metallic='textures/'+m['Metallic']) for n,m in material_maps.items()], 'variants':[{'name':n,'fbx':n+'.fbx','label':n.replace('Krag_',''),'deformation':v.get('deformation',contract['deformation'])} for n,v in contract['variants'].items()], 'animations':{n:'animations/'+n+'.fbx' for n in contract['clips']}, 'normalConvention':'OpenGL', 'authoringForward':'-Y','authoringUp':'Z','heightMeters':2.107,'weapon':weapon_contract,'weaponNode':None,'weaponSourceModule':'Weapon_R','weaponGeometryIncluded':True,'weaponDefaultVisible':True,'deformation':contract['deformation'],'locomotion':contract['locomotionCycles'],'status':'Review model, artistic acceptance pending','geometryExport':{'triangulated':triangulate,'method':'Temporary assembly BMesh triangulation with cached shape coordinates and corner normals restored' if triangulate else 'Original polygon topology'}}
+    manifest['sourceAnimationContract']=action_export
     if contract.get('runtime_derivative_sha256'):
         manifest['runtimeDerivative']={'sha256':contract['runtime_derivative_sha256'],'status':contract.get('runtime_derivative_status'),'trianglesAllModules':contract.get('runtime_triangles_all_modules')}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),newline='\n')
@@ -172,6 +177,7 @@ else:
     (OUT/'animations').mkdir(exist_ok=True)
     bind_data=bpy.data.meshes.new('AnimationBindMesh');bind_data.from_pydata([(0,0,0),(.001,0,0),(0,.001,0)],[],[(0,1,2)]);bind_data.update();bind_mesh=bpy.data.objects.new('AnimationBindMesh',bind_data);bpy.context.collection.objects.link(bind_mesh);bind_mesh.parent=rig;bind_mesh.vertex_groups.new(name='Root').add([0,1,2],1,'REPLACE');bind_modifier=bind_mesh.modifiers.new('Explicit rest binding','ARMATURE');bind_modifier.object=rig
     for clip in contract['clips']:
+        export_contract.select_action(bpy,rig,bpy.data.actions[clip])
         bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.context.view_layer.objects.active=rig;rig.animation_data.action=bpy.data.actions[clip];scene.frame_start=1;scene.frame_end=int(bpy.data.actions[clip].frame_range[1]);scene.frame_set(1);scene.name=clip;bind_mesh.select_set(True)
         bpy.ops.export_scene.fbx(use_triangles=triangulate,filepath=str(OUT/'animations'/(clip+'.fbx')),use_selection=True,object_types={'MESH','ARMATURE'},use_mesh_modifiers=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=False,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0)
     bpy.data.objects.remove(bind_mesh,do_unlink=True);bpy.data.meshes.remove(bind_data)
