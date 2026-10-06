@@ -1,0 +1,130 @@
+{
+  "status": "FAILED_REFERENCE_GEOMETRY_ACCEPTANCE",
+  "technicalGenerationPassed": true,
+  "viewGenerationPassed": true,
+  "allEightViewsInspected": true,
+  "sourceCrop": "input/cropped-original.png",
+  "conditioning": "input/conditioning.png",
+  "modelResult": "pilot-result.json",
+  "inferenceRepeats": 0,
+  "meshSha256": "6d2aa891e7473d2b3aa217967bd07331cb25f2a9c59d2b9104cb3e2475e01a57",
+  "meshTriangles": 213184,
+  "rigged": false,
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "findings": [
+    "The rectangular crop became a thick plaque with a shallow raised face, not a complete bust/head.",
+    "Image-facing side is VertexColor_AxisPlusX; it appears sideways under raw Blender GLB import axes. Axis labels deliberately avoid assuming a correct artistic front.",
+    "Brow, nose, muzzle and broad jaw are recognizable but blurred shallow relief. Eye sockets/lids are blobs rather than articulated anatomy; tusks merge into surrounding surface.",
+    "Opposite and side views show a flat rectangular slab, with no believable rear skull or neck volume.",
+    "Clay views confirm the plaque/relief is actual geometry and not merely painted color.",
+    "No directly usable head or rig donor is accepted. At most this is a rough 2.5D landmark/relief reference."
+  ],
+  "inputDiagnosis": {
+    "observed": "Rectangular backing follows the retained beige crop boundary.",
+    "inference": "Background retention is a likely contributor, not proven by a controlled A/B.",
+    "primarySource": "Pinned TripoSR run.py lines73\u201381 expects RGB gray background when background removal is skipped.",
+    "possibleNextTest": "Separate parent-authorized same-pixels foreground silhouette isolation, then one matched inference; not executed."
+  },
+  "telemetryLimitation": "The Windows venv executable spawned the real Python worker. Direct private-memory sampling/cap therefore targeted the launcher, not the worker. Global available-memory/commit guarding and device GPU telemetry remained active. A late supplemental worker monitor saw zero samples because inference had already completed; it is not memory-cap proof. Future Python jobs now use process-tree tracking/cap. No repeat inference was performed to repair attribution.",
+  "torchPeakAllocatedBytes": 2711532032,
+  "torchPeakReservedBytes": 2768240640,
+  "metrics": {
+    "triposr-reference-prepare-input": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMB": 12730.0,
+      "maximumSystemCommitPercent": 50.0,
+      "sampledPrivatePeakMB": 1.0,
+      "processPrivateMeaning": "Windows venv launcher only; worker not attributed"
+    },
+    "triposr-reference-krag-bust-pilot": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMB": 8433.0,
+      "maximumSystemCommitPercent": 70.0,
+      "sampledPrivatePeakMB": 1.0,
+      "processPrivateMeaning": "Windows venv launcher only; worker not attributed"
+    },
+    "triposr-reference-mesh-review": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "minimumSystemAvailableMB": 11974.0,
+      "maximumSystemCommitPercent": 53.0,
+      "sampledPrivatePeakMB": 872.0,
+      "processPrivateMeaning": "Actual Blender process"
+    }
+  },
+  "logs": [
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-prepare-input.log",
+      "rawSha256": "f0406e93e63acdd7b83560c642f1aab67a9812efb7891280e49f77a4a624da99",
+      "curatedFile": "triposr-reference-prepare-input.log",
+      "curatedSha256": "d4ea0323cd9033b12ddc873ed43f90b8adc7ba450b1aa75640484a198c190d3e",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-prepare-input.stderr.log",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "curatedFile": "triposr-reference-prepare-input.stderr.log",
+      "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-reference-prepare-input-memory.csv",
+      "rawSha256": "8672d8c0456dd3ae73d6b43df3206b8047a34c6caaf2d27a5a2f37c1ee0adf22",
+      "curatedFile": "triposr-reference-prepare-input-memory.csv",
+      "curatedSha256": "2d8870d8543f40e782827da39db344e751ca6ec1585ca66348c337b45625b4e2",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-krag-bust-pilot.log",
+      "rawSha256": "46efd925331e4a6edb4ddb40b1bd2b72883bf34931c07fed1c973b3399c09cfa",
+      "curatedFile": "triposr-reference-krag-bust-pilot.log",
+      "curatedSha256": "0fe0e098f50658385f9e3942e5e3d591eeada9db7eed0517110b77137a5dfeca",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-krag-bust-pilot.stderr.log",
+      "rawSha256": "c0435a82108f1100088abf2ed91e968f95e103ba480999a5556ea3a390a74a61",
+      "curatedFile": "triposr-reference-krag-bust-pilot.stderr.log",
+      "curatedSha256": "3fb891e9b571a6e78f1f3c5b95f7529fa392a6b4563385596531dda763af5fc5",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-reference-krag-bust-pilot-memory.csv",
+      "rawSha256": "570d81f934bfd34a8b81b118319689339deefe054569b882fa8285256d2894d6",
+      "curatedFile": "triposr-reference-krag-bust-pilot-memory.csv",
+      "curatedSha256": "d8933a44e5bb8e79e12ba525c1801cf1ea060c1438b68cd6f871900fe245f8c5",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-reference-krag-bust-pilot-gpu.csv",
+      "rawSha256": "b37a816c12cd0b8f7fb7043aaf351ae0400afe8ea400c1d3273b7b972a96f173",
+      "curatedFile": "triposr-reference-krag-bust-pilot-gpu.csv",
+      "curatedSha256": "7279d38963ce7cc780a90c9a82d087c3db119fa1790f4811d2e2610061911b06",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-mesh-review.log",
+      "rawSha256": "9a1d6d1dc4967adcd9671d80a66a1873539cd0205ad845a540f89dc5eeae8a55",
+      "curatedFile": "triposr-reference-mesh-review.log",
+      "curatedSha256": "39a02298dc146061d92befda1970f80879e2eeda56a82905c74540faf22d9e1e",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-mesh-review.stderr.log",
+      "rawSha256": "229f0297af0d8aee289c32e34385b6c61f4ca5fb6f52ce19cd8779f3936c2387",
+      "curatedFile": "triposr-reference-mesh-review.stderr.log",
+      "curatedSha256": "921fcb1a35aeb68e88531aaa40708cbae8b0f614a5d565625e97ace65171b2dd",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-reference-mesh-review-memory.csv",
+      "rawSha256": "1626de098b34d9401cd1c114c949423c02ba9a24e24f67b549e96ef0703945fb",
+      "curatedFile": "triposr-reference-mesh-review-memory.csv",
+      "curatedSha256": "7ea0ccd0d859b16a0c65f993fbcebac27473f7e5da960c2a1677d323fff8e641",
+      "normalization": "CRLF to LF only"
+    }
+  ]
+}

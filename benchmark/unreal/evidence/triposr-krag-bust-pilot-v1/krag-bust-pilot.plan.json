@@ -1,0 +1,42 @@
+{
+  "status": "Prepared bounded first reference-only pilot; inference awaits root coordination after isolated setup",
+  "input": {
+    "source": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+    "sourceSha256": "c75202e0bc805bf866b0b9b18f79d1413aa72cea3ac916f2f71706ecb1c381a2",
+    "sourceDimensions": [
+      1774,
+      887
+    ],
+    "cropXYXY": [
+      1400,
+      0,
+      1774,
+      425
+    ],
+    "conditioningDimensions": [
+      512,
+      512
+    ],
+    "outputDirectory": "benchmark/local/triposr-reference-v1/input-krag-bust",
+    "processing": "Exact RGB crop, centered on RGB128 neutral padding. No resized crop pixels, background model, inpainting or enhancement; original beige crop background retained."
+  },
+  "inferenceProposal": {
+    "sourceCommit": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "modelSha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+    "device": "Preflight selects GPU or CPU before loading",
+    "precision": "FP32 GPU only with6.5GiB free; otherwise FP16-autocast forward with4GiB free; otherwise CPU",
+    "chunkSize": 4096,
+    "marchingCubesResolution": 256,
+    "output": "Unrigged vertex-colored mesh",
+    "backgroundRemoval": false,
+    "onlineModelFetchDuringInference": false,
+    "cpuMarchingCubes": "Pinned historical torchmcubes CPU extension; actual compatibility pending",
+    "minimumFreeGiBForFp32": 6.5,
+    "minimumFreeGiBForAutocast": 4.0,
+    "extraction": "4096-position streamed queries; CPU float32 density volume and CPU marching cubes; no full GPU grid"
+  },
+  "acceptance": "Inspect actual neutral-lit front/three-quarter/side/back geometry against the source before a second inference. No rig adaptation or sculpt acceptance from generation success.",
+  "inferenceExecuted": false,
+  "sharedAssetsChanged": false
+}
