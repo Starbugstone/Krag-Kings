@@ -1,0 +1,103 @@
+{
+  "planSha256": "cf54d8a55a5f1b3e5d771baa958f3a8fa6ef89ed96386e7a1dfd4ff0b9f2b2c7",
+  "recipeSha256": "7c9c692a4b260e64b22c72916ade3ba7b3bc28de3a09fe8ca4614d38d41e9a91",
+  "files": [
+    {
+      "name": "TripoSR-107cefdc.zip",
+      "url": "https://codeload.github.com/VAST-AI-Research/TripoSR/zip/107cefdc244c39106fa830359024f6a2f1c78871",
+      "sha256": "a7b3871a1b4377bef96cbfb99bdc952bdd4f5df9f65fea4208d978a343fd1162",
+      "verification": "Archive is addressed by immutable commit; actual SHA256 recorded before extraction/execution",
+      "license": "MIT",
+      "actualBytes": 31282920,
+      "utc": "2026-10-06T12:32:05.983293+00:00",
+      "elapsedSeconds": 3.735361084000033
+    },
+    {
+      "name": "torchmcubes-bc36b08c.zip",
+      "url": "https://codeload.github.com/tatsy/torchmcubes/zip/bc36b08c62c5931e1dfc666581b3a8589278647f",
+      "sha256": "6187abe2b7d9b20150b0ee2b710cebf1dc5bfeb23c343a73c8ebafd5a017ab1b",
+      "verification": "Archive is addressed by immutable commit; actual SHA256 recorded before extraction/execution",
+      "license": "MIT at pinned historical commit",
+      "actualBytes": 225294,
+      "utc": "2026-10-06T12:32:06.392139+00:00",
+      "elapsedSeconds": 0.3995073690020945
+    },
+    {
+      "name": "triposr-config.yaml",
+      "url": "https://huggingface.co/stabilityai/TripoSR/resolve/5b521936b01fbe1890f6f9baed0254ab6351c04a/config.yaml",
+      "sha256": "74ca708ce086bf68e97709ea6b3d91f14717921c04691e84043f0eb8fcc68e62",
+      "bytes": 987,
+      "license": "See captured license/model-card file",
+      "actualBytes": 987,
+      "utc": "2026-10-06T12:32:06.811346+00:00",
+      "elapsedSeconds": 0.40884599599667126
+    },
+    {
+      "name": "triposr-model-card.md",
+      "url": "https://huggingface.co/stabilityai/TripoSR/resolve/5b521936b01fbe1890f6f9baed0254ab6351c04a/README.md",
+      "sha256": "5c12ef5b850c6ee2aa7454b1a264f6f8dfa95164384dbb1ab374acd917aa558b",
+      "bytes": 2488,
+      "license": "See captured license/model-card file",
+      "actualBytes": 2488,
+      "utc": "2026-10-06T12:32:07.215869+00:00",
+      "elapsedSeconds": 0.39504556199972285
+    },
+    {
+      "name": "dino-config.json",
+      "url": "https://huggingface.co/facebook/dino-vitb16/resolve/f205d5d8e640a89a2b8ef0369670dfc37cc07fc2/config.json",
+      "sha256": "b87c0270b97db085fd82cf114a761fd0f62ae7914fbd407c752a2260646b689c",
+      "bytes": 454,
+      "license": "See captured license/model-card file",
+      "actualBytes": 454,
+      "utc": "2026-10-06T12:32:07.624670+00:00",
+      "elapsedSeconds": 0.39947065400338033
+    },
+    {
+      "name": "TripoSR-LICENSE",
+      "url": "https://raw.githubusercontent.com/VAST-AI-Research/TripoSR/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE",
+      "sha256": "ade0a66629bdd7e01e46b3296b3851cff0fd27989bca53da470ad6e96ed620fb",
+      "bytes": 1080,
+      "license": "See captured license/model-card file",
+      "actualBytes": 1080,
+      "utc": "2026-10-06T12:32:07.736467+00:00",
+      "elapsedSeconds": 0.09598457199899713
+    },
+    {
+      "name": "torchmcubes-README.md",
+      "url": "https://raw.githubusercontent.com/tatsy/torchmcubes/bc36b08c62c5931e1dfc666581b3a8589278647f/README.md",
+      "sha256": "be51a503ce1e5a089ba5d0dd845a3a67953d74f9b048959508db3e62ea770c9a",
+      "bytes": 1580,
+      "license": "See captured license/model-card file",
+      "actualBytes": 1580,
+      "utc": "2026-10-06T12:32:07.841963+00:00",
+      "elapsedSeconds": 0.09644501699949615
+    },
+    {
+      "name": "model.ckpt",
+      "url": "https://huggingface.co/stabilityai/TripoSR/resolve/5b521936b01fbe1890f6f9baed0254ab6351c04a/model.ckpt",
+      "sha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+      "bytes": 1677246742,
+      "license": "MIT per pinned model card",
+      "actualBytes": 1677246742,
+      "utc": "2026-10-06T12:35:32.010737+00:00",
+      "elapsedSeconds": 199.94753024999955
+    },
+    {
+      "name": "torch-2.5.1+cu121-cp310-cp310-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu121/torch-2.5.1%2Bcu121-cp310-cp310-win_amd64.whl",
+      "sha256": "9b22d6d98aa56f9317902dec0e066814a6edba1aada90110ceea2bb0678df22f",
+      "license": "BSD-style PyTorch plus bundled third-party notices; inspect wheel LICENSE before install",
+      "hashSource": "https://download.pytorch.org/whl/cu121/torch/",
+      "actualBytes": 2449372784,
+      "utc": "2026-10-06T12:40:30.638532+00:00",
+      "elapsedSeconds": 291.99906788599765
+    }
+  ],
+  "networkOnly": true,
+  "extracted": false,
+  "dependenciesInstalled": false,
+  "nativeCompilation": false,
+  "torchImported": false,
+  "inferenceExecuted": false,
+  "sharedAssetsChanged": false
+}

@@ -1,6 +1,6 @@
 """Prepare an isolated portable PBR derivative of a reviewed v5 source.
 
-Prepared code only. Run under Run-HeavyTask, never while another heavy job runs.
+Run under Run-HeavyTask, never while another heavy job runs.
 An actual source-vs-baked render and engine import remain required afterward.
 """
 import argparse,hashlib,json,shutil,sys
@@ -10,6 +10,7 @@ import numpy as np
 from mathutils import Matrix
 sys.path.insert(0,str(Path(__file__).parent))
 from bake_fields import bake_maps,head_mask_receipt,make_face_uv,plane,portable_material,sha,uv_field_audit,source_uv_domain
+from portable_save import save_and_validate_pbr
 
 ROOT=Path(__file__).resolve().parents[5]
 parser=argparse.ArgumentParser()
@@ -51,7 +52,7 @@ report={'status':'PBR derivative requires actual matched render and both-engine 
         'source':str(args.source),'sourceSha256':source_hash,'sourceReportSha256':sha(args.source_report),
         'sourceStructuralGate':source_report.get('preRenderGate'),
         'normalConvention':'OpenGL +Y tangent space','materials':[],'fieldBakes':[],
-        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py')]}}
+        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py'),Path(__file__).with_name('portable_save.py')]}}
 mask=head_mask_receipt(head)
 source_materials=list(head.data.materials);head.data.materials.clear()
 for original in source_materials:
@@ -131,15 +132,10 @@ for obj in source_objects:
     if immutable_geometry(obj)!=before[obj.name]:raise RuntimeError('PBR process changed geometry, weights or morphs: '+obj.name)
     obj.hide_set(visibility[obj.name][0]);obj.hide_render=visibility[obj.name][1]
 rig.animation_data.action=saved_action;scene.frame_set(saved_frame);bpy.context.view_layer.update()
-for material in used:
-    for node in material.node_tree.nodes:
-        if node.type=='TEX_IMAGE' and node.image:
-            local=textures/Path(bpy.path.abspath(node.image.filepath)).name
-            if not local.exists():raise RuntimeError('A used material image was not copied: '+str(local))
-            node.image.filepath='//textures/'+local.name
 report['geometryWeightsMorphsUnchanged']=True
 scene['portable_pbr_bake']=json.dumps(report)
-target=args.out/'Nib_Runtime_PBR.blend';bpy.ops.wm.save_as_mainfile(filepath=str(target),compress=True)
+target=args.out/'Nib_Runtime_PBR.blend'
+report['savedPbrImageValidation']=save_and_validate_pbr(target,report)
 if sha(args.source)!=source_hash:raise RuntimeError('Input source changed')
 report['candidateSha256']=sha(target);report['candidate']=str(target)
 (args.out/'pbr-bake-report.json').write_text(json.dumps(report,indent=2)+'\n',newline='\n')

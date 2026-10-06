@@ -94,6 +94,9 @@ def main():
             '--source', local(plan['source']), '--source-report', local(plan['sourceReport']),
             '--out', output, '--reference-textures', local(plan['referenceTextures']),
             '--card-texture-dir', cards])
+    elif args.stage == 'repair-paths':
+        invoke('benchmark/tools/unreal/nib_candidate/repair_pbr_paths.py',[
+            '--prior-pbr',local(plan['repairBakeRoot']),'--out',output])
     elif args.stage in ['reference', 'triangles']:
         command = ['--source', baked, '--source-report', bake_report,
             '--out', reference if args.stage == 'reference' else final,

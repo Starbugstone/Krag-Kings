@@ -1,3 +1,9 @@
+## Latest actual boundary
+
+The original bake and saved structural snapshot pass. Matched source Face/Tongue/Front renders completed, but the first reopened baked frame fails: all98 texture paths resolve under the old source directory. [Actual failure and images](../../../unreal/evidence/nib-coherent79-pbr-reopen-failure/README.md) are preserved. No FBX/engine import occurred.
+
+`plans/nib-coherent79-socket-pathfix-v2` is a new frozen194-input plan. It replaces `bake` with `repair-paths`, preserving the failed file and reusing all98 map bytes. The common save helper disables relative remapping, reopens and decodes each connected image, and validates its path, content hash and color space. A separate source/PBR snapshot still checks exact rig/action/geometry parity before export. This correction is prepared, not yet executed.
+
 # Isolated coherent Nib PBR/FBX preparation
 
 The first corrected-source snapshot and portable PBR bake now pass actual

@@ -18,6 +18,7 @@ def main():
     parser.add_argument('--source-report',type=Path,required=True)
     parser.add_argument('--source-sha256',required=True)
     parser.add_argument('--name',required=True)
+    parser.add_argument('--repair-bake-root',type=Path,help='Reuse a preserved actual bake via a path-only derivative; never rebake or overwrite it')
     parser.add_argument('--blocked-reason',required=True,help='Use a new frozen plan after the actual source defect is resolved; empty only when ready for scheduling')
     args=parser.parse_args()
     if not args.name.replace('-','').isalnum():raise RuntimeError('Safe candidate name required')
@@ -33,14 +34,25 @@ def main():
     references=ROOT/'benchmark/shared/characters/nib/textures'
     scripts=[*TOOLS.glob('*.py'), ROOT/'benchmark/tools/nib/export_nib.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/prepare_runtime_pbr.py',ROOT/'benchmark/tools/nib/v5_wip/pbr/bake_fields.py',
+        ROOT/'benchmark/tools/nib/v5_wip/pbr/portable_save.py',
         ROOT/'benchmark/tools/nib/v5_wip/preserve_fbx_point_payloads.py',ROOT/'benchmark/tools/nib/v5_wip/validate_triangulated_payload.py',
         ROOT/'benchmark/tools/animation/export_contract.py',ROOT/'benchmark/tools/animation/validate_motion_candidate.py']
+    prior=[]
+    if args.repair_bake_root:
+        repair=args.repair_bake_root.resolve()
+        if not repair.is_relative_to((ROOT/'benchmark/local/candidates').resolve()):
+            raise RuntimeError('Reuse only isolated actual bake outputs')
+        bake=json.loads((repair/'pbr-bake-report.json').read_text())
+        if bake['sourceSha256']!=args.source_sha256 or sha(repair/'Nib_Runtime_PBR.blend')!=bake['candidateSha256']:
+            raise RuntimeError('Prior bake does not match this source')
+        prior=[repair/'pbr-bake-report.json',repair/'Nib_Runtime_PBR.blend',*sorted((repair/'textures').glob('*.png'))]
     pins=[{'path':p.relative_to(ROOT).as_posix(),'sha256':sha(p),'bytes':p.stat().st_size}
-          for p in sorted(set([source,report,*scripts,*cards.glob('*.png'),*references.glob('*.png')]))]
+          for p in sorted(set([source,report,*scripts,*prior,*cards.glob('*.png'),*references.glob('*.png')]))]
+    material_stage='repair-paths' if args.repair_bake_root else 'bake'
     specs={
       'snapshot-source':([],['source-contract.json']),
-      'bake':(['snapshot-source'],['pbr']),
-      'snapshot-pbr':(['bake'],['pbr-contract.json']),
+      material_stage:(['snapshot-source'],['pbr']),
+      'snapshot-pbr':([material_stage],['pbr-contract.json']),
       'reference':(['snapshot-pbr'],['reference']),
       'triangles':(['reference'],['triangulated']),
       'validate-payload':(['triangles'],['triangulation-validation.json']),
@@ -56,6 +68,7 @@ def main():
           'outputRoot':base,'executionReady':not bool(args.blocked_reason),'executionBlockedReason':args.blocked_reason,
           'status':'Prepared only; no bake/export/import/visual acceptance from this plan',
           'artisticAcceptance':False,'sharedPromotionAuthorized':False,'pins':pins,'stages':stages}
+    if args.repair_bake_root:plan['repairBakeRoot']=repair.relative_to(ROOT).as_posix()
     dest.mkdir(parents=True)
     (dest/'plan.json').write_text(json.dumps(plan,indent=2)+'\n',newline='\n')
     win=lambda path:'D:\\Dev\\Krag-Kings\\'+path.replace('/','\\')

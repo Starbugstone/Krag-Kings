@@ -1,13 +1,15 @@
 # Prepared v5 material transfer
 
-Status: the actual corrected coherent source (`1b992ebb…`) now passes its
-source snapshot and first guarded PBR bake, producing `d3b682d4…`, 26 materials
-and 98 maps. Saved-PBR reopening, matched source/baked images, new FBX exports
-and engine import remain pending. Its earlier restorative assembly (`ba0048d0…`)
-failed the wrist/cuff interface and remains preserved. Overall character art is
-unaccepted; the existing corrected v4b shared files remain unchanged.
+Status: source `1b992ebb…` passed the first actual bake (`d3b682d4…`,
+26 materials/98 maps) and saved structural comparison. Actual reopened rendering
+then failed: all 98 image paths resolved under the old source folder. The first
+magenta frame and process stop are [preserved evidence](../../../../unreal/evidence/nib-coherent79-pbr-reopen-failure/README.md).
+The source, failed file and map bytes remain intact. A separate path-only repair
+is prepared, with explicit no-remap save and reopened image path/hash/color-space/
+dimension checks; its execution and visible parity remain pending. No new FBX or
+engine import has run. Overall art is unaccepted and shared v4b remains unchanged.
 Use the current [isolated integration plan](../../../unreal/nib_candidate/README.md),
-not the historical `v5d-pbr-prepared.job.json` paths.
+not historical `v5d-pbr-prepared.job.json` paths.
 
 `prepare_runtime_pbr.py` reads an explicitly named saved source and its matching
 SHA-256 report. It writes a separate compressed `Nib_Runtime_PBR.blend`, textures
@@ -67,9 +69,9 @@ Run order, after the serialized heavy slot is allocated:
    identified honestly; structural validity does not mean artistic approval.
    Both engines need actual material/pose captures and memory/frame-time checks.
 
-Known limits: atlas UV packing/overlap, sampled color parity, bake operator
-behavior on this exact source and engine appearance have not been executed or
-verified. The prepared resolutions are tuning values, not approved asset
+Known limits: sampled material parity, atlas-seam quality and engine appearance
+remain unverified. The bake operator executed, but the first saved-path failure
+blocked visual acceptance. The prepared resolutions are tuning values, not approved asset
 budgets. The proposed regional color treatment does not fix the current face
 shape, flat ear construction or insufficient groom volume.
 

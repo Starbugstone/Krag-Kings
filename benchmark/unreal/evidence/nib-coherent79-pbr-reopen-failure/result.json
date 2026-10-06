@@ -1,0 +1,151 @@
+{
+  "status": "FAIL: saved material image roots are invalid; first actual reopened render is magenta",
+  "sourceSha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732",
+  "failedPbrSha256": "d3b682d455832dcc153f5e41c7b65c5cdfad1911b5706a1b6b73a426bb1870d2",
+  "structuralSnapshotPass": true,
+  "structuralSnapshotDidNotCheckImagePaths": true,
+  "missingImageFiles": 98,
+  "sourceImagesInspected": 3,
+  "bakedImagesInspected": 1,
+  "diagnosedCause": "//textures paths assigned relative to old active source, followed by save_as_mainfile default relative_remap=True",
+  "artisticAcceptance": false,
+  "engineImportExecuted": false,
+  "originalFilesPreserved": true,
+  "jobs": [
+    {
+      "stage": "snapshot-pbr",
+      "pid": 32640,
+      "nativeExit": 0,
+      "shellExit": 0,
+      "deliberatelyStopped": false,
+      "reason": null,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-snapshot-pbr.log",
+          "rawSha256": "1ce4ce930a5ddfc9fd61ef1e9a6a3f008549968f305d56e8415763b0b21395ff",
+          "curatedFile": "snapshot-pbr.log",
+          "curatedSha256": "4f54f91d40d9761401c2cde2aa69acfbc07e6e19797b5da7298e0b8bbca12115",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-snapshot-pbr.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "snapshot-pbr.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-1b992e-v1-snapshot-pbr-memory.csv",
+          "rawSha256": "a79c951f0320b930855c50b04e58749d67e74a0704864ebf5e070f4bf4352564",
+          "curatedFile": "snapshot-pbr-memory.csv",
+          "curatedSha256": "d1ddd5ae879436b15911ba49741d1139cdd8b0fed91a6d8ec217437ff292b3aa",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "memoryColumns": [
+        "time",
+        "processId",
+        "availableMB",
+        "commitPercent",
+        "privateMB",
+        "workingSetMB",
+        "treeTracked",
+        "treePrivateMB",
+        "treeWorkingSetMB",
+        "treeProcessCount"
+      ],
+      "maxPrivateMB": 586.0,
+      "minAvailableMB": 12395.0
+    },
+    {
+      "stage": "review-source",
+      "pid": 13820,
+      "nativeExit": 0,
+      "shellExit": 0,
+      "deliberatelyStopped": false,
+      "reason": null,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pbr-review-source.log",
+          "rawSha256": "f3161ff70649a6b76ec07054f28904462555f492f4fca69d76104cb6c2347425",
+          "curatedFile": "review-source.log",
+          "curatedSha256": "75ad4549fe2db13ce528ec5304fd75d09d4993f6ec84a1bcf3912c5d86b54d02",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pbr-review-source.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "review-source.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pbr-review-source-memory.csv",
+          "rawSha256": "566240d68e603a9368b3191f7cdcfa97af492323bddc9adb429d4ed71127cb6f",
+          "curatedFile": "review-source-memory.csv",
+          "curatedSha256": "bf9eeac3173a0ee56568d8d48a52d28c25e396e64a0a9cdc0a44119f25425cc7",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "memoryColumns": [
+        "time",
+        "processId",
+        "availableMB",
+        "commitPercent",
+        "privateMB",
+        "workingSetMB",
+        "treeTracked",
+        "treePrivateMB",
+        "treeWorkingSetMB",
+        "treeProcessCount"
+      ],
+      "maxPrivateMB": 2728.0,
+      "minAvailableMB": 10552.0
+    },
+    {
+      "stage": "review-baked",
+      "pid": 22356,
+      "nativeExit": -1,
+      "shellExit": 255,
+      "deliberatelyStopped": true,
+      "reason": "Stop repeated known-missing-texture rendering after first actual failed frame",
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pbr-review-baked.log",
+          "rawSha256": "ce1a995c63a9bef86808bed98690bd4a3962bdf3b287577acfa57ef23fb1e905",
+          "curatedFile": "review-baked.log",
+          "curatedSha256": "ce1a995c63a9bef86808bed98690bd4a3962bdf3b287577acfa57ef23fb1e905",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/nib-coherent79-socket-pbr-review-baked.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "review-baked.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/nib-coherent79-socket-pbr-review-baked-memory.csv",
+          "rawSha256": "f0a61c62b097e165618fc5702212a9d4db5d8e22c3a66d9098bec0ff1ce1b963",
+          "curatedFile": "review-baked-memory.csv",
+          "curatedSha256": "91b7cc415c620b1208e2a86f61f6252adaa6b662e8672abc8718789ac9dce14a",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "memoryColumns": [
+        "time",
+        "processId",
+        "availableMB",
+        "commitPercent",
+        "privateMB",
+        "workingSetMB",
+        "treeTracked",
+        "treePrivateMB",
+        "treeWorkingSetMB",
+        "treeProcessCount"
+      ],
+      "maxPrivateMB": 2288.0,
+      "minAvailableMB": 10722.0
+    }
+  ]
+}

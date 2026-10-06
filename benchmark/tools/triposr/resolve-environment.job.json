@@ -1,0 +1,17 @@
+{
+  "name": "triposr-reference-resolve",
+  "executable": "C:\\Python310\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\resolve_environment.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 6,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-resolve.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-resolve.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-resolve.log",
+  "successMarker": "TRIPOSR_REFERENCE_DEPENDENCIES_RESOLVED"
+}
