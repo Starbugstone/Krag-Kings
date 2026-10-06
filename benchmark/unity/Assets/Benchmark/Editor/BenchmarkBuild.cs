@@ -20,7 +20,13 @@ namespace KragKings.Editor
         const string Generated=AssetRoot+"/Generated";
         static string Repo=>Path.GetFullPath(Path.Combine(Application.dataPath,"../../.."));
         [Serializable] public class Manifest { public MaterialEntry[] materials;public VariantEntry[] variants;public DemoDeformation.Contract deformation;public DemoUnit.LocomotionSet locomotion;public DemoUnit.WeaponContract weapon; }
-        [Serializable] public class MaterialEntry { public string name,baseColor,normal,roughness,metallic; }
+        [Serializable] public class MaterialEntry
+        {
+            public string name,baseColor,normal,roughness,metallic;
+            public string alphaMode,alphaSource,doubleSidedNormalMode,normalConvention;
+            public float alphaClipThreshold;
+            public bool doubleSided;
+        }
         [Serializable] public class VariantEntry { public string name,fbx,label;public DemoDeformation.Contract deformation; }
         [Serializable] class ImportReport {public string engine,species;public ImportedMeshReport[] variants;}
         [Serializable] class ImportedMeshReport {public string name,fbxSha256;public int renderers,vertices,triangles,materialSlots,bones,morphTargets,correctiveDrivers;public string[] clips;public ClipReport[] clipDetails;}
@@ -256,9 +262,28 @@ namespace KragKings.Editor
         }
         static Material MakeCharacterMaterial(string folder,MaterialEntry entry)
         {
+            bool masked=entry.alphaMode=="MASK";
+            if(!string.IsNullOrEmpty(entry.alphaMode) && !masked && entry.alphaMode!="OPAQUE")
+                throw new Exception(entry.name+": unsupported alphaMode "+entry.alphaMode);
+            if(!string.IsNullOrEmpty(entry.normalConvention) && entry.normalConvention!="OpenGL +Y")
+                throw new Exception(entry.name+": expected shared OpenGL +Y tangent normals");
+            if(masked && (entry.alphaSource!="baseColor.a" || entry.alphaClipThreshold<=0 || entry.alphaClipThreshold>=1 || entry.doubleSidedNormalMode!="Flip"))
+                throw new Exception(entry.name+": incomplete masked-card alpha/normal contract");
             string safe=entry.name.Replace('/','_');
             var material=LoadOrCreateMaterial(Generated+"/"+safe+".mat","HDRP/Lit");
             var color=Texture(folder+"/"+entry.baseColor,true,false,false);
+            if(masked)
+            {
+                string colorPath=folder+"/"+entry.baseColor;
+                var importer=(TextureImporter)AssetImporter.GetAtPath(colorPath);
+                if(!importer.DoesSourceTextureHaveAlpha())throw new Exception(entry.name+": card base color has no source alpha");
+                bool changed=importer.alphaSource!=TextureImporterAlphaSource.FromInput || !importer.alphaIsTransparency
+                    || !importer.mipMapsPreserveCoverage || !Mathf.Approximately(importer.alphaTestReferenceValue,entry.alphaClipThreshold);
+                importer.alphaSource=TextureImporterAlphaSource.FromInput;importer.alphaIsTransparency=true;
+                importer.mipMapsPreserveCoverage=true;importer.alphaTestReferenceValue=entry.alphaClipThreshold;
+                if(changed)importer.SaveAndReimport();
+                color=AssetDatabase.LoadAssetAtPath<Texture2D>(colorPath);
+            }
             var normal=Texture(folder+"/"+entry.normal,false,true,false);
             var rough=Texture(folder+"/"+entry.roughness,false,false,true);
             var metal=Texture(folder+"/"+entry.metallic,false,false,true);
@@ -273,7 +298,17 @@ namespace KragKings.Editor
             material.SetTexture("_MaskMap",Texture(maskPath,false,false,false));material.SetFloat("_Metallic",1);material.SetFloat("_Smoothness",1);
             material.SetFloat("_SmoothnessRemapMin",0);material.SetFloat("_SmoothnessRemapMax",1);material.SetFloat("_AORemapMin",0);material.SetFloat("_AORemapMax",1);
             if(IsSkin(entry.name))ApplySkinProfile(material,entry.name);
-            material.SetFloat("_DoubleSidedEnable",1);HDMaterial.ValidateMaterial(material);EditorUtility.SetDirty(material);
+            material.SetFloat("_SurfaceType",0); // Masked PBR remains in the opaque depth-writing path.
+            material.SetFloat("_AlphaCutoffEnable",masked?1:0);
+            if(masked)
+            {
+                material.SetFloat("_AlphaCutoff",entry.alphaClipThreshold);
+                material.SetFloat("_AlphaCutoffShadow",entry.alphaClipThreshold);
+                material.SetFloat("_DoubleSidedEnable",entry.doubleSided?1:0);
+                material.SetFloat("_DoubleSidedNormalMode",0); // Pinned HDRP Lit: Flip=0.
+            }
+            else material.SetFloat("_DoubleSidedEnable",1); // Preserve the existing opaque baseline.
+            HDMaterial.ValidateMaterial(material);EditorUtility.SetDirty(material);
             return material;
         }
         static bool IsSkin(string name)=>name.Contains("Skin")||name.Contains("Muzzle")||name.Contains("EarInner");
