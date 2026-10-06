@@ -67,7 +67,9 @@ namespace KragKings.Benchmark
                 krag.MoveTo(origins[0]+new Vector3(-.7f,0,side*2),cycle%2==0);
                 nib.MoveTo(origins[1]+new Vector3(.7f,0,side*2));
             }
-            yield return Until(62);Variant(krag,0);Variant(nib,0);
+            // Keep the fourth replacement visible for the same four seconds
+            // as the preceding variants before returning to the natural pair.
+            yield return Until(64);Variant(krag,0);Variant(nib,0);
             krag.MoveTo(origins[0]-Vector3.forward);nib.MoveTo(origins[1]-Vector3.forward);
             yield return Until(65);krag.MoveTo(origins[0]);nib.MoveTo(origins[1]);
             yield return Until(68);scene.Select(krag);krag.Trigger("Melee");nib.Trigger("Shoot");
@@ -90,7 +92,7 @@ namespace KragKings.Benchmark
             bounds.Encapsulate(scene.units[1].VisualBounds);
             Vector3 focus=bounds.center;
             float yaw=165+Mathf.Sin(t*.15f)*30;
-            if(t>=62)yaw=Mathf.Lerp(yaw,165,Mathf.Clamp01((t-62)/7));
+            if(t>=64)yaw=Mathf.Lerp(yaw,165,Mathf.Clamp01((t-64)/5));
             float required=FitDistance(bounds,focus,yaw,22);
             // Widen immediately to protect moving limbs. Tighten slowly so the
             // view does not pump as walk cycles change the rendered bounds.

@@ -556,7 +556,7 @@ void AKKBenchmarkGameMode::TickShowcase()
     auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0));if(!PC)return;
     auto* Krag=DemoUnits[0].Get();auto* Nib=DemoUnits[1].Get();
     const double Time=FPlatformTime::Seconds()-ShowcaseStartTime;
-    const double Times[]={0,6,10,14,16,18,20,24,26.5,28,36,36.5,38,45.5,47,48,52,56,60,62,65,68,72};
+    const double Times[]={0,6,10,14,16,18,20,24,26.5,28,36,36.5,38,45.5,47,48,52,56,60,64,65,68,72};
     while(ShowcasePhase<UE_ARRAY_COUNT(Times) && Time>=Times[ShowcasePhase])
     {
         switch(ShowcasePhase)
@@ -579,7 +579,9 @@ void AKKBenchmarkGameMode::TickShowcase()
         case 15:case 16:case 17:case 18:
         {
             const int32 Cycle=ShowcasePhase-15;const float Side=Cycle%2==0?1.f:-1.f;
-            Krag->SetVariantIndex(1+Cycle%3);Nib->SetVariantIndex(1+Cycle%2);
+            const auto ReplacementIndex=[Cycle](int32 Count){return Count>1?1+Cycle%(Count-1):0;};
+            Krag->SetVariantIndex(ReplacementIndex(AssetSet->Krags.Num()));
+            Nib->SetVariantIndex(ReplacementIndex(AssetSet->Nibs.Num()));
             Krag->MoveTo(PerformanceOrigins[0]+FVector(-70,-Side*200,0),Cycle%2==0);
             Nib->MoveTo(PerformanceOrigins[1]+FVector(70,-Side*200,0));break;
         }
@@ -599,9 +601,9 @@ void AKKBenchmarkGameMode::TickShowcase()
             VisibleBounds+=Unit->GetCapsuleComponent()->Bounds.GetBox();
         }
         float CameraYaw=75.f+FMath::Sin(Time*.15)*30.f;
-        if(Time>=62)
+        if(Time>=64)
         {
-            const float Settle=FMath::Clamp(float((Time-62)/7),0.f,1.f);
+            const float Settle=FMath::Clamp(float((Time-64)/5),0.f,1.f);
             CameraYaw=FMath::Lerp(CameraYaw,75.f,Settle);
         }
         PC->SetShowcaseFraming(VisibleBounds,CameraYaw,-22.f,GetWorld()->GetDeltaSeconds());
