@@ -199,8 +199,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "Not yet frozen: separate v9g coherent face/cloth study; no heavy launch without coordinated slot",
-  "nextFirstReview": "Next source neutral Front/Head, followed by profile and mouth/blink fitting checks",
+  "nextSourceJob": "benchmark/tools/krag/build-v9g-wip-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9g-wip-Natural_Front.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -313,5 +313,6 @@
       "Armor layering and clothing construction/weathering still simplified"
     ],
     "reviewReceipt": "v9e-source-review.json"
-  }
+  },
+  "preparedV9gRecipe": "benchmark/art/krag/v9g-prepared-recipe.json"
 }

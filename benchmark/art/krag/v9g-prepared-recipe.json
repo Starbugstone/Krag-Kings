@@ -1,0 +1,73 @@
+{
+  "status": "Prepared isolated v9g face/cloth study; not generated or accepted",
+  "baseRecipe": "benchmark/art/krag/v9f-prepared-recipe.json",
+  "baseRecipeUnchanged": true,
+  "basedOnActualSourceSha256": "86656d076fd13b886837b9973301cb587a0f99bf6a96cd7fec9baa8fba44abe3",
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9g_wip/build_v9g.py",
+      "sha256": "b143e869ac7ad3ad58fb6dcfd7478268df08d7c8b886ec2504cd9f62ceef0041"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/face_planes.py",
+      "sha256": "5add08b9eab8ca7850dcc711f8e10419dceaf52d5c763aeef11a3736045ef4b4"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/scarf_cloth.py",
+      "sha256": "12f27e9825d6b79b68d5c0e5ab6c6c5e760a63d740f28c14e68719a687ed1f0e"
+    },
+    {
+      "path": "benchmark/tools/krag/build-v9g-wip-job.json",
+      "sha256": "17058482604707e950a23488dcf074b40aa5e08c43712c6e17f474bcf309c5d0"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_Front.json",
+      "sha256": "155012977bba4401bd37925084858b9287c4cbd52f6a22f60f8a2215dbabeb85"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_Head.json",
+      "sha256": "38f491109a4436feab5d3d864332b5d8dc7947b178f5561623f042152c2d4cb5"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_HeadSide.json",
+      "sha256": "a56778f86cd83a9ed7c553303c3afc0bd60672c55bbd07b5c5261f8fd8027962"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_Back.json",
+      "sha256": "8d9c83bc9d4ca8b4ecc424a84f254f26dae5ad940bc18fd4dc5b15d363d7df38"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_Front-Shoot.json",
+      "sha256": "3279fbed361cbdda37e427e16884fc33e58a341d48a032b5e073375c57ac4257"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Natural_RightGrip-Shoot.json",
+      "sha256": "74e69624aae214655212b448697079d277bc7e1235434e8628b2f1d931a06a42"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-Blink.json",
+      "sha256": "aa56e3303f26416f557b770d257a316c217629833817f2483e442c3d373741e6"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-wip-OpenMouth.json",
+      "sha256": "802098e5b993d6819c77ffe3cd2fac3c62fbbbdf2e9f4f19d69fad72e012c4f5"
+    }
+  ],
+  "changes": [
+    "Continuous paired brow/bridge, nasolabial cheek and mandibular form refinement",
+    "Longer curved tusks fitted through same head assembly transform",
+    "Physically settled broad asymmetrical scarf, actual cage collisions and self-collision"
+  ],
+  "unchanged": [
+    "Whole-head v9f assembly scale",
+    "Anatomical torso and hand domains/pivots",
+    "Current weapon module and muzzle/socket geometry",
+    "Pinned shared v7 runtime package"
+  ],
+  "requiredReviews": [
+    "Actual neutral Front/Head and profile before acceptance",
+    "Blink and provisional open-mouth/tusk contact",
+    "Shoot cloth/neck clearance",
+    "Back cloth/armor fit"
+  ]
+}

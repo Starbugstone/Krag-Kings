@@ -1,0 +1,30 @@
+{
+  "name": "krag-build-v9g-wip",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\build_v9g.py",
+    "--",
+    "--skip-render",
+    "--master-path",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9g_WIP.blend",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9g-source",
+    "--continuous-head",
+    "--aim-solver",
+    "--anatomical-domain",
+    "--anatomical-grip",
+    "--reference-head-scale",
+    "--broad-scarf",
+    "--topological-hands"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\build-v9g-wip.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\build-v9g-wip.stderr.log",
+  "maxPrivateGB": 8
+}
