@@ -1,0 +1,530 @@
+{
+  "metas": [
+    {
+      "path": "animations.meta",
+      "beforeSha256": "3a2cecba4c742b78fb6f5209a60209bcd776949509ec0b90206ba6144c4acfca",
+      "afterSha256": "3a2cecba4c742b78fb6f5209a60209bcd776949509ec0b90206ba6144c4acfca",
+      "byteUnchanged": true,
+      "currentGuid": "0e9f06fb8610ad74f9e3d3e4549b9a05"
+    },
+    {
+      "path": "asset_manifest.json.meta",
+      "beforeSha256": "0ba3d0b2364b69e8131943e6c7e0f6677a0d6dc5af5e372f05d7d7d50a16e207",
+      "afterSha256": "0ba3d0b2364b69e8131943e6c7e0f6677a0d6dc5af5e372f05d7d7d50a16e207",
+      "byteUnchanged": true,
+      "currentGuid": "36b47394ec99bcd419aed386ba0060d0"
+    },
+    {
+      "path": "facial-rig.json.meta",
+      "beforeSha256": "818fd3bb8fe816672acb99c6d0d9b03f7f1a8989bf3dd70c6df7456562333f83",
+      "afterSha256": "818fd3bb8fe816672acb99c6d0d9b03f7f1a8989bf3dd70c6df7456562333f83",
+      "byteUnchanged": true,
+      "currentGuid": "0cf5fad3c659c91478a630c5a7b0d285"
+    },
+    {
+      "path": "manifest.json.meta",
+      "beforeSha256": "786c7a4fbdf6de20687ffccb273524c164a3eb34c9c2aed230ddfcfdce4e401c",
+      "afterSha256": "786c7a4fbdf6de20687ffccb273524c164a3eb34c9c2aed230ddfcfdce4e401c",
+      "byteUnchanged": true,
+      "currentGuid": "2eadf1b33c2e9f647bb6ab7de93cd305"
+    },
+    {
+      "path": "Nib_GripReplacement.fbx.meta",
+      "beforeSha256": "3c92a2449e536247aa7a9ca6bec8e373f7597c2981bcb5e7a1e494962edf106d",
+      "afterSha256": "690e860e187d3b36116a289640e2955ef2bda7aa9251bb838ae50e7466caf27a",
+      "byteUnchanged": false,
+      "currentGuid": "5561f32e203adcd428c5a5a2153c922b"
+    },
+    {
+      "path": "Nib_LegReplacement.fbx.meta",
+      "beforeSha256": "1a3f3ddaca57eddedd632ce30a3016b4111b4f8f0744551a119e47e7de67b110",
+      "afterSha256": "18045a48f7780561348e328d96ef1a1eb2be7f998cbbb61481b0af24fa794e7f",
+      "byteUnchanged": false,
+      "currentGuid": "b57a4e888fec62245961c1b47ddfcc37"
+    },
+    {
+      "path": "Nib_Natural.fbx.meta",
+      "beforeSha256": "e0510d00fc6757d573e40ff4faeeac2e610157a49a067485d79b278e3568cd8d",
+      "afterSha256": "a6d2daff25821ec645927feed4685403c616c68c29ff3493dbab25639f25722d",
+      "byteUnchanged": false,
+      "currentGuid": "029039fa1ab1a7245a9c02ec3dd23a6b"
+    },
+    {
+      "path": "textures.meta",
+      "beforeSha256": "4c3add3b1e1340d81bd46e2d90e048c530ad6f1519be06b1b3f7c79ecda4a203",
+      "afterSha256": "4c3add3b1e1340d81bd46e2d90e048c530ad6f1519be06b1b3f7c79ecda4a203",
+      "byteUnchanged": true,
+      "currentGuid": "661a9fb759006374fa789c5f994b7ec4"
+    },
+    {
+      "path": "animations/FacePerformance.fbx.meta",
+      "beforeSha256": "de3c93b4c029d7f9d979c0322d9d9951969d7b5963c0827dae2d44b14bdd345d",
+      "afterSha256": "de3c93b4c029d7f9d979c0322d9d9951969d7b5963c0827dae2d44b14bdd345d",
+      "byteUnchanged": true,
+      "currentGuid": "7afdd6558a16abd4da2d86c9caeefadf"
+    },
+    {
+      "path": "animations/Hit.fbx.meta",
+      "beforeSha256": "343a38973cd1195328cf746cdc3886a06af762d9ec0d3441aecd9cc2f1b6f140",
+      "afterSha256": "343a38973cd1195328cf746cdc3886a06af762d9ec0d3441aecd9cc2f1b6f140",
+      "byteUnchanged": true,
+      "currentGuid": "864d9f811740ed24a999cf157b7b2ba4"
+    },
+    {
+      "path": "animations/Idle.fbx.meta",
+      "beforeSha256": "8a2bcc2fa3fc0db2697de89d737a01db471b0d549d9db2d021afd7244869e433",
+      "afterSha256": "8a2bcc2fa3fc0db2697de89d737a01db471b0d549d9db2d021afd7244869e433",
+      "byteUnchanged": true,
+      "currentGuid": "2274542bd96e76942beaffb31ce53489"
+    },
+    {
+      "path": "animations/Melee.fbx.meta",
+      "beforeSha256": "45ce2e809137fe123c810905744bab5c904afb4dcf95a4c44ab88651961e7222",
+      "afterSha256": "45ce2e809137fe123c810905744bab5c904afb4dcf95a4c44ab88651961e7222",
+      "byteUnchanged": true,
+      "currentGuid": "7ca1a48ca0d217944a0cefccf9cca625"
+    },
+    {
+      "path": "animations/Run.fbx.meta",
+      "beforeSha256": "3e7142cdbfcf55aa8c79fb86783b3c9da775e00d6261217c5a363a9c6e52fe38",
+      "afterSha256": "3e7142cdbfcf55aa8c79fb86783b3c9da775e00d6261217c5a363a9c6e52fe38",
+      "byteUnchanged": true,
+      "currentGuid": "b33066e6e3ffdbc46a307b13df87807e"
+    },
+    {
+      "path": "animations/Shoot.fbx.meta",
+      "beforeSha256": "5d0fbcd46d09dee2a629d577a8f468517da30237be9354b94821fd3401ebfe16",
+      "afterSha256": "5d0fbcd46d09dee2a629d577a8f468517da30237be9354b94821fd3401ebfe16",
+      "byteUnchanged": true,
+      "currentGuid": "70fc44d001795254a95c6b264b0f9eda"
+    },
+    {
+      "path": "animations/Walk.fbx.meta",
+      "beforeSha256": "41f10c15c10151f918027175c1475ad408286bf08c03ffef3a05ff78b91fdbf0",
+      "afterSha256": "41f10c15c10151f918027175c1475ad408286bf08c03ffef3a05ff78b91fdbf0",
+      "byteUnchanged": true,
+      "currentGuid": "f205fa7a996701a4591624c5612c7b17"
+    },
+    {
+      "path": "textures/Nib_Brass_BaseColor.png.meta",
+      "beforeSha256": "279ca31d10a19a2313baa0d2495622aad11d99c97fdda3a4beeea29545207174",
+      "afterSha256": "279ca31d10a19a2313baa0d2495622aad11d99c97fdda3a4beeea29545207174",
+      "byteUnchanged": true,
+      "currentGuid": "07ea39b79ee7fee46adaf368eeea97b8"
+    },
+    {
+      "path": "textures/Nib_Brass_Metallic.png.meta",
+      "beforeSha256": "b3df79643ab6881d86161d69ce52ed21e646c8a8feff394796cf6a08f8b06f9b",
+      "afterSha256": "b3df79643ab6881d86161d69ce52ed21e646c8a8feff394796cf6a08f8b06f9b",
+      "byteUnchanged": true,
+      "currentGuid": "292ce2ee270661948bbd7e84d5b8b43a"
+    },
+    {
+      "path": "textures/Nib_Brass_Normal.png.meta",
+      "beforeSha256": "f6f5e16b663376e169a5f70cfe40836241935e6294291b18d408ab16b268e0c5",
+      "afterSha256": "f6f5e16b663376e169a5f70cfe40836241935e6294291b18d408ab16b268e0c5",
+      "byteUnchanged": true,
+      "currentGuid": "63ea7093dc31d874691b574fc0cefb7e"
+    },
+    {
+      "path": "textures/Nib_Brass_Roughness.png.meta",
+      "beforeSha256": "313dd10d016dff7b296aeea53566a9dc10cf1117702625492abae776d053b054",
+      "afterSha256": "313dd10d016dff7b296aeea53566a9dc10cf1117702625492abae776d053b054",
+      "byteUnchanged": true,
+      "currentGuid": "51db84a441f986e42b937657a48dacd0"
+    },
+    {
+      "path": "textures/Nib_Cloth_BaseColor.png.meta",
+      "beforeSha256": "9222fa8c3d3843013fd1d0bda3882e85d5df949a95c44dcb415674865c5fe5ec",
+      "afterSha256": "9222fa8c3d3843013fd1d0bda3882e85d5df949a95c44dcb415674865c5fe5ec",
+      "byteUnchanged": true,
+      "currentGuid": "8f752b08502c0d6448e6a962d60654aa"
+    },
+    {
+      "path": "textures/Nib_Cloth_Metallic.png.meta",
+      "beforeSha256": "105f5883d3e7d139c201e65aa9e869d2f0806d661a0026f4dd5c4151e64540ae",
+      "afterSha256": "105f5883d3e7d139c201e65aa9e869d2f0806d661a0026f4dd5c4151e64540ae",
+      "byteUnchanged": true,
+      "currentGuid": "5d3b0ae2888bd204fbf3bd8a0f7ac1b3"
+    },
+    {
+      "path": "textures/Nib_Cloth_Normal.png.meta",
+      "beforeSha256": "6b2454ce91c19ccef3c148d53f3ede3c6b1607df51d72f00937fbffc738aabef",
+      "afterSha256": "6b2454ce91c19ccef3c148d53f3ede3c6b1607df51d72f00937fbffc738aabef",
+      "byteUnchanged": true,
+      "currentGuid": "bb5656976398ad641a351af496c4bf4f"
+    },
+    {
+      "path": "textures/Nib_Cloth_Roughness.png.meta",
+      "beforeSha256": "d08d80652e429bff14b151fbfbe49779515350a9f7441777c2c4b995849dbd82",
+      "afterSha256": "d08d80652e429bff14b151fbfbe49779515350a9f7441777c2c4b995849dbd82",
+      "byteUnchanged": true,
+      "currentGuid": "016aca04cb5ef86438b744ab7c2c8852"
+    },
+    {
+      "path": "textures/Nib_Dark_BaseColor.png.meta",
+      "beforeSha256": "1f3b091347706a99aa156824ac301f912a2979daee42bf7f5626c9d5b043b6bf",
+      "afterSha256": "1f3b091347706a99aa156824ac301f912a2979daee42bf7f5626c9d5b043b6bf",
+      "byteUnchanged": true,
+      "currentGuid": "7b5a42a083561ed40873f722f8e76f86"
+    },
+    {
+      "path": "textures/Nib_Dark_Metallic.png.meta",
+      "beforeSha256": "078d754a2e91cedda741d716d889aba966a2223b4f969c8ff4178074f5de9384",
+      "afterSha256": "078d754a2e91cedda741d716d889aba966a2223b4f969c8ff4178074f5de9384",
+      "byteUnchanged": true,
+      "currentGuid": "2074b838280ca644f8020ff1db8a380b"
+    },
+    {
+      "path": "textures/Nib_Dark_Normal.png.meta",
+      "beforeSha256": "f0a5684d6ccd7bc508ca8cd1dc0add14c2a7ca4f0f2a20f4b8b8056e19ec770c",
+      "afterSha256": "f0a5684d6ccd7bc508ca8cd1dc0add14c2a7ca4f0f2a20f4b8b8056e19ec770c",
+      "byteUnchanged": true,
+      "currentGuid": "6c43aa4fc7e2df3458c349e4bedd421f"
+    },
+    {
+      "path": "textures/Nib_Dark_Roughness.png.meta",
+      "beforeSha256": "895adf40ea2300dcedd7fd13c6b7d8e404da670037a20af972d7869f58ee93cc",
+      "afterSha256": "895adf40ea2300dcedd7fd13c6b7d8e404da670037a20af972d7869f58ee93cc",
+      "byteUnchanged": true,
+      "currentGuid": "d160a702d22d42940ae6ba0595a8a343"
+    },
+    {
+      "path": "textures/Nib_Gum_BaseColor.png.meta",
+      "beforeSha256": "7b5fa292562eac512feee02b2b16f9f69195d158d4f19434fabc0c212f60da7d",
+      "afterSha256": "7b5fa292562eac512feee02b2b16f9f69195d158d4f19434fabc0c212f60da7d",
+      "byteUnchanged": true,
+      "currentGuid": "5f0e587747438334b9d39cd41fce301e"
+    },
+    {
+      "path": "textures/Nib_Gum_Metallic.png.meta",
+      "beforeSha256": "81b9b5244ca845a907919a43c073370c235d3a53ad0b255ef4a29f4b74ce0dc4",
+      "afterSha256": "81b9b5244ca845a907919a43c073370c235d3a53ad0b255ef4a29f4b74ce0dc4",
+      "byteUnchanged": true,
+      "currentGuid": "d42ddfe8c0c7dc34890227d9f3bea50c"
+    },
+    {
+      "path": "textures/Nib_Gum_Normal.png.meta",
+      "beforeSha256": "c605365e70e1fd536eb68cf76f1a0d02552c3c5fbdff9d437ad03a39408d2e99",
+      "afterSha256": "c605365e70e1fd536eb68cf76f1a0d02552c3c5fbdff9d437ad03a39408d2e99",
+      "byteUnchanged": true,
+      "currentGuid": "0a3836e7772f3884aaddd6b665c96ebe"
+    },
+    {
+      "path": "textures/Nib_Gum_Roughness.png.meta",
+      "beforeSha256": "a509092fecd62b4589f41c08b95e615a43216ee58d1c9c1c655e1431825904d6",
+      "afterSha256": "a509092fecd62b4589f41c08b95e615a43216ee58d1c9c1c655e1431825904d6",
+      "byteUnchanged": true,
+      "currentGuid": "c5e741fd350fd9645b61917d1e4e617e"
+    },
+    {
+      "path": "textures/Nib_Hair_BaseColor.png.meta",
+      "beforeSha256": "8322d3c5019952ccfc15e4c1c88f20abf1b0bc4cf6c7c5a2ffa6640b7ca74140",
+      "afterSha256": "8322d3c5019952ccfc15e4c1c88f20abf1b0bc4cf6c7c5a2ffa6640b7ca74140",
+      "byteUnchanged": true,
+      "currentGuid": "6bd99cbb80f93874fb9906930bbefcaa"
+    },
+    {
+      "path": "textures/Nib_Hair_Metallic.png.meta",
+      "beforeSha256": "c598d8bc2dd6de299109b9dcc8114e8d515c48a7caae49ca88cfae1a47e66186",
+      "afterSha256": "c598d8bc2dd6de299109b9dcc8114e8d515c48a7caae49ca88cfae1a47e66186",
+      "byteUnchanged": true,
+      "currentGuid": "de1cceb98a7a2e243b945f23317a1553"
+    },
+    {
+      "path": "textures/Nib_Hair_Normal.png.meta",
+      "beforeSha256": "9aab27872aba10b6eaab26e54d2874bc79f13b1cda494e4b08464e759f2cc4ad",
+      "afterSha256": "9aab27872aba10b6eaab26e54d2874bc79f13b1cda494e4b08464e759f2cc4ad",
+      "byteUnchanged": true,
+      "currentGuid": "de46c07ac62e4fb45aead1d54f3a50ab"
+    },
+    {
+      "path": "textures/Nib_Hair_Roughness.png.meta",
+      "beforeSha256": "5107755ce7cb850e76963a1474452098b645138dcbe99c4d91b50731076901ba",
+      "afterSha256": "5107755ce7cb850e76963a1474452098b645138dcbe99c4d91b50731076901ba",
+      "byteUnchanged": true,
+      "currentGuid": "bae20b349142c8648a3eeebd72a8b710"
+    },
+    {
+      "path": "textures/Nib_Leather_BaseColor.png.meta",
+      "beforeSha256": "262740e1181f648ad21fd2290959616ad43e1a50882e87f72f6e557fdb0ae599",
+      "afterSha256": "262740e1181f648ad21fd2290959616ad43e1a50882e87f72f6e557fdb0ae599",
+      "byteUnchanged": true,
+      "currentGuid": "1a12ed0ad24990a4ea664cebc30bf55a"
+    },
+    {
+      "path": "textures/Nib_Leather_Metallic.png.meta",
+      "beforeSha256": "a9509e2bb3a56941094070d9f87e118fc3777a75694dd18e6428c699d6faf499",
+      "afterSha256": "a9509e2bb3a56941094070d9f87e118fc3777a75694dd18e6428c699d6faf499",
+      "byteUnchanged": true,
+      "currentGuid": "d587beace7d6e45478622873a3955d8a"
+    },
+    {
+      "path": "textures/Nib_Leather_Normal.png.meta",
+      "beforeSha256": "6124d0a527225d54f2e467129301bb009261de8b315a067d4cc28fe3cc8767e1",
+      "afterSha256": "6124d0a527225d54f2e467129301bb009261de8b315a067d4cc28fe3cc8767e1",
+      "byteUnchanged": true,
+      "currentGuid": "be762dd7388cc86499405cc8c0b2290f"
+    },
+    {
+      "path": "textures/Nib_Leather_Roughness.png.meta",
+      "beforeSha256": "3437f8ad8c06e5451b7869c13d300cc27c8b29b33823a147eb222be45d83894e",
+      "afterSha256": "3437f8ad8c06e5451b7869c13d300cc27c8b29b33823a147eb222be45d83894e",
+      "byteUnchanged": true,
+      "currentGuid": "6aa3cd55cb386d8408dc3ef0a4afdd56"
+    },
+    {
+      "path": "textures/Nib_Lens_BaseColor.png.meta",
+      "beforeSha256": "6b8a6e2a8f3c4d61ee92d7469d918eb23f60b6b9334da9f7629ce61442232ba8",
+      "afterSha256": "6b8a6e2a8f3c4d61ee92d7469d918eb23f60b6b9334da9f7629ce61442232ba8",
+      "byteUnchanged": true,
+      "currentGuid": "fc71ba5eedbfe694ca7496e962d08632"
+    },
+    {
+      "path": "textures/Nib_Lens_Metallic.png.meta",
+      "beforeSha256": "eaec584ca68553a3c7cc0c2097640568b65876bcb0dcbccc2016c32a2d19e942",
+      "afterSha256": "eaec584ca68553a3c7cc0c2097640568b65876bcb0dcbccc2016c32a2d19e942",
+      "byteUnchanged": true,
+      "currentGuid": "152a0f178e87a8749bdacc75ec086385"
+    },
+    {
+      "path": "textures/Nib_Lens_Normal.png.meta",
+      "beforeSha256": "f4c04803bf906bf16b8d3996f393615f67bf8b0c071d50cee797e913b6bbb134",
+      "afterSha256": "f4c04803bf906bf16b8d3996f393615f67bf8b0c071d50cee797e913b6bbb134",
+      "byteUnchanged": true,
+      "currentGuid": "e6affe6730239524ebb62b1c36ab9318"
+    },
+    {
+      "path": "textures/Nib_Lens_Roughness.png.meta",
+      "beforeSha256": "a19f297673e94aadff949c9e654ef6b43e48bc04f5983b237836018057a6a3b1",
+      "afterSha256": "a19f297673e94aadff949c9e654ef6b43e48bc04f5983b237836018057a6a3b1",
+      "byteUnchanged": true,
+      "currentGuid": "40b71ace07c6d9749a7c9c9da0dacd6c"
+    },
+    {
+      "path": "textures/Nib_MouthInterior_BaseColor.png.meta",
+      "beforeSha256": "6aefaaf3192f3a90a030d2a599fa23b7766cfc6e036a6aaad4a36680ff251f9d",
+      "afterSha256": "6aefaaf3192f3a90a030d2a599fa23b7766cfc6e036a6aaad4a36680ff251f9d",
+      "byteUnchanged": true,
+      "currentGuid": "4b7ef66922d445f4580cd55db9af6827"
+    },
+    {
+      "path": "textures/Nib_MouthInterior_Metallic.png.meta",
+      "beforeSha256": "4f410e810a3e1d0a881252f3efb4c7a58c2a517bbdec60fa46ba5e212b954126",
+      "afterSha256": "4f410e810a3e1d0a881252f3efb4c7a58c2a517bbdec60fa46ba5e212b954126",
+      "byteUnchanged": true,
+      "currentGuid": "7f15e13197d33054482a857758c6f72a"
+    },
+    {
+      "path": "textures/Nib_MouthInterior_Normal.png.meta",
+      "beforeSha256": "a2e129974e33921230839b88ea4ae9205a2699105079ec6b16bcf230b090345e",
+      "afterSha256": "a2e129974e33921230839b88ea4ae9205a2699105079ec6b16bcf230b090345e",
+      "byteUnchanged": true,
+      "currentGuid": "4f00bea81a1986b4ab1224021a9fed2a"
+    },
+    {
+      "path": "textures/Nib_MouthInterior_Roughness.png.meta",
+      "beforeSha256": "f17ec340326270e628d28ab4d5f114639050743a3f697167fc23ff4a6411b2ca",
+      "afterSha256": "f17ec340326270e628d28ab4d5f114639050743a3f697167fc23ff4a6411b2ca",
+      "byteUnchanged": true,
+      "currentGuid": "2d2e465c15cc0b64a98677cb5abc5ad8"
+    },
+    {
+      "path": "textures/Nib_Skin_BaseColor.png.meta",
+      "beforeSha256": "bef334e045d655ed2dd5f2a0ee290b8c9b856d0684ed27b55248977d5744b529",
+      "afterSha256": "bef334e045d655ed2dd5f2a0ee290b8c9b856d0684ed27b55248977d5744b529",
+      "byteUnchanged": true,
+      "currentGuid": "79e442ec5e6f8e94a82ce457c5005986"
+    },
+    {
+      "path": "textures/Nib_Skin_Metallic.png.meta",
+      "beforeSha256": "364d00df7bd05797c2b995176fde12b20fc75d9acdc9a36b9410e9777667d647",
+      "afterSha256": "364d00df7bd05797c2b995176fde12b20fc75d9acdc9a36b9410e9777667d647",
+      "byteUnchanged": true,
+      "currentGuid": "b3f2df6577346b045b5b96fb8ebe06e5"
+    },
+    {
+      "path": "textures/Nib_Skin_Normal.png.meta",
+      "beforeSha256": "78ec3aa77ca0a037f0c5578fc7b7b451ca3e3b5fad1d1a88943f3146c3fcd38b",
+      "afterSha256": "78ec3aa77ca0a037f0c5578fc7b7b451ca3e3b5fad1d1a88943f3146c3fcd38b",
+      "byteUnchanged": true,
+      "currentGuid": "4d46b7cd1f1986f49a0b3d013bd937ae"
+    },
+    {
+      "path": "textures/Nib_Skin_Roughness.png.meta",
+      "beforeSha256": "702d2684cde2d508355185c8b41012156214794136dca49993bbd04266a79c34",
+      "afterSha256": "702d2684cde2d508355185c8b41012156214794136dca49993bbd04266a79c34",
+      "byteUnchanged": true,
+      "currentGuid": "d17fa957f027a2f40bf4c6a8d867e16b"
+    },
+    {
+      "path": "textures/Nib_Steel_BaseColor.png.meta",
+      "beforeSha256": "e143be31e4860daf4c0c48c3848057ec1731eedd5f180352b14c1801570d4627",
+      "afterSha256": "e143be31e4860daf4c0c48c3848057ec1731eedd5f180352b14c1801570d4627",
+      "byteUnchanged": true,
+      "currentGuid": "4edad1673bd72d84cb11f3d14c84389c"
+    },
+    {
+      "path": "textures/Nib_Steel_Metallic.png.meta",
+      "beforeSha256": "8e8c7539b8f38491c286106cada086f00a6d8d3c97d19dabeee370b0739060ed",
+      "afterSha256": "8e8c7539b8f38491c286106cada086f00a6d8d3c97d19dabeee370b0739060ed",
+      "byteUnchanged": true,
+      "currentGuid": "e50c138843d692d448182828df4858d7"
+    },
+    {
+      "path": "textures/Nib_Steel_Normal.png.meta",
+      "beforeSha256": "e1f051f3f68e99810b5174f0fb2cef2374b6bc3a188395f6a535cf0950db97a6",
+      "afterSha256": "e1f051f3f68e99810b5174f0fb2cef2374b6bc3a188395f6a535cf0950db97a6",
+      "byteUnchanged": true,
+      "currentGuid": "1b0d42fda59947f47af8b04113c2f316"
+    },
+    {
+      "path": "textures/Nib_Steel_Roughness.png.meta",
+      "beforeSha256": "8fe5a198a69728de7834c4061aabb4f48411b72ef114a051b92b070b59368319",
+      "afterSha256": "8fe5a198a69728de7834c4061aabb4f48411b72ef114a051b92b070b59368319",
+      "byteUnchanged": true,
+      "currentGuid": "e496b6aa8617c1e4db197edd20e9ddc1"
+    },
+    {
+      "path": "textures/Nib_Stitch_BaseColor.png.meta",
+      "beforeSha256": "0b136752e961c8e85f0caa8995d20e7d8267af40cfe8d28ddc12f739a04b9186",
+      "afterSha256": "0b136752e961c8e85f0caa8995d20e7d8267af40cfe8d28ddc12f739a04b9186",
+      "byteUnchanged": true,
+      "currentGuid": "acbc9fd450106f244875b979b425ee2c"
+    },
+    {
+      "path": "textures/Nib_Stitch_Metallic.png.meta",
+      "beforeSha256": "6fe1d059a0ddba749e5d103f87a4bb7ffe0ffcf830376996ee60317d6741ea3f",
+      "afterSha256": "6fe1d059a0ddba749e5d103f87a4bb7ffe0ffcf830376996ee60317d6741ea3f",
+      "byteUnchanged": true,
+      "currentGuid": "2abfe95a12bf4d94cb6cb51bc9b8b081"
+    },
+    {
+      "path": "textures/Nib_Stitch_Normal.png.meta",
+      "beforeSha256": "f9398a2098d6c34de73c30844df1b85e36db24b929c9ccb42627a9978d8e6ddb",
+      "afterSha256": "f9398a2098d6c34de73c30844df1b85e36db24b929c9ccb42627a9978d8e6ddb",
+      "byteUnchanged": true,
+      "currentGuid": "4cbcf6ae2cc20494ab03cf6ee062b5b2"
+    },
+    {
+      "path": "textures/Nib_Stitch_Roughness.png.meta",
+      "beforeSha256": "08fc1e3cb66bfe061b7124df5988766cf9bc46fff0ec3b485d69752ecd27908f",
+      "afterSha256": "08fc1e3cb66bfe061b7124df5988766cf9bc46fff0ec3b485d69752ecd27908f",
+      "byteUnchanged": true,
+      "currentGuid": "cee738a8f8d3f834785744204455dfce"
+    },
+    {
+      "path": "textures/Nib_Teal_BaseColor.png.meta",
+      "beforeSha256": "d5e253e355f736893836a6c0eda9009557c73ffee203b5515422bd7f73dfab66",
+      "afterSha256": "d5e253e355f736893836a6c0eda9009557c73ffee203b5515422bd7f73dfab66",
+      "byteUnchanged": true,
+      "currentGuid": "fe07934bd7f5ecc4580908531f24ee25"
+    },
+    {
+      "path": "textures/Nib_Teal_Metallic.png.meta",
+      "beforeSha256": "31de63906e1e8701bb9900efa7762a793132662d99395bc3bc52c6b96671a88d",
+      "afterSha256": "31de63906e1e8701bb9900efa7762a793132662d99395bc3bc52c6b96671a88d",
+      "byteUnchanged": true,
+      "currentGuid": "73e08070200c7fd46abafcb305dad6ac"
+    },
+    {
+      "path": "textures/Nib_Teal_Normal.png.meta",
+      "beforeSha256": "bfbf93c715833b7b0511bfacf86ed128cfc4c74b15ff84408288e6cd300c2ce0",
+      "afterSha256": "bfbf93c715833b7b0511bfacf86ed128cfc4c74b15ff84408288e6cd300c2ce0",
+      "byteUnchanged": true,
+      "currentGuid": "68a7e4eb46bd3ac44b1124ff7b3757a8"
+    },
+    {
+      "path": "textures/Nib_Teal_Roughness.png.meta",
+      "beforeSha256": "9fc3ce9973739b9c24a4588c684c2825697fd79aae1f909a746ef7744d4a56b7",
+      "afterSha256": "9fc3ce9973739b9c24a4588c684c2825697fd79aae1f909a746ef7744d4a56b7",
+      "byteUnchanged": true,
+      "currentGuid": "b9c070145aaf75e44b06765d998d856e"
+    },
+    {
+      "path": "textures/Nib_Tongue_BaseColor.png.meta",
+      "beforeSha256": "f7ed7a1fa295cc4063a1e0d4839042e3b9f29189fe8a20630f42c9aa6142a58d",
+      "afterSha256": "f7ed7a1fa295cc4063a1e0d4839042e3b9f29189fe8a20630f42c9aa6142a58d",
+      "byteUnchanged": true,
+      "currentGuid": "86c61dd890932af4f9d544156039d045"
+    },
+    {
+      "path": "textures/Nib_Tongue_Metallic.png.meta",
+      "beforeSha256": "65245eadf936f1421b013b16e04eab4babf976c32c441354b4f505df1476a635",
+      "afterSha256": "65245eadf936f1421b013b16e04eab4babf976c32c441354b4f505df1476a635",
+      "byteUnchanged": true,
+      "currentGuid": "711d02c237916114493a7c9b8f58e700"
+    },
+    {
+      "path": "textures/Nib_Tongue_Normal.png.meta",
+      "beforeSha256": "212f779e688f48ab46bcea355d8a3ac7ae6576516838ae74bb76dbb6f2e40481",
+      "afterSha256": "212f779e688f48ab46bcea355d8a3ac7ae6576516838ae74bb76dbb6f2e40481",
+      "byteUnchanged": true,
+      "currentGuid": "878ef67818de4994d93a27eeea973b23"
+    },
+    {
+      "path": "textures/Nib_Tongue_Roughness.png.meta",
+      "beforeSha256": "06ba99690171bd3598951fd739aecdb86ade36052c3f08b1b6fdcec40a830939",
+      "afterSha256": "06ba99690171bd3598951fd739aecdb86ade36052c3f08b1b6fdcec40a830939",
+      "byteUnchanged": true,
+      "currentGuid": "f33831a9a69a0ae4d9e2166cabbf3af5"
+    },
+    {
+      "path": "textures/Nib_Tooth_BaseColor.png.meta",
+      "beforeSha256": "88b970b64469ec0b1ac248be17172ba12f6463843d126410a126efb1762a1e40",
+      "afterSha256": "88b970b64469ec0b1ac248be17172ba12f6463843d126410a126efb1762a1e40",
+      "byteUnchanged": true,
+      "currentGuid": "edb3815a39af9704f828645c9d6e8821"
+    },
+    {
+      "path": "textures/Nib_Tooth_Metallic.png.meta",
+      "beforeSha256": "c525c6f393fe3412478c6ad27373b786bde43911567688d9c6f715901567f797",
+      "afterSha256": "c525c6f393fe3412478c6ad27373b786bde43911567688d9c6f715901567f797",
+      "byteUnchanged": true,
+      "currentGuid": "14e423956ff98f944a8ac0740157c579"
+    },
+    {
+      "path": "textures/Nib_Tooth_Normal.png.meta",
+      "beforeSha256": "5b7cebabee69d29d0d2680c26f7ba51d46154ddf71fe758a318aafe22e163631",
+      "afterSha256": "5b7cebabee69d29d0d2680c26f7ba51d46154ddf71fe758a318aafe22e163631",
+      "byteUnchanged": true,
+      "currentGuid": "ba74deac908ddf7429bc208604f365f9"
+    },
+    {
+      "path": "textures/Nib_Tooth_Roughness.png.meta",
+      "beforeSha256": "c236266fb4bebdb3e8567c59e1c98b7998dc2118533997cdf6ea0c0b3cfa0145",
+      "afterSha256": "c236266fb4bebdb3e8567c59e1c98b7998dc2118533997cdf6ea0c0b3cfa0145",
+      "byteUnchanged": true,
+      "currentGuid": "8e2034d8c7245f345b94a43b03f85963"
+    },
+    {
+      "path": "textures/Nib_Workwear_BaseColor.png.meta",
+      "beforeSha256": "895cc11cadeddc0848ce91f7aceba27fed98ae5f62225ee58e21c8c242e2dffd",
+      "afterSha256": "895cc11cadeddc0848ce91f7aceba27fed98ae5f62225ee58e21c8c242e2dffd",
+      "byteUnchanged": true,
+      "currentGuid": "f1221333c89d10745a981703bf9d6e64"
+    },
+    {
+      "path": "textures/Nib_Workwear_Metallic.png.meta",
+      "beforeSha256": "fcef3c1c5ed09ff9e90e50b40bb3d39d88a34a3b12fd640fb839ffde09c55395",
+      "afterSha256": "fcef3c1c5ed09ff9e90e50b40bb3d39d88a34a3b12fd640fb839ffde09c55395",
+      "byteUnchanged": true,
+      "currentGuid": "fbeb8dc88ba901d4caf2efe6bdac6f9f"
+    },
+    {
+      "path": "textures/Nib_Workwear_Normal.png.meta",
+      "beforeSha256": "2d3b513fb9d114e7c32fe912f78d94b02adb7035446fb929ab6b86c617119ae5",
+      "afterSha256": "2d3b513fb9d114e7c32fe912f78d94b02adb7035446fb929ab6b86c617119ae5",
+      "byteUnchanged": true,
+      "currentGuid": "d57995d4071bbec44988ace5bac9583e"
+    },
+    {
+      "path": "textures/Nib_Workwear_Roughness.png.meta",
+      "beforeSha256": "af5f64321fc05563e59754735c7810243ff831370072e71b70c2e3e5d74d8683",
+      "afterSha256": "af5f64321fc05563e59754735c7810243ff831370072e71b70c2e3e5d74d8683",
+      "byteUnchanged": true,
+      "currentGuid": "f8e48e72df649324dbdf599560d7657a"
+    }
+  ],
+  "note": "All retained meta paths were left in place. Three model metas changed during Unity reimport; other72 remain byte-identical. Prior GUIDs were not separately snapshotted, so this does not claim an independent before/after GUID proof."
+}

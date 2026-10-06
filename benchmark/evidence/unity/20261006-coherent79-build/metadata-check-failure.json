@@ -1,0 +1,10 @@
+{
+  "failedAssumption": "Unity reimport keeps entire ModelImporter meta files byte-identical. It updates imported clip configuration; GUID was not separately snapshotted beforehand.",
+  "firstFailure": "Retained meta identity changed: Nib_GripReplacement.fbx.meta",
+  "changedMetaPaths": [
+    "Nib_GripReplacement.fbx.meta",
+    "Nib_LegReplacement.fbx.meta",
+    "Nib_Natural.fbx.meta"
+  ],
+  "engineBuildFailed": false
+}

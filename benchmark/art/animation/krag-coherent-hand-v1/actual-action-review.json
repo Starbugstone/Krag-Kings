@@ -1,0 +1,43 @@
+{
+  "status": "Actual36 posed views completed; natural action hand remains failed",
+  "sourceSha256": "7db2a08ff2d8130e2af87eb8fb5b0888b64f581115786b9131653ad35eeccd37",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "individualViewsInspected": [
+    "Idle_00_palm",
+    "Run_50_palm",
+    "Run_50_edge",
+    "Melee_50_palm",
+    "Melee_50_edge",
+    "Melee_50_back"
+  ],
+  "all36ViewsInspectedAsContactSheet": true,
+  "contactSheetRows": [
+    "Hit",
+    "Idle",
+    "Melee",
+    "Run",
+    "Shoot",
+    "Walk"
+  ],
+  "contactSheetColumns": [
+    "00back",
+    "00edge",
+    "00palm",
+    "50back",
+    "50edge",
+    "50palm"
+  ],
+  "findings": [
+    "Idle retains an open relaxed hand; the old broad rest ridge is absent.",
+    "Melee fingers remain too spread with inadequate palm contact; thumb stays outside instead of opposing across the fist.",
+    "Run retains an exaggerated open C curl.",
+    "Palmar deformation creases remain during flexion, and the wrist contour is abrupt."
+  ],
+  "memory": {
+    "peakPrivateMB": 1420.0,
+    "minimumAvailableMB": 10552.0
+  },
+  "artisticAcceptance": false,
+  "engineIntegrated": false
+}

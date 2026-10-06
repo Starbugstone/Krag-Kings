@@ -1,0 +1,27 @@
+{
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4.5,
+  "name": "krag-convergent-hand-v2-source",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\krag_hand_rebuild\\refine_actions.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-coherent-hand-v1\\Krag_CoherentHand_v1.blend",
+    "--source-sha256",
+    "7db2a08ff2d8130e2af87eb8fb5b0888b64f581115786b9131653ad35eeccd37",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-convergent-hand-v2"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-convergent-hand-v2-source.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-convergent-hand-v2-source.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-convergent-hand-v2-source.stdout.log",
+  "successMarker": "KRAG_CONVERGENT_HAND_SAVED_AND_REOPENED"
+}
