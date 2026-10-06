@@ -376,3 +376,10 @@ This pass gives **visible** malar/nasolabial separation and a distinct lower-lip
 The three completed actual expression views are recorded in `v9o-mouth-review.json`, with pinned source/image hashes and guard/native exit 0. OpenMouth preserves the removed-neck clearance and shows both dental rows, but the tall dark opening, small flat-looking crowns, weak visible gum/tongue and folded lower lip remain unaccepted. Blink closes with pinched dark corners rather than a convincing soft lid roll. The attempted profile is **inconclusive** because the left pauldron covers the lower jaw; the next profile camera must be on the opposite side.
 
 The semantic IronJaw preparation identifies a closed 368-vertex attachment boundary on the actual dense face. The next isolated source will preserve Natural, remove the replaced mandible and lower oral floor from alternate surfaces, and fit a real mechanical lower arch/hinge/chin assembly. This is prepared construction, not a generated or accepted replacement. No shared assets changed.
+
+
+## Actual v4 motion-strip attribution and replacement readiness
+
+The read-only `anatomy-study/motion-strips-v4-attribution.json` samples the actual v4 source in Walk frames1/15. Neither frame contains a visible mesh edge growing by more than150mm to a length above200mm. This does not establish the floor-reaching strips as a character defect; the Workbench shadow projection is a plausible cause pending one matched shadow-disabled frame. The report also records all22 hand/finger/thumb rest bones for root-owned relaxed-hand authoring. No source geometry or actions changed.
+
+`ironjaw_wip/build_replacement_v1.py` and its jobs are prepared, not yet executed. They retain full Natural surfaces and create explicit alternate head/ocular/oral surfaces, a fitted steel casing and lower liner, coaxial cheek bearings, forged plates and a socketed dental/tusk assembly. The opposite-side review camera avoids the pauldron occlusion. All fit, opening, material and concept checks remain pending until actual generation and inspection.
