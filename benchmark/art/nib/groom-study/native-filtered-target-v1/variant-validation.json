@@ -1,0 +1,302 @@
+{
+  "variant": "Nib_Natural",
+  "file": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-native-groom-filtered-v1\\triangulated\\Nib_Natural.fbx",
+  "sha256": "3f15ce613f116122bc756b442d5d3742ac2361c9fc405bc3789eb4f4dfe2f32a",
+  "sourceContractSha256": "692ee3b108ed8fcc8d6616e79fada75dcf5c5fe4cdf37fdfdaeb9f6a53cceb9d",
+  "manifestSha256": "fcb616ecb5d2dadf3b33d8619573faace0e4e36caa11d2462dde82cff6e04904",
+  "recipeSha256": "c698cc556a29341272481d00fa2b9dfd418b9202f9b45a9c5c3b4fb271f85ad3",
+  "passed": true,
+  "errors": [],
+  "boneCount": 79,
+  "missingBones": [],
+  "extraBones": [],
+  "hierarchyMatchesSource": true,
+  "maxSourceBindMatrixError": 1.0073184967041016e-05,
+  "connectionFlagsRestoredForBlenderPlayback": [
+    "Pelvis",
+    "Chest",
+    "Head",
+    "FaceRoot",
+    "TongueTip",
+    "UpperArm_L",
+    "Hand_L",
+    "Index2_L",
+    "Index3_L",
+    "Middle2_L",
+    "Middle3_L",
+    "Ring2_L",
+    "Ring3_L",
+    "Little2_L",
+    "Little3_L",
+    "Thumb2_L",
+    "UpperArm_R",
+    "Hand_R",
+    "Index2_R",
+    "Index3_R",
+    "Middle2_R",
+    "Middle3_R",
+    "Ring2_R",
+    "Ring3_R",
+    "Little2_R",
+    "Little3_R",
+    "Thumb2_R",
+    "WeaponMuzzle",
+    "WeaponAim",
+    "Shin_L",
+    "Foot_L",
+    "Toe_L",
+    "Shin_R",
+    "Foot_R",
+    "Toe_R"
+  ],
+  "connectionNormalizationBindDrift": 0.0,
+  "vertices": 295931,
+  "triangles": 570134,
+  "allPolygonsTriangular": true,
+  "worldRestBoundsMeters": {
+    "min": [
+      -0.30907517632160453,
+      -0.11053978415021427,
+      0.0004999885936157883
+    ],
+    "max": [
+      0.30925601760234567,
+      0.09445078581967298,
+      1.3853082023342167
+    ]
+  },
+  "maximumRestBoundsErrorMeters": 1.8118134013922482e-07,
+  "invalidWeightCount": 0,
+  "materialNames": [
+    "Nib_v5_FacialSkinAtlas",
+    "Nib_MouthInterior",
+    "Nib_Gum",
+    "Nib_Tooth",
+    "Nib_Tongue",
+    "Nib_v5_TawnyEarUndercoat",
+    "Nib_v5_DustyPinkEar",
+    "Nib_Brass",
+    "Nib_Lens",
+    "Nib_Leather",
+    "Nib_Steel",
+    "Nib_Workwear",
+    "Nib_Stitch",
+    "Nib_Cloth",
+    "Nib_Skin",
+    "Nib_Dark",
+    "Nib_Teal",
+    "Nib_IdentityOcularIris_L",
+    "Nib_IdentityOcularIris_R",
+    "Nib_IdentityOcularGlobe",
+    "Nib_Hair",
+    "Nib_v6_HeadFurCards",
+    "Nib_v5_HeadFur"
+  ],
+  "morphMaximumAbsoluteDeltaMeters": {
+    "Blink_L": 0.009633541107177734,
+    "Blink_R": 0.009641051292419434,
+    "Squint_L": 0.0020864009857177734,
+    "Squint_R": 0.002088189125061035,
+    "BrowRaise_L": 0.008994698524475098,
+    "BrowRaise_R": 0.008994340896606445,
+    "BrowLower_L": 0.0059964656829833984,
+    "BrowLower_R": 0.005996227264404297,
+    "Smile_L": 0.006499528884887695,
+    "Smile_R": 0.006499886512756348,
+    "Frown_L": 0.005499601364135742,
+    "Frown_R": 0.0054999589920043945,
+    "JawOpen": 0.005000114440917969,
+    "LipPress": 0.0029997415840625763,
+    "TongueOut": 0.041989341378211975,
+    "CheekTension_L": 0.003998946398496628,
+    "CheekTension_R": 0.0039988309144973755,
+    "Corrective_ElbowFlex_L": 0.0009967498481273651,
+    "Corrective_ElbowFlex_R": 0.0010030176490545273,
+    "Corrective_HipFlex_L": 0.02736908197402954,
+    "Corrective_HipFlex_R": 0.027369074523448944,
+    "Corrective_KneeFlex_L": 0.02736908197402954,
+    "Corrective_KneeFlex_R": 0.027369074523448944,
+    "Corrective_ShoulderRaise_L": 0.0014973431825637817,
+    "Corrective_ShoulderRaise_R": 0.0014982670545578003
+  },
+  "clips": {
+    "Idle": {
+      "action": "Nib_Rig|Nib_Rig|Idle",
+      "durationSeconds": 6.0,
+      "expectedDurationSeconds": 6.0,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 6.073594304195137e-07,
+      "maximumPoseRotationErrorDegrees": 0.00017075472925033458,
+      "maximumScaleError": 9.5367431640625e-07,
+      "worstPosition": {
+        "bone": "Ring3_L",
+        "sourceFrame": 136
+      },
+      "varyingLocalFacialControls": [
+        "Eye_L",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Walk": {
+      "action": "Nib_Rig|Nib_Rig|Walk",
+      "durationSeconds": 0.8,
+      "expectedDurationSeconds": 0.8,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 5.997601687162551e-07,
+      "maximumPoseRotationErrorDegrees": 0.00017343167061495448,
+      "maximumScaleError": 9.5367431640625e-07,
+      "worstPosition": {
+        "bone": "LipLower",
+        "sourceFrame": 4
+      },
+      "varyingLocalFacialControls": [
+        "Eye_L",
+        "Eye_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Run": {
+      "action": "Nib_Rig|Nib_Rig|Run",
+      "durationSeconds": 0.6,
+      "expectedDurationSeconds": 0.6,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 7.234549787128076e-07,
+      "maximumPoseRotationErrorDegrees": 0.00037113924372861535,
+      "maximumScaleError": 9.5367431640625e-07,
+      "worstPosition": {
+        "bone": "TongueTip",
+        "sourceFrame": 12
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Melee": {
+      "action": "Nib_Rig|Nib_Rig|Melee",
+      "durationSeconds": 1.0666666666666667,
+      "expectedDurationSeconds": 1.0666666666666667,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 5.625064995341561e-07,
+      "maximumPoseRotationErrorDegrees": 0.00043440889103791755,
+      "maximumScaleError": 9.5367431640625e-07,
+      "worstPosition": {
+        "bone": "Index3_L",
+        "sourceFrame": 27
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "LipUpper",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Shoot": {
+      "action": "Nib_Rig|Nib_Rig|Shoot",
+      "durationSeconds": 1.0,
+      "expectedDurationSeconds": 1.0,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 7.115206948705508e-07,
+      "maximumPoseRotationErrorDegrees": 0.0004362574478609892,
+      "maximumScaleError": 8.940696716308594e-07,
+      "worstPosition": {
+        "bone": "WeaponAim",
+        "sourceFrame": 25
+      },
+      "varyingLocalFacialControls": [
+        "LipUpper",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Hit": {
+      "action": "Nib_Rig|Nib_Rig|Hit",
+      "durationSeconds": 0.9333333333333333,
+      "expectedDurationSeconds": 0.9333333333333333,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 6.817179461537524e-07,
+      "maximumPoseRotationErrorDegrees": 0.00025021249301294864,
+      "maximumScaleError": 9.5367431640625e-07,
+      "worstPosition": {
+        "bone": "WeaponAim",
+        "sourceFrame": 12
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "FacePerformance": {
+      "action": "Nib_Rig|Nib_Rig|FacePerformance",
+      "durationSeconds": 5.0,
+      "expectedDurationSeconds": 5.0,
+      "sampledFrames": 17,
+      "maximumPosePositionErrorMeters": 3.631728174374682e-07,
+      "maximumPoseRotationErrorDegrees": 0.00014914426157769799,
+      "maximumScaleError": 8.344650268554688e-07,
+      "worstPosition": {
+        "bone": "Little3_L",
+        "sourceFrame": 1
+      },
+      "varyingLocalFacialControls": [
+        "Jaw",
+        "TongueTip",
+        "LipUpper",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    }
+  },
+  "artisticAcceptance": false,
+  "engineImportVerified": false,
+  "limits": "17 skeletal samples per embedded take; not full-cycle mesh collision or artistic validation"
+}

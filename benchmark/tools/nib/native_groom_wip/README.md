@@ -1,4 +1,4 @@
-# Native Nib groom — actual interchange fixture, character pilot pending
+# Native Nib groom — actual source and isolated engine target
 
 The user requested native fur evaluation. Further card refinement is paused; the prepared `surface_layers_wip` root-blend recipe is retained without execution. Native strands do not yet have an accepted appearance or measured game cost.
 
@@ -42,3 +42,5 @@ Current status: **native fixture and coherent character source/posed attachment 
 `neutral-native-character-v1.job.json` and `profile-native-character-v1.job.json` are the bounded first views; their results must be inspected separately. Original meshes remain in the derivative with exact payload hashes; replaced card/opaque head-ear groups are hidden rather than deleted. Existing fine facial/body fuzz remains unchanged in this first pilot. **No engine import, tapered UE interchange, visual acceptance or game-performance claim is implied.**
 
 Both views completed guard/native 0 and were inspected against sheet 02. The head strands are visibly finer and softer and no longer expose broad rectangular card roots. Profile reveals an overly regular straight bob/comb instead of irregular clumped fur. Inner-ear fiber mass and tawny exterior coverage remain insufficient; flat ear geometry, hard tan basal ridges, rectangular retained chin fuzz, facial likeness and scarf remain failed. Root reviewed and showed Neutral to the user as an unfinished first native test. The next boundary is engine rendering/binding, not more card refinement or an accepted character claim.
+
+The common isolated Natural binding target is now generated, triangulated and freshly reimported successfully. See `FILTERED_TARGET.md` and `art/nib/groom-study/native-filtered-target-v1/delivery.json`. It removes exactly the 22 replaced head/ear groom objects, retains 400 original mesh payloads and all rig/action/PBR data, and adds the explicit `KKGroomBindable` alpha attribute. No shared files changed. The separate Unreal width adapter has now passed its actual tiny import and fresh-process reload (maximum per-point diameter error 3.87e−10 cm); that fixes the demonstrated width-scope problem for the fixture, but does not prove character binding or rendering. Both engines must use this same cleaned target and exact native sidecars for their next character test.

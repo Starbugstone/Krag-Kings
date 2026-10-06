@@ -13,6 +13,8 @@ parser.add_argument('--card-texture-dir',type=Path,help='Actual original groom a
 parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
 parser.add_argument('--triangulate',action='store_true',help='Export a temporary triangulated mesh while retaining source vertices and shape keys')
 parser.add_argument('--preserve-baseline-morphs',action='store_true',help='Historical exact-payload conversion only; never use when correcting morphs')
+parser.add_argument('--variants',nargs='+',choices=['natural','grip','leg'],default=['natural','grip','leg'],help='Isolated pilot subset; default retains all three variants')
+parser.add_argument('--reuse-animations-from',type=Path,help='Reuse verified unchanged standalone clips from the exact derivative input source; candidate-only')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source;SHARED_OUT=OUT;BASELINE_OUT=args.baseline_dir;OUT=args.out
 OUT.mkdir(parents=True,exist_ok=True)
@@ -58,6 +60,17 @@ manifest['facialPerformance']={name:{'authoredInBodyClip':True} for name in ['Id
 source_report=json.loads(args.source_report.read_text())
 reported_source=(source_report.get('candidateSha256') or source_report.get('outputSha256') or source_report.get('sourceSha256'))
 if reported_source!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
+reuse_animation_manifest=None
+if args.reuse_animations_from:
+    if not candidate:raise RuntimeError('Standalone reuse is limited to isolated candidates')
+    reuse_animation_manifest=json.loads((args.reuse_animations_from/'manifest.json').read_text())
+    if (source_report.get('sourceSha256')!=reuse_animation_manifest['sourceSha256']
+        or not source_report.get('savedSourceReopened') or not source_report.get('preservedRig')
+        or reuse_animation_manifest['bones']!=manifest['bones']
+        or reuse_animation_manifest['locomotion']!=manifest['locomotion']
+        or reuse_animation_manifest['sourceAnimationContract']!=manifest['sourceAnimationContract']):
+        raise RuntimeError('Standalone reuse requires the exact previously exported source and preserved bind/actions')
+    manifest['animationReuse']={'inputSourceSha256':reuse_animation_manifest['sourceSha256'],'manifestSha256':hashlib.sha256((args.reuse_animations_from/'manifest.json').read_bytes()).hexdigest(),'files':{}}
 if candidate:
     if source_report.get('candidateSha256') and 'trianglesByVariant' in source_report and 'method' in source_report:
         manifest['detailedMasterSha256']=source_report['sourceSha256']
@@ -107,6 +120,7 @@ for a in bpy.data.actions:
     if a.name in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance']:
         manifest['clips'].append({'name':a.name,'startFrame':int(a.frame_range[0]),'endFrame':int(a.frame_range[1]),'fps':30})
 for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','LegReplacement')]:
+    if variant not in args.variants:continue
     bpy.ops.object.select_all(action='DESELECT');copies=[]
     for src in sources:
         if src.type!='MESH' or not visible(src,variant):continue
@@ -216,6 +230,15 @@ for clip in manifest['clips']:
     name=clip['name'];scene.name=name;export_contract.select_action(bpy,rig,bpy.data.actions[name])
     scene.frame_start=clip['startFrame'];scene.frame_end=clip['endFrame'];scene.frame_set(scene.frame_start)
     path=animation_dir/(name+'.fbx')
+    if reuse_animation_manifest is not None:
+        original=next(c for c in reuse_animation_manifest['clips'] if c['name']==name)
+        if any(original[k]!=clip[k] for k in ['startFrame','endFrame','fps']):raise RuntimeError('Reused standalone duration differs '+name)
+        source=args.reuse_animations_from/reuse_animation_manifest['animations'][name]
+        shutil.copy2(source,path)
+        digest=hashlib.sha256(source.read_bytes()).hexdigest()
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=digest:raise RuntimeError('Reused standalone bytes differ '+name)
+        clip['fbx']='animations/'+name+'.fbx';manifest['animations'][name]=clip['fbx'];manifest['animationReuse']['files'][name]={'sha256':digest,'source':str(source)}
+        continue
     bpy.ops.export_scene.fbx(filepath=str(path),use_selection=True,object_types={'ARMATURE','MESH'},use_mesh_modifiers=False,global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=False,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False)
     clip['fbx']='animations/'+name+'.fbx';manifest['animations'][name]=clip['fbx']
 for filename in ['manifest.json','asset_manifest.json']:

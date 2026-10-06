@@ -1,0 +1,1150 @@
+{
+  "source": "../source/Nib_NativeGroom_FilteredTarget_PBR.blend",
+  "sourceSha256": "c097d5e1f5a134272051d016e280bec5f722de082f58727ffeccfac6a90df9d1",
+  "referenceImages": [
+    "krag-kings-design/concept-art/02-nib-character-sheet.png",
+    "krag-kings-design/concept-art/05-jetpack-bionics-sheet.png"
+  ],
+  "units": "meters",
+  "sourceForward": "-Y",
+  "sourceUp": "Z",
+  "fbxForward": "-Z",
+  "fbxUp": "Y",
+  "normalConvention": "OpenGL +Y",
+  "boneRollAlignment": "local Z aligned toward world -Y",
+  "heightMeters": 1.384808212518692,
+  "bones": [
+    "Root",
+    "Pelvis",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "FaceRoot",
+    "Jaw",
+    "TongueBase",
+    "TongueTip",
+    "LipUpper",
+    "LipLower",
+    "Eye_L",
+    "LidUpper_L",
+    "LidLower_L",
+    "BrowInner_L",
+    "BrowOuter_L",
+    "Cheek_L",
+    "MouthCorner_L",
+    "Eye_R",
+    "LidUpper_R",
+    "LidLower_R",
+    "BrowInner_R",
+    "BrowOuter_R",
+    "Cheek_R",
+    "MouthCorner_R",
+    "Ear_L",
+    "EarTip_L",
+    "Ear_R",
+    "EarTip_R",
+    "Clavicle_L",
+    "UpperArm_L",
+    "LowerArm_L",
+    "ForearmTwist_L",
+    "Hand_L",
+    "Index1_L",
+    "Index2_L",
+    "Index3_L",
+    "Middle1_L",
+    "Middle2_L",
+    "Middle3_L",
+    "Ring1_L",
+    "Ring2_L",
+    "Ring3_L",
+    "Little1_L",
+    "Little2_L",
+    "Little3_L",
+    "Thumb1_L",
+    "Thumb2_L",
+    "Clavicle_R",
+    "UpperArm_R",
+    "LowerArm_R",
+    "ForearmTwist_R",
+    "Hand_R",
+    "Index1_R",
+    "Index2_R",
+    "Index3_R",
+    "Middle1_R",
+    "Middle2_R",
+    "Middle3_R",
+    "Ring1_R",
+    "Ring2_R",
+    "Ring3_R",
+    "Little1_R",
+    "Little2_R",
+    "Little3_R",
+    "Thumb1_R",
+    "Thumb2_R",
+    "Weapon",
+    "WeaponMuzzle",
+    "WeaponAim",
+    "Thigh_L",
+    "Shin_L",
+    "Foot_L",
+    "Toe_L",
+    "Thigh_R",
+    "Shin_R",
+    "Foot_R",
+    "Toe_R"
+  ],
+  "bindAnkleHeightMeters": 0.1,
+  "materials": [
+    {
+      "name": "Nib_Brass",
+      "baseColor": "textures/Nib_Brass_BaseColor.png",
+      "normal": "textures/Nib_Brass_Normal.png",
+      "roughness": "textures/Nib_Brass_Roughness.png",
+      "metallic": "textures/Nib_Brass_Metallic.png"
+    },
+    {
+      "name": "Nib_Cloth",
+      "baseColor": "textures/Nib_Cloth_BaseColor.png",
+      "normal": "textures/Nib_Cloth_Normal.png",
+      "roughness": "textures/Nib_Cloth_Roughness.png",
+      "metallic": "textures/Nib_Cloth_Metallic.png"
+    },
+    {
+      "name": "Nib_Dark",
+      "baseColor": "textures/Nib_Dark_BaseColor.png",
+      "normal": "textures/Nib_Dark_Normal.png",
+      "roughness": "textures/Nib_Dark_Roughness.png",
+      "metallic": "textures/Nib_Dark_Metallic.png"
+    },
+    {
+      "name": "Nib_Gum",
+      "baseColor": "textures/Nib_Gum_BaseColor.png",
+      "normal": "textures/Nib_Gum_Normal.png",
+      "roughness": "textures/Nib_Gum_Roughness.png",
+      "metallic": "textures/Nib_Gum_Metallic.png"
+    },
+    {
+      "name": "Nib_Hair",
+      "baseColor": "textures/Nib_Hair_BaseColor.png",
+      "normal": "textures/Nib_Hair_Normal.png",
+      "roughness": "textures/Nib_Hair_Roughness.png",
+      "metallic": "textures/Nib_Hair_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularGlobe",
+      "baseColor": "textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularGlobe_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularGlobe_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularGlobe_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularIris_L",
+      "baseColor": "textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_L_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_L_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_L_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularIris_R",
+      "baseColor": "textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_R_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_R_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_R_Metallic.png"
+    },
+    {
+      "name": "Nib_Leather",
+      "baseColor": "textures/Nib_Leather_BaseColor.png",
+      "normal": "textures/Nib_Leather_Normal.png",
+      "roughness": "textures/Nib_Leather_Roughness.png",
+      "metallic": "textures/Nib_Leather_Metallic.png"
+    },
+    {
+      "name": "Nib_Lens",
+      "baseColor": "textures/Nib_Lens_BaseColor.png",
+      "normal": "textures/Nib_Lens_Normal.png",
+      "roughness": "textures/Nib_Lens_Roughness.png",
+      "metallic": "textures/Nib_Lens_Metallic.png"
+    },
+    {
+      "name": "Nib_MouthInterior",
+      "baseColor": "textures/Nib_MouthInterior_BaseColor.png",
+      "normal": "textures/Nib_MouthInterior_Normal.png",
+      "roughness": "textures/Nib_MouthInterior_Roughness.png",
+      "metallic": "textures/Nib_MouthInterior_Metallic.png"
+    },
+    {
+      "name": "Nib_Skin",
+      "baseColor": "textures/Nib_Skin_BaseColor.png",
+      "normal": "textures/Nib_Skin_Normal.png",
+      "roughness": "textures/Nib_Skin_Roughness.png",
+      "metallic": "textures/Nib_Skin_Metallic.png"
+    },
+    {
+      "name": "Nib_Steel",
+      "baseColor": "textures/Nib_Steel_BaseColor.png",
+      "normal": "textures/Nib_Steel_Normal.png",
+      "roughness": "textures/Nib_Steel_Roughness.png",
+      "metallic": "textures/Nib_Steel_Metallic.png"
+    },
+    {
+      "name": "Nib_Stitch",
+      "baseColor": "textures/Nib_Stitch_BaseColor.png",
+      "normal": "textures/Nib_Stitch_Normal.png",
+      "roughness": "textures/Nib_Stitch_Roughness.png",
+      "metallic": "textures/Nib_Stitch_Metallic.png"
+    },
+    {
+      "name": "Nib_Teal",
+      "baseColor": "textures/Nib_Teal_BaseColor.png",
+      "normal": "textures/Nib_Teal_Normal.png",
+      "roughness": "textures/Nib_Teal_Roughness.png",
+      "metallic": "textures/Nib_Teal_Metallic.png"
+    },
+    {
+      "name": "Nib_Tongue",
+      "baseColor": "textures/Nib_Tongue_BaseColor.png",
+      "normal": "textures/Nib_Tongue_Normal.png",
+      "roughness": "textures/Nib_Tongue_Roughness.png",
+      "metallic": "textures/Nib_Tongue_Metallic.png"
+    },
+    {
+      "name": "Nib_Tooth",
+      "baseColor": "textures/Nib_Tooth_BaseColor.png",
+      "normal": "textures/Nib_Tooth_Normal.png",
+      "roughness": "textures/Nib_Tooth_Roughness.png",
+      "metallic": "textures/Nib_Tooth_Metallic.png"
+    },
+    {
+      "name": "Nib_Workwear",
+      "baseColor": "textures/Nib_Workwear_BaseColor.png",
+      "normal": "textures/Nib_Workwear_Normal.png",
+      "roughness": "textures/Nib_Workwear_Roughness.png",
+      "metallic": "textures/Nib_Workwear_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_DustyPinkEar",
+      "baseColor": "textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "normal": "textures/Nib_v5_DustyPinkEar_Normal.png",
+      "roughness": "textures/Nib_v5_DustyPinkEar_Roughness.png",
+      "metallic": "textures/Nib_v5_DustyPinkEar_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_FacialSkinAtlas",
+      "baseColor": "textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "normal": "textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "roughness": "textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+      "metallic": "textures/Nib_v5_FacialSkinAtlas_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_HeadFur",
+      "baseColor": "textures/Nib_v5_HeadFur_BaseColor.png",
+      "normal": "textures/Nib_v5_HeadFur_Normal.png",
+      "roughness": "textures/Nib_v5_HeadFur_Roughness.png",
+      "metallic": "textures/Nib_v5_HeadFur_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_TawnyEarUndercoat",
+      "baseColor": "textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "normal": "textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "roughness": "textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+      "metallic": "textures/Nib_v5_TawnyEarUndercoat_Metallic.png"
+    },
+    {
+      "name": "Nib_v6_HeadFurCards",
+      "baseColor": "textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Nib_Natural",
+      "fbx": "Nib_Natural.fbx",
+      "label": "Natural",
+      "species": "Nib",
+      "sourceRestBoundsMeters": {
+        "min": [
+          -0.30907517671585083,
+          -0.11053996533155441,
+          0.0004999972879886627
+        ],
+        "max": [
+          0.30925601720809937,
+          0.09445063769817352,
+          1.3853082098066807
+        ]
+      },
+      "fur": {
+        "representation": "skinned masked cards with opaque fiber accents",
+        "simulation": false,
+        "cards": 24,
+        "strands": 3242,
+        "triangles": 20424,
+        "cardTriangles": 216,
+        "strandTriangles": 20208
+      },
+      "deformation": {
+        "schemaVersion": 1,
+        "faceRoot": "FaceRoot",
+        "drivers": [
+          {
+            "morph": "Blink_L",
+            "bone": "LidUpper_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.007,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Squint_L",
+            "bone": "LidLower_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.004,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "BrowRaise_L",
+            "bone": "BrowOuter_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.009,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "BrowLower_L",
+            "bone": "BrowInner_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.006,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Smile_L",
+            "bone": "MouthCorner_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.008,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "CheekTension_L",
+            "bone": "Cheek_L",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.005,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Frown_L",
+            "bone": "MouthCorner_L",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 0,
+            "end": 12,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Corrective_ShoulderRaise_L",
+            "bone": "UpperArm_L",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 25,
+            "end": 90,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_ElbowFlex_L",
+            "bone": "LowerArm_L",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 30,
+            "end": 95,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_HipFlex_L",
+            "bone": "Thigh_L",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 20,
+            "end": 75,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_KneeFlex_L",
+            "bone": "Shin_L",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 25,
+            "end": 100,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Blink_R",
+            "bone": "LidUpper_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.007,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Squint_R",
+            "bone": "LidLower_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.004,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "BrowRaise_R",
+            "bone": "BrowOuter_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.009,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "BrowLower_R",
+            "bone": "BrowInner_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.006,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Smile_R",
+            "bone": "MouthCorner_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.008,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "CheekTension_R",
+            "bone": "Cheek_R",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.005,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Frown_R",
+            "bone": "MouthCorner_R",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 0,
+            "end": 12,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "Corrective_ShoulderRaise_R",
+            "bone": "UpperArm_R",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 25,
+            "end": 90,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_ElbowFlex_R",
+            "bone": "LowerArm_R",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 30,
+            "end": 95,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_HipFlex_R",
+            "bone": "Thigh_R",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 20,
+            "end": 75,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "Corrective_KneeFlex_R",
+            "bone": "Shin_R",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 25,
+            "end": 100,
+            "maxWeight": 1,
+            "kind": "body"
+          },
+          {
+            "morph": "JawOpen",
+            "bone": "Jaw",
+            "channel": "rotationMagnitudeDegrees",
+            "start": 0,
+            "end": 24,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "LipPress",
+            "bone": "LipUpper",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.003,
+            "maxWeight": 1,
+            "kind": "facial"
+          },
+          {
+            "morph": "TongueOut",
+            "bone": "TongueTip",
+            "channel": "translationDistanceMeters",
+            "start": 0,
+            "end": 0.03,
+            "maxWeight": 1,
+            "kind": "facial"
+          }
+        ],
+        "personality": "Playful, technically capable adult engineer; physically weak and somewhat cowardly. Cautious glances and flinches coexist with cheeky tongue gestures.",
+        "tongueColor": "dark blue",
+        "mouthAnatomyStatus": "provisional; expression-sheet review required",
+        "coordinateConvention": "All drivers use magnitude of local transform delta from bind. Translation values are meters; angles are degrees. Never interpret raw imported Euler axes.",
+        "morphs": [
+          "Blink_L",
+          "Blink_R",
+          "Squint_L",
+          "Squint_R",
+          "BrowRaise_L",
+          "BrowRaise_R",
+          "BrowLower_L",
+          "BrowLower_R",
+          "Smile_L",
+          "Smile_R",
+          "Frown_L",
+          "Frown_R",
+          "JawOpen",
+          "LipPress",
+          "TongueOut",
+          "CheekTension_L",
+          "CheekTension_R",
+          "Corrective_ElbowFlex_L",
+          "Corrective_ElbowFlex_R",
+          "Corrective_HipFlex_L",
+          "Corrective_HipFlex_R",
+          "Corrective_KneeFlex_L",
+          "Corrective_KneeFlex_R",
+          "Corrective_ShoulderRaise_L",
+          "Corrective_ShoulderRaise_R"
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "TongueOut",
+        "CheekTension_L",
+        "CheekTension_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R"
+      ],
+      "triangles": 570134,
+      "vertices": 295931,
+      "preTriangulated": true,
+      "skinnedMeshCount": 1,
+      "materialSlots": 23,
+      "weightedVertices": 295931,
+      "maxInfluences": 4,
+      "bionics": []
+    }
+  ],
+  "clips": [
+    {
+      "name": "FacePerformance",
+      "startFrame": 1,
+      "endFrame": 151,
+      "fps": 30,
+      "fbx": "animations/FacePerformance.fbx"
+    },
+    {
+      "name": "Hit",
+      "startFrame": 1,
+      "endFrame": 29,
+      "fps": 30,
+      "fbx": "animations/Hit.fbx"
+    },
+    {
+      "name": "Idle",
+      "startFrame": 1,
+      "endFrame": 181,
+      "fps": 30,
+      "fbx": "animations/Idle.fbx"
+    },
+    {
+      "name": "Melee",
+      "startFrame": 1,
+      "endFrame": 33,
+      "fps": 30,
+      "fbx": "animations/Melee.fbx"
+    },
+    {
+      "name": "Run",
+      "startFrame": 1,
+      "endFrame": 19,
+      "fps": 30,
+      "fbx": "animations/Run.fbx"
+    },
+    {
+      "name": "Shoot",
+      "startFrame": 1,
+      "endFrame": 31,
+      "fps": 30,
+      "fbx": "animations/Shoot.fbx"
+    },
+    {
+      "name": "Walk",
+      "startFrame": 1,
+      "endFrame": 25,
+      "fps": 30,
+      "fbx": "animations/Walk.fbx"
+    }
+  ],
+  "acceptance": "Authored review candidate; likeness and investor acceptance remain unverified.",
+  "weapon": {
+    "muzzleBone": "WeaponMuzzle",
+    "aimBone": "WeaponAim",
+    "fireTimesNormalized": [
+      0.46
+    ],
+    "forwardDefinition": "normalize(worldPosition(WeaponAim)-worldPosition(WeaponMuzzle))",
+    "sourceRestMuzzleMeters": [
+      -0.227,
+      -0.083,
+      0.427
+    ],
+    "sourceRestBarrelForward": [
+      0,
+      0,
+      -1
+    ]
+  },
+  "deformation": {
+    "schemaVersion": 1,
+    "faceRoot": "FaceRoot",
+    "drivers": [
+      {
+        "morph": "Blink_L",
+        "bone": "LidUpper_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_L",
+        "bone": "LidLower_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.004,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_L",
+        "bone": "BrowOuter_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.009,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_L",
+        "bone": "BrowInner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_L",
+        "bone": "MouthCorner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.008,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "CheekTension_L",
+        "bone": "Cheek_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.005,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_L",
+        "bone": "MouthCorner_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 12,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_L",
+        "bone": "UpperArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 90,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_L",
+        "bone": "LowerArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 30,
+        "end": 95,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_L",
+        "bone": "Thigh_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 75,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_L",
+        "bone": "Shin_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 100,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Blink_R",
+        "bone": "LidUpper_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_R",
+        "bone": "LidLower_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.004,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_R",
+        "bone": "BrowOuter_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.009,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_R",
+        "bone": "BrowInner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_R",
+        "bone": "MouthCorner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.008,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "CheekTension_R",
+        "bone": "Cheek_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.005,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_R",
+        "bone": "MouthCorner_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 12,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_R",
+        "bone": "UpperArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 90,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_R",
+        "bone": "LowerArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 30,
+        "end": 95,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_R",
+        "bone": "Thigh_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 75,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_R",
+        "bone": "Shin_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 100,
+        "maxWeight": 1,
+        "kind": "body"
+      },
+      {
+        "morph": "JawOpen",
+        "bone": "Jaw",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 24,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "LipPress",
+        "bone": "LipUpper",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.003,
+        "maxWeight": 1,
+        "kind": "facial"
+      },
+      {
+        "morph": "TongueOut",
+        "bone": "TongueTip",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.03,
+        "maxWeight": 1,
+        "kind": "facial"
+      }
+    ],
+    "personality": "Playful, technically capable adult engineer; physically weak and somewhat cowardly. Cautious glances and flinches coexist with cheeky tongue gestures.",
+    "tongueColor": "dark blue",
+    "mouthAnatomyStatus": "provisional; expression-sheet review required",
+    "coordinateConvention": "All drivers use magnitude of local transform delta from bind. Translation values are meters; angles are degrees. Never interpret raw imported Euler axes."
+  },
+  "adaptedTopologyProvenance": {
+    "referenceLibrarySha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "referenceLicense": "CC0 per Blender Studio bundle README; retained in original reference directory.",
+    "borrowedTopology": "GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept."
+  },
+  "locomotion": {
+    "Walk": {
+      "durationSeconds": 0.8,
+      "cycleSeconds": 0.8,
+      "speedMetersPerSecond": 0.8796227746834336,
+      "leftContacts": [
+        0.065
+      ],
+      "rightContacts": [
+        0.5650000000000001
+      ],
+      "stanceFraction": 0.49,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
+    },
+    "Run": {
+      "durationSeconds": 0.6,
+      "cycleSeconds": 0.6,
+      "speedMetersPerSecond": 2.5299862911031474,
+      "leftContacts": [
+        0.62
+      ],
+      "rightContacts": [
+        0.12000000000000002
+      ],
+      "stanceFraction": 0.15999999999999998,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
+    }
+  },
+  "sourceAnimationContract": {
+    "runtimeActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "excludedStudyActions": [
+      "PRESERVED pre-anatomical-hand FacePerformance",
+      "PRESERVED pre-anatomical-hand Hit",
+      "PRESERVED pre-anatomical-hand Idle",
+      "PRESERVED pre-anatomical-hand Melee",
+      "PRESERVED pre-anatomical-hand Run",
+      "PRESERVED pre-anatomical-hand Shoot",
+      "PRESERVED pre-anatomical-hand Walk",
+      "PRESERVED pre-motion integration FacePerformance",
+      "PRESERVED pre-motion integration Hit",
+      "PRESERVED pre-motion integration Idle",
+      "PRESERVED pre-motion integration Melee",
+      "PRESERVED pre-motion integration Run",
+      "PRESERVED pre-motion integration Shoot",
+      "PRESERVED pre-motion integration Walk",
+      "Preserved_Idle_BeforeHumanMotion",
+      "Preserved_Run_BeforeHumanMotion",
+      "Preserved_Walk_BeforeHumanMotion"
+    ],
+    "sourceMotionGeneration": "v7",
+    "sourceMasterModified": false,
+    "neutralTracksForMissingComponents": {
+      "Idle": [],
+      "Walk": [],
+      "Run": [],
+      "Melee": [],
+      "Shoot": [],
+      "Hit": [],
+      "FacePerformance": []
+    },
+    "actionDurationsSeconds": {
+      "Idle": 6.0,
+      "Walk": 0.8,
+      "Run": 0.6,
+      "Melee": 1.0666666666666667,
+      "Shoot": 1.0,
+      "Hit": 0.9333333333333333,
+      "FacePerformance": 5.0
+    }
+  },
+  "facialPerformance": {
+    "Idle": {
+      "authoredInBodyClip": true
+    },
+    "Walk": {
+      "authoredInBodyClip": true
+    },
+    "Run": {
+      "authoredInBodyClip": true
+    },
+    "Melee": {
+      "authoredInBodyClip": true
+    },
+    "Shoot": {
+      "authoredInBodyClip": true
+    },
+    "Hit": {
+      "authoredInBodyClip": true
+    }
+  },
+  "animationReuse": {
+    "inputSourceSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+    "manifestSha256": "ba01d48da8eee7a9b605245bffd9614c86b00e481d1f3df86fb636dde628dfc7",
+    "files": {
+      "FacePerformance": {
+        "sha256": "32634ef36be15db121734c2c0af87c0d7733b683955204ef265ac145431256f0",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\FacePerformance.fbx"
+      },
+      "Hit": {
+        "sha256": "a9979da0e14f29a564c600b179daadc198f77cac5751ae12e1700d90bb2f0a23",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Hit.fbx"
+      },
+      "Idle": {
+        "sha256": "bccc8678862c994ad1fd5e0f215c13ffcec2f751ca3786eb37ef07e848a45162",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Idle.fbx"
+      },
+      "Melee": {
+        "sha256": "a3c3401181f854ac30420e0350a8be750ddff3ae766d4fcf3eb3cec65fe9a286",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Melee.fbx"
+      },
+      "Run": {
+        "sha256": "1f6b4f548811641f917467b1c941aac154f64e41df111a1a0f00f3e96423c236",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Run.fbx"
+      },
+      "Shoot": {
+        "sha256": "65a5d4a096fbb11523c8c915a461c82a2a4cdbf4b1db92f98a083b72082d5c73",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Shoot.fbx"
+      },
+      "Walk": {
+        "sha256": "278d38ab1dcd980ad4a8d2882123978a0dc26a07d680a3449b9761a708e606f8",
+        "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\animations\\Walk.fbx"
+      }
+    }
+  },
+  "authoredSourceReport": "../source/source.json",
+  "authoredInputSourceSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "fur": {
+    "representation": "skinned masked cards with opaque fiber accents",
+    "simulation": false,
+    "cards": 24,
+    "strands": 3242,
+    "triangles": 20424,
+    "cardTriangles": 216,
+    "strandTriangles": 20208,
+    "cinematic": false,
+    "scope": "Tagged card and strand batches; untagged legacy fine edge/brow/chin tubes are additional geometry in total counts."
+  },
+  "mouthAnatomyStatus": "Provisional interior and expressions for review; dark-blue tongue canonical.",
+  "geometryExport": {
+    "triangulated": true,
+    "method": "Disposable assembly triangulation with original-corner provenance; exact mapped source normals preserved including hard edges, corrected target morphs retained unless explicitly requested otherwise",
+    "sourceVertexOrderUnchanged": true,
+    "mappedNormalMaxVectorError": 0,
+    "pointAndMorphPayloadsByteIdentical": false,
+    "referenceDirectory": "../reference"
+  },
+  "shapeUnion": {
+    "creation": "from_mix=False",
+    "copiedDriversClearedBeforeCreation": true,
+    "copiedWeightsZeroedBeforeCreation": true,
+    "bodyCorrectivesOnFacialVerticesChecked": true
+  },
+  "groomTextureHashes": {
+    "textures/Nib_v6_HeadFurCards_BaseColor.png": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+    "textures/Nib_v6_FurCards_Normal.png": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+    "textures/Nib_v6_FurCards_Roughness.png": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+    "textures/Nib_v6_FurCards_Metallic.png": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+  },
+  "shapeUnionValidation": [
+    {
+      "variant": "Natural",
+      "facialVertices": 48274,
+      "maxFacialDeltaPerBodyTargetMeters": {
+        "Corrective_ElbowFlex_L": 0.0,
+        "Corrective_ElbowFlex_R": 0.0,
+        "Corrective_HipFlex_L": 0.0,
+        "Corrective_HipFlex_R": 0.0,
+        "Corrective_KneeFlex_L": 0.0,
+        "Corrective_KneeFlex_R": 0.0,
+        "Corrective_ShoulderRaise_L": 0.0,
+        "Corrective_ShoulderRaise_R": 0.0
+      }
+    }
+  ],
+  "cornerTriangulation": [
+    {
+      "variant": "Natural",
+      "map": "Nib_Natural.corners.npz",
+      "sourcePolygons": 299606,
+      "sourceCorners": 1169346,
+      "triangles": 570134,
+      "targetCorners": 1710402,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true,
+      "basisCoordinatesByteIdentical": true,
+      "shapeCoordinatesRestored": 26,
+      "authoredCornerNormalsRetained": true
+    }
+  ],
+  "pointPayloadPreservation": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-native-groom-filtered-v1\\reference\\Nib_Natural.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-native-groom-filtered-v1\\triangulated\\Nib_Natural.fbx",
+      "sourceSha256": "73323ca7b1921520d8cd0882efad6eab6902f226c182c4247cae1fdb2f416dbf",
+      "beforeSha256": "1193bb10cb1de9b7084bb3a618723eb8fa7ecfe32b33530c4bf91e9a4eec24bd",
+      "afterSha256": "3f15ce613f116122bc756b442d5d3742ac2361c9fc405bc3789eb4f4dfe2f32a",
+      "pointCoordinatesByteIdentical": true,
+      "restoredSourcePointNormalLayer": false,
+      "restoredSourceCornerNormals": true,
+      "cornerProvenance": {
+        "sourcePolygons": 299606,
+        "sourceCorners": 1169346,
+        "triangles": 570134,
+        "targetCorners": 1710402,
+        "sameSourcePolygon": true,
+        "orientedBoundaryUnchanged": true,
+        "allSourceCornersRetained": true,
+        "vertexIdentityUnchanged": true
+      },
+      "sourceNormalMapping": "ByPolygonVertex",
+      "sourceNormalVertexCollapseMaxError": null,
+      "restoredSparseMorphPayloads": 0,
+      "targetMorphPayloadsPreserved": true,
+      "allOtherSerializedPropertiesVerifiedUnchanged": true
+    }
+  ],
+  "animations": {
+    "FacePerformance": "animations/FacePerformance.fbx",
+    "Hit": "animations/Hit.fbx",
+    "Idle": "animations/Idle.fbx",
+    "Melee": "animations/Melee.fbx",
+    "Run": "animations/Run.fbx",
+    "Shoot": "animations/Shoot.fbx",
+    "Walk": "animations/Walk.fbx"
+  },
+  "animationBindCarrier": {
+    "mesh": "Nib_AnimationBindCarrier",
+    "purpose": "Preserve identical FBX rest skeleton; animation import ignores carrier geometry."
+  }
+}
