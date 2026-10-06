@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\build_mandibular_v9t.py", line 110, in <module>
+    new_jaw, support = tissue.weights(weights[:, 1], weights[:, 0]+weights[:, 1])
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\mandibular_tissue_v9t.py", line 99, in weights
+    raise RuntimeError('Invalid mandibular weight proposal')
+RuntimeError: Invalid mandibular weight proposal
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\krag\oral_volume_wip\build_mandibular_v9t.py', exiting.
