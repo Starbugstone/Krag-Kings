@@ -1,0 +1,68 @@
+{
+  "status": "Prepared bounded float32 rounding retry; actual failed v9t preserved",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "inputSource": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+  "inputSourceSha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd",
+  "firstNativeBoundary": [
+    "source",
+    "ClosedRight",
+    "OpenRight"
+  ],
+  "scope": "Broad mandibular profile/tissue support and actual exterior-lip compact canine fit. Existing true rim, ocular points, actual hinge range, rig/actions and all unrelated geometry retained.",
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/build_mandibular_v9ta.py",
+      "sha256": "d6c334d975332fa9928e32898e5a82a04fe3727619d8f0ddcef907ab0eb685de"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/mandibular_tissue_v9ta.py",
+      "sha256": "af41b9fe142a70aca38ba59c6f1124d5df504cc582c9e29500ffa9018424ead6"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/exterior_canines_v9t.py",
+      "sha256": "fb5fe35f0ed778a1b775ec3c6ed3d295b72a7ac5a3942f68cfb329b1d3e10b6d"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_mandibular_v9ta.py",
+      "sha256": "5e1286f907aac20ed08031744ad9cf1c222800b1296b9c771411374d736e3ad7"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/preflight_mandibular_v9t.py",
+      "sha256": "1e34651b24faa13ec642aa60194d6b61d535fdbf95f8eb21a7c0877254f8da3c"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/posed_lip_corrective_v9s.py",
+      "sha256": "cebf3285ae9ca8afcece860fb9889135cffc90ef15b51e071e27614fff0d4000"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+      "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+    },
+    {
+      "path": "benchmark/tools/krag/ironjaw_wip/replacement_surface.py",
+      "sha256": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695"
+    },
+    {
+      "path": "benchmark/tools/krag/landmark_wip/landmark_relief.py",
+      "sha256": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d"
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/tusk_exterior_fit_v9lfa.py",
+      "sha256": "2495c1784a81325061549c8384fbcf0fff5e5e486d722055508686fc3d41ddf7"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    }
+  ],
+  "onlyRetryChange": "Allow1e-7 source weight rounding and clamp before applying; all anatomy/geometry/full-range gates unchanged"
+}

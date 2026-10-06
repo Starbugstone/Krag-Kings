@@ -1,0 +1,185 @@
+{
+  "status": "Actual mandibular tissue/canine source; neutral and full open views still required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "sha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_MandibularTissue_v9ta_WIP.blend",
+    "sha256": "5a06f5890097ce0f3fa3afe3f62a686df73428d775a30d6602bc9d3a800d56e9"
+  },
+  "neutralSurface": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.3348896433682834,
+    "normalChangeDegreesP99": 34.72143476167396,
+    "normalChangeDegreesMaximum": 74.55579607080222,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.00999999630508791
+  },
+  "mandibularSupport": {
+    "transitionMeters": 0.035,
+    "iterations": 132,
+    "rawWeightRangeBeforeRoundingClamp": [
+      0.0,
+      1.0000000298023224
+    ],
+    "normalizationRoundingTolerance": 1e-07,
+    "relativeResidual": 9.787984941639084e-10,
+    "anchorVertices": 3793,
+    "changedVertices": 3023,
+    "maximumWeightChange": 0.9076829730125379,
+    "trueOralRimsUpperFaceNoseUnchanged": true,
+    "method": "Graph-harmonic lower-face tissue between actual cranial/neck boundaries,35mm mandibular anchors and preserved oral rims; full jaw rotation retained",
+    "actualPoseAcceptance": false
+  },
+  "exteriorCanines": {
+    "method": "Actual exterior24 labial surface and unchanged lower gingiva; short broad provisional visible crowns",
+    "sides": [
+      {
+        "side": "R",
+        "actualGingivalRoot": [
+          -0.04462446365505457,
+          -0.14499868638813496,
+          1.8046594162782033
+        ],
+        "actualExteriorSkinHit": [
+          -0.044624462723731995,
+          -0.1803712546825409,
+          1.826991081237793
+        ],
+        "exteriorNormal": [
+          -0.4868692457675934,
+          -0.7211035490036011,
+          0.4929177463054657
+        ],
+        "emergenceCenter": [
+          -0.044624462723731995,
+          -0.1813712546825409,
+          1.826991081237793
+        ],
+        "tip": [
+          -0.044924462723731996,
+          -0.1818712546825409,
+          1.840991081237793
+        ],
+        "visibleHeightProposalMeters": 0.014,
+        "baseWidthMeters": 0.012,
+        "rootToExteriorMeters": 0.04268099089991459,
+        "actualNeutralOpenContactPending": true
+      },
+      {
+        "side": "L",
+        "actualGingivalRoot": [
+          0.04462446365505457,
+          -0.1450058203190565,
+          1.8046594162782033
+        ],
+        "actualExteriorSkinHit": [
+          0.044624462723731995,
+          -0.18022331595420837,
+          1.8270586729049683
+        ],
+        "exteriorNormal": [
+          0.48514601588249207,
+          -0.7197793126106262,
+          0.49653905630111694
+        ],
+        "emergenceCenter": [
+          0.044624462723731995,
+          -0.18122331595420837,
+          1.8270586729049683
+        ],
+        "tip": [
+          0.044924462723731996,
+          -0.18172331595420838,
+          1.8410586729049683
+        ],
+        "visibleHeightProposalMeters": 0.014,
+        "baseWidthMeters": 0.012,
+        "rootToExteriorMeters": 0.04258443010671766,
+        "actualNeutralOpenContactPending": true
+      }
+    ],
+    "ocularPointsExact": true,
+    "requiresActualClosedOpenReview": true
+  },
+  "posedLowerLip": {
+    "iterations": 1,
+    "freeVertices": 3476,
+    "maximumPosedCorrectionMeters": 5.4547004427888394e-08,
+    "maximumIterationResidualMeters": 1.8353329969435397e-08,
+    "method": "Posed residual through inverse actual linear-blend skinning; no duplicate jaw rotation",
+    "unchangedJawRotationDegrees": 22.990797529309148,
+    "unchangedDriverValue": 0.9196327328681946,
+    "lowerRimVertices": 81,
+    "maximumSourceResidualChangeMeters": 5.9446748137156136e-08,
+    "actualBlenderReproductionErrorMeters": 3.182841194775616e-07,
+    "upperLipNoseHeld": true,
+    "actualMouthAcceptance": false
+  },
+  "savedReopenedChecksPassed": true,
+  "preservationContractSha256": "f2f59e72c5b93b6577a7ea17d2d2c34e149a6a2953db416742747720e5875760",
+  "recipePins": [
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/build_mandibular_v9ta.py",
+      "sha256": "d6c334d975332fa9928e32898e5a82a04fe3727619d8f0ddcef907ab0eb685de"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/mandibular_tissue_v9ta.py",
+      "sha256": "af41b9fe142a70aca38ba59c6f1124d5df504cc582c9e29500ffa9018424ead6"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/exterior_canines_v9t.py",
+      "sha256": "fb5fe35f0ed778a1b775ec3c6ed3d295b72a7ac5a3942f68cfb329b1d3e10b6d"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_mandibular_v9ta.py",
+      "sha256": "5e1286f907aac20ed08031744ad9cf1c222800b1296b9c771411374d736e3ad7"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/preflight_mandibular_v9t.py",
+      "sha256": "1e34651b24faa13ec642aa60194d6b61d535fdbf95f8eb21a7c0877254f8da3c"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/posed_lip_corrective_v9s.py",
+      "sha256": "cebf3285ae9ca8afcece860fb9889135cffc90ef15b51e071e27614fff0d4000"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+      "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+    },
+    {
+      "path": "benchmark/tools/krag/ironjaw_wip/replacement_surface.py",
+      "sha256": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695"
+    },
+    {
+      "path": "benchmark/tools/krag/landmark_wip/landmark_relief.py",
+      "sha256": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d"
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/tusk_exterior_fit_v9lfa.py",
+      "sha256": "2495c1784a81325061549c8384fbcf0fff5e5e486d722055508686fc3d41ddf7"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    }
+  ],
+  "motionLineage": "Preserved pre-v4 v9s actions; not the frozen coherent68 engine candidate",
+  "pending": [
+    "Actual neutral/profile/full open mouth",
+    "Dental/lip/canine contact",
+    "Concept likeness",
+    "Verified v4 merge before any engine promotion"
+  ]
+}

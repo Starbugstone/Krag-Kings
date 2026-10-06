@@ -1,0 +1,90 @@
+{
+  "status": "Actual v9t native/guard exit2 before save at strict weight-range check",
+  "sourceCreated": false,
+  "nativeExitCode": 2,
+  "processId": 34300,
+  "artisticAcceptance": false,
+  "inputUnchanged": true,
+  "cause": "Strict exact1 weight limit rejects existing float32 Head+Jaw normalization excess; actual earlier saved cache maximum is1.0000000298023224. Bounded retry will record actual current extrema, allow1e-7 rounding then clamp; other gates unchanged.",
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/mandibular-v9t-failure-evidence/krag-mandibular-v9t-source.stdout.log",
+      "sha256": "ca82f4970b95e716dafde1533883a9b7409cdbd53dda3ec1204f414c2af9866e"
+    },
+    {
+      "path": "benchmark/art/krag/mandibular-v9t-failure-evidence/krag-mandibular-v9t-source.stderr.log",
+      "sha256": "94e67936f1807aa896645bd3b39171611952963994b15e1d6552aad51d1e4be8"
+    },
+    {
+      "path": "benchmark/art/krag/mandibular-v9t-failure-evidence/krag-mandibular-v9t-source-memory.csv",
+      "sha256": "fb0e20b8f1a762541a81f2de0e04f026c9ab8bca774715b932619433ecfa1e79"
+    }
+  ],
+  "failedRecipe": {
+    "status": "Prepared only; no native v9t generation or actual views",
+    "artisticAcceptance": false,
+    "sharedPromotion": false,
+    "inputSource": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "inputSourceSha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd",
+    "firstNativeBoundary": [
+      "source",
+      "ClosedRight",
+      "OpenRight"
+    ],
+    "scope": "Broad mandibular profile/tissue support and actual exterior-lip compact canine fit. Existing true rim, ocular points, actual hinge range, rig/actions and all unrelated geometry retained.",
+    "pins": [
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/build_mandibular_v9t.py",
+        "sha256": "253813f7fcefa11d09a292b4e19cf97e91507ea40fe84e9dc95c034a061a6f0e"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/mandibular_tissue_v9t.py",
+        "sha256": "ff0fe8ebed74d3b9e98e25809c73dce4c017c50c4ad752fc9e8accc7eb3bac23"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/exterior_canines_v9t.py",
+        "sha256": "fb5fe35f0ed778a1b775ec3c6ed3d295b72a7ac5a3942f68cfb329b1d3e10b6d"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/review_mandibular_v9t.py",
+        "sha256": "a050a45c72eab7dad7798e34caf1fe6d92f859f9dde9f369267bbc1c364357fe"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/preflight_mandibular_v9t.py",
+        "sha256": "1e34651b24faa13ec642aa60194d6b61d535fdbf95f8eb21a7c0877254f8da3c"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/posed_lip_corrective_v9s.py",
+        "sha256": "cebf3285ae9ca8afcece860fb9889135cffc90ef15b51e071e27614fff0d4000"
+      },
+      {
+        "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+        "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+      },
+      {
+        "path": "benchmark/tools/krag/ironjaw_wip/replacement_surface.py",
+        "sha256": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695"
+      },
+      {
+        "path": "benchmark/tools/krag/landmark_wip/landmark_relief.py",
+        "sha256": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d"
+      },
+      {
+        "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+        "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416"
+      },
+      {
+        "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+        "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+      },
+      {
+        "path": "benchmark/tools/krag/v9l_wip/tusk_exterior_fit_v9lfa.py",
+        "sha256": "2495c1784a81325061549c8384fbcf0fff5e5e486d722055508686fc3d41ddf7"
+      },
+      {
+        "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+        "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+      }
+    ]
+  }
+}

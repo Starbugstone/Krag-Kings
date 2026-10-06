@@ -1,0 +1,113 @@
+{
+  "status": "Actual saved/reopened mandibular source and two profile reviews; artistic acceptance failed",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_MandibularTissue_v9ta_WIP.blend",
+    "sha256": "5a06f5890097ce0f3fa3afe3f62a686df73428d775a30d6602bc9d3a800d56e9"
+  },
+  "sourceReceipt": {
+    "path": "benchmark/art/krag/mandibular-tissue-v9ta.json",
+    "sha256": "7de607fd574d4ea10b4c7cdfce571e94011007a61f337afb11b37bc1e1e29249"
+  },
+  "views": [
+    {
+      "view": "ClosedRight",
+      "path": "benchmark/art/krag/renders/Krag_MandibularTissue_v9ta_ClosedRight.png",
+      "sha256": "7b8a492b63c808b716aa0ed3ff9e5c87611acf6726a3bd46deec11bc0ca9e203",
+      "metadata": "benchmark/art/krag/renders/Krag_MandibularTissue_v9ta_ClosedRight.meta.json",
+      "metadataSha256": "0649b52be9cf9eda24cc81e5536ef83c4f824143f390e831c82f5388d43c9791",
+      "inspected": true
+    },
+    {
+      "view": "OpenRight",
+      "path": "benchmark/art/krag/renders/Krag_MandibularTissue_v9ta_OpenRight.png",
+      "sha256": "fbf26b12f842804918c637b31baecc157443b59f3ffeea86aee54ce912c509c4",
+      "metadata": "benchmark/art/krag/renders/Krag_MandibularTissue_v9ta_OpenRight.meta.json",
+      "metadataSha256": "634e386d91cfb84e5d55bd6c086cbabce812b0406298f128cfad416682dd340d",
+      "inspected": true
+    }
+  ],
+  "execution": [
+    {
+      "job": "krag-mandibular-v9ta-source",
+      "processId": 28772,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 1243.0,
+      "minimumAvailableMB": 10075.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-source.stdout.log",
+          "sha256": "b21a37bb96f9095a8bdb19477b39c6aa6e1bddeaf54b5fe161c634fd717df2ed"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-source.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-source-memory.csv",
+          "sha256": "434a575d22bc764cf417207a18c2c1c3e2e991fefb98f6b0cea6caa5ebaa7a37"
+        }
+      ]
+    },
+    {
+      "job": "krag-mandibular-v9ta-ClosedRight",
+      "processId": 29848,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2075.0,
+      "minimumAvailableMB": 9480.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-ClosedRight.stdout.log",
+          "sha256": "8cceb5a3b4650e6d61a970d81f4cd23f320552b74a6ad79db12a2ec81202ff1e"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-ClosedRight.stderr.log",
+          "sha256": "b7692f6702f9bd61256d5501546a2e636458d1152eea54a6c427cc2dae688d4d"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-ClosedRight-memory.csv",
+          "sha256": "0c5e4e82a102bd77e874532b23c76aa4a369ac88d81db6d987979931fd216d50"
+        }
+      ]
+    },
+    {
+      "job": "krag-mandibular-v9ta-OpenRight",
+      "processId": 28628,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2115.0,
+      "minimumAvailableMB": 9435.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-OpenRight.stdout.log",
+          "sha256": "1c663c9311925e1884e500ebd3bf9c0cc58128de2a05eb1d5509f87c26a03981"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-OpenRight.stderr.log",
+          "sha256": "b7692f6702f9bd61256d5501546a2e636458d1152eea54a6c427cc2dae688d4d"
+        },
+        {
+          "path": "benchmark/art/krag/mandibular-v9ta-evidence/krag-mandibular-v9ta-OpenRight-memory.csv",
+          "sha256": "52d63197fd24b026f7bb787f77394106165e0a9a2ccd0084f6704c8a78b2942e"
+        }
+      ]
+    }
+  ],
+  "preservedFailure": "oral-volume-study/mandibular-v9t-native-failure.json",
+  "observedImprovements": [
+    "Neutral pointed chin projection reduced and short canine now visible",
+    "Full opening substantially reduces the former sharp near-ear tissue crease",
+    "True oral rim and full22.9908degree Jaw opening retained"
+  ],
+  "observedFailures": [
+    "Neutral lower-lip/chin contour has uneven small ledges instead of a coherent heavy rounded mandible",
+    "Open lower face still reads as a broad stretched plate",
+    "Tusks, dental/gum contact and the unrendered new frontal appearance are not accepted",
+    "Brow/cheek likeness, skin/cloth and IronJaw compatibility remain failed"
+  ],
+  "nextDirection": "Use measured exterior lower-face sections to fit one continuous profile envelope; retain the lateral tissue improvement and actual lip/canine contact constraints. Do not repeat small independent depth bumps.",
+  "motionLineage": "Pre-v4 oral lineage preserved. Frozen engine source fe15213d remains unchanged; v9ta is not promoted or merged."
+}
