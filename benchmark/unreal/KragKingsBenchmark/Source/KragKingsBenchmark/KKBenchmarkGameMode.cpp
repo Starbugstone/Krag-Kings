@@ -313,19 +313,41 @@ void AKKBenchmarkGameMode::TickMovingWorkload(double WallElapsed)
 }
 void AKKBenchmarkHUD::DrawHUD()
 {
-    Super::DrawHUD();if(!Canvas)return;
-    const float X=32,Y=28;
-    DrawRect(FLinearColor(.016f,.024f,.028f,.82f),20,16,475,94);
-    DrawText(TEXT("KRAG KINGS  /  UNREAL"),FLinearColor(.89f,.83f,.70f),X,Y,nullptr,1.35f);
+    Super::DrawHUD();if(!Canvas || !GEngine)return;
+    // Match the inspection space reserved by the other engine: readable
+    // controls sit outside the models, with the selected actor/action explicit.
+    const float Scale=FMath::Min(Canvas->SizeX/1920.f,Canvas->SizeY/1080.f);
+    const float Left=34.f*Scale,TopHeight=94.f*Scale,BottomHeight=96.f*Scale;
+    const float Bottom=Canvas->SizeY-BottomHeight;
+    const FLinearColor Panel(.018f,.024f,.020f,.95f),Gold(.84f,.57f,.24f);
+    const FLinearColor Teal(.035f,.65f,.58f),Text(.89f,.90f,.85f),Muted(.46f,.49f,.42f);
+    UFont* Font=GEngine->GetMediumFont();
+    auto Label=[&](const FString& Value,const FLinearColor& Color,float X,float Y,float Height,float MaxWidth=0.f,bool bAlignRight=false)
+    {
+        float Width=0.f,MeasuredHeight=0.f;
+        GetTextSize(Value,Width,MeasuredHeight,Font,1.f);
+        float FontScale=Height*Scale/FMath::Max(MeasuredHeight,1.f);
+        if(MaxWidth>0.f && Width>0.f)FontScale=FMath::Min(FontScale,MaxWidth/Width);
+        DrawText(Value,Color,bAlignRight?X-Width*FontScale:X,Y,Font,FontScale);
+    };
+    DrawRect(Panel,0,0,Canvas->SizeX,TopHeight);
+    DrawRect(Panel,0,Bottom,Canvas->SizeX,BottomHeight);
+    Label(TEXT("KRAG KINGS"),Gold,Left,20.f*Scale,30.f);
+    Label(TEXT("DUNES / CHARACTER & MOVEMENT STUDY"),Muted,Left,59.f*Scale,15.f,610.f*Scale);
+    Label(TEXT("UNREAL"),Text,Canvas->SizeX-Left,26.f*Scale,21.f,220.f*Scale,true);
     auto* PC=Cast<AKKBenchmarkController>(GetOwningPlayerController());
     if(PC && PC->SelectedUnit())
     {
-        DrawText(PC->SelectedUnit()->GetVariantLabel(),FLinearColor(.3f,.85f,.76f),X,Y+30,nullptr,1.2f);
-        const FString ActionLabel=PC->SelectedUnit()->IsFaceActing() && PC->SelectedUnit()->GetActionLabel()==TEXT("Idle")?TEXT("EXPRESSION"):PC->SelectedUnit()->GetActionLabel();
-        DrawText(ActionLabel,FLinearColor(.7f,.73f,.71f),X,Y+55,nullptr,1.f);
+        const auto* Unit=PC->SelectedUnit();
+        const float UnitX=700.f*Scale;
+        Label(Unit->GetVariantLabel().ToUpper(),Teal,UnitX,21.f*Scale,25.f,840.f*Scale);
+        Label(Unit->IsKrag()?TEXT("Heavy armor and industrial bionics."):TEXT("Nimble engineer. Light functional replacements."),Muted,UnitX,59.f*Scale,15.f,840.f*Scale);
+        const FString ActionLabel=Unit->IsFaceActing() && Unit->GetActionLabel()==TEXT("Idle")?TEXT("EXPRESSION"):Unit->GetActionLabel().ToUpper();
+        Label(ActionLabel,Teal,Canvas->SizeX-Left,Bottom+30.f*Scale,24.f,280.f*Scale,true);
     }
-    DrawRect(FLinearColor(.016f,.024f,.028f,.8f),20,Canvas->SizeY-62,Canvas->SizeX-40,42);
-    DrawText(TEXT("LMB Select  RMB Run  SHIFT+RMB Walk  A Melee  F Shoot  H Hit  V Bionics  E Face  C Portrait  TAB Unit  Arrows Pan  MMB Orbit  Wheel Zoom  HOME Reset"),FLinearColor(.84f,.81f,.72f),32,Canvas->SizeY-49,nullptr,1.f);
+    const float ControlsWidth=Canvas->SizeX-Left-350.f*Scale;
+    Label(TEXT("SELECT  Left click    RUN  Right click    WALK  Shift + Right click    MELEE  A    SHOOT  F    HIT  H    BIONICS  V    NEXT  Tab"),Text,Left,Bottom+20.f*Scale,19.f,ControlsWidth);
+    Label(TEXT("FACE  E    PORTRAIT  C    CAMERA  Arrows / Middle drag / Scroll    RESET  Home    EXIT  Esc"),Muted,Left,Bottom+58.f*Scale,16.f,ControlsWidth);
 }
 
 void AKKBenchmarkGameMode::SmokeCheck(bool bPass,const FString& Name)
