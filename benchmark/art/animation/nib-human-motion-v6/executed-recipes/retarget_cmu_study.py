@@ -230,30 +230,16 @@ def relax_free_hand(clip):
         # axes' unintended lateral fingertip drift. These are authored loose
         # fist controls, still subject to real fingertip/palm contact review.
         axis=(rig.data.bones['Index1_L'].head_local-rig.data.bones['Little1_L'].head_local).normalized()
-        angles_by_digit=([('Index',(45,65,25)),('Middle',(50,65,25)),
-                          ('Ring',(52,65,28)),('Little',(55,68,28))] if clip=='Run' else
-                         [('Index',(12,22,8)),('Middle',(15,28,10)),
-                          ('Ring',(18,30,10)),('Little',(20,32,12))])
-        rest_bends = {}
+        angles_by_digit=([('Index',(40,55,20)),('Middle',(40,50,20)),
+                          ('Ring',(40,52,20)),('Little',(42,55,20))] if clip=='Run' else
+                         [('Index',(25,40,15)),('Middle',(28,44,18)),
+                          ('Ring',(28,44,18)),('Little',(30,45,18))])
         for finger, angles in angles_by_digit:
             total = 0.; parent = hand.matrix.to_quaternion()
-            first = rig.data.bones[finger+'1_L']
-            first_direction = first.tail_local-first.head_local
-            first_direction -= axis*first_direction.dot(axis); first_direction.normalize()
-            rest_bends[finger] = []
             for segment, angle in enumerate(angles, 1):
                 bone = rig.pose.bones[finger+str(segment)+'_L']
                 total += angle
-                direction = bone.bone.tail_local-bone.bone.head_local
-                direction -= axis*direction.dot(axis); direction.normalize()
-                # The authored bind already curls at PIP and DIP. Controls
-                # describe anatomical angles, not extra curl on that bind.
-                # Subtract its measured cumulative bend before adding the
-                # desired MCP/PIP/DIP angles; preserve lateral rest offsets.
-                existing = math.atan2(axis.dot(first_direction.cross(direction)),
-                                      first_direction.dot(direction))
-                rest_bends[finger].append(math.degrees(existing))
-                desired = delta @ Quaternion(axis, math.radians(total)-existing) @ bone.bone.matrix_local.to_quaternion()
+                desired = delta @ Quaternion(axis, math.radians(total)) @ bone.bone.matrix_local.to_quaternion()
                 put_rotation(rig, bone.name, desired, parent)
                 bone.keyframe_insert('rotation_euler', frame=scene.frame_current, group=bone.name)
                 parent = desired
@@ -270,10 +256,8 @@ def relax_free_hand(clip):
             bone.keyframe_insert('rotation_euler',frame=scene.frame_current,group=bone.name)
             parent=desired
         report['freeHandControls']={'fingerFlexPlane':'Actual Little1 to Index1 knuckle row',
-            'angleConvention':'Anatomical incremental joint angles from first phalanx bind direction; existing cumulative bind bend subtracted',
-            'measuredCumulativeBindBendDegrees':rest_bends,
-            'runMcpPipDipDegrees':{'Index':[45,65,25],'Middle':[50,65,25],'Ring':[52,65,28],'Little':[55,68,28]},
-            'restMcpPipDipDegrees':{'Index':[12,22,8],'Middle':[15,28,10],'Ring':[18,30,10],'Little':[20,32,12]},
+            'runMcpPipDipDegrees':{'Index':[40,55,20],'Middle':[40,50,20],'Ring':[40,52,20],'Little':[42,55,20]},
+            'restMcpPipDipDegrees':{'Index':[25,40,15],'Middle':[28,44,18],'Ring':[28,44,18],'Little':[30,45,18]},
             'thumbRun':{'palmarAxisOppositionDegrees':20,'flexionDegrees':[8,10]},
             'thumbRest':{'palmarAxisOppositionDegrees':12,'flexionDegrees':[5,8]},
             'status':'Actual-chain numerical proposal; native pose/contact review required'}

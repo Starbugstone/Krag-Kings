@@ -12,6 +12,9 @@ import sys
 import bpy
 from mathutils import Vector
 
+sys.path.insert(0, str(Path(__file__).parent))
+from export_contract import select_action
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--source', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
@@ -66,7 +69,7 @@ report = {'source': str(args.source), 'sourceSha256': source_sha,
           'materialReview': False, 'artisticAcceptance': False, 'clips': {}}
 for clip in ['Walk', 'Run', 'Idle']:
     action = bpy.data.actions[clip]
-    rig.animation_data.action = action
+    select_action(bpy, rig, action)
     first, last = (int(v) for v in action.frame_range)
     frames = ([round(first+(last-first)*p) for p in [0, .25, .5, .75]] if args.poses_only
               else list(range(first, last, 3 if clip == 'Idle' else 1)))

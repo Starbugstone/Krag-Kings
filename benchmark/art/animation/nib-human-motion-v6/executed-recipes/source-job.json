@@ -1,0 +1,30 @@
+{
+  "name": "nib-human-motion-v6",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\retarget_cmu_study.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_AnatomicalBodyStudy_v1.blend",
+    "--species",
+    "Nib",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v6",
+    "--generation",
+    "v6"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v6.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v6.stderr.log",
+  "maxPrivateGB": 2.5,
+  "minAvailableGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v6.stdout.log",
+  "successMarker": "KRAG_KINGS_HUMAN_MOTION_STUDY_COMPLETE",
+  "memoryBudgetReason": "Previous matching source generation peaked542MB and wholecycle render1257MB; bounded2.5GiB worker preserves at least5.5GiB launch headroom. Global guard unchanged."
+}

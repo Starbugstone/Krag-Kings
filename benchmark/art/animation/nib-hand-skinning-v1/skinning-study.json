@@ -1,0 +1,43 @@
+{
+  "status": "Actual skinning-only source; native pose/contact review required",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v6\\Nib_HumanMotion_Study_v6.blend",
+  "sourceSha256": "1eb7ccd6913f893f650441630fa7b004aaf9dfb1eb84eeef348d3964c868d15f",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-hand-skinning-v1\\Nib_HandSkinning_Study_v1.blend",
+  "outputSha256": "831b85ad2a078ef75b37305371855c15525f8a5ec53b6039168db87c0a2e7ef3",
+  "recipeSha256": "277d6210951dfde73d8693f980a01cb0e2dd4b9be4dff11c263227a09ddd35ed",
+  "domainRecipeSha256": "cfc38673ff6d55fd3b191eca6194c09322c9e963284fcdf556298d6257ea3b03",
+  "handMesh": "Nib v5 coherent hand L",
+  "vertices": 13194,
+  "faces": 13192,
+  "harmonicDomainSolve": {
+    "digitSeedCounts": {
+      "Index": 1372,
+      "Middle": 1148,
+      "Ring": 1142,
+      "Little": 1244,
+      "Thumb": 831
+    },
+    "palmSeedCount": 4077,
+    "unknownVertices": 3380,
+    "iterations": 204,
+    "maximumRelativeResidual": 9.918305975455066e-10,
+    "maximumPartitionError": 6.43825759372163e-09
+  },
+  "limits": {
+    "maximumHarmonicTailReturnedToPalm": 0.2973730894402395,
+    "maximumDiscardedWeightForFourInfluences": 0.06916993759131757,
+    "jointTransitionHalfWidthMeters": 0.0035
+  },
+  "beforeWeightsSha256": "bb2acf459a6388aa13bf279a2ea272fc811bcf90f06a8138c05ed296c95ab411",
+  "afterWeightsSha256": "c9a8607e91caca6ac290bee09465946e92815aaa2b10c8e152338ff7b3df36c5",
+  "bindAndCoordinatesPreserved": true,
+  "actionsChanged": false,
+  "unresolved": [
+    "Actual curled hand silhouette/contact",
+    "Floating old glove rivets",
+    "Right hand weapon contact and skinning need separate review"
+  ],
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "artisticAcceptance": false
+}

@@ -1,0 +1,29 @@
+{
+  "sourceSha256": "1eb7ccd6913f893f650441630fa7b004aaf9dfb1eb84eeef348d3964c868d15f",
+  "actualHandImages": 18,
+  "inspectedViews": [
+    "Run_00_palm.png",
+    "Run_00_edge.png",
+    "Idle_00_palm.png",
+    "Idle_00_back.png"
+  ],
+  "verdict": "FAIL: finger webbing stretches too far and old glove details float",
+  "findings": [
+    "Common-plane curling and thumb opposition now exist in the actual saved source.",
+    "The close-up reveals 3594 of7621 predominantly digit-weighted vertices carry more than10% influence from another digit. This explains a skinning defect hidden by full-body framing.",
+    "Curled palm has stretched thin web surfaces, floating legacy glove rivets and tubular wrist wraps.",
+    "A topology-based skinning repair is prepared, not yet executed."
+  ],
+  "completedSourceChannelTracks": {
+    "Idle": 180,
+    "Walk": 180,
+    "Run": 180,
+    "Melee": 261,
+    "Shoot": 261,
+    "Hit": 261,
+    "FacePerformance": 261
+  },
+  "bodyGeometryAndBindPreserved": true,
+  "artisticAcceptance": false,
+  "engineImported": false
+}

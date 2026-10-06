@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "831b85ad2a078ef75b37305371855c15525f8a5ec53b6039168db87c0a2e7ef3",
+  "result": "Partial improvement, hand pose still fails",
+  "actualImages": 18,
+  "inspected": [
+    "Run_00_palm.png",
+    "Run_00_edge.png",
+    "Idle_00_back.png"
+  ],
+  "findings": [
+    "Topology-based weights reduce the diffuse knuckle collapse, but thin palmar web surfaces remain in the strongly curled pose.",
+    "The existing finger bind already includes significant PIP/DIP flexion; v6 added additional joint angles on top. The next pose pass subtracts that measured bind bend when authoring anatomical total angles.",
+    "Old glove rivets still float and tubular forearm wraps need replacement."
+  ],
+  "geometryAndBindPreserved": true,
+  "artisticAcceptance": false,
+  "engineImported": false
+}
