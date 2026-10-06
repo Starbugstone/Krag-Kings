@@ -1,0 +1,23 @@
+{
+  "name": "unreal-idle-rig-editor",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\build_demo.ps1",
+    "-Stage",
+    "BuildEditor"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-idle-rig-compile-plan\\result\\stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-idle-rig-compile-plan\\result\\stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\build-editor.log",
+  "successMarker": "Result: Succeeded"
+}

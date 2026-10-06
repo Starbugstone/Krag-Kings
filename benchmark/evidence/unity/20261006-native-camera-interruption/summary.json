@@ -1,0 +1,61 @@
+{
+  "completeNativeSuite": false,
+  "passedCheckGroups": 2,
+  "passed": [
+    "Native clicks and keys started Nib shooting while Krag melee continued",
+    "Native middle-mouse orbit, wheel zoom and arrow pan remained available during animation"
+  ],
+  "stopReason": "Foreground ownership changed; guard aborted before sending further input.",
+  "buildGuid": "c394a9ba909b477fb315daa0072f83c7",
+  "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "gameProcessId": 6556,
+  "gameClosed": true,
+  "launcherExitCode": 0,
+  "coordinatorExitCode": 1,
+  "windowLeaseRestored": true,
+  "foregroundAfterLoss": {
+    "gameHwnd": 2362016,
+    "foregroundHwnd": 5704170,
+    "pointerHwnd": 5704170,
+    "gamePid": 6556,
+    "foregroundPid": 8684,
+    "pointerPid": 8684,
+    "x": 1034,
+    "y": 567
+  },
+  "readOnlyOwnerCheck": {
+    "windowContentsRead": false,
+    "windowStillExists": true,
+    "recordedProcessName": "explorer",
+    "windowOrFocusChanged": false,
+    "recordedForegroundHwnd": 5704170,
+    "recordedForegroundPid": 8684,
+    "ownerMatchesRecordedPid": true,
+    "windowClass": "XamlExplorerHostIslandWindow",
+    "currentOwnerPid": 8684,
+    "checkedUtc": "2026-10-06T09:36:30.1972765Z"
+  },
+  "causeOfForegroundChangeEstablished": false,
+  "perKeyEdgeTimestampsRecorded": false,
+  "quickShiftReached": false,
+  "unityQuickShiftDefectEstablished": false,
+  "playerRebuilt": false,
+  "performanceMeasurement": false,
+  "artisticAcceptance": false,
+  "artifactHashes": {
+    "coordinator-stderr.log": "958d8a8e4f7e4012abe07e357cbfd95c89fb958f6a0a6dd524db31217bc5aa05",
+    "coordinator.log": "8e58449618809e061932b87eb249d585334106d61673eea825b41e65bd40ff64",
+    "foreground-owner.json": "8062634a802832eb82b6f42d9bc06cf24fa6d7e41954fa5ad01f8e98f96a0bef",
+    "frozen-plan.json": "dbea3c0829cf19882594f1cbbcbf7ed555af1bba03a9e2ed6fb89bc2d6f8f5f1",
+    "gpu.csv": "a5f14863186076a81ca0ac123ef153f351a22f24b47432f9a29e137b1a659322",
+    "input-probe.json": "19a6726a0054c24ee857a990f684ee0ec8ac8562acb454e279d2eb7159fa5a0e",
+    "launcher-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "launcher-stdout.log": "10e2f4b76ce5a690ad264403fa742df03fce45d8325833d3e1c9cfda68b60c42",
+    "memory.csv": "67a4c5459e8f91ed12349de2ec3e12b2159fc6f6b24d4411c7ba602d12f0efe5",
+    "native-input-result.json": "dbd26873bf6378b0dbf11e32b75d8691cdf2f0ef26f236fe2269fb60f243e99e",
+    "player.log": "4a5ec0413892255a6a89622e0429df60eaf1c931dfc13d1c638578c59b7a4f8c",
+    "result.json": "4440c323193b548e8f7342b5a091540a9146f0a0ca8af5f372babf89fe8e804e",
+    "run-conditions.json": "b53c5cd20f16161eced4f3df61605b85805d11d82b7cde983376f7cf79faf4a4",
+    "windows-input-verification.json": "aa2d2b8c241ba0bf92b80ccbe85b259cfba93b3e17cb3d5763b6c7e890de9884"
+  }
+}

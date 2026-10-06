@@ -1,0 +1,82 @@
+﻿{
+    "checks":  [
+                   "Native clicks and keys started Nib shooting while Krag melee continued",
+                   "Native middle-mouse orbit, wheel zoom and arrow pan remained available during animation"
+               ],
+    "processId":  6556,
+    "physicalAKeyLabel":  "Q",
+    "keyboardLayout":  "0000040C",
+    "failures":  [
+                     "Exception lors de l\u0027appel de « AssertForeground » avec « 0 » argument(s) : « Game does not own foreground; stopped without sending input to another application. »"
+                 ],
+    "windowLeaseRestored":  true,
+    "timestamp":  "2026-10-06T11:35:13.0535052+02:00",
+    "pointerGuards":  [
+                          {
+                              "gameHwnd":  2362016,
+                              "foregroundHwnd":  2362016,
+                              "pointerHwnd":  2362016,
+                              "gamePid":  6556,
+                              "foregroundPid":  6556,
+                              "pointerPid":  6556,
+                              "x":  1276,
+                              "y":  588
+                          },
+                          {
+                              "gameHwnd":  2362016,
+                              "foregroundHwnd":  2362016,
+                              "pointerHwnd":  2362016,
+                              "gamePid":  6556,
+                              "foregroundPid":  6556,
+                              "pointerPid":  6556,
+                              "x":  668,
+                              "y":  523
+                          },
+                          {
+                              "gameHwnd":  2362016,
+                              "foregroundHwnd":  2362016,
+                              "pointerHwnd":  2362016,
+                              "gamePid":  6556,
+                              "foregroundPid":  6556,
+                              "pointerPid":  6556,
+                              "x":  960,
+                              "y":  540
+                          },
+                          {
+                              "gameHwnd":  2362016,
+                              "foregroundHwnd":  5704170,
+                              "pointerHwnd":  5704170,
+                              "gamePid":  6556,
+                              "foregroundPid":  8684,
+                              "pointerPid":  8684,
+                              "x":  1034,
+                              "y":  567
+                          }
+                      ],
+    "contentFingerprint":  "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+    "buildGuid":  "c394a9ba909b477fb315daa0072f83c7",
+    "cameraObservations":  [
+                               {
+                                   "beforeInputFrame":  276,
+                                   "actionFrame":  283,
+                                   "cameraYaw":  165.0,
+                                   "action":  "Melee",
+                                   "cameraDistance":  6.400000095367432,
+                                   "observedUtc":  "2026-10-06T09:35:10.8502808Z",
+                                   "control":  "OrbitZoom"
+                               },
+                               {
+                                   "beforeInputFrame":  312,
+                                   "cameraFocus":  {
+                                                       "x":  -0.07499992847442627,
+                                                       "y":  2.0234289169311525,
+                                                       "z":  0.04999998211860657
+                                                   },
+                                   "actionFrame":  319,
+                                   "requestedArrowHoldMilliseconds":  90,
+                                   "action":  "Melee",
+                                   "observedUtc":  "2026-10-06T09:35:11.3893162Z",
+                                   "control":  "Pan"
+                               }
+                           ]
+}

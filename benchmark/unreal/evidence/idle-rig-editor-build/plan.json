@@ -1,0 +1,116 @@
+{
+  "preparedUtc": "2026-10-06T09:28:16.856786+00:00",
+  "scope": "Editor-module compilation only: hierarchy/reference-pose getters and independent Idle initialization",
+  "sourceRevision": "085b115c649b4f0a2743f5067f57e0ccb5b3eb14",
+  "sourceFiles": {
+    "benchmark/unreal/KragKingsBenchmark/Config/DefaultEngine.ini": {
+      "bytes": 1598,
+      "sha256": "771a35f9b36a33ef61b35db7458b2267614a5a5b125ce1ab0ce87a9b4c3bf5b2"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Config/DefaultGame.ini": {
+      "bytes": 557,
+      "sha256": "a16f1b518e51a80eee255f8b5546a5bea6088ed355f0c42f9b9ae1157475954f"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Config/DefaultGameUserSettings.ini": {
+      "bytes": 550,
+      "sha256": "7f772e9b574f980947c380785398d017b991c5e24f682ada7a5585e54ced781e"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Config/DefaultInput.ini": {
+      "bytes": 9500,
+      "sha256": "a1a10ceb05a9cd34d96aa69a295cd203a929fc31ca74b13852dab71ebf83a87d"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark.Target.cs": {
+      "bytes": 369,
+      "sha256": "445b084404ec82031102905d64f5c059a3ed58dd6a7db124470eaff81806ce36"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkAnimInstance.cpp": {
+      "bytes": 16952,
+      "sha256": "f5fbd1562a4600627ddfe9cccfa5d6aa6307cdd86ad5151f4baaf09a0256e29a"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkAnimInstance.h": {
+      "bytes": 1984,
+      "sha256": "34a39d678b61d55fedc785c7c55029b9b13efbf96359f133c3d86db469eebae9"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkAssets.cpp": {
+      "bytes": 4356,
+      "sha256": "213bd7ff9d564f853de0c1ab7080873ea5ef01ef7cc722c4def1c0b86657abe7"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkAssets.h": {
+      "bytes": 5541,
+      "sha256": "09e578991c6092558f6da9f2de48d8a3618c50321b1e5473564625ecd30cfe08"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkController.cpp": {
+      "bytes": 14202,
+      "sha256": "2860a49c4225b2cf1452a48b3bf653d44cb501ba6dd255dbe5b3c1e1a9ac0b48"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkController.h": {
+      "bytes": 1835,
+      "sha256": "ef9884fbf3406a1306f113006a86a098fad82f53f070f7823f20020d7ee99e82"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkGameMode.cpp": {
+      "bytes": 43281,
+      "sha256": "080721a40d1a95a1ab87a391af8cc53549eb96dbf3ead109d31cd25331bfa9f9"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkGameMode.h": {
+      "bytes": 2611,
+      "sha256": "7c997eb97b6d81fbcb5d354cb5483eb42ab66d3e3dcff64973ab6f7ea692ec5c"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkUnit.cpp": {
+      "bytes": 22091,
+      "sha256": "3f79f74dc10174954dd56e5870f7744b6f0bfd5f51c2f5c69eec0c7b69c6f5e8"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkUnit.h": {
+      "bytes": 2835,
+      "sha256": "b327184e2840c1b2e4c208f769e33d372183061698101ec52e5438d5866f3bb3"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKFootDust.cpp": {
+      "bytes": 1364,
+      "sha256": "80d337713dc1b01638021399c01ec43be8127534980226184f356f7a84523751"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKFootDust.h": {
+      "bytes": 698,
+      "sha256": "8d0a9d7b413ccc2dd819015fd83cb93342a2702a27e0dd17c76b03b3ef6df1df"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKShotFlash.cpp": {
+      "bytes": 2410,
+      "sha256": "a67a470f1b2834bb2753bf1354fdc2464f118476929fe025a5180bc4e6d8082a"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKShotFlash.h": {
+      "bytes": 839,
+      "sha256": "7644d96b1590298775cefef4a82867d439a45e235a488817151b558ae57515bf"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KragKingsBenchmark.Build.cs": {
+      "bytes": 437,
+      "sha256": "870e03cd84e7fc7a119705993553045aabc6793b00cf8332412c027aaeff8bff"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KragKingsBenchmark.cpp": {
+      "bytes": 132,
+      "sha256": "eaecc5dbb385cedf921b553ceff475fc9f34a5b164817c3c09c86739fc465e28"
+    },
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmarkEditor.Target.cs": {
+      "bytes": 383,
+      "sha256": "35bb049659a634e13fbc2836e5bfbf85175e1e3507f340463f9ef47d0b640d0c"
+    },
+    "benchmark/unreal/KragKingsBenchmark/KragKingsBenchmark.uproject": {
+      "bytes": 526,
+      "sha256": "d1dea64a376c6b24b4b5774e7b0b2038efdb2aecd83ea3bd6ae56f17434a4852"
+    },
+    "benchmark/tools/unreal/BuildConfiguration.xml": {
+      "bytes": 374,
+      "sha256": "6ac5b20d376e6207fa792499fd6c57feadf1ac9109782ebc906614ad85d0ffa4"
+    },
+    "benchmark/tools/unreal/build_demo.ps1": {
+      "bytes": 12512,
+      "sha256": "1429fae6e52a2c69b4e4179f4465031475323dbbf3c3155349e9df8074a4190f"
+    },
+    "benchmark/tools/Run-HeavyTask.ps1": {
+      "bytes": 8006,
+      "sha256": "722aaa9d9b7e1831980d585239528ac116a47700b6eec9f2dbfb89bb29981ab8"
+    }
+  },
+  "currentPackageExecutable": "benchmark/builds/unreal/Windows/KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
+  "currentPackageExecutableSha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+  "packageOverwritePlanned": false,
+  "sharedAssetMutationPlanned": false,
+  "actualNativeCompileExecuted": false
+}

@@ -1,0 +1,10 @@
+Exception lors de l'appel de ®AssertForeground¯ avec ®0¯ argument(s): ®Game does not own foreground; stopped without 
+sending input to another application.¯
+Au caractŠre D:\Dev\Krag-Kings\benchmark\local\evidence\unity-native-input\20261006-113455-31132\executed-Verify-Window
+sInput.ps1:256 : 21
++ if($failures.Count){throw ($failures -join '; ')}
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Exception lors ... application.ÿ¯:String) [], RuntimeException
+    + FullyQualifiedErrorId : Exception lors de l'appel de ®AssertForeground¯ avec ®0¯ argument(s): ®Game does n    ot 
+own foreground; stopped without sending input to another application.¯
+ 
