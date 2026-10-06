@@ -1,0 +1,33 @@
+{
+  "status": "native-input-functional-pass; character likeness not accepted",
+  "buildGuid": "c4767943faf24b91b8fbc5157f46b339",
+  "contentFingerprint": "afe5b84d72dece36b6fa1fb852fbb124a9a5af9ae15f950a3de65b0b55dd7351",
+  "resolution": "1920x1080",
+  "keyboardLayout": "0000040C (French)",
+  "physicalAKeyLabel": "Q",
+  "sourceEvidenceDirectory": "benchmark/local/evidence/unity-interactive/20261006-034604",
+  "art": "pretriangulated optimized Krag v7 / Nib v4b, unchanged shared maps and geometry",
+  "frameRateMeasuredHere": false,
+  "files": [
+    {
+      "path": "tools/unity/Verify-WindowsInput.ps1",
+      "bytes": 12374,
+      "sha256": "adc80fa76f8870016c550495f08aeeb0aa5b4dc336bebcaaf578183bf51d9190"
+    },
+    {
+      "path": "unity/Assets/Benchmark/Scripts/DemoScene.cs",
+      "bytes": 32267,
+      "sha256": "7519af5ac46c3fdaac5bccbc2d3d2453fc229300252b8ebe2731720b5db1472e"
+    },
+    {
+      "path": "builds/Unity/KragKings-Unity.exe",
+      "bytes": 667648,
+      "sha256": "413a04009d5fc13e03fe4e5c6941a8606c63c103edd08853efc6c9bd57e6151b"
+    },
+    {
+      "path": "builds/Unity/KragKings-Unity_Data/Managed/Assembly-CSharp.dll",
+      "bytes": 62464,
+      "sha256": "bffec27275f895c756bf67b87f35a7d83815f4b9d08569f342a3ec96ebb706e3"
+    }
+  ]
+}

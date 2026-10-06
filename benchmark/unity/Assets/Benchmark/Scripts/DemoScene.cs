@@ -32,6 +32,7 @@ namespace KragKings.Benchmark
         bool performanceOnly,performanceSampling,performanceMoving;
         long previousFrameTick;
         bool inputProbe;
+        string lastProbeKey;
         float nextProbe;
         string evidencePath;
         string renderQuality;
@@ -148,6 +149,10 @@ namespace KragKings.Benchmark
         }
         public void SetView(Vector3 focus,float viewYaw,float viewPitch,float viewDistance)
         {cameraFocus=focus;yaw=viewYaw;pitch=viewPitch;distance=viewDistance;}
+        // Actions follow the printed Latin letters on the active keyboard layout
+        // (for example A on AZERTY), matching the controls displayed in the demo.
+        static bool LetterPressed(Keyboard keyboard,string letter) =>
+            keyboard.FindKeyOnCurrentKeyboardLayout(letter)?.wasPressedThisFrame==true;
         void Update()
         {
             long tick=System.Diagnostics.Stopwatch.GetTimestamp();
@@ -159,14 +164,16 @@ namespace KragKings.Benchmark
             var keyboard=Keyboard.current;var mouse=Mouse.current;
             if(keyboard!=null)
             {
+                if(inputProbe)foreach(var key in keyboard.allKeys)
+                    if(key.wasPressedThisFrame)lastProbeKey=key.name+" / "+key.displayName;
                 if(keyboard.escapeKey.wasPressedThisFrame) Application.Quit();
                 if(keyboard.tabKey.wasPressedThisFrame) Select(units[(Array.IndexOf(units,Selected)+1)%units.Length]);
-                if(keyboard.vKey.wasPressedThisFrame && Selected) Selected.SetVariant(Selected.VariantIndex+1);
-                if(keyboard.aKey.wasPressedThisFrame && Selected) Selected.Trigger("Melee");
-                if(keyboard.fKey.wasPressedThisFrame && Selected) Selected.Trigger("Shoot");
-                if(keyboard.hKey.wasPressedThisFrame && Selected) Selected.Trigger("Hit");
-                if(keyboard.eKey.wasPressedThisFrame && Selected) Selected.TriggerFace();
-                if(keyboard.cKey.wasPressedThisFrame) PortraitCamera();
+                if(LetterPressed(keyboard,"v") && Selected) Selected.SetVariant(Selected.VariantIndex+1);
+                if(LetterPressed(keyboard,"a") && Selected) Selected.Trigger("Melee");
+                if(LetterPressed(keyboard,"f") && Selected) Selected.Trigger("Shoot");
+                if(LetterPressed(keyboard,"h") && Selected) Selected.Trigger("Hit");
+                if(LetterPressed(keyboard,"e") && Selected) Selected.TriggerFace();
+                if(LetterPressed(keyboard,"c")) PortraitCamera();
                 if(keyboard.homeKey.wasPressedThisFrame) ResetCamera();
                 if(keyboard.f3Key.wasPressedThisFrame) showStats=!showStats;
                 if(keyboard.f12Key.wasPressedThisFrame) ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"capture-"+DateTime.Now.ToString("yyyyMMdd-HHmmss")+".png"));
@@ -189,7 +196,8 @@ namespace KragKings.Benchmark
                 {
                     Vector2 delta=mouse.delta.ReadValue();yaw+=delta.x*.17f;pitch=Mathf.Clamp(pitch-delta.y*.13f,8,72);
                 }
-                distance=Mathf.Clamp(distance-mouse.scroll.ReadValue().y*.005f,.65f,28);
+                // The pinned Input System normalizes one Windows wheel notch to 1.
+                distance=Mathf.Clamp(distance-mouse.scroll.ReadValue().y*.6f,.65f,28);
             }
             markerLife-=Time.unscaledDeltaTime;
             if(markerLife<=0) destinationRing.enabled=false;
@@ -214,6 +222,8 @@ namespace KragKings.Benchmark
             Vector3 destination=Selected.transform.position+new Vector3(2,0,2);
             if(TryGround(destination,out var hit)) destination=hit.point;
             var report=new InputProbe {frame=Time.frameCount,width=Screen.width,height=Screen.height,
+                keyboardLayout=Keyboard.current?.keyboardLayout,physicalAKeyLabel=Keyboard.current?.aKey.displayName,lastKey=lastProbeKey,
+                buildGuid=Application.buildGUID,contentFingerprint=contentFingerprint,
                 selected=Selected.species,variant=Selected.VariantIndex,action=Selected.CurrentAction,facePlaying=Selected.FacePlaying,
                 moving=Selected.IsMoving,walking=Selected.IsWalking,cameraDistance=distance,cameraYaw=yaw,cameraFocus=cameraFocus,moveScreen=demoCamera.WorldToScreenPoint(destination),
                 units=units.Select(u=>new InputUnit {species=u.species,position=u.transform.position,
@@ -225,7 +235,7 @@ namespace KragKings.Benchmark
             if(File.Exists(path)) File.Replace(temp,path,null);else File.Move(temp,path);
         }
         [Serializable] class InputUnit {public string species,action;public bool facePlaying;public Vector3 position,screen;}
-        [Serializable] class InputProbe {public int frame,width,height,variant;public string selected,action;public bool moving,walking,facePlaying;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
+        [Serializable] class InputProbe {public int frame,width,height,variant;public string selected,action,keyboardLayout,physicalAKeyLabel,lastKey,buildGuid,contentFingerprint;public bool moving,walking,facePlaying;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
         void Effect(DemoUnit unit,string action) { if(combatAudio)combatAudio.Action(unit,action);if(action=="Shoot")StartCoroutine(Tracer(unit)); }
         IEnumerator Tracer(DemoUnit unit)
         {
@@ -419,14 +429,19 @@ namespace KragKings.Benchmark
             Coroutine movement=performanceMoving?StartCoroutine(PerformanceMotion()):null;
             yield return new WaitForSecondsRealtime(15);
             frameTimes.Clear();performanceSampling=true;
+            string sampleStartedUtc=DateTime.UtcNow.ToString("o");
+            long sampleStartedTick=System.Diagnostics.Stopwatch.GetTimestamp();
             yield return new WaitForSecondsRealtime(30);
             performanceSampling=false;
+            string sampleEndedUtc=DateTime.UtcNow.ToString("o");
+            double sampleElapsedSeconds=(System.Diagnostics.Stopwatch.GetTimestamp()-sampleStartedTick)/(double)System.Diagnostics.Stopwatch.Frequency;
             if(movement!=null)StopCoroutine(movement);
             var times=frameTimes.OrderBy(x=>x).ToArray();
             var report=new PerformanceReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,
                 contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,
                 graphicsAPI=SystemInfo.graphicsDeviceType.ToString(),cpu=SystemInfo.processorType,vramMB=SystemInfo.graphicsMemorySize,
                 resolution=$"{Screen.width}x{Screen.height}",warmupSeconds=15,sampleSeconds=30,frames=times.Length,
+                sampleStartedUtc=sampleStartedUtc,sampleEndedUtc=sampleEndedUtc,sampleElapsedSeconds=sampleElapsedSeconds,
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
                 workload=performanceMoving?"Natural Krag and Nib, repeated 12-second run/melee/shoot/hit sequence, fixed default camera; no captures or input probes during sample":"Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
                 quality=renderQuality,internalResolution=$"{demoCamera.scaledPixelWidth}x{demoCamera.scaledPixelHeight}",
@@ -465,6 +480,6 @@ namespace KragKings.Benchmark
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
         [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation; }
-        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
+        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }

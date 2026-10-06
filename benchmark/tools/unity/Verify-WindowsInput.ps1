@@ -15,7 +15,19 @@ public static class DemoInput {
  [DllImport("user32.dll")] public static extern bool GetClientRect(IntPtr h,out RECT r);
  [DllImport("user32.dll")] public static extern bool SetCursorPos(int x,int y);
  [DllImport("user32.dll")] public static extern void mouse_event(uint flags,uint x,uint y,uint data,UIntPtr extra);
- [DllImport("user32.dll")] public static extern void keybd_event(byte key,byte scan,uint flags,UIntPtr extra);
+ [DllImport("user32.dll")] public static extern uint GetWindowThreadProcessId(IntPtr h,out uint processId);
+ [DllImport("user32.dll")] public static extern IntPtr GetKeyboardLayout(uint threadId);
+ [DllImport("user32.dll",EntryPoint="MapVirtualKeyExW",ExactSpelling=true)] public static extern uint MapVirtualKeyEx(uint code,uint type,IntPtr layout);
+ [StructLayout(LayoutKind.Sequential)] public struct KEYBDINPUT {public ushort vk,scan;public uint flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Sequential)] public struct MOUSEINPUT {public int dx,dy;public uint data,flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Explicit)] public struct INPUTUNION {[FieldOffset(0)]public KEYBDINPUT key;[FieldOffset(0)]public MOUSEINPUT mouse;}
+ [StructLayout(LayoutKind.Sequential)] public struct INPUT {public uint type;public INPUTUNION value;}
+ [DllImport("user32.dll",SetLastError=true)] static extern uint SendInput(uint count,INPUT[] inputs,int size);
+ public static void SendScan(uint scan,bool up) {
+  uint flags=8u | ((scan & 0xFF00u)!=0?1u:0u) | (up?2u:0u);
+  var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan & 0xFFu),flags=flags}}};
+  if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
+ }
 }
 '@
 $demo=Get-Process -Id $DemoProcessId
@@ -24,15 +36,35 @@ $window=$demo.MainWindowHandle
 if($window -eq [IntPtr]::Zero){throw 'Packaged demo has no visible window.'}
 $probePath=Join-Path $EvidencePath 'input-probe.json'
 function Read-Probe {
-    for($attempt=0;$attempt -lt 5;$attempt++) {
-        try {return Get-Content -Raw $probePath | ConvertFrom-Json} catch {Start-Sleep -Milliseconds 50}
+    $lastError='No probe yet'
+    for($attempt=0;$attempt -lt 20;$attempt++) {
+        $reader=$null
+        try {
+            $stream=[IO.File]::Open($probePath,[IO.FileMode]::Open,[IO.FileAccess]::Read,([IO.FileShare]::ReadWrite -bor [IO.FileShare]::Delete))
+            $reader=[IO.StreamReader]::new($stream)
+            return $reader.ReadToEnd() | ConvertFrom-Json
+        } catch {$lastError=$_.Exception.Message;Start-Sleep -Milliseconds 50}
+        finally {if($reader){$reader.Dispose()}}
     }
-    throw 'Cannot read runtime input probe. Start the demo with -inputProbe -evidencePath <folder>.'
+    throw "Cannot read runtime input probe at $probePath : $lastError"
 }
 function Focus-Demo {
     [DemoInput]::SetForegroundWindow($window)|Out-Null
     Start-Sleep -Milliseconds 150
     if([DemoInput]::GetForegroundWindow() -ne $window){throw 'Demo did not receive focus; no input sent to another application.'}
+}
+function Send-Key([byte]$Key,[bool]$Up=$false) {
+    # Raw-input consumers need a real scan code, including the extended flag
+    # for Home and arrows. Resolve against the target window's keyboard layout.
+    $owner=[uint32]0
+    $thread=[DemoInput]::GetWindowThreadProcessId($window,[ref]$owner)
+    $layout=[DemoInput]::GetKeyboardLayout($thread)
+    $scan=[DemoInput]::MapVirtualKeyEx($Key,4,$layout)
+    if($scan -eq 0){throw "No scan code for virtual key $Key on the game's keyboard layout."}
+    # This host's French layout returns 0x47/0x4D without E0 even for type 4.
+    # Navigation keys must remain distinct from the numeric keypad.
+    if(($Key -ge 0x21 -and $Key -le 0x28) -or $Key -eq 0x2D -or $Key -eq 0x2E){$scan=$scan -bor 0xE000}
+    [DemoInput]::SendScan($scan,$Up)
 }
 function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false) {
     Focus-Demo
@@ -46,20 +78,30 @@ function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false) {
     [DemoInput]::ClientToScreen($window,[ref]$point)|Out-Null
     [DemoInput]::SetCursorPos($point.X,$point.Y)|Out-Null
     $down=if($Right){8}else{2};$up=if($Right){16}else{4}
-    if($Walk){[DemoInput]::keybd_event(0x10,0,0,[UIntPtr]::Zero)}
+    if($Walk){Send-Key 0xA0}
     try {
         [DemoInput]::mouse_event($down,0,0,0,[UIntPtr]::Zero)
         Start-Sleep -Milliseconds 100
         [DemoInput]::mouse_event($up,0,0,0,[UIntPtr]::Zero)
     } finally {
-        if($Walk){[DemoInput]::keybd_event(0x10,0,2,[UIntPtr]::Zero)}
+        if($Walk){Send-Key 0xA0 $true}
     }
 }
 function Press-Key([byte]$Key) {
     Focus-Demo
-    [DemoInput]::keybd_event($Key,0,0,[UIntPtr]::Zero)
+    Send-Key $Key
     Start-Sleep -Milliseconds 90
-    [DemoInput]::keybd_event($Key,0,2,[UIntPtr]::Zero)
+    Send-Key $Key $true
+}
+function Zoom-ForMove {
+    # Frame a visible sand destination above the bottom controls before clicking.
+    Focus-Demo
+    $before=(Read-Probe).cameraDistance
+    for($notch=0;$notch -lt 4;$notch++){
+        [DemoInput]::mouse_event(0x800,0,0,4294967176,[UIntPtr]::Zero) # signed -120
+        Start-Sleep -Milliseconds 60
+    }
+    $null=Wait-Probe {param($p) $p.cameraDistance -gt $before+1} 'Zoom-out did not reveal a movement destination'
 }
 function Wait-Probe([scriptblock]$Predicate,[string]$Failure,[int]$Seconds=5) {
     $deadline=(Get-Date).AddSeconds($Seconds)
@@ -82,12 +124,13 @@ try {
     $probe=Read-Probe
     Click-World ($probe.units | Where-Object species -eq 'Nib').screen $false
     Press-Key 0x46
-    $null=Wait-Probe {param($p) ($p.units | Where-Object species -eq 'Krag').action -eq 'Melee' -and ($p.units | Where-Object species -eq 'Nib').action -eq 'Shoot'} 'Selecting and commanding the second unit interrupted overlapping actions' 2
+    $null=Wait-Probe {param($p) ($p.units | Where-Object species -eq 'Krag').action -eq 'Melee' -and ($p.units | Where-Object species -eq 'Nib').action -eq 'Shoot'} 'Native clicks/keys did not produce concurrent Krag melee and Nib shooting' 2
     $checks.Add('Native clicks and keys started Nib shooting while Krag melee continued')
     $null=Wait-Probe {param($p) @($p.units | Where-Object action -ne 'Idle').Count -eq 0} 'Overlapping actions did not finish' 8
     Press-Key 0x41
     Focus-Demo
     $beforeCamera=Read-Probe
+    if($beforeCamera.action -ne 'Melee'){throw 'Camera overlap check did not start its action.'}
     $rect=New-Object DemoInput+RECT
     [DemoInput]::GetClientRect($window,[ref]$rect)|Out-Null
     $point=New-Object DemoInput+POINT
@@ -96,14 +139,17 @@ try {
     [DemoInput]::SetCursorPos($point.X,$point.Y)|Out-Null
     [DemoInput]::mouse_event(0x20,0,0,0,[UIntPtr]::Zero)
     try {
+        for($step=0;$step -lt 4;$step++){
+            Start-Sleep -Milliseconds 50
+            [DemoInput]::mouse_event(0x1,16,6,0,[UIntPtr]::Zero)
+        }
         Start-Sleep -Milliseconds 60
-        [DemoInput]::SetCursorPos($point.X+70,$point.Y+25)|Out-Null
-        Start-Sleep -Milliseconds 100
     } finally {[DemoInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
     [DemoInput]::mouse_event(0x800,0,0,120,[UIntPtr]::Zero)
-    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraYaw-$beforeCamera.cameraYaw) -gt 1 -and $p.cameraDistance -lt $beforeCamera.cameraDistance} 'Native orbit/zoom input did not change the camera'
+    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraYaw-$beforeCamera.cameraYaw) -gt 1 -and $p.cameraDistance -lt $beforeCamera.cameraDistance-.2 -and $p.action -eq 'Melee'} 'Native orbit/zoom input did not change the camera'
+    Press-Key 0x41 # Restart an action for a separate pan-during-animation check.
     Press-Key 0x27 # Right arrow pans the camera independently of the action.
-    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraFocus.x-$beforeCamera.cameraFocus.x)+[Math]::Abs($p.cameraFocus.z-$beforeCamera.cameraFocus.z) -gt .02} 'Native pan input did not change camera focus'
+    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraFocus.x-$beforeCamera.cameraFocus.x)+[Math]::Abs($p.cameraFocus.z-$beforeCamera.cameraFocus.z) -gt .02 -and $p.action -eq 'Melee'} 'Native pan input did not change camera focus'
     $checks.Add('Native middle-mouse orbit, wheel zoom and arrow pan remained available during animation')
     Press-Key 0x24
     $null=Wait-Probe {param($p) @($p.units | Where-Object action -ne 'Idle').Count -eq 0} 'Camera test action did not finish' 8
@@ -132,6 +178,7 @@ try {
         Press-Key 0x56
         $null=Wait-Probe {param($p) $p.variant -ne $before} "$species V variant switch failed"
         $checks.Add("$species variant changed with V")
+        Zoom-ForMove
         $probe=Read-Probe
         $origin=($probe.units | Where-Object species -eq $species).position
         Click-World $probe.moveScreen $true
@@ -143,6 +190,7 @@ try {
         $checks.Add("$species moved $([Math]::Round($distance,2)) meters after native right mouse input")
         Press-Key 0x24
         Start-Sleep -Milliseconds 250
+        Zoom-ForMove
         $probe=Read-Probe
         Click-World $probe.moveScreen $true $true
         $null=Wait-Probe {param($p) $p.moving -and $p.walking -and $p.action -eq 'Walk'} "$species Shift + right-click walking failed"
@@ -154,7 +202,7 @@ try {
     Press-Key 0x7B # F12 is the game's own capture path.
     $checks.Add('F12 capture input sent; output image must be inspected separately')
 } catch { $failures.Add($_.Exception.Message) }
-@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;checks=@($checks);failures=@($failures)} |
+@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures)} |
     ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
 if($failures.Count){throw ($failures -join '; ')}
 Write-Output 'WINDOWS_INPUT_VERIFICATION_PASS'
