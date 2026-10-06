@@ -1,0 +1,149 @@
+{
+  "status": "Actual exterior crown fit; neutral and open-mouth profile review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_CrownFit_v9lfa_WIP.blend",
+    "sha256": "dc06977f73ee8333d3e5a7888fc4713fbe5ea72f36fafcfc699ec082b6573f30"
+  },
+  "tusks": {
+    "status": "Actual crown-to-exterior source fit; neutral/open profile review required",
+    "ringLookup": "Authored per-quad UV V coordinates, independent of BMesh vertex order",
+    "gingivalRootsFixed": true,
+    "unrelatedOcularShapesExact": true,
+    "sides": [
+      {
+        "side": "R",
+        "rootCenterUnchanged": [
+          -0.04102049022912979,
+          -0.15700653195381165,
+          1.803720474243164
+        ],
+        "requiredForwardByRingMeters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.013001428413391114,
+          0.015810610222816466,
+          0.01652178304195404,
+          0.015742958950996398,
+          0.013522238898277283,
+          0.010125951337814331,
+          0.006002725529670716,
+          0.001319275665283203,
+          0.0
+        ],
+        "appliedForwardByRingMeters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0007530427337036135,
+          0.004127173435546876,
+          0.00887425497784424,
+          0.012248385679687503,
+          0.013001428413391114,
+          0.015810610222816466,
+          0.01652178304195404,
+          0.015742958950996398,
+          0.013522238898277283,
+          0.010125951337814331,
+          0.006709182467402311,
+          0.0033338652434347898,
+          0.0
+        ],
+        "maximumForwardCorrectionMeters": 0.01652178304195404,
+        "minimumFrontSurfaceGapMeters": 0.0007999999999999952,
+        "surfaceRegionIds": [
+          24,
+          33,
+          35
+        ],
+        "archReviewFlag": false
+      },
+      {
+        "side": "L",
+        "rootCenterUnchanged": [
+          0.04102049022912979,
+          -0.15700653195381165,
+          1.803720474243164
+        ],
+        "requiredForwardByRingMeters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.013080553579330445,
+          0.016061635184288024,
+          0.016831414270401,
+          0.01603955166339874,
+          0.013759584593772889,
+          0.010299266743659974,
+          0.006129370498657227,
+          0.0014073713302612304,
+          0.0
+        ],
+        "appliedForwardByRingMeters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0007576256633148196,
+          0.004152290928222657,
+          0.008928262651107789,
+          0.012322927916015627,
+          0.013080553579330445,
+          0.016061635184288024,
+          0.016831414270401,
+          0.01603955166339874,
+          0.013759584593772889,
+          0.010299266743659974,
+          0.006825339295894952,
+          0.0033922502716086916,
+          0.0
+        ],
+        "maximumForwardCorrectionMeters": 0.016831414270401,
+        "minimumFrontSurfaceGapMeters": 0.0007999999999999952,
+        "surfaceRegionIds": [
+          24,
+          33,
+          35
+        ],
+        "archReviewFlag": false
+      }
+    ],
+    "pending": [
+      "True eruption appearance and posed lip clearance",
+      "Dental-arch setback and visible gum/tongue depth",
+      "Normal mouth and concept likeness"
+    ]
+  },
+  "preservedOtherGeometryBindActions": "f6ab3d69097fa9dc6cebd36550a9cc6dc9e5dcc05fa8944832087057670645cb",
+  "knownUnchangedFailures": [
+    "Actual tusk emergence/contact still requires neutral/open profile review",
+    "Cowl still has regular U-bib folds",
+    "Brow, glabella, facial skin and armor/clothing likeness"
+  ],
+  "preserved": [
+    "True oral bag and lip margins",
+    "Upper face and ocular geometry",
+    "Lower-neck transition",
+    "All mesh coordinates except fitted tusk crowns; complete Head and unrelated ocular shape coordinates verified exact",
+    "Body bind and actions",
+    "Current weapon",
+    "Shared exports"
+  ]
+}

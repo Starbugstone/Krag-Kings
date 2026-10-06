@@ -1,0 +1,18 @@
+{
+  "name": "krag-build-crown-fit-v9lfa",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9l_wip\\build_crown_fit_v9lfa.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-crown-fit-v9lfa.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-crown-fit-v9lfa.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}

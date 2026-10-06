@@ -1,0 +1,68 @@
+{
+  "status": "Actual source and HeadSide reviewed; numerical clearance passes but crown is an unnatural hooked strip, dependent views stopped",
+  "source": {
+    "path": "benchmark/art/krag/Krag_CrownFit_v9lfa_WIP.blend",
+    "sha256": "dc06977f73ee8333d3e5a7888fc4713fbe5ea72f36fafcfc699ec082b6573f30",
+    "bytes": 111783856
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/crown-fit-v9lfa.json",
+      "sha256": "3ab3f7a77192b6ec4aee57813ec31258eede4cd82b08657ae62a0a715cb379ff",
+      "bytes": 4324
+    },
+    {
+      "path": "benchmark/art/krag/v9lfa-crown-fit-prepared.json",
+      "sha256": "75a6f876b778131c361719ba278ea62a075e4a5089b4f9d9793213a73be603c0",
+      "bytes": 2763
+    },
+    {
+      "path": "benchmark/art/krag/v9lf-crown-fit-failure.json",
+      "sha256": "88220adcaa8831b9a69bd2db52fc98cc36cf74619a8e18b1e88c5fa715c12e6b",
+      "bytes": 2337
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lfa-crown-fit.png",
+      "sha256": "871338524c29c7772aaff6b9ce95699cd1aebba10f3db3083e9235bea542de31",
+      "bytes": 1128064
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lfa-crown-fit.meta.json",
+      "sha256": "42c8833a39c1cb8a038577092d36117a0a091469ad6e26b0d7ab78dadcc87ad5",
+      "bytes": 575
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-crown-fit-v9lfa-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 920.0,
+      "minimumAvailableMB": 12450.0
+    },
+    {
+      "path": "benchmark/local/krag-review-crown-fit-v9lfa-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2063.0,
+      "minimumAvailableMB": 11631.0
+    }
+  ],
+  "technicalFindings": [
+    "UV-based ring recovery verified all17x24 rings and the exact original gingival roots",
+    "Maximum crown correction16.8314mm; neutral front-surface gap0.8mm",
+    "Complete Head, other modules, body bind/action curves and unrelated ocular shape coordinates remain exact"
+  ],
+  "visualFailures": [
+    "Exposed tooth becomes a long hooked strip following upper muzzle skin, rather than a short coherent tapered tusk at the lower lip",
+    "Macro face profile remains too protruding at nasal/muzzle region relative to the brow, with rounded withdrawn chin",
+    "Cowl remains a low regular U-bib with stiff rear ends",
+    "Normal oral interior and overall concept likeness remain failed"
+  ],
+  "stoppedViews": [
+    "Head",
+    "OpenMouth",
+    "OpenProfile"
+  ],
+  "next": "Prioritize coherent macro facial envelope and ocular/oral/pivot fit before another local tusk attempt; preserve body bind/actions. Side silhouette first, then neutral/open checks. Short crowns will be fitted only after the envelope is coherent."
+}

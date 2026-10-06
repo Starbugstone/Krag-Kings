@@ -300,3 +300,17 @@ The isolated `Krag_Cowl_v9mc_WIP.blend` rebases the ungenerated v9mb pattern ont
 `Krag_MandibleTusks_v9le_WIP.blend` (SHA-256 `6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7`) and its first HeadSide are preserved in `v9le-mandible-tusks-review.json`; both guarded jobs exited0. The broad mandibular change peaks9.17mm without flips/collapse. New curved crowns replace96 old three-ring vertices with816 vertices, while all retained ocular shape coordinates are exact.
 
 **Tusk emergence fails.** Only a tiny ivory sliver remains visible: the true inner oral rim lies behind the outer lip/muzzle, and preserving the old tip positions buries the new crown. Dependent neutral/open views were stopped. The stronger chin is a useful silhouette improvement, not likeness acceptance. The next bounded fit will test the actual exterior skin along the exposed crown, keep the gingival roots inside and flag excessive arch setback. The cowl's stiff side/back ends, regular U-bib folds, empty-looking mouth and smooth skull planes remain known failures; no shared export occurred.
+
+
+## v9lf stopped before save; UV-based ring recovery prepared
+
+The frozen crown-fit job stopped at its explicit root-ring assertion before saving or rendering. The new tusk vertices had passed through BMesh replacement, so sorted component indices could not be assumed to retain axial ring creation order. `v9lf-crown-fit-failure.json` preserves the exception and sampled memory evidence; the final guard completion text was not retained, and no guard exit code is claimed. Both the Blender process and the named guard were subsequently absent. The actual v9le source remains unchanged.
+
+The separately named v9lfa recipe recovers each ring from actual per-quad UV V coordinates and requires all17 rings to contain24 vertices with consistent coordinates. The existing gingival-root, maximum-displacement and exterior-clearance bounds remain unchanged. It is prepared but ungenerated; profile-first visual review still determines whether the crown fit is coherent. No shared assets changed.
+
+
+## v9lfa actual crown clearance: hooked silhouette rejected
+
+The corrected UV-based ring recovery generated `Krag_CrownFit_v9lfa_WIP.blend` (SHA-256 `dc06977f73ee8333d3e5a7888fc4713fbe5ea72f36fafcfc699ec082b6573f30`) and an actual HeadSide; both guards exited0. `v9lfa-crown-fit-review.json` records source/image hashes and telemetry. All17x24 rings and the original gingival roots verify; maximum forward crown correction is16.83mm with0.8mm neutral exterior clearance. The complete Head, other geometry, body bind/actions and unrelated ocular shape coordinates are exact.
+
+**The visual fit fails.** The tooth becomes a long hooked strip tracing the upper muzzle instead of a short, coherent taper emerging beside the lower lip. Dependent portraits/open views were stopped. The reference comparison also confirms that the nasal/muzzle envelope leads the brow too far, with a rounded withdrawn chin. The next source pass must first establish the compressed, heavy humanoid skull/muzzle/jaw silhouette through a coherent deformation of facial skin, eyes, oral parts and facial pivots; overly fixed ocular margins must not prevent likeness correction. Body bind/actions stay preserved. Short visible tusks will be fitted after that envelope, not through another skin-following offset. Cowl and normal-mouth acceptance remain open, and shared assets are unchanged.

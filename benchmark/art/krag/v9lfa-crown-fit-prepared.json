@@ -1,0 +1,66 @@
+{
+  "status": "Prepared corrected axial-ring lookup; not generated",
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "method": [
+    "Recover axial rings from actual quad UV V coordinates, verifying17 rings of24 vertices independently of BMesh index order",
+    "Ray-test the actual closed exterior Head surface at every exposed crown sample",
+    "Fit crown forward with a smooth root transition; first four root rings remain exact",
+    "Require0.8mm neutral front-surface clearance for the exposed crown and bound maximum correction45mm",
+    "Record all required/applied ring shifts; flag corrections above25mm for dental/soft-tissue depth review",
+    "Preserve complete Head, other modules, rig bind/actions and unrelated ocular shape coordinates"
+  ],
+  "firstReview": "HeadSide first, then Head/OpenMouth/OpenProfile only if coherent",
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_crown_fit_v9lfa.py",
+      "sha256": "199730304aec1aad007e043b5ce44fb1e8a103030bbbfaf4620fdc8dd79a8851",
+      "bytes": 3968
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/tusk_exterior_fit_v9lfa.py",
+      "sha256": "2495c1784a81325061549c8384fbcf0fff5e5e486d722055508686fc3d41ddf7",
+      "bytes": 5893
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca",
+      "bytes": 12214
+    },
+    {
+      "path": "benchmark/tools/krag/build-crown-fit-v9lfa-job.json",
+      "sha256": "e1dbdee0bf1aa98730309b769f839d3da584e017de9f2f0ffa2efc2987385ad5",
+      "bytes": 613
+    },
+    {
+      "path": "benchmark/tools/krag/review-crown-fit-v9lfa-Head.json",
+      "sha256": "e48e844ac309bf39d88e2ebd8b742cd759a6a289d568436f6bfbd27deef14056",
+      "bytes": 929
+    },
+    {
+      "path": "benchmark/tools/krag/review-crown-fit-v9lfa-HeadSide.json",
+      "sha256": "e9d265dd05d102ce974d80322b8bfde70682aaa5200e2a984d2bab7b74b394d1",
+      "bytes": 945
+    },
+    {
+      "path": "benchmark/tools/krag/review-crown-fit-v9lfa-OpenMouth.json",
+      "sha256": "026ea717669d1bb358b883aacd8d9baae8e54d53f7e4eece1cf1269edaff3540",
+      "bytes": 1026
+    },
+    {
+      "path": "benchmark/tools/krag/review-crown-fit-v9lfa-OpenProfile.json",
+      "sha256": "db3411afbd2a4107632fe805cb95185d848d467ec6a12d0f338f5551f61f6b9d",
+      "bytes": 1036
+    }
+  ],
+  "priorFailure": {
+    "path": "benchmark/art/krag/v9lf-crown-fit-failure.json",
+    "sha256": "88220adcaa8831b9a69bd2db52fc98cc36cf74619a8e18b1e88c5fa715c12e6b",
+    "bytes": 2337
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "Generation stopped before source save at explicit axial-ring assertion; no render exists",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "recipeReceipt": {
+    "path": "benchmark/art/krag/v9lf-crown-fit-prepared.json",
+    "sha256": "ee0557f05b53f6435d9170f48f22a52d9f506cf50d69a2ed4ee1bb79b4edcff3",
+    "bytes": 2426
+  },
+  "sourceSaved": false,
+  "rendered": false,
+  "failure": "Actual tusk ring indexing does not start at the preserved gingival root",
+  "cause": "Sorted connected-component vertex indices do not retain the original axial creation order after BMesh replacement. This was an indexing assumption, not a demonstrated geometry defect.",
+  "errorEvidence": "Traceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9l_wip\\build_crown_fit_v9lf.py\", line 36, in <module>\n    tusk_report=tusk_exterior_fit.apply(head,modules['Face'])\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9l_wip\\tusk_exterior_fit.py\", line 25, in apply\n    if np.linalg.norm(centers[0]-expected)>.00001:raise RuntimeError('Actual tusk ring indexing does not start at the preserved gingival root')\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Actual tusk ring indexing does not start at the preserved gingival root\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9l_wip\\build_crown_fit_v9lf.py', exiting.\n",
+  "processEvidence": {
+    "blenderPid": 3356,
+    "blenderAndNamedGuardNoLongerPresent": true,
+    "guardCompletionTextRetained": false,
+    "configuredPythonErrorExitCode": 2
+  },
+  "telemetry": {
+    "path": "benchmark/local/krag-build-crown-fit-v9lf-memory.csv",
+    "samples": 3,
+    "peakPrivateMB": 752.0,
+    "minimumAvailableMB": 13075.0
+  },
+  "correction": "Prepared v9lfa recovers17x24 axial rings from actual per-quad UV V values, verifies complete membership, then retains unchanged root and clearance bounds",
+  "dependentViewsStopped": [
+    "HeadSide",
+    "Head",
+    "OpenMouth",
+    "OpenProfile"
+  ]
+}
