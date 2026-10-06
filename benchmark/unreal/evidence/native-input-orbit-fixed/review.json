@@ -1,0 +1,59 @@
+{
+  "completed": false,
+  "passedChecks": 31,
+  "failedChecks": [
+    {
+      "check": "Nib RMB runs to terrain",
+      "passed": false,
+      "runtimeElapsed": 12.196,
+      "camera": {
+        "x": -148.631,
+        "y": -581.463,
+        "z": 446.751,
+        "pitch": -22.0,
+        "yaw": 75.0
+      },
+      "selectedAction": "Idle"
+    }
+  ],
+  "nativeProcessClosed": true,
+  "guardExitCode": 0,
+  "inputCoordinatorExitCode": 1,
+  "executableSha256": "f15ff67baa06bca1bbaac1c98090f28873702d95467d871422f43af89a6868f8",
+  "orbit": {
+    "beforeCamera": {
+      "x": -259.265,
+      "y": -551.87,
+      "z": 430.395,
+      "pitch": -22.0,
+      "yaw": 75.0
+    },
+    "afterCamera": {
+      "x": -130.045,
+      "y": -555.157,
+      "z": 467.584,
+      "pitch": -25.64,
+      "yaw": 87.58
+    },
+    "yawDeltaDegrees": 12.579999999999998,
+    "actualActionDuringAllOrbitSamples": "Melee",
+    "rawEqualsProcessed": true,
+    "effectiveAxisSensitivity": [
+      1,
+      1
+    ]
+  },
+  "inputWindowOwned": true,
+  "windowLeaseRestored": true,
+  "pendingFailure": {
+    "sameFrameMouseDownAndUp": 502,
+    "noMoveAcceptedLog": true,
+    "dispatchImplementation": "IE_Pressed event binding; installed PlayerInput and EnhancedPlayerInput preserve and dispatch press/release events independently. No per-frame polling loss established.",
+    "cameraObservationMissing": "The executed verifier sent F8, Home and then Nib RMB without waiting for the observed wide camera; screenshot readback can coalesce these events. Reset fields are applied to the camera later in PlayerTick.",
+    "causeStatus": "Camera sequencing is a source-supported hypothesis, not yet proven by the missing movement trace.",
+    "preparedVerifierCorrection": "Keep the 60ms quick tap and require observed wide camera plus a later fresh state before Nib RMB. Retry the unchanged package only when the heavy slot is granted.",
+    "optionalTraceFollowup": "If the settled-camera test still fails, log MoveAtCursor callback entry, actual view and cursor hit; log MoveTo rejection reason. Do not change event dispatch or terrain rules without evidence."
+  },
+  "visualQualityAccepted": false,
+  "newScreenshotSource": "Unmodified actual F8 screenshot input-review00002.png; viewed, still rejected-art Nib candidate."
+}

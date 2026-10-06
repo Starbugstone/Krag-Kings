@@ -48,7 +48,23 @@
         "line": 2337,
         "finding": "MassageAxisInput multiplies axis sensitivity, then optional FOV scale, then optional smoothing."
       }
-    ]
+    ],
+    "numericalCrossCheck": {
+      "type": "Inference from logged pointer positions and source settings, not recorded raw mouse samples",
+      "heldPointerDeltaPixels": [
+        55,
+        -20
+      ],
+      "predictedYawDegrees": 0.9423292909800001,
+      "predictedPitchDegrees": -0.24476085480000004,
+      "archivedDeltaDegrees": [
+        0.942,
+        -0.245
+      ],
+      "matchesToReportedPrecision": true,
+      "lastHorizontalMovePixels": 20,
+      "lastMoveAndReleaseSameFrame": 688
+    }
   },
   "pending": [
     "Explicit unit-sensitivity camera correction, build and native retest",

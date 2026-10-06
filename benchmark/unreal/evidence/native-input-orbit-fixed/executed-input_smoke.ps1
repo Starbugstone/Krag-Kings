@@ -90,7 +90,7 @@ function Orbit-Camera {
  }
  finally {[KKInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
 }
-function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false,[int]$HeldMilliseconds=60) {
+function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false) {
  Assert-Foreground
  $bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
  if($X -lt 0 -or $Y -lt 0 -or $X -ge $bounds.Right -or $Y -ge $bounds.Bottom){throw 'Requested click lies outside game client; input stopped.'}
@@ -103,7 +103,7 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  if($Shift){Send-Key 0xA0}
  try {
   [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
-  if($HeldMilliseconds -gt 0){Start-Sleep -Milliseconds $HeldMilliseconds}
+  Start-Sleep -Milliseconds 60
   [KKInput]::mouse_event($(if($Right){0x10}else{0x4}),0,0,0,[UIntPtr]::Zero)
  }finally{if($Shift){Send-Key 0xA0 $true}}
 }
@@ -202,19 +202,10 @@ try {
  Press-Key 0x43
  Expect-State 'Nib C enters portrait' {param($s)$s.portrait}
  Press-Key 0x77;Press-Key 0x24
- # F8 performs asynchronous screenshot readback. Observe Home's actual cached
- # camera view before interpreting a screen-space click as a wide-view target.
- Expect-State 'Home restores wide camera before Nib movement' {param($s)(-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
- $wideResetElapsed=(Read-State).elapsed
- Expect-State 'Nib wide camera advances after reset' {param($s)$s.elapsed -gt $wideResetElapsed -and (-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
- $cameraProbes.Add([pscustomobject]@{control='NibRunClick';before=(Read-State);clientPoint=@(($rect.Right*.3),($rect.Bottom*.75));heldMilliseconds=60})
  Click-Client ($rect.Right*.3) ($rect.Bottom*.75) $true $false
  Expect-State 'Nib RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
  Click-Client ($rect.Right*.7) ($rect.Bottom*.72) $true $true
  Expect-State 'Nib Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
- $cameraProbes.Add([pscustomobject]@{control='NibQuickRunClick';before=(Read-State);clientPoint=@(($rect.Right*.24),($rect.Bottom*.85));heldMilliseconds=0})
- Click-Client ($rect.Right*.24) ($rect.Bottom*.85) $true $false 0
- Expect-State 'Immediate RMB down/up changes Nib Walk to Run' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
  $inputComplete=$true
 } catch {$inputError=$_.Exception.Message;throw} finally {
  $finalState=$null;try{$finalState=Read-State}catch{}
