@@ -29,13 +29,40 @@ def mount(context):
             if obj!=handle:obj.matrix_world=Matrix.Translation(attachment_shift)@obj.matrix_world
     for vertex in handle.data.vertices:
         vertex.co.x*=.72;vertex.co.y*=.64;vertex.co.z*=length/.117
-    shift=context['WEAPON_REST_SHIFT']
-    muzzle=transform@(Vector((-.450,-.048,.567))+shift)+attachment_shift
-    aim=transform@(Vector((-.450,-.048,.467))+shift)+attachment_shift
+    # Derive sockets from the actual two bore rings, not a remembered offset.
+    # Point flags survive consolidation and permit posed mesh-vs-marker checks.
+    bore=bpy.data.objects['Hand cannon bore'];count=len(bore.data.vertices)//2
+    if len(bore.data.vertices)!=48:raise AssertionError('Bore topology changed; inspect endpoint rings')
+    front_indices=range(count,2*count);back_indices=range(count)
+    for name,indices in [('Krag_BoreFront_v2',front_indices),('Krag_BoreBack_v2',back_indices)]:
+        attribute=bore.data.attributes.new(name,'FLOAT','POINT')
+        values=[1. if i in indices else 0. for i in range(2*count)]
+        attribute.data.foreach_set('value',values)
+    muzzle=sum((bore.matrix_world@bore.data.vertices[i].co for i in front_indices),Vector())/count
+    back=sum((bore.matrix_world@bore.data.vertices[i].co for i in back_indices),Vector())/count
+    forward=(muzzle-back).normalized();aim=muzzle+forward*.10
     return {'center':list(center),'rowAxis':list(row),'palmNormal':list(normal),
         'handleLengthMeters':length,'handleCrossSectionMeters':[.090*.72,.066*.64],
         'muzzle':list(muzzle),'aim':list(aim),
+        'markerDerivation':'Actual visible bore ring centroids after firearm mount transformation',
         'status':'Anatomical contact proposal; posed mesh/hand/weapon review required'}
+
+def verify_visible_muzzle(rig,weapon):
+    bpy.context.view_layer.update();evaluated=weapon.evaluated_get(bpy.context.evaluated_depsgraph_get())
+    mesh=evaluated.to_mesh()
+    try:
+        centers=[]
+        for name in ['Krag_BoreFront_v2','Krag_BoreBack_v2']:
+            indices=[i for i,v in enumerate(weapon.data.attributes[name].data) if v.value>.5]
+            if len(indices)!=24:raise AssertionError('Visible bore marker domain was lost')
+            centers.append(sum((evaluated.matrix_world@mesh.vertices[i].co for i in indices),Vector())/len(indices))
+        muzzle=rig.matrix_world@rig.pose.bones['WeaponMuzzle'].head
+        aim=rig.matrix_world@rig.pose.bones['WeaponAim'].head
+        error=(centers[0]-muzzle).length;dot=(centers[0]-centers[1]).normalized().dot((aim-muzzle).normalized())
+        if error>1e-4 or dot<.99999:raise AssertionError('Visible bore and weapon socket disagree')
+        return {'visibleMuzzlePositionErrorMeters':error,'visibleMuzzleDirectionDot':dot,
+                'visibleBoreCenterMeters':list(centers[0])}
+    finally:evaluated.to_mesh_clear()
 
 def solve_chain(first,second,target,pole):
     start=first.head.copy();axis=target-start;distance=axis.length

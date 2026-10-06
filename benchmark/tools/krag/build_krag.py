@@ -577,6 +577,7 @@ for frame in [13,18,19]:
     forward=(aim-muzzle).normalized()
     weapon_samples.append({'frame':frame,'muzzleMeters':list(muzzle),'forward':list(forward),
                            'dotCharacterForward':forward.dot(Vector((0,-1,0)))})
+    if grip_spec:weapon_samples[-1].update(krag_grip_v2.verify_visible_muzzle(rig,modules['Weapon_R']))
 (ART/(MASTER_PATH.stem+'-weapon-pose-verification.json')).write_text(json.dumps({
     'status':'Actual source bone transforms; rendered weapon grip/aim quality remains unverified',
     'samples':weapon_samples},indent=2),newline='\n')
