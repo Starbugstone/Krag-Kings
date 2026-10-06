@@ -1,0 +1,19 @@
+{
+  "name": "triposr-reference-finalize-resolution",
+  "executable": "C:\\Python310\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\finalize_resolution.py",
+    "--resolution-sha256",
+    "fe161a2a9c217bba8be21628bed988862089230a53d03bfd3102d6c0b7686d8a"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 6,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-finalize-resolution.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-finalize-resolution.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-finalize-resolution.log",
+  "successMarker": "TRIPOSR_RESOLUTION_FINALIZED"
+}

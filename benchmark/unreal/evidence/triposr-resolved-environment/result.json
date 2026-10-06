@@ -1,0 +1,86 @@
+{
+  "status": "60-package dependency resolution and hash/license inventory complete; runtime install pending",
+  "inventorySha256": "10a72e576e6613644ef9aeb30a6f67039387779aaf3695a08168d31466e598ca",
+  "reportSha256": "fe161a2a9c217bba8be21628bed988862089230a53d03bfd3102d6c0b7686d8a",
+  "lockSha256": "c78233b48330ee767262d946048392adc2b38e90f36fa9e8a4d3433794429a1a",
+  "packagesResolved": 60,
+  "bootstrapInstalledOnly": [
+    "pip25.3",
+    "setuptools75.6.0",
+    "wheel0.45.1",
+    "packaging24.2"
+  ],
+  "originalFailure": "Completed pip dry-run wrote UTF-8 report; reader used Windows cp1252 and failed. Original process exit1 retained.",
+  "finalization": "Explicit UTF-8 reader consumed exact existing report; native/guard0 with fresh marker. No resolver rerun.",
+  "licenseReview": "Resolved metadata recorded. llvmlite omitted expression/classifier but names license files; exact0.50.0 upstream BSD-2-Clause/Apache2-LLVM-exception texts captured. Original notices remain with local installed distributions; no tool binaries are being shipped.",
+  "runtimeDependenciesInstalled": false,
+  "nativeExtensionBuilt": false,
+  "inferenceExecuted": false,
+  "existingEnvironmentsModified": false,
+  "globalPathOrDriversChanged": false,
+  "sharedAssetsChanged": false,
+  "jobs": [
+    {
+      "name": "triposr-reference-resolve",
+      "pid": 26376,
+      "guardExit": 1,
+      "nativeExit": 1,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/triposr-reference-resolve.log",
+          "rawSha256": "caa14eae68ead81a4ed279074d6b522562de556f849fd834b37575505f859955",
+          "curatedFile": "triposr-reference-resolve.log",
+          "curatedSha256": "b5995cb6d1eee93fe5f01199f25ee61e802f6bee52f2e05ba6e0e27bed79b5af",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/triposr-reference-resolve.stderr.log",
+          "rawSha256": "004b3d8c6daca8b2febc73020f4e6219b47410e34e00a8bafbe0d1be60499135",
+          "curatedFile": "triposr-reference-resolve.stderr.log",
+          "curatedSha256": "88205d7831129ea996dc9c7f4cda4d7ca2449ff7bd78f382df0c110c808f3daf",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/triposr-reference-resolve-memory.csv",
+          "rawSha256": "d72af3195eb255c5c232ff3d72f33f57eb16bf0887c300c14e9687fef79fe9ac",
+          "curatedFile": "triposr-reference-resolve-memory.csv",
+          "curatedSha256": "ee64409f5d0f82ffa679580d0fe7ead06a703c271678bf78ae1da7ed5ab7efc3",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 15.0,
+      "maxTreePrivateMB": 176.0
+    },
+    {
+      "name": "triposr-reference-finalize-resolution",
+      "pid": 3056,
+      "guardExit": 0,
+      "nativeExit": 0,
+      "logs": [
+        {
+          "rawPath": "benchmark/local/logs/triposr-reference-finalize-resolution.log",
+          "rawSha256": "728412e5e0b5fa117758305dbf5cbc9d8476144a6af942d3ba894fde77e12080",
+          "curatedFile": "triposr-reference-finalize-resolution.log",
+          "curatedSha256": "69ce983e8e951991404161526c5fac3960ddb6a674fbe7fee16a137156bf4627",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/logs/triposr-reference-finalize-resolution.stderr.log",
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "triposr-reference-finalize-resolution.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "rawPath": "benchmark/local/triposr-reference-finalize-resolution-memory.csv",
+          "rawSha256": "d3b88a0d52a566a230dbbd29f0e9c67a0abeb10a4601cb635436a62fe7dbe419",
+          "curatedFile": "triposr-reference-finalize-resolution-memory.csv",
+          "curatedSha256": "6e714e021e5663c68ec11d575a66e73c14f7b1505e1913d9b12b9dfb733fb4cc",
+          "normalization": "CRLF to LF only"
+        }
+      ],
+      "peakPrivateMB": 0.0,
+      "maxTreePrivateMB": 2.0
+    }
+  ]
+}

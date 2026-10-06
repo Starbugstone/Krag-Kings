@@ -44,40 +44,6 @@ def run(command,env):
     subprocess.run([str(x) for x in command],env=env,cwd=OUTPUT,check=True)
 
 
-def emit_inventory(report,requirements):
-    resolution=json.loads(report.read_text(encoding='utf-8'))
-    entries=[];lines=[]
-    for package in resolution['install']:
-        info=package['metadata'];download_info=package['download_info']
-        checksum=download_info['archive_info']['hashes']['sha256']
-        url=download_info['url']
-        if not url.endswith('.whl') and not (
-            info['name']=='antlr4-python3-runtime' and info['version']=='4.9.3'
-            and checksum=='f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b'):
-            raise RuntimeError('Unexpected source distribution in resolved installation')
-        lines.append(f"{info['name']} @ {url} --hash=sha256:{checksum}")
-        entries.append({'name':info['name'],'version':info['version'],'url':url,'sha256':checksum,
-            'licenseExpression':info.get('license_expression'),'license':info.get('license'),
-            'licenseClassifiers':[x for x in info.get('classifier',[]) if x.startswith('License ::')],
-            'requiresPython':info.get('requires_python')})
-    (OUTPUT/'windows-reference.lock').write_text('\n'.join(sorted(lines))+'\n')
-    inventory={'status':'Resolved only; runtime dependencies, extension and model are not installed',
-        'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sys.version,
-        'baseInterpreter':sys.executable,'baseInterpreterSha256':sha(sys.executable),
-        'requirementsSha256':sha(requirements),'recipeSha256':sha(__file__),
-        'resolutionReportSha256':sha(report),
-        'lockSha256':sha(OUTPUT/'windows-reference.lock'),'packages':entries,
-        'sourceRepositories':[
-          {'url':'https://github.com/VAST-AI-Research/TripoSR','commit':TRIPO_COMMIT,'license':'MIT; code and weights'},
-          {'url':'https://github.com/tatsy/torchmcubes','commit':MCUBES_COMMIT,
-           'license':'MIT per this historical commit README/setup metadata; current master uses different terms',
-           'buildPlan':'Separate CPU CppExtension wrapper; no system CUDA Toolkit installation'}],
-        'model':{'repo':'stabilityai/TripoSR','filename':'model.ckpt','bytes':1677246742,
-          'sha256':'429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee','license':'MIT'},
-        'inferenceExecuted':False,'existingPythonEnvironmentsModified':False,'sharedAssetsChanged':False}
-    (OUTPUT/'dependency-license-inventory.json').write_text(json.dumps(inventory,indent=2)+'\n')
-
-
 def main():
     if os.name!='nt' or sys.version_info[:2]!=(3,10):
         raise RuntimeError('Use the existing Windows Python3.10 only')
@@ -125,7 +91,36 @@ def main():
     run([python,'-m','pip','install','--dry-run','--ignore-installed','--only-binary=:all:',
         '--no-binary=antlr4-python3-runtime','--no-build-isolation',
         '--report',report,'-r',resolved_input],env)
-    emit_inventory(report,requirements)
+    resolution=json.loads(report.read_text())
+    entries=[];lines=[]
+    for package in resolution['install']:
+        info=package['metadata'];download_info=package['download_info']
+        checksum=download_info['archive_info']['hashes']['sha256']
+        url=download_info['url']
+        if not url.endswith('.whl') and not (
+            info['name']=='antlr4-python3-runtime' and info['version']=='4.9.3'
+            and checksum=='f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b'):
+            raise RuntimeError('Unexpected source distribution in resolved installation')
+        lines.append(f"{info['name']} @ {url} --hash=sha256:{checksum}")
+        entries.append({'name':info['name'],'version':info['version'],'url':url,'sha256':checksum,
+            'licenseExpression':info.get('license_expression'),'license':info.get('license'),
+            'licenseClassifiers':[x for x in info.get('classifier',[]) if x.startswith('License ::')],
+            'requiresPython':info.get('requires_python')})
+    (OUTPUT/'windows-reference.lock').write_text('\n'.join(sorted(lines))+'\n')
+    inventory={'status':'Resolved only; runtime dependencies, extension and model are not installed',
+        'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sys.version,
+        'baseInterpreter':sys.executable,'baseInterpreterSha256':sha(sys.executable),
+        'requirementsSha256':sha(requirements),'recipeSha256':sha(__file__),
+        'lockSha256':sha(OUTPUT/'windows-reference.lock'),'packages':entries,
+        'sourceRepositories':[
+          {'url':'https://github.com/VAST-AI-Research/TripoSR','commit':TRIPO_COMMIT,'license':'MIT; code and weights'},
+          {'url':'https://github.com/tatsy/torchmcubes','commit':MCUBES_COMMIT,
+           'license':'MIT per this historical commit README/setup metadata; current master uses different terms',
+           'buildPlan':'Separate CPU CppExtension wrapper; no system CUDA Toolkit installation'}],
+        'model':{'repo':'stabilityai/TripoSR','filename':'model.ckpt','bytes':1677246742,
+          'sha256':'429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee','license':'MIT'},
+        'inferenceExecuted':False,'existingPythonEnvironmentsModified':False,'sharedAssetsChanged':False}
+    (OUTPUT/'dependency-license-inventory.json').write_text(json.dumps(inventory,indent=2)+'\n')
     print('TRIPOSR_REFERENCE_DEPENDENCIES_RESOLVED',flush=True)
 
 

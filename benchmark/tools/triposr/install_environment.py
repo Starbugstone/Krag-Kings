@@ -48,20 +48,21 @@ def main():
     inventory_path = BASE/'dependency-license-inventory.json'
     if sha(inventory_path) != args.inventory_sha256:
         raise RuntimeError('Inventory is not the exact reviewed file')
-    inventory = json.loads(inventory_path.read_text())
+    inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
     lock = BASE/'windows-reference.lock'
     if sha(lock) != inventory['lockSha256']:
         raise RuntimeError('Resolved lock changed')
     if (BASE/'installation.json').exists():
         raise RuntimeError('Preserve prior installation receipt')
-    receipt = json.loads((DOWNLOADED/'download-receipt.json').read_text())
+    receipt = json.loads((DOWNLOADED/'download-receipt.json').read_text(encoding='utf-8'))
     for entry in receipt['files']:
         if sha(DOWNLOADED/entry['name']) != entry['sha256']:
             raise RuntimeError('Pinned downloaded content changed: '+entry['name'])
     python = BASE/'venv/Scripts/python.exe'
     env = dict(os.environ)
     env.pop('PYTHONPATH', None)
-    env.update({'PYTHONNOUSERSITE':'1','PIP_DISABLE_PIP_VERSION_CHECK':'1',
+    env.update({'PYTHONNOUSERSITE':'1','PIP_DISABLE_PIP_VERSION_CHECK':'1','PIP_CONFIG_FILE':os.devnull,
+        'PIP_INDEX_URL':'https://pypi.org/simple','PIP_EXTRA_INDEX_URL':'',
         'PIP_CACHE_DIR':str(BASE/'cache/pip'),'TMP':str(BASE/'temp'),'TEMP':str(BASE/'temp'),
         'HF_HOME':str(BASE/'cache/huggingface'),'TORCH_HOME':str(BASE/'cache/torch'),
         'TORCH_EXTENSIONS_DIR':str(BASE/'cache/torch-extensions'),

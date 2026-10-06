@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\triposr\resolve_environment.py", line 127, in <module>
+    if __name__=='__main__':main()
+  File "D:\Dev\Krag-Kings\benchmark\tools\triposr\resolve_environment.py", line 94, in main
+    resolution=json.loads(report.read_text())
+  File "C:\Python310\lib\pathlib.py", line 1133, in read_text
+    return f.read()
+  File "C:\Python310\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 150384: character maps to <undefined>
