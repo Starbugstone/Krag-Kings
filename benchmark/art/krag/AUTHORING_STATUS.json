@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Frozen v9f recipe generated and reviewed; separate v9g face/cloth preparation is ungenerated. Current shared remains v7 bounded aim correction.",
+  "currentAuthoringCode": "Actual v9f remains latest saved source. Combined v9g failed twice before save at initial cloth-placement gates. Separate face-only proof and read-only scarf support audit are prepared, ungenerated.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -199,8 +199,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "benchmark/tools/krag/build-v9g-wip-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9g-wip-Natural_Front.json",
+  "nextSourceJob": "benchmark/tools/krag/build-v9g-face-wip-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9g-face-wip-Natural_Front.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -314,5 +314,10 @@
     ],
     "reviewReceipt": "v9e-source-review.json"
   },
-  "preparedV9gRecipe": "benchmark/art/krag/v9g-prepared-recipe.json"
+  "preparedV9gRecipe": "benchmark/art/krag/v9g-prepared-recipe.json",
+  "preparedV9gFaceRecipe": "benchmark/art/krag/v9g-face-prepared-recipe.json",
+  "failedV9gCombinedAttempts": [
+    "v9g-attempt1-failure.json",
+    "v9g-attempt2-failure.json"
+  ]
 }

@@ -1,0 +1,57 @@
+{
+  "status": "Prepared isolated face-only source proof after two cloth-placement failures; not generated",
+  "basedOn": "v9f actual source",
+  "scope": [
+    "Common facial-plane fit",
+    "Visible curved tusks"
+  ],
+  "unchanged": [
+    "v9f head assembly scale",
+    "v9f failed terrace scarf retained explicitly for comparison",
+    "Weapon module",
+    "Rig/hand domains",
+    "Shared runtime package"
+  ],
+  "failedClothAttempts": [
+    "v9g-attempt1-failure.json",
+    "v9g-attempt2-failure.json"
+  ],
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9g_wip/build_v9g.py",
+      "sha256": "c34a399d29531a1fc63188019c7b2590b5b3d3aa46bc25f23ad5a70d04d8cff3"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/face_planes.py",
+      "sha256": "6320082d92da6e9f6edcb720825f0a3ab1c4bd6cdecb439204f54f74655b077a"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/scarf_cloth.py",
+      "sha256": "c672389c01f66118c7194166a68615ba1693d7e61e056f36e1c80095b0b28121"
+    },
+    {
+      "path": "benchmark/tools/krag/build-v9g-face-wip-job.json",
+      "sha256": "73805c7565cd7673c0cba0e3777102ff1911bb3ba1ae678161d6186faf7c0739"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-face-wip-Natural_Front.json",
+      "sha256": "d37ad0c594162d267cbf9e1fb18032c8c87580f9a3cd65a27c664b32f3412d64"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-face-wip-Natural_Head.json",
+      "sha256": "d0f85a10f8d709ae2d9ad27dd886d02cfb0a5386d69f3049e7bc88ed33c3ae31"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-face-wip-Natural_HeadSide.json",
+      "sha256": "3564e5bca3b7406f4e0a63cd874c1a69af120a54c6a34515e3257e5f3991319f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-face-wip-Blink.json",
+      "sha256": "965e79a53bc0acbb6e3a44ee8cc2292ec2a00c6d8b36201e2bfacba00f37fdc9"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9g-face-wip-OpenMouth.json",
+      "sha256": "9b0a4a7b3f80f533109d06331ba431aba2840a81d432d6f2a2eb647946deb526"
+    }
+  ]
+}

@@ -193,3 +193,10 @@ Next work retains v9f proportions and hand domains while refining the continuous
 
 
 The separate **v9g wrapper is prepared, not generated**, with exact patch/job hashes in `v9g-prepared-recipe.json`. It imports the unchanged frozen v9f generator, substitutes the common continuous face fit and tusk construction in memory, and substitutes a physically settled asymmetric cloth sheet. The new cloth uses copies of the actual anatomical cages, rear/shoulder pins and self-collision; solver success, drape and pose clearance have not yet been tested. Whole-head scale, anatomical hand/torso domains and current firearm geometry remain unchanged. The wrapper embeds its exact additional sources in the final study when run.
+
+
+## v9g combined-study failure and separated follow-up
+
+The combined face/cloth generation stopped twice before saving or rendering. The first guard exited 2 at the initial cloth-penetration check; the single corrected retry exited 2 when actual radial support exceeded the proposed 0.32 m collar bound. Neither reached physical simulation. Peak private memory was 502/545 MB. Both exact failed recipes and failure diagnostics are preserved as `v9g-attempt1/2-failed-recipe.json` and `v9g-attempt1/2-failure.json`; no v9g Blender source or render exists. The global radius threshold is not being widened to hide potentially wrong anatomical support.
+
+A separate **face-only v9g proof is prepared**, retaining the explicitly failed v9f scarf solely for a controlled face/tusk comparison. Its planned source is `Krag_Master_v9gFace_WIP.blend`, with recipe `v9g-face-prepared-recipe.json`. Neutral Front/Head/Profile come first, then actual blink/open-mouth fitting. The separate read-only scarf placement audit loads the unchanged saved v9f cages and reports source arm-domain values on the actual support triangles, plus angle/height bins and worst sample coordinates. It has not run and makes no cloth-fit claim.

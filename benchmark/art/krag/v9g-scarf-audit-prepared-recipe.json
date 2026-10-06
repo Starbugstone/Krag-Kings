@@ -1,0 +1,19 @@
+{
+  "status": "Prepared read-only actual-cage scarf support audit; not executed",
+  "source": "benchmark/art/krag/Krag_Master_v9f_WIP.blend",
+  "sourceSha256": "86656d076fd13b886837b9973301cb587a0f99bf6a96cd7fec9baa8fba44abe3",
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9g_wip/audit_scarf_placement.py",
+      "sha256": "8dfd8422577d624b10fd9016ca07709b7cf98f55910a80349a878398cd4dc5b4"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/scarf_cloth.py",
+      "sha256": "c672389c01f66118c7194166a68615ba1693d7e61e056f36e1c80095b0b28121"
+    },
+    {
+      "path": "benchmark/tools/krag/audit-v9g-scarf-placement-job.json",
+      "sha256": "87390389af7389cf66caa9decb247590921d49fc1fbdeca97d76c3ee068d09c0"
+    }
+  ]
+}

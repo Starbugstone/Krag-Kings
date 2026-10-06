@@ -1,0 +1,11 @@
+{
+  "status": "Second bounded generation attempt failed before save; no v9g source or render exists",
+  "guardExitCode": 2,
+  "failure": "Scarf radial fit escapes anatomical neck/shoulder bounds: 0.3200806941986084",
+  "stage": "Initial cloth placement; physical simulation not started",
+  "recipe": "v9g-prepared-recipe.json",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\build_krag.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0\n  m=bpy.data.materials.new(name); m.use_nodes=True; n=m.node_tree.nodes;l=m.node_tree.links;n.clear()\nTraceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\build_v9g.py\", line 34, in <module>\n    state=runpy.run_path(str(BASE/'build_krag.py'),run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\build_krag.py\", line 303, in <module>\n    krag_scarf_v3.build(globals())\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\scarf_cloth.py\", line 119, in build\n    raise RuntimeError('Scarf radial fit escapes anatomical neck/shoulder bounds: '+str(required))\nRuntimeError: Scarf radial fit escapes anatomical neck/shoulder bounds: 0.3200806941986084\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\build_v9g.py', exiting.\n",
+  "peakPrivateMB": 545.0,
+  "minimumAvailableMB": 15939.0,
+  "nextStep": "No automatic restart. Separate face-only source proof from scarf construction; inspect support samples before another cloth run."
+}

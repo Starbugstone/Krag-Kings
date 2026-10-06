@@ -1,0 +1,12 @@
+{
+  "status": "Generation failed before save; no v9g source or render produced",
+  "guardExitCode": 2,
+  "failure": "Scarf initial penetration exceeds bounded correction",
+  "stage": "Initial sheet correction against actual body/head collider; cloth simulation had not started",
+  "inputRecipe": "v9g-attempt1-failed-recipe.json",
+  "sourceCommit": "0e44175",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\build_krag.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0\n  m=bpy.data.materials.new(name); m.use_nodes=True; n=m.node_tree.nodes;l=m.node_tree.links;n.clear()\nTraceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\build_v9g.py\", line 34, in <module>\n    state=runpy.run_path(str(BASE/'build_krag.py'),run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\build_krag.py\", line 303, in <module>\n    krag_scarf_v3.build(globals())\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\scarf_cloth.py\", line 116, in build\n    if max_adjustment>.055:raise RuntimeError('Scarf initial penetration exceeds bounded correction')\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Scarf initial penetration exceeds bounded correction\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9g_wip\\build_v9g.py', exiting.\n",
+  "peakPrivateMB": 502.0,
+  "minimumAvailableMB": 15758.0,
+  "retryPlan": "Seat initial sheet on actual radial body/head envelope with explicit 0.32m radius bound and 9mm clearance; retain penetration gate before physical solve"
+}

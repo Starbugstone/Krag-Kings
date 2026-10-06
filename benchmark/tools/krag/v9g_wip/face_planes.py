@@ -3,7 +3,7 @@
 Refines the same continuous face topology. This must be evaluated on all head,
 ocular, oral and facial-control points through the common fit, never on skin
 alone. Coefficients are provisional reference-refinement values, not canon.
-Actual v9f neutral/profile/expression review must precede enabling this study.
+Actual neutral/profile/expression review is required before accepting this study.
 """
 import numpy as np
 

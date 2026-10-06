@@ -103,6 +103,23 @@ def build(c):
     for collider in colliders:
         bvhs.append(BVHTree.FromPolygons([collider.matrix_world@v.co for v in collider.data.vertices],
                                          [tuple(p.vertices) for p in collider.data.polygons]))
+    # Fit the initial sheet to the real radial skin envelope rather than
+    # trusting an elliptical neck radius across the flaring trapezius/chest.
+    # Rays start inside the anatomical axis and hit its first outer surface;
+    # this avoids treating a farther upper arm as the scarf support surface.
+    fitted_count=0;max_radial_fit=0.
+    for vertex in o.data.vertices:
+        origin=Vector((0.,.019,vertex.co.z))
+        direction=vertex.co-origin;radius=direction.length
+        direction.normalize();required=radius
+        for tree in bvhs:
+            hit,normal,index,distance=tree.ray_cast(origin,direction,.34)
+            if hit is not None:required=max(required,distance+.009)
+        if required>.32:
+            raise RuntimeError('Scarf radial fit escapes anatomical neck/shoulder bounds: '+str(required))
+        if required>radius:
+            vertex.co=origin+direction*required
+            fitted_count+=1;max_radial_fit=max(max_radial_fit,required-radius)
     adjusted=0;max_adjustment=0.
     for vertex in o.data.vertices:
         original=vertex.co.copy()
@@ -113,7 +130,9 @@ def build(c):
             if signed<.006 and distance<.055:vertex.co=point+normal*.006
         d=(vertex.co-original).length
         if d>0:adjusted+=1;max_adjustment=max(max_adjustment,d)
-    if max_adjustment>.055:raise RuntimeError('Scarf initial penetration exceeds bounded correction')
+    if max_adjustment>.055:raise RuntimeError('Scarf initial penetration exceeds bounded correction: '+str(max_adjustment))
+    # The saved editable pattern records the actual physical-solver start.
+    for target,source in zip(cage.data.vertices,o.data.vertices):target.co=source.co.copy()
     bpy.context.view_layer.objects.active=o
     cloth=o.modifiers.new('Gravity settled broad textile','CLOTH');s=cloth.settings
     s.quality=8;s.mass=.19;s.tension_stiffness=22;s.compression_stiffness=22
@@ -152,6 +171,7 @@ def build(c):
     study={'status':'Actual simulated source study; visual/intersection/pose acceptance pending',
         'simulationFrames':54,'quality':8,'selfCollision':True,'pinDomain':'Own u/v rear neckline and shoulder tuck',
         'colliders':'Copies of actual editable torso and complete proportion-transformed face cages',
+        'radialEnvelopeFittedVertices':fitted_count,'maxRadialEnvelopeAdjustmentMeters':max_radial_fit,
         'initialPenetrationAdjustedVertices':adjusted,'maxInitialAdjustmentMeters':max_adjustment,
         'settledBoundsMeters':[coords.min(0).tolist(),coords.max(0).tolist()],
         'postSimulationSubdivisions':2,'thicknessMeters':.0024}

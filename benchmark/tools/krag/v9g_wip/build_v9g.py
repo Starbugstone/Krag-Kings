@@ -30,16 +30,18 @@ def head_build(c):
     try:return original_build(c)
     finally:c['tube']=original_tube
 krag_head_v9.build=head_build
-krag_scarf_v3.build=scarf_cloth.build
+face_only='--face-only-study' in sys.argv
+if not face_only:krag_scarf_v3.build=scarf_cloth.build
 state=runpy.run_path(str(BASE/'build_krag.py'),run_name='__main__')
 # Append exact isolated patch sources before the final saved-source hash exists.
 for filename in ['build_v9g.py','face_planes.py','scarf_cloth.py']:
     path=HERE/filename;block=bpy.data.texts.get('v9g_wip/'+filename) or bpy.data.texts.new('v9g_wip/'+filename)
     block.clear();block.write(path.read_text(encoding='utf-8'))
 contract_path=state['OUT']/'krag_asset_contract.json';contract=json.loads(contract_path.read_text())
-contract['isolatedSourceStudy']={'version':'v9g','status':'Generated source study; not accepted or promoted',
+contract['isolatedSourceStudy']={'version':'v9g-face' if face_only else 'v9g','status':'Generated source study; not accepted or promoted',
     'frozenBaseRecipe':'benchmark/art/krag/v9f-prepared-recipe.json',
-    'changes':['Common continuous facial fit and visible curved tusks','Physically settled asymmetrical broad scarf'],
+    'changes':['Common continuous facial fit and visible curved tusks']+([] if face_only else ['Physically settled asymmetrical broad scarf']),
+    'scarfStatus':'Preserved failed v9f scarf for isolated facial comparison' if face_only else 'New physical cloth study, unaccepted',
     'weaponModuleChanged':False,'headProportionScaleChanged':False,
     'patches':{f:hashlib.sha256((HERE/f).read_bytes()).hexdigest() for f in ['build_v9g.py','face_planes.py','scarf_cloth.py']}}
 if state.get('scarf_cloth_study'):contract['scarfClothStudy']=state['scarf_cloth_study']
