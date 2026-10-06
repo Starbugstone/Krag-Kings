@@ -1,0 +1,258 @@
+{
+  "status": "Actual bounded mandibular source; profile, neutral and open-mouth review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_Cowl_v9md_WIP.blend",
+    "sha256": "15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7"
+  },
+  "mandible": {
+    "status": "Actual broad surface displacement; profile/likeness and expressions still require renders",
+    "surfaceSmoothingLengthMeters": 0.016,
+    "marginDeadBandMeters": 0.002,
+    "quinticMarginTransitionMeters": 0.022,
+    "fixedOralAndOrbitalVertices": 29555,
+    "maxDisplacementMeters": 0.009173498098813886,
+    "screenedSolveIterations": 394,
+    "relativeResidual": 9.978351089502467e-09,
+    "displacementGradient": {
+      "p95": 0.09074127619655876,
+      "p99": 0.19229557253461652,
+      "max": 0.5877206171229197,
+      "worstEdges": [
+        {
+          "vertices": [
+            3753,
+            3754
+          ],
+          "gradient": 0.5877206171229197,
+          "midpoint": [
+            0.0001379166278638877,
+            -0.19255084544420242,
+            1.81158846616745
+          ]
+        },
+        {
+          "vertices": [
+            24840,
+            24841
+          ],
+          "gradient": 0.5873824572245779,
+          "midpoint": [
+            -0.0027332735480740666,
+            -0.19254568219184875,
+            1.811588168144226
+          ]
+        },
+        {
+          "vertices": [
+            37191,
+            37192
+          ],
+          "gradient": 0.5862492264644411,
+          "midpoint": [
+            0.003022699966095388,
+            -0.19252871721982956,
+            1.8115907311439514
+          ]
+        },
+        {
+          "vertices": [
+            24837,
+            24838
+          ],
+          "gradient": 0.5850688779866705,
+          "midpoint": [
+            -0.005563544342294335,
+            -0.19250725954771042,
+            1.8115929961204529
+          ]
+        },
+        {
+          "vertices": [
+            37188,
+            37189
+          ],
+          "gradient": 0.5819832378571111,
+          "midpoint": [
+            0.005883494392037392,
+            -0.19247271120548248,
+            1.811598777770996
+          ]
+        },
+        {
+          "vertices": [
+            24834,
+            24835
+          ],
+          "gradient": 0.5813061873153096,
+          "midpoint": [
+            -0.008328138384968042,
+            -0.19242513924837112,
+            1.8116071820259094
+          ]
+        },
+        {
+          "vertices": [
+            3752,
+            3753
+          ],
+          "gradient": 0.580117914050709,
+          "midpoint": [
+            0.00014350223500514403,
+            -0.19286619126796722,
+            1.8125692009925842
+          ]
+        },
+        {
+          "vertices": [
+            24839,
+            24840
+          ],
+          "gradient": 0.5797851057037791,
+          "midpoint": [
+            -0.0026710513047873974,
+            -0.19286124408245087,
+            1.8125706911087036
+          ]
+        },
+        {
+          "vertices": [
+            37192,
+            37193
+          ],
+          "gradient": 0.5793741391101556,
+          "midpoint": [
+            0.002973281661979854,
+            -0.19284561276435852,
+            1.812574326992035
+          ]
+        },
+        {
+          "vertices": [
+            24836,
+            24837
+          ],
+          "gradient": 0.579007189755173,
+          "midpoint": [
+            -0.005447456147521734,
+            -0.19282473623752594,
+            1.8125807046890259
+          ]
+        },
+        {
+          "vertices": [
+            24833,
+            24834
+          ],
+          "gradient": 0.5780346363619994,
+          "midpoint": [
+            -0.00816565565764904,
+            -0.1927461177110672,
+            1.8126017451286316
+          ]
+        },
+        {
+          "vertices": [
+            3754,
+            3080
+          ],
+          "gradient": 0.5768015876364102,
+          "midpoint": [
+            0.00012632404104806483,
+            -0.19215869903564453,
+            1.8107033371925354
+          ]
+        }
+      ]
+    },
+    "normalAngleChangeDegrees": {
+      "p95": 5.351021791323003,
+      "p99": 17.8579762440183,
+      "max": 32.28457159025052
+    },
+    "minimumTriangleAreaRatio": 0.8406830601997919,
+    "flippedTriangles": 0,
+    "fixedMarginMaximumDisplacementMeters": 0.0,
+    "protectedRegions": [
+      "Complete oral bag and true lip margins",
+      "Upper face/eyes",
+      "Lower-neck transition"
+    ]
+  },
+  "tusks": {
+    "status": "Actual replacement tusks; neutral/open root/skin clearance still requires renders",
+    "removedThreeRingVertices": 96,
+    "newCurvedTuskVertices": 816,
+    "unrelatedFacialShapeCoordinatesExact": true,
+    "radialSegments": 24,
+    "axialRings": 17,
+    "sides": [
+      {
+        "side": "R",
+        "gingivalRoot": [
+          -0.04102049022912979,
+          -0.15700653195381165,
+          1.803720474243164
+        ],
+        "trueLowerLip": [
+          -0.04102049022912979,
+          -0.17452446875808617,
+          1.8197306330134544
+        ],
+        "emergenceCenter": [
+          -0.04102049022912979,
+          -0.17302446875808616,
+          1.8187306330134545
+        ],
+        "retainedTip": [
+          -0.04937890777364373,
+          -0.19425643049180508,
+          1.8522291406989098
+        ]
+      },
+      {
+        "side": "L",
+        "gingivalRoot": [
+          0.04102049022912979,
+          -0.15700653195381165,
+          1.803720474243164
+        ],
+        "trueLowerLip": [
+          0.04102049022912979,
+          -0.17447444950153965,
+          1.819777203055046
+        ],
+        "emergenceCenter": [
+          0.04102049022912979,
+          -0.17297444950153965,
+          1.8187772030550462
+        ],
+        "retainedTip": [
+          0.04937890777364373,
+          -0.19425643049180508,
+          1.8522291406989098
+        ]
+      }
+    ]
+  },
+  "preservedOtherGeometryBindActions": "64ba3bd3820ec86d660212b833cc8e0cc4f6ddda695ae49efbb88887874c2b1c",
+  "knownUnchangedFailures": [
+    "Actual tusk emergence/contact still requires neutral/open profile review",
+    "Cowl still has regular U-bib folds",
+    "Brow, glabella, facial skin and armor/clothing likeness"
+  ],
+  "preserved": [
+    "True oral bag and lip margins",
+    "Upper face and ocular geometry",
+    "Lower-neck transition",
+    "All mesh coordinates except Head and rebuilt tusks; unrelated ocular shape coordinates verified exact",
+    "Body bind and actions",
+    "Current weapon",
+    "Shared exports"
+  ]
+}

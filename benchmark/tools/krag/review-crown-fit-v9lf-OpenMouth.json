@@ -1,0 +1,33 @@
+{
+  "name": "krag-review-crown-fit-v9lf-OpenMouth",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_CrownFit_v9lf_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9h-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Head",
+    "--tag",
+    "v9lf-crown-fit",
+    "--neutral-light",
+    "--clip",
+    "FacePerformance",
+    "--frame",
+    "146",
+    "--keep-pose"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-crown-fit-v9lf-OpenMouth.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-crown-fit-v9lf-OpenMouth.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}

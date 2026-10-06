@@ -1,0 +1,67 @@
+{
+  "status": "Actual v9le source and first HeadSide reviewed; stronger chin but tusk crowns buried behind outer lip, dependent views stopped",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/mandible-tusks-v9le.json",
+      "sha256": "e196d2a3f7ab7fff43c22359800cb1f1a377df0801b3312db7a9eeb48d2c5ff2",
+      "bytes": 6787
+    },
+    {
+      "path": "benchmark/art/krag/v9le-mandible-tusks-prepared.json",
+      "sha256": "3ee80044e9c4b2c31f6893c345dd6c3e773af80127efa14f67a232d0bc04656d",
+      "bytes": 2902
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9le-mandible-tusks.meta.json",
+      "sha256": "7c09fcbb3edb9594f93120a197489d7211fb8dfaf61c43dca30a86cdc426a9ad",
+      "bytes": 583
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9le-mandible-tusks.png",
+      "sha256": "3697e93938c821b2f43121ea177249e7b9eb105e72a800152e66ccae0a5f5521",
+      "bytes": 1127697
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-mandible-tusks-v9le-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 981.0,
+      "minimumAvailableMB": 10770.0
+    },
+    {
+      "path": "benchmark/local/krag-review-mandible-tusks-v9le-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2059.0,
+      "minimumAvailableMB": 9917.0
+    }
+  ],
+  "improvements": [
+    "Broader lower-jaw/chin silhouette without a new thin profile beak",
+    "Actual new curved tusks retain gingival roots and verified unrelated ocular shape coordinates"
+  ],
+  "findings": [
+    "Almost entire tusk crown is occluded; only a small ivory sliver is visible",
+    "True topological oral rim lies inside the exterior lip/muzzle, so inner-rim fitting plus retained old tips did not establish real emergence",
+    "Brow remains a narrow overhang, cheek/mandibular planes still too smooth",
+    "Cowl side/back now exposes stiff projecting fabric ends; Front already failed smooth U-bib construction",
+    "Normal opening, dental/gum/tongue depth and likeness remain unaccepted"
+  ],
+  "stoppedViews": [
+    "Head",
+    "OpenMouth",
+    "OpenProfile"
+  ],
+  "next": [
+    "Fit exposed crown against actual exterior skin while retaining the buried gingival root",
+    "Record required surface shift and flag excessive dental/soft-tissue setback rather than blindly offset the whole tusk",
+    "Actual neutral profile first, then open profile if coherent"
+  ]
+}

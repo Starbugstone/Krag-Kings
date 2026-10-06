@@ -293,3 +293,10 @@ The isolated `Krag_Cowl_v9mc_WIP.blend` rebases the ungenerated v9mb pattern ont
 `Krag_Cowl_v9md_WIP.blend` (SHA-256 `15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a`) and actual OpenMouth/Front views are preserved in `v9md-authored-cowl-review.json`. All three guards exited0. This source authors the rest shape directly and makes no cloth-simulation claim. The actual opened chin landmark is1.71937m; the front cowl maximum is1.62695m, leaving the visible lower lip and teeth clear. The former side knot is gone.
 
 **The garment still fails likeness:** Front reads as a smooth low U-shaped bib with two regular ledges, rather than irregular compressed overlapping wrap folds. The now-unobstructed mouth also exposes continuing failures: a tall empty-looking oval, weak visible gum/tongue depth, small flat-looking dental crowns and externally applied tusks. The mandibular/skull mass and normal opening remain unaccepted. The useful clearance/footprint will be preserved while broad lower-jaw and real gum/lip tusk fitting proceeds; no shared assets changed.
+
+
+## v9le actual mandible/tusks: chin stronger, crown emergence failed
+
+`Krag_MandibleTusks_v9le_WIP.blend` (SHA-256 `6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7`) and its first HeadSide are preserved in `v9le-mandible-tusks-review.json`; both guarded jobs exited0. The broad mandibular change peaks9.17mm without flips/collapse. New curved crowns replace96 old three-ring vertices with816 vertices, while all retained ocular shape coordinates are exact.
+
+**Tusk emergence fails.** Only a tiny ivory sliver remains visible: the true inner oral rim lies behind the outer lip/muzzle, and preserving the old tip positions buries the new crown. Dependent neutral/open views were stopped. The stronger chin is a useful silhouette improvement, not likeness acceptance. The next bounded fit will test the actual exterior skin along the exposed crown, keep the gingival roots inside and flag excessive arch setback. The cowl's stiff side/back ends, regular U-bib folds, empty-looking mouth and smooth skull planes remain known failures; no shared export occurred.
