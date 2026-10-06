@@ -74,10 +74,7 @@ function Focus-Demo {
     try {
         $windowLease.AssertForeground()
         foreach($key in @(0x5B,0x5C,0xA2,0xA3,0xA4,0xA5)) {
-            if(([int][DemoInput]::GetAsyncKeyState($key) -band 0x8000) -ne 0){
-                Record-InputEdge 'InputBlockedExternalModifier' @{firstObservedVirtualKey=('0x{0:X2}' -f $key);inputSent=$false}
-                throw 'An external Windows/Ctrl/Alt modifier is held; stopped before sending test input.'
-            }
+            if(([int][DemoInput]::GetAsyncKeyState($key) -band 0x8000) -ne 0){throw 'An external Windows/Ctrl/Alt modifier is held; stopped before sending test input.'}
         }
     }
     catch {try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
