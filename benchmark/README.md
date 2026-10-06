@@ -6,7 +6,9 @@ Work in progress. This directory contains the shared asset pipeline and separate
 
 Unity build `c394a9ba909b477fb315daa0072f83c7` passes 17 functional checks and has an [actual widened-action review](evidence/unity/20261006-action-bust-review/README.md). Krag's raised shooting arm and weapon fit the inspected view. Native input verification remains incomplete; the preserved attempts distinguish test framing, startup timing and lost foreground. No current Unity quick-Shift defect has been proven. Older videos/timings below belong to their recorded earlier builds.
 
-Unreal's packaged orbit fix has actual native evidence, but the [next modifier test](unreal/evidence/native-input-modifier-failure/) found that a quick Shift release can change intended walking into running. Its press-time modifier fix is prepared for native compile/package verification. Neither full native suite nor character likeness is accepted yet. The newer Krag/Nib Blender studies remain separate from both engine asset sets.
+Unreal's press-time modifier fix has now compiled and packaged. The focused native check proves that releasing RightShift in the input frame still issues the intended Walk command. The subsequent movement test was blocked by an obstructed test ray; the complete suite and LeftShift proof remain pending. Contact-relative Walk/Run phase alignment is prepared in both engines, with Unity source compilation checked. The current character assets remain unchanged and visually unaccepted.
+
+[Whole-body animation studies](art/animation/README.md) now use captured human motion adapted to each character, with coordinated pelvis/trunk/arms, a six-second standing idle, relaxed free hands and actual boot-surface contact fitting. Krag v3b and Nib v3 sources and 24 clay poses each exist; the Nib includes the latest orbital repair and independent ear tracks. The Nib forearm twist exposes an elbow deformation defect, and complete temporal/import reviews remain open. These sources have not yet replaced the running engine assets.
 
 ## Shared contract
 

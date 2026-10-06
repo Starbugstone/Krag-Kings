@@ -386,8 +386,7 @@ for curve in bag.fcurves:
             for frame,value in points:
                 at = 1+(frame-old_start)+repeat*duration
                 if at <= 181: repeated[at] = value
-        while len(curve.keyframe_points):
-            curve.keyframe_points.remove(curve.keyframe_points[-1], fast=True)
+        for key in list(curve.keyframe_points): curve.keyframe_points.remove(key, fast=True)
         for frame,value in sorted(repeated.items()):
             key = curve.keyframe_points.insert(frame, value, options={'FAST'})
             key.interpolation = 'LINEAR'

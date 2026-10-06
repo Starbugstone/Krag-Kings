@@ -1,0 +1,5 @@
+{
+  "status": "Stopped before save",
+  "cause": "Blender invalidated retained keyframe handles while removing keys from a dynamic collection",
+  "correction": "Read the current final key on every removal rather than retain collection-element pointers"
+}

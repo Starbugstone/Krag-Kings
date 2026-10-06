@@ -1,5 +1,5 @@
 {
-  "name": "nib-human-motion-v3",
+  "name": "krag-human-motion-v3b",
   "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
   "arguments": [
     "--background",
@@ -11,19 +11,19 @@
     "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\retarget_cmu_study.py",
     "--",
     "--source",
-    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5i_OrbitalClosure_WIP.blend",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9h_WIP.blend",
     "--species",
-    "Nib",
+    "Krag",
     "--output",
-    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v3",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v3b",
     "--generation",
-    "v3"
+    "v3b"
   ],
   "workingDirectory": "D:\\Dev\\Krag-Kings",
-  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v3.stdout.log",
-  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v3.stderr.log",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v3b.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v3b.stderr.log",
   "maxPrivateGB": 6,
   "minAvailableGB": 10,
-  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-human-motion-v3.stdout.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-human-motion-v3b.stdout.log",
   "successMarker": "KRAG_KINGS_HUMAN_MOTION_STUDY_COMPLETE"
 }
