@@ -7,6 +7,8 @@ class UAnimSequence;
 class USkeletalMesh;
 class UStaticMesh;
 class UMaterialInterface;
+class UMaterial;
+class UMaterialExpression;
 class USoundBase;
 
 USTRUCT(BlueprintType)
@@ -57,6 +59,8 @@ class KRAGKINGSBENCHMARK_API UKKBenchmarkAssets : public UDataAsset
 {
     GENERATED_BODY()
 public:
+    UFUNCTION(BlueprintCallable,Category="Benchmark materials")
+    static bool ConnectClearCoatInputs(UMaterial* Material, UMaterialExpression* Weight, UMaterialExpression* Roughness);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetMeshBoneNames(USkeletalMesh* Mesh);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")

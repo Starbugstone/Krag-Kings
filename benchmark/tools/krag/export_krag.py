@@ -60,6 +60,18 @@ def attach_maps(m,maps):
 def save_manifest():
     manifest={'materials':[dict(name=n,baseColor='textures/'+m['BaseColor'],normal='textures/'+m['Normal'],roughness='textures/'+m['Roughness'],metallic='textures/'+m['Metallic']) for n,m in material_maps.items()], 'variants':[{'name':n,'fbx':n+'.fbx','label':n.replace('Krag_',''),'deformation':v.get('deformation',contract['deformation'])} for n,v in contract['variants'].items()], 'animations':{n:'animations/'+n+'.fbx' for n in contract['clips']}, 'normalConvention':'OpenGL', 'authoringForward':'-Y','authoringUp':'Z','heightMeters':2.107,'weapon':weapon_contract,'weaponNode':None,'weaponSourceModule':'Weapon_R','weaponGeometryIncluded':True,'weaponDefaultVisible':True,'deformation':contract['deformation'],'locomotion':contract['locomotionCycles'],'status':'Review model, artistic acceptance pending','geometryExport':{'triangulated':triangulate,'method':'Temporary assembly BMesh triangulation with cached shape coordinates and corner normals restored' if triangulate else 'Original polygon topology'}}
     manifest['sourceAnimationContract']=action_export
+    for material in manifest['materials']:
+        surface=contract.get('material_surface',{}).get(material['name'],{})
+        if surface:
+            expected={'hasCoatParameters','coatWeight','coatRoughness','coatIor'}
+            if set(surface)!=expected or surface['hasCoatParameters'] is not True:
+                raise RuntimeError('Unsupported explicit optical surface contract: '+material['name'])
+            shader=next(n for n in bpy.data.materials[material['name']].node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+            for field,socket in [('coatWeight','Coat Weight'),('coatRoughness','Coat Roughness'),('coatIor','Coat IOR')]:
+                actual=shader.inputs[socket]
+                if actual.is_linked or abs(float(actual.default_value)-surface[field])>1e-6:
+                    raise RuntimeError('Exported coat metadata differs from saved source: '+material['name'])
+            material.update(surface)
     manifest['source']=os.path.relpath(source_blend,OUT).replace('\\','/')
     manifest['sourceSha256']=source_sha256
     manifest['bones']=list(rig.data.bones.keys())

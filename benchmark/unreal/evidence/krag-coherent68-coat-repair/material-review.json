@@ -1,0 +1,30 @@
+{
+  "status": "Actual source/baked optical transfer inspected; limited technical pass",
+  "materialTransferAccepted": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "viewNames": [
+    "Head",
+    "Eyes"
+  ],
+  "sourceReport": "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/review.json",
+  "bakedReport": "benchmark/local/candidates/krag-coherent68-coat-fe152-v1/review-baked/review.json",
+  "reviewReportHashes": {
+    "source": "5f394cdd612d2cb553c6f6a5fee8830c81905923dc6b4135054329a6a03da674",
+    "baked": "bcb476b408626b4f5fa58cd8898db91140c0a294a8b046bf6829b5ac8b7d051a"
+  },
+  "correctionPlanSha256": "afe2125584068c7f1d89d1f87e615a4b8f2ae3ab3f07de55c8222b61ff984c52",
+  "candidateSha256": "b3106c35efe6788d5fd5444e8c6fc2505337412b668ed04d7fb2e9f3326904dc",
+  "allFourComparisonImagesIndividuallyViewed": true,
+  "matchingCameraLightsColorManagement": true,
+  "findings": [
+    "The wet-eye coat reflection missing in the previous bake is restored in both Head and Eyes views.",
+    "Head/body color and surface fields remain present; small baked normal/roughness differences are visible.",
+    "The original full-body comparison remains applicable outside the three scalar-only coated material changes; the bionic eye is numerically restored but not shown in these Natural views."
+  ],
+  "limits": [
+    "This passes sampled material transfer only, not pixel equality or final optical anatomy.",
+    "Facial likeness, natural tusk geometry, cowl/armor fit and hand quality remain unaccepted.",
+    "Both runtime adapters approximate source coat IOR1.376 with1.5; actual engine review remains required."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "candidateSha256": "b3106c35efe6788d5fd5444e8c6fc2505337412b668ed04d7fb2e9f3326904dc",
+  "originalPbrSha256": "4387bd3fd184d2b4d51c89daff2cffa1b3dd19261de1eec43e52e5195f1d772b",
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "stages": {
+    "repair": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "pid": 34764,
+      "freshCompletionMarker": true,
+      "sampleCount": 15,
+      "maxPrivateMiB": 2002.0,
+      "minAvailableMiB": 10322.0,
+      "maxCommitPercent": 57.0
+    },
+    "review": {
+      "nativeExit": 0,
+      "guardExit": 0,
+      "pid": 29268,
+      "freshCompletionMarker": true,
+      "sampleCount": 27,
+      "maxPrivateMiB": 3008.0,
+      "minAvailableMiB": 9638.0,
+      "maxCommitPercent": 59.0
+    }
+  },
+  "changeScope": "Nine scalar input changes over three assigned material slots; no rebake",
+  "textureFilesUnchanged": 104,
+  "savedGraphExceptCoatExact": true,
+  "savedRigGeometryFieldsDriversActionsExact": true,
+  "sampledMaterialTransferPassed": true,
+  "artisticAcceptance": false,
+  "engineAdapterVerified": false,
+  "sharedChanged": false
+}

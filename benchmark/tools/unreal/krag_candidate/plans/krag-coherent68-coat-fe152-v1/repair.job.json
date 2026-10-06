@@ -1,0 +1,25 @@
+{
+  "name": "krag-coherent68-coat-fe152-v1-repair",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\run_coat_stage.py",
+    "--",
+    "--plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\plans\\krag-coherent68-coat-fe152-v1\\plan.json",
+    "--stage",
+    "repair"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-coat-fe152-v1-repair.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-coat-fe152-v1-repair.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-coat-fe152-v1-repair.log",
+  "successMarker": "KRAG_COAT_STAGE_COMPLETE repair"
+}

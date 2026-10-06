@@ -3,7 +3,25 @@
 #include "Animation/AnimSequence.h"
 #if WITH_EDITOR
 #include "Animation/AnimData/IAnimationDataModel.h"
+#include "Materials/Material.h"
+#include "Materials/MaterialExpression.h"
 #endif
+
+bool UKKBenchmarkAssets::ConnectClearCoatInputs(UMaterial* Material, UMaterialExpression* Weight, UMaterialExpression* Roughness)
+{
+#if WITH_EDITOR
+    // These EMaterialProperty values are hidden from Python's enum bindings.
+    if(!Material || !Weight || !Roughness) return false;
+    FExpressionInput* WeightInput=Material->GetExpressionInputForProperty(MP_CustomData0);
+    FExpressionInput* RoughnessInput=Material->GetExpressionInputForProperty(MP_CustomData1);
+    if(!WeightInput || !RoughnessInput) return false;
+    WeightInput->Connect(0,Weight);
+    RoughnessInput->Connect(0,Roughness);
+    return WeightInput->Expression==Weight && RoughnessInput->Expression==Roughness;
+#else
+    return false;
+#endif
+}
 
 TArray<FName> UKKBenchmarkAssets::GetMeshBoneNames(USkeletalMesh* Mesh)
 {

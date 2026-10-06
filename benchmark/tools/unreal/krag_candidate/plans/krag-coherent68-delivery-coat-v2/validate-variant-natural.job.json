@@ -1,0 +1,25 @@
+{
+  "name": "krag-coherent68-delivery-coat-v2-validate-variant-natural",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\run_delivery_stage.py",
+    "--",
+    "--plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\plans\\krag-coherent68-delivery-coat-v2\\plan.json",
+    "--stage",
+    "validate-variant-natural"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-coat-v2-validate-variant-natural.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-coat-v2-validate-variant-natural.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-coat-v2-validate-variant-natural.log",
+  "successMarker": "KRAG_DELIVERY_STAGE_COMPLETE validate-variant-natural"
+}

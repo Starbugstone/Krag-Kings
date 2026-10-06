@@ -1,0 +1,1018 @@
+{
+  "height_m": 2.02949,
+  "forward": "-Y",
+  "up": "Z",
+  "ankles_m": {
+    "Foot_L": [
+      0.19,
+      0.026,
+      0.24
+    ],
+    "Foot_R": [
+      -0.19,
+      0.026,
+      0.24
+    ]
+  },
+  "ground_z": 0,
+  "bones": [
+    "Root",
+    "Pelvis",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "Jaw",
+    "Clavicle_R",
+    "UpperArm_R",
+    "LowerArm_R",
+    "Hand_R",
+    "Thigh_R",
+    "Shin_R",
+    "Foot_R",
+    "Toe_R",
+    "Clavicle_L",
+    "UpperArm_L",
+    "LowerArm_L",
+    "Hand_L",
+    "Thigh_L",
+    "Shin_L",
+    "Foot_L",
+    "Toe_L",
+    "Finger1_0_R",
+    "Finger2_0_R",
+    "Finger1_1_R",
+    "Finger2_1_R",
+    "Finger1_2_R",
+    "Finger2_2_R",
+    "Finger1_3_R",
+    "Finger2_3_R",
+    "Thumb1_R",
+    "Thumb2_R",
+    "Finger1_0_L",
+    "Finger2_0_L",
+    "Finger1_1_L",
+    "Finger2_1_L",
+    "Finger1_2_L",
+    "Finger2_2_L",
+    "Finger1_3_L",
+    "Finger2_3_L",
+    "Thumb1_L",
+    "Thumb2_L",
+    "Claw_0",
+    "Claw_1",
+    "Claw_2",
+    "WeaponMuzzle",
+    "WeaponAim",
+    "FaceRoot",
+    "Eye_L",
+    "LidUpper_L",
+    "LidLower_L",
+    "BrowInner_L",
+    "BrowOuter_L",
+    "Cheek_L",
+    "MouthCorner_L",
+    "Eye_R",
+    "LidUpper_R",
+    "LidLower_R",
+    "BrowInner_R",
+    "BrowOuter_R",
+    "Cheek_R",
+    "MouthCorner_R",
+    "LipUpper",
+    "LipLower",
+    "NoseTip",
+    "Tongue_01",
+    "Tongue_02"
+  ],
+  "clips": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "deformation": {
+    "schemaVersion": 1,
+    "faceRoot": "FaceRoot",
+    "drivers": [
+      {
+        "morph": "Blink_L",
+        "bone": "LidUpper_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.012,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_L",
+        "bone": "LidLower_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_L",
+        "bone": "BrowOuter_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.01,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_L",
+        "bone": "BrowInner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_L",
+        "bone": "MouthCorner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_L",
+        "bone": "MouthCorner_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Snarl_L",
+        "bone": "Cheek_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_L",
+        "bone": "UpperArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 95,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_L",
+        "bone": "LowerArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_L",
+        "bone": "Thigh_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 80,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_L",
+        "bone": "Shin_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Blink_R",
+        "bone": "LidUpper_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.012,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_R",
+        "bone": "LidLower_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_R",
+        "bone": "BrowOuter_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.01,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_R",
+        "bone": "BrowInner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_R",
+        "bone": "MouthCorner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_R",
+        "bone": "MouthCorner_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Snarl_R",
+        "bone": "Cheek_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_R",
+        "bone": "UpperArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 95,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_R",
+        "bone": "LowerArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_R",
+        "bone": "Thigh_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 80,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_R",
+        "bone": "Shin_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "JawOpen",
+        "bone": "Jaw",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 25,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "LipPress",
+        "bone": "LipUpper",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "NoseWrinkle",
+        "bone": "NoseTip",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.005,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      }
+    ],
+    "morphs": [
+      "Blink_L",
+      "Blink_R",
+      "Squint_L",
+      "Squint_R",
+      "BrowRaise_L",
+      "BrowRaise_R",
+      "BrowLower_L",
+      "BrowLower_R",
+      "Smile_L",
+      "Smile_R",
+      "Frown_L",
+      "Frown_R",
+      "JawOpen",
+      "LipPress",
+      "Snarl_L",
+      "Snarl_R",
+      "NoseWrinkle",
+      "Corrective_ShoulderRaise_L",
+      "Corrective_ShoulderRaise_R",
+      "Corrective_ElbowFlex_L",
+      "Corrective_ElbowFlex_R",
+      "Corrective_HipFlex_L",
+      "Corrective_HipFlex_R",
+      "Corrective_KneeFlex_L",
+      "Corrective_KneeFlex_R"
+    ],
+    "controls": "Jaw and eye bones deform directly; expression controls drive soft-tissue morphs and fine geometry wrinkles.",
+    "interiorsStatus": "Provisional anatomy for review; serious Krag expression direction. No playful tongue extension."
+  },
+  "variants": {
+    "Krag_Natural": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicLeg_R_Piston",
+        "BionicEye_L",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_Crusher": {
+      "off": [
+        "BioArm_L",
+        "BioForearm_L",
+        "HandDetails_L",
+        "BionicLeg_R_Piston",
+        "BionicEye_L",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_IronJaw": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicLeg_R_Piston",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_Piston": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicEye_L",
+        "Boot_R",
+        "BioLowerLeg_R",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_FullLeg": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicEye_L",
+        "Boot_R",
+        "BioLowerLeg_R",
+        "NaturalThigh_R",
+        "TrouserLeg_R",
+        "Weapon_R"
+      ]
+    }
+  },
+  "modules": [
+    "Body",
+    "Head",
+    "Face",
+    "MouthInterior",
+    "BioArm_R",
+    "BioForearm_L",
+    "BioArm_L",
+    "BioForearm_R",
+    "Garments",
+    "TrouserLeg_R",
+    "BioLowerLeg_R",
+    "Boot_R",
+    "TrouserLeg_L",
+    "BioLowerLeg_L",
+    "Boot_L",
+    "Belt",
+    "Harness",
+    "Scarf",
+    "Armor",
+    "BionicArm_L_Crusher",
+    "BionicJaw_Iron",
+    "BionicLeg_R_Piston",
+    "BionicThigh_R_Full",
+    "BionicEye_L",
+    "Weapon_R",
+    "NaturalThigh_R"
+  ],
+  "locomotionCycles": {
+    "Walk": {
+      "durationSeconds": 1.0,
+      "cycleSeconds": 1.0,
+      "speedMetersPerSecond": 1.1137412967619302,
+      "leftContacts": [
+        0.065
+      ],
+      "rightContacts": [
+        0.5650000000000001
+      ],
+      "stanceFraction": 0.49,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
+    },
+    "Run": {
+      "durationSeconds": 0.8,
+      "cycleSeconds": 0.8,
+      "speedMetersPerSecond": 3.003151919643766,
+      "leftContacts": [
+        0.62
+      ],
+      "rightContacts": [
+        0.12000000000000002
+      ],
+      "stanceFraction": 0.15999999999999998,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
+    }
+  },
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Oral_v9p_Motion_v4_WIP.blend",
+  "source_blend_sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "bone_count": 68,
+  "sourceContractProvenance": {
+    "path": "benchmark/local/candidates/krag-v9h-source/krag_asset_contract.json",
+    "sha256": "5ea87f2e199a604bccac71440e9f883579b9a40896121545a21864ca8771b16c",
+    "status": "Authored module selections retained from actual v9h lineage; exact current module inventory requires the next native review or bake check"
+  },
+  "status": "Coherent68 technical candidate; likeness, normal mouth, bionics and clothing remain unaccepted",
+  "knownFailures": [
+    "IronJaw and Crusher still use legacy metal jaw overlay; separate semantic replacement is not merged",
+    "New72-bone anatomical hand is not merged; old free hand remains splayed",
+    "Initial motion-review wrapper used stale sharedv7 exclusions, leaving full bionic thigh potentially visible beneath Natural trousers"
+  ],
+  "pbr_blend_sha256": "b3106c35efe6788d5fd5444e8c6fc2505337412b668ed04d7fb2e9f3326904dc",
+  "material_maps": {
+    "Krag_WeatheredTeal_Armor_Atlas": {
+      "BaseColor": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Armor_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Armor_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Armor_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_Armor_Atlas": {
+      "BaseColor": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Armor_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Armor_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Armor_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_Armor_Atlas": {
+      "BaseColor": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Armor_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Armor_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Armor_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Armor_Atlas": {
+      "BaseColor": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Armor_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Armor_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Armor_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_Belt_Atlas": {
+      "BaseColor": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Belt_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Belt_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Belt_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Belt_Atlas": {
+      "BaseColor": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Belt_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Belt_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Belt_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_Belt_Atlas": {
+      "BaseColor": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Belt_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Belt_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Belt_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Belt_Atlas": {
+      "BaseColor": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Belt_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Belt_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Belt_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_SandstoneSkin_BioArm_L_Atlas": {
+      "BaseColor": "Krag_BioArm_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioArm_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioArm_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioArm_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_SandstoneSkin_BioArm_R_Atlas": {
+      "BaseColor": "Krag_BioArm_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioArm_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioArm_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioArm_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_SandstoneSkin_BioForearm_L_Atlas": {
+      "BaseColor": "Krag_BioForearm_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioForearm_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioForearm_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioForearm_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_SandstoneSkin_BioForearm_R_Atlas": {
+      "BaseColor": "Krag_BioForearm_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioForearm_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioForearm_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioForearm_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_BioLowerLeg_L_Atlas": {
+      "BaseColor": "Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_BioLowerLeg_L_Atlas": {
+      "BaseColor": "Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_BioLowerLeg_R_Atlas": {
+      "BaseColor": "Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_BioLowerLeg_R_Atlas": {
+      "BaseColor": "Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_WeatheredTeal_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_CopperHose_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Ivory_BionicArm_L_Crusher_Atlas": {
+      "BaseColor": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Amber_BionicEye_L_Atlas": {
+      "BaseColor": "Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicEye_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_BionicEye_L_Atlas": {
+      "BaseColor": "Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicEye_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_BionicEye_L_Atlas": {
+      "BaseColor": "Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicEye_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_BionicJaw_Iron_Atlas": {
+      "BaseColor": "Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_BionicJaw_Iron_Atlas": {
+      "BaseColor": "Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Ivory_BionicJaw_Iron_Atlas": {
+      "BaseColor": "Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_BionicLeg_R_Piston_Atlas": {
+      "BaseColor": "Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_BionicLeg_R_Piston_Atlas": {
+      "BaseColor": "Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_WeatheredTeal_BionicLeg_R_Piston_Atlas": {
+      "BaseColor": "Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_BionicThigh_R_Full_Atlas": {
+      "BaseColor": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_BionicThigh_R_Full_Atlas": {
+      "BaseColor": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_WeatheredTeal_BionicThigh_R_Full_Atlas": {
+      "BaseColor": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_CopperHose_BionicThigh_R_Full_Atlas": {
+      "BaseColor": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_BionicThigh_R_Full_Atlas": {
+      "BaseColor": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_SandstoneSkin_Body_Atlas": {
+      "BaseColor": "Krag_Body_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Body_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Body_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Body_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_Boot_L_Atlas": {
+      "BaseColor": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Boot_L_Atlas": {
+      "BaseColor": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_Boot_L_Atlas": {
+      "BaseColor": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_Boot_L_Atlas": {
+      "BaseColor": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Boot_L_Atlas": {
+      "BaseColor": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_Boot_R_Atlas": {
+      "BaseColor": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Boot_R_Atlas": {
+      "BaseColor": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_Boot_R_Atlas": {
+      "BaseColor": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_Boot_R_Atlas": {
+      "BaseColor": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Boot_R_Atlas": {
+      "BaseColor": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Boot_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Amber_Face_Atlas": {
+      "BaseColor": "Krag_Face_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Face_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Face_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Face_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_Face_Atlas": {
+      "BaseColor": "Krag_Face_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Face_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Face_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Face_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_EyeWhite_Face_Atlas": {
+      "BaseColor": "Krag_Face_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Face_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Face_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Face_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Ivory_Face_Atlas": {
+      "BaseColor": "Krag_Face_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Face_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Face_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Face_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_TuskEnamel_Source_Face_Atlas": {
+      "BaseColor": "Krag_Face_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Face_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Face_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Face_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Garments_Atlas": {
+      "BaseColor": "Krag_Garments_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Garments_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Garments_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Garments_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_AgedBrass_Harness_Atlas": {
+      "BaseColor": "Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Harness_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Harness_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Harness_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Harness_Atlas": {
+      "BaseColor": "Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Harness_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Harness_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Harness_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Harness_Atlas": {
+      "BaseColor": "Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Harness_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Harness_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Harness_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_FacialSkin_Head_Atlas": {
+      "BaseColor": "Krag_Head_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Head_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Head_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Head_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_Head_Atlas": {
+      "BaseColor": "Krag_Head_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Head_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Head_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Head_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_InnerMouth_v9k_Head_Atlas": {
+      "BaseColor": "Krag_Head_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Head_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Head_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Head_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DentalEnamel_MouthInterior_Atlas": {
+      "BaseColor": "Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_MouthInterior_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Gingiva_MouthInterior_Atlas": {
+      "BaseColor": "Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_MouthInterior_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OralTongue_MouthInterior_Atlas": {
+      "BaseColor": "Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_MouthInterior_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_NaturalThigh_R_Atlas": {
+      "BaseColor": "Krag_NaturalThigh_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_NaturalThigh_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_NaturalThigh_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_NaturalThigh_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_Scarf_Atlas": {
+      "BaseColor": "Krag_Scarf_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Scarf_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Scarf_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Scarf_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_TrouserLeg_L_Atlas": {
+      "BaseColor": "Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_TrouserLeg_L_Atlas": {
+      "BaseColor": "Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_DesertCanvas_TrouserLeg_R_Atlas": {
+      "BaseColor": "Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_TrouserLeg_R_Atlas": {
+      "BaseColor": "Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_Recess_Weapon_R_Atlas": {
+      "BaseColor": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Weapon_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_BlackenedSteel_Weapon_R_Atlas": {
+      "BaseColor": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Weapon_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_OiledLeather_Weapon_R_Atlas": {
+      "BaseColor": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Weapon_R_SurfaceAtlas_Metallic.png"
+    },
+    "Krag_WeatheredTeal_Weapon_R_Atlas": {
+      "BaseColor": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "Normal": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "Roughness": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "Metallic": "Krag_Weapon_R_SurfaceAtlas_Metallic.png"
+    }
+  },
+  "materials": [
+    "Krag_WeatheredTeal_Armor_Atlas",
+    "Krag_BlackenedSteel_Armor_Atlas",
+    "Krag_AgedBrass_Armor_Atlas",
+    "Krag_OiledLeather_Armor_Atlas",
+    "Krag_AgedBrass_Belt_Atlas",
+    "Krag_OiledLeather_Belt_Atlas",
+    "Krag_BlackenedSteel_Belt_Atlas",
+    "Krag_DesertCanvas_Belt_Atlas",
+    "Krag_SandstoneSkin_BioArm_L_Atlas",
+    "Krag_SandstoneSkin_BioArm_R_Atlas",
+    "Krag_SandstoneSkin_BioForearm_L_Atlas",
+    "Krag_SandstoneSkin_BioForearm_R_Atlas",
+    "Krag_OiledLeather_BioLowerLeg_L_Atlas",
+    "Krag_DesertCanvas_BioLowerLeg_L_Atlas",
+    "Krag_OiledLeather_BioLowerLeg_R_Atlas",
+    "Krag_DesertCanvas_BioLowerLeg_R_Atlas",
+    "Krag_BlackenedSteel_BionicArm_L_Crusher_Atlas",
+    "Krag_AgedBrass_BionicArm_L_Crusher_Atlas",
+    "Krag_WeatheredTeal_BionicArm_L_Crusher_Atlas",
+    "Krag_CopperHose_BionicArm_L_Crusher_Atlas",
+    "Krag_Recess_BionicArm_L_Crusher_Atlas",
+    "Krag_Ivory_BionicArm_L_Crusher_Atlas",
+    "Krag_Amber_BionicEye_L_Atlas",
+    "Krag_BlackenedSteel_BionicEye_L_Atlas",
+    "Krag_AgedBrass_BionicEye_L_Atlas",
+    "Krag_BlackenedSteel_BionicJaw_Iron_Atlas",
+    "Krag_AgedBrass_BionicJaw_Iron_Atlas",
+    "Krag_Ivory_BionicJaw_Iron_Atlas",
+    "Krag_AgedBrass_BionicLeg_R_Piston_Atlas",
+    "Krag_BlackenedSteel_BionicLeg_R_Piston_Atlas",
+    "Krag_WeatheredTeal_BionicLeg_R_Piston_Atlas",
+    "Krag_BlackenedSteel_BionicThigh_R_Full_Atlas",
+    "Krag_AgedBrass_BionicThigh_R_Full_Atlas",
+    "Krag_WeatheredTeal_BionicThigh_R_Full_Atlas",
+    "Krag_CopperHose_BionicThigh_R_Full_Atlas",
+    "Krag_Recess_BionicThigh_R_Full_Atlas",
+    "Krag_SandstoneSkin_Body_Atlas",
+    "Krag_AgedBrass_Boot_L_Atlas",
+    "Krag_OiledLeather_Boot_L_Atlas",
+    "Krag_BlackenedSteel_Boot_L_Atlas",
+    "Krag_Recess_Boot_L_Atlas",
+    "Krag_DesertCanvas_Boot_L_Atlas",
+    "Krag_AgedBrass_Boot_R_Atlas",
+    "Krag_OiledLeather_Boot_R_Atlas",
+    "Krag_BlackenedSteel_Boot_R_Atlas",
+    "Krag_Recess_Boot_R_Atlas",
+    "Krag_DesertCanvas_Boot_R_Atlas",
+    "Krag_Amber_Face_Atlas",
+    "Krag_Recess_Face_Atlas",
+    "Krag_EyeWhite_Face_Atlas",
+    "Krag_Ivory_Face_Atlas",
+    "Krag_TuskEnamel_Source_Face_Atlas",
+    "Krag_DesertCanvas_Garments_Atlas",
+    "Krag_AgedBrass_Harness_Atlas",
+    "Krag_OiledLeather_Harness_Atlas",
+    "Krag_DesertCanvas_Harness_Atlas",
+    "Krag_FacialSkin_Head_Atlas",
+    "Krag_Recess_Head_Atlas",
+    "Krag_InnerMouth_v9k_Head_Atlas",
+    "Krag_DentalEnamel_MouthInterior_Atlas",
+    "Krag_Gingiva_MouthInterior_Atlas",
+    "Krag_OralTongue_MouthInterior_Atlas",
+    "Krag_DesertCanvas_NaturalThigh_R_Atlas",
+    "Krag_DesertCanvas_Scarf_Atlas",
+    "Krag_DesertCanvas_TrouserLeg_L_Atlas",
+    "Krag_OiledLeather_TrouserLeg_L_Atlas",
+    "Krag_DesertCanvas_TrouserLeg_R_Atlas",
+    "Krag_OiledLeather_TrouserLeg_R_Atlas",
+    "Krag_Recess_Weapon_R_Atlas",
+    "Krag_BlackenedSteel_Weapon_R_Atlas",
+    "Krag_OiledLeather_Weapon_R_Atlas",
+    "Krag_WeatheredTeal_Weapon_R_Atlas"
+  ],
+  "material_surface": {
+    "Krag_Amber_BionicEye_L_Atlas": {
+      "hasCoatParameters": true,
+      "coatWeight": 1.0,
+      "coatRoughness": 0.06499999761581421,
+      "coatIor": 1.3760000467300415
+    },
+    "Krag_Amber_Face_Atlas": {
+      "hasCoatParameters": true,
+      "coatWeight": 1.0,
+      "coatRoughness": 0.06499999761581421,
+      "coatIor": 1.3760000467300415
+    },
+    "Krag_EyeWhite_Face_Atlas": {
+      "hasCoatParameters": true,
+      "coatWeight": 1.0,
+      "coatRoughness": 0.06499999761581421,
+      "coatIor": 1.3760000467300415
+    }
+  }
+}

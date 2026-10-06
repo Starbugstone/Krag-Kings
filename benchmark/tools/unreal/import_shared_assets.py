@@ -126,11 +126,24 @@ def cache_material(asset_path, signature, provenance):
     temporary.replace(CACHE_FILE)
 
 
-MATERIAL_SURFACE_FIELDS = ('alphaMode', 'alphaSource', 'alphaClipThreshold', 'doubleSided', 'doubleSidedNormalMode', 'normalConvention')
+MATERIAL_SURFACE_FIELDS = ('alphaMode', 'alphaSource', 'alphaClipThreshold', 'doubleSided', 'doubleSidedNormalMode', 'normalConvention',
+                           'hasCoatParameters', 'coatWeight', 'coatRoughness', 'coatIor')
 
 
 def material_surface_contract(descriptor):
     contract = {key: descriptor[key] for key in MATERIAL_SURFACE_FIELDS if key in descriptor}
+    coat_fields = ('coatWeight', 'coatRoughness', 'coatIor')
+    if contract.get('hasCoatParameters') is True:
+        for field in coat_fields:
+            value = contract.get(field)
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+                raise RuntimeError('Coated surface requires an explicit finite ' + field)
+        if not 0 <= contract['coatWeight'] <= 1 or not 0 <= contract['coatRoughness'] <= 1 or contract['coatIor'] < 1:
+            raise RuntimeError('Coat parameters exceed the supported physical range')
+        if contract.get('alphaMode', 'OPAQUE') != 'OPAQUE':
+            raise RuntimeError('This optical coat adapter supports opaque surfaces only')
+    elif any(field in contract for field in coat_fields):
+        raise RuntimeError('Coat values require hasCoatParameters=true')
     if contract.get('alphaMode', 'OPAQUE') not in ('OPAQUE', 'MASK'):
         raise RuntimeError('Only opaque or masked character surfaces are supported')
     if contract.get('normalConvention', 'OpenGL +Y') != 'OpenGL +Y':
@@ -166,6 +179,8 @@ def material_signature(name, tex_dir, surface=None, sources=None):
     if surface:
         inputs['surfaceRecipe'] = 'masked-card-v1-alpha-coverage'
         inputs['surface'] = surface
+        if surface.get('hasCoatParameters'):
+            inputs['coatRecipe'] = 'clear-coat-v1-explicit-weight-roughness-fixed-ior-1.5'
     for kind, path in (sources or material_texture_sources(name, tex_dir)).items():
         if path.exists():
             inputs['textures'][kind] = sha256(path)
@@ -311,7 +326,23 @@ def material(name, tex_dir, destination, descriptor=None):
         connect(mat, node, 'RGB' if kind in ('BaseColor', 'Normal') else 'R', prop)
         if masked and kind == 'BaseColor':
             connect(mat, node, 'A', unreal.MaterialProperty.MP_OPACITY_MASK)
-    if not masked and (name == 'Nib_v5_DustyPinkEar' or any(word in name.lower() for word in ('skin', 'muzzle', 'earinner'))):
+    if surface.get('hasCoatParameters'):
+        mat.set_editor_property('shading_model', unreal.MaterialShadingModel.MSM_CLEAR_COAT)
+        coat_nodes = []
+        for field, y in [('coatWeight', 800), ('coatRoughness', 980)]:
+            value = expression(mat, unreal.MaterialExpressionConstant, -400, y)
+            value.set_editor_property('r', float(surface[field]))
+            coat_nodes.append(value)
+        if not unreal.KKBenchmarkAssets.connect_clear_coat_inputs(mat, *coat_nodes):
+            raise RuntimeError('Native editor bridge did not connect the explicit coat inputs')
+        # UE's installed ShadingModels.ush hard-codes coat Fresnel IOR=1.5.
+        # Record this approximation rather than claiming source IOR parity.
+        REPORT.setdefault('coat_materials', []).append({'asset': asset_path,
+            'source': {key: surface[key] for key in ('coatWeight', 'coatRoughness', 'coatIor')},
+            'effectiveCoatIor': 1.5, 'shadingModel': 'ClearCoat',
+            'sourceIorExact': abs(surface['coatIor'] - 1.5) < 1e-6,
+            'appearanceReviewed': False})
+    elif not masked and (name == 'Nib_v5_DustyPinkEar' or any(word in name.lower() for word in ('skin', 'muzzle', 'earinner'))):
         mat.set_editor_property('shading_model', unreal.MaterialShadingModel.MSM_SUBSURFACE)
         scatter = expression(mat, unreal.MaterialExpressionConstant3Vector, -400, 800)
         scatter.set_editor_property('constant', unreal.LinearColor(0.28, 0.15, 0.075, 1))

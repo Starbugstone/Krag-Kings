@@ -42,17 +42,28 @@ def main():
             raise RuntimeError('Preserve earlier output: ' + path)
     final = base / 'triangulated'
     reference = base / 'reference'
-    if args.stage.startswith('review-'):
+    if args.stage == 'snapshot-coat':
+        invoke('benchmark/tools/unreal/krag_candidate/snapshot_source.py',
+               ['--source', local(plan['pbrSource']), '--source-sha256', plan['pbrSourceSha256'],
+                '--selection-contract', local(plan['selectionContract']),
+                '--compare', local(plan['originalSourceSnapshot']), '--output', local(plan['pbrSnapshot'])])
+    elif args.stage.startswith('review-'):
         invoke('benchmark/tools/unreal/krag_candidate/review_materials.py',
                ['--plan', args.plan, '--side', args.stage.removeprefix('review-')])
     elif args.stage in ('reference', 'triangles'):
         if args.stage == 'reference':
-            review_path = base / 'material-review.json'
+            review_path = local(plan['reusedMaterialReview']) if 'reusedMaterialReview' in plan else base / 'material-review.json'
             review = json.loads(review_path.read_text())
-            if review.get('planSha256') != sha(args.plan) or review.get('materialTransferAccepted') is not True:
+            if review.get('materialTransferAccepted') is not True:
                 raise RuntimeError('Matched material images require an actual recorded inspection')
+            if 'reusedMaterialReview' in plan:
+                if review.get('candidateSha256') != plan['pbrSourceSha256']:
+                    raise RuntimeError('Inspected optical correction is not the export source')
+            elif review.get('planSha256') != sha(args.plan):
+                raise RuntimeError('Material review comes from another frozen attempt')
             for side in ['source', 'baked']:
-                if review['reviewReportHashes'][side] != sha(base / ('review-' + side) / 'review.json'):
+                report_path = local(review[side+'Report']) if 'reusedMaterialReview' in plan else base / ('review-' + side) / 'review.json'
+                if review['reviewReportHashes'][side] != sha(report_path):
                     raise RuntimeError('Inspected material view set changed')
         command = ['--export-only', '--source-runtime', local(plan['pbrSource']),
                    '--contract', local(plan['pbrSelectionContract']),
@@ -73,6 +84,9 @@ def main():
             if {entry['name'] for entry in manifest['materials']} != set(expected):
                 raise RuntimeError('Exported material-role set differs from the baked source')
             for entry in manifest['materials']:
+                for field in ['hasCoatParameters', 'coatWeight', 'coatRoughness', 'coatIor']:
+                    if entry.get(field) != expected[entry['name']].get(field):
+                        raise RuntimeError('Optical material metadata changed during export')
                 for channel in ['baseColor', 'normal', 'roughness', 'metallic']:
                     path = Path(entry[channel])
                     if path.is_absolute() or len(path.parts) != 2 or path.parts[0] != 'textures':

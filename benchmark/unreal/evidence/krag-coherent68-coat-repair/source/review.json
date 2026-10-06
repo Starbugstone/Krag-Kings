@@ -1,0 +1,168 @@
+{
+  "side": "source",
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "planSha256": "a95c88bd0c1ea5bae33655282300f09785bc109d1b27fc278d49334da9579d92",
+  "images": [
+    {
+      "view": "Front",
+      "path": "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Front.png",
+      "sha256": "7f089af8dc4dcc1dbca485f4769e009baa712904621064c39ea0d433e8a3f89a",
+      "cameraPosition": [
+        0.0,
+        -6.0,
+        1.2999999523162842
+      ],
+      "cameraTarget": [
+        0.0,
+        0.0,
+        1.059999942779541
+      ],
+      "orthographicScaleMeters": 2.38
+    },
+    {
+      "view": "Head",
+      "path": "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Head.png",
+      "sha256": "efd8010abb48708763d7946f200866ebc9f3c6ecbd221b8f79133246cc083968",
+      "cameraPosition": [
+        1.100000023841858,
+        -4.0,
+        2.049999952316284
+      ],
+      "cameraTarget": [
+        0.0,
+        -0.019999999552965164,
+        1.899999976158142
+      ],
+      "orthographicScaleMeters": 0.53
+    },
+    {
+      "view": "Eyes",
+      "path": "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Eyes.png",
+      "sha256": "b26f593849bab14b586dacb7cc5d0948e909d17ebbf14dc07e5e0f444552814d",
+      "cameraPosition": [
+        0.1499999314546585,
+        -3.1196608543395996,
+        1.9474564790725708
+      ],
+      "cameraTarget": [
+        -8.009374141693115e-08,
+        -0.11966079473495483,
+        1.8974565267562866
+      ],
+      "orthographicScaleMeters": 0.36
+    }
+  ],
+  "clip": "Idle",
+  "frame": 1,
+  "lights": [
+    {
+      "name": "Warm key",
+      "type": "AREA",
+      "energy": 500.0,
+      "matrixWorld": [
+        [
+          0.7999999523162842,
+          0.36305004358291626,
+          -0.47769737243652344,
+          -3.0
+        ],
+        [
+          -0.6000000834465027,
+          0.48406657576560974,
+          -0.6369296908378601,
+          -4.0
+        ],
+        [
+          -1.6617050846434722e-08,
+          0.7961621880531311,
+          0.6050832867622375,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Cool fill",
+      "type": "AREA",
+      "energy": 280.0,
+      "matrixWorld": [
+        [
+          0.3162280321121216,
+          -0.4692992568016052,
+          0.8244743943214417,
+          3.0
+        ],
+        [
+          0.9486832022666931,
+          0.15643322467803955,
+          -0.2748250663280487,
+          -1.0
+        ],
+        [
+          1.5894443095021416e-08,
+          0.869072437286377,
+          0.4946849048137665,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Warm rim",
+      "type": "AREA",
+      "energy": 600.0,
+      "matrixWorld": [
+        [
+          -0.9486833214759827,
+          -0.2096334546804428,
+          0.23675686120986938,
+          1.0
+        ],
+        [
+          0.3162277638912201,
+          -0.6289003491401672,
+          0.7102705836296082,
+          3.0
+        ],
+        [
+          1.406515903745742e-09,
+          0.7486909627914429,
+          0.6629192233085632,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "engine": "Cycles CPU",
+  "samples": 24,
+  "viewTransform": "AgX",
+  "look": "None",
+  "exposure": 0.0,
+  "gamma": 1.0,
+  "worldBackgroundColor": [
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    1.0
+  ],
+  "worldBackgroundStrength": 0.44999998807907104,
+  "readOnlySource": true,
+  "artisticAcceptance": false,
+  "visualParityInspected": false
+}
