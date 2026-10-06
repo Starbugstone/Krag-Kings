@@ -201,7 +201,7 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "Pending mouth follow-up and root-owned reference body motion candidate; scarf study deferred behind critical corrections",
+  "nextSourceJob": "Pose-space lip/dental/cavity correction; root owns reference-derived body motion; semantic IronJaw exclusion prepared, no replacement generated",
   "nextFirstReview": "Actual repaired mouth neutral/open and body motion front/side",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
@@ -399,5 +399,12 @@
     "Normal rounded lip/corner opening and fitted dental/gum/tongue anatomy",
     "Organic mandibular exclusion and closed/open clearance for IronJaw",
     "Realistic continuous muscle forms, concept likeness and materials"
-  ]
+  ],
+  "mouthAnatomyStudy": {
+    "source": "benchmark/art/krag/Krag_MouthAnatomy_v9j_WIP.blend",
+    "sourceSha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f",
+    "review": "benchmark/art/krag/v9j-mouth-anatomy-review.json",
+    "status": "Actual isolated mouth source and first OpenMouth review; structural mouth failure persists, dependent views stopped",
+    "accepted": false
+  }
 }

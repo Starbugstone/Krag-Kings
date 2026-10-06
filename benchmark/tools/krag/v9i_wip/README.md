@@ -1,9 +1,7 @@
 # Krag provisional mouth follow-up
 
-This is prepared work after the actual failed v9h mouth review. No v9i source exists. Do not modify the frozen v9h or cloth-only recipes.
+Actual v9i source and neutral/open views now exist. See `art/krag/v9i-mouth-contact-review.json`: dental visibility improves, but the rectangular opening and sparse block crowns still fail the user's normal-mouth requirement. Shared assets are unchanged.
 
-`audit_mouth_construction.py` has run with the retained raw topology. The old MouthCorner controls are about 23.4 mm from the true source commissures (about 67 mm after creature fitting, before the common head transform); the Smile/Frown fields likewise use obsolete lateral centers. The extra opaque ellipsoid does not cover the neutral tooth front centers, so its removal is not an established dental fix.
+`audit_mouth_construction.py` measured the old MouthCorner controls about 23.4 mm from the true source commissures. `audit_saved_oral_contact.py` then ran on the saved v9h source: upper teeth were occluded by upper skin, most lower teeth/tongue by the inner bag. This is actual posed attribution, not a neutral formula assumption.
 
-`audit_saved_oral_contact.py` is a prepared read-only Blender job against the exact saved v9h hash. It will attribute sampled dental/gum occlusion to actual evaluated Head materials/face sets in neutral and frame146. It has not run.
-
-`mouth_control_fit.py` prepares actual face-set-derived commissure controls and matching modest Smile/Frown fields. It is syntax checked but not integrated, generated or visually verified. Serious Krag acting is preserved. Dental/gum fit and rounded moving mouth corners remain unresolved.
+`repair_saved_mouth.py` and `semantic_jaw_v2.py` produced the isolated v9i source. Their exact hashes are retained in the review receipt. `mouth_control_fit.py` and `face_relief.py` remain prepared, unintegrated source helpers. The separate v9j recipe now prepares true-rim opening, continuous lips and fitted dental anatomy; it has not run.

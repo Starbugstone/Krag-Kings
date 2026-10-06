@@ -1,0 +1,378 @@
+{
+  "status": "Generated provisional source only; neutral/open/profile pose review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MouthContact_v9i_WIP.blend",
+    "sha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthAnatomy_v9j_WIP.blend",
+    "sha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f"
+  },
+  "jaw": {
+    "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+    "sourceFaceSets": {
+      "upperLipCheek": 33,
+      "lowerLipJaw": 24,
+      "oralBag": 7,
+      "nose": 11
+    },
+    "upperLipVertices": 14242,
+    "lowerLipRimVertices": 81,
+    "upperLipRimVertices": 105,
+    "cornerVertices": 2,
+    "lowerJawAnchorVertices": 6064,
+    "unknownSolvedVertices": 2499,
+    "iterations": 113,
+    "relativeLinearResidual": 8.772868704359403e-10,
+    "upperLipMaximumJawWeight": 0.0,
+    "noseMaximumJawWeight": 0.0,
+    "lowerRimJawWeightRange": [
+      0.0,
+      1.0
+    ],
+    "lowerRimCornerToCenterSourceMeters": 0.029720546582932723,
+    "lowerRimProfile": "sin(pi/2 * geodesicFraction)^1.25",
+    "lowerJawBoundarySourceMeters": 0.009,
+    "oralFloorAnchorVertices": 909,
+    "oralRoofAnchorVertices": 1463,
+    "sourceMouthHeight": 0.22888289391994476,
+    "provisional": true,
+    "requiresActualPoseReview": true
+  },
+  "commissureControls": {
+    "R": {
+      "vertex": 251,
+      "old": [
+        -0.08050494641065598,
+        -0.13188745081424713,
+        1.8253123760223389
+      ],
+      "new": [
+        -0.04781512916088104,
+        -0.16938994824886322,
+        1.8204855918884277
+      ]
+    },
+    "L": {
+      "vertex": 1793,
+      "old": [
+        0.08050494641065598,
+        -0.13188745081424713,
+        1.8253123760223389
+      ],
+      "new": [
+        0.04765888303518295,
+        -0.16950571537017822,
+        1.8205187320709229
+      ]
+    }
+  },
+  "oralGeometry": {
+    "anteriorRows": {
+      "upper": [
+        {
+          "center": [
+            -0.07418448467552662,
+            -0.10157622307538985,
+            1.8207853903770448
+          ],
+          "widthMeters": 0.019418970106573626,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.06818448467552662,
+            -0.12157622307538986,
+            1.8212853903770447
+          ],
+          "widthMeters": 0.019418970106573626,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.06218448467552662,
+            -0.14157622307538986,
+            1.8217853903770447
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.04802098870277405,
+            -0.16077803075313568,
+            1.8227969408035278
+          ],
+          "widthMeters": 0.01894098157921693,
+          "heightMeters": 0.01374,
+          "kind": "canine"
+        },
+        {
+          "center": [
+            -0.030917356722056866,
+            -0.17183542996644974,
+            1.8237969279289246
+          ],
+          "widthMeters": 0.01894098157921693,
+          "heightMeters": 0.01374,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            -0.01069639902561903,
+            -0.1764015182852745,
+            1.8245393633842468
+          ],
+          "widthMeters": 0.019278976102302423,
+          "heightMeters": 0.01374,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.01069639902561903,
+            -0.1764015182852745,
+            1.8245393633842468
+          ],
+          "widthMeters": 0.019278976102302423,
+          "heightMeters": 0.01374,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.030917356722056866,
+            -0.17183542996644974,
+            1.8237969279289246
+          ],
+          "widthMeters": 0.01894098157921693,
+          "heightMeters": 0.01374,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.04802098870277405,
+            -0.16077803075313568,
+            1.8227969408035278
+          ],
+          "widthMeters": 0.01894098157921693,
+          "heightMeters": 0.01374,
+          "kind": "canine"
+        },
+        {
+          "center": [
+            0.06218448467552662,
+            -0.14157622307538986,
+            1.8217853903770447
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            0.06818448467552662,
+            -0.12157622307538986,
+            1.8212853903770447
+          ],
+          "widthMeters": 0.019418970106573626,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            0.07418448467552662,
+            -0.10157622307538985,
+            1.8207853903770448
+          ],
+          "widthMeters": 0.019418970106573626,
+          "heightMeters": 0.01374,
+          "kind": "premolar"
+        }
+      ],
+      "lower": [
+        {
+          "center": [
+            -0.06849935267865657,
+            -0.10259270578622817,
+            1.8080633153915406
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.062499352678656576,
+            -0.12259270578622818,
+            1.8085633153915406
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.05649935267865658,
+            -0.14259270578622818,
+            1.8090633153915405
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            -0.024987769313156605,
+            -0.16480861604213715,
+            1.8102017641067505
+          ],
+          "widthMeters": 0.015748616890575086,
+          "heightMeters": 0.01178,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            -0.00840491708368063,
+            -0.16823925077915192,
+            1.8106859922409058
+          ],
+          "widthMeters": 0.015633145775645972,
+          "heightMeters": 0.01178,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.00840491708368063,
+            -0.16823925077915192,
+            1.8106859922409058
+          ],
+          "widthMeters": 0.015633145775645972,
+          "heightMeters": 0.01178,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.024987769313156605,
+            -0.16480861604213715,
+            1.8102017641067505
+          ],
+          "widthMeters": 0.015748616890575086,
+          "heightMeters": 0.01178,
+          "kind": "incisor"
+        },
+        {
+          "center": [
+            0.05649935267865658,
+            -0.14259270578622818,
+            1.8090633153915405
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            0.062499352678656576,
+            -0.12259270578622818,
+            1.8085633153915406
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        },
+        {
+          "center": [
+            0.06849935267865657,
+            -0.10259270578622817,
+            1.8080633153915406
+          ],
+          "widthMeters": 0.01941897010657363,
+          "heightMeters": 0.01178,
+          "kind": "premolar"
+        }
+      ]
+    },
+    "tuskRootTargets": {
+      "R": [
+        -0.04102048836648464,
+        -0.15700653195381165,
+        1.8037204860305787
+      ],
+      "L": [
+        0.04102048836648464,
+        -0.15700653195381165,
+        1.8037204860305787
+      ]
+    },
+    "tongue": {
+      "posteriorY": -0.019503332287073134,
+      "anteriorY": -0.1552392507791519,
+      "neutralCenterZ": 1.8016859922409059,
+      "halfWidthMeters": 0.038,
+      "halfHeightMeters": 0.0085
+    },
+    "vertices": 17010,
+    "polygons": 17928,
+    "removedExtraOpaqueEllipsoid": true,
+    "retainedCavity": "Continuous head topology oral bag set7"
+  },
+  "tusks": [
+    {
+      "side": "R",
+      "previousRoot": [
+        -0.040126095758751035,
+        -0.13701460789889097,
+        1.8067535907030106
+      ],
+      "targetGumRoot": [
+        -0.04102048836648464,
+        -0.15700653195381165,
+        1.8037204860305787
+      ],
+      "shiftMeters": [
+        -0.0008943926077336073,
+        -0.019991924054920673,
+        -0.0030331046724318966
+      ],
+      "tipUnchanged": true
+    },
+    {
+      "side": "L",
+      "previousRoot": [
+        0.040126095758751035,
+        -0.13701460789889097,
+        1.8067535907030106
+      ],
+      "targetGumRoot": [
+        0.04102048836648464,
+        -0.15700653195381165,
+        1.8037204860305787
+      ],
+      "shiftMeters": [
+        0.0008943926077336073,
+        -0.019991924054920673,
+        -0.0030331046724318966
+      ],
+      "tipUnchanged": true
+    }
+  ],
+  "lipRollMaximumMeters": 0.0018,
+  "openingCorrectiveMaximumMeters": 0.0023999918460845945,
+  "preserved": [
+    "Body geometry and actions",
+    "Jaw/eye/body bind",
+    "Current weapon",
+    "Shared exports"
+  ],
+  "pending": [
+    "Actual rounded mouth opening and neutral dental occlusion",
+    "Tusk/gum contact in neutral/open",
+    "Tongue/cavity clearance",
+    "IronJaw organic exclusion",
+    "Concept facial likeness"
+  ]
+}

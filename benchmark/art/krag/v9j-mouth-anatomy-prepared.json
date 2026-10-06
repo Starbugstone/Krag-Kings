@@ -1,0 +1,57 @@
+{
+  "status": "Frozen prepared source recipe; not executed or artistically accepted",
+  "inputSource": {
+    "path": "benchmark/art/krag/Krag_MouthContact_v9i_WIP.blend",
+    "sha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff"
+  },
+  "preparedFiles": [
+    {
+      "path": "benchmark/tools/krag/v9j_wip/build_mouth_v9j.py",
+      "sha256": "4e38fe26b10f0290abc3b233416acf99e92c49bca2661c452e4cc402102e4c8f"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/semantic_jaw_v3.py",
+      "sha256": "8c83abd15a75e731dbc0049b1ccd8cdb951e98235099c38b87ccf8fd997cc17a"
+    },
+    {
+      "path": "benchmark/tools/krag/build-mouth-v9j-job.json",
+      "sha256": "4a60b41c21e2d3357091bdd959e831cc10edb1887ab7bb226d97836100a6763d"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9j-Neutral.json",
+      "sha256": "114251c178add4334e746f680b6629a06e1e2457b632a921d5387f77dfbc75fe"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9j-OpenMouth.json",
+      "sha256": "e7e220b2d401c01f4dde4ec4b6122f9688963e36c2e7cb6f48db342c1698448c"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9j-OpenProfile.json",
+      "sha256": "41a1ca19ab53de9227c3f1cf937851c01387c13610746523afe952b789769710"
+    }
+  ],
+  "changes": [
+    "Entire lower-rim geodesic arc controls oval jaw-opening support",
+    "Continuous lip rolls and modest upper-lip release/corner compression",
+    "True oral commissure control pivots and matching Smile/Frown fields",
+    "Dental crown widths from real arch spacing; differentiated incisors/canines/premolars",
+    "Continuous scalloped gingiva and seated tongue; remove duplicate opaque ellipsoid while retaining oral bag",
+    "Lower tusk root contact follows fitted lower gingiva"
+  ],
+  "unchanged": [
+    "Body anatomy/locomotion/actions",
+    "Jaw/ocular/body rest bind",
+    "Weapon",
+    "Shared exports"
+  ],
+  "reviewOrder": [
+    "OpenMouth first; stop if obvious structural failure",
+    "Neutral closed-mouth contact",
+    "OpenProfile"
+  ],
+  "acceptance": false
+}

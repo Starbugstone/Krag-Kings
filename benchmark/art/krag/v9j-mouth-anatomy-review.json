@@ -1,0 +1,88 @@
+{
+  "status": "Actual isolated mouth source and first OpenMouth review; structural mouth failure persists, dependent views stopped",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthAnatomy_v9j_WIP.blend",
+    "sha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f",
+    "bytes": 142361574
+  },
+  "inputSource": {
+    "path": "benchmark/art/krag/Krag_MouthContact_v9i_WIP.blend",
+    "sha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff",
+    "bytes": 142363852
+  },
+  "artisticAcceptance": false,
+  "mouthAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9j-mouth-anatomy.png",
+      "sha256": "4af438bc6e649c2d1ad471972067dfe5a01b0d49dca9b4f2bce1140628866217",
+      "bytes": 1252482
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9j-mouth-anatomy.meta.json",
+      "sha256": "7c10beebd22a7d2f3d5a0e098824e0eb9f50b62a92d76c50689362ad064186a6",
+      "bytes": 587
+    },
+    {
+      "path": "benchmark/art/krag/mouth-anatomy-v9j.json",
+      "sha256": "0a17c0d48517e976bc866336b88fdb1d88f60d147b93830b9a8426a267fb81af",
+      "bytes": 9871
+    },
+    {
+      "path": "benchmark/art/krag/v9j-mouth-anatomy-prepared.json",
+      "sha256": "b28170f1476c817598d03bbd1980bc171352d9fbb867234a6169056b1efedffe",
+      "bytes": 2216
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/build_mouth_v9j.py",
+      "sha256": "4e38fe26b10f0290abc3b233416acf99e92c49bca2661c452e4cc402102e4c8f",
+      "bytes": 8592
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca",
+      "bytes": 12214
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/semantic_jaw_v3.py",
+      "sha256": "8c83abd15a75e731dbc0049b1ccd8cdb951e98235099c38b87ccf8fd997cc17a",
+      "bytes": 7744
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-mouth-v9j-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1096.0,
+      "minimumAvailableMB": 12848.0
+    },
+    {
+      "path": "benchmark/local/krag-review-mouth-v9j-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2210.0,
+      "minimumAvailableMB": 12047.0
+    }
+  ],
+  "observedImprovements": [
+    "Upper dental crowns fill the fitted arch rather than sparse isolated blocks",
+    "Whole lower lip opening is smoother than the former flat weight plateau",
+    "True mouth-corner pivots and refitted tusk roots exist in the saved source"
+  ],
+  "failedChecks": [
+    "Opening still reads as a tapering trapezoid rather than naturally compressed oval lip anatomy",
+    "Lower lip/cavity hide most lower teeth and the tongue",
+    "Inner cavity is not anatomically shaped; external feature warp also affects its source topology",
+    "Overall smooth facial planes, old scarf and clothing remain unaccepted"
+  ],
+  "stoppedViews": [
+    "Neutral",
+    "OpenProfile"
+  ],
+  "next": [
+    "Fit open-pose lip rolls to actual dental envelope with a bounded pose corrective",
+    "Refit inner oral bag independently of exterior facial sculpt, anchoring real lip rims",
+    "Actual neutral/open/side contact and serious-expression checks",
+    "Fit semantic IronJaw replacement after natural mouth is coherent"
+  ]
+}
