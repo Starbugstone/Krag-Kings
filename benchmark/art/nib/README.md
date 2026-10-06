@@ -326,14 +326,14 @@ ear tip. The offline saved-surface attribution and failure are preserved in
 its actual views and receipt are recorded in `groom-study/root-attachment-v3`.
 The atlas remains unchanged, and the source still fails artistic likeness.
 
-The following adult-face/ocular pass is also **prepared only**. Its second
+The adult-face/ocular pass began as numerical preparation. Its second
 offline field has zero introduced neutral degenerates or inverted triangles,
 fixes actual ocular/oral domains, and bounds broad brow/cheek/nasal relief to
 4.23 mm. The first rejected corner-discontinuity proposal is retained. These
 are numerical construction checks, not native visual proof. New opaque ocular
 materials require a real assigned-iris atlas for the `Nib_IrisCoord` attribute;
 the earlier yellow reference map or a generic UV carrier cannot substitute.
-The next native source is intended to retain the current socket, all seven
+That prepared native source was designed to retain the current socket, all seven
 clips, exact 79-bone bind and attached groom. Root's later hand-weight/thumb
 studies are independent and are not silently included in the orbital source.
 
@@ -352,3 +352,19 @@ neutral oral flags remain explicit. The full receipt and material integration
 handoff require actual assigned-surface face/iris baking; no current shared
 source or engine build was changed. Root's fine-alpha comparison and the
 separate regional guide proposal must not conceal the neck seam failure.
+
+The **fitted neck junction v1** now derives from the actual fine-strands atlas
+source and preserves the complete adult Head/eye geometry. Its source at
+`identity-study/neck-junction-native-v1/` has SHA-256
+`e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b`.
+All three guarded jobs pass. Actual Profile/Neutral remove the severe sawtooth
+Body edge; a horizontal shading/material join and rigid scarf remain. The
+Natural/Grip interfaces agree, and six evaluated poses measure at most0.2685 mm
+ring-to-Head distance.417 unrelated meshes,79 bind bones and every action hash
+remain exact after reopening. The interface is a fitted overlap, not a weld.
+
+This is the current coherent technical PBR/FBX handoff, **not artistic
+acceptance**. Adult likeness, ear/head fur coverage and flow, optical materials,
+cloth and raised-arm deformation still need work. The actual fine-strands
+atlas and the Identity head/iris fields must survive new baking. Root's later
+hand studies remain separate, and shared runtime assets are unchanged.

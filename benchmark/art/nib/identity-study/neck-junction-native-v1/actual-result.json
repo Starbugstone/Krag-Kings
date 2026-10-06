@@ -1,0 +1,221 @@
+{
+  "status": "Actual coherent neck correction and two inspected views; local construction improvement, artistic acceptance remains failed",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "source": {
+    "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+    "sha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+    "bytes": 63750526
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/source.json",
+    "sha256": "fc3888a9aaa4b4ec60707209f2ba832c497517cc5d9bc622cfbb20a32a758489",
+    "bytes": 148477
+  },
+  "jobs": [
+    {
+      "stage": "generate",
+      "processId": 18644,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMB": 919.0,
+      "minimumAvailableMB": 10171.0
+    },
+    {
+      "stage": "profile",
+      "processId": 33864,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMB": 2656.0,
+      "minimumAvailableMB": 8688.0
+    },
+    {
+      "stage": "neutral",
+      "processId": 34756,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "successMarkerVerified": true,
+      "peakPrivateMB": 2666.0,
+      "minimumAvailableMB": 8736.0
+    }
+  ],
+  "views": {
+    "Profile": {
+      "image": {
+        "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-views/Profile.png",
+        "sha256": "97cea9bf7cd8ff5b929ea6b69022f58ea217ee93715cb44bcf9216c67af91a0e",
+        "bytes": 1470291
+      },
+      "metadata": {
+        "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-views/Profile.json",
+        "sha256": "abc362fefc3a3d323d5f9ade8b7a437523cbf3617ac2834edb01b1dbffe6ecff",
+        "bytes": 2317
+      },
+      "review": "Severe sawtooth Body neck and anterior floating edge are visibly removed. Continuous neck-to-jaw outline; pale material join remains above unchanged rigid scarf."
+    },
+    "Neutral": {
+      "image": {
+        "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-views/Neutral.png",
+        "sha256": "cae9079e7ab0ee36236bcd48ee289b5f0d83e5e10708f11a51d17026ae7bdfbd",
+        "bytes": 1872169
+      },
+      "metadata": {
+        "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-views/Neutral.json",
+        "sha256": "5901edef2c37ee6a7ec64348f89783a1de7caa76b97f3561b4d1f01115bea367",
+        "bytes": 2317
+      },
+      "review": "Front confirms removed jagged boundary. A horizontal neck shading/material join remains, and facial likeness, sparse stiff groom, broad naked ear membranes and rigid scarf still fail."
+    }
+  },
+  "checks": {
+    "headShapeCoordinatesExact": true,
+    "rigAndAllActionsExact": true,
+    "restBones": 79,
+    "canonicalActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "unrelatedMeshesExact": 417,
+    "naturalGripGeometryParity": true,
+    "localDiagonalPointUVSkinMorphTransportExact": true,
+    "actualNativeSurface": {
+      "triangles": 67008,
+      "introducedDegenerates": 0,
+      "trianglesRotatedOver90": 0,
+      "minimumAreaRatio": 0.06432936463259459
+    },
+    "maximumEvaluatedRingToHeadDistanceMeters": 0.00026844438980333507,
+    "posedSeamFrames": [
+      {
+        "action": "Idle",
+        "frame": 1,
+        "maximumBodyRingToHeadMeters": 0.0002671133552212268
+      },
+      {
+        "action": "Walk",
+        "frame": 7,
+        "maximumBodyRingToHeadMeters": 0.00026698203873820603
+      },
+      {
+        "action": "Run",
+        "frame": 7,
+        "maximumBodyRingToHeadMeters": 0.00026692121173255146
+      },
+      {
+        "action": "Shoot",
+        "frame": 24,
+        "maximumBodyRingToHeadMeters": 0.0002671133552212268
+      },
+      {
+        "action": "FacePerformance",
+        "frame": 16,
+        "maximumBodyRingToHeadMeters": 0.0002669656532816589
+      },
+      {
+        "action": "FacePerformance",
+        "frame": 103,
+        "maximumBodyRingToHeadMeters": 0.00026844438980333507
+      }
+    ],
+    "absoluteConnectedImagePathsPreserved": true
+  },
+  "limitations": [
+    "Fitted0.2mm overlap, not a welded single surface",
+    "Lower-neck material/normal join remains visible",
+    "Scarf is retained rigid radial-band construction",
+    "Full adult concept likeness, fuller regional flowing fur, facial optics and raised-arm deformation remain failed",
+    "Root later hand weight/thumb studies are not part of this source",
+    "Actual matched PBR/FBX and Unity/Unreal integration still required"
+  ],
+  "executedRecipe": [
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/build_neck_junction.py",
+      "sha256": "fb114f846f649392d5ee3223629a0e7ef0b482fa9322c530c9b0d01a7a6ad0c0",
+      "bytes": 13645
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/generate-neck-junction-v1.job.json",
+      "sha256": "e7d0db7bf3e39bc152802e0ef1abbf364e5aa53f66786c9780fdf49414b98ef0",
+      "bytes": 1103
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/neck_topology.py",
+      "sha256": "fda64e2bf7114f959c100f0a7e1010fb88d0ba39224a2519743a5d5b3cfe98b6",
+      "bytes": 5358
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/neutral-neck-junction-v1.job.json",
+      "sha256": "9c315619b95194d045b64636a18883b6bbc56d71a0572d948740291009430345",
+      "bytes": 1180
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/prepare_neck_junction.py",
+      "sha256": "85c28627d3586ba84ab5db7fcd139adb5605405cfc8d3170bd9ed7925f0a3f68",
+      "bytes": 10756
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/profile-neck-junction-v1.job.json",
+      "sha256": "a9c80089a71028e6161a2ecfe5816c9b9f0d18a5f2a9729060592fdfecae9d34",
+      "bytes": 1180
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/executed-recipe/review_neck_junction.py",
+      "sha256": "b72f40bd1149d92d2df1e4635ebc939d753422c82490b1c5faf8cfc73244859d",
+      "bytes": 3853
+    }
+  ],
+  "processEvidence": [
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-generate-memory.csv",
+      "sha256": "4298dcf7cb8ce1020db07ed9fdcf06243325aca3d0fe75baaaa0730b7a182ef8",
+      "bytes": 1007
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-generate.log.txt",
+      "sha256": "3108a47ffb9c21ef1b77845e415a6512254f20f2748422d2ab4fed658aa62d3c",
+      "bytes": 465
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-generate.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-neutral-memory.csv",
+      "sha256": "fcea701e35ad9d86f0bdf0e092696e3c6fc11a7d041156d13c4ccb55f893e90e",
+      "bytes": 1488
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-neutral.log.txt",
+      "sha256": "bc5f7df6e9935f99ff9462877ce5e74642994aab29456433fde811830c514e58",
+      "bytes": 411
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-neutral.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-profile-memory.csv",
+      "sha256": "9e2b2a33434b9257963e3f5b0141658abac751f8e18c25e9d3f9999840eaa196",
+      "bytes": 806
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-profile.log.txt",
+      "sha256": "372440d27c9ddefb617b6ec49480373e5120b8e81cdc462fe5b61d8efedd6a3a",
+      "bytes": 411
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-evidence/nib-neck-junction-v1-profile.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ]
+}

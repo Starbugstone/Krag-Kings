@@ -1,0 +1,79 @@
+{
+  "status": "Actual coherent adult/fine-atlas/fitted-neck source; technical integration candidate with explicit art failures",
+  "source": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "sourceReport": "benchmark/art/nib/identity-study/neck-junction-native-v1/source.json",
+  "sourceReportSha256": "fc3888a9aaa4b4ec60707209f2ba832c497517cc5d9bc622cfbb20a32a758489",
+  "restBones": 79,
+  "canonicalActions": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "bindAndActionHashesPreserved": true,
+  "retainedUnrelatedMeshPayloads": 417,
+  "restorativeSourceLineage": "socket-wrist-v1 -> orbital-native-v1 -> root-attachment-v3 -> adult-native-v1 -> fine-strands-v1 -> neck-junction-native-v1",
+  "handStudyBoundary": "Contains the coherent anatomical left-hand bind/current socket and original source hand curves, not root later proximal-weight/thumb/relaxed-hand studies",
+  "newMaterialRequirements": [
+    {
+      "name": "Nib_IdentityFacialSkin",
+      "attribute": "NibNoseMask",
+      "bake": "Actual assigned Head surface UV atlas; preserve geometry/attribute-dependent pigment and dry nose response; no generic carrier"
+    },
+    {
+      "name": "Nib_IdentityOcularGlobe",
+      "bake": "Opaque smooth actual ocular shell; warm dark basecolor, roughness0.20, metallic0; no skin/leather bump"
+    },
+    {
+      "name": "Nib_IdentityOcularIris",
+      "attribute": "Nib_IrisCoord",
+      "attributeType": "POINT FLOAT_VECTOR",
+      "attributeHashes": {
+        "Nib v5 fitted iris L": "6bf3ea8de47effb847a9a28a1eab3ad7877193ed85ffd67fa59c4ebaee53145a",
+        "Nib v5 fitted iris R": "d9e4b1d8ee309731f502be1e1c953c54753c9425ed33b9dbb0843b39e5e4e7bb"
+      },
+      "bake": "Actual assigned iris geometry with nonoverlapping UVs, including radial pigment and limbal edge; no old yellow texture or generic carrier",
+      "geometry": "Opaque curved shell preserved, actual slit pupil opening, no new alpha/cornea shader requirement",
+      "roughness": 0.25,
+      "metallic": 0
+    }
+  ],
+  "existingMaskedGroomContractUnchanged": true,
+  "deformationContractUnchanged": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "requiredBeforeRuntimePromotion": [
+    "All source views reviewed and failures explicit",
+    "Root-selected coherent hand replay if approved, with exact bind/action lineage",
+    "Fresh actual-head/iris attribute PBR bake and matched source/baked views",
+    "New matching meshes and all7clips, portable drivers and per-variant morphology verified",
+    "Actual Unity and Unreal material/deformation/animation review"
+  ],
+  "actualViews": [
+    "Profile",
+    "Neutral"
+  ],
+  "actualReceipt": "benchmark/art/nib/identity-study/neck-junction-native-v1/actual-result.json",
+  "actualReceiptSha256": "c0b7c4d244c8dc33b057c4aacef668cf47a62c92dee3a52c08e74d2db26d63c4",
+  "inheritedFaceViews": "benchmark/art/nib/identity-study/adult-native-v1/actual-views",
+  "fineStrandsAtlasDirectory": "benchmark/art/nib/groom-study/fine-strands-v1/textures",
+  "fineStrandsSourceSha256": "b48666e19753109ac32c9de21020440980adfd964d9d811466687e04a8f86e60",
+  "neckInterface": {
+    "naturalAndGripMatching": true,
+    "localQuadTriangulation": 16,
+    "actualPosedMaximumDistanceMeters": 0.00026844438980333507,
+    "construction": "Fitted overlap, not welded"
+  },
+  "visualLimitations": [
+    "Fitted0.2mm overlap, not a welded single surface",
+    "Lower-neck material/normal join remains visible",
+    "Scarf is retained rigid radial-band construction",
+    "Full adult concept likeness, fuller regional flowing fur, facial optics and raised-arm deformation remain failed",
+    "Root later hand weight/thumb studies are not part of this source",
+    "Actual matched PBR/FBX and Unity/Unreal integration still required"
+  ]
+}

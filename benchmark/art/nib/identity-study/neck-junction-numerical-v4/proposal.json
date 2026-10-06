@@ -1,0 +1,236 @@
+{
+  "status": "Offline actual-cross-section neck proposal; no saved native source or pose proof",
+  "sourceSha256": "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+  "codeSha256": "43d418979fb414c61b9bb84ed8383d9358ece738de443f46112130829e33d645",
+  "inputHashes": {
+    "body": "9707a79a00be6d1ce177601b39e0bd943f31290563523ba2050d4d1eb9798a75",
+    "head": "aa952888419327f24e576fff69a8a18f058617128bc08350104d774eade9dac5"
+  },
+  "junctionHeightMeters": 1.035,
+  "contourSegments": 310,
+  "contourComponents": 1,
+  "contourCenterMeters": [
+    -0.0005807853354704975,
+    0.013261139106852476,
+    1.0350000000000026
+  ],
+  "bodyRingParameterization": "Actual oriented loop with strictly increasing projected arc length; no independent polar reordering",
+  "boundaryQuadTriangulation": {
+    "845": [
+      [
+        15466,
+        8682,
+        79
+      ],
+      [
+        15466,
+        79,
+        11881
+      ]
+    ],
+    "2020": [
+      [
+        16126,
+        5572,
+        1
+      ],
+      [
+        16126,
+        1,
+        5575
+      ]
+    ],
+    "2132": [
+      [
+        16189,
+        2392,
+        0
+      ],
+      [
+        16189,
+        0,
+        2395
+      ]
+    ],
+    "2183": [
+      [
+        16218,
+        2403,
+        860
+      ],
+      [
+        16218,
+        860,
+        5595
+      ]
+    ],
+    "13546": [
+      [
+        22614,
+        6748,
+        861
+      ],
+      [
+        22614,
+        861,
+        9975
+      ]
+    ],
+    "13901": [
+      [
+        22810,
+        10000,
+        882
+      ],
+      [
+        22810,
+        882,
+        6777
+      ]
+    ],
+    "13933": [
+      [
+        22828,
+        3589,
+        876
+      ],
+      [
+        22828,
+        876,
+        13176
+      ]
+    ],
+    "14634": [
+      [
+        23226,
+        6843,
+        995
+      ],
+      [
+        23226,
+        995,
+        13233
+      ]
+    ],
+    "17485": [
+      [
+        24826,
+        3886,
+        1132
+      ],
+      [
+        24826,
+        1132,
+        13497
+      ]
+    ],
+    "18660": [
+      [
+        25486,
+        10369,
+        1054
+      ],
+      [
+        25486,
+        1054,
+        10372
+      ]
+    ],
+    "18772": [
+      [
+        25549,
+        7219,
+        1053
+      ],
+      [
+        25549,
+        1053,
+        7222
+      ]
+    ],
+    "18826": [
+      [
+        25584,
+        7227,
+        1968
+      ],
+      [
+        25584,
+        1968,
+        10377
+      ]
+    ],
+    "30180": [
+      [
+        31966,
+        11526,
+        1969
+      ],
+      [
+        31966,
+        1969,
+        8350
+      ]
+    ],
+    "30532": [
+      [
+        32164,
+        5121,
+        1993
+      ],
+      [
+        32164,
+        1993,
+        8380
+      ]
+    ],
+    "30564": [
+      [
+        32182,
+        11547,
+        1987
+      ],
+      [
+        32182,
+        1987,
+        14809
+      ]
+    ],
+    "31271": [
+      [
+        32580,
+        11619,
+        2106
+      ],
+      [
+        32580,
+        2106,
+        5181
+      ]
+    ]
+  },
+  "bodyUpperRingVertices": 328,
+  "bodyChangedVertices": 4933,
+  "bodyMaximumMoveMeters": 0.0480480081167655,
+  "bodyMinimumNeckZChanged": 0.9950268268585205,
+  "fieldIterations": 3931,
+  "fieldResidualMeters": 9.979048648931943e-10,
+  "introducedDegenerateTriangles": 0,
+  "changedTrianglesRotatedOver90": 0,
+  "minimumAreaRatio": 0.06432468173341391,
+  "headGeometryChanged": false,
+  "headInterfaceWeightChangedVertices": 1799,
+  "headInterfaceSupportVertices": 310,
+  "headInterfaceOriginalJawWeightMaximum": 0.0,
+  "headInterfaceWeightRule": "Neck-only on actual interface support, smooth fade within original neck below sourceZ0.185; no nasal/oral/ocular weight change",
+  "hardStructuralFailure": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "pending": [
+    "Native exact cached-source correspondence",
+    "Matched restorative Body and attached fine fuzz changes",
+    "Native LBS neck/head extreme and actual bare-junction source renders",
+    "Scarf construction remains an independent visible failure"
+  ],
+  "proposalSha256": "551ac0b4983736d18f6aa5de84c2b6a3e5706109fea26f40a7abe76d1b7c0e41"
+}

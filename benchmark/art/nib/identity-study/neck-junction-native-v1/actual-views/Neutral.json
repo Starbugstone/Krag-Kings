@@ -1,0 +1,82 @@
+{
+  "status": "Actual diagnostic mesh image; normal/oral warnings retained and artistic acceptance pending",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\neck-junction-native-v1\\Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "sourceReportSha256": "fc3888a9aaa4b4ec60707209f2ba832c497517cc5d9bc622cfbb20a32a758489",
+  "view": "Neutral",
+  "action": "Idle",
+  "frame": 1,
+  "headMorphValues": {
+    "Blink_L": 0.0,
+    "Blink_R": 0.0,
+    "Squint_L": 0.0,
+    "Squint_R": 0.0,
+    "BrowRaise_L": 0.13332897424697876,
+    "BrowRaise_R": 0.13332897424697876,
+    "BrowLower_L": 0.0,
+    "BrowLower_R": 0.0,
+    "Smile_L": 0.0,
+    "Smile_R": 0.0,
+    "Frown_L": 0.0,
+    "Frown_R": 0.0,
+    "JawOpen": 0.0,
+    "LipPress": 0.0,
+    "TongueOut": 0.0,
+    "CheekTension_L": 0.0,
+    "CheekTension_R": 0.0
+  },
+  "headHasCustomNormals": false,
+  "headMaterialNames": [
+    "Nib_IdentityFacialSkin",
+    "Nib_EarInner",
+    "Nib_MouthInterior"
+  ],
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "Inherited adult likeness, sparse/stiff groom, rigid scarf and raised-arm defects; actual neck review pending"
+    ]
+  },
+  "neckActualPosedSeam": [
+    {
+      "action": "Idle",
+      "frame": 1,
+      "maximumBodyRingToHeadMeters": 0.0002671133552212268
+    },
+    {
+      "action": "Walk",
+      "frame": 7,
+      "maximumBodyRingToHeadMeters": 0.00026698203873820603
+    },
+    {
+      "action": "Run",
+      "frame": 7,
+      "maximumBodyRingToHeadMeters": 0.00026692121173255146
+    },
+    {
+      "action": "Shoot",
+      "frame": 24,
+      "maximumBodyRingToHeadMeters": 0.0002671133552212268
+    },
+    {
+      "action": "FacePerformance",
+      "frame": 16,
+      "maximumBodyRingToHeadMeters": 0.0002669656532816589
+    },
+    {
+      "action": "FacePerformance",
+      "frame": 103,
+      "maximumBodyRingToHeadMeters": 0.00026844438980333507
+    }
+  ],
+  "render": {
+    "engine": "Cycles CPU",
+    "samples": 24,
+    "width": 1400,
+    "height": 1100
+  },
+  "imageSha256": "cae9079e7ab0ee36236bcd48ee289b5f0d83e5e10708f11a51d17026ae7bdfbd",
+  "scriptSha256": "b72f40bd1149d92d2df1e4635ebc939d753422c82490b1c5faf8cfc73244859d",
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

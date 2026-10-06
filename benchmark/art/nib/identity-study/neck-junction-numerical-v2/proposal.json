@@ -1,0 +1,41 @@
+{
+  "status": "Offline actual-cross-section neck proposal; no saved native source or pose proof",
+  "sourceSha256": "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+  "codeSha256": "61660589aab6687bfe07bab33de84dcfa7bb08229d673fd54b2c79b88174dc26",
+  "inputHashes": {
+    "body": "9707a79a00be6d1ce177601b39e0bd943f31290563523ba2050d4d1eb9798a75",
+    "head": "aa952888419327f24e576fff69a8a18f058617128bc08350104d774eade9dac5"
+  },
+  "junctionHeightMeters": 1.035,
+  "contourSegments": 310,
+  "contourComponents": 1,
+  "contourCenterMeters": [
+    -0.0005807853354705062,
+    0.013261139106852478,
+    1.0350000000000024
+  ],
+  "bodyUpperRingVertices": 328,
+  "bodyChangedVertices": 4933,
+  "bodyMaximumMoveMeters": 0.04798507589055415,
+  "bodyMinimumNeckZChanged": 0.9950268268585205,
+  "fieldIterations": 3917,
+  "fieldResidualMeters": 9.981592096552156e-10,
+  "introducedDegenerateTriangles": 0,
+  "changedTrianglesRotatedOver90": 2,
+  "minimumAreaRatio": 0.0001504239145083633,
+  "headGeometryChanged": false,
+  "headInterfaceWeightChangedVertices": 1799,
+  "headInterfaceSupportVertices": 310,
+  "headInterfaceOriginalJawWeightMaximum": 0.0,
+  "headInterfaceWeightRule": "Neck-only on actual interface support, smooth fade within original neck below sourceZ0.185; no nasal/oral/ocular weight change",
+  "hardStructuralFailure": true,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "pending": [
+    "Native exact cached-source correspondence",
+    "Matched restorative Body and attached fine fuzz changes",
+    "Native LBS neck/head extreme and actual bare-junction source renders",
+    "Scarf construction remains an independent visible failure"
+  ],
+  "proposalSha256": "0e044eca12c77b11544e2ed4cc20e0a49287c30c310be11c8ccf7a81b3297eeb"
+}

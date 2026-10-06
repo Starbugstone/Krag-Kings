@@ -1,0 +1,27 @@
+{
+  "name": "nib-neck-junction-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\identity_wip\\build_neck_junction.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\Nib_Coherent_FineStrands_v1.blend",
+    "--source-sha256",
+    "b48666e19753109ac32c9de21020440980adfd964d9d811466687e04a8f86e60",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\neck-junction-native-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-neck-junction-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-neck-junction-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-neck-junction-v1-generate.log",
+  "successMarker": "NIB_NECK_JUNCTION_SAVED_AND_REOPENED"
+}

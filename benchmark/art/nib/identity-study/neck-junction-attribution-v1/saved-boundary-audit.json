@@ -1,0 +1,5217 @@
+{
+  "status": "Actual saved geometry boundary/radial attribution; no evaluated pose or source mutation",
+  "sourceSha256": "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+  "inputHashes": {
+    "body": "9707a79a00be6d1ce177601b39e0bd943f31290563523ba2050d4d1eb9798a75",
+    "head": "aa952888419327f24e576fff69a8a18f058617128bc08350104d774eade9dac5"
+  },
+  "codeSha256": "016c357918f27aa24306077ce0d59086ed859beddcaac56ae7802aeeea7749ec",
+  "bodyObject": "Continuous Nib anatomy organic",
+  "headObject": "Nib v5 fitted animation face",
+  "bodyBoundaryLoops": [
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        50,
+        65,
+        66,
+        67,
+        68,
+        79,
+        81,
+        105,
+        136,
+        845,
+        850,
+        854,
+        857,
+        860,
+        861,
+        862,
+        865,
+        868,
+        875,
+        876,
+        877,
+        881,
+        882,
+        883,
+        887,
+        888,
+        892,
+        923,
+        924,
+        925,
+        926,
+        935,
+        995,
+        996,
+        1053,
+        1054,
+        1055,
+        1056,
+        1060,
+        1103,
+        1118,
+        1119,
+        1120,
+        1121,
+        1132,
+        1134,
+        1159,
+        1190,
+        1216,
+        1226,
+        1953,
+        1958,
+        1962,
+        1965,
+        1968,
+        1969,
+        1970,
+        1973,
+        1976,
+        1986,
+        1987,
+        1988,
+        1992,
+        1993,
+        1994,
+        1998,
+        1999,
+        2003,
+        2034,
+        2035,
+        2036,
+        2037,
+        2046,
+        2106,
+        2107,
+        2168,
+        2173,
+        2245,
+        2246,
+        2247,
+        2353,
+        2354,
+        2355,
+        2392,
+        2393,
+        2394,
+        2395,
+        2396,
+        2397,
+        2401,
+        2402,
+        2403,
+        3589,
+        3590,
+        3591,
+        3598,
+        3599,
+        3600,
+        3628,
+        3629,
+        3630,
+        3688,
+        3689,
+        3690,
+        3886,
+        3887,
+        3888,
+        3985,
+        3986,
+        3987,
+        3991,
+        3992,
+        3993,
+        3997,
+        3998,
+        3999,
+        4006,
+        4007,
+        4008,
+        5113,
+        5114,
+        5115,
+        5119,
+        5120,
+        5121,
+        5125,
+        5126,
+        5127,
+        5152,
+        5153,
+        5154,
+        5179,
+        5180,
+        5181,
+        5314,
+        5315,
+        5316,
+        5332,
+        5333,
+        5334,
+        5572,
+        5573,
+        5574,
+        5575,
+        5576,
+        5577,
+        5593,
+        5594,
+        5595,
+        5608,
+        5609,
+        5610,
+        6748,
+        6749,
+        6750,
+        6769,
+        6770,
+        6771,
+        6775,
+        6776,
+        6777,
+        6802,
+        6803,
+        6804,
+        6811,
+        6812,
+        6813,
+        6841,
+        6842,
+        6843,
+        6877,
+        6878,
+        6879,
+        6973,
+        6974,
+        6975,
+        6982,
+        6983,
+        6984,
+        7051,
+        7052,
+        7053,
+        7219,
+        7220,
+        7221,
+        7222,
+        7223,
+        7224,
+        7225,
+        7226,
+        7227,
+        8350,
+        8351,
+        8352,
+        8380,
+        8381,
+        8382,
+        8545,
+        8546,
+        8547,
+        8569,
+        8570,
+        8571,
+        8602,
+        8603,
+        8604,
+        8680,
+        8681,
+        8682,
+        8782,
+        8783,
+        8784,
+        8794,
+        8795,
+        8796,
+        8809,
+        8810,
+        8811,
+        9973,
+        9974,
+        9975,
+        9976,
+        9977,
+        9978,
+        10000,
+        10001,
+        10002,
+        10156,
+        10157,
+        10158,
+        10324,
+        10325,
+        10326,
+        10369,
+        10370,
+        10371,
+        10372,
+        10373,
+        10374,
+        10375,
+        10376,
+        10377,
+        11524,
+        11525,
+        11526,
+        11527,
+        11528,
+        11529,
+        11542,
+        11543,
+        11544,
+        11545,
+        11546,
+        11547,
+        11557,
+        11558,
+        11559,
+        11587,
+        11588,
+        11589,
+        11593,
+        11594,
+        11595,
+        11617,
+        11618,
+        11619,
+        11653,
+        11654,
+        11655,
+        11752,
+        11753,
+        11754,
+        11881,
+        11882,
+        11883,
+        11971,
+        11972,
+        11973,
+        11977,
+        11978,
+        11979,
+        11986,
+        11987,
+        11988,
+        13171,
+        13172,
+        13173,
+        13174,
+        13175,
+        13176,
+        13183,
+        13184,
+        13185,
+        13213,
+        13214,
+        13215,
+        13231,
+        13232,
+        13233,
+        13429,
+        13430,
+        13431,
+        13495,
+        13496,
+        13497,
+        13579,
+        13580,
+        13581,
+        13591,
+        13592,
+        13593,
+        13612,
+        13613,
+        13614,
+        14809,
+        14810,
+        14811,
+        14839,
+        14840,
+        14841,
+        14884,
+        14885,
+        14886
+      ],
+      "count": 328,
+      "minimumMeters": [
+        -0.041295066475868225,
+        -0.06144872307777405,
+        1.0352647304534912
+      ],
+      "maximumMeters": [
+        0.041222382336854935,
+        0.028085431084036827,
+        1.0477147102355957
+      ],
+      "meanMeters": [
+        -4.261789421789439e-06,
+        -0.016615157408390275,
+        1.043664605879202
+      ],
+      "edgeDegrees": {
+        "2": 328
+      }
+    },
+    {
+      "indices": [
+        502,
+        503,
+        530,
+        531,
+        559,
+        560,
+        569,
+        570,
+        572,
+        574,
+        576,
+        622,
+        660,
+        661,
+        662,
+        691,
+        1244,
+        1592,
+        1593,
+        1620,
+        1621,
+        1649,
+        1650,
+        1659,
+        1660,
+        1662,
+        1664,
+        1666,
+        1713,
+        1751,
+        1752,
+        1753,
+        1782,
+        1823,
+        2491,
+        2492,
+        2493,
+        2494,
+        2495,
+        2496,
+        3193,
+        3194,
+        3195,
+        3247,
+        3248,
+        3249,
+        3250,
+        3251,
+        3252,
+        4045,
+        4046,
+        4047,
+        4720,
+        4721,
+        4722,
+        4807,
+        4808,
+        4809,
+        4858,
+        4859,
+        4860,
+        4867,
+        4868,
+        4869,
+        6370,
+        6371,
+        6372,
+        6379,
+        6380,
+        6381,
+        7894,
+        7895,
+        7896,
+        7966,
+        7967,
+        7968,
+        7972,
+        7973,
+        7974,
+        8038,
+        8039,
+        8040,
+        8059,
+        8060,
+        8061,
+        8119,
+        8120,
+        8121,
+        9607,
+        9608,
+        9609,
+        9673,
+        9674,
+        9675,
+        9688,
+        9689,
+        9690,
+        9739,
+        9740,
+        9741,
+        9748,
+        9749,
+        9750,
+        9754,
+        9755,
+        9756,
+        11167,
+        11168,
+        11169,
+        11227,
+        11228,
+        11229,
+        11233,
+        11234,
+        11235,
+        12673,
+        12674,
+        12675,
+        12739,
+        12740,
+        12741,
+        12745,
+        12746,
+        12747,
+        12826,
+        12827,
+        12828,
+        13738,
+        13739,
+        13740,
+        14398,
+        14399,
+        14400,
+        14407,
+        14408,
+        14409
+      ],
+      "count": 136,
+      "minimumMeters": [
+        -0.08648747950792313,
+        -0.06430333852767944,
+        0.6643978357315063
+      ],
+      "maximumMeters": [
+        0.08638682961463928,
+        0.05748541280627251,
+        0.6789963245391846
+      ],
+      "meanMeters": [
+        -2.6189172571963246e-05,
+        0.005890258692756213,
+        0.6713177018305835
+      ],
+      "edgeDegrees": {
+        "2": 136
+      }
+    },
+    {
+      "indices": [
+        998,
+        999,
+        1000,
+        1004,
+        1006,
+        1007,
+        1008,
+        1010,
+        1012,
+        1013,
+        1014,
+        1017,
+        1018,
+        1019,
+        1024,
+        1025,
+        1028,
+        1029,
+        1030,
+        1033,
+        1036,
+        1039,
+        1043,
+        1044,
+        1045,
+        1046,
+        3703,
+        3704,
+        3705,
+        3709,
+        3710,
+        3711,
+        3715,
+        3716,
+        3717,
+        3721,
+        3722,
+        3723,
+        3724,
+        3725,
+        3726,
+        3748,
+        3749,
+        3750,
+        3763,
+        3764,
+        3765,
+        6889,
+        6890,
+        6891,
+        6898,
+        6899,
+        6900,
+        6922,
+        6923,
+        6924,
+        6925,
+        6926,
+        6927,
+        6940,
+        6941,
+        6942,
+        6955,
+        6956,
+        6957,
+        10057,
+        10058,
+        10059,
+        10069,
+        10070,
+        10071,
+        10075,
+        10076,
+        10077,
+        10087,
+        10088,
+        10089,
+        10099,
+        10100,
+        10101,
+        10102,
+        10103,
+        10104,
+        10105,
+        10106,
+        10107,
+        13279,
+        13280,
+        13281,
+        13294,
+        13295,
+        13296,
+        13303,
+        13304,
+        13305,
+        13306,
+        13307,
+        13308,
+        13333,
+        13334,
+        13335,
+        13336,
+        13337,
+        13338
+      ],
+      "count": 104,
+      "minimumMeters": [
+        -0.22933408617973328,
+        -0.048581562936306,
+        0.6194220781326294
+      ],
+      "maximumMeters": [
+        -0.1902700811624527,
+        -0.005696848500519991,
+        0.6375256180763245
+      ],
+      "meanMeters": [
+        -0.2124889169174891,
+        -0.027368409474057935,
+        0.6284807232710031
+      ],
+      "edgeDegrees": {
+        "2": 104
+      }
+    },
+    {
+      "indices": [
+        2109,
+        2110,
+        2111,
+        2115,
+        2117,
+        2118,
+        2119,
+        2121,
+        2123,
+        2124,
+        2125,
+        2128,
+        2129,
+        2130,
+        2135,
+        2136,
+        2139,
+        2140,
+        2141,
+        2144,
+        2147,
+        2150,
+        2154,
+        2155,
+        2156,
+        2157,
+        5221,
+        5222,
+        5223,
+        5230,
+        5231,
+        5232,
+        5254,
+        5255,
+        5256,
+        5257,
+        5258,
+        5259,
+        5272,
+        5273,
+        5274,
+        5299,
+        5300,
+        5301,
+        8464,
+        8465,
+        8466,
+        8476,
+        8477,
+        8478,
+        8479,
+        8480,
+        8481,
+        8491,
+        8492,
+        8493,
+        8503,
+        8504,
+        8505,
+        8506,
+        8507,
+        8508,
+        8509,
+        8510,
+        8511,
+        11668,
+        11669,
+        11670,
+        11680,
+        11681,
+        11682,
+        11689,
+        11690,
+        11691,
+        11692,
+        11693,
+        11694,
+        11719,
+        11720,
+        11721,
+        11722,
+        11723,
+        11724,
+        14896,
+        14897,
+        14898,
+        14899,
+        14900,
+        14901,
+        14905,
+        14906,
+        14907,
+        14914,
+        14915,
+        14916,
+        14920,
+        14921,
+        14922,
+        14941,
+        14942,
+        14943,
+        14953,
+        14954,
+        14955
+      ],
+      "count": 104,
+      "minimumMeters": [
+        0.19033774733543396,
+        -0.0485515221953392,
+        0.6193187832832336
+      ],
+      "maximumMeters": [
+        0.2292361706495285,
+        -0.0056708334013819695,
+        0.6375130414962769
+      ],
+      "meanMeters": [
+        0.21248065694593465,
+        -0.027405852523560707,
+        0.6284815290799508
+      ],
+      "edgeDegrees": {
+        "2": 104
+      }
+    }
+  ],
+  "headBoundaryLoops": [],
+  "upperBodyLoopHeightSpanMeters": 0.012449979782104492,
+  "upperBodyLoopNeckWeightRange": [
+    1.0,
+    1.0
+  ],
+  "headLowerNeckWorldZRangeMeters": [
+    1.021151963621378,
+    1.0499985851347446
+  ],
+  "headLowerNeckWeightRange": {
+    "Neck": [
+      0.0,
+      1.0
+    ],
+    "Head": [
+      0.0,
+      0.930949330329895
+    ],
+    "Jaw": [
+      0.0,
+      1.0
+    ]
+  },
+  "radialHeadSurface": {
+    "method": "Double-sided rays from actual Body neck center at each boundary height against Head quad-fan triangles; no native triangulation equivalence claim",
+    "singleExitRays": 192,
+    "totalRays": 328,
+    "bodyOutsideHeadBeyondPoint5mm": 141,
+    "signedBodyMinusHeadRadiusRangeMeters": [
+      -0.01893747275948672,
+      0.027604271539162187
+    ],
+    "samples": [
+      {
+        "bodyVertex": 0,
+        "worldPointMeters": [
+          -0.011110054329037666,
+          -0.05797876790165901,
+          1.0471857786178589
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018133978966308303
+        ],
+        "bodyRadiusMeters": 0.04282857575231564,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02469459678600734
+      },
+      {
+        "bodyVertex": 1,
+        "worldPointMeters": [
+          -0.007058849558234215,
+          -0.060953833162784576,
+          1.0474709272384644
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01861417952638437
+        ],
+        "bodyRadiusMeters": 0.04489638489055874,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02628220536417437
+      },
+      {
+        "bodyVertex": 2,
+        "worldPointMeters": [
+          -0.003895969595760107,
+          -0.06144014000892639,
+          1.0473061800003052
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01779265953848868
+        ],
+        "bodyRadiusMeters": 0.04499360459874581,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02720094506025713
+      },
+      {
+        "bodyVertex": 3,
+        "worldPointMeters": [
+          -0.012484392151236534,
+          -0.052529994398355484,
+          1.0461019277572632
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.013088116133128701
+        ],
+        "bodyRadiusMeters": 0.03802143040265139,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024933314269522694
+      },
+      {
+        "bodyVertex": 7,
+        "worldPointMeters": [
+          -0.012075621634721756,
+          -0.055446185171604156,
+          1.0467376708984375
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016360831614784105
+        ],
+        "bodyRadiusMeters": 0.04066406823796911,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024303236623185002
+      },
+      {
+        "bodyVertex": 50,
+        "worldPointMeters": [
+          -0.020594250410795212,
+          -0.027419745922088623,
+          1.043022632598877
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.023252672198666315,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 65,
+        "worldPointMeters": [
+          -0.04056595638394356,
+          0.009525377303361893,
+          1.0362389087677002
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.003708135649582083,
+          0.0393042721037904
+        ],
+        "bodyRadiusMeters": 0.048255348132570514,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 66,
+        "worldPointMeters": [
+          -0.026272155344486237,
+          0.02244897000491619,
+          1.0454124212265015
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05749386595421376
+        ],
+        "bodyRadiusMeters": 0.04707449715486335,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01041936879935041
+      },
+      {
+        "bodyVertex": 67,
+        "worldPointMeters": [
+          -0.021827194839715958,
+          0.024501008912920952,
+          1.0461623668670654
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06021624354996708
+        ],
+        "bodyRadiusMeters": 0.04654867924957,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.013667564300397082
+      },
+      {
+        "bodyVertex": 68,
+        "worldPointMeters": [
+          -0.011913309805095196,
+          0.027158400043845177,
+          1.0464798212051392
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06304339487813569
+        ],
+        "bodyRadiusMeters": 0.04536463112011132,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.017678763758024373
+      },
+      {
+        "bodyVertex": 79,
+        "worldPointMeters": [
+          -0.023436108604073524,
+          -0.02518656477332115,
+          1.044127106666565
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002223885127704575
+        ],
+        "bodyRadiusMeters": 0.024950360104834077,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.022726474977129502
+      },
+      {
+        "bodyVertex": 81,
+        "worldPointMeters": [
+          -0.017031623050570488,
+          0.026080800220370293,
+          1.0464550256729126
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06206784189302661
+        ],
+        "bodyRadiusMeters": 0.0459660290796865,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01610181281334011
+      },
+      {
+        "bodyVertex": 105,
+        "worldPointMeters": [
+          -0.008615711703896523,
+          -0.05907193943858147,
+          1.0467374324798584
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.015940941745791914
+        ],
+        "bodyRadiusMeters": 0.0433213043431136,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027380362597321684
+      },
+      {
+        "bodyVertex": 136,
+        "worldPointMeters": [
+          -0.013380523771047592,
+          -0.050034500658512115,
+          1.0459883213043213
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.012507028351728806
+        ],
+        "bodyRadiusMeters": 0.0359969010870457,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.023489872735316896
+      },
+      {
+        "bodyVertex": 845,
+        "worldPointMeters": [
+          -0.01641225256025791,
+          -0.04326128587126732,
+          1.047339677810669
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019076765248373807
+        ],
+        "bodyRadiusMeters": 0.03129278388376447,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.012216018635390662
+      },
+      {
+        "bodyVertex": 850,
+        "worldPointMeters": [
+          -0.01811460219323635,
+          -0.029747307300567627,
+          1.0416646003723145
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02237046692254437,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 854,
+        "worldPointMeters": [
+          -0.015300227329134941,
+          -0.037430353462696075,
+          1.046211838722229
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.013913829988848967
+        ],
+        "bodyRadiusMeters": 0.02583096878886427,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011917138800015301
+      },
+      {
+        "bodyVertex": 857,
+        "worldPointMeters": [
+          -0.01648821122944355,
+          -0.046111367642879486,
+          1.0476146936416626
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020182632393254994
+        ],
+        "bodyRadiusMeters": 0.03378974707419959,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.0136071146809446
+      },
+      {
+        "bodyVertex": 860,
+        "worldPointMeters": [
+          -0.015790171921253204,
+          -0.048628367483615875,
+          1.0474799871444702
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019804116802180183
+        ],
+        "bodyRadiusMeters": 0.03569370501938379,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01588958821720361
+      },
+      {
+        "bodyVertex": 861,
+        "worldPointMeters": [
+          -0.01707528345286846,
+          -0.032468363642692566,
+          1.0450326204299927
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005722865311662457
+        ],
+        "bodyRadiusMeters": 0.0232968652084607,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.017573999896798243
+      },
+      {
+        "bodyVertex": 862,
+        "worldPointMeters": [
+          -0.015156188048422337,
+          -0.034550197422504425,
+          1.0448497533798218
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0042072611280156635
+        ],
+        "bodyRadiusMeters": 0.023478639859797375,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01927137873178171
+      },
+      {
+        "bodyVertex": 865,
+        "worldPointMeters": [
+          -0.016004668548703194,
+          -0.040408242493867874,
+          1.0470376014709473
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01776174456744594
+        ],
+        "bodyRadiusMeters": 0.02867270329681585,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01091095872936991
+      },
+      {
+        "bodyVertex": 868,
+        "worldPointMeters": [
+          -0.025578491389751434,
+          -0.0228095892816782,
+          1.0390516519546509
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02631372656776653,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 875,
+        "worldPointMeters": [
+          -0.034226320683956146,
+          -0.01613219827413559,
+          1.0367447137832642
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03422546660757656,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 876,
+        "worldPointMeters": [
+          -0.03165995702147484,
+          -0.018167685717344284,
+          1.0427474975585938
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.031693743621963144,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 877,
+        "worldPointMeters": [
+          -0.03920380771160126,
+          0.0021973117254674435,
+          1.0441941022872925
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03692340750573108
+        ],
+        "bodyRadiusMeters": 0.04348003444590869,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.006556626940177612
+      },
+      {
+        "bodyVertex": 881,
+        "worldPointMeters": [
+          -0.0403454452753067,
+          -0.005426581017673016,
+          1.0375964641571045
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.012214415194370087,
+          0.020642522127928414
+        ],
+        "bodyRadiusMeters": 0.04186400992132441,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 882,
+        "worldPointMeters": [
+          -0.039000578224658966,
+          -0.00772108556702733,
+          1.0449951887130737
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.022746014466304375
+        ],
+        "bodyRadiusMeters": 0.03999771505269363,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.017251700586389255
+      },
+      {
+        "bodyVertex": 883,
+        "worldPointMeters": [
+          -0.028585050255060196,
+          -0.020484065636992455,
+          1.040834665298462
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.028841461824930355,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 887,
+        "worldPointMeters": [
+          -0.03642883524298668,
+          -0.013427969999611378,
+          1.0388808250427246
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.036563748643332825,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 888,
+        "worldPointMeters": [
+          -0.03999023139476776,
+          -0.00022760128194931895,
+          1.0414303541183472
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005885171474070616,
+          0.032637214434123055
+        ],
+        "bodyRadiusMeters": 0.043213768188818065,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 892,
+        "worldPointMeters": [
+          -0.037932444363832474,
+          -0.010474731214344501,
+          1.0435616970062256
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0010088126508051916,
+          0.008949119992698417
+        ],
+        "bodyRadiusMeters": 0.03842202320599936,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 923,
+        "worldPointMeters": [
+          -0.030258256942033768,
+          0.020051756873726845,
+          1.0441676378250122
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.054314407169945886
+        ],
+        "bodyRadiusMeters": 0.04753700480327293,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.006777402366672958
+      },
+      {
+        "bodyVertex": 924,
+        "worldPointMeters": [
+          -0.03368869423866272,
+          0.01744462177157402,
+          1.0425418615341187
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0017440395897848596,
+          0.05085316461095287
+        ],
+        "bodyRadiusMeters": 0.0479031266956073,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 925,
+        "worldPointMeters": [
+          -0.036513589322566986,
+          0.014749676920473576,
+          1.0406509637832642
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0034873028595942585,
+          0.04689815514859074
+        ],
+        "bodyRadiusMeters": 0.04813194188269937,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 926,
+        "worldPointMeters": [
+          -0.03876640275120735,
+          0.012081323191523552,
+          1.038551688194275
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004401358273518486,
+          0.04311879729399464
+        ],
+        "bodyRadiusMeters": 0.048228534818741536,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 935,
+        "worldPointMeters": [
+          -0.041135456413030624,
+          0.007075916975736618,
+          1.036346673965454
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004159031997672804,
+          0.037027436171735706
+        ],
+        "bodyRadiusMeters": 0.04746622142786828,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 995,
+        "worldPointMeters": [
+          -0.038970060646533966,
+          0.004623815417289734,
+          1.0441958904266357
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03947241062061191
+        ],
+        "bodyRadiusMeters": 0.04437823168246904,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.004905821061857128
+      },
+      {
+        "bodyVertex": 996,
+        "worldPointMeters": [
+          -0.04048515856266022,
+          -0.0028021044563502073,
+          1.0382872819900513
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009429714611565157,
+          0.02678842085007422
+        ],
+        "bodyRadiusMeters": 0.04277269497496561,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1053,
+        "worldPointMeters": [
+          0.011113462038338184,
+          -0.057970695197582245,
+          1.0472116470336914
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01813275877780009
+        ],
+        "bodyRadiusMeters": 0.042823875220998245,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024691116443198154
+      },
+      {
+        "bodyVertex": 1054,
+        "worldPointMeters": [
+          0.007061493117362261,
+          -0.06095948442816734,
+          1.0474684238433838
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01853521786222092
+        ],
+        "bodyRadiusMeters": 0.044903721797192646,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026368503934971727
+      },
+      {
+        "bodyVertex": 1055,
+        "worldPointMeters": [
+          0.003899600822478533,
+          -0.061447691172361374,
+          1.0473015308380127
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01772805991296179
+        ],
+        "bodyRadiusMeters": 0.04500218024707472,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027274120334112927
+      },
+      {
+        "bodyVertex": 1056,
+        "worldPointMeters": [
+          0.012491499073803425,
+          -0.05253390222787857,
+          1.0460790395736694
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0128387420020679
+        ],
+        "bodyRadiusMeters": 0.0380302546528212,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.025191512650753298
+      },
+      {
+        "bodyVertex": 1060,
+        "worldPointMeters": [
+          0.012079834938049316,
+          -0.05544454604387283,
+          1.0467479228973389
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016308586087166014
+        ],
+        "bodyRadiusMeters": 0.04066628598143947,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024357699894273454
+      },
+      {
+        "bodyVertex": 1103,
+        "worldPointMeters": [
+          0.020595449954271317,
+          -0.027393005788326263,
+          1.0430711507797241
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.023248873943142633,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1118,
+        "worldPointMeters": [
+          0.04048869013786316,
+          0.009543972089886665,
+          1.0361604690551758
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.003609622952837498,
+          0.03934290146309478
+        ],
+        "bodyRadiusMeters": 0.04820766756329363,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1119,
+        "worldPointMeters": [
+          0.026266997680068016,
+          0.022446589544415474,
+          1.0453771352767944
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05747686496654239
+        ],
+        "bodyRadiusMeters": 0.04707440014613343,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.010402464820408963
+      },
+      {
+        "bodyVertex": 1120,
+        "worldPointMeters": [
+          0.02184596098959446,
+          0.024502187967300415,
+          1.046138882637024
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06019017674658081
+        ],
+        "bodyRadiusMeters": 0.04656252061729984,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01362765612928097
+      },
+      {
+        "bodyVertex": 1121,
+        "worldPointMeters": [
+          0.011947887018322945,
+          0.02713979035615921,
+          1.046451210975647
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06302068139742327
+        ],
+        "bodyRadiusMeters": 0.04535801268795765,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.017662668709465618
+      },
+      {
+        "bodyVertex": 1132,
+        "worldPointMeters": [
+          0.02345193736255169,
+          -0.025168275460600853,
+          1.0441688299179077
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002477003356611726
+        ],
+        "bodyRadiusMeters": 0.024966960309018234,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02248995695240651
+      },
+      {
+        "bodyVertex": 1134,
+        "worldPointMeters": [
+          0.017059987410902977,
+          0.026073042303323746,
+          1.0464332103729248
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.062039745229036374
+        ],
+        "bodyRadiusMeters": 0.04597250260098927,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.016067242628047103
+      },
+      {
+        "bodyVertex": 1159,
+        "worldPointMeters": [
+          0.008617759682238102,
+          -0.05907110869884491,
+          1.0467498302459717
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01590382968391682
+        ],
+        "bodyRadiusMeters": 0.04332259288448951,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02741876320057269
+      },
+      {
+        "bodyVertex": 1190,
+        "worldPointMeters": [
+          0.013386140577495098,
+          -0.05003729462623596,
+          1.0459637641906738
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.012232211342084081
+        ],
+        "bodyRadiusMeters": 0.03600475151638238,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.0237725401742983
+      },
+      {
+        "bodyVertex": 1216,
+        "worldPointMeters": [
+          1.4519901014864445e-06,
+          -0.06143951043486595,
+          1.047182559967041
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01722008185148246
+        ],
+        "bodyRadiusMeters": 0.044824353390644646,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027604271539162187
+      },
+      {
+        "bodyVertex": 1226,
+        "worldPointMeters": [
+          1.5034805983304977e-05,
+          0.028085431084036827,
+          1.0464372634887695
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06363806541694374
+        ],
+        "bodyRadiusMeters": 0.04470059265745702,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01893747275948672
+      },
+      {
+        "bodyVertex": 1953,
+        "worldPointMeters": [
+          0.01641092821955681,
+          -0.04326150193810463,
+          1.047338604927063
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01904341878584873
+        ],
+        "bodyRadiusMeters": 0.0312967432782887,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01225332449243997
+      },
+      {
+        "bodyVertex": 1958,
+        "worldPointMeters": [
+          0.018107986077666283,
+          -0.029736261814832687,
+          1.041684865951538
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022365529362024923,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1962,
+        "worldPointMeters": [
+          0.015296421945095062,
+          -0.03743279352784157,
+          1.0462052822113037
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.013881062598323807
+        ],
+        "bodyRadiusMeters": 0.025835729065493616,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011954666467169809
+      },
+      {
+        "bodyVertex": 1965,
+        "worldPointMeters": [
+          0.016493139788508415,
+          -0.046108178794384,
+          1.0476175546646118
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020123859127902724
+        ],
+        "bodyRadiusMeters": 0.033793528512100914,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01366966938419819
+      },
+      {
+        "bodyVertex": 1968,
+        "worldPointMeters": [
+          0.015802374109625816,
+          -0.048627808690071106,
+          1.047459363937378
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01965401454214394
+        ],
+        "bodyRadiusMeters": 0.035702374998416594,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016048360456272656
+      },
+      {
+        "bodyVertex": 1969,
+        "worldPointMeters": [
+          0.017065677791833878,
+          -0.03246895968914032,
+          1.0450197458267212
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0055646770521232776
+        ],
+        "bodyRadiusMeters": 0.02329647793261536,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01773180088049208
+      },
+      {
+        "bodyVertex": 1970,
+        "worldPointMeters": [
+          0.015143453143537045,
+          -0.03455060347914696,
+          1.0448323488235474
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00407326642734828
+        ],
+        "bodyRadiusMeters": 0.023476232522430113,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.019402966095081832
+      },
+      {
+        "bodyVertex": 1973,
+        "worldPointMeters": [
+          0.016004182398319244,
+          -0.040409136563539505,
+          1.0470256805419922
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017700884094104
+        ],
+        "bodyRadiusMeters": 0.028677931050682438,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.010977046956578439
+      },
+      {
+        "bodyVertex": 1976,
+        "worldPointMeters": [
+          0.025588616728782654,
+          -0.022822970524430275,
+          1.0390329360961914
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02633500283902109,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1986,
+        "worldPointMeters": [
+          0.03423093631863594,
+          -0.016126951202750206,
+          1.0367751121520996
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03423867892891291,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1987,
+        "worldPointMeters": [
+          0.03167138621211052,
+          -0.01818099617958069,
+          1.0427356958389282
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03171432684725219,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1988,
+        "worldPointMeters": [
+          0.039172276854515076,
+          0.002200549468398094,
+          1.0441784858703613
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03695512819538476
+        ],
+        "bodyRadiusMeters": 0.04346069494834499,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.006505566752960226
+      },
+      {
+        "bodyVertex": 1992,
+        "worldPointMeters": [
+          0.04029626399278641,
+          -0.005411873105913401,
+          1.0375950336456299
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.012245670514196977,
+          0.020879395049883245
+        ],
+        "bodyRadiusMeters": 0.04182876949522365,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1993,
+        "worldPointMeters": [
+          0.03899441286921501,
+          -0.007730381563305855,
+          1.0449804067611694
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.02274357074710617
+        ],
+        "bodyRadiusMeters": 0.03999794828422573,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.017254377537119562
+      },
+      {
+        "bodyVertex": 1994,
+        "worldPointMeters": [
+          0.028597775846719742,
+          -0.020509637892246246,
+          1.040800929069519
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.028865958067910924,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1998,
+        "worldPointMeters": [
+          0.03643443062901497,
+          -0.013431200757622719,
+          1.0388895273208618
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03657753251819219,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 1999,
+        "worldPointMeters": [
+          0.03995388746261597,
+          -0.0002150979998987168,
+          1.0414233207702637
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005779750106992456,
+          0.032705656680484134
+        ],
+        "bodyRadiusMeters": 0.04319277300949984,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2003,
+        "worldPointMeters": [
+          0.03793741762638092,
+          -0.01049111783504486,
+          1.0435384511947632
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0012318490596118137,
+          0.008904501700010047
+        ],
+        "bodyRadiusMeters": 0.03843273211193094,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2034,
+        "worldPointMeters": [
+          0.030226383358240128,
+          0.020049702376127243,
+          1.0441213846206665
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0543342543880293
+        ],
+        "bodyRadiusMeters": 0.04752056238158577,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.006813692006443529
+      },
+      {
+        "bodyVertex": 2035,
+        "worldPointMeters": [
+          0.03363758325576782,
+          0.01744256727397442,
+          1.0424778461456299
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0018105314117425459,
+          0.05085218039888659
+        ],
+        "bodyRadiusMeters": 0.047871728071841126,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2036,
+        "worldPointMeters": [
+          0.036450136452913284,
+          0.014745773747563362,
+          1.0405751466751099
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0034940981607197606,
+          0.046946254924619964
+        ],
+        "bodyRadiusMeters": 0.04808774432409183,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2037,
+        "worldPointMeters": [
+          0.03869730979204178,
+          0.012088657356798649,
+          1.0384753942489624
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004380164563878564,
+          0.04309231201504185
+        ],
+        "bodyRadiusMeters": 0.04818423627027232,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2046,
+        "worldPointMeters": [
+          0.04106975719332695,
+          0.007098519243299961,
+          1.036287546157837
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004067601307126555,
+          0.03705677073991024
+        ],
+        "bodyRadiusMeters": 0.04742798220181966,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2106,
+        "worldPointMeters": [
+          0.038945313543081284,
+          0.004625618923455477,
+          1.0441755056381226
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0394843972186984
+        ],
+        "bodyRadiusMeters": 0.044364850926852335,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.004880453708153938
+      },
+      {
+        "bodyVertex": 2107,
+        "worldPointMeters": [
+          0.0404394306242466,
+          -0.00278470478951931,
+          1.038293719291687
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009294290260846834,
+          0.02685275961140722
+        ],
+        "bodyRadiusMeters": 0.042743112611206176,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 2168,
+        "worldPointMeters": [
+          -0.00629003020003438,
+          0.0278333593159914,
+          1.0464513301849365
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06349062652686331
+        ],
+        "bodyRadiusMeters": 0.044890773255865095,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.018599853270998216
+      },
+      {
+        "bodyVertex": 2173,
+        "worldPointMeters": [
+          0.006322488188743591,
+          0.027817603200674057,
+          1.0464282035827637
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06347516362919825
+        ],
+        "bodyRadiusMeters": 0.04488093114707664,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01859423248212161
+      },
+      {
+        "bodyVertex": 2245,
+        "worldPointMeters": [
+          -0.013229133561253548,
+          0.026930302381515503,
+          1.0464853048324585
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06285833496225837
+        ],
+        "bodyRadiusMeters": 0.0455093869624245,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.017348947999833872
+      },
+      {
+        "bodyVertex": 2246,
+        "worldPointMeters": [
+          -0.01451896782964468,
+          0.026676425710320473,
+          1.0464859008789062
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06264003238838561
+        ],
+        "bodyRadiusMeters": 0.045660024752055536,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.016980007636330077
+      },
+      {
+        "bodyVertex": 2247,
+        "worldPointMeters": [
+          -0.015785550698637962,
+          0.026394132524728775,
+          1.04647696018219
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.062379600048254574
+        ],
+        "bodyRadiusMeters": 0.045813186968243595,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01656641308001098
+      },
+      {
+        "bodyVertex": 2353,
+        "worldPointMeters": [
+          -0.010568051598966122,
+          0.02736283652484417,
+          1.0464725494384766
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06320051973278254
+        ],
+        "bodyRadiusMeters": 0.045228946544572955,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.017971573188209584
+      },
+      {
+        "bodyVertex": 2354,
+        "worldPointMeters": [
+          -0.009187081828713417,
+          0.02754373289644718,
+          1.0464649200439453
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0633337474644897
+        ],
+        "bodyRadiusMeters": 0.045103567229529455,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01823018023496025
+      },
+      {
+        "bodyVertex": 2355,
+        "worldPointMeters": [
+          -0.007763403467833996,
+          0.027700699865818024,
+          1.0464574098587036
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06342409679334664
+        ],
+        "bodyRadiusMeters": 0.04498999317107832,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01843410362226832
+      },
+      {
+        "bodyVertex": 2392,
+        "worldPointMeters": [
+          -0.010530349798500538,
+          -0.05830052122473717,
+          1.0470739603042603
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017629424809056146
+        ],
+        "bodyRadiusMeters": 0.042993814500182165,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02536438969112602
+      },
+      {
+        "bodyVertex": 2393,
+        "worldPointMeters": [
+          -0.009864404797554016,
+          -0.05853813886642456,
+          1.0469133853912354
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016871132151226275
+        ],
+        "bodyRadiusMeters": 0.04306691066783762,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026195778516611343
+      },
+      {
+        "bodyVertex": 2394,
+        "worldPointMeters": [
+          -0.00919577106833458,
+          -0.058767545968294144,
+          1.0467755794525146
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01618547194693618
+        ],
+        "bodyRadiusMeters": 0.04314287547358723,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02695740352665105
+      },
+      {
+        "bodyVertex": 2395,
+        "worldPointMeters": [
+          -0.01151176169514656,
+          -0.05748923495411873,
+          1.0471746921539307
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018146588542850676
+        ],
+        "bodyRadiusMeters": 0.04246307536312553,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024316486820274857
+      },
+      {
+        "bodyVertex": 2396,
+        "worldPointMeters": [
+          -0.011780654080212116,
+          -0.0568775050342083,
+          1.047074556350708
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017796405654015253
+        ],
+        "bodyRadiusMeters": 0.04194925567550395,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024152850021488696
+      },
+      {
+        "bodyVertex": 2397,
+        "worldPointMeters": [
+          -0.01195370964705944,
+          -0.056181441992521286,
+          1.0469166040420532
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01715231215140295
+        ],
+        "bodyRadiusMeters": 0.04133134621440299,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024179034063000045
+      },
+      {
+        "bodyVertex": 2401,
+        "worldPointMeters": [
+          -0.013939482159912586,
+          -0.049649372696876526,
+          1.0462989807128906
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01437639531552062
+        ],
+        "bodyRadiusMeters": 0.03585316926716801,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.021476773951647387
+      },
+      {
+        "bodyVertex": 2402,
+        "worldPointMeters": [
+          -0.014591734856367111,
+          -0.04933105781674385,
+          1.0467115640640259
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016551067495258465
+        ],
+        "bodyRadiusMeters": 0.035820727379663374,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01926965988440491
+      },
+      {
+        "bodyVertex": 2403,
+        "worldPointMeters": [
+          -0.015238683670759201,
+          -0.04901149868965149,
+          1.0471335649490356
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018484068175999673
+        ],
+        "bodyRadiusMeters": 0.035799588523759904,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01731552034776023
+      },
+      {
+        "bodyVertex": 3589,
+        "worldPointMeters": [
+          -0.03093300573527813,
+          -0.018715307116508484,
+          1.0430800914764404
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.030999965013929518,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3590,
+        "worldPointMeters": [
+          -0.030173709616065025,
+          -0.0192931666970253,
+          1.042717695236206
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.030288072172301818,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3591,
+        "worldPointMeters": [
+          -0.029388369992375374,
+          -0.019887879490852356,
+          1.0418814420700073
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.029565799916659096,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3598,
+        "worldPointMeters": [
+          -0.02624286524951458,
+          -0.022226259112358093,
+          1.0387444496154785
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.026831861170412013,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3599,
+        "worldPointMeters": [
+          -0.02698487415909767,
+          -0.02164856716990471,
+          1.0390675067901611
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.027446104599196147,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3600,
+        "worldPointMeters": [
+          -0.02777533046901226,
+          -0.021070009097456932,
+          1.0398284196853638
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.028126108141335707,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3628,
+        "worldPointMeters": [
+          -0.034452084451913834,
+          0.016774488613009453,
+          1.0420905351638794
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0022554980011275133,
+          0.049869208488903354
+        ],
+        "bodyRadiusMeters": 0.04797416958761115,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3629,
+        "worldPointMeters": [
+          -0.03517716005444527,
+          0.016100727021694183,
+          1.0416244268417358
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0027244584648191427,
+          0.048856152105616224
+        ],
+        "bodyRadiusMeters": 0.0480360475726754,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3630,
+        "worldPointMeters": [
+          -0.035864222794771194,
+          0.015425174497067928,
+          1.0411441326141357
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.003097587314274934,
+          0.04786360380763778
+        ],
+        "bodyRadiusMeters": 0.0480886646925978,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3688,
+        "worldPointMeters": [
+          -0.0401434563100338,
+          -0.0008528780308552086,
+          1.0406805276870728
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0072568119368380335,
+          0.03137886198269917
+        ],
+        "bodyRadiusMeters": 0.043123130544279784,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3689,
+        "worldPointMeters": [
+          -0.04027843475341797,
+          -0.0014899630332365632,
+          1.0399055480957031
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.008411723503003335,
+          0.02998342971806921
+        ],
+        "bodyRadiusMeters": 0.043020698655647865,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3690,
+        "worldPointMeters": [
+          -0.04039303958415985,
+          -0.002139492891728878,
+          1.039107084274292
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00929132014095816,
+          0.028442609047967957
+        ],
+        "bodyRadiusMeters": 0.0429045246442803,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3886,
+        "worldPointMeters": [
+          0.024000510573387146,
+          -0.024586964398622513,
+          1.0430349111557007
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025293849111588204,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3887,
+        "worldPointMeters": [
+          0.02450721710920334,
+          -0.023998646065592766,
+          1.0415475368499756
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025599384808014096,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3888,
+        "worldPointMeters": [
+          0.025019444525241852,
+          -0.02340867556631565,
+          1.0400785207748413
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025929476791570608,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 3985,
+        "worldPointMeters": [
+          0.012595705687999725,
+          -0.0518222451210022,
+          1.045929193496704
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.011912122766436056
+        ],
+        "bodyRadiusMeters": 0.03739382576891043,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02548170300247437
+      },
+      {
+        "bodyVertex": 3986,
+        "worldPointMeters": [
+          0.012747075408697128,
+          -0.05114707723259926,
+          1.0458277463912964
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.011234998951243103
+        ],
+        "bodyRadiusMeters": 0.0368110049725042,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.025576006021261095
+      },
+      {
+        "bodyVertex": 3987,
+        "worldPointMeters": [
+          0.012994317337870598,
+          -0.050541169941425323,
+          1.045823335647583
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01123575816239386
+        ],
+        "bodyRadiusMeters": 0.03633094253828454,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02509518437589068
+      },
+      {
+        "bodyVertex": 3991,
+        "worldPointMeters": [
+          0.01239367388188839,
+          -0.05325479060411453,
+          1.046237587928772
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.013734590260314736
+        ],
+        "bodyRadiusMeters": 0.03868037654453695,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024945786284222216
+      },
+      {
+        "bodyVertex": 3992,
+        "worldPointMeters": [
+          0.012293193489313126,
+          -0.05397987365722656,
+          1.046399712562561
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.014598549097234717
+        ],
+        "bodyRadiusMeters": 0.03933636265198571,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024737813554750993
+      },
+      {
+        "bodyVertex": 3993,
+        "worldPointMeters": [
+          0.01218894962221384,
+          -0.05470963194966316,
+          1.0465686321258545
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.015454445490444415
+        ],
+        "bodyRadiusMeters": 0.039998292402358,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024543846911913584
+      },
+      {
+        "bodyVertex": 3997,
+        "worldPointMeters": [
+          0.020680181682109833,
+          0.024943843483924866,
+          1.0462509393692017
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06073967507687604
+        ],
+        "bodyRadiusMeters": 0.04642194262301436,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.014317732453861677
+      },
+      {
+        "bodyVertex": 3998,
+        "worldPointMeters": [
+          0.019493088126182556,
+          0.0253532063215971,
+          1.0463353395462036
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.061235123033703376
+        ],
+        "bodyRadiusMeters": 0.04627623804831197,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.014958884985391406
+      },
+      {
+        "bodyVertex": 3999,
+        "worldPointMeters": [
+          0.018285932019352913,
+          0.025729767978191376,
+          1.0463948249816895
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06166806564154871
+        ],
+        "bodyRadiusMeters": 0.04612617364965045,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01554189199189826
+      },
+      {
+        "bodyVertex": 4006,
+        "worldPointMeters": [
+          0.040450938045978546,
+          -0.004785764496773481,
+          1.0368859767913818
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009523965917535297,
+          0.022795509163880297
+        ],
+        "bodyRadiusMeters": 0.04214923167009792,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 4007,
+        "worldPointMeters": [
+          0.04051093012094498,
+          -0.004129440523684025,
+          1.036940574645996
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00893403518189512,
+          0.023840149153358452
+        ],
+        "bodyRadiusMeters": 0.042395446709038075,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 4008,
+        "worldPointMeters": [
+          0.04049938544631004,
+          -0.0034575406461954117,
+          1.0374972820281982
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009315240703651485,
+          0.025223834738356928
+        ],
+        "bodyRadiusMeters": 0.04258718490646451,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5113,
+        "worldPointMeters": [
+          0.03939428552985191,
+          0.0016017411835491657,
+          1.0435175895690918
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0005062206511536645,
+          0.03592593256215775
+        ],
+        "bodyRadiusMeters": 0.043406231409534445,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5114,
+        "worldPointMeters": [
+          0.03959830477833748,
+          0.0010018802713602781,
+          1.0428404808044434
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002564049628619839,
+          0.034895145224583236
+        ],
+        "bodyRadiusMeters": 0.04334424177862101,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5115,
+        "worldPointMeters": [
+          0.039784710854291916,
+          0.0003974417340941727,
+          1.0421433448791504
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004265963631955477,
+          0.03383082901132896
+        ],
+        "bodyRadiusMeters": 0.04327344305258203,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5119,
+        "worldPointMeters": [
+          0.040035177022218704,
+          -0.005999551620334387,
+          1.0391993522644043
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.04142279259777772,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5120,
+        "worldPointMeters": [
+          0.03970147669315338,
+          -0.006566278636455536,
+          1.0413062572479248
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.04095760775508857,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5121,
+        "worldPointMeters": [
+          0.039340365678071976,
+          -0.007135958410799503,
+          1.0433927774429321
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0018539816517522472,
+          0.019285681831133855
+        ],
+        "bodyRadiusMeters": 0.04047042036094746,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5125,
+        "worldPointMeters": [
+          0.02625264599919319,
+          -0.02224540337920189,
+          1.038716435432434
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02685376838195471,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5126,
+        "worldPointMeters": [
+          0.02699533849954605,
+          -0.0216716006398201,
+          1.0390346050262451
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.027469001327254418,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5127,
+        "worldPointMeters": [
+          0.02778695523738861,
+          -0.02109515108168125,
+          1.0397939682006836
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.028149992666855233,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5152,
+        "worldPointMeters": [
+          0.03706089034676552,
+          0.014073897153139114,
+          1.0400689840316772
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0037837740707673986,
+          0.04597884605567749
+        ],
+        "bodyRadiusMeters": 0.04812113436692072,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5153,
+        "worldPointMeters": [
+          0.037637390196323395,
+          0.013406403362751007,
+          1.0395512580871582
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004085001388467844,
+          0.04501224663899395
+        ],
+        "bodyRadiusMeters": 0.04814756562227506,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5154,
+        "worldPointMeters": [
+          0.03818204998970032,
+          0.012744313105940819,
+          1.039020299911499
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004225657955209867,
+          0.04404904566530999
+        ],
+        "bodyRadiusMeters": 0.04816817327005662,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5179,
+        "worldPointMeters": [
+          0.03894534334540367,
+          0.002801361493766308,
+          1.044785737991333
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03800869820194878
+        ],
+        "bodyRadiusMeters": 0.04352094836324946,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.005512250161300684
+      },
+      {
+        "bodyVertex": 5180,
+        "worldPointMeters": [
+          0.03878040239214897,
+          0.0034053665585815907,
+          1.0451405048370361
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03895523797049427
+        ],
+        "bodyRadiusMeters": 0.04364712539892304,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.00469188742842877
+      },
+      {
+        "bodyVertex": 5181,
+        "worldPointMeters": [
+          0.0387578159570694,
+          0.004013285972177982,
+          1.0450034141540527
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03947658392423765
+        ],
+        "bodyRadiusMeters": 0.0439093537589696,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.004432769834731953
+      },
+      {
+        "bodyVertex": 5314,
+        "worldPointMeters": [
+          -0.01646069437265396,
+          -0.04397129267454147,
+          1.0474046468734741
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019357672394435383
+        ],
+        "bodyRadiusMeters": 0.031924478227003596,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.012566805832568213
+      },
+      {
+        "bodyVertex": 5315,
+        "worldPointMeters": [
+          -0.016488872468471527,
+          -0.044682808220386505,
+          1.0474717617034912
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01963727421601251
+        ],
+        "bodyRadiusMeters": 0.032550505546673054,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.012913231330660545
+      },
+      {
+        "bodyVertex": 5316,
+        "worldPointMeters": [
+          -0.016497723758220673,
+          -0.04539607837796211,
+          1.0475413799285889
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019901870592062117
+        ],
+        "bodyRadiusMeters": 0.03317191130418859,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.013270040712126473
+      },
+      {
+        "bodyVertex": 5332,
+        "worldPointMeters": [
+          -0.016342714428901672,
+          -0.0425521656870842,
+          1.0472747087478638
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018800439141177558
+        ],
+        "bodyRadiusMeters": 0.030654093251987806,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011853654110810248
+      },
+      {
+        "bodyVertex": 5333,
+        "worldPointMeters": [
+          -0.01625175029039383,
+          -0.041841890662908554,
+          1.047206163406372
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018504040984330346
+        ],
+        "bodyRadiusMeters": 0.030006148591311035,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011502107606980689
+      },
+      {
+        "bodyVertex": 5334,
+        "worldPointMeters": [
+          -0.016139138489961624,
+          -0.04112805053591728,
+          1.0471285581588745
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018157984402172818
+        ],
+        "bodyRadiusMeters": 0.029346484893819632,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011188500491646814
+      },
+      {
+        "bodyVertex": 5572,
+        "worldPointMeters": [
+          -0.006441160570830107,
+          -0.06122025474905968,
+          1.0475221872329712
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018703881630844164
+        ],
+        "bodyRadiusMeters": 0.04506715405583859,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026363272424994425
+      },
+      {
+        "bodyVertex": 5573,
+        "worldPointMeters": [
+          -0.005684380419552326,
+          -0.06136653199791908,
+          1.0474858283996582
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01852298785409984
+        ],
+        "bodyRadiusMeters": 0.045110412049821504,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026587424195721663
+      },
+      {
+        "bodyVertex": 5574,
+        "worldPointMeters": [
+          -0.004822151269763708,
+          -0.06142628937959671,
+          1.0473995208740234
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018186150486968266
+        ],
+        "bodyRadiusMeters": 0.04506938658985353,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026883236102885264
+      },
+      {
+        "bodyVertex": 5575,
+        "worldPointMeters": [
+          -0.007494657300412655,
+          -0.06052602827548981,
+          1.0472922325134277
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018057726534541733
+        ],
+        "bodyRadiusMeters": 0.04454515243231482,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026487425897773087
+      },
+      {
+        "bodyVertex": 5576,
+        "worldPointMeters": [
+          -0.007841949351131916,
+          -0.06001894548535347,
+          1.0470612049102783
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017257301930406706
+        ],
+        "bodyRadiusMeters": 0.04410576114007011,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026848459209663403
+      },
+      {
+        "bodyVertex": 5577,
+        "worldPointMeters": [
+          -0.008184945210814476,
+          -0.0595070905983448,
+          1.0468500852584839
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016409861088436086
+        ],
+        "bodyRadiusMeters": 0.04366510636666963,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02725524527823354
+      },
+      {
+        "bodyVertex": 5593,
+        "worldPointMeters": [
+          -0.016453398391604424,
+          -0.04682305082678795,
+          1.0476850271224976
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020444329139877714
+        ],
+        "bodyRadiusMeters": 0.034396088727274475,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01395175958739676
+      },
+      {
+        "bodyVertex": 5594,
+        "worldPointMeters": [
+          -0.016354896128177643,
+          -0.047502096742391586,
+          1.0477147102355957
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.02053713326476797
+        ],
+        "bodyRadiusMeters": 0.03494776480265912,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.014410631537891148
+      },
+      {
+        "bodyVertex": 5595,
+        "worldPointMeters": [
+          -0.016146428883075714,
+          -0.04811359941959381,
+          1.0476590394973755
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020362941718759832
+        ],
+        "bodyRadiusMeters": 0.03539380465014457,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01503086293138474
+      },
+      {
+        "bodyVertex": 5608,
+        "worldPointMeters": [
+          -0.04050374776124954,
+          -0.0048032780177891254,
+          1.036884069442749
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009691664134703168,
+          0.022654518837747894
+        ],
+        "bodyRadiusMeters": 0.04218683276474285,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5609,
+        "worldPointMeters": [
+          -0.04056333005428314,
+          -0.004147927742451429,
+          1.0369360446929932
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00904009671368539,
+          0.023775843438482748
+        ],
+        "bodyRadiusMeters": 0.04243194355738314,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 5610,
+        "worldPointMeters": [
+          -0.0405489020049572,
+          -0.0034757847897708416,
+          1.037490725517273
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.009415759081607923,
+          0.02512555186458418
+        ],
+        "bodyRadiusMeters": 0.04262054625433767,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6748,
+        "worldPointMeters": [
+          -0.01660214737057686,
+          -0.03300914168357849,
+          1.0452560186386108
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.007290201928173489
+        ],
+        "bodyRadiusMeters": 0.02332922043661626,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016039018508442773
+      },
+      {
+        "bodyVertex": 6749,
+        "worldPointMeters": [
+          -0.016057660803198814,
+          -0.03350450098514557,
+          1.0451680421829224
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.006564445350153324
+        ],
+        "bodyRadiusMeters": 0.023301535278801317,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016737089928647992
+      },
+      {
+        "bodyVertex": 6750,
+        "worldPointMeters": [
+          -0.015540284104645252,
+          -0.03400120884180069,
+          1.0449610948562622
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004993825075914198
+        ],
+        "bodyRadiusMeters": 0.023316148348822834,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.018322323272908635
+      },
+      {
+        "bodyVertex": 6769,
+        "worldPointMeters": [
+          -0.03942815214395523,
+          0.0015960452146828175,
+          1.0435326099395752
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00045803494409250823,
+          0.03589082708405955
+        ],
+        "bodyRadiusMeters": 0.04342684689987173,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6770,
+        "worldPointMeters": [
+          -0.03963332995772362,
+          0.0009937179274857044,
+          1.0428537130355835
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002563206017688803,
+          0.03485433921732339
+        ],
+        "bodyRadiusMeters": 0.04336514192853904,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6771,
+        "worldPointMeters": [
+          -0.0398203507065773,
+          0.00038695920375175774,
+          1.0421539545059204
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004308164904162679,
+          0.03378452504762519
+        ],
+        "bodyRadiusMeters": 0.043294259503445835,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6775,
+        "worldPointMeters": [
+          -0.04007579758763313,
+          -0.006009286269545555,
+          1.0392037630081177
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.041451326683727654,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6776,
+        "worldPointMeters": [
+          -0.03973044082522392,
+          -0.0065696570090949535,
+          1.0413137674331665
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.040976595503492565,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6777,
+        "worldPointMeters": [
+          -0.03935706987977028,
+          -0.007132664322853088,
+          1.0434036254882812
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0018214015755623825,
+          0.019249156451583115
+        ],
+        "bodyRadiusMeters": 0.04047914499730766,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6802,
+        "worldPointMeters": [
+          -0.04015643522143364,
+          0.010151758790016174,
+          1.0368356704711914
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004190231142974819,
+          0.04028457582524974
+        ],
+        "bodyRadiusMeters": 0.04825624140032947,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6803,
+        "worldPointMeters": [
+          -0.0397198311984539,
+          0.010786697268486023,
+          1.037420630455017
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004308315487083018,
+          0.04129242359734604
+        ],
+        "bodyRadiusMeters": 0.04825130146655419,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6804,
+        "worldPointMeters": [
+          -0.039256397634744644,
+          0.01142996083945036,
+          1.0379927158355713
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00441165659984046,
+          0.04221376517074368
+        ],
+        "bodyRadiusMeters": 0.04824167105268062,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6811,
+        "worldPointMeters": [
+          -0.03712595999240875,
+          0.014076012186706066,
+          1.0401455163955688
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0037776138295967077,
+          0.045942699851192974
+        ],
+        "bodyRadiusMeters": 0.048166049958332804,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6812,
+        "worldPointMeters": [
+          -0.037703704088926315,
+          0.013405737467110157,
+          1.0396275520324707
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004094345375314658,
+          0.044995190759354126
+        ],
+        "bodyRadiusMeters": 0.04819234460803416,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6813,
+        "worldPointMeters": [
+          -0.03824959322810173,
+          0.012740342877805233,
+          1.0390963554382324
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004246593610665825,
+          0.0440514804531459
+        ],
+        "bodyRadiusMeters": 0.048212558259309424,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6841,
+        "worldPointMeters": [
+          -0.03897315263748169,
+          0.002800336107611656,
+          1.0448009967803955
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.038051719382906246
+        ],
+        "bodyRadiusMeters": 0.043537751921727874,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.005486032538821628
+      },
+      {
+        "bodyVertex": 6842,
+        "worldPointMeters": [
+          -0.03880460560321808,
+          0.0034057358279824257,
+          1.045155644416809
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03900251558788325
+        ],
+        "bodyRadiusMeters": 0.043661228178454095,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.004658712590570845
+      },
+      {
+        "bodyVertex": 6843,
+        "worldPointMeters": [
+          -0.03878043591976166,
+          0.004013575613498688,
+          1.0450198650360107
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.03950845777576928
+        ],
+        "bodyRadiusMeters": 0.04392193422738588,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.004413476451616598
+      },
+      {
+        "bodyVertex": 6877,
+        "worldPointMeters": [
+          -0.04093575477600098,
+          0.008907249197363853,
+          1.035671591758728
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0032285017374645074,
+          0.038382871986670966
+        ],
+        "bodyRadiusMeters": 0.04823671171483213,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6878,
+        "worldPointMeters": [
+          -0.04120364412665367,
+          0.008294939063489437,
+          1.0353375673294067
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002958282442052628,
+          0.03769287502000737
+        ],
+        "bodyRadiusMeters": 0.04814459482857622,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6879,
+        "worldPointMeters": [
+          -0.041295066475868225,
+          0.007685484364628792,
+          1.0354812145233154
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0031744020540814635,
+          0.03718424524304416
+        ],
+        "bodyRadiusMeters": 0.04791087290203411,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 6973,
+        "worldPointMeters": [
+          0.016460129991173744,
+          -0.04397066682577133,
+          1.0474070310592651
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019325469031416166
+        ],
+        "bodyRadiusMeters": 0.031928045542897944,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.012602576511481778
+      },
+      {
+        "bodyVertex": 6974,
+        "worldPointMeters": [
+          0.016489656642079353,
+          -0.0446811243891716,
+          1.0474761724472046
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.019608872767982167
+        ],
+        "bodyRadiusMeters": 0.03255376856511886,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.012944895797136691
+      },
+      {
+        "bodyVertex": 6975,
+        "worldPointMeters": [
+          0.01650036685168743,
+          -0.0453934408724308,
+          1.0475462675094604
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01986281755470597
+        ],
+        "bodyRadiusMeters": 0.03317517695081054,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.013312359396104572
+      },
+      {
+        "bodyVertex": 6982,
+        "worldPointMeters": [
+          0.01634124107658863,
+          -0.04255278408527374,
+          1.0472700595855713
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018763878159875017
+        ],
+        "bodyRadiusMeters": 0.03065837473794284,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011894496578067824
+      },
+      {
+        "bodyVertex": 6983,
+        "worldPointMeters": [
+          0.01625053584575653,
+          -0.041842613369226456,
+          1.047197937965393
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018444514410105795
+        ],
+        "bodyRadiusMeters": 0.030010714426959708,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011566200016853913
+      },
+      {
+        "bodyVertex": 6984,
+        "worldPointMeters": [
+          0.016138339415192604,
+          -0.041128791868686676,
+          1.0471177101135254
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018092427335677744
+        ],
+        "bodyRadiusMeters": 0.029351351725333697,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011258924389655953
+      },
+      {
+        "bodyVertex": 7051,
+        "worldPointMeters": [
+          0.013262758031487465,
+          0.026913534849882126,
+          1.0464580059051514
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06283354491265335
+        ],
+        "bodyRadiusMeters": 0.045505613550899215,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01732793136175413
+      },
+      {
+        "bodyVertex": 7052,
+        "worldPointMeters": [
+          0.014551058411598206,
+          0.026662280783057213,
+          1.046460509300232
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0626148613916013
+        ],
+        "bodyRadiusMeters": 0.045659544484902365,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.016955316906698936
+      },
+      {
+        "bodyVertex": 7053,
+        "worldPointMeters": [
+          0.015815792605280876,
+          0.026383090764284134,
+          1.046453595161438
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06235235845098749
+        ],
+        "bodyRadiusMeters": 0.04581619219195599,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.016536166259031496
+      },
+      {
+        "bodyVertex": 7219,
+        "worldPointMeters": [
+          0.01151526439934969,
+          -0.05748173967003822,
+          1.0471997261047363
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.018145253535373405
+        ],
+        "bodyRadiusMeters": 0.04245912186282037,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024313868327446968
+      },
+      {
+        "bodyVertex": 7220,
+        "worldPointMeters": [
+          0.011784213595092297,
+          -0.05687154084444046,
+          1.0470967292785645
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017785814874553715
+        ],
+        "bodyRadiusMeters": 0.041946925504041305,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02416111062948759
+      },
+      {
+        "bodyVertex": 7221,
+        "worldPointMeters": [
+          0.011957446113228798,
+          -0.05617757514119148,
+          1.0469340085983276
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017130700009068432
+        ],
+        "bodyRadiusMeters": 0.04133119104033898,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024200491031270546
+      },
+      {
+        "bodyVertex": 7222,
+        "worldPointMeters": [
+          0.010533464141190052,
+          -0.058293286710977554,
+          1.047098159790039
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01762424345101305
+        ],
+        "bodyRadiusMeters": 0.04298965142859237,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.025365407977579316
+      },
+      {
+        "bodyVertex": 7223,
+        "worldPointMeters": [
+          0.009867124259471893,
+          -0.05853267014026642,
+          1.0469346046447754
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016859663333977423
+        ],
+        "bodyRadiusMeters": 0.04306416301466095,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026204499680683526
+      },
+      {
+        "bodyVertex": 7224,
+        "worldPointMeters": [
+          0.00919809564948082,
+          -0.05876436457037926,
+          1.0467925071716309
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016164452790202552
+        ],
+        "bodyRadiusMeters": 0.043142079769264596,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026977626979062044
+      },
+      {
+        "bodyVertex": 7225,
+        "worldPointMeters": [
+          0.016460899263620377,
+          -0.04681994765996933,
+          1.0476828813552856
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020367394021155224
+        ],
+        "bodyRadiusMeters": 0.034401030255567955,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.014033636234412731
+      },
+      {
+        "bodyVertex": 7226,
+        "worldPointMeters": [
+          0.016364796087145805,
+          -0.04749959707260132,
+          1.047706127166748
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.02043847866249823
+        ],
+        "bodyRadiusMeters": 0.034954179566093556,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.014515700903595326
+      },
+      {
+        "bodyVertex": 7227,
+        "worldPointMeters": [
+          0.016158049926161766,
+          -0.04811200872063637,
+          1.0476436614990234
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020241984287688097
+        ],
+        "bodyRadiusMeters": 0.03540158135701608,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.015159597069327981
+      },
+      {
+        "bodyVertex": 8350,
+        "worldPointMeters": [
+          0.016591226682066917,
+          -0.03301022946834564,
+          1.0452390909194946
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0070747754271809505
+        ],
+        "bodyRadiusMeters": 0.023328279522040276,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016253504094859324
+      },
+      {
+        "bodyVertex": 8351,
+        "worldPointMeters": [
+          0.016045479103922844,
+          -0.03350546583533287,
+          1.0451490879058838
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.006331556294593553
+        ],
+        "bodyRadiusMeters": 0.023299714622731907,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016968158328138354
+      },
+      {
+        "bodyVertex": 8352,
+        "worldPointMeters": [
+          0.015527340583503246,
+          -0.03400179743766785,
+          1.044942021369934
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004803473844682367
+        ],
+        "bodyRadiusMeters": 0.023313642439102642,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.018510168594420274
+      },
+      {
+        "bodyVertex": 8380,
+        "worldPointMeters": [
+          0.03870469704270363,
+          -0.00837394967675209,
+          1.0455429553985596
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.022739422149273904
+        ],
+        "bodyRadiusMeters": 0.039576520801394274,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01683709865212037
+      },
+      {
+        "bodyVertex": 8381,
+        "worldPointMeters": [
+          0.0384485200047493,
+          -0.009054988622665405,
+          1.045340895652771
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.020280420641241786
+        ],
+        "bodyRadiusMeters": 0.039188934404737065,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01890851376349528
+      },
+      {
+        "bodyVertex": 8382,
+        "worldPointMeters": [
+          0.038201697170734406,
+          -0.00976443663239479,
+          1.0445868968963623
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01590156359259538
+        ],
+        "bodyRadiusMeters": 0.03881530207554484,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.022913738482949458
+      },
+      {
+        "bodyVertex": 8545,
+        "worldPointMeters": [
+          0.010602799244225025,
+          0.02734340727329254,
+          1.0464434623718262
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06318087100070624
+        ],
+        "bodyRadiusMeters": 0.04522018523452995,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.017960685766176293
+      },
+      {
+        "bodyVertex": 8546,
+        "worldPointMeters": [
+          0.009221372194588184,
+          0.02752453275024891,
+          1.0464366674423218
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06331272773031126
+        ],
+        "bodyRadiusMeters": 0.04509350917490885,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.018219218555402407
+      },
+      {
+        "bodyVertex": 8547,
+        "worldPointMeters": [
+          0.007796852383762598,
+          0.02768273465335369,
+          1.046431064605713
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06340308464645797
+        ],
+        "bodyRadiusMeters": 0.04497955783972289,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.018423526806735077
+      },
+      {
+        "bodyVertex": 8569,
+        "worldPointMeters": [
+          -0.01549171470105648,
+          -0.03819279000163078,
+          1.0465377569198608
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01555239459487844
+        ],
+        "bodyRadiusMeters": 0.02656041087820324,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011008016283324798
+      },
+      {
+        "bodyVertex": 8570,
+        "worldPointMeters": [
+          -0.015676330775022507,
+          -0.03894222527742386,
+          1.0467665195465088
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016600615932473972
+        ],
+        "bodyRadiusMeters": 0.02727841098594014,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01067779505346617
+      },
+      {
+        "bodyVertex": 8571,
+        "worldPointMeters": [
+          -0.015849003568291664,
+          -0.03968019410967827,
+          1.046924352645874
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017273087028479985
+        ],
+        "bodyRadiusMeters": 0.027983062020994532,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.010709974992514547
+      },
+      {
+        "bodyVertex": 8602,
+        "worldPointMeters": [
+          -0.019852153956890106,
+          -0.027965189889073372,
+          1.0423026084899902
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022863990482940886,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 8603,
+        "worldPointMeters": [
+          -0.019164107739925385,
+          -0.028524059802293777,
+          1.0417454242706299
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022559291945328196,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 8604,
+        "worldPointMeters": [
+          -0.018571220338344574,
+          -0.029112663120031357,
+          1.041487455368042
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022381233182510705,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 8680,
+        "worldPointMeters": [
+          -0.021351641044020653,
+          -0.02687360718846321,
+          1.0437582731246948
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00031848175808674357
+        ],
+        "bodyRadiusMeters": 0.023684306891483153,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02336582513339641
+      },
+      {
+        "bodyVertex": 8681,
+        "worldPointMeters": [
+          -0.02209504507482052,
+          -0.02632138691842556,
+          1.0443174839019775
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002943819417466387
+        ],
+        "bodyRadiusMeters": 0.024129102707393237,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02118528328992685
+      },
+      {
+        "bodyVertex": 8682,
+        "worldPointMeters": [
+          -0.02279752492904663,
+          -0.02575988881289959,
+          1.0444972515106201
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004109117996246607
+        ],
+        "bodyRadiusMeters": 0.024559294717332567,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.020450176721085962
+      },
+      {
+        "bodyVertex": 8782,
+        "worldPointMeters": [
+          -0.027315985411405563,
+          0.021876567974686623,
+          1.0451446771621704
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05670528620459992
+        ],
+        "bodyRadiusMeters": 0.04719685551146212,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.009508430693137802
+      },
+      {
+        "bodyVertex": 8783,
+        "worldPointMeters": [
+          -0.028329331427812576,
+          0.0212848037481308,
+          1.0448464155197144
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.055931075637656764
+        ],
+        "bodyRadiusMeters": 0.04731507820648185,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.008615997431174915
+      },
+      {
+        "bodyVertex": 8784,
+        "worldPointMeters": [
+          -0.02931060828268528,
+          0.020675817504525185,
+          1.0445199012756348
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05513726413128541
+        ],
+        "bodyRadiusMeters": 0.04742867017679187,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.0077085939544935395
+      },
+      {
+        "bodyVertex": 8794,
+        "worldPointMeters": [
+          -0.025199461728334427,
+          0.022999845445156097,
+          1.0456476211547852
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.058236375329459245
+        ],
+        "bodyRadiusMeters": 0.046948339172416635,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01128803615704261
+      },
+      {
+        "bodyVertex": 8795,
+        "worldPointMeters": [
+          -0.024099785834550858,
+          0.023526974022388458,
+          1.0458506345748901
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.058943433944571515
+        ],
+        "bodyRadiusMeters": 0.04681863939517365,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.012124794549397862
+      },
+      {
+        "bodyVertex": 8796,
+        "worldPointMeters": [
+          -0.022975051775574684,
+          0.024028107523918152,
+          1.0460219383239746
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05960851529648981
+        ],
+        "bodyRadiusMeters": 0.046685460016430744,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.012923055280059069
+      },
+      {
+        "bodyVertex": 8809,
+        "worldPointMeters": [
+          -0.0029413439333438873,
+          -0.0614423044025898,
+          1.0472406148910522
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01750754752147747
+        ],
+        "bodyRadiusMeters": 0.044923263006595125,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027415715485117655
+      },
+      {
+        "bodyVertex": 8810,
+        "worldPointMeters": [
+          -0.0019698431715369225,
+          -0.06144142895936966,
+          1.047203540802002
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01733707200864038
+        ],
+        "bodyRadiusMeters": 0.04486934511815235,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02753227310951197
+      },
+      {
+        "bodyVertex": 8811,
+        "worldPointMeters": [
+          -0.0009870502399280667,
+          -0.061439745128154755,
+          1.0471867322921753
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01725215772775847
+        ],
+        "bodyRadiusMeters": 0.044835360346330545,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027583202618572077
+      },
+      {
+        "bodyVertex": 9973,
+        "worldPointMeters": [
+          -0.017813410609960556,
+          -0.030434805899858475,
+          1.0423439741134644
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022542148658453935,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 9974,
+        "worldPointMeters": [
+          -0.017598943784832954,
+          -0.031143927946686745,
+          1.0433146953582764
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022817931717710904,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 9975,
+        "worldPointMeters": [
+          -0.017380546778440475,
+          -0.0318339578807354,
+          1.0442966222763062
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0018851862323337038
+        ],
+        "bodyRadiusMeters": 0.02309863995642705,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.021213453724093344
+      },
+      {
+        "bodyVertex": 9976,
+        "worldPointMeters": [
+          -0.015116138383746147,
+          -0.03665853291749954,
+          1.0457850694656372
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.011335146532621446
+        ],
+        "bodyRadiusMeters": 0.02510190662083758,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.013766760088216133
+      },
+      {
+        "bodyVertex": 9977,
+        "worldPointMeters": [
+          -0.014990557916462421,
+          -0.03590160235762596,
+          1.0453433990478516
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.007835324641527008
+        ],
+        "bodyRadiusMeters": 0.024424496522697285,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016589171881170275
+      },
+      {
+        "bodyVertex": 9978,
+        "worldPointMeters": [
+          -0.014983803033828735,
+          -0.03518901392817497,
+          1.0449954271316528
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005108434016798236
+        ],
+        "bodyRadiusMeters": 0.023861575847173994,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01875314183037576
+      },
+      {
+        "bodyVertex": 10000,
+        "worldPointMeters": [
+          -0.038704488426446915,
+          -0.008360425010323524,
+          1.045561671257019
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.02288607183012532
+        ],
+        "bodyRadiusMeters": 0.03957079919234387,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016684727362218547
+      },
+      {
+        "bodyVertex": 10001,
+        "worldPointMeters": [
+          -0.03844501078128815,
+          -0.009038887917995453,
+          1.045363187789917
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.02028430954294421
+        ],
+        "bodyRadiusMeters": 0.03918023790696991,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.018895928364025698
+      },
+      {
+        "bodyVertex": 10002,
+        "worldPointMeters": [
+          -0.03819698095321655,
+          -0.009747409261763096,
+          1.0446110963821411
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0159208148610014
+        ],
+        "bodyRadiusMeters": 0.038805280075396915,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.022884465214395515
+      },
+      {
+        "bodyVertex": 10156,
+        "worldPointMeters": [
+          0.015489660203456879,
+          -0.038195133209228516,
+          1.0465304851531982
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.015508299547605334
+        ],
+        "bodyRadiusMeters": 0.026566086920850298,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.011057787373244964
+      },
+      {
+        "bodyVertex": 10157,
+        "worldPointMeters": [
+          0.015675337985157967,
+          -0.03894411772489548,
+          1.0467573404312134
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01655254776024359
+        ],
+        "bodyRadiusMeters": 0.027284287014819823,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.010731739254576232
+      },
+      {
+        "bodyVertex": 10158,
+        "worldPointMeters": [
+          0.015848496928811073,
+          -0.03968152403831482,
+          1.0469133853912354
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01721044071069188
+        ],
+        "bodyRadiusMeters": 0.0279886982277598,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01077825751706792
+      },
+      {
+        "bodyVertex": 10324,
+        "worldPointMeters": [
+          0.0016270939959213138,
+          0.028065364807844162,
+          1.046433687210083
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06361775902881268
+        ],
+        "bodyRadiusMeters": 0.04471029397369012,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.018907465055122565
+      },
+      {
+        "bodyVertex": 10325,
+        "worldPointMeters": [
+          0.0032251556403934956,
+          0.028011901304125786,
+          1.0464304685592651
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06358115837291126
+        ],
+        "bodyRadiusMeters": 0.044743753824040625,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01883740454887063
+      },
+      {
+        "bodyVertex": 10326,
+        "worldPointMeters": [
+          0.00479501998052001,
+          0.027928238734602928,
+          1.0464280843734741
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0635340099112086
+        ],
+        "bodyRadiusMeters": 0.04480119691993638,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01873281299127222
+      },
+      {
+        "bodyVertex": 10369,
+        "worldPointMeters": [
+          0.007496976293623447,
+          -0.0605304092168808,
+          1.0472924709320068
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017973973823947744
+        ],
+        "bodyRadiusMeters": 0.04455129531429652,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026577321490348773
+      },
+      {
+        "bodyVertex": 10370,
+        "worldPointMeters": [
+          0.007844028063118458,
+          -0.06002186983823776,
+          1.0470647811889648
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01717629487141217
+        ],
+        "bodyRadiusMeters": 0.044110524113605394,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026934229242193224
+      },
+      {
+        "bodyVertex": 10371,
+        "worldPointMeters": [
+          0.008186915889382362,
+          -0.0595083013176918,
+          1.0468580722808838
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01635626123520517
+        ],
+        "bodyRadiusMeters": 0.04366826291701778,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02731200168181261
+      },
+      {
+        "bodyVertex": 10372,
+        "worldPointMeters": [
+          0.006444165483117104,
+          -0.061227019876241684,
+          1.047518014907837
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01862405438816672
+        ],
+        "bodyRadiusMeters": 0.045075497636074005,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026451443247907287
+      },
+      {
+        "bodyVertex": 10373,
+        "worldPointMeters": [
+          0.00568771455436945,
+          -0.061374109238386154,
+          1.047480821609497
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01844825748489801
+        ],
+        "bodyRadiusMeters": 0.045119423352012945,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.026671165867114936
+      },
+      {
+        "bodyVertex": 10374,
+        "worldPointMeters": [
+          0.004825717303901911,
+          -0.06143418699502945,
+          1.0473942756652832
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0181060282139891
+        ],
+        "bodyRadiusMeters": 0.0450785327082635,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.0269725044942744
+      },
+      {
+        "bodyVertex": 10375,
+        "worldPointMeters": [
+          0.01394657976925373,
+          -0.049651436507701874,
+          1.0462745428085327
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.014155450571023494
+        ],
+        "bodyRadiusMeters": 0.03586114494718316,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02170569437615967
+      },
+      {
+        "bodyVertex": 10376,
+        "worldPointMeters": [
+          0.014600931666791439,
+          -0.04933232069015503,
+          1.0466872453689575
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.016370424604170437
+        ],
+        "bodyRadiusMeters": 0.03582910059014976,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01945867598597932
+      },
+      {
+        "bodyVertex": 10377,
+        "worldPointMeters": [
+          0.015249820426106453,
+          -0.049011897295713425,
+          1.0471103191375732
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01833624584062007
+        ],
+        "bodyRadiusMeters": 0.03580831997685692,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.01747207413623685
+      },
+      {
+        "bodyVertex": 11524,
+        "worldPointMeters": [
+          0.01780608855187893,
+          -0.030427852645516396,
+          1.0423551797866821
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022538836016830977,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11525,
+        "worldPointMeters": [
+          0.017590999603271484,
+          -0.031140364706516266,
+          1.0433168411254883
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022816109890398385,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11526,
+        "worldPointMeters": [
+          0.01737189292907715,
+          -0.03183294087648392,
+          1.044290542602539
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0018637355225910332
+        ],
+        "bodyRadiusMeters": 0.023097871903770637,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.021234136381179602
+      },
+      {
+        "bodyVertex": 11527,
+        "worldPointMeters": [
+          0.015109899453818798,
+          -0.036660581827163696,
+          1.0457768440246582
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.011216987919658672
+        ],
+        "bodyRadiusMeters": 0.025104918048371193,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.013887930128712521
+      },
+      {
+        "bodyVertex": 11528,
+        "worldPointMeters": [
+          0.014981647953391075,
+          -0.03590298444032669,
+          1.045332431793213
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.007647304311898539
+        ],
+        "bodyRadiusMeters": 0.02442535081495516,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.016778046503056622
+      },
+      {
+        "bodyVertex": 11529,
+        "worldPointMeters": [
+          0.014972541481256485,
+          -0.03518974408507347,
+          1.0449810028076172
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004952566265374685
+        ],
+        "bodyRadiusMeters": 0.02386042552885879,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.018907859263484105
+      },
+      {
+        "bodyVertex": 11542,
+        "worldPointMeters": [
+          0.03482299670577049,
+          -0.015518536791205406,
+          1.0364283323287964
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.034844519096537664,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11543,
+        "worldPointMeters": [
+          0.03539465367794037,
+          -0.014855940826237202,
+          1.0368330478668213
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03544260232048959,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11544,
+        "worldPointMeters": [
+          0.03593532741069794,
+          -0.01415491383522749,
+          1.037737250328064
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03602369873170509,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11545,
+        "worldPointMeters": [
+          0.033625926822423935,
+          -0.016672929748892784,
+          1.0380001068115234
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.033630238234535974,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11546,
+        "worldPointMeters": [
+          0.033002860844135284,
+          -0.017178142443299294,
+          1.0397281646728516
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03301192355341032,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11547,
+        "worldPointMeters": [
+          0.03235349804162979,
+          -0.01767176203429699,
+          1.041459560394287
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.032375006326169305,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11557,
+        "worldPointMeters": [
+          0.03688347712159157,
+          -0.012698465958237648,
+          1.0400784015655518
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03709509069786442,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11558,
+        "worldPointMeters": [
+          0.037282347679138184,
+          -0.011962042190134525,
+          1.0412551164627075
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03757582636343836,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11559,
+        "worldPointMeters": [
+          0.03763300180435181,
+          -0.011225175112485886,
+          1.0424110889434814
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.038021250899692376,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11587,
+        "worldPointMeters": [
+          0.040080726146698,
+          0.010167629458010197,
+          1.0367568731307983
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004089924443111526,
+          0.04031424195848094
+        ],
+        "bodyRadiusMeters": 0.048209168528091234,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11588,
+        "worldPointMeters": [
+          0.03964629024267197,
+          0.010799882002174854,
+          1.0373425483703613
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0042525993968646715,
+          0.04131277247834268
+        ],
+        "bodyRadiusMeters": 0.048205297036037584,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11589,
+        "worldPointMeters": [
+          0.03918520361185074,
+          0.011440351605415344,
+          1.0379157066345215
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.004355864551006869,
+          0.04215095196058342
+        ],
+        "bodyRadiusMeters": 0.04819674039249195,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11593,
+        "worldPointMeters": [
+          0.031133372336626053,
+          0.019413048401474953,
+          1.0437414646148682
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05349964875991542
+        ],
+        "bodyRadiusMeters": 0.047619154474282985,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.005880494285632434
+      },
+      {
+        "bodyVertex": 11594,
+        "worldPointMeters": [
+          0.032004859298467636,
+          0.01876513846218586,
+          1.043339490890503
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0006121714952508558,
+          0.052605155676371966
+        ],
+        "bodyRadiusMeters": 0.047711101105598834,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11595,
+        "worldPointMeters": [
+          0.032839905470609665,
+          0.01810772530734539,
+          1.0429174900054932
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0012730587283395188,
+          0.05174464414430639
+        ],
+        "bodyRadiusMeters": 0.04779558459832515,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11617,
+        "worldPointMeters": [
+          0.040633827447891235,
+          0.006482369266450405,
+          1.0380083322525024
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0052674298009941865,
+          0.037333003294184826
+        ],
+        "bodyRadiusMeters": 0.04674344911701311,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11618,
+        "worldPointMeters": [
+          0.04003242030739784,
+          0.005862957797944546,
+          1.0402131080627441
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005084673359433526,
+          0.03800033030813256
+        ],
+        "bodyRadiusMeters": 0.0459151562836397,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11619,
+        "worldPointMeters": [
+          0.03942173346877098,
+          0.005243157036602497,
+          1.0424169301986694
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002885617726755222,
+          0.03883422524103513
+        ],
+        "bodyRadiusMeters": 0.045079873696309516,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11653,
+        "worldPointMeters": [
+          0.040858011692762375,
+          0.008928593248128891,
+          1.0355950593948364
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0031331120354499637,
+          0.038429715569623796
+        ],
+        "bodyRadiusMeters": 0.04818929955638736,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11654,
+        "worldPointMeters": [
+          0.04112718626856804,
+          0.008318408392369747,
+          1.0352647304534912
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002866733432823491,
+          0.03768952009245601
+        ],
+        "bodyRadiusMeters": 0.04809863535369736,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11655,
+        "worldPointMeters": [
+          0.041222382336854935,
+          0.007709643803536892,
+          1.0354139804840088
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.003085099221797091,
+          0.03721531074116354
+        ],
+        "bodyRadiusMeters": 0.04786786124232459,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11752,
+        "worldPointMeters": [
+          -0.0015968361403793097,
+          0.028069892898201942,
+          1.0464403629302979
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06361962145454704
+        ],
+        "bodyRadiusMeters": 0.04471342096022183,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01890620049432521
+      },
+      {
+        "bodyVertex": 11753,
+        "worldPointMeters": [
+          -0.0031943847425282,
+          0.028020717203617096,
+          1.046443223953247
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06358745374915727
+        ],
+        "bodyRadiusMeters": 0.044749728343698135,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01883772540545913
+      },
+      {
+        "bodyVertex": 11754,
+        "worldPointMeters": [
+          -0.004763490054756403,
+          0.02794087678194046,
+          1.0464465618133545
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06354490110510269
+        ],
+        "bodyRadiusMeters": 0.044809490473017896,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.018735410632084795
+      },
+      {
+        "bodyVertex": 11881,
+        "worldPointMeters": [
+          -0.02398490719497204,
+          -0.024597952142357826,
+          1.0430067777633667
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025274421176980456,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11882,
+        "worldPointMeters": [
+          -0.024493282660841942,
+          -0.02400127425789833,
+          1.0415356159210205
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025578640803518835,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11883,
+        "worldPointMeters": [
+          -0.02500767633318901,
+          -0.023402834311127663,
+          1.0400831699371338
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.025908363448574376,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 11971,
+        "worldPointMeters": [
+          -0.012589079327881336,
+          -0.0518181249499321,
+          1.0459550619125366
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.012203852503345559
+        ],
+        "bodyRadiusMeters": 0.037384843937178155,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.025180991433832595
+      },
+      {
+        "bodyVertex": 11972,
+        "worldPointMeters": [
+          -0.01274123601615429,
+          -0.05114314332604408,
+          1.0458542108535767
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0115420650002138
+        ],
+        "bodyRadiusMeters": 0.036802341283974686,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.025260276283760888
+      },
+      {
+        "bodyVertex": 11973,
+        "worldPointMeters": [
+          -0.012989003211259842,
+          -0.05053772032260895,
+          1.0458488464355469
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.011540661579925242
+        ],
+        "bodyRadiusMeters": 0.03632277225737487,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024782110677449627
+      },
+      {
+        "bodyVertex": 11977,
+        "worldPointMeters": [
+          -0.012386816553771496,
+          -0.053251612931489944,
+          1.0462543964385986
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.013933779576036693
+        ],
+        "bodyRadiusMeters": 0.03867243896870457,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02473865939266788
+      },
+      {
+        "bodyVertex": 11978,
+        "worldPointMeters": [
+          -0.01228712685406208,
+          -0.053977906703948975,
+          1.0464078187942505
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.014741807543156479
+        ],
+        "bodyRadiusMeters": 0.039329935279872164,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024588127736715683
+      },
+      {
+        "bodyVertex": 11979,
+        "worldPointMeters": [
+          -0.012183875776827335,
+          -0.05470927804708481,
+          1.0465673208236694
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.015547479528296798
+        ],
+        "bodyRadiusMeters": 0.03999381232287837,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.024446332794581575
+      },
+      {
+        "bodyVertex": 11986,
+        "worldPointMeters": [
+          -0.02065795473754406,
+          0.024943670257925987,
+          1.046272873878479
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06076856138133674
+        ],
+        "bodyRadiusMeters": 0.046408094007337655,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.014360467373999083
+      },
+      {
+        "bodyVertex": 11987,
+        "worldPointMeters": [
+          -0.019468380138278008,
+          0.025355054065585136,
+          1.046356201171875
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06126406386883519
+        ],
+        "bodyRadiusMeters": 0.04626392281539146,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.01500014105344373
+      },
+      {
+        "bodyVertex": 11988,
+        "worldPointMeters": [
+          -0.018259316682815552,
+          0.02573436126112938,
+          1.0464158058166504
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.06169756607904646
+        ],
+        "bodyRadiusMeters": 0.04611646951687448,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.015581096562171978
+      },
+      {
+        "bodyVertex": 13171,
+        "worldPointMeters": [
+          -0.03481872007250786,
+          -0.01552412286400795,
+          1.0363972187042236
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.034831549806486874,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13172,
+        "worldPointMeters": [
+          -0.035390086472034454,
+          -0.014859795570373535,
+          1.036806344985962
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03542933648335748,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13173,
+        "worldPointMeters": [
+          -0.03593020141124725,
+          -0.0141556141898036,
+          1.037718653678894
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.036010033192919226,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13174,
+        "worldPointMeters": [
+          -0.03362010419368744,
+          -0.016675380989909172,
+          1.0379762649536133
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.033615896350211984,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13175,
+        "worldPointMeters": [
+          -0.03299523517489433,
+          -0.017175979912281036,
+          1.03971529006958
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03299573982807217,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13176,
+        "worldPointMeters": [
+          -0.03234387934207916,
+          -0.01766405627131462,
+          1.0414592027664185
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03235662300483146,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13183,
+        "worldPointMeters": [
+          -0.03687777742743492,
+          -0.012691132724285126,
+          1.0400798320770264
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03708172225272534,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13184,
+        "worldPointMeters": [
+          -0.037276823073625565,
+          -0.011950879357755184,
+          1.0412660837173462
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.03756327081629557,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13185,
+        "worldPointMeters": [
+          -0.037627775222063065,
+          -0.011210859753191471,
+          1.042429804801941
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.038009672402720414,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13213,
+        "worldPointMeters": [
+          -0.031170805916190147,
+          0.019414708018302917,
+          1.043791651725769
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.053479410625190585
+        ],
+        "bodyRadiusMeters": 0.04763931858739607,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.005840092037794516
+      },
+      {
+        "bodyVertex": 13214,
+        "worldPointMeters": [
+          -0.03204730525612831,
+          0.01876659505069256,
+          1.0433942079544067
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0005277401225320649,
+          0.052626113468604685
+        ],
+        "bodyRadiusMeters": 0.047734945707364716,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13215,
+        "worldPointMeters": [
+          -0.03288687765598297,
+          0.01810927502810955,
+          1.0429768562316895
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0011862727404688082,
+          0.05178295373572478
+        ],
+        "bodyRadiusMeters": 0.04782313910927284,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13231,
+        "worldPointMeters": [
+          -0.040689125657081604,
+          0.006464004050940275,
+          1.038057565689087
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005329960377328303,
+          0.037291601452711765
+        ],
+        "bodyRadiusMeters": 0.04677505576261625,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13232,
+        "worldPointMeters": [
+          -0.040075838565826416,
+          0.0058504254557192326,
+          1.04025137424469
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.005111662753701668,
+          0.037978889121556815
+        ],
+        "bodyRadiusMeters": 0.04593945666604538,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13233,
+        "worldPointMeters": [
+          -0.039454225450754166,
+          0.005236594006419182,
+          1.0424450635910034
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.002859144877932665,
+          0.03881919231415804
+        ],
+        "bodyRadiusMeters": 0.045097657065251984,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13429,
+        "worldPointMeters": [
+          0.01985018327832222,
+          -0.02794109284877777,
+          1.0423458814620972
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022857729601775633,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13430,
+        "worldPointMeters": [
+          0.019159933552145958,
+          -0.028503865003585815,
+          1.0417821407318115
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.022552333612595996,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13431,
+        "worldPointMeters": [
+          0.018565578386187553,
+          -0.029097026214003563,
+          1.0415163040161133
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02237489693894068,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 13495,
+        "worldPointMeters": [
+          0.02135702595114708,
+          -0.02684599906206131,
+          1.0438101291656494
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0005238586336474216
+        ],
+        "bodyRadiusMeters": 0.02368490521150271,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02316104657785529
+      },
+      {
+        "bodyVertex": 13496,
+        "worldPointMeters": [
+          0.02210487425327301,
+          -0.026294860988855362,
+          1.0443699359893799
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0032051711779655188
+        ],
+        "bodyRadiusMeters": 0.02413525549813084,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02093008432016532
+      },
+      {
+        "bodyVertex": 13497,
+        "worldPointMeters": [
+          0.022811120375990868,
+          -0.025736473500728607,
+          1.0445464849472046
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00437683512472149
+        ],
+        "bodyRadiusMeters": 0.02457112269738972,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02019428757266823
+      },
+      {
+        "bodyVertex": 13579,
+        "worldPointMeters": [
+          0.02730381488800049,
+          0.02187369391322136,
+          1.0451066493988037
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.056687239282313374
+        ],
+        "bodyRadiusMeters": 0.047192401166682545,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.00949483811563083
+      },
+      {
+        "bodyVertex": 13580,
+        "worldPointMeters": [
+          0.028310248628258705,
+          0.021281953901052475,
+          1.044805884361267
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05590995295046058
+        ],
+        "bodyRadiusMeters": 0.04730647467094997,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.008603478279510607
+      },
+      {
+        "bodyVertex": 13581,
+        "worldPointMeters": [
+          0.029284900054335594,
+          0.020673304796218872,
+          1.044476866722107
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.055126526954874674
+        ],
+        "bodyRadiusMeters": 0.047416077601319766,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.007710449353554909
+      },
+      {
+        "bodyVertex": 13591,
+        "worldPointMeters": [
+          0.02520121820271015,
+          0.02299855649471283,
+          1.045615315437317
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05821523344337194
+        ],
+        "bodyRadiusMeters": 0.04695276936274013,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.011262464080631814
+      },
+      {
+        "bodyVertex": 13592,
+        "worldPointMeters": [
+          0.024108054116368294,
+          0.023526981472969055,
+          1.0458216667175293
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05892096398110419
+        ],
+        "bodyRadiusMeters": 0.046827290038085244,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.012093673943018947
+      },
+      {
+        "bodyVertex": 13593,
+        "worldPointMeters": [
+          0.022989097982645035,
+          0.02402910776436329,
+          1.0459959506988525
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.05958428324263116
+        ],
+        "bodyRadiusMeters": 0.046697439812486606,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": -0.012886843430144554
+      },
+      {
+        "bodyVertex": 13612,
+        "worldPointMeters": [
+          0.0029448391869664192,
+          -0.06144872307777405,
+          1.0472369194030762
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017458921809845533
+        ],
+        "bodyRadiusMeters": 0.04493045523027651,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027471533420430974
+      },
+      {
+        "bodyVertex": 13613,
+        "worldPointMeters": [
+          0.0019730913918465376,
+          -0.061446063220500946,
+          1.0472007989883423
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.01730327752377973
+        ],
+        "bodyRadiusMeters": 0.044874492103396675,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.027571214579616945
+      },
+      {
+        "bodyVertex": 13614,
+        "worldPointMeters": [
+          0.0009900606237351894,
+          -0.06144217029213905,
+          1.0471853017807007
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.017235529687692437
+        ],
+        "bodyRadiusMeters": 0.04483803922052219,
+        "bodyNeckWeight": 1.0,
+        "bodyMinusHeadRadiusMeters": 0.02760250953282975
+      },
+      {
+        "bodyVertex": 14809,
+        "worldPointMeters": [
+          0.030945653095841408,
+          -0.01873340643942356,
+          1.0430594682693481
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.031022317939872094,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14810,
+        "worldPointMeters": [
+          0.030186990275979042,
+          -0.019315043464303017,
+          1.0426905155181885
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.030311731821053744,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14811,
+        "worldPointMeters": [
+          0.02940167672932148,
+          -0.01991230435669422,
+          1.0418500900268555
+        ],
+        "positiveHeadIntersectionsMeters": [],
+        "bodyRadiusMeters": 0.02959020780878058,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14839,
+        "worldPointMeters": [
+          0.03439716622233391,
+          0.016771512106060982,
+          1.042022466659546
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0023007525491031983,
+          0.049882209536316925
+        ],
+        "bodyRadiusMeters": 0.04793879379495482,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14840,
+        "worldPointMeters": [
+          0.03511884808540344,
+          0.0160968080163002,
+          1.0415529012680054
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0027622020089604835,
+          0.04887225096908909
+        ],
+        "bodyRadiusMeters": 0.0479969324980794,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14841,
+        "worldPointMeters": [
+          0.03580303490161896,
+          0.015420780517160892,
+          1.0410698652267456
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.0031246771429155615,
+          0.04788029342547084
+        ],
+        "bodyRadiusMeters": 0.04804647557407291,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14884,
+        "worldPointMeters": [
+          0.04010580852627754,
+          -0.00083876249846071,
+          1.0406776666641235
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00714288830681386,
+          0.0314645718608372
+        ],
+        "bodyRadiusMeters": 0.0431011876528292,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14885,
+        "worldPointMeters": [
+          0.04023878276348114,
+          -0.0014745719963684678,
+          1.0399068593978882
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00828511241023572,
+          0.03008987600078529
+        ],
+        "bodyRadiusMeters": 0.042996976190258517,
+        "bodyNeckWeight": 1.0
+      },
+      {
+        "bodyVertex": 14886,
+        "worldPointMeters": [
+          0.04035068675875664,
+          -0.0021230459678918123,
+          1.0391117334365845
+        ],
+        "positiveHeadIntersectionsMeters": [
+          0.00917721489810002,
+          0.028539440524335026
+        ],
+        "bodyRadiusMeters": 0.04287823651142797,
+        "bodyNeckWeight": 1.0
+      }
+    ]
+  },
+  "attribution": "Body is open and its source whole-face height crop leaves an irregular upper ring. Head is closed. Native posed ownership/continuity views remain necessary.",
+  "nextRepair": "Author a clean actual Head/Body junction with matched surface and Neck weights; do not hide the open sawtooth with scarf; preserve upper face/bind/actions and apply matching neck geometry to restoration partition",
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}

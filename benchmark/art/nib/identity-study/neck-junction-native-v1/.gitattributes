@@ -1,0 +1,3 @@
+# Preserve exact native process evidence bytes referenced by actual-result.json.
+actual-evidence/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+actual-evidence/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
