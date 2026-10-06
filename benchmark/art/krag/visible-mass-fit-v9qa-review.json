@@ -1,0 +1,94 @@
+{
+  "status": "Actual source/save/reopen and three views completed; artistic and mouth acceptance failed",
+  "artisticAcceptance": false,
+  "mouthAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_VisibleMassFit_v9qa_WIP.blend",
+    "sha256": "9e3a0ca39088053cbbca9e8b20b8144c8e12d51927ed9d613a42b4c1f704b01c"
+  },
+  "sourceReportSha256": "9bc6105039d19bae947ea1042db682a56cde6f8428b504288ecd66ba8502f859",
+  "execution": [
+    {
+      "job": "krag-visible-mass-fit-v9qa-source",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1140.0,
+      "minimumAvailableMB": 10777.0,
+      "telemetrySha256": "b1002800329785433bf8e709d4f24f1b4d13cf6ea600962257769bb51ccd9103",
+      "stdoutSha256": "5a88fc4a37b3142926673ccffb4ec9c12d2ebe4f9f98d8d2af7729ba23dffb10",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "job": "krag-visible-mass-fit-v9qa-FrontClay",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2121.0,
+      "minimumAvailableMB": 10062.0,
+      "telemetrySha256": "2542047e4514cc06115d1744b67cd43d67f1505d26e52c27b5d12572c03fa173",
+      "stdoutSha256": "355499f0f4429352779d6279264f746dd2a1291ec479e9aec9e48ac0a7254960",
+      "stderrSha256": "83a76cf6091382e445ca1400bc58b1d7f6c68677482e686c2c99d21b20b50b12"
+    },
+    {
+      "job": "krag-visible-mass-fit-v9qa-RightClay",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2123.0,
+      "minimumAvailableMB": 10000.0,
+      "telemetrySha256": "fe165548238589da7074657f28a82a75a430fef0041721ce5af089631809b7d3",
+      "stdoutSha256": "fc5e7abf12ade250a6c1587c0563405d6ffe189a1c98076d46682865099639e0",
+      "stderrSha256": "83a76cf6091382e445ca1400bc58b1d7f6c68677482e686c2c99d21b20b50b12"
+    },
+    {
+      "job": "krag-visible-mass-fit-v9qa-OpenFront",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2071.0,
+      "minimumAvailableMB": 10017.0,
+      "telemetrySha256": "e997721374e82922c1c700b24127dbfe684956f4b6bf6886c73ebfe9bcdb9c88",
+      "stdoutSha256": "9c4c9a884f71ea8bcc8b08dc771879c95ad87ed8ba097be62f1ecdb409c2ce70",
+      "stderrSha256": "4fd5ce543acda6294df85e23571d0f01d519216393ece12603897c2ea91be541"
+    }
+  ],
+  "views": [
+    {
+      "view": "FrontClay",
+      "image": "benchmark/art/krag/renders/Krag_v9qa_FrontClay.png",
+      "imageSha256": "b7c92efaac6b46c23280809e4314d317464591ae683ebf1d1daeaadc0e6da696",
+      "metadataSha256": "3005767edf4b5bda41bf476251ef9a9483809ff3589d9cad2771055664b24b42"
+    },
+    {
+      "view": "RightClay",
+      "image": "benchmark/art/krag/renders/Krag_v9qa_RightClay.png",
+      "imageSha256": "781f4fb993f859f70616802664e968817fcba2ffd5442b0e9de12dd91d06fad7",
+      "metadataSha256": "afc9febaf3c86b0418382054ee3c6db1253956597c87f4d77c5f3b6989efc2b6"
+    },
+    {
+      "view": "OpenFront",
+      "image": "benchmark/art/krag/renders/Krag_v9qa_OpenFront.png",
+      "imageSha256": "3aa6c7fc72e8723b379846211a676701167776eebf8164d61e84b1794394ec46",
+      "metadataSha256": "870165f8ee9fbb69e7ddb81e9717274219a32f2f98585850f1729bb14c5aa2bb"
+    }
+  ],
+  "verifiedTechnicalScope": [
+    "Head/Face/MouthInterior neutral surface gates pass with zero inverted triangles",
+    "160 actual ocular-contact points and rigid eye surfaces exact",
+    "All existing bind matrices and action curves preserved",
+    "Local corner Jaw-weight gradient429.19 to99.09 per metre; central full support and full jaw range preserved",
+    "Saved source reopened with matching authored coordinate signatures"
+  ],
+  "visibleFindings": [
+    "Frontal brow/nasal interval is more compressed and jaw outline broader, but this does not meet concept likeness",
+    "Orbital skin has pinched radial folds; cheek and muzzle remain broad smooth planes",
+    "Right profile retains pointed brow projection, long smooth cheek and separate lip/chin ledges instead of the concept heavy connected skull and mandible",
+    "Neutral tusks are thin exterior hooked blades; full opening hides them again",
+    "Full-range aperture remains tall with near-vertical square sides, uneven lower-lip roll and inadequate visible gum/tongue depth",
+    "Skin remains pale and uniformly cracked; cowl and armor remain known simplified failures"
+  ],
+  "nextConstraints": [
+    "Correct frontal and profile skull/muzzle/jaw as a coherent anatomical envelope instead of treating a normal/area pass as visual success",
+    "Preserve actual optical and oral topology, but reconstruct broad brow/cheek/mandibular masses from the approved concept with consistent projected landmarks",
+    "Normal opening still needs lip/corner support and oral-floor presentation verified in real posed meshes",
+    "No mechanical-jaw cuff rebase may assume Natural mouth is accepted"
+  ]
+}

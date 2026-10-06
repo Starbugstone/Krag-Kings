@@ -1,6 +1,8 @@
 # Visible reference masses on the existing Krag topology
 
-**Current state:** native v9q generation stopped safely before saving. Its unchanged surface gate found145 orbital triangles below20% of their previous area (minimum15.93%), despite no inverted triangles. The older cached preflight omitted area ratio; that gap is now explicit in `visible-mass-fit-v9q-native-failure.json`. No v9q source or renders exist.
+**Current actual result:** v9qa saved/reopened successfully and has inspected FrontClay, RightClay and OpenFront views. All execution/surface checks pass, but likeness and full-range mouth appearance fail: pinched orbital skin, smooth broad cheek/muzzle, pointed brow profile, separated lip/chin ledges and square-sided dark opening. No source was promoted. See `art/krag/visible-mass-fit-v9qa-review.json`.
+
+**Retained previous failure:** native v9q generation stopped safely before saving. Its unchanged surface gate found145 orbital triangles below20% of their previous area (minimum15.93%), despite no inverted triangles. The older cached preflight omitted area ratio; that gap is now explicit in `visible-mass-fit-v9q-native-failure.json`. No v9q source or renders exist.
 
 The separately named **v9qa preparation** retains the same visible reference handles and fixed eyes, but bounds the continuous-flow interval at0.68 instead of0.85. Full cached surface checks now measure22.83mm maximum movement,0.2137 minimum area ratio and zero inverted triangles; the failed0.75 numerical proposal is retained. This is preparation only. The unchanged native gate, actual Face/MouthInterior checks, save/reopen and clay/open-mouth review must still pass. The frozen failed v9q scripts remain unchanged.
 

@@ -1,0 +1,78 @@
+{
+  "status": "Actual coherent-topology reference-mass fit; neutral and full-range mouth inspection required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+    "sha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_VisibleMassFit_v9qa_WIP.blend",
+    "sha256": "9e3a0ca39088053cbbca9e8b20b8144c8e12d51927ed9d613a42b4c1f704b01c"
+  },
+  "referenceSha256": "f6513fa6cb0c50c07d9e1adad1a17e7c15a1f75bfa8dc0745593cb08ef5f0026",
+  "referenceUse": "Inspected near-side visible broad masses only; no GLB topology/noise/eyes/teeth/rear transferred",
+  "scaleNormalizedToMeters": 0.530737690418528,
+  "flowDuration": 0.68,
+  "actualOcularContactVerticesFixed": 160,
+  "ocularGeometryExact": true,
+  "commissureSupport": {
+    "method": "Smooth finite-slope factor on the old square-root rim support within14mm of each real commissure",
+    "affectedVertices": 901,
+    "worldGeodesicSupportMeters": 0.014,
+    "beforeMaximumLocalJawGradientPerMeter": 429.19091982726474,
+    "afterMaximumLocalJawGradientPerMeter": 99.08601831850741,
+    "centralFullMandibularSupportAndRangePreserved": true,
+    "actualPoseAcceptance": false
+  },
+  "changedModules": [
+    {
+      "module": "Head",
+      "neutralSurface": {
+        "flippedTriangles": 0,
+        "minimumTriangleAreaRatio": 0.21366709573037612,
+        "normalChangeDegreesP99": 50.215765990045504,
+        "normalChangeDegreesMaximum": 74.89853660889715,
+        "preexistingDegenerateTriangles": 0,
+        "maxDisplacementMeters": 0.022831089749077518
+      }
+    },
+    {
+      "module": "Face",
+      "neutralSurface": {
+        "flippedTriangles": 0,
+        "minimumTriangleAreaRatio": 0.7898610440529024,
+        "normalChangeDegreesP99": 21.37031442201509,
+        "normalChangeDegreesMaximum": 29.801410085402022,
+        "preexistingDegenerateTriangles": 0,
+        "maxDisplacementMeters": 0.017970491194749656
+      }
+    },
+    {
+      "module": "MouthInterior",
+      "neutralSurface": {
+        "flippedTriangles": 0,
+        "minimumTriangleAreaRatio": 0.7152020265881084,
+        "normalChangeDegreesP99": 27.615535995198723,
+        "normalChangeDegreesMaximum": 33.35370809399211,
+        "preexistingDegenerateTriangles": 0,
+        "maxDisplacementMeters": 0.02062647485316506
+      }
+    }
+  ],
+  "allBindActionsUnrelatedMeshesPreserved": "31f5af06da06b1eee4988e52bc90464c666348592888f82f0b56be4034e60a65",
+  "savedReopenedChecksPassed": true,
+  "recipeHashes": {
+    "build_visible_masses_v9qa.py": "a808b70ffb0f12a4f7f3aae70a5d77af57dd15ca950aa01c6ab9c3f3e8ff145d",
+    "fit_visible_masses.py": "27ca583624dc3344a180cf57a1e525a980394b24e707679e83a4c2a09ffe7f43",
+    "fit_visible_masses_v9qa.py": "35e6d81a9502516494a661087e81bfd142098df0c5ed3f6cf2045de5d01457eb",
+    "reference_landmarks.py": "682481d347fa3b0be8d3cdb7addb0946f36d4f31bd8ec932c686c87b7e73c4f9",
+    "commissure_support.py": "9f8959808a1ef404bd7ef827efa45fb4811eb3ace72a8e49b15695927f09e047"
+  },
+  "pending": [
+    "Actual frontal/profile clay concept likeness",
+    "Full-range lip/chin/corner volume",
+    "Short broad natural tusk crown/root refit; existing hooks remain unaccepted",
+    "Material/cowl/armor construction and mechanical jaw compatibility"
+  ]
+}
