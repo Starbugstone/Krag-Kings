@@ -319,5 +319,12 @@
   "failedV9gCombinedAttempts": [
     "v9g-attempt1-failure.json",
     "v9g-attempt2-failure.json"
-  ]
+  ],
+  "knownJawDomainDefect": {
+    "evidence": "benchmark/art/krag/anatomy-study/jaw-source-domain-audit-v9f.json",
+    "finding": "Raw control-cage upper-lip rim Jaw weights: 27/27 positive, mean0.6516/max0.9776; needs actual saved dense pose verification",
+    "preparedRepair": "benchmark/art/krag/jaw-topology-patch-prepared.json",
+    "savedRepairExists": false,
+    "neutralFaceRecipeUnchanged": true
+  }
 }

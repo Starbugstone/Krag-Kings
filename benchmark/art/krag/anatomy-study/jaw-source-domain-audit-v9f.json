@@ -1,0 +1,116 @@
+{
+  "status": "Raw control-cage classification of current Krag Jaw formula; not actual dense saved-weight or posed verification",
+  "sourceGeometrySha256": "bbe35776c14f9b9142deffc3d83826564586c36868f5fae2250806d18616005d",
+  "sourceAttributeSha256": "4a3c528af95370a30fc8e2d9572a167d967e64b336e8fbc91e40b097680aaa44",
+  "fieldRecipe": "krag_face.face_weights: raw-Z smooth((.239-z)/.011) times depth, with neck exception z<.168",
+  "regions": {
+    "upperLipRim": {
+      "vertices": 27,
+      "positiveJawVertices": 27,
+      "maxJawWeight": 0.9776034951210022,
+      "meanJawWeight": 0.6516017913818359,
+      "sourceBounds": [
+        [
+          -0.024270983412861824,
+          -0.14121204614639282,
+          0.22897997498512268
+        ],
+        [
+          0.024180008098483086,
+          -0.1235470324754715,
+          0.23351699113845825
+        ]
+      ]
+    },
+    "lowerLipRim": {
+      "vertices": 21,
+      "positiveJawVertices": 21,
+      "maxJawWeight": 0.9958378672599792,
+      "meanJawWeight": 0.9775362610816956,
+      "sourceBounds": [
+        [
+          -0.024270983412861824,
+          -0.13946904242038727,
+          0.22841496765613556
+        ],
+        [
+          0.024180008098483086,
+          -0.12499213218688965,
+          0.22951696813106537
+        ]
+      ]
+    },
+    "nose": {
+      "vertices": 151,
+      "positiveJawVertices": 0,
+      "maxJawWeight": 0.0,
+      "meanJawWeight": 0.0,
+      "sourceBounds": [
+        [
+          -0.023667002096772194,
+          -0.16345006227493286,
+          0.2566569447517395
+        ],
+        [
+          0.023715998977422714,
+          -0.1298590451478958,
+          0.3040289282798767
+        ]
+      ]
+    },
+    "upperFaceAndCheek": {
+      "vertices": 967,
+      "positiveJawVertices": 148,
+      "maxJawWeight": 1.0,
+      "meanJawWeight": 0.10461511462926865,
+      "sourceBounds": [
+        [
+          -0.08673799782991409,
+          -0.15107905864715576,
+          0.22089390456676483
+        ],
+        [
+          0.08668000996112823,
+          0.07727692276239395,
+          0.4362730085849762
+        ]
+      ]
+    },
+    "lowerJaw": {
+      "vertices": 456,
+      "positiveJawVertices": 432,
+      "maxJawWeight": 1.0,
+      "meanJawWeight": 0.9186813831329346,
+      "sourceBounds": [
+        [
+          -0.07635200023651123,
+          -0.14785005152225494,
+          0.17075014114379883
+        ],
+        [
+          0.07641199231147766,
+          -0.037916142493486404,
+          0.26140502095222473
+        ]
+      ]
+    },
+    "oralBag": {
+      "vertices": 249,
+      "positiveJawVertices": 159,
+      "maxJawWeight": 1.0,
+      "meanJawWeight": 0.55989670753479,
+      "sourceBounds": [
+        [
+          -0.04089299961924553,
+          -0.14121204614639282,
+          0.2037632167339325
+        ],
+        [
+          0.04099399596452713,
+          -0.027474038302898407,
+          0.26785796880722046
+        ]
+      ]
+    }
+  }
+}

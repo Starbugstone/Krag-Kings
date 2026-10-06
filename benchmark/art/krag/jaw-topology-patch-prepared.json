@@ -1,0 +1,36 @@
+{
+  "status": "Prepared isolated topology-aware Jaw patch; syntax checked only, no saved Krag repair or posed result",
+  "sharedSolverCheckpoint": "b4c29ef",
+  "currentKragDefect": "Raw control-cage upper-lip rim Jaw weights: 27/27 positive, mean0.6516/max0.9776; needs actual saved dense pose verification",
+  "evidence": "benchmark/art/krag/anatomy-study/jaw-source-domain-audit-v9f.json",
+  "preserves": [
+    "geometry and all shape coordinates",
+    "source input file",
+    "rest skeleton",
+    "serious Krag facial acting"
+  ],
+  "requiredChecks": [
+    "Audited retained face-set/loop counts on actual source",
+    "Stored normalized Head/Neck/Jaw weights",
+    "Jaw-only and combined open-mouth actual deformation",
+    "Actual Blink/OpenMouth images"
+  ],
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9g_wip/krag_jaw_domains.py",
+      "sha256": "159c9c85cac1f13c45b02adc49f71ca8babcb57659671a828113dca61f84ea97"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/repair_saved_krag_jaw.py",
+      "sha256": "00f69364ea2093c1dddf763978da27bf6ccd6e588aa5681520a24c301f3f62bf"
+    },
+    {
+      "path": "benchmark/tools/krag/v9g_wip/audit_raw_jaw_field.py",
+      "sha256": "8085d1b3e4cace7d080a2ac9bca1fca6030d3aa8291d4e8e4102c891ff22b474"
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/mouth_jaw_weights.py",
+      "sha256": "32e162941906005c49e32803739a4f38086b947e99ce3fa982620789a91845fb"
+    }
+  ]
+}
