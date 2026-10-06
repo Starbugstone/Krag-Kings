@@ -4,7 +4,7 @@ No polygons, UVs, skeletons, weights, connections or animation are replaced.
 The source and target must have exactly identical vertex coordinates/order.
 Uses the installed Blender FBX parser/writer, not hand-edited binary offsets.
 """
-import argparse, hashlib, importlib, json, sys, types
+import argparse, array, hashlib, importlib, json, sys, types
 from pathlib import Path
 import numpy as np
 
@@ -24,10 +24,31 @@ def preserve(source,target,addons,preserve_normals=True):
     source_vertices=child(bm[0],b'Vertices').props[0]
     target_vertices=child(am[0],b'Vertices').props[0]
     if source_vertices.tobytes()!=target_vertices.tobytes():raise ValueError('Cannot preserve point payloads after a vertex change')
+    source_normal_mapping=None;normal_collapse_error=0.
     if preserve_normals:
         source_normal=child(bm[0],b'LayerElementNormal')
-        if child(source_normal,b'MappingInformationType').props[0] not in [b'ByVertice',b'ByVertex']:
-            raise ValueError('Source normals are not point-domain; loop-aware remap required')
+        source_normal_mapping=child(source_normal,b'MappingInformationType').props[0]
+        if source_normal_mapping==b'ByPolygonVertex':
+            raw=np.asarray(child(bm[0],b'PolygonVertexIndex').props[0],dtype=np.int64)
+            indices=np.where(raw<0,-raw-1,raw)
+            normals=np.asarray(child(source_normal,b'Normals').props[0],dtype=np.float64).reshape((-1,3))
+            reference=child(source_normal,b'ReferenceInformationType').props[0]
+            if reference==b'IndexToDirect':normals=normals[np.asarray(child(source_normal,b'NormalsIndex').props[0],dtype=np.int64)]
+            elif reference!=b'Direct':raise ValueError('Unsupported source normal reference')
+            if len(normals)!=len(indices):raise ValueError('Source loop normal count mismatch')
+            points=np.zeros((len(source_vertices)//3,3),dtype=np.float64);points[indices]=normals
+            normal_collapse_error=float(np.linalg.norm(normals-points[indices],axis=1).max())
+            if normal_collapse_error>1e-7:raise ValueError('True split normals require a loop-aware remap, not point collapse')
+            children=[]
+            for node in source_normal.elems:
+                if node.id in [b'NormalsIndex',b'NormalsW']:continue
+                if node.id==b'MappingInformationType':node=node._replace(props=[b'ByVertice'])
+                elif node.id==b'ReferenceInformationType':node=node._replace(props=[b'Direct'])
+                elif node.id==b'Normals':node=node._replace(props=[array.array('d',points.ravel())])
+                children.append(node)
+            source_normal=source_normal._replace(elems=children)
+        elif source_normal_mapping not in [b'ByVertice',b'ByVertex']:
+            raise ValueError('Unsupported source normal mapping')
         old_normal=child(am[0],b'LayerElementNormal')
         am[0].elems[am[0].elems.index(old_normal)]=source_normal
     def shapes(root):return {n.props[1]:n for n in child(root,b'Objects').elems if n.id==b'Geometry' and n.props[2]==b'Shape'}
@@ -64,6 +85,8 @@ def preserve(source,target,addons,preserve_normals=True):
     return {'source':str(source),'target':str(target),'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'beforeSha256':original_hash,'afterSha256':hashlib.sha256(target.read_bytes()).hexdigest(),
             'pointCoordinatesByteIdentical':True,'restoredSourcePointNormalLayer':preserve_normals,
+            'sourceNormalMapping':source_normal_mapping.decode() if source_normal_mapping else None,
+            'sourceNormalVertexCollapseMaxError':normal_collapse_error,
             'restoredSparseMorphPayloads':len(bs),'allOtherSerializedPropertiesVerifiedUnchanged':True}
 
 
