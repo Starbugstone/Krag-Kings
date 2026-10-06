@@ -85,7 +85,7 @@ namespace KragKings.Benchmark
         {
             if(!playing)return;
             float t=Time.unscaledTime-started;
-            if(t>=28&&t<48){scene.PortraitCamera();return;}
+            if(t>=28&&t<48){scene.PortraitCamera(t>=45.25f);return;}
             Bounds bounds=scene.units[0].VisualBounds;
             bounds.Encapsulate(scene.units[1].VisualBounds);
             Vector3 focus=bounds.center;

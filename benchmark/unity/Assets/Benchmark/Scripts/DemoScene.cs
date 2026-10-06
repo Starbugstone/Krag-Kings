@@ -113,7 +113,7 @@ namespace KragKings.Benchmark
         public void Select(DemoUnit unit)
         {
             Selected=unit;
-            message=unit.species=="Nib" ? "Light functional replacements. No heavy augmentations." : "Heavy armor and industrial bionics.";
+            message=unit.species=="Nib" ? "Restores ordinary function. No upgrades." : "Heavy armor and industrial bionics.";
         }
         public bool Click(Vector2 screenPosition,bool move,bool walk=false)
         {
@@ -141,12 +141,19 @@ namespace KragKings.Benchmark
             cameraFocus=(units[0].transform.position+units[1].transform.position)*.5f+Vector3.up*.95f;
             yaw=165;pitch=22;distance=6.4f;
         }
-        public void PortraitCamera()
+        public void PortraitCamera(bool actionBust=false)
         {
             if(!Selected)return;
             cameraFocus=Selected.PortraitFocus;
             yaw=Selected.transform.eulerAngles.y+165;pitch=7;
             distance=Selected.species=="Krag"?1.35f:1.45f;
+            if(actionBust && Selected.species=="Krag")
+            {
+                // Face-only framing cropped the actual raised arm and weapon.
+                // Preserve the close facial view, then widen for acting poses.
+                cameraFocus-=Vector3.up*.18f;
+                yaw-=15;distance=2.4f;
+            }
         }
         public void SetView(Vector3 focus,float viewYaw,float viewPitch,float viewDistance)
         {cameraFocus=focus;yaw=viewYaw;pitch=viewPitch;distance=viewDistance;}
