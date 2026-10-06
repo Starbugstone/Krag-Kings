@@ -12,7 +12,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'v5_wip'))
 from nib_groom_v5 import ear_coordinates,configure_goggle_envelopes,avoid_goggles
 
 HEAD_REGIONS=[('crown',210),('fringe',120),('temple_L',90),('temple_R',90),('nape',120)]
-EAR_REGIONS=[('outer_rim',128),('inner_wisps',72),('outer_nap',160)]
+EAR_REGIONS=[('outer_rim',160),('inner_wisps',100),('outer_nap',160)]
 
 def head_selector(region,p,n,s):
     x,y,z=s
@@ -78,9 +78,11 @@ def make_guide(region,root,normal,source,seed,side=1):
         along,u=ear_coordinates(root);flow=Vector((-side*u*.64,-.06,u*.77))+Vector((side*.13,0,.18))
         length=rng.uniform(.021,.036);lift=.010
     else:
-        flow=Vector((side*.65,.06,.76));length=rng.uniform(.005,.010) if short else rng.uniform(.013,.024)
+        flow=Vector((side*.65,.06,.76));length=rng.uniform(.007,.012) if short else rng.uniform(.013,.024)
         lift=.002 if short else .007
-    flow-=normal*flow.dot(normal)
+    # The chin tuft falls away from the underside under gravity; projecting it
+    # completely onto a downward-facing surface would make a horizontal comb.
+    if region!='chin':flow-=normal*flow.dot(normal)
     if flow.length<1e-5:flow=normal.cross(Vector((1,0,0)))
     if flow.length<1e-5:flow=normal.cross(Vector((0,1,0)))
     flow.normalize();root=root+normal*.00025
@@ -88,10 +90,10 @@ def make_guide(region,root,normal,source,seed,side=1):
     tip=root+flow*length+normal*(.0005 if short else .002)
     if region in [r[0] for r in HEAD_REGIONS]:middle=avoid_goggles(middle);tip=avoid_goggles(tip)
     return {'region':region,'root':list(root),'normal':list(normal),'middle':list(middle),'tip':list(tip),
-            'halfWidthMeters':rng.uniform(.0008,.0013) if short else rng.uniform(.0016,.0026),
+            'halfWidthMeters':rng.uniform(.0013,.0023) if short else rng.uniform(.0016,.0026),
             'seed':seed,'sourceHint':list(source),'shortNap':short}
 
-def build_guides(head,collection):
+def build_guides(head,collection,nap_alpha_coverage):
     if head.data.attributes.get('nib_source_position') is None:raise RuntimeError('Reviewed fitted-head source coordinates are required')
     configure_goggle_envelopes(collection);groups=[];seed=70100
     for region,count in HEAD_REGIONS:
@@ -103,7 +105,22 @@ def build_guides(head,collection):
         ear=next(o for o in collection.objects if o.name.startswith('Fennec cupped ear ') and o.get('bone')=='Ear_'+side)
         for region,count in EAR_REGIONS:
             sampler=SurfaceSampler(ear,lambda p,n,s:ear_selector(region,p,n,s))
-            roots,audit=sampler.roots(count,seed,.0025 if region!='inner_wisps' else .0035)
+            # A fixed 160 short cards leave the broad exterior mostly bare.
+            # Report a measured-area density estimate, not assumed coverage.
+            target_coverage=1.35 if region=='outer_nap' else None
+            if not .05<nap_alpha_coverage<.98:raise RuntimeError('Invalid measured nap-atlas alpha coverage')
+            estimated_footprint=2*.0018*.0095*.78*nap_alpha_coverage
+            if target_coverage is not None:
+                count=max(count,math.ceil(sampler.total*target_coverage/estimated_footprint))
+                if count>2400:raise RuntimeError('Outer-ear area exceeds bounded candidate groom budget: '+str(count))
+            spacing=min(.0025 if region!='inner_wisps' else .0030,
+                        math.sqrt(sampler.total/max(count,1))*.58)
+            roots,audit=sampler.roots(count,seed,spacing)
+            audit['requestedGuides']=count
+            if target_coverage is not None:
+                audit['estimatedAlphaFootprintMetersSquared']=estimated_footprint
+                audit['targetProjectedCoverage']=target_coverage
+                audit['scope']='Guide-density estimate, not measured rendered coverage/overdraw'
             guides=[make_guide(region,*sample,seed+i,side=sign) for i,sample in enumerate(roots)]
             groups.append({'region':region+'_'+side,'bone':'Ear_'+side,
                            'materialRegion':'innerWisps' if region=='inner_wisps' else 'outerEar',

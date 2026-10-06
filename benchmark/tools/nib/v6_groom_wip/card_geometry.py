@@ -12,7 +12,7 @@ def emit_cards(name,guides,collection,rig,material,bone):
         root=Vector(guide['root']);mid=Vector(guide['middle']);tip=Vector(guide['tip']);normal=Vector(guide['normal'])
         short=guide['shortNap'];segments=3 if short else 5
         for layer,angle in enumerate([0] if short else [-.40,.40]):
-            base=len(vertices);tile=(guide['seed']+layer*7)%16
+            base=len(vertices);tile=12+guide['seed']%4 if short else (guide['seed']+layer*7)%12
             def atlas(u,v):
                 # Each 512px tile reserves 8px padding on all sides.
                 pad=8/512;u=pad+u*(1-2*pad);v=pad+v*(1-2*pad)
@@ -28,7 +28,9 @@ def emit_cards(name,guides,collection,rig,material,bone):
                 width=guide['halfWidthMeters']*(.72+.38*math.sin(t*math.pi))*(1-t)**.35
                 shading=normal.lerp(across.cross(tangent).normalized(),.35).normalized()
                 for sign,u in [(-1,0),(1,1)]:
-                    vertices.append(tuple(center+across*(width*sign)));uvs.append(atlas(u,t));point_normals.append(tuple(shading))
+                    point=center+across*(width*sign)
+                    if bone=='Head':point=avoid_goggles(point)
+                    vertices.append(tuple(point));uvs.append(atlas(u,t));point_normals.append(tuple(shading))
             end=len(vertices);vertices.append(tuple(avoid_goggles(tip) if bone=='Head' else tip));uvs.append(atlas(.5,1));point_normals.append(point_normals[-1])
             for j in range(segments-1):
                 a=base+j*2;faces.append((a,a+1,a+3,a+2))

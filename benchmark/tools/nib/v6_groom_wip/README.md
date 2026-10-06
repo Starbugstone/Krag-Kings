@@ -52,13 +52,15 @@ runtime accent subset; a second deterministic stream adds density. No strand
 simulation or different coverage is introduced. Actual Blender memory and
 render cost remain to be measured under the existing guard.
 
-Proposed root counts are 630 head guides, 400 long ear guides, 320 short exterior
-nap guides, and 12 chin guides. At two nine-triangle cards per long guide, one
-five-triangle card per nap guide and an every-fourth-guide accent stream, the
-analytic runtime estimate is about 122k triangles including existing fine face
-fuzz. That is an estimate from the prepared topology recipe, not measured mesh
-or performance evidence. Increase coverage through placement and layered flow,
-not thicker individual hairs or arbitrary count inflation.
+The guide proposal now uses 630 head guides, 520 long ear guides and 12 chin
+guides. Short exterior density is computed from actual eligible area, measured
+alpha coverage in the generated nap patterns and an explicit 1.35 projected
+coverage estimate, capped at 2,400 guides per ear for this bounded candidate.
+The earlier fixed 160 short cards per ear / 122k-triangle estimate is superseded:
+it would leave much of the broad exterior bare. Runtime accents use every
+fourth long guide and every eighth nap guide. Actual guide/triangle/strand/card
+counts are recorded on generation; coverage and performance require rendering.
+The count cap fails clearly if the surface cannot meet this candidate budget.
 
 ## Portable material agreement
 
@@ -70,7 +72,7 @@ the UE agent confirmed masked/TwoSided support and will verify the actual
 backface normal behavior. Tangent anisotropy is deferred until the shape and
 coverage pass. Numeric colors, threshold and density remain tuning proposals.
 
-Planned atlas layout is 16 padded clump patterns in a 2048² sheet. Cream head,
+Prepared atlas layout is 12 long-wisp and 4 dense-nap padded patterns in a 2048² sheet. Cream head,
 cream inner-ear and tawny outer-ear use separate color maps with the same alpha
 layout; normal/roughness/metal maps can be shared. Root-to-tip color and per-clump
 variation remain explicit. Mip alpha coverage must use the same clipping
@@ -84,3 +86,48 @@ counts. Then verify blink/tongue/body clips and backface lighting in both
 engines; capture separately from performance measurement. The current v5c
 images remain failures, and this prepared recipe makes no artistic acceptance
 claim.
+
+
+## Prepared executable sequence
+
+All files below are source preparation only; no atlas PNG, card mesh or groom
+`.blend` has been generated. A small in-memory pattern calculation checked one
+long pattern and one nap pattern: finite values, unit normals before PNG
+quantization, and approximately 29.1% / 47.7% content alpha coverage at 0.45.
+That is not a full-atlas, Blender API, image or engine validation.
+
+- `atlas.py` authors original straight-alpha RGBA patterns with staggered fine
+  fibers, root-to-tip regional color, restrained tangent relief and explicit
+  roughness. No external images or scans are represented as fur captures.
+- `build_groom_candidate.py` requires a matching reviewed-source hash and a
+  passed structural face gate. It writes only a new `art/nib/groom-study`
+  candidate and refuses to overwrite an existing `.blend`. It removes the old
+  broad groom only; face/body/cloth/fuzz geometry, morphs, UVs and skin weights
+  are fingerprinted before/after and must stay unchanged.
+- `generate-runtime.job.json` creates cards plus opaque accents and validates
+  finite/nondegenerate triangles, UVs, weights and goggle-lens clearance.
+- `review-runtime.job.json` prepares matched Face/Profile/ThreeQuarter/Back
+  views; `review-details.job.json` adds actual inner/outer-ear and back-head
+  closeups. Neither job implies artistic acceptance.
+- Only after runtime coverage/shape review, `generate-cinematic.job.json` uses
+  the same deterministic guides with two denser opaque fiber streams. The
+  first stream includes the runtime accent seeds; identical guide hashes and
+  actual matched renders still need verification. No simulation is added.
+
+These jobs require a fresh root allocation of the serialized heavy slot. They
+are not queued ahead of v5e geometry and its separate Wary/Tongue/Blink review.
+The existing `render_review.py` and frozen v5e generation/depth recipes were not
+modified. The inherited false v5d gate cannot be bypassed by this groom builder.
+
+The output's `groom-source.json` and scene `nib_groom_material_contract` expose
+the exact three MASK entries. A later PBR/export handoff must copy these RGBA
+maps by their declared filenames, preserve alpha and optional MASK fields, and
+exclude them from opaque RGB-only rebaking. The existing v5 PBR/export recipe
+is not yet wired for that pass-through and must not be used blindly on the new
+source. The actual face/nose atlas and unchanged opaque material maps remain
+separate requirements. No shared export is produced by the groom builder.
+
+[Follow-on review](FOLLOW_ON_REVIEW.md) records reference-backed placement,
+matting, expression and cloth-construction issues, including the actual Unreal
+playful capture. Scarf/bib/pockets/boots still require authored shape and later
+CC0 scan detail; neither the fur recipe nor denser cinematic fibers solve them.

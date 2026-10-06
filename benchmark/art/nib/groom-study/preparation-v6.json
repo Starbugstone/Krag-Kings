@@ -1,0 +1,36 @@
+{
+  "status": "Prepared source only; no atlas PNG, card mesh, groom source or Blender execution",
+  "codeSha256": {
+    "atlas.py": "5e93930775132051ff04efb8e1bbab0444a4337e6d1d6ea1c712791fcfeb8a97",
+    "build_groom_candidate.py": "cb6442d910ed8eb550e73f99d75ecd58dff709888027c3b3d1c17943030997ea",
+    "card_geometry.py": "31ff651a624671348670b8d74a05b47a883e28a4d31a4752271a3a0bac89593f",
+    "card_materials.py": "e171ae4b0df2a5949d5b4725177c2be5ea82e56b0e1ecd020943151e3234d839",
+    "guide_recipe.py": "e74bb4d359af48839ec1166202cc8cf464d8c550e6f140b7af33dc4d9f8fd06b",
+    "render_groom_details.py": "f16db8b79905cdf3702a5399bb0252194e322cbbe9903dcb8ad6663979900da0"
+  },
+  "sourceSyntaxParsed": true,
+  "jobJsonParsed": true,
+  "frozenV5eFilesUnchanged": {
+    "benchmark/tools/nib/v5_wip/rebuild_head_v5e.py": "3985981bb28cfc1597448638ab00a384db807d91f9825b8a14d80990a9b7e4a5",
+    "benchmark/tools/nib/v5_wip/fit_head_v5e.py": "9fd4bfc7809ad0546e0895b5aa35692b0c59167e6486293da3ae6b39854771bc",
+    "benchmark/tools/nib/v5_wip/native-v5e-generate.job.json": "5783d909f4f9e349686824ea26ac8317f92b818f596ac6f226ecdc5c008d9d3a",
+    "benchmark/tools/nib/v5_wip/native-v5e-depth-review.job.json": "a072c8bcdb5fb271c9a764ec0e6021eee85ea14888936222dc83c779dffc84a6",
+    "benchmark/tools/nib/render_review.py": "e19346aa9fb104efc5184abe45d66dcdb17364168ebfe327511805624b949522"
+  },
+  "lightweightPatternCalculation": {
+    "scope": "Two in-memory512px patterns only; not a full atlas or rendered asset",
+    "seed": 89100,
+    "longContentCoverageAt045": 0.2907087343912591,
+    "napContentCoverageAt045": 0.4769730424037461,
+    "finite": true,
+    "maximumNormalLengthErrorBeforePNG": 2.220446049250313e-16
+  },
+  "remaining": [
+    "Actual v5e geometry and extreme-expression review",
+    "Allocated runtime groom generation; inspect sampling/card API/zero-area/UV/clearance reports",
+    "Matched neutral/depth/ear/back-head images, then expressions",
+    "Cinematic guide equality and matched appearance",
+    "MASK texture pass-through in future PBR/export and actual engine measurements"
+  ],
+  "sharedAssetsModified": false
+}

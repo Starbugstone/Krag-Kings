@@ -1,0 +1,29 @@
+{
+  "name": "nib-v6-groom-cinematic",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v6_groom_wip\\build_groom_candidate.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5e_WIP.blend",
+    "--source-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-head-v5e.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\v6-cinematic",
+    "--representation",
+    "cinematic"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\nib-v6-groom-cinematic.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\nib-v6-groom-cinematic.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\nib-v6-groom-cinematic.log",
+  "successMarker": "NIB_GROOM_CANDIDATE_SAVED"
+}
