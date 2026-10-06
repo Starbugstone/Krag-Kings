@@ -1,0 +1,27 @@
+{
+  "name": "nib-semantic-body-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\repair_semantic_body.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-glove-v2\\Nib_FittedGlove_Study_v1.blend",
+    "--source-sha256",
+    "92e9fe76d4521f873edea5ecf0c2281f47da0a6e6b8a660927b1d8212d0905bb",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2.log",
+  "successMarker": "NIB_SEMANTIC_BODY_SOURCE_SAVED_AND_REOPENED"
+}

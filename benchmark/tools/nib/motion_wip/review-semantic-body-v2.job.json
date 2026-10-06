@@ -1,0 +1,27 @@
+{
+  "name": "nib-semantic-body-v2-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\review_semantic_body.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\Nib_Coherent_SemanticBody_v2.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\actual-views"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-semantic-body-v2-review.log",
+  "successMarker": "NIB_SEMANTIC_BODY_ACTUAL_REVIEW_COMPLETE"
+}
