@@ -1,0 +1,19 @@
+{
+  "recipes": [
+    {
+      "source": "benchmark/tools/animation/rebuild_nib_hand_fit.py",
+      "sha256": "4bca4bec2daa6d8c28194131b2609e47991cf4f674eb20ac3730cfccc62a9db6",
+      "receiptField": "recipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/hand_skin_domains.py",
+      "sha256": "663329c11bf3ec187f23fa1c312fb1926e33c172889e3ccb2504cfe674b0663c",
+      "receiptField": "domainRecipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/export_contract.py",
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+      "receiptField": null
+    }
+  ]
+}

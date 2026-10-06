@@ -9,6 +9,7 @@ parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--out',type=Path,default=OUT)
 parser.add_argument('--baseline-dir',type=Path,default=OUT,help='Matching reference FBXs for point-domain normal preservation; new topology needs its own isolated reference export')
 parser.add_argument('--texture-dir',type=Path,help='Explicit baked PBR directory for a new source; otherwise use baseline-dir/textures')
+parser.add_argument('--card-texture-dir',type=Path,help='Actual original groom atlas directory; masked maps are copied without rebaking or losing coverage alpha')
 parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
 parser.add_argument('--triangulate',action='store_true',help='Export a temporary triangulated mesh while retaining source vertices and shape keys')
 parser.add_argument('--preserve-baseline-morphs',action='store_true',help='Historical exact-payload conversion only; never use when correcting morphs')
@@ -55,19 +56,51 @@ import export_contract
 manifest['locomotion'],manifest['sourceAnimationContract']=export_contract.prepare(bpy,json.loads(scene['locomotion_contract']))
 manifest['facialPerformance']={name:{'authoredInBodyClip':True} for name in ['Idle','Walk','Run','Melee','Shoot','Hit']}
 source_report=json.loads(args.source_report.read_text())
-if source_report.get('candidateSha256',source_report['sourceSha256'])!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
+reported_source=(source_report.get('candidateSha256') or source_report.get('outputSha256') or source_report.get('sourceSha256'))
+if reported_source!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
 if candidate:
-    manifest['detailedMasterSha256']=source_report['sourceSha256']
-    manifest['runtimeReductionReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
+    if source_report.get('candidateSha256'):
+        manifest['detailedMasterSha256']=source_report['sourceSha256']
+        manifest['runtimeReductionReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
+    else:
+        manifest['authoredSourceReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
 manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','furStrands','furTriangles','cinematic']}
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
 if args.triangulate:
     manifest['geometryExport']={'triangulated':True,'method':'Disposable assembly triangulation; validated baseline vertex-domain normal layer preserved, corrected target morphs retained unless explicitly requested otherwise','sourceVertexOrderUnchanged':True,'mappedNormalMaxVectorError':0,'pointAndMorphPayloadsByteIdentical':args.preserve_baseline_morphs}
     manifest['geometryExport']['referenceDirectory']=os.path.relpath(BASELINE_OUT,OUT).replace('\\','/')
 manifest['shapeUnion']={'creation':'from_mix=False','copiedDriversClearedBeforeCreation':True,'copiedWeightsZeroedBeforeCreation':True,'bodyCorrectivesOnFacialVerticesChecked':True}
-for m in bpy.data.materials:
-    if not m.name.startswith('Nib_'):continue
-    manifest['materials'].append({'name':m.name,'baseColor':'textures/'+m.name+'_BaseColor.png','normal':'textures/'+m.name+'_Normal.png','roughness':'textures/'+m.name+'_Roughness.png','metallic':'textures/'+m.name+'_Metallic.png'})
+card_entries=json.loads(scene.get('nib_groom_material_contract','[]'))
+card_contract={entry['name']:entry for entry in card_entries}
+if len(card_contract)!=len(card_entries):raise RuntimeError('Duplicate groom material contract')
+used_materials={m.name:m for o in sources if o.type=='MESH' for m in o.data.materials if m}
+unused_cards=set(card_contract)-set(used_materials)
+if unused_cards:raise RuntimeError('Groom contract has no authored surface assignments: '+str(sorted(unused_cards)))
+for name,m in sorted(used_materials.items()):
+    if not name.startswith('Nib_'):raise RuntimeError('Uncontracted authored Nib material '+name)
+    if name in card_contract:
+        entry=dict(card_contract[name])
+        if (entry.get('alphaMode')!='MASK' or entry.get('alphaSource')!='baseColor.a'
+            or not 0<float(entry.get('alphaClipThreshold',0))<1
+            or entry.get('doubleSided') is not True or entry.get('doubleSidedNormalMode')!='Flip'
+            or entry.get('normalConvention')!='OpenGL +Y'):
+            raise RuntimeError('Incomplete portable groom material contract '+name)
+        for channel in ['baseColor','normal','roughness','metallic']:
+            relative=Path(entry[channel])
+            if relative.is_absolute() or len(relative.parts)!=2 or relative.parts[0]!='textures':
+                raise RuntimeError('Groom map must be a local textures/ file '+str(relative))
+            destination=OUT/relative
+            if args.card_texture_dir:
+                atlas=args.card_texture_dir/relative.name
+                if not atlas.is_file():raise RuntimeError('Missing original groom atlas '+str(atlas))
+                destination.parent.mkdir(parents=True,exist_ok=True)
+                if atlas.resolve()!=destination.resolve():shutil.copy2(atlas,destination)
+            if not destination.is_file():raise RuntimeError('Missing exported groom texture '+str(destination))
+            manifest.setdefault('groomTextureHashes',{})[entry[channel]]=hashlib.sha256(destination.read_bytes()).hexdigest()
+    else:
+        if m.get('portableAlphaMode')=='MASK':raise RuntimeError('Masked material missing scene contract '+name)
+        entry={'name':name,'baseColor':'textures/'+name+'_BaseColor.png','normal':'textures/'+name+'_Normal.png','roughness':'textures/'+name+'_Roughness.png','metallic':'textures/'+name+'_Metallic.png'}
+    manifest['materials'].append(entry)
 for a in bpy.data.actions:
     if a.name in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance']:
         manifest['clips'].append({'name':a.name,'startFrame':int(a.frame_range[0]),'endFrame':int(a.frame_range[1]),'fps':30})
@@ -77,8 +110,13 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
         if src.type!='MESH' or not visible(src,variant):continue
         o=src.copy();o.data=src.data.copy();scene.collection.objects.link(o);o.hide_set(False);o.hide_render=False;o.select_set(True);copies.append(o)
         o.data.uv_layers.active.name='UVMap'
-    variant_fur={'representation':'skinned opaque strands; no simulation','strands':sum(int(o.get('fur_strands',0)) for o in copies),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in copies if o.get('fur_strands'))}
-    if candidate and variant=='natural':manifest['fur']={**variant_fur,'cinematic':False,'scope':'Batched strand meshes; legacy fine edge/brow/chin tubes are additional geometry in total counts.'}
+    card_count=sum(int(o.get('fur_cards',0)) for o in copies)
+    strand_triangles=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in copies if o.get('fur_strands'))
+    card_triangles=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in copies if o.get('fur_cards'))
+    variant_fur={'representation':('skinned masked cards with opaque fiber accents' if card_count else 'skinned opaque strands'),
+                 'simulation':False,'cards':card_count,'strands':sum(int(o.get('fur_strands',0)) for o in copies),
+                 'triangles':strand_triangles+card_triangles,'cardTriangles':card_triangles,'strandTriangles':strand_triangles}
+    if candidate and variant=='natural':manifest['fur']={**variant_fur,'cinematic':False,'scope':'Tagged card and strand batches; untagged legacy fine edge/brow/chin tubes are additional geometry in total counts.'}
     # The active head owns the union of shape names; missing shapes on other
     # components are joined as their Basis, preserving both face and body targets.
     active=next(o for o in copies if o.get('bone')=='FaceSurface')

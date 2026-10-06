@@ -17,11 +17,13 @@ parser.add_argument('--source',type=Path,required=True)
 parser.add_argument('--source-report',type=Path,required=True)
 parser.add_argument('--out',type=Path,required=True)
 parser.add_argument('--reference-textures',type=Path,default=ROOT/'benchmark/shared/characters/nib/textures')
+parser.add_argument('--card-texture-dir',type=Path,help='Original masked groom atlas; preserve its RGBA coverage and shared map names')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 if not args.out.resolve().is_relative_to((ROOT/'benchmark/local/candidates').resolve()):
     raise RuntimeError('Prepared PBR outputs must remain under isolated local/candidates')
 source_hash=sha(args.source);source_report=json.loads(args.source_report.read_text())
-if source_report.get('candidateSha256')!=source_hash:raise RuntimeError('Saved source/report hashes do not match')
+reported_source=(source_report.get('candidateSha256') or source_report.get('outputSha256') or source_report.get('sourceSha256'))
+if reported_source!=source_hash:raise RuntimeError('Saved source/report hashes do not match')
 if any(args.out.glob('*.blend')):raise RuntimeError('Choose a fresh candidate directory; an earlier bake is already present')
 args.out.mkdir(parents=True,exist_ok=True);textures=args.out/'textures';textures.mkdir(exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(args.source))
@@ -68,9 +70,10 @@ report['fieldBakes'].append({'material':atlas_name,'mode':'actual face geometry 
 baked_names={atlas_name}
 region_names=['Nib_v5_HeadFur','Nib_v5_InnerEarWisps','Nib_v5_TawnyEarFur',
               'Nib_v5_DustyPinkEar','Nib_v5_TawnyEarUndercoat','Nib_OcularGlobe','Nib_OcularIris']
+assigned_materials={m for obj in source_objects for m in obj.data.materials if m is not None}
 for name in region_names:
     original=bpy.data.materials.get(name)
-    if original is None:raise RuntimeError('Next-source field material is missing: '+name)
+    if original not in assigned_materials:continue
     audit=uv_field_audit(original);domain=source_uv_domain(source_objects,original)
     copied=original.copy();copied.name=name+'_BakeEvaluation'
     carrier=plane(copied)
@@ -88,7 +91,29 @@ for name in region_names:
                                 'reviewRequired':'Same root-to-tip/clump color and regional separation on actual geometry'})
 
 used={m for obj in source_objects for m in obj.data.materials if m is not None}
+card_entries=json.loads(scene.get('nib_groom_material_contract','[]'))
+card_contract={entry['name']:entry for entry in card_entries}
+if len(card_contract)!=len(card_entries):raise RuntimeError('Duplicate groom material contract')
 for material in sorted(used,key=lambda m:m.name):
+    if material.name in card_contract:
+        record=dict(card_contract[material.name])
+        if (record.get('alphaMode')!='MASK' or record.get('alphaSource')!='baseColor.a'
+            or not 0<float(record.get('alphaClipThreshold',0))<1):
+            raise RuntimeError('Invalid masked groom atlas contract '+material.name)
+        if args.card_texture_dir is None:raise RuntimeError('Actual masked groom requires --card-texture-dir')
+        for key in ['baseColor','normal','roughness','metallic']:
+            relative=Path(record[key])
+            if relative.is_absolute() or len(relative.parts)!=2 or relative.parts[0]!='textures':
+                raise RuntimeError('Groom map must be textures/filename '+str(relative))
+            original=args.card_texture_dir/relative.name;target=args.out/relative
+            if not original.is_file():raise RuntimeError('Missing original groom map '+str(original))
+            if original.resolve()!=target.resolve():shutil.copy2(original,target)
+            if sha(original)!=sha(target):raise RuntimeError('Groom atlas copy changed bytes')
+        record['mode']='Original masked atlas copied byte-identically, including unassociated coverage alpha'
+        record['mapHashes']={key:sha(args.out/record[key]) for key in ['baseColor','normal','roughness','metallic']}
+        report['materials'].append(record)
+        continue
+    if material.get('portableAlphaMode')=='MASK':raise RuntimeError('Masked surface lacks groom scene contract '+material.name)
     record={'name':material.name}
     for channel,key in [('BaseColor','baseColor'),('Normal','normal'),('Roughness','roughness'),('Metallic','metallic')]:
         filename=material.name+'_'+channel+'.png';target=textures/filename

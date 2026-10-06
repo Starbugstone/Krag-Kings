@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "source": "benchmark/tools/animation/refine_nib_action_hands.py",
+      "sha256": "634befea87506ad6936ce1b4c8ded53d7097973bd0cc855f0ec1e6b74483682d",
+      "receiptField": "recipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/nib_anatomical_hand_pose.py",
+      "sha256": "c41f1b30bc8792fd4e80d3fc323766410350f35c09640d7b8ef86633af65f4b5",
+      "receiptField": "handPoseRecipeSha256"
+    },
+    {
+      "source": "benchmark/tools/animation/humanoid_arms.py",
+      "sha256": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+      "receiptField": null
+    },
+    {
+      "source": "benchmark/tools/animation/export_contract.py",
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+      "receiptField": null
+    },
+    {
+      "source": "benchmark/tools/animation/review_free_hand.py",
+      "sha256": "024823c6bea63da8419c6f789e1b65b799fa16af43c175f51b90ad8dbc304dfd",
+      "receiptField": null
+    }
+  ]
+}

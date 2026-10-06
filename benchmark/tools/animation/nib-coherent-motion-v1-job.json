@@ -1,0 +1,28 @@
+{
+  "name": "nib-coherent-motion-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\integrate_motion_study.py",
+    "--",
+    "--art-source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\coherent79-v2-runtime-wide-nap\\Nib_Groom_v6_runtime_WIP.blend",
+    "--motion-source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v7\\Nib_HumanMotion_Study_v7.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-motion-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-motion-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-motion-v1.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-motion-v1.stdout.log",
+  "successMarker": "KRAG_KINGS_MOTION_INTEGRATION_COMPLETE",
+  "memoryBudgetReason": "Isolated dense-art/action integration; skip mesh deformation during skeleton checks, retain 4 GiB process cap and 8 GiB available start threshold."
+}
