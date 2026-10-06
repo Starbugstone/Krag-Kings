@@ -1,6 +1,6 @@
 {
   "scope": "diagnostic groom over reviewed garment candidate",
-  "status": "Actual v2 garment views inspected; source unaccepted. Underarm ownership diagnostic must precede groom generation.",
+  "status": "Actual three garment views and object-color attribution inspected; diagnostic composition remains unaccepted.",
   "sourceSha256": "4df4d2fb46d83a457277ad1395adb63f6acde3af9d817ae430d7a282f82792f8",
   "garmentReview": "benchmark/art/nib/garment-study/v2/shirt-straps-actual-views/review.json",
   "garmentReviewSha256": "31585437d04918d40a82200c3359cb3e62f23a6caeb573f3bf5b974f909b5eb3",
@@ -13,11 +13,14 @@
   ],
   "garmentReviewFindings": [
     "Shoulder exposure and belt attachments improve in actual Front/Back",
-    "Raised-arm triangular sheet persists; object ownership not yet attributed",
+    "Raised-arm triangular sheet attributed by actual object-color view to Body skin, not new shirt or bib",
     "Thin/jagged cloth edges, side seam pinching and old scarf remain failed",
     "Forearm tube coils and tight pelvic/trouser silhouette remain failed"
   ],
   "handMigration": "Root owns explicit left-digit bind/mesh migration; do not cross-bind copy old actions",
-  "underarmOwnershipStatus": "PENDING_ACTUAL_VIEW",
-  "generationStatus": "Prepared only; actual underarm attribution must precede native groom generation"
+  "underarmOwnershipStatus": "ACTUAL_VIEW_BODY_SKIN",
+  "generationStatus": "Authorized isolated diagnostic groom on unchanged reviewed v2; no asset acceptance or shared promotion",
+  "underarmOwnershipReview": "benchmark/art/nib/garment-study/v2/underarm-ownership/review.json",
+  "underarmOwnershipReviewSha256": "3e518d10b7c3ea12a761ce4a0e647b31ef975af7a7f7018bb620270de5d1f1bd",
+  "underarmOwnershipFinding": "Green Continuous Nib anatomy organic forms the raised-arm triangular sheet; yellow shirt and blue bib are separate and not its source. Skinning/skin coverage remains a release-blocking failure."
 }

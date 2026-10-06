@@ -1,0 +1,13 @@
+"""Lightweight original-cage fit/skin-field comparison before native generation."""
+import json,hashlib,sys
+from pathlib import Path
+import numpy as np
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3];sys.path.insert(0,str(HERE))
+from anatomical_body_fit import crop,warp as old_warp
+from anatomical_domain_v2 import solve,warp
+source=ROOT/'benchmark/local/nib-axilla-actual-shoot-v2.npz';d=np.load(source,allow_pickle=True);raw=d['reference_points'];original=d['reference_faces'];sets=d['reference_face_sets'];used,faces=crop(raw,original);lookup={tuple(face):i for i,face in enumerate(original)};face_ids=np.asarray([lookup[tuple(int(used[i]) for i in face)] for face in faces]);p=raw[used];field,stats=solve(p,faces,sets[face_ids]);old=old_warp(p);new=warp(p,field);delta=np.linalg.norm(new-old,axis=1)
+tri=np.asarray([(f[0],f[i],f[i+1]) for f in faces for i in range(1,len(f)-1)],int)
+q=old[tri];before=np.cross(q[:,1]-q[:,0],q[:,2]-q[:,0]);q=new[tri];after=np.cross(q[:,1]-q[:,0],q[:,2]-q[:,0]);bl=np.linalg.norm(before,axis=1);al=np.linalg.norm(after,axis=1);cos=np.sum(before*after,1)/np.maximum(bl*al,1e-20)
+report={'status':'Prepared original-cage coherent fit/skin field, native mesh and posed review not run','referenceCacheSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'cageVertices':len(p),'cageFaces':len(faces),'field':stats,'fitChangeMeters':{'max':float(delta.max()),'median':float(np.median(delta)),'p95':float(np.quantile(delta,.95))},'minimumTriangleDoubleAreaMetersSquared':float(al.min()),'newZeroAreaTriangles':int((al<1e-12).sum()),'normalDotWithOldMin':float(cos.min()),'moreThan90DegreeNormalChanges':int((cos<0).sum()),'minimumAreaRatio':float((al/bl).min()),'fixedBind':'No bone edits. Original target shoulder/elbow/wrist anchors retained.','cloth':'Existing fitted cloth retained, but new underarm/body geometry requires actual contact review.','codeSha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),HERE/'anatomical_domain_v2.py']},'largestChanges':[{'cageVertex':int(i),'referenceVertex':int(used[i]),'reference':p[i].tolist(),'old':old[i].tolist(),'new':new[i].tolist(),'domain':float(field[i])} for i in np.argsort(delta)[-12:][::-1]],'sourceChanged':False,'sharedChanged':False}
+out=ROOT/'benchmark/art/nib/motion-study/axilla-field-v2-readiness.json';out.write_text(json.dumps(report,indent=2)+'\n',newline='\n');np.savez_compressed(ROOT/'benchmark/local/nib-axilla-field-v2-prepared.npz',used=used,faces=np.asarray(faces,dtype=object),source=p,old=old,new=new,domain=field)
+print(json.dumps({k:v for k,v in report.items() if k!='largestChanges'},indent=2))

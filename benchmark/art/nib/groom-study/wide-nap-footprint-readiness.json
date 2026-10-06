@@ -1,0 +1,38 @@
+{
+  "status": "Lightweight measured-alpha footprint audit; no groom geometry or render yet",
+  "originalActualFailureGuideCount": 4534,
+  "atlasSha256": "9f3c54140ec695faa52b687a6833febf44a95596d65e16cad5c3b88b1dbc2c12",
+  "recipeSha256": "9f558e600466f337114cd5b77f93f657962af9e4d8279179f6b7f7491713e0f6",
+  "measuredNapAlphaCoverage": 0.4736439906347555,
+  "originalMeanFootprintMetersSquared": 1.2634927094172737e-05,
+  "newMeanFootprintMetersSquared": 3.058982349115505e-05,
+  "earAreaIntervalDerivedFromActualFailureMetersSquared": [
+    0.04242527742065556,
+    0.04243463662591051
+  ],
+  "newEstimatedGuideCountInterval": [
+    1873,
+    1873
+  ],
+  "sameTargetProjectedCoverage": 1.35,
+  "estimatedUnclippedAreaRatio": 2.8502420102296524,
+  "constants": {
+    "NAP_HALF_WIDTH": [
+      0.0032,
+      0.004
+    ],
+    "NAP_LENGTH": [
+      0.009,
+      0.014
+    ],
+    "NAP_PROJECTED_WIDTH_FACTOR": 0.78,
+    "NAP_MAX_GUIDES": 2400
+  },
+  "passedBudgetEstimate": true,
+  "geometryTrianglesPerShortCard": 5,
+  "pending": [
+    "Native exact eligible surface/density and geometry gates",
+    "Actual rendered cards/coverage/silhouette/goggle and ear-twitch appearance",
+    "Engine alpha coverage mips/overdraw/backfaces/VRAM"
+  ]
+}

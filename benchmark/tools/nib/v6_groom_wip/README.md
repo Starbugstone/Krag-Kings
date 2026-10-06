@@ -1,5 +1,28 @@
 # Separate provisional Nib groom pass
 
+## Latest actual boundary
+
+`generate-coherent79-v2-runtime-wide-nap.job.json` and its single diagnostic
+Face review have run successfully. The saved source and actual image are under
+`art/nib/groom-study/coherent79-v2-runtime-wide-nap/`; both remain visually
+unaccepted. The source preserves exact old79 bind, every action curve and
+retained face/body/clothing data. Three agreed MASK material entries are stored
+in the scene. Full engine/export and cinematic verification remain pending.
+
+The first source attempt stopped before any groom mutation because tiny sparse
+nap patches implied 4,534 cards per ear. Its exact code, logs and generated
+atlas are preserved. Wider 6.4–8.0 mm patches with 9–14 mm length retain the
+same alpha coverage and unchanged 2,400-card cap. Actual counts are 1,873/1,785
+outer-ear cards. This is a measured representation correction, not artistic
+acceptance: the Face view still reads as stiff separated wisps/blades and
+insufficient inner-rim coverage. Do not raise density blindly or hide the
+failed underlying face/ear forms.
+
+Earlier preparation notes below are historical. The diagnostic composition
+record explicitly preserves failed face/Body/garment gates; it does not turn
+them into a pass. The generic older v6/v1 jobs are not the current source path.
+
+
 The prepared recipe now also preserves the actual rooted-ear rig contract.
 `ear_groom_weights.py` attaches new ear cards and opaque/cinematic fibers to
 the same continuous Head/Ear/EarTip field as the reviewed ear study. It refuses
@@ -166,3 +189,12 @@ reference, not restoration against the obsolete v4b payload. Natural anatomy
 is ahead of the unreviewed restoration variants; no final bionic-quality claim
 is implied. Keep all inherited face, cloth, hand and groom failures explicit
 until each actual source and engine view resolves them.
+
+After the actual Body attribution, a read-only native audit and reference
+face-set correspondence prove the old arm-fitting field disagrees with skinning
+on genuine medial upper-arm topology. Root has composed this groom with v7
+whole-body actions on the exact old bind, and owns the subsequent left-digit
+bind/mesh/clip/glove migration. A separate semantic Body repair is prepared;
+retain the original groom/garment source and all failure evidence. Do not
+apply old cross-bind clips to the migrated hand or mix current source with
+obsolete variant anatomy.

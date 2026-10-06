@@ -10,7 +10,10 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[4]
 parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True)
-parser.add_argument('--output',type=Path,required=True);parser.add_argument('--mesh-name',default='Nib v5 coherent hand L');args=parser.parse_args()
+parser.add_argument('--output',type=Path,required=True);parser.add_argument('--mesh-name',default='Nib v5 coherent hand L')
+parser.add_argument('--attribute',action='append',default=[],help='Extract a named saved POINT float/vector attribute; no evaluated inference')
+parser.add_argument('--all-bones',action='store_true',help='Include all actual saved rest bones instead of only the left hand')
+args=parser.parse_args()
 source=args.source.resolve();expected=hashlib.sha256(source.read_bytes()).hexdigest()
 header_path=Path('/mnt/d/Program Files/Blender Foundation/Blender 5.2/5.2/scripts/modules/_blendfile_header.py')
 spec=importlib.util.spec_from_file_location('_blendfile_header',header_path);module=importlib.util.module_from_spec(spec);sys.modules[spec.name]=module;spec.loader.exec_module(module)
@@ -130,6 +133,15 @@ def numeric(pointer,fmt,count):
     if block is None or struct.calcsize(fmt)*count>block['size']:raise RuntimeError('Invalid saved numeric payload '+str({'pointer':pointer,'requestedBytes':struct.calcsize(fmt)*count,'block':block}))
     return list(struct.unpack_from('<'+fmt*count,data,block['offset']))
 raw=numeric(vertex_layers['position']['pointer'],'f',vertex_count*3);points=[raw[i:i+3] for i in range(0,len(raw),3)]
+attributes={}
+for name in args.attribute:
+    if name not in vertex_layers:raise RuntimeError('Requested saved POINT attribute is absent: '+name)
+    layer=vertex_layers[name]
+    if layer['type'] not in [5,7]:raise RuntimeError('Only saved FLOAT/FLOAT_VECTOR attributes are supported: '+name)
+    if layer.get('count',vertex_count)!=vertex_count:raise RuntimeError('Attribute is not a full saved point array: '+name)
+    width=3 if layer['type']==7 else 1
+    values=numeric(layer['pointer'],'f',vertex_count*width)
+    attributes[name]={'type':'FLOAT_VECTOR' if width==3 else 'FLOAT','values':[values[i:i+3] for i in range(0,len(values),3)] if width==3 else values}
 corners=numeric(corner_layers['.corner_vert']['pointer'],'i',corner_count)
 offsets=numeric(field(mesh,'face_offset_indices' if 'face_offset_indices' in mesh_fields else 'poly_offset_indices'),'i',face_count+1);faces=[corners[offsets[i]:offsets[i+1]] for i in range(face_count)]
 groups=[field(group,'name') for group in linked(field(mesh,'vertex_group_names'),'bDeformGroup')]
@@ -145,12 +157,13 @@ armature=record(field(rig,'data'),'bArmature');bones={}
 def bone_tree(listbase):
     for bone in linked(listbase,'Bone'):
         name=field(bone,'name')
-        if name.endswith('_L') and name.startswith(('Hand','Thumb','Index','Middle','Ring','Little')):
+        if args.all_bones or (name.endswith('_L') and name.startswith(('Hand','Thumb','Index','Middle','Ring','Little'))):
             bones[name]={'head':field(bone,'arm_head'),'tail':field(bone,'arm_tail'),'matrix':field(bone,'arm_mat')}
         bone_tree(field(bone,'childbase'))
 bone_tree(field(armature,'bonebase'))
 report.update({'vertices':points,'polygons':faces,'weights':weights,'bones':bones,'vertexCount':vertex_count,'faceCount':face_count,
     'codeSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'sharedChanged':False})
+if attributes:report['attributes']=attributes
 args.output.write_text(json.dumps(report,separators=(',',':'))+'\n',newline='\n')
 if hashlib.sha256(source.read_bytes()).hexdigest()!=expected:raise RuntimeError('Read-only extraction changed source')
 data.close();file_stream.close();temporary.unlink();marker.unlink(missing_ok=True)

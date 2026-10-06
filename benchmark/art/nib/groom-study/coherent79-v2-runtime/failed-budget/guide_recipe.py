@@ -13,12 +13,6 @@ from nib_groom_v5 import ear_coordinates,configure_goggle_envelopes,avoid_goggle
 
 HEAD_REGIONS=[('crown',210),('fringe',120),('temple_L',90),('temple_R',90),('nape',120)]
 EAR_REGIONS=[('outer_rim',160),('inner_wisps',100),('outer_nap',160)]
-# Wider dense short-nap clumps reduce cards without changing ear coverage.
-# First candidate remains capped; actual card silhouette/overdraw needs review.
-NAP_HALF_WIDTH=(.0032,.0040)
-NAP_LENGTH=(.009,.014)
-NAP_PROJECTED_WIDTH_FACTOR=.78
-NAP_MAX_GUIDES=2400
 
 def head_selector(region,p,n,s):
     x,y,z=s
@@ -84,7 +78,7 @@ def make_guide(region,root,normal,source,seed,side=1):
         along,u=ear_coordinates(root);flow=Vector((-side*u*.64,-.06,u*.77))+Vector((side*.13,0,.18))
         length=rng.uniform(.021,.036);lift=.010
     else:
-        flow=Vector((side*.65,.06,.76));length=rng.uniform(*NAP_LENGTH) if short else rng.uniform(.013,.024)
+        flow=Vector((side*.65,.06,.76));length=rng.uniform(.007,.012) if short else rng.uniform(.013,.024)
         lift=.002 if short else .007
     # The chin tuft falls away from the underside under gravity; projecting it
     # completely onto a downward-facing surface would make a horizontal comb.
@@ -96,7 +90,7 @@ def make_guide(region,root,normal,source,seed,side=1):
     tip=root+flow*length+normal*(.0005 if short else .002)
     if region in [r[0] for r in HEAD_REGIONS]:middle=avoid_goggles(middle);tip=avoid_goggles(tip)
     return {'region':region,'root':list(root),'normal':list(normal),'middle':list(middle),'tip':list(tip),
-            'halfWidthMeters':rng.uniform(*NAP_HALF_WIDTH) if short else rng.uniform(.0016,.0026),
+            'halfWidthMeters':rng.uniform(.0013,.0023) if short else rng.uniform(.0016,.0026),
             'seed':seed,'sourceHint':list(source),'shortNap':short}
 
 def build_guides(head,collection,nap_alpha_coverage):
@@ -115,10 +109,10 @@ def build_guides(head,collection,nap_alpha_coverage):
             # Report a measured-area density estimate, not assumed coverage.
             target_coverage=1.35 if region=='outer_nap' else None
             if not .05<nap_alpha_coverage<.98:raise RuntimeError('Invalid measured nap-atlas alpha coverage')
-            estimated_footprint=2*(sum(NAP_HALF_WIDTH)/2)*(sum(NAP_LENGTH)/2)*NAP_PROJECTED_WIDTH_FACTOR*nap_alpha_coverage
+            estimated_footprint=2*.0018*.0095*.78*nap_alpha_coverage
             if target_coverage is not None:
                 count=max(count,math.ceil(sampler.total*target_coverage/estimated_footprint))
-                if count>NAP_MAX_GUIDES:raise RuntimeError('Outer-ear area exceeds bounded candidate groom budget: '+str({'count':count,'maximum':NAP_MAX_GUIDES,'areaMetersSquared':sampler.total,'alphaCoverage':nap_alpha_coverage,'estimatedFootprint':estimated_footprint}))
+                if count>2400:raise RuntimeError('Outer-ear area exceeds bounded candidate groom budget: '+str(count))
             spacing=min(.0025 if region!='inner_wisps' else .0030,
                         math.sqrt(sampler.total/max(count,1))*.58)
             roots,audit=sampler.roots(count,seed,spacing)
@@ -126,9 +120,6 @@ def build_guides(head,collection,nap_alpha_coverage):
             if target_coverage is not None:
                 audit['estimatedAlphaFootprintMetersSquared']=estimated_footprint
                 audit['targetProjectedCoverage']=target_coverage
-                audit['halfWidthRangeMeters']=list(NAP_HALF_WIDTH)
-                audit['lengthRangeMeters']=list(NAP_LENGTH)
-                audit['maximumGuides']=NAP_MAX_GUIDES
                 audit['scope']='Guide-density estimate, not measured rendered coverage/overdraw'
             guides=[make_guide(region,*sample,seed+i,side=sign) for i,sample in enumerate(roots)]
             groups.append({'region':region+'_'+side,'bone':'Ear_'+side,

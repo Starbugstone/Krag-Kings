@@ -1,0 +1,20 @@
+{
+  "name": "nib-axilla-actual-shoot-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\audit_axilla_pose.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 2.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-axilla-actual-shoot-v2.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-axilla-actual-shoot-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-axilla-actual-shoot-v2.log",
+  "successMarker": "NIB_AXILLA_ACTUAL_SHOOT_AUDIT_COMPLETE"
+}

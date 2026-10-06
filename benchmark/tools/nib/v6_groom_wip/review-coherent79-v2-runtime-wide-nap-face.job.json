@@ -1,0 +1,29 @@
+{
+  "name": "nib-coherent79-v2-groom-runtime-wide-nap-face",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\render_review.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\coherent79-v2-runtime-wide-nap\\Nib_Groom_v6_runtime_WIP.blend",
+    "--coordinate-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\coherent79-v2-runtime-wide-nap\\groom-source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\coherent79-v2-runtime-wide-nap\\renders",
+    "--diagnostic-allow-failed-gate",
+    "Face"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-runtime-wide-nap-face.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-runtime-wide-nap-face.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-runtime-wide-nap-face.log",
+  "successMarker": "NIB_REVIEW_RENDER_COMPLETE"
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\v6_groom_wip\build_groom_candidate.py", line 97, in <module>
+    guides=build_guides(head,collection,nap_coverage)
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\v6_groom_wip\guide_recipe.py", line 115, in build_guides
+    if count>2400:raise RuntimeError('Outer-ear area exceeds bounded candidate groom budget: '+str(count))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Outer-ear area exceeds bounded candidate groom budget: 4534
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\v6_groom_wip\build_groom_candidate.py', exiting.

@@ -1,0 +1,64 @@
+{
+  "status": "Actual isolated coherent runtime groom candidate; technical gates pass, visual identity FAIL",
+  "candidate": "benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/Nib_Groom_v6_runtime_WIP.blend",
+  "candidateSha256": "edc3aef50c7ef70b3eb609a5da3c1b739b80b7127f6afa03636204ee1b4b2def",
+  "reportSha256": "96d6d39d4c745a7e639efb40584547c8fd05f0f4120623297e51d2e20c4ed4dc",
+  "image": "benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/renders/Nib_FaceReview.png",
+  "imageSha256": "c4c80c167de7f50f46195853dfa511f8a514cce31d541c83f6f727ec6a1415f3",
+  "reference": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "referenceSha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80",
+  "processes": [
+    {
+      "name": "nib-coherent79-v2-groom-runtime-wide-nap",
+      "pid": 21948,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1033
+    },
+    {
+      "name": "nib-coherent79-v2-groom-runtime-wide-nap-face",
+      "pid": 14624,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2602
+    }
+  ],
+  "structuralPreservation": {
+    "retainedSurfacesUnchanged": true,
+    "exactBoneCount": 79,
+    "actionCurveHashesUnchanged": 10,
+    "portableMaskContractPresent": true
+  },
+  "groom": {
+    "removedTriangles": 505824,
+    "newTriangles": 181382,
+    "cards": 5982,
+    "opaqueStrands": 7760,
+    "fineFaceBodyFuzz": "Retained unchanged; excluded from new-groom counts"
+  },
+  "visualReview": {
+    "improved": [
+      "Fuller scalp coverage compared with prior near-bald source",
+      "Distinct tawny outer-ear and pale inner/head color regions",
+      "Goggle lenses remain unobstructed"
+    ],
+    "failed": [
+      "Hair still reads as separated stiff wisps and flat blades instead of soft coherent flowing clumps",
+      "Inner-ear fringe remains sparse and overly regular; large pink plane remains flat",
+      "Existing human-like flat muzzle and slit-like neutral eyes do not match the reference",
+      "Scarf and exposed neck edge remain jagged; clothing failure preserved"
+    ]
+  },
+  "bodyAttribution": "Actual object-color Shoot view proved the underarm sheet belongs to Body skin. Rest-domain diagnosis identifies fit/weight-field mismatch; no repair yet.",
+  "variants": "Current connected organic body excludes GripReplacement; legacy grip torso/arm remains unreviewed and needs new anatomical partition before coherent variant import.",
+  "migration": "Old79 bind preserved. Root will integrate v7 body actions, apply fourteen-left-digit HandFit v2 migration once, regenerate seven left-digit action tracks, then fit gloves.",
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "engineVerified": false,
+  "files": {
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap-face-memory.csv": "87abbe52c4d9e7eaa3d977bdd996cd1216e8f202ed8e2f4a94363f432c41831f",
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap-face.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap-face.txt": "50a76ec99f5e644b17973b36bed43740381360c6d4ad93191cf89fd428fa3466",
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap-memory.csv": "3a3695cd67a309fccd57adcf0bc3ccc963dc5e375382fb00c9f9636994ff1ab0",
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-coherent79-v2-groom-runtime-wide-nap.txt": "8f624fc3e0895272834b852a9d1b0201775bbd2fafa3d1696b74fc35bbe3f697"
+  }
+}

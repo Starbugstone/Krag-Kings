@@ -1,5 +1,37 @@
 # Nib benchmark asset work
 
+**Latest isolated coherent source, not promoted:**
+`groom-study/coherent79-v2-runtime-wide-nap/Nib_Groom_v6_runtime_WIP.blend`,
+SHA-256 `edc3aef50c7ef70b3eb609a5da3c1b739b80b7127f6afa03636204ee1b4b2def`.
+It combines the actual v2 sewn shirt/straps, connected Natural anatomy,
+79-bone v5 captured motion/ear rig, repaired orbital construction and a new
+masked-card groom. `groom-study/coherent79-v2-runtime-wide-nap/actual-review.json`
+pins its real Face capture and preserved failures. Exact bind, all ten saved
+action-curve hashes and retained surfaces are unchanged. Root's later hand
+migration has not been applied: merge v7 actions on the exact old bind first,
+then apply HandFit v2's fourteen-left-digit migration once, regenerate all
+seven left-digit clips and refit gloves.
+
+The replaced groom decreases from 505,824 to 181,382 triangles (5,982 masked
+cards plus 7,760 opaque fibers; existing fine face/body fuzz retained). The
+actual image still **fails** soft flowing fur, ear fringe/fullness, mature
+animal-like face, neutral eye shape and scarf/neck quality. Generation and
+one diagnostic Face review exited 0 at 1,033 / 2,602 MB private peaks. The first
+attempt's 4,534-card-per-ear budget failure remains preserved, followed by a
+measured-footprint correction within the unchanged 2,400-per-ear bound.
+No cinematic groom, new PBR bake, FBX export or engine validation exists for
+this source yet.
+
+The actual object-color Shoot view in `garment-study/v2/underarm-ownership/`
+proves the raised-arm sheet is **Body skin**, not the fitted shirt or bib.
+`motion-study/axilla-rest-domain-audit-v2.json` finds no open armpit boundary,
+but 1,089 vertices fitted mostly toward the arm and weighted mostly to torso.
+A read-only actual-pose/source-face-set audit is prepared; no weight repair is
+claimed. The restorative Grip body still uses the old separate construction
+and needs a matching anatomical partition before a coherent variant export.
+The following sections preserve earlier shared-package and study history.
+
+
 **Current handoff: repaired, pretriangulated optimized v4b; artistic acceptance remains false.** Actual Unity Shoot footage exposed paired forehead spikes caused by mixed shape-key creation. Root has now promoted the bounded deformation repair after verifying all 85 files; 12 changed and all texture maps remained unchanged. Strict binary checks, fresh FBX roundtrips and an actual imported-FBX Shoot close-up pass. Running-engine replay is still pending. The dense original master and failed art studies remain preserved; neither character likeness nor finished hero quality is approved.
 
 The dense v4b pipeline was checkpointed in `c523810`. `create_nib.py` incorporates the scarf fitting, neutral-lid cleanup and lossless saves; `patch_nib_v4.py` records the equivalent changes applied to the saved v4 source. `source-report.json` retains original generation hashes, patch hash and reproduction-code hashes. The measured reduction, pose checks, matched captures and export receipt are in `v5-study/`; the authoring tools are in `tools/nib/v5_wip`. Separate native v5, v5b and v5c art builds exist and failed visual review. The latest v5c source has one diagnostic Face capture; it does not change the preserved masters or shared files. Export/review/validation tools support explicit alternative paths while retaining their baseline defaults.
@@ -195,3 +227,14 @@ A v2-pinned diagnostic groom composition is prepared, not generated. Root owns
 an explicit left-digit anatomical bind migration and matching clip regeneration;
 old actions must not be copied casually across that future changed hand bind.
 No shared package has been promoted from this study.
+
+The actual short axilla Shoot audit has now completed (guard 0, 306 MB private)
+without changing a source. Explicit portable LBS reproduces the native surface
+within 0.207 µm; body correctives move it by at most 1.04 mm. All 1,089 fit/skin
+mismatch vertices map to the original reference's upper-arm sets20/21, not
+thorax set1 (42.2 µm median correspondence distance). The separate prepared
+`anatomical_domain_v2.py` uses geodesic distance across the real arm/thorax
+interface for **both** fitting and weighting. Its original-cage comparison has
+14.395 mm maximum fit change, no zero/inverted triangles and minimum old/new
+normal dot .7815. This is preparation only: the native revised source, actual
+raised-arm/garment contacts and motion must still be generated and inspected.

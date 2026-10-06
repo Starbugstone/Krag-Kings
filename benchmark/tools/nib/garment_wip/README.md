@@ -246,3 +246,12 @@ pinched side folds, old scarf and larger character-quality failures remain.
 Keep this actual source fixed for diagnostic groom composition and root's
 future explicit anatomical hand migration. No shared promotion is authorized
 by these technical checks or images.
+
+
+Actual object-color attribution now exists at
+`art/nib/garment-study/v2/underarm-ownership/Shoot-objects.png`: the green
+connected Body forms the raised-arm triangular sheet; the yellow shirt and
+blue bib do not. Do not redesign the fitted shirt to hide this anatomical
+skinning fault. The cloth still needs coherent opening hems/thickness, refined
+side folds and a replacement for the old jagged scarf. The current runtime
+groom composition remains a failed diagnostic source, not a clothing pass.
