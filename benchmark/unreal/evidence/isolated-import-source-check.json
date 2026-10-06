@@ -1,0 +1,13 @@
+{
+  "testKind": "lightweight Python receipt/hash validation with a stub Unreal module; no editor launched",
+  "passed": true,
+  "checks": [
+    "unchanged receipt accepted",
+    "isolated option parsed",
+    "changed source hash rejected",
+    "changed generated package rejected",
+    "mismatched variant identity rejected"
+  ],
+  "importerSha256": "822706ef1a9d7e6c084adf2158fef67f498eb4ca44dc7c04130f179fcf32b51b",
+  "actualIsolatedEditorImportExecuted": false
+}

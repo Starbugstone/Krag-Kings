@@ -1,0 +1,26 @@
+{
+  "completed": false,
+  "guardExitCode": 88,
+  "nativeExitCode": null,
+  "processId": 12380,
+  "peakPrivateMiB": 10281.0,
+  "minimumAvailableMiB": 7296.0,
+  "maximumCommitPercent": 65.0,
+  "validatedVariants": [
+    "Krag_Natural",
+    "Krag_Crusher"
+  ],
+  "interruptedVariant": "Krag_IronJaw",
+  "lastObservedStage": "first skeletal mesh build finished; memory rose after physics preview/world cleanup before the second mesh build",
+  "caseInsensitiveTrackFixConfirmed": true,
+  "resourceControls": [
+    "NullRHI",
+    "corelimit=2",
+    "pretriangulated FBX",
+    "GC between variants",
+    "9GiB process-private guard"
+  ],
+  "nextProposal": "Fresh editor process for each variant with persisted validated descriptor/source snapshot, then separate assembly; no higher guard cap",
+  "rendered": false,
+  "packaged": false
+}

@@ -90,17 +90,10 @@ if($Stage -eq 'Probe'){
     if(-not(Select-String -Path $Logs -Pattern 'KK_EDITOR_PROBE_COMPLETE' | Select-Object -First 1)){throw 'Editor probe returned without completion marker.'}
 }
 if($Stage -in @('Import','All')){
-    & (Join-Path $PSScriptRoot 'Prepare-ImportCache.ps1') -Apply
-    $Importer=Join-Path $PSScriptRoot 'import_shared_assets.py'
-    $Log=Join-Path $Evidence 'import.log'
-    $ConsoleLog=Join-Path $Evidence 'import-console.log'
-    Clear-CompletionLogs @($Log,$ConsoleLog)
-    # Importing source assets needs no viewport. Keep renderer/shader memory out of
-    # the FBX import budget; the later cook/launch validates the real renderer.
-    & $Editor $Project "-ExecutePythonScript=$Importer" -NullRHI -corelimit=2 -unattended -nosplash -stdout -FullStdOutLogOutput "-abslog=$Log" -NoSound 2>&1 | Tee-Object -FilePath $ConsoleLog
-    if($LASTEXITCODE -ne 0){throw "Unreal shared asset import failed: $LASTEXITCODE"}
-    $Logs=@($Log,$ConsoleLog)|Where-Object {Test-Path $_}
-    if(-not(Select-String -Path $Logs -Pattern 'KK_IMPORT_COMPLETE' | Select-Object -First 1)){throw 'Import returned without completion marker. Inspect import.log.'}
+    # The coordinator guards each fresh native editor separately. An outer guard
+    # around Stage Import would conflict with its deliberate per-process mutex.
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Invoke-IsolatedImport.ps1') -EngineRoot $EngineRoot
+    if($LASTEXITCODE -ne 0){throw "Isolated Unreal shared asset import failed: $LASTEXITCODE"}
 }
 if($Stage -in @('Package','All')){
     & $UAT BuildCookRun "-project=$Project" -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive "-archivedirectory=$PackageRoot" -utf8output 2>&1 | Tee-Object -FilePath (Join-Path $Evidence 'package.log')

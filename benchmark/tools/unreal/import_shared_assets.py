@@ -5,6 +5,7 @@ Fails on absent meshes, materials, clips, map save or data asset creation.
 import gc
 import hashlib
 import json
+import re
 from pathlib import Path
 import unreal
 
@@ -23,6 +24,13 @@ REUSE_MATERIALS = '-KKReuseMaterials' in unreal.SystemLibrary.get_command_line()
 CACHE_FILE = BENCHMARK / 'local' / 'unreal-material-cache.json'
 MATERIAL_CACHE = json.loads(CACHE_FILE.read_text(encoding='utf-8')) if CACHE_FILE.exists() else {}
 SOURCE_SNAPSHOT = {}
+RECEIPT_DIR = BENCHMARK / 'local' / 'unreal-variant-cache'
+VARIANT_RECIPE = 'skeletal-v2-explicit-dependencies-casefold-tracks'
+
+
+def option(name):
+    match = re.search(r'(?:^|\s)-' + re.escape(name) + r'=([^\s"]+)', unreal.SystemLibrary.get_command_line(), re.IGNORECASE)
+    return match.group(1) if match else None
 
 
 def sha256(path):
@@ -39,6 +47,49 @@ def source_snapshot():
     return {str(path.relative_to(SHARED)).replace('\\', '/'): {
         'sha256': sha256(path), 'bytes': path.stat().st_size,
     } for path in sorted(SHARED.rglob('*')) if path.is_file() and path.suffix.lower() in extensions}
+
+
+def package_snapshot(folder, variant_name):
+    directory = PROJECT / 'Content' / 'Benchmark' / 'Characters' / folder / variant_name
+    return {str(p.relative_to(PROJECT)).replace('\\', '/'): {'sha256': sha256(p), 'bytes': p.stat().st_size}
+            for p in sorted(directory.rglob('*.uasset'))}
+
+
+def character_inputs(folder):
+    prefix = 'characters/' + folder + '/'
+    return {key: value for key, value in SOURCE_SNAPSHOT.items() if key.startswith(prefix)}
+
+
+def write_variant_receipt(folder, descriptor, validation):
+    name = descriptor['id']
+    packages = package_snapshot(folder, name)
+    if len(packages) < 10:
+        raise RuntimeError(f'{name}: expected saved mesh, Skeleton, PhysicsAsset and seven clips')
+    receipt = {'schemaVersion': 1, 'recipe': VARIANT_RECIPE, 'engine': REPORT['engine'],
+               'folder': folder, 'variant': name, 'characterInputs': character_inputs(folder),
+               'packages': packages, 'descriptor': descriptor, 'validation': validation,
+               'rendered': False, 'artisticallyAccepted': False}
+    RECEIPT_DIR.mkdir(parents=True, exist_ok=True)
+    output = RECEIPT_DIR / (name + '.json')
+    temporary = output.with_suffix('.json.tmp')
+    temporary.write_text(json.dumps(receipt, indent=2), encoding='utf-8')
+    temporary.replace(output)
+
+
+def read_variant_receipt(folder, name):
+    path = RECEIPT_DIR / (name + '.json')
+    if not path.exists():
+        raise RuntimeError('Missing validated variant receipt: ' + str(path))
+    receipt = json.loads(path.read_text(encoding='utf-8'))
+    if receipt.get('variant') != name or receipt.get('folder') != folder or receipt.get('descriptor', {}).get('id') != name:
+        raise RuntimeError(name + ': receipt identity mismatch')
+    if receipt.get('recipe') != VARIANT_RECIPE or receipt.get('engine') != REPORT['engine']:
+        raise RuntimeError(name + ': importer recipe or engine changed; validate/reimport before assembly')
+    if receipt['characterInputs'] != character_inputs(folder):
+        raise RuntimeError(name + ': shared character inputs changed after validation')
+    if receipt['packages'] != package_snapshot(folder, name):
+        raise RuntimeError(name + ': generated packages changed after validation')
+    return receipt
 
 
 def cache_material(asset_path, signature, provenance):
@@ -339,7 +390,7 @@ def restore_variant(descriptor):
     return variant
 
 
-def species(folder):
+def species(folder, only_variant=None, validate_saved=False):
     source = SHARED / 'characters' / folder
     manifest_path = next((p for p in (source / 'manifest.json', source / 'asset_manifest.json', source / 'krag_asset_contract.json') if p.exists()), None)
     manifest = json.loads(manifest_path.read_text(encoding='utf-8-sig')) if manifest_path else {}
@@ -360,6 +411,10 @@ def species(folder):
         raise RuntimeError('Manifest character file missing: ' + str([str(p) for p in files if not p.exists()]))
     if not files:
         raise RuntimeError('No shared character FBXs: ' + str(source))
+    if only_variant:
+        files = [p for p in files if p.stem == only_variant]
+        if len(files) != 1:
+            raise RuntimeError('Requested variant is absent from species manifest: ' + only_variant)
     material_map = {}
     for color in sorted((source / 'textures').glob('*_BaseColor.png')):
         name = color.stem.removesuffix('_BaseColor')
@@ -381,7 +436,10 @@ def species(folder):
         # Avoid constructing duplicate embedded animation assets for every mesh variant.
         if manifest.get('animations'):
             character_options.set_editor_property('import_animations', False)
-        objects = imported_task(fbx, destination, character_options)
+        if validate_saved:
+            objects = [load(destination + '/' + fbx.stem)]
+        else:
+            objects = imported_task(fbx, destination, character_options)
         # Some FBX importer versions report only the primary object, so query the package folder too.
         objects.extend(load(p) for p in unreal.EditorAssetLibrary.list_assets(destination, recursive=True, include_folder=False))
         meshes = [o for o in objects if isinstance(o, unreal.SkeletalMesh)]
@@ -396,7 +454,8 @@ def species(folder):
             dependency = mesh.get_editor_property(property_name)
             if dependency is None:
                 raise RuntimeError(f'{fbx.stem}: imported mesh has no {property_name}')
-            save(dependency)
+            if not validate_saved:
+                save(dependency)
             package = dependency.get_path_name().split('.', 1)[0]
             if not package.startswith('/Game/'):
                 raise RuntimeError(f'{fbx.stem}: unexpected generated dependency path {package}')
@@ -411,9 +470,15 @@ def species(folder):
                 name = str(slot.get_editor_property('material_slot_name'))
             if name not in material_map:
                 raise RuntimeError('Unmapped PBR material slot ' + name + ' in ' + fbx.stem)
-            slot.set_editor_property('material_interface', material_map[name])
-        mesh.set_editor_property('materials', slots)
-        save(mesh)
+            if validate_saved:
+                actual = slot.get_editor_property('material_interface')
+                if actual is None or actual.get_path_name() != material_map[name].get_path_name():
+                    raise RuntimeError(f'{fbx.stem}: saved material slot {name} does not match its PBR asset')
+            else:
+                slot.set_editor_property('material_interface', material_map[name])
+        if not validate_saved:
+            mesh.set_editor_property('materials', slots)
+            save(mesh)
         anims = [o for o in objects if isinstance(o, unreal.AnimSequence)]
         explicit_clips = manifest.get('animations', {})
         explicit_animations = {}
@@ -427,7 +492,10 @@ def species(folder):
             anim_opts.set_editor_property('mesh_type_to_import', unreal.FBXImportType.FBXIT_ANIMATION)
             anim_opts.set_editor_property('import_mesh', False)
             anim_opts.set_editor_property('skeleton', mesh.get_editor_property('skeleton'))
-            imported_anims = [o for o in imported_task(clip_file, destination + '/Animations/' + clip_name, anim_opts) if isinstance(o, unreal.AnimSequence)]
+            if validate_saved:
+                imported_anims = [o for o in [load(destination + '/Animations/' + clip_name + '/' + clip_name)] if isinstance(o, unreal.AnimSequence)]
+            else:
+                imported_anims = [o for o in imported_task(clip_file, destination + '/Animations/' + clip_name, anim_opts) if isinstance(o, unreal.AnimSequence)]
             if not imported_anims:
                 raise RuntimeError('No animation sequence imported: ' + str(clip_file))
             explicit_animations[clip_name] = imported_anims[0]
@@ -523,7 +591,9 @@ def species(folder):
             else:
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
         REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies})
-        return variant_descriptor(variant)
+        descriptor = variant_descriptor(variant)
+        write_variant_receipt(folder, descriptor, REPORT['meshes'][-1])
+        return descriptor
 
     for fbx in files:
         # Import in a function scope: no previous mesh, skeleton, options or animation
@@ -557,7 +627,52 @@ def main():
     snapshot_file = BENCHMARK / 'unreal' / 'evidence' / 'import-source-snapshot.json'
     snapshot_file.parent.mkdir(parents=True, exist_ok=True)
     snapshot_file.write_text(json.dumps({'engine': REPORT['engine'], 'importerSha256': sha256(Path(__file__)), 'inputs': SOURCE_SNAPSHOT}, indent=2), encoding='utf-8')
-    krags, nibs = species('krag'), species('nib')
+    requested_import = option('KKImportVariant')
+    requested_saved = option('KKValidateSavedVariant')
+    assemble_only = '-kkassemble' in unreal.SystemLibrary.get_command_line().lower()
+    if sum(bool(value) for value in (requested_import, requested_saved, assemble_only)) > 1:
+        raise RuntimeError('Choose exactly one isolated import, saved validation, or assembly mode')
+    requested = requested_import or requested_saved
+    if requested:
+        folder = requested.split('_', 1)[0].lower()
+        if folder not in ('krag', 'nib') or not re.fullmatch(r'[A-Za-z0-9_]+', requested):
+            raise RuntimeError('Invalid requested character variant')
+        if requested_saved:
+            # Only reuse packages with a previous semantic pass against these
+            # exact sources. They will be loaded and checked again, not reimported.
+            receipt_file = RECEIPT_DIR / (requested + '.json')
+            if receipt_file.exists():
+                read_variant_receipt(folder, requested)
+            else:
+                previous = json.loads((BENCHMARK / 'unreal/evidence/character-import-batch-progress.json').read_text(encoding='utf-8'))
+                previous_snapshot = json.loads((BENCHMARK / 'unreal/evidence/character-import-batch-source-snapshot.json').read_text(encoding='utf-8'))['inputs']
+                matching = [entry for entry in previous['validated_meshes'] if Path(entry['source']).stem == requested]
+                prefix = 'characters/' + folder + '/'
+                if len(matching) != 1 or character_inputs(folder) != {key: value for key, value in previous_snapshot.items() if key.startswith(prefix)}:
+                    raise RuntimeError(requested + ': no prior semantic pass against unchanged character sources')
+        species(folder, only_variant=requested, validate_saved=bool(requested_saved))
+        if source_snapshot() != SOURCE_SNAPSHOT:
+            (RECEIPT_DIR / (requested + '.json')).unlink(missing_ok=True)
+            raise RuntimeError('Shared files changed during isolated variant validation')
+        progress.write_text(json.dumps({'complete': False, 'isolated_variant_complete': requested,
+                                        'validated_meshes': REPORT['meshes'],
+                                        'note': 'Fresh editor process; final assembly remains separate'}, indent=2), encoding='utf-8')
+        unreal.log('KK_VARIANT_COMPLETE ' + requested)
+        return
+    if assemble_only:
+        descriptors = {}
+        for folder in ('krag', 'nib'):
+            manifest = json.loads((SHARED / 'characters' / folder / 'manifest.json').read_text(encoding='utf-8-sig'))
+            names = [Path(entry['fbx']).stem for entry in manifest['variants']]
+            descriptors[folder] = []
+            for name in names:
+                receipt = read_variant_receipt(folder, name)
+                descriptors[folder].append(receipt['descriptor'])
+                REPORT['meshes'].append(receipt['validation'])
+        krags, nibs = descriptors['krag'], descriptors['nib']
+        REPORT['character_import_mode'] = 'one guarded editor process per variant; verified generated package/source hashes before assembly'
+    else:
+        krags, nibs = species('krag'), species('nib')
     # Environment producer preserves this stable filename in its shared directory.
     candidates = list((SHARED / 'environment').rglob('Dunes.fbx'))
     if len(candidates) != 1:
@@ -599,7 +714,7 @@ def main():
     elif not levels.new_level(level_path):
         raise RuntimeError('Map creation failed')
     if not levels.save_current_level(): raise RuntimeError('Map save failed')
-    unreal.EditorAssetLibrary.save_directory(DEST, only_if_is_dirty=False, recursive=True)
+    unreal.EditorAssetLibrary.save_directory(DEST, only_if_is_dirty=True, recursive=True)
     if source_snapshot() != SOURCE_SNAPSHOT:
         raise RuntimeError('Shared source files changed during import; discard this mixed-source result and rerun against pinned files.')
     REPORT['source_snapshot'] = str(snapshot_file)

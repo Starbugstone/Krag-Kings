@@ -1,5 +1,6 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0)
+param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,
+ [ValidateSet('Packaged','EditorGame')][string]$ExecutionMode='Packaged')
 $ErrorActionPreference='Stop'
 Add-Type @'
 using System;using System.Runtime.InteropServices;
@@ -13,12 +14,26 @@ public static class KKInput {
  [DllImport("user32.dll")]public static extern bool GetClientRect(IntPtr h,out RECT r);
  [DllImport("user32.dll")]public static extern bool SetCursorPos(int x,int y);
  [DllImport("user32.dll")]public static extern void mouse_event(uint flags,uint dx,uint dy,uint data,UIntPtr extra);
- [DllImport("user32.dll")]public static extern void keybd_event(byte vk,byte scan,uint flags,UIntPtr extra);
+ [DllImport("user32.dll")]public static extern uint GetWindowThreadProcessId(IntPtr h,out uint processId);
+ [DllImport("user32.dll")]public static extern IntPtr GetKeyboardLayout(uint threadId);
+ [DllImport("user32.dll",EntryPoint="MapVirtualKeyExW",ExactSpelling=true)]public static extern uint MapVirtualKeyEx(uint code,uint mapType,IntPtr layout);
+ [StructLayout(LayoutKind.Sequential)]public struct KEYBDINPUT {public ushort vk,scan;public uint flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Sequential)]public struct MOUSEINPUT {public int dx,dy;public uint data,flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Explicit)]public struct INPUTUNION {[FieldOffset(0)]public KEYBDINPUT key;[FieldOffset(0)]public MOUSEINPUT mouse;}
+ [StructLayout(LayoutKind.Sequential)]public struct INPUT {public uint type;public INPUTUNION value;}
+ [DllImport("user32.dll",SetLastError=true)]static extern uint SendInput(uint count,INPUT[] inputs,int size);
+ public static void SendScan(uint scan,bool up) {
+  uint flags=8u|((scan&0xFF00u)!=0?1u:0u)|(up?2u:0u);
+  var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan&0xFFu),flags=flags}}};
+  if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
+ }
 }
 '@
 [KKInput]::SetProcessDPIAware()|Out-Null
 $game=if($GameProcessId){Get-Process -Id $GameProcessId}else{Get-Process KragKingsBenchmark* -ErrorAction SilentlyContinue|Where-Object {$_.MainWindowHandle -ne 0}|Select-Object -First 1}
-if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible packaged Unreal demo is required.'}
+if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible Unreal demo is required.'}
+if($ExecutionMode -eq 'EditorGame' -and $game.ProcessName -notlike 'UnrealEditor*'){throw 'EditorGame evidence requires the explicitly selected Unreal editor game process.'}
+if($ExecutionMode -eq 'Packaged' -and $game.ProcessName -notlike 'KragKingsBenchmark*'){throw 'Packaged evidence requires the actual standalone KragKingsBenchmark process.'}
 [KKInput]::SetForegroundWindow($game.MainWindowHandle)|Out-Null
 Start-Sleep -Milliseconds 200
 function Assert-Foreground {if([KKInput]::GetForegroundWindow() -ne $game.MainWindowHandle){throw 'Demo lost foreground; stopped input delivery to preserve other applications.'}}
@@ -26,15 +41,27 @@ function Read-State {
  for($i=0;$i -lt 20;$i++) {try{return Get-Content $StatePath -Raw|ConvertFrom-Json}catch{Start-Sleep -Milliseconds 50}}
  throw 'No readable runtime input-state.json; launch with -KKInputState.'
 }
+function Send-Key([byte]$Code,[bool]$Up=$false) {
+ [uint32]$owner=0
+ $thread=[KKInput]::GetWindowThreadProcessId($game.MainWindowHandle,[ref]$owner)
+ if($owner -ne $game.Id){throw 'Demo window ownership changed; keyboard input stopped.'}
+ $layout=[KKInput]::GetKeyboardLayout($thread)
+ # Supply physical scan codes to raw-input consumers. This host's French HKL
+ # omits E0 from the navigation mapping even with MAPVK_VK_TO_VSC_EX (type 4).
+ $mapped=[KKInput]::MapVirtualKeyEx($Code,4,$layout)
+ if($mapped -eq 0){throw "No scan code for virtual key $Code in the demo keyboard layout."}
+ if(($Code -ge 0x21 -and $Code -le 0x28) -or $Code -eq 0x2D -or $Code -eq 0x2E){$mapped=$mapped -bor 0xE000}
+ [KKInput]::SendScan($mapped,$Up)
+}
 function Press-Key([byte]$Code) {
  Assert-Foreground
- [KKInput]::keybd_event($Code,0,0,[UIntPtr]::Zero);Start-Sleep -Milliseconds 60
- [KKInput]::keybd_event($Code,0,2,[UIntPtr]::Zero)
+ Send-Key $Code
+ try {Start-Sleep -Milliseconds 60} finally {Send-Key $Code $true}
 }
 function Hold-Key([byte]$Code,[int]$Milliseconds=250) {
  Assert-Foreground
- [KKInput]::keybd_event($Code,0,0,[UIntPtr]::Zero)
- try {Start-Sleep -Milliseconds $Milliseconds} finally {[KKInput]::keybd_event($Code,0,2,[UIntPtr]::Zero)}
+ Send-Key $Code
+ try {Start-Sleep -Milliseconds $Milliseconds} finally {Send-Key $Code $true}
 }
 function Orbit-Camera {
  Assert-Foreground
@@ -43,7 +70,7 @@ function Orbit-Camera {
  $x=$origin.X+[int]($rect.Right*.5);$y=$origin.Y+[int]($rect.Bottom*.5)
  [KKInput]::SetCursorPos($x,$y)|Out-Null
  [KKInput]::mouse_event(0x20,0,0,0,[UIntPtr]::Zero)
- try {for($i=1;$i -le 6;$i++){Assert-Foreground;[KKInput]::SetCursorPos($x+8*$i,$y+3*$i)|Out-Null;Start-Sleep -Milliseconds 30}}
+ try {for($i=0;$i -lt 4;$i++){Assert-Foreground;Start-Sleep -Milliseconds 50;[KKInput]::mouse_event(0x1,16,6,0,[UIntPtr]::Zero)}}
  finally {[KKInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
 }
 function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false) {
@@ -53,12 +80,12 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  $origin=New-Object KKInput+POINT
  [KKInput]::ClientToScreen($game.MainWindowHandle,[ref]$origin)|Out-Null
  [KKInput]::SetCursorPos($origin.X+[int]$X,$origin.Y+[int]$Y)|Out-Null
- if($Shift){[KKInput]::keybd_event(0x10,0,0,[UIntPtr]::Zero)}
+ if($Shift){Send-Key 0xA0}
  try {
   [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
   Start-Sleep -Milliseconds 60
   [KKInput]::mouse_event($(if($Right){0x10}else{0x4}),0,0,0,[UIntPtr]::Zero)
- }finally{if($Shift){[KKInput]::keybd_event(0x10,0,2,[UIntPtr]::Zero)}}
+ }finally{if($Shift){Send-Key 0xA0 $true}}
 }
 $checks=New-Object System.Collections.Generic.List[object]
 function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000) {
@@ -125,6 +152,6 @@ try {
  Expect-State 'Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  Press-Key 0x77
 } finally {
- $report=[ordered]@{source='Windows mouse and keyboard delivered to visible packaged demo';mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray())}
+ $report=[ordered]@{source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray())}
  $report|ConvertTo-Json -Depth 6|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }

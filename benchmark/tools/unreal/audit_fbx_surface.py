@@ -8,7 +8,7 @@ import numpy as np
 
 
 def read_meshes(path):
-    meshes=[]
+    meshes=[];materials={};models={};connections=[]
     with Path(path).open('rb') as f:
         header=f.read(27)
         if not header.startswith(b'Kaydara FBX Binary'):raise ValueError('Binary FBX required')
@@ -36,12 +36,15 @@ def read_meshes(path):
             end,count,_,length=struct.unpack(fmt,raw)
             if not end:return
             name=f.read(length).decode()
-            if (not parent and name!='Objects') or (parent=='Objects' and name!='Geometry'):
+            if (not parent and name not in ('Objects','Connections')) or (parent=='Objects' and name not in ('Geometry','Material','Model')):
                 f.seek(end);return
             props=[prop() for _ in range(count)]
+            if name in ('Material','Model'):
+                (materials if name=='Material' else models)[props[0]]=props[1].split('\0')[0];f.seek(end);return
+            if parent=='Connections' and name=='C':connections.append(props)
             if name=='Geometry':
                 if len(props)<3 or props[2]!='Mesh':f.seek(end);return
-                active={'name':props[1].split('\0')[0],'arrays':{}};meshes.append(active)
+                active={'id':props[0],'name':props[1].split('\0')[0],'arrays':{}};meshes.append(active)
             if active is not None and props and isinstance(props[0],np.ndarray) and name in ('Vertices','PolygonVertexIndex','Normals','UV','UVIndex','Materials'):
                 active['arrays'][name]=props[0]
             while f.tell()<end-size:node(name,active)
@@ -49,6 +52,9 @@ def read_meshes(path):
         while f.tell()<Path(path).stat().st_size-size:
             old=f.tell();node()
             if f.tell()==old+size:break
+    for mesh in meshes:
+        owners=[row[2] for row in connections if len(row)>2 and row[0]=='OO' and row[1]==mesh['id'] and row[2] in models]
+        mesh['materialNames']=[materials[row[1]] for row in connections if len(row)>2 and row[0]=='OO' and row[1] in materials and row[2] in owners]
     return meshes
 
 
@@ -62,7 +68,7 @@ def audit(path):
         p=vertices[indices];cross=np.cross(p[:,1]-p[:,0],p[:,2]-p[:,0]);double_area=np.sqrt(np.einsum('ij,ij->i',cross,cross));del p,cross
         diagonal=float(np.linalg.norm(np.max(vertices,axis=0)-np.min(vertices,axis=0)));epsilon=diagonal*diagonal*1e-12
         exact=double_area==0;near=double_area<=epsilon
-        item={'name':mesh['name'],'vertices':len(vertices),'triangles':len(indices),'finiteVertexComponents':bool(np.all(np.isfinite(vertices))),'boundsDiagonalFileUnits':diagonal,'exactZeroAreaTriangles':int(np.sum(exact)),'nearZeroAreaTriangles':int(np.sum(near)),'relativeDoubleAreaThreshold':1e-12,'minimumNonzeroDoubleAreaFileUnitsSquared':float(np.min(double_area[double_area>0])) if np.any(double_area>0) else None}
+        item={'name':mesh['name'],'materialNamesBySlot':dict(enumerate(mesh['materialNames'])),'vertices':len(vertices),'triangles':len(indices),'finiteVertexComponents':bool(np.all(np.isfinite(vertices))),'boundsDiagonalFileUnits':diagonal,'exactZeroAreaTriangles':int(np.sum(exact)),'nearZeroAreaTriangles':int(np.sum(near)),'relativeDoubleAreaThreshold':1e-12,'minimumNonzeroDoubleAreaFileUnitsSquared':float(np.min(double_area[double_area>0])) if np.any(double_area>0) else None}
         if 'Materials' in arrays:
             mats=arrays['Materials']
             if len(mats)==len(indices):

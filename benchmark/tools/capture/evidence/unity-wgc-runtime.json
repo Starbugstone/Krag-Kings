@@ -1,0 +1,86 @@
+{
+  "engine": "Unity",
+  "source": "real-time capture of explicit game HWND client area",
+  "captureBackend": "WGC",
+  "encoder": "h264_nvenc",
+  "recordingFrameRate": 30,
+  "gameFrameRateClaim": false,
+  "completed": true,
+  "visualAcceptance": false,
+  "audioOffsetSeconds": 0.7371885776519775,
+  "engineStartTimestampSource": "engine showcase-started.json",
+  "blackFrameCheck": {
+    "minimumDurationSeconds": 1,
+    "blackPixelFraction": 0.98,
+    "pixelThreshold": 0.04,
+    "intervals": [],
+    "passed": true
+  },
+  "audioSignalCheck": {
+    "rmsDbFS": "-39.248944",
+    "peakDbFS": "-7.186073",
+    "samples": "3456000",
+    "nonzeroSignal": true,
+    "listeningReviewPassed": false
+  },
+  "wgc": {
+    "backend": "WindowsGraphicsCapture",
+    "explicitHwndOnly": true,
+    "desktopCapture": false,
+    "completed": true,
+    "hwnd": 8063304,
+    "processId": 21212,
+    "width": 1920,
+    "height": 1080,
+    "frameRate": 30,
+    "pixelFormat": "BGRA8 SDR",
+    "frames": 2257,
+    "duplicatedFrames": 15,
+    "firstOutputUnixMicroseconds": 1791251622205851.2,
+    "firstCompositorUnixMicroseconds": 1791251622192610,
+    "timing": "Real-time CFR schedule; newest available compositor frame, repeat only when compositor has no newer frame"
+  },
+  "sourceEvidenceFolder": "benchmark/local/evidence/unity-showcase/20261006-035316/capture-wgc",
+  "outputSha256": "b2a9ee6c5671a80a4519af1af93a5f09f06733dcd9f03142bb9fddc850078443",
+  "bytes": 58932599,
+  "durationSeconds": 75.233008,
+  "streams": [
+    {
+      "codec": "h264",
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "frameRate": "30/1",
+      "sampleRate": null,
+      "channels": null
+    },
+    {
+      "codec": "aac",
+      "kind": "audio",
+      "width": null,
+      "height": null,
+      "frameRate": "0/0",
+      "sampleRate": "48000",
+      "channels": 2
+    }
+  ],
+  "motionCheckPassed": true,
+  "freezeDetection": {
+    "longestPlateauSeconds": 0,
+    "minimumDurationSeconds": 5,
+    "passed": true,
+    "intervals": [],
+    "noiseThresholdDb": -60
+  },
+  "repeatedCompositorFrameFraction": 0.00664599025254763,
+  "independentlyInspectedFrameSeconds": [
+    3,
+    31,
+    41
+  ],
+  "frameReview": "Wide pair changes to Nib and Krag portraits; no captured desktop or window chrome in inspected samples. This confirms capture changes, not animation/likeness acceptance.",
+  "artStatus": "Current baseline remains rejected; Nib portrait is strongly backlit.",
+  "listeningReviewPassed": false,
+  "captureScriptSha256AtExecution": "84614cb6bf181ac281622fd7a76d308efb9e6152d517a73976b2f741d1d30da6",
+  "unrealCaptureExecuted": false
+}

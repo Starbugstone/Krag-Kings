@@ -8,7 +8,7 @@ param(
     [int]$GameProcessId=0,
     [string]$WindowTitle='',
     [string]$Ffmpeg='',
-    [ValidateSet('GDI','WGC')][string]$CaptureBackend='GDI',
+    [ValidateSet('GDI','WGC')][string]$CaptureBackend='WGC',
     [string]$WindowCaptureHelper='',
     [ValidateRange(15,60)][int]$FrameRate=30,
     [ValidateRange(30,180)][int]$ShowcaseSeconds=72,
@@ -18,7 +18,7 @@ $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 if(-not $Ffmpeg){$Ffmpeg=Join-Path $repo 'benchmark\local\capture\ffmpeg-compatible\ffmpeg-8.0.1-essentials_build\bin\ffmpeg.exe'}
 if(-not $WindowCaptureHelper){$WindowCaptureHelper=Join-Path $repo 'benchmark\local\capture\native\KragKingsWindowCapture.exe'}
-if($CaptureBackend -eq 'WGC' -and -not(Test-Path $WindowCaptureHelper)){throw 'Build the optional WGC helper with Build-WindowCapture.ps1 before selecting that backend.'}
+if($CaptureBackend -eq 'WGC' -and -not(Test-Path $WindowCaptureHelper)){throw 'Build the WGC helper with Build-WindowCapture.ps1 before recording.'}
 $ffprobe=Join-Path (Split-Path $Ffmpeg) 'ffprobe.exe'
 foreach($tool in @($Ffmpeg,$ffprobe)){if(-not(Test-Path $tool)){throw "Capture tool missing: $tool"}}
 New-Item -ItemType Directory -Force $OutputDirectory | Out-Null

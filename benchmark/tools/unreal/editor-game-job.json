@@ -1,0 +1,22 @@
+{
+  "name": "unreal-editor-game-review",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-game",
+    "-nosplash",
+    "-ResX=1920",
+    "-ResY=1080",
+    "-NoVSync",
+    "-KKInputState",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\editor-game-runtime.log"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-editor-game-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-editor-game-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 10,
+  "gpuTelemetry": true
+}
