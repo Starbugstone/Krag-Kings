@@ -1,0 +1,74 @@
+{
+  "status": "Promoted bounded deformation repair; engine replay pending; artistic acceptance false",
+  "utc": "2026-10-06T02:31:43.861830+00:00",
+  "candidateReceipt": "benchmark/art/nib/v5-study/runtime-morph-repair-candidate-v4b.contract.json",
+  "candidateReceiptSha256": "3f0c644d394df4cb3d944cc9a04daa3796a0db7b8559a1a5ffc558491055dc6b",
+  "backup": "benchmark/local/shared-backups/nib-before-morph-repair-20261006",
+  "rootReview": "Reviewed actual imported-FBX Shoot .46; forehead spikes absent; existing eye/lid and likeness failures remain",
+  "changedFiles": [
+    {
+      "path": "Nib_GripReplacement.fbx",
+      "previousSha256": "4b35892fcaec9456a9ff6f6f1209febcffae66ac4e05c3609017f810dace6ce8",
+      "newSha256": "c4c8d4282a2d9c7b7b9d75698ef9cf3aece91fc4cf95ee1d44418d1ec7cf55e7"
+    },
+    {
+      "path": "Nib_LegReplacement.fbx",
+      "previousSha256": "fd1716cad09d15dbb52bec187512e793820963941465dcb7478acc8cc3f133f7",
+      "newSha256": "87a6f07060621091ecd6b57b60286a68f7657be912474bb0ca3f8929fa91a8f0"
+    },
+    {
+      "path": "Nib_Natural.fbx",
+      "previousSha256": "3e912b71e5ee1a908bb89bf0fe3b5b0faa3977ca08a3c396a5eea46e4a9d7898",
+      "newSha256": "39f3829f66fd5b186af1c92404e44111abf76b0054b03594f30268983ddf47c9"
+    },
+    {
+      "path": "animations/FacePerformance.fbx",
+      "previousSha256": "beae04b7c28ae994cb0a8a3f4cb821551a7100fa09f75721ad2ee2a658ba518d",
+      "newSha256": "03028fa96e2f05068219e2e01d52f19a11611de5e9ec9c325f4353e94b17cb2c"
+    },
+    {
+      "path": "animations/Hit.fbx",
+      "previousSha256": "dfc03b080fb82b8ca8bdfb00ee1c112a1ce8ab984ad37c69c0404818e9e64827",
+      "newSha256": "892fc8663149906df41a62fda0fa5c61d48f73affd74e115dee2c1b97a58dbfb"
+    },
+    {
+      "path": "animations/Idle.fbx",
+      "previousSha256": "e8305bd57390566f522bcbcb2ddc390110efd22af70ed829274fa64a9b69164e",
+      "newSha256": "69425a18bb8d20d9904a8331141cf6a3a3ee68b6b9957dd129629601e3eb45c6"
+    },
+    {
+      "path": "animations/Melee.fbx",
+      "previousSha256": "1150a5e715fcbcac93f3b865d71df27c6268735e9ab6d93ab1ca8671b32e7930",
+      "newSha256": "c48a303d993f22e80aca94e6e4191fff7ef9ea4ecd01d7d763f58e10bfa17d6c"
+    },
+    {
+      "path": "animations/Run.fbx",
+      "previousSha256": "f99221d0227ea972fdb4edec95ab170bc63f266562836716235046ed4d64e863",
+      "newSha256": "2c8a23c472e47e5ee423609ab6c0a42a232d6d81226da463d2b5a157b7aa3af3"
+    },
+    {
+      "path": "animations/Shoot.fbx",
+      "previousSha256": "badcd0ea9adb84d77e1410752b1162437154a10682ccd506cb94eefef4da6b58",
+      "newSha256": "f0fce303c997b5e461a457e0d250d416c1d0c32468945ca4d52b9a8277c75ddf"
+    },
+    {
+      "path": "animations/Walk.fbx",
+      "previousSha256": "2b0dbc2954ef69bb695c8f030c7b31e98fb1cbbd3064aec2eab17d0a52e5c4bb",
+      "newSha256": "8245a3184307247acb97a30fa121808ede580842f57ba1f446d438d40f304267"
+    },
+    {
+      "path": "asset_manifest.json",
+      "previousSha256": "80170dea8dc6e13492497728eab473ed4a53383a271d3430a919f74808b0ec44",
+      "newSha256": "785e2664b534b2a1ebfb9d7fc1c946f3d0bc83ef51eec75c16d6ca395b7e0ec3"
+    },
+    {
+      "path": "manifest.json",
+      "previousSha256": "80170dea8dc6e13492497728eab473ed4a53383a271d3430a919f74808b0ec44",
+      "newSha256": "785e2664b534b2a1ebfb9d7fc1c946f3d0bc83ef51eec75c16d6ca395b7e0ec3"
+    }
+  ],
+  "validatedFiles": 85,
+  "textureFilesChanged": 0,
+  "source": "benchmark/art/nib/Nib_Runtime_Optimized_v4b_MorphRepair.blend",
+  "sourceSha256": "db83f3d82861164a8be7bf61e08f1ee842c03564db7946c18651444cf8a07c66"
+}
