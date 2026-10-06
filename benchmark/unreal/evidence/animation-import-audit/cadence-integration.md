@@ -33,3 +33,11 @@ Starting locomotion from idle still seeks to phase zero. The seek clears old ter
 - The 72-second showcase and 12-second performance workload are scenario schedules, not gait clocks. Different travel/clip durations can alter which pose is visible at a scheduled event. Recheck framing/event overlap when new assets are actually integrated.
 
 Prepared changes cover metadata validation/reporting, metadata-driven Unreal foot support, and the scoped phase/foot-event transition handling above. Python syntax and pure metadata/phase checks pass. The updated Unity runtime and Editor source compile against the exact cached compiler/references from the real project; that is not an Editor import or player build. The subsequent [native Unreal build/package](../gait-phase-build/README.md) passes; actual new-clip contact/deformation review remains pending. Shared assets remain unchanged.
+
+## Independent idle initialization — source preparation
+
+The new six-second Idle clips would otherwise begin together. A provisional presentation offset now initializes Krag at normalized phase 0 and Nib at 0.37 (2.22 seconds on a six-second clip), on model configuration or a transition into Idle. Continuous Idle does not seek again each frame. This is tuning for the two-unit demonstration, not species canon or randomness.
+
+Unity applies the offset after the existing same-action early return; its normal crossfade remains. Unreal uses an initialization serial, clip-change check and body-action/locomotion-to-Idle transition check, setting both sequence start position and accumulated time only at those boundaries. Walk/Run contact-relative mapping, action clocks, facial layering and camera controls are unchanged. These latest Idle changes are **source only**, not included in package `fe65cc4a…`; native compile and actual two-unit idle review remain pending.
+
+The updated Unity runtime and Editor assemblies pass the existing cached compiler/reference check. No editor was launched and no player was rebuilt. [Exact source hashes and preparation status](idle-phase-preparation.json).

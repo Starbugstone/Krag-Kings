@@ -11,7 +11,7 @@ class KRAGKINGSBENCHMARK_API UKKBenchmarkAnimInstance : public UAnimInstance
 {
     GENERATED_BODY()
 public:
-    void Configure(UAnimSequence* InIdle,UAnimSequence* InWalk,UAnimSequence* InRun);
+    void Configure(UAnimSequence* InIdle,UAnimSequence* InWalk,UAnimSequence* InRun,float InIdlePhase=0.f);
     void SetRunning(bool bInRunning,bool bInWalking=false) { bRunning=bInRunning; bWalking=bInWalking; bActionActive=false; }
     void PlayAction(UAnimSequence* InAction) { ActionClip=InAction;bRunning=false;bActionActive=true;++ActionSerial; }
     void PlayFace(UAnimSequence* InFace) { FaceClip=InFace;bFaceActive=true;++FaceSerial; }
@@ -27,6 +27,8 @@ public:
     bool bFaceActive=false;
     uint32 ActionSerial=0;
     uint32 FaceSerial=0;
+    float IdleInitialPhase=0.f;
+    uint32 IdleInitializationSerial=0;
     float LocomotionSpeedRatio=1.f;
     float WalkCycleSeconds=0.f;
     float RunCycleSeconds=0.f;

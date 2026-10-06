@@ -82,7 +82,8 @@ void AKKBenchmarkUnit::ApplyVariant()
     GetMesh()->SetAnimInstanceClass(UKKBenchmarkAnimInstance::StaticClass());
     if(auto* Anim=Cast<UKKBenchmarkAnimInstance>(GetMesh()->GetAnimInstance()))
     {
-        Anim->Configure(V->Idle,V->Walk,V->Run);Anim->MorphDrivers=V->MorphDrivers;
+        // Provisional presentation tuning, matching Unity's independent Idle.
+        Anim->Configure(V->Idle,V->Walk,V->Run,bKrag?0.f:.37f);Anim->MorphDrivers=V->MorphDrivers;
         Anim->WalkCycleSeconds=V->WalkCycleSeconds;Anim->RunCycleSeconds=V->RunCycleSeconds;
         Anim->WalkStanceFraction=V->WalkStanceFraction;Anim->RunStanceFraction=V->RunStanceFraction;
         Anim->WalkLeftContacts=V->WalkLeftContacts;Anim->WalkRightContacts=V->WalkRightContacts;

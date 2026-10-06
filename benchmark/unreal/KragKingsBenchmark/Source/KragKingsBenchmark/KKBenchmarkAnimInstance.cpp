@@ -97,6 +97,7 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     bool bRunning=false,bPreviousWalking=false,bActionActive=false,bFaceActive=false;
     uint32 LastActionSerial=0;
     uint32 LastFaceSerial=0;
+    uint32 LastIdleInitializationSerial=~0u;
     explicit FKKBenchmarkAnimProxy(UAnimInstance* Instance):FAnimInstanceProxy(Instance)
     {
         IdlePlayer.SetLoopAnimation(true);RunPlayer.SetLoopAnimation(true);ActionPlayer.SetLoopAnimation(false);
@@ -150,7 +151,17 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
         auto* Anim=CastChecked<UKKBenchmarkAnimInstance>(Instance);
         MorphCurves.Drivers=Anim->MorphDrivers;
         MorphCurves.MeshToWorld=GetComponentTransform();
+        const bool bEnteringIdle=!Anim->bRunning && !Anim->bActionActive && (bRunning || bActionActive);
+        const bool bInitializeIdle=LastIdleInitializationSerial!=Anim->IdleInitializationSerial || IdlePlayer.GetSequence()!=Anim->IdleClip.Get() || bEnteringIdle;
         IdlePlayer.SetSequence(Anim->IdleClip);
+        if(bInitializeIdle && Anim->IdleClip)
+        {
+            // Seek once on configuration/Idle entry, never on continuous Idle.
+            // StartPosition also survives initial graph-node initialization.
+            const float Time=Anim->IdleInitialPhase*Anim->IdleClip->GetPlayLength();
+            IdlePlayer.SetStartPosition(Time);IdlePlayer.SetAccumulatedTime(Time);
+            LastIdleInitializationSerial=Anim->IdleInitializationSerial;
+        }
         const UAnimSequence* PreviousMovingClip=Cast<UAnimSequence>(RunPlayer.GetSequence());
         const float PreviousPhase=PreviousMovingClip && PreviousMovingClip->GetPlayLength()>0.f?FMath::Frac(RunPlayer.GetAccumulatedTime()/PreviousMovingClip->GetPlayLength()):0.f;
         const UAnimSequence* MovingClip=Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get();
@@ -255,9 +266,10 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     }
 };
 
-void UKKBenchmarkAnimInstance::Configure(UAnimSequence* InIdle,UAnimSequence* InWalk,UAnimSequence* InRun)
+void UKKBenchmarkAnimInstance::Configure(UAnimSequence* InIdle,UAnimSequence* InWalk,UAnimSequence* InRun,float InIdlePhase)
 {
     IdleClip=InIdle;WalkClip=InWalk;RunClip=InRun;ActionClip=InIdle;bRunning=false;bWalking=false;bActionActive=false;bFaceActive=false;
+    IdleInitialPhase=FMath::Clamp(InIdlePhase,0.f,.999999f);++IdleInitializationSerial;
 }
 FAnimInstanceProxy* UKKBenchmarkAnimInstance::CreateAnimInstanceProxy(){return new FKKBenchmarkAnimProxy(this);}
 void UKKBenchmarkAnimInstance::DestroyAnimInstanceProxy(FAnimInstanceProxy* InProxy){delete InProxy;}

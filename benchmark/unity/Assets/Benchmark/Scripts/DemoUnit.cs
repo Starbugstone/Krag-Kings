@@ -198,7 +198,9 @@ namespace KragKings.Benchmark
         void Play(string action, bool restart=false)
         {
             if (!restart && CurrentAction == action) return;
-            float phase=0;
+            // Provisional presentation tuning: independent breathing/attention
+            // on each Idle entry. Continuous Idle returns above without seeking.
+            float phase=action=="Idle" && species=="Nib" ? .37f : 0;
             bool oldGait=CurrentAction=="Walk"||CurrentAction=="Run";
             bool newGait=action=="Walk"||action=="Run";
             if(!restart && IsMoving && oldGait && newGait && animationPlayer[CurrentAction]!=null)
