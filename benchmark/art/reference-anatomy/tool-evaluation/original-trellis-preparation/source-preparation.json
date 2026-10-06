@@ -1,0 +1,46 @@
+{
+  "status": "Isolated mesh-only imports prepared; no model/GPU/inference validation",
+  "upstreamRevision": "442aa1e1afb9014e80681d3bf604e8d728a86ee7",
+  "upstreamChanged": false,
+  "changes": [
+    {
+      "path": "trellis/__init__.py",
+      "upstreamSha256": "6eb340add1370ec95a8c19c36d5e7deb96e5950f1ffd2464e988fd77b813c130",
+      "preparedSha256": "07c43c0fab9855152178b61dbcd4924c54c1b77eca7d3a98fcb5fc71d0182e83"
+    },
+    {
+      "path": "trellis/representations/__init__.py",
+      "upstreamSha256": "9a927094c556265a0e346d3a288ef5909011f2bd1422416bbf55e631848a96ea",
+      "preparedSha256": "10e01f5e303c501deb6e0f7bd0563c245889bcca168c1032fd3d0a4f960cacc5"
+    },
+    {
+      "path": "trellis/models/structured_latent_vae/__init__.py",
+      "upstreamSha256": "7ff6602d44207b58c4dce103b136219b78b98a3a424368a7fb219a2ea2dd41bf",
+      "preparedSha256": "e60a0b6b87e95079b85643df9929b3259993be0b46ff8d9c55b2ba268c7786fa"
+    },
+    {
+      "path": "trellis/pipelines/__init__.py",
+      "upstreamSha256": "481154bace0520887b62966357a63d07db41ad35bbc037ece67c9329750e67e3",
+      "preparedSha256": "4d1adb06bd0ce67c9d23620e4ba5ab524178f2bd080db56f133bad6e5e679c44"
+    },
+    {
+      "path": "trellis/pipelines/trellis_image_to_3d.py",
+      "upstreamSha256": "a9a6eab500dd0693f6f5aa86d42291a4921596988c5c6460aa17fad6fe66b833",
+      "preparedSha256": "f94a1e0f59471b1a0fe11261216ff1c9a5b5c11986fb4269fae2421cfa6d0cbb"
+    },
+    {
+      "path": "trellis/pipelines/trellis_image_to_3d.py",
+      "upstreamSha256": "f94a1e0f59471b1a0fe11261216ff1c9a5b5c11986fb4269fae2421cfa6d0cbb",
+      "preparedSha256": "d13d53dd2af2212abe5b7f20fe9f964c8c118f0b6e4fcb7152d0a19089a2ee83"
+    },
+    {
+      "path": "trellis/representations/mesh/flexicubes/flexicubes.py",
+      "upstreamSha256": "fe443b5225680969c706644931a4f723e7137ce8007758c1870b6841af2d4238",
+      "preparedSha256": "441ad1240fc6a548efb62f021a6d98079cad14903b506ffcefada09cdba9319f"
+    }
+  ],
+  "geometryAlgorithmChanged": false,
+  "modelWeightsDownloaded": false,
+  "inferenceRan": false,
+  "recipeSha256": "5990498ad98cef1f8224fa823590a742c5dd8192ea65340ebb03e8f755a7c697"
+}

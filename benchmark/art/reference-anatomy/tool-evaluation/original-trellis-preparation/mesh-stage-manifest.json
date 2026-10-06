@@ -1,0 +1,128 @@
+[
+  {
+    "role": "sparse_structure_decoder",
+    "config": {
+      "name": "SparseStructureDecoder",
+      "args": {
+        "out_channels": 1,
+        "latent_channels": 8,
+        "num_res_blocks": 2,
+        "num_res_blocks_middle": 2,
+        "channels": [
+          512,
+          128,
+          32
+        ],
+        "use_fp16": true
+      }
+    },
+    "configSha256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+    "weight": {
+      "rfilename": "ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "blobId": "a4b577752af35caab154c83b72427d9cc92285f6",
+      "size": 147591972,
+      "lfs": {
+        "sha256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+        "size": 147591972,
+        "pointerSize": 134
+      }
+    }
+  },
+  {
+    "role": "sparse_structure_flow_model",
+    "config": {
+      "name": "SparseStructureFlowModel",
+      "args": {
+        "resolution": 16,
+        "in_channels": 8,
+        "out_channels": 8,
+        "model_channels": 1024,
+        "cond_channels": 1024,
+        "num_blocks": 24,
+        "num_heads": 16,
+        "mlp_ratio": 4,
+        "patch_size": 1,
+        "pe_mode": "ape",
+        "qk_rms_norm": true,
+        "use_fp16": true
+      }
+    },
+    "configSha256": "bf69161da7ece9a87394dd4441f0cfa6d4261696a214a8f68388c81fa9a6b5b7",
+    "weight": {
+      "rfilename": "ckpts/ss_flow_img_dit_L_16l8_fp16.safetensors",
+      "blobId": "2444705e7da1d8897e5cbd08c08001033f08cf2a",
+      "size": 1130770840,
+      "lfs": {
+        "sha256": "96dc6bfd4136fd950af564dd16b4ae533c9ba6af8f26c670646b2a9f2789b1db",
+        "size": 1130770840,
+        "pointerSize": 135
+      }
+    }
+  },
+  {
+    "role": "slat_flow_model",
+    "config": {
+      "name": "SLatFlowModel",
+      "args": {
+        "resolution": 64,
+        "in_channels": 8,
+        "out_channels": 8,
+        "model_channels": 1024,
+        "cond_channels": 1024,
+        "num_blocks": 24,
+        "num_heads": 16,
+        "mlp_ratio": 4,
+        "patch_size": 2,
+        "num_io_res_blocks": 2,
+        "io_block_channels": [
+          128
+        ],
+        "pe_mode": "ape",
+        "qk_rms_norm": true,
+        "use_fp16": true
+      }
+    },
+    "configSha256": "c0a9bd57227f55cf75ff02562c27bb05c50174f06955f56a79dea2982fd7a8f9",
+    "weight": {
+      "rfilename": "ckpts/slat_flow_img_dit_L_64l8p2_fp16.safetensors",
+      "blobId": "a7d367bccf6fb75d9407675e3d8adc9e51307a03",
+      "size": 1203755136,
+      "lfs": {
+        "sha256": "693fb2a58ad497bd222007301eeec49d14d60f8c12d2f2f00c221fa747b4c66c",
+        "size": 1203755136,
+        "pointerSize": 135
+      }
+    }
+  },
+  {
+    "role": "slat_decoder_mesh",
+    "config": {
+      "name": "SLatMeshDecoder",
+      "args": {
+        "resolution": 64,
+        "model_channels": 768,
+        "latent_channels": 8,
+        "num_blocks": 12,
+        "num_heads": 12,
+        "mlp_ratio": 4,
+        "attn_mode": "swin",
+        "window_size": 8,
+        "use_fp16": true,
+        "representation_config": {
+          "use_color": true
+        }
+      }
+    },
+    "configSha256": "293900795cb69cc972d1a20a4940ee12f7e007952c2ae92d128dda91b96ac317",
+    "weight": {
+      "rfilename": "ckpts/slat_dec_mesh_swin8_B_64l8m256c_fp16.safetensors",
+      "blobId": "da28e99a05f40ab6f63172aaef5d695dfb1ab899",
+      "size": 181903412,
+      "lfs": {
+        "sha256": "3e87aba94b5786407eb06d0502c1ed0885a0027a3f2b8537bfe15b0a92c01859",
+        "size": 181903412,
+        "pointerSize": 134
+      }
+    }
+  }
+]

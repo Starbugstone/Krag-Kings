@@ -248,3 +248,7 @@ benchmark/unreal/evidence/coherent79-native-incomplete/*.ps1 -text whitespace=cr
 benchmark/art/animation/krag-anatomical-hand-v3/actions-review/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/animation/krag-anatomical-hand-v3/evidence/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/animation/krag-anatomical-hand-v3/evidence/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/evidence/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/evidence/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

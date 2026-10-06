@@ -1,0 +1,42 @@
+{
+  "status": "Isolated import surface and small kernel probe prepared; environment, GPU kernels and inference not yet run",
+  "upstream": "https://github.com/microsoft/TRELLIS",
+  "sourceCommit": "442aa1e1afb9014e80681d3bf604e8d728a86ee7",
+  "flexiCubesCommit": "815e075a2a400d06c48d94c347674344ed6ae5c5",
+  "model": "microsoft/TRELLIS-image-large",
+  "modelRevision": "25e0d31ffbebe4b5a97464dd851910efc3002d96",
+  "upstreamMinimumVramGB": 16,
+  "localVramGB": 6,
+  "upstreamSupportsXformersFallback": true,
+  "meshOnlyWeightsBytes": 2664021360,
+  "weightsByteNote": "Four stage weights; image conditioning DINO is additional. Do not infer peak RAM or VRAM from file sizes.",
+  "proposedWindowsVersions": {
+    "python": "3.10",
+    "torch": "2.4.0+cu121",
+    "torchvision": "0.19.0+cu121",
+    "xformers": "0.0.27.post2",
+    "spconv-cu120": "2.3.6",
+    "cumm-cu120": "0.4.11"
+  },
+  "windowsWheelsVerifiedInOfficialIndex": [
+    "torch",
+    "torchvision",
+    "xformers",
+    "spconv-cu120"
+  ],
+  "proposedChanges": [
+    "Stage-wise CPU offload and load only four mesh pipeline models; no Gaussian/radiance decoders or proprietary renderers",
+    "Equivalent standalone shape assertions for the six FlexiCubes shape checks; preserve actual checks while avoiding a whole Kaolin dependency",
+    "Guarded small FP16/xformers/spconv kernel probe before any model download",
+    "Dense256-cube mesh extraction remains a memory risk; measured pilot required"
+  ],
+  "generationCanSupplySkeleton": false,
+  "sourceConceptUpload": false,
+  "engineIntegrated": false,
+  "artisticAcceptance": false,
+  "dinoSourceCommit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+  "input": "benchmark/unreal/evidence/triposr-krag-bust-matted-v2/input/foreground-original-rgb.png",
+  "inputSha256": "3733b77247fcabfab1dd715f0b13e06e27e15df8beb77deaa18ab528435ba8a2",
+  "kernelProbePrepared": true,
+  "environmentInstalled": false
+}

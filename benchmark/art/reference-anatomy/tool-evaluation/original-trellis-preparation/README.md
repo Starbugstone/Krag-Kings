@@ -1,0 +1,9 @@
+# Original TRELLIS — proposed bounded reconstruction pilot
+
+The original Microsoft TRELLIS is a separate route from TRELLIS.2 and AISmith. Its reference reports a 16GB GPU baseline and an xformers fallback. This machine has 6GB: staged residency is a hypothesis, not a successful local result. [Official repository](https://github.com/microsoft/TRELLIS/tree/442aa1e1afb9014e80681d3bf604e8d728a86ee7).
+
+The pinned model is labelled MIT; source MIT and modified FlexiCubes Apache2.0 notices are retained here. DINOv2 uses Apache2.0. The intended mesh-only path excludes optional research rasterizers. No model, environment, GPU kernel or inference has run yet. An isolated copy with mesh-only imports is now prepared, with a recorded patch history; the original checkout is unchanged. [Model](https://huggingface.co/microsoft/TRELLIS-image-large/tree/25e0d31ffbebe4b5a97464dd851910efc3002d96), [FlexiCubes](https://github.com/MaxtirError/FlexiCubes/blob/815e075a2a400d06c48d94c347674344ed6ae5c5/LICENSE.txt), [DINOv2](https://github.com/facebookresearch/dinov2/blob/main/LICENSE).
+
+A separate Windows Python environment with matching Torch2.4.0/xformers wheels is proposed. Test small FP16 attention and sparse-convolution kernels first, under the existing guard, then load stages serially for a single existing locally matted concept crop if viable. Dense mesh extraction still needs measurement. Output would be a provisional mesh/reference study requiring anatomical retopology, rigging, mouth construction and hidden-surface review, not a game-ready character.
+
+The kernel probe will compare FP16 attention and sparse convolution against FP32 outputs, then extract a tiny sphere with the original FlexiCubes algorithm. These are prepared checks only. The local DINOv2 checkout is pinned to `7764ea0f912e53c92e82eb78a2a1631e92725fc8`. The proposed input reuses the existing locally matted Krag concept crop; no project image is uploaded.

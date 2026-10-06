@@ -1,0 +1,27 @@
+{
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4.5,
+  "name": "krag-organic-skin-study-v1",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\material_study\\review_skin_v1.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Oral_v9p_Motion_v4_WIP.blend",
+    "--source-sha256",
+    "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\material-study\\organic-skin-v1\\matched-mesh-review"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-organic-skin-study-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-organic-skin-study-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-organic-skin-study-v1.stdout.log",
+  "successMarker": "KRAG_MATCHED_SKIN_STUDY_COMPLETE"
+}

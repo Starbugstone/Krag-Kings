@@ -1,0 +1,82 @@
+{
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "bitmapSha256": "346ff0960a02f8b4eb17ba93ff4cb562e238223d758fea64f86169d062f726ea",
+  "bitmapDimensions": [
+    1254,
+    1254
+  ],
+  "recipeSha256": "c18e70e50c51ff30472c90527805dd5a494f38da907d27e9249b00d91b04a5ed",
+  "artisticAcceptance": false,
+  "sourceModified": false,
+  "engineIntegrated": false,
+  "generatedBitmapIsMeasuredAlbedo": false,
+  "generatedBitmapUsedAsHeight": false,
+  "views": [
+    {
+      "material": "Current",
+      "view": "Face",
+      "path": "Current-Face.png",
+      "sha256": "36cc3227d2d120c6d6e11d58c45130263c7ee912d2f13561464336177330194f",
+      "samples": 24
+    },
+    {
+      "material": "Current",
+      "view": "Body",
+      "path": "Current-Body.png",
+      "sha256": "0b1456e3e8dc7ad4a32f67a5cd91f3578f411aeebaaa2fa906c2680510ab5d4f",
+      "samples": 24
+    },
+    {
+      "material": "OrganicStudy",
+      "view": "Face",
+      "path": "OrganicStudy-Face.png",
+      "sha256": "be441699f1c102478aa9a89d483b6dc949d5088165dac5d3688a2a2b644f9093",
+      "samples": 24
+    },
+    {
+      "material": "OrganicStudy",
+      "view": "Body",
+      "path": "OrganicStudy-Body.png",
+      "sha256": "39d29ee822d76d95d368a7c0fa6f00d675d8acaf4d885cdc2e31ca950c75ad6b",
+      "samples": 24
+    }
+  ],
+  "materialChanges": [
+    {
+      "name": "Krag_SandstoneSkin",
+      "pigmentScalePerMeter": 4.0,
+      "bumpChanges": [
+        {
+          "node": "Bump",
+          "beforeMeters": 0.000699999975040555,
+          "afterMeters": 0.0005499999970197678
+        },
+        {
+          "node": "Bump.001",
+          "beforeMeters": 0.0017999999690800905,
+          "afterMeters": 0.0005499999970197678
+        }
+      ],
+      "subsurfaceWeight": 0.06,
+      "roughness": "Original scanned roughness retained"
+    },
+    {
+      "name": "Krag_FacialSkin",
+      "pigmentScalePerMeter": 6.5,
+      "bumpChanges": [
+        {
+          "node": "Bump",
+          "beforeMeters": 0.00031499998294748366,
+          "afterMeters": 0.00031499998294748366
+        },
+        {
+          "node": "Bump.001",
+          "beforeMeters": 0.0002835000050254166,
+          "afterMeters": 0.0002835000050254166
+        }
+      ],
+      "subsurfaceWeight": 0.06,
+      "roughness": "Original scanned roughness retained"
+    }
+  ]
+}
