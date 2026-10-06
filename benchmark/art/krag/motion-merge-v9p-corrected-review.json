@@ -1,0 +1,79 @@
+{
+  "status": "Actual corrected Natural assembly and24 motion poses inspected; source preservation passes, art remains unaccepted",
+  "source": {
+    "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.blend",
+    "sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17"
+  },
+  "review": {
+    "path": "benchmark/art/krag/motion-merge-v9p-fallback-review-v2/review.json",
+    "sha256": "01c083fd433a34b3ff29779b637ac5de6308c957024901f8bf280e43a6fd37be"
+  },
+  "all24ImagesInspected": true,
+  "exactSourceModuleInventory": [
+    "Armor",
+    "Belt",
+    "BioArm_L",
+    "BioArm_R",
+    "BioForearm_L",
+    "BioForearm_R",
+    "BioLowerLeg_L",
+    "BioLowerLeg_R",
+    "BionicArm_L_Crusher",
+    "BionicEye_L",
+    "BionicJaw_Iron",
+    "BionicLeg_R_Piston",
+    "BionicThigh_R_Full",
+    "Body",
+    "Boot_L",
+    "Boot_R",
+    "Face",
+    "Garments",
+    "Harness",
+    "Head",
+    "MouthInterior",
+    "NaturalThigh_R",
+    "Scarf",
+    "TrouserLeg_L",
+    "TrouserLeg_R",
+    "Weapon_R"
+  ],
+  "frozenSourceContract": {
+    "path": "benchmark/art/krag/coherent68-source-contract.json",
+    "sha256": "7469b7ffb00f6cb3f2b2f148eac68be2ecc08d294c70564c1f4227e62352e477"
+  },
+  "initialVisibilityFailureRetained": "benchmark/art/krag/motion-merge-v9p-review.json",
+  "pixelsUnchangedFromInitialOf24": 0,
+  "execution": {
+    "nativeProcessId": 31712,
+    "nativeExitCode": 0,
+    "guardExitCode": 0,
+    "processClosed": true,
+    "peakPrivateMB": 1480.0,
+    "minimumAvailableMB": 10493.0,
+    "files": [
+      {
+        "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback-v2.stdout.txt",
+        "sha256": "77608ee055b5280e9ee0d27285848498264ecc451a9d4ea12e18ff977107fa3b"
+      },
+      {
+        "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback-v2.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback-v2-memory.csv",
+        "sha256": "e7b4f4bb2e67ce913b55ff5223faf235e0e76adfcbab08627d54409ef7e851da"
+      }
+    ]
+  },
+  "observations": [
+    "Explicit Natural exclusions now remove the full bionic thigh; exact26-module source inventory passes",
+    "Coordinated torso/pelvis/shoulder motion and distinct walk/run support remain visible",
+    "Subtle head and standing weight variation accompany the six-second Idle",
+    "Old free-hand splay and soft anatomy remain; root72-bone hand is not merged",
+    "Facial likeness, mouth/tusks, cloth/armor and inherited IronJaw overlay are still unaccepted"
+  ],
+  "artisticAcceptance": false,
+  "sourceChanged": false,
+  "sharedChanged": false,
+  "engineExported": false
+}

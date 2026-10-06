@@ -11,3 +11,5 @@ Every current mesh, shape key, UV, weight and corrective-driver contract must re
 Neither source is an art acceptance or shared/export promotion. Mouth, facial likeness, hand shape, cloth and armor defects remain explicit until actual corrected views and engine validation exist.
 
 The initial 24 actual views used the stale shared v7 visibility list and omitted the later full-thigh exclusion. They are retained as motion diagnostics, not final Natural assembly proof. Prepared `review_merge_v2.py` uses the frozen `art/krag/coherent68-source-contract.json`, asserts the exact current module set, and writes to a separate review directory. It leaves the source and previous images unchanged. The v9r source/merge remain ungenerated.
+
+That corrected review is now actual: all 26 module names matched and all 24 Natural poses completed and were inspected. See `art/krag/motion-merge-v9p-corrected-review.json`. The technical source is ready for the separately owned PBR/export pipeline; this is not artistic acceptance.
