@@ -7,3 +7,6 @@ The old ungenerated relief helper excluded whole orbital face sets, suppressing 
 The real curved iris components receive retained source-coordinate radial amber pigment and a dark limbus. The existing curved optical shell receives a wet corneal coat. No new transparency layer or flat eye card is introduced. These attributes require baking on the actual Face UV atlas before runtime export; coat response needs explicit engine integration.
 
 Body anatomy/bind/actions and shared assets stay unchanged. Source and actual HeadSide/Head/Front/Blink/OpenMouth views remain required before any acceptance or export.
+
+
+Actual progression: v9lb generated from the corrected v9ma neck and failed its first profile due narrow visor/cheek projections. v9lc replaces those local fields with a broad cotangent-screened surface solve, fixes actual oral/orbital/globe-contact margins, and records normal/gradient bounds. Actual HeadSide/Head images are preserved; continuity improves but brow/jaw silhouette, facial planes and tusk emergence still fail. Neither source is promoted. The original v9l recipe remains ungenerated.

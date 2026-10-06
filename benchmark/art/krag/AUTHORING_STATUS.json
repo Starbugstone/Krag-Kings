@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Actual v9ma removes duplicate neck from oral cavity but cloth silhouette fails. Actual v9lb face/iris source and HeadSide now fail due thin brow shelf/triangular cheek projection; no stale custom normals found. Broad topology-based sculpt transition and cowl/tusk corrections remain. Shared unchanged.",
+  "currentAuthoringCode": "Actual v9lc geodesic face source has coherent profile transitions but still fails concept brow/jaw silhouette, cheek planes and tusk emergence. Actual HeadSide and Head preserved. Cowl remains failed tight band/side knot. Shared unchanged.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -441,6 +441,16 @@
     },
     "review": "benchmark/art/krag/v9lb-facial-planes-review.json",
     "status": "Actual facial source and first HeadSide reviewed; structural profile/likeness failure, further views stopped",
+    "accepted": false
+  },
+  "geodesicFaceStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_GeodesicFace_v9lc_WIP.blend",
+      "sha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60",
+      "bytes": 117714576
+    },
+    "review": "benchmark/art/krag/v9lc-geodesic-face-review.json",
+    "status": "Actual broad geodesic face source and profile/portrait reviewed; smoother continuity but likeness remains failed",
     "accepted": false
   }
 }

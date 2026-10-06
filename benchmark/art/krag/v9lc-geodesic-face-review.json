@@ -1,0 +1,102 @@
+{
+  "status": "Actual broad geodesic face source and profile/portrait reviewed; smoother continuity but likeness remains failed",
+  "source": {
+    "path": "benchmark/art/krag/Krag_GeodesicFace_v9lc_WIP.blend",
+    "sha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60",
+    "bytes": 117714576
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/geodesic-face-v9lc.json",
+      "sha256": "b6c6e9357816cd8f34786603d65dfcd01968f78d7e3934bd17f6729bea9f455d",
+      "bytes": 5994
+    },
+    {
+      "path": "benchmark/art/krag/v9lc-geodesic-face-prepared.json",
+      "sha256": "34776fc5eba1cabe7bc68e248b036cce4e1b79800395930cbdb5ff120cce96bf",
+      "bytes": 3158
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lc-geodesic-face.meta.json",
+      "sha256": "20fef8f0329bec933025bf733dac342b5f2671df70abc751f27183582850f698",
+      "bytes": 581
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9lc-geodesic-face.png",
+      "sha256": "c547a0bdbdb6da96244d966d24576c15d865dc993aa6b92bf7114446ad62aa3c",
+      "bytes": 1139774
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9lc-geodesic-face.meta.json",
+      "sha256": "b3b1555f37fee51cb848da25f0f2cb84b66dec8faae8be4344086ef47470e7ad",
+      "bytes": 577
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9lc-geodesic-face.png",
+      "sha256": "6062ff47d45cdb25badd25ef58ce82cf94acff372462683ad7651191f4d31392",
+      "bytes": 1319075
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_face_v9lc.py",
+      "sha256": "c0b58be7eb389c8ab9a32e949681aa351a4d3178a3d19c1057d52e3792af1fbb",
+      "bytes": 5280
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/geodesic_planes.py",
+      "sha256": "bebc9b3c677fe5278abb9cf64cc420b7ca1491ea3274e9b9164eabfdd8d44e65",
+      "bytes": 6965
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/ocular_surface.py",
+      "sha256": "fd3e1642a175162061864eea4a1eaa5fde3fd3112fcb0aa498f2b851247b8dd6",
+      "bytes": 2823
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-face-v9lc-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 918.0,
+      "minimumAvailableMB": 11131.0
+    },
+    {
+      "path": "benchmark/local/krag-review-face-v9lc-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2110.0,
+      "minimumAvailableMB": 10072.0
+    },
+    {
+      "path": "benchmark/local/krag-review-face-v9lc-Head-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2107.0,
+      "minimumAvailableMB": 10086.0
+    }
+  ],
+  "improvements": [
+    "Previous thin visor and triangular cheek shield substantially removed by distributed surface deformation",
+    "Actual oral and orbital/contact margins remain unchanged; no surface flips or triangle collapse under recorded source bounds",
+    "Actual portrait includes radial amber/limbal iris material fields; final optical likeness not accepted"
+  ],
+  "findings": [
+    "Profile brow still reads as a narrow beak-like overhang rather than broad connected supraorbital mass",
+    "Smooth rounded cheek/neck lacks the strong mandibular lower edge and chin of concept01",
+    "Neutral portrait still has weak glabellar/nasolabial planes and broad smooth cheeks",
+    "Tusks remain externally applied-looking wedges on lower muzzle, requiring real lower-gum/lip eruption transition",
+    "Scarf remains the failed tight band/side knot from v9ma; broad draped front cowl absent",
+    "Eye pigment/depth remains less convincing than reference; no actual runtime UV atlas integration"
+  ],
+  "unrunViews": [
+    "Front",
+    "Blink",
+    "OpenMouth",
+    "OpenProfile"
+  ],
+  "next": [
+    "Rebase prepared broad-cowl construction on this actual source, preserving mouth/neck repair",
+    "Shape broad mandibular angle/chin and supraorbital silhouette with fixed contact margins, without returning to local beak fields",
+    "Refit tusk root/crown emergence against true lower gum and oral margin; inspect neutral/open profile",
+    "Retain coherent current surface and exact source provenance; no shared export"
+  ]
+}

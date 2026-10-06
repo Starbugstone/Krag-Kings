@@ -1,0 +1,234 @@
+{
+  "status": "Actual broad topology-based face source; profile and full expression review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_NeckScarf_v9ma_WIP.blend",
+    "sha256": "e16545aff12b8f62bd533541adb7447b34ac245aa2bc0b2f4c4615a1f1715650"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_GeodesicFace_v9lc_WIP.blend",
+    "sha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60"
+  },
+  "planes": {
+    "status": "Actual broad surface displacement; profile/likeness and expressions still require renders",
+    "surfaceSmoothingLengthMeters": 0.019,
+    "marginDeadBandMeters": 0.002,
+    "quinticMarginTransitionMeters": 0.035,
+    "fixedOralAndOrbitalVertices": 7020,
+    "maxDisplacementMeters": 0.011108084735724959,
+    "screenedSolveIterations": 467,
+    "relativeResidual": 9.811312254353113e-09,
+    "displacementGradient": {
+      "p95": 0.21087237562208408,
+      "p99": 0.41628767114848336,
+      "max": 0.5553075069243404,
+      "worstEdges": [
+        {
+          "vertices": [
+            43534,
+            43537
+          ],
+          "gradient": 0.5553075069243404,
+          "midpoint": [
+            0.05926189571619034,
+            -0.14027532935142517,
+            1.930633544921875
+          ]
+        },
+        {
+          "vertices": [
+            31185,
+            31188
+          ],
+          "gradient": 0.5552371067205871,
+          "midpoint": [
+            -0.059234367683529854,
+            -0.13905025273561478,
+            1.930910885334015
+          ]
+        },
+        {
+          "vertices": [
+            1911,
+            19328
+          ],
+          "gradient": 0.5534416674862194,
+          "midpoint": [
+            0.06441126763820648,
+            -0.13778891414403915,
+            1.933677315711975
+          ]
+        },
+        {
+          "vertices": [
+            7246,
+            369
+          ],
+          "gradient": 0.5528485463065052,
+          "midpoint": [
+            -0.06440213695168495,
+            -0.136550635099411,
+            1.9338569045066833
+          ]
+        },
+        {
+          "vertices": [
+            4571,
+            31188
+          ],
+          "gradient": 0.5486691481121373,
+          "midpoint": [
+            -0.06060115620493889,
+            -0.1388290971517563,
+            1.9322149157524109
+          ]
+        },
+        {
+          "vertices": [
+            42359,
+            42362
+          ],
+          "gradient": 0.5485250416966629,
+          "midpoint": [
+            0.0679824911057949,
+            -0.13492226600646973,
+            1.9353474974632263
+          ]
+        },
+        {
+          "vertices": [
+            43538,
+            43541
+          ],
+          "gradient": 0.5478773000084189,
+          "midpoint": [
+            0.05510402470827103,
+            -0.14166095852851868,
+            1.9290286302566528
+          ]
+        },
+        {
+          "vertices": [
+            19061,
+            43534
+          ],
+          "gradient": 0.5471139753134748,
+          "midpoint": [
+            0.06062114238739014,
+            -0.14011849462985992,
+            1.931935966014862
+          ]
+        },
+        {
+          "vertices": [
+            43537,
+            43538
+          ],
+          "gradient": 0.5470069528288362,
+          "midpoint": [
+            0.057224636897444725,
+            -0.141048863530159,
+            1.9297992587089539
+          ]
+        },
+        {
+          "vertices": [
+            17570,
+            43444
+          ],
+          "gradient": 0.5459138757717292,
+          "midpoint": [
+            0.046819161623716354,
+            -0.14179041236639023,
+            1.926011860370636
+          ]
+        },
+        {
+          "vertices": [
+            7986,
+            44142
+          ],
+          "gradient": 0.5453831309920408,
+          "midpoint": [
+            0.03585298731923103,
+            -0.14033102244138718,
+            1.92416250705719
+          ]
+        },
+        {
+          "vertices": [
+            4375,
+            369
+          ],
+          "gradient": 0.5448712414583514,
+          "midpoint": [
+            -0.06321778893470764,
+            -0.13707896322011948,
+            1.9324495792388916
+          ]
+        }
+      ]
+    },
+    "normalAngleChangeDegrees": {
+      "p95": 10.64237094922388,
+      "p99": 20.67988491447256,
+      "max": 43.987991857184
+    },
+    "minimumTriangleAreaRatio": 0.49117455484983535,
+    "flippedTriangles": 0,
+    "fixedMarginMaximumDisplacementMeters": 0.0,
+    "ringVertexCounts": {
+      "R": 80,
+      "L": 80
+    },
+    "customNormalsBeforeSculpt": false,
+    "actualGlobeContactAnchors": {
+      "L": {
+        "vertices": 1641,
+        "distanceBandMeters": 0.003,
+        "maxNearestDistanceMeters": 0.0029993655625730753,
+        "ringVertices": 80
+      },
+      "R": {
+        "vertices": 1630,
+        "distanceBandMeters": 0.003,
+        "maxNearestDistanceMeters": 0.0029957524966448545,
+        "ringVertices": 80
+      }
+    }
+  },
+  "eyes": {
+    "status": "Actual source material fields; runtime atlas/coat integration pending",
+    "irisSurfaces": [
+      {
+        "side": "L",
+        "points": 1600,
+        "sourceRadiusMeters": 0.007057659708108627
+      },
+      {
+        "side": "R",
+        "points": 1600,
+        "sourceRadiusMeters": 0.007063365092522638
+      }
+    ],
+    "radialReliefMeters": 1.8e-05,
+    "coatRoughness": 0.065,
+    "coatIOR": 1.376,
+    "geometryUnchanged": true,
+    "runtimeRequirement": "Bake actual Face UV atlas; preserve ocular wet-coat response explicitly in engine materials"
+  },
+  "knownUnchangedFailures": [
+    "Tight v9ma scarf/side knot",
+    "Tusk root/lip emergence",
+    "Remaining clothing/armor likeness"
+  ],
+  "preserved": [
+    "Actual repaired Body neck",
+    "Body coordinates/rig/actions",
+    "Real oral rim/interior",
+    "Fitted ocular geometry",
+    "Current weapon",
+    "Shared exports"
+  ]
+}
