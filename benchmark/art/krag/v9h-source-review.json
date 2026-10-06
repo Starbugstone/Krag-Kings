@@ -1,0 +1,197 @@
+{
+  "version": "v9h-profile-jaw-source-review",
+  "status": "Actual HeadSide/Head/OpenMouth/Blink/Front reviewed; partial structural improvement, artistic and overall pose acceptance failed",
+  "artisticAcceptance": false,
+  "poseAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+    "sha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+    "bytes": 142381118
+  },
+  "inputRecipe": {
+    "path": "benchmark/art/krag/v9h-prepared-recipe.json",
+    "sha256": "618251097f342433e03385a0a5e2cc2db6dc21220cfda5477fa1c07bf9cc90c1",
+    "bytes": 2490
+  },
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9h-profile-wip.png",
+      "sha256": "a171c40e2d95aa9b1375cb91ed0d8444503dc98cdaf62fab52449a9c25f51b79",
+      "bytes": 1295534
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9h-profile-wip.png",
+      "sha256": "509b8c339591dce909d38d7119a2bc8a712363c223470a6138a953e033e39fcb",
+      "bytes": 1132360
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9h-profile-wip.png",
+      "sha256": "7388cd8709083cdc945cc53a8f71705be4dc3c27b7d82e533cf6ad26d44d4b86",
+      "bytes": 1247481
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f21_v9h-profile-wip.png",
+      "sha256": "0a3641f8684ef196a58c595d996cb87992af553587ea4611299ca9911adb7b63",
+      "bytes": 1247842
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9h-profile-wip.png",
+      "sha256": "c2eb8014f1c3da4356396a769d0784f01c6e242cb90880989ff86c3e01d536e4",
+      "bytes": 1250476
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9h-profile-wip.meta.json",
+      "sha256": "aa453420541ef7954c42c15ec2e84760c754ac4bac8c632dd301a4b48e3102f2",
+      "bytes": 568
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9h-profile-wip.meta.json",
+      "sha256": "4677ba0989be535faf8cef27a5f1b4f64274f85c0783eefa5fa3b87f51b617fe",
+      "bytes": 571
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9h-profile-wip.meta.json",
+      "sha256": "0205e444b61b7966d3d3a4ba729bd1ee1e7498027a23f668aa235bb098a2557b",
+      "bytes": 579
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f21_v9h-profile-wip.meta.json",
+      "sha256": "1b8a13003d7827904ec6abfa697da064584ff8a82d32cc19dbb0067fd99a2c8a",
+      "bytes": 578
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9h-profile-wip.meta.json",
+      "sha256": "dc8cce537946bb6ebbd3da996fb6fe2a46f682deefb8ddb37136f43fa1bed764",
+      "bytes": 567
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9h_WIP-grip-target-verification.json",
+      "sha256": "6a20a1f3a29ecf386571580a131cab1ae5dc432550bc07aa3dae9f67279b87a8",
+      "bytes": 48483
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9h_WIP-jaw-domain-verification.json",
+      "sha256": "10652c303565fc32cf3e8e72c498bdeb9eb328a1cf5886284eacbc1b77992c34",
+      "bytes": 1273
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9h_WIP-locomotion-target-verification.json",
+      "sha256": "1e6dc54b1ad6d469d2c856e06671dc7f8784ddb129d206e1f646e7a32926dad0",
+      "bytes": 42935
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9h_WIP-weapon-pose-verification.json",
+      "sha256": "20a1e8e765035eabbaa85f64d5649eb8ab91a8d682730fe34e54ce6e2eb673a0",
+      "bytes": 1791
+    },
+    {
+      "path": "benchmark/art/krag/v9h-source-contract.json",
+      "sha256": "5ea87f2e199a604bccac71440e9f883579b9a40896121545a21864ca8771b16c",
+      "bytes": 21105
+    }
+  ],
+  "observedImprovements": [
+    "Pointed brow shelf and separate thin chin wedge removed; profile now has a connected rounded mandibular envelope",
+    "Tusks begin on the provisional lower gum and emerge at the lower lip, following Jaw in the open-mouth pose",
+    "Saved upper-lip/nose Jaw weights are zero and the actual open-mouth view has no upper-lip skin curtain",
+    "Both ocular apertures close in the actual Blink view",
+    "v9f head scale and coherent torso/hand domains preserved"
+  ],
+  "failedChecks": [
+    "Concept likeness still fails: smooth convex cheek/muzzle planes, weak glabella/nasolabial structure and insufficiently characteristic brow/nasal construction",
+    "Open-mouth aperture is too rectangular with stretched near-vertical commissures; most teeth/gums are occluded and tongue is poorly readable",
+    "Blink closes the apertures but reads as a long flat seam rather than shaped folded eyelids",
+    "Known failed v9f scarf remains a rigid terrace collar in this isolated face study",
+    "Armor, trousers, boots and plain iris pigment remain simplified; no final runtime/material/pose acceptance"
+  ],
+  "reviewOrder": [
+    "HeadSide",
+    "Head",
+    "OpenMouth frame146",
+    "Blink frame21",
+    "Front"
+  ],
+  "jawVerification": {
+    "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+    "sourceFaceSets": {
+      "upperLipCheek": 33,
+      "lowerLipJaw": 24,
+      "oralBag": 7,
+      "nose": 11
+    },
+    "upperLipVertices": 14242,
+    "lowerLipRimVertices": 81,
+    "upperLipRimVertices": 105,
+    "cornerVertices": 2,
+    "lowerJawAnchorVertices": 5155,
+    "unknownSolvedVertices": 4871,
+    "iterations": 229,
+    "relativeLinearResidual": 9.4808960098463e-10,
+    "upperLipMaximumJawWeight": 0.0,
+    "noseMaximumJawWeight": 0.0,
+    "lowerRimJawWeightRange": [
+      0.0,
+      1.0
+    ],
+    "cornerFadeSourceMeters": 0.008,
+    "lowerJawBoundarySourceMeters": 0.009,
+    "provisional": true,
+    "requiresActualPoseReview": true,
+    "maximumStoredWeightSumError": 2.9802322387695312e-08,
+    "character": "Krag",
+    "status": "Topology-aware source weight patch; actual pose acceptance pending",
+    "solverPath": "benchmark/tools/nib/v5_wip/mouth_jaw_weights.py",
+    "solverSha256": "32e162941906005c49e32803739a4f38086b947e99ce3fa982620789a91845fb",
+    "adapterSha256": "159c9c85cac1f13c45b02adc49f71ca8babcb57659671a828113dca61f84ea97",
+    "maximumJawWeightChange": 1.0,
+    "changedVertices": 8712,
+    "geometryChanged": false,
+    "shapeKeysChanged": false,
+    "actingChanged": false
+  },
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-v9h-profile-wip-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1237.0,
+      "minimumAvailableMB": 13717.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-profile-wip-Natural_HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2145.0,
+      "minimumAvailableMB": 13295.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-profile-wip-Natural_Head-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2158.0,
+      "minimumAvailableMB": 13266.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-profile-wip-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2159.0,
+      "minimumAvailableMB": 13206.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-profile-wip-Blink-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2158.0,
+      "minimumAvailableMB": 11324.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-profile-wip-Natural_Front-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2162.0,
+      "minimumAvailableMB": 11414.0
+    }
+  ],
+  "pending": [
+    "Refine connected cheek/brow/nasal/labial planes without restoring prior profile spikes",
+    "Inspect overlap of original oral bag, extra opaque ellipsoid and approximate dental placements; fit provisional interior and rounded commissure motion",
+    "Separate prepared asymmetric scarf physical construction study",
+    "Actual source and later engine deformation, material and concept comparison before promotion"
+  ]
+}

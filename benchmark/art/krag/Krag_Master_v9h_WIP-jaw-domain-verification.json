@@ -1,0 +1,38 @@
+{
+  "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+  "sourceFaceSets": {
+    "upperLipCheek": 33,
+    "lowerLipJaw": 24,
+    "oralBag": 7,
+    "nose": 11
+  },
+  "upperLipVertices": 14242,
+  "lowerLipRimVertices": 81,
+  "upperLipRimVertices": 105,
+  "cornerVertices": 2,
+  "lowerJawAnchorVertices": 5155,
+  "unknownSolvedVertices": 4871,
+  "iterations": 229,
+  "relativeLinearResidual": 9.4808960098463e-10,
+  "upperLipMaximumJawWeight": 0.0,
+  "noseMaximumJawWeight": 0.0,
+  "lowerRimJawWeightRange": [
+    0.0,
+    1.0
+  ],
+  "cornerFadeSourceMeters": 0.008,
+  "lowerJawBoundarySourceMeters": 0.009,
+  "provisional": true,
+  "requiresActualPoseReview": true,
+  "maximumStoredWeightSumError": 2.9802322387695312e-08,
+  "character": "Krag",
+  "status": "Topology-aware source weight patch; actual pose acceptance pending",
+  "solverPath": "benchmark/tools/nib/v5_wip/mouth_jaw_weights.py",
+  "solverSha256": "32e162941906005c49e32803739a4f38086b947e99ce3fa982620789a91845fb",
+  "adapterSha256": "159c9c85cac1f13c45b02adc49f71ca8babcb57659671a828113dca61f84ea97",
+  "maximumJawWeightChange": 1.0,
+  "changedVertices": 8712,
+  "geometryChanged": false,
+  "shapeKeysChanged": false,
+  "actingChanged": false
+}

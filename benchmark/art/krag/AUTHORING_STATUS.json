@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Actual isolated v9g face source generated and Front/Head/HeadSide reviewed; hard profile/likeness failure. Scarf audit localizes deep side-row shoulder collision. Next separate profile/tusk/jaw and scarf fixes ungenerated.",
+  "currentAuthoringCode": "Frozen v9h source generated and five actual views reviewed. Brow/chin profile and gum-rooted tusks improve; semantic Jaw repair works, but mouth/interior/likeness and scarf remain failed. No shared promotion.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -119,27 +119,32 @@
   "sharedExportsVersion": "v7-optimized-pretriangulated plus bounded Shoot aim correction; root promoted; appearance and pose acceptance false",
   "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged",
   "workInProgressSource": {
-    "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP.blend",
-    "sha256": "2898288570fa840f656986d1b7673cf1daaa5203347c5e65df21e6bd7651d875",
-    "bytes": 142199898,
-    "status": "Actual neutral Front/Head/HeadSide reviewed; hard profile/likeness failure",
+    "path": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+    "sha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+    "bytes": 142381118,
+    "status": "Actual HeadSide/Head/OpenMouth/Blink/Front reviewed; partial structural improvement, artistic and overall pose acceptance failed",
     "actualRenders": [
-      "renders/Krag_Natural_Front_v9g-face-wip.png",
-      "renders/Krag_Natural_HeadSide_v9g-face-wip.png",
-      "renders/Krag_Natural_Head_v9g-face-wip.png"
+      "renders/Krag_Natural_Front_v9h-profile-wip.png",
+      "renders/Krag_Natural_HeadSide_v9h-profile-wip.png",
+      "renders/Krag_Natural_Head_FacePerformance_f146_v9h-profile-wip.png",
+      "renders/Krag_Natural_Head_FacePerformance_f21_v9h-profile-wip.png",
+      "renders/Krag_Natural_Head_v9h-profile-wip.png"
     ],
     "improvements": [
-      "Longer curved tusks are readable at portrait scale; attachment still fails",
-      "v9f whole-head scale and torso/hand improvements preserved"
+      "Pointed brow shelf and separate thin chin wedge removed; profile now has a connected rounded mandibular envelope",
+      "Tusks begin on the provisional lower gum and emerge at the lower lip, following Jaw in the open-mouth pose",
+      "Saved upper-lip/nose Jaw weights are zero and the actual open-mouth view has no upper-lip skin curtain",
+      "Both ocular apertures close in the actual Blink view",
+      "v9f head scale and coherent torso/hand domains preserved"
     ],
     "defects": [
-      "Profile brow forms a long pointed shelf; chin forms a separate thin projecting wedge, unlike the continuous heavy concept skull/jaw",
-      "Frontal cheeks/muzzle remain broad smooth masses; geometric nasolabial/glabellar and lid structure insufficient",
-      "Tusks are visible but roots emerge from cheek skin outside the true oral aperture",
-      "Known upper-lip Jaw classification defect remains deliberately unpatched in this neutral study",
-      "Preserved v9f scarf is still a rigid terrace collar; armor/trousers/boots remain simplified; iris pigment unchanged"
+      "Concept likeness still fails: smooth convex cheek/muzzle planes, weak glabella/nasolabial structure and insufficiently characteristic brow/nasal construction",
+      "Open-mouth aperture is too rectangular with stretched near-vertical commissures; most teeth/gums are occluded and tongue is poorly readable",
+      "Blink closes the apertures but reads as a long flat seam rather than shaped folded eyelids",
+      "Known failed v9f scarf remains a rigid terrace collar in this isolated face study",
+      "Armor, trousers, boots and plain iris pigment remain simplified; no final runtime/material/pose acceptance"
     ],
-    "reviewReceipt": "v9g-face-source-review.json"
+    "reviewReceipt": "v9h-source-review.json"
   },
   "triangulatedTechnicalCandidate": {
     "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
@@ -164,9 +169,9 @@
     ]
   },
   "sourceCorrectionsPrepared": [
-    "Separate v9g continuous facial-plane and larger curved-tusk study; ungenerated",
-    "Replace failed scarf terrace shape with asymmetrical broad cloth folds, verifying actual simulation/collision if used",
-    "Preserve v9f hand domains, assembly scale and current weapon module; root owns isolated hard-surface replacement study"
+    "Separate cloth-only source study remains ungenerated; exact frozen recipe in v9h-scarf-prepared-recipe.json",
+    "Next facial/interior refinements must remain separate from the frozen actual v9h recipe",
+    "Preserve current weapon; root owns separate equipped hard-surface study"
   ],
   "pendingExportCode": {
     "actualHeadAtlas": "benchmark/tools/krag/bake_face_atlas.py",
@@ -196,8 +201,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "benchmark/tools/krag/build-v9h-profile-wip-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9h-profile-wip-Natural_HeadSide.json",
+  "nextSourceJob": "benchmark/tools/krag/build-v9h-scarf-study-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9h-scarf-study-Natural_HeadSide.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -321,8 +326,12 @@
     "evidence": "benchmark/art/krag/anatomy-study/jaw-source-domain-audit-v9f.json",
     "finding": "Raw control-cage upper-lip rim Jaw weights: 27/27 positive, mean0.6516/max0.9776; needs actual saved dense pose verification",
     "preparedRepair": "benchmark/art/krag/jaw-topology-patch-prepared.json",
-    "savedRepairExists": false,
-    "neutralFaceRecipeUnchanged": true
+    "savedRepairExists": true,
+    "neutralFaceRecipeUnchanged": true,
+    "repairSource": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+    "savedNumericalEvidence": "Krag_Master_v9h_WIP-jaw-domain-verification.json",
+    "actualOpenMouthReview": "renders/Krag_Natural_Head_FacePerformance_f146_v9h-profile-wip.png",
+    "status": "Upper-lip/nose Jaw influence removed; aperture shape/interior still fail artistic pose review"
   },
   "historicalV9fSource": {
     "path": "benchmark/art/krag/Krag_Master_v9f_WIP.blend",
@@ -351,5 +360,28 @@
     "reviewReceipt": "v9f-source-review.json"
   },
   "preparedV9hRecipe": "benchmark/art/krag/v9h-prepared-recipe.json",
-  "preparedClothStudy": "benchmark/art/krag/v9h-scarf-prepared-recipe.json"
+  "preparedClothStudy": "benchmark/art/krag/v9h-scarf-prepared-recipe.json",
+  "historicalV9gFaceSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP.blend",
+    "sha256": "2898288570fa840f656986d1b7673cf1daaa5203347c5e65df21e6bd7651d875",
+    "bytes": 142199898,
+    "status": "Actual neutral Front/Head/HeadSide reviewed; hard profile/likeness failure",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v9g-face-wip.png",
+      "renders/Krag_Natural_HeadSide_v9g-face-wip.png",
+      "renders/Krag_Natural_Head_v9g-face-wip.png"
+    ],
+    "improvements": [
+      "Longer curved tusks are readable at portrait scale; attachment still fails",
+      "v9f whole-head scale and torso/hand improvements preserved"
+    ],
+    "defects": [
+      "Profile brow forms a long pointed shelf; chin forms a separate thin projecting wedge, unlike the continuous heavy concept skull/jaw",
+      "Frontal cheeks/muzzle remain broad smooth masses; geometric nasolabial/glabellar and lid structure insufficient",
+      "Tusks are visible but roots emerge from cheek skin outside the true oral aperture",
+      "Known upper-lip Jaw classification defect remains deliberately unpatched in this neutral study",
+      "Preserved v9f scarf is still a rigid terrace collar; armor/trousers/boots remain simplified; iris pigment unchanged"
+    ],
+    "reviewReceipt": "v9g-face-source-review.json"
+  }
 }
