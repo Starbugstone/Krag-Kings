@@ -1,0 +1,41 @@
+{
+  "status": "Actual generation failed at initial cloth contact, before simulation/save/render",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "failure": "Initial penetration correction56.91012396356592mm exceeds unchanged55mm bound",
+  "inMemoryGatesBeforeFailure": [
+    "Concealed high-neck Body face removal completed",
+    "All40 previously visible Body mouth rays no longer hit Body first"
+  ],
+  "sourceSaved": false,
+  "rendered": false,
+  "guardExitCode": 2,
+  "peakPrivateMB": 1008.0,
+  "minimumAvailableMB": 10033.0,
+  "frozenRecipeCommit": "d65ab29",
+  "preparedAttributionJob": "benchmark/tools/krag/diagnose-cloth-v9m-job.json",
+  "next": "Locate actual cloth point and collider surface, preserve bound, correct pattern/support before one bounded retry",
+  "actualDiagnostic": {
+    "status": "Executed; deliberately retained original failure and exited2 before simulation/save",
+    "artifacts": [
+      {
+        "path": "benchmark/art/krag/anatomy-study/scarf-initial-fit-v9m-failure.json",
+        "sha256": "4bc466ef2a6ed99ae3af6251caf0d876a05f484b05d569d08013796e4f7f16f9"
+      },
+      {
+        "path": "benchmark/art/krag/anatomy-study/neck-in-memory-v9m-failure.json",
+        "sha256": "012c9b99089374c374e1bcc25a228dc18e262a5346a16a1d00b0bdb897856bd3"
+      },
+      {
+        "path": "benchmark/tools/krag/v9m_wip/diagnose_cloth_fit.py",
+        "sha256": "143452b6266624e0035ffc48cae6f68062362d2df73da64232d36c342bd2653f"
+      },
+      {
+        "path": "benchmark/tools/krag/diagnose-cloth-v9m-job.json",
+        "sha256": "ec248fb5fdd9ef45a96fb0ba01cc18f0c0c37806f712bf6d595ca136fc2f7e27"
+      }
+    ],
+    "finding": "Worst rear-left neckline point snaps to an open-edge contact on the coarse Body collider after an artificial neck-plane crop. Head is already56mm clear; actual corrected Body should replace the coarse cropped collider.",
+    "nextRecipe": "benchmark/art/krag/v9ma-neck-scarf-prepared.json"
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "status": "Actual in-memory neck repair passed before unchanged cloth failure; no source or render saved",
+  "inputSha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+  "neck": {
+    "status": "Prepared concealed-face composition executed; actual open-mouth/neck review required",
+    "removedFaces": 2611,
+    "beforeFaces": 59155,
+    "afterFaces": 56544,
+    "selection": "All face corners are in the Neck skin domain, above Neck joint midpoint and strictly inside external Head surface",
+    "neckJointMidpointZ": 1.7319499850273132,
+    "retainedVertexCount": 59859,
+    "shapeCoordinatesPreserved": true,
+    "unchanged": [
+      "Limbs",
+      "Torso",
+      "Head anatomy",
+      "Body vertex order",
+      "Rig bind"
+    ],
+    "pending": "Actual visibility/neck seam review; cinematic seam welding is not claimed"
+  },
+  "resolvedMouthRays": [
+    {
+      "pixel": [
+        342,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        342,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        358,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        358,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        358,
+        722
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        374,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        374,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        374,
+        722
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        374,
+        738
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        374,
+        754
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        390,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        390,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        390,
+        722
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        390,
+        738
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        390,
+        754
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        406,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        406,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        406,
+        722
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        406,
+        738
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        406,
+        754
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        422,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        422,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        422,
+        722
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        422,
+        738
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        438,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        438,
+        706
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        438,
+        722
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        438,
+        738
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        454,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        454,
+        706
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        454,
+        722
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        454,
+        738
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        470,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        470,
+        706
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        470,
+        722
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        470,
+        738
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        486,
+        690
+      ],
+      "firstSurface": "Head"
+    },
+    {
+      "pixel": [
+        486,
+        706
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        486,
+        722
+      ],
+      "firstSurface": "MouthInterior"
+    },
+    {
+      "pixel": [
+        486,
+        738
+      ],
+      "firstSurface": "MouthInterior"
+    }
+  ],
+  "remainingMouthRays": [],
+  "frozenRecipe": {
+    "scarf_cloth_v5.py": "8232b492dc7d0b5844ae8a0dbd94d24715bb42eb6462c171a70e45c8148080c6",
+    "build_neck_scarf.py": "c7a410f187cf0bdc713d8bd694f0bea9609a10deaa8cd989ad0f7db1428b9263"
+  }
+}

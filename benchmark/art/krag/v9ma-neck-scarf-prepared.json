@@ -1,0 +1,47 @@
+{
+  "status": "Prepared corrected-collider retry; not generated",
+  "reason": "Actual v9m diagnostic identifies a false signed-nearest fit against an artificial coarse Body neck-cut boundary. Use exact repaired Body and actual Head exterior, with no artificial horizontal cut.",
+  "unchangedInitialAdjustmentLimitMeters": 0.055,
+  "inputSourceSha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_neck_scarf_v9ma.py",
+      "sha256": "bc09eb9bbd390fd1f839ddcfc30e1c946607a70713bec2a3b87d89339bdb31f5"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v6.py",
+      "sha256": "de1f2f147ca1dec1f320b8ac8874f05e409422c1d79c1a2686f4a1e6486f3688"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/neck_composition.py",
+      "sha256": "14204d317782b642a5be645cbdbdf3ff50ec3045ab2eba7d0178ca870c60c0db"
+    },
+    {
+      "path": "benchmark/tools/krag/build-neck-scarf-v9ma-job.json",
+      "sha256": "2082de9e62a5fb88240d1dc61d21cccecfbac7c69b84e4c7121c59beb3fd3b9c"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9ma-Front.json",
+      "sha256": "f248cbdd6a6add116323ab52d05796b02341025a004e1af768137db54ed1e05a"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9ma-OpenMouth.json",
+      "sha256": "076211ba89b2b33fd515a2f0d0ae6bf11caf5d970f67cd0dbfb198230ddc4f18"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9ma-OpenProfile.json",
+      "sha256": "58d1eb4125737f9b8a35ca409c89dca3188a4f22fc9a988962b8d7c6801c83f3"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9ma-Shoot.json",
+      "sha256": "ce9750f2fb57296c518f04d5150c3ea6c5ffff79711238f56ed0cda9933f81bd"
+    }
+  ],
+  "memoryPolicy": {
+    "maxPrivateGB": 4,
+    "minAvailableGB": 8.5,
+    "basis": "Actual prior source1110MB, all-mesh audit1146MB, portrait2180MB private peaks; new cloth physics remains guarded, global2GiB emergency floor unchanged"
+  }
+}
