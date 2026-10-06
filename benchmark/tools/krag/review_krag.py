@@ -18,7 +18,7 @@ if not opt.runtime and not opt.keep_pose and opt.clip=='Idle':
     bpy.context.view_layer.update()
 for o in bpy.data.objects:
     if o.type=='MESH' and 'module'in o:o.hide_render=o['module'] in contract['variants'][opt.variant]['off'] and not((opt.runtime or opt.show_weapon) and o['module']=='Weapon_R')
-for name,pos,target,scale in [('Natural_Front',(0,-6,1.3),(0,0,1.06),2.38),('Natural_Head',(1.1,-4,2.05),(0,-.02,1.9),.53),('Natural_Side',(6,0,1.4),(0,0,1.08),2.4),('Natural_Back',(0,6,1.5),(0,0,1.08),2.4),('Natural_LeftHand',(2.2,-3,1.15),(.625,-.055,.90),.46),('Natural_RightGrip',(-2.2,-3,1.15),(-.605,-.065,.85),.60)]:
+for name,pos,target,scale in [('Natural_Front',(0,-6,1.3),(0,0,1.06),2.38),('Natural_Head',(1.1,-4,2.05),(0,-.02,1.9),.53),('Natural_HeadSide',(4,-.04,1.96),(0,-.04,1.91),.53),('Natural_Side',(6,0,1.4),(0,0,1.08),2.4),('Natural_Back',(0,6,1.5),(0,0,1.08),2.4),('Natural_LeftHand',(2.2,-3,1.15),(.625,-.055,.90),.46),('Natural_RightGrip',(-2.2,-3,1.15),(-.605,-.065,.85),.60)]:
     if name!=opt.view:continue
     if opt.clip=='Shoot':
         for o in bpy.data.objects:

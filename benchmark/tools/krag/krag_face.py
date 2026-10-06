@@ -177,21 +177,25 @@ def add_morphs(modules,rig):
         o.shape_key_add(name='Basis',from_mix=False)
         for name in MORPHS:
             k=o.shape_key_add(name=name,from_mix=False);delta=deform(group,v,name)
+            if group=='Head' and name in FACIAL and 'krag_reference_position' in o.data.attributes:
+                raw=np.empty(len(v)*3,dtype=np.float32)
+                o.data.attributes['krag_reference_position'].data.foreach_get('vector',raw)
+                raw=raw.reshape(-1,3)
+                delta=continuous_face_delta(raw,name)
             if group=='Head' and name.startswith('Blink') and 'krag_reference_position' in o.data.attributes:
                 # Continuous eyelid loops close together; the old primitive
                 # head's small crease corrective cannot substitute for a blink.
                 raw=np.empty(len(v)*3,dtype=np.float32)
                 o.data.attributes['krag_reference_position'].data.foreach_get('vector',raw)
                 raw=raw.reshape(-1,3);side=1 if name.endswith('_L') else -1
-                envelope=np.exp(-((raw[:,0]-side*.0358764)/.023)**6-((raw[:,2]-.3100375)/.021)**6)
+                envelope=np.exp(-((raw[:,0]-side*.0358764)/.022)**8-((raw[:,2]-.3100375)/.017)**8)
                 envelope*=np.clip((-raw[:,1]-.045)/.040,0,1)
                 from krag_head_v9 import fit
                 eye=json.loads(o['krag_reference_eye_surfaces'])['L' if side>0 else 'R']
                 center=np.asarray(eye['center']);closed=raw.copy();closed[:,2]=center[2]
                 sphere_front=center[1]-np.sqrt(np.maximum(0,eye['radius']**2-(raw[:,0]-center[0])**2))-.0008
                 closed[:,1]=np.minimum(raw[:,1],sphere_front)
-                target=fit(closed);target[:,0]*=.93;target[:,1]*=.94;target[:,2]=2.107+(target[:,2]-2.107)*.85
-                delta=(target-v)*envelope[:,None]
+                delta=(fit(closed)-fit(raw))*np.asarray((.93,.94,.85))*envelope[:,None]
             if name in FACIAL:
                 rigid_indices={g.index for g in o.vertex_groups if g.name.startswith(('Eye_','Tongue_'))}
                 for vertex in o.data.vertices:
@@ -207,6 +211,35 @@ def add_morphs(modules,rig):
             metric=('2*acos(min(1,abs(cos(x/2)*cos(y/2)*cos(z/2)+sin(x/2)*sin(y/2)*sin(z/2))))*57.2957795131' if d['channel']=='rotationMagnitudeDegrees' else 'sqrt(x*x+y*y+z*z)')
             drv.expression=f'min(1.0,max(0.0,(({metric})-{d["start"]})/{d["end"]-d["start"]}))'
     return data
+
+
+def continuous_face_delta(raw,name):
+    """Expressions remain anchored to anatomical loops as the Krag fit changes."""
+    from krag_head_v9 import fit
+    delta=np.zeros_like(raw);sign=1 if name.endswith('_L') else -1
+    front=np.clip((-raw[:,1]-.025)/.055,0,1)
+    def field(center,radius):return _field(raw,center,radius)*front
+    if name.startswith('Squint'):
+        w=field((sign*.0359,-.106,.301),(.025,.060,.014));delta[:,2]=.0032*w;delta[:,1]=-.0008*w
+    elif name.startswith(('BrowRaise','BrowLower')):
+        raising=name.startswith('BrowRaise')
+        w=field((sign*.035,-.101,.338),(.035,.085,.024))
+        delta[:,2]=(.0065 if raising else -.0045)*w
+        delta[:,0]=sign*(.0006 if raising else -.0013)*w
+    elif name.startswith(('Smile','Frown')):
+        smile=name.startswith('Smile');w=field((sign*.040,-.103,.234),(.020,.070,.019))
+        delta[:,2]=(.0036 if smile else -.0042)*w;delta[:,0]=sign*(.0018 if smile else -.0006)*w
+        delta[:,2]+=(.0014 if smile else -.0007)*field((sign*.054,-.080,.265),(.021,.08,.027))
+    elif name.startswith('Snarl'):
+        w=field((sign*.024,-.113,.247),(.022,.064,.018));delta[:,2]=.0040*w;delta[:,1]=-.0008*w
+    elif name=='LipPress':
+        upper=field((0,-.113,.240),(.060,.060,.008));lower=field((0,-.115,.226),(.060,.060,.008))
+        delta[:,2]=-.0018*upper+.0018*lower;delta[:,1]=-.0006*(upper+lower)
+    elif name=='NoseWrinkle':
+        w=field((0,-.114,.274),(.032,.080,.030));delta[:,2]=.0017*w;delta[:,1]=.00065*w*np.sin(raw[:,0]*380)
+    elif name=='JawOpen':
+        w=field((0,-.080,.196),(.065,.100,.024));delta[:,1]=-.0015*w
+    return (fit(raw+delta)-fit(raw))*np.asarray((.93,.94,.85))
 
 def face_weights(modules):
     # Jaw deforms mandible; upper face is preserved while morphs express soft-tissue controls.
@@ -244,7 +277,7 @@ def performance(rig):
     for frame in range(1,181):
         bpy.context.scene.frame_set(frame);t=(frame-1)/179
         for p in facial:p.rotation_mode='XYZ';p.rotation_euler=(0,0,0);p.location=(0,0,0)
-        blink=max(peak(t,.11,.025),peak(t,.55,.022),peak(t,.91,.03))
+        blink=min(1,1.18*max(peak(t,.11,.025),peak(t,.55,.022),peak(t,.91,.03)))
         suspicious=peak(t,.28,.16);satisfaction=peak(t,.45,.13);anger=peak(t,.66,.16);intimidate=peak(t,.81,.14)
         for side in ['L','R']:
             rig.pose.bones['LidUpper_'+side].location.y=-.012*blink
@@ -268,7 +301,7 @@ def action_expression(rig,name,t):
     def pulse(center,width):return max(0,1-abs(t-center)/width)
     brow=.18;squint=.09;press=.12;snarl=0;smile=0;jaw=0;blink=0;gaze=.014*sin(2*pi*t);asymmetry=0
     if name=='Idle':
-        blink=pulse(.74,.045);brow+=.04*sin(2*pi*t);press+=.025*cos(2*pi*t)
+        blink=min(1,1.18*pulse(.74,.045));brow+=.04*sin(2*pi*t);press+=.025*cos(2*pi*t)
     elif name=='Walk':
         brow=.30+.035*cos(4*pi*t);squint=.14;press=.20+.025*cos(4*pi*t)
     elif name=='Run':

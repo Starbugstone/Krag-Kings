@@ -8,7 +8,7 @@ import bmesh
 import numpy as np
 
 
-def triangulate(mesh):
+def triangulate(mesh,remove_zero_area=False):
     count=len(mesh.vertices)
     basis=np.empty(count*3,dtype=np.float32);mesh.vertices.foreach_get('co',basis)
     keys={}
@@ -27,7 +27,20 @@ def triangulate(mesh):
         attribute=mesh.attributes.new(name,'FLOAT','CORNER')
         attribute.data.foreach_set('value',np.ascontiguousarray(normal_data[:,axis]))
     bm=bmesh.new();bm.from_mesh(mesh)
-    bmesh.ops.triangulate(bm,faces=list(bm.faces));bm.to_mesh(mesh);bm.free()
+    bmesh.ops.triangulate(bm,faces=list(bm.faces))
+    removed=0
+    if remove_zero_area:
+        bm.verts.ensure_lookup_table();bm.verts.index_update()
+        faces=list(bm.faces)
+        indices=np.asarray([[v.index for v in face.verts] for face in faces],dtype=np.int32)
+        coordinates=np.asarray([tuple(v.co) for v in bm.verts],dtype=np.float64)
+        a,b,c=(coordinates[indices[:,i]] for i in range(3))
+        zero=np.all(np.cross(b-a,c-a)==0.0,axis=1)
+        invalid=[face for face,is_zero in zip(faces,zero) if is_zero];removed=len(invalid)
+        # No welding, thresholds or vertex deletion: only exact zero-area faces.
+        # Existing point identity and every nondegenerate UV corner are retained.
+        if invalid:bmesh.ops.delete(bm,geom=invalid,context='FACES_ONLY')
+    bm.to_mesh(mesh);bm.free()
     if len(mesh.vertices)!=count:raise RuntimeError('Triangulation changed vertex count')
     actual_ids=np.empty(count,dtype=np.int32)
     mesh.attributes['krag_export_vertex_id'].data.foreach_get('value',actual_ids)
@@ -46,5 +59,6 @@ def triangulate(mesh):
     if any(len(poly.vertices)!=3 for poly in mesh.polygons):
         raise RuntimeError('Nontriangular face survived triangulation')
     return {'vertices':count,'triangles':len(mesh.polygons),'restoredShapeCoordinates':len(keys),
+            'exactZeroAreaFacesRemoved':removed,
             'vertexIndicesPreserved':True,'basisCoordinatesUnchanged':True,
             'normals':'Original corner normals transported through temporary corner attributes'}

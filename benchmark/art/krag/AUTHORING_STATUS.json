@@ -13,27 +13,22 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-triangulated.json",
-  "currentAuthoringCode": "v9 continuous-face branch plus v8b structural corrections, not yet generated; v8 WIP and shared optimized v7 are preserved",
+  "currentAuthoringCode": "v9c narrower/sloping brow, projected nose/cheek/scalp refinements and true sampled blink closure are code only; actual latest source is v9b",
   "pendingChanges": [
-    "Correct mouth aperture winding and narrow connected lip crease",
-    "Flatten cheek planes",
-    "Continuous looped scarf instead of settled bib",
-    "Broad canvas wear",
-    "Embed authoring sources and losslessly compress future Blender saves",
-    "Source weapon marker bones matching existing v7 runtime markers",
-    "Preserve rigid Jaw tusk weights instead of applying soft lip/jaw skin-weight falloff to ivory",
-    "Replace voxel muscle-ball torso/arms/hands with connected CC0 anatomical control-cage adaptation, keeping Krag proportions",
-    "Regional quiet central facial skin, fractured outer skull and shaped frown/nasolabial creases",
-    "Refit natural hand joints/weights to the adapted hand topology before animation validation",
-    "Rounded ellipsoidal overlapping pauldron cap with fitted straps/edges/rivets",
-    "Complete right-leg module wired as Krag_FullLeg with removable natural right-thigh cloth; provisional review pending",
-    "Complete organic cinematic anatomy beneath clothing approved for a later source pass after first v8 review"
+    "Generate/review v9b evaluated-eye transform fix, opaque iris surface projection and continuous facial proportion fit",
+    "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
+    "Correct scarf fabric construction, garment weave/dust/wear and armor layered construction against sheet 01",
+    "Verify natural palms/fingers, grip and all moving body seams",
+    "Add coherent complete organic pelvis/legs/feet beneath clothing in cinematic master",
+    "Review complete right-leg provisional module and promote only after source/bind/pose/runtime validation",
+    "Bake geometry-dependent face material region on actual head UVs instead of generic material tile",
+    "Derive runtime from corrected detailed source, preserving face/silhouette and measured deformation quality",
+    "Review current UE warning about zero-length normal in tangent build; cause not yet diagnosed"
   ],
   "notIntegrated": [
-    "v8 actual source is isolated from shared and not accepted",
-    "v8b neckline/harness/scarf/head proportion fixes are code only and folded into the next v9 build",
-    "v9 continuous CC0 face, refitted eye/jaw/tongue pivots and provisional mouth anatomy are code only",
-    "Shared uses triangulated optimized-v7 appearance; v9 anatomy changes remain ungenerated and unaccepted"
+    "v8 and v9 actual sources are isolated from shared and not accepted",
+    "v9 forehead/brow/cheek/muzzle fitting is too flat; eye apertures show no iris; no v9 exports authorized",
+    "Shared remains triangulated optimized-v7 appearance"
   ],
   "codeAtPin": {
     "add_finger_rig.py": "d6efd0fca4dbb27787170d47d30b921c3ba440e4db8b7596b432b46cba9ce4da",
@@ -121,6 +116,33 @@
   "sharedExportsVersion": "v7-optimized; promoted technical derivative, artistic acceptance false",
   "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged",
   "workInProgressSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9b_WIP.blend",
+    "sha256": "7e28e595ac550814c5775e6f8d88cc994bf93472cba0a1c66bb8329cd132759b",
+    "status": "Generated and front/head reviewed; visible eyes fixed, artistic acceptance false",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v9b-wip.png",
+      "renders/Krag_Natural_Head_v9b-wip.png"
+    ],
+    "improvements": [
+      "Correct ocular positions and visible amber irises",
+      "Broader head with lower chin and shorter exposed neck",
+      "Continuous forehead/face material transition"
+    ],
+    "defects": [
+      "Broad horizontal brow shelf rather than separate sloping ridges",
+      "Nose/muzzle too small and shallow, rectangular smooth facial planes",
+      "Scalp dome insufficiently shaped",
+      "Scarf/garment/armor construction and material detail still simplified",
+      "Actual blink, open-mouth, gaze, hands and body poses remain unverified"
+    ]
+  },
+  "triangulatedTechnicalCandidate": {
+    "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
+    "directory": "benchmark/local/candidates/krag-v7-triangulated",
+    "status": "Root promoted after verifying all 71 hashes and LF JSON; engine ingestion pending",
+    "artisticAcceptance": false
+  },
+  "historicalWorkInProgressSource": {
     "path": "benchmark/art/krag/Krag_Master_v8_WIP.blend",
     "sha256": "bb6954eb75a10cf50b486d54e64ccc0b4c85d879d1569d250ae8d6f2b002dca2",
     "status": "Generated and front/head rendered; failed artistic review",
@@ -136,10 +158,45 @@
       "Hands and animation require posed close review"
     ]
   },
-  "triangulatedTechnicalCandidate": {
-    "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
-    "directory": "benchmark/local/candidates/krag-v7-triangulated",
-    "status": "Root promoted after verifying all 71 hashes and LF JSON; engine ingestion pending",
-    "artisticAcceptance": false
+  "sourceCorrectionsPrepared": [
+    "Link source hierarchy and evaluate depsgraph before caching eye matrices; assert centers against audited library",
+    "Measure proposed head/shoulder ratio (.355) and lower chin with fixed crown before visual review",
+    "Fit iris onto opaque ocular shell after optical subdivision, preserving source planar coordinates and avoiding unsupported alpha",
+    "Refit expression displacement fields through the same anatomical source coordinates",
+    "Replace hard forehead material boundary with continuously interpolated skin region"
+  ],
+  "pendingExportCode": {
+    "actualHeadAtlas": "benchmark/tools/krag/bake_face_atlas.py",
+    "status": "Syntax checked only; requires real neutral-source bake, source/runtime image comparison and fresh roundtrip",
+    "sourceIsolationArguments": [
+      "--source-master",
+      "--runtime-output",
+      "--material-cache",
+      "--texture-source-dir"
+    ],
+    "sharedModified": false
+  },
+  "priorContinuousFaceReview": {
+    "path": "benchmark/art/krag/Krag_Master_v9_WIP.blend",
+    "sha256": "4e108bb4e7576b7dd124aba59fef8ad46dad7aad990adf6e5a8465c85465d6ef",
+    "status": "Generated; actual front/head review failed, open-mouth/blink deferred for structural correction",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v9-wip.png",
+      "renders/Krag_Natural_Head_v9-wip.png"
+    ],
+    "defects": [
+      "Head still undersized relative to shoulder breadth with excessive exposed tall neck",
+      "Brow/eye/muzzle depth flattened into a broad slab",
+      "Ocular apertures too narrow with no visible iris; transform/material/depth diagnosis pending",
+      "Abrupt forehead material boundary",
+      "Scarf still regular stiff layered collar; armor/garment detail remains insufficient",
+      "Hands and facial/body poses require actual verification"
+    ]
+  },
+  "nextSourceJob": "benchmark/tools/krag/build-v9c-wip-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9b-wip-Natural_HeadSide.json",
+  "optionalPreparedDetail": {
+    "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
+    "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
   }
 }

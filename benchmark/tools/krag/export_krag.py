@@ -10,14 +10,18 @@ def argument(name,default):return Path(sys.argv[sys.argv.index(name)+1]) if name
 ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/krag';BASE_OUT=ROOT/'benchmark/shared/characters/krag';OUT=argument('--output-dir',BASE_OUT);TEX=OUT/'textures';TEX.mkdir(parents=True,exist_ok=True)
 stage='export' if '--export-only' in sys.argv or '--animations-only' in sys.argv else 'bake'
 triangulate='--triangulate' in sys.argv
-source_blend=argument('--source-runtime',ART/'Krag_Runtime.blend') if stage=='export' else ART/'Krag_Master.blend'
+source_blend=argument('--source-runtime',ART/'Krag_Runtime.blend') if stage=='export' else argument('--source-master',ART/'Krag_Master.blend')
+runtime_destination=argument('--runtime-output',ART/'Krag_Runtime.blend')
+texture_source=argument('--texture-source-dir',BASE_OUT/'textures')
 bpy.ops.wm.open_mainfile(filepath=str(source_blend))
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=4;scene.render.bake.margin=4
 rig=bpy.data.objects['Krag_Rig'];modules={o.get('module'):o for o in bpy.data.objects if o.type=='MESH' and 'module' in o};contract=json.loads(argument('--contract',BASE_OUT/'krag_asset_contract.json').read_text())
 if stage=='export' and OUT!=BASE_OUT:
     (OUT/'facial-rig.json').write_text(json.dumps(contract['deformation'],indent=2),newline='\n')
     for maps in contract['material_maps'].values():
-        for filename in maps.values():shutil.copy2(BASE_OUT/'textures'/filename,TEX/filename)
+        for filename in maps.values():
+            source=texture_source/filename;destination=TEX/filename
+            if source.resolve()!=destination.resolve():shutil.copy2(source,destination)
     for image in bpy.data.images:
         if image.filepath and (TEX/Path(bpy.path.abspath(image.filepath)).name).is_file():image.filepath=str(TEX/Path(bpy.path.abspath(image.filepath)).name)
 
@@ -55,11 +59,26 @@ if stage=='bake':
     # Material tile sampled on 1m of physically scaled surface.
     for o in bpy.context.selected_objects:o.select_set(False)
     bpy.ops.mesh.primitive_plane_add(size=1,location=(0,0,0));tile=bpy.context.object;tile.name='Temporary_PBR_bake_tile';tile.rotation_euler=(0,0,0)
-    material_maps={};new_cache={};cache_path=ART/'material-cache.json';reuse='--reuse-tiles' in sys.argv
+    material_maps={};new_cache={};cache_path=argument('--material-cache',ART/'material-cache.json');reuse='--reuse-tiles' in sys.argv
     if reuse and not cache_path.is_file():raise RuntimeError('Verified material cache missing; run the seed job before reusing existing tiles.')
     old_cache=json.loads(cache_path.read_text()).get('materials',{}) if cache_path.is_file() else {}
-    source_sha=material_cache.sha(ART/'Krag_Master.blend')
-    for m in [m for m in bpy.data.materials if m.name.startswith('Krag_')]:
+    source_sha=material_cache.sha(source_blend)
+    if 'Krag_SkinRegion' in modules['Head'].data.attributes:
+        from bake_face_atlas import bake
+        tile.hide_render=True
+        material,maps,receipt=bake(modules['Head'],TEX);material_maps[material.name]=maps;attach_maps(material,maps)
+        (OUT/'facial-atlas-receipt.json').write_text(json.dumps(receipt,indent=2),newline='\n')
+        modules['Head'].hide_render=True;modules['Head'].select_set(False)
+        tile.hide_render=False;tile.hide_set(False);tile.select_set(True);bpy.context.view_layer.objects.active=tile
+    if 'Face' in modules and 'Krag_IrisCoord' in modules['Face'].data.attributes:
+        from bake_face_atlas import bake
+        tile.hide_render=True
+        material,maps,receipt=bake(modules['Face'],TEX,optical=True);material_maps[material.name]=maps;attach_maps(material,maps)
+        (OUT/'optical-atlas-receipt.json').write_text(json.dumps(receipt,indent=2),newline='\n')
+        modules['Face'].hide_render=True;modules['Face'].select_set(False)
+        tile.hide_render=False;tile.hide_set(False);tile.select_set(True);bpy.context.view_layer.objects.active=tile
+    used_materials={material.name for obj in modules.values() for material in obj.data.materials}
+    for m in [m for m in bpy.data.materials if m.name in used_materials and m.name not in material_maps]:
         recipe_hash=material_cache.recipe(m);cached=old_cache.get(m.name)
         if reuse and material_cache.valid(cached,recipe_hash,TEX):
             print('REUSE VERIFIED PBR TILES',m.name,flush=True);maps=dict(cached['maps']);material_maps[m.name]=maps;new_cache[m.name]=cached;attach_maps(m,maps);continue
@@ -99,7 +118,7 @@ if stage=='bake':
             while o.modifiers[0]!=dec:bpy.ops.object.modifier_move_up(modifier=dec.name)
             bpy.ops.object.modifier_apply(modifier=dec.name)
         # Tiles represent one square metre. Preserve physical texel density after island packing.
-        if o.data.uv_layers:
+        if o.data.uv_layers and not o.get('runtime_uv_atlas',False):
             o.data.calc_loop_triangles();uv=o.data.uv_layers.active.data;uv_area=0.0
             for tri in o.data.loop_triangles:
                 a,b,c=[uv[i].uv for i in tri.loops];ab=b-a;ac=c-a;uv_area+=abs(ab.x*ac.y-ab.y*ac.x)*.5
@@ -109,12 +128,12 @@ if stage=='bake':
             o['runtime_uv_metres_scale']=factor
     for g,o in modules.items():o.hide_render=g in contract['variants']['Krag_Natural']['off'];o.hide_set(o.hide_render)
     rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
-    contract['material_maps']=material_maps;contract['bone_count']=len(rig.data.bones);contract['runtime_triangles_all_modules']=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())
+    contract['material_maps']=material_maps;contract['materials']=list(material_maps);contract['bone_count']=len(rig.data.bones);contract['runtime_triangles_all_modules']=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())
     (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2),newline='\n')
     cache_path.write_text(json.dumps({'schemaVersion':1,'sourceBlendSha256':source_sha,'materials':new_cache},indent=2),newline='\n')
     contract['source_blend_sha256']=source_sha
     (OUT/'krag_asset_contract.json').write_text(json.dumps(contract,indent=2),newline='\n')
-    save_manifest();bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(ART/'Krag_Runtime.blend'),compress=True)
+    save_manifest();bpy.ops.wm.save_as_mainfile(filepath=str(runtime_destination),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(runtime_destination),compress=True)
     print('BAKE/SAVE COMPLETE. Run a fresh process with -- --export-only next.',flush=True)
 else:
     material_maps=contract['material_maps']
@@ -139,7 +158,7 @@ else:
         missing_facial={d['morph'] for d in contract['deformation']['drivers'] if d['kind']=='facial'}-set(present)
         if missing_facial:raise RuntimeError('Assembly lost required facial targets: '+str(sorted(missing_facial)))
         v['deformation']={**contract['deformation'],'drivers':[d for d in contract['deformation']['drivers'] if d['morph'] in present],'morphs':present}
-        if triangulate:v['triangulation']=triangulate_assembly(assembly.data)
+        if triangulate:v['triangulation']=triangulate_assembly(assembly.data,remove_zero_area='--remove-zero-area' in sys.argv)
         fp=OUT/(name+'.fbx');print('EXPORT',fp,flush=True)
         bpy.ops.export_scene.fbx(use_triangles=False,filepath=str(fp),use_selection=True,object_types={'MESH','ARMATURE'},axis_forward='-Z',axis_up='Y',apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False,use_armature_deform_only=False,mesh_smooth_type='FACE',use_mesh_modifiers=False,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False)
         v['runtime_triangles']=sum(len(p.vertices)-2 for p in assembly.data.polygons);v['runtime_material_slots']=len(assembly.data.materials);v['runtime_mesh_count']=1

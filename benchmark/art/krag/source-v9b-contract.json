@@ -1,0 +1,646 @@
+{
+  "height_m": 2.107,
+  "forward": "-Y",
+  "up": "Z",
+  "ankles_m": {
+    "Foot_L": [
+      0.19,
+      0.026,
+      0.24
+    ],
+    "Foot_R": [
+      -0.19,
+      0.026,
+      0.24
+    ]
+  },
+  "ground_z": 0,
+  "bones": [
+    "Root",
+    "Pelvis",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "Jaw",
+    "Clavicle_R",
+    "UpperArm_R",
+    "LowerArm_R",
+    "Hand_R",
+    "Thigh_R",
+    "Shin_R",
+    "Foot_R",
+    "Toe_R",
+    "Clavicle_L",
+    "UpperArm_L",
+    "LowerArm_L",
+    "Hand_L",
+    "Thigh_L",
+    "Shin_L",
+    "Foot_L",
+    "Toe_L",
+    "Finger1_0_R",
+    "Finger2_0_R",
+    "Finger1_1_R",
+    "Finger2_1_R",
+    "Finger1_2_R",
+    "Finger2_2_R",
+    "Finger1_3_R",
+    "Finger2_3_R",
+    "Thumb1_R",
+    "Thumb2_R",
+    "Finger1_0_L",
+    "Finger2_0_L",
+    "Finger1_1_L",
+    "Finger2_1_L",
+    "Finger1_2_L",
+    "Finger2_2_L",
+    "Finger1_3_L",
+    "Finger2_3_L",
+    "Thumb1_L",
+    "Thumb2_L",
+    "Claw_0",
+    "Claw_1",
+    "Claw_2",
+    "WeaponMuzzle",
+    "WeaponAim",
+    "FaceRoot",
+    "Eye_L",
+    "LidUpper_L",
+    "LidLower_L",
+    "BrowInner_L",
+    "BrowOuter_L",
+    "Cheek_L",
+    "MouthCorner_L",
+    "Eye_R",
+    "LidUpper_R",
+    "LidLower_R",
+    "BrowInner_R",
+    "BrowOuter_R",
+    "Cheek_R",
+    "MouthCorner_R",
+    "LipUpper",
+    "LipLower",
+    "NoseTip",
+    "Tongue_01",
+    "Tongue_02"
+  ],
+  "clips": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "deformation": {
+    "schemaVersion": 1,
+    "faceRoot": "FaceRoot",
+    "drivers": [
+      {
+        "morph": "Blink_L",
+        "bone": "LidUpper_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.012,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_L",
+        "bone": "LidLower_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_L",
+        "bone": "BrowOuter_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.01,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_L",
+        "bone": "BrowInner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_L",
+        "bone": "MouthCorner_L",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_L",
+        "bone": "MouthCorner_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Snarl_L",
+        "bone": "Cheek_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_L",
+        "bone": "UpperArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 95,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_L",
+        "bone": "LowerArm_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_L",
+        "bone": "Thigh_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 80,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_L",
+        "bone": "Shin_L",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Blink_R",
+        "bone": "LidUpper_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.012,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Squint_R",
+        "bone": "LidLower_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowRaise_R",
+        "bone": "BrowOuter_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.01,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "BrowLower_R",
+        "bone": "BrowInner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Smile_R",
+        "bone": "MouthCorner_R",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.007,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Frown_R",
+        "bone": "MouthCorner_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Snarl_R",
+        "bone": "Cheek_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 18,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "Corrective_ShoulderRaise_R",
+        "bone": "UpperArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 25,
+        "end": 95,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_ElbowFlex_R",
+        "bone": "LowerArm_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_HipFlex_R",
+        "bone": "Thigh_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 80,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "Corrective_KneeFlex_R",
+        "bone": "Shin_R",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 20,
+        "end": 105,
+        "maxWeight": 1.0,
+        "kind": "body"
+      },
+      {
+        "morph": "JawOpen",
+        "bone": "Jaw",
+        "channel": "rotationMagnitudeDegrees",
+        "start": 0,
+        "end": 25,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "LipPress",
+        "bone": "LipUpper",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.006,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      },
+      {
+        "morph": "NoseWrinkle",
+        "bone": "NoseTip",
+        "channel": "translationDistanceMeters",
+        "start": 0,
+        "end": 0.005,
+        "maxWeight": 1.0,
+        "kind": "facial"
+      }
+    ],
+    "morphs": [
+      "Blink_L",
+      "Blink_R",
+      "Squint_L",
+      "Squint_R",
+      "BrowRaise_L",
+      "BrowRaise_R",
+      "BrowLower_L",
+      "BrowLower_R",
+      "Smile_L",
+      "Smile_R",
+      "Frown_L",
+      "Frown_R",
+      "JawOpen",
+      "LipPress",
+      "Snarl_L",
+      "Snarl_R",
+      "NoseWrinkle",
+      "Corrective_ShoulderRaise_L",
+      "Corrective_ShoulderRaise_R",
+      "Corrective_ElbowFlex_L",
+      "Corrective_ElbowFlex_R",
+      "Corrective_HipFlex_L",
+      "Corrective_HipFlex_R",
+      "Corrective_KneeFlex_L",
+      "Corrective_KneeFlex_R"
+    ],
+    "controls": "Jaw and eye bones deform directly; expression controls drive soft-tissue morphs and fine geometry wrinkles.",
+    "interiorsStatus": "Provisional anatomy for review; serious Krag expression direction. No playful tongue extension."
+  },
+  "locomotionCycles": {
+    "Walk": {
+      "durationSeconds": 1.2,
+      "speedMetersPerSecond": 1.15,
+      "stanceFraction": 0.62,
+      "swingClearanceMeters": 0.075,
+      "cycleSeconds": 1.2,
+      "leftContacts": [
+        0.0
+      ],
+      "rightContacts": [
+        0.5
+      ],
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "stanceHalfStrideMeters": 0.42779999999999996,
+      "status": "Authored targets; actual mesh/engine contact verification pending"
+    },
+    "Run": {
+      "durationSeconds": 0.6,
+      "speedMetersPerSecond": 3.2,
+      "stanceFraction": 0.42,
+      "swingClearanceMeters": 0.145,
+      "cycleSeconds": 0.6,
+      "leftContacts": [
+        0.0
+      ],
+      "rightContacts": [
+        0.5
+      ],
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "stanceHalfStrideMeters": 0.40319999999999995,
+      "status": "Authored targets; actual mesh/engine contact verification pending"
+    }
+  },
+  "variants": {
+    "Krag_Natural": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicLeg_R_Piston",
+        "BionicEye_L",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_Crusher": {
+      "off": [
+        "BioArm_L",
+        "BioForearm_L",
+        "HandDetails_L",
+        "BionicLeg_R_Piston",
+        "BionicEye_L",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_IronJaw": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicLeg_R_Piston",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_Piston": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicEye_L",
+        "Boot_R",
+        "BioLowerLeg_R",
+        "Weapon_R",
+        "BionicThigh_R_Full"
+      ]
+    },
+    "Krag_FullLeg": {
+      "off": [
+        "BionicArm_L_Crusher",
+        "BionicJaw_Iron",
+        "BionicEye_L",
+        "Boot_R",
+        "BioLowerLeg_R",
+        "NaturalThigh_R",
+        "TrouserLeg_R",
+        "Weapon_R"
+      ]
+    }
+  },
+  "modules": [
+    "Body",
+    "Head",
+    "Face",
+    "MouthInterior",
+    "BioArm_R",
+    "BioArm_L",
+    "BioForearm_R",
+    "BioForearm_L",
+    "Garments",
+    "TrouserLeg_R",
+    "BioLowerLeg_R",
+    "Boot_R",
+    "TrouserLeg_L",
+    "BioLowerLeg_L",
+    "Boot_L",
+    "Belt",
+    "Harness",
+    "Scarf",
+    "Armor",
+    "BionicArm_L_Crusher",
+    "BionicJaw_Iron",
+    "BionicLeg_R_Piston",
+    "BionicThigh_R_Full",
+    "BionicEye_L",
+    "Weapon_R",
+    "NaturalThigh_R"
+  ],
+  "source": "benchmark/art/krag/Krag_Master_v9b_WIP.blend",
+  "materials": [
+    "Krag_SandstoneSkin",
+    "Krag_DesertCanvas",
+    "Krag_OiledLeather",
+    "Krag_WeatheredTeal",
+    "Krag_BlackenedSteel",
+    "Krag_AgedBrass",
+    "Krag_Ivory",
+    "Krag_Recess",
+    "Krag_Amber",
+    "Krag_EyeWhite",
+    "Krag_CopperHose",
+    "Krag_FacialSkin",
+    "Krag_OralTissue",
+    "Krag_Tongue",
+    "Studio_Sand"
+  ],
+  "triangles": 1167580,
+  "facialFitLandmarksMeters": {
+    "Eye_L": [
+      0.07467546934385405,
+      -0.16018507640711677,
+      1.9595965423607324
+    ],
+    "LidUpper_L": [
+      0.07469743135660938,
+      -0.18330430520044466,
+      1.9686625758471308
+    ],
+    "LidLower_L": [
+      0.07686976376246415,
+      -0.17169042762876527,
+      1.94704999082145
+    ],
+    "BrowInner_L": [
+      0.04259118347710113,
+      -0.17203258001109417,
+      1.9797064042764652
+    ],
+    "BrowOuter_L": [
+      0.11783552779455973,
+      -0.15852650717515326,
+      1.987974129232977
+    ],
+    "Cheek_L": [
+      0.1310384305090823,
+      -0.1021659410901322,
+      1.914989054016084
+    ],
+    "MouthCorner_L": [
+      0.10181423904879484,
+      -0.17220491852331754,
+      1.8415001138013083
+    ],
+    "Eye_R": [
+      -0.07467570208468154,
+      -0.1601851086031537,
+      1.9595965468976055
+    ],
+    "LidUpper_R": [
+      -0.07469743135660938,
+      -0.18330430520044466,
+      1.9686625758471308
+    ],
+    "LidLower_R": [
+      -0.07686976376246415,
+      -0.17169042762876527,
+      1.94704999082145
+    ],
+    "BrowInner_R": [
+      -0.04259118347710113,
+      -0.17203258001109417,
+      1.9797064042764652
+    ],
+    "BrowOuter_R": [
+      -0.11783552779455973,
+      -0.15852650717515326,
+      1.987974129232977
+    ],
+    "Cheek_R": [
+      -0.1310384305090823,
+      -0.1021659410901322,
+      1.914989054016084
+    ],
+    "MouthCorner_R": [
+      -0.10181423904879484,
+      -0.17220491852331754,
+      1.8415001138013083
+    ],
+    "JawPivot": [
+      0.0,
+      -0.002326957490774344,
+      1.9165095263076228
+    ],
+    "JawTail": [
+      0.0,
+      -0.19160696019397522,
+      1.7798714285714494
+    ],
+    "LipUpper": [
+      0.0,
+      -0.20944471682666438,
+      1.8528251409793228
+    ],
+    "LipLower": [
+      0.0,
+      -0.21062394662738534,
+      1.8311750038000267
+    ],
+    "NoseTip": [
+      0.0,
+      -0.21510120100001917,
+      1.9000739237001507
+    ],
+    "TongueBase": [
+      0.0,
+      -0.037335922410763056,
+      1.8104714285869536
+    ],
+    "TongueMiddle": [
+      0.0,
+      -0.12328776723228917,
+      1.8104714286180044
+    ],
+    "TongueTip": [
+      0.0,
+      -0.1762118482410126,
+      1.811928571498896
+    ]
+  },
+  "sourceEyeTransformVerification": {
+    "L": {
+      "sourceCenterMeters": [
+        0.03587651252746582,
+        -0.11538119614124298,
+        0.3100374937057495
+      ],
+      "expectedSourceCenterMeters": [
+        0.0358764,
+        -0.1153812,
+        0.3100375
+      ],
+      "sourceCenterErrorMeters": 1.1276940258138322e-07,
+      "opaqueIrisProjection": {
+        "clearanceMeters": 0.0001,
+        "maximumForwardAdjustmentMeters": 0.003149209713935841,
+        "note": "Opaque runtime iris/pupil lies on curved ocular shell; original CC0 iris is behind a clear corneal surface."
+      }
+    },
+    "R": {
+      "sourceCenterMeters": [
+        -0.03587663173675537,
+        -0.11538119614124298,
+        0.3100374937057495
+      ],
+      "expectedSourceCenterMeters": [
+        -0.0358764,
+        -0.1153812,
+        0.3100375
+      ],
+      "sourceCenterErrorMeters": 2.3185433225172045e-07,
+      "opaqueIrisProjection": {
+        "clearanceMeters": 0.0001,
+        "maximumForwardAdjustmentMeters": 0.0031478686094283947,
+        "note": "Opaque runtime iris/pupil lies on curved ocular shell; original CC0 iris is behind a clear corneal surface."
+      }
+    }
+  }
+}

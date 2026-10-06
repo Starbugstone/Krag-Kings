@@ -4,9 +4,10 @@ This preserves the reference eye, lip, nose, cheek and jaw loops. It is an
 unaccepted anatomy pass; source proportions are fitted toward concept sheet 01.
 Coordinates returned here precede the common Krag head proportion transform.
 """
-import bpy,json
+import bpy,json,sys
 import numpy as np
-from mathutils import Matrix
+from mathutils import Matrix,Vector
+from mathutils.bvhtree import BVHTree
 
 
 def fit(points):
@@ -14,33 +15,52 @@ def fit(points):
     front=np.clip((-y-.005)/.065,0,1)
     gaussian=lambda value,center,width:np.exp(-((value-center)/width)**2)
     target_z=np.interp(z,[.02,.13,.18,.222,.234,.268,.3100375,.337,.436],
-                         [1.60,1.733,1.775,1.829,1.845,1.916,1.964,1.995,2.107])
+                         [1.54,1.650,1.705,1.777,1.799,1.860,1.934,1.974,2.107])
     width=np.interp(z,[.02,.13,.18,.222,.268,.3100375,.337,.38,.436],
-                      [1.45,1.65,2.22,2.23,2.04,1.98,1.98,1.94,1.86])
+                      [1.55,1.82,2.26,2.34,2.23,2.18,2.28,2.30,2.22])
     target_x=x*width
     target_y=y*1.40+.013
     # Broad projecting mandible and muzzle, with a low, flattened nasal bridge.
     mouth=gaussian(x,0,.060)*gaussian(z,.232,.030)*front
     chin=gaussian(x,0,.066)*gaussian(z,.183,.026)*front
-    target_y-=.037*mouth+.039*chin
-    target_x*=1+.10*mouth
-    target_z-=.008*(np.clip(abs(x)/.053,0,1)**1.5)*mouth
+    target_y-=.060*mouth+.066*chin
+    # Deep upper muzzle and underbite remain one connected lip/cheek surface.
+    upper_muzzle=gaussian(x,0,.053)*gaussian(z,.255,.020)*front
+    target_y-=.017*upper_muzzle
+    target_x*=1+.14*mouth
+    target_z-=.010*(np.clip(abs(x)/.053,0,1)**1.5)*mouth
     nose=gaussian(x,0,.030)*gaussian(z,.271,.030)*front
-    target_x*=1+.25*nose
+    target_x*=1+.85*nose
+    target_y-=.028*nose
     target_y+=.011*gaussian(x,0,.026)*gaussian(z,.295,.021)*front
     # The same transformation is applied to the complete eye assemblies, so
     # lids and globes share their fitting field instead of being placed by eye.
     ocular=gaussian(abs(x),.0358764,.026)*gaussian(z,.3100375,.024)*front
     target_y-=.0165*ocular
-    target_z-=(z-.3100375)*.38*ocular
-    target_x-=np.sign(x)*(abs(x)-.0358764)*.16*ocular
-    brow=gaussian(abs(x),.033,.030)*gaussian(z,.334,.014)*front
-    target_y-=.026*brow
-    target_z-=.008*gaussian(abs(x),.018,.022)*brow
+    target_z-=(z-.3100375)*.10*ocular
+    target_x-=np.sign(x)*(abs(x)-.0358764)*.08*ocular
+    # Continuous sloping supraorbital bone: low inner frown and rising outer
+    # brow, with eye opening retained rather than flattened to a horizontal slit.
+    brow=gaussian(abs(x),.037,.022)*gaussian(z,.325+.23*abs(x),.012)*front
+    target_y-=.055*brow
+    target_z-=.014*gaussian(abs(x),.024,.021)*brow
+    # A recessed central bridge separates the paired ridges; overlapping broad
+    # fields in v9b had turned the brow into one horizontal shelf.
+    central_brow=gaussian(x,0,.011)*gaussian(z,.338,.021)*front
+    target_y+=.009*central_brow
     # Flatter cheek planes, with the uninterrupted nasolabial surface retained.
     cheek=gaussian(abs(x),.057,.022)*gaussian(z,.276,.030)*front
-    target_y+=.006*cheek
-    target_x+=np.sign(x)*.005*cheek
+    target_y+=.008*cheek
+    target_x+=np.sign(x)*.007*cheek
+    zygoma=gaussian(abs(x),.058,.021)*gaussian(z,.298,.015)*front
+    target_y-=.030*zygoma
+    masseter=gaussian(abs(x),.064,.018)*gaussian(z,.231,.034)*front
+    target_y-=.010*masseter
+    target_x+=np.sign(x)*.006*masseter
+    # Preserve the crown while rounding down the lateral scalp, instead of a
+    # broad flat plateau. This is a regional cage warp, not an added skull lobe.
+    scalp=np.clip((z-.346)/.055,0,1)
+    target_z-=.018*np.clip(abs(x)/.081,0,1)**1.7*scalp
     # Small rounded Krag ears retain the source auricle topology. Compress only
     # the outer lateral region rather than adding disconnected ear primitives.
     auricle=np.clip((abs(x)-.068)/.019,0,1)*np.clip((y+.056)/.025,0,1)
@@ -49,7 +69,39 @@ def fit(points):
     return np.column_stack((target_x,target_y,target_z))
 
 
+def sculpt_face(raw,points):
+    """Low relief anatomically placed folds on the continuous dense face."""
+    x,y,z=raw.T;result=points.copy()
+    front=np.clip((-y-.045)/.060,0,1)
+    gaussian=lambda a,c,w:np.exp(-((a-c)/w)**2)
+    relief=np.zeros(len(raw))
+    # Paired glabellar furrows divide the heavy frown, not the eyelid margins.
+    for sign in [-1,1]:
+        glabella=gaussian(x,sign*.012,.0016)*gaussian(z,.350,.023)
+        relief+=.0019*glabella
+        # Nasolabial furrows run from the nasal ala toward the mouth corners.
+        t=np.clip((.271-z)/.043,0,1)
+        line=sign*(.026+.017*t)
+        extent=gaussian(z,.251,.026)
+        relief+=.0021*gaussian(x,line,.0015)*extent
+        relief-=.0015*gaussian(x,line+sign*.0032,.0026)*extent
+        for dz,slope in [(0,.20),(.007,.32),(-.006,-.12)]:
+            linez=.309+dz+slope*(abs(x)-.056)
+            relief+=.0010*gaussian(z,linez,.0011)*gaussian(abs(x),.065,.011)
+    for height,strength in [(.357,.0012),(.375,.0009)]:
+        line=height+.045*(abs(x)/.10)**2+.0013*np.sin(x*130)
+        relief+=strength*gaussian(z,line,.0014)*gaussian(x,0,.067)
+    # Chin-to-lower-lip crease remains low relief; the mouth seam is real topology.
+    relief+=.0015*gaussian(z,.207+.045*abs(x),.0018)*gaussian(x,0,.043)
+    result[:,1]+=relief*front
+    return result
+
+
 def build(c):
+    iris_detail='--iris-detail' in sys.argv
+    if iris_detail:
+        import krag_iris_material
+        krag_iris_material.configure(c['iris'])
     source=c['ROOT']/'benchmark/art/reference-anatomy/blender-studio-human-base-meshes/source/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend'
     names=['GEO-head_animation_realistic']
     names += ['GEO-head_animation_realistic.'+part+'.'+side for part in ['iris','sclera'] for side in ['L','R']]
@@ -57,14 +109,25 @@ def build(c):
         loaded.objects=names
     reference={o.name:o for o in loaded.objects}
     head=reference['GEO-head_animation_realistic']
+    # Appended but unlinked objects can expose identity matrix_world until the
+    # intact parent hierarchy has been evaluated. Cache only after linking.
+    for obj in reference.values():
+        if obj.name not in bpy.context.collection.objects:
+            bpy.context.collection.objects.link(obj)
+    bpy.context.view_layer.update()
     # Cache all source transforms BEFORE moving the head or clearing eye parents.
     # The library's eyes are parented to its head and inherit those transforms.
     matrices={name:obj.matrix_world.copy() for name,obj in reference.items()}
     source_head_inverse=matrices[head.name].inverted()
-    landmarks={}
+    landmarks={};eye_audit={}
     for side,sign in [('L',1),('R',-1)]:
         eye_name='GEO-head_animation_realistic.sclera.'+side
         source_center=source_head_inverse@matrices[eye_name].translation
+        expected=np.asarray((sign*.0358764,-.1153812,.3100375))
+        if np.linalg.norm(np.asarray(source_center)-expected)>.00005:
+            raise RuntimeError('Invalid evaluated reference eye center '+side+': '+str(tuple(source_center)))
+        eye_audit[side]={'sourceCenterMeters':list(source_center),'expectedSourceCenterMeters':expected.tolist(),
+                         'sourceCenterErrorMeters':float(np.linalg.norm(np.asarray(source_center)-expected))}
         landmarks['Eye_'+side]=tuple(fit([source_center])[0])
         for name,point in {'LidUpper':(sign*.0358764,-.126,.319),
                            'LidLower':(sign*.0358764,-.126,.301),
@@ -80,8 +143,34 @@ def build(c):
                        'TongueTip':(0,-.102,.212)}.items():
         landmarks[name]=tuple(fit([point])[0])
     c['continuous_head_landmarks']=landmarks
+    c['continuous_head_eye_audit']=eye_audit
+    # Subdivide the optical geometry BEFORE projecting onto the shell. A later
+    # Catmull-Clark pass could shrink the fitted iris below the opaque cornea.
+    for name,obj in reference.items():
+        if obj is head:continue
+        obj.modifiers.clear();bpy.context.view_layer.objects.active=obj
+        optical_subdivision=obj.modifiers.new('Smooth optical surface before fit','SUBSURF')
+        optical_subdivision.levels=1
+        bpy.ops.object.modifier_apply(modifier=optical_subdivision.name)
     points={name:np.asarray([tuple(source_head_inverse@matrices[name]@v.co) for v in obj.data.vertices],dtype=float)
             for name,obj in reference.items()}
+    for side in ['L','R']:
+        shell_name='GEO-head_animation_realistic.sclera.'+side
+        iris_name='GEO-head_animation_realistic.iris.'+side
+        shell=reference[shell_name]
+        surface=BVHTree.FromPolygons([Vector(p) for p in points[shell_name]],
+                                     [tuple(p.vertices) for p in shell.data.polygons])
+        iris_points=points[iris_name].copy();original_iris=iris_points.copy()
+        iris_relief=np.clip((original_iris[:,1]-np.median(original_iris[:,1]))*.025,-.000015,.000015)
+        for point,relief in zip(iris_points,iris_relief):
+            hit,normal,index,distance=surface.ray_cast(Vector((point[0],-.5,point[2])),Vector((0,1,0)))
+            if hit is None:raise RuntimeError('Source iris outside ocular shell: '+side)
+            point[1]=hit.y-.00010+relief
+        points[iris_name]=iris_points
+        eye_audit[side]['opaqueIrisProjection']={'clearanceMeters':.00010,
+            'maximumForwardAdjustmentMeters':float(np.max(original_iris[:,1]-iris_points[:,1])),
+            'preservedFoldReliefLimitMeters':.000015,
+            'note':'Opaque runtime iris/pupil lies on curved ocular shell; original CC0 iris is behind a clear corneal surface.'}
     eye_surfaces={}
     for side in ['L','R']:
         name='GEO-head_animation_realistic.sclera.'+side
@@ -102,11 +191,21 @@ def build(c):
         obj.data.materials.clear()
         if obj is head:
             obj.name='Head_Sculpt';c['mark'](obj,'Head','Head')
-            obj.data.materials.append(c['face_skin']);obj.data.materials.append(c['skin']);obj.data.materials.append(c['dark'])
+            obj.data.materials.append(c['face_skin']);obj.data.materials.append(c['dark'])
+            # A continuously interpolated field replaces the abrupt polygon
+            # material cutoff that created a visible cap on the failed v9 head.
+            rx,ry,rz=original.T
+            smooth=lambda t: np.clip(t,0,1)**2*(3-2*np.clip(t,0,1))
+            region=np.maximum.reduce((smooth((rz-.354)/.048),
+                                      .72*smooth((abs(rx)-.050)/.030),
+                                      smooth((ry+.020)/.050),
+                                      smooth((.190-rz)/.050)))
+            attribute=obj.data.attributes.new('Krag_SkinRegion','FLOAT','POINT')
+            attribute.data.foreach_set('value',region.astype(np.float32))
             for polygon in obj.data.polygons:
-                raw=original[list(polygon.vertices)].mean(0)
-                polygon.material_index=2 if original_face_sets[polygon.index]==7 else (1 if raw[2]>.366 or raw[1]>.015 else 0)
+                polygon.material_index=1 if original_face_sets[polygon.index]==7 else 0
             cage=obj.copy();cage.data=obj.data.copy();cage.name='EDITABLE Krag continuous facial cage'
+            cage['krag_head_control_cage']=True
             for key in ['module','rig_bone']:
                 if key in cage:del cage[key]
             collection=bpy.data.collections.get('Authoring control cages')
@@ -121,14 +220,21 @@ def build(c):
                 # Retain the modeled iris cup and recessed pupil, assigning a
                 # dark pupil to its central source-local radial region.
                 center=np.asarray(tuple(source_head_inverse@matrices[name].translation))
+                if iris_detail:krag_iris_material.coordinates(obj,original,center)
                 for polygon in obj.data.polygons:
                     q=original[list(polygon.vertices)].mean(0)-center
                     if np.hypot(q[0],q[2])<.0027:polygon.material_index=1
-            levels=1
+            levels=0
         for polygon in obj.data.polygons:polygon.use_smooth=True
         bpy.context.view_layer.objects.active=obj
-        subdivision=obj.modifiers.new('Continuous facial sculpt surface','SUBSURF');subdivision.levels=levels;subdivision.render_levels=levels
-        bpy.ops.object.modifier_apply(modifier=subdivision.name)
+        if levels:
+            subdivision=obj.modifiers.new('Continuous facial sculpt surface','SUBSURF');subdivision.levels=levels;subdivision.render_levels=levels
+            bpy.ops.object.modifier_apply(modifier=subdivision.name)
+        if obj is head:
+            raw=np.empty(len(obj.data.vertices)*3,dtype=np.float32)
+            obj.data.attributes['krag_reference_position'].data.foreach_get('vector',raw)
+            current=np.empty_like(raw);obj.data.vertices.foreach_get('co',current)
+            obj.data.vertices.foreach_set('co',sculpt_face(raw.reshape(-1,3),current.reshape(-1,3)).astype(np.float32).ravel())
         obj['anatomical_source']='Blender Studio Human Base Meshes 1.4.1 / animation head and matching ocular topology / CC0'
         obj['anatomical_status']='Unaccepted Krag facial topology adaptation; visual and expression review required'
     # Tusks remain the approved silhouette cue, emerging beside the lower lip.

@@ -82,6 +82,9 @@ face_bs=next(node for node in face_nodes if node.type=='BSDF_PRINCIPLED')
 face_color_source=face_bs.inputs['Base Color'].links[0].from_socket
 quiet=face_nodes.new('ShaderNodeMixRGB');quiet.name='Quieter central facial skin';quiet.blend_type='MIX';quiet.inputs[0].default_value=.76;quiet.inputs[2].default_value=(.185,.111,.054,1)
 face_links.new(face_color_source,quiet.inputs[1]);face_links.new(quiet.outputs[0],face_bs.inputs['Base Color'])
+region=face_nodes.new('ShaderNodeAttribute');region.attribute_name='Krag_SkinRegion'
+regional_color=face_nodes.new('ShaderNodeMixRGB');regional_color.name='Continuous facial skin regions'
+face_links.new(region.outputs['Fac'],regional_color.inputs[0]);face_links.new(quiet.outputs[0],regional_color.inputs[1]);face_links.new(face_color_source,regional_color.inputs[2]);face_links.new(regional_color.outputs[0],face_bs.inputs['Base Color'])
 for node in face_nodes:
     if node.type=='BUMP' and node.inputs['Distance'].default_value>.0004:node.inputs['Distance'].default_value*=.35
 
@@ -401,7 +404,7 @@ for v in trousers.data.vertices:
 krag_full_leg.split_natural_thigh(globals(),trousers)
 # Reference-proportion head: compact adult cranium, broad bulldog jaw, fixed crown.
 for o in list(bpy.data.objects):
-    if o.type=='MESH' and o.get('module') in {'Head','Face','BionicJaw_Iron','BionicEye_L','MouthInterior','Eyelids_L','Eyelids_R'}:
+    if o.type=='MESH' and (o.get('module') in {'Head','Face','BionicJaw_Iron','BionicEye_L','MouthInterior','Eyelids_L','Eyelids_R'} or o.get('krag_head_control_cage')):
         head_transform=o.matrix_world.copy();inv=head_transform.inverted()
         for v in o.data.vertices:
             q=head_transform@v.co;v.co=inv@Vector(krag_face.H(q))
@@ -551,7 +554,7 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
 bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')
@@ -560,5 +563,6 @@ log('Source saved; render '+('skipped' if '--skip-render' in sys.argv else 'fini
 # Manifest kept local to this asset; shared root manifest belongs to integration lead.
 data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.24],'Foot_R':[-.19,.026,.24]},'ground_z':0,'bones':list(bones),'clips':['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'],'deformation':deformation,'locomotionCycles':krag_locomotion.manifest(),'variants':variants,'modules':list(modules),'source':str(MASTER_PATH.relative_to(ROOT)).replace('\\','/'),'materials':list(materials),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())}
 if globals().get('continuous_head_landmarks'):data['facialFitLandmarksMeters']={name:list(krag_face.H(point)) for name,point in continuous_head_landmarks.items()}
+if globals().get('continuous_head_eye_audit'):data['sourceEyeTransformVerification']=continuous_head_eye_audit
 (OUT/'krag_asset_contract.json').write_text(json.dumps(data,indent=2),newline='\n')
 log('COMPLETE source creation; use export_krag.py for PBR texture baking and FBX.')
