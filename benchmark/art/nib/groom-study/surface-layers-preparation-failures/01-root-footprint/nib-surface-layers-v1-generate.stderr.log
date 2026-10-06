@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\build_surface_layers.py", line 61, in <module>
+    obj,attachment=emit('Nib layered alpha '+group['region'],group['guides'],collection,rig,materials[group['materialRegion']],group['bone'],trees[group['bone']]);new.append(obj)
+                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\alpha_clumps.py", line 48, in emit
+    if row==0 and (fitted-p).length>.00005:raise RuntimeError('Clump root crosses goggle lens')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Clump root crosses goggle lens
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\build_surface_layers.py', exiting.

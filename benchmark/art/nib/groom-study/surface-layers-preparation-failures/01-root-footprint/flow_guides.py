@@ -5,21 +5,12 @@ from importlib.util import spec_from_file_location, module_from_spec
 from mathutils import Vector
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/'v5_wip'))
-from nib_groom_v5 import ear_coordinates, EAR_CENTERS, EAR_WIDTHS, avoid_goggles, configure_goggle_envelopes, GOGGLE_ENVELOPES
+from nib_groom_v5 import ear_coordinates, EAR_CENTERS, EAR_WIDTHS, avoid_goggles, configure_goggle_envelopes
 spec=spec_from_file_location('nib_surface_prior_guides',HERE.parent/'v6_groom_wip/guide_recipe.py')
 prior=module_from_spec(spec);spec.loader.exec_module(prior)
 SurfaceSampler=prior.SurfaceSampler
 
 HEAD_COUNTS={'undercoat':420,'crown':320,'fringe':170,'temple_L':150,'temple_R':150,'nape':240}
-
-
-def head_root_clear(point):
-    # The complete widest root sheet, including local projection/burial, must
-    # stay outside the lens envelope. The old selector checked the center only.
-    for center,back in GOGGLE_ENVELOPES:
-        radial=math.hypot(point.x-center.x,point.z-center.z)
-        if radial<.034+.008 and point.y<back+.008:return False
-    return True
 
 
 def head_selector(region,p,n,s):
@@ -80,13 +71,9 @@ def build(head,collection):
         def select(p,n,s):
             if not head_selector(region,p,n,s):return False
             if region in ['fringe','undercoat'] and abs(s.x)<.018 and s.z<.353:return False
-            return head_root_clear(p)
+            return (avoid_goggles(p)-p).length<.00005
         sampler=SurfaceSampler(head,select);spacing=min(.0015,math.sqrt(sampler.total/count)*.36)
-        samples,audit=sampler.roots(math.ceil(count*1.18),seed,spacing*.92)
-        eligible=[v for v in samples if head_root_clear(v[0])]
-        if len(eligible)<count:raise RuntimeError('Complete card-root footprint cannot fit requested head region '+region)
-        roots=eligible[:count];audit['rootCenterFootprintMarginMeters']=.008
-        audit['actualRootSamplesRejected']=len(samples)-len(eligible)
+        roots,audit=sampler.roots(count,seed,spacing)
         groups.append({'region':region,'bone':'Head','materialRegion':'head','guides':[make(region,*v,seed+i)for i,v in enumerate(roots)],'sampling':audit})
         seed+=3000
     for side,sign in [('L',1),('R',-1)]:

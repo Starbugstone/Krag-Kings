@@ -1,0 +1,28 @@
+{
+  "status": "One diagnosed footprint-aware retry; native/render pending",
+  "priorFailure": "benchmark/art/nib/groom-study/surface-layers-preparation-failures/01-root-footprint/failure.json",
+  "sourceSha256": "e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592",
+  "changes": [
+    "Conservative8mm root footprint margin",
+    "Actual sampled root predicate as well as triangle-center filtering",
+    "Detailed emitter collision attribution; thresholds unchanged"
+  ],
+  "recipeSha256": {
+    "alpha_clumps.py": "f7ad1714bde6ab40d350728917596089af0053cbc07bb7a29b73081ebda1a02b",
+    "blink-surface-layers-v1.job.json": "794d6a0c36cadaec4156a4c4d2cd5b488c7a5b9bc1a362dc021c5c5a6ad640aa",
+    "build_surface_layers.py": "22f29b3b553f614d2bd14c66334a1da405b8c91fccab91939bb9b1ca5bfb16a6",
+    "cloth_pattern.py": "77b2ec06a87b5c0c07e2023cc8bfde36657daf2a7de7886893d983dfcc5fab80",
+    "flow_guides.py": "328fdf34f47956028496d7f49b422febafabf10069b99a186a55219b393011dc",
+    "generate-surface-layers-v1-retry1.job.json": "02e5aa5fb826f04dc81347263c3daa2dff3dfcdd62576f0472c97ecca732d8d2",
+    "generate-surface-layers-v1.job.json": "beb8a1a648f2e6c61a7755e284a10154c0eb2c4666eff8d579ef20b52c1986f8",
+    "neutral-surface-layers-v1.job.json": "c61f3a8041b504c85fe8fc0bad2da9339a3cbb75cb5ba9528e8f583aea4ca127",
+    "pattern-preflight.json": "0b02bc6e42a0685d4797e252e7f7c296f055d5ef76ba4ed316c0dc510e20d652",
+    "preflight_pattern.py": "a4b4105861a9ebbbdded8ea79217f560ee4814bad2f758d5f6a1ad14874514db",
+    "profile-surface-layers-v1.job.json": "b2233e813fa6828edfd150f4fbefc68fd3d3cf9ea15fd824d1826ad9cc61cc5f",
+    "readiness.json": "bb6d1981b2d0dfa4a888b67f1e1938e53e5e114493ea06ec07030441251c2d8d",
+    "README.md": "31b24f6a4763f95dd44d75c8a43a57a7b991b7a7f2037852fa029685270ee47f",
+    "returned_scarf.py": "74fae53e488d21c6da5c86efdf5512e518c9ba4b9a91df0ad3be9ce706b138b2",
+    "tongue-surface-layers-v1.job.json": "41144dadca83bd7dd8ac9a0268128eb125d06b79d4e7465e8f9a5833cc68ceb1"
+  },
+  "nativeGenerated": false
+}

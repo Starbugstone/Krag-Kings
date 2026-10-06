@@ -13,7 +13,7 @@ from flow_guides import build as build_guides
 from alpha_clumps import emit
 from returned_scarf import create as create_scarf
 from nib_groom_v5 import GOGGLE_ENVELOPES
-p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--source-sha256',required=True);p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--stage',choices=['groom','complete'],default='complete');args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
+p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--source-sha256',required=True);p.add_argument('--output-dir',type=Path,required=True);args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 if sha(args.source)!=args.source_sha256:raise RuntimeError('Pinned actual source changed')
 if args.output_dir.exists():raise RuntimeError('Preserve preceding candidate')
@@ -27,7 +27,7 @@ for name in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance']:
     if name not in bpy.data.actions:raise RuntimeError('Canonical take missing '+name)
     bpy.data.actions[name].use_fake_user=True
 before=rig_contract(rig)
-removed=[o for o in collection.objects if o.type=='MESH'and ((o.name.startswith(('Nib v6 cards ','Nib v6 opaque accents '))and o.get('bone')in['Head','Ear_L','Ear_R'])or o.name.startswith('Auricle basal cartilage fold')or (args.stage=='complete'and o.name=='Nib v5 layered desert scarf'))]
+removed=[o for o in collection.objects if o.type=='MESH'and ((o.name.startswith(('Nib v6 cards ','Nib v6 opaque accents '))and o.get('bone')in['Head','Ear_L','Ear_R'])or o.name.startswith('Auricle basal cartilage fold')or o.name=='Nib v5 layered desert scarf')]
 if len([o for o in removed if o.name.startswith('Auricle basal cartilage fold')])!=2:raise RuntimeError('Unexpected old cartilage tubes')
 retained={o.name:surface_hash(o)for o in bpy.data.objects if o.type=='MESH'and o not in removed}
 images={i.name:{'path':str(Path(bpy.path.abspath(i.filepath)).resolve()),'sha256':sha(Path(bpy.path.abspath(i.filepath)).resolve()),'colorspace':i.colorspace_settings.name}for i in bpy.data.images if i.source=='FILE'and i.filepath}
@@ -61,9 +61,7 @@ for group in groups:
     obj,attachment=emit('Nib layered alpha '+group['region'],group['guides'],collection,rig,materials[group['materialRegion']],group['bone'],trees[group['bone']]);new.append(obj)
     ear=bind_ear(obj,rig)
     groom.append({'region':group['region'],'sampling':group['sampling'],'attachment':attachment,'earBinding':ear})
-scarf=None;cloth={'changed':False,'status':'Original failed scarf retained exactly; standalone coherent-fold fitting pending'}
-if args.stage=='complete':
-    scarf,cloth=create_scarf(collection,rig,scarf_material,body,head);new.append(scarf)
+scarf,cloth=create_scarf(collection,rig,scarf_material,body,head);new.append(scarf)
 geometry=[]
 for obj in new:
     mesh=obj.data;mesh.calc_loop_triangles();points=np.asarray([v.co[:]for v in mesh.vertices],float);tri=np.asarray([t.vertices[:]for t in mesh.loop_triangles],int);q=points[tri]
@@ -88,7 +86,7 @@ if sum(g['triangles']for g in geometry)>350000:raise RuntimeError('Bounded layer
 # Actual posed cloth/anatomy distances. This is a local signed-distance proxy,
 # not a self-intersection or material/appearance acceptance test.
 cloth_poses=[]
-for action,frame in ([]if scarf is None else [('Idle',1),('Walk',13),('Run',8),('Shoot',14),('FacePerformance',103)]):
+for action,frame in [('Idle',1),('Walk',13),('Run',8),('Shoot',14),('FacePerformance',103)]:
     rig.animation_data.action=bpy.data.actions[action];scene.frame_set(frame);bpy.context.view_layer.update();deps=bpy.context.evaluated_depsgraph_get()
     vertices=[];polys=[]
     for obj in [body,head]:
@@ -107,11 +105,11 @@ for name,digest in retained.items():
 if rig_contract(rig)!=before or str(scene['nib_groom_material_contract'])!=material_contract:raise RuntimeError('Rig/actions/material contract changed')
 expected={o.name:surface_hash(o)for o in new}
 args.output_dir.mkdir(parents=True);guides_file=args.output_dir/'guides.json';guides_file.write_text(json.dumps({'groups':groups},indent=2)+'\n',newline='\n')
-scene['source_version']='Isolated layered alpha fur; '+('failed original scarf retained'if args.stage=='groom'else'new returned scarf')+'; inherited macroface failure retained'
-scene['nib_surface_layers']=json.dumps({'sourceSha256':args.source_sha256,'newCards':sum(g['cards']for g in geometry),'mainHeadEarOpaqueBundlesRemoved':True,'artisticAcceptance':False})
+scene['source_version']='Isolated layered alpha fur and returned scarf; inherited macroface failure retained'
+scene['nib_surface_layers']=json.dumps({'sourceSha256':args.source_sha256,'newCards':sum(g['cards']for g in geometry),'opaqueBundlesRemoved':True,'artisticAcceptance':False})
 for file in [Path(__file__),HERE/'flow_guides.py',HERE/'alpha_clumps.py',HERE/'returned_scarf.py',HERE/'cloth_pattern.py']:
     text=bpy.data.texts.new('Nib surface layers '+file.name);text.write(file.read_text())
-rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1);target=args.output_dir/('Nib_Coherent_LayeredGroom_v1.blend'if args.stage=='groom'else'Nib_Coherent_SurfaceLayers_v1.blend')
+rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1);target=args.output_dir/'Nib_Coherent_SurfaceLayers_v1.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(target),compress=True);bpy.ops.wm.open_mainfile(filepath=str(target),load_ui=False)
 if rig_contract(bpy.data.objects['Nib_Rig'])!=before:raise RuntimeError('Saved source lost bind/actions')
 for name,digest in {**retained,**expected}.items():
@@ -120,5 +118,5 @@ for name,entry in images.items():
     image=bpy.data.images[name];path=Path(bpy.path.abspath(image.filepath)).resolve();size=list(image.size)
     if str(path)!=entry['path']or sha(path)!=entry['sha256']or image.colorspace_settings.name!=entry['colorspace']or not image.has_data or min(size)<=0:raise RuntimeError('Saved immutable source image differs '+name)
 if sha(args.source)!=args.source_sha256:raise RuntimeError('Pinned input changed')
-report={'stage':args.stage,'status':'Actual isolated construction source; images and art acceptance pending','sourceSha256':args.source_sha256,'candidateSha256':sha(target),'savedSourceReopened':True,'preservedRig':before,'retainedMeshHashes':retained,'changedMeshHashes':expected,'removed':old,'groom':groom,'geometry':geometry,'scarf':cloth,'clothPoses':cloth_poses,'guideSha256':sha(guides_file),'connectedImages':images,'preRenderGate':inherited['preRenderGate'],'numericalWarnings':inherited['numericalWarnings'],'artisticAcceptance':False,'sharedChanged':False,'requiresMatchingFullMeshAndClipExport':True,'codeSha256':{p.name:sha(p)for p in HERE.glob('*.py')}}
+report={'status':'Actual isolated construction source; images and art acceptance pending','sourceSha256':args.source_sha256,'candidateSha256':sha(target),'savedSourceReopened':True,'preservedRig':before,'retainedMeshHashes':retained,'changedMeshHashes':expected,'removed':old,'groom':groom,'geometry':geometry,'scarf':cloth,'clothPoses':cloth_poses,'guideSha256':sha(guides_file),'connectedImages':images,'preRenderGate':inherited['preRenderGate'],'numericalWarnings':inherited['numericalWarnings'],'artisticAcceptance':False,'sharedChanged':False,'requiresMatchingFullMeshAndClipExport':True,'codeSha256':{p.name:sha(p)for p in HERE.glob('*.py')}}
 (args.output_dir/'source.json').write_text(json.dumps(report,indent=2)+'\n',newline='\n');print('NIB_SURFACE_LAYERS_SAVED_AND_REOPENED',flush=True)

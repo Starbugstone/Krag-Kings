@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\build_surface_layers.py", line 64, in <module>
+    scarf,cloth=create_scarf(collection,rig,scarf_material,body,head);new.append(scarf)
+                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\returned_scarf.py", line 84, in create
+    if nearest_separation<.0018:raise RuntimeError('Actual skin fit collapses nonadjacent scarf folds '+str(nearest_separation))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Actual skin fit collapses nonadjacent scarf folds 1.7936946058189616e-11
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\surface_layers_wip\build_surface_layers.py', exiting.

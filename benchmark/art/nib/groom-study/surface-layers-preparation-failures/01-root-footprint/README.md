@@ -1,10 +1,4 @@
-# Actual construction failures; groom-only checkpoint prepared
-
-The first native source attempt stopped before save because broad card corners crossed a lens despite a clear center. Its exact recipe and logs are preserved. The footprint-aware retry completed groom emission/root fitting, then stopped before save because independent cloth fitting collapsed separated folds onto the same skin surface. Neither attempt produced a source or render; both exited 2 and kept the gates intact.
-
-`generate-layered-groom-v1.job.json` is the next prepared boundary: save/reopen the new groom while retaining the old scarf exactly, then matched Neutral/Profile. It is not yet executed. The separate cloth fitter now transports complete cross-sections with a smooth conservative radial offset, retaining internal fold geometry and required skin clearance; that correction is also unexecuted. The earlier full-stage jobs remain historical recipes and are not the next launch.
-
-## Design and gates
+# Prepared substantive fur / scarf construction candidate
 
 This is ungenerated code, pinned to actual macroface diagnostic `e7a39cdb…`. It does not edit the frozen engine source or imply that the failed macroface is accepted. Its facial shape, morphs, five migrated pivots and unresolved 0.494 mm full-weight mouth warning remain unchanged.
 

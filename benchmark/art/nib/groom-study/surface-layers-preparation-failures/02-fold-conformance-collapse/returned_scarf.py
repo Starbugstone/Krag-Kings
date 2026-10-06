@@ -26,7 +26,7 @@ def skin_tree(objects):
 
 
 def create(collection,rig,material,body,head):
-    support=skin_tree([body,head]);N=160;M=49;points=[];uv=[];faces=[];fits=[];required_offsets=np.zeros(N)
+    support=skin_tree([body,head]);N=160;M=49;points=[];uv=[];faces=[];fits=[]
     for j in range(M):
         v=j/(M-1)
         for i in range(N):
@@ -40,27 +40,9 @@ def create(collection,rig,material,body,head):
                 if required>radius:
                     delta=required-radius
                     if delta>.030:raise RuntimeError('Scarf pattern enters actual anatomy by over30mm; revise pattern '+str((i,j,delta)))
-                    required_offsets[i]=max(required_offsets[i],delta)
+                    p+=direction*delta
             # Front support cannot lift the low cowl toward the shoulders.
-            points.append(tuple(p));uv.append((i/N*.62,v*.20))
-    # Transport each entire folded section along one radial vector. Separate
-    # layers never snap independently onto the same body surface. A smooth
-    # periodic majorant retains every measured minimum support requirement.
-    offsets=required_offsets.copy()
-    for _ in range(2):
-        offsets=sum(np.roll(offsets,k)*w for k,w in [(-2,1),(-1,4),(0,6),(1,4),(2,1)])/16
-    offsets+=max(0.,float(np.max(required_offsets-offsets)))
-    if float(offsets.max())>.030:raise RuntimeError('Whole scarf section needs over30mm of support transport; inspect pattern')
-    unfit=np.asarray(points,dtype=np.float64).reshape((M,N,3));fitted=unfit.copy()
-    for i in range(N):
-        direction=unfit[0,i,:2]-np.array([0,.008]);direction/=np.linalg.norm(direction)
-        fitted[:,i,:2]+=direction*offsets[i]
-    preservation=0.
-    for i in range(N):
-        preservation=max(preservation,float(np.max(np.abs((fitted[:,i]-fitted[0,i])-(unfit[:,i]-unfit[0,i])))))
-    if preservation>1e-7:raise RuntimeError('Coherent cloth section transport changed its fold geometry')
-    if np.any(offsets+1e-12<required_offsets):raise RuntimeError('Smoothed support transport lost required clearance')
-    points=[tuple(v)for v in fitted.reshape((-1,3))];fits=offsets.tolist()
+            fits.append(delta);points.append(tuple(p));uv.append((i/N*.62,v*.20))
     for j in range(M-1):
         for i in range(N):
             a=j*N+i;b=j*N+(i+1)%N;faces.append((a,b,b+N,a+N))
@@ -100,6 +82,6 @@ def create(collection,rig,material,body,head):
             for b in range(a+4,M-1):
                 nearest_separation=min(nearest_separation,segment_distance(section[a],section[a+1],section[b],section[b+1]))
     if nearest_separation<.0018:raise RuntimeError('Actual skin fit collapses nonadjacent scarf folds '+str(nearest_separation))
-    return obj,{'maximumSectionInternalCoordinateErrorMeters':preservation,'rawRequiredOffsetsMeters':required_offsets.tolist(),'coherentSectionOffsetsMeters':offsets.tolist(),'minimumFittedNonadjacentSectionDistanceMeters':nearest_separation,'construction' :'Actual returned surface, no cloth simulation','radialFitMaximumMeters':max(fits),'sections':returns,
+    return obj,{'minimumFittedNonadjacentSectionDistanceMeters':nearest_separation,'construction' :'Actual returned surface, no cloth simulation','radialFitMaximumMeters':max(fits),'sections':returns,
                 'fittingValuesProvisional':True,'chestNeckOnly':True,'minimumFabricThicknessMeters':.0013,
                 'posedCollisionAndAppearancePending':True}

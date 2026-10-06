@@ -45,7 +45,7 @@ def emit(name,guides,collection,rig,material,bone,surface):
                         'distanceMeters':dist,'burialMeters':depth,'opposingClearanceMeters':opposing,'sideSwitch':side_switch})
                 if bone=='Head':
                     fitted=avoid_goggles(p)
-                    if row==0 and (fitted-p).length>.00005:raise RuntimeError('Clump root crosses goggle lens '+str((name,index,u,tuple(p),(fitted-p).length)))
+                    if row==0 and (fitted-p).length>.00005:raise RuntimeError('Clump root crosses goggle lens')
                     p=fitted
                 points.append(tuple(p));pad=8/512
                 uvs.append(((tile%4+pad+(u+1)*.5*(1-2*pad))/4,(tile//4+pad+t*(1-2*pad))/4))
