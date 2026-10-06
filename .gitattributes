@@ -24,7 +24,7 @@ benchmark/art/animation/cmu/*.amc -text whitespace=-blank-at-eol,-blank-at-eof,c
 benchmark/art/animation/cmu/*.avi filter=lfs diff=lfs merge=lfs -text
 benchmark/art/animation/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
 # Preserve original native evidence bytes so recorded hashes survive cloning.
-benchmark/art/animation/nib-human-motion-v4/**/*.json -text
-benchmark/art/animation/nib-human-motion-v4/**/*.csv -text
-benchmark/art/animation/nib-human-motion-v5/**/*.json -text
-benchmark/art/animation/nib-human-motion-v5/**/*.csv -text
+benchmark/art/animation/nib-human-motion-v4/**/*.json -text whitespace=cr-at-eol
+benchmark/art/animation/nib-human-motion-v4/**/*.csv -text whitespace=cr-at-eol
+benchmark/art/animation/nib-human-motion-v5/**/*.json -text whitespace=cr-at-eol
+benchmark/art/animation/nib-human-motion-v5/**/*.csv -text whitespace=cr-at-eol
