@@ -1,5 +1,5 @@
 {
-  "name": "weapon-v2-equipped-Natural_Front",
+  "name": "weapon-v2b-equipped-Natural_Front",
   "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
   "arguments": [
     "--background",
@@ -11,13 +11,13 @@
     "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
     "--",
     "--source",
-    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_v9f_Equipped_WeaponStudy_v2.blend",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_v9f_Equipped_WeaponStudy_v2b.blend",
     "--contract",
     "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9f-source\\krag_asset_contract.json",
     "--view",
     "Natural_Front",
     "--tag",
-    "weapon-v2-equipped",
+    "weapon-v2b-equipped",
     "--neutral-light",
     "--clip",
     "Shoot",
@@ -27,9 +27,9 @@
     "--show-weapon"
   ],
   "workingDirectory": "D:\\Dev\\Krag-Kings",
-  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2-equipped-Natural_Front.stdout.log",
-  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2-equipped-Natural_Front.stderr.log",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2b-equipped-Natural_Front.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2b-equipped-Natural_Front.stderr.log",
   "maxPrivateGB": 8,
-  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2-equipped-Natural_Front.stdout.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-v2b-equipped-Natural_Front.stdout.log",
   "successMarker": "REVIEW SAVED Natural_Front"
 }

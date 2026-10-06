@@ -1,0 +1,239 @@
+{
+  "status": "Actual isolated equipped study; corrected integration, incomplete art acceptance",
+  "reference": "krag-kings-design/concept-art/10-clan-boss-and-krag-comparison.png, regular Krag",
+  "firstFailure": {
+    "source": "benchmark/art/weapons/study-v2/Krag_v9f_Equipped_WeaponStudy_v2.blend",
+    "sourceSha256": "3f267f578a54ad477a4f071ed4356abef64854fd2cc9c9630e3e65d573eb6941",
+    "failure": "Appended object matrix_world was stale before dependency update. Local primitive components collapsed at grip while mesh-space shells retained position. Socket-only checks passed despite broken geometry.",
+    "recipe": "benchmark/art/weapons/study-v2/equip_v2_failed_recipe.py",
+    "recipeSha256": "770fc48f11f0649a565ed55e19874d9a7dc936cd5211663c5acd195e4ca40aa1"
+  },
+  "correctedSource": {
+    "status": "Actual equipped study; posed contact/render acceptance remains pending",
+    "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9f_WIP.blend",
+    "sourceSha256": "86656d076fd13b886837b9973301cb587a0f99bf6a96cd7fec9baa8fba44abe3",
+    "weapon": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_Regular_Weapon_Study_v2.blend",
+    "weaponSha256": "89e78f84376b7de1d1b6964f6a8d6c95e50dfe0724e202b63736905b704c5aed",
+    "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_v9f_Equipped_WeaponStudy_v2b.blend",
+    "outputSha256": "c167fbeed8b19b951ab28f4adb81e5ae65b18ad912138c87bc9107550203938b",
+    "gripReportSha256": "6a20a1f3a29ecf386571580a131cab1ae5dc432550bc07aa3dae9f67279b87a8",
+    "socketDerivation": "Actual visible front-lip mesh centroid, not the earlier study empty",
+    "studyEmptyOffsetCorrectionMeters": 0.00200000572204595,
+    "muzzleSourceLocalMeters": [
+      -4.0745362639427185e-10,
+      -0.569000244140625,
+      0.13199999928474426
+    ],
+    "rigidBasisDeterminant": 1.0,
+    "appendedWorldVsBasisErrorBeforeRefresh": 2.0,
+    "appendedWorldVsBasisErrorAfterRefresh": 0.0,
+    "rigidShapeVertexCount": 17608,
+    "rigidShapeMaximumNearestErrorMeters": 1.712013073529306e-07,
+    "recipeSha256": "42038c2e9c72199f33413aea69c18e263fee24089a739589248549a47b01e2d8",
+    "poseSamples": [
+      {
+        "clip": "Idle",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 1.6323404237781945e-07
+      },
+      {
+        "clip": "Idle",
+        "frame": 31,
+        "visibleMuzzleErrorMeters": 2.5331974029541016e-07
+      },
+      {
+        "clip": "Idle",
+        "frame": 61,
+        "visibleMuzzleErrorMeters": 1.6323404237781945e-07
+      },
+      {
+        "clip": "Walk",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 1.5910086411284374e-07
+      },
+      {
+        "clip": "Walk",
+        "frame": 19,
+        "visibleMuzzleErrorMeters": 1.5910086411284374e-07
+      },
+      {
+        "clip": "Walk",
+        "frame": 37,
+        "visibleMuzzleErrorMeters": 1.5910086411284374e-07
+      },
+      {
+        "clip": "Run",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 2.1126042125758269e-07
+      },
+      {
+        "clip": "Run",
+        "frame": 10,
+        "visibleMuzzleErrorMeters": 2.1126042125758269e-07
+      },
+      {
+        "clip": "Run",
+        "frame": 19,
+        "visibleMuzzleErrorMeters": 2.1126042125758269e-07
+      },
+      {
+        "clip": "Melee",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 2.8115454709698567e-07
+      },
+      {
+        "clip": "Melee",
+        "frame": 19,
+        "visibleMuzzleErrorMeters": 2.7314279645418166e-07
+      },
+      {
+        "clip": "Melee",
+        "frame": 37,
+        "visibleMuzzleErrorMeters": 2.8115454709698567e-07
+      },
+      {
+        "clip": "Shoot",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 5.112205981733931e-07
+      },
+      {
+        "clip": "Shoot",
+        "frame": 16,
+        "visibleMuzzleErrorMeters": 4.6552715753952587e-07
+      },
+      {
+        "clip": "Shoot",
+        "frame": 31,
+        "visibleMuzzleErrorMeters": 6.224691442908472e-07
+      },
+      {
+        "clip": "Hit",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 5.877936757599122e-07
+      },
+      {
+        "clip": "Hit",
+        "frame": 14,
+        "visibleMuzzleErrorMeters": 1.884864366154897e-07
+      },
+      {
+        "clip": "Hit",
+        "frame": 28,
+        "visibleMuzzleErrorMeters": 1.999200562387517e-07
+      },
+      {
+        "clip": "FacePerformance",
+        "frame": 1,
+        "visibleMuzzleErrorMeters": 1.999200562387517e-07
+      },
+      {
+        "clip": "FacePerformance",
+        "frame": 90,
+        "visibleMuzzleErrorMeters": 1.999200562387517e-07
+      },
+      {
+        "clip": "FacePerformance",
+        "frame": 180,
+        "visibleMuzzleErrorMeters": 1.999200562387517e-07
+      }
+    ],
+    "unchangedOtherBoneRestMatrices": true,
+    "sharedAssetsChanged": false,
+    "exported": false,
+    "artisticAcceptance": false
+  },
+  "processes": [
+    {
+      "name": "krag-weapon-equipped-v2",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1039.0,
+      "lowestAvailableMB": 14184.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/krag-weapon-equipped-v2-memory.csv",
+      "memoryTraceSha256": "31e7b4d1b31d4e2c6203e29a2f3e98441107482ac7cb28c6fddd492a70674b5a",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    },
+    {
+      "name": "weapon-v2-equipped-Natural_RightGrip",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2162.0,
+      "lowestAvailableMB": 13370.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/weapon-v2-equipped-Natural_RightGrip-memory.csv",
+      "memoryTraceSha256": "f39b42fc01541fd3414add2bb285bb3873d36f339a89655b605f86e82e46b57f",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    },
+    {
+      "name": "weapon-v2-equipped-Natural_Front",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2167.0,
+      "lowestAvailableMB": 13218.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/weapon-v2-equipped-Natural_Front-memory.csv",
+      "memoryTraceSha256": "d011e75a8921f7b5b5ec28538ee26010ee77b77b36a01fb86aedd34128421fad",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    },
+    {
+      "name": "krag-weapon-equipped-v2b",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1046.0,
+      "lowestAvailableMB": 14175.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/krag-weapon-equipped-v2b-memory.csv",
+      "memoryTraceSha256": "11956896dad0468a36813d2c24e1f038c0e7f9a78aa5c6eacc4dec3581ba0967",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    },
+    {
+      "name": "weapon-v2b-equipped-Natural_RightGrip",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2186.0,
+      "lowestAvailableMB": 13347.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/weapon-v2b-equipped-Natural_RightGrip-memory.csv",
+      "memoryTraceSha256": "97af5637a53e73e00f264679fc667568ee9b777c6b0ebf6a4680fa3f3d1c997d",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    },
+    {
+      "name": "weapon-v2b-equipped-Natural_Front",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2169.0,
+      "lowestAvailableMB": 13339.0,
+      "memoryTrace": "benchmark/art/weapons/study-v2/weapon-v2b-equipped-Natural_Front-memory.csv",
+      "memoryTraceSha256": "885f26b6e50a09eb62e96f92c62f0ca33b543e5dc763d75db00400ed910307fc",
+      "scope": "Executed source/render task; guard success is not visual acceptance"
+    }
+  ],
+  "images": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_RightGrip_Shoot_f13_weapon-v2-equipped.png",
+      "sha256": "1f8a23324014dc211fc683830f5fe6f63240463de23cbdc1719e87a7ac47696a",
+      "status": "Rejected displaced housing from stale transforms"
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Shoot_f13_weapon-v2-equipped.png",
+      "sha256": "9632802b8d217a06b6a5ebd31ce1be49263ca00b4c63808abf8a54385b1f4b1e",
+      "status": "Rejected displaced housing from stale transforms"
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_RightGrip_Shoot_f13_weapon-v2b-equipped.png",
+      "sha256": "f1ea27d075dddc0826ac28665c7915b2822656202e41fd6b6f5305e8930a93d2",
+      "status": "Inspected actual corrected equipped geometry; material/contact acceptance incomplete"
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Shoot_f13_weapon-v2b-equipped.png",
+      "sha256": "6982560eb34ed89a5900ef9d77d16a17cd8084b13ac8c36c52389d416e770dc9",
+      "status": "Inspected actual corrected equipped geometry; material/contact acceptance incomplete"
+    }
+  ],
+  "visualFindings": [
+    "Corrected Shoot frame13 shows connected housing/shroud and a visible open muzzle in full-body and close-up views.",
+    "The fitted handle is enclosed by the existing fingers; complete hand-surface penetration/contact and other animation poses remain unverified.",
+    "Material wear and housing detail remain too clean/simple for the final concept target.",
+    "The character is the preserved v9f source: its failed facial planes, scarf, garments and armor are not changed by this prop study."
+  ],
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "next": "Refine surface wear and later fit/review on the coherent character source before portable bake/export."
+}

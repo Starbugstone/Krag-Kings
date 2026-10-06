@@ -11,7 +11,6 @@ from pathlib import Path
 
 import bpy
 from mathutils import Matrix, Vector
-from mathutils.kdtree import KDTree
 
 p=argparse.ArgumentParser()
 p.add_argument('--source',type=Path,required=True)
@@ -45,17 +44,6 @@ for obj in destination.objects:
         bpy.context.scene.collection.objects.link(obj);parts.append(obj)
     else:bpy.data.objects.remove(obj,do_unlink=True)
 if len(parts)!=134:raise AssertionError('Unexpected frozen weapon-v2 inventory')
-# Appended objects need a dependency-graph refresh before matrix_world is read.
-# The source uses local primitive geometry with nonzero object transforms.
-# A stale identity matrix collapses those parts onto the grip, while mesh-space
-# shells appear correctly placed; socket checks alone cannot catch that defect.
-if any(obj.parent for obj in parts):raise AssertionError('Inspect parented prop transforms')
-before_refresh=max(max(abs(obj.matrix_world[r][c]-obj.matrix_basis[r][c]) for r in range(4) for c in range(4)) for obj in parts)
-bpy.context.view_layer.update()
-after_refresh=max(max(abs(obj.matrix_world[r][c]-obj.matrix_basis[r][c]) for r in range(4) for c in range(4)) for obj in parts)
-if after_refresh>1e-7:raise AssertionError('Appended object transforms remain stale')
-expected_points=[transform@(obj.matrix_world@v.co) for obj in parts for v in obj.data.vertices]
-
 lip=next(obj for obj in parts if obj.name=='Muzzle worn lip')
 front_y=min((lip.matrix_world@v.co).y for v in lip.data.vertices)
 front_indices=[v.index for v in lip.data.vertices if abs((lip.matrix_world@v.co).y-front_y)<1e-6]
@@ -68,7 +56,6 @@ for obj in parts:
     obj.vertex_groups.clear();obj.vertex_groups.new(name='Hand_R').add(list(range(len(obj.data.vertices))),1,'REPLACE')
     if not obj.data.uv_layers:raise AssertionError('Missing study UVs')
     obj.data.uv_layers.active.name='UVMap'
-bpy.context.view_layer.update()
 original.name='ARCHIVE pre-study Weapon_R';original['archived_module']='Weapon_R'
 del original['module'];original.hide_render=True;original.hide_set(True)
 bpy.ops.object.select_all(action='DESELECT')
@@ -77,17 +64,6 @@ bpy.context.view_layer.objects.active=parts[0];bpy.ops.object.join()
 weapon=bpy.context.object;weapon.name='Weapon_R';weapon['module']='Weapon_R'
 weapon['provisional_exterior_study']=True
 bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
-bpy.context.view_layer.update()
-actual_points=[weapon.matrix_world@v.co for v in weapon.data.vertices]
-if len(actual_points)!=len(expected_points):raise AssertionError('Joined vertex inventory changed')
-def maximum_nearest_error(points,reference):
-    tree=KDTree(len(reference))
-    for index,point in enumerate(reference):tree.insert(point,index)
-    tree.balance()
-    return max(tree.find(point)[2] for point in points)
-shape_error=max(maximum_nearest_error(actual_points,expected_points),maximum_nearest_error(expected_points,actual_points))
-if shape_error>2e-6:raise AssertionError('Rigid transplant changed the prop geometry')
-
 weapon.parent=rig;modifier=weapon.modifiers.new('Rigid hand attachment','ARMATURE');modifier.object=rig
 weapon.hide_render=False;weapon.hide_set(False)
 bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.context.view_layer.objects.active=rig
@@ -122,10 +98,7 @@ report={'status':'Actual equipped study; posed contact/render acceptance remains
     'output':str(a.output),'outputSha256':sha(a.output),'gripReportSha256':sha(a.grip_report),
     'socketDerivation':'Actual visible front-lip mesh centroid, not the earlier study empty',
     'studyEmptyOffsetCorrectionMeters':abs(front_y+.567),'muzzleSourceLocalMeters':list(front),
-    'rigidBasisDeterminant':basis.determinant(),
-    'appendedWorldVsBasisErrorBeforeRefresh':before_refresh,'appendedWorldVsBasisErrorAfterRefresh':after_refresh,
-    'rigidShapeVertexCount':len(actual_points),'rigidShapeMaximumNearestErrorMeters':shape_error,
-    'recipeSha256':sha(Path(__file__)),'poseSamples':samples,'unchangedOtherBoneRestMatrices':True,
+    'rigidBasisDeterminant':basis.determinant(),'poseSamples':samples,'unchangedOtherBoneRestMatrices':True,
     'sharedAssetsChanged':False,'exported':False,'artisticAcceptance':False}
 a.output.with_suffix('.json').write_text(json.dumps(report,indent=2)+'\n')
 if sha(a.source)!=source_hash or sha(a.weapon)!=weapon_hash:raise AssertionError('Input source changed')
