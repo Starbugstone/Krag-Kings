@@ -31,11 +31,15 @@
       "evidence": [
         {
           "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-garments-v1-generation.txt",
-          "sha256": "fc6e019ebeff43cd5036a15160a226f66747a3336ad6e31bf87a87d90b9153ba"
+          "sha256": "e36f368eb0087f460a45d897d2016fe4bfa906db063c9237ce350357d85561de",
+          "originalCaptureSha256": "fc6e019ebeff43cd5036a15160a226f66747a3336ad6e31bf87a87d90b9153ba",
+          "normalization": "CRLF to LF only for portable Git evidence"
         },
         {
           "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-garments-v1-generation.stderr.txt",
-          "sha256": "3b32923d1e700b4d9a21e7854fb442d428cfde1f68bd989a60e3b4f594f4e44e"
+          "sha256": "3a2704460bfbca03b59c8f6e194c21c7abd8491523d381edd289d36e28af09b5",
+          "originalCaptureSha256": "3b32923d1e700b4d9a21e7854fb442d428cfde1f68bd989a60e3b4f594f4e44e",
+          "normalization": "CRLF to LF only for portable Git evidence"
         },
         {
           "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-strap-centreline-failure.json",
@@ -43,7 +47,9 @@
         },
         {
           "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/nib-fitted-garments-v1-memory.csv",
-          "sha256": "6ec2a41d93ba2c280ad75ffcaaef720e0aec9da1c103d38292990e741e2c471c"
+          "sha256": "4bc5b7719d54a50a164578a2166bf130ac474517e76f421c262684af2fab17cd",
+          "originalCaptureSha256": "6ec2a41d93ba2c280ad75ffcaaef720e0aec9da1c103d38292990e741e2c471c",
+          "normalization": "CRLF to LF only for portable Git evidence"
         },
         {
           "path": "benchmark/art/nib/garment-study/v1/failed-centreline-20261006/build_garment_study.py",
@@ -67,11 +73,15 @@
   "evidence": [
     {
       "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-generation.txt",
-      "sha256": "5050ec193b9f2c6ea832d4410bc1adae27fbc21f868f4143054f49557002019c"
+      "sha256": "efa1991280e2c946c53b6351106551ab45fe8ef22ffbac5f8bd3c15c813fd9a9",
+      "originalCaptureSha256": "5050ec193b9f2c6ea832d4410bc1adae27fbc21f868f4143054f49557002019c",
+      "normalization": "CRLF to LF only for portable Git evidence"
     },
     {
       "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-generation.stderr.txt",
-      "sha256": "5fb0b99a23f9592d696fdde4c542530f1e5f27b5722cb2f486547f0344097481"
+      "sha256": "cf6294edd3fdd2a706013bf3c0baecb855fba6bf59b0811420430866cf5f1c9f",
+      "originalCaptureSha256": "5fb0b99a23f9592d696fdde4c542530f1e5f27b5722cb2f486547f0344097481",
+      "normalization": "CRLF to LF only for portable Git evidence"
     },
     {
       "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-garments-v1-python-error.txt",
@@ -79,7 +89,9 @@
     },
     {
       "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/nib-fitted-garments-v1-memory.csv",
-      "sha256": "d729fe9405b7f2dafeab995ba34a07e336d42a8ad8d19817642b24f5d691e12a"
+      "sha256": "507074251566349ef4cc4e4f4d4a1667eee213a0bb04d9ac80b99a0d1d987008",
+      "originalCaptureSha256": "d729fe9405b7f2dafeab995ba34a07e336d42a8ad8d19817642b24f5d691e12a",
+      "normalization": "CRLF to LF only for portable Git evidence"
     },
     {
       "path": "benchmark/art/nib/garment-study/v1/failed-attempt-20261006/build_garment_study.py",
