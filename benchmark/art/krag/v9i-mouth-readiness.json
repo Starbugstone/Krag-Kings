@@ -1,0 +1,39 @@
+{
+  "status": "Prepared mouth control/contact diagnostics only; no v9i Blender source or repair exists",
+  "actualInputSource": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+  "actualInputSourceSha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+  "finding": "Original mouth controls and Smile/Frown centers sit outside retained true commissures; source-space mismatch approximately23.4mm, fitted67mm before common head scale",
+  "ruledOut": "Extra ellipsoid does not cover neutral tooth front centers in the formula-only check; deleting it is not an established fix",
+  "prepared": [
+    "Read-only actual saved-pose attribution of tooth/gum occlusion to evaluated head skin/oral bag",
+    "True-rim MouthCorner controls and modest serious Smile/Frown fields; unintegrated"
+  ],
+  "requires": [
+    "Execute bounded oral contact audit after queue handoff",
+    "Fit dental/gum geometry to actual oral surfaces and inspect neutral/open contact",
+    "Actual expression review for new control/soft-tissue placement"
+  ],
+  "artisticAcceptance": false,
+  "files": [
+    {
+      "path": "benchmark/tools/krag/v9i_wip/audit_mouth_construction.py",
+      "sha256": "2903d72d80ddcc64b9b3ed25508cc157947d2077afa2a8b9619ee32ac55a8621"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/audit_saved_oral_contact.py",
+      "sha256": "cdff0490b40a8af25b0765e8483a6a91a2f20fea5d36da4a1e2f3a3077493ea3"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/mouth_control_fit.py",
+      "sha256": "4406bdcf3ac13bc17d18d05df740a45272105fed5c70ac33eff22b33f31e3144"
+    },
+    {
+      "path": "benchmark/tools/krag/audit-v9h-oral-contact-job.json",
+      "sha256": "3a1f4d7cf32aec263b3cb6af13b45a551076dcf2de9ca3a88890962fc506a974"
+    },
+    {
+      "path": "benchmark/art/krag/anatomy-study/mouth-construction-audit-v9h.json",
+      "sha256": "ad711df97ec11cbf54b68b65789c1c5ece90747ec3e3c374a10233b1d06cef51"
+    }
+  ]
+}

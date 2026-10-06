@@ -1,0 +1,313 @@
+{
+  "status": "Source-formula diagnostics only; actual saved posed occlusion still requires inspection",
+  "observedFailure": "v9h OpenMouth frame146: rectangular aperture and mostly hidden dental/gum anatomy",
+  "sourceRecipe": "benchmark/art/krag/v9h-prepared-recipe.json",
+  "sourceGeometrySha256": "bbe35776c14f9b9142deffc3d83826564586c36868f5fae2250806d18616005d",
+  "mouthCorners": [
+    {
+      "side": -1,
+      "actualCornerSource": [
+        -0.024270983412861824,
+        -0.1250770390033722,
+        0.22897997498512268
+      ],
+      "authoredControlSource": [
+        -0.043,
+        -0.112,
+        0.234
+      ],
+      "sourceDistanceMeters": 0.023387724612860664,
+      "fittedDistanceBeforeHeadTransformMeters": 0.06721836517951528
+    },
+    {
+      "side": 1,
+      "actualCornerSource": [
+        0.024180008098483086,
+        -0.12511806190013885,
+        0.2290019690990448
+      ],
+      "authoredControlSource": [
+        0.043,
+        -0.112,
+        0.234
+      ],
+      "sourceDistanceMeters": 0.023478840603316422,
+      "fittedDistanceBeforeHeadTransformMeters": 0.067474754867404
+    }
+  ],
+  "extraOpaqueLining": {
+    "centerBeforeSharedHeadTransform": [
+      0.0,
+      -0.05484362716541918,
+      1.7918622484404059
+    ],
+    "radiiBeforeSharedHeadTransform": [
+      0.105,
+      0.114,
+      0.084
+    ],
+    "teeth": [
+      {
+        "upper": true,
+        "index": 0,
+        "centerBeforeSharedHeadTransform": [
+          -0.08683770830268532,
+          -0.19014005089569502,
+          1.8003466449684766
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.08225263196216231,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.1992954218302845,
+          -0.08528565507515562
+        ],
+        "toothFrontY": -0.20014005089569503
+      },
+      {
+        "upper": true,
+        "index": 1,
+        "centerBeforeSharedHeadTransform": [
+          -0.06705905267091779,
+          -0.21118330743942706,
+          1.8018921175923166
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.07968023585817113,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.23968738621505442,
+          -0.07614618422107289
+        ],
+        "toothFrontY": -0.22118330743942707
+      },
+      {
+        "upper": true,
+        "index": 2,
+        "centerBeforeSharedHeadTransform": [
+          -0.043174636073189825,
+          -0.22174411410886713,
+          1.8034199351077784
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.07417428931551195,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.25859175351597513,
+          -0.06533638154333596
+        ],
+        "toothFrontY": -0.23174411410886714
+      },
+      {
+        "upper": true,
+        "index": 3,
+        "centerBeforeSharedHeadTransform": [
+          -0.014937017686359863,
+          -0.22511334074072656,
+          1.8045544004741219
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06875157476891058,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.26667587035952134,
+          -0.06326060512033163
+        ],
+        "toothFrontY": -0.23511334074072657
+      },
+      {
+        "upper": true,
+        "index": 4,
+        "centerBeforeSharedHeadTransform": [
+          0.014937017686359863,
+          -0.22511334074076053,
+          1.8045544004741219
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06875157476894456,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.2668422042533553,
+          -0.06328428973549896
+        ],
+        "toothFrontY": -0.23511334074076054
+      },
+      {
+        "upper": true,
+        "index": 5,
+        "centerBeforeSharedHeadTransform": [
+          0.043174636073189825,
+          -0.22174411410891895,
+          1.8034199351077784
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.07417428931556377,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.25906758893574117,
+          -0.0654350983817738
+        ],
+        "toothFrontY": -0.23174411410891896
+      },
+      {
+        "upper": true,
+        "index": 6,
+        "centerBeforeSharedHeadTransform": [
+          0.06705905267091779,
+          -0.21118330743945754,
+          1.8018921175923166
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.07968023585820161,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.23956830322797884,
+          -0.07600403111277108
+        ],
+        "toothFrontY": -0.22118330743945755
+      },
+      {
+        "upper": true,
+        "index": 7,
+        "centerBeforeSharedHeadTransform": [
+          0.08683770830268532,
+          -0.19014005089570665,
+          1.8003466449684766
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.08225263196217394,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.19906761129341743,
+          -0.0848876946639644
+        ],
+        "toothFrontY": -0.20014005089570666
+      },
+      {
+        "upper": false,
+        "index": 0,
+        "centerBeforeSharedHeadTransform": [
+          -0.07889869183284913,
+          -0.18918393067185132,
+          1.7747972715470757
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.0727738963551092,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.20097931376904898,
+          -0.08363111964704742
+        ],
+        "toothFrontY": -0.19918393067185133
+      },
+      {
+        "upper": false,
+        "index": 1,
+        "centerBeforeSharedHeadTransform": [
+          -0.05728318645698721,
+          -0.203795304127817,
+          1.7756333247919998
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06598442510827188,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.23327246569194668,
+          -0.06683394886224882
+        ],
+        "toothFrontY": -0.213795304127817
+      },
+      {
+        "upper": false,
+        "index": 2,
+        "centerBeforeSharedHeadTransform": [
+          -0.03489424689569297,
+          -0.21087799014186717,
+          1.7765367477303529
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06054446310635869,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.24723602147274193,
+          -0.057425606317575144
+        ],
+        "toothFrontY": -0.22087799014186718
+      },
+      {
+        "upper": false,
+        "index": 3,
+        "centerBeforeSharedHeadTransform": [
+          -0.01173707083077162,
+          -0.21368348658365777,
+          1.7772765089382583
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.05729715942032776,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.2536121456882559,
+          -0.054559897559863436
+        ],
+        "toothFrontY": -0.22368348658365778
+      },
+      {
+        "upper": false,
+        "index": 4,
+        "centerBeforeSharedHeadTransform": [
+          0.01173707083077162,
+          -0.21368348658365777,
+          1.7772765089382583
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.05729715942032776,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.2535527666641559,
+          -0.05462435679897667
+        ],
+        "toothFrontY": -0.22368348658365778
+      },
+      {
+        "upper": false,
+        "index": 5,
+        "centerBeforeSharedHeadTransform": [
+          0.03489424689569297,
+          -0.21087799014186717,
+          1.7765367477303529
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06054446310635869,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.24710671863947392,
+          -0.057645234491116734
+        ],
+        "toothFrontY": -0.22087799014186718
+      },
+      {
+        "upper": false,
+        "index": 6,
+        "centerBeforeSharedHeadTransform": [
+          0.05728318645698721,
+          -0.203795304127817,
+          1.7756333247919998
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.06598442510827188,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.2332153998255903,
+          -0.06695722687150833
+        ],
+        "toothFrontY": -0.213795304127817
+      },
+      {
+        "upper": false,
+        "index": 7,
+        "centerBeforeSharedHeadTransform": [
+          0.07889869183284913,
+          -0.18918393067185132,
+          1.7747972715470757
+        ],
+        "frontFaceCenterInsideExtraEllipsoid": false,
+        "extraShellInFrontOfToothCenterMeters": -0.0727738963551092,
+        "sourceOralBagYIntersectionsAtToothCenterXZ": [
+          -0.20101171997912934,
+          -0.08332684215608284
+        ],
+        "toothFrontY": -0.19918393067185133
+      }
+    ]
+  },
+  "nextBoundedCorrection": [
+    "Inspect actual posed oral-bag envelope against dental/gum surfaces; the extra ellipsoid does not cover neutral tooth front centers in this formula check",
+    "Fit controls and dental/gum layout to true oral rims instead of obsolete mouth-corner coordinates",
+    "Inspect actual neutral/open views and commissure deformation before accepting any change"
+  ]
+}
