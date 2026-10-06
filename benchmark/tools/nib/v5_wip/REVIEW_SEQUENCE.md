@@ -44,3 +44,6 @@ physically weak and a little timid. Interior designs remain provisional.
 No v5c PBR bake, runtime reduction, FBX export or shared promotion is queued by
 this sequence. Those require an actual reviewed source, updated materials and
 matching clips, plus new engine verification.
+
+
+The critical v4b morph repair has now been generated, independently validated, posed and promoted by root. The separate repaired source is `Nib_Runtime_Optimized_v4b_MorphRepair.blend`; original source remains preserved. All source shape creation is explicitly unmixed. The current generator requires new revision v5d and defaults to that repaired source. Historical v5c jobs correspond to the embedded/checkpointed source revision and must not overwrite the failed v5c evidence. Next art preparation is lightweight only while UE owns the guard. Preserved v5c profile/three-quarter diagnostic captures need explicit slot allocation before the next face warp. Smooth ocular materials are prepared but not yet connected/generated or baked.

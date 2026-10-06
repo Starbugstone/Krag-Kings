@@ -1,0 +1,27 @@
+{
+  "name": "nib-runtime-morph-repair-shoot-v4b",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\review_corrected_shoot.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b.blend",
+    "--candidate-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-shoot-v4b"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-shoot-v4b.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-shoot-v4b.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-morph-repair-shoot-v4b.log",
+  "successMarker": "NIB_REPAIRED_SHOOT_REVIEW_PASSED"
+}

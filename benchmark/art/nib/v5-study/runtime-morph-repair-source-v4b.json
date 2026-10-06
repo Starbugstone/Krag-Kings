@@ -1,0 +1,1913 @@
+{
+  "passed": true,
+  "sourceSha256": "c4fc3bce0413ab65a9a96e1d70451abbc8179c63a79b2a859c2ab1e11c1185eb",
+  "inputRuntimeSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b.blend",
+  "inputRuntimeSourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
+  "candidate": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b_MorphRepair.blend",
+  "candidateSha256": "db83f3d82861164a8be7bf61e08f1ee842c03564db7946c18651444cf8a07c66",
+  "recipeSha256": "12b4b7dfe1b0c1d5a42fb1f2f5157a7bf536c0421f945b37b35520150f4cc8ee",
+  "changes": [
+    {
+      "object": "Sleeveless dust undershirt",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0023409138830976076,
+      "newMaxWorldDeltaMeters": 0.0023409139178851967,
+      "formulaStorageMaxErrorMeters": 2.9785383210941665e-08,
+      "supportedVertices": 295
+    },
+    {
+      "object": "Sleeveless dust undershirt",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0036420124023019756,
+      "newMaxWorldDeltaMeters": 0.0036420590437861227,
+      "formulaStorageMaxErrorMeters": 2.9851359778577246e-08,
+      "supportedVertices": 511
+    },
+    {
+      "object": "Sleeveless dust undershirt",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.004681827766195215,
+      "newMaxWorldDeltaMeters": 0.002340917576239714,
+      "formulaStorageMaxErrorMeters": 2.9740017403593563e-08,
+      "supportedVertices": 295
+    },
+    {
+      "object": "Sleeveless dust undershirt",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00936365553239043,
+      "newMaxWorldDeltaMeters": 0.003642058860250515,
+      "formulaStorageMaxErrorMeters": 2.983827921451646e-08,
+      "supportedVertices": 511
+    },
+    {
+      "object": "Overalls shoulder strap",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.00028409039689725245,
+      "newMaxWorldDeltaMeters": 0.00028409039689725245,
+      "formulaStorageMaxErrorMeters": 2.9515904578153886e-08,
+      "supportedVertices": 66
+    },
+    {
+      "object": "Overalls shoulder strap.001",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.00028409039689725245,
+      "newMaxWorldDeltaMeters": 0.00028409039689725245,
+      "formulaStorageMaxErrorMeters": 2.945080513047637e-08,
+      "supportedVertices": 66
+    },
+    {
+      "object": "Shaped overalls trouser L",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0031776650092650146,
+      "newMaxWorldDeltaMeters": 0.0031776650092650146,
+      "formulaStorageMaxErrorMeters": 2.983040527985622e-08,
+      "supportedVertices": 971
+    },
+    {
+      "object": "Shaped overalls trouser L",
+      "target": "Corrective_KneeFlex_L",
+      "supportCenterMeters": [
+        0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0031776650092650146,
+      "newMaxWorldDeltaMeters": 0.0011349765379174098,
+      "formulaStorageMaxErrorMeters": 1.5284861205275658e-08,
+      "supportedVertices": 1016
+    },
+    {
+      "object": "Shaped overalls trouser L",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.006355330018530029,
+      "newMaxWorldDeltaMeters": 0.00013992828625391737,
+      "formulaStorageMaxErrorMeters": 2.9727976737453733e-08,
+      "supportedVertices": 67
+    },
+    {
+      "object": "Trouser raised seam L",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0007920234412639941,
+      "newMaxWorldDeltaMeters": 0.0007920234412639941,
+      "formulaStorageMaxErrorMeters": 2.9266648270508522e-08,
+      "supportedVertices": 97
+    },
+    {
+      "object": "Trouser raised seam L",
+      "target": "Corrective_KneeFlex_L",
+      "supportCenterMeters": [
+        0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0007920234412639941,
+      "newMaxWorldDeltaMeters": 0.00027976317409432585,
+      "formulaStorageMaxErrorMeters": 1.4807383171139127e-08,
+      "supportedVertices": 96
+    },
+    {
+      "object": "Trouser raised seam L",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0015566851880345935,
+      "newMaxWorldDeltaMeters": 4.571224835179712e-05,
+      "formulaStorageMaxErrorMeters": 2.932968037397095e-08,
+      "supportedVertices": 49
+    },
+    {
+      "object": "Trouser raised seam L.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0005734962367647682,
+      "newMaxWorldDeltaMeters": 0.0005734962367647682,
+      "formulaStorageMaxErrorMeters": 2.986038008446412e-08,
+      "supportedVertices": 85
+    },
+    {
+      "object": "Trouser raised seam L.001",
+      "target": "Corrective_KneeFlex_L",
+      "supportCenterMeters": [
+        0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0005734962367647682,
+      "newMaxWorldDeltaMeters": 0.0005496154459457571,
+      "formulaStorageMaxErrorMeters": 1.4853638644352495e-08,
+      "supportedVertices": 120
+    },
+    {
+      "object": "Knee patched panel L",
+      "target": "Corrective_KneeFlex_L",
+      "supportCenterMeters": [
+        0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 2.0934973506455207e-06,
+      "newMaxWorldDeltaMeters": 2.0934973506455207e-06,
+      "formulaStorageMaxErrorMeters": 1.3944657924019628e-09,
+      "supportedVertices": 2
+    },
+    {
+      "object": "Cargo pocket flap L",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 3.4899794830275354e-05,
+      "newMaxWorldDeltaMeters": 3.489963074082868e-05,
+      "formulaStorageMaxErrorMeters": 1.6204398300974922e-09,
+      "supportedVertices": 21
+    },
+    {
+      "object": "Shaped overalls trouser R",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00013992828625391737,
+      "newMaxWorldDeltaMeters": 0.00013992782173892325,
+      "formulaStorageMaxErrorMeters": 2.972672134339989e-08,
+      "supportedVertices": 67
+    },
+    {
+      "object": "Shaped overalls trouser R",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.003177665019615494,
+      "newMaxWorldDeltaMeters": 0.003177665019615494,
+      "formulaStorageMaxErrorMeters": 2.982478573553628e-08,
+      "supportedVertices": 971
+    },
+    {
+      "object": "Shaped overalls trouser R",
+      "target": "Corrective_KneeFlex_R",
+      "supportCenterMeters": [
+        -0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.003177665019615494,
+      "newMaxWorldDeltaMeters": 0.0011349765379174098,
+      "formulaStorageMaxErrorMeters": 1.5224731834608035e-08,
+      "supportedVertices": 1016
+    },
+    {
+      "object": "Trouser raised seam R",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0005734962367647682,
+      "newMaxWorldDeltaMeters": 0.0005734962367647682,
+      "formulaStorageMaxErrorMeters": 2.9859572777656317e-08,
+      "supportedVertices": 85
+    },
+    {
+      "object": "Trouser raised seam R",
+      "target": "Corrective_KneeFlex_R",
+      "supportCenterMeters": [
+        -0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0005734962367647682,
+      "newMaxWorldDeltaMeters": 0.0005496154459457571,
+      "formulaStorageMaxErrorMeters": 1.4853613423588591e-08,
+      "supportedVertices": 120
+    },
+    {
+      "object": "Trouser raised seam R.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 4.571224835179712e-05,
+      "newMaxWorldDeltaMeters": 4.571224835179712e-05,
+      "formulaStorageMaxErrorMeters": 2.932968037397095e-08,
+      "supportedVertices": 49
+    },
+    {
+      "object": "Trouser raised seam R.001",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0007646691872320294,
+      "newMaxWorldDeltaMeters": 0.0007920234412639941,
+      "formulaStorageMaxErrorMeters": 2.9334294669546386e-08,
+      "supportedVertices": 97
+    },
+    {
+      "object": "Trouser raised seam R.001",
+      "target": "Corrective_KneeFlex_R",
+      "supportCenterMeters": [
+        -0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0007409138486644147,
+      "newMaxWorldDeltaMeters": 0.00027976317409432585,
+      "formulaStorageMaxErrorMeters": 1.4807383171139127e-08,
+      "supportedVertices": 96
+    },
+    {
+      "object": "Knee patched panel R",
+      "target": "Corrective_KneeFlex_R",
+      "supportCenterMeters": [
+        -0.073,
+        0.015,
+        0.35
+      ],
+      "radiusMeters": 0.065,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 2.0934973506455207e-06,
+      "newMaxWorldDeltaMeters": 2.0934973506455207e-06,
+      "formulaStorageMaxErrorMeters": 1.3944657924019628e-09,
+      "supportedVertices": 2
+    },
+    {
+      "object": "Cargo pocket flap R",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 3.4899794830275354e-05,
+      "newMaxWorldDeltaMeters": 3.489963074082868e-05,
+      "formulaStorageMaxErrorMeters": 1.6203178209541698e-09,
+      "supportedVertices": 21
+    },
+    {
+      "object": "Belt teal plate",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 2.6648109130609245e-06,
+      "newMaxWorldDeltaMeters": 2.6648109130609245e-06,
+      "formulaStorageMaxErrorMeters": 6.339697674285556e-10,
+      "supportedVertices": 19
+    },
+    {
+      "object": "Tool pouch closing flap",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0007267236249742676,
+      "newMaxWorldDeltaMeters": 0.0007267248539238074,
+      "formulaStorageMaxErrorMeters": 1.1934575661667686e-09,
+      "supportedVertices": 72
+    },
+    {
+      "object": "Set rivet.020",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00021523329202451463,
+      "newMaxWorldDeltaMeters": 0.00021523332774305704,
+      "formulaStorageMaxErrorMeters": 1.3556602116349264e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Rear patch pocket",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00044044545261691625,
+      "newMaxWorldDeltaMeters": 0.00044044545261691625,
+      "formulaStorageMaxErrorMeters": 1.9635845475778123e-09,
+      "supportedVertices": 96
+    },
+    {
+      "object": "Rear pocket seam",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00022998072871955602,
+      "newMaxWorldDeltaMeters": 0.00022998072871955602,
+      "formulaStorageMaxErrorMeters": 2.9034423322695382e-08,
+      "supportedVertices": 110
+    },
+    {
+      "object": "Hanging tool handle",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001402484462072729,
+      "newMaxWorldDeltaMeters": 0.0001402484462072729,
+      "formulaStorageMaxErrorMeters": 2.8077943535848617e-08,
+      "supportedVertices": 30
+    },
+    {
+      "object": "Set rivet.021",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00010170081384629688,
+      "newMaxWorldDeltaMeters": 0.00010170086395223833,
+      "formulaStorageMaxErrorMeters": 1.1637200894114319e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.022",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001365828782978593,
+      "newMaxWorldDeltaMeters": 0.0001365829530284342,
+      "formulaStorageMaxErrorMeters": 1.050006515097702e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.023",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00016157278460632272,
+      "newMaxWorldDeltaMeters": 0.00016157283731643848,
+      "formulaStorageMaxErrorMeters": 1.1584189170380228e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.024",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001736634509291529,
+      "newMaxWorldDeltaMeters": 0.00017366326644317932,
+      "formulaStorageMaxErrorMeters": 7.589674771606117e-11,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Belt teal plate.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 2.6648109130609245e-06,
+      "newMaxWorldDeltaMeters": 2.6648109130609245e-06,
+      "formulaStorageMaxErrorMeters": 6.339422964113529e-10,
+      "supportedVertices": 19
+    },
+    {
+      "object": "Tool pouch closing flap.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0007267236249742676,
+      "newMaxWorldDeltaMeters": 0.0007267248539238074,
+      "formulaStorageMaxErrorMeters": 1.224114123102154e-09,
+      "supportedVertices": 72
+    },
+    {
+      "object": "Set rivet.027",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00021523329202451463,
+      "newMaxWorldDeltaMeters": 0.00021523332774305704,
+      "formulaStorageMaxErrorMeters": 1.3333749261785755e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Rear patch pocket.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00044044545261691625,
+      "newMaxWorldDeltaMeters": 0.00044044545261691625,
+      "formulaStorageMaxErrorMeters": 1.9607265967559232e-09,
+      "supportedVertices": 96
+    },
+    {
+      "object": "Rear pocket seam.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00022998072871955602,
+      "newMaxWorldDeltaMeters": 0.00022998072871955602,
+      "formulaStorageMaxErrorMeters": 2.892914339796891e-08,
+      "supportedVertices": 110
+    },
+    {
+      "object": "Hanging tool handle.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001402484462072729,
+      "newMaxWorldDeltaMeters": 0.0001402484462072729,
+      "formulaStorageMaxErrorMeters": 2.8083037388451774e-08,
+      "supportedVertices": 30
+    },
+    {
+      "object": "Set rivet.028",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00010170081384629688,
+      "newMaxWorldDeltaMeters": 0.00010170086395223833,
+      "formulaStorageMaxErrorMeters": 1.1637200894114319e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.029",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001365828782978593,
+      "newMaxWorldDeltaMeters": 0.0001365829530284342,
+      "formulaStorageMaxErrorMeters": 1.050006515097702e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.030",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00016157278460632272,
+      "newMaxWorldDeltaMeters": 0.00016157283731643848,
+      "formulaStorageMaxErrorMeters": 1.1584189170380228e-10,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Set rivet.031",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0001736634509291529,
+      "newMaxWorldDeltaMeters": 0.00017366326644317932,
+      "formulaStorageMaxErrorMeters": 7.663267034240057e-11,
+      "supportedVertices": 86
+    },
+    {
+      "object": "Replacement radius piston",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0015241195441950569,
+      "newMaxWorldDeltaMeters": 0.0015241197637904246,
+      "formulaStorageMaxErrorMeters": 3.6526317579209394e-09,
+      "supportedVertices": 72
+    },
+    {
+      "object": "Replacement ulna piston",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0013883411795660825,
+      "newMaxWorldDeltaMeters": 0.0013883410558939461,
+      "formulaStorageMaxErrorMeters": 3.4711696016169363e-09,
+      "supportedVertices": 72
+    },
+    {
+      "object": "Restorative elbow spindle",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.001313934073948228,
+      "newMaxWorldDeltaMeters": 0.001313934073948228,
+      "formulaStorageMaxErrorMeters": 1.1843658601823134e-09,
+      "supportedVertices": 144
+    },
+    {
+      "object": "Small fitted teal forearm shell",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.00042568055299783687,
+      "newMaxWorldDeltaMeters": 0.00042568055299783687,
+      "formulaStorageMaxErrorMeters": 3.027674862291776e-08,
+      "supportedVertices": 76
+    },
+    {
+      "object": "Restorative flexible cable",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.00043037214746564906,
+      "newMaxWorldDeltaMeters": 0.00043037214746564906,
+      "formulaStorageMaxErrorMeters": 2.8433502542872335e-08,
+      "supportedVertices": 25
+    },
+    {
+      "object": "Restorative flexible cable.001",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0004083861502224462,
+      "newMaxWorldDeltaMeters": 0.0004083861502224462,
+      "formulaStorageMaxErrorMeters": 2.980745915628844e-08,
+      "supportedVertices": 25
+    },
+    {
+      "object": "Fitted prosthetic cuff",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0014409246968675317,
+      "newMaxWorldDeltaMeters": 0.0014409228596756211,
+      "formulaStorageMaxErrorMeters": 1.0934549781904035e-09,
+      "supportedVertices": 400
+    },
+    {
+      "object": "Overalls pelvis",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.002660252768037694,
+      "newMaxWorldDeltaMeters": 0.0026833769038592577,
+      "formulaStorageMaxErrorMeters": 2.984372348996414e-08,
+      "supportedVertices": 189
+    },
+    {
+      "object": "Overalls pelvis",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.002702383388553264,
+      "newMaxWorldDeltaMeters": 0.00270238174135645,
+      "formulaStorageMaxErrorMeters": 2.9776795613088122e-08,
+      "supportedVertices": 192
+    },
+    {
+      "object": "Cargo sewn pocket L",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 6.469083362133917e-05,
+      "newMaxWorldDeltaMeters": 6.469083362133917e-05,
+      "formulaStorageMaxErrorMeters": 2.9587739067066166e-08,
+      "supportedVertices": 114
+    },
+    {
+      "object": "Cargo sewn pocket R",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 6.461700955791743e-05,
+      "newMaxWorldDeltaMeters": 6.461700955791743e-05,
+      "formulaStorageMaxErrorMeters": 2.9644413936368635e-08,
+      "supportedVertices": 110
+    },
+    {
+      "object": "Utility belt leather",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00023846715498175003,
+      "newMaxWorldDeltaMeters": 0.00023846715498175003,
+      "formulaStorageMaxErrorMeters": 2.967392619792646e-08,
+      "supportedVertices": 215
+    },
+    {
+      "object": "Utility belt leather",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.00023846715498175003,
+      "newMaxWorldDeltaMeters": 0.00022624256112100392,
+      "formulaStorageMaxErrorMeters": 2.9915825957659396e-08,
+      "supportedVertices": 212
+    },
+    {
+      "object": "Shaped tool pouch",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0025900596887550448,
+      "newMaxWorldDeltaMeters": 0.0025956834737405213,
+      "formulaStorageMaxErrorMeters": 2.995131270103067e-08,
+      "supportedVertices": 1046
+    },
+    {
+      "object": "Shaped tool pouch.001",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.002574747275391035,
+      "newMaxWorldDeltaMeters": 0.0025929795745112984,
+      "formulaStorageMaxErrorMeters": 2.988886937313075e-08,
+      "supportedVertices": 1046
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0011496454570422792,
+      "newMaxWorldDeltaMeters": 0.0011497860262922957,
+      "formulaStorageMaxErrorMeters": 3.07085143875719e-08,
+      "supportedVertices": 10757
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0011496454570422792,
+      "newMaxWorldDeltaMeters": 0.0010860730568589914,
+      "formulaStorageMaxErrorMeters": 3.061808075770667e-08,
+      "supportedVertices": 6124
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0022992986740450836,
+      "newMaxWorldDeltaMeters": 7.308220189467309e-05,
+      "formulaStorageMaxErrorMeters": 2.985213343326643e-08,
+      "supportedVertices": 681
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.004598546464124154,
+      "newMaxWorldDeltaMeters": 0.0011503543832163134,
+      "formulaStorageMaxErrorMeters": 3.05929518961364e-08,
+      "supportedVertices": 10770
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_ElbowFlex_R",
+      "supportCenterMeters": [
+        -0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.009197085167922885,
+      "newMaxWorldDeltaMeters": 0.0010863864008555056,
+      "formulaStorageMaxErrorMeters": 3.0540384479518326e-08,
+      "supportedVertices": 6111
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.018394221219902446,
+      "newMaxWorldDeltaMeters": 7.30772407280263e-05,
+      "formulaStorageMaxErrorMeters": 2.9825009689040686e-08,
+      "supportedVertices": 760
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.001149653216660343,
+      "newMaxWorldDeltaMeters": 0.001149793786051848,
+      "formulaStorageMaxErrorMeters": 3.057858512751655e-08,
+      "supportedVertices": 11656
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0026915144849149106,
+      "newMaxWorldDeltaMeters": 0.002691514606097414,
+      "formulaStorageMaxErrorMeters": 3.0531479870444145e-08,
+      "supportedVertices": 3626
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_HipFlex_L",
+      "supportCenterMeters": [
+        0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.0026915144849149106,
+      "newMaxWorldDeltaMeters": 7.308318885611123e-05,
+      "formulaStorageMaxErrorMeters": 2.978264105769007e-08,
+      "supportedVertices": 868
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.005383028969829821,
+      "newMaxWorldDeltaMeters": 0.0011503543832163134,
+      "formulaStorageMaxErrorMeters": 3.05929518961364e-08,
+      "supportedVertices": 11567
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_ElbowFlex_R",
+      "supportCenterMeters": [
+        -0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.010766057939659643,
+      "newMaxWorldDeltaMeters": 0.0010863864008555056,
+      "formulaStorageMaxErrorMeters": 3.0540384479518326e-08,
+      "supportedVertices": 6541
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "target": "Corrective_HipFlex_R",
+      "supportCenterMeters": [
+        -0.066,
+        0.009,
+        0.594
+      ],
+      "radiusMeters": 0.09,
+      "authoredAmplitudeMeters": 0.004,
+      "oldMaxWorldDeltaMeters": 0.021532115879319285,
+      "newMaxWorldDeltaMeters": 7.30772407280263e-05,
+      "formulaStorageMaxErrorMeters": 2.981294259481651e-08,
+      "supportedVertices": 801
+    },
+    {
+      "object": "Fine skin fuzz organic",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.001140903000447336,
+      "newMaxWorldDeltaMeters": 0.001140903000447336,
+      "formulaStorageMaxErrorMeters": 3.0473622851204364e-08,
+      "supportedVertices": 1380
+    },
+    {
+      "object": "Fine skin fuzz organic",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.001140903000447336,
+      "newMaxWorldDeltaMeters": 0.0010773702448727298,
+      "formulaStorageMaxErrorMeters": 3.063266492697735e-08,
+      "supportedVertices": 1373
+    },
+    {
+      "object": "Fine skin fuzz organic",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.002281806000894672,
+      "newMaxWorldDeltaMeters": 0.0011269306948189172,
+      "formulaStorageMaxErrorMeters": 3.051449350654875e-08,
+      "supportedVertices": 1461
+    },
+    {
+      "object": "Fine skin fuzz organic",
+      "target": "Corrective_ElbowFlex_R",
+      "supportCenterMeters": [
+        -0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.004563612001789344,
+      "newMaxWorldDeltaMeters": 0.0010788257045380833,
+      "formulaStorageMaxErrorMeters": 3.0627399848570264e-08,
+      "supportedVertices": 1524
+    },
+    {
+      "object": "Fine skin fuzz grip",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0011446133760735111,
+      "newMaxWorldDeltaMeters": 0.0011446133760735111,
+      "formulaStorageMaxErrorMeters": 3.0627320906563657e-08,
+      "supportedVertices": 1507
+    },
+    {
+      "object": "Fine skin fuzz grip",
+      "target": "Corrective_ElbowFlex_L",
+      "supportCenterMeters": [
+        0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.002831090724510885,
+      "newMaxWorldDeltaMeters": 0.002831093605668773,
+      "formulaStorageMaxErrorMeters": 3.03106487611355e-08,
+      "supportedVertices": 753
+    },
+    {
+      "object": "Fine skin fuzz grip",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.002831090724510885,
+      "newMaxWorldDeltaMeters": 0.0011445029935620097,
+      "formulaStorageMaxErrorMeters": 3.045407143161952e-08,
+      "supportedVertices": 1545
+    },
+    {
+      "object": "Fine skin fuzz grip",
+      "target": "Corrective_ElbowFlex_R",
+      "supportCenterMeters": [
+        -0.189,
+        -0.003,
+        0.769
+      ],
+      "radiusMeters": 0.055,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0056621813382082015,
+      "newMaxWorldDeltaMeters": 0.0010697467844421867,
+      "formulaStorageMaxErrorMeters": 3.029348403393889e-08,
+      "supportedVertices": 1620
+    },
+    {
+      "object": "Draped desert scarf",
+      "target": "Corrective_ShoulderRaise_L",
+      "supportCenterMeters": [
+        0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0020904885150127795,
+      "newMaxWorldDeltaMeters": 0.0020904885150127795,
+      "formulaStorageMaxErrorMeters": 2.986151711188946e-08,
+      "supportedVertices": 711
+    },
+    {
+      "object": "Draped desert scarf",
+      "target": "Corrective_ShoulderRaise_R",
+      "supportCenterMeters": [
+        -0.128,
+        0.005,
+        0.938
+      ],
+      "radiusMeters": 0.075,
+      "authoredAmplitudeMeters": 0.003,
+      "oldMaxWorldDeltaMeters": 0.0020904885150127795,
+      "newMaxWorldDeltaMeters": 0.001658211565841752,
+      "formulaStorageMaxErrorMeters": 2.983269444810446e-08,
+      "supportedVertices": 694
+    }
+  ],
+  "unchangedBasisAndFacialKeys": [
+    {
+      "object": "Sleeveless dust undershirt",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "906f4e2ed13272e2ca0b9ff0c869d6c68e4d0cc22bec0f81d84c192a272c4d21"
+      }
+    },
+    {
+      "object": "Nib facial surface with eyelid and lip loops",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4118d573d6398e97ff3eb9c5746c550a116fd676b1b41c9ff1c7dca74c5e9332",
+        "Blink_L": "1840ee04ccaa29562899c3a14eb42ee77e82649b490dd0b9ebbcdf4306256960",
+        "Blink_R": "f45abc206be7a593651ec179d3d0bb315afe3c9f38332c5e0a24cecccadc2964",
+        "Squint_L": "694f493d8d3a63f4f8e31f0b25b3763f63e1443e8d109a82d0ba74c51451026b",
+        "Squint_R": "bd4576a4892801310162415b682704aac394c4dfffb259e0e4976a8f6da95e2c",
+        "BrowRaise_L": "9f834aef20bd6c5b7807f0c784621fb2b3fc4dc64c20f3dc4b027d2c30949214",
+        "BrowRaise_R": "08924dd46b131eea3166c94ce0936a252c8d884acfad7b7246d6d02b5c948154",
+        "BrowLower_L": "7acb5d183750a4ed051592585ee05a0a4676c0ce372e6120d5f9c5a92a62630a",
+        "BrowLower_R": "8988b89e2bd9fb84e300b082ad1274501e83f342d6395af4e80a48fd4b83a463",
+        "Smile_L": "96f2d9d7d304c6a597f0f9c9318b4ad1a6d61224597c62e5a9ff5622bd5c1bb1",
+        "Smile_R": "2d286e45eab5d8ef90c57bb01e53ee6b1a13d3b4dcdb0be66eafe2ac6c1a73da",
+        "Frown_L": "586650986bc6128267431d1812664e5e7d6e0417f5010e7d941659f0364e0a9e",
+        "Frown_R": "6e5231dd965dfd00bd39a1afe45714a2534aa6662c8c510ee41d7e83e53508d5",
+        "JawOpen": "3fedf93939b409b9e46e450852e8d6e5052f947135aa979a1d9c3128ad53057b",
+        "LipPress": "3a12c7a97976b534138abc632240beebbcbef90b7816b4424239f331cc657698",
+        "TongueOut": "4118d573d6398e97ff3eb9c5746c550a116fd676b1b41c9ff1c7dca74c5e9332",
+        "CheekTension_L": "7b027b3884b2340839fd79e37354316102cd6f451d5431ea82f053ca666c8c6b",
+        "CheekTension_R": "2378d66d1ab7ae372badabb432d8f1e5be66e9e22d8603cbe92e69168a8d8a70"
+      }
+    },
+    {
+      "object": "Canonical dark blue Nib tongue",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4a3fe401072c81a76bd451fd888add7bd4607dfbf68e2ba8f07693c9467b9115",
+        "TongueOut": "50996334b261a6d9e9877fc401092a9d427d94f88cf39b348a1e335e0da825c4"
+      }
+    },
+    {
+      "object": "Overalls shoulder strap",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "fafa0f3e332189c37e8e8480165fab09c83095389296a0c693089e39e63c5482"
+      }
+    },
+    {
+      "object": "Overalls shoulder strap.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "c1f044b863e798383e57acaca62b1ad34aa05521fc7136b46a4e98fe31a03e1b"
+      }
+    },
+    {
+      "object": "Shaped overalls trouser L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f91d2495b186299fe6feddc2f83ddf406e8cf9596fc9ed8f29bcd672146b783a"
+      }
+    },
+    {
+      "object": "Trouser raised seam L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "57f531138e2e79922e1db6208e76657e80d16b6bbab942d16dd73dbf8d3a1ff7"
+      }
+    },
+    {
+      "object": "Trouser raised seam L.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "613f8d9a04126cab1e67446eb4bb99d1b4d43e160906e7b396d31008d0eb7baf"
+      }
+    },
+    {
+      "object": "Knee patched panel L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "ed419fa255761601020437c080004b857823dec8a94f6019dd9e86721e79d619"
+      }
+    },
+    {
+      "object": "Cargo pocket flap L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "6a67f3efdf17d4bb3e270f4cde880fafdd2acca5294840ddbd9834e7f701bc25"
+      }
+    },
+    {
+      "object": "Shaped overalls trouser R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4fe5802e7ca06aff52243bda7a5d45504bc1938c6dbce55b3eb59f4618e5ec46"
+      }
+    },
+    {
+      "object": "Trouser raised seam R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "44f0b0fadd9366b69573cf802b2b2838ffb5f01fcc973d643b03444700b8bf58"
+      }
+    },
+    {
+      "object": "Trouser raised seam R.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "463d85a6f7c7798491ada5cde7c8b5550dc0cabd0e1ef942358ced7fe4b43f26"
+      }
+    },
+    {
+      "object": "Knee patched panel R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "ed419fa255761601020437c080004b857823dec8a94f6019dd9e86721e79d619"
+      }
+    },
+    {
+      "object": "Cargo pocket flap R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "6a67f3efdf17d4bb3e270f4cde880fafdd2acca5294840ddbd9834e7f701bc25"
+      }
+    },
+    {
+      "object": "Belt teal plate",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4ef2caea1e7adc0cb4f5d51f9a814dab9bcb9d7083edfcf4008ee892283b28fe"
+      }
+    },
+    {
+      "object": "Tool pouch closing flap",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4b31a3ca1e07441d5f7a8a1672652e4f43c01cb9962d0dc26c7a5aa3f23e0410"
+      }
+    },
+    {
+      "object": "Set rivet.020",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f2e4a66bcc0fa82d1906f1677f6f65b2024b89a1127c4e34be7ab0e312d1af15"
+      }
+    },
+    {
+      "object": "Rear patch pocket",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "dad6a3df52ca046c8ca26f9de4853781f437ef8a4ddbf1a09056507e02cb5dc3"
+      }
+    },
+    {
+      "object": "Rear pocket seam",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "904252873f26b719c0c3fccd0e7a037ec10c3a488d33a542d9681fca096bb52a"
+      }
+    },
+    {
+      "object": "Hanging tool handle",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "5756eaf2ef15ecd950bbd3bddb86aec16dc0fc9200ec8dd4041b51c74005ff8e"
+      }
+    },
+    {
+      "object": "Set rivet.021",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.022",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.023",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.024",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Belt teal plate.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4ef2caea1e7adc0cb4f5d51f9a814dab9bcb9d7083edfcf4008ee892283b28fe"
+      }
+    },
+    {
+      "object": "Tool pouch closing flap.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4b31a3ca1e07441d5f7a8a1672652e4f43c01cb9962d0dc26c7a5aa3f23e0410"
+      }
+    },
+    {
+      "object": "Set rivet.027",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f2e4a66bcc0fa82d1906f1677f6f65b2024b89a1127c4e34be7ab0e312d1af15"
+      }
+    },
+    {
+      "object": "Rear patch pocket.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "dad6a3df52ca046c8ca26f9de4853781f437ef8a4ddbf1a09056507e02cb5dc3"
+      }
+    },
+    {
+      "object": "Rear pocket seam.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "bc59662a78ce9b7fea0ef7163bc38400d772bac9d997e4310af977361b05a99f"
+      }
+    },
+    {
+      "object": "Hanging tool handle.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "3a46cfe2bdecfa65c8054540ff5ca792f67eee1600981d26e30d79bfdfd87831"
+      }
+    },
+    {
+      "object": "Set rivet.028",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.029",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.030",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Set rivet.031",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "b513cf61f12756cb97ccac5b1804d518711c8d0623058c40fa71c76e2aab1a61"
+      }
+    },
+    {
+      "object": "Replacement radius piston",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "5181c49e3489c6b36c5b74b247709d51043c06d0053d000d27f1fb1885454baa"
+      }
+    },
+    {
+      "object": "Replacement ulna piston",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "39b83b73229ece217e3809ae5ff46a81d3f9820642e0d7f4b94b1fb39d56b497"
+      }
+    },
+    {
+      "object": "Restorative elbow spindle",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e3781f852c0ee66825363610377e4fbba7c9d4cefe52b203260983b1093399e3"
+      }
+    },
+    {
+      "object": "Small fitted teal forearm shell",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "ccce5c6ba4686c7c500ae33a614d05e8f36dc14d7b234b3125e900e609dc9443"
+      }
+    },
+    {
+      "object": "Restorative flexible cable",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "099476623817e30e233b66fef116b01a534ee84fab9add4e8d796ec29bee78cd"
+      }
+    },
+    {
+      "object": "Restorative flexible cable.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "5c7c47e590a29b81d92c26e2e2aeb603ccfd010c56d01348af9dd9b93ffa41a1"
+      }
+    },
+    {
+      "object": "Fitted prosthetic cuff",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "fa56e5afbb77d9c83b18ca03d21dbd2e07e25254d5ff841f7b99fc39023a90bf"
+      }
+    },
+    {
+      "object": "Goggle leather head strap",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4c8970b751e74a33d903a938564be56121abc6426ae72219d614865b4c88761c"
+      }
+    },
+    {
+      "object": "Overalls draped bib",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "a4ead79aaeabe5eecb8c51de6d6645b27bb27c5f456fe2054db70d2057c12ecb"
+      }
+    },
+    {
+      "object": "Bib sewn chest pocket",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "787d00362531eec80f6a50a0770388a66a75d41a9ffc1818ec3a9344740fc21c"
+      }
+    },
+    {
+      "object": "Overalls pelvis",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "53f6ecb211020758907b419967b109efd23c371b3faa928962071d936f30a49f"
+      }
+    },
+    {
+      "object": "Cargo sewn pocket L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "6c4a9ce3a2994241d657c720dd95b4d05e78a1dff99200c0f0600f5abc37b335"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "9c28d78e1e63035b9d96a96c029e12fdeaca132c215c0c68b2096e681a40f172"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff L.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "23c1ad3706b5416df6e3ef1aad123abe4ae8b5a22ea3d3a1268ab4a3994d6533"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff L.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "6dd1cc1dcb9bef03a2136db6491923c9c32a7954339476461d47c2bda8b7b2aa"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "fa34f60aa65feeb7c370d22f4ccea1f48fde37d100be72a72265603af5d93930"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "47235bda7038234170f41d184608d5e1464efd4632e72ba6652f36f40288a00a"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "9ce981ad77dd581f9f22e381a2fcced6afe3467edb0c36926ed3e8b9e3ee5882"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L.003",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "388c0860742c0ba338332ff725f46e462bf53d946ed27befeb13c4feb60f76e2"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L.004",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "10cfe5d2843172d8f5f0568e5eff34b8e672384a9c294b15e2e50963d9b29864"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings L.005",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "189dc9775ba795531b9ef64a26e36a722185fc22b858c727a93c9a84b4dab628"
+      }
+    },
+    {
+      "object": "Worn ankle boot L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "fa3f0a9e188b7ac7a71e034542568179120ea78cbbb063e949c5c673eb85f718"
+      }
+    },
+    {
+      "object": "Boot strap L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e4bd4bd654bedb66e6f204025142d03b6dfdcaeb20728c9aecdaea000609c197"
+      }
+    },
+    {
+      "object": "Boot strap L.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e4bd4bd654bedb66e6f204025142d03b6dfdcaeb20728c9aecdaea000609c197"
+      }
+    },
+    {
+      "object": "Cargo sewn pocket R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "1b2149d7baf6d12ef58d5be2287256fbc698f1d9f7ffc26dc5ccdc4a3cb8d020"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "662aaf2fe07f33fc93627b6771c53fcdd6d96f3298b6689403de713e6afbb014"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff R.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "62901660ec438701fba7b34453f18814d34f45bbf546e5e524a2dfaadba3fd82"
+      }
+    },
+    {
+      "object": "Rolled trouser cuff R.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e29731f9b5c5de39eaaa552381c4dbdd1d7d36adfb43c31cc5d572308971ce07"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "bdd1f4e87972db09113f38fcbae1d1c6f650d85a85721aca84390cd52b1f2901"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "240060bf50d04455f06095a725c58bc479e25abac399d4332f3798311d84a739"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "8f2a963b5a0519135237f28be41ff6c22ae94a029250bcaa18cbe7838fcbf23f"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R.003",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "a61125e1f58de4c37d7805ff95485cf6e262b3285b173b0910c59f17897a9ad6"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R.004",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "c961e5dbddacdbd85df10f79476deb3b65e91e0455861038efcc89b38f75f843"
+      }
+    },
+    {
+      "object": "Ankle fabric bindings R.005",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "8837f51032604dc76ff34beb1ad4cc5bacaddb19f157a3d7b1ba0689e311691a"
+      }
+    },
+    {
+      "object": "Worn ankle boot R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "58278383c2637fc429a699702eccb144a40f2e47803206dd6c194aceb6786062"
+      }
+    },
+    {
+      "object": "Boot strap R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e4bd4bd654bedb66e6f204025142d03b6dfdcaeb20728c9aecdaea000609c197"
+      }
+    },
+    {
+      "object": "Boot strap R.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e4bd4bd654bedb66e6f204025142d03b6dfdcaeb20728c9aecdaea000609c197"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "a2d8b8b20dac599ef0249b6665421e7906afa22e46ca2c357651433e121f1e4d"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f41112e0adcc97f8788085113992e0e1fbd1461e2d6b0e61b686ce3e8cfc5c4f"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "941e3dd07aaf10e4a1e9d0c2b7e8a82f9f0530ee30b98c47a9a7b737c5cfe1e8"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.003",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "c614575fc580f1d2094faf5ff54de87f8c4cb6dfea2331552ddf55dae466fc43"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.004",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "bcce18844b27828c1d61d3dfadee9bb00694865cc0c4f6f3dd53f951db3235ef"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.005",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "61ee23473e37989c6ce63468f2460242d2a944e669ada55fcb552ab9d2b809d0"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.006",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "44ca73dd78e414f8233bf2582f7c86dc9e72519045f240513213510cb6f193b3"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.007",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "80bcc1c57a385e2c9410d5c104bd57da7646ee3233755a47ca14fae1470e8b7d"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.008",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "869959009fe6640a50e4bddbfd51c0a793aac9a5eb39f6eedbadf33afc24f0e9"
+      }
+    },
+    {
+      "object": "Forearm desert wrap L.009",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "304ee8cbc62c38a587c30bba302a584444b5610705bf2caa74a0e21625dcd3f1"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "243b18acf4ea6bb8854bba7613a5d916ca4d7099c93d68e110c333b6f1443cd0"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "203aebebd9b7fb0665292ab969540bf8c7c567cd57b5e7bb7d6ae5b4910afec6"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.002",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4810f6e912e750a3c6ebfa60a2a9ac832cd56f3bbda82bc4663a09ce43ce329c"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.003",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "bd06c83a2f508f6888155ca44709065ae17b2a5e423a82233de5246765f594fe"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.004",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "84ff0f85416ff95dd0175ff03ba0e5adf334b06c058272bc53586adb580edd29"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.005",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "054ee9a0302667a9f2e664be489dd50304b02ed374a253c7caa370cd409cf4e7"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.006",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "4fd57574b3494e6c67f0dae7a6ad3ad0a5f9b88f9da8fd25d22aaf6777053904"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.007",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "3edfaca83678a8d20a94dcc9b4a9ce1d4c1d2becf655c7d687e46982c603fdf5"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.008",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "0f62295a201a87f3ec67a36dbee42b8e463e721f7d07bd23474dc041cffe8209"
+      }
+    },
+    {
+      "object": "Forearm desert wrap R.009",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "d4a6824ade1d5b9b826f468f9636cebc45192382830ddfe1eca5a609cfd3ec0d"
+      }
+    },
+    {
+      "object": "Utility belt leather",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "e32a7e29635dbd06f4a866a0e1678972d820427ad2cc275ff60c86e703ff81d5"
+      }
+    },
+    {
+      "object": "Shaped tool pouch",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "5faddfc6d56e57af616868be0b5397bc80f9b78e77805cb9673baca6499947e7"
+      }
+    },
+    {
+      "object": "Shaped tool pouch.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "c29b31fccde7e15ccbfa1e4adee0d14610fece85a3c264eaa1b1155ef0ec1bb6"
+      }
+    },
+    {
+      "object": "Replacement leg cloth cuff",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f8bada1768658eba884b1aba27f1c0a3cec82c0e1298eb889e3149f034b351d6"
+      }
+    },
+    {
+      "object": "Replacement leg cloth cuff.001",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f8bada1768658eba884b1aba27f1c0a3cec82c0e1298eb889e3149f034b351d6"
+      }
+    },
+    {
+      "object": "Continuous Nib anatomy organic",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "3c88cecbeb86d0511fc77f8014fcd2c58f12e0ba4e23c09a3c7f0e7ef17b78bc"
+      }
+    },
+    {
+      "object": "Continuous Nib anatomy grip",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "cc0f7bcc8b7a80385cf4c1a242b43dee53d606f025e3d686335b625a8f292312"
+      }
+    },
+    {
+      "object": "Fine skin fuzz all",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "da637b60aeda69a84074ecb00d3d3e5946cbb4c187ebfd5bb72cf8c1ba520cda",
+        "Blink_L": "6fbf22be84bee97b0f4ed0f8cc0f6a9c72ddf2d771070f736cf7434748ee8050",
+        "Blink_R": "48f66ef4cc84b07f44d363978bc9607d622024a706786cf407aa428d266ab81a",
+        "Squint_L": "cf04ae44bda2cfad463901b68bd549c21933fc8cadf1c5b2a8230161e2e41062",
+        "Squint_R": "14ac222c4c880111f2d2dc691ca012e8e7df3f5553c0d194cb30c1202af3c58b",
+        "BrowRaise_L": "b72ded75a22efe00ea651eba799b34fb2a5d6d3ae908f8a49b157e1fa9459217",
+        "BrowRaise_R": "14021e19aa855ee76c8feaea1bec445f8c90343e876e1e4248ad0834ee51dba9",
+        "BrowLower_L": "25648ca66f12ecd3a38b7c79b33e8e04571ed610f690c0c5e6b6949397a130c0",
+        "BrowLower_R": "72130696cf6818b0c1053b74c5ec77dafe09d3f275f1fbbf4925a65cdb335507",
+        "Smile_L": "aa0d4d0af68023a47e059ac00dd0b8019ef2e3aa57a83595d7afaa2eceed90d9",
+        "Smile_R": "991a06a411b34289a3da9a91ddbdbb8035c6bcca1abb35c4ae161bd9144d89e2",
+        "Frown_L": "c9557ff09783c6b0c4910260043643315a8ce09534c9310770379ea928c47ede",
+        "Frown_R": "83a08086e5f6621630c4b4f2ac6dff6c8d84620a702e7e17fd370f5c7c235c8f",
+        "JawOpen": "f072ee35768d1315760f416263a37174ea4c9398acfdcab609df9c697f29388e",
+        "LipPress": "ca970be595374249f7a823977567bb9db7802c25e16082465141bbbbfd48ee92",
+        "TongueOut": "da637b60aeda69a84074ecb00d3d3e5946cbb4c187ebfd5bb72cf8c1ba520cda",
+        "CheekTension_L": "83ce949553a2026f364a87687fea2530111891e5cd96eca9aab663cb5113fca5",
+        "CheekTension_R": "8a7007985fbb9bf1424467a7bf3c80907a203b2803bb4a31422beaaf80637a08"
+      }
+    },
+    {
+      "object": "Fine skin fuzz organic",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "96a38a26d6eb5c4827245667cfbaef527c85426c59af004a3a22adf22a65c049"
+      }
+    },
+    {
+      "object": "Fine skin fuzz grip",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "f0cb92eb2a16632c8ae9bd970c93e776269fbf5558bfed7ea77b92938fefcaa7"
+      }
+    },
+    {
+      "object": "Draped desert scarf",
+      "nonBodyTargetAndBasisHashes": {
+        "Basis": "0fc2e1f29d8f1f65ab4ce9c83d2b685f459e367c7843c06a96cbd6fbe29a5223"
+      }
+    }
+  ],
+  "status": "Technical body-target repair of unaccepted v4b art; engine verification pending",
+  "scope": "No topology, UV, weights, material, facial target, bone or animation edits"
+}

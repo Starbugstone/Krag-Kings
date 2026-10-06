@@ -1,0 +1,53 @@
+{
+  "status": "Actual repaired FBX imported and posed; artistic acceptance false, engine verification separate",
+  "fbx": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair\\Nib_Natural.fbx",
+  "fbxSha256": "39f3829f66fd5b186af1c92404e44111abf76b0054b03594f30268983ddf47c9",
+  "sceneSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b.blend",
+  "sceneSourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
+  "action": "Nib_Rig.001|Nib_Rig|Shoot",
+  "normalizedPhase": 0.46,
+  "frame": 14.8,
+  "weights": {
+    "Blink_L": 0.7185085058416498,
+    "Squint_L": 0.5500018717763998,
+    "BrowRaise_L": 0,
+    "BrowLower_L": 0.2166628828475768,
+    "Smile_L": 0,
+    "CheekTension_L": 0,
+    "Frown_L": 0,
+    "Corrective_ShoulderRaise_L": 0.7344514645081582,
+    "Corrective_ElbowFlex_L": 0.39621877611791595,
+    "Corrective_HipFlex_L": 0,
+    "Corrective_KneeFlex_L": 0,
+    "Blink_R": 0.7185085058416498,
+    "Squint_R": 0.5500018717763998,
+    "BrowRaise_R": 0,
+    "BrowLower_R": 0.2166628828475768,
+    "Smile_R": 0,
+    "CheekTension_R": 0,
+    "Frown_R": 0,
+    "Corrective_ShoulderRaise_R": 0.597339465123215,
+    "Corrective_ElbowFlex_R": 1,
+    "Corrective_HipFlex_R": 0,
+    "Corrective_KneeFlex_R": 0,
+    "JawOpen": 0,
+    "LipPress": 0.8333523916617632,
+    "TongueOut": 3.104408582051595e-08
+  },
+  "headVertices": 142750,
+  "bodyCorrectiveHeadMaxDisplacementMeters": 0.0,
+  "allMorphsVersusSkinOnlyHeadMaxDisplacementMeters": 0.011108568259457012,
+  "posedHeadBoundsMin": [
+    -0.3121805783144024,
+    -0.08800000555640554,
+    1.0400000252890043
+  ],
+  "posedHeadBoundsMax": [
+    0.3120422069200489,
+    0.09536521674128876,
+    1.394570167675085
+  ],
+  "renderer": "Blender Cycles CPU",
+  "samples": 20,
+  "passed": true
+}

@@ -87,10 +87,10 @@ def fine_face_fuzz(head,collection,rig,material,cinematic=False):
     for index,root in enumerate(roots):
         for group in head.data.vertices[root].groups:
             groups[head.vertex_groups[group.group].name].add([index],group.weight,'REPLACE')
-    obj.shape_key_add(name='Basis');basis=head.data.shape_keys.key_blocks['Basis']
+    obj.shape_key_add(name='Basis',from_mix=False);basis=head.data.shape_keys.key_blocks['Basis']
     for source_key in head.data.shape_keys.key_blocks:
         if source_key.name=='Basis':continue
-        target=obj.shape_key_add(name=source_key.name)
+        target=obj.shape_key_add(name=source_key.name,from_mix=False)
         for index,root in enumerate(roots):target.data[index].co=mesh.vertices[index].co+source_key.data[root].co-basis.data[root].co
     world=obj.matrix_world.copy();obj.parent=rig;obj.matrix_world=world
     mod=obj.modifiers.new('Nib deformation','ARMATURE');mod.object=rig

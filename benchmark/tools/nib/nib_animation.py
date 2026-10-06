@@ -45,10 +45,10 @@ def body_correctives(objects):
         for name,(center,radius,amount) in centers.items():
             if any((p-center).length<radius for p in world):candidates[name]=(center,radius,amount)
         if not candidates:continue
-        if not obj.data.shape_keys:obj.shape_key_add(name='Basis')
+        if not obj.data.shape_keys:obj.shape_key_add(name='Basis',from_mix=False)
         inverse=obj.matrix_world.to_3x3().inverted()
         for name,(center,radius,amount) in candidates.items():
-            key=obj.shape_key_add(name=name)
+            key=obj.shape_key_add(name=name,from_mix=False)
             for i,p in enumerate(world):
                 offset=p-center;dist=offset.length
                 if dist<radius and dist>1e-8:

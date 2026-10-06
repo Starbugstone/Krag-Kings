@@ -26,10 +26,10 @@ from nib_groom_materials import create_regions
 from audit_face_coordinates import facial_snapshot
 
 parser=argparse.ArgumentParser()
-parser.add_argument('--source',type=Path,default=ART/'Nib_Runtime_Optimized_v4b.blend')
+parser.add_argument('--source',type=Path,default=ART/'Nib_Runtime_Optimized_v4b_MorphRepair.blend')
 parser.add_argument('--cinematic',action='store_true')
 parser.add_argument('--hands',action='store_true')
-parser.add_argument('--revision',required=True,choices=['v5c'],help='Explicit isolated revision; older job recipes require their recorded source revision')
+parser.add_argument('--revision',required=True,choices=['v5d'],help='Explicit isolated revision; older job recipes require their recorded source revision')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source
 TARGET=ART/('Nib_Cinematic_'+args.revision+'_WIP.blend' if args.cinematic else 'Nib_Master_'+args.revision+'_WIP.blend')
@@ -197,9 +197,9 @@ for v in head.data.vertices:
         jaw=1-smoothstep(seam-.0012,seam+.0012,z)
     if jaw<1:headgroup.add([v.index],1-jaw,'REPLACE')
     if jaw>0:jawgroup.add([v.index],jaw,'REPLACE')
-head.shape_key_add(name='Basis')
+head.shape_key_add(name='Basis',from_mix=False)
 for name in FACIAL_MORPHS:
-    key=head.shape_key_add(name=name)
+    key=head.shape_key_add(name=name,from_mix=False)
     for vertex in head.data.vertices:
         delta=morph_delta(name,vertex.co)
         # Orbital loops receive an explicit continuous closing motion. The

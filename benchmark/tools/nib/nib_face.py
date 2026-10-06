@@ -72,9 +72,9 @@ def morph_delta(name,p):
 
 def add_shapes(obj,names=FACIAL_MORPHS):
     if obj.type!='MESH':return
-    obj.shape_key_add(name='Basis')
+    obj.shape_key_add(name='Basis',from_mix=False)
     for name in names:
-        key=obj.shape_key_add(name=name)
+        key=obj.shape_key_add(name=name,from_mix=False)
         for i,v in enumerate(obj.data.vertices):key.data[i].co=v.co+morph_delta(name,v.co)
 
 def build_face(g):
@@ -156,7 +156,7 @@ def build_face(g):
             o=box(('Upper' if upper else 'Lower')+' provisional tooth',(x,y,z),(.0052,.0045,.006 if upper else .005),tooth,'Head' if upper else 'Jaw',.001)
             o.rotation_euler[2]=-x*3.5
     tongue_obj=tube('Canonical dark blue Nib tongue',[(0,-.030,1.106),(0,-.040,1.106),(0,-.050,1.106),(0,-.060,1.106)],[(.004,.008),(.004,.012),(.0035,.012),(.0025,.007)],tongue,'TongueBase',sides=24,res=2)
-    tongue_obj.shape_key_add(name='Basis');key=tongue_obj.shape_key_add(name='TongueOut')
+    tongue_obj.shape_key_add(name='Basis',from_mix=False);key=tongue_obj.shape_key_add(name='TongueOut',from_mix=False)
     for i,v in enumerate(tongue_obj.data.vertices):
         t=smoothstep(.033,.060,-v.co.y)
         key.data[i].co=v.co+Vector((0,-.042*t,.003*math.sin(t*math.pi)))
