@@ -1,0 +1,24 @@
+{
+  "status": "Rejected before packaging by imported collision-normal gate",
+  "exitCode": 1,
+  "actualInitialUnityHeightsMeters": {
+    "Krag": 1.290237069129944,
+    "Nib": 0.9128316044807434
+  },
+  "originalImportedField": "h(-UnityX,-UnityZ)",
+  "incorrectEarlierInference": "h(-UnityX,UnityZ)",
+  "rejectedXOnlyAdapter": {
+    "actualKragHeightMeters": 0.8830562233924866,
+    "analyticHeightMeters": 0.8832441568374634,
+    "heightErrorMeters": 0.00018793344497680664,
+    "actualNormal": [
+      -0.16801239550113678,
+      0.9849478602409363,
+      -0.04061460122466087
+    ],
+    "normalErrorDegrees": 4.838371753692627,
+    "normalToleranceDegrees": 2
+  },
+  "nextCorrection": "Rotate only imported terrain 180 degrees about Unity world Y; preserve positive determinant and source mesh. Retain strict four-point height/normal check.",
+  "baselineExecutableOverwritten": false
+}

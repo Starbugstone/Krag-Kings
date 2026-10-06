@@ -91,11 +91,10 @@ namespace KragKings.Editor
             var dunesAsset=AssetDatabase.LoadAssetAtPath<GameObject>(Imported+"/environment/Dunes.fbx");
             if(!dunesAsset) throw new Exception("Shared Dunes.fbx missing");
             var dunes=(GameObject)PrefabUtility.InstantiatePrefab(dunesAsset);dunes.name="Shared dune terrain";
-            // Measured FBX import maps source (x,y,z) to Unity (-x,z,y).
+            // Measured FBX import maps source (x,y,z) to Unity (-x,z,-y).
             // Our common scene uses Unity (x,z,y), Unreal (100x,-100y,100z).
             // Correct only the terrain adapter; preserve the shared source mesh.
-            Vector3 terrainScale=dunes.transform.localScale;
-            terrainScale.x=-terrainScale.x;dunes.transform.localScale=terrainScale;
+            dunes.transform.rotation=Quaternion.AngleAxis(180,Vector3.up)*dunes.transform.rotation;
             var sand=MakeSand();
             foreach(var filter in dunes.GetComponentsInChildren<MeshFilter>())
             {
@@ -104,8 +103,9 @@ namespace KragKings.Editor
                 var renderer=filter.GetComponent<MeshRenderer>();renderer.sharedMaterial=sand;
             }
             Physics.SyncTransforms();
-            foreach(var sample in DemoTerrainReference.Sample())
-                if(!sample.passed)throw new Exception("Imported dune coordinate/collision mismatch: "+JsonUtility.ToJson(sample));
+            var terrainSamples=DemoTerrainReference.Sample();
+            foreach(var sample in terrainSamples)Debug.Log("KRAG_TERRAIN_REFERENCE "+JsonUtility.ToJson(sample));
+            if(terrainSamples.Any(s=>!s.passed))throw new Exception("Imported dune coordinate/collision mismatch; inspect all KRAG_TERRAIN_REFERENCE samples");
             var director=new GameObject("Demo controller").AddComponent<DemoScene>();
             director.contentFingerprint=ContentFingerprint(Imported);
             var contacts=director.gameObject.AddComponent<DemoContacts>();
@@ -174,6 +174,7 @@ namespace KragKings.Editor
                 string path=folder+"/"+variant.fbx;
                 var importer=AssetImporter.GetAtPath(path) as ModelImporter;
                 if(!importer) throw new Exception("Missing FBX "+path);
+                string previousSettings=EditorJsonUtility.ToJson(importer);
                 importer.animationType=ModelImporterAnimationType.Legacy;
                 importer.importAnimation=true;importer.importCameras=false;importer.importLights=false;importer.isReadable=false;
                 importer.importBlendShapes=true;
@@ -188,7 +189,8 @@ namespace KragKings.Editor
                     if(canonical!=null) {settings.name=canonical;settings.loopTime=canonical=="Idle"||canonical=="Walk"||canonical=="Run";settings.wrapMode=settings.loopTime?WrapMode.Loop:WrapMode.Once;}
                 }
                 importer.clipAnimations=clipSettings;
-                importer.SaveAndReimport();
+                if(EditorJsonUtility.ToJson(importer)!=previousSettings)importer.SaveAndReimport();
+                else Debug.Log("KRAG_IMPORT_SETTINGS_CACHED "+path);
                 var model=AssetDatabase.LoadAssetAtPath<GameObject>(path);
                 var instance=(GameObject)PrefabUtility.InstantiatePrefab(model);instance.name=variant.name;
                 foreach(var renderer in instance.GetComponentsInChildren<Renderer>())
@@ -434,18 +436,19 @@ namespace KragKings.Editor
             foreach(var sourcePath in files.Where(p=>p.EndsWith(".fbx",StringComparison.OrdinalIgnoreCase)).OrderBy(p=>new FileInfo(p).Length))
             {
                 string relative=Path.GetRelativePath(source,sourcePath);string path=Path.Combine(destination,relative).Replace('\\','/');Directory.CreateDirectory(Path.GetDirectoryName(path));
-                CopyIfChanged(sourcePath,path);
-                AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
+                bool changed=CopyIfChanged(sourcePath,path);
+                if(changed || !AssetImporter.GetAtPath(path))AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
                 EditorUtility.UnloadUnusedAssetsImmediate();GC.Collect();GC.WaitForPendingFinalizers();
-                Debug.Log("KRAG_MODEL_IMPORTED "+relative); // External guard records reliable native-process memory.
+                Debug.Log((changed?"KRAG_MODEL_IMPORTED ":"KRAG_MODEL_SOURCE_UNCHANGED ")+relative);
             }
         }
-        static void CopyIfChanged(string source,string destination)
+        static bool CopyIfChanged(string source,string destination)
         {
             // Restored candidates can be older than the local import. Content,
             // not modification time, defines the cross-engine comparison.
             if(!File.Exists(destination)||new FileInfo(source).Length!=new FileInfo(destination).Length||HashFile(source)!=HashFile(destination))
-                File.Copy(source,destination,true);
+            {File.Copy(source,destination,true);return true;}
+            return false;
         }
         static string HashFile(string path){using var hash=SHA256.Create();using var input=File.OpenRead(path);return BitConverter.ToString(hash.ComputeHash(input)).Replace("-","").ToLowerInvariant();}
         static string HashText(string value){using var hash=SHA256.Create();return BitConverter.ToString(hash.ComputeHash(System.Text.Encoding.UTF8.GetBytes(value))).Replace("-","").ToLowerInvariant();}

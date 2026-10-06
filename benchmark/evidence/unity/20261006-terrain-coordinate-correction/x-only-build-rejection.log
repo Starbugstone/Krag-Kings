@@ -1,0 +1,2102 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-Matthew doesn't exist
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'fr' Physical Memory: 32553 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T04:02:38Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 25500)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+-projectPath
+D:\Dev\Krag-Kings\benchmark\unity
+-logFile
+D:\Dev\Krag-Kings\benchmark\local\logs\unity-terrain-sand-rebuild.log
+-accept-apiupdate
+-batchmode
+-quit
+-nographics
+-job-worker-count
+2
+-executeMethod
+KragKings.Editor.BenchmarkBuild.PrepareAndBuild
+Successfully changed project path to: D:\Dev\Krag-Kings\benchmark\unity
+D:/Dev/Krag-Kings/benchmark/unity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew" at "2026-10-06T04:02:39.695882Z"
+Player connection [26144]  Target information:
+
+Player connection [26144]  * "[IP] 172.17.32.1 [Port] 55504 [Flags] 2 [Guid] 1778065165 [EditorId] 1778065165 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26144]  * "[IP] 172.26.16.1 [Port] 55504 [Flags] 2 [Guid] 1778065165 [EditorId] 1778065165 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26144]  * "[IP] 192.168.31.40 [Port] 55504 [Flags] 2 [Guid] 1778065165 [EditorId] 1778065165 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26144] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26144] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 2
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-18192" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              ef569bf97986405aa0cc295fb826dde9
+  Correlation Id:          dc02a0eef99c1e52659873e069ff8c5e
+  External correlation Id: 212723901243188628
+  Machine Id:              H9ywjWMk/aJPg3YR91m8eMuX6rE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Matthew" (connect: 0.85s, validation: 0.05s, handshake: 1.49s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew-notifications" at "2026-10-06T04:02:41.2328549Z"
+[Licensing::Module] Connected to LicensingClient (PId: 25500, launch time: 0.03, total connection time: 2.39s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 2.45s
+[Licensing::Module] Licensing is initialized (took 1.03s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 14 unused hashed content files
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/unity/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56192
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001883 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.541 seconds
+Domain Reload Profiling: 1175ms
+	BeginReloadAssembly (209ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (59ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (268ms)
+		LoadAssemblies (189ms)
+		AnalyzeDomain (255ms)
+			TypeCache.Refresh (253ms)
+				TypeCache.ScanAssembly (232ms)
+	FinalizeReload (543ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (63ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (143ms)
+			ProcessInitializeOnLoadMethodAttributes (145ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 29 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.19.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.searcher@4.9.4 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.high-definition@4509f627d0da)
+    com.unity.ugui@2.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.uielements@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.ui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.video@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.animation@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.physics@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.physics)
+    com.unity.render-pipelines.core@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.visualeffectgraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.collections@6.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+    com.unity.modules.terrain@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.audio@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.test-framework@1.6.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ext.nunit@2.0.5 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/unity
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 1s692ms
+[378/643    0s] WriteResponseFile Library/Bee/artifacts/rsp/4747638433968585886.rsp
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[514/643    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (1.62 seconds), 3 items updated, 513 evaluated
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/Dev/Krag-Kings/benchmark/unity
+ExitCode: 0 Duration: 1s400ms
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/unity
+ExitCode: 0 Duration: 2s553ms
+Finished compiling graph: 646 nodes, 10327 flattened edges (8499 ToBuild, 92 ToUse), maximum node priority 733
+[378/643    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[514/643    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[635/643    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[636/643    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[637/643    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 137 defines and 311 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[638/643    1s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 139 defines and 276 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[639/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[640/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[641/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[642/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (2.53 seconds), 10 items updated, 643 evaluated
+AssetDatabase: script compilation time: 6.510902s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 6.67 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.882 seconds
+Domain Reload Profiling: 10989ms
+	BeginReloadAssembly (379ms)
+		DisableScriptedObjects (29ms)
+		CreateAndSetChildDomain (142ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (3195ms)
+	LoadAllAssembliesAndSetupDomain (1475ms)
+		LoadAssemblies (1426ms)
+		AnalyzeDomain (195ms)
+			TypeCache.Refresh (141ms)
+				TypeCache.ScanAssembly (131ms)
+			BuildScriptInfoCaches (41ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (5883ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			BeforeProcessingInitializeOnLoad (173ms)
+			ProcessInitializeOnLoadAttributes (2505ms)
+			ProcessInitializeOnLoadMethodAttributes (2905ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=fd3d2de1eb99cd74d9a2140aaf20318d): Total: 18.496 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=6390 ms
+		Asset DB Callback time: managed=419 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=5108 ms, compile time=6513 ms, other=36 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=1, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 20.272ms
+	ApplyChangesToAssetFolders: 0.484ms
+	Scan: 166.071ms
+	OnSourceAssetsModified: 0.905ms
+	CategorizeScriptCompilationAssets: 27.000ms
+	ProcessAssetsWithTransientArtifactChanges: 65.956ms
+	CategorizeAssets: 86.749ms
+	CompileScripts: 6513.010ms
+	ImportOutOfDateAssets: 5913.153ms (5907.097ms without children)
+		ReloadNativeAssets: 0.136ms
+		UnloadImportedAssets: 2.963ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.071ms
+		OnDemandSchedulerStart: 1.882ms
+	PostProcessAllAssets: 423.908ms
+		VCAutoAddAssetPostprocess 2.972ms
+		PostProcessCallbackCreateDeferredMaterials 0.915ms
+		WindowTitlePostprocess 0.303ms
+		XRBuildSystem.XRAssetImported 0.071ms
+		MonoPostProcessAllAssets: 417.571ms
+			AssetPostprocessor.OnPostprocessAllAssets 274.434ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 45.765ms
+			SyncVS.PostprocessSyncProject 29.142ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 24.368ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 8.534ms
+			MaterialPostprocessor.OnPostprocessAllAssets 3.692ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.936ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.198ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.148ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.416ms
+			AssetChangedListener.OnPostprocessAllAssets 1.385ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.127ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.058ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 0.910ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.680ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.596ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.570ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.480ms
+			AssetEvents.OnPostprocessAllAssets 0.371ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.364ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.303ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.297ms
+			PostProcessor.OnPostprocessAllAssets 0.238ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.232ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.182ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.163ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.155ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.140ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.077ms
+	PostAssetChangesProfiler: 4.115ms
+	UnloadStreamsBegin: 1.661ms
+	PersistCurrentRevisions: 0.283ms
+	GenerateScriptTypeHashes: 3.348ms
+	GenerateScriptTypeSerializationHashes: 6.587ms
+	Untracked: 5266.515ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 3.862ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Krag Kings — Engine Comparison
+Unloading 70 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4758 unused Assets / (11.3 MB). Loaded Objects now: 5822.
+Memory consumption went from 250.9 MB to 239.6 MB.
+Total: 14.791100 ms (FindLiveObjects: 0.646700 ms CreateObjectMapping: 0.835900 ms MarkObjects: 7.498400 ms  DeleteObjects: 5.806900 ms)
+
+Starting new worker id: 0 with log in D:/Dev/Krag-Kings/benchmark/unity/Logs/AssetImportWorker0.log
+Worker ready: AssetImportWorker0 0
+Start importing Assets/Benchmark/Imported/environment/Sand_BaseColor.png using Guid(509cdf0459754d046981e1d50e3786f0) (TextureImporter) -> (Import Result ID: '6cfd5fd4e3bab1dab7ac53b625bb9bc5') in 0.6441817 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=44cdea5efd744db0a1c8b2d31694e64a DependenciesID=4eb86a1999c4bd535329b896f7edc288 StaticDependenciesID=eb63c25c34980b8f15c254a96037558d 
+Start importing Assets/Benchmark/Imported/environment/Sand_MaskHDRP.png using Guid(d5746d3bc78ffd648abbd51ef723b4c2) (TextureImporter) -> (Import Result ID: 'b4e69df12e6041e1e217a029632dab16') in 1.0534866 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9db237cc8da819cbb324ee223fdebbbf DependenciesID=8e2f777d4084df66954ae4f161c6f47e StaticDependenciesID=0602af5150afb076a133969bf11cfa8e 
+Start importing Assets/Benchmark/Imported/environment/Sand_Roughness.png using Guid(48b924e143869124187091f987fd14cd) (TextureImporter) -> (Import Result ID: 'c431fd862e329558b55304a3050937b5') in 0.1476211 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=230cb4784d67f2f578b742890e7bab24 DependenciesID=0db68e190705ddc51e0f56cdc013f65d StaticDependenciesID=381991ce2840c2152ba2fc2db23f5bc9 
+Start importing Assets/Benchmark/Imported/environment/Sand_Normal.png using Guid(fa0dfea22b8f0b74ca679107cd594356) (TextureImporter) -> (Import Result ID: 'a12425077e534ed7830614c500990fda') in 1.2796922 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc0ddf9a9f31c57735bb2887e85d3316 DependenciesID=08e117c6772ff48eb8495a2eef253285 StaticDependenciesID=2a18578f0ee0ae2f05798d605fc7ce62 
+Start importing Assets/Benchmark/Imported/environment/manifest.json using Guid(2c777492f5bc0f04e8966c46628d34e7) (TextScriptImporter) -> (Import Result ID: 'a0f853b8077e0213ceee8db8c8d3adbd') in 0.0108609 seconds [static dependencies only]. Details - ImportResultOutputID=d0b5ef719e9e8dd3d54ad76a1b6e02f4 DependenciesID=bcd337bea30ce423b44c4572f92d8ac3 StaticDependenciesID=2ec6f00fe85e5aa2748d97f066bae992 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=d1d3736f016871543a4fa6778a40ca6b): Total: 3.289 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=6 (actual=5, local cache=1, cache server=0)
+		Asset DB Process Time: managed=9 ms, native=3257 ms
+		Asset DB Callback time: managed=8 ms, native=13 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=5, moved=0, deleted=0
+		Scan Filter Count: 0
+	ApplyChangesToAssetFolders: 0.075ms
+	Scan: 37.980ms
+	OnSourceAssetsModified: 0.683ms
+	ProcessAssetsWithTransientArtifactChanges: 0.098ms
+	CategorizeAssets: 60.936ms
+	ImportOutOfDateAssets: 3153.164ms (0.367ms without children)
+		ImportManagerImport: 3151.648ms (13.639ms without children)
+		UnloadImportedAssets: 0.138ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.459ms
+		OnDemandSchedulerStart: 0.503ms
+	PostProcessAllAssets: 20.334ms
+		XRBuildSystem.XRAssetImported 0.457ms
+		MonoPostProcessAllAssets: 7.196ms
+			AssetPostprocessor.OnPostprocessAllAssets 2.900ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 2.015ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.093ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.459ms
+			AssetChangedListener.OnPostprocessAllAssets 0.226ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.063ms
+	PostAssetChangesProfiler: 0.674ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.163ms
+	UnloadStreamsBegin: 0.069ms
+	PersistCurrentRevisions: 0.241ms
+	Untracked: 10.069ms
+
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Weapon.fbx using Guid(e0a62a53e5b544242b211e40bcce0fbd) (FBXImporter) -> (Import Result ID: '7dd3746a6dd5146ef4976ea89d5dc6e0') in 0.3019379 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ce76ab3f0c8486cb87572b53e6d7cc2b DependenciesID=197d84c2634b28fc3bb797dc2c58e384 StaticDependenciesID=2fd68da98d587c35b53553e8521b20b4 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=aba85bf3bd7109541a902b5585da3d82): Total: 0.323 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=41 ms, native=274 ms
+		Asset DB Callback time: managed=0 ms, native=6 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 8.088ms
+	CategorizeAssets: 1.360ms
+	ImportOutOfDateAssets: 304.041ms (0.239ms without children)
+		ImportManagerImport: 302.772ms (0.404ms without children)
+			UpdateCategorizedAssets: 0.085ms
+		UnloadImportedAssets: 0.280ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.417ms
+		OnDemandSchedulerStart: 0.289ms
+	PostProcessAllAssets: 6.299ms
+		XRBuildSystem.XRAssetImported 0.068ms
+		MonoPostProcessAllAssets: 0.446ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.066ms
+	PostAssetChangesProfiler: 0.326ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.193ms
+	PersistCurrentRevisions: 0.171ms
+	Untracked: 2.549ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4 unused Assets / (1.0 KB). Loaded Objects now: 5824.
+Memory consumption went from 215.5 MB to 215.5 MB.
+Total: 6.914500 ms (FindLiveObjects: 0.337600 ms CreateObjectMapping: 0.277000 ms MarkObjects: 6.265500 ms  DeleteObjects: 0.032300 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\Krag_Weapon.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Run.fbx using Guid(c2172b0bf82527b438a3744ef5b56600) (FBXImporter)Keyframe reduction: Ratio: 19.781336%;
+ -> (Import Result ID: '09406873321868ad85a62d15c05f40ff') in 0.0847669 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f5d1831c0899a66639d311cf433c1e60 DependenciesID=dd84fe8ac665fb6f489d19686d477112 StaticDependenciesID=0c7f8abf26c11f903baed4c4859a9067 
+Asset Pipeline Refresh (id=ca34784de4a6896439f16fc4a164fba0): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.3 MB to 203.3 MB.
+Total: 6.357400 ms (FindLiveObjects: 0.324800 ms CreateObjectMapping: 0.233100 ms MarkObjects: 5.756800 ms  DeleteObjects: 0.041700 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Run.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Hit.fbx using Guid(b0955846f198c2e418092453b386ceb0) (FBXImporter)Keyframe reduction: Ratio: 12.663907%;
+ -> (Import Result ID: '41d12409368cf365e4c22cdbe9dfebe9') in 0.0765539 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d16413698f2da2c2300a0fb31e52ec1 DependenciesID=5bf48e6f7fbf168ce56eb87c600786f8 StaticDependenciesID=3c458a6987876eb397ec23ac10f3e8a9 
+Asset Pipeline Refresh (id=3ad406b1d4866e34eb35d30a62894fdb): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (1.2 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.3 MB to 203.3 MB.
+Total: 6.606600 ms (FindLiveObjects: 0.334500 ms CreateObjectMapping: 0.273500 ms MarkObjects: 5.948200 ms  DeleteObjects: 0.049400 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Hit.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Run.fbx using Guid(b33066e6e3ffdbc46a307b13df87807e) (FBXImporter)Keyframe reduction: Ratio: 15.604800%;
+ -> (Import Result ID: '59800eec47a3197ea031f04a7d78d495') in 0.0807764 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=761c6ce4b8cde3d6a8be6f016a9625c1 DependenciesID=b22177137eab4640056ad33448572c70 StaticDependenciesID=db2cf6e938442d4c1b8f2dfc2dc5d2d9 
+Asset Pipeline Refresh (id=f1fff3d03ac363541887e162f9fd6fec): Total: 0.109 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (1.2 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.3 MB to 203.3 MB.
+Total: 7.320900 ms (FindLiveObjects: 0.689100 ms CreateObjectMapping: 0.278800 ms MarkObjects: 6.317300 ms  DeleteObjects: 0.034200 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Run.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Walk.fbx using Guid(767704c7ba647b94cb523d27a2e17ede) (FBXImporter)Keyframe reduction: Ratio: 12.769291%;
+ -> (Import Result ID: '1e36fc320218ed12a502735ac4a8f59a') in 0.0784723 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8fae98d02a0ba817a310d5005ef39866 DependenciesID=cd1d6e8e5e90a7eea567a70bbac0f666 StaticDependenciesID=d05afa8fcde1c55d4dd07d71fc47cf83 
+Asset Pipeline Refresh (id=db209b95776c5cd4c8955388c1a003a4): Total: 0.107 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 6.904000 ms (FindLiveObjects: 0.577200 ms CreateObjectMapping: 0.311100 ms MarkObjects: 5.986500 ms  DeleteObjects: 0.028200 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Walk.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Melee.fbx using Guid(6d9224cf848d81d42981b9ad46d21519) (FBXImporter)Keyframe reduction: Ratio: 11.528919%;
+ -> (Import Result ID: 'd47d5b05ad1b9261e1721b86b8fda6f4') in 0.0799833 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ad8bfa2f690eda275babd76aff697fe8 DependenciesID=751714ced457d64d7b2c70b0fa8bc2cb StaticDependenciesID=69fd9fc2deea78dffeacde4c2dde27c1 
+Asset Pipeline Refresh (id=ee52e3ebe6fc17d4fae864dcc3dc322e): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 7.084600 ms (FindLiveObjects: 0.323500 ms CreateObjectMapping: 0.277300 ms MarkObjects: 6.429900 ms  DeleteObjects: 0.053000 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Melee.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Shoot.fbx using Guid(7ae534364ee9822489f596692b8aa85e) (FBXImporter)Keyframe reduction: Ratio: 11.983793%;
+ -> (Import Result ID: 'bff26c4fda22eaff43ee35e2528d1d25') in 0.0825168 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=02978221f675be6094cee20a58ddda34 DependenciesID=eb4b24e80711b3427c2ede5d9f4dc1c9 StaticDependenciesID=98c135a22c8fd4356eac18a521ce2240 
+Asset Pipeline Refresh (id=4bdaae21bd4a2db4b8587b522564c671): Total: 0.104 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 7.573900 ms (FindLiveObjects: 0.318500 ms CreateObjectMapping: 0.234000 ms MarkObjects: 6.975800 ms  DeleteObjects: 0.029600 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Shoot.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Walk.fbx using Guid(f205fa7a996701a4591624c5612c7b17) (FBXImporter)Keyframe reduction: Ratio: 11.666667%;
+ -> (Import Result ID: 'c35894070be06e75c0d8ed971f4e196e') in 0.0853924 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ba8e0ad4febe2723560c8c2c2b23cf0d DependenciesID=f9857e4a8ec90670a14022d0644a29df StaticDependenciesID=46465d2afbd7c36783e96b35cc1a5d7e 
+Asset Pipeline Refresh (id=39c7a44a731a98541a22175c7786cf69): Total: 0.112 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 6.725500 ms (FindLiveObjects: 0.332100 ms CreateObjectMapping: 0.229500 ms MarkObjects: 6.120000 ms  DeleteObjects: 0.042700 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Walk.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Melee.fbx using Guid(7ca1a48ca0d217944a0cefccf9cca625) (FBXImporter)Keyframe reduction: Ratio: 12.094631%;
+ -> (Import Result ID: '40beeae22e367048b89731fb47959b24') in 0.0855863 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8975dd1ed02dd191af3946eb85d09172 DependenciesID=fecec0cc3a42b446303128af7540b12e StaticDependenciesID=1c0b4fba567f5d07b11bc1c2ab808499 
+Asset Pipeline Refresh (id=9ba23df8448bb4447b6e5b002b08e384): Total: 0.115 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 7.424600 ms (FindLiveObjects: 0.351700 ms CreateObjectMapping: 0.271900 ms MarkObjects: 6.771300 ms  DeleteObjects: 0.028800 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Melee.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Hit.fbx using Guid(864d9f811740ed24a999cf157b7b2ba4) (FBXImporter)Keyframe reduction: Ratio: 11.509376%;
+ -> (Import Result ID: '3122297820c5adc7525b9c8d05206937') in 0.0859619 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=32e7d6add99948f30f51f0f8b5dc5e90 DependenciesID=4848075e66817edd2640ed4cfd077de4 StaticDependenciesID=36781d7d86fea37df7a9b4c2ff46545e 
+Asset Pipeline Refresh (id=ce08b08007bbcfb40810e4dfbd000dfc): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 6.616600 ms (FindLiveObjects: 0.323100 ms CreateObjectMapping: 0.223900 ms MarkObjects: 6.046100 ms  DeleteObjects: 0.022700 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Hit.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Shoot.fbx using Guid(70fc44d001795254a95c6b264b0f9eda) (FBXImporter)Keyframe reduction: Ratio: 11.856252%;
+ -> (Import Result ID: '176de9411bf28d3d3c1c06636356ae1d') in 0.085113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6c7d700f4fef033afa29a43c34f8a4cb DependenciesID=96ec66691bdbe966a8a6730f03b3e122 StaticDependenciesID=1f600fe9e3fcdcd807adfa74253ca54f 
+Asset Pipeline Refresh (id=5d2c4b5ae9e80e04b92aa7407f6df255): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.5 MB to 203.5 MB.
+Total: 6.096300 ms (FindLiveObjects: 0.316000 ms CreateObjectMapping: 0.226100 ms MarkObjects: 5.511900 ms  DeleteObjects: 0.041400 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Shoot.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/Idle.fbx using Guid(dc944a225407f714986a358eda17ddcf) (FBXImporter)Keyframe reduction: Ratio: 7.911618%;
+ -> (Import Result ID: '7270c4299b52d9ab7354cdcf29126716') in 0.0846709 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4c186c711f12ab535910b5fc92cd931 DependenciesID=287f36cc32d3aeb29b7d17ed62f4d060 StaticDependenciesID=56777c742a06f4a2f424c107f2d0006d 
+Asset Pipeline Refresh (id=631f1d9cb77c40f48ac8394b1ab7deb3): Total: 0.114 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.6 MB to 203.6 MB.
+Total: 6.432200 ms (FindLiveObjects: 0.336300 ms CreateObjectMapping: 0.231500 ms MarkObjects: 5.837500 ms  DeleteObjects: 0.026100 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\Idle.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/Idle.fbx using Guid(2274542bd96e76942beaffb31ce53489) (FBXImporter)Keyframe reduction: Ratio: 4.400424%;
+ -> (Import Result ID: '94528a63278f4210cfc8c84fa9868ba9') in 0.1004283 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ccab35eaca05d9e1320ea273efbe6932 DependenciesID=661e33e138f072c4dac24fc73651862e StaticDependenciesID=e6ec14c1975e3c729ed97a4e963a2844 
+Asset Pipeline Refresh (id=0c55fe81cec090847bbde61daa03bfbe): Total: 0.129 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.6 MB to 203.6 MB.
+Total: 6.424100 ms (FindLiveObjects: 0.324100 ms CreateObjectMapping: 0.227000 ms MarkObjects: 5.845900 ms  DeleteObjects: 0.025600 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\Idle.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/animations/FacePerformance.fbx using Guid(48cb4b8dfa8bda6438085d4341622b45) (FBXImporter)Keyframe reduction: Ratio: 1.583467%;
+ -> (Import Result ID: 'f1443ec155aa5e1f05616c13a08414f7') in 0.1090152 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1941d38edc51bf7116a8769d3bb70e75 DependenciesID=0424734fbd7dc67e339bf862e458be5c StaticDependenciesID=2b4b21eec859d3547e3cdb8566f31d78 
+Asset Pipeline Refresh (id=0fc4e982d62aef94b843e430d8a6ab56): Total: 0.132 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.6 MB to 203.6 MB.
+Total: 6.518100 ms (FindLiveObjects: 0.323500 ms CreateObjectMapping: 0.231600 ms MarkObjects: 5.910600 ms  DeleteObjects: 0.051300 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\animations\FacePerformance.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/animations/FacePerformance.fbx using Guid(7afdd6558a16abd4da2d86c9caeefadf) (FBXImporter)Keyframe reduction: Ratio: 1.917044%;
+ -> (Import Result ID: 'a629a30da65f3142c875f33e22f2931a') in 0.1171999 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb64592a0134be747173ba332638523a DependenciesID=e369c5a31fd12d4155ebfab22a734993 StaticDependenciesID=ae61cfbe01497e86f5daa657100abe09 
+Asset Pipeline Refresh (id=030939ec30584f64991dd3239d0fa629): Total: 0.152 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 203.6 MB to 203.6 MB.
+Total: 7.283500 ms (FindLiveObjects: 0.339600 ms CreateObjectMapping: 0.251400 ms MarkObjects: 6.639300 ms  DeleteObjects: 0.052000 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\animations\FacePerformance.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/environment/Dunes.fbx using Guid(656a5885ee7b9784dacae20df0fecac0) (FBXImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+ -> (Import Result ID: '0bb1c68c40aece3ae6eba9e574d009ff') in 0.2876184 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ad6acdad8bb612080e28b2c3d5f0e42e DependenciesID=62e35f4e5d3680481c17e261e3e5c559 StaticDependenciesID=048520f7d8d7b3231a881c1d412eea5b 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=2c00b32f96cc2ef4ca11bdf26e41bee0): Total: 0.304 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=13 ms, native=287 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	ApplyChangesToAssetFolders: 0.050ms
+	Scan: 7.777ms
+	CategorizeAssets: 1.399ms
+	ImportOutOfDateAssets: 290.050ms (0.368ms without children)
+		ImportManagerImport: 288.404ms (0.334ms without children)
+		UnloadImportedAssets: 0.214ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.493ms
+		OnDemandSchedulerStart: 0.520ms
+	PostProcessAllAssets: 1.431ms
+		XRBuildSystem.XRAssetImported 0.376ms
+		MonoPostProcessAllAssets: 0.704ms
+			AssetChangedListener.OnPostprocessAllAssets 0.184ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.078ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.067ms
+	PostAssetChangesProfiler: 0.260ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.150ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.302ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 207.3 MB to 207.3 MB.
+Total: 7.118600 ms (FindLiveObjects: 0.324100 ms CreateObjectMapping: 0.268900 ms MarkObjects: 6.481100 ms  DeleteObjects: 0.043400 ms)
+
+KRAG_MODEL_IMPORTED environment\Dunes.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_GripReplacement.fbx using Guid(5561f32e203adcd428c5a5a2153c922b) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102973%;
+Keyframe reduction: Ratio: 11.322197%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: '1384a4ec1f246ffe55e25c02d244fb47') in 8.4805275 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cab4c3955ed56f6e2b3a4459faf4851 DependenciesID=8e191ad364584bedfcbe8a196697cd5f StaticDependenciesID=1a5efe6d3d2055114f08642bc573a670 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=bd0bb03bc3d6e62418cce42f677dbff7): Total: 8.524 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=7 ms, native=8503 ms
+		Asset DB Callback time: managed=1 ms, native=11 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.053ms
+	Scan: 7.222ms
+	CategorizeAssets: 1.339ms
+	ImportOutOfDateAssets: 8499.796ms (0.345ms without children)
+		ImportManagerImport: 8498.354ms (17.125ms without children)
+		UnloadImportedAssets: 0.216ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.398ms
+		OnDemandSchedulerStart: 0.436ms
+	PostProcessAllAssets: 11.584ms
+		XRBuildSystem.XRAssetImported 0.466ms
+		MonoPostProcessAllAssets: 1.156ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.144ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.090ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.087ms
+			SyncVS.PostprocessSyncProject 0.073ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.070ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.064ms
+	PostAssetChangesProfiler: 0.981ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.210ms
+	PersistCurrentRevisions: 0.151ms
+	Untracked: 2.393ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.8 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.7 MB to 225.7 MB.
+Total: 8.144900 ms (FindLiveObjects: 0.569100 ms CreateObjectMapping: 0.267100 ms MarkObjects: 7.274500 ms  DeleteObjects: 0.032800 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\Nib_GripReplacement.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_LegReplacement.fbx using Guid(b57a4e888fec62245961c1b47ddfcc37) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102973%;
+Keyframe reduction: Ratio: 11.322198%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: 'b8f35bad1c753e39ef9bc1ba0fa34066') in 7.787148 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c899544ba6bc84c23689bb2722a1ccd2 DependenciesID=440f04dbc1001e1bacf575b938fe15fa StaticDependenciesID=0632b5c1e052d0fb2cfc2001f65e457b 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=027abdcd4822f7245b06e7b0643b7ce5): Total: 7.830 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=7 ms, native=7811 ms
+		Asset DB Callback time: managed=0 ms, native=10 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.066ms
+	Scan: 7.894ms
+	CategorizeAssets: 1.877ms
+	ImportOutOfDateAssets: 7807.038ms (0.391ms without children)
+		ImportManagerImport: 7805.412ms (17.529ms without children)
+		ReloadNativeAssets: 0.060ms
+		UnloadImportedAssets: 0.222ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.466ms
+		OnDemandSchedulerStart: 0.480ms
+	PostProcessAllAssets: 10.348ms
+		XRBuildSystem.XRAssetImported 0.397ms
+		MonoPostProcessAllAssets: 0.593ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.075ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.067ms
+	PostAssetChangesProfiler: 0.369ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.190ms
+	PersistCurrentRevisions: 0.119ms
+	Untracked: 2.427ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.7 MB to 225.7 MB.
+Total: 7.650500 ms (FindLiveObjects: 0.461500 ms CreateObjectMapping: 0.748400 ms MarkObjects: 6.393800 ms  DeleteObjects: 0.046000 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\Nib_LegReplacement.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_Natural.fbx using Guid(029039fa1ab1a7245a9c02ec3dd23a6b) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102973%;
+Keyframe reduction: Ratio: 11.322197%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: 'f645930873c8d25ce863d9c71efbbb1e') in 7.7111535 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3505175391d6e6ccc6a52f4ac935ac66 DependenciesID=0506055449eb5561a24064222e080d40 StaticDependenciesID=bcb2a0b2a27bb23a0d4e65bcd00f4795 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=3fb0891618fe60c40a9dbaed6ba2b316): Total: 7.756 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=7736 ms
+		Asset DB Callback time: managed=0 ms, native=11 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.075ms
+	Scan: 7.838ms
+	CategorizeAssets: 1.242ms
+	ImportOutOfDateAssets: 7731.601ms (0.366ms without children)
+		ImportManagerImport: 7729.687ms (17.694ms without children)
+		UnloadImportedAssets: 0.197ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.507ms
+		OnDemandSchedulerStart: 0.798ms
+	PostProcessAllAssets: 11.321ms
+		XRBuildSystem.XRAssetImported 0.360ms
+		MonoPostProcessAllAssets: 0.613ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.115ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.060ms
+	PostAssetChangesProfiler: 0.547ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.292ms
+	PersistCurrentRevisions: 0.163ms
+	Untracked: 2.745ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.7 MB to 225.7 MB.
+Total: 7.307700 ms (FindLiveObjects: 0.347500 ms CreateObjectMapping: 0.298400 ms MarkObjects: 6.624600 ms  DeleteObjects: 0.035900 ms)
+
+KRAG_MODEL_IMPORTED characters\nib\Nib_Natural.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Crusher.fbx using Guid(27843aa7286de38419f3055bdb67677b) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.992612%;
+Keyframe reduction: Ratio: 7.610231%;
+Keyframe reduction: Ratio: 13.082479%;
+Keyframe reduction: Ratio: 22.459166%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 13.292171%;
+ -> (Import Result ID: 'a9b63d4365c4e69c443b84140d2a9d3d') in 12.6426227 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a377a6aba55d306f97b207c5d0200cc0 DependenciesID=8b0717c10cc6d2d726769e845456995d StaticDependenciesID=4e17a5fec521c5f23ac102546df15fdb 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=399e4da60a1c870498c3eb60613454c1): Total: 12.678 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=12662 ms
+		Asset DB Callback time: managed=0 ms, native=9 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.054ms
+	Scan: 7.887ms
+	CategorizeAssets: 1.440ms
+	ImportOutOfDateAssets: 12656.314ms (0.476ms without children)
+		ImportManagerImport: 12654.607ms (11.272ms without children)
+		UnloadImportedAssets: 0.226ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.522ms
+		OnDemandSchedulerStart: 0.431ms
+	PostProcessAllAssets: 9.191ms
+		XRBuildSystem.XRAssetImported 0.469ms
+		MonoPostProcessAllAssets: 0.543ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.083ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.056ms
+	PostAssetChangesProfiler: 0.384ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.162ms
+	PersistCurrentRevisions: 0.149ms
+	Untracked: 2.327ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.8 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.8 MB to 225.8 MB.
+Total: 7.103100 ms (FindLiveObjects: 0.352200 ms CreateObjectMapping: 0.253300 ms MarkObjects: 6.416300 ms  DeleteObjects: 0.080300 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\Krag_Crusher.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Piston.fbx using Guid(725b9fc86852ad947bc912668e7610bc) (FBXImporter)Keyframe reduction: Ratio: 2.447319%;
+Keyframe reduction: Ratio: 13.084975%;
+Keyframe reduction: Ratio: 7.652628%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 22.504536%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 13.164025%;
+ -> (Import Result ID: '63aefc108252b81630a9ac61bd4fa68d') in 11.8408282 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2cf80553199986089c6671113617e10e DependenciesID=cd1cf7c1402d4ee567049faec6f4465b StaticDependenciesID=2b21814792009b4d1394d427d7ef23b3 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=c8008931e99312e4cafa3439dc08472b): Total: 11.873 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=11856 ms
+		Asset DB Callback time: managed=0 ms, native=8 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.054ms
+	Scan: 6.835ms
+	CategorizeAssets: 1.354ms
+	ImportOutOfDateAssets: 11853.060ms (0.456ms without children)
+		ImportManagerImport: 11851.508ms (9.868ms without children)
+		UnloadImportedAssets: 0.182ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.455ms
+		OnDemandSchedulerStart: 0.412ms
+	PostProcessAllAssets: 8.294ms
+		XRBuildSystem.XRAssetImported 0.420ms
+		MonoPostProcessAllAssets: 0.554ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.078ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.074ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.059ms
+	PostAssetChangesProfiler: 0.438ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.163ms
+	PersistCurrentRevisions: 0.116ms
+	Untracked: 2.322ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.8 MB to 225.8 MB.
+Total: 6.699800 ms (FindLiveObjects: 0.361400 ms CreateObjectMapping: 0.264100 ms MarkObjects: 6.030000 ms  DeleteObjects: 0.043300 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\Krag_Piston.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Natural.fbx using Guid(534f32475d005b6498ac2c9281ec7ada) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.900247%;
+Keyframe reduction: Ratio: 7.645562%;
+Keyframe reduction: Ratio: 12.931036%;
+Keyframe reduction: Ratio: 22.459166%;
+Keyframe reduction: Ratio: 13.000556%;
+Keyframe reduction: Ratio: 13.210625%;
+ -> (Import Result ID: 'd618e7e019097c17bce2394cc6261411') in 12.697395 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2b72ba1138bf766bd1e561834f610a1 DependenciesID=08bf6bd663fd9edbe00d6dde0c7acaad StaticDependenciesID=90297cb96765707c273076fef4b04a2e 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=a7e8e5c1efb2de74eb40037f56ec29d6): Total: 12.728 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=12714 ms
+		Asset DB Callback time: managed=0 ms, native=7 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.077ms
+	Scan: 7.516ms
+	CategorizeAssets: 1.214ms
+	ImportOutOfDateAssets: 12708.491ms (0.326ms without children)
+		ImportManagerImport: 12707.162ms (9.260ms without children)
+		UnloadImportedAssets: 0.192ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.359ms
+		OnDemandSchedulerStart: 0.410ms
+	PostProcessAllAssets: 8.009ms
+		XRBuildSystem.XRAssetImported 0.368ms
+		MonoPostProcessAllAssets: 0.552ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.074ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.065ms
+	PostAssetChangesProfiler: 0.335ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.174ms
+	PersistCurrentRevisions: 0.115ms
+	Untracked: 2.283ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.8 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.8 MB to 225.8 MB.
+Total: 6.390100 ms (FindLiveObjects: 0.397000 ms CreateObjectMapping: 0.367000 ms MarkObjects: 5.580800 ms  DeleteObjects: 0.044100 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\Krag_Natural.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_IronJaw.fbx using Guid(16d7f2abf2343bd47947a5c5fe14610e) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 7.687959%;
+Keyframe reduction: Ratio: 13.047529%;
+Keyframe reduction: Ratio: 22.368420%;
+Keyframe reduction: Ratio: 12.944938%;
+Keyframe reduction: Ratio: 13.327120%;
+ -> (Import Result ID: '1bef10b0b22b4418b1475dfd8b695b97') in 12.4566211 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d30c378fde2fa432eaecc298defef1cd DependenciesID=4cc40049134d10f32545dd1d0bb6574c StaticDependenciesID=e007f934504dc3be20d241231dd02bb8 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=b37b09ac80e9f724e962a957d6fe6864): Total: 12.489 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=12473 ms
+		Asset DB Callback time: managed=0 ms, native=9 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.060ms
+	Scan: 7.235ms
+	CategorizeAssets: 1.383ms
+	ImportOutOfDateAssets: 12467.766ms (0.320ms without children)
+		ImportManagerImport: 12466.386ms (9.188ms without children)
+		UnloadImportedAssets: 0.241ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.381ms
+		OnDemandSchedulerStart: 0.391ms
+	PostProcessAllAssets: 8.992ms
+		XRBuildSystem.XRAssetImported 0.367ms
+		MonoPostProcessAllAssets: 0.562ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.073ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.053ms
+	PostAssetChangesProfiler: 0.635ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.160ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.372ms
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (2.7 KB). Loaded Objects now: 5824.
+Memory consumption went from 225.8 MB to 225.8 MB.
+Total: 7.124500 ms (FindLiveObjects: 0.313500 ms CreateObjectMapping: 0.391800 ms MarkObjects: 6.387100 ms  DeleteObjects: 0.031000 ms)
+
+KRAG_MODEL_IMPORTED characters\krag\Krag_IronJaw.fbx
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.Editor.BenchmarkBuild:CopyTree (string,string) (at Assets/Benchmark/Editor/BenchmarkBuild.cs:440)
+KragKings.Editor.BenchmarkBuild:Prepare () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:84)
+KragKings.Editor.BenchmarkBuild:PrepareAndBuild () (at Assets/Benchmark/Editor/BenchmarkBuild.cs:38)
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 440)
+
+Asset Pipeline Refresh (id=ae6299057edb58045896288b9b9c0952): Total: 0.003 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=932e0c2c2c73abf4a99513451f232f4e): Total: 0.064 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Asset Pipeline Refresh (id=fc1879facc11d644cb519924b89155eb): Total: 0.069 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_AgedBrass_Mask.png using Guid(6161c2b5db5e77f4ca55095ca15ceb3c) (TextureImporter) -> (Import Result ID: '3acaeddd8e93f7e51251010cbdaf3795') in 0.0116059 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2e927820915c5af32cbea2e2a0c860e DependenciesID=6e4e16c07d1edd171e357fee4b21e890 StaticDependenciesID=39c8947f7d6773df1a11c8d3f7c5bcbf 
+Asset Pipeline Refresh (id=65a2f16722d23844ead242d30002f573): Total: 0.038 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_Amber_Mask.png using Guid(8d907e77d060ee7479fb7352fa871ab4) (TextureImporter) -> (Import Result ID: 'eab729cf9ec9c8aee8541476aa8038bb') in 0.0090098 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e522814d15f8f26610e11202b2badad9 DependenciesID=2994ffefecdee059a0fa8b8d9062e942 StaticDependenciesID=395442250d23d008adb1593bbcb50f46 
+Asset Pipeline Refresh (id=6b048c9ae3118da43b1870f8dad78b9f): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_BlackenedSteel_Mask.png using Guid(35dcf07d3a9a9854ba186cba80596c52) (TextureImporter) -> (Import Result ID: 'f90385ce49eb7d85cda279a8e26d1b0e') in 0.0118788 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2740d31e997773279d2821632e50488b DependenciesID=c35a3839f82a92ebfeeba7e4acc40177 StaticDependenciesID=58b6226de6e3a365505b617dee67faf7 
+Asset Pipeline Refresh (id=b9c58291d58df444eaacee76f1b2b7cc): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_CopperHose_Mask.png using Guid(68dee77310ee1ff4896b0ab12231e436) (TextureImporter) -> (Import Result ID: 'bcf6c7b6a899cbb57d9e50cea89d3ce2') in 0.0102609 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fdf7e64e9a3be9ddaed45f287bfe4a0 DependenciesID=22101a12a937aa4b15cb8b0c5e2be6a3 StaticDependenciesID=58121fa4ec827d5e7bb4ad1636dea124 
+Asset Pipeline Refresh (id=db3cd6c743187be4e884c86ac165ce46): Total: 0.029 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_DesertCanvas_Mask.png using Guid(9d3cdc634950def4984ba47e7f041a62) (TextureImporter) -> (Import Result ID: 'c0b8d69b199763650dbb2587988daddb') in 0.0083341 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=02bf7c5805bbb7349d0ebe40e65660c7 DependenciesID=dfaa55c41b884db460f3faccc91c670b StaticDependenciesID=9385fa491cf5dca6cd3066c8885fb26d 
+Asset Pipeline Refresh (id=cf3600e934d94c541af296b8a69fbe85): Total: 0.026 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_EyeWhite_Mask.png using Guid(1fc7bf94d6bd10b42b07850bc19de3a8) (TextureImporter) -> (Import Result ID: '8ab9309398a96952fad18100c10c2c76') in 0.008849 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6363bd7e2f57c77f7057b582d9975ed3 DependenciesID=c7804ea92dcd53f379c86ecf18098584 StaticDependenciesID=d9622afbf0fda6e1001582c2491ac9ff 
+Asset Pipeline Refresh (id=b692cd27edc899847ade20af6f6ca017): Total: 0.027 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_FacialSkin_Mask.png using Guid(9387649abd15fa84891979af737e5d7f) (TextureImporter) -> (Import Result ID: '611ba0ddc36e33d874b371b2e9144e23') in 0.0124418 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3ecd339f911e95e4dc93246b0538289d DependenciesID=3e48a60267b5e638de64f9b470c9fb56 StaticDependenciesID=ec425fa231046a8cc60aca07149d2019 
+Asset Pipeline Refresh (id=8d901e0dcf67ffb46b3d50fe3293b43e): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/KragSkinProfile.asset using Guid(48717835e7b347c4c994a3624138bc08) (NativeFormatImporter) -> (Import Result ID: 'e078049fb04cd3897ea6c339d96053d9') in 0.0078487 seconds [static dependencies only]. Details - ImportResultOutputID=a695d695f632a83deef727215d41c304 DependenciesID=5dd5f40e6c56c43563645d96bbfa76ac StaticDependenciesID=3a892b3ff4772ad3a656dd87823dad47 
+Asset Pipeline Refresh (id=d3f98dbdd4831a442952934312df9771): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_Ivory_Mask.png using Guid(441589f7fa2b85a44a8aa92ee238d9aa) (TextureImporter) -> (Import Result ID: '318a6b39493c69f0d926f299132f3f11') in 0.0089031 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3dab68ef94a63285841259f2254719c1 DependenciesID=efb3d0054b3582c6b8d45343441d3f1f StaticDependenciesID=5a199599cdee7581e8212e848ee79ebe 
+Asset Pipeline Refresh (id=8af6969254f05304793088b0ee25f7cb): Total: 0.026 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_OiledLeather_Mask.png using Guid(268be6faa178cc442bc9cbec52c52db7) (TextureImporter) -> (Import Result ID: '1d108d1434369d89ac89d6337ed4de0d') in 0.0089423 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8bcb7b5604b16f0584fe94dc7745986e DependenciesID=3b2e69262b2fa4c8c4cb27361d6f1d22 StaticDependenciesID=3c9c70107177871cb30d4aee57adecc4 
+Asset Pipeline Refresh (id=260fe0a7fea8fca459a3d64c5785a56a): Total: 0.025 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_OralTissue_Mask.png using Guid(0cd67ce77660b4b41a1ab17afc7daae4) (TextureImporter) -> (Import Result ID: '3bc3c6803afbaaa06ec715508991ab50') in 0.0089324 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3eaa02f2e48b45e2dbd1ab335db7362f DependenciesID=df70b7f2eebb7c7b7e842993f145c45a StaticDependenciesID=87c533d57d5f6fdea33164fc344f405b 
+Asset Pipeline Refresh (id=12d237abcd3d2b54dabfe866fe98e8c1): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_Recess_Mask.png using Guid(5dbb86d5fa720ae4a9948f13d743abd0) (TextureImporter) -> (Import Result ID: '94b6d9f7bc65a91a8078281498502b09') in 0.0086347 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3dbb3d60cf8e89d1b70740ad342119e7 DependenciesID=1406316d1da0f9cd8c604932b2d2402c StaticDependenciesID=62007ba56aeca81370dfe0744e4ec26c 
+Asset Pipeline Refresh (id=7ec554925d70d1240914f1497401b67b): Total: 0.026 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_SandstoneSkin_Mask.png using Guid(4dac726acc219d14e9add2b27dcf3a9f) (TextureImporter) -> (Import Result ID: '5094b6bd6477f85f0764da1648bcef2d') in 0.0117213 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f307e9a21f3257111605b9b830bdc291 DependenciesID=5dd49263299c610e1bb60c4f075094ae StaticDependenciesID=3ecb03bcf3871b4b9507717e73a0cec8 
+Asset Pipeline Refresh (id=f237b56ba8fcdf44bbe4ce86c9729d32): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/KragSkinProfile.asset using Guid(48717835e7b347c4c994a3624138bc08) (NativeFormatImporter) -> (Import Result ID: 'e078049fb04cd3897ea6c339d96053d9') in 0.0017821 seconds [static dependencies only]. Details - ImportResultOutputID=a695d695f632a83deef727215d41c304 DependenciesID=5dd5f40e6c56c43563645d96bbfa76ac StaticDependenciesID=3a892b3ff4772ad3a656dd87823dad47 
+Asset Pipeline Refresh (id=462de6c3b62383e48a679e84107ca100): Total: 0.015 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_Tongue_Mask.png using Guid(3860caba2b30efe4a8827d8e6478f663) (TextureImporter) -> (Import Result ID: 'bae6ceef0f31a72735368ada9366233a') in 0.004625 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d2b3bdafa5afebfcf27cb09c09a9ab31 DependenciesID=c534ef52540443c31c3aece7a4fdd5bc StaticDependenciesID=1b66f66f366dae4afa0f2b4bf356820e 
+Asset Pipeline Refresh (id=432dc99e6469a6840a9ce125cd5e3163): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Krag_WeatheredTeal_Mask.png using Guid(0032f46f1d38eb74a94e8ee8f0e6e679) (TextureImporter) -> (Import Result ID: 'ca516f01c532f12393ba0be496d7952f') in 0.0097576 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6e73ecae83c6aa061404a01255453488 DependenciesID=33d79c65e136f25d1406b3d816777e00 StaticDependenciesID=f7ee2d4c6901e556738c35145bbfc70d 
+Asset Pipeline Refresh (id=16c7c1f7352047a46b682069be21a950): Total: 0.027 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Natural.fbx using Guid(534f32475d005b6498ac2c9281ec7ada) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.900247%;
+Keyframe reduction: Ratio: 7.645562%;
+Keyframe reduction: Ratio: 12.931036%;
+Keyframe reduction: Ratio: 22.459166%;
+Keyframe reduction: Ratio: 13.000556%;
+Keyframe reduction: Ratio: 13.210625%;
+ -> (Import Result ID: 'd618e7e019097c17bce2394cc6261411') in 12.4347194 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2b72ba1138bf766bd1e561834f610a1 DependenciesID=08bf6bd663fd9edbe00d6dde0c7acaad StaticDependenciesID=90297cb96765707c273076fef4b04a2e 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=373357b1dba42c24b88a32375c98a4db): Total: 12.451 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=12443 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.072ms
+	Scan: 7.036ms
+	CategorizeAssets: 1.326ms
+	ImportOutOfDateAssets: 12437.938ms (0.292ms without children)
+		ImportManagerImport: 12436.383ms (0.569ms without children)
+		ReloadNativeAssets: 0.050ms
+		UnloadImportedAssets: 0.252ms
+		ReloadImportedAssets: 0.457ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.504ms
+		OnDemandSchedulerStart: 0.450ms
+	PostProcessAllAssets: 0.706ms
+		XRBuildSystem.XRAssetImported 0.057ms
+		MonoPostProcessAllAssets: 0.509ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.071ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.051ms
+	PostAssetChangesProfiler: 0.364ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.217ms
+	UnloadStreamsBegin: 0.074ms
+	PersistCurrentRevisions: 0.113ms
+	Untracked: 2.780ms
+
+Asset Pipeline Refresh (id=7e292f1757188124fbe3035b630617d3): Total: 0.016 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Crusher.fbx using Guid(27843aa7286de38419f3055bdb67677b) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.992612%;
+Keyframe reduction: Ratio: 7.610231%;
+Keyframe reduction: Ratio: 13.082479%;
+Keyframe reduction: Ratio: 22.459166%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 13.292171%;
+ -> (Import Result ID: 'a9b63d4365c4e69c443b84140d2a9d3d') in 11.8419445 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a377a6aba55d306f97b207c5d0200cc0 DependenciesID=8b0717c10cc6d2d726769e845456995d StaticDependenciesID=4e17a5fec521c5f23ac102546df15fdb 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=e3611a27293a44749a71b6904c18e855): Total: 11.860 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=11852 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.054ms
+	Scan: 9.249ms
+	CategorizeAssets: 1.458ms
+	ImportOutOfDateAssets: 11844.977ms (0.280ms without children)
+		ImportManagerImport: 11843.453ms (0.599ms without children)
+		ReloadNativeAssets: 0.057ms
+		UnloadImportedAssets: 0.275ms
+		ReloadImportedAssets: 0.391ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.453ms
+		OnDemandSchedulerStart: 0.452ms
+	PostProcessAllAssets: 0.677ms
+		XRBuildSystem.XRAssetImported 0.056ms
+		MonoPostProcessAllAssets: 0.481ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.074ms
+	PostAssetChangesProfiler: 0.361ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.181ms
+	UnloadStreamsBegin: 0.070ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.698ms
+
+Asset Pipeline Refresh (id=c8050597de3ac0f49a68ab9784218ecf): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_IronJaw.fbx using Guid(16d7f2abf2343bd47947a5c5fe14610e) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 7.687959%;
+Keyframe reduction: Ratio: 13.047529%;
+Keyframe reduction: Ratio: 22.368420%;
+Keyframe reduction: Ratio: 12.944938%;
+Keyframe reduction: Ratio: 13.327119%;
+ -> (Import Result ID: '1bef10b0b22b4418b1475dfd8b695b97') in 12.4132296 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d30c378fde2fa432eaecc298defef1cd DependenciesID=4cc40049134d10f32545dd1d0bb6574c StaticDependenciesID=e007f934504dc3be20d241231dd02bb8 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=de332025b3643ad4aa46e2e5a6843fb7): Total: 12.430 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=4 ms, native=12423 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.067ms
+	Scan: 7.646ms
+	ProcessAssetsWithTransientArtifactChanges: 0.051ms
+	CategorizeAssets: 1.496ms
+	ImportOutOfDateAssets: 12416.355ms (0.319ms without children)
+		ImportManagerImport: 12414.770ms (0.605ms without children)
+		ReloadNativeAssets: 0.051ms
+		UnloadImportedAssets: 0.282ms
+		ReloadImportedAssets: 0.381ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.439ms
+		OnDemandSchedulerStart: 0.489ms
+	PostProcessAllAssets: 0.822ms
+		XRBuildSystem.XRAssetImported 0.142ms
+		MonoPostProcessAllAssets: 0.487ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.071ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.051ms
+	PostAssetChangesProfiler: 0.501ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.183ms
+	UnloadStreamsBegin: 0.061ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.925ms
+
+Asset Pipeline Refresh (id=f3055dc803e5caa4d888ff3a1290ef9e): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/krag/Krag_Piston.fbx using Guid(725b9fc86852ad947bc912668e7610bc) (FBXImporter)Keyframe reduction: Ratio: 2.447318%;
+Keyframe reduction: Ratio: 13.084975%;
+Keyframe reduction: Ratio: 7.652628%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 22.504538%;
+Keyframe reduction: Ratio: 12.931034%;
+Keyframe reduction: Ratio: 13.164025%;
+ -> (Import Result ID: '63aefc108252b81630a9ac61bd4fa68d') in 12.008075 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2cf80553199986089c6671113617e10e DependenciesID=cd1cf7c1402d4ee567049faec6f4465b StaticDependenciesID=2b21814792009b4d1394d427d7ef23b3 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=68b426e152b3f0e408caefd43773a67a): Total: 12.024 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=12017 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 6.711ms
+	ProcessAssetsWithTransientArtifactChanges: 0.066ms
+	CategorizeAssets: 1.578ms
+	ImportOutOfDateAssets: 12011.391ms (0.406ms without children)
+		ImportManagerImport: 12009.857ms (0.713ms without children)
+		ReloadNativeAssets: 0.052ms
+		UnloadImportedAssets: 0.233ms
+		ReloadImportedAssets: 0.390ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.422ms
+		OnDemandSchedulerStart: 0.416ms
+	PostProcessAllAssets: 0.695ms
+		XRBuildSystem.XRAssetImported 0.061ms
+		MonoPostProcessAllAssets: 0.490ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.072ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.055ms
+	PostAssetChangesProfiler: 0.444ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.184ms
+	PersistCurrentRevisions: 0.115ms
+	Untracked: 2.920ms
+
+Asset Pipeline Refresh (id=5d2732adbf642594ab081d2645189146): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Nib_Brass_Mask.png using Guid(1ae215a712507844db8fa14f85e26b6d) (TextureImporter) -> (Import Result ID: '2caedc50d663d0231797282beedcd64d') in 0.4351123 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01efd6c8b72a727db5352d517063f2c7 DependenciesID=c7c6102f2a1dc199cd93ff95fbab9f08 StaticDependenciesID=aaa113a1f9020e8520fa05d6f4f66847 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=d18204a6f38f10f479e91125405dfa00): Total: 0.454 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=452 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 10.361ms
+	ProcessAssetsWithTransientArtifactChanges: 0.131ms
+	CategorizeAssets: 1.691ms
+	ImportOutOfDateAssets: 437.415ms (0.389ms without children)
+		ImportManagerImport: 435.892ms (0.274ms without children)
+		ReloadNativeAssets: 0.053ms
+		UnloadImportedAssets: 0.243ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.385ms
+		OnDemandSchedulerStart: 0.447ms
+	PostProcessAllAssets: 0.628ms
+		XRBuildSystem.XRAssetImported 0.075ms
+		MonoPostProcessAllAssets: 0.473ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.095ms
+	PostAssetChangesProfiler: 0.551ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.170ms
+	UnloadStreamsBegin: 0.099ms
+	PersistCurrentRevisions: 0.205ms
+	Untracked: 2.692ms
+
+Start importing Assets/Benchmark/Generated/Nib_Cloth_Mask.png using Guid(919469e86f4c228408681361e92e30d5) (TextureImporter) -> (Import Result ID: '9b3efea9bf3b365ecdaf3c4697d532f0') in 0.3711049 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=76f20bfb9d18fa694b5de5d4b181c178 DependenciesID=3bd29d8cf0e58d731c2a450ef0c78617 StaticDependenciesID=0b88781bc5f8a0e65831cadd8fe61889 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=f6e10a6d7c904084c9fc6cdb8a8dd252): Total: 0.387 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=385 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 8.685ms
+	CategorizeAssets: 1.333ms
+	ImportOutOfDateAssets: 373.085ms (0.398ms without children)
+		ImportManagerImport: 371.668ms (0.264ms without children)
+		ReloadNativeAssets: 0.060ms
+		UnloadImportedAssets: 0.197ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.431ms
+		OnDemandSchedulerStart: 0.321ms
+	PostProcessAllAssets: 0.646ms
+		XRBuildSystem.XRAssetImported 0.053ms
+		MonoPostProcessAllAssets: 0.518ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.140ms
+	PostAssetChangesProfiler: 0.410ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.183ms
+	UnloadStreamsBegin: 0.100ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.387ms
+
+Start importing Assets/Benchmark/Generated/Nib_Dark_Mask.png using Guid(2d502eff476df834bb6310101f57c64c) (TextureImporter) -> (Import Result ID: 'd8a15b7c90a9184997837392700c4cc0') in 0.3732902 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=738d969bf974a18ec7c0b3bc02bf4968 DependenciesID=5d8e321c7ee797b0c41b5ad8fdec5086 StaticDependenciesID=521e69ec6a3983cd019198508758054e 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=f275aabaea9b5ad4188ad83fa543079d): Total: 0.394 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=392 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.058ms
+	Scan: 12.876ms
+	CategorizeAssets: 1.558ms
+	ImportOutOfDateAssets: 375.364ms (0.360ms without children)
+		ImportManagerImport: 373.866ms (0.266ms without children)
+		ReloadNativeAssets: 0.063ms
+		UnloadImportedAssets: 0.201ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.429ms
+		OnDemandSchedulerStart: 0.439ms
+	PostProcessAllAssets: 0.649ms
+		XRBuildSystem.XRAssetImported 0.070ms
+		MonoPostProcessAllAssets: 0.491ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.094ms
+	PostAssetChangesProfiler: 0.436ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.378ms
+	UnloadStreamsBegin: 0.137ms
+	PersistCurrentRevisions: 0.115ms
+	Untracked: 2.816ms
+
+Start importing Assets/Benchmark/Generated/Nib_EarInner_Mask.png using Guid(024767681a630834b9256891c8d4fcba) (TextureImporter) -> (Import Result ID: 'dcbc00af30bf587b72f8ddfdaa72a47f') in 0.3693358 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2c25f1a3a3556b04330b5d53638fc0d6 DependenciesID=1eb4cbcd5dfdb2c53a9efb560478de2a StaticDependenciesID=910ed7662d4c08c8b8b4715d730becc8 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=0268071350630d04897074eb829281ec): Total: 0.386 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=384 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 9.481ms
+	CategorizeAssets: 1.270ms
+	ImportOutOfDateAssets: 371.380ms (0.265ms without children)
+		ImportManagerImport: 369.952ms (0.288ms without children)
+		ReloadNativeAssets: 0.062ms
+		UnloadImportedAssets: 0.246ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.421ms
+		OnDemandSchedulerStart: 0.424ms
+	PostProcessAllAssets: 0.605ms
+		XRBuildSystem.XRAssetImported 0.058ms
+		MonoPostProcessAllAssets: 0.469ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.094ms
+	PostAssetChangesProfiler: 0.393ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.169ms
+	UnloadStreamsBegin: 0.105ms
+	PersistCurrentRevisions: 0.117ms
+	Untracked: 2.199ms
+
+Start importing Assets/Benchmark/Generated/NibSkinProfile.asset using Guid(81cb02986b243f64fa87086d24882648) (NativeFormatImporter) -> (Import Result ID: 'a0623815575f5aac1c32ab2b56c5a6bd') in 0.0069864 seconds [static dependencies only]. Details - ImportResultOutputID=ea79b5a382c34e131e19ca4d6cdb6b31 DependenciesID=688171ce19b355bc042e32d97a201301 StaticDependenciesID=1735f6c6c542ffbf6ea7770f93bdd89b 
+Asset Pipeline Refresh (id=ee8a74b94fe390a4a9d91b460ca7237f): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Nib_Eye_Mask.png using Guid(4abd879e60f902e47830f2cfa083d921) (TextureImporter) -> (Import Result ID: '2af674a2772a3742fdc9bc8e64dcd78c') in 0.3632583 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cef8a55b40eb7b821feb3f9fa4292dfa DependenciesID=959e0cfc75e5a671ba54616ba1c50ca3 StaticDependenciesID=7d0e7a0a9c84236a27444853d7693b35 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=ce0525c6a9b1b9047830431d835e3c96): Total: 0.383 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=380 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.057ms
+	Scan: 11.164ms
+	CategorizeAssets: 1.460ms
+	ImportOutOfDateAssets: 366.172ms (0.337ms without children)
+		ImportManagerImport: 363.938ms (0.275ms without children)
+		ReloadNativeAssets: 0.063ms
+		UnloadImportedAssets: 0.236ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.094ms
+		OnDemandSchedulerStart: 0.496ms
+	PostProcessAllAssets: 0.718ms
+		XRBuildSystem.XRAssetImported 0.077ms
+		MonoPostProcessAllAssets: 0.560ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.102ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.082ms
+	PostAssetChangesProfiler: 0.585ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.174ms
+	UnloadStreamsBegin: 0.127ms
+	PersistCurrentRevisions: 0.116ms
+	Untracked: 2.414ms
+
+Start importing Assets/Benchmark/Generated/Nib_Gum_Mask.png using Guid(ff2eed43283b2bc4da90f6b8a77fed75) (TextureImporter) -> (Import Result ID: 'bdd71a0708edc9d78ce2085534789846') in 0.3720969 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=13e003c48560d744b5ac974bc886d6ed DependenciesID=44ba38bd3ee1b3413ef70def460fa086 StaticDependenciesID=97e5bd8a56e36502e3ee25314d51864c 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=e0fc923a8c4434448a2a6a98857a1775): Total: 0.390 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=387 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.050ms
+	Scan: 9.927ms
+	CategorizeAssets: 1.458ms
+	ImportOutOfDateAssets: 374.505ms (0.499ms without children)
+		ImportManagerImport: 372.757ms (0.346ms without children)
+		ReloadNativeAssets: 0.122ms
+		UnloadImportedAssets: 0.219ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.471ms
+		OnDemandSchedulerStart: 0.429ms
+	PostProcessAllAssets: 0.756ms
+		XRBuildSystem.XRAssetImported 0.064ms
+		MonoPostProcessAllAssets: 0.611ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.156ms
+	PostAssetChangesProfiler: 0.468ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.169ms
+	UnloadStreamsBegin: 0.104ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.253ms
+
+Start importing Assets/Benchmark/Generated/Nib_Hair_Mask.png using Guid(30cbc0441aeae4e4cb86bd0ac6fa9773) (TextureImporter) -> (Import Result ID: '8d6f4ef3a37d2d5ce84e880675fd6b10') in 0.3617757 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=40afd78385c9a7a1c051eb05a82a19d5 DependenciesID=75a415c12aa2f062e6cccec178e41c1f StaticDependenciesID=47c1dc8e0894a1ccd0b602161d1bb4b1 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=605be9d479355a043bf719de2fc9646c): Total: 0.381 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=378 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 11.443ms
+	CategorizeAssets: 1.417ms
+	ImportOutOfDateAssets: 363.846ms (0.273ms without children)
+		ImportManagerImport: 362.413ms (0.289ms without children)
+		ReloadNativeAssets: 0.064ms
+		UnloadImportedAssets: 0.206ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.473ms
+		OnDemandSchedulerStart: 0.409ms
+	PostProcessAllAssets: 0.618ms
+		XRBuildSystem.XRAssetImported 0.058ms
+		MonoPostProcessAllAssets: 0.481ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.094ms
+	PostAssetChangesProfiler: 0.458ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.186ms
+	UnloadStreamsBegin: 0.100ms
+	PersistCurrentRevisions: 0.115ms
+	Untracked: 2.211ms
+
+Start importing Assets/Benchmark/Generated/Nib_Leather_Mask.png using Guid(8bd072e67c0a5e94799db8e27d9c4f76) (TextureImporter) -> (Import Result ID: 'dcc5c14663ea689659d6b30ae6f95d0b') in 0.3652879 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6131f74fe2b91caa43bcd8d72f796406 DependenciesID=b4291370bb10cb982989d1f9a4858cf1 StaticDependenciesID=06e763fe87b4e2942012e5736d839cf3 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=bb5ee56a9ed183041bf567292cb3fa8b): Total: 0.383 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=381 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 10.052ms
+	CategorizeAssets: 1.450ms
+	ImportOutOfDateAssets: 367.546ms (0.375ms without children)
+		ImportManagerImport: 365.951ms (0.333ms without children)
+		ReloadNativeAssets: 0.068ms
+		UnloadImportedAssets: 0.219ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.433ms
+		OnDemandSchedulerStart: 0.491ms
+	PostProcessAllAssets: 0.663ms
+		XRBuildSystem.XRAssetImported 0.064ms
+		MonoPostProcessAllAssets: 0.518ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.091ms
+	PostAssetChangesProfiler: 0.464ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.177ms
+	UnloadStreamsBegin: 0.099ms
+	PersistCurrentRevisions: 0.154ms
+	Untracked: 2.393ms
+
+Start importing Assets/Benchmark/Generated/Nib_Lens_Mask.png using Guid(c51a386ff1a06fc4d9537bd60d38bbeb) (TextureImporter) -> (Import Result ID: '6af941c1db4dfec94dea3e36f36216ad') in 0.3913132 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=736173f20c86c5e2d106ccee4310c5f8 DependenciesID=4124c184b8735bc0a1dd0ad002af9f5d StaticDependenciesID=7711a3c6c6d3bcecda49aea1da10c1d5 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=ff1eac2031865f14d9a172e5075b9bb8): Total: 0.409 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=406 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 9.902ms
+	CategorizeAssets: 1.202ms
+	ImportOutOfDateAssets: 393.423ms (0.324ms without children)
+		ImportManagerImport: 391.975ms (0.322ms without children)
+		ReloadNativeAssets: 0.061ms
+		UnloadImportedAssets: 0.209ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.406ms
+		OnDemandSchedulerStart: 0.440ms
+	PostProcessAllAssets: 0.688ms
+		XRBuildSystem.XRAssetImported 0.061ms
+		MonoPostProcessAllAssets: 0.539ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.099ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.067ms
+	PostAssetChangesProfiler: 0.527ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.225ms
+	UnloadStreamsBegin: 0.126ms
+	PersistCurrentRevisions: 0.122ms
+	Untracked: 2.605ms
+
+Start importing Assets/Benchmark/Generated/Nib_MouthInterior_Mask.png using Guid(cfdfeff5bcf1ea149b9354b201e9afbc) (TextureImporter) -> (Import Result ID: '038ae73f8a4ac2c0b26d857230840d5b') in 0.39565 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=95e9f9fb56cb66500bab6609943c9a24 DependenciesID=c5dc1380d9c05bf3b4d4bbc66fa0699e StaticDependenciesID=fcc70843010a3931ea3790135951fd04 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=753b022a6b965a94bbbbd60b7f19e388): Total: 0.414 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=411 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.073ms
+	Scan: 10.680ms
+	CategorizeAssets: 1.320ms
+	ImportOutOfDateAssets: 397.790ms (0.310ms without children)
+		ImportManagerImport: 396.358ms (0.338ms without children)
+		ReloadNativeAssets: 0.070ms
+		UnloadImportedAssets: 0.247ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.425ms
+		OnDemandSchedulerStart: 0.373ms
+	PostProcessAllAssets: 0.766ms
+		XRBuildSystem.XRAssetImported 0.059ms
+		MonoPostProcessAllAssets: 0.630ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.147ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.064ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.063ms
+	PostAssetChangesProfiler: 0.459ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.180ms
+	UnloadStreamsBegin: 0.102ms
+	PersistCurrentRevisions: 0.111ms
+	Untracked: 2.311ms
+
+Start importing Assets/Benchmark/Generated/Nib_Muzzle_Mask.png using Guid(9e85fb96ef1389a4394248d0ef35897c) (TextureImporter) -> (Import Result ID: '84cd8d3a5b12a551844d2a3d86ea67ea') in 0.3856979 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b4361b4de13e44173eb94e805b41d9f1 DependenciesID=be9ba7d49e0759e7ac8965cb0cc9abc3 StaticDependenciesID=1ece2ee2a9d926939e943d41112ded98 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=84d9af2fb79352a48a5eea70c6cb2026): Total: 0.402 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=400 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 9.613ms
+	CategorizeAssets: 1.261ms
+	ImportOutOfDateAssets: 387.617ms (0.349ms without children)
+		ImportManagerImport: 386.325ms (0.281ms without children)
+		ReloadNativeAssets: 0.068ms
+		UnloadImportedAssets: 0.178ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.367ms
+		OnDemandSchedulerStart: 0.324ms
+	PostProcessAllAssets: 0.610ms
+		XRBuildSystem.XRAssetImported 0.054ms
+		MonoPostProcessAllAssets: 0.484ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.093ms
+	PostAssetChangesProfiler: 0.451ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.208ms
+	UnloadStreamsBegin: 0.104ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.264ms
+
+Start importing Assets/Benchmark/Generated/NibSkinProfile.asset using Guid(81cb02986b243f64fa87086d24882648) (NativeFormatImporter) -> (Import Result ID: 'a0623815575f5aac1c32ab2b56c5a6bd') in 0.0017427 seconds [static dependencies only]. Details - ImportResultOutputID=ea79b5a382c34e131e19ca4d6cdb6b31 DependenciesID=688171ce19b355bc042e32d97a201301 StaticDependenciesID=1735f6c6c542ffbf6ea7770f93bdd89b 
+Asset Pipeline Refresh (id=bead0125d8fe93b41b6793aa2f30d74c): Total: 0.017 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Nib_Skin_Mask.png using Guid(d66c438b8391865418ec391447837f02) (TextureImporter) -> (Import Result ID: 'c5ad59ebd79b62088ba04b49f7cfa44f') in 1.6834919 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e5fa9135746d7ae6a2c565b85799fba4 DependenciesID=6464d762be8529aeb3f9056f72c66d7f StaticDependenciesID=8053edab7badb176efd2059165f80fb9 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=853da0cc2902c854ea1ce42fd7eac8fc): Total: 1.699 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1697 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 8.318ms
+	CategorizeAssets: 1.275ms
+	ImportOutOfDateAssets: 1685.687ms (0.294ms without children)
+		ImportManagerImport: 1684.258ms (0.347ms without children)
+		ReloadNativeAssets: 0.067ms
+		UnloadImportedAssets: 0.203ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.375ms
+		OnDemandSchedulerStart: 0.484ms
+	PostProcessAllAssets: 0.713ms
+		XRBuildSystem.XRAssetImported 0.066ms
+		MonoPostProcessAllAssets: 0.564ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.134ms
+	PostAssetChangesProfiler: 0.508ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.161ms
+	UnloadStreamsBegin: 0.119ms
+	PersistCurrentRevisions: 0.115ms
+	Untracked: 2.296ms
+
+Start importing Assets/Benchmark/Generated/NibSkinProfile.asset using Guid(81cb02986b243f64fa87086d24882648) (NativeFormatImporter) -> (Import Result ID: 'a0623815575f5aac1c32ab2b56c5a6bd') in 0.0020173 seconds [static dependencies only]. Details - ImportResultOutputID=ea79b5a382c34e131e19ca4d6cdb6b31 DependenciesID=688171ce19b355bc042e32d97a201301 StaticDependenciesID=1735f6c6c542ffbf6ea7770f93bdd89b 
+Asset Pipeline Refresh (id=a72152495c896ff48813ddd4f6059a2d): Total: 0.016 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Generated/Nib_Steel_Mask.png using Guid(842e6b1527333d04fb716e453b2fba6a) (TextureImporter) -> (Import Result ID: 'f405453e1916b9256a2e46c28d221cf9') in 0.4108636 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a71e9e34dbd1e08e210fc0dc015c3efd DependenciesID=ea62dbd63a9a4092e8f31f3aec9a05c8 StaticDependenciesID=454f689187e0b44d18c7396af4abfd53 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=02e8e36ef40fd2b49b2a19ae4ff3daf8): Total: 0.431 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=429 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.053ms
+	Scan: 13.012ms
+	CategorizeAssets: 1.268ms
+	ImportOutOfDateAssets: 412.841ms (0.244ms without children)
+		ImportManagerImport: 411.536ms (0.321ms without children)
+		ReloadNativeAssets: 0.070ms
+		UnloadImportedAssets: 0.203ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.392ms
+		OnDemandSchedulerStart: 0.389ms
+	PostProcessAllAssets: 0.601ms
+		XRBuildSystem.XRAssetImported 0.058ms
+		MonoPostProcessAllAssets: 0.469ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.097ms
+	PostAssetChangesProfiler: 0.448ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.185ms
+	UnloadStreamsBegin: 0.160ms
+	PersistCurrentRevisions: 0.146ms
+	Untracked: 2.325ms
+
+Start importing Assets/Benchmark/Generated/Nib_Stitch_Mask.png using Guid(ed8dc820e602a864aabc5a6776d8ffca) (TextureImporter) -> (Import Result ID: '7854fef6d9f41bfb87fd3913319fc112') in 0.3748695 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c923bd6318d4ab30f1b789ecfe8f1cb3 DependenciesID=604fb801d455e474fe44a14a45cb1857 StaticDependenciesID=00b263e2529fb035d07faa7ca7fc6a2d 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=39dfd8a3fb509d74eaacc6f9df771f46): Total: 0.392 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=390 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.054ms
+	Scan: 10.057ms
+	CategorizeAssets: 1.316ms
+	ImportOutOfDateAssets: 377.134ms (0.386ms without children)
+		ImportManagerImport: 375.602ms (0.376ms without children)
+		ReloadNativeAssets: 0.069ms
+		UnloadImportedAssets: 0.222ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.407ms
+		OnDemandSchedulerStart: 0.426ms
+	PostProcessAllAssets: 0.596ms
+		XRBuildSystem.XRAssetImported 0.059ms
+		MonoPostProcessAllAssets: 0.464ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.095ms
+	PostAssetChangesProfiler: 0.412ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.205ms
+	UnloadStreamsBegin: 0.106ms
+	PersistCurrentRevisions: 0.112ms
+	Untracked: 2.319ms
+
+Start importing Assets/Benchmark/Generated/Nib_Teal_Mask.png using Guid(b4fcb3e00790d284d8df6bdc8befa1e8) (TextureImporter) -> (Import Result ID: 'c750b51a587ce871ccfe807c668fe67e') in 0.3797621 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=70cbeb98bdb69c863d767f125afb16b2 DependenciesID=1a668884353096acf5066c74ec95c908 StaticDependenciesID=13708460da6bc594cf71a4cd655585e6 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=04c732841e8e712489c036cee94e77d1): Total: 0.398 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=395 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 10.445ms
+	CategorizeAssets: 1.326ms
+	ImportOutOfDateAssets: 381.781ms (0.362ms without children)
+		ImportManagerImport: 380.380ms (0.268ms without children)
+		ReloadNativeAssets: 0.069ms
+		UnloadImportedAssets: 0.210ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.381ms
+		OnDemandSchedulerStart: 0.370ms
+	PostProcessAllAssets: 0.851ms
+		XRBuildSystem.XRAssetImported 0.057ms
+		MonoPostProcessAllAssets: 0.717ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.137ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.083ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.055ms
+	PostAssetChangesProfiler: 0.499ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.173ms
+	UnloadStreamsBegin: 0.134ms
+	PersistCurrentRevisions: 0.129ms
+	Untracked: 2.385ms
+
+Start importing Assets/Benchmark/Generated/Nib_Tongue_Mask.png using Guid(3abd9bd8c53234447aa7b163cccbf83b) (TextureImporter) -> (Import Result ID: '4b63cf2f15c756e18cc2e22bcb7ca4b5') in 0.3752356 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4a9c2521b544ea2713f11545bb5903e4 DependenciesID=b2c738d6c597743cb7a961d6dfd780a7 StaticDependenciesID=e64104d1ed560f1402d04aa6c3f4cc75 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=3bf957c840071364996f81c73c2a6c3b): Total: 0.392 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=390 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.051ms
+	Scan: 9.376ms
+	CategorizeAssets: 1.261ms
+	ImportOutOfDateAssets: 377.273ms (0.293ms without children)
+		ImportManagerImport: 375.820ms (0.281ms without children)
+		ReloadNativeAssets: 0.071ms
+		UnloadImportedAssets: 0.174ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.418ms
+		OnDemandSchedulerStart: 0.491ms
+	PostProcessAllAssets: 0.758ms
+		XRBuildSystem.XRAssetImported 0.113ms
+		MonoPostProcessAllAssets: 0.534ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.094ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.061ms
+	PostAssetChangesProfiler: 0.492ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.190ms
+	UnloadStreamsBegin: 0.099ms
+	PersistCurrentRevisions: 0.179ms
+	Untracked: 2.322ms
+
+Start importing Assets/Benchmark/Generated/Nib_Tooth_Mask.png using Guid(083d1419152577743907dbdf4888b8a6) (TextureImporter) -> (Import Result ID: 'e17a4e17f29679cd0651d7a3da8e0178') in 0.386402 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=35f344f9f856411995b9fa9db8312dd4 DependenciesID=69fc117c87a797d070be5e58081bde29 StaticDependenciesID=e0f758954f0c2b553919176a503dcd4e 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=0cbe5d94ff638a041bc1c177ba3c052d): Total: 0.406 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=403 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.060ms
+	Scan: 11.186ms
+	CategorizeAssets: 1.848ms
+	ImportOutOfDateAssets: 388.633ms (0.356ms without children)
+		ImportManagerImport: 387.067ms (0.308ms without children)
+		ReloadNativeAssets: 0.071ms
+		UnloadImportedAssets: 0.237ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.475ms
+		OnDemandSchedulerStart: 0.418ms
+	PostProcessAllAssets: 0.696ms
+		XRBuildSystem.XRAssetImported 0.067ms
+		MonoPostProcessAllAssets: 0.537ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.110ms
+	PostAssetChangesProfiler: 0.456ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.212ms
+	UnloadStreamsBegin: 0.113ms
+	PersistCurrentRevisions: 0.147ms
+	Untracked: 2.440ms
+
+Start importing Assets/Benchmark/Generated/Nib_Workwear_Mask.png using Guid(170c9554fa1d74f4fa774859093bd50f) (TextureImporter) -> (Import Result ID: '51538a721c9f7f785b7f5b646f8717ce') in 0.4085817 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4399f67ba2ef001d02b0f28248d5103d DependenciesID=34a696bdba140092e880e423c77a1c0a StaticDependenciesID=e5d670ef5c0060b4b650a78eee71112f 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=2e1658d65b9050c458b2c9d4305a4b3f): Total: 0.433 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=430 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	Scan: 16.878ms
+	CategorizeAssets: 1.372ms
+	ImportOutOfDateAssets: 410.488ms (0.248ms without children)
+		ImportManagerImport: 409.190ms (0.275ms without children)
+		ReloadNativeAssets: 0.074ms
+		UnloadImportedAssets: 0.189ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.383ms
+		OnDemandSchedulerStart: 0.396ms
+	PostProcessAllAssets: 0.626ms
+		XRBuildSystem.XRAssetImported 0.055ms
+		MonoPostProcessAllAssets: 0.497ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.094ms
+	PostAssetChangesProfiler: 0.516ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.171ms
+	UnloadStreamsBegin: 0.103ms
+	PersistCurrentRevisions: 0.113ms
+	Untracked: 2.204ms
+
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_Natural.fbx using Guid(029039fa1ab1a7245a9c02ec3dd23a6b) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102973%;
+Keyframe reduction: Ratio: 11.322198%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: 'f645930873c8d25ce863d9c71efbbb1e') in 7.6069483 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3505175391d6e6ccc6a52f4ac935ac66 DependenciesID=0506055449eb5561a24064222e080d40 StaticDependenciesID=bcb2a0b2a27bb23a0d4e65bcd00f4795 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=211b5a6909072dd4292b5b4dcb2a2aec): Total: 7.624 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=7615 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 7.165ms
+	CategorizeAssets: 1.521ms
+	ImportOutOfDateAssets: 7610.402ms (0.380ms without children)
+		ImportManagerImport: 7608.655ms (0.680ms without children)
+		ReloadNativeAssets: 0.073ms
+		UnloadImportedAssets: 0.261ms
+		ReloadImportedAssets: 0.424ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.580ms
+		OnDemandSchedulerStart: 0.447ms
+	PostProcessAllAssets: 0.733ms
+		XRBuildSystem.XRAssetImported 0.061ms
+		MonoPostProcessAllAssets: 0.535ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.078ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.053ms
+	PostAssetChangesProfiler: 0.543ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.153ms
+	UnloadStreamsBegin: 0.066ms
+	PersistCurrentRevisions: 0.121ms
+	Untracked: 2.769ms
+
+Asset Pipeline Refresh (id=0bb7275551535b24f8c1a316554c5f7d): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_GripReplacement.fbx using Guid(5561f32e203adcd428c5a5a2153c922b) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102972%;
+Keyframe reduction: Ratio: 11.322197%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: '1384a4ec1f246ffe55e25c02d244fb47') in 7.9309165 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cab4c3955ed56f6e2b3a4459faf4851 DependenciesID=8e191ad364584bedfcbe8a196697cd5f StaticDependenciesID=1a5efe6d3d2055114f08642bc573a670 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=0ba5b864a0be99348b93d895caefa236): Total: 7.948 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=7939 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	ApplyChangesToAssetFolders: 0.065ms
+	Scan: 7.183ms
+	ProcessAssetsWithTransientArtifactChanges: 0.053ms
+	CategorizeAssets: 1.614ms
+	ImportOutOfDateAssets: 7934.603ms (0.395ms without children)
+		ImportManagerImport: 7932.954ms (0.744ms without children)
+		ReloadNativeAssets: 0.071ms
+		UnloadImportedAssets: 0.245ms
+		ReloadImportedAssets: 0.677ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.465ms
+		OnDemandSchedulerStart: 0.466ms
+	PostProcessAllAssets: 0.690ms
+		XRBuildSystem.XRAssetImported 0.062ms
+		MonoPostProcessAllAssets: 0.490ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.073ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.051ms
+	PostAssetChangesProfiler: 0.626ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.168ms
+	PersistCurrentRevisions: 0.114ms
+	Untracked: 2.790ms
+
+Asset Pipeline Refresh (id=b9b0f153a84c6bf4e9226e9736ba76d1): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Benchmark/Imported/characters/nib/Nib_LegReplacement.fbx using Guid(b57a4e888fec62245961c1b47ddfcc37) (FBXImporter)Keyframe reduction: Ratio: 1.858492%;
+Keyframe reduction: Ratio: 11.053564%;
+Keyframe reduction: Ratio: 4.182774%;
+Keyframe reduction: Ratio: 11.498383%;
+Keyframe reduction: Ratio: 15.102973%;
+Keyframe reduction: Ratio: 11.322197%;
+Keyframe reduction: Ratio: 11.304348%;
+ -> (Import Result ID: 'b8f35bad1c753e39ef9bc1ba0fa34066') in 7.3431296 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c899544ba6bc84c23689bb2722a1ccd2 DependenciesID=440f04dbc1001e1bacf575b938fe15fa StaticDependenciesID=0632b5c1e052d0fb2cfc2001f65e457b 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=8b9acce5f5b197145a1845c9c6e24610): Total: 7.359 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=2 (actual=1, local cache=1, cache server=0)
+		Asset DB Process Time: managed=6 ms, native=7351 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 7.131ms
+	CategorizeAssets: 1.330ms
+	ImportOutOfDateAssets: 7346.149ms (0.266ms without children)
+		ImportManagerImport: 7344.694ms (0.642ms without children)
+		ReloadNativeAssets: 0.072ms
+		UnloadImportedAssets: 0.244ms
+		ReloadImportedAssets: 0.388ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.387ms
+		OnDemandSchedulerStart: 0.480ms
+	PostProcessAllAssets: 0.672ms
+		XRBuildSystem.XRAssetImported 0.056ms
+		MonoPostProcessAllAssets: 0.485ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.073ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.051ms
+	PostAssetChangesProfiler: 0.486ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.244ms
+	UnloadStreamsBegin: 0.055ms
+	PersistCurrentRevisions: 0.113ms
+	Untracked: 3.149ms
+
+Asset Pipeline Refresh (id=0668ceb28372d084c824280c74870bf0): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2431 unused Assets / (68.8 MB). Loaded Objects now: 6119.
+Memory consumption went from 0.84 GB to 0.78 GB.
+Total: 13.990800 ms (FindLiveObjects: 0.515400 ms CreateObjectMapping: 0.480400 ms MarkObjects: 5.892000 ms  DeleteObjects: 7.101800 ms)
+
+Exception: Imported dune coordinate/collision mismatch: {"sourcePoint":{"x":-1.350000023841858,"y":0.0,"z":0.8832441568374634},"actualPoint":{"x":-1.350000023841858,"y":0.8830562233924866,"z":-8.891191782822716e-9},"actualNormal":{"x":-0.16801239550113679,"y":0.9849478602409363,"z":-0.04061460122466087},"hit":true,"passed":false,"heightErrorMeters":0.00018793344497680664,"normalErrorDegrees":4.838371753692627}
+  at KragKings.Editor.BenchmarkBuild.Prepare () [0x00586] in D:\Dev\Krag-Kings\benchmark\unity\Assets\Benchmark\Editor\BenchmarkBuild.cs:140 
+  at KragKings.Editor.BenchmarkBuild.PrepareAndBuild () [0x00000] in D:\Dev\Krag-Kings\benchmark\unity\Assets\Benchmark\Editor\BenchmarkBuild.cs:38 
+
+(Filename: Assets/Benchmark/Editor/BenchmarkBuild.cs Line: 140)
+
+executeMethod method KragKings.Editor.BenchmarkBuild.PrepareAndBuild threw exception.
+Exiting without the bug reporter. Application will terminate with return code 1

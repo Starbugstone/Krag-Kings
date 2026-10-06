@@ -1,0 +1,542 @@
+{
+    "engine": "6000.4.4f1",
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "resolution": "1920x1080",
+    "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+    "buildGuid": "b5fa6342a69f462d8e2f6510ee0056e6",
+    "checks": [
+        "Imported dune coordinates and upward collision normals match the shared source",
+        "Independent overlapping Krag melee and Nib shooting while changing camera",
+        "Krag: ray selection",
+        "Krag_Natural: variants/actions exercised",
+        "Krag_Crusher: variants/actions exercised",
+        "Krag_IronJaw: variants/actions exercised",
+        "Krag_Piston: variants/actions exercised",
+        "Krag: dune traversal completed",
+        "Nib: ray selection",
+        "Nib_Natural: variants/actions exercised",
+        "Nib_GripReplacement: variants/actions exercised",
+        "Nib_LegReplacement: variants/actions exercised",
+        "Nib: dune traversal completed",
+        "Krag_Natural: actual firing markers aim within diagnostic forward tolerance",
+        "Krag_Crusher: actual firing markers aim within diagnostic forward tolerance",
+        "Krag_IronJaw: actual firing markers aim within diagnostic forward tolerance",
+        "Krag_Piston: actual firing markers aim within diagnostic forward tolerance"
+    ],
+    "failures": [],
+    "deformation": [
+        {
+            "variant": "Krag_Natural",
+            "maximumBodyMorphWeight": 70.21509552001953,
+            "maximumFacialMorphWeight": 99.75302124023438,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 17.99644660949707
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.62096405029297
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.77327728271485
+                }
+            ]
+        },
+        {
+            "variant": "Krag_Crusher",
+            "maximumBodyMorphWeight": 70.12748718261719,
+            "maximumFacialMorphWeight": 99.62874603271485,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 84.01557159423828
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.68494415283203
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.78829193115235
+                }
+            ]
+        },
+        {
+            "variant": "Krag_IronJaw",
+            "maximumBodyMorphWeight": 70.23460388183594,
+            "maximumFacialMorphWeight": 99.06429290771485,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 83.70335388183594
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.80435943603516
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.99961853027344
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.72431182861328
+                }
+            ]
+        },
+        {
+            "variant": "Krag_Piston",
+            "maximumBodyMorphWeight": 69.96314239501953,
+            "maximumFacialMorphWeight": 99.02970886230469,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 84.93968200683594
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 69.72442626953125
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 70.9996109008789
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 69.78924560546875
+                }
+            ]
+        },
+        {
+            "variant": "Nib_Natural",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 97.86164855957031,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 77.20167541503906
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 54.1219482421875
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.93090057373047
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.70890808105469
+                }
+            ]
+        },
+        {
+            "variant": "Nib_GripReplacement",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 98.68415069580078,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 75.28671264648438
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 54.06165313720703
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.93040466308594
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.67720031738281
+                }
+            ]
+        },
+        {
+            "variant": "Nib_LegReplacement",
+            "maximumBodyMorphWeight": 100.0,
+            "maximumFacialMorphWeight": 97.56539154052735,
+            "actionExpressions": [
+                {
+                    "action": "Idle",
+                    "maximumFacialMorphWeight": 76.29600524902344
+                },
+                {
+                    "action": "Melee",
+                    "maximumFacialMorphWeight": 54.10319137573242
+                },
+                {
+                    "action": "Shoot",
+                    "maximumFacialMorphWeight": 83.93018341064453
+                },
+                {
+                    "action": "Hit",
+                    "maximumFacialMorphWeight": 89.68917083740235
+                }
+            ]
+        }
+    ],
+    "shots": [
+        {
+            "species": "Nib",
+            "variant": "Nib_Natural",
+            "requestedNormalizedTime": 0.46000000834465029,
+            "observedNormalizedTime": 0.4639091491699219,
+            "forwardDeviationDegrees": 0.08156468719244003,
+            "origin": {
+                "x": 1.1994714736938477,
+                "y": 2.2060158252716066,
+                "z": 0.483271062374115
+            },
+            "direction": {
+                "x": -0.0013560035731643439,
+                "y": 0.0004947177949361503,
+                "z": 0.9999989867210388
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Natural",
+            "requestedNormalizedTime": 0.4000000059604645,
+            "observedNormalizedTime": 0.40926361083984377,
+            "forwardDeviationDegrees": 3.73695969581604,
+            "origin": {
+                "x": -1.0673255920410157,
+                "y": 2.4309582710266115,
+                "z": 0.9103988409042358
+            },
+            "direction": {
+                "x": 0.0023508076556026937,
+                "y": 0.06513358652591706,
+                "z": 0.9978737235069275
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Natural",
+            "requestedNormalizedTime": 0.5799999833106995,
+            "observedNormalizedTime": 0.5940780639648438,
+            "forwardDeviationDegrees": 2.14949369430542,
+            "origin": {
+                "x": -1.0738862752914429,
+                "y": 2.4120137691497804,
+                "z": 0.9276012182235718
+            },
+            "direction": {
+                "x": -0.006744890008121729,
+                "y": 0.03689543157815933,
+                "z": 0.9992963671684265
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Crusher",
+            "requestedNormalizedTime": 0.4000000059604645,
+            "observedNormalizedTime": 0.4081993103027344,
+            "forwardDeviationDegrees": 3.790597438812256,
+            "origin": {
+                "x": -1.0676437616348267,
+                "y": 2.431812286376953,
+                "z": 0.9098769426345825
+            },
+            "direction": {
+                "x": 0.0019049659604206682,
+                "y": 0.06608252972364426,
+                "z": 0.9978123307228088
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Crusher",
+            "requestedNormalizedTime": 0.5799999833106995,
+            "observedNormalizedTime": 0.5881462097167969,
+            "forwardDeviationDegrees": 2.1694326400756838,
+            "origin": {
+                "x": -1.0721087455749512,
+                "y": 2.411799192428589,
+                "z": 0.9263901710510254
+            },
+            "direction": {
+                "x": -0.004317768383771181,
+                "y": 0.03760821744799614,
+                "z": 0.9992832541465759
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_IronJaw",
+            "requestedNormalizedTime": 0.4000000059604645,
+            "observedNormalizedTime": 0.40026092529296877,
+            "forwardDeviationDegrees": 4.003843784332275,
+            "origin": {
+                "x": -1.0689979791641236,
+                "y": 2.435220718383789,
+                "z": 0.9078150987625122
+            },
+            "direction": {
+                "x": 0.0000023841926122258885,
+                "y": 0.06982346624135971,
+                "z": 0.9975593090057373
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_IronJaw",
+            "requestedNormalizedTime": 0.5799999833106995,
+            "observedNormalizedTime": 0.5886878967285156,
+            "forwardDeviationDegrees": 2.169071674346924,
+            "origin": {
+                "x": -1.0722633600234986,
+                "y": 2.4118425846099855,
+                "z": 0.9264837503433228
+            },
+            "direction": {
+                "x": -0.0045287758111953739,
+                "y": 0.037577275186777118,
+                "z": 0.999283492565155
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Piston",
+            "requestedNormalizedTime": 0.4000000059604645,
+            "observedNormalizedTime": 0.4043693542480469,
+            "forwardDeviationDegrees": 3.9391016960144045,
+            "origin": {
+                "x": -1.0685687065124512,
+                "y": 2.434183359146118,
+                "z": 0.9084376096725464
+            },
+            "direction": {
+                "x": 0.0006055847043171525,
+                "y": 0.06869333237409592,
+                "z": 0.9976376295089722
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Krag",
+            "variant": "Krag_Piston",
+            "requestedNormalizedTime": 0.5799999833106995,
+            "observedNormalizedTime": 0.5840263366699219,
+            "forwardDeviationDegrees": 2.1631083488464357,
+            "origin": {
+                "x": -1.0710101127624512,
+                "y": 2.411334753036499,
+                "z": 0.9258042573928833
+            },
+            "direction": {
+                "x": -0.0028228829614818098,
+                "y": 0.03763923421502113,
+                "z": 0.9992874264717102
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Nib",
+            "variant": "Nib_Natural",
+            "requestedNormalizedTime": 0.46000000834465029,
+            "observedNormalizedTime": 0.46202850341796877,
+            "forwardDeviationDegrees": 0.08392937481403351,
+            "origin": {
+                "x": 1.1994574069976807,
+                "y": 2.206029176712036,
+                "z": 0.48326313495635989
+            },
+            "direction": {
+                "x": -0.001388787990435958,
+                "y": 0.0005185603513382375,
+                "z": 0.9999988675117493
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Nib",
+            "variant": "Nib_GripReplacement",
+            "requestedNormalizedTime": 0.46000000834465029,
+            "observedNormalizedTime": 0.46414947509765627,
+            "forwardDeviationDegrees": 0.08156468719244003,
+            "origin": {
+                "x": 1.1994738578796387,
+                "y": 2.2060117721557619,
+                "z": 0.48327600955963137
+            },
+            "direction": {
+                "x": -0.0013500411296263338,
+                "y": 0.0004887565737590194,
+                "z": 0.9999989867210388
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        },
+        {
+            "species": "Nib",
+            "variant": "Nib_LegReplacement",
+            "requestedNormalizedTime": 0.46000000834465029,
+            "observedNormalizedTime": 0.46144866943359377,
+            "forwardDeviationDegrees": 0.08392937481403351,
+            "origin": {
+                "x": 1.1994547843933106,
+                "y": 2.206027030944824,
+                "z": 0.4832712411880493
+            },
+            "direction": {
+                "x": -0.0013917682226747275,
+                "y": 0.0005245208158157766,
+                "z": 0.9999988675117493
+            },
+            "unitForward": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            }
+        }
+    ],
+    "terrain": [
+        {
+            "sourcePoint": {
+                "x": -1.350000023841858,
+                "y": 0.0,
+                "z": 0.8832441568374634
+            },
+            "actualPoint": {
+                "x": -1.3499999046325684,
+                "y": 0.8830562233924866,
+                "z": -5.960464477539063e-8
+            },
+            "actualNormal": {
+                "x": -0.1680123656988144,
+                "y": 0.9849478602409363,
+                "z": 0.04061467573046684
+            },
+            "hit": true,
+            "passed": true,
+            "heightErrorMeters": 0.00018793344497680664,
+            "normalErrorDegrees": 0.19583527743816377
+        },
+        {
+            "sourcePoint": {
+                "x": 1.2000000476837159,
+                "y": 0.10000000149011612,
+                "z": 1.2640764713287354
+            },
+            "actualPoint": {
+                "x": 1.2000000476837159,
+                "y": 1.2638014554977418,
+                "z": 0.10000002384185791
+            },
+            "actualNormal": {
+                "x": -0.13397568464279176,
+                "y": 0.9887256622314453,
+                "z": 0.06687378883361817
+            },
+            "hit": true,
+            "passed": true,
+            "heightErrorMeters": 0.00027501583099365234,
+            "normalErrorDegrees": 0.19382666051387788
+        },
+        {
+            "sourcePoint": {
+                "x": 6.300000190734863,
+                "y": -4.699999809265137,
+                "z": 2.095370054244995
+            },
+            "actualPoint": {
+                "x": 6.299999713897705,
+                "y": 2.094907283782959,
+                "z": -4.6999993324279789
+            },
+            "actualNormal": {
+                "x": -0.07037696242332459,
+                "y": 0.9967046976089478,
+                "z": 0.04033335670828819
+            },
+            "hit": true,
+            "passed": true,
+            "heightErrorMeters": 0.0004627704620361328,
+            "normalErrorDegrees": 0.20463024079799653
+        },
+        {
+            "sourcePoint": {
+                "x": -9.100000381469727,
+                "y": 7.199999809265137,
+                "z": -0.4162663221359253
+            },
+            "actualPoint": {
+                "x": -9.09999942779541,
+                "y": -0.4161701202392578,
+                "z": 7.19999885559082
+            },
+            "actualNormal": {
+                "x": -0.14319641888141633,
+                "y": 0.9877627491950989,
+                "z": -0.06180199608206749
+            },
+            "hit": true,
+            "passed": true,
+            "heightErrorMeters": 0.00009620189666748047,
+            "normalErrorDegrees": 0.13417039811611176
+        }
+    ]
+}
