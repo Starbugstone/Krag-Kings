@@ -18,6 +18,9 @@ def main():
     parser.add_argument('--source-report',type=Path,required=True)
     parser.add_argument('--source-sha256',required=True)
     parser.add_argument('--name',required=True)
+    parser.add_argument('--card-texture-dir',type=Path,
+        default=ROOT/'benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/textures',
+        help='Exact original card atlas directory used by this saved source; pinned before baking')
     parser.add_argument('--repair-bake-root',type=Path,help='Reuse a preserved actual bake via a path-only derivative; never rebake or overwrite it')
     parser.add_argument('--blocked-reason',required=True,help='Use a new frozen plan after the actual source defect is resolved; empty only when ready for scheduling')
     args=parser.parse_args()
@@ -30,12 +33,15 @@ def main():
     dest=TOOLS/'plans'/args.name
     if dest.exists():raise RuntimeError('Preserve existing frozen plan')
     base='benchmark/local/candidates/'+args.name
-    cards=ROOT/'benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/textures'
+    cards=args.card_texture_dir.resolve()
+    if not cards.is_dir() or not cards.is_relative_to(ROOT):
+        raise RuntimeError('Original card atlas directory must exist inside this repository')
     references=ROOT/'benchmark/shared/characters/nib/textures'
     scripts=[*TOOLS.glob('*.py'), ROOT/'benchmark/tools/nib/export_nib.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/prepare_runtime_pbr.py',ROOT/'benchmark/tools/nib/v5_wip/pbr/bake_fields.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/portable_save.py',
         ROOT/'benchmark/tools/nib/v5_wip/pbr/bake_ocular.py',
+        ROOT/'benchmark/tools/nib/v5_wip/pbr/groom_source_images.py',
         ROOT/'benchmark/tools/nib/v5_wip/preserve_fbx_point_payloads.py',ROOT/'benchmark/tools/nib/v5_wip/validate_triangulated_payload.py',
         ROOT/'benchmark/tools/animation/export_contract.py',ROOT/'benchmark/tools/animation/validate_motion_candidate.py']
     prior=[]

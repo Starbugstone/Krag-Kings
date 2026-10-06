@@ -1,25 +1,32 @@
-## Latest actual boundary
+# Isolated coherent Nib PBR/FBX preparation
 
 The original saved-path failure and v2 Windows-basename validation failure are preserved. Path-only v3 candidate `2a3ab470…` now passes reopened98-map path/hash/color/decode checks and exact79-bone/seven-action/mesh parity. All three matched baked views were inspected against the original source, without an obvious new material-transfer regression. [Actual repair/parity evidence](../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md) contains the images and failures. No maps were rebaked and shared assets remain unchanged.
 
-`plans/nib-coherent79-socket-pathfix-v3` is the current frozen194-input plan. Its material stage is `repair-paths`; it preserves the failed original file and copies exact map bytes. Full79 mesh/seven-clip exports and actual engine imports remain required after the next coherent-art handoff. This technical check does not approve the current likeness, anatomy, groom or hand/clothing.
+`plans/nib-coherent79-socket-pathfix-v3` preserves the executed 194-input plan.
+Its `repair-paths` stage copied exact map bytes from the earlier socket bake.
+That older source is not the next export target: the newer adult face and
+anatomical iris require a fresh actual-surface bake. Full 79-bone mesh/seven-clip
+exports and actual engine imports remain required after the next coherent-art
+handoff. This technical check does not approve likeness, anatomy, groom or
+hand/clothing.
 
-# Isolated coherent Nib PBR/FBX preparation
-
-The first corrected-source snapshot and portable PBR bake now pass actual
-guarded execution. See [the execution evidence](../../../unreal/evidence/nib-coherent79-pbr-first-bake/README.md).
-Saved-PBR reopening, matched images, FBX exports and engine imports remain pending;
-there is no artistic acceptance.
-
-The next scheduled plan is `plans/nib-coherent79-socket-1b992e-v1`, pinned to the
-actual corrected socket/wrist source SHA `1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732`.
-Its three source views remove the large wrist gap/exposed stump; character art
-and natural grip remain unaccepted. This plan is eligible for the coordinated
-technical bake boundary, with no shared promotion or engine build authorized.
+The first source snapshot and bake belong to
+`plans/nib-coherent79-socket-1b992e-v1`, pinned to the corrected socket/wrist
+source `1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732`.
+Its original execution and saved-path failure remain preserved; do not rerun
+or reinterpret it as a successful new-source delivery.
 
 The frozen diagnostic plan pins source `ba0048d08f351c9876a947bd88cc366936cac4fa1ea50ed2aeb17db23e5174be`, its actual source report, all original groom atlases/reference maps and the recipes. That source's actual Grip views fail the wrist gap and retained-skin/cuff interface. `executionReady` is false and the stage runner refuses it. After the artist supplies the corrected saved source and receipt, create a **new** plan/output name with those exact hashes; preserve this diagnostic plan. Heavy execution still follows the parent agent's explicit serialized job grant.
 
 `prepare_plan.py` writes ten separate guarded jobs. It launches no process. The existing PBR/export scripts remain the implementation, with explicit paths overriding their old defaults. Every stage verifies frozen inputs and completed dependency hashes, preserves previous outputs, and requires its fresh completion marker. All output stays below `benchmark/local/candidates`; shared assets and current packages are untouched.
+
+For the next source, pass its actual atlas directory through
+`--card-texture-dir`. The prepared bake gate follows connected source shader
+images and requires their exact hashes to match those supplied files, including
+packed-image bytes and linked-library paths. Reusing older map filenames is not
+sufficient. The gate and new actual-iris adapter are syntax-checked only; their
+native execution is pending the final coherent-source handoff. Older frozen
+plans and executed recipe hashes remain unchanged.
 
 1. `snapshot-source`: capture exact 79-bone hierarchy/bind, canonical action curve hashes, geometry/weights/morph payloads, contracts and 17 skeletal poses per take.
 2. `bake`: use the existing PBR bridge, retaining the original masked-card RGBA bytes. The actual face attribute is baked on its geometry; UV-only regions use the existing carrier bake.

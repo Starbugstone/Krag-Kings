@@ -1,0 +1,136 @@
+{
+  "status": "Unaccepted generated reference; concept-visible facial masses only",
+  "meshPath": "benchmark/unreal/evidence/triposr-krag-bust-matted-v2/Krag_Bust_Reference.glb",
+  "meshSha256": "f6513fa6cb0c50c07d9e1adad1a17e7c15a1f75bfa8dc0745593cb08ef5f0026",
+  "triangles": 188352,
+  "vertices": 94336,
+  "watertight": false,
+  "units": "Normalized generator units, not metres; no canonical character scale",
+  "rawGeneratorAxes": "Z-up. The input image-facing view is from +X; this does not assert anatomical forward because the input itself is a three-quarter portrait.",
+  "blenderDisplayAdapter": "Blender glTF import applies its Y-up conversion; the reviewed display then multiplies mesh matrix_world by RotationX(-90degrees). Do not rotate twice if reading raw GLB coordinates directly.",
+  "reviewedBounds": [
+    [
+      -0.4264413118362427,
+      -0.4673825204372406,
+      -0.483014315366745
+    ],
+    [
+      0.3775966167449951,
+      0.4628260135650635,
+      0.4928191900253296
+    ]
+  ],
+  "reviewedBoundsCenter": [
+    -0.02442234754562378,
+    -0.002278253436088562,
+    0.004902437329292297
+  ],
+  "reviewedMaximumSpan": 0.9758335053920746,
+  "cameraOrthoScale": 1.268583557009697,
+  "cameraTarget": [
+    -0.02442234754562378,
+    -0.002278253436088562,
+    0.004902437329292297
+  ],
+  "cameraUp": "Z",
+  "views": [
+    {
+      "path": "VertexColor_InputFacingPlusX.png",
+      "sha256": "8b5a184ad578b8dc08aea17617bda02f8fad7005b6cfa290f162326f28316834",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        2.903078317642212,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InputFacingPlusX"
+    },
+    {
+      "path": "VertexColor_QuarterPlusXMinusY.png",
+      "sha256": "fb835b563d8d4da78a121fab04aa4f51d9bde86fbe73ee71dcdf7b8434c39e3b",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        2.2199947834014893,
+        -1.7587785720825195,
+        0.4928191900253296
+      ],
+      "axisLabel": "QuarterPlusXMinusY"
+    },
+    {
+      "path": "VertexColor_SideMinusY.png",
+      "sha256": "2d5054f72abd4489193ea210fba1c40df2578adb0de433262779eda4d9670593",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        -0.02442234754562378,
+        -2.929779052734375,
+        0.12200246006250381
+      ],
+      "axisLabel": "SideMinusY"
+    },
+    {
+      "path": "VertexColor_InferredBackMinusX.png",
+      "sha256": "17f679ff39c960bbc827a9fe2457183b48eac07070560adc26c7f5909cf647fd",
+      "mode": "VertexColor",
+      "cameraPosition": [
+        -2.951923131942749,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InferredBackMinusX"
+    },
+    {
+      "path": "Clay_InputFacingPlusX.png",
+      "sha256": "73d7d6d004256a1dfde83a48f85e6ae9681af2dd1cf77ad91aa4bd3bb4d5c8b7",
+      "mode": "Clay",
+      "cameraPosition": [
+        2.903078317642212,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InputFacingPlusX"
+    },
+    {
+      "path": "Clay_QuarterPlusXMinusY.png",
+      "sha256": "266ee3b9a396d0f4b53576469cc9f58b2d40c06d2782771c828e5fc15f928865",
+      "mode": "Clay",
+      "cameraPosition": [
+        2.2199947834014893,
+        -1.7587785720825195,
+        0.4928191900253296
+      ],
+      "axisLabel": "QuarterPlusXMinusY"
+    },
+    {
+      "path": "Clay_SideMinusY.png",
+      "sha256": "f3eede71f48dbc05942750cefaac70886754591344b65d600cdca2db2ca1a429",
+      "mode": "Clay",
+      "cameraPosition": [
+        -0.02442234754562378,
+        -2.929779052734375,
+        0.12200246006250381
+      ],
+      "axisLabel": "SideMinusY"
+    },
+    {
+      "path": "Clay_InferredBackMinusX.png",
+      "sha256": "8048c23efc5641d3cb16fb727ef42da84f99b71b0feeddd14af1cc04c1581de4",
+      "mode": "Clay",
+      "cameraPosition": [
+        -2.951923131942749,
+        -0.002278253436088562,
+        0.12200246006250381
+      ],
+      "axisLabel": "InferredBackMinusX"
+    }
+  ],
+  "permittedReferenceRegion": "Concept-visible cranial/brow/cheek/nose/muzzle/jaw masses only; correspondence needs explicit landmark fit",
+  "excludedRegions": [
+    "inferred rear armor block and unseen head surfaces",
+    "fused eye/lid and tusk geometry",
+    "absent oral cavity and unknown lip topology",
+    "noisy micro-surface detail",
+    "any arbitrary graft into accepted rig topology"
+  ],
+  "rigOrArtAcceptance": false,
+  "sourceGLBUnchanged": true
+}

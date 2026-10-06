@@ -22,8 +22,14 @@ Roughness and Metallic (linear). Ordinary materials stay opaque. The current
 groom also uses the explicit MASK contract: BaseColor RGBA coverage in alpha,
 threshold 0.45, double-sided/Flip, and OpenGL +Y tangent normals. Original atlas
 PNGs are copied byte-identically via `--card-texture-dir`; alpha is not rebaked
-or converted to transparent blending. Shared normal/roughness/metal filenames
-remain explicit manifest paths rather than guessed per-material filenames.
+or converted to transparent blending. New plans explicitly pin that directory.
+The prepared source-image gate follows the active masked shader and requires
+each connected image's packed bytes or resolved file hash to match the supplied
+atlas. An older atlas with the same filenames cannot silently replace the
+saved source's finer groom. Linked-image paths resolve against their library.
+This new gate is syntax-checked; its first actual Blender execution is pending
+the next coherent-source handoff. Shared normal/roughness/metal filenames remain
+explicit manifest paths rather than guessed per-material filenames.
 
 | Field | Prepared transfer | Reason |
 | --- | --- | --- |

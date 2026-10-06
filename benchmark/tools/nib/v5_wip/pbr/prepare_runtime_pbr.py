@@ -12,6 +12,7 @@ sys.path.insert(0,str(Path(__file__).parent))
 from bake_fields import bake_maps,head_mask_receipt,make_face_uv,plane,portable_material,sha,uv_field_audit,source_uv_domain
 from portable_save import save_and_validate_pbr
 from bake_ocular import bake_actual_irises
+from groom_source_images import verify_card_source_images
 
 ROOT=Path(__file__).resolve().parents[5]
 parser=argparse.ArgumentParser()
@@ -53,7 +54,7 @@ report={'status':'PBR derivative requires actual matched render and both-engine 
         'source':str(args.source),'sourceSha256':source_hash,'sourceReportSha256':sha(args.source_report),
         'sourceStructuralGate':source_report.get('preRenderGate'),
         'normalConvention':'OpenGL +Y tangent space','materials':[],'fieldBakes':[],
-        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py'),Path(__file__).with_name('bake_ocular.py'),Path(__file__).with_name('portable_save.py')]}}
+        'codeSha256':{p.name:sha(p) for p in [Path(__file__),Path(__file__).with_name('bake_fields.py'),Path(__file__).with_name('bake_ocular.py'),Path(__file__).with_name('groom_source_images.py'),Path(__file__).with_name('portable_save.py')]}}
 mask=head_mask_receipt(head)
 source_materials=list(head.data.materials);head.data.materials.clear()
 for original in source_materials:
@@ -107,6 +108,7 @@ for material in sorted(used,key=lambda m:m.name):
             or not 0<float(record.get('alphaClipThreshold',0))<1):
             raise RuntimeError('Invalid masked groom atlas contract '+material.name)
         if args.card_texture_dir is None:raise RuntimeError('Actual masked groom requires --card-texture-dir')
+        record['sourceImageAgreement']=verify_card_source_images(material,record,args.card_texture_dir)
         for key in ['baseColor','normal','roughness','metallic']:
             relative=Path(record[key])
             if relative.is_absolute() or len(relative.parts)!=2 or relative.parts[0]!='textures':
