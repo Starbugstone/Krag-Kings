@@ -1,0 +1,60 @@
+{
+  "status": "Compile and actual imported render-mask pass; strict authored-only bone-name gate failed on retained armature wrapper",
+  "stages": {
+    "build": {
+      "pid": 33024,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 79.0,
+      "maxTreePrivateMiB": 6893.0,
+      "minAvailableMiB": 7264.0
+    },
+    "mesh": {
+      "pid": 19876,
+      "nativeExit": 0,
+      "guardExit": 89,
+      "completionMarkerPresent": false,
+      "maxPrivateMiB": 7108.0,
+      "maxTreePrivateMiB": 7108.0,
+      "minAvailableMiB": 4606.0
+    }
+  },
+  "actualRenderVertices": 350779,
+  "actualEligibleRenderVertices": 60420,
+  "actualEligibleTriangles": 102736,
+  "actualMorphTargets": 25,
+  "actualImportedBones": 80,
+  "authoredBonesPresent": 79,
+  "extraImportedWrapper": {
+    "name": "Nib_Rig",
+    "parent": "",
+    "componentMatrixUnrealRowMajorCentimeters": [
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "bindingMaskVerified": true,
+  "boneSpaceGatePassed": false,
+  "generatedPackagesSaved": false,
+  "runtimeSkinCacheVerified": false,
+  "bindingVerified": false,
+  "rendered": false,
+  "performanceMeasured": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}

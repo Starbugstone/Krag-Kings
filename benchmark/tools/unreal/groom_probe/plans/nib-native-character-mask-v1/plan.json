@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "name": "nib-native-character-mask-v1",
+  "engine": "D:/Games/UE_5.8",
+  "pins": [
+    {
+      "path": "benchmark/art/nib/groom-study/native-character-pilot-v1/source.json",
+      "sha256": "4af5db725dd90dc5ac652bf8d94fc5fe84034fc7c89f944e666832b67bcaa755",
+      "bytes": 168784
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/binding-mask-validation.json",
+      "sha256": "79f350b61c560d462ecd97d58a53d716bbabf11b1f98bdb5c61a3a1471c588ef",
+      "bytes": 496
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/delivery.json",
+      "sha256": "4e7b430b9c850aa469f8ede96bf70fd99c612866c26ab963414f4f51c2d8e0a6",
+      "bytes": 72658
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/payload-validation.json",
+      "sha256": "0ff091656680c7e84f50aebc92d3c5211538b360508a607f717806e91a34f105",
+      "bytes": 18330
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/source-contract.json",
+      "sha256": "692ee3b108ed8fcc8d6616e79fada75dcf5c5fe4cdf37fdfdaeb9f6a53cceb9d",
+      "bytes": 5053746
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/triangulated/Nib_Natural.fbx",
+      "sha256": "3f15ce613f116122bc756b442d5d3742ac2361c9fc405bc3789eb4f4dfe2f32a",
+      "bytes": 39136732
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/triangulated/manifest.json",
+      "sha256": "fcb616ecb5d2dadf3b33d8619573faace0e4e36caa11d2462dde82cff6e04904",
+      "bytes": 34614
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-filtered-target-v1/variant-validation.json",
+      "sha256": "bbb5e10d90be762e61049765f511769f55c78ea9bd9c8cf50a2b660251d3a688",
+      "bytes": 8347
+    },
+    {
+      "path": "benchmark/tools/unreal/BuildConfiguration.xml",
+      "sha256": "6ac5b20d376e6207fa792499fd6c57feadf1ac9109782ebc906614ad85d0ffa4",
+      "bytes": 374
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/build.ps1",
+      "sha256": "b8d91c689a498670cdfebd78fe6465ebf32d5cf9c01d1d7da32fb460dbd65fb7",
+      "bytes": 970
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/character_coordinates.py",
+      "sha256": "6729d52ba7caa663037fec181fa3ff9acffde2eb7011d55179f358ed938efd39",
+      "bytes": 4572
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/import_character_mesh.py",
+      "sha256": "60eda3e7c417501ababa8bc7cc73b9d430c8c111a54f6e9614b13eddb3d45e55",
+      "bytes": 4403
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/prepare_character.py",
+      "sha256": "d1e5d66d724061aa8c4233b2fcfe10a220d42f2e4b1efa6191065de810d35914",
+      "bytes": 4776
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Config/DefaultEngine.ini",
+      "sha256": "01d9520b2b81bc4a0ab062a762d90376a51110025b141e27324b9f8ddfa682ae",
+      "bytes": 245
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/GroomProbe.uproject",
+      "sha256": "1d50afe37baf9b0355c9a5e15f7c9b5932b4d1039da3d85314022eab6b90cd74",
+      "bytes": 463
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomCharacterLibrary.cpp",
+      "sha256": "2f8b33164023f062cd9a6dd6f3fdc5bcb9b03555f543786d394005919add80e6",
+      "bytes": 14151
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomCharacterLibrary.h",
+      "sha256": "dbfb263938e4d6f3266fc8e459648ffffb8bec11c0006d2c886fc58928390958",
+      "bytes": 1047
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbe.Build.cs",
+      "sha256": "b7e39f43af0cfd7f666f89ee6d3425327773065f58cd26379862033ab8b02704",
+      "bytes": 423
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbeLibrary.cpp",
+      "sha256": "bae6af2086459a2629ff4099cf85dfec939be705a3fdbcbcc919782d54fe388a",
+      "bytes": 7198
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbeLibrary.h",
+      "sha256": "63430b88e5bc9de9ba2abdfb6cc0f4aacd07de7ec75e8e09bed8277ff12f2c1b",
+      "bytes": 660
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbeEditor.Target.cs",
+      "sha256": "45bb3bca7283a02473a08896fd6a258e214e88e96dcd708837bec9de663f5a54",
+      "bytes": 353
+    }
+  ],
+  "projectDirectory": "benchmark/local/groom-probe/nib-native-character-mask-v1/GroomProbe",
+  "meshManifest": "benchmark/art/nib/groom-study/native-filtered-target-v1/triangulated/manifest.json",
+  "groomSourceReport": "benchmark/art/nib/groom-study/native-character-pilot-v1/source.json",
+  "delivery": "benchmark/art/nib/groom-study/native-filtered-target-v1/delivery.json",
+  "status": "Prepared; native compile/import not executed",
+  "maskAttribute": "KKGroomBindable",
+  "geometryScope": "Natural only; exact22oldhead/eargroomobjectsremoved; body/facialfuzzretained",
+  "bindingPending": true,
+  "rendered": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}
