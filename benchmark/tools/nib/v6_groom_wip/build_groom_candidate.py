@@ -16,6 +16,7 @@ from atlas import make_atlas,REGIONS
 from card_materials import create_card_material
 from guide_recipe import build_guides,legacy_guides
 from card_geometry import emit_cards
+from ear_groom_weights import bind as bind_ear_groom
 from nib_groom_v5 import strand_mesh,GOGGLE_ENVELOPES
 
 parser=argparse.ArgumentParser()
@@ -108,7 +109,15 @@ def validate(obj):
     values=np.asarray([item.uv[:] for item in uv.data],dtype=np.float64)[indices]
     a=values[:,1]-values[:,0];b=values[:,2]-values[:,0];uvarea=np.abs(a[:,0]*b[:,1]-a[:,1]*b[:,0])
     if np.any(uvarea<=1e-14):raise RuntimeError('Collapsed groom UV triangle: '+obj.name)
-    if any(len(v.groups)!=1 or abs(v.groups[0].weight-1)>1e-7 for v in mesh.vertices):raise RuntimeError('Unexpected groom skin weights')
+    tag=obj.get('bone','')
+    allowed={'Head',tag,'EarTip_'+tag[-1]} if tag in ['Ear_L','Ear_R'] else {tag}
+    maximum=3 if tag in ['Ear_L','Ear_R'] else 1
+    for vertex in mesh.vertices:
+        active=[group for group in vertex.groups if group.weight>1e-8]
+        if not active or len(active)>maximum or abs(sum(group.weight for group in active)-1)>1e-6:
+            raise RuntimeError('Invalid normalized groom skin weights')
+        if any(obj.vertex_groups[group.group].name not in allowed for group in active):
+            raise RuntimeError('Unexpected groom bone influence')
     intrusions=0
     if obj.get('bone')=='Head':
         for center,back_y in GOGGLE_ENVELOPES:
@@ -120,6 +129,7 @@ def validate(obj):
             'cards':int(obj.get('fur_cards',0)),'strands':int(obj.get('fur_strands',0)),
             'materials':[m.name for m in mesh.materials],'goggleLensIntrusions':intrusions}
 
+ear_binding=[entry for o in generated if (entry:=bind_ear_groom(o,rig)) is not None]
 geometry=[validate(o) for o in generated]
 after={o.name:surface_hash(o) for o in retained}
 if before!=after:raise RuntimeError('Retained face/body/fuzz/cloth topology, weights, UVs or morphs changed')
@@ -134,7 +144,7 @@ scene['nib_groom_source_sha256']=source_hash
 scene['nib_groom_material_contract']=json.dumps(atlas['materials'] if args.representation=='runtime' else [])
 scene.cycles.transparent_max_bounces=16
 rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
-code_files=[Path(__file__),HERE/'atlas.py',HERE/'guide_recipe.py',HERE/'card_geometry.py',HERE/'card_materials.py',HERE.parent/'v5_wip/nib_groom_v5.py']
+code_files=[Path(__file__),HERE/'atlas.py',HERE/'guide_recipe.py',HERE/'card_geometry.py',HERE/'card_materials.py',HERE/'ear_groom_weights.py',HERE.parent/'motion_wip/ear_motion.py',HERE.parent/'v5_wip/nib_groom_v5.py']
 code={p.name:sha(p) for p in code_files}
 for path in code_files:
     block=bpy.data.texts.new('Nib v6 source '+path.name);block.write(path.read_text())
@@ -146,7 +156,7 @@ report={'status':'Saved unaccepted groom candidate; actual views and engine veri
     'preRenderGate':source_report['preRenderGate'],'artisticAcceptance':False,
     'removedGroom':removed,'retainedSurfaceHashes':before,'retainedSurfacesUnchanged':True,
     'fineBodyAndFaceFuzz':'Retained unchanged, including all weights and morphs',
-    'guideSha256':sha(guide_path),'groups':group_receipts,'geometry':geometry,
+    'guideSha256':sha(guide_path),'groups':group_receipts,'geometry':geometry,'earBinding':ear_binding,
     'newGroomTriangles':sum(m['triangles'] for m in geometry),'newGroomCards':sum(m['cards'] for m in geometry),
     'newGroomOpaqueStrands':sum(m['strands'] for m in geometry),
     'materials':atlas['materials'] if args.representation=='runtime' else [],

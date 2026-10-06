@@ -1,0 +1,252 @@
+{
+  "status": "Analytical control reconstruction from preserved rest-chain source, not actual saved-mesh pose validation",
+  "inspectedNativeSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v5\\Nib_HumanMotion_Study_v5.blend",
+  "expectedNativeSourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "actualImagesInspected": [
+    "benchmark/local/animation/nib-human-motion-v5-review/Run/side/0000.png",
+    "benchmark/local/animation/nib-human-motion-v5-review/Run/front/0000.png"
+  ],
+  "rows": [
+    {
+      "digit": "Index",
+      "restChainMeters": [
+        [
+          0.20900000000000002,
+          -0.046,
+          0.565
+        ],
+        [
+          0.21300000000000002,
+          -0.049,
+          0.5439999999999999
+        ],
+        [
+          0.21200000000000002,
+          -0.06,
+          0.5269999999999999
+        ],
+        [
+          0.20900000000000002,
+          -0.07,
+          0.5229999999999999
+        ]
+      ],
+      "runControlAnglesDegrees": [
+        23.400000000000002,
+        36.4,
+        15.600000000000001
+      ],
+      "variants": {
+        "existingSegmentAxes": {
+          "tipMinusMcpMeters": [
+            0.008553383570202688,
+            -0.03885384444989415,
+            -0.010429771984678649
+          ],
+          "tipMeters": [
+            0.2175533835702027,
+            -0.08485384444989415,
+            0.5545702280153213
+          ]
+        },
+        "commonKnucklePlane": {
+          "tipMinusMcpMeters": [
+            0.0,
+            -0.03771079089088694,
+            -0.008456905466835196
+          ],
+          "tipMeters": [
+            0.20900000000000002,
+            -0.08371079089088694,
+            0.5565430945331648
+          ]
+        }
+      }
+    },
+    {
+      "digit": "Middle",
+      "restChainMeters": [
+        [
+          0.221,
+          -0.046,
+          0.573
+        ],
+        [
+          0.225,
+          -0.049,
+          0.5519999999999999
+        ],
+        [
+          0.224,
+          -0.06,
+          0.5349999999999999
+        ],
+        [
+          0.221,
+          -0.07,
+          0.5309999999999999
+        ]
+      ],
+      "runControlAnglesDegrees": [
+        28.6,
+        41.6,
+        19.5
+      ],
+      "variants": {
+        "existingSegmentAxes": {
+          "tipMinusMcpMeters": [
+            0.009496451348600526,
+            -0.03766824240083834,
+            -0.004474699466579302
+          ],
+          "tipMeters": [
+            0.23049645134860053,
+            -0.08366824240083834,
+            0.5685253005334207
+          ]
+        },
+        "commonKnucklePlane": {
+          "tipMinusMcpMeters": [
+            0.0,
+            -0.03645987294526065,
+            -0.002431504028690523
+          ],
+          "tipMeters": [
+            0.221,
+            -0.08245987294526065,
+            0.5705684959713094
+          ]
+        }
+      }
+    },
+    {
+      "digit": "Ring",
+      "restChainMeters": [
+        [
+          0.233,
+          -0.046,
+          0.573
+        ],
+        [
+          0.23700000000000002,
+          -0.049,
+          0.5519999999999999
+        ],
+        [
+          0.23600000000000002,
+          -0.06,
+          0.5349999999999999
+        ],
+        [
+          0.233,
+          -0.07,
+          0.5309999999999999
+        ]
+      ],
+      "runControlAnglesDegrees": [
+        31.200000000000003,
+        45.5,
+        20.8
+      ],
+      "variants": {
+        "existingSegmentAxes": {
+          "tipMinusMcpMeters": [
+            0.00986948501378282,
+            -0.0363953939094382,
+            -0.0012067027851349055
+          ],
+          "tipMeters": [
+            0.24286948501378283,
+            -0.0823953939094382,
+            0.571793297214865
+          ]
+        },
+        "commonKnucklePlane": {
+          "tipMinusMcpMeters": [
+            0.0,
+            -0.035179765446891664,
+            0.0008221070157171662
+          ],
+          "tipMeters": [
+            0.233,
+            -0.08117976544689166,
+            0.5738221070157171
+          ]
+        }
+      }
+    },
+    {
+      "digit": "Little",
+      "restChainMeters": [
+        [
+          0.245,
+          -0.046,
+          0.565
+        ],
+        [
+          0.249,
+          -0.049,
+          0.5439999999999999
+        ],
+        [
+          0.248,
+          -0.06,
+          0.5269999999999999
+        ],
+        [
+          0.245,
+          -0.07,
+          0.5229999999999999
+        ]
+      ],
+      "runControlAnglesDegrees": [
+        33.800000000000004,
+        49.4,
+        23.400000000000002
+      ],
+      "variants": {
+        "existingSegmentAxes": {
+          "tipMinusMcpMeters": [
+            0.010141663888122765,
+            -0.03453196151015123,
+            0.0018889768837665466
+          ],
+          "tipMeters": [
+            0.25514166388812276,
+            -0.08053196151015123,
+            0.5668889768837665
+          ]
+        },
+        "commonKnucklePlane": {
+          "tipMinusMcpMeters": [
+            0.0,
+            -0.03333442524632284,
+            0.0038539453339726526
+          ],
+          "tipMeters": [
+            0.245,
+            -0.07933442524632284,
+            0.5688539453339726
+          ]
+        }
+      }
+    }
+  ],
+  "finding": "Per-segment axes change with authored lateral rest offsets, adding8.6\u201310.1mm unintended lateral drift; common knuckle-row plane removes it analytically.",
+  "proposedNextPoseAnglesDegrees": {
+    "Index": [
+      40,
+      55,
+      20
+    ],
+    "Middle": [
+      40,
+      50,
+      20
+    ]
+  },
+  "proposalStatus": "Unvalidated starting pose; Ring/Little need smaller changes and thumb requires separate restrained opposition. Check actual contact before acceptance.",
+  "sharedChanged": false,
+  "rootMotionScriptChanged": false,
+  "codeSha256": "895acf819214dcc37ef163c7af3879779df0c4323dda9395892e0255353a4afa"
+}
