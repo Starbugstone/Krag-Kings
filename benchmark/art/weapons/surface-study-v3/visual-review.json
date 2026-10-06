@@ -1,0 +1,24 @@
+{
+  "sourceSha256": "f7d836438169b5d27ece74b49f6243a1afae9ae19555f8be8acd677193f1695d",
+  "reference": "krag-kings-design/concept-art/10-clan-boss-and-krag-comparison.png",
+  "inspectedImages": [
+    {
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\surface-study-v3\\Krag_Weapon_ThreeQuarter.png",
+      "sha256": "d5c2e4689d327e206b4874eb811c0b1f31b9e925fe66de559d1fc8b836da7655"
+    },
+    {
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\surface-study-v3\\Krag_Weapon_Side.png",
+      "sha256": "6d4abdd7ef7c7bf6067bf2e3f7897b84ac77231a12f5df37730cd6d965dcaa55"
+    }
+  ],
+  "result": "FAIL: finish remains too bright, shiny and uniformly clean",
+  "findings": [
+    "Steel still has broad bright grey reflections and cloudy variation.",
+    "Warm bands and handle read as clean gold rather than worn aged brass.",
+    "Grip construction remains plain.",
+    "Actual geometry-dependent wear is present, but does not yet achieve the reference surface response."
+  ],
+  "nextPass": "Material-only darker oxide/patina coverage and narrower exposed edges, same lighting and geometry.",
+  "artisticAcceptance": false,
+  "engineExported": false
+}

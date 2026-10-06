@@ -220,8 +220,8 @@ def fixed_idle_feet():
 def relax_free_hand(clip):
     """Partial anatomical curl around the actual finger bend planes.
 
-    Preserve the separate authored right-hand weapon contact and thumb tracks.
-    Only the Krag's free left finger chains have verified control semantics here.
+    Preserve the separate authored right-hand weapon contact. Nib finger/thumb
+    controls use the saved anatomical chains; every pose needs mesh review.
     """
     if args.species == 'Nib':
         hand = rig.pose.bones['Hand_L']
@@ -243,6 +243,24 @@ def relax_free_hand(clip):
                 put_rotation(rig, bone.name, desired, parent)
                 bone.keyframe_insert('rotation_euler', frame=scene.frame_current, group=bone.name)
                 parent = desired
+        # Restrained opposition on the actual two-joint thumb. Order matches
+        # the saved-mesh LBS proposal: flexion after palmar-axis opposition.
+        opposition=math.radians(20 if clip=='Run' else 12)
+        thumb_angles=(8,10) if clip=='Run' else (5,8)
+        total=0.;parent=hand.matrix.to_quaternion()
+        for segment,angle in enumerate(thumb_angles,1):
+            bone=rig.pose.bones['Thumb'+str(segment)+'_L'];total+=angle
+            desired=(delta @ Quaternion(axis,math.radians(total)) @
+                     Quaternion(Vector((0,-1,0)),opposition) @ bone.bone.matrix_local.to_quaternion())
+            put_rotation(rig,bone.name,desired,parent)
+            bone.keyframe_insert('rotation_euler',frame=scene.frame_current,group=bone.name)
+            parent=desired
+        report['freeHandControls']={'fingerFlexPlane':'Actual Little1 to Index1 knuckle row',
+            'runMcpPipDipDegrees':{'Index':[40,55,20],'Middle':[40,50,20],'Ring':[40,52,20],'Little':[42,55,20]},
+            'restMcpPipDipDegrees':{'Index':[25,40,15],'Middle':[28,44,18],'Ring':[28,44,18],'Little':[30,45,18]},
+            'thumbRun':{'palmarAxisOppositionDegrees':20,'flexionDegrees':[8,10]},
+            'thumbRest':{'palmarAxisOppositionDegrees':12,'flexionDegrees':[5,8]},
+            'status':'Actual-chain numerical proposal; native pose/contact review required'}
         bpy.context.view_layer.update()
         return
     sys.path.insert(0, str(root/'tools/krag'))
