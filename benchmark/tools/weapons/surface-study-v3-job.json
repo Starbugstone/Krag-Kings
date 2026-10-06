@@ -1,0 +1,25 @@
+{
+  "name": "krag-weapon-surface-v3",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\weapons\\refine_weapon_surfaces.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_Regular_Weapon_Study_v2.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\surface-study-v3"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-surface-v3.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-surface-v3.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-surface-v3.stdout.log",
+  "successMarker": "KRAG_WEAPON_SURFACE_STUDY_COMPLETE"
+}

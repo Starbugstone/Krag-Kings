@@ -10,3 +10,5 @@ The [actual equipped v2b study](study-v2/equipped-review.json) is saved on a sep
 The gun now stays connected and fits the existing grip in the inspected firing pose. Full hand-contact/intersection review and other posed views are still incomplete; surface wear remains too clean. No shared export or artistic acceptance is claimed. `tools/weapons/equip_krag_weapon_study.py` and the v2b jobs reproduce the corrected isolated integration; repeated runs require a fresh output to preserve evidence.
 
 Original sources and individual image hashes are retained in each `study.json`; independent findings are in `visual-review.json`. Existing character masters, exports and both engine packages are unchanged by these studies.
+
+`tools/weapons/refine_weapon_surfaces.py` and `surface-study-v3-job.json` prepare a separate material-only study with irregular roughness, fine abrasion and geometry-dependent seam/edge wear. It has not run in Blender yet. These fields require a unique actual-mesh PBR atlas before export; the existing tiled-material bake is insufficient. Geometry and source preservation checks are part of the prepared job.
