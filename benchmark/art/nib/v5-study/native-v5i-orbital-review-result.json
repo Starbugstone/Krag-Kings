@@ -1,0 +1,188 @@
+{
+  "status": "Actual bounded orbital repair and three inspected diagnostic views; improvement in front-view closure, overall art unaccepted",
+  "source": "benchmark/art/nib/Nib_Master_v5i_OrbitalClosure_WIP.blend",
+  "sourceSha256": "f103eb11e67c412a55753e3a21de491d79ac69f3db1247d3cc2d250995e0b40b",
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "actualReview": {
+    "views": [
+      "Face",
+      "Blink",
+      "Tongue"
+    ],
+    "inspectedDirectly": true,
+    "improvements": [
+      "Blink closes both eyes without the prior triangular nasal/cheek wedge or bridge pinches in the front view.",
+      "Tongue retains the repaired aperture and canonical dark-blue tongue; its squint no longer creates the old nasal wedge.",
+      "Neutral retains the previous facial proportions and visible amber irises."
+    ],
+    "remainingFailures": [
+      "Neutral concept likeness and facial planes remain weak.",
+      "Mouth corners remain boxy; nose response is too glossy.",
+      "Ear membranes are thin, head/ear fur sparse and clumped, shoulder contours rounded and cloth rigid.",
+      "The inherited neutral oral-visibility gate remains false."
+    ],
+    "limitations": [
+      "Full closure rotates 87 thin fold/canthus triangles over 90 degrees relative to neutral; the conservative numeric warning remains false. The three views do not resolve all oblique or temporal behavior.",
+      "No new PBR bake, FBX, runtime promotion or engine validation exists."
+    ]
+  },
+  "scope": {
+    "changed": [
+      "Neutral eye-margin clearance by at most 0.80315 mm",
+      "Loop/globe Blink and Squint targets",
+      "Corresponding deterministic fine facial fuzz"
+    ],
+    "preserved": [
+      "374 unrelated components",
+      "Jaw skinning and other relative expression targets",
+      "77-bone bind and existing eye geometry",
+      "Ear/body/face action curves",
+      "UVs, topology and materials"
+    ]
+  },
+  "stages": [
+    {
+      "name": "nib-v5i-orbital-geometry-audit",
+      "exitCode": 0,
+      "completionMarker": "NIB_SAVED_ORBITAL_GEOMETRY_AUDIT_COMPLETE",
+      "processId": 31908,
+      "processClosed": true,
+      "peakPrivateMB": 314.0,
+      "telemetry": "benchmark/art/nib/v5-study/native-v5i-orbital-geometry-audit-memory.csv",
+      "telemetrySha256": "6e8d810fca0e8ce802d1b1d70fa3522ee2846bd9e4b93ae9b6d427faad163136"
+    },
+    {
+      "name": "nib-v5i-orbital-diagnostic-source",
+      "exitCode": 0,
+      "completionMarker": "NIB_V5I_ORBITAL_DIAGNOSTIC_SOURCE_SAVED",
+      "processId": 5944,
+      "processClosed": true,
+      "peakPrivateMB": 617.0,
+      "telemetry": "benchmark/art/nib/v5-study/native-v5i-orbital-source-memory.csv",
+      "telemetrySha256": "08d65c16cec34320b7d16432b4a452748ed4c0e1d869491d25cdc4c008c78025"
+    },
+    {
+      "name": "nib-v5i-orbital-first-blink",
+      "exitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "processId": 5968,
+      "processClosed": true,
+      "peakPrivateMB": 2578.0,
+      "telemetry": "benchmark/art/nib/v5-study/native-v5i-orbital-first-blink-memory.csv",
+      "telemetrySha256": "d6f04aa3d6110a216f6b08722d7a8e51eb51a8bac5faadc243a00457f68303d6"
+    },
+    {
+      "name": "nib-v5i-orbital-face-tongue",
+      "exitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "processId": 25420,
+      "processClosed": true,
+      "peakPrivateMB": 2647.0,
+      "telemetry": "benchmark/art/nib/v5-study/native-v5i-orbital-face-tongue-memory.csv",
+      "telemetrySha256": "fb494bdb68d6170247250c512d5290259ab17b2d9a8bad74be9fc9203928b9f7"
+    }
+  ],
+  "files": [
+    {
+      "path": "benchmark/art/nib/Nib_Master_v5i_OrbitalClosure_WIP.blend",
+      "sha256": "f103eb11e67c412a55753e3a21de491d79ac69f3db1247d3cc2d250995e0b40b",
+      "bytes": 55627502
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-geometry-audit.json",
+      "sha256": "1796fb79f7caadd6c010d628dd639cd572845e744991fc77545207a693773ae3",
+      "bytes": 2285
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-topology-study.json",
+      "sha256": "155e812104b6bdc53b5ce145123c571b86b70dddfa1ff9654e04ecfe732ae29a",
+      "bytes": 100476
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-proposal-rotation.json",
+      "sha256": "6ff6d7c6a554facca3553f2cd3e6d2769fd991850dea880037bca9306b465e87",
+      "bytes": 14060
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-head-v5i-orbital-closure.json",
+      "sha256": "586f357fdd8732927f7fdd0476d5acb01a1ebb6d99936a8822ec5013e9ae362d",
+      "bytes": 69373
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_ExpressionBlink.png",
+      "sha256": "880027ec42c005a6b51ed460e237dd7088667533c480175653541e06307ded1d",
+      "bytes": 1832091
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_ExpressionBlink.png.json",
+      "sha256": "7263603e978f9c2c10ead05fb0ba718afcd22cd2e7dbd4ad6c5c15d661977bd9",
+      "bytes": 3361
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_ExpressionTongue.png",
+      "sha256": "c257078fd3931d3af6b72f646be69ca4b720637cd21a762e6ed5d1a26083310d",
+      "bytes": 1844184
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_ExpressionTongue.png.json",
+      "sha256": "8ccc906841d69eb621e0d4e42c8845e44a15b86dae624ed8aef59c509fb616af",
+      "bytes": 3363
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "861eea9d16bfb6a904f31d1919aea1d9c615c6ff51f3a9218c97e1627921bfc2",
+      "bytes": 1837907
+    },
+    {
+      "path": "benchmark/art/nib/v5-study/native-v5i-orbital-diagnostic-renders/Nib_FaceReview.png.json",
+      "sha256": "1b3ace1efa40a1d0bf8f77148038653075adf4c8df5d683d8cc1d048b82e9d36",
+      "bytes": 3348
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/analyze_orbital_rings.py",
+      "sha256": "2d7d51dc65c9449fc8ecfa4ee740ba48c0565c0c109a597a5969ab6fc6d3e85d",
+      "bytes": 5370
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/audit_saved_orbital_geometry.py",
+      "sha256": "79b488ab84c0dc888a04cf4d582232ac4411047cb79fb01b6fc7c71057f887ea",
+      "bytes": 4081
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/orbital_closure_v5i.py",
+      "sha256": "7c5467ed5f1e84840f7be5b2da16612cd15d2d3d4cbe8f284da1a53b4f7b0d51",
+      "bytes": 11748
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/evaluate_orbital_proposal.py",
+      "sha256": "5cf1c6265aa412503da011ba702f6a8f0cb0b207d8efb55cf3cf556491f78ede",
+      "bytes": 3828
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/repair_saved_orbits_v5i.py",
+      "sha256": "600724fd332ca4e698bec7f70d8456bcaadbfeec7925aaa12e88bf5e6ac679d0",
+      "bytes": 8317
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/native-v5i-orbital-geometry-audit.job.json",
+      "sha256": "25ad62c97918840616ca430a9718dbe8f4432190a38becb4db0f55d2fb389a2a",
+      "bytes": 1220
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/native-v5i-orbital-source.job.json",
+      "sha256": "aa8587e15e07f5f200dfe49a7f34e66c24140acb14ea04c6e324b89925b9ae0a",
+      "bytes": 851
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/native-v5i-orbital-first-blink.job.json",
+      "sha256": "70381a6217bed596f663c9215ded5fb199f3a4cd9f6749f7869c85407652a276",
+      "bytes": 1175
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/native-v5i-orbital-face-tongue.job.json",
+      "sha256": "0180d0b4f43b51569c4c532656fd61a4380a4139d0cb26aad3d4a58e8eed15f5",
+      "bytes": 1188
+    }
+  ]
+}

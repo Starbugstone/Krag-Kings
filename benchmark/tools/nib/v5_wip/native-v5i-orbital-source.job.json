@@ -1,0 +1,22 @@
+{
+  "name": "nib-v5i-orbital-diagnostic-source",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\repair_saved_orbits_v5i.py",
+    "--",
+    "--diagnostic-allow-normal-rotation-warning"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-source.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-source.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-source.log",
+  "successMarker": "NIB_V5I_ORBITAL_DIAGNOSTIC_SOURCE_SAVED"
+}

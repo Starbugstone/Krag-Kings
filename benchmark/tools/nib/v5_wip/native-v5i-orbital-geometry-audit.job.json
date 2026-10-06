@@ -1,0 +1,29 @@
+{
+  "name": "nib-v5i-orbital-geometry-audit",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\audit_saved_orbital_geometry.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_EarMotionStudy_v1.blend",
+    "--expected-sha",
+    "4f5465424ae61376af51e5f57a38cc197f6e4c5bb127b4748193e435d87bbd47",
+    "--cache",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-v5i-orbital-geometry.npz",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-geometry-audit.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-geometry-audit.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-geometry-audit.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5i-orbital-geometry-audit.log",
+  "successMarker": "NIB_SAVED_ORBITAL_GEOMETRY_AUDIT_COMPLETE"
+}

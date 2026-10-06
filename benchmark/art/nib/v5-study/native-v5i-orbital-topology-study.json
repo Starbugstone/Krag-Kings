@@ -1,0 +1,3199 @@
+{
+  "status": "Actual cached topology measurements; closure design remains provisional and ungenerated",
+  "cacheSha256": "c4e7df1ecff67fa628cf4264b50f4861e2153a65186285c1db0d7e2b3c25e7ac",
+  "auditSha256": "110d08de96eaf5620c97f8655dc43e53992019ad964720db0277cbf58c032c1b",
+  "codeSha256": "2d7d51dc65c9449fc8ecfa4ee740ba48c0565c0c109a597a5969ab6fc6d3e85d",
+  "sources": {
+    "Nib_Master_v5f_JawRepair_WIP.blend": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e",
+    "Nib_Master_v5g_FacePlanes_WIP.blend": "1586cb3a4c66897be5d1b2c5ba43fdb34a462a6fc96d6d51d90fa417dd185db9"
+  },
+  "changedSource": false,
+  "artisticAcceptance": false,
+  "coordinates": "Source attribute in original head local metres; fitted Basis remains in Nib head object space, before its world transform",
+  "eyes": {
+    "R": {
+      "sourceTags": {
+        "cavity": 5,
+        "surroundingOrbitalSurface": 9
+      },
+      "boundaryVertices": 80,
+      "layers": [
+        {
+          "stepsFromTaggedCavityBoundary": 0,
+          "vertices": 80,
+          "sourceMeanY": -0.11361079392954707,
+          "sourceMeanProjectedRadius": 0.01637163924967939,
+          "sourceMinimumProjectedRadius": 0.015314271789166679,
+          "sourceXWidth": 0.03210420347750187,
+          "sourceZHeight": 0.03359070420265198,
+          "fittedBoundsMin": [
+            -0.060487594455480576,
+            -0.048450928181409836,
+            1.1527572870254517
+          ],
+          "fittedBoundsMax": [
+            -0.022197013720870018,
+            -0.041835587471723557,
+            1.1798824071884155
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 1,
+          "vertices": 80,
+          "sourceMeanY": -0.11451736530289054,
+          "sourceMeanProjectedRadius": 0.01552342366869414,
+          "sourceMinimumProjectedRadius": 0.014224847737093359,
+          "sourceXWidth": 0.030719779431819916,
+          "sourceZHeight": 0.03154408931732178,
+          "fittedBoundsMin": [
+            -0.059901248663663864,
+            -0.04862020164728165,
+            1.1532565355300903
+          ],
+          "fittedBoundsMax": [
+            -0.02318580262362957,
+            -0.04243018478155136,
+            1.1791199445724487
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 2,
+          "vertices": 80,
+          "sourceMeanY": -0.11542393621057272,
+          "sourceMeanProjectedRadius": 0.0146802022069074,
+          "sourceMinimumProjectedRadius": 0.0131372211925581,
+          "sourceXWidth": 0.02933535724878311,
+          "sourceZHeight": 0.02949744462966919,
+          "fittedBoundsMin": [
+            -0.059332773089408875,
+            -0.0487477108836174,
+            1.1538258790969849
+          ],
+          "fittedBoundsMax": [
+            -0.024125726893544197,
+            -0.042976051568984985,
+            1.1782680749893188
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 3,
+          "vertices": 80,
+          "sourceMeanY": -0.11633050702512264,
+          "sourceMeanProjectedRadius": 0.013842920324346326,
+          "sourceMinimumProjectedRadius": 0.012051851066331732,
+          "sourceXWidth": 0.027950936928391457,
+          "sourceZHeight": 0.02745082974433899,
+          "fittedBoundsMin": [
+            -0.05879128724336624,
+            -0.04889655485749245,
+            1.1544811725616455
+          ],
+          "fittedBoundsMax": [
+            -0.024968182668089867,
+            -0.04346557706594467,
+            1.1773130893707275
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 4,
+          "vertices": 80,
+          "sourceMeanY": -0.11723707839846612,
+          "sourceMeanProjectedRadius": 0.013012757381164242,
+          "sourceMinimumProjectedRadius": 0.01096949709570429,
+          "sourceXWidth": 0.026566512882709503,
+          "sourceZHeight": 0.02540421485900879,
+          "fittedBoundsMin": [
+            -0.058299411088228226,
+            -0.04911898821592331,
+            1.1552324295043945
+          ],
+          "fittedBoundsMax": [
+            -0.02566458098590374,
+            -0.04388706758618355,
+            1.176251769065857
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 5,
+          "vertices": 80,
+          "sourceMeanY": -0.11809862768277526,
+          "sourceMeanProjectedRadius": 0.012259408281049714,
+          "sourceMinimumProjectedRadius": 0.009547028480994521,
+          "sourceXWidth": 0.026142779737710953,
+          "sourceZHeight": 0.022407084703445435,
+          "fittedBoundsMin": [
+            -0.05787592753767967,
+            -0.04941593483090401,
+            1.1560651063919067
+          ],
+          "fittedBoundsMax": [
+            -0.026180071756243706,
+            -0.04422580823302269,
+            1.175102949142456
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 6,
+          "vertices": 80,
+          "sourceMeanY": -0.11896017882972956,
+          "sourceMeanProjectedRadius": 0.011559629614742597,
+          "sourceMinimumProjectedRadius": 0.008127273555793622,
+          "sourceXWidth": 0.025719041004776955,
+          "sourceZHeight": 0.01940995454788208,
+          "fittedBoundsMin": [
+            -0.05755292624235153,
+            -0.04977232962846756,
+            1.1569174528121948
+          ],
+          "fittedBoundsMax": [
+            -0.0265347883105278,
+            -0.04449896514415741,
+            1.1739169359207153
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 7,
+          "vertices": 80,
+          "sourceMeanY": -0.11982172839343548,
+          "sourceMeanProjectedRadius": 0.010924301094305932,
+          "sourceMinimumProjectedRadius": 0.006731272339824828,
+          "sourceXWidth": 0.025295305997133255,
+          "sourceZHeight": 0.016505509614944458,
+          "fittedBoundsMin": [
+            -0.05730481818318367,
+            -0.0501534566283226,
+            1.1577143669128418
+          ],
+          "fittedBoundsMax": [
+            -0.026762602850794792,
+            -0.044726017862558365,
+            1.172813892364502
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 8,
+          "vertices": 80,
+          "sourceMeanY": -0.1206832786090672,
+          "sourceMeanProjectedRadius": 0.010365487757485364,
+          "sourceMinimumProjectedRadius": 0.005353344180442783,
+          "sourceXWidth": 0.02505166083574295,
+          "sourceZHeight": 0.013697296380996704,
+          "fittedBoundsMin": [
+            -0.057163771241903305,
+            -0.05050921067595482,
+            1.1583918333053589
+          ],
+          "fittedBoundsMax": [
+            -0.026897387579083443,
+            -0.04491957277059555,
+            1.1718400716781616
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 9,
+          "vertices": 80,
+          "sourceMeanY": -0.1210349234752357,
+          "sourceMeanProjectedRadius": 0.010261440763364731,
+          "sourceMinimumProjectedRadius": 0.004901326430232625,
+          "sourceXWidth": 0.02513732947409153,
+          "sourceZHeight": 0.012884378433227539,
+          "fittedBoundsMin": [
+            -0.05711405351758003,
+            -0.050808507949113846,
+            1.158887267112732
+          ],
+          "fittedBoundsMax": [
+            -0.02696051448583603,
+            -0.04509996995329857,
+            1.171072244644165
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 10,
+          "vertices": 80,
+          "sourceMeanY": -0.12138656880706548,
+          "sourceMeanProjectedRadius": 0.010165359872643233,
+          "sourceMinimumProjectedRadius": 0.004453191662938426,
+          "sourceXWidth": 0.02522299438714981,
+          "sourceZHeight": 0.012071460485458374,
+          "fittedBoundsMin": [
+            -0.05716108903288841,
+            -0.05106396973133087,
+            1.1592292785644531
+          ],
+          "fittedBoundsMax": [
+            -0.026928575709462166,
+            -0.04527682065963745,
+            1.1704801321029663
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 11,
+          "vertices": 80,
+          "sourceMeanY": -0.12173821311444044,
+          "sourceMeanProjectedRadius": 0.010077580384593754,
+          "sourceMinimumProjectedRadius": 0.004010269536477454,
+          "sourceXWidth": 0.02530866116285324,
+          "sourceZHeight": 0.011258572340011597,
+          "fittedBoundsMin": [
+            -0.05730390548706055,
+            -0.051293957978487015,
+            1.1594382524490356
+          ],
+          "fittedBoundsMax": [
+            -0.026788273826241493,
+            -0.04545183107256889,
+            1.1700254678726196
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 12,
+          "vertices": 80,
+          "sourceMeanY": -0.12208985788747669,
+          "sourceMeanProjectedRadius": 0.009998451416051796,
+          "sourceMinimumProjectedRadius": 0.003574430257122747,
+          "sourceXWidth": 0.025394326075911522,
+          "sourceZHeight": 0.01046714186668396,
+          "fittedBoundsMin": [
+            -0.05753941833972931,
+            -0.051516853272914886,
+            1.1595414876937866
+          ],
+          "fittedBoundsMax": [
+            -0.026513315737247467,
+            -0.04562552273273468,
+            1.1696773767471313
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 13,
+          "vertices": 82,
+          "sourceMeanY": -0.12246589244502347,
+          "sourceMeanProjectedRadius": 0.010271765244082123,
+          "sourceMinimumProjectedRadius": 0.003485268682281362,
+          "sourceXWidth": 0.026332329958677292,
+          "sourceZHeight": 0.010460078716278076,
+          "fittedBoundsMin": [
+            -0.05786578729748726,
+            -0.05174534395337105,
+            1.159561038017273
+          ],
+          "fittedBoundsMax": [
+            -0.026091352105140686,
+            -0.04579179733991623,
+            1.1694164276123047
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 14,
+          "vertices": 84,
+          "sourceMeanY": -0.12283319580767836,
+          "sourceMeanProjectedRadius": 0.010551760260913175,
+          "sourceMinimumProjectedRadius": 0.0034029888285456535,
+          "sourceXWidth": 0.027270331978797913,
+          "sourceZHeight": 0.010452985763549805,
+          "fittedBoundsMin": [
+            -0.05825507268309593,
+            -0.05197892710566521,
+            1.1595048904418945
+          ],
+          "fittedBoundsMax": [
+            -0.025565864518284798,
+            -0.04594552144408226,
+            1.1692543029785156
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 15,
+          "vertices": 86,
+          "sourceMeanY": -0.1231914752617825,
+          "sourceMeanProjectedRadius": 0.010837619748469165,
+          "sourceMinimumProjectedRadius": 0.003328162226193165,
+          "sourceXWidth": 0.028208332136273384,
+          "sourceZHeight": 0.010455071926116943,
+          "fittedBoundsMin": [
+            -0.05868436023592949,
+            -0.05221157521009445,
+            1.1593650579452515
+          ],
+          "fittedBoundsMax": [
+            -0.02498720958828926,
+            -0.04607464000582695,
+            1.1691879034042358
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 16,
+          "vertices": 88,
+          "sourceMeanY": -0.12354046394201842,
+          "sourceMeanProjectedRadius": 0.01112859331603444,
+          "sourceMinimumProjectedRadius": 0.0032612705234167927,
+          "sourceXWidth": 0.029146336019039154,
+          "sourceZHeight": 0.010458201169967651,
+          "fittedBoundsMin": [
+            -0.05912218242883682,
+            -0.05243732035160065,
+            1.159193515777588
+          ],
+          "fittedBoundsMax": [
+            -0.024422379210591316,
+            -0.046167150139808655,
+            1.169227123260498
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 6,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 17,
+          "vertices": 90,
+          "sourceMeanY": -0.12369231490625275,
+          "sourceMeanProjectedRadius": 0.011501812134179935,
+          "sourceMinimumProjectedRadius": 0.0035709979207579914,
+          "sourceXWidth": 0.0298449844121933,
+          "sourceZHeight": 0.011242866516113281,
+          "fittedBoundsMin": [
+            -0.0595511794090271,
+            -0.05264749750494957,
+            1.1589865684509277
+          ],
+          "fittedBoundsMax": [
+            -0.02392290160059929,
+            -0.04621060565114021,
+            1.1693774461746216
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 18,
+          "vertices": 92,
+          "sourceMeanY": -0.12384214462793391,
+          "sourceMeanProjectedRadius": 0.01187177130284261,
+          "sourceMinimumProjectedRadius": 0.0038817213829419298,
+          "sourceXWidth": 0.03054363653063774,
+          "sourceZHeight": 0.012027531862258911,
+          "fittedBoundsMin": [
+            -0.059985894709825516,
+            -0.052837129682302475,
+            1.1587450504302979
+          ],
+          "fittedBoundsMax": [
+            -0.02350129559636116,
+            -0.04620793089270592,
+            1.169626235961914
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 10
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 19,
+          "vertices": 94,
+          "sourceMeanY": -0.12399019205823858,
+          "sourceMeanProjectedRadius": 0.012238929268744024,
+          "sourceMinimumProjectedRadius": 0.004193248313382872,
+          "sourceXWidth": 0.031242288649082184,
+          "sourceZHeight": 0.012812197208404541,
+          "fittedBoundsMin": [
+            -0.06045226380228996,
+            -0.052997805178165436,
+            1.1584614515304565
+          ],
+          "fittedBoundsMax": [
+            -0.023155100643634796,
+            -0.04616290330886841,
+            1.1699388027191162
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 12
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 20,
+          "vertices": 96,
+          "sourceMeanY": -0.12413667398504913,
+          "sourceMeanProjectedRadius": 0.01260372865175792,
+          "sourceMinimumProjectedRadius": 0.004484447782645821,
+          "sourceXWidth": 0.031940942630171776,
+          "sourceZHeight": 0.013596862554550171,
+          "fittedBoundsMin": [
+            -0.061033762991428375,
+            -0.053119827061891556,
+            1.1581480503082275
+          ],
+          "fittedBoundsMax": [
+            -0.022884847596287727,
+            -0.04602520167827606,
+            1.1702913045883179
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 14,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 21,
+          "vertices": 97,
+          "sourceMeanY": -0.1240074368789024,
+          "sourceMeanProjectedRadius": 0.012932279469955796,
+          "sourceMinimumProjectedRadius": 0.004846430285250755,
+          "sourceXWidth": 0.03238995000720024,
+          "sourceZHeight": 0.014672964811325073,
+          "fittedBoundsMin": [
+            -0.06156593933701515,
+            -0.05319712311029434,
+            1.157808542251587
+          ],
+          "fittedBoundsMax": [
+            -0.022693775594234467,
+            -0.045858267694711685,
+            1.1706616878509521
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 14
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 22,
+          "vertices": 98,
+          "sourceMeanY": -0.12387202353197702,
+          "sourceMeanProjectedRadius": 0.013271205808070041,
+          "sourceMinimumProjectedRadius": 0.005211277496613931,
+          "sourceXWidth": 0.032838962972164154,
+          "sourceZHeight": 0.015749096870422363,
+          "fittedBoundsMin": [
+            -0.06205888092517853,
+            -0.053235795348882675,
+            1.1574456691741943
+          ],
+          "fittedBoundsMax": [
+            -0.022558601573109627,
+            -0.045675743371248245,
+            1.1710339784622192
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 15
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 23,
+          "vertices": 99,
+          "sourceMeanY": -0.12373123325482764,
+          "sourceMeanProjectedRadius": 0.013619810614409734,
+          "sourceMinimumProjectedRadius": 0.005578474720453762,
+          "sourceXWidth": 0.03328797407448292,
+          "sourceZHeight": 0.016825199127197266,
+          "fittedBoundsMin": [
+            -0.06257989257574081,
+            -0.053244419395923615,
+            1.1570665836334229
+          ],
+          "fittedBoundsMax": [
+            -0.022445334121584892,
+            -0.045463308691978455,
+            1.1713939905166626
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 16
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 24,
+          "vertices": 100,
+          "sourceMeanY": -0.12358583286404609,
+          "sourceMeanProjectedRadius": 0.013977475333282682,
+          "sourceMinimumProjectedRadius": 0.005947644787304469,
+          "sourceXWidth": 0.03373698145151138,
+          "sourceZHeight": 0.017901301383972168,
+          "fittedBoundsMin": [
+            -0.06315016001462936,
+            -0.053231578320264816,
+            1.156680941581726
+          ],
+          "fittedBoundsMax": [
+            -0.02233133465051651,
+            -0.045216817408800125,
+            1.1717281341552734
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 17,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 25,
+          "vertices": 101,
+          "sourceMeanY": -0.12336116822639315,
+          "sourceMeanProjectedRadius": 0.014362551935136938,
+          "sourceMinimumProjectedRadius": 0.0061686322433540134,
+          "sourceXWidth": 0.03437781520187855,
+          "sourceZHeight": 0.018815308809280396,
+          "fittedBoundsMin": [
+            -0.0637843981385231,
+            -0.05320676788687706,
+            1.156298041343689
+          ],
+          "fittedBoundsMax": [
+            -0.02219267562031746,
+            -0.04493444785475731,
+            1.1720244884490967
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 18,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 26,
+          "vertices": 102,
+          "sourceMeanY": -0.12313018819572878,
+          "sourceMeanProjectedRadius": 0.014752557336138665,
+          "sourceMinimumProjectedRadius": 0.006390446550608222,
+          "sourceXWidth": 0.03512243181467056,
+          "sourceZHeight": 0.019774556159973145,
+          "fittedBoundsMin": [
+            -0.06448402255773544,
+            -0.05318041518330574,
+            1.1559175252914429
+          ],
+          "fittedBoundsMax": [
+            -0.02200697921216488,
+            -0.04461628571152687,
+            1.1722841262817383
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 19,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 27,
+          "vertices": 103,
+          "sourceMeanY": -0.12289389606239726,
+          "sourceMeanProjectedRadius": 0.015148418431255448,
+          "sourceMinimumProjectedRadius": 0.006612920887698814,
+          "sourceXWidth": 0.03586705029010773,
+          "sourceZHeight": 0.020733803510665894,
+          "fittedBoundsMin": [
+            -0.06524712592363358,
+            -0.053164102137088776,
+            1.1555311679840088
+          ],
+          "fittedBoundsMax": [
+            -0.021751420572400093,
+            -0.044264309108257294,
+            1.1725102663040161
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 20,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 28,
+          "vertices": 104,
+          "sourceMeanY": -0.12265326211658809,
+          "sourceMeanProjectedRadius": 0.015551082478988952,
+          "sourceMinimumProjectedRadius": 0.006836018235682736,
+          "sourceXWidth": 0.036611663177609444,
+          "sourceZHeight": 0.022084981203079224,
+          "fittedBoundsMin": [
+            -0.0660717561841011,
+            -0.053176380693912506,
+            1.155120849609375
+          ],
+          "fittedBoundsMax": [
+            -0.021397609263658524,
+            -0.043880511075258255,
+            1.1727064847946167
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 21
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 29,
+          "vertices": 102,
+          "sourceMeanY": -0.12235841520276725,
+          "sourceMeanProjectedRadius": 0.016206588997498557,
+          "sourceMinimumProjectedRadius": 0.006943562058648006,
+          "sourceXWidth": 0.03804267942905426,
+          "sourceZHeight": 0.023342251777648926,
+          "fittedBoundsMin": [
+            -0.06695416569709778,
+            -0.05321674048900604,
+            1.1542999744415283
+          ],
+          "fittedBoundsMax": [
+            -0.020933691412210464,
+            -0.043464068323373795,
+            1.1728806495666504
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 74,
+            "0": 20,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 30,
+          "vertices": 100,
+          "sourceMeanY": -0.12204706639051438,
+          "sourceMeanProjectedRadius": 0.016905212591068537,
+          "sourceMinimumProjectedRadius": 0.007051218068190044,
+          "sourceXWidth": 0.039473701268434525,
+          "sourceZHeight": 0.02459949254989624,
+          "fittedBoundsMin": [
+            -0.06788311898708344,
+            -0.05328983813524246,
+            1.153532862663269
+          ],
+          "fittedBoundsMax": [
+            -0.020354198291897774,
+            -0.04301825538277626,
+            1.1730570793151855
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 72,
+            "0": 20,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 31,
+          "vertices": 98,
+          "sourceMeanY": -0.12171945819745258,
+          "sourceMeanProjectedRadius": 0.017643908494393817,
+          "sourceMinimumProjectedRadius": 0.007158980620507996,
+          "sourceXWidth": 0.04090471565723419,
+          "sourceZHeight": 0.025856763124465942,
+          "fittedBoundsMin": [
+            -0.06884555518627167,
+            -0.05339944362640381,
+            1.1528342962265015
+          ],
+          "fittedBoundsMax": [
+            -0.019656706601381302,
+            -0.04254410043358803,
+            1.1732648611068726
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 70,
+            "0": 20,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 32,
+          "vertices": 96,
+          "sourceMeanY": -0.12137584698696931,
+          "sourceMeanProjectedRadius": 0.01841907737758032,
+          "sourceMinimumProjectedRadius": 0.007266875258419819,
+          "sourceXWidth": 0.042335737496614456,
+          "sourceZHeight": 0.027114063501358032,
+          "fittedBoundsMin": [
+            -0.06985720992088318,
+            -0.05354934185743332,
+            1.1521815061569214
+          ],
+          "fittedBoundsMax": [
+            -0.018838804215192795,
+            -0.04204264283180237,
+            1.1735323667526245
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 20,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 33,
+          "vertices": 97,
+          "sourceMeanY": -0.12120438996971268,
+          "sourceMeanProjectedRadius": 0.019339683974172593,
+          "sourceMinimumProjectedRadius": 0.007762387070703729,
+          "sourceXWidth": 0.044283974915742874,
+          "sourceZHeight": 0.02850741147994995,
+          "fittedBoundsMin": [
+            -0.07099071890115738,
+            -0.053743842989206314,
+            1.1515612602233887
+          ],
+          "fittedBoundsMax": [
+            -0.01790299452841282,
+            -0.041510652750730515,
+            1.1738840341567993
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 21,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 34,
+          "vertices": 98,
+          "sourceMeanY": -0.12104233992951256,
+          "sourceMeanProjectedRadius": 0.020276470925328742,
+          "sourceMinimumProjectedRadius": 0.008257887235197723,
+          "sourceXWidth": 0.04623221419751644,
+          "sourceZHeight": 0.029900789260864258,
+          "fittedBoundsMin": [
+            -0.07220041751861572,
+            -0.05399484187364578,
+            1.1509654521942139
+          ],
+          "fittedBoundsMax": [
+            -0.01684235967695713,
+            -0.0409521758556366,
+            1.1743242740631104
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 22,
+            "2": 68,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 35,
+          "vertices": 99,
+          "sourceMeanY": -0.12088785666708994,
+          "sourceMeanProjectedRadius": 0.02122908721163802,
+          "sourceMinimumProjectedRadius": 0.0087534321283771,
+          "sourceXWidth": 0.04818045534193516,
+          "sourceZHeight": 0.03129413723945618,
+          "fittedBoundsMin": [
+            -0.0734422355890274,
+            -0.0543147474527359,
+            1.1503870487213135
+          ],
+          "fittedBoundsMax": [
+            -0.015743058174848557,
+            -0.04036713019013405,
+            1.174854040145874
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 23,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 36,
+          "vertices": 100,
+          "sourceMeanY": -0.12073917642235756,
+          "sourceMeanProjectedRadius": 0.022197100033979185,
+          "sourceMinimumProjectedRadius": 0.009248989613908942,
+          "sourceXWidth": 0.050128691829741,
+          "sourceZHeight": 0.03268745541572571,
+          "fittedBoundsMin": [
+            -0.0746564269065857,
+            -0.0548056922852993,
+            1.1498197317123413
+          ],
+          "fittedBoundsMax": [
+            -0.014612451195716858,
+            -0.03975540027022362,
+            1.1754732131958008
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "1": 8,
+            "0": 24
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 37,
+          "vertices": 85,
+          "sourceMeanY": -0.12316816212499843,
+          "sourceMeanProjectedRadius": 0.021234690974884705,
+          "sourceMinimumProjectedRadius": 0.010313988327179514,
+          "sourceXWidth": 0.05106739420443773,
+          "sourceZHeight": 0.03465217351913452,
+          "fittedBoundsMin": [
+            -0.07376504689455032,
+            -0.055487800389528275,
+            1.149256944656372
+          ],
+          "fittedBoundsMax": [
+            -0.013526548631489277,
+            -0.039419908076524734,
+            1.1761804819107056
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 25,
+            "2": 52,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 38,
+          "vertices": 85,
+          "sourceMeanY": -0.12363456058151581,
+          "sourceMeanProjectedRadius": 0.021918110089744987,
+          "sourceMinimumProjectedRadius": 0.011378735204512595,
+          "sourceXWidth": 0.052114530466496944,
+          "sourceZHeight": 0.036750614643096924,
+          "fittedBoundsMin": [
+            -0.0735154077410698,
+            -0.05606380105018616,
+            1.1486972570419312
+          ],
+          "fittedBoundsMax": [
+            -0.012470855377614498,
+            -0.03911689668893814,
+            1.177005648612976
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 25,
+            "2": 52,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 39,
+          "vertices": 85,
+          "sourceMeanY": -0.12413367173250983,
+          "sourceMeanProjectedRadius": 0.022626423056471355,
+          "sourceMinimumProjectedRadius": 0.012064801828545824,
+          "sourceXWidth": 0.05317205563187599,
+          "sourceZHeight": 0.03884902596473694,
+          "fittedBoundsMin": [
+            -0.07333958894014359,
+            -0.05660645291209221,
+            1.148139476776123
+          ],
+          "fittedBoundsMax": [
+            -0.011422060430049896,
+            -0.038851793855428696,
+            1.1779261827468872
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 25,
+            "2": 52,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 40,
+          "vertices": 85,
+          "sourceMeanY": -0.12466458310099209,
+          "sourceMeanProjectedRadius": 0.023359889352073664,
+          "sourceMinimumProjectedRadius": 0.012925824610876914,
+          "sourceXWidth": 0.05422958731651306,
+          "sourceZHeight": 0.04094743728637695,
+          "fittedBoundsMin": [
+            -0.07320107519626617,
+            -0.05712300166487694,
+            1.1475830078125
+          ],
+          "fittedBoundsMax": [
+            -0.010380652733147144,
+            -0.03863004222512245,
+            1.1789735555648804
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 52,
+            "0": 25,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 41,
+          "vertices": 72,
+          "sourceMeanY": -0.12365508783194754,
+          "sourceMeanProjectedRadius": 0.023607200812366846,
+          "sourceMinimumProjectedRadius": 0.013582007133481745,
+          "sourceXWidth": 0.05411238316446543,
+          "sourceZHeight": 0.043273329734802246,
+          "fittedBoundsMin": [
+            -0.0730636939406395,
+            -0.05770951882004738,
+            1.1470268964767456
+          ],
+          "fittedBoundsMax": [
+            -0.01054512057453394,
+            -0.03845827281475067,
+            1.180137038230896
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 41,
+            "1": 6,
+            "0": 25
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 42,
+          "vertices": 70,
+          "sourceMeanY": -0.12390083585466657,
+          "sourceMeanProjectedRadius": 0.024345027581350487,
+          "sourceMinimumProjectedRadius": 0.01441175696236614,
+          "sourceXWidth": 0.05399518646299839,
+          "sourceZHeight": 0.045599162578582764,
+          "fittedBoundsMin": [
+            -0.07291191816329956,
+            -0.058272767812013626,
+            1.1464707851409912
+          ],
+          "fittedBoundsMax": [
+            -0.010785232298076153,
+            -0.038348425179719925,
+            1.1814041137695312
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 41,
+            "1": 6,
+            "0": 23
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 43,
+          "vertices": 68,
+          "sourceMeanY": -0.12416821060811772,
+          "sourceMeanProjectedRadius": 0.025127751176255382,
+          "sourceMinimumProjectedRadius": 0.015041063554389061,
+          "sourceXWidth": 0.05387798976153135,
+          "sourceZHeight": 0.04792502522468567,
+          "fittedBoundsMin": [
+            -0.07272669672966003,
+            -0.058846719563007355,
+            1.1459143161773682
+          ],
+          "fittedBoundsMax": [
+            -0.011138266883790493,
+            -0.03831372410058975,
+            1.182748794555664
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 41,
+            "1": 6,
+            "0": 21
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 44,
+          "vertices": 66,
+          "sourceMeanY": -0.12446028818235252,
+          "sourceMeanProjectedRadius": 0.025955619193455435,
+          "sourceMinimumProjectedRadius": 0.015836766015022208,
+          "sourceXWidth": 0.05376078560948372,
+          "sourceZHeight": 0.05025091767311096,
+          "fittedBoundsMin": [
+            -0.07248897850513458,
+            -0.05938743054866791,
+            1.1453574895858765
+          ],
+          "fittedBoundsMax": [
+            -0.011610235087573528,
+            -0.03836745023727417,
+            1.1841926574707031
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "1": 6,
+            "2": 41,
+            "0": 19
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 45,
+          "vertices": 32,
+          "sourceMeanY": -0.1279759460594505,
+          "sourceMeanProjectedRadius": 0.027073255813363506,
+          "sourceMinimumProjectedRadius": 0.016691904599167938,
+          "sourceXWidth": 0.036631084978580475,
+          "sourceZHeight": 0.05161044001579285,
+          "fittedBoundsMin": [
+            -0.07054432481527328,
+            -0.05988467112183571,
+            1.1447999477386475
+          ],
+          "fittedBoundsMax": [
+            -0.02210421673953533,
+            -0.05354251340031624,
+            1.184241771697998
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 19,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 46,
+          "vertices": 30,
+          "sourceMeanY": -0.12814357181390126,
+          "sourceMeanProjectedRadius": 0.028172069759844567,
+          "sourceMinimumProjectedRadius": 0.017405404454245352,
+          "sourceXWidth": 0.03474239259958267,
+          "sourceZHeight": 0.05296996235847473,
+          "fittedBoundsMin": [
+            -0.06988933682441711,
+            -0.06068769842386246,
+            1.1442402601242065
+          ],
+          "fittedBoundsMax": [
+            -0.023647239431738853,
+            -0.05420031026005745,
+            1.1842529773712158
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 17,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 47,
+          "vertices": 28,
+          "sourceMeanY": -0.12829013275248663,
+          "sourceMeanProjectedRadius": 0.029390471545054923,
+          "sourceMinimumProjectedRadius": 0.018217444826789976,
+          "sourceXWidth": 0.03285369090735912,
+          "sourceZHeight": 0.054329484701156616,
+          "fittedBoundsMin": [
+            -0.06917715072631836,
+            -0.06155490130186081,
+            1.1436767578125
+          ],
+          "fittedBoundsMax": [
+            -0.025158952921628952,
+            -0.054864585399627686,
+            1.1842353343963623
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 15,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 48,
+          "vertices": 26,
+          "sourceMeanY": -0.12841151024286562,
+          "sourceMeanProjectedRadius": 0.030742977631772105,
+          "sourceMinimumProjectedRadius": 0.01894481621537603,
+          "sourceXWidth": 0.03096499852836132,
+          "sourceZHeight": 0.05568903684616089,
+          "fittedBoundsMin": [
+            -0.0684126541018486,
+            -0.062494900077581406,
+            1.1431082487106323
+          ],
+          "fittedBoundsMax": [
+            -0.026617925614118576,
+            -0.05553916469216347,
+            1.1841996908187866
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 11,
+            "0": 13,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 49,
+          "vertices": 12,
+          "sourceMeanY": -0.12810228082040945,
+          "sourceMeanProjectedRadius": 0.03199198186319032,
+          "sourceMinimumProjectedRadius": 0.01972000056652808,
+          "sourceXWidth": 0.02752474695444107,
+          "sourceZHeight": 0.05685925483703613,
+          "fittedBoundsMin": [
+            -0.06759952008724213,
+            -0.06254291534423828,
+            1.1426175832748413
+          ],
+          "fittedBoundsMax": [
+            -0.02800310216844082,
+            -0.0562274232506752,
+            1.1841533184051514
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 12
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 50,
+          "vertices": 10,
+          "sourceMeanY": -0.12788123339414598,
+          "sourceMeanProjectedRadius": 0.033438613899221585,
+          "sourceMinimumProjectedRadius": 0.020452402222972513,
+          "sourceXWidth": 0.02547449991106987,
+          "sourceZHeight": 0.05802953243255615,
+          "fittedBoundsMin": [
+            -0.06673667579889297,
+            -0.06350718438625336,
+            1.1421042680740356
+          ],
+          "fittedBoundsMax": [
+            -0.02929493971168995,
+            -0.05692819505929947,
+            1.1841086149215698
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 10
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 51,
+          "vertices": 8,
+          "sourceMeanY": -0.1274351365864277,
+          "sourceMeanProjectedRadius": 0.03523922335552983,
+          "sourceMinimumProjectedRadius": 0.021195786515569522,
+          "sourceXWidth": 0.02342425286769867,
+          "sourceZHeight": 0.059199780225753784,
+          "fittedBoundsMin": [
+            -0.0658218041062355,
+            -0.06437318027019501,
+            1.1415643692016602
+          ],
+          "fittedBoundsMax": [
+            -0.030474280938506126,
+            -0.05764197185635567,
+            1.1840758323669434
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 52,
+          "vertices": 6,
+          "sourceMeanY": -0.12653852005799612,
+          "sourceMeanProjectedRadius": 0.03772394873991642,
+          "sourceMinimumProjectedRadius": 0.021926492273971216,
+          "sourceXWidth": 0.021373998373746872,
+          "sourceZHeight": 0.06036999821662903,
+          "fittedBoundsMin": [
+            -0.06485260277986526,
+            -0.06504020094871521,
+            1.1409895420074463
+          ],
+          "fittedBoundsMax": [
+            -0.03152197226881981,
+            -0.05836951732635498,
+            1.1840620040893555
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 53,
+          "vertices": 4,
+          "sourceMeanY": -0.12451497837901115,
+          "sourceMeanProjectedRadius": 0.04188733182800843,
+          "sourceMinimumProjectedRadius": 0.04127575472022912,
+          "sourceXWidth": 0.005490005016326904,
+          "sourceZHeight": 0.0002842843532562256,
+          "fittedBoundsMin": [
+            -0.06382453441619873,
+            -0.062153346836566925,
+            1.1403611898422241
+          ],
+          "fittedBoundsMax": [
+            -0.05743061751127243,
+            -0.05911021679639816,
+            1.1404041051864624
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 54,
+          "vertices": 3,
+          "sourceMeanY": -0.12452577551205952,
+          "sourceMeanProjectedRadius": 0.04289825913202631,
+          "sourceMinimumProjectedRadius": 0.04248499853440227,
+          "sourceXWidth": 0.0036600008606910706,
+          "sourceZHeight": 0.0001895129680633545,
+          "fittedBoundsMin": [
+            -0.06272423267364502,
+            -0.06197477877140045,
+            1.1397156715393066
+          ],
+          "fittedBoundsMax": [
+            -0.058500345796346664,
+            -0.05987323448061943,
+            1.139752984046936
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 3
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 55,
+          "vertices": 2,
+          "sourceMeanY": -0.1245397999882698,
+          "sourceMeanProjectedRadius": 0.04391583704134947,
+          "sourceMinimumProjectedRadius": 0.04370663840772154,
+          "sourceXWidth": 0.0018299967050552368,
+          "sourceZHeight": 9.47415828704834e-05,
+          "fittedBoundsMin": [
+            -0.061536144465208054,
+            -0.06175782531499863,
+            1.139048457145691
+          ],
+          "fittedBoundsMax": [
+            -0.059441789984703064,
+            -0.06066760793328285,
+            1.1390749216079712
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 56,
+          "vertices": 1,
+          "sourceMeanY": -0.12455705553293228,
+          "sourceMeanProjectedRadius": 0.044939663428089756,
+          "sourceMinimumProjectedRadius": 0.044939663428089756,
+          "sourceXWidth": 0.0,
+          "sourceZHeight": 0.0,
+          "fittedBoundsMin": [
+            -0.06024465709924698,
+            -0.06150274723768234,
+            1.1383552551269531
+          ],
+          "fittedBoundsMax": [
+            -0.06024465709924698,
+            -0.06150274723768234,
+            1.1383552551269531
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 1
+          }
+        }
+      ],
+      "candidateTightClosedRing": {
+        "stepsFromTaggedCavityBoundary": 12,
+        "vertices": 80,
+        "sourceMeanY": -0.12208985788747669,
+        "sourceMeanProjectedRadius": 0.009998451416051796,
+        "sourceMinimumProjectedRadius": 0.003574430257122747,
+        "sourceXWidth": 0.025394326075911522,
+        "sourceZHeight": 0.01046714186668396,
+        "fittedBoundsMin": [
+          -0.05753941833972931,
+          -0.051516853272914886,
+          1.1595414876937866
+        ],
+        "fittedBoundsMax": [
+          -0.026513315737247467,
+          -0.04562552273273468,
+          1.1696773767471313
+        ],
+        "singleClosedCycle": true,
+        "withinLayerEdgeDegrees": {
+          "2": 80
+        }
+      },
+      "candidateRingVertexIds": [
+        262,
+        14287,
+        14288,
+        14289,
+        865,
+        3610,
+        3611,
+        3612,
+        280,
+        3348,
+        3347,
+        3346,
+        281,
+        6045,
+        6044,
+        6043,
+        867,
+        5920,
+        5921,
+        5922,
+        282,
+        7701,
+        7700,
+        7699,
+        1189,
+        7717,
+        7718,
+        7719,
+        283,
+        14670,
+        14669,
+        14668,
+        1197,
+        14248,
+        14249,
+        14250,
+        289,
+        6723,
+        6722,
+        6721,
+        1108,
+        18189,
+        18188,
+        18187,
+        287,
+        17785,
+        17786,
+        17787,
+        286,
+        12265,
+        12266,
+        12267,
+        285,
+        10003,
+        10004,
+        10005,
+        288,
+        18291,
+        18290,
+        18289,
+        863,
+        18451,
+        18452,
+        18453,
+        284,
+        7855,
+        7856,
+        7857,
+        291,
+        11130,
+        11129,
+        11128,
+        1230,
+        15468,
+        15467,
+        15466,
+        263,
+        15577,
+        15578,
+        15579
+      ],
+      "candidateIsNotYetVerifiedLidMargin": true
+    },
+    "L": {
+      "sourceTags": {
+        "cavity": 6,
+        "surroundingOrbitalSurface": 10
+      },
+      "boundaryVertices": 80,
+      "layers": [
+        {
+          "stepsFromTaggedCavityBoundary": 0,
+          "vertices": 80,
+          "sourceMeanY": -0.10509515553712845,
+          "sourceMeanProjectedRadius": 0.020617806135600093,
+          "sourceMinimumProjectedRadius": 0.01876347480023437,
+          "sourceXWidth": 0.041000161319971085,
+          "sourceZHeight": 0.04194295406341553,
+          "fittedBoundsMin": [
+            0.015553012490272522,
+            -0.04610211402177811,
+            1.1506242752075195
+          ],
+          "fittedBoundsMax": [
+            0.06329186260700226,
+            -0.03629322350025177,
+            1.1836544275283813
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 1,
+          "vertices": 80,
+          "sourceMeanY": -0.10621870029717684,
+          "sourceMeanProjectedRadius": 0.02020881974862642,
+          "sourceMinimumProjectedRadius": 0.0185697590425389,
+          "sourceXWidth": 0.040152763947844505,
+          "sourceZHeight": 0.04114639759063721,
+          "fittedBoundsMin": [
+            0.01616416499018669,
+            -0.046408750116825104,
+            1.150754451751709
+          ],
+          "fittedBoundsMax": [
+            0.06322085112333298,
+            -0.037018097937107086,
+            1.1833792924880981
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 2,
+          "vertices": 80,
+          "sourceMeanY": -0.10734224356710911,
+          "sourceMeanProjectedRadius": 0.019801174532087438,
+          "sourceMinimumProjectedRadius": 0.018376467540412743,
+          "sourceXWidth": 0.03930536564439535,
+          "sourceZHeight": 0.040349870920181274,
+          "fittedBoundsMin": [
+            0.016845228150486946,
+            -0.04667404294013977,
+            1.1509206295013428
+          ],
+          "fittedBoundsMax": [
+            0.0630633607506752,
+            -0.037738870829343796,
+            1.1830508708953857
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 3,
+          "vertices": 80,
+          "sourceMeanY": -0.10846578683704138,
+          "sourceMeanProjectedRadius": 0.01939495679492672,
+          "sourceMinimumProjectedRadius": 0.018176946953932474,
+          "sourceXWidth": 0.0384579673409462,
+          "sourceZHeight": 0.039553314447402954,
+          "fittedBoundsMin": [
+            0.01759607531130314,
+            -0.04693296551704407,
+            1.151123285293579
+          ],
+          "fittedBoundsMax": [
+            0.06282073259353638,
+            -0.03845321014523506,
+            1.1826732158660889
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 4,
+          "vertices": 80,
+          "sourceMeanY": -0.10958933122456074,
+          "sourceMeanProjectedRadius": 0.018990251751339067,
+          "sourceMinimumProjectedRadius": 0.017961169123636392,
+          "sourceXWidth": 0.03761056996881962,
+          "sourceZHeight": 0.038756757974624634,
+          "fittedBoundsMin": [
+            0.01841657981276512,
+            -0.04724876955151558,
+            1.1513628959655762
+          ],
+          "fittedBoundsMax": [
+            0.06249433010816574,
+            -0.03915882855653763,
+            1.182245135307312
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 5,
+          "vertices": 80,
+          "sourceMeanY": -0.1105928580276668,
+          "sourceMeanProjectedRadius": 0.01833590978580414,
+          "sourceMinimumProjectedRadius": 0.017463077414202947,
+          "sourceXWidth": 0.03624109923839569,
+          "sourceZHeight": 0.03747120499610901,
+          "fittedBoundsMin": [
+            0.01930365152657032,
+            -0.047582052648067474,
+            1.1516411304473877
+          ],
+          "fittedBoundsMax": [
+            0.06208781525492668,
+            -0.03985239565372467,
+            1.1817562580108643
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 6,
+          "vertices": 80,
+          "sourceMeanY": -0.11159638585522771,
+          "sourceMeanProjectedRadius": 0.017682935947358213,
+          "sourceMinimumProjectedRadius": 0.01684219477800486,
+          "sourceXWidth": 0.03487163223326206,
+          "sourceZHeight": 0.03618568181991577,
+          "fittedBoundsMin": [
+            0.02024237997829914,
+            -0.047937843948602676,
+            1.1519638299942017
+          ],
+          "fittedBoundsMax": [
+            0.06161404401063919,
+            -0.040529701858758926,
+            1.1812129020690918
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 7,
+          "vertices": 80,
+          "sourceMeanY": -0.11259991358965635,
+          "sourceMeanProjectedRadius": 0.017031495980869168,
+          "sourceMinimumProjectedRadius": 0.016117800539074908,
+          "sourceXWidth": 0.033502161502838135,
+          "sourceZHeight": 0.034900158643722534,
+          "fittedBoundsMin": [
+            0.02121489681303501,
+            -0.04824742674827576,
+            1.1523388624191284
+          ],
+          "fittedBoundsMax": [
+            0.06108822301030159,
+            -0.041185591369867325,
+            1.180606484413147
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 8,
+          "vertices": 80,
+          "sourceMeanY": -0.11360344067215919,
+          "sourceMeanProjectedRadius": 0.01638176834227497,
+          "sourceMinimumProjectedRadius": 0.015332594060289785,
+          "sourceXWidth": 0.032132694497704506,
+          "sourceZHeight": 0.03361460566520691,
+          "fittedBoundsMin": [
+            0.022203339263796806,
+            -0.04848434031009674,
+            1.152773141860962
+          ],
+          "fittedBoundsMax": [
+            0.06052551791071892,
+            -0.041814934462308884,
+            1.179927945137024
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 9,
+          "vertices": 80,
+          "sourceMeanY": -0.11450949227437376,
+          "sourceMeanProjectedRadius": 0.01553511676999399,
+          "sourceMinimumProjectedRadius": 0.014253168781664072,
+          "sourceXWidth": 0.030761785805225372,
+          "sourceZHeight": 0.03156900405883789,
+          "fittedBoundsMin": [
+            0.02318466268479824,
+            -0.04865112528204918,
+            1.1532715559005737
+          ],
+          "fittedBoundsMax": [
+            0.05994246527552605,
+            -0.04241107776761055,
+            1.1791645288467407
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 10,
+          "vertices": 80,
+          "sourceMeanY": -0.11541554294526576,
+          "sourceMeanProjectedRadius": 0.014693494135471923,
+          "sourceMinimumProjectedRadius": 0.013163944538536787,
+          "sourceXWidth": 0.02939087525010109,
+          "sourceZHeight": 0.029523372650146484,
+          "fittedBoundsMin": [
+            0.024115169420838356,
+            -0.04877292364835739,
+            1.1538398265838623
+          ],
+          "fittedBoundsMax": [
+            0.05937569588422775,
+            -0.04295630380511284,
+            1.1783109903335571
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 11,
+          "vertices": 80,
+          "sourceMeanY": -0.11632159585133195,
+          "sourceMeanProjectedRadius": 0.01385784892348071,
+          "sourceMinimumProjectedRadius": 0.012077028603963664,
+          "sourceXWidth": 0.028019964694976807,
+          "sourceZHeight": 0.027477771043777466,
+          "fittedBoundsMin": [
+            0.02494598738849163,
+            -0.04891413450241089,
+            1.1544935703277588
+          ],
+          "fittedBoundsMax": [
+            0.058837298303842545,
+            -0.04344494640827179,
+            1.1773546934127808
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 12,
+          "vertices": 80,
+          "sourceMeanY": -0.117227647267282,
+          "sourceMeanProjectedRadius": 0.01302937029509626,
+          "sourceMinimumProjectedRadius": 0.01099313765038147,
+          "sourceXWidth": 0.026649056002497673,
+          "sourceZHeight": 0.025432169437408447,
+          "fittedBoundsMin": [
+            0.02562825009226799,
+            -0.049126021564006805,
+            1.1552435159683228
+          ],
+          "fittedBoundsMax": [
+            0.058348722755908966,
+            -0.04386524111032486,
+            1.1762914657592773
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 13,
+          "vertices": 80,
+          "sourceMeanY": -0.1180888956412673,
+          "sourceMeanProjectedRadius": 0.01227682677404387,
+          "sourceMinimumProjectedRadius": 0.009562816028278,
+          "sourceXWidth": 0.02625400573015213,
+          "sourceZHeight": 0.02243494987487793,
+          "fittedBoundsMin": [
+            0.02612697333097458,
+            -0.049410440027713776,
+            1.1560744047164917
+          ],
+          "fittedBoundsMax": [
+            0.05792885273694992,
+            -0.04420400783419609,
+            1.1751391887664795
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 14,
+          "vertices": 80,
+          "sourceMeanY": -0.11895014280453324,
+          "sourceMeanProjectedRadius": 0.01157760423626054,
+          "sourceMinimumProjectedRadius": 0.008138169761538852,
+          "sourceXWidth": 0.025858953595161438,
+          "sourceZHeight": 0.0194377601146698,
+          "fittedBoundsMin": [
+            0.02646276354789734,
+            -0.04975593462586403,
+            1.1569246053695679
+          ],
+          "fittedBoundsMax": [
+            0.057606782764196396,
+            -0.04447499290108681,
+            1.1739500761032104
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 15,
+          "vertices": 80,
+          "sourceMeanY": -0.11981139043346048,
+          "sourceMeanProjectedRadius": 0.010942533753766113,
+          "sourceMinimumProjectedRadius": 0.006730213656203279,
+          "sourceXWidth": 0.025463901460170746,
+          "sourceZHeight": 0.016507595777511597,
+          "fittedBoundsMin": [
+            0.026670115068554878,
+            -0.05012504383921623,
+            1.1577194929122925
+          ],
+          "fittedBoundsMax": [
+            0.05736253410577774,
+            -0.04470100253820419,
+            1.172841191291809
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 16,
+          "vertices": 80,
+          "sourceMeanY": -0.1206726391799748,
+          "sourceMeanProjectedRadius": 0.010383657140794431,
+          "sourceMinimumProjectedRadius": 0.005342907010224027,
+          "sourceXWidth": 0.025245426222682,
+          "sourceZHeight": 0.013691037893295288,
+          "fittedBoundsMin": [
+            0.026763997972011566,
+            -0.05047079175710678,
+            1.1583949327468872
+          ],
+          "fittedBoundsMax": [
+            0.05722172185778618,
+            -0.04489167779684067,
+            1.1718642711639404
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 17,
+          "vertices": 80,
+          "sourceMeanY": -0.12102970043197274,
+          "sourceMeanProjectedRadius": 0.010281866353294953,
+          "sourceMinimumProjectedRadius": 0.004889775697154879,
+          "sourceXWidth": 0.025354232639074326,
+          "sourceZHeight": 0.012879878282546997,
+          "fittedBoundsMin": [
+            0.026787342503666878,
+            -0.05076311528682709,
+            1.1588892936706543
+          ],
+          "fittedBoundsMax": [
+            0.057170674204826355,
+            -0.04506925866007805,
+            1.1710894107818604
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 18,
+          "vertices": 80,
+          "sourceMeanY": -0.12138676410540938,
+          "sourceMeanProjectedRadius": 0.01018806889935769,
+          "sourceMinimumProjectedRadius": 0.004440581271318449,
+          "sourceXWidth": 0.025463039055466652,
+          "sourceZHeight": 0.012068718671798706,
+          "fittedBoundsMin": [
+            0.026724588125944138,
+            -0.05101412534713745,
+            1.159228801727295
+          ],
+          "fittedBoundsMax": [
+            0.05721360817551613,
+            -0.04524388164281845,
+            1.1704959869384766
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 19,
+          "vertices": 80,
+          "sourceMeanY": -0.1217438269406557,
+          "sourceMeanProjectedRadius": 0.010102596201247569,
+          "sourceMinimumProjectedRadius": 0.003996476445454907,
+          "sourceXWidth": 0.02557184547185898,
+          "sourceZHeight": 0.011257529258728027,
+          "fittedBoundsMin": [
+            0.02654513716697693,
+            -0.05124130845069885,
+            1.159437656402588
+          ],
+          "fittedBoundsMax": [
+            0.05734920874238014,
+            -0.045417819172143936,
+            1.170040249824524
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 20,
+          "vertices": 80,
+          "sourceMeanY": -0.12210088949650526,
+          "sourceMeanProjectedRadius": 0.010025802279942552,
+          "sourceMinimumProjectedRadius": 0.003559476422400424,
+          "sourceXWidth": 0.025680651888251305,
+          "sourceZHeight": 0.010446548461914062,
+          "fittedBoundsMin": [
+            0.026218384504318237,
+            -0.05146217718720436,
+            1.1595370769500732
+          ],
+          "fittedBoundsMax": [
+            0.0575750358402729,
+            -0.04559272155165672,
+            1.1696895360946655
+          ],
+          "singleClosedCycle": true,
+          "withinLayerEdgeDegrees": {
+            "2": 80
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 21,
+          "vertices": 82,
+          "sourceMeanY": -0.12245277905972993,
+          "sourceMeanProjectedRadius": 0.01030852026558438,
+          "sourceMinimumProjectedRadius": 0.0034689184615648377,
+          "sourceXWidth": 0.02668628841638565,
+          "sourceZHeight": 0.010444015264511108,
+          "fittedBoundsMin": [
+            0.02573118731379509,
+            -0.05168880522251129,
+            1.159552812576294
+          ],
+          "fittedBoundsMax": [
+            0.05789386108517647,
+            -0.04576214775443077,
+            1.1694191694259644
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 22,
+          "vertices": 84,
+          "sourceMeanY": -0.1227974763051385,
+          "sourceMeanProjectedRadius": 0.010598954221394572,
+          "sourceMinimumProjectedRadius": 0.0033853669180936557,
+          "sourceXWidth": 0.02769191935658455,
+          "sourceZHeight": 0.01044166088104248,
+          "fittedBoundsMin": [
+            0.025140244513750076,
+            -0.05192308500409126,
+            1.1594939231872559
+          ],
+          "fittedBoundsMax": [
+            0.0582733228802681,
+            -0.04592062160372734,
+            1.1692476272583008
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 23,
+          "vertices": 86,
+          "sourceMeanY": -0.12313454234322836,
+          "sourceMeanProjectedRadius": 0.010896003419762811,
+          "sourceMinimumProjectedRadius": 0.0033092614654887174,
+          "sourceXWidth": 0.028697554022073746,
+          "sourceZHeight": 0.010439306497573853,
+          "fittedBoundsMin": [
+            0.02451971359550953,
+            -0.05215788260102272,
+            1.1593537330627441
+          ],
+          "fittedBoundsMax": [
+            0.05869486555457115,
+            -0.046054985374212265,
+            1.1691746711730957
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "1": 4,
+            "0": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 24,
+          "vertices": 88,
+          "sourceMeanY": -0.12346358326348392,
+          "sourceMeanProjectedRadius": 0.011198656257948742,
+          "sourceMinimumProjectedRadius": 0.0032412791181849177,
+          "sourceXWidth": 0.029703188687562943,
+          "sourceZHeight": 0.010436952114105225,
+          "fittedBoundsMin": [
+            0.023943748325109482,
+            -0.05238717421889305,
+            1.159182071685791
+          ],
+          "fittedBoundsMax": [
+            0.059128761291503906,
+            -0.04615208879113197,
+            1.1692067384719849
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 6,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 25,
+          "vertices": 90,
+          "sourceMeanY": -0.12363421618938446,
+          "sourceMeanProjectedRadius": 0.011562164014735334,
+          "sourceMinimumProjectedRadius": 0.00354916358784526,
+          "sourceXWidth": 0.03031093068420887,
+          "sourceZHeight": 0.011214226484298706,
+          "fittedBoundsMin": [
+            0.023471985012292862,
+            -0.052603140473365784,
+            1.1589758396148682
+          ],
+          "fittedBoundsMax": [
+            0.05955785512924194,
+            -0.04619854316115379,
+            1.1693475246429443
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 8,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 26,
+          "vertices": 92,
+          "sourceMeanY": -0.12380162213483582,
+          "sourceMeanProjectedRadius": 0.011921991845124201,
+          "sourceMinimumProjectedRadius": 0.0038580954022952463,
+          "sourceXWidth": 0.030918670818209648,
+          "sourceZHeight": 0.0119914710521698,
+          "fittedBoundsMin": [
+            0.023106005042791367,
+            -0.05279899761080742,
+            1.1587319374084473
+          ],
+          "fittedBoundsMax": [
+            0.05999842658638954,
+            -0.04619777202606201,
+            1.1695889234542847
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 10,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 27,
+          "vertices": 94,
+          "sourceMeanY": -0.12396620697480568,
+          "sourceMeanProjectedRadius": 0.012278803659396851,
+          "sourceMinimumProjectedRadius": 0.004167842168196247,
+          "sourceXWidth": 0.031526412814855576,
+          "sourceZHeight": 0.012768685817718506,
+          "fittedBoundsMin": [
+            0.022832857444882393,
+            -0.05296562984585762,
+            1.1584491729736328
+          ],
+          "fittedBoundsMax": [
+            0.06046971306204796,
+            -0.046154242008924484,
+            1.1698975563049316
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 78,
+            "0": 12,
+            "1": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 28,
+          "vertices": 96,
+          "sourceMeanY": -0.12412834159719448,
+          "sourceMeanProjectedRadius": 0.012633251291831696,
+          "sourceMinimumProjectedRadius": 0.004471540433587776,
+          "sourceXWidth": 0.032134152948856354,
+          "sourceZHeight": 0.013545960187911987,
+          "fittedBoundsMin": [
+            0.022639600560069084,
+            -0.053093891590833664,
+            1.1581366062164307
+          ],
+          "fittedBoundsMax": [
+            0.06105594336986542,
+            -0.04601581022143364,
+            1.170249104499817
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "1": 4,
+            "2": 78,
+            "0": 14
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 29,
+          "vertices": 97,
+          "sourceMeanY": -0.12400391467453278,
+          "sourceMeanProjectedRadius": 0.01295621167392962,
+          "sourceMinimumProjectedRadius": 0.004834684450303139,
+          "sourceXWidth": 0.03254757076501846,
+          "sourceZHeight": 0.014631122350692749,
+          "fittedBoundsMin": [
+            0.02251112461090088,
+            -0.05317716300487518,
+            1.157798171043396
+          ],
+          "fittedBoundsMax": [
+            0.06158983334898949,
+            -0.04584955424070358,
+            1.1706212759017944
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 14,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 30,
+          "vertices": 98,
+          "sourceMeanY": -0.12387328899028349,
+          "sourceMeanProjectedRadius": 0.013289956142832092,
+          "sourceMinimumProjectedRadius": 0.005200836903626213,
+          "sourceXWidth": 0.03296098858118057,
+          "sourceZHeight": 0.015716254711151123,
+          "fittedBoundsMin": [
+            0.022423624992370605,
+            -0.053221117705106735,
+            1.1574352979660034
+          ],
+          "fittedBoundsMax": [
+            0.06208185851573944,
+            -0.04566841945052147,
+            1.1709980964660645
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 15,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 31,
+          "vertices": 99,
+          "sourceMeanY": -0.12373714683332829,
+          "sourceMeanProjectedRadius": 0.013633747253597096,
+          "sourceMinimumProjectedRadius": 0.005569487400346899,
+          "sourceXWidth": 0.03337441198527813,
+          "sourceZHeight": 0.016801416873931885,
+          "fittedBoundsMin": [
+            0.02234703302383423,
+            -0.053233884274959564,
+            1.157055139541626
+          ],
+          "fittedBoundsMax": [
+            0.06260083615779877,
+            -0.04545826464891434,
+            1.1713637113571167
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "0": 16,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 32,
+          "vertices": 100,
+          "sourceMeanY": -0.12359613917768002,
+          "sourceMeanProjectedRadius": 0.013986919014627066,
+          "sourceMinimumProjectedRadius": 0.005940063471656959,
+          "sourceXWidth": 0.03378782980144024,
+          "sourceZHeight": 0.017886608839035034,
+          "fittedBoundsMin": [
+            0.0222594253718853,
+            -0.053223609924316406,
+            1.156668782234192
+          ],
+          "fittedBoundsMax": [
+            0.06316869705915451,
+            -0.04521528258919716,
+            1.1717032194137573
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 17
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 33,
+          "vertices": 101,
+          "sourceMeanY": -0.12337088105407092,
+          "sourceMeanProjectedRadius": 0.014368974449688304,
+          "sourceMinimumProjectedRadius": 0.006161902292240477,
+          "sourceXWidth": 0.03441854752600193,
+          "sourceZHeight": 0.018787115812301636,
+          "fittedBoundsMin": [
+            0.02213972620666027,
+            -0.053199537098407745,
+            1.1562858819961548
+          ],
+          "fittedBoundsMax": [
+            0.06380061060190201,
+            -0.044937748461961746,
+            1.1720046997070312
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "1": 6,
+            "2": 77,
+            "0": 18
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 34,
+          "vertices": 102,
+          "sourceMeanY": -0.12313955810432341,
+          "sourceMeanProjectedRadius": 0.014756149148537828,
+          "sourceMinimumProjectedRadius": 0.006384499079405501,
+          "sourceXWidth": 0.0351586788892746,
+          "sourceZHeight": 0.01975002884864807,
+          "fittedBoundsMin": [
+            0.021967735141515732,
+            -0.05317249521613121,
+            1.1559059619903564
+          ],
+          "fittedBoundsMax": [
+            0.0644971951842308,
+            -0.04462537169456482,
+            1.172268271446228
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "1": 6,
+            "2": 77,
+            "0": 19
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 35,
+          "vertices": 103,
+          "sourceMeanY": -0.12290326223790067,
+          "sourceMeanProjectedRadius": 0.01514940879519483,
+          "sourceMinimumProjectedRadius": 0.006607776481190014,
+          "sourceXWidth": 0.035898806527256966,
+          "sourceZHeight": 0.020712941884994507,
+          "fittedBoundsMin": [
+            0.021723104640841484,
+            -0.05315548926591873,
+            1.1555203199386597
+          ],
+          "fittedBoundsMax": [
+            0.06525541841983795,
+            -0.0442795492708683,
+            1.1724978685379028
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 77,
+            "1": 6,
+            "0": 20
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 36,
+          "vertices": 104,
+          "sourceMeanY": -0.12266304336774808,
+          "sourceMeanProjectedRadius": 0.01554973663643983,
+          "sourceMinimumProjectedRadius": 0.0068316981471876325,
+          "sourceXWidth": 0.03663893602788448,
+          "sourceZHeight": 0.022063791751861572,
+          "fittedBoundsMin": [
+            0.02137892134487629,
+            -0.05316636711359024,
+            1.1551122665405273
+          ],
+          "fittedBoundsMax": [
+            0.06607227772474289,
+            -0.04390166327357292,
+            1.172696828842163
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 21,
+            "2": 77,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 37,
+          "vertices": 102,
+          "sourceMeanY": -0.12237024029680327,
+          "sourceMeanProjectedRadius": 0.016205052798964958,
+          "sourceMinimumProjectedRadius": 0.006938023739524422,
+          "sourceXWidth": 0.03804071806371212,
+          "sourceZHeight": 0.02332499623298645,
+          "fittedBoundsMin": [
+            0.020924419164657593,
+            -0.05320565402507782,
+            1.1542991399765015
+          ],
+          "fittedBoundsMax": [
+            0.0669434666633606,
+            -0.043490342795848846,
+            1.1728731393814087
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 74,
+            "1": 8,
+            "0": 20
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 38,
+          "vertices": 100,
+          "sourceMeanY": -0.12206118285655976,
+          "sourceMeanProjectedRadius": 0.016903267133071137,
+          "sourceMinimumProjectedRadius": 0.007044462876940183,
+          "sourceXWidth": 0.039442501962184906,
+          "sourceZHeight": 0.024586200714111328,
+          "fittedBoundsMin": [
+            0.020354220643639565,
+            -0.05327829718589783,
+            1.1535316705703735
+          ],
+          "fittedBoundsMax": [
+            0.06785956025123596,
+            -0.04304921627044678,
+            1.1730515956878662
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 72,
+            "1": 8,
+            "0": 20
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 39,
+          "vertices": 98,
+          "sourceMeanY": -0.12173601179098596,
+          "sourceMeanProjectedRadius": 0.017641290728945463,
+          "sourceMinimumProjectedRadius": 0.007151010228992688,
+          "sourceXWidth": 0.04084428586065769,
+          "sourceZHeight": 0.025847405195236206,
+          "fittedBoundsMin": [
+            0.019665656611323357,
+            -0.05338830500841141,
+            1.1528326272964478
+          ],
+          "fittedBoundsMax": [
+            0.06880977004766464,
+            -0.04257967695593834,
+            1.1732611656188965
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 70,
+            "1": 8,
+            "0": 20
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 40,
+          "vertices": 96,
+          "sourceMeanY": -0.12139487778767943,
+          "sourceMeanProjectedRadius": 0.018415491381307506,
+          "sourceMinimumProjectedRadius": 0.007257691289792104,
+          "sourceXWidth": 0.04224606789648533,
+          "sourceZHeight": 0.027108609676361084,
+          "fittedBoundsMin": [
+            0.018856072798371315,
+            -0.05353972315788269,
+            1.1521798372268677
+          ],
+          "fittedBoundsMax": [
+            0.06982482969760895,
+            -0.042083144187927246,
+            1.1735303401947021
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "1": 8,
+            "0": 20
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 41,
+          "vertices": 97,
+          "sourceMeanY": -0.12122582498284959,
+          "sourceMeanProjectedRadius": 0.0193353008789344,
+          "sourceMinimumProjectedRadius": 0.007752212188619898,
+          "sourceXWidth": 0.0441955104470253,
+          "sourceZHeight": 0.02850303053855896,
+          "fittedBoundsMin": [
+            0.017927510663866997,
+            -0.05373696982860565,
+            1.1515597105026245
+          ],
+          "fittedBoundsMax": [
+            0.07096955180168152,
+            -0.041556812822818756,
+            1.1738837957382202
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 21,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 42,
+          "vertices": 98,
+          "sourceMeanY": -0.12106617958265908,
+          "sourceMeanProjectedRadius": 0.020271517698071385,
+          "sourceMinimumProjectedRadius": 0.00824678363741706,
+          "sourceXWidth": 0.046144950203597546,
+          "sourceZHeight": 0.029897481203079224,
+          "fittedBoundsMin": [
+            0.01687346212565899,
+            -0.053991544991731644,
+            1.1509641408920288
+          ],
+          "fittedBoundsMax": [
+            0.07219303399324417,
+            -0.04100401699542999,
+            1.1743266582489014
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 22,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 43,
+          "vertices": 99,
+          "sourceMeanY": -0.12091411936162698,
+          "sourceMeanProjectedRadius": 0.021223669231400982,
+          "sourceMinimumProjectedRadius": 0.008741371430643526,
+          "sourceXWidth": 0.04809439182281494,
+          "sourceZHeight": 0.03129193186759949,
+          "fittedBoundsMin": [
+            0.015780393034219742,
+            -0.05431530997157097,
+            1.1503859758377075
+          ],
+          "fittedBoundsMax": [
+            0.07344239205121994,
+            -0.04042406007647514,
+            1.174858808517456
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 68,
+            "0": 23,
+            "1": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 44,
+          "vertices": 100,
+          "sourceMeanY": -0.1207678934931755,
+          "sourceMeanProjectedRadius": 0.02219120899516451,
+          "sourceMinimumProjectedRadius": 0.009235943909469184,
+          "sourceXWidth": 0.05004383251070976,
+          "sourceZHeight": 0.03268635272979736,
+          "fittedBoundsMin": [
+            0.01465519331395626,
+            -0.05481213331222534,
+            1.149818778038025
+          ],
+          "fittedBoundsMax": [
+            0.07466570287942886,
+            -0.039816275238990784,
+            1.175480842590332
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "1": 8,
+            "2": 68,
+            "0": 24
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 45,
+          "vertices": 85,
+          "sourceMeanY": -0.12318469110657188,
+          "sourceMeanProjectedRadius": 0.021230935810635686,
+          "sourceMinimumProjectedRadius": 0.010309740964437524,
+          "sourceXWidth": 0.050991861149668694,
+          "sourceZHeight": 0.034646451473236084,
+          "fittedBoundsMin": [
+            0.013575329445302486,
+            -0.05549534782767296,
+            1.1492563486099243
+          ],
+          "fittedBoundsMax": [
+            0.07380492240190506,
+            -0.03947388380765915,
+            1.1761913299560547
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 52,
+            "1": 8,
+            "0": 25
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 46,
+          "vertices": 85,
+          "sourceMeanY": -0.12364936970612582,
+          "sourceMeanProjectedRadius": 0.021913385845216255,
+          "sourceMinimumProjectedRadius": 0.011355150876798864,
+          "sourceXWidth": 0.05205090343952179,
+          "sourceZHeight": 0.036747097969055176,
+          "fittedBoundsMin": [
+            0.012524614110589027,
+            -0.05607176199555397,
+            1.1486968994140625
+          ],
+          "fittedBoundsMax": [
+            0.07355629652738571,
+            -0.039163362234830856,
+            1.1770154237747192
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 52,
+            "1": 8,
+            "0": 25
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 47,
+          "vertices": 85,
+          "sourceMeanY": -0.12414691930308061,
+          "sourceMeanProjectedRadius": 0.022620536294286824,
+          "sourceMinimumProjectedRadius": 0.012050676962447283,
+          "sourceXWidth": 0.05311697069555521,
+          "sourceZHeight": 0.03884771466255188,
+          "fittedBoundsMin": [
+            0.011480564251542091,
+            -0.056614287197589874,
+            1.1481395959854126
+          ],
+          "fittedBoundsMax": [
+            0.07333274930715561,
+            -0.03889062628149986,
+            1.1779372692108154
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 52,
+            "1": 8,
+            "0": 25
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 48,
+          "vertices": 85,
+          "sourceMeanY": -0.12467644240926294,
+          "sourceMeanProjectedRadius": 0.02335271575983537,
+          "sourceMinimumProjectedRadius": 0.01290425326973367,
+          "sourceXWidth": 0.05418304447084665,
+          "sourceZHeight": 0.040948331356048584,
+          "fittedBoundsMin": [
+            0.010442608967423439,
+            -0.05713023617863655,
+            1.147583246231079
+          ],
+          "fittedBoundsMax": [
+            0.07320458441972733,
+            -0.03866160288453102,
+            1.1789886951446533
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 52,
+            "1": 8,
+            "0": 25
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 49,
+          "vertices": 72,
+          "sourceMeanY": -0.12366919136709636,
+          "sourceMeanProjectedRadius": 0.02361004918521211,
+          "sourceMinimumProjectedRadius": 0.013569130888078759,
+          "sourceXWidth": 0.054069891571998596,
+          "sourceZHeight": 0.0432906448841095,
+          "fittedBoundsMin": [
+            0.010603203438222408,
+            -0.0577169731259346,
+            1.1470271348953247
+          ],
+          "fittedBoundsMax": [
+            0.07307462394237518,
+            -0.03848334401845932,
+            1.180159330368042
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 25,
+            "2": 41,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 50,
+          "vertices": 70,
+          "sourceMeanY": -0.12391388171485491,
+          "sourceMeanProjectedRadius": 0.024350452533348343,
+          "sourceMinimumProjectedRadius": 0.01439134947476034,
+          "sourceXWidth": 0.053956737741827965,
+          "sourceZHeight": 0.0456329882144928,
+          "fittedBoundsMin": [
+            0.010841124691069126,
+            -0.05828090384602547,
+            1.1464711427688599
+          ],
+          "fittedBoundsMax": [
+            0.07292792201042175,
+            -0.03836796060204506,
+            1.1814361810684204
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 41,
+            "0": 23,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 51,
+          "vertices": 68,
+          "sourceMeanY": -0.12418023989919354,
+          "sourceMeanProjectedRadius": 0.025135883581326218,
+          "sourceMinimumProjectedRadius": 0.01502887552595113,
+          "sourceXWidth": 0.05384358391165733,
+          "sourceZHeight": 0.047975361347198486,
+          "fittedBoundsMin": [
+            0.01119218859821558,
+            -0.0588529147207737,
+            1.1459145545959473
+          ],
+          "fittedBoundsMax": [
+            0.07274629920721054,
+            -0.03832879289984703,
+            1.1827924251556396
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 21,
+            "2": 41,
+            "1": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 52,
+          "vertices": 66,
+          "sourceMeanY": -0.12447148076061046,
+          "sourceMeanProjectedRadius": 0.025966506147252613,
+          "sourceMinimumProjectedRadius": 0.015816731605112298,
+          "sourceXWidth": 0.05373043101280928,
+          "sourceZHeight": 0.0503176748752594,
+          "fittedBoundsMin": [
+            0.011662708595395088,
+            -0.05939458683133125,
+            1.1453577280044556
+          ],
+          "fittedBoundsMax": [
+            0.07251162827014923,
+            -0.038379233330488205,
+            1.1842490434646606
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 41,
+            "1": 6,
+            "0": 19
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 53,
+          "vertices": 32,
+          "sourceMeanY": -0.12798760109581053,
+          "sourceMeanProjectedRadius": 0.027073794821355197,
+          "sourceMinimumProjectedRadius": 0.016660717090529825,
+          "sourceXWidth": 0.03665476478636265,
+          "sourceZHeight": 0.05167275667190552,
+          "fittedBoundsMin": [
+            0.022161701694130898,
+            -0.05988944694399834,
+            1.1447999477386475
+          ],
+          "fittedBoundsMax": [
+            0.07059849053621292,
+            -0.0535486675798893,
+            1.184298038482666
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 19,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 54,
+          "vertices": 30,
+          "sourceMeanY": -0.1281556765238444,
+          "sourceMeanProjectedRadius": 0.028172764797983023,
+          "sourceMinimumProjectedRadius": 0.01739247546462111,
+          "sourceXWidth": 0.034764841198921204,
+          "sourceZHeight": 0.053027838468551636,
+          "fittedBoundsMin": [
+            0.023705869913101196,
+            -0.06068971008062363,
+            1.144240140914917
+          ],
+          "fittedBoundsMax": [
+            0.0699455589056015,
+            -0.054207902401685715,
+            1.1843078136444092
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 17,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 55,
+          "vertices": 28,
+          "sourceMeanY": -0.1283022282379014,
+          "sourceMeanProjectedRadius": 0.02939127142737,
+          "sourceMinimumProjectedRadius": 0.01819327932666992,
+          "sourceXWidth": 0.03287492319941521,
+          "sourceZHeight": 0.054382920265197754,
+          "fittedBoundsMin": [
+            0.02521815523505211,
+            -0.06155368313193321,
+            1.1436767578125
+          ],
+          "fittedBoundsMax": [
+            0.0692349374294281,
+            -0.05487319454550743,
+            1.1842881441116333
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 15,
+            "2": 11,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 56,
+          "vertices": 26,
+          "sourceMeanY": -0.12842278497723433,
+          "sourceMeanProjectedRadius": 0.030743969957838617,
+          "sourceMinimumProjectedRadius": 0.018938265177790455,
+          "sourceXWidth": 0.030985001474618912,
+          "sourceZHeight": 0.05573800206184387,
+          "fittedBoundsMin": [
+            0.026676706969738007,
+            -0.062490105628967285,
+            1.1431083679199219
+          ],
+          "fittedBoundsMax": [
+            0.06847137957811356,
+            -0.055548086762428284,
+            1.184248924255371
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "2": 11,
+            "0": 13,
+            "1": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 57,
+          "vertices": 12,
+          "sourceMeanY": -0.12811987660825253,
+          "sourceMeanProjectedRadius": 0.03200320866537185,
+          "sourceMinimumProjectedRadius": 0.019702124950696072,
+          "sourceXWidth": 0.02753225341439247,
+          "sourceZHeight": 0.056901007890701294,
+          "fittedBoundsMin": [
+            0.02806026116013527,
+            -0.06251458078622818,
+            1.1426177024841309
+          ],
+          "fittedBoundsMax": [
+            0.0676584467291832,
+            -0.05623539537191391,
+            1.1841974258422852
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 12
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 58,
+          "vertices": 10,
+          "sourceMeanY": -0.12789741307497024,
+          "sourceMeanProjectedRadius": 0.03345129963008407,
+          "sourceMinimumProjectedRadius": 0.0204515621879126,
+          "sourceXWidth": 0.025479502975940704,
+          "sourceZHeight": 0.058064013719558716,
+          "fittedBoundsMin": [
+            0.02934989519417286,
+            -0.06348567456007004,
+            1.1421045064926147
+          ],
+          "fittedBoundsMax": [
+            0.06679550558328629,
+            -0.0569346584379673,
+            1.184146761894226
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 10
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 59,
+          "vertices": 8,
+          "sourceMeanY": -0.12745061609894037,
+          "sourceMeanProjectedRadius": 0.0352536765378665,
+          "sourceMinimumProjectedRadius": 0.021183516857685804,
+          "sourceXWidth": 0.023426758125424385,
+          "sourceZHeight": 0.05922701954841614,
+          "fittedBoundsMin": [
+            0.030527278780937195,
+            -0.064361572265625,
+            1.141564965248108
+          ],
+          "fittedBoundsMax": [
+            0.06588073074817657,
+            -0.05764685943722725,
+            1.1841075420379639
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 8
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 60,
+          "vertices": 6,
+          "sourceMeanY": -0.1265553037325541,
+          "sourceMeanProjectedRadius": 0.03774078690724786,
+          "sourceMinimumProjectedRadius": 0.021930837642952724,
+          "sourceXWidth": 0.021374007686972618,
+          "sourceZHeight": 0.06038999557495117,
+          "fittedBoundsMin": [
+            0.031574077904224396,
+            -0.06503700464963913,
+            1.1409865617752075
+          ],
+          "fittedBoundsMax": [
+            0.0649123564362526,
+            -0.05837325006723404,
+            1.1840876340866089
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 6
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 61,
+          "vertices": 4,
+          "sourceMeanY": -0.12453892827033997,
+          "sourceMeanProjectedRadius": 0.041908200181977606,
+          "sourceMinimumProjectedRadius": 0.04129277909195902,
+          "sourceXWidth": 0.005483254790306091,
+          "sourceZHeight": 0.00028198957443237305,
+          "fittedBoundsMin": [
+            0.057501837611198425,
+            -0.062154870480298996,
+            1.140358328819275
+          ],
+          "fittedBoundsMax": [
+            0.06388618052005768,
+            -0.05911416932940483,
+            1.1404036283493042
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 4
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 62,
+          "vertices": 3,
+          "sourceMeanY": -0.12455413490533829,
+          "sourceMeanProjectedRadius": 0.0429206638245015,
+          "sourceMinimumProjectedRadius": 0.04250484639301983,
+          "sourceXWidth": 0.003655504435300827,
+          "sourceZHeight": 0.00018799304962158203,
+          "fittedBoundsMin": [
+            0.058570872992277145,
+            -0.061977654695510864,
+            1.1397135257720947
+          ],
+          "fittedBoundsMax": [
+            0.06278841197490692,
+            -0.059877827763557434,
+            1.1397539377212524
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 3
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 63,
+          "vertices": 2,
+          "sourceMeanY": -0.12457316741347313,
+          "sourceMeanProjectedRadius": 0.04393977703970607,
+          "sourceMinimumProjectedRadius": 0.04372930969200328,
+          "sourceXWidth": 0.0018277503550052643,
+          "sourceZHeight": 9.399652481079102e-05,
+          "fittedBoundsMin": [
+            0.059511490166187286,
+            -0.06176187843084335,
+            1.1390479803085327
+          ],
+          "fittedBoundsMax": [
+            0.061602845788002014,
+            -0.060672711580991745,
+            1.1390764713287354
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 2
+          }
+        },
+        {
+          "stepsFromTaggedCavityBoundary": 64,
+          "vertices": 1,
+          "sourceMeanY": -0.12459604442119598,
+          "sourceMeanProjectedRadius": 0.04496515451808584,
+          "sourceMinimumProjectedRadius": 0.04496515451808584,
+          "sourceXWidth": 0.0,
+          "sourceZHeight": 0.0,
+          "fittedBoundsMin": [
+            0.06031327694654465,
+            -0.061507709324359894,
+            1.138357400894165
+          ],
+          "fittedBoundsMax": [
+            0.06031327694654465,
+            -0.061507709324359894,
+            1.138357400894165
+          ],
+          "singleClosedCycle": false,
+          "withinLayerEdgeDegrees": {
+            "0": 1
+          }
+        }
+      ],
+      "candidateTightClosedRing": {
+        "stepsFromTaggedCavityBoundary": 20,
+        "vertices": 80,
+        "sourceMeanY": -0.12210088949650526,
+        "sourceMeanProjectedRadius": 0.010025802279942552,
+        "sourceMinimumProjectedRadius": 0.003559476422400424,
+        "sourceXWidth": 0.025680651888251305,
+        "sourceZHeight": 0.010446548461914062,
+        "fittedBoundsMin": [
+          0.026218384504318237,
+          -0.05146217718720436,
+          1.1595370769500732
+        ],
+        "fittedBoundsMax": [
+          0.0575750358402729,
+          -0.04559272155165672,
+          1.1696895360946655
+        ],
+        "singleClosedCycle": true,
+        "withinLayerEdgeDegrees": {
+          "2": 80
+        }
+      },
+      "candidateRingVertexIds": [
+        1517,
+        11178,
+        11177,
+        11176,
+        1518,
+        11527,
+        11528,
+        11529,
+        2485,
+        4948,
+        4949,
+        4950,
+        1546,
+        4554,
+        4553,
+        4552,
+        1539,
+        10449,
+        10448,
+        10447,
+        2118,
+        14529,
+        14528,
+        14527,
+        1543,
+        14272,
+        14273,
+        14274,
+        1540,
+        8370,
+        8369,
+        8368,
+        1541,
+        10365,
+        10364,
+        10363,
+        1542,
+        9130,
+        9131,
+        9132,
+        2363,
+        17925,
+        17924,
+        17923,
+        1544,
+        18298,
+        18299,
+        18300,
+        2452,
+        5476,
+        5477,
+        5478,
+        1538,
+        3171,
+        3170,
+        3169,
+        2444,
+        2842,
+        2843,
+        2844,
+        1537,
+        3039,
+        3038,
+        3037,
+        2122,
+        15288,
+        15287,
+        15286,
+        1536,
+        18385,
+        18386,
+        18387,
+        1535,
+        17997,
+        17996,
+        17995,
+        2120,
+        17842,
+        17843,
+        17844
+      ],
+      "candidateIsNotYetVerifiedLidMargin": true
+    }
+  },
+  "nextEvidence": [
+    "Inspect actual fitted sclera/iris surfaces in the same head coordinate frame.",
+    "Verify the candidate loop against the true visible lid margin; face-set boundary alone lies too far inside the cavity.",
+    "Use upper/lower arc correspondence and globe clearance with fixed orbital anchors, preserving the nose and Jaw repair.",
+    "Check partial and full closure for inverted faces, collisions, seam continuity and nasal displacement before actual neutral/Tongue/Blink renders."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "status": "Read-only actual orbital geometry extraction; no repair or artistic acceptance",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_EarMotionStudy_v1.blend",
+  "sourceSha256": "4f5465424ae61376af51e5f57a38cc197f6e4c5bb127b4748193e435d87bbd47",
+  "codeSha256": "79b488ab84c0dc888a04cf4d582232ac4411047cb79fb01b6fc7c71057f887ea",
+  "coordinateSpace": "All fitted points and Eye bind centers expressed in the unchanged head object coordinate frame",
+  "eyeSurfaces": {
+    "L": {
+      "bindCenter": [
+        0.04071545600891113,
+        -0.044418010860681534,
+        1.1650718450546265
+      ],
+      "sclera": {
+        "vertices": 2178,
+        "triangles": 4352,
+        "boundsMin": [
+          0.024843739345669746,
+          -0.05239015445113182,
+          1.1552990674972534
+        ],
+        "boundsMax": [
+          0.056893736124038696,
+          -0.03647725284099579,
+          1.1781671047210693
+        ]
+      },
+      "iris": {
+        "vertices": 1600,
+        "triangles": 3200,
+        "boundsMin": [
+          0.031961046159267426,
+          -0.05248177424073219,
+          1.1598397493362427
+        ],
+        "boundsMax": [
+          0.04785991832613945,
+          -0.04999689385294914,
+          1.1718515157699585
+        ]
+      }
+    },
+    "R": {
+      "bindCenter": [
+        -0.04071560129523277,
+        -0.04441801831126213,
+        1.1650718450546265
+      ],
+      "sclera": {
+        "vertices": 2178,
+        "triangles": 4352,
+        "boundsMin": [
+          -0.05690667778253555,
+          -0.0523882694542408,
+          1.1553040742874146
+        ],
+        "boundsMax": [
+          -0.024859974160790443,
+          -0.036478862166404724,
+          1.1781704425811768
+        ]
+      },
+      "iris": {
+        "vertices": 1600,
+        "triangles": 3200,
+        "boundsMin": [
+          -0.04785199463367462,
+          -0.0524790994822979,
+          1.1598387956619263
+        ],
+        "boundsMax": [
+          -0.031953997910022736,
+          -0.04999193176627159,
+          1.1718504428863525
+        ]
+      }
+    }
+  },
+  "sharedChanged": false,
+  "cacheSha256": "f03659a8742c390b6dc3ec796d2400df9458d38b174b1c83470c8e4323d0df7e",
+  "cache": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-v5i-orbital-geometry.npz"
+}
