@@ -1,0 +1,69 @@
+{
+  "status": "Actual digit-refinement source and18 posed views; fist remains failed",
+  "sourceSha256": "fcfa7606bc088aebda96300600b3921127f11964de4204d3b6e5a9091a134ce2",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "engineIntegrated": false,
+  "individualViewsInspected": [
+    "Melee_50_palm",
+    "Melee_50_edge",
+    "Melee_50_back",
+    "Run_50_palm",
+    "Idle_00_palm",
+    "Idle_00_edge"
+  ],
+  "all18ViewsInspected": false,
+  "findings": [
+    "Relaxed Idle remains open, with broad smooth anatomy and abrupt wrist contour.",
+    "Melee still has spread digits, weak thumb opposition and severe proximal/palmar creases.",
+    "Run is less closed than the previous candidate but retains an artificial C curl.",
+    "A saved-pose bone/skin audit is prepared to distinguish pose orientation, bind geometry and weighting before further tuning."
+  ],
+  "execution": [
+    {
+      "stage": "source",
+      "processId": 21928,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1183.0,
+      "minimumAvailableMB": 10610.0
+    },
+    {
+      "stage": "review",
+      "processId": 34064,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1318.0,
+      "minimumAvailableMB": 10714.0
+    }
+  ],
+  "artifactHashes": {
+    "action-refinement.json": "8c8abb2da574d425896bce639fca3a6d491da779c825d4225eb73ab45b13b429",
+    "Krag_ConvergentHand_v2.blend": "fcfa7606bc088aebda96300600b3921127f11964de4204d3b6e5a9091a134ce2",
+    "actions-review/Idle_00_back.png": "91211621035933537b374198b076545bfca5365c1e8901b873b6e80e88ff364e",
+    "actions-review/Idle_00_edge.png": "88d614e8c5729e0b5d5549fc46d6bf9c0ea94ce4180ecca13d4c0262834d5770",
+    "actions-review/Idle_00_palm.png": "c3af517f34389ae32c1ebf68c8c026a1387368561dc09e5d8676efd606ac6a23",
+    "actions-review/Idle_50_back.png": "dfcaedb045f00f82e2eb98fa278b1958eb14bf2e97ecec0f63a8a57b552a7a8c",
+    "actions-review/Idle_50_edge.png": "cfbe308275bb021da58eb5cc4737faa303697863ecb4fde725fc14bf4aea1ae0",
+    "actions-review/Idle_50_palm.png": "b06e133c7aea718f9a07fe00729f2575db013d31f3c3d024b60cf38b598638bb",
+    "actions-review/Melee_00_back.png": "f2f80e0cb8ff041d36d16c3c60e5af34f8139e12d43effdda57f4c76d1851dfd",
+    "actions-review/Melee_00_edge.png": "6b135d591f2876e8c635fea1906f3b9956036ac9ba28f165a7f55312697f9c51",
+    "actions-review/Melee_00_palm.png": "867ea54c0306963e1a07b59296aeba23542d3b774cb8c1cc7b380722e7fa452a",
+    "actions-review/Melee_50_back.png": "50d2255c2d5c68ff8959cd5779204f8cc37dd8d9fd5e902580543be5de475cc6",
+    "actions-review/Melee_50_edge.png": "ebf477b3e0e6d9a1535cd5589eb1e53763ff0a42f7a22a9c0c91ffb5d64c9a60",
+    "actions-review/Melee_50_palm.png": "84848ed45b8ef63949d09e5520ed373feb039ba76e6afd8d19fc9c29ac3958d3",
+    "actions-review/review.json": "b7fdb884733a8e771f1e461e30efcafadaf3c9b4ff5526896095f7ee39b3f8c5",
+    "actions-review/Run_00_back.png": "3ba31b354733d4a5c5c79919d026e65cd4a243e84083489f89a040e0856604b8",
+    "actions-review/Run_00_edge.png": "4b50d21df733ea9addb92ce4d46a9455ae1997476b13ac86504180c4c885311a",
+    "actions-review/Run_00_palm.png": "931b917487593b52af5498a3eaf36a89b4a7d20dc88b42c2dd81becde4839835",
+    "actions-review/Run_50_back.png": "fd4ea14bc213cb37ca9c6bb2a1b5e93add878e0bfa30a8cb0a3bf859ebb7bd38",
+    "actions-review/Run_50_edge.png": "b2102d76b20bcaaeaae1a6477f7b68a6dcb8fd2c2fa2a1926d18deefe737c86f",
+    "actions-review/Run_50_palm.png": "3a69784194c8367eab05d906cb938b5e585a214be4f40a7df5ad63f2c9eaf6f8",
+    "logs/krag-convergent-hand-v2-review-memory.csv": "e994d38abc8e40a7b07f28e580c6980189af6f6edb22fb4a55b665e41b1663ef",
+    "logs/krag-convergent-hand-v2-review.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/krag-convergent-hand-v2-review.stdout.log": "9dfdad01509781e6e5f496e9cdf24266054be544d836d9a78454fb5ef9d0503d",
+    "logs/krag-convergent-hand-v2-source-memory.csv": "a52a0371b8062782ffbd8fcea38067cab1e684c13bfca9f2824b74a2d1c8e696",
+    "logs/krag-convergent-hand-v2-source.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/krag-convergent-hand-v2-source.stdout.log": "23421d7bfb1d9fac7781def54479ef5aa5e81f648248bdaed2aab958c94f468f"
+  }
+}

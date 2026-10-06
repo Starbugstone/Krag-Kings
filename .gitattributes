@@ -217,3 +217,7 @@ benchmark/evidence/unity/20261006-coherent79-runtime/*.json -text whitespace=-bl
 benchmark/evidence/unity/20261006-coherent79-runtime/*.jsonl -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 benchmark/evidence/unity/20261006-coherent79-runtime/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 benchmark/evidence/unity/20261006-coherent79-runtime/*.txt -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+benchmark/art/animation/krag-convergent-hand-v2/**/*.json -text whitespace=cr-at-eol
+benchmark/art/animation/krag-convergent-hand-v2/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-convergent-hand-v2/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

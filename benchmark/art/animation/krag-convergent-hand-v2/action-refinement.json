@@ -1,0 +1,69 @@
+{
+  "sourceSha256": "7db2a08ff2d8130e2af87eb8fb5b0888b64f581115786b9131653ad35eeccd37",
+  "outputSha256": "fcfa7606bc088aebda96300600b3921127f11964de4204d3b6e5a9091a134ce2",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-convergent-hand-v2\\Krag_ConvergentHand_v2.blend",
+  "savedSourceReopened": true,
+  "allMeshPayloadsPreserved": 31,
+  "allBindBonesPreserved": 72,
+  "correctiveDriversPreserved": 25,
+  "clips": {
+    "Idle": {
+      "frameRange": [
+        1,
+        181
+      ],
+      "nonDigitCurvesSha256": "7b5cfa813d5ce77d9f71188a327c202102c94d9e15110c6370357ac31cb4ecc2"
+    },
+    "Walk": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "nonDigitCurvesSha256": "aa2c4d259738217fafd8b1fc33d0c02f6652b03e3aa6b216c17b911ae6e331db"
+    },
+    "Run": {
+      "frameRange": [
+        1,
+        25
+      ],
+      "nonDigitCurvesSha256": "fdf704c6b2cdbfee4ac13aa307f7760fc28edbce9891923ec3418f44f78664ff"
+    },
+    "Melee": {
+      "frameRange": [
+        1,
+        37
+      ],
+      "nonDigitCurvesSha256": "4d2a67396348365efc8f4108907e73b5f190b4d0620fd823d999802890b6e019"
+    },
+    "Shoot": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "nonDigitCurvesSha256": "398fe44a92444cf9ec904d597f7a6f9de3df2c2f9fa8ec9c34b7b8976232e8f8"
+    },
+    "Hit": {
+      "frameRange": [
+        1,
+        28
+      ],
+      "nonDigitCurvesSha256": "b1738f75f34a2ede6173bd3c1d9c31fdb2a24c1d89da8da1590a07578ebcda95"
+    },
+    "FacePerformance": {
+      "frameRange": [
+        1,
+        180
+      ],
+      "nonDigitCurvesSha256": "417f13b3933069f1484cfe5f13e5d0db3a29e85402b1737deae1c3e191749901"
+    }
+  },
+  "preparedPoseProposals": "Digit adduction and full-fist MCP/PIP/DIP 76/90/49 degrees; two-bone thumb opposition toward index/middle PIP region with12mm pad offset.",
+  "visualReviewCompleted": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "recipeHashes": {
+    "refine_actions.py": "c7aa613b1e13e5b4039f07190f6f7797740e6a51fdc24e3d7c37b2b93f53cf4b",
+    "pose_refinement.py": "b30f03a6d9d96b987ff27fb00a5a3972a06cb7b4d1df87df5b30e0f8f72552c4",
+    "morph_drivers.py": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+  }
+}
