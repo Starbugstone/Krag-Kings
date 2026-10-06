@@ -507,5 +507,16 @@
     "sha256": "9e3a0ca39088053cbbca9e8b20b8144c8e12d51927ed9d613a42b4c1f704b01c"
   },
   "preparedOralProfileAndMotionMerge": "oral-volume-study/prepared-v9r-and-v4-merge.json",
-  "motionLineage": "Actual v9p/v9qa retain pre-v4 source actions. Prepared independent v4 merge has not run. Root72-bone hand study remains separate."
+  "motionLineage": "Actual fe15213d source merges exact verified v4 seven takes onto saved v9p art. Original v9p/v9qa and prepared oral-only v9r retain earlier actions. Root72-bone hand remains separate.",
+  "latestCoherentMotionSource": {
+    "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.blend",
+    "sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+    "rigBones": 68,
+    "wholeBodyV4": true,
+    "idleSeconds": 6,
+    "savedReopened": true,
+    "hand72Included": false
+  },
+  "latestCoherentMotionReview": "motion-merge-v9p-review.json",
+  "coherentMotionAssemblyContract": "coherent68-source-contract.json"
 }

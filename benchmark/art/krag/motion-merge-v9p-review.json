@@ -1,0 +1,93 @@
+{
+  "status": "Actual saved/reopened v4 movement merge; initial24 motion views inspected but Natural assembly selection needs correction",
+  "artisticAcceptance": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.blend",
+    "sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17"
+  },
+  "mergeReceipt": {
+    "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.json",
+    "sha256": "7733cc4913f9441c2555fa12b43cfe933d9aecd25dd7c75d1e266a034fd1fa12"
+  },
+  "sourceTechnicalChecksPassed": true,
+  "exactBindBones": 68,
+  "idleSeconds": 6,
+  "allSevenCanonicalTakesExact": true,
+  "maximumSampledBoneMatrixError": 0,
+  "allCurrentMeshesMorphsDriversPreserved": true,
+  "new72BoneHandIncluded": false,
+  "initialReview": {
+    "path": "benchmark/art/krag/motion-merge-v9p-fallback-review/review.json",
+    "sha256": "a87a6daf7fd8c2a60b898b89b256851ed23faf10d878c31a9a14e6cafd0bb040",
+    "actualImages": 24,
+    "allInspected": true,
+    "assemblyFailure": "Review used sharedv7 OFF list, omitting new BionicThigh_R_Full; initial images are motion diagnostics, not verified Natural assembly views"
+  },
+  "observed": [
+    "Pelvis/torso tilt and coordinated shoulder/arm motion are visible in actual walk/run phases",
+    "Run and walk poses are distinct; six-second idle retains subtle posture/head variation",
+    "Previous floor-reaching Workbench shadow strips are absent with shadows disabled",
+    "Old free hand remains splayed; root72-bone reconstruction is not present",
+    "Facial profile, normal mouth/tusks, cowl, armor and material quality remain unaccepted"
+  ],
+  "execution": [
+    {
+      "job": "krag-oral-motion-merge-v9p-fallback",
+      "nativeProcessId": 5660,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "processClosed": true,
+      "peakPrivateMB": 1335.0,
+      "minimumAvailableMB": 10749.0,
+      "files": [
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-merge-v9p-fallback.stdout.txt",
+          "sha256": "909287a64ae06bd3590755dba0dbc7f2a174a81dad8895ca17461d61f9407877"
+        },
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-merge-v9p-fallback.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-merge-v9p-fallback-memory.csv",
+          "sha256": "59f6423b7145ea2c0444c1e218b24212eb5f9c9706a14af8bb3ea376f51ecdc0"
+        }
+      ]
+    },
+    {
+      "job": "krag-oral-motion-review-v9p-fallback",
+      "nativeProcessId": 21248,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "processClosed": true,
+      "peakPrivateMB": 1525.0,
+      "minimumAvailableMB": 10759.0,
+      "files": [
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback.stdout.txt",
+          "sha256": "3c44bd7212286daafe0ab3647b47c04ab5ba47621587858e3e8e52f30c38e983"
+        },
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/motion-merge-v9p-evidence/krag-oral-motion-review-v9p-fallback-memory.csv",
+          "sha256": "81d50bc340cc4beff21db2fb8caa41da7cd5eaa7a50cd525d90f6e307ed5060c"
+        }
+      ]
+    }
+  ],
+  "executedRecipeHashes": {
+    "benchmark/tools/krag/motion_merge_wip/merge_v4.py": "819742354132befe4377731f5703b9cf5d0fc7b3c295464d50d1342e7b46d003",
+    "benchmark/tools/krag/motion_merge_wip/review_merge.py": "97d3307fe57ae0e3f042f48c89c450f73bb9d01ce2777c73d7191c5c0ea011d3",
+    "benchmark/tools/krag/motion_merge_wip/v9p-fallback-merge.job.json": "2a1fac26130139301096093ff576a4f5fafaca2ad10f5dd7af087f07fc4b7f0c",
+    "benchmark/tools/krag/motion_merge_wip/v9p-fallback-review.job.json": "7cdaf838b74747c256bad211aeaf36a0d63447ecc3424ed018ad2339396ff5fb",
+    "benchmark/tools/animation/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5",
+    "benchmark/tools/nib/restorative_wip/contracts.py": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902"
+  },
+  "correctedReviewPrepared": "benchmark/tools/krag/motion_merge_wip/v9p-fallback-review-v2.job.json",
+  "sharedChanged": false,
+  "engineExported": false
+}

@@ -1,0 +1,27 @@
+{
+  "name": "krag-oral-motion-merge-v9p-fallback",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\motion_merge_wip\\merge_v4.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_NormalMouth_v9p_WIP.blend",
+    "--source-sha256",
+    "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Oral_v9p_Motion_v4_WIP.blend"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9p-fallback.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9p-fallback.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9p-fallback.stdout.log",
+  "successMarker": "KRAG_VERIFIED_V4_MERGE_COMPLETE"
+}
