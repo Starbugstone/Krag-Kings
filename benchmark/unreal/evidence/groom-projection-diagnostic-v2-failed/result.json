@@ -1,0 +1,36 @@
+{
+  "status": "Native diagnostic helper compiles; cached-binding readback crashes before triangle diagnosis because helper omitted public CPU bulk streaming",
+  "stages": {
+    "build": {
+      "pid": 33816,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 103.0,
+      "maxTreePrivateMiB": 6930.0,
+      "minAvailableMiB": 7359.0
+    },
+    "grooms": {
+      "pid": 22148,
+      "nativeExit": 3,
+      "guardExit": 3,
+      "completionMarkerPresent": false,
+      "maxPrivateMiB": 2731.0,
+      "maxTreePrivateMiB": 2731.0,
+      "minAvailableMiB": 8449.0
+    }
+  },
+  "diagnosticResultExists": false,
+  "thresholdChanged": false,
+  "groomPackagesSaved": false,
+  "rendered": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "failure": {
+    "assertion": "In.IsBulkDataLoaded()",
+    "engineFile": "HairStrandsCore/Private/GroomBindingBuilder.cpp",
+    "line": 2596,
+    "caller": "UGroomCharacterLibrary::ReadBindingProjection",
+    "fixPrepared": "Call public UGroomBindingAsset::StreamInForCPUAccess(true), then check every required root bulk buffer before GetRootData"
+  }
+}

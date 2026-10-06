@@ -297,3 +297,4 @@ benchmark/unreal/evidence/groom-character-mask-v1/execution/*.json -text whitesp
 # Preserve exact native mask retry and first full-strand diagnostic bytes.
 benchmark/unreal/evidence/groom-character-mask-v2/execution/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/groom-character-binding-v1/execution/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/groom-projection-diagnostic-v2-failed/execution/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

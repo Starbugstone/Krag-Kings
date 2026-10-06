@@ -1,0 +1,23 @@
+{
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "name": "nib-native-character-projection-diagnostic-v3-build",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\groom_probe\\build.ps1",
+    "-Plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\groom_probe\\plans\\nib-native-character-projection-diagnostic-v3\\plan.json"
+  ],
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 10,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-projection-diagnostic-v3\\evidence\\build.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-projection-diagnostic-v3\\evidence\\build.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-projection-diagnostic-v3\\evidence\\build.stdout.log",
+  "successMarker": "KK_GROOM_PROBE_BUILD_COMPLETE"
+}

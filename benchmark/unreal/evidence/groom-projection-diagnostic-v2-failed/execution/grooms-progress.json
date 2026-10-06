@@ -1,0 +1,93 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "stage": "grooms",
+  "regions": [
+    {
+      "region": "HeadCream",
+      "groom": "/Game/Grooms/HeadCream",
+      "binding": "/Game/Grooms/HeadCream_Binding",
+      "sourceAbcSha256": "d041f9f90fd357c0b139f02a8f53432e597321082b142b5499443d59a6186da2",
+      "stockImported": {
+        "pointCount": 90000,
+        "curveCount": 10000,
+        "hasPointWidths": false,
+        "hasColor": false,
+        "hasRootUV": false
+      },
+      "stockPositionErrorCentimeters": 3.814697265625e-06,
+      "sidecarAdapter": {
+        "verifiedPoints": 90000,
+        "verifiedCurves": 10000,
+        "positionToleranceCentimeters": 0.00019999999494757503,
+        "maximumPositionComponentErrorCentimeters": 3.814697265625e-06,
+        "exactDiameterAndLinearColorApplied": true,
+        "abcRootUvNotClaimed": true,
+        "rendered": false
+      }
+    }
+  ],
+  "meshMaskFreshProcessVerified": true,
+  "sourceToMeshAxes": {
+    "axes": [
+      {
+        "sourceAxis": 0,
+        "sign": 1
+      },
+      {
+        "sourceAxis": 1,
+        "sign": -1
+      },
+      {
+        "sourceAxis": 2,
+        "sign": 1
+      }
+    ],
+    "maximumComponentErrorCentimeters": 1.2405407630922127e-05,
+    "meanComponentMaximumErrorCentimeters": 3.142138881370118e-06,
+    "boneCount": 79,
+    "toleranceCentimeters": 0.001,
+    "scaleCentimetersPerSourceMeter": 100,
+    "translationCentimeters": [
+      0,
+      0,
+      0
+    ],
+    "fullRotationalBindParityClaimed": false
+  },
+  "importedWrapper": {
+    "name": "Nib_Rig",
+    "fbxModelType": "Null",
+    "fbxUnitScaleFactor": 100.0,
+    "actualComponentMatrixRetained": [
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "authoredTransformsRescaled": false,
+    "onlyAuthoredRootParentLabelNormalized": true,
+    "broadNameFiltering": false
+  },
+  "curveCount": 0,
+  "pointCount": 0,
+  "simulation": false,
+  "globalInterpolation": false,
+  "lod0CurveAndPointDecimation": 1,
+  "rendered": false,
+  "posedDeformationVerified": false,
+  "performanceMeasured": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

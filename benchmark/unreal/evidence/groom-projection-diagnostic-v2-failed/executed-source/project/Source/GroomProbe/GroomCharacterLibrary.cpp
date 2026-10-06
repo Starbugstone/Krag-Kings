@@ -170,14 +170,6 @@ FString UGroomCharacterLibrary::ReadBindingProjection(UGroomBindingAsset* Bindin
 {
     if(!Binding || Binding->GetTargetBindingAttribute()!=AttributeName) return Failure(TEXT("Binding does not use the explicit mask"));
     FAssetCompilingManager::Get().FinishAllCompilation();
-    if(!Binding->IsValid()) return Failure(TEXT("Binding is not valid for CPU readback"));
-    TArray<TSharedPtr<FJsonValue>> ResidencyBefore;
-    for(const auto& Group:Binding->GetHairGroupsPlatformData())
-        for(const auto& Bulk:Group.RenRootBulkDatas)
-            ResidencyBefore.Add(MakeShared<FJsonValueBoolean>(Bulk.Data.RootBarycentricBuffer.IsBulkDataLoaded()));
-    // A DDC hit can have valid compiled headers with no resident CPU bulk payload.
-    // This public API waits for the native DDC/IO fill before GetRootData's strict lock.
-    Binding->StreamInForCPUAccess(true);
     const USkeletalMesh* Mesh=Binding->GetTargetSkeletalMesh();
     UGroomAsset* Groom=Binding->GetGroom();
     if(!Mesh || !Groom || !UGroomBindingAsset::IsCompatible(Mesh,Binding,false)) return Failure(TEXT("Binding target incompatibility"));
@@ -190,22 +182,13 @@ FString UGroomCharacterLibrary::ReadBindingProjection(UGroomBindingAsset* Bindin
     if(!Indices) return Failure(TEXT("Missing indices"));
     auto Result=MakeShared<FJsonObject>();
     Result->SetStringField(TEXT("binding"),Binding->GetPathName());
-    Result->SetArrayField(TEXT("rootBarycentricResidencyBeforeStream"),ResidencyBefore);
-    Result->SetBoolField(TEXT("publicBlockingCpuStreamRequested"),true);
     TArray<TSharedPtr<FJsonValue>> Groups;
     int32 GroupIndex=0;
     for(const auto& Group:Binding->GetHairGroupsPlatformData())
     {
         if(Group.RenRootBulkDatas.IsEmpty()) return Failure(TEXT("Missing render-root binding bulk data"));
-        const auto& Bulk=Group.RenRootBulkDatas[0];
-        const auto& Data=Bulk.Data;
-        if(!Data.RootToUniqueTriangleIndexBuffer.IsBulkDataLoaded() || !Data.RootBarycentricBuffer.IsBulkDataLoaded() ||
-           !Data.UniqueTriangleIndexBuffer.IsBulkDataLoaded() || !Data.RestUniqueTrianglePositionBuffer.IsBulkDataLoaded() ||
-           (Bulk.Header.SampleCount>0 && (!Data.MeshInterpolationWeightsBuffer.IsBulkDataLoaded() ||
-            !Data.MeshSampleIndicesAndSectionsBuffer.IsBulkDataLoaded() || !Data.RestSamplePositionsBuffer.IsBulkDataLoaded())))
-            return Failure(TEXT("Required binding CPU bulk is still unavailable after public stream; refuse GetRootData assertion"));
         FHairStrandsRootData Roots;
-        FGroomBindingBuilder::GetRootData(Roots,Bulk);
+        FGroomBindingBuilder::GetRootData(Roots,Group.RenRootBulkDatas[0]);
         FHairStrandsDatas Strands,Guides;
         if(!Groom->GetHairStrandsDatas(GroupIndex,Strands,Guides)||Roots.RootCount!=Strands.GetNumCurves()||Roots.LODIndex!=0)
             return Failure(TEXT("Binding root count/LOD differs from groom"));
