@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "v9f frozen prepared recipe, ungenerated; based on actual failed v9e. Complete head proportion transform, broad scarf sheet, source-topology hand domains and refitted joints. v10 remains separate.",
+  "currentAuthoringCode": "Frozen v9f recipe generated and reviewed; separate v9g face/cloth preparation is ungenerated. Current shared remains v7 bounded aim correction.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -119,28 +119,30 @@
   "sharedExportsVersion": "v7-optimized-pretriangulated plus bounded Shoot aim correction; root promoted; appearance and pose acceptance false",
   "sharedJsonLineEndings": "Canonical LF, normalized before first optimized native-engine import; receipt hashes refreshed; binary payloads unchanged",
   "workInProgressSource": {
-    "path": "benchmark/art/krag/Krag_Master_v9e_WIP.blend",
-    "sha256": "c0717f5a627185664aca87bfa80b938e1a6735fb33d23cdae66473eb29067353",
-    "bytes": 139698776,
-    "status": "Generated and actual Front/Head/ShootFront/ShootGrip reviewed; artistic and pose acceptance false",
+    "path": "benchmark/art/krag/Krag_Master_v9f_WIP.blend",
+    "sha256": "86656d076fd13b886837b9973301cb587a0f99bf6a96cd7fec9baa8fba44abe3",
+    "bytes": 142895665,
+    "status": "Generated and four actual views reviewed; artistic and overall pose acceptance false",
     "actualRenders": [
-      "renders/Krag_Natural_Front_v9e-wip.png",
-      "renders/Krag_Natural_Head_v9e-wip.png",
-      "renders/Krag_Natural_Front_Shoot_f13_v9e-wip.png",
-      "renders/Krag_Natural_RightGrip_Shoot_f13_v9e-wip.png"
+      "renders/Krag_Natural_Front_Shoot_f13_v9f-wip.png",
+      "renders/Krag_Natural_Front_v9f-wip.png",
+      "renders/Krag_Natural_Head_v9f-wip.png",
+      "renders/Krag_Natural_RightGrip_Shoot_f13_v9f-wip.png"
     ],
     "improvements": [
-      "Raised right arm no longer pulls a large lateral-rib/axillary sheet with it in Shoot frame13",
-      "Sloping paired brow ridges and broader raised nostrils visible",
-      "Reduced sternum strap clearance"
+      "Whole-head assembly proportion is visibly closer to concept front landmarks; retain v9f scale for further sculpting",
+      "Raised right arm retains coherent torso/axilla without the previous large stretched sheet",
+      "Topological digit domains and refitted pivots remove long hand-web tents; fingers now form a substantially more compact handle grasp",
+      "Visible firearm bore remains aligned with the exported muzzle markers during authored firing poses"
     ],
     "defects": [
-      "Head remains oversized against recorded concept landmarks; smooth planar cheek/muzzle and cushion-like lower lip do not match reference",
-      "Scarf experiment produces parallel hollow tubes rather than broad asymmetrical folded cloth",
-      "Shoot right hand skin webs stretch between articulated finger chains; fingers remain splayed along an overlong handle",
-      "Armor layering and clothing construction/weathering still simplified"
+      "Scarf still forms a conical neck brace with three regular parallel ledges and high rigid rear rim; needs broad asymmetrical crossing/sagging cloth folds",
+      "Smooth inflated cheeks, weak glabella/nasal bridge and uninterrupted jaw profile fail the angular heavy reference face; tusks are largely buried",
+      "Grip joint forms remain soft/merged and thumb/trigger contact is unclear; improved technical grasp does not establish final pose acceptance",
+      "Amber eyes remain flat disks without the reference iris depth; skin/weathering and optical detail require actual source/runtime maps",
+      "Armor layering, trouser folds/pockets and boot construction/weathering remain simplified"
     ],
-    "reviewReceipt": "v9e-source-review.json"
+    "reviewReceipt": "v9f-source-review.json"
   },
   "triangulatedTechnicalCandidate": {
     "receipt": "benchmark/art/krag/delivery-v7-triangulated.json",
@@ -165,11 +167,9 @@
     ]
   },
   "sourceCorrectionsPrepared": [
-    "Raise nasal mass while retaining mouth height, develop alar planes and upper muzzle, reduce isolated lower-lip protrusion",
-    "Stronger sloping paired brow fields and laterally visible cupped ears",
-    "Gather scarf cross-section, lower the exposed rear body-neck boundary and reduce harness skin clearance",
-    "Use the verified rig-space arm/hand aim solver during source Shoot authoring; posed grip still pending",
-    "Remove inherited generic 1.8mm bump from the curved optical surfaces; actual reflection/iris coverage still needs visual review"
+    "Separate v9g continuous facial-plane and larger curved-tusk study; ungenerated",
+    "Replace failed scarf terrace shape with asymmetrical broad cloth folds, verifying actual simulation/collision if used",
+    "Preserve v9f hand domains, assembly scale and current weapon module; root owns isolated hard-surface replacement study"
   ],
   "pendingExportCode": {
     "actualHeadAtlas": "benchmark/tools/krag/bake_face_atlas.py",
@@ -199,8 +199,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "benchmark/tools/krag/build-v9e-wip-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9e-wip-Natural_Front.json",
+  "nextSourceJob": "Not yet frozen: separate v9g coherent face/cloth study; no heavy launch without coordinated slot",
+  "nextFirstReview": "Next source neutral Front/Head, followed by profile and mouth/blink fitting checks",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -253,7 +253,7 @@
   },
   "proportionReview": {
     "measurements": "anatomy-study/front-proportion-landmarks-v9c.json",
-    "status": "Actual v9e completed; next separate whole-head/oral/ocular/rig proportional reduction based on approximate recorded concept landmarks"
+    "status": "Actual v9f whole-head transform improves concept proportions; retain scale while correcting face planes and scarf."
   },
   "sharedAimPromotion": {
     "status": "Root promoted bounded functional correction after artifact/hash verification; visual/pose acceptance remains failed",
@@ -263,7 +263,7 @@
     "domainHelper": "benchmark/tools/krag/krag_skin_domains.py",
     "gripHelper": "benchmark/tools/krag/krag_grip_v2.py",
     "codeOnlyDomainEvidence": "anatomy-study/skin-domain-v2-measurements.json",
-    "status": "Actual v9e generation and four views complete; torso-domain improvement visible, articulated grip fails due to skin/hand contact",
+    "status": "Actual v9f raised-arm and grip views show coherent axilla and substantially improved compact grasp; joints/contact and other poses remain unaccepted.",
     "v9dGenerated": false,
     "v10MixedIntoCandidate": false
   },
@@ -289,5 +289,29 @@
       "Blink/open mouth, hands/grip and remaining body poses remain unverified"
     ]
   },
-  "preparedV9fRecipe": "benchmark/art/krag/v9f-prepared-recipe.json"
+  "preparedV9fRecipe": "benchmark/art/krag/v9f-prepared-recipe.json",
+  "historicalV9eSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9e_WIP.blend",
+    "sha256": "c0717f5a627185664aca87bfa80b938e1a6735fb33d23cdae66473eb29067353",
+    "bytes": 139698776,
+    "status": "Generated and actual Front/Head/ShootFront/ShootGrip reviewed; artistic and pose acceptance false",
+    "actualRenders": [
+      "renders/Krag_Natural_Front_v9e-wip.png",
+      "renders/Krag_Natural_Head_v9e-wip.png",
+      "renders/Krag_Natural_Front_Shoot_f13_v9e-wip.png",
+      "renders/Krag_Natural_RightGrip_Shoot_f13_v9e-wip.png"
+    ],
+    "improvements": [
+      "Raised right arm no longer pulls a large lateral-rib/axillary sheet with it in Shoot frame13",
+      "Sloping paired brow ridges and broader raised nostrils visible",
+      "Reduced sternum strap clearance"
+    ],
+    "defects": [
+      "Head remains oversized against recorded concept landmarks; smooth planar cheek/muzzle and cushion-like lower lip do not match reference",
+      "Scarf experiment produces parallel hollow tubes rather than broad asymmetrical folded cloth",
+      "Shoot right hand skin webs stretch between articulated finger chains; fingers remain splayed along an overlong handle",
+      "Armor layering and clothing construction/weathering still simplified"
+    ],
+    "reviewReceipt": "v9e-source-review.json"
+  }
 }
