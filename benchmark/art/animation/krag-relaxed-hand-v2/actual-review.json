@@ -1,0 +1,56 @@
+{
+  "sourceSha256": "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "savedSourceReopened": true,
+  "actualReviewImages": 18,
+  "inspectedImages": [
+    "Idle_00_palm.png",
+    "Idle_00_edge.png",
+    "Run_50_palm.png",
+    "Run_50_edge.png"
+  ],
+  "artisticAcceptance": false,
+  "finding": "Restrained thumb motion in its measured native bend plane reduces the hooked opposition from v1, but a broad transverse palmar ridge remains in both relaxed and running poses. The v1 thumb-only explanation is insufficient. Diagnose the saved Basis, weighting and corrective contribution before another pose change. Fingers still lack convincing surface articulation.",
+  "thumbIncrementalAnglesDegrees": {
+    "IdleWalk": [
+      4,
+      8
+    ],
+    "Run": [
+      8,
+      15
+    ]
+  },
+  "surfaceContactProven": false,
+  "retainedMeshComponents": 31,
+  "bodyFaceWeaponCurvesPreserved": true,
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "memory": {
+    "krag-relaxed-hand-v2": {
+      "peakPrivateMB": 1186.0,
+      "minimumAvailableMB": 11463.0
+    },
+    "krag-relaxed-hand-v2-review": {
+      "peakPrivateMB": 1361.0,
+      "minimumAvailableMB": 11472.0
+    }
+  },
+  "frozenFiles": {
+    "executed-recipe/contracts.py": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902",
+    "executed-recipe/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "executed-recipe/humanoid_arms.py": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+    "executed-recipe/krag-relaxed-hand-v2-job.json": "490473b411841ac3c26c1716c7aa42efba6f4bcddaa43bbc05c5df7222c72569",
+    "executed-recipe/krag-relaxed-hand-v2-review-job.json": "d7fd78d8bee01eb7519e4da9b0d913a07741c4fdb09ddc24595e3ee4499aeaed",
+    "executed-recipe/krag_relaxed_hand_pose.py": "c53f0bc495e574444d0152689b1f3b2203c6472095c9542dc5f4a1b737b8bf92",
+    "executed-recipe/refine_krag_relaxed_hand.py": "278593ad13c22903cea6ddf9d976c2ee9063823f56d4b1199f4d0c32e0097e2d",
+    "executed-recipe/review_free_hand.py": "b0800b0efe0facbf3a70a6fc42cc29775dd08976b7b4b7ca17e7bd033c7c5628",
+    "evidence/krag-relaxed-hand-v2-memory.csv": "3dfec55e4c2799a113dae8b53b38a98091ce450a6dc9fe23ef0e959c7430d12b",
+    "evidence/krag-relaxed-hand-v2-review-memory.csv": "24d16dfc2c538c872d12cd44e600123f31fc108a05c88e8f24ca13269710e347",
+    "evidence/krag-relaxed-hand-v2-review.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-relaxed-hand-v2-review.stdout.txt": "f15fc94b00fe9226eb766431dfa5b4dbd04ba446d0608685f671b1f557cdb3b3",
+    "evidence/krag-relaxed-hand-v2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-relaxed-hand-v2.stdout.txt": "d32ad941258ce8b1a980aec6e3a14e0284ca8cfbc962dcb7f62ccf1942265cde"
+  }
+}

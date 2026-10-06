@@ -22,8 +22,6 @@ parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--species', choices=['Krag', 'Nib'], required=True)
 parser.add_argument('--clips', nargs='+', default=['Idle', 'Walk', 'Run'])
 parser.add_argument('--phases', nargs='+', type=float, default=[0., .5])
-parser.add_argument('--rest-only', action='store_true',
-                    help='Diagnostic: identity pose and zero shape keys; source remains untouched')
 args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 if any(not 0 <= phase <= 1 for phase in args.phases):
     raise ValueError('Review phases must lie in [0, 1]')
@@ -103,24 +101,12 @@ report = {'source': str(args.source), 'sourceSha256': source_hash,
           'recipeSha256': sha(Path(__file__)), 'visibleMeshes': visible,
           'renderer': scene.render.engine, 'materialReview': False,
           'surfaceIntersectionProof': False, 'artisticAcceptance': False,
-          'sourceModified': False, 'restOnly': args.rest_only, 'views': []}
-if args.rest_only:
-    rig.animation_data_clear()
-    for bone in rig.pose.bones:
-        bone.matrix_basis = Matrix.Identity(4)
-    for obj in bpy.data.objects:
-        if obj.type == 'MESH' and obj.data.shape_keys:
-            obj.data.shape_keys.animation_data_clear()
-            for key in obj.data.shape_keys.key_blocks:
-                key.value = 0
-for clip in (['BasisRest'] if args.rest_only else args.clips):
-    if args.rest_only:
-        first = last = 1
-    else:
-        action = bpy.data.actions[clip]
-        select_action(bpy, rig, action)
-        first, last = action.frame_range
-    for phase in ([0.] if args.rest_only else args.phases):
+          'sourceModified': False, 'views': []}
+for clip in args.clips:
+    action = bpy.data.actions[clip]
+    select_action(bpy, rig, action)
+    first, last = action.frame_range
+    for phase in args.phases:
         at = first + phase * (last-first)
         scene.frame_set(int(at), subframe=at-int(at))
         bpy.context.view_layer.update()

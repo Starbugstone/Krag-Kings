@@ -1,0 +1,29 @@
+{
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4,
+  "name": "krag-relaxed-hand-v2",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\refine_krag_relaxed_hand.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-human-motion-v4\\Krag_HumanMotion_Study_v4.blend",
+    "--source-sha256",
+    "84822444a021194fc47e0360bfffc875c18687720bb8b8923588e486b9900607",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-relaxed-hand-v2",
+    "--generation",
+    "v2"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-relaxed-hand-v2.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-relaxed-hand-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-relaxed-hand-v2.stdout.log",
+  "successMarker": "KRAG_RELAXED_HAND_SAVED_AND_REOPENED"
+}

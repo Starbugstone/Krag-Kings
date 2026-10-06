@@ -11,13 +11,14 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[4]
 parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True)
 parser.add_argument('--output',type=Path,required=True);parser.add_argument('--mesh-name',default='Nib v5 coherent hand L')
+parser.add_argument('--rig-name',default='Nib_Rig',help='Actual saved armature object name')
 parser.add_argument('--attribute',action='append',default=[],help='Extract a named saved POINT float/vector attribute; no evaluated inference')
 parser.add_argument('--all-bones',action='store_true',help='Include all actual saved rest bones instead of only the left hand')
 args=parser.parse_args()
 source=args.source.resolve();expected=hashlib.sha256(source.read_bytes()).hexdigest()
 header_path=Path('/mnt/d/Program Files/Blender Foundation/Blender 5.2/5.2/scripts/modules/_blendfile_header.py')
 spec=importlib.util.spec_from_file_location('_blendfile_header',header_path);module=importlib.util.module_from_spec(spec);sys.modules[spec.name]=module;spec.loader.exec_module(module)
-temporary=ROOT/'benchmark/local/nib-native-hand-readonly.blend'
+temporary=ROOT/'benchmark/local'/('native-hand-readonly-'+expected[:16]+'.blend')
 marker=temporary.with_suffix('.source-sha256')
 if not temporary.exists() or not marker.exists() or marker.read_text()!=expected:
     subprocess.run(['zstd','-q','-d','-f',str(source),'-o',str(temporary)],check=True)
@@ -92,7 +93,7 @@ objects={}
 for block in blocks:
     if block['code']!=b'OB':continue
     obj=(block['offset'],'Object');name=field(field(obj,'id'),'name')[2:];objects[name]=obj
-hand=objects[args.mesh_name];mesh=record(field(hand,'data'),'Mesh');rig=objects['Nib_Rig']
+hand=objects[args.mesh_name];mesh=record(field(hand,'data'),'Mesh');rig=objects[args.rig_name]
 active_scope=scopes[block_for(field(hand,'data'))['owner']]
 mesh_fields=by_type['Mesh']['fields']
 report={'status':'Read-only saved DNA extraction; no animation evaluation or authoring',
