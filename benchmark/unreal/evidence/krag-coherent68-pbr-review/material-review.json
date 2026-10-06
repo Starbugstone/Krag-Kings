@@ -1,0 +1,69 @@
+{
+  "planSha256": "a95c88bd0c1ea5bae33655282300f09785bc109d1b27fc278d49334da9579d92",
+  "materialTransferAccepted": false,
+  "reviewReportHashes": {
+    "source": "5f394cdd612d2cb553c6f6a5fee8830c81905923dc6b4135054329a6a03da674",
+    "baked": "962d0fb258b1e3bd58a42c184cc8dfb21c695f44a2ac59323d1556c9a9b0fb0e"
+  },
+  "inspectedImages": {
+    "source": [
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Front.png",
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Head.png",
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-source/Eyes.png"
+    ],
+    "baked": [
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-baked/Front.png",
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-baked/Head.png",
+      "benchmark/local/candidates/krag-coherent68-delivery-fe152-v1/review-baked/Eyes.png"
+    ]
+  },
+  "allSixImagesIndividuallyInspected": true,
+  "cameraLightColorManagementSettingsMatch": true,
+  "nativeStages": {
+    "source": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "KRAG_DELIVERY_STAGE_COMPLETE review-source",
+      "peakPrivateMiB": 2234,
+      "minimumAvailableMiB": 9381,
+      "maximumCommitPercent": 60
+    },
+    "baked": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "KRAG_DELIVERY_STAGE_COMPLETE review-baked",
+      "peakPrivateMiB": 3099,
+      "minimumAvailableMiB": 8400,
+      "maximumCommitPercent": 63
+    }
+  },
+  "observations": [
+    "Full-body material assignments, cracked-skin pattern, armor color and facial/iris pigment remain present.",
+    "Baked head/eye views have visibly weaker ocular highlights and white reflections than the authored source.",
+    "Small surface relief/shading differences remain; these views are not pixel-identical or final fidelity proof."
+  ],
+  "sourceDiagnosis": {
+    "authoringCode": "benchmark/tools/krag/v9l_wip/ocular_surface.py",
+    "authoringCodeConstants": {
+      "materials": [
+        "Krag_Amber",
+        "Krag_EyeWhite"
+      ],
+      "coatWeight": 1,
+      "coatRoughness": 0.065,
+      "coatIOR": 1.376
+    },
+    "portableHelper": "benchmark/tools/nib/v5_wip/pbr/bake_fields.py::portable_material",
+    "omittedSourceConstants": [
+      "Coat Weight",
+      "Coat Roughness",
+      "Coat IOR"
+    ],
+    "serializedMaterialConstantAuditExecuted": false,
+    "limits": "Observed render difference and exact source-code omission; saved native shader socket values still need targeted audit."
+  },
+  "nextStep": "Preserve original candidate; prepare coat-constant-only derivative using unchanged texture maps and explicit engine material metadata, then repeat relevant matched views.",
+  "matchingExportsExecuted": false,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false
+}

@@ -1,0 +1,25 @@
+{
+  "name": "krag-coherent68-delivery-fe152-v1-review-source",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\run_delivery_stage.py",
+    "--",
+    "--plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\krag_candidate\\plans\\krag-coherent68-delivery-fe152-v1\\plan.json",
+    "--stage",
+    "review-source"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-fe152-v1-review-source.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-fe152-v1-review-source.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-coherent68-delivery-fe152-v1-review-source.log",
+  "successMarker": "KRAG_DELIVERY_STAGE_COMPLETE review-source"
+}

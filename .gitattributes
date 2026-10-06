@@ -260,3 +260,7 @@ benchmark/unreal/evidence/krag-coherent68-pbr-initial/**/*.csv -text whitespace=
 benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve raw material-review diagnostics.
+benchmark/unreal/evidence/krag-coherent68-pbr-review/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/krag-coherent68-pbr-review/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

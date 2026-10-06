@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1539,
+      "sha256": "3d24eb95ce46d0ab262a859e165ffda0c80c03aa38de2c5677d4b53394dde7c3"
+    },
+    {
+      "path": "baked/Eyes.png",
+      "bytes": 1210102,
+      "sha256": "0d2d3f4ad24ead3e0a70c5e0ba6bc2dbe6e38f17d131f82077007301e94af2b8"
+    },
+    {
+      "path": "baked/Front.png",
+      "bytes": 1281019,
+      "sha256": "ca1b6c6588e1a00e7d64eafe9fbefebc954fa963e80fed4390abb1165c63759b"
+    },
+    {
+      "path": "baked/Head.png",
+      "bytes": 1261317,
+      "sha256": "43ab1905ce50020594a645fbea5093329c77bb3a2bfb7ead9cdfc4c8a532ecc2"
+    },
+    {
+      "path": "baked/review.json",
+      "bytes": 3767,
+      "sha256": "962d0fb258b1e3bd58a42c184cc8dfb21c695f44a2ac59323d1556c9a9b0fb0e"
+    },
+    {
+      "path": "executed-plan/plan.json",
+      "bytes": 37602,
+      "sha256": "a95c88bd0c1ea5bae33655282300f09785bc109d1b27fc278d49334da9579d92"
+    },
+    {
+      "path": "executed-plan/review-baked.job.json",
+      "bytes": 1035,
+      "sha256": "69b5b366f5d7134fa71c074a75bf9f3d2c5096e3fdfe5619207aa3a2a080dce4"
+    },
+    {
+      "path": "executed-plan/review-source.job.json",
+      "bytes": 1041,
+      "sha256": "ff17e6597fd25f8cf186eb8af4d7cb004fd6ca847adb6ce42e03a52a7300b1c6"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-baked-memory.csv",
+      "bytes": 3299,
+      "sha256": "ef2f1bbfbb1c8902493b371131758044587249e8edc2719bc06fcee36156139f"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-baked.log",
+      "bytes": 736,
+      "sha256": "cf18de3f674b98ee612e0a75432fdcb0461eb9dae21ac10aa4ed6a6d9736ac8d"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-baked.stderr.log",
+      "bytes": 226,
+      "sha256": "b6c732e59a0e530a7c39d6b9c907029309147c7f886e6d4fafc3c10bac9a58ee"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-source-memory.csv",
+      "bytes": 3372,
+      "sha256": "cdb2dab81d97dc98356d3a726d7fcecb5c5b14413a01a4e4b770d1022c5c7a5a"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-source.log",
+      "bytes": 708,
+      "sha256": "9d4ff12abf1ece631b6c8dbac37e682e7767692c848ed5b1dc4d73eb00c1f3d9"
+    },
+    {
+      "path": "logs/krag-coherent68-delivery-fe152-v1-review-source.stderr.log",
+      "bytes": 226,
+      "sha256": "b6c732e59a0e530a7c39d6b9c907029309147c7f886e6d4fafc3c10bac9a58ee"
+    },
+    {
+      "path": "material-review.json",
+      "bytes": 2890,
+      "sha256": "67bd7544a46873e7b7842b843cd263b1db7b3c8dfc9612d600539174786b3186"
+    },
+    {
+      "path": "source/Eyes.png",
+      "bytes": 1248786,
+      "sha256": "b26f593849bab14b586dacb7cc5d0948e909d17ebbf14dc07e5e0f444552814d"
+    },
+    {
+      "path": "source/Front.png",
+      "bytes": 1283301,
+      "sha256": "7f089af8dc4dcc1dbca485f4769e009baa712904621064c39ea0d433e8a3f89a"
+    },
+    {
+      "path": "source/Head.png",
+      "bytes": 1296998,
+      "sha256": "efd8010abb48708763d7946f200866ebc9f3c6ecbd221b8f79133246cc083968"
+    },
+    {
+      "path": "source/review.json",
+      "bytes": 3771,
+      "sha256": "5f394cdd612d2cb553c6f6a5fee8830c81905923dc6b4135054329a6a03da674"
+    },
+    {
+      "path": "source-evidence/bake_fields.py",
+      "bytes": 12059,
+      "sha256": "1f28559325ab9db71a29ab95fa24a809a67fc7bd6c2fe08b5625abb19e450be9"
+    },
+    {
+      "path": "source-evidence/ocular_surface.py",
+      "bytes": 2823,
+      "sha256": "fd3e1642a175162061864eea4a1eaa5fde3fd3112fcb0aa498f2b851247b8dd6"
+    },
+    {
+      "path": "source-evidence/review_materials.py",
+      "bytes": 5101,
+      "sha256": "69313e6e8c1affd28488b26e8b4c81db895067b2d3b067a9cece39053e2c320d"
+    },
+    {
+      "path": "source-evidence/run_delivery_stage.py",
+      "bytes": 6562,
+      "sha256": "cfccaffa63d3ce35aa50855f0b430ce5fed27091478777ad199598f44bfa8db8"
+    },
+    {
+      "path": "stage-receipts/review-baked.json",
+      "bytes": 1110,
+      "sha256": "71ef2fbe3e984027df728fb63396c181f6715566c18869f889f5775254e6b8e3"
+    },
+    {
+      "path": "stage-receipts/review-source.json",
+      "bytes": 1115,
+      "sha256": "e8789152cd0494b387e5bc1f8ecbe9fd7272c6fe24c132fd84f42e63d8a6e8d1"
+    }
+  ],
+  "materialTransferAccepted": false,
+  "artisticAcceptance": false
+}
