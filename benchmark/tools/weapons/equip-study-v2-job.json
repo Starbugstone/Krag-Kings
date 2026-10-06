@@ -1,0 +1,29 @@
+{
+  "name": "krag-weapon-equipped-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\weapons\\equip_krag_weapon_study.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9f_WIP.blend",
+    "--weapon",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_Regular_Weapon_Study_v2.blend",
+    "--grip-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9f_WIP-grip-target-verification.json",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2\\Krag_v9f_Equipped_WeaponStudy_v2.blend"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-equipped-v2.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-equipped-v2.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-equipped-v2.stdout.log",
+  "successMarker": "KRAG_WEAPON_EQUIPPED_STUDY_COMPLETE"
+}
