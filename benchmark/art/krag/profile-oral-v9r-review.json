@@ -1,0 +1,81 @@
+{
+  "status": "Actual saved/reopened source and OpenFront inspected; normal-mouth appearance rejected",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+    "sha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab"
+  },
+  "sourceReceipt": {
+    "path": "benchmark/art/krag/profile-oral-v9r.json",
+    "sha256": "f04092b2b29e3b335ec48b6b0e4054b965116fea4964878ecc413002ad4a96d2"
+  },
+  "image": {
+    "path": "benchmark/art/krag/renders/Krag_ProfileOral_v9r_OpenFront.png",
+    "sha256": "72a5b319cae261b581d20df410fe05dfb8902af0cf11f65ce1ea89f5844e78fa",
+    "metadataSha256": "f2fd438b47c453c450ad07baa8d5ecd8f0a1344e0765f1f56494fef79a5ebf00"
+  },
+  "jobs": [
+    {
+      "name": "krag-profile-oral-v9r-source",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1195,
+      "minimumAvailableMB": 10221,
+      "peakCommitPercent": 57.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-source.stdout.txt",
+          "sha256": "4df6161252e3889a93d127b391dcc521ce7df1c1b6d05a98cf3399425e540fd2"
+        },
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-source.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-source-memory.csv",
+          "sha256": "7574c7d92eed8cb2fa389c3436f87d542837a61da93eb8960e656ea14f111014"
+        }
+      ]
+    },
+    {
+      "name": "krag-profile-oral-v9r-OpenFront",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2115,
+      "minimumAvailableMB": 9553,
+      "peakCommitPercent": 59.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-OpenFront.stdout.txt",
+          "sha256": "3fc5507a51feb0119af7e820137ce9c24a3edbfbace9a8081e4f36f8cd1c6292"
+        },
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-OpenFront.stderr.txt",
+          "sha256": "636906f75895757c54461bc3e969caef87a4c8c0d5cbf5774cafccb17808ed7f"
+        },
+        {
+          "path": "benchmark/art/krag/profile-oral-v9r-evidence/krag-profile-oral-v9r-OpenFront-memory.csv",
+          "sha256": "84200f782e080ceb25032668a0a728e8779303c995ccf3b3784741ff6ab480d4"
+        }
+      ]
+    }
+  ],
+  "structuralChecks": [
+    "No inverted neutral Head faces; actual source was saved and reopened",
+    "Full Jaw rotation22.9908degrees and driver0.9196 preserved; posed lip residual reproduces within0.236micrometers",
+    "Unrelated geometry/bind/actions preserved; current source retains pre-v4 actions"
+  ],
+  "visibleFailures": [
+    "Lower rim narrows into a V-like aperture instead of a broad continuous lower lip",
+    "Lower dental fronts are largely hidden; compact gum-anchored tusks are not visibly emerging",
+    "Cheek/brow/muzzle planes remain soft and pale; concept likeness and IronJaw fit remain unaccepted"
+  ],
+  "boundedDecision": "Stopped after this first actual OpenFront; did not run three other prepared views or promote source",
+  "nextAttribution": "oral-volume-study/v9r-arch-envelope-attribution.json",
+  "engineCandidateUnaffected": {
+    "source": "Krag_Oral_v9p_Motion_v4_WIP.blend",
+    "sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+    "frozenContractSha256": "7469b7ffb00f6cb3f2b2f148eac68be2ecc08d294c70564c1f4227e62352e477"
+  }
+}

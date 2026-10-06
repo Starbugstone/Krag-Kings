@@ -1,0 +1,117 @@
+{
+  "status": "Actual coherent mouth/profile candidate; closed/open source views required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+    "sha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+    "sha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab"
+  },
+  "branchReason": "Rejected v9qa orbital compression is not retained; start from exact preserved v9p",
+  "restProfile": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.41809691118714837,
+    "normalChangeDegreesP99": 19.88324140236118,
+    "normalChangeDegreesMaximum": 33.218634809194135,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.012806248474865708
+  },
+  "oralTranslationMeters": [
+    0.0,
+    0.01,
+    0.008
+  ],
+  "heldOpticalVerticesExact": 7922,
+  "canines": {
+    "method": "Actual lower gingiva and true oral rim; compact crown with no exterior skin-ray hook",
+    "sides": [
+      {
+        "side": "R",
+        "gingivalRoot": [
+          -0.04462446365505457,
+          -0.14499868638813496,
+          1.8046594162782033
+        ],
+        "trueLowerRimEmergence": [
+          -0.04462446365505457,
+          -0.1581150108767777,
+          1.8251024490677477
+        ],
+        "tip": [
+          -0.04562446365505457,
+          -0.1586150108767777,
+          1.8411024490677477
+        ],
+        "heightMeters": 0.036443032789544416,
+        "exposedHeightProposalMeters": 0.016,
+        "emergenceWidthMeters": 0.012,
+        "sourceIndicesAndTopologyPreserved": true
+      },
+      {
+        "side": "L",
+        "gingivalRoot": [
+          0.04462446365505457,
+          -0.1450058203190565,
+          1.8046594162782033
+        ],
+        "trueLowerRimEmergence": [
+          0.04462446365505457,
+          -0.1580319599052295,
+          1.8251477245633512
+        ],
+        "tip": [
+          0.04562446365505457,
+          -0.1585319599052295,
+          1.8411477245633512
+        ],
+        "heightMeters": 0.03648830828514793,
+        "exposedHeightProposalMeters": 0.016,
+        "emergenceWidthMeters": 0.012,
+        "sourceIndicesAndTopologyPreserved": true
+      }
+    ],
+    "neutralOpenLipContactPending": true
+  },
+  "posedLowerLip": {
+    "iterations": 1015,
+    "freeVertices": 3623,
+    "maximumPosedCorrectionMeters": 0.021479922545286,
+    "maximumIterationResidualMeters": 2.989540044285449e-07,
+    "method": "Posed residual through inverse actual linear-blend skinning; no duplicate jaw rotation",
+    "unchangedJawRotationDegrees": 22.990797529309148,
+    "unchangedDriverValue": 0.9196327328681946,
+    "lowerRimVertices": 81,
+    "maximumSourceResidualChangeMeters": 0.023799690879449296,
+    "actualBlenderReproductionErrorMeters": 2.3611123382210814e-07,
+    "upperLipNoseHeld": true,
+    "actualMouthAcceptance": false
+  },
+  "commissureSupport": {
+    "method": "Smooth finite-slope factor on the old square-root rim support within14mm of each real commissure",
+    "affectedVertices": 901,
+    "worldGeodesicSupportMeters": 0.014,
+    "beforeMaximumLocalJawGradientPerMeter": 429.19091982726474,
+    "afterMaximumLocalJawGradientPerMeter": 99.08601831850741,
+    "centralFullMandibularSupportAndRangePreserved": true,
+    "actualPoseAcceptance": false
+  },
+  "motionLineage": "Preserved pre-v4 actions from v9p/v9o; separate verified v4 merge is required before engine export",
+  "allExistingBindActionsUnrelatedMeshesPreserved": "e72f78d951cac3b5a5fc36589c1916eba2dcaf0e64aa2b994b494f836bd84262",
+  "savedReopenedChecksPassed": true,
+  "recipeHashes": {
+    "build_profile_oral_v9r.py": "2ab3bb0c52e8b74f5a1a146703b8740b37a357230f2ed8adcbda31daabd1a223",
+    "profile_and_lip.py": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824",
+    "rest_profile_v9r.py": "fcaf3cf3f78cd3ef5495f1e4f43a074960b41ac64f330c3d401000dd85d8db7c",
+    "posed_lip_corrective.py": "218fcea286d5910982747f9757e82ce727a851300bb3a2371fcb9058948a6ff5",
+    "stout_canines.py": "ccd20e11c80079bea7c94e97a0fb6772cf2f2cd44cce283626245347cfa40a8c",
+    "commissure_support.py": "9f8959808a1ef404bd7ef827efa45fb4811eb3ace72a8e49b15695927f09e047"
+  },
+  "pending": [
+    "Actual normal lip/corner opening and dental/tusk emergence",
+    "Frontal/profile concept likeness and mandibular mass",
+    "Materials/cowl/armor and IronJaw compatibility remain unaccepted"
+  ]
+}

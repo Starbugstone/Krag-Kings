@@ -1,0 +1,74 @@
+{
+  "status": "Frozen preparation only; no v9s native source, render or promotion exists",
+  "artisticAcceptance": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+    "sha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab"
+  },
+  "nativeBoundary": "Source/save/reopen then OpenFront first; inspect before any additional view",
+  "externalProportionProposal": {
+    "trueMouthWidthMeters": 0.15,
+    "mouthToInterocular": 1.2765260960418747,
+    "manualConceptRatio": 1.375,
+    "conceptLandmarkUncertaintyPixels": 3
+  },
+  "preserve": [
+    "Real ocular surface/contact",
+    "Full existing Jaw hinge/action range",
+    "Exact Face tusks/eyes and MouthInterior dental/gum/tongue geometry",
+    "Body/hand geometry and complete bind/action contracts"
+  ],
+  "change": [
+    "Coherent neutral Head oral envelope with monotone lateral map",
+    "Lower-rim Jaw/Head weight transition and corresponding full-range residual"
+  ],
+  "preflight": "broad-oral-v9s-preflight.json",
+  "priorFailure": "broad-oral-v9s-geodesic-failure.json",
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/broad_oral_v9s.py",
+      "sha256": "4c57cae4dbf7a834139953d43efbe553b7bb23be76f0ca5a36d020404547bc35"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/posed_lip_corrective_v9s.py",
+      "sha256": "cebf3285ae9ca8afcece860fb9889135cffc90ef15b51e071e27614fff0d4000"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/build_broad_oral_v9s.py",
+      "sha256": "37805db55ad30a0cc43bd9ad466d864183648607cff57cb5509538a43f08b9c1"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_broad_oral_v9s.py",
+      "sha256": "168be3c22d3df2d9c59e3c88bd6acdf7aaf96466d005f844c85f37318e3cda4a"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/preflight_broad_oral_v9s.py",
+      "sha256": "419a1b7cef39b610c2db1521d5c709d78454a68552434dc52c50e9e2417a1cae"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+      "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-source-job.json",
+      "sha256": "e9b7d777aac7e0965a8f69965fc77a3efa9ea9d95430a2db3657cc562eaaa7c9"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-OpenFront-job.json",
+      "sha256": "5a5b1639d9d15266dc5d592363b09d3cbcfd92f4650599ed0c564307a3157a4f"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-ClosedFront-job.json",
+      "sha256": "e6a1c867a1ab3aef8aa890ac7829d8e5506a4c67264c2812d4cafc0be5710bad"
+    },
+    {
+      "path": "benchmark/tools/krag/krag-broad-oral-v9s-OpenRight-job.json",
+      "sha256": "fa46a01648744f67908f9d335b9b9923042f5962b3aad1f68fc1ce440b1f83ea"
+    },
+    {
+      "path": "benchmark/art/krag/oral-volume-study/broad-oral-v9s-preflight.json",
+      "sha256": "8163ec97ea71c0011a53eb7d75f449342b898127b8b46a3fb9f847ebf893790e"
+    }
+  ],
+  "engineCandidate": "Separate fe15213d coherent68 source remains frozen and unaffected; this oral source still requires later v4 merge"
+}

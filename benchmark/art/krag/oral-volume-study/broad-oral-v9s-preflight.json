@@ -1,0 +1,129 @@
+{
+  "status": "Prepared v9s broad external mouth; no saved source or actual new render",
+  "artisticAcceptance": false,
+  "source": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+  "sourceSha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab",
+  "actualBasisWidthMeters": 0.10153051093220711,
+  "proposedBasisWidthMeters": 0.15,
+  "proposalWidthToInterocular": 1.2765260960418747,
+  "heldOpticalVertices": 7922,
+  "exactHeldOpticalCoordinates": true,
+  "surface": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.6583651709435161,
+    "normalChangeDegreesP99": 31.40940204159138,
+    "normalChangeDegreesMaximum": 51.26375500875518,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.027030066483586496
+  },
+  "passed": true,
+  "canineCrossSections": [
+    {
+      "side": "R",
+      "tipJawOnly": [
+        -0.0456244626161533,
+        -0.12933795741141962,
+        1.782970092337401
+      ],
+      "proposedRimAtTipX": [
+        -0.0456244626161533,
+        -0.14304879993973585,
+        1.7734850255419652
+      ],
+      "tipAboveRimMeters": 0.009485066795435815,
+      "tipBehindRimMeters": 0.013710842528316225
+    },
+    {
+      "side": "L",
+      "tipJawOnly": [
+        0.04562446469256688,
+        -0.12927918658977067,
+        1.783044211015101
+      ],
+      "proposedRimAtTipX": [
+        0.04562446469256688,
+        -0.14306282619925398,
+        1.7737054352626376
+      ],
+      "tipAboveRimMeters": 0.009338775752463446,
+      "tipBehindRimMeters": 0.013783639609483311
+    }
+  ],
+  "posedTargetRimSamples": [
+    [
+      -0.07508423812687397,
+      -0.1474255919456482,
+      1.8253028392791748
+    ],
+    [
+      -0.07168100281356214,
+      -0.14380014773401495,
+      1.8156389251977285
+    ],
+    [
+      -0.06402476867098886,
+      -0.14150975591149773,
+      1.7987936511175713
+    ],
+    [
+      -0.04713943050951025,
+      -0.14272830044984844,
+      1.774862823277945
+    ],
+    [
+      -0.025203508284760732,
+      -0.145804953533367,
+      1.7633444373573819
+    ],
+    [
+      3.680787621354947e-05,
+      -0.14551449586536042,
+      1.762072319426677
+    ],
+    [
+      0.025261863306973498,
+      -0.14567971165124927,
+      1.7634747044353465
+    ],
+    [
+      0.04718214502686529,
+      -0.14275119831600536,
+      1.7751349376865595
+    ],
+    [
+      0.06395480457230748,
+      -0.14169072089152457,
+      1.7990380809982136
+    ],
+    [
+      0.07154171287048428,
+      -0.14396506479026464,
+      1.8157615257599988
+    ],
+    [
+      0.07491576187312603,
+      -0.14756444096565247,
+      1.8253490924835205
+    ]
+  ],
+  "mandibularSupportPreflight": {
+    "iterations": 1102,
+    "freeVertices": 3462,
+    "maximumSolvedWeightDelta": 0.15994240643293933,
+    "maximumIterationResidualWeight": 2.997868242364532e-07,
+    "method": "True lower-rim quartic mandibular support plus bounded graph-harmonic neighborhood",
+    "lowerRimVertices": 81,
+    "fixedUpperNoseVertices": 16353,
+    "maxWeightChange": 0.15994240643293933,
+    "artisticAcceptance": false
+  },
+  "weightNormalization": {
+    "minimumHeadWeight": 0.0,
+    "fixedUpperNoseMaximumJawWeight": 0.0
+  },
+  "scope": "Dental/tusk geometry unchanged in this prediction; actual arch hull and intermediate poses still require source review",
+  "toolHashes": {
+    "preflight_broad_oral_v9s.py": "419a1b7cef39b610c2db1521d5c709d78454a68552434dc52c50e9e2417a1cae",
+    "broad_oral_v9s.py": "4c57cae4dbf7a834139953d43efbe553b7bb23be76f0ca5a36d020404547bc35"
+  }
+}

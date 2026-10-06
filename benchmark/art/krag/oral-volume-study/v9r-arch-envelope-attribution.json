@@ -1,0 +1,164 @@
+{
+  "status": "Actual cached dental fits plus exact recipe rim prediction; new saved-mesh attribution still required",
+  "artisticAcceptance": false,
+  "cacheSha256": "5407ee8e83729337f36fa7d1d95502858d817c080a0771f7abf572091bf800b7",
+  "v9rSource": {
+    "path": "benchmark/art/krag/Krag_ProfileOral_v9r_WIP.blend",
+    "sha256": "c27cecdc6e8709a42f472906db4595aaa6554c3e2897a994fdf19de767e1ceab"
+  },
+  "actualRigidDentalFitMaximumMeters": {
+    "Head": 1.2442489111650356e-07,
+    "Jaw": 1.308470060898254e-07
+  },
+  "jawOnlyMatrixFromActualDentalPairs": [
+    [
+      1.0,
+      -1.1908865708170779e-08,
+      -8.832967572653048e-09,
+      1.541237464389167e-08
+    ],
+    [
+      7.512898573775125e-09,
+      0.9205673567902342,
+      -0.39058384709591076,
+      0.7357827216960259
+    ],
+    [
+      1.278275219581481e-08,
+      0.3905838470959102,
+      0.9205673567902339,
+      0.1500637389576959
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "neutralOralWidthMeters": 0.10153051093220711,
+  "actualEyeSpacingMeters": 0.11750641092658043,
+  "oralWidthToEyeSpacing": 0.8640423116628481,
+  "conceptFrontManualReading": {
+    "reference": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+    "commissuresPixels": [
+      [
+        258,
+        88
+      ],
+      [
+        313,
+        88
+      ]
+    ],
+    "eyesPixels": [
+      [
+        265,
+        58
+      ],
+      [
+        305,
+        58
+      ]
+    ],
+    "landmarkUncertaintyPixels": 3,
+    "approximateLipToEyeSpacing": 1.375,
+    "caution": "Illustration is uncalibrated; use as a width interval, not canonical dimensions. Dental arch is provisional and must fit the external envelope."
+  },
+  "lowerRimPredictionSamples": [
+    [
+      -0.050849493592977524,
+      -0.14742559731006621,
+      1.8253028230667114
+    ],
+    [
+      -0.049292167946157754,
+      -0.14736705818653628,
+      1.8206088071593811
+    ],
+    [
+      -0.04413411778986065,
+      -0.147173169557084,
+      1.8069463411807294
+    ],
+    [
+      -0.03164525641499253,
+      -0.14670371925279857,
+      1.783186477412141
+    ],
+    [
+      -0.01698255399495376,
+      -0.14615255530709365,
+      1.7676670243194956
+    ],
+    [
+      -8.119741665195573e-06,
+      -0.1455144944714345,
+      1.7620723024057345
+    ],
+    [
+      0.016987682874713347,
+      -0.1462018326107059,
+      1.7677210811964157
+    ],
+    [
+      0.03162225386401213,
+      -0.14679367866939844,
+      1.783331744973612
+    ],
+    [
+      0.04400923653607522,
+      -0.14729462856939307,
+      1.8070356844997053
+    ],
+    [
+      0.04913585024637768,
+      -0.1475019572380025,
+      1.8206736123491816
+    ],
+    [
+      0.050681017339229584,
+      -0.1475644463300705,
+      1.8253490762710571
+    ]
+  ],
+  "canineVisibilityCrossSections": [
+    {
+      "side": "R",
+      "tipJawOnly": [
+        -0.0456244626161533,
+        -0.12933795741141962,
+        1.782970092337401
+      ],
+      "rimAtTipX": [
+        -0.0456244626161533,
+        -0.14722919090372183,
+        1.8106312473678787
+      ],
+      "tipAboveRimMeters": -0.027661155030477724,
+      "tipBehindRimMeters": 0.017891233492302205,
+      "neutralCanineHalfMouthRatio": 0.8775793130261842
+    },
+    {
+      "side": "L",
+      "tipJawOnly": [
+        0.04562446469256688,
+        -0.12927918658977067,
+        1.783044211015101
+      ],
+      "rimAtTipX": [
+        0.04562446469256688,
+        -0.1473599510458092,
+        1.8110565365192557
+      ],
+      "tipAboveRimMeters": -0.028012325504154667,
+      "tipBehindRimMeters": 0.01808076445603854,
+      "neutralCanineHalfMouthRatio": 0.8775793130261842
+    }
+  ],
+  "conclusions": [
+    "Current true lip span is narrower than interocular distance, unlike the reference front reading.",
+    "Rigid canines occupy the highly supported commissure region; compare tip height and anterior offset against actual posed rim.",
+    "Next source must fit the whole oral envelope and provisional arch together, preserving optical surfaces and actual jaw range."
+  ]
+}
