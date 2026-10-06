@@ -48,7 +48,7 @@ These concrete findings were sent to the owning animation author. The revised pr
 
 ## Prepared engine audit
 
-[inspect_rig_candidate.py](../../../tools/unreal/inspect_rig_candidate.py) is a read-only audit for the future matching imported candidate. Two new native helpers expose exact mesh parent names and local reference transforms. **Those helpers are uncompiled; the audit has not run inside Unreal.** Python syntax and small pure hierarchy fixtures pass: valid UE wrapper accepted; wrong hand parent, missing ear tip, unexpected bone and malformed wrapper rejected.
+[inspect_rig_candidate.py](../../../tools/unreal/inspect_rig_candidate.py) is a read-only audit for the future matching imported candidate. Two new native helpers expose exact mesh parent names and local reference transforms. The helpers subsequently passed [actual editor-module compilation](../idle-rig-editor-build/README.md); this audit still has not run on the new rig inside Unreal. Python syntax and small pure hierarchy fixtures pass: valid UE wrapper accepted; wrong hand parent, missing ear tip, unexpected bone and malformed wrapper rejected.
 
 An explicit `-KKRigAuditSpec=<json>` supplies `mesh`, `clips` (the seven canonical names mapped to actual asset paths), `sourceContract`, its pinned `sourceContractSha256`, `allowedRootWrappers` and a fresh `outputFile`. The source contract is the motion export's `export.json` with `sourceParents`, `sourceRest`, and per-clip frame ranges/FPS. The audit checks exact authored hierarchy separately from the wrapper, required control tracks and duration agreement within one source frame. It records local bind transforms and 17 indexed local samples for pelvis, tongue tip, ears, twists and hands.
 

@@ -291,9 +291,10 @@ namespace KragKings.Editor
             var metal=Texture(folder+"/"+entry.metallic,false,false,true);
             int width=rough.width,height=rough.height;
             Color[] r=rough.GetPixels(),m=metal.GetPixels();
-            if(m.Length!=r.Length) throw new Exception("Metal/roughness map sizes differ for "+entry.name);
+            var metallic=new LinearScalarMap(m.Select(c=>c.r).ToArray(),metal.width,metal.height);
             var packed=new Texture2D(width,height,TextureFormat.RGBA32,false,true);
-            var pixels=new Color[r.Length];for(int i=0;i<r.Length;i++)pixels[i]=new Color(m[i].r,1,1,1-r[i].r);
+            var pixels=new Color[r.Length];for(int i=0;i<r.Length;i++)pixels[i]=new Color(metallic.AtOutputTexel(i%width,i/width,width,height),1,1,1-r[i].r);
+            Debug.Log("KRAG_MASK_PACK "+entry.name+" roughness="+width+"x"+height+" metallic="+metal.width+"x"+metal.height+" output="+width+"x"+height+" scalarLinear=true constantMetallic="+metallic.IsConstant);
             packed.SetPixels(pixels);packed.Apply();string maskPath=Generated+"/"+safe+"_Mask.png";File.WriteAllBytes(maskPath,packed.EncodeToPNG());UnityEngine.Object.DestroyImmediate(packed);
             AssetDatabase.ImportAsset(maskPath,ImportAssetOptions.ForceSynchronousImport);
             material.SetTexture("_BaseColorMap",color);material.SetColor("_BaseColor",Color.white);material.SetTexture("_NormalMap",normal);material.SetFloat("_NormalScale",1);

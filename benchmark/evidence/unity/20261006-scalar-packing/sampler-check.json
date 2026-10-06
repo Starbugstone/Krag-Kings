@@ -1,0 +1,13 @@
+﻿{
+    "scope":  "Actual production scalar sampler compiled outside Unity; no texture import or rendering",
+    "passed":  true,
+    "checks":  [
+                   "Constant scalar expansion preserves exact value at larger target dimensions",
+                   "Bilinear pixel-center sampling preserves a nonconstant 2D gradient and clamps atlas edges",
+                   "Existing equal-size values and nonconstant downsampled center remain correct",
+                   "Single-row source safely resizes both axes",
+                   "Mismatched source dimensions are rejected"
+               ],
+    "sourceSha256":  "58f6777e3750875c65cbdd6541321ac4ac205604c6bf7702c83657df8ffee27a",
+    "unityImportExecuted":  false
+}

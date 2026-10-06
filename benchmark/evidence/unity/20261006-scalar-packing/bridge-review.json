@@ -1,0 +1,39 @@
+{
+  "reviewedUtc": "2026-10-06T11:44:49.310472+00:00",
+  "scope": "Source-only Nib PBR/MASK/full-rig bridge review and real standalone scalar-math check",
+  "sourceHashes": {
+    "benchmark/tools/nib/export_nib.py": "abd024c0be732f1d3935f15f4f74e026c0a19cf708ff4acf478c1ed9d5277e0f",
+    "benchmark/tools/nib/v5_wip/pbr/prepare_runtime_pbr.py": "22daad257e4de7091baf3075c6922cb59b12a144c1ff5edadd7be17c9128f7c3",
+    "benchmark/tools/nib/v5_wip/pbr/bake_fields.py": "776e3387b3d4d156998db565c2e5663699d127a7d4404ae221e839f630d9aff1",
+    "benchmark/tools/animation/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "benchmark/tools/unreal/import_shared_assets.py": "65f13ac3987f9e67d9ecd0824a5cd893cbf726b5ff58d23c40d2f9e07ecb89e1",
+    "benchmark/unity/Assets/Benchmark/Editor/BenchmarkBuild.cs": "6c4b43e223a4ea82634880758d7de2154e7299e8fbf7a3b8835170c955ef69ed",
+    "benchmark/unity/Assets/Benchmark/Editor/BenchmarkModelImport.cs": "78f9a7eb71e5dae7f33286957f909c4621a85a751a8083ea57477b859f8986eb",
+    "benchmark/unity/Assets/Benchmark/Editor/LinearScalarMap.cs": "58f6777e3750875c65cbdd6541321ac4ac205604c6bf7702c83657df8ffee27a",
+    "benchmark/tools/unity/Check-ScalarPacking.ps1": "79724df978c5017f107820187f3f3d6635a6d9b5a77a407acc17e4e89263f778"
+  },
+  "concreteBlocker": {
+    "before": "New face roughness1024/metallic128 and region roughness512/metallic128 would fail Unity equal-dimensions mask packing",
+    "after": "Linear metallic sampling into unchanged roughness dimensions; exact constant/equal-size paths, bilinear pixel-center resize with clamped atlas edges",
+    "actualProductionSamplerCasesPassed": 5,
+    "cachedUnityAssembliesCompile": true,
+    "actualUnityTextureImportExecuted": false
+  },
+  "sourceReviewedCompatibility": {
+    "maskedAtlas": "PBR stage copies original RGBA coverage byte-for-byte; exporter forwards agreed fields and explicit shared normal/scalar filenames",
+    "normals": "Blender tangent +Y bake; Unity ordinary +Y normal import; UE green-channel flip",
+    "skeleton": "All bones exported, including unweighted FaceRoot controls and markers; Nib79 fresh UE Skeleton migration required for inserted twist parents",
+    "animation": "Seven canonical completed actions; Unity consumes embedded takes; UE consumes matching-bind standalone files with carrier geometry ignored",
+    "variants": "Nib agent confirms legacy Grip torso/arm needs prepared semantic partition migration. Continuous new organic body has no shin; no leg duplication defect established from that object.",
+    "skinProfiles": "New UE facial-atlas material requires explicit profile alternative preparation; existing name-based map does not automatically cover it"
+  },
+  "notExecuted": [
+    "Blender PBR bake",
+    "new full FBX export",
+    "Nib79 engine import",
+    "masked-card runtime render",
+    "new Windows build"
+  ],
+  "currentPackageUnchanged": "d4315c2b22dd47328984db4acf9bbc22",
+  "artisticAcceptance": false
+}
