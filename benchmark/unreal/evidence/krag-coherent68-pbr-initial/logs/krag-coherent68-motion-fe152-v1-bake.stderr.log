@@ -1,0 +1,2 @@
+D:\Dev\Krag-Kings\benchmark\tools\unreal\krag_candidate\bake_runtime.py:28: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  images = {n.image for m in materials if m.use_nodes for n in m.node_tree.nodes

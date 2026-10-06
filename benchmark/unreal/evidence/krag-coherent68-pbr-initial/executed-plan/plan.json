@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "name": "krag-coherent68-motion-fe152-v1",
+  "source": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.blend",
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "selectionContract": "benchmark/art/krag/coherent68-source-contract.json",
+  "sourceReport": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.json",
+  "outputRoot": "benchmark/local/candidates/krag-coherent68-motion-fe152-v1",
+  "pins": [
+    {
+      "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.blend",
+      "bytes": 112669093,
+      "sha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17"
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Oral_v9p_Motion_v4_WIP.json",
+      "bytes": 1960865,
+      "sha256": "7733cc4913f9441c2555fa12b43cfe933d9aecd25dd7c75d1e266a034fd1fa12"
+    },
+    {
+      "path": "benchmark/art/krag/coherent68-source-contract.json",
+      "bytes": 11619,
+      "sha256": "7469b7ffb00f6cb3f2b2f148eac68be2ecc08d294c70564c1f4227e62352e477"
+    },
+    {
+      "path": "benchmark/tools/animation/export_contract.py",
+      "bytes": 5068,
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "bytes": 4203,
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/pbr/bake_fields.py",
+      "bytes": 12059,
+      "sha256": "1f28559325ab9db71a29ab95fa24a809a67fc7bd6c2fe08b5625abb19e450be9"
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/pbr/portable_save.py",
+      "bytes": 4827,
+      "sha256": "5b1c72d913352b1ca802d65beadfe19cc0685e8a423e2e98b2d40100711daa3c"
+    },
+    {
+      "path": "benchmark/tools/unreal/krag_candidate/bake_runtime.py",
+      "bytes": 8605,
+      "sha256": "6f22a7d2eb7e67ae44134ff16a3f2432bd6d5593f7223835368cca4f639d79cd"
+    },
+    {
+      "path": "benchmark/tools/unreal/krag_candidate/prepare_plan.py",
+      "bytes": 4242,
+      "sha256": "9178722616439e1cf32d44c148f5de7151d7f684278f9854741b2592a3455c65"
+    },
+    {
+      "path": "benchmark/tools/unreal/krag_candidate/run_stage.py",
+      "bytes": 3115,
+      "sha256": "aab888fde0cb51df421e75e43d425c461430a8938471f9a1122fb3ec49aecdb1"
+    },
+    {
+      "path": "benchmark/tools/unreal/krag_candidate/snapshot_source.py",
+      "bytes": 7365,
+      "sha256": "9a6a01e9b6e9e8f58617405347a9a4735024a88504416183f137ae1c4d82a653"
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/run_stage.py",
+      "bytes": 8743,
+      "sha256": "a326296a69c24ccf8c0ac8d8541f1f5224d24e43980483f2d93c946ef933bdb2"
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/snapshot_source.py",
+      "bytes": 7213,
+      "sha256": "9750fc9b933123986487afe5ce9cd0ef6b53b21fbb89dd287316a9f560bd80ff"
+    }
+  ],
+  "stages": {
+    "snapshot-source": {
+      "dependencies": [],
+      "outputs": [
+        "benchmark/local/candidates/krag-coherent68-motion-fe152-v1/source-contract.json"
+      ]
+    },
+    "bake": {
+      "dependencies": [
+        "snapshot-source"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/krag-coherent68-motion-fe152-v1/pbr"
+      ]
+    },
+    "snapshot-pbr": {
+      "dependencies": [
+        "bake"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/krag-coherent68-motion-fe152-v1/pbr-contract.json"
+      ]
+    }
+  },
+  "authoredVariants": [
+    "Krag_Natural",
+    "Krag_Crusher",
+    "Krag_IronJaw",
+    "Krag_Piston",
+    "Krag_FullLeg"
+  ],
+  "status": "Prepared source/PBR stages only; full matching exports and review follow actual bake proof",
+  "artisticAcceptance": false,
+  "sharedPromotionAuthorized": false
+}

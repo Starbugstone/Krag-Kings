@@ -1,0 +1,77 @@
+{
+  "status": "Actual initial material preparation passed; no new export or render yet",
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "selectionContractSha256": "7469b7ffb00f6cb3f2b2f148eac68be2ecc08d294c70564c1f4227e62352e477",
+  "pbrSha256": "4387bd3fd184d2b4d51c89daff2cffa1b3dd19261de1eec43e52e5195f1d772b",
+  "pbrLocalPath": "benchmark/local/candidates/krag-coherent68-motion-fe152-v1/pbr/Krag_Runtime_PBR.blend",
+  "nativeStages": {
+    "snapshot-source": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "KRAG_CANDIDATE_STAGE_COMPLETE snapshot-source",
+      "peakPrivateMiB": 844,
+      "minimumAvailableMiB": 10571,
+      "maximumCommitPercent": 57,
+      "firstMemorySample": "2026-10-06T19:42:26.5241498+02:00",
+      "lastMemorySample": "2026-10-06T19:42:46.3026394+02:00"
+    },
+    "bake": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "KRAG_CANDIDATE_STAGE_COMPLETE bake",
+      "peakPrivateMiB": 5497,
+      "minimumAvailableMiB": 6389,
+      "maximumCommitPercent": 68,
+      "firstMemorySample": "2026-10-06T19:43:09.3880343+02:00",
+      "lastMemorySample": "2026-10-06T19:48:35.2440345+02:00"
+    },
+    "snapshot-pbr": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "KRAG_CANDIDATE_STAGE_COMPLETE snapshot-pbr",
+      "peakPrivateMiB": 854,
+      "minimumAvailableMiB": 10719,
+      "maximumCommitPercent": 56,
+      "firstMemorySample": "2026-10-06T19:48:53.1201541+02:00",
+      "lastMemorySample": "2026-10-06T19:49:16.1543550+02:00"
+    }
+  },
+  "moduleCount": 26,
+  "materialRoleSlotCount": 72,
+  "uniqueTextureFiles": 104,
+  "boneCount": 68,
+  "clips": [
+    "Idle",
+    "Walk",
+    "Run",
+    "Melee",
+    "Shoot",
+    "Hit",
+    "FacePerformance"
+  ],
+  "sampledPoseCountPerClip": 17,
+  "sourceVersusSavedPbrExactFields": [
+    "rig",
+    "geometryWeightsMorphs",
+    "sourceParents",
+    "sourceConnected",
+    "sourceRest",
+    "fields",
+    "correctiveDriverContracts",
+    "locomotion",
+    "actionContract",
+    "clips"
+  ],
+  "allSavedImagesReopenedDecodedAndHashMatched": true,
+  "matchedMaterialImagesCreated": false,
+  "matchingFbxExportsCreated": false,
+  "engineImportsCreated": false,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "sourceFailures": [
+    "Normal mouth/lid and concept likeness",
+    "Inherited jaw overlays",
+    "Hand poses and clothing",
+    "New 72-bone hand study excluded"
+  ]
+}

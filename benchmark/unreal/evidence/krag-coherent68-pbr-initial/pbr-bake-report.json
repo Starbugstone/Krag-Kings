@@ -1,0 +1,2970 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Oral_v9p_Motion_v4_WIP.blend",
+  "sourceSha256": "fe15213defe5299971b7713249cbe9e00fc16ba8d854df8dfd885e6f78821c17",
+  "selectionContractSha256": "7469b7ffb00f6cb3f2b2f148eac68be2ecc08d294c70564c1f4227e62352e477",
+  "materials": [
+    {
+      "name": "Krag_WeatheredTeal_Armor_Atlas",
+      "baseColor": "textures/Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Armor_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Armor_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Armor_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+        "normal": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+        "roughness": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+        "metallic": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74"
+      },
+      "sourceMaterial": "Krag_WeatheredTeal",
+      "sourceModule": "Armor"
+    },
+    {
+      "name": "Krag_BlackenedSteel_Armor_Atlas",
+      "baseColor": "textures/Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Armor_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Armor_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Armor_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+        "normal": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+        "roughness": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+        "metallic": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "Armor"
+    },
+    {
+      "name": "Krag_AgedBrass_Armor_Atlas",
+      "baseColor": "textures/Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Armor_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Armor_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Armor_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+        "normal": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+        "roughness": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+        "metallic": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "Armor"
+    },
+    {
+      "name": "Krag_OiledLeather_Armor_Atlas",
+      "baseColor": "textures/Krag_Armor_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Armor_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Armor_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Armor_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+        "normal": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+        "roughness": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+        "metallic": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Armor"
+    },
+    {
+      "name": "Krag_AgedBrass_Belt_Atlas",
+      "baseColor": "textures/Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Belt_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Belt_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Belt_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+        "normal": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+        "roughness": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+        "metallic": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "Belt"
+    },
+    {
+      "name": "Krag_OiledLeather_Belt_Atlas",
+      "baseColor": "textures/Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Belt_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Belt_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Belt_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+        "normal": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+        "roughness": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+        "metallic": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Belt"
+    },
+    {
+      "name": "Krag_BlackenedSteel_Belt_Atlas",
+      "baseColor": "textures/Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Belt_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Belt_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Belt_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+        "normal": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+        "roughness": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+        "metallic": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "Belt"
+    },
+    {
+      "name": "Krag_DesertCanvas_Belt_Atlas",
+      "baseColor": "textures/Krag_Belt_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Belt_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Belt_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Belt_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+        "normal": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+        "roughness": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+        "metallic": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Belt"
+    },
+    {
+      "name": "Krag_SandstoneSkin_BioArm_L_Atlas",
+      "baseColor": "textures/Krag_BioArm_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioArm_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioArm_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioArm_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "18b5aee0ef51661284ba631be26da92676a9a1234e363e5b65edebaa55d5c57b",
+        "normal": "e33864cab6d8794865d4b530930a5107b5fcd9d54bbf92113ce378f985ced095",
+        "roughness": "6fa3c4da9c33203c1f535e49b3896bb725c303567e87c7e4b68ba4be8f8e7f90",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_SandstoneSkin",
+      "sourceModule": "BioArm_L"
+    },
+    {
+      "name": "Krag_SandstoneSkin_BioArm_R_Atlas",
+      "baseColor": "textures/Krag_BioArm_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioArm_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioArm_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioArm_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1e572e032fa4981d22935a0236c97fd95039cd3ac0db919ca06db1f7e54cf80a",
+        "normal": "6d9fac84acfd7b7be3eb03d90acd1f39209d95c3820ddf98d6ea71ee98bec35a",
+        "roughness": "0bb983e7f86c6e0c6ced416c9cadb3ce9f319cfe5208a4e5d6a6457c81710fc3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_SandstoneSkin",
+      "sourceModule": "BioArm_R"
+    },
+    {
+      "name": "Krag_SandstoneSkin_BioForearm_L_Atlas",
+      "baseColor": "textures/Krag_BioForearm_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioForearm_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioForearm_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioForearm_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "9e56cb2ccacef79541400977ab75f3bc7f8008edb74d5769afc87bac600ad83d",
+        "normal": "4c869548807641cec64d9fa80fdc35ca6dd41449a43d28313c895f0b573ee890",
+        "roughness": "022bc6190a906ca5bba39fae689fb10d4ec11b9eda88536f86995c08c9019343",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_SandstoneSkin",
+      "sourceModule": "BioForearm_L"
+    },
+    {
+      "name": "Krag_SandstoneSkin_BioForearm_R_Atlas",
+      "baseColor": "textures/Krag_BioForearm_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioForearm_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioForearm_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioForearm_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "e23d398e7153e18c11d3a2477b427e31ab3cf7566c7155080b3fee744395d95b",
+        "normal": "112f5f38a5e968f1899af5d9f02911abd2ec0d35f3cd18f749a9b8d9d878440f",
+        "roughness": "56faa8563143b668a686291e93f7fe4de291b46cf4d92ea399f2379ce7f94a21",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_SandstoneSkin",
+      "sourceModule": "BioForearm_R"
+    },
+    {
+      "name": "Krag_OiledLeather_BioLowerLeg_L_Atlas",
+      "baseColor": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "854474cb2e3e33bd480d7b5b067425719c1413f7041abe71331ad4a8043158db",
+        "normal": "b787cd45d7781d1beab2b61d05c4810abd905dd46a3078c93aec4a121c24de85",
+        "roughness": "a95e81605e620ef4e6fd26fa545c6af406c39164219f09d55f5cd9beccb329b3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "BioLowerLeg_L"
+    },
+    {
+      "name": "Krag_DesertCanvas_BioLowerLeg_L_Atlas",
+      "baseColor": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "854474cb2e3e33bd480d7b5b067425719c1413f7041abe71331ad4a8043158db",
+        "normal": "b787cd45d7781d1beab2b61d05c4810abd905dd46a3078c93aec4a121c24de85",
+        "roughness": "a95e81605e620ef4e6fd26fa545c6af406c39164219f09d55f5cd9beccb329b3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "BioLowerLeg_L"
+    },
+    {
+      "name": "Krag_OiledLeather_BioLowerLeg_R_Atlas",
+      "baseColor": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0e900edee248f012f1a4fd998b02158fd101fbe0c2ea4fc7776522843a69af8c",
+        "normal": "78f824b34350bac8602fce6d12939fbd93afb19632aed70798e1a8ff35ae24b0",
+        "roughness": "af9057fd960fdc0089dbdfd14bfb653a39ed8d6ee42ae03dde680d81ba88f4a5",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "BioLowerLeg_R"
+    },
+    {
+      "name": "Krag_DesertCanvas_BioLowerLeg_R_Atlas",
+      "baseColor": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0e900edee248f012f1a4fd998b02158fd101fbe0c2ea4fc7776522843a69af8c",
+        "normal": "78f824b34350bac8602fce6d12939fbd93afb19632aed70798e1a8ff35ae24b0",
+        "roughness": "af9057fd960fdc0089dbdfd14bfb653a39ed8d6ee42ae03dde680d81ba88f4a5",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "BioLowerLeg_R"
+    },
+    {
+      "name": "Krag_BlackenedSteel_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_AgedBrass_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_WeatheredTeal_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_WeatheredTeal",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_CopperHose_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_CopperHose",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_Recess_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_Ivory_BionicArm_L_Crusher_Atlas",
+      "baseColor": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "normal": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "roughness": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "metallic": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb"
+      },
+      "sourceMaterial": "Krag_Ivory",
+      "sourceModule": "BionicArm_L_Crusher"
+    },
+    {
+      "name": "Krag_Amber_BionicEye_L_Atlas",
+      "baseColor": "textures/Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "b435d07cfa1bed630f1bfc5933b68763b55c7a0656876473ad7464a3a16efc62",
+        "normal": "4d0abfe1192873b2c72499097ca268708aaa4dd8d414dd9b56becc02a07a0655",
+        "roughness": "267a6daa6449193d3dbc2faf6e85fb1d3221c0856bc356cb20a69af7b1ae131f",
+        "metallic": "0ad97f78fed829957a27cb7e34f5d25494a2b73d9ad721e38b6cd80773521efb"
+      },
+      "sourceMaterial": "Krag_Amber",
+      "sourceModule": "BionicEye_L"
+    },
+    {
+      "name": "Krag_BlackenedSteel_BionicEye_L_Atlas",
+      "baseColor": "textures/Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "b435d07cfa1bed630f1bfc5933b68763b55c7a0656876473ad7464a3a16efc62",
+        "normal": "4d0abfe1192873b2c72499097ca268708aaa4dd8d414dd9b56becc02a07a0655",
+        "roughness": "267a6daa6449193d3dbc2faf6e85fb1d3221c0856bc356cb20a69af7b1ae131f",
+        "metallic": "0ad97f78fed829957a27cb7e34f5d25494a2b73d9ad721e38b6cd80773521efb"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "BionicEye_L"
+    },
+    {
+      "name": "Krag_AgedBrass_BionicEye_L_Atlas",
+      "baseColor": "textures/Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "b435d07cfa1bed630f1bfc5933b68763b55c7a0656876473ad7464a3a16efc62",
+        "normal": "4d0abfe1192873b2c72499097ca268708aaa4dd8d414dd9b56becc02a07a0655",
+        "roughness": "267a6daa6449193d3dbc2faf6e85fb1d3221c0856bc356cb20a69af7b1ae131f",
+        "metallic": "0ad97f78fed829957a27cb7e34f5d25494a2b73d9ad721e38b6cd80773521efb"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "BionicEye_L"
+    },
+    {
+      "name": "Krag_BlackenedSteel_BionicJaw_Iron_Atlas",
+      "baseColor": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1126b48d406d11b078d042e967a6b121a74fec1c6553d09e503910ee54582d79",
+        "normal": "37b99a3798afc9c801f19858e618db0e59a10e29f868284637c71d622c63a9ae",
+        "roughness": "e06328e7e214d410cf0253e167c41044aa27cc1556f0b68cb1868aa7c577ff8f",
+        "metallic": "07bfbf7f104ffa5899424ed7b61a9b7b9c39dda1e5a592ef5397ef0dc0050ab4"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "BionicJaw_Iron"
+    },
+    {
+      "name": "Krag_AgedBrass_BionicJaw_Iron_Atlas",
+      "baseColor": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1126b48d406d11b078d042e967a6b121a74fec1c6553d09e503910ee54582d79",
+        "normal": "37b99a3798afc9c801f19858e618db0e59a10e29f868284637c71d622c63a9ae",
+        "roughness": "e06328e7e214d410cf0253e167c41044aa27cc1556f0b68cb1868aa7c577ff8f",
+        "metallic": "07bfbf7f104ffa5899424ed7b61a9b7b9c39dda1e5a592ef5397ef0dc0050ab4"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "BionicJaw_Iron"
+    },
+    {
+      "name": "Krag_Ivory_BionicJaw_Iron_Atlas",
+      "baseColor": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1126b48d406d11b078d042e967a6b121a74fec1c6553d09e503910ee54582d79",
+        "normal": "37b99a3798afc9c801f19858e618db0e59a10e29f868284637c71d622c63a9ae",
+        "roughness": "e06328e7e214d410cf0253e167c41044aa27cc1556f0b68cb1868aa7c577ff8f",
+        "metallic": "07bfbf7f104ffa5899424ed7b61a9b7b9c39dda1e5a592ef5397ef0dc0050ab4"
+      },
+      "sourceMaterial": "Krag_Ivory",
+      "sourceModule": "BionicJaw_Iron"
+    },
+    {
+      "name": "Krag_AgedBrass_BionicLeg_R_Piston_Atlas",
+      "baseColor": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "ef594456eb7fe3dc3e9a0223bf6cf70b77c0674f8542f17f4ee66d158dde424d",
+        "normal": "a510da28fd8f895e8858544c8f39dd816eae1df1a4726232327d7018908bfb47",
+        "roughness": "54adf29c18995b0bca37de07a497c8babd5e916196fa1c88817932525dca8a21",
+        "metallic": "1cc69389e2607a40fe4c10f555cc7abd2960580c96492d331a105958ce0a58d0"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "BionicLeg_R_Piston"
+    },
+    {
+      "name": "Krag_BlackenedSteel_BionicLeg_R_Piston_Atlas",
+      "baseColor": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "ef594456eb7fe3dc3e9a0223bf6cf70b77c0674f8542f17f4ee66d158dde424d",
+        "normal": "a510da28fd8f895e8858544c8f39dd816eae1df1a4726232327d7018908bfb47",
+        "roughness": "54adf29c18995b0bca37de07a497c8babd5e916196fa1c88817932525dca8a21",
+        "metallic": "1cc69389e2607a40fe4c10f555cc7abd2960580c96492d331a105958ce0a58d0"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "BionicLeg_R_Piston"
+    },
+    {
+      "name": "Krag_WeatheredTeal_BionicLeg_R_Piston_Atlas",
+      "baseColor": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "ef594456eb7fe3dc3e9a0223bf6cf70b77c0674f8542f17f4ee66d158dde424d",
+        "normal": "a510da28fd8f895e8858544c8f39dd816eae1df1a4726232327d7018908bfb47",
+        "roughness": "54adf29c18995b0bca37de07a497c8babd5e916196fa1c88817932525dca8a21",
+        "metallic": "1cc69389e2607a40fe4c10f555cc7abd2960580c96492d331a105958ce0a58d0"
+      },
+      "sourceMaterial": "Krag_WeatheredTeal",
+      "sourceModule": "BionicLeg_R_Piston"
+    },
+    {
+      "name": "Krag_BlackenedSteel_BionicThigh_R_Full_Atlas",
+      "baseColor": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "normal": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "roughness": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "metallic": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "BionicThigh_R_Full"
+    },
+    {
+      "name": "Krag_AgedBrass_BionicThigh_R_Full_Atlas",
+      "baseColor": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "normal": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "roughness": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "metallic": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "BionicThigh_R_Full"
+    },
+    {
+      "name": "Krag_WeatheredTeal_BionicThigh_R_Full_Atlas",
+      "baseColor": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "normal": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "roughness": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "metallic": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba"
+      },
+      "sourceMaterial": "Krag_WeatheredTeal",
+      "sourceModule": "BionicThigh_R_Full"
+    },
+    {
+      "name": "Krag_CopperHose_BionicThigh_R_Full_Atlas",
+      "baseColor": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "normal": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "roughness": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "metallic": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba"
+      },
+      "sourceMaterial": "Krag_CopperHose",
+      "sourceModule": "BionicThigh_R_Full"
+    },
+    {
+      "name": "Krag_Recess_BionicThigh_R_Full_Atlas",
+      "baseColor": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "normal": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "roughness": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "metallic": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "BionicThigh_R_Full"
+    },
+    {
+      "name": "Krag_SandstoneSkin_Body_Atlas",
+      "baseColor": "textures/Krag_Body_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Body_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Body_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Body_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2fc3020e1681fa34804c3abed4f736a47d6f758032caab5d0df84c9ba0dc907f",
+        "normal": "96aa0f092e1981a1eb9e9dc16ece01f469e92f17c60ee54e1bdbdaf2e6f2f1cb",
+        "roughness": "6e79d983ea35af034d10555afa96a2800a8b0adbf3fc848b63fc42c46ec0f604",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_SandstoneSkin",
+      "sourceModule": "Body"
+    },
+    {
+      "name": "Krag_AgedBrass_Boot_L_Atlas",
+      "baseColor": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "normal": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "roughness": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "metallic": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "Boot_L"
+    },
+    {
+      "name": "Krag_OiledLeather_Boot_L_Atlas",
+      "baseColor": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "normal": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "roughness": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "metallic": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Boot_L"
+    },
+    {
+      "name": "Krag_BlackenedSteel_Boot_L_Atlas",
+      "baseColor": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "normal": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "roughness": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "metallic": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "Boot_L"
+    },
+    {
+      "name": "Krag_Recess_Boot_L_Atlas",
+      "baseColor": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "normal": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "roughness": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "metallic": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "Boot_L"
+    },
+    {
+      "name": "Krag_DesertCanvas_Boot_L_Atlas",
+      "baseColor": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "normal": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "roughness": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "metallic": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Boot_L"
+    },
+    {
+      "name": "Krag_AgedBrass_Boot_R_Atlas",
+      "baseColor": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "normal": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "roughness": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "metallic": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "Boot_R"
+    },
+    {
+      "name": "Krag_OiledLeather_Boot_R_Atlas",
+      "baseColor": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "normal": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "roughness": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "metallic": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Boot_R"
+    },
+    {
+      "name": "Krag_BlackenedSteel_Boot_R_Atlas",
+      "baseColor": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "normal": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "roughness": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "metallic": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "Boot_R"
+    },
+    {
+      "name": "Krag_Recess_Boot_R_Atlas",
+      "baseColor": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "normal": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "roughness": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "metallic": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "Boot_R"
+    },
+    {
+      "name": "Krag_DesertCanvas_Boot_R_Atlas",
+      "baseColor": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "normal": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "roughness": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "metallic": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Boot_R"
+    },
+    {
+      "name": "Krag_Amber_Face_Atlas",
+      "baseColor": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "normal": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "roughness": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_Amber",
+      "sourceModule": "Face"
+    },
+    {
+      "name": "Krag_Recess_Face_Atlas",
+      "baseColor": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "normal": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "roughness": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "Face"
+    },
+    {
+      "name": "Krag_EyeWhite_Face_Atlas",
+      "baseColor": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "normal": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "roughness": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_EyeWhite",
+      "sourceModule": "Face"
+    },
+    {
+      "name": "Krag_Ivory_Face_Atlas",
+      "baseColor": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "normal": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "roughness": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_Ivory",
+      "sourceModule": "Face"
+    },
+    {
+      "name": "Krag_TuskEnamel_Source_Face_Atlas",
+      "baseColor": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "normal": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "roughness": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_TuskEnamel_Source",
+      "sourceModule": "Face"
+    },
+    {
+      "name": "Krag_DesertCanvas_Garments_Atlas",
+      "baseColor": "textures/Krag_Garments_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Garments_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Garments_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Garments_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0e248f0b0e70f6a16037234fe21904097b2cecc80dee0e13c7c1964e32af4313",
+        "normal": "9e558baf44f4a9b29b3641193aa045e5aca60938204f7b4d667e37f89419214e",
+        "roughness": "29a07f715310b0f69e0fe2e52c1a5d8e7aefbf6c2597c17b1a368641b070259f",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Garments"
+    },
+    {
+      "name": "Krag_AgedBrass_Harness_Atlas",
+      "baseColor": "textures/Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Harness_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Harness_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Harness_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "91c0ba198bffadac75f51ab9c4d03c667d116f75898ceecf4d1986a58db7a23f",
+        "normal": "74c13157cfdd15f04a8525981b25cb00d1341270b75cc8535679807925979eb5",
+        "roughness": "f7adb37fefff7f5b039e4ab4206f0640aada4c15fdd3c656ff7315abb251db35",
+        "metallic": "79f7e6b97e2cb28c649cd573774f37dd27020f5499aa1858e79389efcdf0c504"
+      },
+      "sourceMaterial": "Krag_AgedBrass",
+      "sourceModule": "Harness"
+    },
+    {
+      "name": "Krag_OiledLeather_Harness_Atlas",
+      "baseColor": "textures/Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Harness_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Harness_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Harness_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "91c0ba198bffadac75f51ab9c4d03c667d116f75898ceecf4d1986a58db7a23f",
+        "normal": "74c13157cfdd15f04a8525981b25cb00d1341270b75cc8535679807925979eb5",
+        "roughness": "f7adb37fefff7f5b039e4ab4206f0640aada4c15fdd3c656ff7315abb251db35",
+        "metallic": "79f7e6b97e2cb28c649cd573774f37dd27020f5499aa1858e79389efcdf0c504"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Harness"
+    },
+    {
+      "name": "Krag_DesertCanvas_Harness_Atlas",
+      "baseColor": "textures/Krag_Harness_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Harness_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Harness_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Harness_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "91c0ba198bffadac75f51ab9c4d03c667d116f75898ceecf4d1986a58db7a23f",
+        "normal": "74c13157cfdd15f04a8525981b25cb00d1341270b75cc8535679807925979eb5",
+        "roughness": "f7adb37fefff7f5b039e4ab4206f0640aada4c15fdd3c656ff7315abb251db35",
+        "metallic": "79f7e6b97e2cb28c649cd573774f37dd27020f5499aa1858e79389efcdf0c504"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Harness"
+    },
+    {
+      "name": "Krag_FacialSkin_Head_Atlas",
+      "baseColor": "textures/Krag_Head_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Head_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Head_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Head_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "e64ef5fcf7e5613ed897ef899acb9f0758a12dfffead9104d3fb364581c1716c",
+        "normal": "81f1cb365f8215b473ceb8882220878d333d4dbe57a3590f11a0809baef4a27c",
+        "roughness": "4d72032314713c199222679e09543003892ff1d8ba10ad80f4f8c769a1ec3943",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_FacialSkin",
+      "sourceModule": "Head"
+    },
+    {
+      "name": "Krag_Recess_Head_Atlas",
+      "baseColor": "textures/Krag_Head_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Head_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Head_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Head_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "e64ef5fcf7e5613ed897ef899acb9f0758a12dfffead9104d3fb364581c1716c",
+        "normal": "81f1cb365f8215b473ceb8882220878d333d4dbe57a3590f11a0809baef4a27c",
+        "roughness": "4d72032314713c199222679e09543003892ff1d8ba10ad80f4f8c769a1ec3943",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "Head"
+    },
+    {
+      "name": "Krag_InnerMouth_v9k_Head_Atlas",
+      "baseColor": "textures/Krag_Head_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Head_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Head_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Head_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "e64ef5fcf7e5613ed897ef899acb9f0758a12dfffead9104d3fb364581c1716c",
+        "normal": "81f1cb365f8215b473ceb8882220878d333d4dbe57a3590f11a0809baef4a27c",
+        "roughness": "4d72032314713c199222679e09543003892ff1d8ba10ad80f4f8c769a1ec3943",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_InnerMouth_v9k",
+      "sourceModule": "Head"
+    },
+    {
+      "name": "Krag_DentalEnamel_MouthInterior_Atlas",
+      "baseColor": "textures/Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "349a094d357443f5febf3a1699d417af92923950990ac89bbaf5f281b968d4f1",
+        "normal": "8f6e72e5c973cba4a0af2cd00cf7f25f0d6fa2810f3acd7a40f17b41228c3be4",
+        "roughness": "2172c949addab2c942648eeef4190a49b93ebd28d928d8492b5308633c6c42b3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DentalEnamel",
+      "sourceModule": "MouthInterior"
+    },
+    {
+      "name": "Krag_Gingiva_MouthInterior_Atlas",
+      "baseColor": "textures/Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "349a094d357443f5febf3a1699d417af92923950990ac89bbaf5f281b968d4f1",
+        "normal": "8f6e72e5c973cba4a0af2cd00cf7f25f0d6fa2810f3acd7a40f17b41228c3be4",
+        "roughness": "2172c949addab2c942648eeef4190a49b93ebd28d928d8492b5308633c6c42b3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_Gingiva",
+      "sourceModule": "MouthInterior"
+    },
+    {
+      "name": "Krag_OralTongue_MouthInterior_Atlas",
+      "baseColor": "textures/Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_MouthInterior_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "349a094d357443f5febf3a1699d417af92923950990ac89bbaf5f281b968d4f1",
+        "normal": "8f6e72e5c973cba4a0af2cd00cf7f25f0d6fa2810f3acd7a40f17b41228c3be4",
+        "roughness": "2172c949addab2c942648eeef4190a49b93ebd28d928d8492b5308633c6c42b3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_OralTongue",
+      "sourceModule": "MouthInterior"
+    },
+    {
+      "name": "Krag_DesertCanvas_NaturalThigh_R_Atlas",
+      "baseColor": "textures/Krag_NaturalThigh_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "5144f33e5100ae839a1698d5ffa030312f1bcfb6c650c492d5367b711a1742d3",
+        "normal": "b3ea1d2000a7c3dc3f61af129329a30b786d683e7bcbb28e523d5759f8a6e225",
+        "roughness": "da4eeb0b244e8ec0bdae230acea202fb3f62511504f0f44db6d7cc3dfdd6f2b6",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "NaturalThigh_R"
+    },
+    {
+      "name": "Krag_DesertCanvas_Scarf_Atlas",
+      "baseColor": "textures/Krag_Scarf_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Scarf_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Scarf_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Scarf_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "78db3b970302f1471805a3652b36d3b0324cf83ed2724c8d522c7e3f0ed1215c",
+        "normal": "47c42ee87950cc25c37cc7e6971bad1504ef6f7b6521bec90e046a1ab0ed40c1",
+        "roughness": "0e9e67b72a634faff2a622330a56d302e435ef3623ab26fc93369de9b63ea873",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "Scarf"
+    },
+    {
+      "name": "Krag_DesertCanvas_TrouserLeg_L_Atlas",
+      "baseColor": "textures/Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0c617de117a3c65938363784e4152d4c0d508382b1839ed1a06972b5fbe02af2",
+        "normal": "9a7c9dc883a75b83641231f63313fa41d8669e9b60ceae28e0b3882078122520",
+        "roughness": "6b6262c183cbe0e4c7f189c96f6956a007199405d17cab1a2457cafce74d2f17",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "TrouserLeg_L"
+    },
+    {
+      "name": "Krag_OiledLeather_TrouserLeg_L_Atlas",
+      "baseColor": "textures/Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "0c617de117a3c65938363784e4152d4c0d508382b1839ed1a06972b5fbe02af2",
+        "normal": "9a7c9dc883a75b83641231f63313fa41d8669e9b60ceae28e0b3882078122520",
+        "roughness": "6b6262c183cbe0e4c7f189c96f6956a007199405d17cab1a2457cafce74d2f17",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "TrouserLeg_L"
+    },
+    {
+      "name": "Krag_DesertCanvas_TrouserLeg_R_Atlas",
+      "baseColor": "textures/Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "ca03a706f691b06c2cda588a60c45b9410948710714b99000667bb46c8531726",
+        "normal": "6c1cc211b102a1eab1061525e27c948fb42f5385ec9abbf1d445135ba50f87c5",
+        "roughness": "3c98bfc06edd95c82f50e333efd2b8805f09d6481f21e0d959713170b45a4de3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_DesertCanvas",
+      "sourceModule": "TrouserLeg_R"
+    },
+    {
+      "name": "Krag_OiledLeather_TrouserLeg_R_Atlas",
+      "baseColor": "textures/Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "ca03a706f691b06c2cda588a60c45b9410948710714b99000667bb46c8531726",
+        "normal": "6c1cc211b102a1eab1061525e27c948fb42f5385ec9abbf1d445135ba50f87c5",
+        "roughness": "3c98bfc06edd95c82f50e333efd2b8805f09d6481f21e0d959713170b45a4de3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "TrouserLeg_R"
+    },
+    {
+      "name": "Krag_Recess_Weapon_R_Atlas",
+      "baseColor": "textures/Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+        "normal": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+        "roughness": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+        "metallic": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5"
+      },
+      "sourceMaterial": "Krag_Recess",
+      "sourceModule": "Weapon_R"
+    },
+    {
+      "name": "Krag_BlackenedSteel_Weapon_R_Atlas",
+      "baseColor": "textures/Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+        "normal": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+        "roughness": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+        "metallic": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5"
+      },
+      "sourceMaterial": "Krag_BlackenedSteel",
+      "sourceModule": "Weapon_R"
+    },
+    {
+      "name": "Krag_OiledLeather_Weapon_R_Atlas",
+      "baseColor": "textures/Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+        "normal": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+        "roughness": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+        "metallic": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5"
+      },
+      "sourceMaterial": "Krag_OiledLeather",
+      "sourceModule": "Weapon_R"
+    },
+    {
+      "name": "Krag_WeatheredTeal_Weapon_R_Atlas",
+      "baseColor": "textures/Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+      "normal": "textures/Krag_Weapon_R_SurfaceAtlas_Normal.png",
+      "roughness": "textures/Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+      "metallic": "textures/Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+        "normal": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+        "roughness": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+        "metallic": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5"
+      },
+      "sourceMaterial": "Krag_WeatheredTeal",
+      "sourceModule": "Weapon_R"
+    }
+  ],
+  "modules": [
+    {
+      "module": "Armor",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+          "sha256": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Armor_SurfaceAtlas_Normal.png",
+          "sha256": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Armor_SurfaceAtlas_Roughness.png",
+          "sha256": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Armor_SurfaceAtlas_Metallic.png",
+          "sha256": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_WeatheredTeal_Armor_Atlas",
+        "Krag_BlackenedSteel_Armor_Atlas",
+        "Krag_AgedBrass_Armor_Atlas",
+        "Krag_OiledLeather_Armor_Atlas"
+      ]
+    },
+    {
+      "module": "Belt",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+          "sha256": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Belt_SurfaceAtlas_Normal.png",
+          "sha256": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Belt_SurfaceAtlas_Roughness.png",
+          "sha256": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Belt_SurfaceAtlas_Metallic.png",
+          "sha256": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_AgedBrass_Belt_Atlas",
+        "Krag_OiledLeather_Belt_Atlas",
+        "Krag_BlackenedSteel_Belt_Atlas",
+        "Krag_DesertCanvas_Belt_Atlas"
+      ]
+    },
+    {
+      "module": "BioArm_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioArm_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "18b5aee0ef51661284ba631be26da92676a9a1234e363e5b65edebaa55d5c57b",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioArm_L_SurfaceAtlas_Normal.png",
+          "sha256": "e33864cab6d8794865d4b530930a5107b5fcd9d54bbf92113ce378f985ced095",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioArm_L_SurfaceAtlas_Roughness.png",
+          "sha256": "6fa3c4da9c33203c1f535e49b3896bb725c303567e87c7e4b68ba4be8f8e7f90",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioArm_L_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_SandstoneSkin_BioArm_L_Atlas"
+      ]
+    },
+    {
+      "module": "BioArm_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioArm_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "1e572e032fa4981d22935a0236c97fd95039cd3ac0db919ca06db1f7e54cf80a",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioArm_R_SurfaceAtlas_Normal.png",
+          "sha256": "6d9fac84acfd7b7be3eb03d90acd1f39209d95c3820ddf98d6ea71ee98bec35a",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioArm_R_SurfaceAtlas_Roughness.png",
+          "sha256": "0bb983e7f86c6e0c6ced416c9cadb3ce9f319cfe5208a4e5d6a6457c81710fc3",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioArm_R_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_SandstoneSkin_BioArm_R_Atlas"
+      ]
+    },
+    {
+      "module": "BioForearm_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioForearm_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "9e56cb2ccacef79541400977ab75f3bc7f8008edb74d5769afc87bac600ad83d",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioForearm_L_SurfaceAtlas_Normal.png",
+          "sha256": "4c869548807641cec64d9fa80fdc35ca6dd41449a43d28313c895f0b573ee890",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioForearm_L_SurfaceAtlas_Roughness.png",
+          "sha256": "022bc6190a906ca5bba39fae689fb10d4ec11b9eda88536f86995c08c9019343",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioForearm_L_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_SandstoneSkin_BioForearm_L_Atlas"
+      ]
+    },
+    {
+      "module": "BioForearm_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioForearm_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "e23d398e7153e18c11d3a2477b427e31ab3cf7566c7155080b3fee744395d95b",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioForearm_R_SurfaceAtlas_Normal.png",
+          "sha256": "112f5f38a5e968f1899af5d9f02911abd2ec0d35f3cd18f749a9b8d9d878440f",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioForearm_R_SurfaceAtlas_Roughness.png",
+          "sha256": "56faa8563143b668a686291e93f7fe4de291b46cf4d92ea399f2379ce7f94a21",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioForearm_R_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_SandstoneSkin_BioForearm_R_Atlas"
+      ]
+    },
+    {
+      "module": "BioLowerLeg_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "854474cb2e3e33bd480d7b5b067425719c1413f7041abe71331ad4a8043158db",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+          "sha256": "b787cd45d7781d1beab2b61d05c4810abd905dd46a3078c93aec4a121c24de85",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+          "sha256": "a95e81605e620ef4e6fd26fa545c6af406c39164219f09d55f5cd9beccb329b3",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_OiledLeather_BioLowerLeg_L_Atlas",
+        "Krag_DesertCanvas_BioLowerLeg_L_Atlas"
+      ]
+    },
+    {
+      "module": "BioLowerLeg_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "0e900edee248f012f1a4fd998b02158fd101fbe0c2ea4fc7776522843a69af8c",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+          "sha256": "78f824b34350bac8602fce6d12939fbd93afb19632aed70798e1a8ff35ae24b0",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+          "sha256": "af9057fd960fdc0089dbdfd14bfb653a39ed8d6ee42ae03dde680d81ba88f4a5",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_OiledLeather_BioLowerLeg_R_Atlas",
+        "Krag_DesertCanvas_BioLowerLeg_R_Atlas"
+      ]
+    },
+    {
+      "module": "BionicArm_L_Crusher",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+          "sha256": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+          "sha256": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+          "sha256": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+          "sha256": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_BlackenedSteel_BionicArm_L_Crusher_Atlas",
+        "Krag_AgedBrass_BionicArm_L_Crusher_Atlas",
+        "Krag_WeatheredTeal_BionicArm_L_Crusher_Atlas",
+        "Krag_CopperHose_BionicArm_L_Crusher_Atlas",
+        "Krag_Recess_BionicArm_L_Crusher_Atlas",
+        "Krag_Ivory_BionicArm_L_Crusher_Atlas"
+      ]
+    },
+    {
+      "module": "BionicEye_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "b435d07cfa1bed630f1bfc5933b68763b55c7a0656876473ad7464a3a16efc62",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+          "sha256": "4d0abfe1192873b2c72499097ca268708aaa4dd8d414dd9b56becc02a07a0655",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+          "sha256": "267a6daa6449193d3dbc2faf6e85fb1d3221c0856bc356cb20a69af7b1ae131f",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+          "sha256": "0ad97f78fed829957a27cb7e34f5d25494a2b73d9ad721e38b6cd80773521efb",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_Amber_BionicEye_L_Atlas",
+        "Krag_BlackenedSteel_BionicEye_L_Atlas",
+        "Krag_AgedBrass_BionicEye_L_Atlas"
+      ]
+    },
+    {
+      "module": "BionicJaw_Iron",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+          "sha256": "1126b48d406d11b078d042e967a6b121a74fec1c6553d09e503910ee54582d79",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+          "sha256": "37b99a3798afc9c801f19858e618db0e59a10e29f868284637c71d622c63a9ae",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+          "sha256": "e06328e7e214d410cf0253e167c41044aa27cc1556f0b68cb1868aa7c577ff8f",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+          "sha256": "07bfbf7f104ffa5899424ed7b61a9b7b9c39dda1e5a592ef5397ef0dc0050ab4",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_BlackenedSteel_BionicJaw_Iron_Atlas",
+        "Krag_AgedBrass_BionicJaw_Iron_Atlas",
+        "Krag_Ivory_BionicJaw_Iron_Atlas"
+      ]
+    },
+    {
+      "module": "BionicLeg_R_Piston",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+          "sha256": "ef594456eb7fe3dc3e9a0223bf6cf70b77c0674f8542f17f4ee66d158dde424d",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+          "sha256": "a510da28fd8f895e8858544c8f39dd816eae1df1a4726232327d7018908bfb47",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+          "sha256": "54adf29c18995b0bca37de07a497c8babd5e916196fa1c88817932525dca8a21",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+          "sha256": "1cc69389e2607a40fe4c10f555cc7abd2960580c96492d331a105958ce0a58d0",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_AgedBrass_BionicLeg_R_Piston_Atlas",
+        "Krag_BlackenedSteel_BionicLeg_R_Piston_Atlas",
+        "Krag_WeatheredTeal_BionicLeg_R_Piston_Atlas"
+      ]
+    },
+    {
+      "module": "BionicThigh_R_Full",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+          "sha256": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+          "sha256": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+          "sha256": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+          "sha256": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_BlackenedSteel_BionicThigh_R_Full_Atlas",
+        "Krag_AgedBrass_BionicThigh_R_Full_Atlas",
+        "Krag_WeatheredTeal_BionicThigh_R_Full_Atlas",
+        "Krag_CopperHose_BionicThigh_R_Full_Atlas",
+        "Krag_Recess_BionicThigh_R_Full_Atlas"
+      ]
+    },
+    {
+      "module": "Body",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Body_SurfaceAtlas_BaseColor.png",
+          "sha256": "2fc3020e1681fa34804c3abed4f736a47d6f758032caab5d0df84c9ba0dc907f",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Body_SurfaceAtlas_Normal.png",
+          "sha256": "96aa0f092e1981a1eb9e9dc16ece01f469e92f17c60ee54e1bdbdaf2e6f2f1cb",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Body_SurfaceAtlas_Roughness.png",
+          "sha256": "6e79d983ea35af034d10555afa96a2800a8b0adbf3fc848b63fc42c46ec0f604",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Body_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_SandstoneSkin_Body_Atlas"
+      ]
+    },
+    {
+      "module": "Boot_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+          "sha256": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+          "sha256": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Boot_L_SurfaceAtlas_Metallic.png",
+          "sha256": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_AgedBrass_Boot_L_Atlas",
+        "Krag_OiledLeather_Boot_L_Atlas",
+        "Krag_BlackenedSteel_Boot_L_Atlas",
+        "Krag_Recess_Boot_L_Atlas",
+        "Krag_DesertCanvas_Boot_L_Atlas"
+      ]
+    },
+    {
+      "module": "Boot_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+          "sha256": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+          "sha256": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Boot_R_SurfaceAtlas_Metallic.png",
+          "sha256": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_AgedBrass_Boot_R_Atlas",
+        "Krag_OiledLeather_Boot_R_Atlas",
+        "Krag_BlackenedSteel_Boot_R_Atlas",
+        "Krag_Recess_Boot_R_Atlas",
+        "Krag_DesertCanvas_Boot_R_Atlas"
+      ]
+    },
+    {
+      "module": "Face",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Face_SurfaceAtlas_BaseColor.png",
+          "sha256": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+          "resolution": 2048,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Face_SurfaceAtlas_Normal.png",
+          "sha256": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+          "resolution": 2048,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Face_SurfaceAtlas_Roughness.png",
+          "sha256": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Face_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_Amber_Face_Atlas",
+        "Krag_Recess_Face_Atlas",
+        "Krag_EyeWhite_Face_Atlas",
+        "Krag_Ivory_Face_Atlas",
+        "Krag_TuskEnamel_Source_Face_Atlas"
+      ]
+    },
+    {
+      "module": "Garments",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Garments_SurfaceAtlas_BaseColor.png",
+          "sha256": "0e248f0b0e70f6a16037234fe21904097b2cecc80dee0e13c7c1964e32af4313",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Garments_SurfaceAtlas_Normal.png",
+          "sha256": "9e558baf44f4a9b29b3641193aa045e5aca60938204f7b4d667e37f89419214e",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Garments_SurfaceAtlas_Roughness.png",
+          "sha256": "29a07f715310b0f69e0fe2e52c1a5d8e7aefbf6c2597c17b1a368641b070259f",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Garments_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DesertCanvas_Garments_Atlas"
+      ]
+    },
+    {
+      "module": "Harness",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Harness_SurfaceAtlas_BaseColor.png",
+          "sha256": "91c0ba198bffadac75f51ab9c4d03c667d116f75898ceecf4d1986a58db7a23f",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Harness_SurfaceAtlas_Normal.png",
+          "sha256": "74c13157cfdd15f04a8525981b25cb00d1341270b75cc8535679807925979eb5",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Harness_SurfaceAtlas_Roughness.png",
+          "sha256": "f7adb37fefff7f5b039e4ab4206f0640aada4c15fdd3c656ff7315abb251db35",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Harness_SurfaceAtlas_Metallic.png",
+          "sha256": "79f7e6b97e2cb28c649cd573774f37dd27020f5499aa1858e79389efcdf0c504",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_AgedBrass_Harness_Atlas",
+        "Krag_OiledLeather_Harness_Atlas",
+        "Krag_DesertCanvas_Harness_Atlas"
+      ]
+    },
+    {
+      "module": "Head",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Head_SurfaceAtlas_BaseColor.png",
+          "sha256": "e64ef5fcf7e5613ed897ef899acb9f0758a12dfffead9104d3fb364581c1716c",
+          "resolution": 4096,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Head_SurfaceAtlas_Normal.png",
+          "sha256": "81f1cb365f8215b473ceb8882220878d333d4dbe57a3590f11a0809baef4a27c",
+          "resolution": 4096,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Head_SurfaceAtlas_Roughness.png",
+          "sha256": "4d72032314713c199222679e09543003892ff1d8ba10ad80f4f8c769a1ec3943",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Head_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_FacialSkin_Head_Atlas",
+        "Krag_Recess_Head_Atlas",
+        "Krag_InnerMouth_v9k_Head_Atlas"
+      ]
+    },
+    {
+      "module": "MouthInterior",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+          "sha256": "349a094d357443f5febf3a1699d417af92923950990ac89bbaf5f281b968d4f1",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_MouthInterior_SurfaceAtlas_Normal.png",
+          "sha256": "8f6e72e5c973cba4a0af2cd00cf7f25f0d6fa2810f3acd7a40f17b41228c3be4",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+          "sha256": "2172c949addab2c942648eeef4190a49b93ebd28d928d8492b5308633c6c42b3",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DentalEnamel_MouthInterior_Atlas",
+        "Krag_Gingiva_MouthInterior_Atlas",
+        "Krag_OralTongue_MouthInterior_Atlas"
+      ]
+    },
+    {
+      "module": "NaturalThigh_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_NaturalThigh_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "5144f33e5100ae839a1698d5ffa030312f1bcfb6c650c492d5367b711a1742d3",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_NaturalThigh_R_SurfaceAtlas_Normal.png",
+          "sha256": "b3ea1d2000a7c3dc3f61af129329a30b786d683e7bcbb28e523d5759f8a6e225",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_NaturalThigh_R_SurfaceAtlas_Roughness.png",
+          "sha256": "da4eeb0b244e8ec0bdae230acea202fb3f62511504f0f44db6d7cc3dfdd6f2b6",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_NaturalThigh_R_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DesertCanvas_NaturalThigh_R_Atlas"
+      ]
+    },
+    {
+      "module": "Scarf",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Scarf_SurfaceAtlas_BaseColor.png",
+          "sha256": "78db3b970302f1471805a3652b36d3b0324cf83ed2724c8d522c7e3f0ed1215c",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Scarf_SurfaceAtlas_Normal.png",
+          "sha256": "47c42ee87950cc25c37cc7e6971bad1504ef6f7b6521bec90e046a1ab0ed40c1",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Scarf_SurfaceAtlas_Roughness.png",
+          "sha256": "0e9e67b72a634faff2a622330a56d302e435ef3623ab26fc93369de9b63ea873",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Scarf_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DesertCanvas_Scarf_Atlas"
+      ]
+    },
+    {
+      "module": "TrouserLeg_L",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+          "sha256": "0c617de117a3c65938363784e4152d4c0d508382b1839ed1a06972b5fbe02af2",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+          "sha256": "9a7c9dc883a75b83641231f63313fa41d8669e9b60ceae28e0b3882078122520",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+          "sha256": "6b6262c183cbe0e4c7f189c96f6956a007199405d17cab1a2457cafce74d2f17",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DesertCanvas_TrouserLeg_L_Atlas",
+        "Krag_OiledLeather_TrouserLeg_L_Atlas"
+      ]
+    },
+    {
+      "module": "TrouserLeg_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "ca03a706f691b06c2cda588a60c45b9410948710714b99000667bb46c8531726",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+          "sha256": "6c1cc211b102a1eab1061525e27c948fb42f5385ec9abbf1d445135ba50f87c5",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+          "sha256": "3c98bfc06edd95c82f50e333efd2b8805f09d6481f21e0d959713170b45a4de3",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png",
+          "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_DesertCanvas_TrouserLeg_R_Atlas",
+        "Krag_OiledLeather_TrouserLeg_R_Atlas"
+      ]
+    },
+    {
+      "module": "Weapon_R",
+      "sourceSamplingUvDuringBake": "Nib_SourceUV",
+      "sourceUvRemovedAfterBakeForPackedExportUv0": true,
+      "maps": {
+        "BaseColor": {
+          "file": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+          "sha256": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+          "sha256": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+          "sha256": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+          "sha256": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "materials": [
+        "Krag_Recess_Weapon_R_Atlas",
+        "Krag_BlackenedSteel_Weapon_R_Atlas",
+        "Krag_OiledLeather_Weapon_R_Atlas",
+        "Krag_WeatheredTeal_Weapon_R_Atlas"
+      ]
+    }
+  ],
+  "rigActionsGeometryWeightsMorphsUnchanged": true,
+  "method": "Actual per-module surface atlases; original material roles retained",
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "savedImageValidation": {
+    "reopened": true,
+    "relativeRootCorrect": true,
+    "allMapsDecoded": true,
+    "allBytesMatchBake": true,
+    "imageDatablocks": 104,
+    "uniqueTextureFiles": 104,
+    "images": [
+      {
+        "image": "Krag_Armor_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Armor_SurfaceAtlas_BaseColor.png",
+        "sha256": "6c66054df7bf916034ed316dc52cf5c275779b296db123f619016398cc789231",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Armor_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Armor_SurfaceAtlas_Metallic.png",
+        "sha256": "3f5d30347a6d759778b5293145f0aada04dbffd45ccd685fc3d51c664e4c6b74",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Armor_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Armor_SurfaceAtlas_Normal.png",
+        "sha256": "cae23edd4dff4c1bc8c9bb5123f34ad97668551ae8d2b580d35b711caede366d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Armor_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Armor_SurfaceAtlas_Roughness.png",
+        "sha256": "9744f3abc0c3ef4d297b9988af7da5944e8f89e1b501a02d9c2adf3f9efec714",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Belt_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Belt_SurfaceAtlas_BaseColor.png",
+        "sha256": "69275410d3937d903d18a4e58d22075017e02889544136bdcaac3425a19b4fe8",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Belt_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Belt_SurfaceAtlas_Metallic.png",
+        "sha256": "c53140c2dba5e0541f7f945f93e43a0a9f4472f7ea7221c012e709dfe6ecad88",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Belt_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Belt_SurfaceAtlas_Normal.png",
+        "sha256": "dac8d8f5ec60e1df3e908965d094f80c1cc90e6c4a2bf7418cabf1b2f1941262",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Belt_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Belt_SurfaceAtlas_Roughness.png",
+        "sha256": "7ae8899a4d7edb43d904e1666ead82a2fafb3c61d974ef645a2778208979f9af",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioArm_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "18b5aee0ef51661284ba631be26da92676a9a1234e363e5b65edebaa55d5c57b",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioArm_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioArm_L_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioArm_L_SurfaceAtlas_Normal.png",
+        "sha256": "e33864cab6d8794865d4b530930a5107b5fcd9d54bbf92113ce378f985ced095",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioArm_L_SurfaceAtlas_Roughness.png",
+        "sha256": "6fa3c4da9c33203c1f535e49b3896bb725c303567e87c7e4b68ba4be8f8e7f90",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioArm_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "1e572e032fa4981d22935a0236c97fd95039cd3ac0db919ca06db1f7e54cf80a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioArm_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioArm_R_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioArm_R_SurfaceAtlas_Normal.png",
+        "sha256": "6d9fac84acfd7b7be3eb03d90acd1f39209d95c3820ddf98d6ea71ee98bec35a",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioArm_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioArm_R_SurfaceAtlas_Roughness.png",
+        "sha256": "0bb983e7f86c6e0c6ced416c9cadb3ce9f319cfe5208a4e5d6a6457c81710fc3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioForearm_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "9e56cb2ccacef79541400977ab75f3bc7f8008edb74d5769afc87bac600ad83d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioForearm_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioForearm_L_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioForearm_L_SurfaceAtlas_Normal.png",
+        "sha256": "4c869548807641cec64d9fa80fdc35ca6dd41449a43d28313c895f0b573ee890",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioForearm_L_SurfaceAtlas_Roughness.png",
+        "sha256": "022bc6190a906ca5bba39fae689fb10d4ec11b9eda88536f86995c08c9019343",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioForearm_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "e23d398e7153e18c11d3a2477b427e31ab3cf7566c7155080b3fee744395d95b",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioForearm_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioForearm_R_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioForearm_R_SurfaceAtlas_Normal.png",
+        "sha256": "112f5f38a5e968f1899af5d9f02911abd2ec0d35f3cd18f749a9b8d9d878440f",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioForearm_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioForearm_R_SurfaceAtlas_Roughness.png",
+        "sha256": "56faa8563143b668a686291e93f7fe4de291b46cf4d92ea399f2379ce7f94a21",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "854474cb2e3e33bd480d7b5b067425719c1413f7041abe71331ad4a8043158db",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Normal.png",
+        "sha256": "b787cd45d7781d1beab2b61d05c4810abd905dd46a3078c93aec4a121c24de85",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioLowerLeg_L_SurfaceAtlas_Roughness.png",
+        "sha256": "a95e81605e620ef4e6fd26fa545c6af406c39164219f09d55f5cd9beccb329b3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "0e900edee248f012f1a4fd998b02158fd101fbe0c2ea4fc7776522843a69af8c",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Normal.png",
+        "sha256": "78f824b34350bac8602fce6d12939fbd93afb19632aed70798e1a8ff35ae24b0",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BioLowerLeg_R_SurfaceAtlas_Roughness.png",
+        "sha256": "af9057fd960fdc0089dbdfd14bfb653a39ed8d6ee42ae03dde680d81ba88f4a5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_BaseColor.png",
+        "sha256": "84037537663910ae5f001ad1d0c263ef5d8fb988ea0b34e028ea82db4c53319a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Metallic.png",
+        "sha256": "216c596e0445939c6b416113dabd3be434a6506d0144ffca749cec4ed56a08eb",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Normal.png",
+        "sha256": "02fdf8dba27d97e426e0f48293ecad5a6e7436a9499870111c12a865fdb7574a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BionicArm_L_Crusher_SurfaceAtlas_Roughness.png",
+        "sha256": "50a21e1d1ba38e6db0ffe33602f51de4077891f1f9c392ff5d172527889ecbbf",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BionicEye_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "b435d07cfa1bed630f1bfc5933b68763b55c7a0656876473ad7464a3a16efc62",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BionicEye_L_SurfaceAtlas_Metallic.png",
+        "sha256": "0ad97f78fed829957a27cb7e34f5d25494a2b73d9ad721e38b6cd80773521efb",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BionicEye_L_SurfaceAtlas_Normal.png",
+        "sha256": "4d0abfe1192873b2c72499097ca268708aaa4dd8d414dd9b56becc02a07a0655",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BionicEye_L_SurfaceAtlas_Roughness.png",
+        "sha256": "267a6daa6449193d3dbc2faf6e85fb1d3221c0856bc356cb20a69af7b1ae131f",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_BaseColor.png",
+        "sha256": "1126b48d406d11b078d042e967a6b121a74fec1c6553d09e503910ee54582d79",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Metallic.png",
+        "sha256": "07bfbf7f104ffa5899424ed7b61a9b7b9c39dda1e5a592ef5397ef0dc0050ab4",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Normal.png",
+        "sha256": "37b99a3798afc9c801f19858e618db0e59a10e29f868284637c71d622c63a9ae",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BionicJaw_Iron_SurfaceAtlas_Roughness.png",
+        "sha256": "e06328e7e214d410cf0253e167c41044aa27cc1556f0b68cb1868aa7c577ff8f",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_BaseColor.png",
+        "sha256": "ef594456eb7fe3dc3e9a0223bf6cf70b77c0674f8542f17f4ee66d158dde424d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Metallic.png",
+        "sha256": "1cc69389e2607a40fe4c10f555cc7abd2960580c96492d331a105958ce0a58d0",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Normal.png",
+        "sha256": "a510da28fd8f895e8858544c8f39dd816eae1df1a4726232327d7018908bfb47",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BionicLeg_R_Piston_SurfaceAtlas_Roughness.png",
+        "sha256": "54adf29c18995b0bca37de07a497c8babd5e916196fa1c88817932525dca8a21",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_BaseColor.png",
+        "sha256": "0ee50b62d2b12611046d480a70b6ef984ff2d7be5fd587cbcff48d4cedf28167",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Metallic.png",
+        "sha256": "60473ebb9084933d5159585b4bdf472fddae0ef7f8c4ba2015073bab8d799bba",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Normal.png",
+        "sha256": "e77f3fc3a7fd437854f252798b328ae63048cd41700efce127c60d3d18f4577d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_BionicThigh_R_Full_SurfaceAtlas_Roughness.png",
+        "sha256": "21adc18d3fe4284bbe9beeb3c9d3fa279f0eee58d3651c0e97bbb2d57c4d8ef9",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Body_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Body_SurfaceAtlas_BaseColor.png",
+        "sha256": "2fc3020e1681fa34804c3abed4f736a47d6f758032caab5d0df84c9ba0dc907f",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Body_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Body_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Body_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Body_SurfaceAtlas_Normal.png",
+        "sha256": "96aa0f092e1981a1eb9e9dc16ece01f469e92f17c60ee54e1bdbdaf2e6f2f1cb",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Body_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Body_SurfaceAtlas_Roughness.png",
+        "sha256": "6e79d983ea35af034d10555afa96a2800a8b0adbf3fc848b63fc42c46ec0f604",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Boot_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "1bfb2d0656a3368488ec53b493433bad7ff9435d279fe67e67ca79675ec465c7",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Boot_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Boot_L_SurfaceAtlas_Metallic.png",
+        "sha256": "b8729cc9270eba9ff83f0c60c8edd1bfe8ce23943da0c4f8434240a9c986dc74",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Boot_L_SurfaceAtlas_Normal.png",
+        "sha256": "d00c7f92fcb226713be8a1cd0fa35e532c7fc9537146dc268dd786671bcb1ff4",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Boot_L_SurfaceAtlas_Roughness.png",
+        "sha256": "242c9825231ecc778a46b603fb9bd9a65368d3cdf6943a5b2b6c7d65a06153e7",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Boot_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "781f4121c9776e890a11ec69fb763540d58c68676334e46c02b3ccc016701dd9",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Boot_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Boot_R_SurfaceAtlas_Metallic.png",
+        "sha256": "66f689881bac457c5b10474d013bc65f6329fe1093057b9678eb22188529dd2d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Boot_R_SurfaceAtlas_Normal.png",
+        "sha256": "e305a52c64cf9a2b3399ae4caf1f23e6623757cf3d6be760a9a2d83d09e6f818",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Boot_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Boot_R_SurfaceAtlas_Roughness.png",
+        "sha256": "54ab4a2e3f0cdcd149779900f974b3b6d1b74a50c08c08f700c065efe65afcaa",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Face_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Face_SurfaceAtlas_BaseColor.png",
+        "sha256": "2f79aaa65b39432bb3c4d8f2226ebc59201751f256c49ad64ea3f22e9bf1dd9e",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Face_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Face_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Face_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Face_SurfaceAtlas_Normal.png",
+        "sha256": "e907c70ad5f98d72ab06d5f4da8d411373229ae5c97d586e48939bb6722914bd",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Face_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Face_SurfaceAtlas_Roughness.png",
+        "sha256": "968a92ef6c39726b1d568b3c0923c8bf91ece2b199131ed9409791be2abe0bb7",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Garments_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Garments_SurfaceAtlas_BaseColor.png",
+        "sha256": "0e248f0b0e70f6a16037234fe21904097b2cecc80dee0e13c7c1964e32af4313",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Garments_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Garments_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Garments_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Garments_SurfaceAtlas_Normal.png",
+        "sha256": "9e558baf44f4a9b29b3641193aa045e5aca60938204f7b4d667e37f89419214e",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Garments_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Garments_SurfaceAtlas_Roughness.png",
+        "sha256": "29a07f715310b0f69e0fe2e52c1a5d8e7aefbf6c2597c17b1a368641b070259f",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Harness_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Harness_SurfaceAtlas_BaseColor.png",
+        "sha256": "91c0ba198bffadac75f51ab9c4d03c667d116f75898ceecf4d1986a58db7a23f",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Harness_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Harness_SurfaceAtlas_Metallic.png",
+        "sha256": "79f7e6b97e2cb28c649cd573774f37dd27020f5499aa1858e79389efcdf0c504",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Harness_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Harness_SurfaceAtlas_Normal.png",
+        "sha256": "74c13157cfdd15f04a8525981b25cb00d1341270b75cc8535679807925979eb5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Harness_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Harness_SurfaceAtlas_Roughness.png",
+        "sha256": "f7adb37fefff7f5b039e4ab4206f0640aada4c15fdd3c656ff7315abb251db35",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Head_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Head_SurfaceAtlas_BaseColor.png",
+        "sha256": "e64ef5fcf7e5613ed897ef899acb9f0758a12dfffead9104d3fb364581c1716c",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Head_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Head_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Head_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Head_SurfaceAtlas_Normal.png",
+        "sha256": "81f1cb365f8215b473ceb8882220878d333d4dbe57a3590f11a0809baef4a27c",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Head_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Head_SurfaceAtlas_Roughness.png",
+        "sha256": "4d72032314713c199222679e09543003892ff1d8ba10ad80f4f8c769a1ec3943",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_MouthInterior_SurfaceAtlas_BaseColor.png",
+        "sha256": "349a094d357443f5febf3a1699d417af92923950990ac89bbaf5f281b968d4f1",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_MouthInterior_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_MouthInterior_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_MouthInterior_SurfaceAtlas_Normal.png",
+        "sha256": "8f6e72e5c973cba4a0af2cd00cf7f25f0d6fa2810f3acd7a40f17b41228c3be4",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_MouthInterior_SurfaceAtlas_Roughness.png",
+        "sha256": "2172c949addab2c942648eeef4190a49b93ebd28d928d8492b5308633c6c42b3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_NaturalThigh_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_NaturalThigh_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "5144f33e5100ae839a1698d5ffa030312f1bcfb6c650c492d5367b711a1742d3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_NaturalThigh_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_NaturalThigh_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Normal.png",
+        "sha256": "b3ea1d2000a7c3dc3f61af129329a30b786d683e7bcbb28e523d5759f8a6e225",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_NaturalThigh_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_NaturalThigh_R_SurfaceAtlas_Roughness.png",
+        "sha256": "da4eeb0b244e8ec0bdae230acea202fb3f62511504f0f44db6d7cc3dfdd6f2b6",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Scarf_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Scarf_SurfaceAtlas_BaseColor.png",
+        "sha256": "78db3b970302f1471805a3652b36d3b0324cf83ed2724c8d522c7e3f0ed1215c",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Scarf_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Scarf_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Scarf_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Scarf_SurfaceAtlas_Normal.png",
+        "sha256": "47c42ee87950cc25c37cc7e6971bad1504ef6f7b6521bec90e046a1ab0ed40c1",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Scarf_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Scarf_SurfaceAtlas_Roughness.png",
+        "sha256": "0e9e67b72a634faff2a622330a56d302e435ef3623ab26fc93369de9b63ea873",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_TrouserLeg_L_SurfaceAtlas_BaseColor.png",
+        "sha256": "0c617de117a3c65938363784e4152d4c0d508382b1839ed1a06972b5fbe02af2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Normal.png",
+        "sha256": "9a7c9dc883a75b83641231f63313fa41d8669e9b60ceae28e0b3882078122520",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_TrouserLeg_L_SurfaceAtlas_Roughness.png",
+        "sha256": "6b6262c183cbe0e4c7f189c96f6956a007199405d17cab1a2457cafce74d2f17",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_TrouserLeg_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "ca03a706f691b06c2cda588a60c45b9410948710714b99000667bb46c8531726",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Normal.png",
+        "sha256": "6c1cc211b102a1eab1061525e27c948fb42f5385ec9abbf1d445135ba50f87c5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_TrouserLeg_R_SurfaceAtlas_Roughness.png",
+        "sha256": "3c98bfc06edd95c82f50e333efd2b8805f09d6481f21e0d959713170b45a4de3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+        "relativePath": "textures/Krag_Weapon_R_SurfaceAtlas_BaseColor.png",
+        "sha256": "6d79bb2353192bb86181bc935d77490e0970ae38a22995b04ba148fe81298da1",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+        "relativePath": "textures/Krag_Weapon_R_SurfaceAtlas_Metallic.png",
+        "sha256": "e2c423f172e8bd96f0cb42cd8f1e28bfa28c0896d2b4f3953004742ba584bca5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Weapon_R_SurfaceAtlas_Normal.png",
+        "relativePath": "textures/Krag_Weapon_R_SurfaceAtlas_Normal.png",
+        "sha256": "8838da3ef1afc41940ff1a2e84cb952c30e6635c7fddef53027696bb184fb5fd",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+        "relativePath": "textures/Krag_Weapon_R_SurfaceAtlas_Roughness.png",
+        "sha256": "15a79043673b41fcf53e33f4cb656a8e7e8d29675a36d66a62872334ab91cd1d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      }
+    ]
+  },
+  "candidateSha256": "4387bd3fd184d2b4d51c89daff2cffa1b3dd19261de1eec43e52e5195f1d772b"
+}

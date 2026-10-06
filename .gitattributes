@@ -252,3 +252,7 @@ benchmark/art/animation/krag-anatomical-hand-v3/evidence/*.txt -text whitespace=
 benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/evidence/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/evidence/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve native coherent68 material-preparation evidence bytes.
+benchmark/unreal/evidence/krag-coherent68-pbr-initial/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/krag-coherent68-pbr-initial/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

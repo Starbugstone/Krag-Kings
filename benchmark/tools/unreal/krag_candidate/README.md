@@ -1,6 +1,6 @@
 # Coherent68 Krag material preparation
 
-The frozen `krag-coherent68-motion-fe152-v1` plan prepares an isolated derivative of the actual saved/reopened `Krag_Oral_v9p_Motion_v4_WIP.blend` (`fe15213d…`). Its current selection contract contains 26 authored modules and five variants. No stage has run yet. The shared v7 assets and both existing builds are untouched by this preparation.
+The frozen `krag-coherent68-motion-fe152-v1` plan prepares an isolated derivative of the actual saved/reopened `Krag_Oral_v9p_Motion_v4_WIP.blend` (`fe15213d…`). Its current selection contract contains 26 authored modules and five variants. All three initial stages now pass with native/guard exit 0; see the [actual result](../../../unreal/evidence/krag-coherent68-pbr-initial/README.md). The saved PBR derivative preserves the recorded source and all 104 maps reopen correctly. Matched material renders and full matching exports have not run. The shared v7 Krag assets and both existing builds are untouched by this preparation.
 
 The first three stages snapshot the exact source, bake assigned module surfaces, then reopen and compare the saved PBR derivative. Every recipe/source pin is verified before and after execution. The source snapshot records full 68-bone bind/hierarchy, seven action hashes, geometry/weights/morphs, corrective-driver definitions, point fields and connected image hashes. PBR preparation may change UVs and materials; it must preserve the recorded rig, actions and deformation data exactly.
 
