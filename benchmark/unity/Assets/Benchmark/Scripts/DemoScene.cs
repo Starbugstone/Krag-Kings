@@ -28,6 +28,7 @@ namespace KragKings.Benchmark
         readonly Color sand=new(.94f,.85f,.68f);
         readonly List<float> frameTimes=new();
         readonly List<string> runtimeErrors=new();
+        readonly List<ShotEvidence> verificationShots=new();
         bool verification;
         bool performanceOnly,performanceSampling,performanceMoving;
         long previousFrameTick;
@@ -248,6 +249,11 @@ namespace KragKings.Benchmark
                 if(unit.ActionVersion!=version)yield break;
                 if(combatAudio)combatAudio.Shot(unit);
                 Vector3 start=unit.ShotOrigin,direction=unit.ShotDirection,end=start+direction*7;
+                if(verification)
+                    verificationShots.Add(new ShotEvidence{species=unit.species,variant=unit.Model.name,
+                        requestedNormalizedTime=normalized,observedNormalizedTime=(Time.time-began)/unit.ActionDuration("Shoot"),
+                        origin=start,direction=direction,unitForward=unit.transform.forward,
+                        forwardDeviationDegrees=direction.sqrMagnitude>.5f?Vector3.Angle(direction,unit.transform.forward):180});
                 if(Physics.Raycast(start,direction,out var ground,7,1<<8))end=ground.point;
                 var go=new GameObject("Shot tracer");var line=go.AddComponent<LineRenderer>();
                 var material=StrokeMaterial(new Color(1,.73f,.25f));line.sharedMaterial=material;
@@ -433,8 +439,20 @@ namespace KragKings.Benchmark
             Select(units[0]);ResetCamera();yield return new WaitForSeconds(1);
             ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"Unity-Dunes-Final.png"));
             yield return new WaitForSeconds(1);
+            // Regression for the measured firing-arm fault: sample the actual
+            // animated muzzle markers at discharge, not just an active clip.
+            // Ten degrees is a diagnostic tolerance for this forward-fire demo,
+            // not a weapon accuracy or tactical combat rule.
+            foreach(var unit in units.Where(u=>u.species=="Krag"))
+                foreach(var model in unit.variants)
+                {
+                    var shots=verificationShots.Where(s=>s.species==unit.species && s.variant==model.name).ToArray();
+                    if(shots.Length<unit.weapon.fireTimesNormalized.Length)failures.Add(model.name+": missing actual discharge-marker samples");
+                    else if(shots.Any(s=>s.forwardDeviationDegrees>10))failures.Add(model.name+": firing muzzle deviates more than 10 degrees from unit forward");
+                    else checks.Add(model.name+": actual firing markers aim within diagnostic forward tolerance");
+                }
             failures.AddRange(runtimeErrors);
-            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray()};
+            var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray(),shots=verificationShots.ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"verification.json"),JsonUtility.ToJson(report,true));
             Debug.Log("BENCHMARK_VERIFICATION "+(report.failures.Length==0?"PASS":"FAIL"));
             Application.Quit(report.failures.Length==0?0:1);
@@ -495,8 +513,9 @@ namespace KragKings.Benchmark
         }
         static float Percentile(float[] sorted,float p)=>sorted.Length>0?sorted[Mathf.Clamp(Mathf.CeilToInt(sorted.Length*p)-1,0,sorted.Length-1)]:0;
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}
+        [Serializable] class ShotEvidence {public string species,variant;public float requestedNormalizedTime,observedNormalizedTime,forwardDeviationDegrees;public Vector3 origin,direction,unitForward;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
-        [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation; }
+        [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation;public ShotEvidence[] shots; }
         [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }
