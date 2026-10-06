@@ -1,0 +1,142 @@
+{
+  "status": "Compile passes; first regional exact strand import/color/width and eligible skin projection pass, but decoded projection distance narrowly exceeds explicit surface gate",
+  "stages": {
+    "build": {
+      "pid": 28284,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 103.0,
+      "maxTreePrivateMiB": 6946.0,
+      "minAvailableMiB": 7572.0
+    },
+    "grooms": {
+      "pid": 5740,
+      "nativeExit": 0,
+      "guardExit": 89,
+      "completionMarkerPresent": false,
+      "maxPrivateMiB": 2697.0,
+      "maxTreePrivateMiB": 2697.0,
+      "minAvailableMiB": 8456.0
+    }
+  },
+  "completedRegions": 0,
+  "importedRegions": [
+    "HeadCream"
+  ],
+  "laterRegionsExecuted": false,
+  "freshReloadExecuted": false,
+  "savedGrooms": false,
+  "rendered": false,
+  "performanceMeasured": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "firstRegionActual": {
+    "region": "HeadCream",
+    "groom": "/Game/Grooms/HeadCream",
+    "binding": "/Game/Grooms/HeadCream_Binding",
+    "sourceAbcSha256": "d041f9f90fd357c0b139f02a8f53432e597321082b142b5499443d59a6186da2",
+    "stockImported": {
+      "pointCount": 90000,
+      "curveCount": 10000,
+      "hasPointWidths": false,
+      "hasColor": false,
+      "hasRootUV": false
+    },
+    "stockPositionErrorCentimeters": 3.814697265625e-06,
+    "sidecarAdapter": {
+      "verifiedPoints": 90000,
+      "verifiedCurves": 10000,
+      "positionToleranceCentimeters": 0.00019999999494757503,
+      "maximumPositionComponentErrorCentimeters": 3.814697265625e-06,
+      "exactDiameterAndLinearColorApplied": true,
+      "abcRootUvNotClaimed": true,
+      "rendered": false
+    },
+    "projection": {
+      "binding": "/Game/Grooms/HeadCream_Binding.HeadCream_Binding",
+      "groups": [
+        {
+          "groupIndex": 0,
+          "roots": 10000,
+          "uniqueTriangles": 6633,
+          "maximumRootProjectionDistanceCentimeters": 0.01033265795558691,
+          "meanRootProjectionDistanceCentimeters": 0.00019334010951171194,
+          "allProjectedTrianglesEligible": true
+        }
+      ],
+      "posedDeformationVerified": false,
+      "rendered": false
+    },
+    "description": {
+      "asset": "/Game/Grooms/HeadCream.HeadCream",
+      "valid": true,
+      "pointCount": 90000,
+      "curveCount": 10000,
+      "hasPointWidths": true,
+      "hasStrandWidths": true,
+      "hasRootUV": false,
+      "hasColor": true,
+      "hasGroupIds": false,
+      "builtStrandsAvailable": true,
+      "builtPointCount": 100000,
+      "builtCurveCount": 10000,
+      "builtRadiusMinCentimeters": 8.180368604371324e-05,
+      "builtRadiusMaxCentimeters": 0.006099366582930088,
+      "resourceSizeBytesReported": 1611108,
+      "runtimeMemoryMeasured": false,
+      "maximumPositionComponentErrorCentimeters": 3.814697265625e-06,
+      "maximumDiameterErrorCentimeters": 4.656612873077393e-10,
+      "maximumLinearColorError": 0.0,
+      "samples": [
+        {
+          "index": 0,
+          "positionCentimeters": [
+            7.722891807556152,
+            2.8080663681030273,
+            114.63545227050781
+          ],
+          "diameterCentimeters": 0.005504770670086145,
+          "linearRgb": [
+            0.3141579031944275,
+            0.20943860709667206,
+            0.11219924688339233
+          ]
+        },
+        {
+          "index": 45000,
+          "positionCentimeters": [
+            -5.80241584777832,
+            -4.351884841918945,
+            118.91897583007812
+          ],
+          "diameterCentimeters": 0.010935220867395401,
+          "linearRgb": [
+            0.41852042078971863,
+            0.27901360392570496,
+            0.14947158098220825
+          ]
+        },
+        {
+          "index": 89999,
+          "positionCentimeters": [
+            6.4926862716674805,
+            -3.8112952709198,
+            109.70760345458984
+          ],
+          "diameterCentimeters": 0.0003593153669498861,
+          "linearRgb": [
+            0.5810524821281433,
+            0.45350825786590576,
+            0.2881573438644409
+          ]
+        }
+      ],
+      "positionsCentimetersFloat32Sha256": "632366c59536b0b333362805ec5491ec7c036aa6f22244c4f639fe543f5279a6",
+      "pointWidthsCentimetersFloat32Sha256": "f89e0940404902700211dbbf9ae24726602c47ce17022d561eb30ff8a08f73a8",
+      "pointColorsLinearRgbFloat32Sha256": "2bb0b8f3231126da4971607baaabcfefde911ccd992171a542d7340bbc0be6c5"
+    }
+  },
+  "gateCentimeters": 0.01,
+  "diagnosisPending": "Native half-float barycentric quantization versus real source/export surface residual; no tolerance change justified yet"
+}

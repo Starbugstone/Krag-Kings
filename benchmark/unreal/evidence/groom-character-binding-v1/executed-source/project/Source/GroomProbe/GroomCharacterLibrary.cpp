@@ -192,9 +192,7 @@ FString UGroomCharacterLibrary::ReadBindingProjection(UGroomBindingAsset* Bindin
         FHairStrandsDatas Strands,Guides;
         if(!Groom->GetHairStrandsDatas(GroupIndex,Strands,Guides)||Roots.RootCount!=Strands.GetNumCurves()||Roots.LODIndex!=0)
             return Failure(TEXT("Binding root count/LOD differs from groom"));
-        double MaximumDistance=0.,SumDistance=0.,MaximumClosestResidual=0.,MaximumEncodingDisplacement=0.;
-        double MaximumHalfRoundingBound=0.;
-        TSharedPtr<FJsonObject> WorstDecodedRoot,WorstSurfaceRoot;
+        double MaximumDistance=0.,SumDistance=0.;
         for(uint32 Root=0;Root<Roots.RootCount;++Root)
         {
             const uint32 Unique=Roots.RootToUniqueTriangleIndexBuffer[Root];
@@ -216,38 +214,6 @@ FString UGroomCharacterLibrary::ReadBindingProjection(UGroomBindingAsset* Bindin
             const FVector3f Projected=P0*float(BX)+P1*float(BY)+P2*(1.f-float(BX)-float(BY));
             const FVector3f Authored=Strands.StrandsPoints.PointsPosition[Strands.StrandsCurves.CurvesOffset[Root]];
             const double Distance=(Projected-Authored).Length();
-            const FVector Closest=FMath::ClosestPointOnTriangleToPoint(FVector(Authored),FVector(P0),FVector(P1),FVector(P2));
-            const double ClosestResidual=(Closest-FVector(Authored)).Length();
-            const double EncodingDisplacement=(Closest-FVector(Projected)).Length();
-            // Each original barycentric lies in [0,1]. Half nearest-rounding error is at most
-            // 2^-12 per stored coordinate. P2 uses 1-bx-by, hence the two edge lengths.
-            const double HalfBound=(FVector(P0-P2).Length()+FVector(P1-P2).Length())/4096.;
-            if(!WorstDecodedRoot.IsValid() || Distance>MaximumDistance || ClosestResidual>MaximumClosestResidual)
-            {
-                auto Diagnostic=MakeShared<FJsonObject>();
-                Diagnostic->SetNumberField(TEXT("rootIndex"),Root);
-                Diagnostic->SetNumberField(TEXT("sectionIndex"),SectionIndex);
-                Diagnostic->SetNumberField(TEXT("triangleIndex"),Triangle);
-                Diagnostic->SetNumberField(TEXT("decodedDistanceCentimeters"),Distance);
-                Diagnostic->SetNumberField(TEXT("closestSurfaceResidualCentimeters"),ClosestResidual);
-                Diagnostic->SetNumberField(TEXT("decodedVersusClosestDisplacementCentimeters"),EncodingDisplacement);
-                Diagnostic->SetNumberField(TEXT("conservativeHalfRoundingBoundCentimeters"),HalfBound);
-                const auto VectorValue=[](const FVector& Value)
-                {
-                    return MakeShared<FJsonValueArray>(TArray<TSharedPtr<FJsonValue>>{
-                        MakeShared<FJsonValueNumber>(Value.X),MakeShared<FJsonValueNumber>(Value.Y),MakeShared<FJsonValueNumber>(Value.Z)});
-                };
-                Diagnostic->SetField(TEXT("authoredRootCentimeters"),VectorValue(FVector(Authored)));
-                Diagnostic->SetField(TEXT("decodedProjectedCentimeters"),VectorValue(FVector(Projected)));
-                Diagnostic->SetField(TEXT("closestTrianglePointCentimeters"),VectorValue(Closest));
-                Diagnostic->SetArrayField(TEXT("triangleCentimeters"),{VectorValue(FVector(P0)),VectorValue(FVector(P1)),VectorValue(FVector(P2))});
-                Diagnostic->SetField(TEXT("decodedBarycentrics"),VectorValue(FVector(float(BX),float(BY),1.f-float(BX)-float(BY))));
-                if(!WorstDecodedRoot.IsValid()||Distance>MaximumDistance)WorstDecodedRoot=Diagnostic;
-                if(!WorstSurfaceRoot.IsValid()||ClosestResidual>MaximumClosestResidual)WorstSurfaceRoot=Diagnostic;
-            }
-            MaximumClosestResidual=FMath::Max(MaximumClosestResidual,ClosestResidual);
-            MaximumEncodingDisplacement=FMath::Max(MaximumEncodingDisplacement,EncodingDisplacement);
-            MaximumHalfRoundingBound=FMath::Max(MaximumHalfRoundingBound,HalfBound);
             MaximumDistance=FMath::Max(MaximumDistance,Distance);SumDistance+=Distance;
         }
         auto Item=MakeShared<FJsonObject>();
@@ -256,11 +222,6 @@ FString UGroomCharacterLibrary::ReadBindingProjection(UGroomBindingAsset* Bindin
         Item->SetNumberField(TEXT("uniqueTriangles"),Roots.UniqueTriangleIndexBuffer.Num());
         Item->SetNumberField(TEXT("maximumRootProjectionDistanceCentimeters"),MaximumDistance);
         Item->SetNumberField(TEXT("meanRootProjectionDistanceCentimeters"),SumDistance/FMath::Max(1u,Roots.RootCount));
-        Item->SetNumberField(TEXT("maximumClosestSurfaceResidualCentimeters"),MaximumClosestResidual);
-        Item->SetNumberField(TEXT("maximumDecodedVersusClosestDisplacementCentimeters"),MaximumEncodingDisplacement);
-        Item->SetNumberField(TEXT("maximumConservativeHalfRoundingBoundCentimeters"),MaximumHalfRoundingBound);
-        if(WorstDecodedRoot.IsValid())Item->SetObjectField(TEXT("worstDecodedRoot"),WorstDecodedRoot);
-        if(WorstSurfaceRoot.IsValid())Item->SetObjectField(TEXT("worstSurfaceRoot"),WorstSurfaceRoot);
         Item->SetBoolField(TEXT("allProjectedTrianglesEligible"),true);
         Groups.Add(MakeShared<FJsonValueObject>(Item));
     }

@@ -1,0 +1,88 @@
+{
+  "status": "Actual saved clean mesh, imported render mask and all79 authored bone origins pass",
+  "stage": {
+    "pid": 27756,
+    "nativeExit": 0,
+    "guardExit": 0,
+    "completionMarker": "KK_GROOM_CHARACTER_MESH_COMPLETE",
+    "maxPrivateMiB": 6876.0,
+    "minAvailableMiB": 4795.0
+  },
+  "actualRenderVertices": 350779,
+  "actualEligibleRenderVertices": 60420,
+  "actualEligibleTriangles": 102736,
+  "morphTargets": 25,
+  "sourceToMeshAxes": {
+    "axes": [
+      {
+        "sourceAxis": 0,
+        "sign": 1
+      },
+      {
+        "sourceAxis": 1,
+        "sign": -1
+      },
+      {
+        "sourceAxis": 2,
+        "sign": 1
+      }
+    ],
+    "maximumComponentErrorCentimeters": 1.2405407630922127e-05,
+    "meanComponentMaximumErrorCentimeters": 3.142138881370118e-06,
+    "boneCount": 79,
+    "toleranceCentimeters": 0.001,
+    "scaleCentimetersPerSourceMeter": 100,
+    "translationCentimeters": [
+      0,
+      0,
+      0
+    ],
+    "fullRotationalBindParityClaimed": false
+  },
+  "importedWrapper": {
+    "name": "Nib_Rig",
+    "fbxModelType": "Null",
+    "fbxUnitScaleFactor": 100.0,
+    "actualComponentMatrixRetained": [
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "authoredTransformsRescaled": false,
+    "onlyAuthoredRootParentLabelNormalized": true,
+    "broadNameFiltering": false
+  },
+  "savedPackages": [
+    {
+      "path": "benchmark/local/groom-probe/nib-native-character-mask-v1/GroomProbe/Content/Character/Nib_Natural_Filtered.uasset",
+      "sha256": "d67c8b05dec259f0c5f66f650688cf63a96d86e043faaf04f474daef34844003",
+      "bytes": 92584451
+    },
+    {
+      "path": "benchmark/local/groom-probe/nib-native-character-mask-v1/GroomProbe/Content/Character/Nib_Natural_Filtered_Skeleton.uasset",
+      "sha256": "99203c3dee9948ff382b36661799606bdc1a5021fdcaf3ece2f50caeb144eb08",
+      "bytes": 24742
+    }
+  ],
+  "freshProcessReloadVerified": false,
+  "runtimeSkinCacheVerified": false,
+  "animationImportPending": true,
+  "bindingVerified": false,
+  "rendered": false,
+  "performanceMeasured": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

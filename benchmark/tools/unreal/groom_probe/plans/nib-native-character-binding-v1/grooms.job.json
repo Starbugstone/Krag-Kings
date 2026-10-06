@@ -1,0 +1,23 @@
+{
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "name": "nib-native-character-binding-v1-grooms",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-binding-v1\\GroomProbe\\GroomProbe.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\groom_probe\\import_character_grooms.py",
+    "-NullRHI",
+    "-unattended",
+    "-nosplash",
+    "-NoSound",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-corelimit=2",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-binding-v1\\evidence\\grooms-editor.log"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-binding-v1\\evidence\\grooms.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-binding-v1\\evidence\\grooms.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\groom-probe\\nib-native-character-binding-v1\\evidence\\grooms.stdout.log",
+  "successMarker": "KK_GROOM_CHARACTER_BINDING_COMPLETE"
+}

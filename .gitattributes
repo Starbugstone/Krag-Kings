@@ -293,3 +293,7 @@ benchmark/unreal/evidence/groom-native-width-v2/**/*.csv -text whitespace=cr-at-
 benchmark/unreal/evidence/groom-character-mask-v1/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/groom-character-mask-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/groom-character-mask-v1/execution/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve exact native mask retry and first full-strand diagnostic bytes.
+benchmark/unreal/evidence/groom-character-mask-v2/execution/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/groom-character-binding-v1/execution/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

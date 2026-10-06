@@ -1,0 +1,7 @@
+# Actual first character Groom binding attempt
+
+The isolated native binding helper compiled successfully. The actual next process reloaded the cleaned target, rebuilt/verified its float32 skin mask and all 79 authored origins, and imported HeadCream: 10,000 curves and 90,000 source points. Its explicitly verified sidecar adapter preserved native point order, restored per-point diameters and linear RGB, and rebuilt 100,000 native points (the native builder duplicates each terminal point). The maximum coordinate component residual is 0.038 micrometers, maximum diameter residual 4.66e-10 cm and linear-color residual zero.
+
+All 10,000 roots project onto eligible skin. The strict overall attempt **fails**: the largest decoded projection distance is 0.01033265796 cm (0.1033266 mm), just above the predeclared 0.1 mm gate. Mean distance is 0.0019334 mm. The current report cannot attribute this to half-precision stored barycentrics versus the actual source/export triangle surface. A follow-up must record worst roots and their exact triangle geometry before changing any gate.
+
+Native process exit 0 is not treated as success: the completion marker is absent and the guard returns 89. The original completed mesh proof remains valid, but this attempt saved no Groom/Binding packages. Four later regions, fresh reload, posed attachment, rendering and performance were not executed. No shared input or production package changed. Known source appearance failures remain.
