@@ -1,0 +1,119 @@
+{
+  "status": "Three actual unchanged-source neutral/profile views inspected; normal-mouth and concept-profile acceptance failed",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "motionMergePerformed": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "sha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd"
+  },
+  "views": [
+    {
+      "view": "ClosedFront",
+      "path": "benchmark/art/krag/renders/Krag_BroadOral_v9s_ClosedFront.png",
+      "sha256": "5f571c8313e01789c4c2242b8c0ac3f86cc27a9acc0e28540ce01c4429021fcf",
+      "metadataSha256": "5e4d1254ff3d35cf119c87a638b9a9ff7abba0d80cd4ea42be7aa880da0fdc76"
+    },
+    {
+      "view": "ClosedRight",
+      "path": "benchmark/art/krag/renders/Krag_BroadOral_v9s_ClosedRight.png",
+      "sha256": "c715b0ab7f1ad229eb94bbfe81ca8f7a9c0f035b706229c9c6f1f0627609ddb2",
+      "metadataSha256": "6c8fae7c1a60f54ea795487644d13aaab94043cdd718a0eb6a383dd502df8baa"
+    },
+    {
+      "view": "OpenRight",
+      "path": "benchmark/art/krag/renders/Krag_BroadOral_v9s_OpenRight.png",
+      "sha256": "cd7280917aefcd523588d86671b723de7ee4edb1d3b0c6796744a9a30af2be47",
+      "metadataSha256": "4d0666fe619ed032e3950cac58edbf8a9957bec5e41673f2ef95c919ba29bd67"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "krag-broad-oral-v9s-ClosedFront",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2089,
+      "minimumAvailableMB": 10375,
+      "peakCommitPercent": 57.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedFront.stdout.txt",
+          "sha256": "b4351bf54dbbc2f4f2760edf5356afb2c55e09b6fa9fc588e565ab1cf3c6c401"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedFront.stderr.txt",
+          "sha256": "1a8d3a9316bf6523f7db10231cde2b0963a0733e838ee494aa0c5b70d3430042"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedFront-memory.csv",
+          "sha256": "7f49fb0db3c8d95857bcabacf0e5c66219d4e70a6feda743c3a8a743d75e3e05"
+        }
+      ]
+    },
+    {
+      "name": "krag-broad-oral-v9s-ClosedRight",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2105,
+      "minimumAvailableMB": 10432,
+      "peakCommitPercent": 57.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedRight.stdout.txt",
+          "sha256": "7701f6ad7ccbc8957d91d0ad0255071c7875ea12d2417e44c16e338bc60abd3e"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedRight.stderr.txt",
+          "sha256": "1a8d3a9316bf6523f7db10231cde2b0963a0733e838ee494aa0c5b70d3430042"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-ClosedRight-memory.csv",
+          "sha256": "6c1e7cc40af0df4b90c1ae7c80662b2d50afa0e3c9ea1ea5f3d3480ec37f6cf3"
+        }
+      ]
+    },
+    {
+      "name": "krag-broad-oral-v9s-OpenRight",
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2097,
+      "minimumAvailableMB": 10414,
+      "peakCommitPercent": 57.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-OpenRight.stdout.txt",
+          "sha256": "35ccf839fa21f84df513f0f6a46f9aab2b2101996b688058129bcc01159b8efd"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-OpenRight.stderr.txt",
+          "sha256": "1a8d3a9316bf6523f7db10231cde2b0963a0733e838ee494aa0c5b70d3430042"
+        },
+        {
+          "path": "benchmark/art/krag/broad-oral-v9s-evidence/krag-broad-oral-v9s-OpenRight-memory.csv",
+          "sha256": "061461fa6f6ba46225e9c2a575b4f102cee49a439d7ffa592a2e28368044e1b0"
+        }
+      ]
+    }
+  ],
+  "visibleFindings": {
+    "ClosedFront": [
+      "Continuous closed lip line without floating exposed incisors",
+      "Both compact tusks are entirely hidden",
+      "Strong diagonal cheek folds and a broad slab-like lower-face shape remain"
+    ],
+    "ClosedRight": [
+      "Deep recess below lower lip and forward pointed chin shelf",
+      "Smooth protruding brow shelf and hidden tusks remain",
+      "Layered anatomical mandibular volume does not yet match concept01"
+    ],
+    "OpenRight": [
+      "Lower face rotates as a plate with a sharp below-ear crease",
+      "Separate pointed lower-lip/chin ledges remain",
+      "Previously improved frontal aperture does not establish a normal three-dimensional mouth"
+    ]
+  },
+  "comparison": "The retained v9p OpenRight already shows the lateral crease and lip/chin ledges; v9s did not originate all of these defects. They still require correction.",
+  "lightAttribution": "oral-volume-study/v9s-lateral-jaw-attribution.json",
+  "nextDecision": "Preserve source and frontal aperture improvement; correct lateral tissue support, mandibular profile and true canine/labial hull contact before any motion merge/promotion",
+  "engineCandidateUnaffected": "fe15213d coherent68 source and its PBR input remain frozen"
+}

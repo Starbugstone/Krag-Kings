@@ -1,0 +1,25 @@
+{
+  "name": "krag-oral-motion-merge-v9s",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\motion_merge_wip\\merge_v4.py",
+    "--",
+    "--source-receipt",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\broad-oral-v9s.json",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Oral_v9s_Motion_v4_WIP.blend"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9s.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9s.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-motion-merge-v9s.stdout.log",
+  "successMarker": "KRAG_VERIFIED_V4_MERGE_COMPLETE"
+}

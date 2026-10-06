@@ -1,0 +1,52 @@
+{
+  "status": "Prepared only; on hold after actual v9s neutral/profile failure. Do not launch or promote this defective source.",
+  "artisticAcceptance": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_BroadOral_v9s_WIP.blend",
+    "sha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd"
+  },
+  "donor": {
+    "path": "benchmark/art/animation/krag-human-motion-v4/Krag_HumanMotion_Study_v4.blend",
+    "sha256": "84822444a021194fc47e0360bfffc875c18687720bb8b8923588e486b9900607"
+  },
+  "outputNotYetCreated": "benchmark/art/krag/Krag_Oral_v9s_Motion_v4_WIP.blend",
+  "checks": [
+    "Exact complete68-bone body/facial bind equality before merge",
+    "Every current mesh/morph/UV/weight and driver contract retained",
+    "All7 canonical take hashes match donor including6secondIdle",
+    "Saved/reopened source with35 complete skeletal-pose comparisons"
+  ],
+  "notIncluded": [
+    "Separate72-bone hand study",
+    "Legacy shared export replacement",
+    "New artistic acceptance"
+  ],
+  "reviewContractWarning": "Existing review_merge_v2 is pinned to fe15213d and must not be reused unchanged for the new output. Derive a separately pinned assembly contract from verified same module inventory after the actual merge.",
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/motion_merge_wip/v9s-merge.job.json",
+      "sha256": "148e8b38c6fbb285b355f00fa0ca2d2d0419be4071cd3a7895ca5a58bf6daee0"
+    },
+    {
+      "path": "benchmark/tools/krag/motion_merge_wip/merge_v4.py",
+      "sha256": "819742354132befe4377731f5703b9cf5d0fc7b3c295464d50d1342e7b46d003"
+    },
+    {
+      "path": "benchmark/tools/animation/export_contract.py",
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/contracts.py",
+      "sha256": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902"
+    },
+    {
+      "path": "benchmark/art/krag/broad-oral-v9s.json",
+      "sha256": "84a2d43ae0426af2fc717127698bea5d6e115814937ebb9426bfe2408d8b254d"
+    }
+  ],
+  "blockingArtReview": "broad-oral-v9s-neutral-profile-review.json"
+}
