@@ -1,0 +1,773 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-Matthew doesn't exist
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'fr' Physical Memory: 32553 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T18:42:49Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 28256)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+-batchmode
+-job-worker-count
+2
+-projectPath
+D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+-logFile
+D:\Dev\Krag-Kings\benchmark\local\logs\unity-native-strand-fixture-render-v1.log
+-executeMethod
+KragKings.StrandPilot.RenderProbe.Run
+-force-d3d12
+Successfully changed project path to: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [9604]  Target information:
+
+Player connection [9604]  * "[IP] 172.17.32.1 [Port] 55504 [Flags] 2 [Guid] 1005856419 [EditorId] 1005856419 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [9604]  * "[IP] 172.26.16.1 [Port] 55504 [Flags] 2 [Guid] 1005856419 [EditorId] 1005856419 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [9604]  * "[IP] 192.168.31.40 [Port] 55504 [Flags] 2 [Guid] 1005856419 [EditorId] 1005856419 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [9604] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [9604] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 2
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew" at "2026-10-06T18:42:50.1064729Z"
+[Package Manager] Connected to IPC stream "Upm-32048" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              ed556fa5b31c43ea85c63ac990df5ac4
+  Correlation Id:          a5f424c0afb19572327a997613af1d64
+  External correlation Id: 3491639107309350116
+  Machine Id:              H9ywjWMk/aJPg3YR91m8eMuX6rE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Matthew" (connect: 0.57s, validation: 0.05s, handshake: 1.54s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew-notifications" at "2026-10-06T18:42:51.6915748Z"
+[Licensing::Module] Connected to LicensingClient (PId: 28256, launch time: 0.01, total connection time: 2.15s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 2.19s
+[Licensing::Module] Licensing is initialized (took 1.56s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:          NVIDIA
+    VRAM:            5955 MB
+    App VRAM Budget: 5187 MB
+    Driver:          32.0.15.9144
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56048
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001902 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.496 seconds
+Domain Reload Profiling: 1064ms
+	BeginReloadAssembly (197ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (242ms)
+		LoadAssemblies (176ms)
+		AnalyzeDomain (229ms)
+			TypeCache.Refresh (227ms)
+				TypeCache.ScanAssembly (208ms)
+	FinalizeReload (498ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (61ms)
+			BeforeProcessingInitializeOnLoad (111ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (111ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 34 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.19.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.burst@1.8.29 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.timeline@1.8.12 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+    com.unity.searcher@4.9.4 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.searcher@d45a78918735)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition@4509f627d0da)
+    com.unity.ugui@2.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.wind@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.animation@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.audio@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.collections@6.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+    com.unity.render-pipelines.core@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.uielements@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.ui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.video@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.video)
+    com.unity.visualeffectgraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.modules.director@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.director)
+    com.unity.test-framework@1.6.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.modules.terrain@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.ext.nunit@2.0.5 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+  Local packages:
+    com.unity.demoteam.hair@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source)
+    com.unity.demoteam.digital-human@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.render-pipelines.high-definition/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.screencapture/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.particlesystem/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.physics/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.wind/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.animation/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.audio/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imgui/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.jsonserialize/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.shadergraph/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.shadergraph/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.shadergraph/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.imageconversion/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.uielements/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.ui/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.video/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.director/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.terrain/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.hierarchycore/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/AssetProcessors/PluginMaterialVersions.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/Material/Eye/ShaderGraph/EyeSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/Material/Fabric/ShaderGraph/FabricSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/Material/Hair/ShaderGraph/HairSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/Material/SixWayLit/ShaderGraph/HDSixWaySubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/4509f627d0da/Editor/Material/Unlit/ShaderGraph/HDUnlitSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/cd28a7c13031/Editor/Generation/Contexts/TargetSetupContext.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/cd28a7c13031/Editor/Generation/Processors/ShaderSpliceUtil.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/cd28a7c13031/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/Targets/BuiltInCanvasSubTarget.cs.
+[Package Manager] Could not restore immutable package asset: Packages/com.unity.modules.unitywebrequest/cd28a7c13031/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSubTarget.cs.
+[Package Manager] Done registering packages in 0.06 seconds
+[ScriptCompilation] Requested script compilation because: Assembly Definition File(s) changed
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 0s228ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[567/718    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (0.19 seconds), 1 items updated, 566 evaluated
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+ExitCode: 0 Duration: 0s916ms
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+ExitCode: 0 Duration: 2s380ms
+Finished compiling graph: 722 nodes, 11931 flattened edges (9875 ToBuild, 108 ToUse), maximum node priority 816
+[416/718    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.rsp
+[417/718    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll.mvfrm.rsp
+[418/718    0s] WriteResponseFile Library/Bee/artifacts/rsp/10433462319749307672.rsp
+[565/718    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[713/718    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll.mvfrm
+[714/718    1s] Csc Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll (+2 others)
+Assets\Editor\RenderProbe.cs(56,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+
+Assets\Editor\RenderProbe.cs(58,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+[715/718    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/KragKings.StrandPilot.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll, with 137 defines and 288 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[716/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.pdb
+[717/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.dll
+*** Tundra build success (2.36 seconds), 9 items updated, 718 evaluated
+Assets\Editor\RenderProbe.cs(56,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+Assets\Editor\RenderProbe.cs(58,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+AssetDatabase: script compilation time: 4.008516s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp.dll at Library/ScriptAssemblies/Assembly-CSharp.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Editor.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Runtime.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Runtime.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Start importing Assets/NativeGroom using Guid(42974a377aed30c46a57fba3bb26c1dc) (DefaultImporter) -> (Import Result ID: 'f0335316f1eb4e5b9298f52fa138898f') in 0.0386142 seconds [static dependencies only]. Details - ImportResultOutputID=ba167766588653ca17d5bd9e3407cab7 DependenciesID=4bccf5f64e7db7795e1c323bcce6e5df StaticDependenciesID=f84f471a0d22ce09e9bf55272a2a788e 
+Start importing Assets/NativeGroom/Fixture using Guid(c43af507238745c42a11584c81729dad) (DefaultImporter) -> (Import Result ID: 'e9c7dd87fd5f3bd12c705b915b23359f') in 0.0093846 seconds [static dependencies only]. Details - ImportResultOutputID=8fa29276fd680742541e073393f5aa95 DependenciesID=c081e2e3c6c0b2bdbd89d01fcd27a4f8 StaticDependenciesID=eddfe65b33654f0f5912a88934612a9a 
+Start importing Assets/Editor/StrandPilot.Editor.asmdef using Guid(db16171834b775a4dbbcae904d44cfc6) (AssemblyDefinitionImporter) -> (Import Result ID: '73cf2e40ab0e2fe2af7e344a0583113c') in 0.0025164 seconds [static dependencies only]. Details - ImportResultOutputID=95219af0d7b859f85b6f0f415d52eb52 DependenciesID=6e226e3c9167cf74ab63ba302b9c0221 StaticDependenciesID=58d1946716e1b7f96e848a81b5867020 
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.590 seconds
+Domain Reload Profiling: 4597ms
+	BeginReloadAssembly (357ms)
+		DisableScriptedObjects (29ms)
+		CreateAndSetChildDomain (140ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (109ms)
+	LoadAllAssembliesAndSetupDomain (483ms)
+		LoadAssemblies (360ms)
+		AnalyzeDomain (256ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (180ms)
+			BuildScriptInfoCaches (52ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (3591ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (41ms)
+			BeforeProcessingInitializeOnLoad (201ms)
+			ProcessInitializeOnLoadAttributes (2423ms)
+			ProcessInitializeOnLoadMethodAttributes (634ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RaytracingAmbientOcclusion.raytrace using Guid(82dc8cd069971d2488c502b0f32b94fb) (RayTracingShaderImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+
+Compiling Ray Tracing Shader "RaytracingAmbientOcclusion.raytrace", keywords = <no keywords>
+    finished in 0.01 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'e252a20fa72c8f9da67107dd2a51b7d9') in 0.0753836 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=03d2d6178a38ba77e8608d7ec355b771 DependenciesID=ddd2f7cd6af8aae9a25632cf08b30208 StaticDependenciesID=5f3764f196470f95f74ff729b2671399 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingSubSurface.raytrace using Guid(b29a18f967c92364492508dddf78cff7) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RayTracingSubSurface.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'db2970a441d24dc2fdb3d70d115fccd3') in 0.0577548 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a66c20162a3606c39b172fe0141c7d5e DependenciesID=0bb407542b52c16750c933f735075a08 StaticDependenciesID=34db5e9857d7f5855f1b8f78637387c0 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RaytracingRenderer.raytrace using Guid(d3a89a2d3f73b3e4da6f191e844fe68c) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RaytracingRenderer.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'a097be766262849e68e2ed2a2fcab249') in 0.0359484 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f71e85f55f45a492eb1516f07a991f5 DependenciesID=77c71358af5471e2f6812214a0bfec9b StaticDependenciesID=a5eb65ce20a8b965e4aff1a10e10f3e4 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/PathTracing/Shaders/PathTracingMain.raytrace using Guid(c4f4525a058009a409fea974f9ad8d03) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "PathTracingMain.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'edb8b4d78cc350ab1529a3b9a854d04a') in 0.0355623 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bd28007a4a61cbfbcc7a9d01dc6b4ece DependenciesID=4490b147ccbf22e4fcaaf3a1c67e3c83 StaticDependenciesID=ace4d10803f20383e50bd6869db34939 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/Deferred/RaytracingGBuffer.raytrace using Guid(e4c61a77b91f35845bbb546b848b18e5) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RaytracingGBuffer.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '7b213cec8e17b287524f1f6f2d2aa4b9') in 0.0508768 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=05aef34ab3fe93af3c2993dc047a4457 DependenciesID=b1a26d4782166eebf7db186fa165372c StaticDependenciesID=e023d40bd341fa6d0f2723f231b50a53 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/IndirectDiffuse/RayTracingIndirectDiffuse_APVL1.raytrace using Guid(653044b9878c5764e818b20399112284) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RayTracingIndirectDiffuse_APVL1.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '389fb14c5e124dd23065da2e8205a937') in 0.0302695 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d4c050560b3a1a51559cdb6ca131a4d DependenciesID=9b5d59d70c026793a214eafbbe6d7e7f StaticDependenciesID=3060b2640d7f1e63b79eb7d7f8f3a5a0 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/IndirectDiffuse/RayTracingIndirectDiffuse_APVL2.raytrace using Guid(866a72c4868acec4088b0956b9ca73f9) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RayTracingIndirectDiffuse_APVL2.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '0aed6cd2a1ad33f1f38ed2f2b5ab10b4') in 0.0231346 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2f911c269877ff84626a4d2ff6c84d04 DependenciesID=29b598be01d8257f0c8fd62feeb0fe5e StaticDependenciesID=3f6c85442166f5f13e4b76c358a8d2c9 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/Reflections/RaytracingReflections.raytrace using Guid(1a500e5079fba734aa90fe92e70ea131) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RaytracingReflections.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '076deed09907cfc792199c72c412faed') in 0.0269688 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=02f2aa95d18457be0b6fce0c01f4171a DependenciesID=47232919433ef2eba26614d3c6bcce72 StaticDependenciesID=aaa51c0904f09ebc34b7fd33086f1442 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/IndirectDiffuse/RayTracingIndirectDiffuse_APVOff.raytrace using Guid(fbcaf423d9f8e3843b2c046420608293) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RayTracingIndirectDiffuse_APVOff.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '3fdf4784dbf00dd3c9f8331b99ae1df8') in 0.0245371 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9be21e2bfa920d52a26523d0a48ed124 DependenciesID=2a5b7b0d653546bc550108a235639a6a StaticDependenciesID=b32369a10028544800e8c451e86541da 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/Shadows/RayTracingContactShadow.raytrace using Guid(acaf840af875ab541b8f10069b7444c8) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RayTracingContactShadow.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'a9f3b29ef3b83a48cbddd19cef244e29') in 0.0206616 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d45f1d94ddd36ce59b680490a9db6662 DependenciesID=5a525461fc3fbbf9a243b477bd9a4ada StaticDependenciesID=5f0c87756ca29fee31344194bedbd465 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/Shadows/RaytracingShadow.raytrace using Guid(6f93cb4dc095de14993f8d2baa972d5b) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RaytracingShadow.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '8c27ce7ed1fc456128ab23ed38e943d2') in 0.0409247 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5ef3c964fb817ecb2cfb65e21bf87873 DependenciesID=e2e41c7f3fd2c0dde06bb25dc9bff222 StaticDependenciesID=0426ee11170738e29ecca74d9e4ad30e 
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RTASDebug.raytrace using Guid(7f98079d20376fd4f8590d58be99ab0d) (RayTracingShaderImporter)
+Compiling Ray Tracing Shader "RTASDebug.raytrace", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '87c9304b9a5b5098905aebd31c49760d') in 0.0117202 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf81bc54e341978a015ddf4aaa86ee90 DependenciesID=eba30b41e9e8ab85c94907dc6c79b1a4 StaticDependenciesID=bf4fc72986f9a85a007bbce23bc7643f 
+Start importing Assets/NativeGroom/NativeFurPhysical.shadergraph using Guid(241ab007a5818f347ba5d4062cbba42e) (ScriptedImporter)Error in Graph at Assets/NativeGroom/NativeFurPhysical.shadergraph on line -1: Keyword 'PROCEDURAL_INSTANCING_ON' is duplicated in several directives. This can lead to unnecessary shader variants. Please remove it from all but one directive.
+ -> (Import Result ID: '7bd68b9b55aa4c9d20ac4bd77faa71b6') in 1.0739322 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=77958ab099dd7001b91b3111f67e98c8 DependenciesID=7995819494e7a83b31592bee0a909989 StaticDependenciesID=69e0a6b767486148b8a827bda0744e7a 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRays.urtshader using Guid(1142bbad8b9e8c44c83a9775ff120d37) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRays.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '7afca4d7e3c820ebf2cf832a55b3efb6') in 0.011009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=58b1d56b89b4fd5b7264b1ae141a2e16 DependenciesID=0f507060acbbee5aa85d653be9dc174c StaticDependenciesID=b7859538b7c8061be2c1df0681a26cec 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RisEstimation.urtshader using Guid(713f6141bd66a134383b787f2eaa7c11) (ScriptedImporter)
+Compiling Ray Tracing Shader "RisEstimation.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'e3e001109788d2dde410cd1a6c63a120') in 0.0129643 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c3db561babc2d3f192dc496b0a2dfe8 DependenciesID=85c8fc919268ffee728aa363066ff820 StaticDependenciesID=1251c416255850dca778d66927462604 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapShadowMaskIntegration.urtshader using Guid(d19f4f8a13b6edb48b986a47ec96402e) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapShadowMaskIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'e139afbdfd299bbf6ff83af7ea76e8d1') in 0.0192344 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=89734c47f7ded59f2ff0667094688153 DependenciesID=a41d6a67b8f40a57c05b5257efd8808a StaticDependenciesID=dddefbaa39ba5d51a386df5433e82fa1 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferDebug.urtshader using Guid(737a1597422c12547a8714d76a9406ec) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferDebug.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'e56622c2a7259949f7b8ad8ad750bc95') in 0.01249 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6ebff43bdf0b449e2d9c76c9f8402a35 DependenciesID=54ba711bc9e3c6c0bfa936f371e7a8cd StaticDependenciesID=62194a0448f2b8616e1214fb593272db 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapNormalIntegration.urtshader using Guid(1451d029813b192429211be28181beab) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapNormalIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'cb2fbf5c1d07930b000d7de377c20f6c') in 0.0125908 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d0c0299acd75edd000c68987e109915e DependenciesID=ec5e778e363441e5bbbdecda6633b948 StaticDependenciesID=cbe3820d9825e61936c3967ec27e4e90 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader using Guid(94a070d33e408384bafc1dea4a565df9) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRenderingLayerMask.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '793cfd96f1713212e5bf9eabeb38eec2') in 0.0114154 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=59bcf41c92be5967e4bd2a65d9ad484d DependenciesID=32036152490f4464cd59f01c18de8529 StaticDependenciesID=83d03f1fcc976b11b697d3bab0b97d8c 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/UniformEstimation.urtshader using Guid(94a39d12848d8d64ca962a72b74e7c50) (ScriptedImporter)
+Compiling Ray Tracing Shader "UniformEstimation.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '439a7638a134eca36a4161512c2a4559') in 0.0096747 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e7d10f59892682bfbe73a5848ecb6371 DependenciesID=9728f3107fde0bb092451e3486d8a631 StaticDependenciesID=f100dc97879ef35876f7ad5427566dd9 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceTransparentRays.urtshader using Guid(6513c3b892e933c4f8d00c19d5c47532) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceTransparentRays.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'da93953b8a13c0d1fc489ef5ba76241a') in 0.0057676 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=65a6c94c3370940a3394556c71e25836 DependenciesID=24e95d1316241f1b4b39167f48526b4c StaticDependenciesID=5e41b194f27d8b70c797e75555e2b1f0 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapIndirectIntegration.urtshader using Guid(7624adbeb148b5c48ab5ab660cc2602a) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapIndirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ffa1a186eee4385ce7a04a5ed97165ac') in 0.0117464 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed5d51e29def6d7a65086d762b13a5c1 DependenciesID=54a8750c9763863e61dec10d55776477 StaticDependenciesID=6d19372de11b03798f093933090e79bb 
+Start importing Assets/NativeGroom/Fixture/TawnyEarOuter.json using Guid(3836082bb49c0e6418832c049aaac6a2) (TextScriptImporter) -> (Import Result ID: '1e9760d0569b634be617411efd731775') in 0.009161 seconds [static dependencies only]. Details - ImportResultOutputID=a0b599b46ef986dd3614001ae1c501cd DependenciesID=4611bfabf328e31a5944cca513a307c7 StaticDependenciesID=eeeac33ae047ec72b233aca5aee0c8e0 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferIntegration.urtshader using Guid(e9f4de6d1e07fb94f9a60d35b618f724) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapGBufferIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd42712c860a2d8848dd3a0c7ef5ad479') in 0.008133 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1676c0d51b56dde7ef6140c740c7057b DependenciesID=d45d6f2db6ad286790594662352e121a StaticDependenciesID=66dc06979910318021783fcb4ccd3ecc 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader using Guid(5a2a534753fbdb44e96c3c78b5a6999d) (ScriptedImporter)
+Compiling Ray Tracing Shader "DynamicGISkyOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '63afcbd76537517bf9873a4e1e2d03d1') in 0.0089204 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fd364a85d059b91e96e65a685207106 DependenciesID=fbba977ddafde040ae65aeaedffd88ff StaticDependenciesID=18974378deb0e4fc540e6b2321b0ff13 
+Start importing Assets/NativeGroom/Fixture/CreamHead.json using Guid(8ae9475f44ef3d448a693a88134bc947) (TextScriptImporter) -> (Import Result ID: '281fa5a948e20ad4819c9e34e20c8599') in 0.0091713 seconds [static dependencies only]. Details - ImportResultOutputID=e376661ab0fbf1e8e95e244216c4e4a2 DependenciesID=a4efc1411722baee4f3242d717ed39e6 StaticDependenciesID=9bc474584544a7946317216ef10382b6 
+Start importing Assets/NativeGroom/Fixture/conversion.json using Guid(aa0bd70f049a49c4489d64a70259e1ba) (TextScriptImporter) -> (Import Result ID: 'd8ef43223b269a0ce14d0b4a9cdbb041') in 0.0102117 seconds [static dependencies only]. Details - ImportResultOutputID=570432cb9e60bf85f056f4894b2d394e DependenciesID=565a2c09adb8410ae3049142959cf848 StaticDependenciesID=ac40d557155e567597f13bcfb1ba442d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectIntegration.urtshader using Guid(5bbebdef5916845478fcef13fa10d89f) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapDirectIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9e40b327fc8eeee41360b2a9a17a1cab') in 0.0124879 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5a7cbb81c84c34dea07d3b9312e0f8af DependenciesID=afc1b846ca9ded3227c1d5b288a1eedf StaticDependenciesID=63188f79534be5f4b9e074ad4af5bfb7 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/UnifiedRayTracing/TraceRaysAndFetchAttributes.urtshader using Guid(fbc59f55df2416344b008dc23753cae2) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceRaysAndFetchAttributes.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'e6d4100a4ef49b0c4368ad5ca5e22854') in 0.0066415 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=76e2821aaffa55c5b91860f99dabfee9 DependenciesID=b74cc84dd8b21bd37e6f5ebd7b3b9434 StaticDependenciesID=aa8291e86ea82085a643681c1c779d39 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapAOIntegration.urtshader using Guid(1c410815c01ce1d4d82c645c0cd45747) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapAOIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'c639823e3fca9ca4cf92a999fd6b113b') in 0.0115827 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8f5afc25c05398cab29e5d22d338c324 DependenciesID=7da2892cf839ca4597649bc8499224dc StaticDependenciesID=bcaf3aac9727a2ca27155e619d011e5f 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationValidity.urtshader using Guid(2c32233d92a2d0745930664c087c5c9a) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationValidity.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'ff948fbe6f9eea32896381d72e2bfa0e') in 0.0112513 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2dc641a56b85f519cbe1e82a7a9e8c5 DependenciesID=9be055ea3569dfe45a29be164adc8ad3 StaticDependenciesID=4aea10376946a8225ccdfdec15a70dac 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapValidityIntegration.urtshader using Guid(ace95ac84e213794891b4bd7c9b3c158) (ScriptedImporter)
+Compiling Ray Tracing Shader "LightmapValidityIntegration.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'a234c72a94157d43c653d68ddcbca060') in 0.0131429 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=79d295adafa5f47513a34a76865e634c DependenciesID=02906d7b3e185d7299b9af30e9216571 StaticDependenciesID=46d905dacc01197a8e043a8ad4f9d21d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/RestirCandidateTemporal.urtshader using Guid(ad3a9f9982f8c4f4a839a78955e78458) (ScriptedImporter)
+Compiling Ray Tracing Shader "RestirCandidateTemporal.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '8fd0ecc81a1a4d448bded1b3c5e88d3a') in 0.0082859 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dc53a428a46533fd6d93947a9d30e8d2 DependenciesID=718c8be356410685d68e26863909b46d StaticDependenciesID=2beaac54fac463ee5ee15c00b0990d01 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationIndirect.urtshader using Guid(5ecdabd800f05984696f22ba95284516) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationIndirect.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '9c422886474b488de372cc61ee26e4e8') in 0.0118953 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e8498fb62d3b8ed20afdce949e3e2cb9 DependenciesID=93eebeab53cdace61879d0044c0001f3 StaticDependenciesID=83ecbbd61911181b4944eb7ac9eabee5 
+Start importing Packages/com.unity.render-pipelines.core/Tests/Runtime/PathTracing/PathIteratorTest.urtshader using Guid(6e0b547bab30a804c8123974120d583f) (ScriptedImporter)
+Compiling Ray Tracing Shader "PathIteratorTest.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'bd7a5612e4985f9643f5f4834c9ee53a') in 0.0138063 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b2d87ec346a485fd9620322af1ef51c9 DependenciesID=866f976e2a4d51fe77efccb491dd5106 StaticDependenciesID=cf2a33ce9b71ea08a4459556694e1323 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LiveGI.urtshader using Guid(ceb7a31b84722d144bbeff1c8cd88769) (ScriptedImporter)
+Compiling Ray Tracing Shader "LiveGI.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '235c25704a2aee85c149dddd0f018e72') in 0.0126443 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b5c079ae955e0922962604f94c4f7f5 DependenciesID=4d90bacf5f912709e27b0193ff9e24f2 StaticDependenciesID=628001b751fe9fddf64a203b1446575e 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationOcclusion.urtshader using Guid(de3013e16d99f2746ab1735ec06a660b) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationOcclusion.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '2b22b889aeafc7a50d68995467a319c7') in 0.0122144 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f570b42574b3853f221a09536dc9daca DependenciesID=be257ec1f2e0292ec4724c7091d9a494 StaticDependenciesID=183f3d853e4af89ec08f4e79696e167d 
+Start importing Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirect.urtshader using Guid(1f9bfe60b4ad75943a5281839c1a4e5c) (ScriptedImporter)
+Compiling Ray Tracing Shader "ProbeIntegrationDirect.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: 'd37cf92f5433a49ca14de3608a128b67') in 0.0115077 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3828a5aea5672b46b4d9977701bdd003 DependenciesID=2c37205a6451b724b0972c24b9fbd758 StaticDependenciesID=d3f99f9cc1ae2c0c0147c2fa8da668fc 
+Start importing Assets/NativeGroom/Fixture/PinkEarWisps.json using Guid(9f427d4281c63044f92de67bcd346cea) (TextScriptImporter) -> (Import Result ID: 'cde336df7dff79212406fa030cae1145') in 0.0080972 seconds [static dependencies only]. Details - ImportResultOutputID=fb694dc90e007a2b6992969c2d6ff97c DependenciesID=e27117c8f293b05cfb6761219793486f StaticDependenciesID=30c91d501713cb3f5a6239d6dc9d9073 
+Start importing Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader using Guid(ff2cbab5da58bf04d82c5f34037ed123) (ScriptedImporter)
+Compiling Ray Tracing Shader "TraceVirtualOffset.urtshader", keywords = <no keywords>
+    finished in 0.00 seconds. Local cache hits 1, remote cache hits 0, compiled 0 platform variants
+ -> (Import Result ID: '29accf2d3b99b61e5cfb895ecb82a5a0') in 0.0110359 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ab4ffcb1f1f746aecd037f904b72cad DependenciesID=f7909e0286c136d1e7b092bc619cd62f StaticDependenciesID=f51ff46b48d84884c883ac486ebfd7f9 
+Shader error in 'Krag Kings/Native Groom/NativeFurPhysical': Keyword 'PROCEDURAL_INSTANCING_ON' is duplicated in several directives. This can lead to unnecessary shader variants. Please remove it from all but one directive.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=56cc4c183afe031418ee51a61386c72f): Total: 12.084 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=43 (actual=43, local cache=0, cache server=0)
+		Asset DB Process Time: managed=9 ms, native=6105 ms
+		Asset DB Callback time: managed=207 ms, native=696 ms
+		Scripting: domain reloads=1, domain reload time=1008 ms, compile time=4011 ms, other=45 ms
+		Project Asset Count: scripts=1163, non-scripts=2746
+		Asset File Changes: new=9, changed=10, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 78.763ms
+	ApplyChangesToAssetFolders: 0.939ms
+	Scan: 186.427ms
+	OnSourceAssetsModified: 0.882ms
+	CategorizeScriptCompilationAssets: 25.821ms
+	ProcessAssetsWithTransientArtifactChanges: 74.287ms
+	CategorizeAssets: 96.039ms
+	CompileScripts: 4010.669ms
+	ImportOutOfDateAssets: 5591.365ms (3597.326ms without children)
+		ImportManagerImport: 1988.965ms (18.820ms without children)
+			UpdateCategorizedAssets: 4.785ms
+		UnloadImportedAssets: 3.793ms
+		ReloadImportedAssets: 87.850ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.730ms
+		OnDemandSchedulerStart: 0.497ms
+	PostProcessAllAssets: 826.826ms
+		ShaderAssetModifiedCallback 444.187ms
+		RaytracingShaderImportPostprocess 103.806ms
+		ComputeShaderImportPostprocess 68.634ms
+		AssemblyValidation.PostprocessAllAssets 2.232ms
+		VersionControlSettings.HiddenFilePostprocess 0.125ms
+		PostProcessCallbackCreateDeferredMaterials 0.106ms
+		XRBuildSystem.XRAssetImported 0.086ms
+		SpeedTreeImporter.PostprocessAllAssets 0.076ms
+		MonoPostProcessAllAssets: 206.331ms
+			AssetPostprocessor.OnPostprocessAllAssets 133.194ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.024ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 13.683ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.738ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 4.730ms
+			MaterialPostprocessor.OnPostprocessAllAssets 3.332ms
+			SyncVS.PostprocessSyncProject 2.093ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.072ms
+			AssetChangedListener.OnPostprocessAllAssets 1.890ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.571ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.306ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 1.197ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.840ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.706ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.624ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.565ms
+			PostProcessor.OnPostprocessAllAssets 0.516ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.505ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.449ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.426ms
+			AssetEvents.OnPostprocessAllAssets 0.362ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.297ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.216ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.199ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.195ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.149ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.148ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.145ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.131ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.082ms
+	PostAssetChangesProfiler: 2.136ms
+	UnloadStreamsBegin: 1.806ms
+	PersistCurrentRevisions: 0.388ms
+	GenerateScriptTypeHashes: 3.517ms
+	GenerateScriptTypeSerializationHashes: 6.516ms
+	Untracked: 1181.539ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 4.617ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Krag Kings — Engine Comparison
+Unloading 106 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5332 unused Assets / (23.1 MB). Loaded Objects now: 6350.
+Memory consumption went from 285.7 MB to 262.6 MB.
+Total: 17.606800 ms (FindLiveObjects: 0.756800 ms CreateObjectMapping: 1.359400 ms MarkObjects: 6.909200 ms  DeleteObjects: 8.577700 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (2.7 KB). Loaded Objects now: 6350.
+Memory consumption went from 240.4 MB to 240.4 MB.
+Total: 7.739500 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.225400 ms MarkObjects: 7.159600 ms  DeleteObjects: 0.039700 ms)
+
+Exception: Native physical hair shader did not import cleanly
+  at KragKings.StrandPilot.RenderProbe.Run () [0x001e7] in D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Assets\Editor\RenderProbe.cs:60 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+KragKings.StrandPilot.RenderProbe:Fail(Exception) (at Assets\Editor\RenderProbe.cs:159)
+KragKings.StrandPilot.RenderProbe:Run() (at Assets\Editor\RenderProbe.cs:118)
+
+(Filename: Assets/Editor/RenderProbe.cs Line: 159)
+
+Curl error 42: Callback aborted
+Start importing ProjectSettings/GraphicsSettings.asset using Guid(00000000000000006100000000000000) (LibraryAssetImporter) -> (Import Result ID: 'fc8e63ea8ddc7ad6001aef54ee729bf7') in 0.0024555 seconds [static dependencies only]. Details - ImportResultOutputID=5bd38efc7568c0c855c21a11ad435b27 DependenciesID=3f1491af1b9eeaeaad5ea917e7c76bed StaticDependenciesID=aeeacb038682447ae222969de5249b16 
+Start importing Assets/Settings/HDRP High Fidelity.asset using Guid(36dd385e759c96147b6463dcd1149c11) (NativeFormatImporter) -> (Import Result ID: '3bef72167e4d804b7505a2e3919dac71') in 0.001963 seconds [static dependencies only]. Details - ImportResultOutputID=8bafe0fd5ae1bde66ab41ff556efb17e DependenciesID=7e87c81941afdaf4c313372f09a2978f StaticDependenciesID=8ff708a13b9db4e963b9faf6818b4a4c 
+Asset Pipeline Refresh (id=aed7e73097282a24bb8bf3dcbfa88709): Total: 0.099 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Matthew-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Matthew channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791312187241,"processId":32048,"allocatedMemory":16284568,"memoryLabels":[{"Default":200288},{"Permanent":15276},{"NewDelete":65785},{"Thread":4238000},{"Manager":808141},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":845460},{"Material":24},{"GfxDevice":57353},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":1328},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"MonoCode":64},{"ScriptingNativeRuntime":155052},{"BaseObject":1620368},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":1088},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":23839},{"StaticString":6718},{"Utility":2672774},{"Curl":2478},{"PoolAlloc":2312},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":13136},{"WebRequest":845},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":109142},{"VersionControl":4},{"Undo":931},{"AssetDatabase":4864653},{"EditorGi":328},{"UnityConnect":34330},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":213},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2874},{"Windowing":456},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

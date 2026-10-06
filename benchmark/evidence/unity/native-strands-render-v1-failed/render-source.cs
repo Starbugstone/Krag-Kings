@@ -34,7 +34,7 @@ namespace KragKings.StrandPilot
         {
             try
             {
-                output=Path.GetFullPath("../fixture-render-v2");
+                output=Path.GetFullPath("../fixture-render-v1");
                 if(Directory.Exists(output))throw new Exception("Preserve previous render output");
                 Directory.CreateDirectory(output);
                 Application.logMessageReceived+=OnLog;
