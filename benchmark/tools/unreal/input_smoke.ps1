@@ -2,6 +2,7 @@
 param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,
  [ValidateSet('Packaged','EditorGame')][string]$ExecutionMode='Packaged')
 $ErrorActionPreference='Stop'
+. (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
 Add-Type @'
 using System;using System.Runtime.InteropServices;
 public static class KKInput {
@@ -10,6 +11,12 @@ public static class KKInput {
  [DllImport("user32.dll")]public static extern bool SetProcessDPIAware();
  [DllImport("user32.dll")]public static extern bool SetForegroundWindow(IntPtr h);
  [DllImport("user32.dll")]public static extern IntPtr GetForegroundWindow();
+ [DllImport("user32.dll")]static extern bool ShowWindow(IntPtr h,int command);
+ [DllImport("user32.dll")]static extern bool BringWindowToTop(IntPtr h);
+ [DllImport("user32.dll")]static extern bool AttachThreadInput(uint first,uint second,bool attach);
+ [DllImport("kernel32.dll")]static extern uint GetCurrentThreadId();
+ [StructLayout(LayoutKind.Sequential)]struct MSG {public IntPtr hwnd;public uint message;public UIntPtr wparam;public IntPtr lparam;public uint time;public POINT point;public uint extra;}
+ [DllImport("user32.dll")]static extern bool PeekMessage(out MSG message,IntPtr hwnd,uint min,uint max,uint remove);
  [DllImport("user32.dll")]public static extern bool ClientToScreen(IntPtr h,ref POINT p);
  [DllImport("user32.dll")]public static extern bool GetClientRect(IntPtr h,out RECT r);
  [DllImport("user32.dll")]public static extern bool SetCursorPos(int x,int y);
@@ -27,6 +34,7 @@ public static class KKInput {
   var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan&0xFFu),flags=flags}}};
   if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
  }
+
 }
 '@
 [KKInput]::SetProcessDPIAware()|Out-Null
@@ -34,9 +42,12 @@ $game=if($GameProcessId){Get-Process -Id $GameProcessId}else{Get-Process KragKin
 if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible Unreal demo is required.'}
 if($ExecutionMode -eq 'EditorGame' -and $game.ProcessName -notlike 'UnrealEditor*'){throw 'EditorGame evidence requires the explicitly selected Unreal editor game process.'}
 if($ExecutionMode -eq 'Packaged' -and $game.ProcessName -notlike 'KragKingsBenchmark*'){throw 'Packaged evidence requires the actual standalone KragKingsBenchmark process.'}
-[KKInput]::SetForegroundWindow($game.MainWindowHandle)|Out-Null
-Start-Sleep -Milliseconds 200
-function Assert-Foreground {if([KKInput]::GetForegroundWindow() -ne $game.MainWindowHandle){throw 'Demo lost foreground; stopped input delivery to preserve other applications.'}}
+$windowLease=$null;$pointerEvidence=New-Object System.Collections.Generic.List[object]
+function Assert-Foreground {$windowLease.AssertForeground()}
+function Assert-Pointer {
+ try{$point=$windowLease.AssertPointer();$pointerEvidence.Add($point)}
+ catch{try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
+}
 function Read-State {
  for($i=0;$i -lt 20;$i++) {try{return Get-Content $StatePath -Raw|ConvertFrom-Json}catch{Start-Sleep -Milliseconds 50}}
  throw 'No readable runtime input-state.json; launch with -KKInputState.'
@@ -69,8 +80,9 @@ function Orbit-Camera {
  $origin=New-Object KKInput+POINT;[KKInput]::ClientToScreen($game.MainWindowHandle,[ref]$origin)|Out-Null
  $x=$origin.X+[int]($rect.Right*.5);$y=$origin.Y+[int]($rect.Bottom*.5)
  [KKInput]::SetCursorPos($x,$y)|Out-Null
+ Start-Sleep -Milliseconds 100;Assert-Pointer
  [KKInput]::mouse_event(0x20,0,0,0,[UIntPtr]::Zero)
- try {for($i=0;$i -lt 4;$i++){Assert-Foreground;Start-Sleep -Milliseconds 50;[KKInput]::mouse_event(0x1,16,6,0,[UIntPtr]::Zero)}}
+ try {for($i=0;$i -lt 4;$i++){Assert-Pointer;Start-Sleep -Milliseconds 50;[KKInput]::mouse_event(0x1,16,6,0,[UIntPtr]::Zero)}}
  finally {[KKInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
 }
 function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false) {
@@ -80,6 +92,9 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  $origin=New-Object KKInput+POINT
  [KKInput]::ClientToScreen($game.MainWindowHandle,[ref]$origin)|Out-Null
  [KKInput]::SetCursorPos($origin.X+[int]$X,$origin.Y+[int]$Y)|Out-Null
+ # Let Slate observe the new pointer position before dispatching its click.
+ Start-Sleep -Milliseconds 100
+ Assert-Pointer
  if($Shift){Send-Key 0xA0}
  try {
   [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
@@ -88,6 +103,7 @@ function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$fa
  }finally{if($Shift){Send-Key 0xA0 $true}}
 }
 $checks=New-Object System.Collections.Generic.List[object]
+$inputComplete=$false;$inputError=$null
 function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000) {
  $end=[DateTime]::UtcNow.AddMilliseconds($TimeoutMs);$pass=$false
  do {$state=Read-State;if(& $Predicate $state){$pass=$true;break};Start-Sleep -Milliseconds 75}while([DateTime]::UtcNow -lt $end)
@@ -96,6 +112,8 @@ function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000
  if(-not $pass){throw "Runtime input check failed: $Name"}
 }
 try {
+ $windowLease=[KKOwnedWindowLease]::Acquire($game.MainWindowHandle,[uint32]$game.Id)
+ Start-Sleep -Milliseconds 200
  $initial=Read-State;Start-Sleep -Milliseconds 250
  if((Read-State).elapsed -le $initial.elapsed){throw 'Runtime state is stale; game is not updating.'}
  $nib=$initial.units|Where-Object {$_.species -eq 'Nib'}
@@ -112,8 +130,13 @@ try {
  $krag=(Read-State).units|Where-Object {$_.species -eq 'Krag'}
  Click-Client $krag.screen_x $krag.screen_y
  foreach($entry in @(@(0x41,'Melee'),@(0x46,'Shoot'),@(0x48,'Hit'))) {
+  $beforeShots=((Read-State).units|Where-Object {$_.species -eq 'Krag'}).shots.count
   Press-Key ([byte]$entry[0]);$action=$entry[1]
   Expect-State "$action key triggers authored action" {param($s)($s.units|Where-Object selected).action -eq $action}
+  if($action -eq 'Shoot') {
+   Expect-State 'Krag emits both authored discharges before another action interrupts' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).shots.count -ge ($beforeShots+2)}
+   Expect-State 'Krag actual discharge markers pass repaired-aim 10-degree regression' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).shots.maximum_angle_degrees -le 10}
+  }
  }
  Press-Key 0x41
  $camera=(Read-State).camera
@@ -123,7 +146,7 @@ try {
  Orbit-Camera
  Expect-State 'MMB orbits camera' {param($s)[math]::Abs($s.camera.yaw-$camera.yaw) -gt 1}
  $camera=(Read-State).camera
- Assert-Foreground;[KKInput]::mouse_event(0x800,0,0,120,[UIntPtr]::Zero)
+ Assert-Pointer;[KKInput]::mouse_event(0x800,0,0,120,[UIntPtr]::Zero)
  Expect-State 'Mouse wheel zooms camera' {param($s)[math]::Abs($s.camera.z-$camera.z) -gt 3}
  Press-Key 0x24
  $before=Read-State;$variant=($before.units|Where-Object selected).variant
@@ -148,10 +171,32 @@ try {
  $u0=$before.units|Where-Object selected;$u1=$after.units|Where-Object selected
  $moved=[math]::Sqrt([math]::Pow($u1.x-$u0.x,2)+[math]::Pow($u1.y-$u0.y,2))
  $checks.Add([pscustomobject]@{check='RMB causes world movement';passed=($moved -gt 25);distanceCm=$moved})
+ if($moved -le 25){throw 'RMB failed to cause sufficient actual movement.'}
  Click-Client ($rect.Right*.65) ($rect.Bottom*.75) $true $true
  Expect-State 'Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  Press-Key 0x77
-} finally {
- $report=[ordered]@{source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray())}
- $report|ConvertTo-Json -Depth 6|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
+ Press-Key 0x09
+ Expect-State 'Tab returns selection to Nib' {param($s)($s.units|Where-Object {$_.species -eq 'Nib'}).selected}
+ foreach($entry in @(@(0x41,'Melee'),@(0x46,'Shoot'),@(0x48,'Hit'))) {
+  Press-Key ([byte]$entry[0]);$action=$entry[1]
+  Expect-State "Nib $action key triggers authored action" {param($s)($s.units|Where-Object selected).action -eq $action}
+ }
+ $variant=((Read-State).units|Where-Object selected).variant
+ Press-Key 0x56
+ Expect-State 'Nib V changes replacement variant' {param($s)($s.units|Where-Object selected).variant -ne $variant}
+ Press-Key 0x45
+ Expect-State 'Nib E activates applied facial morphs' {param($s)($s.units|Where-Object selected).facial_morph_weight -gt .01}
+ Press-Key 0x43
+ Expect-State 'Nib C enters portrait' {param($s)$s.portrait}
+ Press-Key 0x77;Press-Key 0x24
+ Click-Client ($rect.Right*.3) ($rect.Bottom*.75) $true $false
+ Expect-State 'Nib RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Click-Client ($rect.Right*.7) ($rect.Bottom*.72) $true $true
+ Expect-State 'Nib Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+ $inputComplete=$true
+} catch {$inputError=$_.Exception.Message;throw} finally {
+ $finalState=$null;try{$finalState=Read-State}catch{}
+ $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
+ $report=[ordered]@{completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());finalUnits=$finalState.units}
+ $report|ConvertTo-Json -Depth 9|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }

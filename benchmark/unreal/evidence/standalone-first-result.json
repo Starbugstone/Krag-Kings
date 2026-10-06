@@ -1,0 +1,29 @@
+{
+  "status": "Actual standalone Windows launch/render passed; pointer input verification blocked before game received an event",
+  "processId": 23004,
+  "nativeExit": 0,
+  "guardExit": 0,
+  "executable": "benchmark/builds/unreal/Windows/KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
+  "executableSha256": "84afaaa70f2a18427b49f03efeaf751626a7e0ad8f3c937a4661ae62a5f0ba72",
+  "screenshot": "standalone-first-frame.png",
+  "artisticAcceptance": false,
+  "allControlsVerified": false,
+  "pointerDiagnostics": {
+    "requestedClientXY": [
+      668.044,
+      529.04
+    ],
+    "actualCursorXY": [
+      668,
+      529
+    ],
+    "receivedMouseEvents": 0,
+    "selectTraceCalls": 0,
+    "gameWindow": 11012448,
+    "underCursorWindow": 7735740,
+    "underCursorOwner": 27968,
+    "foregroundAtReadOnlyInspection": 0,
+    "inspectionTiming": "After verifier failure, before normal game shutdown; does not prove which window received prior button events",
+    "nextAction": "Before any further mouse injection require WindowFromPoint owner to match explicit game PID; diagnose bounded game window activation/z-order only"
+  }
+}

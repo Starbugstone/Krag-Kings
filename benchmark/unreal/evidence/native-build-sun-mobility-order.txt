@@ -1,0 +1,26 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" KragKingsBenchmarkEditor Win64 Development -Project=D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: C:\Users\Matthew\AppData\Local\UnrealBuildTool\Log.txt
+Executing up to 2 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Building KragKingsBenchmarkEditor...
+===== Toolchain Information =====
+Using ISPC compiler (D:\Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.44.35229 toolchain (D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+=================================
+Using Unreal Build Accelerator local executor to run 4 action(s)
+  CPU 6 physical cores, 12 logical cores
+  Memory 31.79 GB physical, 17.69 GB/39.04 GB committed
+  UBA Storage capacity 40 GB
+[1/4] Compile [x64] KKBenchmarkGameMode.cpp [NoUba]
+[2/4] Link [x64] UnrealEditor-KragKingsBenchmark.lib [NoUba]
+[3/4] Link [x64] UnrealEditor-KragKingsBenchmark.dll [NoUba]
+[4/4] WriteMetadata KragKingsBenchmarkEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 8.64 seconds
+Output binary: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 10.07 seconds
+Trace written to file C:\Users\Matthew\AppData\Local\UnrealBuildTool\Trace.uba with size 4.1kb

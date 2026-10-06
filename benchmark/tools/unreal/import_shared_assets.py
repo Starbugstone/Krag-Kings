@@ -419,7 +419,7 @@ def restore_variant(descriptor, validation):
     return variant
 
 
-def species(folder, only_variant=None, validate_saved=False):
+def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, write_receipts=True):
     source = SHARED / 'characters' / folder
     manifest_path = next((p for p in (source / 'manifest.json', source / 'asset_manifest.json', source / 'krag_asset_contract.json') if p.exists()), None)
     manifest = json.loads(manifest_path.read_text(encoding='utf-8-sig')) if manifest_path else {}
@@ -538,7 +538,7 @@ def species(folder, only_variant=None, validate_saved=False):
             anim_opts.set_editor_property('mesh_type_to_import', unreal.FBXImportType.FBXIT_ANIMATION)
             anim_opts.set_editor_property('import_mesh', False)
             anim_opts.set_editor_property('skeleton', mesh.get_editor_property('skeleton'))
-            if validate_saved:
+            if validate_saved and clip_name != refresh_clip:
                 imported_anims = [o for o in [load(destination + '/Animations/' + clip_name + '/' + clip_name)] if isinstance(o, unreal.AnimSequence)]
             else:
                 imported_anims = [o for o in imported_task(clip_file, destination + '/Animations/' + clip_name, anim_opts) if isinstance(o, unreal.AnimSequence)]
@@ -638,7 +638,8 @@ def species(folder, only_variant=None, validate_saved=False):
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
         REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies, 'material_bindings': material_bindings, 'material_binding_repairs': binding_repairs})
         descriptor = variant_descriptor(variant)
-        write_variant_receipt(folder, descriptor, REPORT['meshes'][-1])
+        if write_receipts:
+            write_variant_receipt(folder, descriptor, REPORT['meshes'][-1])
         return descriptor
 
     for fbx in files:

@@ -39,6 +39,9 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Widgets/SWindow.h"
 #include "AudioMixerBlueprintLibrary.h"
+#if PLATFORM_WINDOWS
+#include "Windows/WindowsHWrapper.h"
+#endif
 
 AKKBenchmarkGameMode::AKKBenchmarkGameMode()
 {
@@ -83,8 +86,17 @@ void AKKBenchmarkGameMode::BeginPlay()
     Ground->GetStaticMeshComponent()->SetCastShadow(true);
     // Unity Euler(42,-140,0): horizontal Unity X/Z -> Unreal X/-Y.
     auto* Sun=GetWorld()->SpawnActor<ADirectionalLight>(FVector(0,0,2000),FRotator(-42,130,0));
+    // ADirectionalLight's CDO supplies a -46-degree root rotation. Spawn composes
+    // it with the requested transform, so explicitly establish the final angle.
     auto* SunComponent=Cast<UDirectionalLightComponent>(Sun->GetLightComponent());
     SunComponent->SetMobility(EComponentMobility::Movable);
+    Sun->SetActorRotation(FRotator(-42,130,0));
+    if(!Sun->GetActorRotation().Equals(FRotator(-42,130,0),.01f))
+    {
+        UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED final sun rotation did not match the requested transform"));
+        UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);
+        return;
+    }
     SunComponent->SetIntensity(55000.f);
     SunComponent->SetLightColor(FLinearColor::White);
     SunComponent->SetAtmosphereSunLight(true);
@@ -210,7 +222,7 @@ void AKKBenchmarkGameMode::WriteInputState()
         bool bVisible=PC->ProjectWorldLocationToScreen(Unit->GetActorLocation(),Screen);
         const FVector P=Unit->GetActorLocation();
         if(!Units.IsEmpty())Units+=TEXT(",");
-        Units+=FString::Printf(TEXT("{\"species\":\"%s\",\"variant\":\"%s\",\"action\":\"%s\",\"selected\":%s,\"face_active\":%s,\"facial_morph_weight\":%.5f,\"body_morph_weight\":%.5f,\"screen_visible\":%s,\"screen_x\":%.3f,\"screen_y\":%.3f,\"x\":%.3f,\"y\":%.3f,\"z\":%.3f}"),Unit->IsKrag()?TEXT("Krag"):TEXT("Nib"),*Unit->GetVariantLabel(),*Unit->GetActionLabel(),PC->SelectedUnit()==Unit?TEXT("true"):TEXT("false"),Unit->IsFaceActing()?TEXT("true"):TEXT("false"),Unit->GetMaximumAppliedMorphWeight(TEXT("facial")),Unit->GetMaximumAppliedMorphWeight(TEXT("body")),bVisible?TEXT("true"):TEXT("false"),Screen.X,Screen.Y,P.X,P.Y,P.Z);
+        Units+=FString::Printf(TEXT("{\"species\":\"%s\",\"variant\":\"%s\",\"action\":\"%s\",\"selected\":%s,\"face_active\":%s,\"facial_morph_weight\":%.5f,\"body_morph_weight\":%.5f,\"screen_visible\":%s,\"screen_x\":%.3f,\"screen_y\":%.3f,\"x\":%.3f,\"y\":%.3f,\"z\":%.3f,\"shots\":%s}"),Unit->IsKrag()?TEXT("Krag"):TEXT("Nib"),*Unit->GetVariantLabel(),*Unit->GetActionLabel(),PC->SelectedUnit()==Unit?TEXT("true"):TEXT("false"),Unit->IsFaceActing()?TEXT("true"):TEXT("false"),Unit->GetMaximumAppliedMorphWeight(TEXT("facial")),Unit->GetMaximumAppliedMorphWeight(TEXT("body")),bVisible?TEXT("true"):TEXT("false"),Screen.X,Screen.Y,P.X,P.Y,P.Z,*Unit->GetShotDiagnosticsJson());
     }
     const FString Dir=FPaths::ProjectSavedDir()/TEXT("Benchmark");IFileManager::Get().MakeDirectory(*Dir,true);
     FVector CameraPosition;FRotator CameraRotation;PC->GetPlayerViewPoint(CameraPosition,CameraRotation);
@@ -250,7 +262,18 @@ void AKKBenchmarkGameMode::WriteMetrics()
     Report->SetStringField(TEXT("engine_version"),FEngineVersion::Current().ToString());
     Report->SetStringField(TEXT("rhi"),GDynamicRHI?GDynamicRHI->GetName():TEXT("unavailable"));
     Report->SetNumberField(TEXT("physical_ram_gib"),double(FPlatformMemory::GetConstants().TotalPhysical)/1073741824.0);
-    Report->SetBoolField(TEXT("running_on_battery"),FPlatformMisc::IsRunningOnBattery());
+    // UE5.8's Windows helper tests BatteryFlag presence/charging, not AC supply.
+    Report->SetBoolField(TEXT("ue_battery_presence_flag"),FPlatformMisc::IsRunningOnBattery());
+    Report->SetField(TEXT("running_on_battery"),MakeShared<FJsonValueNull>());
+#if PLATFORM_WINDOWS
+    SYSTEM_POWER_STATUS PowerStatus{};
+    if(::GetSystemPowerStatus(&PowerStatus))
+    {
+        Report->SetNumberField(TEXT("windows_ac_line_status"),PowerStatus.ACLineStatus);
+        if(PowerStatus.ACLineStatus<=1)Report->SetBoolField(TEXT("running_on_battery"),PowerStatus.ACLineStatus==0);
+        if(PowerStatus.BatteryLifePercent!=255)Report->SetNumberField(TEXT("battery_percent"),PowerStatus.BatteryLifePercent);
+    }
+#endif
     Report->SetStringField(TEXT("camera"),TEXT("distance6.4m; pitch22deg; verticalFOV38deg; fixedEV12.7"));
     Report->SetStringField(TEXT("requested_sun"),TEXT("55000lux; RGB(1,1,1); angular diameter1.5deg; pitch-42/yaw130deg in Unreal coordinates"));
     Report->SetStringField(TEXT("requested_profile"),TEXT("DX12 SM6; Epic; software Lumen; virtual shadow maps; TSR; 100% render scale"));
@@ -463,10 +486,13 @@ void AKKBenchmarkGameMode::TickSmoke()
         }
         case 9:
             CheckGround(DemoUnits[0]);CheckGround(DemoUnits[1]);
+            SmokeCheck(DemoUnits[0]->GetShotEventCount()>=2,TEXT("Krag emitted both authored discharges from animated weapon markers"));
+            SmokeCheck(DemoUnits[0]->GetShotEventCount()>=2 && DemoUnits[0]->GetMaximumShotForwardAngle()<=10.f,TEXT("Krag actual discharge marker direction within 10-degree repaired-aim regression tolerance"));
+            SmokeCheck(DemoUnits[1]->GetShotEventCount()>=2,TEXT("Nib emitted authored discharges from animated weapon markers"));
             FScreenshotRequest::RequestScreenshot(EvidenceDir/TEXT("smoke-final.png"),true,false);NextSmokeTime=71;break;
         case 10:
         {
-            const FString Report=FString::Printf(TEXT("{\n  \"source\": \"packaged runtime scripted exercise\",\n  \"mouse_keyboard_delivery_tested\": false,\n  \"failures\": %d,\n  \"checks\": [\n%s\n  ]\n}\n"),SmokeFailures,*SmokeResults);
+            const FString Report=FString::Printf(TEXT("{\n  \"source\": \"runtime scripted exercise; see launch evidence for editor-game or standalone process\",\n  \"mouse_keyboard_delivery_tested\": false,\n  \"failures\": %d,\n  \"checks\": [\n%s\n  ],\n  \"shots\":{\"Krag\":%s,\"Nib\":%s}\n}\n"),SmokeFailures,*SmokeResults,*DemoUnits[0]->GetShotDiagnosticsJson(),*DemoUnits[1]->GetShotDiagnosticsJson());
             FFileHelper::SaveStringToFile(Report,*(EvidenceDir/TEXT("smoke-report.json")));
             UE_LOG(LogTemp,Display,TEXT("KK_SMOKE_COMPLETE failures=%d"),SmokeFailures);
             bSmoke=false;UKismetSystemLibrary::QuitGame(this,PC,EQuitPreference::Quit,false);break;

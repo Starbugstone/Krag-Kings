@@ -27,6 +27,9 @@ public:
     bool HasMovementTarget() const { return bMoving; }
     bool IsFaceActing() const { return FaceTimeRemaining>0.f; }
     float GetMaximumAppliedMorphWeight(const FName& Kind) const;
+    FString GetShotDiagnosticsJson() const;
+    int32 GetShotEventCount() const { return ShotEventCount; }
+    float GetMaximumShotForwardAngle() const { return MaximumShotForwardAngle; }
 private:
     void ApplyVariant();
     void PlayLocomotion(bool bRunning);
@@ -49,6 +52,15 @@ private:
     float ActionDuration = 0;
     int32 NextFireContact=0;
     bool bHitSoundPending=false;
+    bool bShotDiagnostics=false;
+    int32 ShotEventCount=0;
+    float LastShotPhase=0.f;
+    float LastShotForwardAngle=0.f;
+    float MaximumShotForwardAngle=0.f;
+    FVector LastShotMuzzle=FVector::ZeroVector;
+    FVector LastShotDirection=FVector::ZeroVector;
+    FVector LastShotActorForward=FVector::ZeroVector;
+    TArray<FString> ShotDiagnosticEvents;
     float FaceTimeRemaining = 0;
     void UpdateFootContacts(float DeltaSeconds);
     void EmitShot();

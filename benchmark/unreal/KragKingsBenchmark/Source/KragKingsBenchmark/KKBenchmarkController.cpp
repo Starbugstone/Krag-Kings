@@ -53,6 +53,15 @@ void AKKBenchmarkController::SetupInputComponent()
     InputComponent->BindKey(EKeys::MouseScrollUp,IE_Pressed,this,&AKKBenchmarkController::ZoomIn);
     InputComponent->BindKey(EKeys::MouseScrollDown,IE_Pressed,this,&AKKBenchmarkController::ZoomOut);
 }
+bool AKKBenchmarkController::InputKey(const FInputKeyEventArgs& Params)
+{
+    if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")) && Params.Key.IsMouseButton())
+    {
+        float X=0,Y=0;const bool bPointer=GetMousePosition(X,Y);
+        UE_LOG(LogTemp,Display,TEXT("KK_INPUT_MOUSE key=%s event=%d pointer=%d xy=(%.2f,%.2f)"),*Params.Key.ToString(),int32(Params.Event),bPointer?1:0,X,Y);
+    }
+    return Super::InputKey(Params);
+}
 void AKKBenchmarkController::ResetCamera()
 {
     bPortrait=false;PortraitPan=FVector::ZeroVector;Focus=FVector(-7.5f,-5.f,205.f);
@@ -74,7 +83,10 @@ void AKKBenchmarkController::SelectAtCursor()
 {
     if(bPerformanceLocked)return;
     FHitResult Result;
-    if(GetHitResultUnderCursor(ECC_Visibility,false,Result))
+    const bool bHit=GetHitResultUnderCursor(ECC_Visibility,false,Result);
+    if(FParse::Param(FCommandLine::Get(),TEXT("KKInputState")))
+        UE_LOG(LogTemp,Display,TEXT("KK_SELECT_TRACE hit=%d actor=%s point=%s"),bHit?1:0,*GetNameSafe(Result.GetActor()),*Result.ImpactPoint.ToString());
+    if(bHit)
         if(auto* Unit=Cast<AKKBenchmarkUnit>(Result.GetActor())) SelectUnit(Unit);
 }
 void AKKBenchmarkController::MoveAtCursor()

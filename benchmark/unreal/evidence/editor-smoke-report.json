@@ -1,0 +1,32 @@
+{
+  "source": "runtime scripted exercise; see launch evidence for editor-game or standalone process",
+  "mouse_keyboard_delivery_tested": false,
+  "failures": 0,
+  "checks": [
+    {"check": "both species have requested variant families", "passed": true},
+    {"check": "movement destination hits dune collider", "passed": true},
+    {"check": "Krag traverses dune terrain", "passed": true},
+    {"check": "Krag dune grounding under 12cm capsule tolerance", "passed": true},
+    {"check": "Krag melee action selected", "passed": true},
+    {"check": "independent units perform overlapping actions after selection changes", "passed": true},
+    {"check": "Krag shoot action selected", "passed": true},
+    {"check": "Krag hit action selected", "passed": true},
+    {"check": "Krag bionic variant switches", "passed": true},
+    {"check": "movement destination hits dune collider", "passed": true},
+    {"check": "selection changes to Nib", "passed": true},
+    {"check": "Nib traverses dune terrain", "passed": true},
+    {"check": "Nib dune grounding under 12cm capsule tolerance", "passed": true},
+    {"check": "Nib melee action selected", "passed": true},
+    {"check": "Nib shoot action selected", "passed": true},
+    {"check": "Nib hit action selected", "passed": true},
+    {"check": "Nib replacement variant switches", "passed": true},
+    {"check": "movement destination hits dune collider", "passed": true},
+    {"check": "movement destination hits dune collider", "passed": true},
+    {"check": "Krag dune grounding under 12cm capsule tolerance", "passed": true},
+    {"check": "Nib dune grounding under 12cm capsule tolerance", "passed": true},
+    {"check": "Krag emitted both authored discharges from animated weapon markers", "passed": true},
+    {"check": "Krag actual discharge marker direction within 10-degree repaired-aim regression tolerance", "passed": true},
+    {"check": "Nib emitted authored discharges from animated weapon markers", "passed": true}
+  ],
+  "shots":{"Krag":{"count":2,"phase":0.598348,"angle_degrees":2.000502,"maximum_angle_degrees":2.411256,"muzzle":[-769.398741,523.885028,154.752475],"direction":[-0.748444,0.662279,0.034908],"actor_forward":[-0.748870,0.662717,0.000000],"events":[{"event":1,"variant":"Krag_Natural","authored_phase":0.400000,"phase":0.410729,"angle_degrees":2.411256,"muzzle_cm":[-769.093604,523.636090,155.291625],"direction":[-0.748111,0.662238,0.042072],"actor_forward":[-0.748870,0.662717,0.000000]},{"event":2,"variant":"Krag_Natural","authored_phase":0.580000,"phase":0.598348,"angle_degrees":2.000502,"muzzle_cm":[-769.398741,523.885028,154.752475],"direction":[-0.748444,0.662279,0.034908],"actor_forward":[-0.748870,0.662717,0.000000]}]},"Nib":{"count":2,"phase":0.477376,"angle_degrees":0.016670,"maximum_angle_degrees":0.018986,"muzzle":[710.596899,-508.955416,224.731715],"direction":[0.764004,-0.645212,0.000226],"actor_forward":[0.763886,-0.645352,0.000000],"events":[{"event":1,"variant":"Nib_Natural","authored_phase":0.460000,"phase":0.471079,"angle_degrees":0.018986,"muzzle_cm":[119.998609,-48.773931,222.956501],"direction":[0.000211,-1.000000,0.000256],"actor_forward":[-0.000000,-1.000000,0.000000]},{"event":2,"variant":"Nib_Natural","authored_phase":0.460000,"phase":0.477376,"angle_degrees":0.016670,"muzzle_cm":[710.596899,-508.955416,224.731715],"direction":[0.764004,-0.645212,0.000226],"actor_forward":[0.763886,-0.645352,0.000000]}]}}
+}

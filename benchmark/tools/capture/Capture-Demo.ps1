@@ -15,6 +15,7 @@ param(
     [int]$ReadyTimeoutSeconds=120
 )
 $ErrorActionPreference='Stop'
+. (Join-Path $PSScriptRoot 'OwnedGameWindow.ps1')
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 if(-not $Ffmpeg){$Ffmpeg=Join-Path $repo 'benchmark\local\capture\ffmpeg-compatible\ffmpeg-8.0.1-essentials_build\bin\ffmpeg.exe'}
 if(-not $WindowCaptureHelper){$WindowCaptureHelper=Join-Path $repo 'benchmark\local\capture\native\KragKingsWindowCapture.exe'}
@@ -87,7 +88,7 @@ function Assert-Window {
     if($rect.Right -ne $script:clientWidth -or $rect.Bottom -ne $script:clientHeight){throw 'Game client size changed during recording; repeat with a stable viewport.'}
 }
 $report=[ordered]@{engine=$Engine;source='real-time capture of explicit game HWND client area';desktopCapture=$false;systemAudioCapture=$false;microphoneCapture=$false;captureBackend=$CaptureBackend;encoder='h264_nvenc';recordingFrameRate=$FrameRate;gameFrameRateClaim=$false;ffmpeg=$Ffmpeg;showcaseSeconds=$ShowcaseSeconds;completed=$false;visualAcceptance=$false;startedUtc=[DateTime]::UtcNow.ToString('o')}
-$capture=$null;$producer=$null;$gateWritten=$false
+$capture=$null;$producer=$null;$gateWritten=$false;$windowLease=$null
 try {
     $deadline=[DateTime]::UtcNow.AddSeconds($ReadyTimeoutSeconds)
     while(-not(Has-Marker 'SHOWCASE_READY')){
@@ -105,7 +106,8 @@ try {
     $client=New-Object KKCaptureWindow+RECT;[KKCaptureWindow]::GetClientRect($window,[ref]$client)|Out-Null
     $clientWidth=$client.Right;$clientHeight=$client.Bottom
     if($clientWidth -lt 640 -or $clientHeight -lt 360){throw 'Game client is too small for a review recording.'}
-    [KKCaptureWindow]::SetForegroundWindow($window)|Out-Null;Start-Sleep -Milliseconds 250;Assert-Window
+    $windowLease=[KKOwnedWindowLease]::Acquire($window,[uint32]$windowOwner)
+    Start-Sleep -Milliseconds 250;Assert-Window
     $report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
     $report.clientWidth=$clientWidth;$report.clientHeight=$clientHeight
     if(Test-Path $progress){Remove-Item $progress}
@@ -260,6 +262,7 @@ try {
         try{if($CaptureBackend -eq 'GDI'){$capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush()};if(-not $capture.process.WaitForExit(5000)){$capture.process.Kill();$capture.process.WaitForExit()}}catch{}
     }
     if($capture -and $capture.process.HasExited){try{[IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-capture.log')),$capture.stderr.Result)}catch{}}
+    if($windowLease){try{$windowLease.Dispose();$report.windowLeaseRestored=$windowLease.Restored}catch{$report.windowRestoreError=$_.Exception.Message}}
     $report.finishedUtc=[DateTime]::UtcNow.ToString('o')
     $report|ConvertTo-Json -Depth 12|Set-Content $reportPath -Encoding UTF8
 }

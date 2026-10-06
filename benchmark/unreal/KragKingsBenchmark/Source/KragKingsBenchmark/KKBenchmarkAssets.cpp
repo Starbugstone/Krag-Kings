@@ -23,6 +23,14 @@ TArray<FName> UKKBenchmarkAssets::GetAnimationBoneNames(UAnimSequence* Clip)
 #endif
     return Names;
 }
+TArray<FTransform> UKKBenchmarkAssets::GetAnimationBoneTrackSamples(UAnimSequence* Clip,FName Bone)
+{
+    TArray<FTransform> Samples;
+#if WITH_EDITOR
+    if(Clip && Clip->GetDataModel())Clip->GetDataModel()->GetBoneTrackTransforms(Bone,Samples);
+#endif
+    return Samples;
+}
 TMap<FName,FVector> UKKBenchmarkAssets::GetMeshBoneReferenceScales(USkeletalMesh* Mesh)
 {
     TMap<FName,FVector> Scales;

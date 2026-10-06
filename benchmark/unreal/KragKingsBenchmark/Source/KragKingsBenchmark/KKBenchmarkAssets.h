@@ -68,6 +68,8 @@ public:
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetAnimationBoneNames(UAnimSequence* Clip);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static TArray<FTransform> GetAnimationBoneTrackSamples(UAnimSequence* Clip,FName Bone);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetFaciallyAnimatedBones(UAnimSequence* Clip,USkeletalMesh* Mesh);
     UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FKKCharacterVariant> Krags;
     UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FKKCharacterVariant> Nibs;

@@ -1,0 +1,877 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
+  "asset": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural",
+  "size_meters": [
+    1.3425204167696734,
+    0.5067577058056507,
+    2.101744967213012
+  ],
+  "clips": {
+    "Idle": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Idle/Idle.Idle",
+    "Walk": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Walk/Walk.Walk",
+    "Run": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Run/Run.Run",
+    "Melee": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Melee/Melee.Melee",
+    "Shoot": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Shoot/Shoot.Shoot",
+    "Hit": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Hit/Hit.Hit",
+    "FacePerformance": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/FacePerformance/FacePerformance.FacePerformance"
+  },
+  "clip_validation": {
+    "Idle": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "eye_l",
+        "lidupper_l",
+        "mouthcorner_l",
+        "eye_r",
+        "lidupper_r",
+        "mouthcorner_r"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          1.0,
+          1.0
+        ],
+        "Thigh_R": [
+          1.0,
+          1.0
+        ],
+        "Shin_L": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "Shin_R": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "UpperArm_L": [
+          1.0000000924216683,
+          1.0000000924216683
+        ],
+        "UpperArm_R": [
+          0.9999999910566546,
+          0.9999999910566546
+        ],
+        "LowerArm_L": [
+          0.9999995285349619,
+          0.9999995285349619
+        ],
+        "LowerArm_R": [
+          0.9999996131999127,
+          0.9999996131999127
+        ]
+      }
+    },
+    "Walk": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "eye_l",
+        "mouthcorner_l",
+        "eye_r",
+        "mouthcorner_r"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          1.0,
+          1.0
+        ],
+        "Thigh_R": [
+          1.0,
+          1.0
+        ],
+        "Shin_L": [
+          1.000000005193195,
+          1.000000005193195
+        ],
+        "Shin_R": [
+          0.9999998064002114,
+          0.9999998064002114
+        ],
+        "UpperArm_L": [
+          0.9999999910566253,
+          0.9999999910566253
+        ],
+        "UpperArm_R": [
+          0.9999999910566253,
+          0.9999999910566253
+        ],
+        "LowerArm_L": [
+          0.9999997825298611,
+          0.9999997825298611
+        ],
+        "LowerArm_R": [
+          0.9999997825298611,
+          0.9999997825298611
+        ]
+      }
+    },
+    "Run": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "jaw",
+        "eye_l",
+        "cheek_l",
+        "mouthcorner_l",
+        "eye_r",
+        "cheek_r",
+        "mouthcorner_r"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          0.9999999930603077,
+          0.9999999930603077
+        ],
+        "Thigh_R": [
+          0.9999999930603077,
+          0.9999999930603077
+        ],
+        "Shin_L": [
+          0.9999998064607917,
+          0.9999998064607917
+        ],
+        "Shin_R": [
+          0.9999998064286564,
+          0.9999998064286564
+        ],
+        "UpperArm_L": [
+          0.9999999910566327,
+          0.9999999910566327
+        ],
+        "UpperArm_R": [
+          0.9999999910566327,
+          0.9999999910566327
+        ],
+        "LowerArm_L": [
+          1.0000000365247874,
+          1.0000000365247874
+        ],
+        "LowerArm_R": [
+          1.0000000365247874,
+          1.0000000365247874
+        ]
+      }
+    },
+    "Melee": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "jaw",
+        "eye_l",
+        "lidlower_l",
+        "browinner_l",
+        "cheek_l",
+        "mouthcorner_l",
+        "eye_r",
+        "lidlower_r",
+        "browinner_r",
+        "cheek_r",
+        "mouthcorner_r",
+        "lipupper",
+        "nosetip"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          1.0,
+          1.0
+        ],
+        "Thigh_R": [
+          1.0,
+          1.0
+        ],
+        "Shin_L": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "Shin_R": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "UpperArm_L": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "UpperArm_R": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "LowerArm_L": [
+          0.9999993592049842,
+          0.9999993592049842
+        ],
+        "LowerArm_R": [
+          0.9999996131999249,
+          0.9999996131999249
+        ]
+      }
+    },
+    "Shoot": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "lidupper_l",
+        "lidlower_l",
+        "browinner_l",
+        "mouthcorner_l",
+        "lidupper_r",
+        "lidlower_r",
+        "browinner_r",
+        "mouthcorner_r",
+        "lipupper"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          1.0,
+          1.0
+        ],
+        "Thigh_R": [
+          1.0,
+          1.0
+        ],
+        "Shin_L": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "Shin_R": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "UpperArm_L": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "UpperArm_R": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "LowerArm_L": [
+          0.9999996131999128,
+          0.9999996131999128
+        ],
+        "LowerArm_R": [
+          0.99999978252987,
+          0.99999978252987
+        ]
+      }
+    },
+    "Hit": {
+      "bone_track_count": 69,
+      "varying_facial_bones": [
+        "jaw",
+        "eye_l",
+        "lidlower_l",
+        "browinner_l",
+        "cheek_l",
+        "mouthcorner_l",
+        "eye_r",
+        "lidlower_r",
+        "browinner_r",
+        "cheek_r",
+        "mouthcorner_r",
+        "lipupper"
+      ],
+      "local_limb_translation_to_bind_length_ranges": {
+        "Thigh_L": [
+          1.0,
+          1.0
+        ],
+        "Thigh_R": [
+          1.0,
+          1.0
+        ],
+        "Shin_L": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "Shin_R": [
+          1.000000071394292,
+          1.000000071394292
+        ],
+        "UpperArm_L": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "UpperArm_R": [
+          0.9999999910566406,
+          0.9999999910566406
+        ],
+        "LowerArm_L": [
+          0.99999978252987,
+          0.99999978252987
+        ],
+        "LowerArm_R": [
+          0.99999978252987,
+          0.99999978252987
+        ]
+      }
+    },
+    "FacePerformance": {
+      "varying_facial_bones": [
+        "jaw",
+        "eye_l",
+        "lidupper_l",
+        "lidlower_l",
+        "browinner_l",
+        "browouter_l",
+        "cheek_l",
+        "mouthcorner_l",
+        "eye_r",
+        "lidupper_r",
+        "lidlower_r",
+        "browinner_r",
+        "cheek_r",
+        "mouthcorner_r",
+        "lipupper",
+        "nosetip"
+      ]
+    }
+  },
+  "bones": [
+    "Krag_Rig",
+    "Root",
+    "Pelvis",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "FaceRoot",
+    "Jaw",
+    "Tongue_01",
+    "Tongue_02",
+    "Eye_L",
+    "LidUpper_L",
+    "LidLower_L",
+    "BrowInner_L",
+    "BrowOuter_L",
+    "Cheek_L",
+    "MouthCorner_L",
+    "Eye_R",
+    "LidUpper_R",
+    "LidLower_R",
+    "BrowInner_R",
+    "BrowOuter_R",
+    "Cheek_R",
+    "MouthCorner_R",
+    "LipUpper",
+    "LipLower",
+    "NoseTip",
+    "Clavicle_R",
+    "UpperArm_R",
+    "LowerArm_R",
+    "Hand_R",
+    "Finger1_0_R",
+    "Finger2_0_R",
+    "Finger1_1_R",
+    "Finger2_1_R",
+    "Finger1_2_R",
+    "Finger2_2_R",
+    "Finger1_3_R",
+    "Finger2_3_R",
+    "Thumb1_R",
+    "Thumb2_R",
+    "WeaponMuzzle",
+    "WeaponAim",
+    "Clavicle_L",
+    "UpperArm_L",
+    "LowerArm_L",
+    "Hand_L",
+    "Finger1_0_L",
+    "Finger2_0_L",
+    "Finger1_1_L",
+    "Finger2_1_L",
+    "Finger1_2_L",
+    "Finger2_2_L",
+    "Finger1_3_L",
+    "Finger2_3_L",
+    "Thumb1_L",
+    "Thumb2_L",
+    "Claw_0",
+    "Claw_1",
+    "Claw_2",
+    "Thigh_R",
+    "Shin_R",
+    "Foot_R",
+    "Toe_R",
+    "Thigh_L",
+    "Shin_L",
+    "Foot_L",
+    "Toe_L"
+  ],
+  "reference_bone_local_scales": {
+    "Krag_Rig": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "Root": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Pelvis": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Spine": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Chest": [
+      1.0,
+      1.00000008565127,
+      1.0000000260585427
+    ],
+    "Neck": [
+      1.0,
+      0.9999998936850985,
+      1.0000000125094772
+    ],
+    "Head": [
+      1.0,
+      0.9999999017112204,
+      0.9999999611751104
+    ],
+    "FaceRoot": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Jaw": [
+      1.0,
+      0.9999999175230595,
+      0.999999801393167
+    ],
+    "Tongue_01": [
+      1.0000000000000038,
+      0.9999996555374442,
+      0.9999999698952184
+    ],
+    "Tongue_02": [
+      0.999999999999996,
+      0.999999940395307,
+      0.9999999999999942
+    ],
+    "Eye_L": [
+      1.0000000000000038,
+      1.0,
+      1.0000000000000038
+    ],
+    "LidUpper_L": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "LidLower_L": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "BrowInner_L": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "BrowOuter_L": [
+      1.0,
+      0.9999999403953481,
+      1.0
+    ],
+    "Cheek_L": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "MouthCorner_L": [
+      1.0,
+      0.9999999403953481,
+      1.0
+    ],
+    "Eye_R": [
+      1.0000000000000038,
+      1.0,
+      1.0000000000000038
+    ],
+    "LidUpper_R": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "LidLower_R": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "BrowInner_R": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "BrowOuter_R": [
+      1.0,
+      0.9999999403953481,
+      1.0
+    ],
+    "Cheek_R": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "MouthCorner_R": [
+      1.0,
+      0.9999999403953481,
+      1.0
+    ],
+    "LipUpper": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "LipLower": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "NoseTip": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Clavicle_R": [
+      1.000000132894528,
+      1.0000000986678044,
+      1.0000000654372414
+    ],
+    "UpperArm_R": [
+      0.9999999689355977,
+      1.0000000647799696,
+      0.9999999861952785
+    ],
+    "LowerArm_R": [
+      1.0000000142802485,
+      1.0000001159813354,
+      0.9999999769707716
+    ],
+    "Hand_R": [
+      1.0000000230851325,
+      1.0000000095895771,
+      0.9999998951935126
+    ],
+    "Finger1_0_R": [
+      1.0000001784630947,
+      1.0000000281243826,
+      1.000000218300564
+    ],
+    "Finger2_0_R": [
+      0.999999975696366,
+      0.9999998813913381,
+      0.9999999816731342
+    ],
+    "Finger1_1_R": [
+      1.000000178463094,
+      0.999999946656402,
+      1.000000198162409
+    ],
+    "Finger2_1_R": [
+      1.0000000984511777,
+      0.9999999195700313,
+      0.9999999123251359
+    ],
+    "Finger1_2_R": [
+      1.0000001784630934,
+      0.9999999494025177,
+      1.000000198162409
+    ],
+    "Finger2_2_R": [
+      1.000000089003187,
+      1.0000001087226889,
+      0.9999999516343657
+    ],
+    "Finger1_3_R": [
+      1.0000000592538298,
+      1.0000000867081202,
+      1.000000218300564
+    ],
+    "Finger2_3_R": [
+      0.9999998794031206,
+      0.9999999460606651,
+      0.9999998453498283
+    ],
+    "Thumb1_R": [
+      1.000000116642171,
+      1.0000001477965081,
+      1.0000001337727555
+    ],
+    "Thumb2_R": [
+      0.9999999768844053,
+      1.0000001573207506,
+      1.000000001841721
+    ],
+    "WeaponMuzzle": [
+      1.0000000592538387,
+      0.9999999688448478,
+      1.0000001042269921
+    ],
+    "WeaponAim": [
+      1.000000059253831,
+      1.000000088054125,
+      1.000000104227024
+    ],
+    "Clavicle_L": [
+      1.000000132894528,
+      1.0000000986678044,
+      1.0000000654372414
+    ],
+    "UpperArm_L": [
+      0.9999999689355977,
+      1.0000000647799696,
+      0.9999999861952785
+    ],
+    "LowerArm_L": [
+      1.0000000142802485,
+      1.0000001159813354,
+      0.9999999769707716
+    ],
+    "Hand_L": [
+      1.0000000230851325,
+      1.0000000095895771,
+      0.9999998951935126
+    ],
+    "Finger1_0_L": [
+      1.0000001784630947,
+      1.0000000281243826,
+      1.000000218300564
+    ],
+    "Finger2_0_L": [
+      0.999999975696366,
+      0.9999998813913381,
+      0.9999999816731342
+    ],
+    "Finger1_1_L": [
+      1.000000178463094,
+      0.999999946656402,
+      1.000000198162409
+    ],
+    "Finger2_1_L": [
+      1.0000000984511777,
+      0.9999999195700313,
+      0.9999999123251359
+    ],
+    "Finger1_2_L": [
+      1.0000001784630934,
+      0.9999999494025177,
+      1.000000198162409
+    ],
+    "Finger2_2_L": [
+      1.000000089003187,
+      1.0000001087226889,
+      0.9999999516343657
+    ],
+    "Finger1_3_L": [
+      1.0000000592538298,
+      1.0000000867081202,
+      1.000000218300564
+    ],
+    "Finger2_3_L": [
+      0.9999998794031206,
+      0.9999999460606651,
+      0.9999998453498283
+    ],
+    "Thumb1_L": [
+      1.000000116642171,
+      1.0000001477965081,
+      1.0000001337727555
+    ],
+    "Thumb2_L": [
+      0.9999999768844053,
+      1.0000001573207506,
+      1.000000001841721
+    ],
+    "Claw_0": [
+      1.0000001295715613,
+      1.0000000891330145,
+      1.0000001464986579
+    ],
+    "Claw_1": [
+      1.0000001784630925,
+      1.0000000197296588,
+      1.0000000938736675
+    ],
+    "Claw_2": [
+      1.0000000289417401,
+      0.9999999313189943,
+      1.0000001115010724
+    ],
+    "Thigh_R": [
+      1.0000045360575318,
+      1.000000028696421,
+      1.0000125522530616
+    ],
+    "Shin_R": [
+      0.9999999514225602,
+      0.9999999864809213,
+      1.0000000297894305
+    ],
+    "Foot_R": [
+      0.9999999133972036,
+      1.0000000950625603,
+      1.000000140071541
+    ],
+    "Toe_R": [
+      1.0,
+      1.0000000915727987,
+      1.0000001651081223
+    ],
+    "Thigh_L": [
+      1.0000045360575318,
+      1.000000028696421,
+      1.0000125522530616
+    ],
+    "Shin_L": [
+      0.9999999514225602,
+      0.9999999864809213,
+      1.0000000297894305
+    ],
+    "Foot_L": [
+      0.9999999133972036,
+      1.0000000950625603,
+      1.000000140071541
+    ],
+    "Toe_L": [
+      1.0,
+      1.0000000915727987,
+      1.0000001651081223
+    ]
+  },
+  "morphs": [
+    "Blink_L",
+    "Blink_R",
+    "Squint_L",
+    "Squint_R",
+    "BrowRaise_L",
+    "BrowRaise_R",
+    "BrowLower_L",
+    "BrowLower_R",
+    "Smile_L",
+    "Smile_R",
+    "Frown_L",
+    "Frown_R",
+    "JawOpen",
+    "LipPress",
+    "Snarl_L",
+    "Snarl_R",
+    "NoseWrinkle",
+    "Corrective_ShoulderRaise_L",
+    "Corrective_ShoulderRaise_R",
+    "Corrective_ElbowFlex_L",
+    "Corrective_ElbowFlex_R",
+    "Corrective_HipFlex_L",
+    "Corrective_HipFlex_R",
+    "Corrective_KneeFlex_L",
+    "Corrective_KneeFlex_R"
+  ],
+  "corrective_driver_count": 25,
+  "saved_dependencies": {
+    "skeleton": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_Skeleton.Krag_Natural_Skeleton",
+    "physics_asset": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_PhysicsAsset.Krag_Natural_PhysicsAsset"
+  },
+  "material_bindings": [
+    {
+      "slot": 0,
+      "name": "Krag_BlackenedSteel",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+    },
+    {
+      "slot": 1,
+      "name": "Krag_WeatheredTeal",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+    },
+    {
+      "slot": 2,
+      "name": "Krag_AgedBrass",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+    },
+    {
+      "slot": 3,
+      "name": "Krag_OiledLeather",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+    },
+    {
+      "slot": 4,
+      "name": "Krag_DesertCanvas",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+    },
+    {
+      "slot": 5,
+      "name": "Krag_SandstoneSkin",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+    },
+    {
+      "slot": 6,
+      "name": "Krag_Recess",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+    },
+    {
+      "slot": 7,
+      "name": "Krag_FacialSkin",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+    },
+    {
+      "slot": 8,
+      "name": "Krag_Amber",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+    },
+    {
+      "slot": 9,
+      "name": "Krag_EyeWhite",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+    },
+    {
+      "slot": 10,
+      "name": "Krag_Ivory",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+    },
+    {
+      "slot": 11,
+      "name": "Krag_OralTissue",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+    },
+    {
+      "slot": 12,
+      "name": "Krag_Tongue",
+      "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+    }
+  ],
+  "material_binding_repairs": [],
+  "shoot_only_refresh": {
+    "rawProof": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-clip-refresh\\unreal-refresh-Krag_Natural-20261006-031626-2076774\\raw-patch-proof.json",
+    "rawProofSha256": "770e746721cc3a0e51206cac529510869af7b139261f9aa997440a2faca3d6fb",
+    "promotionReceiptSha256": "65cf5e5db1c9aef955a33238e615d1b1cf301c4439b25026adcd8db14be1fb61",
+    "metadata": {
+      "characters/krag/manifest.json": {
+        "previousSha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+        "newSha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+        "runtimeContractUnchanged": true
+      },
+      "characters/krag/krag_asset_contract.json": {
+        "previousSha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+        "newSha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+        "runtimeContractUnchanged": true
+      }
+    },
+    "updatedBones": {
+      "upperarm_r": {
+        "maximumAngularChangeDegrees": 63.017935004531466,
+        "samples": 31
+      },
+      "lowerarm_r": {
+        "maximumAngularChangeDegrees": 69.30977297678675,
+        "samples": 31
+      },
+      "hand_r": {
+        "maximumAngularChangeDegrees": 47.45172281495967,
+        "samples": 31
+      }
+    },
+    "changedPackage": "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Shoot/Shoot.uasset",
+    "fullSkeletalFbxReimport": false,
+    "allOtherSavedPackagesByteIdentical": true
+  }
+}

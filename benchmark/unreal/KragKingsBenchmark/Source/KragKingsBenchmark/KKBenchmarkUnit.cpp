@@ -11,6 +11,8 @@
 #include "KKShotFlash.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundAttenuation.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 
 AKKBenchmarkUnit::AKKBenchmarkUnit()
 {
@@ -38,6 +40,7 @@ AKKBenchmarkUnit::AKKBenchmarkUnit()
 void AKKBenchmarkUnit::InitializeUnit(UKKBenchmarkAssets* Assets, bool bIsKrag)
 {
     AssetSet=Assets; bKrag=bIsKrag;
+    bShotDiagnostics=FParse::Param(FCommandLine::Get(),TEXT("KKInputState")) || FParse::Param(FCommandLine::Get(),TEXT("KKSmoke"));
     GetCharacterMovement()->MaxWalkSpeed=bKrag?320.f:270.f;
     GetCharacterMovement()->RotationRate=FRotator(0,bKrag?300.f:720.f,0);
     GetCharacterMovement()->MaxAcceleration=bKrag?700.f:1200.f;
@@ -230,6 +233,21 @@ void AKKBenchmarkUnit::EmitShot()
     if(V->WeaponMuzzleBone.IsNone() || V->WeaponAimBone.IsNone())return;
     const FVector Muzzle=GetMesh()->GetSocketLocation(V->WeaponMuzzleBone);
     const FVector Direction=(GetMesh()->GetSocketLocation(V->WeaponAimBone)-Muzzle).GetSafeNormal();
+    if(bShotDiagnostics)
+    {
+        ++ShotEventCount;LastShotMuzzle=Muzzle;LastShotDirection=Direction;LastShotActorForward=GetActorForwardVector();
+        LastShotPhase=FMath::Clamp(1.f-ActionTimeRemaining/FMath::Max(.001f,ActionDuration),0.f,1.f);
+        LastShotForwardAngle=FMath::RadiansToDegrees(FMath::Acos(FMath::Clamp(FVector::DotProduct(Direction,LastShotActorForward),-1.f,1.f)));
+        MaximumShotForwardAngle=FMath::Max(MaximumShotForwardAngle,LastShotForwardAngle);
+        const float AuthoredPhase=V->FireTimesNormalized.IsValidIndex(NextFireContact)?V->FireTimesNormalized[NextFireContact]:-1.f;
+        const FString Event=FString::Printf(TEXT("{\"event\":%d,\"variant\":\"%s\",\"authored_phase\":%.6f,\"phase\":%.6f,\"angle_degrees\":%.6f,\"muzzle_cm\":[%.6f,%.6f,%.6f],\"direction\":[%.6f,%.6f,%.6f],\"actor_forward\":[%.6f,%.6f,%.6f]}"),
+            ShotEventCount,*V->Id,AuthoredPhase,LastShotPhase,LastShotForwardAngle,
+            Muzzle.X,Muzzle.Y,Muzzle.Z,Direction.X,Direction.Y,Direction.Z,
+            LastShotActorForward.X,LastShotActorForward.Y,LastShotActorForward.Z);
+        if(ShotDiagnosticEvents.Num()>=64)ShotDiagnosticEvents.RemoveAt(0);
+        ShotDiagnosticEvents.Add(Event);
+        UE_LOG(LogTemp,Display,TEXT("KK_SHOT_DIAGNOSTIC species=%s %s"),bKrag?TEXT("Krag"):TEXT("Nib"),*Event);
+    }
     if(Direction.IsNearlyZero())return;
     FVector End=Muzzle+Direction*3000.f;FHitResult Hit;FCollisionQueryParams Params;Params.AddIgnoredActor(this);
     if(GetWorld()->LineTraceSingleByObjectType(Hit,Muzzle,End,FCollisionObjectQueryParams(ECC_WorldStatic),Params))End=Hit.ImpactPoint;
@@ -238,6 +256,14 @@ void AKKBenchmarkUnit::EmitShot()
     if(AssetSet->WeaponFlashMaterial)
         if(auto* Shot=GetWorld()->SpawnActor<AKKShotFlash>(Muzzle,Direction.Rotation()))Shot->InitializeFlash(AssetSet->WeaponFlashMaterial,Direction,End,bKrag);
     UE_LOG(LogTemp,Verbose,TEXT("KK_SHOT species=%s muzzle=%s direction=%s"),bKrag?TEXT("Krag"):TEXT("Nib"),*Muzzle.ToString(),*Direction.ToString());
+}
+
+FString AKKBenchmarkUnit::GetShotDiagnosticsJson() const
+{
+    return FString::Printf(TEXT("{\"count\":%d,\"phase\":%.6f,\"angle_degrees\":%.6f,\"maximum_angle_degrees\":%.6f,\"muzzle\":[%.6f,%.6f,%.6f],\"direction\":[%.6f,%.6f,%.6f],\"actor_forward\":[%.6f,%.6f,%.6f],\"events\":[%s]}"),
+        ShotEventCount,LastShotPhase,LastShotForwardAngle,MaximumShotForwardAngle,
+        LastShotMuzzle.X,LastShotMuzzle.Y,LastShotMuzzle.Z,LastShotDirection.X,LastShotDirection.Y,LastShotDirection.Z,
+        LastShotActorForward.X,LastShotActorForward.Y,LastShotActorForward.Z,*FString::Join(ShotDiagnosticEvents,TEXT(",")));
 }
 
 void AKKBenchmarkUnit::EmitHitSound()

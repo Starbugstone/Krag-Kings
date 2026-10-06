@@ -1,0 +1,38 @@
+{
+  "executionMode": "EditorGame",
+  "standalone": false,
+  "neutralLightingVerified": true,
+  "sunPitchDegrees": -42,
+  "sunYawDegrees": 130,
+  "sunLux": 55000,
+  "sunRGB": [
+    1,
+    1,
+    1
+  ],
+  "rayleighScatteringScale": 0.0331,
+  "image": "neutral-final-editor-frame.png",
+  "groundingVerified": true,
+  "artisticAcceptance": false,
+  "imageTuningRemaining": [
+    "Krag face/skin much brighter than concepts and Unity; nominal EV is not image equivalence",
+    "Character anatomy and likeness remain rejected"
+  ],
+  "scriptedSmoke": {
+    "nativeExit": 0,
+    "guardExit": 0,
+    "checks": 24,
+    "failures": 0,
+    "report": "editor-smoke-report.json",
+    "sunPitchDuringSmoke": -88,
+    "note": "Gameplay/weapon checks passed before final sun mobility-order repair"
+  },
+  "windowsInput": {
+    "foregroundActivationVerified": true,
+    "actualFKeyTriggersShoot": true,
+    "leftClickSelect": false,
+    "status": "Pointer selection failed; diagnostic mouse/trace logging prepared for actual standalone run"
+  },
+  "nativeExit": 0,
+  "guardExit": 0
+}

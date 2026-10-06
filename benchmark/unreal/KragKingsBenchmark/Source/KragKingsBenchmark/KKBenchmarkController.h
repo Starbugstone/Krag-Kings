@@ -12,6 +12,7 @@ public:
     AKKBenchmarkController();
     virtual void BeginPlay() override;
     virtual void SetupInputComponent() override;
+    virtual bool InputKey(const FInputKeyEventArgs& Params) override;
     virtual void PlayerTick(float DeltaTime) override;
     AKKBenchmarkUnit* SelectedUnit() const { return Selected; }
     void SelectUnit(AKKBenchmarkUnit* Unit);
