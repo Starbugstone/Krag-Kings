@@ -22,6 +22,8 @@ from export_contract import CLIPS, select_action
 parser = argparse.ArgumentParser()
 parser.add_argument('--art-source', type=Path, required=True)
 parser.add_argument('--motion-source', type=Path, required=True)
+parser.add_argument('--art-sha256')
+parser.add_argument('--motion-sha256')
 parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 if args.output.exists():
@@ -29,6 +31,10 @@ if args.output.exists():
 args.output.mkdir(parents=True)
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
 inputs = {str(path): sha(path) for path in [args.art_source, args.motion_source]}
+for path, expected_hash in [(args.art_source, args.art_sha256),
+                            (args.motion_source, args.motion_sha256)]:
+    if expected_hash and inputs[str(path)] != expected_hash:
+        raise RuntimeError('Pinned integration source changed '+str(path))
 
 
 def current_rig():
@@ -195,6 +201,8 @@ rig = current_rig()
 hide_mesh_evaluation()
 if bind_contract(rig) != motion_bind:
     raise RuntimeError('Saved combined rig bind differs from the verified source')
+if geometry_digest() != before:
+    raise RuntimeError('Saved combined geometry/UVs/weights/material assignments changed')
 retained_actions = {}
 for name in CLIPS:
     action = bpy.data.actions.get(name)
