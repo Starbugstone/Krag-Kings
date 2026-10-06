@@ -1,0 +1,20 @@
+{
+  "name": "krag-oral-occlusion-v9p",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\ironjaw_wip\\audit_oral_occlusion_v9p.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-occlusion-v9p.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-occlusion-v9p.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-oral-occlusion-v9p.stdout.log",
+  "successMarker": "KRAG_ORAL_OCCLUSION_ATTRIBUTION_COMPLETE"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "Actual read-only attribution passed after separately retained prelaunch memory rejection",
+  "sourceSha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72",
+  "reportSha256": "0346b5322b2bbd4403e68a918432f20f78c8700ecc2e3a9d0722e593f759a8b7",
+  "guardExitCode": 0,
+  "nativeExitCode": 0,
+  "peakPrivateMB": 907.0,
+  "minimumAvailableMB": 10152.0,
+  "stdoutSha256": "bc146f4320391b705bf8ae9b4d8ffb89efa3ebce98693ab625454a567c63daf2",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "toothVisibilitySummary": {
+    "Head": {
+      "samples": 384,
+      "visible": 168,
+      "blockedByHeadFaceSet": {
+        "33": 32,
+        "24": 183,
+        "7": 1
+      }
+    },
+    "Jaw": {
+      "samples": 320,
+      "visible": 81,
+      "blockedByHeadFaceSet": {
+        "24": 238,
+        "7": 1
+      }
+    }
+  },
+  "tongueVisibleSamples": 43,
+  "tongueTotalSamples": 64,
+  "conclusions": [
+    "The oral bag is not the primary blocker; exterior lower-face tissue dominates sampled occlusion.",
+    "Central upper incisal fronts are all visible and most central lower fronts are visible. Moving the whole dental arch or cavity is not justified by this check.",
+    "The saved lower-rim weight uses sqrt(1-(1-progress)^2), giving an infinite endpoint slope. Actual near-corner edge0.23mm carries Jaw0->.0986 and stretches to about7.3mm.",
+    "Prepare finite-slope local commissure support, preserving central full jaw support, upper-lip/nose fixation, full action range and actual mouth topology."
+  ],
+  "artisticAcceptance": false,
+  "sourceChanged": false
+}

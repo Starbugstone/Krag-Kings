@@ -1,0 +1,5621 @@
+{
+  "status": "Actual saved full-open occlusion and lower-face weight attribution; source unchanged",
+  "sourceSha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72",
+  "action": "FacePerformance",
+  "frame": 146,
+  "camera": [
+    1.1,
+    -4.0,
+    2.05
+  ],
+  "teeth": [
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.0768949498952423,
+        -0.10210987559174964,
+        1.8191716608421578
+      ],
+      "boundsPosed": [
+        [
+          -0.09036713093519211,
+          -0.11417406052350998,
+          1.8103350400924683
+        ],
+        [
+          -0.07362884283065796,
+          -0.09183525294065475,
+          1.8262096643447876
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "33": 15,
+          "24": 17
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 3922,
+            "oralWorld": [
+              -0.07990799844264984,
+              -0.1123727411031723,
+              1.8145440816879272
+            ],
+            "blockingHeadTriangle": 37099,
+            "blockingHeadPolygon": 18549,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06550395488739014,
+              -0.15983200073242188,
+              1.8174184560775757
+            ],
+            "blockerAheadOfTargetMeters": 0.04968065128024168,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3953,
+            "oralWorld": [
+              -0.07527141273021698,
+              -0.10261444002389908,
+              1.8141436576843262
+            ],
+            "blockingHeadTriangle": 18863,
+            "blockingHeadPolygon": 9431,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05534195899963379,
+              -0.16870379447937012,
+              1.8181431293487549
+            ],
+            "blockerAheadOfTargetMeters": 0.0691445437836622,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3956,
+            "oralWorld": [
+              -0.07511118054389954,
+              -0.10645610839128494,
+              1.8141887187957764
+            ],
+            "blockingHeadTriangle": 18850,
+            "blockingHeadPolygon": 9425,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.056717872619628906,
+              -0.16739940643310547,
+              1.8178796768188477
+            ],
+            "blockerAheadOfTargetMeters": 0.06376551365628647,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3958,
+            "oralWorld": [
+              -0.07582876086235046,
+              -0.10850051790475845,
+              1.8142510652542114
+            ],
+            "blockingHeadTriangle": 18853,
+            "blockingHeadPolygon": 9426,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05855202674865723,
+              -0.1656792163848877,
+              1.8177149295806885
+            ],
+            "blockerAheadOfTargetMeters": 0.05983220332660455,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3961,
+            "oralWorld": [
+              -0.07820545881986618,
+              -0.11123717576265335,
+              1.814378261566162
+            ],
+            "blockingHeadTriangle": 37142,
+            "blockingHeadPolygon": 18571,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06302273273468018,
+              -0.16134881973266602,
+              1.8174145221710205
+            ],
+            "blockerAheadOfTargetMeters": 0.052449117770599685,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3964,
+            "oralWorld": [
+              -0.08256389200687408,
+              -0.11412792652845383,
+              1.8129501342773438
+            ],
+            "blockingHeadTriangle": 17179,
+            "blockingHeadPolygon": 8589,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06897687911987305,
+              -0.15877461433410645,
+              1.8156737089157104
+            ],
+            "blockerAheadOfTargetMeters": 0.04674764851645552,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3966,
+            "oralWorld": [
+              -0.08413869142532349,
+              -0.11396046727895737,
+              1.8133710622787476
+            ],
+            "blockingHeadTriangle": 14177,
+            "blockingHeadPolygon": 7088,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.0704880952835083,
+              -0.15875792503356934,
+              1.8160988092422485
+            ],
+            "blockerAheadOfTargetMeters": 0.04691094655407824,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3969,
+            "oralWorld": [
+              -0.08605452626943588,
+              -0.11241842061281204,
+              1.8133785724639893
+            ],
+            "blockingHeadTriangle": 14204,
+            "blockingHeadPolygon": 7102,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.07196247577667236,
+              -0.15860819816589355,
+              1.8161898851394653
+            ],
+            "blockerAheadOfTargetMeters": 0.048373389156176394,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3972,
+            "oralWorld": [
+              -0.08791660517454147,
+              -0.10745999217033386,
+              1.8131624460220337
+            ],
+            "blockingHeadTriangle": 14204,
+            "blockingHeadPolygon": 7102,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.07233262062072754,
+              -0.1585252285003662,
+              1.8162693977355957
+            ],
+            "blockerAheadOfTargetMeters": 0.053480870459503116,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3974,
+            "oralWorld": [
+              -0.0888022929430008,
+              -0.10299427807331085,
+              1.8134089708328247
+            ],
+            "blockingHeadTriangle": 14180,
+            "blockingHeadPolygon": 7090,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.07185077667236328,
+              -0.15856313705444336,
+              1.8167825937271118
+            ],
+            "blockerAheadOfTargetMeters": 0.058195190389406015,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3994,
+            "oralWorld": [
+              -0.07588151097297668,
+              -0.10540889203548431,
+              1.8123224973678589
+            ],
+            "blockingHeadTriangle": 37074,
+            "blockingHeadPolygon": 18537,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05805957317352295,
+              -0.16443634033203125,
+              1.8159247636795044
+            ],
+            "blockerAheadOfTargetMeters": 0.061764414468582274,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 3997,
+            "oralWorld": [
+              -0.07609770447015762,
+              -0.10857894271612167,
+              1.8126423358917236
+            ],
+            "blockingHeadTriangle": 37095,
+            "blockingHeadPolygon": 18547,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05975198745727539,
+              -0.16266298294067383,
+              1.8159410953521729
+            ],
+            "blockerAheadOfTargetMeters": 0.05659623856826457,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.0713827826329687,
+        -0.11944852901097819,
+        1.818953261191015
+      ],
+      "boundsPosed": [
+        [
+          -0.08502811938524246,
+          -0.1307615339756012,
+          1.8100159168243408
+        ],
+        [
+          -0.0677647516131401,
+          -0.1096130982041359,
+          1.8262783288955688
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "33": 7,
+          "24": 25
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 4284,
+            "oralWorld": [
+              -0.07417764514684677,
+              -0.12861177325248718,
+              1.8143293857574463
+            ],
+            "blockingHeadTriangle": 17166,
+            "blockingHeadPolygon": 8583,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06487751007080078,
+              -0.15927481651306152,
+              1.8161959648132324
+            ],
+            "blockerAheadOfTargetMeters": 0.032096815084313945,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4316,
+            "oralWorld": [
+              -0.06924553215503693,
+              -0.12072600424289703,
+              1.8137683868408203
+            ],
+            "blockingHeadTriangle": 36859,
+            "blockingHeadPolygon": 18429,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05511617660522461,
+              -0.1676034927368164,
+              1.8166229724884033
+            ],
+            "blockerAheadOfTargetMeters": 0.04904414130279289,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4319,
+            "oralWorld": [
+              -0.06954216957092285,
+              -0.12384917587041855,
+              1.8139103651046753
+            ],
+            "blockingHeadTriangle": 18856,
+            "blockingHeadPolygon": 9428,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.056672096252441406,
+              -0.1665036678314209,
+              1.8165082931518555
+            ],
+            "blockerAheadOfTargetMeters": 0.044629957402611886,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4322,
+            "oralWorld": [
+              -0.07138620316982269,
+              -0.12657047808170319,
+              1.8140257596969604
+            ],
+            "blockingHeadTriangle": 37095,
+            "blockingHeadPolygon": 18547,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06062436103820801,
+              -0.1621568202972412,
+              1.816193699836731
+            ],
+            "blockerAheadOfTargetMeters": 0.03724154544326286,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4324,
+            "oralWorld": [
+              -0.07436265796422958,
+              -0.12943151593208313,
+              1.8123443126678467
+            ],
+            "blockingHeadTriangle": 14250,
+            "blockingHeadPolygon": 7125,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06565976142883301,
+              -0.15811514854431152,
+              1.81410551071167
+            ],
+            "blockerAheadOfTargetMeters": 0.030026527411868287,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.04689263179898262
+            ]
+          },
+          {
+            "oralVertex": 4327,
+            "oralWorld": [
+              -0.07778766006231308,
+              -0.13057629764080048,
+              1.8131078481674194
+            ],
+            "blockingHeadTriangle": 13384,
+            "blockingHeadPolygon": 6692,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06927335262298584,
+              -0.15854835510253906,
+              1.8148202896118164
+            ],
+            "blockerAheadOfTargetMeters": 0.029289351318814383,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.06478538364171982
+            ]
+          },
+          {
+            "oralVertex": 4330,
+            "oralWorld": [
+              -0.07993107289075851,
+              -0.1298268735408783,
+              1.813478708267212
+            ],
+            "blockingHeadTriangle": 13386,
+            "blockingHeadPolygon": 6693,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07114923000335693,
+              -0.1586313247680664,
+              1.8152389526367188
+            ],
+            "blockerAheadOfTargetMeters": 0.030164877839840898,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.07158633321523666
+            ]
+          },
+          {
+            "oralVertex": 4332,
+            "oralWorld": [
+              -0.08113201707601547,
+              -0.12853176891803741,
+              1.8133093118667603
+            ],
+            "blockingHeadTriangle": 13388,
+            "blockingHeadPolygon": 6694,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07202231884002686,
+              -0.15839099884033203,
+              1.8151347637176514
+            ],
+            "blockerAheadOfTargetMeters": 0.03127145353271921,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.07822665572166443
+            ]
+          },
+          {
+            "oralVertex": 4335,
+            "oralWorld": [
+              -0.08327610045671463,
+              -0.12280242145061493,
+              1.8133724927902222
+            ],
+            "blockingHeadTriangle": 13388,
+            "blockingHeadPolygon": 6694,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07237410545349121,
+              -0.1585245132446289,
+              1.8155525922775269
+            ],
+            "blockerAheadOfTargetMeters": 0.03741263257407024,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.07822665572166443
+            ]
+          },
+          {
+            "oralVertex": 4338,
+            "oralWorld": [
+              -0.08355876058340073,
+              -0.11913083493709564,
+              1.813820242881775
+            ],
+            "blockingHeadTriangle": 14207,
+            "blockingHeadPolygon": 7103,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.07149875164031982,
+              -0.1586751937866211,
+              1.8162267208099365
+            ],
+            "blockerAheadOfTargetMeters": 0.041412496718701064,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4357,
+            "oralWorld": [
+              -0.07001182436943054,
+              -0.12322850525379181,
+              1.8121393918991089
+            ],
+            "blockingHeadTriangle": 21173,
+            "blockingHeadPolygon": 10586,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05886423587799072,
+              -0.16016554832458496,
+              1.8144056797027588
+            ],
+            "blockerAheadOfTargetMeters": 0.03864949475368107,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4359,
+            "oralWorld": [
+              -0.07027725130319595,
+              -0.1250438541173935,
+              1.8123482465744019
+            ],
+            "blockingHeadTriangle": 21194,
+            "blockingHeadPolygon": 10597,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05977523326873779,
+              -0.15981769561767578,
+              1.8144809007644653
+            ],
+            "blockerAheadOfTargetMeters": 0.03638766895251955,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.06548794286932734,
+        -0.13476366166910414,
+        1.818765162763016
+      ],
+      "boundsPosed": [
+        [
+          -0.07987891137599945,
+          -0.1452769786119461,
+          1.8099099397659302
+        ],
+        [
+          -0.06103885918855667,
+          -0.12558431923389435,
+          1.8262302875518799
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "33": 4,
+          "24": 28
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 4646,
+            "oralWorld": [
+              -0.0665428638458252,
+              -0.1422104835510254,
+              1.8139419555664062
+            ],
+            "blockingHeadTriangle": 17221,
+            "blockingHeadPolygon": 8610,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06120491027832031,
+              -0.15986275672912598,
+              1.8150219917297363
+            ],
+            "blockerAheadOfTargetMeters": 0.018473380130718198,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4678,
+            "oralWorld": [
+              -0.06275071948766708,
+              -0.13503143191337585,
+              1.8137742280960083
+            ],
+            "blockingHeadTriangle": 37027,
+            "blockingHeadPolygon": 18513,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.053778886795043945,
+              -0.16485333442687988,
+              1.8155969381332397
+            ],
+            "blockerAheadOfTargetMeters": 0.0311956663183528,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4681,
+            "oralWorld": [
+              -0.06241638958454132,
+              -0.13781088590621948,
+              1.813873291015625
+            ],
+            "blockingHeadTriangle": 36888,
+            "blockingHeadPolygon": 18444,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.054108262062072754,
+              -0.16541528701782227,
+              1.8155609369277954
+            ],
+            "blockerAheadOfTargetMeters": 0.028876807543279703,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4684,
+            "oralWorld": [
+              -0.06388837099075317,
+              -0.14019998908042908,
+              1.8138188123703003
+            ],
+            "blockingHeadTriangle": 36882,
+            "blockingHeadPolygon": 18441,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.056648850440979004,
+              -0.16420841217041016,
+              1.8152878284454346
+            ],
+            "blockerAheadOfTargetMeters": 0.025119072752086247,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4687,
+            "oralWorld": [
+              -0.06829489767551422,
+              -0.144288569688797,
+              1.8121607303619385
+            ],
+            "blockingHeadTriangle": 14249,
+            "blockingHeadPolygon": 7124,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06428539752960205,
+              -0.15752077102661133,
+              1.8129769563674927
+            ],
+            "blockerAheadOfTargetMeters": 0.013850426613024602,
+            "headTriangleJawWeights": [
+              0.0,
+              0.04124874249100685,
+              0.03550420701503754
+            ]
+          },
+          {
+            "oralVertex": 4690,
+            "oralWorld": [
+              -0.07106243073940277,
+              -0.14496245980262756,
+              1.812893271446228
+            ],
+            "blockingHeadTriangle": 14252,
+            "blockingHeadPolygon": 7126,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06714439392089844,
+              -0.15786027908325195,
+              1.813686490058899
+            ],
+            "blockerAheadOfTargetMeters": 0.013503127197759035,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.05242141708731651
+            ]
+          },
+          {
+            "oralVertex": 4693,
+            "oralWorld": [
+              -0.0734764114022255,
+              -0.14438262581825256,
+              1.8130701780319214
+            ],
+            "blockingHeadTriangle": 13384,
+            "blockingHeadPolygon": 6692,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0693211555480957,
+              -0.1580350399017334,
+              1.8139090538024902
+            ],
+            "blockerAheadOfTargetMeters": 0.014295545169384027,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.06478538364171982
+            ]
+          },
+          {
+            "oralVertex": 4696,
+            "oralWorld": [
+              -0.07647262513637543,
+              -0.14124274253845215,
+              1.8131120204925537
+            ],
+            "blockingHeadTriangle": 13389,
+            "blockingHeadPolygon": 6694,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07136368751525879,
+              -0.15799951553344727,
+              1.8141406774520874
+            ],
+            "blockerAheadOfTargetMeters": 0.01754848564532452,
+            "headTriangleJawWeights": [
+              0.0,
+              0.07822665572166443,
+              0.07158633321523666
+            ]
+          },
+          {
+            "oralVertex": 4699,
+            "oralWorld": [
+              -0.07855532318353653,
+              -0.13714493811130524,
+              1.8137013912200928
+            ],
+            "blockingHeadTriangle": 13388,
+            "blockingHeadPolygon": 6694,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07210278511047363,
+              -0.1582939624786377,
+              1.8149950504302979
+            ],
+            "blockerAheadOfTargetMeters": 0.02214924746281266,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.07822665572166443
+            ]
+          },
+          {
+            "oralVertex": 4702,
+            "oralWorld": [
+              -0.07843225449323654,
+              -0.1346559375524521,
+              1.8138175010681152
+            ],
+            "blockingHeadTriangle": 13386,
+            "blockingHeadPolygon": 6693,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.07111406326293945,
+              -0.1586601734161377,
+              1.8152841329574585
+            ],
+            "blockerAheadOfTargetMeters": 0.02513800460715565,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.07158633321523666
+            ]
+          },
+          {
+            "oralVertex": 4719,
+            "oralWorld": [
+              -0.06324609369039536,
+              -0.13750864565372467,
+              1.8120763301849365
+            ],
+            "blockingHeadTriangle": 17303,
+            "blockingHeadPolygon": 8651,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05669105052947998,
+              -0.15927433967590332,
+              1.8134169578552246
+            ],
+            "blockerAheadOfTargetMeters": 0.022771248389097387,
+            "headTriangleJawWeights": [
+              0.05474400520324707,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 4722,
+            "oralWorld": [
+              -0.06336041539907455,
+              -0.13991548120975494,
+              1.812208890914917
+            ],
+            "blockingHeadTriangle": 17307,
+            "blockingHeadPolygon": 8653,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.057463884353637695,
+              -0.15948033332824707,
+              1.8134140968322754
+            ],
+            "blockerAheadOfTargetMeters": 0.02046961498894362,
+            "headTriangleJawWeights": [
+              0.06459330022335052,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.050894142390944024,
+        -0.1497207158013602,
+        1.8193546892529693
+      ],
+      "boundsPosed": [
+        [
+          -0.06641121208667755,
+          -0.1605861932039261,
+          1.8098833560943604
+        ],
+        [
+          -0.0454065278172493,
+          -0.13863596320152283,
+          1.8271034955978394
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 21,
+        "blockedByHeadFaceSet": {
+          "33": 3,
+          "24": 7,
+          "7": 1
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 5014,
+            "oralWorld": [
+              -0.05557768791913986,
+              -0.15901930630207062,
+              1.8150415420532227
+            ],
+            "blockingHeadTriangle": 36970,
+            "blockingHeadPolygon": 18485,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05446982383728027,
+              -0.16270184516906738,
+              1.815266728401184
+            ],
+            "blockerAheadOfTargetMeters": 0.0038520606802503465,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 5016,
+            "oralWorld": [
+              -0.057816483080387115,
+              -0.15743674337863922,
+              1.8148175477981567
+            ],
+            "blockingHeadTriangle": 36884,
+            "blockingHeadPolygon": 18442,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.05566239356994629,
+              -0.16458535194396973,
+              1.815255045890808
+            ],
+            "blockerAheadOfTargetMeters": 0.007479012811093533,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 5019,
+            "oralWorld": [
+              -0.06349451094865799,
+              -0.15278752148151398,
+              1.8147382736206055
+            ],
+            "blockingHeadTriangle": 17245,
+            "blockingHeadPolygon": 8622,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              -0.06130969524383545,
+              -0.16001152992248535,
+              1.8151799440383911
+            ],
+            "blockerAheadOfTargetMeters": 0.007560156942986396,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 5057,
+            "oralWorld": [
+              -0.058733537793159485,
+              -0.15705278515815735,
+              1.812665343284607
+            ],
+            "blockingHeadTriangle": 15790,
+            "blockingHeadPolygon": 7895,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.058119773864746094,
+              -0.1590883731842041,
+              1.8127909898757935
+            ],
+            "blockerAheadOfTargetMeters": 0.002129815740405938,
+            "headTriangleJawWeights": [
+              0.06459330022335052,
+              0.0,
+              0.02343892678618431
+            ]
+          },
+          {
+            "oralVertex": 5059,
+            "oralWorld": [
+              -0.0630880668759346,
+              -0.15345928072929382,
+              1.812663197517395
+            ],
+            "blockingHeadTriangle": 15621,
+            "blockingHeadPolygon": 7810,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0617218017578125,
+              -0.15797781944274902,
+              1.8129419088363647
+            ],
+            "blockerAheadOfTargetMeters": 0.004728688591561614,
+            "headTriangleJawWeights": [
+              0.026202261447906494,
+              0.04291713610291481,
+              0.021467551589012146
+            ]
+          },
+          {
+            "oralVertex": 5062,
+            "oralWorld": [
+              -0.06527461856603622,
+              -0.15076065063476562,
+              1.813125491142273
+            ],
+            "blockingHeadTriangle": 15625,
+            "blockingHeadPolygon": 7812,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06306469440460205,
+              -0.15806055068969727,
+              1.8135746717453003
+            ],
+            "blockerAheadOfTargetMeters": 0.007640288616582502,
+            "headTriangleJawWeights": [
+              0.0,
+              0.030883148312568665,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 5099,
+            "oralWorld": [
+              -0.06271908432245255,
+              -0.1541597694158554,
+              1.8112167119979858
+            ],
+            "blockingHeadTriangle": 15620,
+            "blockingHeadPolygon": 7810,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.061864256858825684,
+              -0.15698742866516113,
+              1.8113921880722046
+            ],
+            "blockerAheadOfTargetMeters": 0.0029592163768636937,
+            "headTriangleJawWeights": [
+              0.026202261447906494,
+              0.052425868809223175,
+              0.04291713610291481
+            ]
+          },
+          {
+            "oralVertex": 5102,
+            "oralWorld": [
+              -0.06480226665735245,
+              -0.1513475775718689,
+              1.8119385242462158
+            ],
+            "blockingHeadTriangle": 15627,
+            "blockingHeadPolygon": 7813,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06300592422485352,
+              -0.15728306770324707,
+              1.8123056888580322
+            ],
+            "blockerAheadOfTargetMeters": 0.006212262442349292,
+            "headTriangleJawWeights": [
+              0.03550420701503754,
+              0.06180055812001228,
+              0.030883148312568665
+            ]
+          },
+          {
+            "oralVertex": 5140,
+            "oralWorld": [
+              -0.06351401656866074,
+              -0.1534460186958313,
+              1.8108737468719482
+            ],
+            "blockingHeadTriangle": 15616,
+            "blockingHeadPolygon": 7808,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06254756450653076,
+              -0.15664100646972656,
+              1.8110723495483398
+            ],
+            "blockerAheadOfTargetMeters": 0.00334432964718534,
+            "headTriangleJawWeights": [
+              0.030883148312568665,
+              0.06180055812001228,
+              0.052425868809223175
+            ]
+          },
+          {
+            "oralVertex": 5143,
+            "oralWorld": [
+              -0.06484930217266083,
+              -0.15084843337535858,
+              1.811586856842041
+            ],
+            "blockingHeadTriangle": 15627,
+            "blockingHeadPolygon": 7813,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06295943260192871,
+              -0.15709352493286133,
+              1.8119735717773438
+            ],
+            "blockerAheadOfTargetMeters": 0.006536649477880019,
+            "headTriangleJawWeights": [
+              0.03550420701503754,
+              0.06180055812001228,
+              0.030883148312568665
+            ]
+          },
+          {
+            "oralVertex": 5169,
+            "oralWorld": [
+              -0.05648571252822876,
+              -0.15252549946308136,
+              1.8114486932754517
+            ],
+            "blockingHeadTriangle": 20883,
+            "blockingHeadPolygon": 10441,
+            "blockingFaceSet": 7,
+            "blockerWorld": [
+              -0.055777907371520996,
+              -0.15488004684448242,
+              1.8115946054458618
+            ],
+            "blockerAheadOfTargetMeters": 0.002463035038353212,
+            "headTriangleJawWeights": [
+              0.02582648955285549,
+              0.06515524536371231,
+              0.042079027742147446
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.032563042579969975,
+        -0.16898472870581716,
+        1.8222208826581419
+      ],
+      "boundsPosed": [
+        [
+          -0.04816629737615585,
+          -0.1818513423204422,
+          1.8148447275161743
+        ],
+        [
+          -0.02721228636801243,
+          -0.15935270488262177,
+          1.8298144340515137
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 32,
+        "blockedByHeadFaceSet": {},
+        "blockerExamples": []
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        -0.01106400772361908,
+        -0.17686153009780864,
+        1.8236232060753839
+      ],
+      "boundsPosed": [
+        [
+          -0.026403462514281273,
+          -0.1877414733171463,
+          1.8167258501052856
+        ],
+        [
+          -0.006139896810054779,
+          -0.1654960960149765,
+          1.8310058116912842
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 32,
+        "blockedByHeadFaceSet": {},
+        "blockerExamples": []
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.01106400772361908,
+        -0.1768003437894484,
+        1.8236232060753839
+      ],
+      "boundsPosed": [
+        [
+          -0.0041555073112249374,
+          -0.18772107362747192,
+          1.8169902563095093
+        ],
+        [
+          0.01611131615936756,
+          -0.1653514802455902,
+          1.8312458992004395
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 32,
+        "blockedByHeadFaceSet": {},
+        "blockerExamples": []
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.032563042569679124,
+        -0.1689309693914092,
+        1.8222208826581419
+      ],
+      "boundsPosed": [
+        [
+          0.01693628914654255,
+          -0.1818103790283203,
+          1.8157633543014526
+        ],
+        [
+          0.03792377933859825,
+          -0.1592596024274826,
+          1.8304462432861328
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 32,
+        "blockedByHeadFaceSet": {},
+        "blockerExamples": []
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.050894142390944024,
+        -0.1497067341076735,
+        1.8193546892529693
+      ],
+      "boundsPosed": [
+        [
+          0.035177115350961685,
+          -0.1605575531721115,
+          1.811218023300171
+        ],
+        [
+          0.056203752756118774,
+          -0.13857993483543396,
+          1.82816481590271
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 19,
+        "blockedByHeadFaceSet": {
+          "33": 3,
+          "24": 10
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 6825,
+            "oralWorld": [
+              0.055066078901290894,
+              -0.15103404223918915,
+              1.8163578510284424
+            ],
+            "blockingHeadTriangle": 61094,
+            "blockingHeadPolygon": 30547,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              0.057178497314453125,
+              -0.1588149070739746,
+              1.8168301582336426
+            ],
+            "blockerAheadOfTargetMeters": 0.008076406184899465,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6827,
+            "oralWorld": [
+              0.0533660426735878,
+              -0.15276536345481873,
+              1.8161404132843018
+            ],
+            "blockingHeadTriangle": 61093,
+            "blockingHeadPolygon": 30546,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              0.05499827861785889,
+              -0.15876483917236328,
+              1.8165050745010376
+            ],
+            "blockerAheadOfTargetMeters": 0.0062283397175724176,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6830,
+            "oralWorld": [
+              0.04768996685743332,
+              -0.15740475058555603,
+              1.8160834312438965
+            ],
+            "blockingHeadTriangle": 67406,
+            "blockingHeadPolygon": 33703,
+            "blockingFaceSet": 33,
+            "blockerWorld": [
+              0.0488666296005249,
+              -0.16170120239257812,
+              1.816344976425171
+            ],
+            "blockerAheadOfTargetMeters": 0.004462388940030149,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6863,
+            "oralWorld": [
+              0.05543680489063263,
+              -0.14995497465133667,
+              1.8146706819534302
+            ],
+            "blockingHeadTriangle": 58173,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05762815475463867,
+              -0.15803170204162598,
+              1.81516432762146
+            ],
+            "blockerAheadOfTargetMeters": 0.008383278895477186,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6866,
+            "oralWorld": [
+              0.05402834713459015,
+              -0.15242747962474823,
+              1.8142679929733276
+            ],
+            "blockingHeadTriangle": 58176,
+            "blockingHeadPolygon": 29088,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.055457472801208496,
+              -0.1576838493347168,
+              1.8145899772644043
+            ],
+            "blockerAheadOfTargetMeters": 0.005456845532419763,
+            "headTriangleJawWeights": [
+              0.04091224819421768,
+              0.04669494181871414,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6869,
+            "oralWorld": [
+              0.04865822196006775,
+              -0.1570282131433487,
+              1.8139537572860718
+            ],
+            "blockingHeadTriangle": 75831,
+            "blockingHeadPolygon": 37915,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.049109458923339844,
+              -0.1586775779724121,
+              1.8140549659729004
+            ],
+            "blockerAheadOfTargetMeters": 0.0017132455904032007,
+            "headTriangleJawWeights": [
+              0.01851693168282509,
+              0.0385826975107193,
+              0.025814784690737724
+            ]
+          },
+          {
+            "oralVertex": 6902,
+            "oralWorld": [
+              0.05505254119634628,
+              -0.14976078271865845,
+              1.8136485815048218
+            ],
+            "blockingHeadTriangle": 58173,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0571286678314209,
+              -0.1574108600616455,
+              1.8141181468963623
+            ],
+            "blockerAheadOfTargetMeters": 0.007940546386910441,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6904,
+            "oralWorld": [
+              0.054739899933338165,
+              -0.15133631229400635,
+              1.8133728504180908
+            ],
+            "blockingHeadTriangle": 58174,
+            "blockingHeadPolygon": 29087,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05632281303405762,
+              -0.1571648120880127,
+              1.8137311935424805
+            ],
+            "blockerAheadOfTargetMeters": 0.006050174989991053,
+            "headTriangleJawWeights": [
+              0.04669494181871414,
+              0.05236225202679634,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6907,
+            "oralWorld": [
+              0.05267598479986191,
+              -0.15414494276046753,
+              1.8126012086868286
+            ],
+            "blockingHeadTriangle": 59540,
+            "blockingHeadPolygon": 29770,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05339455604553223,
+              -0.1567835807800293,
+              1.812764048576355
+            ],
+            "blockerAheadOfTargetMeters": 0.0027396029055881677,
+            "headTriangleJawWeights": [
+              0.07007797062397003,
+              0.03503863140940666,
+              0.030538588762283325
+            ]
+          },
+          {
+            "oralVertex": 6910,
+            "oralWorld": [
+              0.047264404594898224,
+              -0.15825141966342926,
+              1.8128063678741455
+            ],
+            "blockingHeadTriangle": 59715,
+            "blockingHeadPolygon": 29857,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.04731452465057373,
+              -0.15843415260314941,
+              1.8128175735473633
+            ],
+            "blockerAheadOfTargetMeters": 0.0001901793475385105,
+            "headTriangleJawWeights": [
+              0.06500602513551712,
+              0.023867754265666008,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6943,
+            "oralWorld": [
+              0.054795123636722565,
+              -0.15083841979503632,
+              1.8130223751068115
+            ],
+            "blockingHeadTriangle": 58174,
+            "blockingHeadPolygon": 29087,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05646157264709473,
+              -0.15697503089904785,
+              1.813400149345398
+            ],
+            "blockerAheadOfTargetMeters": 0.006370206351452357,
+            "headTriangleJawWeights": [
+              0.04669494181871414,
+              0.05236225202679634,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 6946,
+            "oralWorld": [
+              0.053478583693504333,
+              -0.15343360602855682,
+              1.8122774362564087
+            ],
+            "blockingHeadTriangle": 58180,
+            "blockingHeadPolygon": 29090,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0543137788772583,
+              -0.15650343894958496,
+              1.812467098236084
+            ],
+            "blockerAheadOfTargetMeters": 0.0031873386922449676,
+            "headTriangleJawWeights": [
+              0.07007797062397003,
+              0.08187666535377502,
+              0.04091224819421768
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.06548794284874564,
+        -0.13478537895896817,
+        1.818765162763016
+      ],
+      "boundsPosed": [
+        [
+          0.05085671693086624,
+          -0.14528220891952515,
+          1.8113740682601929
+        ],
+        [
+          0.06964738667011261,
+          -0.1255573034286499,
+          1.8279191255569458
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 7198,
+            "oralWorld": [
+              0.059297963976860046,
+              -0.143974170088768,
+              1.81583571434021
+            ],
+            "blockingHeadTriangle": 57296,
+            "blockingHeadPolygon": 28648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06311655044555664,
+              -0.15812277793884277,
+              1.8166948556900024
+            ],
+            "blockerAheadOfTargetMeters": 0.01467988435394929,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.0783669501543045
+            ]
+          },
+          {
+            "oralVertex": 7201,
+            "oralWorld": [
+              0.05473589152097702,
+              -0.14100754261016846,
+              1.8152660131454468
+            ],
+            "blockingHeadTriangle": 57302,
+            "blockingHeadPolygon": 28651,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0595325231552124,
+              -0.15871620178222656,
+              1.8163431882858276
+            ],
+            "blockerAheadOfTargetMeters": 0.01837838915459411,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0,
+              0.05792383477091789
+            ]
+          },
+          {
+            "oralVertex": 7204,
+            "oralWorld": [
+              0.052591659128665924,
+              -0.13861575722694397,
+              1.8152484893798828
+            ],
+            "blockingHeadTriangle": 58173,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05806839466094971,
+              -0.15880608558654785,
+              1.8164758682250977
+            ],
+            "blockerAheadOfTargetMeters": 0.020955929035897825,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7207,
+            "oralWorld": [
+              0.05231303721666336,
+              -0.1360308676958084,
+              1.8151930570602417
+            ],
+            "blockingHeadTriangle": 58173,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.058507680892944336,
+              -0.15887737274169922,
+              1.81658136844635
+            ],
+            "blockerAheadOfTargetMeters": 0.02371201281959401,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7225,
+            "oralWorld": [
+              0.06850969046354294,
+              -0.13542242348194122,
+              1.8156555891036987
+            ],
+            "blockingHeadTriangle": 55104,
+            "blockingHeadPolygon": 27552,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07204151153564453,
+              -0.14865493774414062,
+              1.816457986831665
+            ],
+            "blockerAheadOfTargetMeters": 0.01371929233305913,
+            "headTriangleJawWeights": [
+              0.1212930753827095,
+              0.1282743364572525,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7228,
+            "oralWorld": [
+              0.06814321875572205,
+              -0.13818775117397308,
+              1.8152620792388916
+            ],
+            "blockingHeadTriangle": 55105,
+            "blockingHeadPolygon": 27552,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07120621204376221,
+              -0.14965105056762695,
+              1.815958857536316
+            ],
+            "blockerAheadOfTargetMeters": 0.011886057928348848,
+            "headTriangleJawWeights": [
+              0.1212930753827095,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7231,
+            "oralWorld": [
+              0.06502904742956161,
+              -0.14305821061134338,
+              1.8146737813949585
+            ],
+            "blockingHeadTriangle": 56696,
+            "blockingHeadPolygon": 28348,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06786000728607178,
+              -0.15360808372497559,
+              1.8153173923492432
+            ],
+            "blockerAheadOfTargetMeters": 0.01094206624112637,
+            "headTriangleJawWeights": [
+              0.10719618201255798,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7234,
+            "oralWorld": [
+              0.06258835643529892,
+              -0.14471562206745148,
+              1.8147205114364624
+            ],
+            "blockingHeadTriangle": 56699,
+            "blockingHeadPolygon": 28349,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0655890703201294,
+              -0.1558668613433838,
+              1.8154009580612183
+            ],
+            "blockerAheadOfTargetMeters": 0.011568046293689793,
+            "headTriangleJawWeights": [
+              0.10013175755739212,
+              0.0,
+              0.09265164285898209
+            ]
+          },
+          {
+            "oralVertex": 7237,
+            "oralWorld": [
+              0.06012792885303497,
+              -0.1449143886566162,
+              1.814225435256958
+            ],
+            "blockingHeadTriangle": 57297,
+            "blockingHeadPolygon": 28648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06341063976287842,
+              -0.15708398818969727,
+              1.8149696588516235
+            ],
+            "blockerAheadOfTargetMeters": 0.012627008214114888,
+            "headTriangleJawWeights": [
+              0.0,
+              0.0783669501543045,
+              0.08483295887708664
+            ]
+          },
+          {
+            "oralVertex": 7240,
+            "oralWorld": [
+              0.056674011051654816,
+              -0.14334769546985626,
+              1.8134443759918213
+            ],
+            "blockingHeadTriangle": 57301,
+            "blockingHeadPolygon": 28650,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06050431728363037,
+              -0.15750622749328613,
+              1.8143126964569092
+            ],
+            "blockerAheadOfTargetMeters": 0.014693017396884223,
+            "headTriangleJawWeights": [
+              0.0,
+              0.06489767134189606,
+              0.07171885669231415
+            ]
+          },
+          {
+            "oralVertex": 7243,
+            "oralWorld": [
+              0.05370260030031204,
+              -0.14071229100227356,
+              1.813508152961731
+            ],
+            "blockingHeadTriangle": 58172,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05831122398376465,
+              -0.15771102905273438,
+              1.8145498037338257
+            ],
+            "blockerAheadOfTargetMeters": 0.017643229412388273,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.05792383477091789,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7246,
+            "oralWorld": [
+              0.053020015358924866,
+              -0.13831813633441925,
+              1.8135918378829956
+            ],
+            "blockingHeadTriangle": 58172,
+            "blockingHeadPolygon": 29086,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.05831456184387207,
+              -0.15784621238708496,
+              1.8147872686386108
+            ],
+            "blockerAheadOfTargetMeters": 0.020268259392824284,
+            "headTriangleJawWeights": [
+              0.05236225202679634,
+              0.05792383477091789,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.0713827826329687,
+        -0.11948791183325468,
+        1.818953261191015
+      ],
+      "boundsPosed": [
+        [
+          0.05757713317871094,
+          -0.13079050183296204,
+          1.8116258382797241
+        ],
+        [
+          0.07478874921798706,
+          -0.1095988005399704,
+          1.828099250793457
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 7562,
+            "oralWorld": [
+              0.06404431909322739,
+              -0.12862493097782135,
+              1.8159877061843872
+            ],
+            "blockingHeadTriangle": 55107,
+            "blockingHeadPolygon": 27553,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07021117210388184,
+              -0.1516706943511963,
+              1.817380666732788
+            ],
+            "blockerAheadOfTargetMeters": 0.023897181090134723,
+            "headTriangleJawWeights": [
+              0.11380590498447418,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7564,
+            "oralWorld": [
+              0.061259977519512177,
+              -0.12657834589481354,
+              1.815617322921753
+            ],
+            "blockingHeadTriangle": 56694,
+            "blockingHeadPolygon": 28347,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06854593753814697,
+              -0.1537473201751709,
+              1.8172613382339478
+            ],
+            "blockerAheadOfTargetMeters": 0.028177002621909253,
+            "headTriangleJawWeights": [
+              0.11380590498447418,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7567,
+            "oralWorld": [
+              0.05941794067621231,
+              -0.1238541379570961,
+              1.8154575824737549
+            ],
+            "blockingHeadTriangle": 56696,
+            "blockingHeadPolygon": 28348,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06770789623260498,
+              -0.15473413467407227,
+              1.8173260688781738
+            ],
+            "blockerAheadOfTargetMeters": 0.03202791266001359,
+            "headTriangleJawWeights": [
+              0.10719618201255798,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7570,
+            "oralWorld": [
+              0.059123292565345764,
+              -0.1207314059138298,
+              1.8153085708618164
+            ],
+            "blockingHeadTriangle": 56695,
+            "blockingHeadPolygon": 28347,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06812572479248047,
+              -0.1542825698852539,
+              1.8173383474349976
+            ],
+            "blockerAheadOfTargetMeters": 0.03479707918168362,
+            "headTriangleJawWeights": [
+              0.11380590498447418,
+              0.0,
+              0.10719618201255798
+            ]
+          },
+          {
+            "oralVertex": 7588,
+            "oralWorld": [
+              0.07343039661645889,
+              -0.11916656047105789,
+              1.8157038688659668
+            ],
+            "blockingHeadTriangle": 55364,
+            "blockingHeadPolygon": 27682,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07855367660522461,
+              -0.1385347843170166,
+              1.8168730735778809
+            ],
+            "blockerAheadOfTargetMeters": 0.020068413853445044,
+            "headTriangleJawWeights": [
+              0.0,
+              0.15275554358959198,
+              0.1580360382795334
+            ]
+          },
+          {
+            "oralVertex": 7591,
+            "oralWorld": [
+              0.0731603354215622,
+              -0.12283983826637268,
+              1.8152494430541992
+            ],
+            "blockingHeadTriangle": 55366,
+            "blockingHeadPolygon": 27683,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07759296894073486,
+              -0.13957643508911133,
+              1.8162627220153809
+            ],
+            "blockerAheadOfTargetMeters": 0.01734328033800203,
+            "headTriangleJawWeights": [
+              0.0,
+              0.14708763360977173,
+              0.15275554358959198
+            ]
+          },
+          {
+            "oralVertex": 7594,
+            "oralWorld": [
+              0.07102113217115402,
+              -0.12856541574001312,
+              1.815134882926941
+            ],
+            "blockingHeadTriangle": 55100,
+            "blockingHeadPolygon": 27550,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07499098777770996,
+              -0.14350152015686035,
+              1.8160409927368164
+            ],
+            "blockerAheadOfTargetMeters": 0.015481247716573776,
+            "headTriangleJawWeights": [
+              0.13476981222629547,
+              0.14076478779315948,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7597,
+            "oralWorld": [
+              0.06915653496980667,
+              -0.13024187088012695,
+              1.8152377605438232
+            ],
+            "blockingHeadTriangle": 55102,
+            "blockingHeadPolygon": 27551,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07342684268951416,
+              -0.1462724208831787,
+              1.8162102699279785
+            ],
+            "blockerAheadOfTargetMeters": 0.016618462608365192,
+            "headTriangleJawWeights": [
+              0.1282743364572525,
+              0.13476981222629547,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7599,
+            "oralWorld": [
+              0.06768355518579483,
+              -0.13060206174850464,
+              1.8148531913757324
+            ],
+            "blockingHeadTriangle": 55103,
+            "blockingHeadPolygon": 27551,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07232499122619629,
+              -0.14799904823303223,
+              1.8159103393554688
+            ],
+            "blockerAheadOfTargetMeters": 0.01803655392415049,
+            "headTriangleJawWeights": [
+              0.1282743364572525,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7602,
+            "oralWorld": [
+              0.0642772912979126,
+              -0.12945044040679932,
+              1.8140076398849487
+            ],
+            "blockingHeadTriangle": 55106,
+            "blockingHeadPolygon": 27553,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07002866268157959,
+              -0.15094351768493652,
+              1.815317988395691
+            ],
+            "blockerAheadOfTargetMeters": 0.022287626483403322,
+            "headTriangleJawWeights": [
+              0.11380590498447418,
+              0.1212930753827095,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7605,
+            "oralWorld": [
+              0.06109728664159775,
+              -0.12680447101593018,
+              1.8138666152954102
+            ],
+            "blockingHeadTriangle": 56695,
+            "blockingHeadPolygon": 28347,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06820344924926758,
+              -0.15329766273498535,
+              1.8154817819595337
+            ],
+            "blockerAheadOfTargetMeters": 0.02747724636068849,
+            "headTriangleJawWeights": [
+              0.11380590498447418,
+              0.0,
+              0.10719618201255798
+            ]
+          },
+          {
+            "oralVertex": 7608,
+            "oralWorld": [
+              0.05997919291257858,
+              -0.1241634413599968,
+              1.8138344287872314
+            ],
+            "blockingHeadTriangle": 56696,
+            "blockingHeadPolygon": 28348,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06790733337402344,
+              -0.15370917320251465,
+              1.8156347274780273
+            ],
+            "blockerAheadOfTargetMeters": 0.03064379194754796,
+            "headTriangleJawWeights": [
+              0.10719618201255798,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "centerBasis": [
+        0.0768949498952423,
+        -0.1021578959832534,
+        1.8191716608421578
+      ],
+      "boundsPosed": [
+        [
+          0.06342201679944992,
+          -0.11421357095241547,
+          1.8120667934417725
+        ],
+        [
+          0.08012276142835617,
+          -0.09182653576135635,
+          1.8281629085540771
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 7923,
+            "oralWorld": [
+              0.0714779645204544,
+              -0.1133430227637291,
+              1.816564917564392
+            ],
+            "blockingHeadTriangle": 55364,
+            "blockingHeadPolygon": 27682,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07837069034576416,
+              -0.1393895149230957,
+              1.818129301071167
+            ],
+            "blockerAheadOfTargetMeters": 0.026988854901984993,
+            "headTriangleJawWeights": [
+              0.0,
+              0.15275554358959198,
+              0.1580360382795334
+            ]
+          },
+          {
+            "oralVertex": 7925,
+            "oralWorld": [
+              0.068061463534832,
+              -0.11125894635915756,
+              1.8161331415176392
+            ],
+            "blockingHeadTriangle": 55345,
+            "blockingHeadPolygon": 27672,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07627058029174805,
+              -0.14219379425048828,
+              1.8179935216903687
+            ],
+            "blockerAheadOfTargetMeters": 0.032059995976150724,
+            "headTriangleJawWeights": [
+              0.0,
+              0.14708763360977173,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7928,
+            "oralWorld": [
+              0.06568718701601028,
+              -0.1085173487663269,
+              1.8159489631652832
+            ],
+            "blockingHeadTriangle": 55100,
+            "blockingHeadPolygon": 27550,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07514262199401855,
+              -0.14409255981445312,
+              1.8180885314941406
+            ],
+            "blockerAheadOfTargetMeters": 0.03687241637572569,
+            "headTriangleJawWeights": [
+              0.13476981222629547,
+              0.14076478779315948,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7930,
+            "oralWorld": [
+              0.06497032195329666,
+              -0.10647133737802505,
+              1.8158694505691528
+            ],
+            "blockingHeadTriangle": 55100,
+            "blockingHeadPolygon": 27550,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07503044605255127,
+              -0.14431476593017578,
+              1.8181450366973877
+            ],
+            "blockerAheadOfTargetMeters": 0.039223720008199514,
+            "headTriangleJawWeights": [
+              0.13476981222629547,
+              0.14076478779315948,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7933,
+            "oralWorld": [
+              0.06512975692749023,
+              -0.10262922942638397,
+              1.8158282041549683
+            ],
+            "blockingHeadTriangle": 55344,
+            "blockingHeadPolygon": 27672,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07583725452423096,
+              -0.14295434951782227,
+              1.8182510137557983
+            ],
+            "blockerAheadOfTargetMeters": 0.04179269356417503,
+            "headTriangleJawWeights": [
+              0.0,
+              0.14076478779315948,
+              0.14708763360977173
+            ]
+          },
+          {
+            "oralVertex": 7953,
+            "oralWorld": [
+              0.07845176011323929,
+              -0.10466086864471436,
+              1.815262794494629
+            ],
+            "blockingHeadTriangle": 54997,
+            "blockingHeadPolygon": 27498,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08465969562530518,
+              -0.12833285331726074,
+              1.8166892528533936
+            ],
+            "blockerAheadOfTargetMeters": 0.02451433184566909,
+            "headTriangleJawWeights": [
+              0.0,
+              0.16958339512348175,
+              0.17619632184505463
+            ]
+          },
+          {
+            "oralVertex": 7955,
+            "oralWorld": [
+              0.07702895253896713,
+              -0.11019526422023773,
+              1.8151291608810425
+            ],
+            "blockingHeadTriangle": 54999,
+            "blockingHeadPolygon": 27499,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08266341686248779,
+              -0.1316204071044922,
+              1.8164228200912476
+            ],
+            "blockerAheadOfTargetMeters": 0.022191750718523195,
+            "headTriangleJawWeights": [
+              0.0,
+              0.16333119571208954,
+              0.16958339512348175
+            ]
+          },
+          {
+            "oralVertex": 7958,
+            "oralWorld": [
+              0.07533949613571167,
+              -0.11314942687749863,
+              1.81539785861969
+            ],
+            "blockingHeadTriangle": 55362,
+            "blockingHeadPolygon": 27681,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08099019527435303,
+              -0.1345844268798828,
+              1.8166916370391846
+            ],
+            "blockerAheadOfTargetMeters": 0.022205500175898507,
+            "headTriangleJawWeights": [
+              0.0,
+              0.1580360382795334,
+              0.16333119571208954
+            ]
+          },
+          {
+            "oralVertex": 7961,
+            "oralWorld": [
+              0.0732763409614563,
+              -0.11417499929666519,
+              1.8150609731674194
+            ],
+            "blockingHeadTriangle": 55364,
+            "blockingHeadPolygon": 27682,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07935070991516113,
+              -0.13716459274291992,
+              1.8164509534835815
+            ],
+            "blockerAheadOfTargetMeters": 0.023819308796015015,
+            "headTriangleJawWeights": [
+              0.0,
+              0.15275554358959198,
+              0.1580360382795334
+            ]
+          },
+          {
+            "oralVertex": 7963,
+            "oralWorld": [
+              0.07149560749530792,
+              -0.11390550434589386,
+              1.8145709037780762
+            ],
+            "blockingHeadTriangle": 55367,
+            "blockingHeadPolygon": 27683,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07809031009674072,
+              -0.1388227939605713,
+              1.8160804510116577
+            ],
+            "blockerAheadOfTargetMeters": 0.025819446832764825,
+            "headTriangleJawWeights": [
+              0.0,
+              0.15275554358959198,
+              0.0
+            ]
+          },
+          {
+            "oralVertex": 7966,
+            "oralWorld": [
+              0.06757781654596329,
+              -0.11132741719484329,
+              1.814207673072815
+            ],
+            "blockingHeadTriangle": 55344,
+            "blockingHeadPolygon": 27672,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07576549053192139,
+              -0.1421668529510498,
+              1.8160775899887085
+            ],
+            "blockerAheadOfTargetMeters": 0.03196248273600677,
+            "headTriangleJawWeights": [
+              0.0,
+              0.14076478779315948,
+              0.14708763360977173
+            ]
+          },
+          {
+            "oralVertex": 7969,
+            "oralWorld": [
+              0.06599468737840652,
+              -0.10860008746385574,
+              1.8143471479415894
+            ],
+            "blockingHeadTriangle": 55100,
+            "blockingHeadPolygon": 27550,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07521045207977295,
+              -0.14328289031982422,
+              1.816447377204895
+            ],
+            "blockerAheadOfTargetMeters": 0.03594751586030753,
+            "headTriangleJawWeights": [
+              0.13476981222629547,
+              0.14076478779315948,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        -0.07243617547892076,
+        -0.10757802455629432,
+        1.8070826951970054
+      ],
+      "boundsPosed": [
+        [
+          -0.08533655852079391,
+          -0.07907384634017944,
+          1.76088285446167
+        ],
+        [
+          -0.06841845065355301,
+          -0.059220731258392334,
+          1.781603455543518
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 11993,
+            "oralWorld": [
+              -0.07992788404226303,
+              -0.0778341293334961,
+              1.770179033279419
+            ],
+            "blockingHeadTriangle": 13344,
+            "blockingHeadPolygon": 6672,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.061411142349243164,
+              -0.13938474655151367,
+              1.7745702266693115
+            ],
+            "blockerAheadOfTargetMeters": 0.06442597874181288,
+            "headTriangleJawWeights": [
+              0.576416015625,
+              0.6733509302139282,
+              0.6302858591079712
+            ]
+          },
+          {
+            "oralVertex": 11994,
+            "oralWorld": [
+              -0.08062764257192612,
+              -0.07742083072662354,
+              1.7704460620880127
+            ],
+            "blockingHeadTriangle": 13355,
+            "blockingHeadPolygon": 6677,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06195962429046631,
+              -0.13944435119628906,
+              1.7748663425445557
+            ],
+            "blockerAheadOfTargetMeters": 0.06492273996045395,
+            "headTriangleJawWeights": [
+              0.6180295348167419,
+              0.6733509302139282,
+              0.576416015625
+            ]
+          },
+          {
+            "oralVertex": 11996,
+            "oralWorld": [
+              -0.0818467065691948,
+              -0.07591837644577026,
+              1.7713099718093872
+            ],
+            "blockingHeadTriangle": 13352,
+            "blockingHeadPolygon": 6676,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06259119510650635,
+              -0.13985252380371094,
+              1.775850534439087
+            ],
+            "blockerAheadOfTargetMeters": 0.06692513307209946,
+            "headTriangleJawWeights": [
+              0.5183414220809937,
+              0.6180295348167419,
+              0.576416015625
+            ]
+          },
+          {
+            "oralVertex": 11998,
+            "oralWorld": [
+              -0.08320078253746033,
+              -0.07224828004837036,
+              1.773073673248291
+            ],
+            "blockingHeadTriangle": 13353,
+            "blockingHeadPolygon": 6676,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06253480911254883,
+              -0.14085102081298828,
+              1.7779104709625244
+            ],
+            "blockerAheadOfTargetMeters": 0.07181124557966889,
+            "headTriangleJawWeights": [
+              0.5183414220809937,
+              0.576416015625,
+              0.4786238372325897
+            ]
+          },
+          {
+            "oralVertex": 12028,
+            "oralWorld": [
+              -0.0743500366806984,
+              -0.07599616050720215,
+              1.7723828554153442
+            ],
+            "blockingHeadTriangle": 13416,
+            "blockingHeadPolygon": 6708,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05456733703613281,
+              -0.14209866523742676,
+              1.7770594358444214
+            ],
+            "blockerAheadOfTargetMeters": 0.06915787627914582,
+            "headTriangleJawWeights": [
+              0.6283385157585144,
+              0.5460765957832336,
+              0.564728856086731
+            ]
+          },
+          {
+            "oralVertex": 12030,
+            "oralWorld": [
+              -0.07693750411272049,
+              -0.0772828459739685,
+              1.7719758749008179
+            ],
+            "blockingHeadTriangle": 13433,
+            "blockingHeadPolygon": 6716,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.057787537574768066,
+              -0.14110946655273438,
+              1.7764995098114014
+            ],
+            "blockerAheadOfTargetMeters": 0.06679079762320672,
+            "headTriangleJawWeights": [
+              0.6107642650604248,
+              0.5487829446792603,
+              0.6376053690910339
+            ]
+          },
+          {
+            "oralVertex": 12032,
+            "oralWorld": [
+              -0.07859376817941666,
+              -0.07743126153945923,
+              1.7717996835708618
+            ],
+            "blockingHeadTriangle": 13348,
+            "blockingHeadPolygon": 6674,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.059629082679748535,
+              -0.1405494213104248,
+              1.7762761116027832
+            ],
+            "blockerAheadOfTargetMeters": 0.06605749918921511,
+            "headTriangleJawWeights": [
+              0.5354908108711243,
+              0.6302858591079712,
+              0.5885778665542603
+            ]
+          },
+          {
+            "oralVertex": 12033,
+            "oralWorld": [
+              -0.07930447906255722,
+              -0.07720685005187988,
+              1.7719237804412842
+            ],
+            "blockingHeadTriangle": 13348,
+            "blockingHeadPolygon": 6674,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06028461456298828,
+              -0.1404738426208496,
+              1.7764085531234741
+            ],
+            "blockerAheadOfTargetMeters": 0.06621631236389369,
+            "headTriangleJawWeights": [
+              0.5354908108711243,
+              0.6302858591079712,
+              0.5885778665542603
+            ]
+          },
+          {
+            "oralVertex": 12035,
+            "oralWorld": [
+              -0.08053938299417496,
+              -0.07615047693252563,
+              1.772707223892212
+            ],
+            "blockingHeadTriangle": 13345,
+            "blockingHeadPolygon": 6672,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06110703945159912,
+              -0.14073920249938965,
+              1.7772715091705322
+            ],
+            "blockerAheadOfTargetMeters": 0.06760329019668365,
+            "headTriangleJawWeights": [
+              0.576416015625,
+              0.6302858591079712,
+              0.5354908108711243
+            ]
+          },
+          {
+            "oralVertex": 12037,
+            "oralWorld": [
+              -0.08162333816289902,
+              -0.07407468557357788,
+              1.7740273475646973
+            ],
+            "blockingHeadTriangle": 13374,
+            "blockingHeadPolygon": 6687,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.061353206634521484,
+              -0.14142155647277832,
+              1.778761386871338
+            ],
+            "blockerAheadOfTargetMeters": 0.0704906660979514,
+            "headTriangleJawWeights": [
+              0.4786238372325897,
+              0.576416015625,
+              0.5354908108711243
+            ]
+          },
+          {
+            "oralVertex": 12038,
+            "oralWorld": [
+              -0.08240707963705063,
+              -0.07167202234268188,
+              1.7751942873001099
+            ],
+            "blockingHeadTriangle": 13372,
+            "blockingHeadPolygon": 6686,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06120705604553223,
+              -0.1421051025390625,
+              1.7801213264465332
+            ],
+            "blockerAheadOfTargetMeters": 0.07371922773425155,
+            "headTriangleJawWeights": [
+              0.43940892815589905,
+              0.5354908108711243,
+              0.4956297278404236
+            ]
+          },
+          {
+            "oralVertex": 12063,
+            "oralWorld": [
+              -0.07033521682024002,
+              -0.0719638466835022,
+              1.773046612739563
+            ],
+            "blockingHeadTriangle": 18728,
+            "blockingHeadPolygon": 9364,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.04922330379486084,
+              -0.1428225040435791,
+              1.7780425548553467
+            ],
+            "blockerAheadOfTargetMeters": 0.07410543101485523,
+            "headTriangleJawWeights": [
+              0.6239203810691833,
+              0.6325036287307739,
+              0.554223895072937
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        -0.06686807760341063,
+        -0.12525087726708933,
+        1.8068683364773324
+      ],
+      "boundsPosed": [
+        [
+          -0.08001412451267242,
+          -0.09430938959121704,
+          1.754069209098816
+        ],
+        [
+          -0.06223959103226662,
+          -0.07583630084991455,
+          1.7741894721984863
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 12354,
+            "oralWorld": [
+              -0.07335234433412552,
+              -0.09307211637496948,
+              1.7634696960449219
+            ],
+            "blockingHeadTriangle": 13357,
+            "blockingHeadPolygon": 6678,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06058323383331299,
+              -0.1355893611907959,
+              1.7665878534317017
+            ],
+            "blockerAheadOfTargetMeters": 0.04450316055076531,
+            "headTriangleJawWeights": [
+              0.7169911861419678,
+              0.7696062922477722,
+              0.6733509302139282
+            ]
+          },
+          {
+            "oralVertex": 12355,
+            "oralWorld": [
+              -0.07416004687547684,
+              -0.09293895959854126,
+              1.7636148929595947
+            ],
+            "blockingHeadTriangle": 13357,
+            "blockingHeadPolygon": 6678,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06135427951812744,
+              -0.13555049896240234,
+              1.7667381763458252
+            ],
+            "blockerAheadOfTargetMeters": 0.04460406954872553,
+            "headTriangleJawWeights": [
+              0.7169911861419678,
+              0.7696062922477722,
+              0.6733509302139282
+            ]
+          },
+          {
+            "oralVertex": 12357,
+            "oralWorld": [
+              -0.0755629763007164,
+              -0.09211331605911255,
+              1.7642072439193726
+            ],
+            "blockingHeadTriangle": 30650,
+            "blockingHeadPolygon": 15325,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.062462449073791504,
+              -0.13566303253173828,
+              1.7673921585083008
+            ],
+            "blockerAheadOfTargetMeters": 0.04558888235222458,
+            "headTriangleJawWeights": [
+              0.7779550552368164,
+              0.7169911861419678,
+              0.6180295348167419
+            ]
+          },
+          {
+            "oralVertex": 12358,
+            "oralWorld": [
+              -0.07618171721696854,
+              -0.09138572216033936,
+              1.7646490335464478
+            ],
+            "blockingHeadTriangle": 30650,
+            "blockingHeadPolygon": 15325,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06280899047851562,
+              -0.13582491874694824,
+              1.7678933143615723
+            ],
+            "blockerAheadOfTargetMeters": 0.04652104152533365,
+            "headTriangleJawWeights": [
+              0.7779550552368164,
+              0.7169911861419678,
+              0.6180295348167419
+            ]
+          },
+          {
+            "oralVertex": 12360,
+            "oralWorld": [
+              -0.07765840739011765,
+              -0.08829104900360107,
+              1.7662032842636108
+            ],
+            "blockingHeadTriangle": 30651,
+            "blockingHeadPolygon": 15325,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06308209896087646,
+              -0.13670754432678223,
+              1.7697159051895142
+            ],
+            "blockerAheadOfTargetMeters": 0.050684955888163685,
+            "headTriangleJawWeights": [
+              0.7779550552368164,
+              0.6180295348167419,
+              0.6760092377662659
+            ]
+          },
+          {
+            "oralVertex": 12390,
+            "oralWorld": [
+              -0.06834175437688828,
+              -0.09084069728851318,
+              1.7658288478851318
+            ],
+            "blockingHeadTriangle": 30590,
+            "blockingHeadPolygon": 15295,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05407297611236572,
+              -0.13858270645141602,
+              1.7692992687225342
+            ],
+            "blockerAheadOfTargetMeters": 0.049949230679546375,
+            "headTriangleJawWeights": [
+              0.7793412804603577,
+              0.7563207745552063,
+              0.647291898727417
+            ]
+          },
+          {
+            "oralVertex": 12392,
+            "oralWorld": [
+              -0.07103518396615982,
+              -0.0920875072479248,
+              1.7654443979263306
+            ],
+            "blockingHeadTriangle": 13365,
+            "blockingHeadPolygon": 6682,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05743110179901123,
+              -0.13748598098754883,
+              1.7687500715255737
+            ],
+            "blockerAheadOfTargetMeters": 0.047508141743757726,
+            "headTriangleJawWeights": [
+              0.6793767213821411,
+              0.7231053113937378,
+              0.6376053690910339
+            ]
+          },
+          {
+            "oralVertex": 12393,
+            "oralWorld": [
+              -0.071945421397686,
+              -0.09230458736419678,
+              1.7653019428253174
+            ],
+            "blockingHeadTriangle": 13350,
+            "blockingHeadPolygon": 6675,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05853104591369629,
+              -0.13703298568725586,
+              1.7685606479644775
+            ],
+            "blockerAheadOfTargetMeters": 0.04681033786506372,
+            "headTriangleJawWeights": [
+              0.6302858591079712,
+              0.7235153317451477,
+              0.6793767213821411
+            ]
+          },
+          {
+            "oralVertex": 12395,
+            "oralWorld": [
+              -0.07350850105285645,
+              -0.09219348430633545,
+              1.7653675079345703
+            ],
+            "blockingHeadTriangle": 13347,
+            "blockingHeadPolygon": 6673,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.060148000717163086,
+              -0.13668441772460938,
+              1.7686080932617188
+            ],
+            "blockerAheadOfTargetMeters": 0.0465666728260441,
+            "headTriangleJawWeights": [
+              0.6733509302139282,
+              0.7235153317451477,
+              0.6302858591079712
+            ]
+          },
+          {
+            "oralVertex": 12396,
+            "oralWorld": [
+              -0.0741860643029213,
+              -0.0918617844581604,
+              1.7656527757644653
+            ],
+            "blockingHeadTriangle": 13346,
+            "blockingHeadPolygon": 6673,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0607074499130249,
+              -0.13672375679016113,
+              1.7689168453216553
+            ],
+            "blockerAheadOfTargetMeters": 0.04695662082914964,
+            "headTriangleJawWeights": [
+              0.6733509302139282,
+              0.7696062922477722,
+              0.7235153317451477
+            ]
+          },
+          {
+            "oralVertex": 12398,
+            "oralWorld": [
+              -0.07538770139217377,
+              -0.09060662984848022,
+              1.7666579484939575
+            ],
+            "blockingHeadTriangle": 13354,
+            "blockingHeadPolygon": 6677,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06138801574707031,
+              -0.13717007637023926,
+              1.7700326442718506
+            ],
+            "blockerAheadOfTargetMeters": 0.048739576995613376,
+            "headTriangleJawWeights": [
+              0.6180295348167419,
+              0.7169911861419678,
+              0.6733509302139282
+            ]
+          },
+          {
+            "oralVertex": 12425,
+            "oralWorld": [
+              -0.06419666856527328,
+              -0.08731502294540405,
+              1.7663943767547607
+            ],
+            "blockingHeadTriangle": 14274,
+            "blockingHeadPolygon": 7137,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.048673391342163086,
+              -0.13948583602905273,
+              1.7701759338378906
+            ],
+            "blockerAheadOfTargetMeters": 0.05456260919609157,
+            "headTriangleJawWeights": [
+              0.8146990537643433,
+              0.7153640985488892,
+              0.7099486589431763
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        -0.06076501370587731,
+        -0.14122766441567827,
+        1.8068586528630546
+      ],
+      "boundsPosed": [
+        [
+          -0.07492441684007645,
+          -0.10837435722351074,
+          1.7479058504104614
+        ],
+        [
+          -0.054908741265535355,
+          -0.09141188859939575,
+          1.7675222158432007
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 12719,
+            "oralWorld": [
+              -0.06745097786188126,
+              -0.1062881350517273,
+              1.7577258348464966
+            ],
+            "blockingHeadTriangle": 13359,
+            "blockingHeadPolygon": 6679,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05965447425842285,
+              -0.13229107856750488,
+              1.7596776485443115
+            ],
+            "blockerAheadOfTargetMeters": 0.02721688004295686,
+            "headTriangleJawWeights": [
+              0.815131664276123,
+              0.8664957284927368,
+              0.7696062922477722
+            ]
+          },
+          {
+            "oralVertex": 12720,
+            "oralWorld": [
+              -0.06837904453277588,
+              -0.10578525066375732,
+              1.7580934762954712
+            ],
+            "blockingHeadTriangle": 13356,
+            "blockingHeadPolygon": 6678,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06040346622467041,
+              -0.13236761093139648,
+              1.7600860595703125
+            ],
+            "blockerAheadOfTargetMeters": 0.027824381521167396,
+            "headTriangleJawWeights": [
+              0.7169911861419678,
+              0.815131664276123,
+              0.7696062922477722
+            ]
+          },
+          {
+            "oralVertex": 12721,
+            "oralWorld": [
+              -0.06938214600086212,
+              -0.10503500699996948,
+              1.758571982383728
+            ],
+            "blockingHeadTriangle": 30648,
+            "blockingHeadPolygon": 15324,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.061149001121520996,
+              -0.13245773315429688,
+              1.7606236934661865
+            ],
+            "blockerAheadOfTargetMeters": 0.02870580496090014,
+            "headTriangleJawWeights": [
+              0.8811274170875549,
+              0.815131664276123,
+              0.7169911861419678
+            ]
+          },
+          {
+            "oralVertex": 12722,
+            "oralWorld": [
+              -0.0710098147392273,
+              -0.10349434614181519,
+              1.7594445943832397
+            ],
+            "blockingHeadTriangle": 30649,
+            "blockingHeadPolygon": 15324,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.06223869323730469,
+              -0.13267993927001953,
+              1.7616208791732788
+            ],
+            "blockerAheadOfTargetMeters": 0.03055280144347261,
+            "headTriangleJawWeights": [
+              0.8811274170875549,
+              0.7169911861419678,
+              0.7779550552368164
+            ]
+          },
+          {
+            "oralVertex": 12752,
+            "oralWorld": [
+              -0.05963963642716408,
+              -0.10426068305969238,
+              1.7601569890975952
+            ],
+            "blockingHeadTriangle": 30603,
+            "blockingHeadPolygon": 15301,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05004584789276123,
+              -0.1364901065826416,
+              1.7625547647476196
+            ],
+            "blockerAheadOfTargetMeters": 0.03371244881576008,
+            "headTriangleJawWeights": [
+              0.9106741547584534,
+              0.8108561038970947,
+              0.8161478042602539
+            ]
+          },
+          {
+            "oralVertex": 12753,
+            "oralWorld": [
+              -0.06119242683053017,
+              -0.10500043630599976,
+              1.7597965002059937
+            ],
+            "blockingHeadTriangle": 30587,
+            "blockingHeadPolygon": 15293,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.052051424980163574,
+              -0.13566231727600098,
+              1.7620810270309448
+            ],
+            "blockerAheadOfTargetMeters": 0.032076954338976726,
+            "headTriangleJawWeights": [
+              0.8586527705192566,
+              0.7369511723518372,
+              0.7563207745552063
+            ]
+          },
+          {
+            "oralVertex": 12754,
+            "oralWorld": [
+              -0.06224007532000542,
+              -0.1054118275642395,
+              1.7595120668411255
+            ],
+            "blockingHeadTriangle": 30572,
+            "blockingHeadPolygon": 15286,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05340313911437988,
+              -0.135023832321167,
+              1.7617206573486328
+            ],
+            "blockerAheadOfTargetMeters": 0.030981298959880554,
+            "headTriangleJawWeights": [
+              0.9069635272026062,
+              0.8852989673614502,
+              0.7793412804603577
+            ]
+          },
+          {
+            "oralVertex": 12756,
+            "oralWorld": [
+              -0.06411627680063248,
+              -0.10580390691757202,
+              1.7591336965560913
+            ],
+            "blockingHeadTriangle": 11886,
+            "blockingHeadPolygon": 5943,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05562758445739746,
+              -0.1342003345489502,
+              1.7612546682357788
+            ],
+            "blockerAheadOfTargetMeters": 0.029713837906637508,
+            "headTriangleJawWeights": [
+              0.8332842588424683,
+              0.7231053113937378,
+              0.7676492929458618
+            ]
+          },
+          {
+            "oralVertex": 12757,
+            "oralWorld": [
+              -0.06500620394945145,
+              -0.10577243566513062,
+              1.7591581344604492
+            ],
+            "blockingHeadTriangle": 11888,
+            "blockingHeadPolygon": 5944,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05659472942352295,
+              -0.13388919830322266,
+              1.7612580060958862
+            ],
+            "blockerAheadOfTargetMeters": 0.029423334966441672,
+            "headTriangleJawWeights": [
+              0.8815246820449829,
+              0.7676492929458618,
+              0.8146127462387085
+            ]
+          },
+          {
+            "oralVertex": 12758,
+            "oralWorld": [
+              -0.06587827205657959,
+              -0.10557365417480469,
+              1.7593677043914795
+            ],
+            "blockingHeadTriangle": 13362,
+            "blockingHeadPolygon": 6681,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0574265718460083,
+              -0.1338050365447998,
+              1.7614744901657104
+            ],
+            "blockerAheadOfTargetMeters": 0.029544454809036225,
+            "headTriangleJawWeights": [
+              0.7235153317451477,
+              0.8146127462387085,
+              0.7676492929458618
+            ]
+          },
+          {
+            "oralVertex": 12759,
+            "oralWorld": [
+              -0.06674566119909286,
+              -0.10520368814468384,
+              1.7597440481185913
+            ],
+            "blockingHeadTriangle": 13361,
+            "blockingHeadPolygon": 6680,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05818641185760498,
+              -0.13377618789672852,
+              1.7618733644485474
+            ],
+            "blockerAheadOfTargetMeters": 0.0299028710317657,
+            "headTriangleJawWeights": [
+              0.7696062922477722,
+              0.8146127462387085,
+              0.7235153317451477
+            ]
+          },
+          {
+            "oralVertex": 12761,
+            "oralWorld": [
+              -0.06861087679862976,
+              -0.10389178991317749,
+              1.7608134746551514
+            ],
+            "blockingHeadTriangle": 13361,
+            "blockingHeadPolygon": 6680,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.05957376956939697,
+              -0.13402128219604492,
+              1.763049840927124
+            ],
+            "blockerAheadOfTargetMeters": 0.03153493079953584,
+            "headTriangleJawWeights": [
+              0.7696062922477722,
+              0.8146127462387085,
+              0.7235153317451477
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        -0.02636240151047048,
+        -0.16570505100554525,
+        1.8091437467553997
+      ],
+      "boundsPosed": [
+        [
+          -0.03978537395596504,
+          -0.1351345181465149,
+          1.7437660694122314
+        ],
+        [
+          -0.021634336560964584,
+          -0.11348164081573486,
+          1.7569152116775513
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 28,
+        "blockedByHeadFaceSet": {
+          "24": 3,
+          "7": 1
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 13077,
+            "oralWorld": [
+              -0.024382829666137695,
+              -0.13467371463775635,
+              1.749241590499878
+            ],
+            "blockingHeadTriangle": 11982,
+            "blockingHeadPolygon": 5991,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.01911771297454834,
+              -0.15277385711669922,
+              1.7506499290466309
+            ],
+            "blockerAheadOfTargetMeters": 0.018903007473880074,
+            "headTriangleJawWeights": [
+              0.9768261909484863,
+              0.9696915149688721,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13080,
+            "oralWorld": [
+              -0.02669733390212059,
+              -0.13484764099121094,
+              1.749149203300476
+            ],
+            "blockingHeadTriangle": 13333,
+            "blockingHeadPolygon": 6666,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0216597318649292,
+              -0.1521294116973877,
+              1.7504942417144775
+            ],
+            "blockerAheadOfTargetMeters": 0.018051134168358907,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9696915149688721,
+              0.9613834619522095
+            ]
+          },
+          {
+            "oralVertex": 13126,
+            "oralWorld": [
+              -0.03627057746052742,
+              -0.12707465887069702,
+              1.7535178661346436
+            ],
+            "blockingHeadTriangle": 14020,
+            "blockingHeadPolygon": 7010,
+            "blockingFaceSet": 7,
+            "blockerWorld": [
+              -0.03103768825531006,
+              -0.14491033554077148,
+              1.7548831701278687
+            ],
+            "blockerAheadOfTargetMeters": 0.018637614774286604,
+            "headTriangleJawWeights": [
+              0.9096209406852722,
+              0.9208129644393921,
+              0.9075314998626709
+            ]
+          },
+          {
+            "oralVertex": 13128,
+            "oralWorld": [
+              -0.03799494355916977,
+              -0.12496387958526611,
+              1.7541507482528687
+            ],
+            "blockingHeadTriangle": 12976,
+            "blockingHeadPolygon": 6488,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.03039836883544922,
+              -0.15083098411560059,
+              1.756125569343567
+            ],
+            "blockerAheadOfTargetMeters": 0.02703220258728045,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9160762429237366,
+              0.9008374810218811
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        -0.008663078190376776,
+        -0.17282281066831304,
+        1.809866780075579
+      ],
+      "boundsPosed": [
+        [
+          -0.021194446831941605,
+          -0.13897162675857544,
+          1.7421196699142456
+        ],
+        [
+          -0.004776659421622753,
+          -0.12137442827224731,
+          1.754348874092102
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 29,
+        "blockedByHeadFaceSet": {
+          "24": 3
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 13442,
+            "oralWorld": [
+              -0.007787975482642651,
+              -0.13787692785263062,
+              1.7487324476242065
+            ],
+            "blockingHeadTriangle": 56290,
+            "blockingHeadPolygon": 28145,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0035049915313720703,
+              -0.15280866622924805,
+              1.7498971223831177
+            ],
+            "blockerAheadOfTargetMeters": 0.015577449022349477,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13444,
+            "oralWorld": [
+              -0.009725344367325306,
+              -0.13855832815170288,
+              1.748455286026001
+            ],
+            "blockingHeadTriangle": 12379,
+            "blockingHeadPolygon": 6189,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.0055342912673950195,
+              -0.15314197540283203,
+              1.7495940923690796
+            ],
+            "blockerAheadOfTargetMeters": 0.015216434333160223,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13447,
+            "oralWorld": [
+              -0.016004953533411026,
+              -0.13895124197006226,
+              1.7482233047485352
+            ],
+            "blockingHeadTriangle": 12373,
+            "blockingHeadPolygon": 6186,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              -0.011765360832214355,
+              -0.15361857414245605,
+              1.7493696212768555
+            ],
+            "blockerAheadOfTargetMeters": 0.015310731096693786,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        0.008663078190376776,
+        -0.17288550504004757,
+        1.809866780075579
+      ],
+      "boundsPosed": [
+        [
+          -0.003782636718824506,
+          -0.13901907205581665,
+          1.7423350811004639
+        ],
+        [
+          0.012674187310039997,
+          -0.12143445014953613,
+          1.7545024156570435
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 24,
+        "blockedByHeadFaceSet": {
+          "24": 8
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 13805,
+            "oralWorld": [
+              0.009828406386077404,
+              -0.13852530717849731,
+              1.7486705780029297
+            ],
+            "blockingHeadTriangle": 56381,
+            "blockingHeadPolygon": 28190,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.01385200023651123,
+              -0.15277695655822754,
+              1.7497825622558594
+            ],
+            "blockerAheadOfTargetMeters": 0.014850715283353466,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13807,
+            "oralWorld": [
+              0.007479759864509106,
+              -0.13901180028915405,
+              1.7484769821166992
+            ],
+            "blockingHeadTriangle": 55472,
+            "blockingHeadPolygon": 27736,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.011504888534545898,
+              -0.15323662757873535,
+              1.7495877742767334
+            ],
+            "blockerAheadOfTargetMeters": 0.014825100637456678,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13810,
+            "oralWorld": [
+              0.0011960137635469437,
+              -0.13858604431152344,
+              1.7485734224319458
+            ],
+            "blockingHeadTriangle": 55906,
+            "blockingHeadPolygon": 27953,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.005419015884399414,
+              -0.1534264087677002,
+              1.7497317790985107
+            ],
+            "blockerAheadOfTargetMeters": 0.01547296641521445,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 13838,
+            "oralWorld": [
+              0.012292134575545788,
+              -0.13312721252441406,
+              1.7522412538528442
+            ],
+            "blockingHeadTriangle": 57245,
+            "blockingHeadPolygon": 28622,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.017539620399475098,
+              -0.15178251266479492,
+              1.7536777257919312
+            ],
+            "blockerAheadOfTargetMeters": 0.019432311324472984,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9280247092247009,
+              0.9398600459098816
+            ]
+          },
+          {
+            "oralVertex": 13841,
+            "oralWorld": [
+              0.012079966254532337,
+              -0.13621342182159424,
+              1.750983715057373
+            ],
+            "blockingHeadTriangle": 57247,
+            "blockingHeadPolygon": 28623,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.016377806663513184,
+              -0.15147709846496582,
+              1.7521648406982422
+            ],
+            "blockerAheadOfTargetMeters": 0.015901114482548273,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9398600459098816,
+              0.9505404233932495
+            ]
+          },
+          {
+            "oralVertex": 13844,
+            "oralWorld": [
+              0.010527058504521847,
+              -0.13794708251953125,
+              1.7503758668899536
+            ],
+            "blockingHeadTriangle": 57249,
+            "blockingHeadPolygon": 28624,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.014432072639465332,
+              -0.15178990364074707,
+              1.7514498233795166
+            ],
+            "blockerAheadOfTargetMeters": 0.014423420613701943,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9505404233932495,
+              0.96010422706604
+            ]
+          },
+          {
+            "oralVertex": 13846,
+            "oralWorld": [
+              0.008678626269102097,
+              -0.13864672183990479,
+              1.75017511844635
+            ],
+            "blockingHeadTriangle": 57251,
+            "blockingHeadPolygon": 28625,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.012510180473327637,
+              -0.15220355987548828,
+              1.7512277364730835
+            ],
+            "blockerAheadOfTargetMeters": 0.01412715607883186,
+            "headTriangleJawWeights": [
+              1.0,
+              0.96010422706604,
+              0.9685847759246826
+            ]
+          },
+          {
+            "oralVertex": 13881,
+            "oralWorld": [
+              0.0115233538672328,
+              -0.13497799634933472,
+              1.7521641254425049
+            ],
+            "blockingHeadTriangle": 57247,
+            "blockingHeadPolygon": 28623,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.016378045082092285,
+              -0.15221643447875977,
+              1.7534924745559692
+            ],
+            "blockerAheadOfTargetMeters": 0.01795821223852556,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9398600459098816,
+              0.9505404233932495
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        0.026362401500179624,
+        -0.16579069719953432,
+        1.8091437467553997
+      ],
+      "boundsPosed": [
+        [
+          0.013059294782578945,
+          -0.1352081298828125,
+          1.7442816495895386
+        ],
+        [
+          0.03116188570857048,
+          -0.11354374885559082,
+          1.7576395273208618
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 14172,
+            "oralWorld": [
+              0.020263180136680603,
+              -0.13380318880081177,
+              1.7501397132873535
+            ],
+            "blockingHeadTriangle": 57921,
+            "blockingHeadPolygon": 28960,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.02415597438812256,
+              -0.14774203300476074,
+              1.7512208223342896
+            ],
+            "blockerAheadOfTargetMeters": 0.014512664573707923,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14174,
+            "oralWorld": [
+              0.018145032227039337,
+              -0.13493210077285767,
+              1.7496469020843506
+            ],
+            "blockingHeadTriangle": 57923,
+            "blockingHeadPolygon": 28961,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.022165298461914062,
+              -0.14929485321044922,
+              1.750762939453125
+            ],
+            "blockerAheadOfTargetMeters": 0.014956652032957152,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14177,
+            "oralWorld": [
+              0.015828926116228104,
+              -0.13476502895355225,
+              1.7496811151504517
+            ],
+            "blockingHeadTriangle": 57239,
+            "blockingHeadPolygon": 28619,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.020130634307861328,
+              -0.1501009464263916,
+              1.7508726119995117
+            ],
+            "blockerAheadOfTargetMeters": 0.015972769299535727,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14181,
+            "oralWorld": [
+              0.01350673008710146,
+              -0.13067680597305298,
+              1.7513959407806396
+            ],
+            "blockingHeadTriangle": 57244,
+            "blockingHeadPolygon": 28622,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0190737247467041,
+              -0.15050220489501953,
+              1.7529258728027344
+            ],
+            "blockerAheadOfTargetMeters": 0.020648990886169116,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              0.9280247092247009
+            ]
+          },
+          {
+            "oralVertex": 14184,
+            "oralWorld": [
+              0.013526561670005322,
+              -0.12803184986114502,
+              1.7525453567504883
+            ],
+            "blockingHeadTriangle": 56899,
+            "blockingHeadPolygon": 28449,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.01988661289215088,
+              -0.1506977081298828,
+              1.754286527633667
+            ],
+            "blockerAheadOfTargetMeters": 0.02360559188050093,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9140427112579346,
+              0.9280247092247009
+            ]
+          },
+          {
+            "oralVertex": 14187,
+            "oralWorld": [
+              0.015116882510483265,
+              -0.1257506012916565,
+              1.7535669803619385
+            ],
+            "blockingHeadTriangle": 56897,
+            "blockingHeadPolygon": 28448,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.021853923797607422,
+              -0.1498095989227295,
+              1.7554078102111816
+            ],
+            "blockerAheadOfTargetMeters": 0.02505212001357915,
+            "headTriangleJawWeights": [
+              1.0,
+              0.8986251950263977,
+              0.9140427112579346
+            ]
+          },
+          {
+            "oralVertex": 14206,
+            "oralWorld": [
+              0.029314320534467697,
+              -0.1249818205833435,
+              1.75494384765625
+            ],
+            "blockingHeadTriangle": 58274,
+            "blockingHeadPolygon": 29137,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.032727956771850586,
+              -0.13733601570129395,
+              1.7558845281600952
+            ],
+            "blockerAheadOfTargetMeters": 0.012851601520631917,
+            "headTriangleJawWeights": [
+              0.7916246056556702,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14209,
+            "oralWorld": [
+              0.026326674968004227,
+              -0.12844055891036987,
+              1.753819227218628
+            ],
+            "blockingHeadTriangle": 58279,
+            "blockingHeadPolygon": 29139,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.02975320816040039,
+              -0.14079594612121582,
+              1.7547643184661865
+            ],
+            "blockerAheadOfTargetMeters": 0.01285649610407713,
+            "headTriangleJawWeights": [
+              0.8414854407310486,
+              1.0,
+              0.8177004456520081
+            ]
+          },
+          {
+            "oralVertex": 14212,
+            "oralWorld": [
+              0.020024649798870087,
+              -0.1340165138244629,
+              1.7515960931777954
+            ],
+            "blockingHeadTriangle": 56894,
+            "blockingHeadPolygon": 28447,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.023585200309753418,
+              -0.14676189422607422,
+              1.7525798082351685
+            ],
+            "blockerAheadOfTargetMeters": 0.013269804045376254,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              0.8816966414451599
+            ]
+          },
+          {
+            "oralVertex": 14215,
+            "oralWorld": [
+              0.017110038548707962,
+              -0.1352081298828125,
+              1.7509527206420898
+            ],
+            "blockingHeadTriangle": 56898,
+            "blockingHeadPolygon": 28449,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.02090275287628174,
+              -0.1487443447113037,
+              1.752000093460083
+            ],
+            "blockerAheadOfTargetMeters": 0.014096397124517601,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              0.9140427112579346
+            ]
+          },
+          {
+            "oralVertex": 14218,
+            "oralWorld": [
+              0.015157944522798061,
+              -0.13447445631027222,
+              1.751152515411377
+            ],
+            "blockingHeadTriangle": 56899,
+            "blockingHeadPolygon": 28449,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.01949620246887207,
+              -0.1499321460723877,
+              1.752347469329834
+            ],
+            "blockerAheadOfTargetMeters": 0.016099386223556778,
+            "headTriangleJawWeights": [
+              1.0,
+              0.9140427112579346,
+              0.9280247092247009
+            ]
+          },
+          {
+            "oralVertex": 14220,
+            "oralWorld": [
+              0.014072875492274761,
+              -0.13258779048919678,
+              1.7519268989562988
+            ],
+            "blockingHeadTriangle": 57244,
+            "blockingHeadPolygon": 28622,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.01915132999420166,
+              -0.15067458152770996,
+              1.7533208131790161
+            ],
+            "blockerAheadOfTargetMeters": 0.01883779578802436,
+            "headTriangleJawWeights": [
+              1.0,
+              1.0,
+              0.9280247092247009
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        0.0607650136852956,
+        -0.14126222247247538,
+        1.8068586528630546
+      ],
+      "boundsPosed": [
+        [
+          0.04612504318356514,
+          -0.10837525129318237,
+          1.7493733167648315
+        ],
+        [
+          0.06611999124288559,
+          -0.09141486883163452,
+          1.7690379619598389
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 14531,
+            "oralWorld": [
+              0.06367235630750656,
+              -0.10191488265991211,
+              1.761914849281311
+            ],
+            "blockingHeadTriangle": 55275,
+            "blockingHeadPolygon": 27637,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06943130493164062,
+              -0.12357664108276367,
+              1.7635157108306885
+            ],
+            "blockerAheadOfTargetMeters": 0.02247186711134752,
+            "headTriangleJawWeights": [
+              0.7744612097740173,
+              1.0,
+              0.824573278427124
+            ]
+          },
+          {
+            "oralVertex": 14532,
+            "oralWorld": [
+              0.062182407826185226,
+              -0.10350489616394043,
+              1.7610247135162354
+            ],
+            "blockingHeadTriangle": 55285,
+            "blockingHeadPolygon": 27642,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06788432598114014,
+              -0.12491250038146973,
+              1.7626123428344727
+            ],
+            "blockerAheadOfTargetMeters": 0.022210811834085575,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.9109126925468445,
+              0.7744612097740173
+            ]
+          },
+          {
+            "oralVertex": 14533,
+            "oralWorld": [
+              0.06057685241103172,
+              -0.10504114627838135,
+              1.760115385055542
+            ],
+            "blockingHeadTriangle": 56645,
+            "blockingHeadPolygon": 28322,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06617724895477295,
+              -0.12602686882019043,
+              1.7616772651672363
+            ],
+            "blockerAheadOfTargetMeters": 0.021776261493141824,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.8307915925979614,
+              0.8668277859687805
+            ]
+          },
+          {
+            "oralVertex": 14534,
+            "oralWorld": [
+              0.05958586558699608,
+              -0.10578888654708862,
+              1.7596142292022705
+            ],
+            "blockingHeadTriangle": 56645,
+            "blockingHeadPolygon": 28322,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06510722637176514,
+              -0.12645483016967773,
+              1.7611552476882935
+            ],
+            "blockerAheadOfTargetMeters": 0.021446325894891594,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.8307915925979614,
+              0.8668277859687805
+            ]
+          },
+          {
+            "oralVertex": 14572,
+            "oralWorld": [
+              0.06134328618645668,
+              -0.1024017333984375,
+              1.7632639408111572
+            ],
+            "blockingHeadTriangle": 55285,
+            "blockingHeadPolygon": 27642,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06776165962219238,
+              -0.12648677825927734,
+              1.7650357484817505
+            ],
+            "blockerAheadOfTargetMeters": 0.024988579606062267,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.9109126925468445,
+              0.7744612097740173
+            ]
+          },
+          {
+            "oralVertex": 14573,
+            "oralWorld": [
+              0.05975145474076271,
+              -0.10389411449432373,
+              1.762339472770691
+            ],
+            "blockingHeadTriangle": 56645,
+            "blockingHeadPolygon": 28322,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06605362892150879,
+              -0.12749767303466797,
+              1.7640821933746338
+            ],
+            "blockerAheadOfTargetMeters": 0.024492927428284794,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.8307915925979614,
+              0.8668277859687805
+            ]
+          },
+          {
+            "oralVertex": 14574,
+            "oralWorld": [
+              0.05878955125808716,
+              -0.1046571135520935,
+              1.7617433071136475
+            ],
+            "blockingHeadTriangle": 56644,
+            "blockingHeadPolygon": 28322,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06499361991882324,
+              -0.1278676986694336,
+              1.7634608745574951
+            ],
+            "blockerAheadOfTargetMeters": 0.024086850071530996,
+            "headTriangleJawWeights": [
+              0.7301133275032043,
+              0.6908185482025146,
+              0.8307915925979614
+            ]
+          },
+          {
+            "oralVertex": 14576,
+            "oralWorld": [
+              0.057055097073316574,
+              -0.10557067394256592,
+              1.760831356048584
+            ],
+            "blockingHeadTriangle": 56640,
+            "blockingHeadPolygon": 28320,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06320905685424805,
+              -0.12854981422424316,
+              1.7625375986099243
+            ],
+            "blockerAheadOfTargetMeters": 0.023849991549404592,
+            "headTriangleJawWeights": [
+              0.8307915925979614,
+              0.7665764689445496,
+              0.8907785415649414
+            ]
+          },
+          {
+            "oralVertex": 14577,
+            "oralWorld": [
+              0.056188393384218216,
+              -0.10576802492141724,
+              1.7606018781661987
+            ],
+            "blockingHeadTriangle": 56639,
+            "blockingHeadPolygon": 28319,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06240284442901611,
+              -0.1289527416229248,
+              1.7623248100280762
+            ],
+            "blockerAheadOfTargetMeters": 0.02406498503963661,
+            "headTriangleJawWeights": [
+              0.7665764689445496,
+              0.8090689182281494,
+              0.8907785415649414
+            ]
+          },
+          {
+            "oralVertex": 14578,
+            "oralWorld": [
+              0.055299315601587296,
+              -0.10579806566238403,
+              1.7605568170547485
+            ],
+            "blockingHeadTriangle": 56639,
+            "blockingHeadPolygon": 28319,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06164109706878662,
+              -0.12943696975708008,
+              1.7623138427734375
+            ],
+            "blockerAheadOfTargetMeters": 0.024537891048959537,
+            "headTriangleJawWeights": [
+              0.7665764689445496,
+              0.8090689182281494,
+              0.8907785415649414
+            ]
+          },
+          {
+            "oralVertex": 14579,
+            "oralWorld": [
+              0.0543791837990284,
+              -0.10567200183868408,
+              1.7606723308563232
+            ],
+            "blockingHeadTriangle": 56638,
+            "blockingHeadPolygon": 28319,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06090855598449707,
+              -0.1299901008605957,
+              1.7624790668487549
+            ],
+            "blockerAheadOfTargetMeters": 0.025244204862057806,
+            "headTriangleJawWeights": [
+              0.7665764689445496,
+              0.7018444538116455,
+              0.8090689182281494
+            ]
+          },
+          {
+            "oralVertex": 14581,
+            "oralWorld": [
+              0.05236000195145607,
+              -0.10499125719070435,
+              1.7611511945724487
+            ],
+            "blockingHeadTriangle": 55171,
+            "blockingHeadPolygon": 27585,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.059369802474975586,
+              -0.13105297088623047,
+              1.763083815574646
+            ],
+            "blockerAheadOfTargetMeters": 0.02705739522315742,
+            "headTriangleJawWeights": [
+              0.8603796362876892,
+              0.8090689182281494,
+              0.7410620450973511
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        0.06686807760341063,
+        -0.1253041137030441,
+        1.8068683364773324
+      ],
+      "boundsPosed": [
+        [
+          0.053321100771427155,
+          -0.09433406591415405,
+          1.7556777000427246
+        ],
+        [
+          0.07103779166936874,
+          -0.07584822177886963,
+          1.7757899761199951
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 14894,
+            "oralWorld": [
+              0.06865974515676498,
+              -0.088320791721344,
+              1.767931342124939
+            ],
+            "blockingHeadTriangle": 53514,
+            "blockingHeadPolygon": 26757,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07630741596221924,
+              -0.11732673645019531,
+              1.7700228691101074
+            ],
+            "blockerAheadOfTargetMeters": 0.030070468368240455,
+            "headTriangleJawWeights": [
+              0.8033340573310852,
+              0.7832591533660889,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14895,
+            "oralWorld": [
+              0.06781074404716492,
+              -0.09038704633712769,
+              1.7669119834899902
+            ],
+            "blockingHeadTriangle": 53514,
+            "blockingHeadPolygon": 26757,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07523167133331299,
+              -0.11849546432495117,
+              1.7689472436904907
+            ],
+            "blockerAheadOfTargetMeters": 0.02914274164376529,
+            "headTriangleJawWeights": [
+              0.8033340573310852,
+              0.7832591533660889,
+              1.0
+            ]
+          },
+          {
+            "oralVertex": 14897,
+            "oralWorld": [
+              0.06661462038755417,
+              -0.09213835000991821,
+              1.765887975692749
+            ],
+            "blockingHeadTriangle": 53528,
+            "blockingHeadPolygon": 26764,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07396352291107178,
+              -0.11992883682250977,
+              1.7679083347320557
+            ],
+            "blockerAheadOfTargetMeters": 0.02881673957073083,
+            "headTriangleJawWeights": [
+              0.7832591533660889,
+              0.7379838228225708,
+              0.9001421928405762
+            ]
+          },
+          {
+            "oralVertex": 14898,
+            "oralWorld": [
+              0.06595420092344284,
+              -0.09264594316482544,
+              1.7655267715454102
+            ],
+            "blockingHeadTriangle": 55297,
+            "blockingHeadPolygon": 27648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07336759567260742,
+              -0.12065887451171875,
+              1.767566204071045
+            ],
+            "blockerAheadOfTargetMeters": 0.02904891757773953,
+            "headTriangleJawWeights": [
+              0.7021499872207642,
+              0.9001421928405762,
+              0.7379838228225708
+            ]
+          },
+          {
+            "oralVertex": 14900,
+            "oralWorld": [
+              0.06442274898290634,
+              -0.09309184551239014,
+              1.765100359916687
+            ],
+            "blockingHeadTriangle": 55296,
+            "blockingHeadPolygon": 27648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0721520185470581,
+              -0.12225222587585449,
+              1.7672266960144043
+            ],
+            "blockerAheadOfTargetMeters": 0.030242129071157642,
+            "headTriangleJawWeights": [
+              0.7021499872207642,
+              0.8572253584861755,
+              0.9001421928405762
+            ]
+          },
+          {
+            "oralVertex": 14935,
+            "oralWorld": [
+              0.06694146245718002,
+              -0.08961081504821777,
+              1.7689963579177856
+            ],
+            "blockingHeadTriangle": 53528,
+            "blockingHeadPolygon": 26764,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.075034499168396,
+              -0.12024474143981934,
+              1.7711976766586304
+            ],
+            "blockerAheadOfTargetMeters": 0.031761692600346336,
+            "headTriangleJawWeights": [
+              0.7832591533660889,
+              0.7379838228225708,
+              0.9001421928405762
+            ]
+          },
+          {
+            "oralVertex": 14937,
+            "oralWorld": [
+              0.06581306457519531,
+              -0.09136021137237549,
+              1.76776123046875
+            ],
+            "blockingHeadTriangle": 53528,
+            "blockingHeadPolygon": 26764,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07377970218658447,
+              -0.12146949768066406,
+              1.7699353694915771
+            ],
+            "blockerAheadOfTargetMeters": 0.03122145981378832,
+            "headTriangleJawWeights": [
+              0.7832591533660889,
+              0.7379838228225708,
+              0.9001421928405762
+            ]
+          },
+          {
+            "oralVertex": 14938,
+            "oralWorld": [
+              0.06520326435565948,
+              -0.09188121557235718,
+              1.7673026323318481
+            ],
+            "blockingHeadTriangle": 55297,
+            "blockingHeadPolygon": 27648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07319808006286621,
+              -0.12207484245300293,
+              1.769486665725708
+            ],
+            "blockerAheadOfTargetMeters": 0.031310521138096625,
+            "headTriangleJawWeights": [
+              0.7021499872207642,
+              0.9001421928405762,
+              0.7379838228225708
+            ]
+          },
+          {
+            "oralVertex": 14940,
+            "oralWorld": [
+              0.06379177421331406,
+              -0.09235638380050659,
+              1.7668757438659668
+            ],
+            "blockingHeadTriangle": 55296,
+            "blockingHeadPolygon": 27648,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07206189632415771,
+              -0.12354373931884766,
+              1.7691353559494019
+            ],
+            "blockerAheadOfTargetMeters": 0.032344274314255905,
+            "headTriangleJawWeights": [
+              0.7021499872207642,
+              0.8572253584861755,
+              0.9001421928405762
+            ]
+          },
+          {
+            "oralVertex": 14941,
+            "oralWorld": [
+              0.06297186017036438,
+              -0.09231877326965332,
+              1.7669010162353516
+            ],
+            "blockingHeadTriangle": 55277,
+            "blockingHeadPolygon": 27638,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07148480415344238,
+              -0.12439656257629395,
+              1.7692248821258545
+            ],
+            "blockerAheadOfTargetMeters": 0.03326941688969942,
+            "headTriangleJawWeights": [
+              0.6689375638961792,
+              0.8572253584861755,
+              0.7021499872207642
+            ]
+          },
+          {
+            "oralVertex": 14943,
+            "oralWorld": [
+              0.0610024556517601,
+              -0.09168398380279541,
+              1.7671761512756348
+            ],
+            "blockingHeadTriangle": 55273,
+            "blockingHeadPolygon": 27636,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07021570205688477,
+              -0.1263408660888672,
+              1.769684076309204
+            ],
+            "blockerAheadOfTargetMeters": 0.03594823357614896,
+            "headTriangleJawWeights": [
+              0.6318454146385193,
+              0.824573278427124,
+              0.6689375638961792
+            ]
+          },
+          {
+            "oralVertex": 14945,
+            "oralWorld": [
+              0.05774340778589249,
+              -0.08995890617370605,
+              1.7674583196640015
+            ],
+            "blockingHeadTriangle": 55282,
+            "blockingHeadPolygon": 27641,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.06818914413452148,
+              -0.12914609909057617,
+              1.7702898979187012
+            ],
+            "blockerAheadOfTargetMeters": 0.040654687494589226,
+            "headTriangleJawWeights": [
+              0.5941635966300964,
+              0.7301133275032043,
+              0.7744612097740173
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "bone": "Jaw",
+      "centerBasis": [
+        0.07243617547892076,
+        -0.10764232164670749,
+        1.8070826951970054
+      ],
+      "boundsPosed": [
+        [
+          0.0593189001083374,
+          -0.07911109924316406,
+          1.7626184225082397
+        ],
+        [
+          0.0761905387043953,
+          -0.05923748016357422,
+          1.7833282947540283
+        ]
+      ],
+      "incisalAnteriorVisibility": {
+        "samples": 32,
+        "visible": 0,
+        "blockedByHeadFaceSet": {
+          "24": 32
+        },
+        "blockerExamples": [
+          {
+            "oralVertex": 15256,
+            "oralWorld": [
+              0.07402803003787994,
+              -0.07228410243988037,
+              1.7749288082122803
+            ],
+            "blockingHeadTriangle": 54194,
+            "blockingHeadPolygon": 27097,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08372294902801514,
+              -0.10939860343933105,
+              1.7775280475616455
+            ],
+            "blockerAheadOfTargetMeters": 0.03844794426729958,
+            "headTriangleJawWeights": [
+              0.7469760179519653,
+              0.7039034366607666,
+              0.8931582570075989
+            ]
+          },
+          {
+            "oralVertex": 15257,
+            "oralWorld": [
+              0.07326354086399078,
+              -0.07473373413085938,
+              1.7737678289413452
+            ],
+            "blockingHeadTriangle": 54197,
+            "blockingHeadPolygon": 27098,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08265852928161621,
+              -0.11065125465393066,
+              1.7762954235076904
+            ],
+            "blockerAheadOfTargetMeters": 0.03721183041136733,
+            "headTriangleJawWeights": [
+              0.7039034366607666,
+              0.8495309948921204,
+              0.8931582570075989
+            ]
+          },
+          {
+            "oralVertex": 15259,
+            "oralWorld": [
+              0.07214722037315369,
+              -0.07682859897613525,
+              1.7726331949234009
+            ],
+            "blockingHeadTriangle": 54199,
+            "blockingHeadPolygon": 27099,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08140313625335693,
+              -0.11215686798095703,
+              1.7751308679580688
+            ],
+            "blockerAheadOfTargetMeters": 0.03660640145028271,
+            "headTriangleJawWeights": [
+              0.6706673502922058,
+              0.8282998204231262,
+              0.8495309948921204
+            ]
+          },
+          {
+            "oralVertex": 15261,
+            "oralWorld": [
+              0.07082817703485489,
+              -0.07786750793457031,
+              1.771958351135254
+            ],
+            "blockingHeadTriangle": 54198,
+            "blockingHeadPolygon": 27099,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08021187782287598,
+              -0.11362838745117188,
+              1.7744934558868408
+            ],
+            "blockerAheadOfTargetMeters": 0.03705846732681195,
+            "headTriangleJawWeights": [
+              0.6706673502922058,
+              0.6473833918571472,
+              0.8282998204231262
+            ]
+          },
+          {
+            "oralVertex": 15296,
+            "oralWorld": [
+              0.07318337261676788,
+              -0.07170295715332031,
+              1.7770321369171143
+            ],
+            "blockingHeadTriangle": 54197,
+            "blockingHeadPolygon": 27098,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08350539207458496,
+              -0.1111917495727539,
+              1.7797760963439941
+            ],
+            "blockerAheadOfTargetMeters": 0.04090759013210743,
+            "headTriangleJawWeights": [
+              0.7039034366607666,
+              0.8495309948921204,
+              0.8931582570075989
+            ]
+          },
+          {
+            "oralVertex": 15298,
+            "oralWorld": [
+              0.07190991938114166,
+              -0.07531028985977173,
+              1.7751202583312988
+            ],
+            "blockingHeadTriangle": 54199,
+            "blockingHeadPolygon": 27099,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.0818030834197998,
+              -0.11307668685913086,
+              1.7777652740478516
+            ],
+            "blockerAheadOfTargetMeters": 0.03913061967197873,
+            "headTriangleJawWeights": [
+              0.6706673502922058,
+              0.8282998204231262,
+              0.8495309948921204
+            ]
+          },
+          {
+            "oralVertex": 15300,
+            "oralWorld": [
+              0.07080069929361343,
+              -0.07681351900100708,
+              1.774011492729187
+            ],
+            "blockingHeadTriangle": 54198,
+            "blockingHeadPolygon": 27099,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08062207698822021,
+              -0.11425113677978516,
+              1.7766450643539429
+            ],
+            "blockerAheadOfTargetMeters": 0.03879377359171787,
+            "headTriangleJawWeights": [
+              0.6706673502922058,
+              0.6473833918571472,
+              0.8282998204231262
+            ]
+          },
+          {
+            "oralVertex": 15301,
+            "oralWorld": [
+              0.07016277313232422,
+              -0.0772363543510437,
+              1.7736895084381104
+            ],
+            "blockingHeadTriangle": 53521,
+            "blockingHeadPolygon": 26760,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.08006441593170166,
+              -0.11495256423950195,
+              1.7763460874557495
+            ],
+            "blockerAheadOfTargetMeters": 0.03908462107227528,
+            "headTriangleJawWeights": [
+              0.6473833918571472,
+              0.8157991766929626,
+              0.8282998204231262
+            ]
+          },
+          {
+            "oralVertex": 15303,
+            "oralWorld": [
+              0.06867087632417679,
+              -0.0774846076965332,
+              1.7735666036605835
+            ],
+            "blockingHeadTriangle": 53520,
+            "blockingHeadPolygon": 26760,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07896113395690918,
+              -0.1166219711303711,
+              1.77632474899292
+            ],
+            "blockerAheadOfTargetMeters": 0.04056154529720146,
+            "headTriangleJawWeights": [
+              0.6473833918571472,
+              0.6315523982048035,
+              0.8157991766929626
+            ]
+          },
+          {
+            "oralVertex": 15305,
+            "oralWorld": [
+              0.0667814165353775,
+              -0.07690310478210449,
+              1.7738471031188965
+            ],
+            "blockingHeadTriangle": 53523,
+            "blockingHeadPolygon": 26761,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07781827449798584,
+              -0.11880970001220703,
+              1.7767969369888306
+            ],
+            "blockerAheadOfTargetMeters": 0.043436255318065164,
+            "headTriangleJawWeights": [
+              0.6315523982048035,
+              0.8033340573310852,
+              0.8157991766929626
+            ]
+          },
+          {
+            "oralVertex": 15306,
+            "oralWorld": [
+              0.06519809365272522,
+              -0.07601523399353027,
+              1.774034857749939
+            ],
+            "blockingHeadTriangle": 53525,
+            "blockingHeadPolygon": 26762,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07693004608154297,
+              -0.12050294876098633,
+              1.7771635055541992
+            ],
+            "blockerAheadOfTargetMeters": 0.046115067193396087,
+            "headTriangleJawWeights": [
+              0.6162031888961792,
+              0.7832591533660889,
+              0.8033340573310852
+            ]
+          },
+          {
+            "oralVertex": 15308,
+            "oralWorld": [
+              0.06274693459272385,
+              -0.07428812980651855,
+              1.7742007970809937
+            ],
+            "blockingHeadTriangle": 53524,
+            "blockingHeadPolygon": 26762,
+            "blockingFaceSet": 24,
+            "blockerWorld": [
+              0.07563567161560059,
+              -0.12306857109069824,
+              1.7776278257369995
+            ],
+            "blockerAheadOfTargetMeters": 0.050570794628350235,
+            "headTriangleJawWeights": [
+              0.6162031888961792,
+              0.5968174934387207,
+              0.7832591533660889
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "tongueDorsumVisibility": {
+    "samples": 64,
+    "visible": 43,
+    "blockedByHeadFaceSet": {
+      "24": 21
+    },
+    "blockerExamples": [
+      {
+        "oralVertex": 15934,
+        "oralWorld": [
+          0.016450684517621994,
+          -0.035102665424346924,
+          1.7929173707962036
+        ],
+        "blockingHeadTriangle": 59516,
+        "blockingHeadPolygon": 29758,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.04838705062866211,
+          -0.1519637107849121,
+          1.8004945516586304
+        ],
+        "blockerAheadOfTargetMeters": 0.1213829934968258,
+        "headTriangleJawWeights": [
+          0.24114808440208435,
+          0.2218773066997528,
+          0.27078142762184143
+        ]
+      },
+      {
+        "oralVertex": 15969,
+        "oralWorld": [
+          0.03223307803273201,
+          -0.03564155101776123,
+          1.7869938611984253
+        ],
+        "blockingHeadTriangle": 55613,
+        "blockingHeadPolygon": 27806,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.0621412992477417,
+          -0.1466832160949707,
+          1.794360637664795
+        ],
+        "blockerAheadOfTargetMeters": 0.11523464263741268,
+        "headTriangleJawWeights": [
+          0.40682676434516907,
+          0.3412957489490509,
+          0.3151942491531372
+        ]
+      },
+      {
+        "oralVertex": 15972,
+        "oralWorld": [
+          0.02533775195479393,
+          -0.03713899850845337,
+          1.790294885635376
+        ],
+        "blockingHeadTriangle": 56603,
+        "blockingHeadPolygon": 28301,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05557548999786377,
+          -0.14864182472229004,
+          1.7976021766662598
+        ],
+        "blockerAheadOfTargetMeters": 0.11576126183504698,
+        "headTriangleJawWeights": [
+          0.3435140550136566,
+          0.3034158945083618,
+          0.27682244777679443
+        ]
+      },
+      {
+        "oralVertex": 16006,
+        "oralWorld": [
+          0.030923768877983093,
+          -0.0347973108291626,
+          1.783215045928955
+        ],
+        "blockingHeadTriangle": 55613,
+        "blockingHeadPolygon": 27806,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.06062626838684082,
+          -0.14496350288391113,
+          1.790627121925354
+        ],
+        "blockerAheadOfTargetMeters": 0.11434062632078135,
+        "headTriangleJawWeights": [
+          0.40682676434516907,
+          0.3412957489490509,
+          0.3151942491531372
+        ]
+      },
+      {
+        "oralVertex": 16009,
+        "oralWorld": [
+          0.03302553668618202,
+          -0.03906410560011864,
+          1.7855628728866577
+        ],
+        "blockingHeadTriangle": 55613,
+        "blockingHeadPolygon": 27806,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.06179463863372803,
+          -0.14586400985717773,
+          1.7926928997039795
+        ],
+        "blockerAheadOfTargetMeters": 0.11083690075405528,
+        "headTriangleJawWeights": [
+          0.40682676434516907,
+          0.3412957489490509,
+          0.3151942491531372
+        ]
+      },
+      {
+        "oralVertex": 16012,
+        "oralWorld": [
+          0.025957781821489334,
+          -0.04045671224594116,
+          1.789009928703308
+        ],
+        "blockingHeadTriangle": 56590,
+        "blockingHeadPolygon": 28295,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05512416362762451,
+          -0.1479809284210205,
+          1.7960972785949707
+        ],
+        "blockerAheadOfTargetMeters": 0.11163529766271285,
+        "headTriangleJawWeights": [
+          0.3126019239425659,
+          0.3435140550136566,
+          0.27682244777679443
+        ]
+      },
+      {
+        "oralVertex": 16045,
+        "oralWorld": [
+          0.029365960508584976,
+          -0.03822946548461914,
+          1.7804313898086548
+        ],
+        "blockingHeadTriangle": 55596,
+        "blockingHeadPolygon": 27798,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05787003040313721,
+          -0.1437058448791504,
+          1.78760826587677
+        ],
+        "blockerAheadOfTargetMeters": 0.10949588069870853,
+        "headTriangleJawWeights": [
+          0.41621461510658264,
+          0.4577723443508148,
+          0.3728269934654236
+        ]
+      },
+      {
+        "oralVertex": 16048,
+        "oralWorld": [
+          0.0342412106692791,
+          -0.04226142168045044,
+          1.782734990119934
+        ],
+        "blockingHeadTriangle": 55612,
+        "blockingHeadPolygon": 27806,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.06171059608459473,
+          -0.1442699432373047,
+          1.789623498916626
+        ],
+        "blockerAheadOfTargetMeters": 0.10586663362231974,
+        "headTriangleJawWeights": [
+          0.40682676434516907,
+          0.4402068555355072,
+          0.3412957489490509
+        ]
+      },
+      {
+        "oralVertex": 16051,
+        "oralWorld": [
+          0.029774893075227737,
+          -0.043177247047424316,
+          1.7866249084472656
+        ],
+        "blockingHeadTriangle": 55620,
+        "blockingHeadPolygon": 27810,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05774056911468506,
+          -0.14657163619995117,
+          1.7935069799423218
+        ],
+        "blockerAheadOfTargetMeters": 0.10733055831391791,
+        "headTriangleJawWeights": [
+          0.3745515048503876,
+          0.41621461510658264,
+          0.3383300006389618
+        ]
+      },
+      {
+        "oralVertex": 16053,
+        "oralWorld": [
+          0.022434145212173462,
+          -0.044433414936065674,
+          1.7885410785675049
+        ],
+        "blockingHeadTriangle": 59523,
+        "blockingHeadPolygon": 29761,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05089271068572998,
+          -0.14890003204345703,
+          1.7954461574554443
+        ],
+        "blockerAheadOfTargetMeters": 0.10849344777962333,
+        "headTriangleJawWeights": [
+          0.30686265230178833,
+          0.33659958839416504,
+          0.3614215552806854
+        ]
+      },
+      {
+        "oralVertex": 16087,
+        "oralWorld": [
+          0.03378916159272194,
+          -0.042099591344594955,
+          1.7813841104507446
+        ],
+        "blockingHeadTriangle": 55611,
+        "blockingHeadPolygon": 27805,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.06114637851715088,
+          -0.14365291595458984,
+          1.7882763147354126
+        ],
+        "blockerAheadOfTargetMeters": 0.1053992512359887,
+        "headTriangleJawWeights": [
+          0.49910080432891846,
+          0.4402068555355072,
+          0.40682676434516907
+        ]
+      },
+      {
+        "oralVertex": 16090,
+        "oralWorld": [
+          0.032741084694862366,
+          -0.0460737906396389,
+          1.7839566469192505
+        ],
+        "blockingHeadTriangle": 55599,
+        "blockingHeadPolygon": 27799,
+        "blockingFaceSet": 24,
+        "blockerWorld": [
+          0.05945479869842529,
+          -0.14504146575927734,
+          1.7906157970428467
+        ],
+        "blockerAheadOfTargetMeters": 0.10272600336038629,
+        "headTriangleJawWeights": [
+          0.4577723443508148,
+          0.40682676434516907,
+          0.3728269934654236
+        ]
+      }
+    ]
+  },
+  "lowerLipJawWeights": {
+    "minimum": 0.0,
+    "median": 0.763022780418396,
+    "maximum": 1.0,
+    "samples": 81
+  },
+  "worstLowerFaceWeightEdges": [
+    {
+      "ids": [
+        3520,
+        40987
+      ],
+      "basis": [
+        [
+          0.050843141973018646,
+          -0.15868337452411652,
+          1.8170441389083862
+        ],
+        [
+          0.050688255578279495,
+          -0.15887533128261566,
+          1.817018985748291
+        ]
+      ],
+      "posed": [
+        [
+          0.04566047340631485,
+          -0.15916545689105988,
+          1.815580129623413
+        ],
+        [
+          0.04551086202263832,
+          -0.1575007289648056,
+          1.8124819993972778
+        ]
+      ],
+      "jawWeights": [
+        0.0,
+        0.051325928419828415
+      ],
+      "weightGradientPerMeter": 207.01682946958894
+    },
+    {
+      "ids": [
+        4582,
+        1784
+      ],
+      "basis": [
+        [
+          0.050861962139606476,
+          -0.15906333923339844,
+          1.8169569969177246
+        ],
+        [
+          0.05102977156639099,
+          -0.15886680781841278,
+          1.8169645071029663
+        ]
+      ],
+      "posed": [
+        [
+          0.0456816740334034,
+          -0.15762920677661896,
+          1.8123619556427002
+        ],
+        [
+          0.045847199857234955,
+          -0.15942703187465668,
+          1.8155039548873901
+        ]
+      ],
+      "jawWeights": [
+        0.053523819893598557,
+        0.0
+      ],
+      "weightGradientPerMeter": 207.02634715414925
+    },
+    {
+      "ids": [
+        6837,
+        28628
+      ],
+      "basis": [
+        [
+          -0.0509188212454319,
+          -0.15826205909252167,
+          1.817098617553711
+        ],
+        [
+          -0.05077577009797096,
+          -0.1584535390138626,
+          1.8170503377914429
+        ]
+      ],
+      "posed": [
+        [
+          -0.05583038926124573,
+          -0.1587861031293869,
+          1.814267873764038
+        ],
+        [
+          -0.05562480539083481,
+          -0.15721015632152557,
+          1.8110542297363281
+        ]
+      ],
+      "jawWeights": [
+        0.0,
+        0.0510239452123642
+      ],
+      "weightGradientPerMeter": 209.2496658436586
+    },
+    {
+      "ids": [
+        3519,
+        40986
+      ],
+      "basis": [
+        [
+          0.05073929950594902,
+          -0.15841329097747803,
+          1.817132830619812
+        ],
+        [
+          0.050599317997694016,
+          -0.15860044956207275,
+          1.8170870542526245
+        ]
+      ],
+      "posed": [
+        [
+          0.045556992292404175,
+          -0.1588403731584549,
+          1.8156687021255493
+        ],
+        [
+          0.04542894661426544,
+          -0.1572721004486084,
+          1.8124911785125732
+        ]
+      ],
+      "jawWeights": [
+        0.0,
+        0.050614140927791595
+      ],
+      "weightGradientPerMeter": 212.52449244726049
+    },
+    {
+      "ids": [
+        237,
+        13187
+      ],
+      "basis": [
+        [
+          -0.03696024417877197,
+          -0.17535331845283508,
+          1.818711519241333
+        ],
+        [
+          -0.037722356617450714,
+          -0.17543311417102814,
+          1.8193507194519043
+        ]
+      ],
+      "posed": [
+        [
+          -0.04129732400178909,
+          -0.14495907723903656,
+          1.7669286727905273
+        ],
+        [
+          -0.04179639369249344,
+          -0.1355818510055542,
+          1.7528011798858643
+        ]
+      ],
+      "jawWeights": [
+        0.7658101320266724,
+        1.0
+      ],
+      "weightGradientPerMeter": 234.687977917065
+    },
+    {
+      "ids": [
+        1779,
+        6389
+      ],
+      "basis": [
+        [
+          0.03690888732671738,
+          -0.17533278465270996,
+          1.8187843561172485
+        ],
+        [
+          0.03768051043152809,
+          -0.17538957297801971,
+          1.8194292783737183
+        ]
+      ],
+      "posed": [
+        [
+          0.0322846919298172,
+          -0.14512993395328522,
+          1.768151879310608
+        ],
+        [
+          0.033130258321762085,
+          -0.13563305139541626,
+          1.7538833618164062
+        ]
+      ],
+      "jawWeights": [
+        0.763022780418396,
+        1.0
+      ],
+      "weightGradientPerMeter": 235.27158419855945
+    },
+    {
+      "ids": [
+        6836,
+        28627
+      ],
+      "basis": [
+        [
+          -0.050867386162281036,
+          -0.15789735317230225,
+          1.8171924352645874
+        ],
+        [
+          -0.05073796957731247,
+          -0.15808187425136566,
+          1.8171201944351196
+        ]
+      ],
+      "posed": [
+        [
+          -0.05578133463859558,
+          -0.15839335322380066,
+          1.8143606185913086
+        ],
+        [
+          -0.05558263137936592,
+          -0.15668216347694397,
+          1.8105379343032837
+        ]
+      ],
+      "jawWeights": [
+        0.0,
+        0.058027468621730804
+      ],
+      "weightGradientPerMeter": 245.17705990654417
+    },
+    {
+      "ids": [
+        3518,
+        40985
+      ],
+      "basis": [
+        [
+          0.05069351568818092,
+          -0.15804189443588257,
+          1.8172333240509033
+        ],
+        [
+          0.05056630074977875,
+          -0.15822266042232513,
+          1.8171632289886475
+        ]
+      ],
+      "posed": [
+        [
+          0.04551099240779877,
+          -0.15843357145786285,
+          1.8157821893692017
+        ],
+        [
+          0.04540421813726425,
+          -0.1567395180463791,
+          1.811983346939087
+        ]
+      ],
+      "jawWeights": [
+        0.0,
+        0.05757378041744232
+      ],
+      "weightGradientPerMeter": 248.27980850515797
+    },
+    {
+      "ids": [
+        13699,
+        27515
+      ],
+      "basis": [
+        [
+          -0.03844088315963745,
+          -0.17346253991127014,
+          1.8184099197387695
+        ],
+        [
+          -0.03919235244393349,
+          -0.1734910011291504,
+          1.819015383720398
+        ]
+      ],
+      "posed": [
+        [
+          -0.04279545322060585,
+          -0.14425991475582123,
+          1.7689131498336792
+        ],
+        [
+          -0.043263789266347885,
+          -0.13367289304733276,
+          1.7531381845474243
+        ]
+      ],
+      "jawWeights": [
+        0.7363040447235107,
+        1.0
+      ],
+      "weightGradientPerMeter": 273.13136276501604
+    },
+    {
+      "ids": [
+        6397,
+        39867
+      ],
+      "basis": [
+        [
+          0.0383792370557785,
+          -0.17346271872520447,
+          1.818483591079712
+        ],
+        [
+          0.039138562977313995,
+          -0.1734716296195984,
+          1.8190943002700806
+        ]
+      ],
+      "posed": [
+        [
+          0.03372465446591377,
+          -0.14444003999233246,
+          1.7701643705368042
+        ],
+        [
+          0.034576576203107834,
+          -0.133742094039917,
+          1.7542535066604614
+        ]
+      ],
+      "jawWeights": [
+        0.7336143851280212,
+        1.0
+      ],
+      "weightGradientPerMeter": 273.3604115038305
+    },
+    {
+      "ids": [
+        8926,
+        251
+      ],
+      "basis": [
+        [
+          -0.05072958394885063,
+          -0.15759849548339844,
+          1.8172012567520142
+        ],
+        [
+          -0.050849493592977524,
+          -0.15742559731006622,
+          1.8173028230667114
+        ]
+      ],
+      "posed": [
+        [
+          -0.05550593137741089,
+          -0.15510053932666779,
+          1.8076938390731812
+        ],
+        [
+          -0.05576641857624054,
+          -0.15791967511177063,
+          1.8144747018814087
+        ]
+      ],
+      "jawWeights": [
+        0.09904424101114273,
+        0.0
+      ],
+      "weightGradientPerMeter": 423.9175175619419
+    },
+    {
+      "ids": [
+        4666,
+        1793
+      ],
+      "basis": [
+        [
+          0.05056271329522133,
+          -0.157734215259552,
+          1.817249059677124
+        ],
+        [
+          0.050681017339229584,
+          -0.1575644463300705,
+          1.8173490762710571
+        ]
+      ],
+      "posed": [
+        [
+          0.045401681214571,
+          -0.15516000986099243,
+          1.8091198205947876
+        ],
+        [
+          0.045500174164772034,
+          -0.15795844793319702,
+          1.815895438194275
+        ]
+      ],
+      "jawWeights": [
+        0.09863985329866409,
+        0.0
+      ],
+      "weightGradientPerMeter": 429.19091982726474
+    }
+  ],
+  "cache": {
+    "path": "benchmark/local/krag-normal-mouth-v9p-posed-cache.npz",
+    "sha256": "5407ee8e83729337f36fa7d1d95502858d817c080a0771f7abf572091bf800b7"
+  },
+  "toolSha256": "dcd923612668440a09a21b6e8ac11720761cbb13f0bfbfd6eb8c95d99957e1e6",
+  "artisticAcceptance": false
+}
