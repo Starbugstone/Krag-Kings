@@ -1,0 +1,659 @@
+{
+  "status": "Isolated anatomical construction and twist candidate; source/posed/engine review required",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5i_OrbitalClosure_WIP.blend",
+  "sourceSha256": "f103eb11e67c412a55753e3a21de491d79ac69f3db1247d3cc2d250995e0b40b",
+  "library": "D:\\Dev\\Krag-Kings\\benchmark\\art\\reference-anatomy\\blender-studio-human-base-meshes\\source\\human-base-meshes-bundle-v1.4.1\\human_base_meshes_bundle.blend",
+  "librarySha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "license": "Blender Studio Human Base Meshes 1.4.1 CC0; original README/provenance preserved",
+  "referenceObject": "GEO-body_male_realistic",
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "scope": "Natural torso/arms plus twist extension; retained restorative body is not a newly accepted variant",
+  "skeleton": {
+    "addedBones": [
+      "ForearmTwist_L",
+      "ForearmTwist_R"
+    ],
+    "globalBindMaximumElementError": 3.5762786865234375e-07,
+    "globalBindMaximumTranslationErrorMeters": 5.960464477539063e-08,
+    "globalBindMaximumRotationErrorDegrees": 1.617563432437585e-05,
+    "bindDifferences": {
+      "Hand_L": {
+        "maximumMatrixElementDifference": 1.932494342327118e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.2792616813822691e-06
+      },
+      "Index1_L": {
+        "maximumMatrixElementDifference": 1.4901161193847656e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 9.505871479467643e-07
+      },
+      "Index2_L": {
+        "maximumMatrixElementDifference": 5.960464477539063e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 3.0448566285990103e-06
+      },
+      "Index3_L": {
+        "maximumMatrixElementDifference": 1.1920928955078125e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 5.709156584127923e-06
+      },
+      "Middle1_L": {
+        "maximumMatrixElementDifference": 1.4901161193847656e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 4.260746090828739e-07
+      },
+      "Middle2_L": {
+        "maximumMatrixElementDifference": 2.9802322387695312e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.5864937509602228e-06
+      },
+      "Middle3_L": {
+        "maximumMatrixElementDifference": 5.960464477539063e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.0541285480137198e-05
+      },
+      "Ring1_L": {
+        "maximumMatrixElementDifference": 2.9802322387695312e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 8.521491793874945e-07
+      },
+      "Ring2_L": {
+        "maximumMatrixElementDifference": 2.9802322387695312e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.0880755509464283e-06
+      },
+      "Ring3_L": {
+        "maximumMatrixElementDifference": 5.960464477539063e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 7.170066581443784e-06
+      },
+      "Little1_L": {
+        "maximumMatrixElementDifference": 7.450580596923828e-08,
+        "translationDifferenceMeters": 5.960464477539063e-08,
+        "rotationDifferenceDegrees": 4.250812728065056e-06
+      },
+      "Little2_L": {
+        "maximumMatrixElementDifference": 1.1920928955078125e-07,
+        "translationDifferenceMeters": 5.960464477539063e-08,
+        "rotationDifferenceDegrees": 4.0770418653615245e-06
+      },
+      "Little3_L": {
+        "maximumMatrixElementDifference": 1.7881393432617188e-07,
+        "translationDifferenceMeters": 5.960464477539063e-08,
+        "rotationDifferenceDegrees": 1.3259852064174447e-05
+      },
+      "Thumb1_L": {
+        "maximumMatrixElementDifference": 1.1920928955078125e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 8.485793940058141e-06
+      },
+      "Thumb2_L": {
+        "maximumMatrixElementDifference": 1.4901161193847656e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 5.786167704818732e-06
+      },
+      "Hand_R": {
+        "maximumMatrixElementDifference": 1.932494342327118e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.2792616813822691e-06
+      },
+      "Index1_R": {
+        "maximumMatrixElementDifference": 1.4901161193847656e-07,
+        "translationDifferenceMeters": 1.4901161193847656e-08,
+        "rotationDifferenceDegrees": 3.929469352187665e-06
+      },
+      "Index2_R": {
+        "maximumMatrixElementDifference": 2.980232238769531e-07,
+        "translationDifferenceMeters": 1.4901161193847656e-08,
+        "rotationDifferenceDegrees": 6.106097110298526e-06
+      },
+      "Index3_R": {
+        "maximumMatrixElementDifference": 3.5762786865234375e-07,
+        "translationDifferenceMeters": 1.4901161193847656e-08,
+        "rotationDifferenceDegrees": 2.2241189771513586e-06
+      },
+      "Middle1_R": {
+        "maximumMatrixElementDifference": 4.470348358154297e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 2.287044809604723e-06
+      },
+      "Middle2_R": {
+        "maximumMatrixElementDifference": 1.842643087002216e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.1345083241640466e-05
+      },
+      "Middle3_R": {
+        "maximumMatrixElementDifference": 2.2643590114057588e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 7.044756395747374e-07
+      },
+      "Ring1_R": {
+        "maximumMatrixElementDifference": 7.450580596923828e-09,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 4.48907395512702e-07
+      },
+      "Ring2_R": {
+        "maximumMatrixElementDifference": 1.3692925904251751e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 4.950714992452326e-07
+      },
+      "Ring3_R": {
+        "maximumMatrixElementDifference": 1.3775263596471632e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 4.1768991022740206e-07
+      },
+      "Little1_R": {
+        "maximumMatrixElementDifference": 1.4901161193847656e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 3.4106646744047667e-06
+      },
+      "Little2_R": {
+        "maximumMatrixElementDifference": 2.682209014892578e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.617563432437585e-05
+      },
+      "Little3_R": {
+        "maximumMatrixElementDifference": 3.5762786865234375e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 1.5072139192483656e-05
+      },
+      "Thumb1_R": {
+        "maximumMatrixElementDifference": 5.960464477539063e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 8.531360968354506e-07
+      },
+      "Thumb2_R": {
+        "maximumMatrixElementDifference": 2.980232238769531e-07,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 9.14028816743022e-06
+      },
+      "Weapon": {
+        "maximumMatrixElementDifference": 1.3504177331924438e-08,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 5.94469869014024e-07
+      },
+      "WeaponMuzzle": {
+        "maximumMatrixElementDifference": 8.41873770696111e-09,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 3.4120907990901714e-07
+      },
+      "WeaponAim": {
+        "maximumMatrixElementDifference": 8.418723496106395e-09,
+        "translationDifferenceMeters": 0.0,
+        "rotationDifferenceDegrees": 3.412083961066966e-07
+      }
+    },
+    "bindTolerance": {
+      "matrixElements": 1e-06,
+      "translationMeters": 1e-07
+    },
+    "parentContract": {
+      "ForearmTwist_L": "LowerArm_L",
+      "ForearmTwist_R": "LowerArm_R"
+    },
+    "reparentedHands": {
+      "L": "ForearmTwist_L",
+      "R": "ForearmTwist_R"
+    },
+    "twistAxis": "Blender local +Y; same global elbow-to-wrist rest direction and roll as LowerArm",
+    "animationContract": "LowerArm captured swing/flex; ForearmTwist half axial pronation; Hand desired orientation includes full pronation (remaining half local)",
+    "requiresFreshMatchingClips": true
+  },
+  "retainedSoftForearmWeights": [
+    {
+      "component": "Forearm desert wrap L",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9973185314066267,
+          "maximumAddedHandWeight": 0.0,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.001",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9999996552066177,
+          "maximumAddedHandWeight": 0.018476261614919862,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.002",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9999995099187983,
+          "maximumAddedHandWeight": 0.09119634420163747,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.003",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9993829505375034,
+          "maximumAddedHandWeight": 0.20591024029446442,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.004",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9586535225503948,
+          "maximumAddedHandWeight": 0.3484789233454761,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.005",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.8603327572537592,
+          "maximumAddedHandWeight": 0.5047566108460889,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.006",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.7229019601885992,
+          "maximumAddedHandWeight": 0.6606041457890309,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.007",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.5633314549323876,
+          "maximumAddedHandWeight": 0.8004578633160536,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.008",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.39460232139502094,
+          "maximumAddedHandWeight": 0.9135324316341269,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap L.009",
+      "sides": {
+        "L": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.23920881691681684,
+          "maximumAddedHandWeight": 0.9838281098548979,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9973564281898925,
+          "maximumAddedHandWeight": 0.0,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.001",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9999991060608416,
+          "maximumAddedHandWeight": 0.018557036902730823,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.002",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9999996515043001,
+          "maximumAddedHandWeight": 0.09135803764852557,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.003",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9996616505898183,
+          "maximumAddedHandWeight": 0.2080983670299507,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.004",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.9587284702271056,
+          "maximumAddedHandWeight": 0.3467817188395127,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.005",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.8611101877268481,
+          "maximumAddedHandWeight": 0.5031626399509169,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.006",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.7238864260054579,
+          "maximumAddedHandWeight": 0.6592612198268616,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.007",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.5621518146573026,
+          "maximumAddedHandWeight": 0.7982091213928508,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.008",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.3953476338971119,
+          "maximumAddedHandWeight": 0.911869725356751,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    },
+    {
+      "component": "Forearm desert wrap R.009",
+      "sides": {
+        "R": {
+          "weightedVertices": 227,
+          "maximumTwistWeight": 0.24017010375094572,
+          "maximumAddedHandWeight": 0.9848724454365331,
+          "halfTwistProgressRange": [
+            0.1,
+            0.48
+          ],
+          "fullTwistProgressRange": [
+            0.48,
+            0.94
+          ]
+        }
+      },
+      "weightSumDifference": 2.9802322387695312e-08,
+      "maximumInfluences": 2
+    }
+  ],
+  "preserved": {
+    "unrelatedGeometryUVMaterialsMorphsAndMatrices": 374,
+    "originalGlobalBoneBind": true,
+    "faceAndEarGeometry": true,
+    "allOriginalAnimationCurves": true,
+    "newTwistAnimationAuthored": false,
+    "rigRequiresRootRetarget": true
+  },
+  "cage": {
+    "vertices": 2176,
+    "faces": 2094,
+    "domain": {
+      "iterations": 463,
+      "maxIterationDelta": 9.88659940026615e-09,
+      "converged": true,
+      "torsoSeedVertices": 1104,
+      "armSeedVertices": 654,
+      "vertices": 2176,
+      "undirectedEdges": 4272,
+      "status": "Anatomical weighting proposal; actual raised-arm deformation review required"
+    }
+  },
+  "anatomicalSurface": {
+    "vertices": 33838,
+    "triangles": 67008,
+    "boundsMin": [
+      -0.23016437888145447,
+      -0.07360288500785828,
+      0.6193188428878784
+    ],
+    "boundsMax": [
+      0.23016002774238586,
+      0.08160556107759476,
+      1.0477148294448853
+    ],
+    "maximumInfluences": 4,
+    "bodyCorrectives": [
+      "Corrective_ShoulderRaise_L",
+      "Corrective_ElbowFlex_L",
+      "Corrective_HipFlex_L",
+      "Corrective_ShoulderRaise_R",
+      "Corrective_ElbowFlex_R",
+      "Corrective_HipFlex_R"
+    ],
+    "fineFuzzStrands": 2300
+  },
+  "authoringCode": {
+    "build_anatomical_body_study.py": "6edd769b4d8c8136b971873ac42dbf5883f1dc06bbedb921a9984d988aa8c14d",
+    "anatomical_body_fit.py": "70f0c16538cf65838631adef2bebdb5edc2016444285d9ea20dbfc06b75f9f2d",
+    "forearm_twist.py": "11a4597d43eb37c8fb85d6503403ad75b8207c38b52d174817e5eb4cb5cc6910"
+  },
+  "reusedDomainCodeSha256": "a57a6c2d84d18aa16b3f31234499f46a4a43497a31205f669ddc66a8b99d15f7",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_AnatomicalBodyStudy_v1.blend",
+  "outputSha256": "21bae901ace9613c34c0482efc3e07b21e400cb650a6c552280e81052d05d00d"
+}

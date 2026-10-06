@@ -1,0 +1,71 @@
+{
+  "status": "Actual static LBS construction/twist diagnostics; not final motion/material/likeness acceptance",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_AnatomicalBodyStudy_v1.blend",
+  "sourceSha256": "21bae901ace9613c34c0482efc3e07b21e400cb650a6c552280e81052d05d00d",
+  "codeSha256": "c783d895b72279a6d119e94d7ac3faf61ceca98b826bac055e8b0c2d9220ca7a",
+  "blenderDQS": false,
+  "poses": [
+    {
+      "label": "Neutral",
+      "elbowFlexDegrees": 0,
+      "forearmPronationDegrees": 0,
+      "twistBoneLocalDegrees": 0.0,
+      "handRigQuaternion": [
+        0.046725381165742874,
+        0.06796891242265701,
+        0.5645716786384583,
+        -0.8212525844573975
+      ],
+      "geometry": {
+        "minimumAreaRatio": 0.9999664386080848,
+        "maximumEdgeStretch": 1.0000206608751623,
+        "edgeStretchP99": 1.000000545170097,
+        "newZeroAreaTriangles": 0
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\anatomical-body-v1-renders\\Neutral.png",
+      "imageSha256": "f3b20ed83596e1ea59d3e57449243188a3124d33de1bc6a49c765180777003b8"
+    },
+    {
+      "label": "Pronation90",
+      "elbowFlexDegrees": 0,
+      "forearmPronationDegrees": 90,
+      "twistBoneLocalDegrees": 45.0,
+      "handRigQuaternion": [
+        0.46788620948791504,
+        -0.5419296026229858,
+        -0.452073872089386,
+        0.5320001840591431
+      ],
+      "geometry": {
+        "minimumAreaRatio": 0.9062999154548467,
+        "maximumEdgeStretch": 1.2319944064407902,
+        "edgeStretchP99": 1.0954765136889555,
+        "newZeroAreaTriangles": 0
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\anatomical-body-v1-renders\\Pronation90.png",
+      "imageSha256": "b7b66f7e6f7d35b719ecc9819e71b47acc8a5d6433c84ed3b93d62f96f15ccb8"
+    },
+    {
+      "label": "Flex60Pronation90",
+      "elbowFlexDegrees": 60,
+      "forearmPronationDegrees": 90,
+      "twistBoneLocalDegrees": 45.0,
+      "handRigQuaternion": [
+        0.1342363804578781,
+        -0.7032677531242371,
+        -0.12550725042819977,
+        0.6867627501487732
+      ],
+      "geometry": {
+        "minimumAreaRatio": 0.13019787208331696,
+        "maximumEdgeStretch": 1.9939649346105246,
+        "edgeStretchP99": 1.1471014924963086,
+        "newZeroAreaTriangles": 0
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\anatomical-body-v1-renders\\Flex60Pronation90.png",
+      "imageSha256": "ae6c02c7443aa51a82b1c4d8b97961187425260e46b07be50c8528d69e8b0d6a"
+    }
+  ],
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}

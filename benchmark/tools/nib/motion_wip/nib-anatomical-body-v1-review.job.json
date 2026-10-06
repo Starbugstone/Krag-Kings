@@ -1,0 +1,20 @@
+{
+  "name": "nib-anatomical-body-v1-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\review_anatomical_body.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\nib-anatomical-body-v1-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\nib-anatomical-body-v1-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\nib-anatomical-body-v1-review.log",
+  "successMarker": "NIB_ANATOMICAL_BODY_DIAGNOSTIC_REVIEW_COMPLETE"
+}

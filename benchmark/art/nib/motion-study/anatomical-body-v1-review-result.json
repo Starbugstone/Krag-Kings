@@ -1,0 +1,64 @@
+{
+  "status": "Actual isolated Native anatomy and half-twist construction study; partial visual improvement, no art/runtime approval",
+  "source": "benchmark/art/nib/Nib_AnatomicalBodyStudy_v1.blend",
+  "sourceSha256": "21bae901ace9613c34c0482efc3e07b21e400cb650a6c552280e81052d05d00d",
+  "generationReport": "benchmark/art/nib/motion-study/anatomical-body-v1.json",
+  "generationReportSha256": "863163a921ef54c24dfdaf23eda492f60cf9a5eb501abf38cfaf4e1c8343ee98",
+  "reviewReport": "benchmark/art/nib/motion-study/anatomical-body-v1-renders/review.json",
+  "reviewReportSha256": "f7c24010d5d56d70aa3ba1e2b47f0a20851c4bbc2e7b53808ab59ef52a11fa2d",
+  "stages": [
+    {
+      "name": "nib-anatomical-body-v1-source",
+      "exitCode": 2,
+      "peakPrivateMB": 534.0,
+      "telemetry": "benchmark/art/nib/motion-study/nib-anatomical-body-v1-source-memory.csv",
+      "telemetrySha256": "aec5d7ea17c9c5431ce415c03fb913b1848e91065285b2a3eb91e5d4cf9a0848",
+      "failure": "Traceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\build_anatomical_body_study.py\", line 57, in <module>\n    report['skeleton']=install(rig)\n                       ~~~~~~~^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\forearm_twist.py\", line 63, in install\n    if error>1e-7:raise RuntimeError('Twist extension changed global bind: '+name)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Twist extension changed global bind: Hand_L\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\build_anatomical_body_study.py', exiting."
+    },
+    {
+      "name": "nib-anatomical-body-v1-source-retry1",
+      "exitCode": 2,
+      "peakPrivateMB": 540.0,
+      "telemetry": "benchmark/art/nib/motion-study/nib-anatomical-body-v1-source-retry1-memory.csv",
+      "telemetrySha256": "e8bab938ace141518194628043c7a7c3062b7ff66fcab5695e7e96032f0339bf",
+      "failure": "Traceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\build_anatomical_body_study.py\", line 57, in <module>\n    report['skeleton']=install(rig)\n                       ~~~~~~~^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\forearm_twist.py\", line 65, in install\n    if error>1e-7:raise RuntimeError('Twist extension changed global bind: '+name+' maximum matrix element difference '+str(error))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Twist extension changed global bind: Index3_L maximum matrix element difference 1.1920928955078125e-07\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\build_anatomical_body_study.py', exiting."
+    },
+    {
+      "name": "nib-anatomical-body-v1-source-float-bind",
+      "exitCode": 0,
+      "peakPrivateMB": 708.0,
+      "telemetry": "benchmark/art/nib/motion-study/nib-anatomical-body-v1-source-float-bind-memory.csv",
+      "telemetrySha256": "c605312c79b1d880921d6bdafa554e9dadb99c4c572930592ae7c021f11fd0a1"
+    },
+    {
+      "name": "nib-anatomical-body-v1-review",
+      "exitCode": 0,
+      "peakPrivateMB": 1397.0,
+      "telemetry": "benchmark/art/nib/motion-study/nib-anatomical-body-v1-review-memory.csv",
+      "telemetrySha256": "127711bcbbbb88d86183d87a9fc31a05197dfe695cf079e4f4e52c4a335cfb37"
+    }
+  ],
+  "actualViewsInspected": [
+    "Neutral",
+    "Pronation90",
+    "Flex60Pronation90"
+  ],
+  "findings": [
+    "Connected shoulder and upper-arm surfaces improve the former capsule silhouette.",
+    "90-degree pronation uses LowerArm/half-twist/Hand LBS without the old gross elbow notch.",
+    "60-degree elbow plus90-degree pronation retains compression: minimum triangle area ratio0.130, max edge stretch1.994, p99 1.147; no new zero-area faces.",
+    "Chest and neck garment intersections now require garment refitting; current cloth and sculpt quality still fail concept likeness.",
+    "Existing face/ear/hands and374 unrelated geometry/UV/material/morph components remain preserved.",
+    "Original global bind differences are documented float32 rounding: maximum59.6nm translation and0.00001618degrees rotation."
+  ],
+  "remaining": [
+    "Fresh root-authored captured-human Idle/Walk/Run clips on79bones",
+    "Actual temporal and raised-arm motion review",
+    "Clothing refit and continuous inner-elbow corrective",
+    "Concept likeness, fuller groom and material work",
+    "All restorative variants and matching new portable exports"
+  ],
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "heavyProcessesClosed": true
+}
