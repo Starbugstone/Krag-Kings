@@ -1,0 +1,62 @@
+[
+  {
+    "path": "failure.txt",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v2/failure.txt",
+    "sha256": "863dc216c60b41e95294e7bfef45b0d27e53a99b36a835ee1080b973013211d3",
+    "bytes": 274
+  },
+  {
+    "path": "topology.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v2/topology.json",
+    "sha256": "2819b74d0017315f138f92e030b4e877fdbc3212d8d876d06a8f8f62022773d5",
+    "bytes": 6646
+  },
+  {
+    "path": "topology-attribution.json",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v2/topology-attribution.json",
+    "sha256": "edbe9ec25807d9c48b4c8e304c44b7f491f8e5762cac6f2865dbe655f2abec2b",
+    "bytes": 2334
+  },
+  {
+    "path": "mesh-0-source-positions.bin",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v2/mesh-0-source-positions.bin",
+    "sha256": "5149b969d5804cc02d5c9a6ad45e1a2db64dba164805b32bdfbd00a659d71c03",
+    "bytes": 3990456
+  },
+  {
+    "path": "mesh-0-indices.bin",
+    "source": "benchmark/local/unity-strand-hair-pilot/character-import-v2/mesh-0-indices.bin",
+    "sha256": "faf8e1ed20f890b4599015f71dffdff85f03b53393fe999805b27414b2292a20",
+    "bytes": 6840096
+  },
+  {
+    "path": "native.log",
+    "source": "benchmark/local/logs/unity-native-character-import-v2.log",
+    "sha256": "0ab678b1ca709379dedd0ad5330f815d81938ccfbf4c3f0539ee72c119364dea",
+    "bytes": 32008
+  },
+  {
+    "path": "memory.csv",
+    "source": "benchmark/local/unity-native-character-import-v2-memory.csv",
+    "sha256": "24a444ea6fb4e368beb6bddff131bc95ebc1f2f8023b725b6c0445e281c3c7d9",
+    "bytes": 418
+  },
+  {
+    "path": "job.json",
+    "source": "benchmark/tools/unity/strand_pilot/character-import-v2.job.json",
+    "sha256": "0a2923ab92168f8bd02931a24212282b2ed559ea719ed9ff7a822893b9aa2550",
+    "bytes": 841
+  },
+  {
+    "path": "executed-attribution.py",
+    "source": "benchmark/local/attribute-unity-groom-topology.py",
+    "sha256": "011c03b9308eda3b349523596ad379834a990b941c21f85ae4abd3c9fe4081bb",
+    "bytes": 3332
+  },
+  {
+    "path": "import-source.cs",
+    "source": "git 682e35d:benchmark/tools/unity/strand_pilot/CharacterImportProbe.cs (copied to the isolated project before execution)",
+    "sha256": "737632b5bb33b667edc6bc4b37f3806987e01e8df7c0e9d47983653b4a8477b1",
+    "bytes": 13034
+  }
+]

@@ -34,12 +34,6 @@ namespace KragKings.StrandPilot
         [Serializable] public class RegionResult { public string name; public int curves,points; public float maxPointErrorMeters,maxDiameterErrorMeters; }
         [Serializable] public class MeshInspection { public string name; public bool active,enabled; public int vertices,triangles,submeshes; public Matrix4x4 localToWorld; }
         [Serializable] public class TopologyInspection { public int expectedTriangles,activeTriangles,allTriangles; public Matrix4x4 sourceToUnity; public AnchorResult[] anchors; public MeshInspection[] meshes; }
-        [Serializable] public class TopologyAttribution
-        {
-            public string sourceSha256,importPositionsSha256,importIndicesSha256;
-            public bool matchedNondegenerateTriangleMultiset;
-            public int sourceTriangles,importedTriangles,removedTriangleMultiplicity,addedTriangleMultiplicity,removedNonzeroAreaCandidateCount;
-        }
         [Serializable] public class Receipt
         {
             public string status,engine,sourceSha256;
@@ -48,20 +42,16 @@ namespace KragKings.StrandPilot
             public AnchorResult[] anchors;public RegionResult[] regions;
             public int canonicalBones,triangles,vertices,morphs,colorAlphaZero,colorAlphaOne,colorAlphaOther;
             public string[] clips;
-            public int independentlyVerifiedZeroAreaTrianglesRemoved;
-            public string topologyAttributionSha256;
             public bool bindingMaskVerified=false,rootAttachmentVerified=false,rendered=false;
         }
         static Vector3 Position(Anchor a)=>new Vector3(a.source[0],a.source[1],a.source[2]);
-        static string Hash(string path)
-        {using(var stream=File.OpenRead(path))using(var sha=SHA256.Create())return BitConverter.ToString(sha.ComputeHash(stream)).Replace("-","").ToLowerInvariant();}
         static Matrix4x4 Basis(Vector3 a,Vector3 b,Vector3 c,Vector3 d)
         {
             var m=Matrix4x4.identity;m.SetColumn(0,(Vector4)(b-a));m.SetColumn(1,(Vector4)(c-a));m.SetColumn(2,(Vector4)(d-a));m.SetColumn(3,new Vector4(a.x,a.y,a.z,1));return m;
         }
         public static void Run()
         {
-            string output=Path.GetFullPath("../character-import-v3");GameObject character=null;
+            string output=Path.GetFullPath("../character-import-v2");GameObject character=null;
             try
             {
                 if(Directory.Exists(output))throw new Exception("Preserve prior character import evidence");Directory.CreateDirectory(output);
@@ -106,22 +96,7 @@ namespace KragKings.StrandPilot
                     {var p=transform.inverse.MultiplyPoint3x4(renderer.localToWorldMatrix.MultiplyPoint3x4(local));stream.Write(p.x);stream.Write(p.y);stream.Write(p.z);}
                     using(var stream=new BinaryWriter(File.OpenWrite(Path.Combine(output,"mesh-"+n+"-indices.bin"))))foreach(int i in mesh.triangles)stream.Write(i);
                 }
-                int removedZeroArea=0;string proofHash=null;
-                if(triangles!=config.expectedTriangles)
-                {
-                    string proofPath="Assets/NativeGroom/Character/topology-attribution.json";
-                    var proof=JsonUtility.FromJson<TopologyAttribution>(File.ReadAllText(proofPath));
-                    // The allowance is tied to independently audited exact source
-                    // and imported buffers, never only a lower triangle count.
-                    if(allMeshes.Length!=1 || !proof.matchedNondegenerateTriangleMultiset || proof.sourceSha256!=Hash(config.fbx) ||
-                        proof.sourceTriangles!=config.expectedTriangles || proof.importedTriangles!=triangles ||
-                        proof.addedTriangleMultiplicity!=0 || proof.removedNonzeroAreaCandidateCount!=0 ||
-                        proof.removedTriangleMultiplicity!=config.expectedTriangles-triangles ||
-                        proof.importPositionsSha256!=Hash(Path.Combine(output,"mesh-0-source-positions.bin")) ||
-                        proof.importIndicesSha256!=Hash(Path.Combine(output,"mesh-0-indices.bin")))
-                        throw new Exception("Imported topology differs from the independently verified zero-area-only removal");
-                    removedZeroArea=proof.removedTriangleMultiplicity;proofHash=Hash(proofPath);
-                }
+                if(triangles!=config.expectedTriangles)throw new Exception("Cleaned character triangle mismatch: expected="+config.expectedTriangles+", active="+triangles+", all="+topology.allTriangles);
                 var clipNames=AssetDatabase.LoadAllAssetsAtPath(config.fbx).OfType<AnimationClip>().Where(x=>!x.name.StartsWith("__preview__")).Select(x=>x.name).ToArray();
                 foreach(string expected in new[]{"Idle","Walk","Run","Melee","Shoot","Hit","FacePerformance"})
                     if(clipNames.Count(x=>x.Equals(expected,StringComparison.OrdinalIgnoreCase)||x.EndsWith("|"+expected,StringComparison.OrdinalIgnoreCase)||x.EndsWith("_"+expected,StringComparison.OrdinalIgnoreCase))!=1)throw new Exception("Missing/ambiguous embedded clip "+expected);
@@ -149,7 +124,6 @@ namespace KragKings.StrandPilot
                     if(result.maxPointErrorMeters>1e-7f||result.maxDiameterErrorMeters>1e-8f)throw new Exception("Native authored stream transfer failed");regionResults.Add(result);
                 }
                 var receipt=new Receipt{status="Actual cleaned character import and coordinate/curve-asset transfer only; rendering and deforming attachment unverified",engine=Application.unityVersion,sourceSha256=config.sourceSha256,sourceToUnity=transform,maxAnchorErrorMeters=error,determinant=transform.determinant,anchors=checks.ToArray(),regions=regionResults.ToArray(),canonicalBones=config.bones.Length,triangles=triangles,vertices=meshes.Sum(x=>x.sharedMesh.vertexCount),morphs=meshes.Sum(x=>x.sharedMesh.blendShapeCount),colorAlphaZero=colors.Count(x=>x.a==0),colorAlphaOne=colors.Count(x=>x.a==1),colorAlphaOther=colors.Count(x=>x.a!=0&&x.a!=1),clips=clipNames};
-                receipt.independentlyVerifiedZeroAreaTrianglesRemoved=removedZeroArea;receipt.topologyAttributionSha256=proofHash;
                 File.WriteAllText(Path.Combine(output,"import.json"),JsonUtility.ToJson(receipt,true));AssetDatabase.SaveAssets();
                 UnityEngine.Object.DestroyImmediate(character);Debug.Log("KK_NATIVE_CHARACTER_IMPORT_COMPLETE");EditorApplication.Exit(0);
             }

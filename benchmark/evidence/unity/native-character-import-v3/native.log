@@ -1,0 +1,451 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'fr' Physical Memory: 32553 MB
+[Licensing::IpcConnector] Channel LicenseClient-Matthew doesn't exist
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T19:47:57Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 35604)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+-batchmode
+-nographics
+-job-worker-count
+2
+-projectPath
+D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+-logFile
+D:\Dev\Krag-Kings\benchmark\local\logs\unity-native-character-import-v3.log
+-executeMethod
+KragKings.StrandPilot.CharacterImportProbe.Run
+Successfully changed project path to: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project
+D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [24580]  Target information:
+
+Player connection [24580]  * "[IP] 172.17.32.1 [Port] 55504 [Flags] 2 [Guid] 3996487054 [EditorId] 3996487054 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24580]  * "[IP] 172.26.16.1 [Port] 55504 [Flags] 2 [Guid] 3996487054 [EditorId] 3996487054 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24580]  * "[IP] 192.168.31.40 [Port] 55504 [Flags] 2 [Guid] 3996487054 [EditorId] 3996487054 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24580] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24580] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 2
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew" at "2026-10-06T19:47:57.5751267Z"
+[Package Manager] Connected to IPC stream "Upm-33160" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              7702466431674871b87bf11507a84433
+  Correlation Id:          baf3c1c77608f1627258c1191d32db3c
+  External correlation Id: 1337607153911117326
+  Machine Id:              H9ywjWMk/aJPg3YR91m8eMuX6rE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Matthew" (connect: 0.37s, validation: 0.05s, handshake: 1.26s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew-notifications" at "2026-10-06T19:47:58.8855226Z"
+[Licensing::Module] Connected to LicensingClient (PId: 35604, launch time: 0.01, total connection time: 1.68s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 1.73s
+[Licensing::Module] Licensing is initialized (took 1.13s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002947 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.473 seconds
+Domain Reload Profiling: 1015ms
+	BeginReloadAssembly (174ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (76ms)
+	LoadAllAssembliesAndSetupDomain (228ms)
+		LoadAssemblies (170ms)
+		AnalyzeDomain (218ms)
+			TypeCache.Refresh (216ms)
+				TypeCache.ScanAssembly (201ms)
+	FinalizeReload (475ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (54ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (130ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 34 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.19.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.burst@1.8.29 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.timeline@1.8.12 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+    com.unity.searcher@4.9.4 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.searcher@d45a78918735)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition@4509f627d0da)
+    com.unity.ugui@2.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.wind@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.animation@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.audio@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.collections@6.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+    com.unity.render-pipelines.core@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.uielements@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.ui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.video@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.video)
+    com.unity.visualeffectgraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.modules.director@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.director)
+    com.unity.test-framework@1.6.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.modules.terrain@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.ext.nunit@2.0.5 (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+  Local packages:
+    com.unity.demoteam.hair@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\source)
+    com.unity.demoteam.digital-human@file:D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human (location: D:\Dev\Krag-Kings\benchmark\local\unity-strand-hair-pilot\digital-human)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/local/unity-strand-hair-pilot/project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 2s336ms
+[566/718    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[714/718    1s] Csc Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll (+2 others)
+Assets\Editor\RenderProbe.cs(73,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+
+Assets\Editor\RenderProbe.cs(75,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+[715/718    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/KragKings.StrandPilot.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/KragKings.StrandPilot.Editor.dll, with 137 defines and 288 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[716/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.pdb
+[717/718    0s] CopyFiles Library/ScriptAssemblies/KragKings.StrandPilot.Editor.dll
+*** Tundra build success (2.30 seconds), 5 items updated, 718 evaluated
+Assets\Editor\RenderProbe.cs(73,67): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+Assets\Editor\RenderProbe.cs(75,68): warning CS0618: 'HDAdditionalLightData.SetIntensity(float, LightUnit)' is obsolete: 'This property has been deprecated. Use LightUnitUtils.ConvertIntensity(...) & directly set Light.lightUnit + Light.intensity instead. #from(2023.3)'
+AssetDatabase: script compilation time: 2.837767s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp.dll at Library/ScriptAssemblies/Assembly-CSharp.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Editor.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.DemoTeam.Hair.Tests.Runtime.dll at Library/ScriptAssemblies/Unity.DemoTeam.Hair.Tests.Runtime.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.412 seconds
+Domain Reload Profiling: 4559ms
+	BeginReloadAssembly (405ms)
+		DisableScriptedObjects (44ms)
+		CreateAndSetChildDomain (176ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (155ms)
+	LoadAllAssembliesAndSetupDomain (529ms)
+		LoadAssemblies (381ms)
+		AnalyzeDomain (279ms)
+			TypeCache.Refresh (213ms)
+				TypeCache.ScanAssembly (198ms)
+			BuildScriptInfoCaches (53ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (3413ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			BeforeProcessingInitializeOnLoad (175ms)
+			ProcessInitializeOnLoadAttributes (2403ms)
+			ProcessInitializeOnLoadMethodAttributes (525ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (36ms)
+Start importing Assets/NativeGroom/Character/topology-attribution.json using Guid(97afbf70eb097be43af6e807da6aef3b) (TextScriptImporter) -> (Import Result ID: '2dc03e24ceca0ce482174c4f37d138b8') in 0.024906 seconds [static dependencies only]. Details - ImportResultOutputID=8f731e0509520b61c3dcc6d84e7c70db DependenciesID=0c8a6c4325e7d5fa782a21b6812b2783 StaticDependenciesID=0c58aaf088d74bc158333a5f4ffc3e70 
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=c6242946b6f0fa1479b7e6d01090b630): Total: 8.269 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=3943 ms
+		Asset DB Callback time: managed=260 ms, native=30 ms
+		Scripting: domain reloads=1, domain reload time=1147 ms, compile time=2840 ms, other=42 ms
+		Project Asset Count: scripts=1166, non-scripts=2828
+		Asset File Changes: new=1, changed=2, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 31.007ms
+	ApplyChangesToAssetFolders: 0.907ms
+	Scan: 151.400ms
+	OnSourceAssetsModified: 0.822ms
+	CategorizeScriptCompilationAssets: 27.210ms
+	ProcessAssetsWithTransientArtifactChanges: 78.346ms
+	CategorizeAssets: 95.628ms
+	CompileScripts: 2839.658ms
+	ImportOutOfDateAssets: 3448.659ms (3418.197ms without children)
+		ImportManagerImport: 26.489ms (1.256ms without children)
+		UnloadImportedAssets: 2.563ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.646ms
+		OnDemandSchedulerStart: 0.714ms
+	PostProcessAllAssets: 258.505ms
+		XRBuildSystem.XRAssetImported 0.065ms
+		MonoPostProcessAllAssets: 257.889ms
+			AssetPostprocessor.OnPostprocessAllAssets 158.966ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 26.228ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 20.846ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.492ms
+			MaterialPostprocessor.OnPostprocessAllAssets 5.736ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 3.262ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 3.054ms
+			SyncVS.PostprocessSyncProject 2.759ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.921ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.888ms
+			AssetChangedListener.OnPostprocessAllAssets 1.843ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 1.494ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.203ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.698ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.694ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.570ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.534ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.492ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.466ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.409ms
+			PostProcessor.OnPostprocessAllAssets 0.357ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.321ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.317ms
+			AssetEvents.OnPostprocessAllAssets 0.294ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.214ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.210ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.193ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.166ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.136ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.078ms
+	PostAssetChangesProfiler: 4.755ms
+	UnloadStreamsBegin: 1.937ms
+	PersistCurrentRevisions: 0.196ms
+	GenerateScriptTypeHashes: 3.087ms
+	GenerateScriptTypeSerializationHashes: 5.790ms
+	Untracked: 1324.181ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 4.279ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Krag Kings — Engine Comparison
+Unloading 84 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5290 unused Assets / (10.4 MB). Loaded Objects now: 6351.
+Memory consumption went from 251.5 MB to 241.1 MB.
+Total: 17.551600 ms (FindLiveObjects: 0.952400 ms CreateObjectMapping: 1.528900 ms MarkObjects: 7.708500 ms  DeleteObjects: 7.358000 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (2.8 KB). Loaded Objects now: 6351.
+Memory consumption went from 219.0 MB to 219.0 MB.
+Total: 6.590400 ms (FindLiveObjects: 0.301400 ms CreateObjectMapping: 0.219200 ms MarkObjects: 6.043800 ms  DeleteObjects: 0.025100 ms)
+
+Start importing Assets/CharacterProbeOutput using Guid(6e379f8708cc10f4c977a2e2ac2d7088) (DefaultImporter) -> (Import Result ID: '22e57e48adfee8a0c3017103133a6073') in 0.0076985 seconds [static dependencies only]. Details - ImportResultOutputID=ec3c718598b63eeb16b862ad93fe4293 DependenciesID=f4104cb2746f7c6e7dec47ec2e924442 StaticDependenciesID=ac2a2857225c5556fd7afface3dde1a3 
+Asset Pipeline Refresh (id=4f86117d827483742a3dd6112f38cad4): Total: 0.116 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/HeadCream-provider.asset using Guid(f358cae373fb7db4786de84ea3622226) (NativeFormatImporter) -> (Import Result ID: '69d3858a49df19fa2ba2ada79a0dc6b6') in 0.0024021 seconds [static dependencies only]. Details - ImportResultOutputID=b7c24570cc3dc4b5d62cfad6d3dba444 DependenciesID=88ba878b22d6105ccde997684222436f StaticDependenciesID=e9495b293f1bf9349a4b95f36eac5bd6 
+Asset Pipeline Refresh (id=2f7ded66dd5d2b84aa0276f59afb231b): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/HeadCream-hair.asset using Guid(86c9514c3e48ab84b904ccc141e04468) (NativeFormatImporter) -> (Import Result ID: 'bce971201b5024378563fdbf09f1531f') in 0.0020204 seconds [static dependencies only]. Details - ImportResultOutputID=f876b712652010b891f003b8a379fd0a DependenciesID=65c8ec45dbc19bb696eb65f9b9b11619 StaticDependenciesID=e80a4448165e94f095a993d93eaa0d06 
+Asset Pipeline Refresh (id=4351e7106afc35a4ba1f5db08c8bed64): Total: 0.073 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarInnerCream_L-provider.asset using Guid(31f1f5b4d6da01341ae16e048215a62b) (NativeFormatImporter) -> (Import Result ID: '5029b63d807de271612f791ce011d629') in 0.0023249 seconds [static dependencies only]. Details - ImportResultOutputID=96ed5240c2532c5fa04c939df86b9c86 DependenciesID=88a9e65c87576c429ab5e15da50b58d9 StaticDependenciesID=c009d0b97d5ab86c7dbb52d5dc1b7646 
+Asset Pipeline Refresh (id=04cdaecbe37578b48a85bef901adb191): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarInnerCream_L-hair.asset using Guid(135e4d1c13639234784c8cb8f2024438) (NativeFormatImporter) -> (Import Result ID: 'c80e81c2710206ca901540d63ab7272b') in 0.0018144 seconds [static dependencies only]. Details - ImportResultOutputID=66900c1d70657927c3efce93f8afc459 DependenciesID=3e9ca2fb37546478bd3a07dbebb61f1f StaticDependenciesID=e85f39d933d01d958fd0401076f7652e 
+Asset Pipeline Refresh (id=b8cf1b2b00d796c418d4c0bc5e4f1108): Total: 0.080 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_L-provider.asset using Guid(2a26c8ea4e7b037418f49ecc99188d94) (NativeFormatImporter) -> (Import Result ID: '9a73ad8e494d55f099aa998c4168b55b') in 0.0024923 seconds [static dependencies only]. Details - ImportResultOutputID=4b9071aaa6601bae427b7f6da9a7ca8d DependenciesID=454364904a7d6049ab44abe92dd40719 StaticDependenciesID=87aa1e82febbc59763bc01da1aecc9ce 
+Asset Pipeline Refresh (id=c017d0b8f3dd7ce4e9557962b14690f3): Total: 0.077 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_L-hair.asset using Guid(3ceab83421d5e934392e434b4245d995) (NativeFormatImporter) -> (Import Result ID: '60629a28bababd0ee02c7f8249a12ba0') in 0.0020128 seconds [static dependencies only]. Details - ImportResultOutputID=8d67dead7566e108c2ca18cdc0482bd6 DependenciesID=9b0109cab16bd26f94831e9b48e5b242 StaticDependenciesID=d1901a2f36a930cc416c899600b8ff13 
+Asset Pipeline Refresh (id=d0cbe661f6384e74c8ae23c0504e0410): Total: 0.073 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarInnerCream_R-provider.asset using Guid(daf16ff261e428d44820a3cf74ea2105) (NativeFormatImporter) -> (Import Result ID: 'a59b207cb2bfc24e2ebe6c48b0e3f21a') in 0.0041769 seconds [static dependencies only]. Details - ImportResultOutputID=2839e74e0b66bfb164f0bd67be8ef90c DependenciesID=cf0e2674f99bdcd24037a3ddf3e52fa1 StaticDependenciesID=e23a8f416b3f590873331fd3fd007b62 
+Asset Pipeline Refresh (id=e0c15fa5552b39d439faf5abbe7d2eb7): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarInnerCream_R-hair.asset using Guid(4569bbfd2a6645e4586f20288c0ca238) (NativeFormatImporter) -> (Import Result ID: 'ebece08a4f9e4e2a1acae889d8e1c6e2') in 0.0018713 seconds [static dependencies only]. Details - ImportResultOutputID=3d4c40a418fd8be95b1d3d00da847e9b DependenciesID=9102b39155c2811c2cd4e844078132ee StaticDependenciesID=d9f43e47bced07c1d76b9fbf8a2663be 
+Asset Pipeline Refresh (id=59a85fb1ed66964489675f6b4defba8b): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_R-provider.asset using Guid(e2392d807ab27034ba041f22e1c0dd9d) (NativeFormatImporter) -> (Import Result ID: 'ef355a7561d15b26765e63b288c746eb') in 0.0021795 seconds [static dependencies only]. Details - ImportResultOutputID=eae36ab85ec462a953266ac231d84c3c DependenciesID=4e34d0db59cfc04a6e7ac98322b54d8d StaticDependenciesID=71162febac8bbe784e73c4081a018b04 
+Asset Pipeline Refresh (id=c04ade6ad98615b4db03b61afe30bf1d): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_R-hair.asset using Guid(575018729788e964580783a312f3c61d) (NativeFormatImporter) -> (Import Result ID: 'f100a5fb83e33446280918202b8485a1') in 0.0028399 seconds [static dependencies only]. Details - ImportResultOutputID=a65b4521759e55ede331150ae0f8a4c1 DependenciesID=72b7ee13ed8cf8ff8995630b40ecf680 StaticDependenciesID=0f5943c99dee78ee21344bbe8ba20e38 
+Asset Pipeline Refresh (id=76317581ab636e84b91d3403e81cdda9): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/CharacterProbeOutput/EarInnerCream_L-hair.asset using Guid(135e4d1c13639234784c8cb8f2024438) (NativeFormatImporter) -> (Import Result ID: '75d5c4f26078e7acf4e4bfe6f60436e8') in 0.0018346 seconds [static dependencies only]. Details - ImportResultOutputID=66900c1d70657927c3efce93f8afc459 DependenciesID=e1bf457773bcc0ae900cc19c17091e4f StaticDependenciesID=62de2f438012f75f1032f0c7cc195ef4 
+Start importing Assets/CharacterProbeOutput/EarInnerCream_R-hair.asset using Guid(4569bbfd2a6645e4586f20288c0ca238) (NativeFormatImporter) -> (Import Result ID: '280aef15460c89c89039038e8b6b98ae') in 0.0016133 seconds [static dependencies only]. Details - ImportResultOutputID=3d4c40a418fd8be95b1d3d00da847e9b DependenciesID=9f2533dd9d958662dcf39fc828be96f8 StaticDependenciesID=6817b6a7054aeb3e48b99038d6187cf5 
+Start importing Assets/CharacterProbeOutput/HeadCream-hair.asset using Guid(86c9514c3e48ab84b904ccc141e04468) (NativeFormatImporter) -> (Import Result ID: '1f1639698aa73e6679c558c26e07dc2f') in 0.0020248 seconds [static dependencies only]. Details - ImportResultOutputID=f876b712652010b891f003b8a379fd0a DependenciesID=846faa0ae9adf25a03fecc72fe3294e8 StaticDependenciesID=73f19dcf53c8c3ee08d5775461a2d1e6 
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_R-hair.asset using Guid(575018729788e964580783a312f3c61d) (NativeFormatImporter) -> (Import Result ID: '7d715672a8b8076212e81b52b2e758e1') in 0.0015725 seconds [static dependencies only]. Details - ImportResultOutputID=a65b4521759e55ede331150ae0f8a4c1 DependenciesID=eaf69d979b72b3a84645f849e0406800 StaticDependenciesID=80a9f60841879fe679f358c1a16a9baa 
+Start importing Assets/CharacterProbeOutput/EarOuterTawny_L-hair.asset using Guid(3ceab83421d5e934392e434b4245d995) (NativeFormatImporter) -> (Import Result ID: '74646922481af1df993e1395b61465b0') in 0.0015595 seconds [static dependencies only]. Details - ImportResultOutputID=8d67dead7566e108c2ca18cdc0482bd6 DependenciesID=30ceda1751c78849ed06f0ad6f20f341 StaticDependenciesID=1655aca50b0035f87b7e2b327cf6d0a8 
+Asset Pipeline Refresh (id=f950c947d98719d459e944fe43f59cf5): Total: 0.077 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+KK_NATIVE_CHARACTER_IMPORT_COMPLETE
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+KragKings.StrandPilot.CharacterImportProbe:Run () (at Assets/Editor/CharacterImportProbe.cs:154)
+
+(Filename: Assets/Editor/CharacterImportProbe.cs Line: 154)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Matthew-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Matthew channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Leak Detected : Persistent allocates 1 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791316092850,"processId":33160,"allocatedMemory":16246692,"memoryLabels":[{"Default":192472},{"Permanent":15276},{"NewDelete":65163},{"Thread":4230384},{"Manager":808141},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":841364},{"Material":24},{"GfxDevice":55313},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":952},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"MonoCode":64},{"ScriptingNativeRuntime":155052},{"BaseObject":1620368},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":1088},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":15850},{"StaticString":6718},{"Utility":2672774},{"Curl":2478},{"PoolAlloc":2312},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":7520},{"WebRequest":845},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"NativeArray":1056},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":108700},{"VersionControl":4},{"Undo":931},{"AssetDatabase":4858901},{"EditorGi":328},{"UnityConnect":37753},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":213},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2884},{"Windowing":456},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}
