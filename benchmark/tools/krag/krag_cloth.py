@@ -1,7 +1,7 @@
 """Localized cloth settling against low resolution collision stand-ins.
 Only the scarf is simulated; collider geometry is discarded after applying the cloth result.
 """
-import bpy,math
+import bpy,math,sys
 
 def settle(o):
     scene=bpy.context.scene;old_frame=scene.frame_current;colliders=[]
@@ -23,7 +23,7 @@ def settle(o):
 
 def wrapped(c):
     """One continuous scarf strip winds into uneven deep-U layers, with soft rolled folds."""
-    mesh,cloth=c['mesh'],c['cloth'];vs=[];fs=[];longitudinal=361;across=25;turns=2.35
+    mesh,cloth=c['mesh'],c['cloth'];vs=[];fs=[];longitudinal=361;across=33 if '--bunched-scarf' in sys.argv else 25;turns=2.35
     for i in range(longitudinal):
         turn=turns*i/(longitudinal-1);a=math.pi/2+2*math.pi*turn;front=max(0,-math.sin(a));side=abs(math.cos(a))
         centre_radius=.151+.022*turn+.068*front+.012*math.sin(2*a+.85*turn)
@@ -33,9 +33,22 @@ def wrapped(c):
             radius=centre_radius+.012*math.cos(2*math.pi*u)+.005*math.sin(6*math.pi*u+a)*math.sin(math.pi*(u+.5))
             radius+=.010*front*math.sin(3*a+2.8*turn+2*u)
             z=centre_z+u*(.113+.029*math.sin(a+.4*turn))+.008*math.sin(4*math.pi*u+.6*a)+gather
+            if '--bunched-scarf' in sys.argv:
+                # A broad textile is gathered across its width into three
+                # rounded unequal folds, rather than three upright flat ribbons.
+                # Rough transverse arc length is .30m, compressed into .09m.
+                phase=6*math.pi*u+.38*math.sin(2*a+.9*turn)+.23*math.sin(5*a+turn)
+                fold_depth=.018+.004*math.sin(3*a+.7*turn)
+                radius=centre_radius+fold_depth*math.cos(phase)+.004*math.sin(3*a+turn+u)
+                z=centre_z+.083*u+.011*math.sin(phase)+gather
             vs.append((radius*math.cos(a),.019+radius*math.sin(a),z))
     for i in range(longitudinal-1):
         for j in range(across-1):k=i*across+j;fs.append((k,k+across,k+across+1,k+1))
-    o=mesh('Continuous layered desert scarf wrap',vs,fs,cloth,'Scarf','Chest');solid=o.modifiers.new('Woven scarf edge thickness','SOLIDIFY');solid.thickness=.003;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=solid.name)
+    o=mesh('Continuous layered desert scarf wrap',vs,fs,cloth,'Scarf','Chest')
+    if '--bunched-scarf' in sys.argv:
+        bpy.context.view_layer.objects.active=o
+        subdivision=o.modifiers.new('Soft gathered textile folds','SUBSURF');subdivision.levels=1;bpy.ops.object.modifier_apply(modifier=subdivision.name)
+    solid=o.modifiers.new('Woven scarf edge thickness','SOLIDIFY');solid.thickness=.003;bpy.context.view_layer.objects.active=o;bpy.ops.object.modifier_apply(modifier=solid.name)
     o['construction']='Continuous 2.35-turn textile strip; deep front sag and irregular rolled folds; unaccepted review geometry'
+    o['bunched_cross_section']='--bunched-scarf' in sys.argv
     return o

@@ -1,0 +1,382 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9c_WIP.blend",
+  "sourceSha256": "5596b2604a56c03a13b75aa1c79904ce5bc0c7114e014e5b0e32c7697725d65d",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9c_Aim_WIP.blend",
+  "outputSha256": "8ccd110691f2caf98304a201e3e1441ddd5b022cd0fc5b694bf786133eece13f",
+  "status": "Actual rig-space aim correction; source mesh and grip review still required; artistic acceptance false",
+  "changed": "Shoot action UpperArm_R, LowerArm_R and Hand_R local rotation tracks only",
+  "samples": [
+    {
+      "frame": 1,
+      "aimWeight": 0.0,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.302790461364624e-08,
+      "direction": [
+        0.0,
+        7.450583439094771e-08,
+        -1.0
+      ],
+      "dotIntendedDirection": -7.450583439094771e-08
+    },
+    {
+      "frame": 2,
+      "aimWeight": 0.15151515151515152,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 5.21540641784668e-08,
+      "direction": [
+        -0.01581609807908535,
+        -0.23575106263160706,
+        -0.9716848134994507
+      ],
+      "dotIntendedDirection": 0.23575106263160706
+    },
+    {
+      "frame": 3,
+      "aimWeight": 0.30303030303030304,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.4600096599955427e-07,
+      "direction": [
+        -0.026128612458705902,
+        -0.4581938087940216,
+        -0.8884682059288025
+      ],
+      "dotIntendedDirection": 0.4581938087940216
+    },
+    {
+      "frame": 4,
+      "aimWeight": 0.4545454545454546,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.341104507446289e-07,
+      "direction": [
+        -0.030235644429922104,
+        -0.6548004746437073,
+        -0.755196750164032
+      ],
+      "dotIntendedDirection": 0.6548004746437073
+    },
+    {
+      "frame": 5,
+      "aimWeight": 0.6060606060606061,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        -0.02811017632484436,
+        -0.8145096302032471,
+        -0.5794686079025269
+      ],
+      "dotIntendedDirection": 0.8145096302032471
+    },
+    {
+      "frame": 6,
+      "aimWeight": 0.7575757575757576,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        -0.02041339874267578,
+        -0.9283238649368286,
+        -0.3712117671966553
+      ],
+      "dotIntendedDirection": 0.9283238649368286
+    },
+    {
+      "frame": 7,
+      "aimWeight": 0.9090909090909092,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.4901161193847656e-07,
+      "direction": [
+        -0.008458795957267284,
+        -0.9898117184638977,
+        -0.14213089644908905
+      ],
+      "dotIntendedDirection": 0.9898117184638977
+    },
+    {
+      "frame": 8,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 9,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 10,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 11,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 12,
+      "aimWeight": 1,
+      "kickWeight": 0.48717948717948645,
+      "wristErrorMeters": 1.3657139822709083e-07,
+      "direction": [
+        2.9802305334669654e-07,
+        -0.999419093132019,
+        0.03408191725611687
+      ],
+      "dotIntendedDirection": 1.000000149360858
+    },
+    {
+      "frame": 13,
+      "aimWeight": 1,
+      "kickWeight": 1.0,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        2.9802345125062857e-07,
+        -0.9975590109825134,
+        0.06982927769422531
+      ],
+      "dotIntendedDirection": 1.000000040512532
+    },
+    {
+      "frame": 14,
+      "aimWeight": 1,
+      "kickWeight": 0.48717948717948734,
+      "wristErrorMeters": 1.3657139822709083e-07,
+      "direction": [
+        2.9802305334669654e-07,
+        -0.999419093132019,
+        0.03408191725611687
+      ],
+      "dotIntendedDirection": 1.000000149360858
+    },
+    {
+      "frame": 15,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 16,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 17,
+      "aimWeight": 1,
+      "kickWeight": 0.10606060606060651,
+      "wristErrorMeters": 4.2146848510894035e-08,
+      "direction": [
+        0.0,
+        -0.999972403049469,
+        0.007424355950206518
+      ],
+      "dotIntendedDirection": 0.9999999844039849
+    },
+    {
+      "frame": 18,
+      "aimWeight": 1,
+      "kickWeight": 0.5303030303030306,
+      "wristErrorMeters": 1.228781230931777e-07,
+      "direction": [
+        2.980233659855003e-07,
+        -0.9993116855621338,
+        0.0370955653488636
+      ],
+      "dotIntendedDirection": 0.9999999324791133
+    },
+    {
+      "frame": 19,
+      "aimWeight": 1,
+      "kickWeight": 0.44545454545454516,
+      "wristErrorMeters": 1.3657139822709083e-07,
+      "direction": [
+        0.0,
+        -0.9995142221450806,
+        0.031166087836027145
+      ],
+      "dotIntendedDirection": 1.000000025902409
+    },
+    {
+      "frame": 20,
+      "aimWeight": 1,
+      "kickWeight": 0.021212121212121113,
+      "wristErrorMeters": 1.0745380149674383e-07,
+      "direction": [
+        0.0,
+        -0.999998927116394,
+        0.0014841563533991575
+      ],
+      "dotIntendedDirection": 1.0000000579775588
+    },
+    {
+      "frame": 21,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 22,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 23,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 24,
+      "aimWeight": 1,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3328003749250113e-07,
+      "direction": [
+        2.9802350809404743e-07,
+        -1.0,
+        0.0
+      ],
+      "dotIntendedDirection": 1.0
+    },
+    {
+      "frame": 25,
+      "aimWeight": 0.909090909090909,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 4.2146848510894035e-08,
+      "direction": [
+        -0.008458792231976986,
+        -0.989811897277832,
+        -0.14212964475154877
+      ],
+      "dotIntendedDirection": 0.989811897277832
+    },
+    {
+      "frame": 26,
+      "aimWeight": 0.7575757575757576,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        -0.02041339874267578,
+        -0.9283238649368286,
+        -0.3712117671966553
+      ],
+      "dotIntendedDirection": 0.9283238649368286
+    },
+    {
+      "frame": 27,
+      "aimWeight": 0.606060606060606,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 2.9802322387695312e-08,
+      "direction": [
+        -0.028110157698392868,
+        -0.8145090937614441,
+        -0.5794694423675537
+      ],
+      "dotIntendedDirection": 0.8145090937614441
+    },
+    {
+      "frame": 28,
+      "aimWeight": 0.4545454545454546,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 5.960464477539063e-08,
+      "direction": [
+        -0.03023565746843815,
+        -0.6548001170158386,
+        -0.7551970481872559
+      ],
+      "dotIntendedDirection": 0.6548001170158386
+    },
+    {
+      "frame": 29,
+      "aimWeight": 0.3030303030303031,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 1.3657139822709083e-07,
+      "direction": [
+        -0.026128627359867096,
+        -0.4581940770149231,
+        -0.8884680867195129
+      ],
+      "dotIntendedDirection": 0.4581940770149231
+    },
+    {
+      "frame": 30,
+      "aimWeight": 0.1515151515151516,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 5.960464477539063e-08,
+      "direction": [
+        -0.0158160962164402,
+        -0.23575134575366974,
+        -0.9716847538948059
+      ],
+      "dotIntendedDirection": 0.23575134575366974
+    },
+    {
+      "frame": 31,
+      "aimWeight": 1.1102230246251565e-16,
+      "kickWeight": 0.0,
+      "wristErrorMeters": 6.302790461364624e-08,
+      "direction": [
+        0.0,
+        7.450583439094771e-08,
+        -1.0
+      ],
+      "dotIntendedDirection": -7.450583439094771e-08
+    }
+  ]
+}

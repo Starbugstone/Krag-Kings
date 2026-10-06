@@ -530,6 +530,21 @@ deformation=krag_face.add_morphs(modules,rig)
 (OUT/'facial-rig.json').write_text(json.dumps(deformation,indent=2),newline='\n')
 reset();rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
 (ART/('locomotion-target-verification.json' if MASTER_PATH.name=='Krag_Master.blend' else MASTER_PATH.stem+'-locomotion-target-verification.json')).write_text(json.dumps({'status':'Analytic skeleton targets only; actual rendered sole contact pending','samples':locomotion_metrics,'maxAnkleErrorMeters':max(m['errorMeters'] for m in locomotion_metrics)},indent=2),newline='\n')
+# Record the real hierarchy's firing direction, without assuming Blender bone
+# roll or local Euler axes. Source animation review must also verify the grip.
+weapon_samples=[]
+rig.animation_data.action=bpy.data.actions['Shoot']
+for frame in [13,18,19]:
+    scene.frame_set(frame);bpy.context.view_layer.update()
+    muzzle=rig.matrix_world@rig.pose.bones['WeaponMuzzle'].head
+    aim=rig.matrix_world@rig.pose.bones['WeaponAim'].head
+    forward=(aim-muzzle).normalized()
+    weapon_samples.append({'frame':frame,'muzzleMeters':list(muzzle),'forward':list(forward),
+                           'dotCharacterForward':forward.dot(Vector((0,-1,0)))})
+(ART/(MASTER_PATH.stem+'-weapon-pose-verification.json')).write_text(json.dumps({
+    'status':'Actual source bone transforms; rendered weapon grip/aim quality remains unverified',
+    'samples':weapon_samples},indent=2),newline='\n')
+rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
 # Variant visibility source contract and export list.
 variants={
 'Krag_Natural': {'off':['BionicArm_L_Crusher','BionicJaw_Iron','BionicLeg_R_Piston','BionicEye_L','Weapon_R']},

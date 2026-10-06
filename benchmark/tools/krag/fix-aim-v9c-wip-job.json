@@ -1,0 +1,26 @@
+{
+  "name": "krag-fix-aim-v9c-wip",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\fix_krag_aim.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9c_WIP.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9c_Aim_WIP.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\weapon-aim-correction-v9c.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v9c-wip.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v9c-wip.stderr.log",
+  "maxPrivateGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\fix-aim-v9c-wip.stdout.log",
+  "successMarker": "KRAG_AIM_CORRECTION_COMPLETE"
+}

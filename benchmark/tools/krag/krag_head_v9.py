@@ -17,16 +17,18 @@ def fit(points):
     target_z=np.interp(z,[.02,.13,.18,.222,.234,.268,.3100375,.337,.436],
                          [1.54,1.650,1.705,1.777,1.799,1.860,1.934,1.974,2.107])
     width=np.interp(z,[.02,.13,.18,.222,.268,.3100375,.337,.38,.436],
-                      [1.55,1.82,2.26,2.34,2.23,2.18,2.28,2.30,2.22])
+                      [1.55,1.82,2.26,2.34,2.23,2.18,2.02,2.00,1.92])
     target_x=x*width
     target_y=y*1.40+.013
     # Broad projecting mandible and muzzle, with a low, flattened nasal bridge.
     mouth=gaussian(x,0,.060)*gaussian(z,.232,.030)*front
     chin=gaussian(x,0,.066)*gaussian(z,.183,.026)*front
-    target_y-=.060*mouth+.066*chin
+    target_y-=.060*mouth+.101*chin
     # Deep upper muzzle and underbite remain one connected lip/cheek surface.
-    upper_muzzle=gaussian(x,0,.053)*gaussian(z,.255,.020)*front
-    target_y-=.017*upper_muzzle
+    upper_muzzle=gaussian(x,0,.066)*gaussian(z,.255,.020)*front
+    target_y-=.028*upper_muzzle
+    lower_lip=gaussian(x,0,.045)*gaussian(z,.224,.010)*front
+    target_y-=.020*lower_lip
     target_x*=1+.14*mouth
     target_z-=.010*(np.clip(abs(x)/.053,0,1)**1.5)*mouth
     nose=gaussian(x,0,.030)*gaussian(z,.271,.030)*front
@@ -42,17 +44,17 @@ def fit(points):
     # Continuous sloping supraorbital bone: low inner frown and rising outer
     # brow, with eye opening retained rather than flattened to a horizontal slit.
     brow=gaussian(abs(x),.037,.022)*gaussian(z,.325+.23*abs(x),.012)*front
-    target_y-=.055*brow
-    target_z-=.014*gaussian(abs(x),.024,.021)*brow
+    target_y-=(.055+.003*np.tanh(x/.012))*brow
+    target_z-=(.014+.0015*np.tanh(x/.012))*gaussian(abs(x),.024,.021)*brow
     # A recessed central bridge separates the paired ridges; overlapping broad
     # fields in v9b had turned the brow into one horizontal shelf.
     central_brow=gaussian(x,0,.011)*gaussian(z,.338,.021)*front
     target_y+=.009*central_brow
     # Flatter cheek planes, with the uninterrupted nasolabial surface retained.
     cheek=gaussian(abs(x),.057,.022)*gaussian(z,.276,.030)*front
-    target_y+=.008*cheek
+    target_y-=.006*cheek
     target_x+=np.sign(x)*.007*cheek
-    zygoma=gaussian(abs(x),.058,.021)*gaussian(z,.298,.015)*front
+    zygoma=gaussian(abs(x),.058,.023)*gaussian(z,.291,.019)*front
     target_y-=.030*zygoma
     masseter=gaussian(abs(x),.064,.018)*gaussian(z,.231,.034)*front
     target_y-=.010*masseter
@@ -65,7 +67,7 @@ def fit(points):
     # the outer lateral region rather than adding disconnected ear primitives.
     auricle=np.clip((abs(x)-.068)/.019,0,1)*np.clip((y+.056)/.025,0,1)
     auricle*=gaussian(z,.289,.049)
-    target_x=target_x*(1-auricle)+np.sign(x)*(.139+(abs(x)-.068)*.80)*auricle
+    target_x=target_x*(1-auricle)+np.sign(x)*(.155+(abs(x)-.068)*.60)*auricle
     return np.column_stack((target_x,target_y,target_z))
 
 
