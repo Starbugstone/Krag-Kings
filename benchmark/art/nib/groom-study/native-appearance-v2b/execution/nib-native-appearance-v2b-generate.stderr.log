@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 387, in <module>
+    main()
+    ~~~~^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 247, in main
+    points, lift = lift_ear_path(points, normals[i], tree)
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 74, in lift_ear_path
+    raise PathClearanceError('Proposed root lies under another skin surface',
+        {'front': front, 'rootNormal': list(outward), 'intersections': intersections})
+PathClearanceError: Proposed root lies under another skin surface
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py', exiting.
