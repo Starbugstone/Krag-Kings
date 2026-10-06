@@ -1,0 +1,27 @@
+{
+  "name": "nib-restorative-socket-wrist-v1-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\restorative_wip\\review_restorative_compatibility.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\restorative-study\\socket-wrist-v1\\Nib_Coherent_RestorativeSocket_v1.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\restorative-study\\socket-wrist-v1\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\restorative-study\\socket-wrist-v1\\actual-views"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-socket-wrist-v1-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-socket-wrist-v1-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-socket-wrist-v1-review.log",
+  "successMarker": "NIB_RESTORATIVE_COMPATIBILITY_ACTUAL_REVIEW_COMPLETE"
+}

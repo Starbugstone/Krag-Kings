@@ -1,0 +1,162 @@
+{
+  "status": "Actual socket/wrist source and three views; gap and exposed stump corrected in sampled views, character art unaccepted",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "sharedPromotionAuthorized": false,
+  "source": {
+    "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend",
+    "sha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732",
+    "bytes": 63857462
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/source.json",
+    "sha256": "a896010204e300742aafa3d89671fb8dff2b15d0e2dac17355021d813d438dfa",
+    "bytes": 107736
+  },
+  "reviewReport": {
+    "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-views/review.json",
+    "sha256": "08d8dee49801c82e58e0588141aafc86b42ed46981d073f124d3e4c40a46197f",
+    "bytes": 18812
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-views/ArmNeutral.png",
+      "sha256": "a096148c6240306f0d9bb3158aee75d5a65ee22e9f65fcb7ebefbceb3fe0b5d1",
+      "bytes": 1338722
+    },
+    {
+      "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-views/HandCurl.png",
+      "sha256": "3740e664ba728395d8bb5c5d9b257c60043fe732d7641e99ba0b037cb30f3c33",
+      "bytes": 1492756
+    },
+    {
+      "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-views/Shoot.png",
+      "sha256": "9d83e360d85e263ff8de84519d3615c3637130757ad98012c9dc8a8836bee238",
+      "bytes": 1268368
+    }
+  ],
+  "processes": [
+    {
+      "pid": 23108,
+      "guardExitCode": 0,
+      "peakPrivateMB": 887.0,
+      "completionMarker": "NIB_RESTORATIVE_SOCKET_SAVED_AND_REOPENED",
+      "files": [
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-generate.txt",
+          "sha256": "b2df49bb74e11296559af0a1eedf76d2cc38a265c37821e96705e40bf205852e",
+          "bytes": 488,
+          "originalCaptureSha256": "afcff03bc0c131e44e924ef988c8be12cdd6c8c966a6a44d2573cf8cc6ca47a6"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-generate.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-generate-memory.csv",
+          "sha256": "f6495bf6559d617037510c5fe4b4591ed4e588edc408ded00670325193468eed",
+          "bytes": 994,
+          "originalCaptureSha256": "2cbff1208352e0e84384af6f84f2b65969567df1beaf5d48592e74ac655c1b04"
+        }
+      ]
+    },
+    {
+      "pid": 2264,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1277.0,
+      "completionMarker": "NIB_RESTORATIVE_COMPATIBILITY_ACTUAL_REVIEW_COMPLETE",
+      "files": [
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-review.txt",
+          "sha256": "95d125e7c6f99653b5f80bf04fa33e9a976e0d1f0f5b01d2f20f6328453384cf",
+          "bytes": 689,
+          "originalCaptureSha256": "1dfb9080aefed916d15f9fdcea3fc88fd346850b2f200741f6d525146229072a"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-review.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/actual-evidence/nib-restorative-socket-wrist-v1-review-memory.csv",
+          "sha256": "15acfabfd280ab247ec892f2624d26cb78469c84e4f1373cc825d22fe49561aa",
+          "bytes": 336,
+          "originalCaptureSha256": "495d06c1433c1dd20ccf2c3d09d530493da4c7b44bf038d8a545196499f816c4"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "originalMeshPayloads": 414,
+    "restBones": 79,
+    "canonicalActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "allActionHashesUnchanged": true,
+    "naturalBodyHandsWrapsUnchanged": true,
+    "savedSourceReopened": true
+  },
+  "technicalEvidence": {
+    "socketActualSkinSamples": 832,
+    "distalCutCoverageMeters": 0.005605465104648611,
+    "socketMaxSkinInfluences": 3,
+    "wristCenterSamples": 63,
+    "wristCenterMaxErrorMeters": 1.6924465733171325e-07
+  },
+  "actualReview": {
+    "improved": [
+      "Wrist bearing physically connects guide rods to palm in ArmNeutral, Run curl and Shoot views",
+      "Actual fitted cuff covers retained skin cut rather than crossing it",
+      "Retained natural arm, clothing, rig and clips remain exact"
+    ],
+    "unresolved": [
+      "Old palm, shell and finger hardware remain simplified rounded forms; not premium final bionics",
+      "Old decorative hand rivets visibly float after earlier anatomical digit migration",
+      "Metal guide/shell cap shading and cuff edge construction need a material/normal review",
+      "Shoot hand grip/contact is not accepted",
+      "Axilla, clothing, facial and ear/groom concept fidelity remain failed",
+      "Only three actual source views, not exhaustive animation or engine collision proof"
+    ]
+  },
+  "recipes": [
+    {
+      "path": "benchmark/tools/nib/restorative_wip/build_socket_wrist.py",
+      "sha256": "33ee8fa44e21656f5d41731ba8e43e33e0cbd5e2ce77eab40c32fa4ebaeebf41",
+      "bytes": 15575
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/socket_geometry.py",
+      "sha256": "f330f3ee251e0c500af62a5b5e19277f8b05faa349ca9124cb2d8f19a8b10a6a",
+      "bytes": 3747
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/contracts.py",
+      "sha256": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902",
+      "bytes": 2292
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/review_restorative_compatibility.py",
+      "sha256": "292c09c962d36e4df0bfb3b989ffeeceb41ba47a8b6f985b60d972ac8620ad6e",
+      "bytes": 4615
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/generate-socket-wrist-v1.job.json",
+      "sha256": "963ac1fb53a94b4fce9a006d8cec07b6063c1f961d839ea6355cd2170e0dddbf",
+      "bytes": 1164
+    },
+    {
+      "path": "benchmark/tools/nib/restorative_wip/review-socket-wrist-v1.job.json",
+      "sha256": "27ec3203eced48193bd1f8faf25663bec8e80160ba2b5d1af65d63c8974688f8",
+      "bytes": 1210
+    }
+  ]
+}

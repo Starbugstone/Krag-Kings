@@ -280,3 +280,19 @@ The next correction must construct a real wrist coupling and fitted cuff/socket
 at the actual skin boundary, preserving ordinary restorative function. Existing
 primitive hardware, axillary stretch, clothing and full facial/groom likeness
 failures remain. No shared export or artistic acceptance is claimed.
+
+
+The **restorative socket/wrist v1** is now actual at
+`restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend`, SHA-256
+`1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732`.
+Its `actual-result.json` pins source, three views and successful guarded jobs.
+A measured skin-supported cuff and distal plate cover the retained stump;
+longer guide rods and an anatomical wrist bearing remove the previous large gap
+in the neutral, Run-curl and Shoot views. All 414 original mesh payloads, exact
+79-bone bind and all seven canonical action hashes survive actual save/reopen.
+The wrist center differs by at most 0.169 µm across 63 sampled poses.
+
+This is a technical assembly improvement, **not artistic acceptance**. The old
+palm/shell/fingers remain overly simple; decorative hand rivets float after the
+earlier digit migration, and contact/shading need further review. Inherited
+axilla, garment, facial/ear/groom failures remain. No shared export changed.

@@ -1,8 +1,10 @@
-# Prepared restorative compatibility pass
+# Restorative compatibility and socket fit
 
-This code is **not generated or visually validated**. It is isolated from the
-current shared FBXs. It follows the actual semantic Body v2 and waits for root's
-final natural-hand cuff / fitted-wrap source before a job is pinned.
+The compatibility and socket recipes have now generated isolated sources and
+actual three-view evidence. Both remain artistically unaccepted and separate
+from shared FBXs. See `art/nib/restorative-study/coherent-v1/actual-result.json`
+and `socket-wrist-v1/actual-result.json`. The original preparation below records
+its intended preservation scope; the actual receipts establish execution.
 
 `build_restorative_compatibility.py` will:
 
@@ -27,7 +29,11 @@ All fourteen original segment definitions match the recorded old rest frames:
 maximum head error 0.093 micrometres, axis error 0.024 micrometres. This does not
 prove native metal geometry, cuff fit or posed contact; those gates execute in
 the builder and actual three-view review. `review_restorative_compatibility.py`
-prepares ArmNeutral, HandCurl and Shoot views. No generation job is pinned yet.
+prepares ArmNeutral, HandCurl and Shoot views. The executed jobs are `generate-coherent-v1.job.json` and
+`review-coherent-v1.job.json`. The first actual assembly exposed a disconnected
+wrist and intersecting cuff. `build_socket_wrist.py` and its two socket job
+recipes correct those interfaces against the actual skin boundary, preserving
+every original mesh and the complete bind/action contract.
 
 The separate wrist audit on the actual semantic Body finds two closed,
 104-vertex oblique wrist boundaries. Root identified a lateral natural-hand
