@@ -38,7 +38,6 @@ namespace KragKings.Benchmark
         [DllImport("user32.dll")] static extern bool GetClientRect(IntPtr hwnd,out Rect rect);
         [DllImport("user32.dll")] static extern IntPtr GetForegroundWindow();
         [DllImport("user32.dll")] static extern int GetMessageTime();
-        [DllImport("user32.dll",SetLastError=true)] static extern bool PostMessageW(IntPtr hwnd,uint message,UIntPtr wParam,IntPtr lParam);
         [DllImport("kernel32.dll")] static extern uint GetCurrentProcessId();
         [DllImport("kernel32.dll")] static extern void SetLastError(uint error);
         [DllImport("user32.dll",EntryPoint="GetWindowLongPtrW",SetLastError=true)] static extern IntPtr GetWindowLongPtr(IntPtr hwnd,int index);
@@ -60,9 +59,6 @@ namespace KragKings.Benchmark
         volatile bool enabled=true,disposed;
         int sequence;
         string callbackError;
-        bool closeRequested;
-        UIntPtr closeWParam;
-        IntPtr closeLParam;
         public bool Restored {get;private set;}
         public bool RestorationDeferred {get;private set;}
         public long WindowHandle=>window.ToInt64();
@@ -104,28 +100,12 @@ namespace KragKings.Benchmark
         public void Clear(){lock(gate)pending.Clear();}
         public bool TryDequeue(out Press press){lock(gate)return pending.TryDequeue(out press);}
         public Press[] SnapshotHistory(){lock(gate)return history.ToArray();}
-        public bool HasCloseRequest {get{lock(gate)return closeRequested;}}
-        public void RepostCloseAfterRestore()
-        {
-            if(!Restored||RestorationDeferred)throw new InvalidOperationException("The native procedure must be restored before reposting window close.");
-            UIntPtr wParam;IntPtr lParam;
-            lock(gate){if(!closeRequested)throw new InvalidOperationException("No native close request is pending.");wParam=closeWParam;lParam=closeLParam;closeRequested=false;}
-            if(!PostMessageW(window,0x0010,wParam,lParam))throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error(),"Cannot repost the owned game window close.");
-        }
         IntPtr HandleMessage(IntPtr hwnd,uint message,UIntPtr wParam,IntPtr lParam)
         {
             // This callback uses only Win32 and thread-safe managed values.
             // Every message still reaches Unity's original procedure.
             try
             {
-                // Unity can unload Mono synchronously while handling WM_CLOSE.
-                // Return out of this managed forwarding frame first. Update
-                // restores the original procedure, then reposts the same close.
-                if(hwnd==window&&message==0x0010)
-                {
-                    lock(gate){closeRequested=true;closeWParam=wParam;closeLParam=lParam;pending.Clear();}
-                    return IntPtr.Zero;
-                }
                 if(message==0x0008||message==0x001F||message==0x0219||(message==0x001C&&wParam==UIntPtr.Zero))Clear();
                 if(!disposed&&enabled&&hwnd==window&&(message==RightDown||message==RightDoubleClick)&&GetForegroundWindow()==window)
                 {

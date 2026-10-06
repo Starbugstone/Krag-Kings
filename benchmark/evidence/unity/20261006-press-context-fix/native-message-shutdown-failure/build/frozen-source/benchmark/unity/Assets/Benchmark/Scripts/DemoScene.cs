@@ -48,7 +48,6 @@ namespace KragKings.Benchmark
         bool profileInteractiveInput;
         string reportedInputProfile;
         bool applicationPaused,inputSetupFailed;
-        bool inputClosing,nativeCloseReposted;
         string nativeInputRestoreStatus="not attached";
         long nativeOriginalProcedure,nativeHookProcedure,nativeProcedureAfterDispose;
         string MovementBackend=>WindowsMovePressSource.Supported?"Win32 message context":"InputSystem event queue";
@@ -67,27 +66,9 @@ namespace KragKings.Benchmark
                 windowsPresses=null;
             }
         }
-        void QuitAfterInputDetach(int exitCode=0)
-        {
-            inputClosing=true;
-            var native=windowsPresses;
-            ReleaseInputCapture();
-            if(native!=null&&!native.Restored){Debug.LogError("Quit deferred: the native movement procedure could not safely detach.");return;}
-            Application.Quit(exitCode);
-        }
-        bool DispatchNativeClose()
-        {
-            if(windowsPresses?.HasCloseRequest!=true)return false;
-            inputClosing=true;
-            var native=windowsPresses;
-            ReleaseInputCapture();
-            try {native.RepostCloseAfterRestore();nativeCloseReposted=true;RecordInputProfile("native close reposted after detach");}
-            catch(Exception error){Debug.LogError("Native close deferred: "+error);}
-            return true;
-        }
         void SynchronizeInputCapture()
         {
-            if(!sceneReady||inputSetupFailed||inputClosing)return;
+            if(!sceneReady||inputSetupFailed)return;
             bool interactive=!performanceOnly&&!AutomatedView&&!verification;
             if(interactive&&windowsPresses==null&&movePresses==null)
             {
@@ -101,14 +82,14 @@ namespace KragKings.Benchmark
                     }
                     else movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!applicationPaused&&!performanceOnly&&!AutomatedView&&!verification,inputProbe);
                 }
-                catch(Exception error){inputSetupFailed=true;Debug.LogError("Movement input setup failed: "+error);QuitAfterInputDetach(1);return;}
+                catch(Exception error){inputSetupFailed=true;ReleaseInputCapture();Debug.LogError("Movement input setup failed: "+error);Application.Quit(1);return;}
             }
             if(!interactive&&(movePresses!=null||windowsPresses!=null))ReleaseInputCapture();
             windowsPresses?.SetEnabled(Application.isFocused&&!applicationPaused);
             if(profileInteractiveInput&&!WindowsMovePressSource.Supported&&inputProfileLease==null)inputProfileLease=DemoMovePressQueue.AcquirePressPositionLease();
             RecordInputProfile("active");
         }
-        [Serializable] sealed class InputProfileRecord {public string utc,reason,buildGuid,inputSystemVersion,movementBackend,nativeRestoreStatus;public long nativeOriginalProcedure,nativeHookProcedure,nativeProcedureAfterDispose;public bool disableRedundantEventsMerging,interactiveCapture,nativeAttached,performanceRun,interactiveProfileRequested,nativeCloseReposted;}
+        [Serializable] sealed class InputProfileRecord {public string utc,reason,buildGuid,inputSystemVersion,movementBackend,nativeRestoreStatus;public long nativeOriginalProcedure,nativeHookProcedure,nativeProcedureAfterDispose;public bool disableRedundantEventsMerging,interactiveCapture,nativeAttached,performanceRun,interactiveProfileRequested;}
         void RecordInputProfile(string reason)
         {
             if(!sceneReady||string.IsNullOrEmpty(evidencePath))return;
@@ -118,7 +99,7 @@ namespace KragKings.Benchmark
             reportedInputProfile=profileKey;
             var profile=new InputProfileRecord {utc=DateTime.UtcNow.ToString("o"),reason=reason,buildGuid=Application.buildGUID,inputSystemVersion=InputSystem.version.ToString(),
                 disableRedundantEventsMerging=disabled,interactiveCapture=windowsPresses!=null||movePresses!=null,movementBackend=MovementBackend,nativeAttached=windowsPresses!=null,nativeRestoreStatus=nativeInputRestoreStatus,
-                nativeOriginalProcedure=nativeOriginalProcedure,nativeHookProcedure=nativeHookProcedure,nativeProcedureAfterDispose=nativeProcedureAfterDispose,nativeCloseReposted=nativeCloseReposted,performanceRun=performanceOnly,interactiveProfileRequested=profileInteractiveInput};
+                nativeOriginalProcedure=nativeOriginalProcedure,nativeHookProcedure=nativeHookProcedure,nativeProcedureAfterDispose=nativeProcedureAfterDispose,performanceRun=performanceOnly,interactiveProfileRequested=profileInteractiveInput};
             File.AppendAllText(Path.Combine(evidencePath,"input-profile.jsonl"),JsonUtility.ToJson(profile)+Environment.NewLine);
             Debug.Log("KRAG_INPUT_PROFILE "+JsonUtility.ToJson(profile));
         }
@@ -251,7 +232,6 @@ namespace KragKings.Benchmark
             keyboard.FindKeyOnCurrentKeyboardLayout(letter)?.wasPressedThisFrame==true;
         void Update()
         {
-            if(DispatchNativeClose()||inputClosing)return;
             long tick=System.Diagnostics.Stopwatch.GetTimestamp();
             float frameSeconds=previousFrameTick>0?(float)((tick-previousFrameTick)/(double)System.Diagnostics.Stopwatch.Frequency):Time.unscaledDeltaTime;
             previousFrameTick=tick;
@@ -259,13 +239,13 @@ namespace KragKings.Benchmark
             if(performanceSampling)frameTimes.Add(frameSeconds*1000);
             SynchronizeInputCapture();
             if(inputSetupFailed)return;
-            if(performanceOnly||AutomatedView){movePresses?.Clear();if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)QuitAfterInputDetach();return;}
+            if(performanceOnly||AutomatedView){movePresses?.Clear();if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)Application.Quit();return;}
             var keyboard=Keyboard.current;var mouse=Mouse.current;
             if(keyboard!=null)
             {
                 if(inputProbe)foreach(var key in keyboard.allKeys)
                     if(key.wasPressedThisFrame)lastProbeKey=key.name+" / "+key.displayName;
-                if(keyboard.escapeKey.wasPressedThisFrame){QuitAfterInputDetach();return;}
+                if(keyboard.escapeKey.wasPressedThisFrame) Application.Quit();
                 if(keyboard.tabKey.wasPressedThisFrame) Select(units[(Array.IndexOf(units,Selected)+1)%units.Length]);
                 if(LetterPressed(keyboard,"v") && Selected) Selected.SetVariant(Selected.VariantIndex+1);
                 if(LetterPressed(keyboard,"a") && Selected) Selected.Trigger("Melee");
@@ -448,7 +428,7 @@ namespace KragKings.Benchmark
                 }
             }
             Debug.Log("BENCHMARK_VISUAL_REVIEW_CAPTURED "+contentFingerprint);
-            QuitAfterInputDetach(runtimeErrors.Count==0?0:1);
+            Application.Quit(runtimeErrors.Count==0?0:1);
         }
         IEnumerator Verify()
         {
@@ -576,7 +556,7 @@ namespace KragKings.Benchmark
             var report=new VerificationReport{engine=Application.unityVersion,gpu=SystemInfo.graphicsDeviceName,resolution=$"{Screen.width}x{Screen.height}",contentFingerprint=contentFingerprint,buildGuid=Application.buildGUID,checks=checks.ToArray(),failures=failures.Distinct().ToArray(),deformation=deformationChecks.ToArray(),shots=verificationShots.ToArray(),terrain=terrain};
             File.WriteAllText(Path.Combine(evidencePath,"verification.json"),JsonUtility.ToJson(report,true));
             Debug.Log("BENCHMARK_VERIFICATION "+(report.failures.Length==0?"PASS":"FAIL"));
-            QuitAfterInputDetach(report.failures.Length==0?0:1);
+            Application.Quit(report.failures.Length==0?0:1);
         }
         IEnumerator MeasurePerformance()
         {
@@ -607,7 +587,7 @@ namespace KragKings.Benchmark
             File.WriteAllText(Path.Combine(evidencePath,"performance.json"),JsonUtility.ToJson(report,true));
             ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"performance-view.png"));
             yield return new WaitForSecondsRealtime(1);
-            QuitAfterInputDetach(report.failures.Length==0&&times.Length>0?0:1);
+            Application.Quit(report.failures.Length==0&&times.Length>0?0:1);
         }
         IEnumerator PerformanceMotion()
         {

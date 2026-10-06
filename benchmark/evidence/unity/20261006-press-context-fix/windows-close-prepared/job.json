@@ -1,0 +1,24 @@
+{
+  "name": "unity-windows-message-close-build",
+  "executable": "D:\\Unity\\Hub\\6000.4.4f1\\Editor\\Unity.exe",
+  "arguments": [
+    "-projectPath",
+    "D:\\Dev\\Krag-Kings\\benchmark\\unity",
+    "-batchmode",
+    "-quit",
+    "-nographics",
+    "-job-worker-count",
+    "2",
+    "-logFile",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-windows-message-close-build\\editor.log",
+    "-executeMethod",
+    "KragKings.Editor.BenchmarkBuild.BuildPrepared"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\unity",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-windows-message-close-build\\stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-windows-message-close-build\\stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-windows-message-close-build\\editor.log",
+  "successMarker": "KRAG_BUILD_RESULT Succeeded"
+}

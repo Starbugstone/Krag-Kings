@@ -66,14 +66,13 @@ try {
         $last=$profiles|Select-Object -Last 1
         $report.nativeProcedureRestored=($last.reason -eq 'disabled' -and $last.nativeRestoreStatus -eq 'restored' -and -not $last.nativeAttached -and $last.nativeOriginalProcedure -gt 0 -and $last.nativeProcedureAfterDispose -eq $last.nativeOriginalProcedure -and $last.nativeHookProcedure -ne $last.nativeOriginalProcedure)
         $report.normalMouseMergingRetained=(@($profiles|Where-Object {$_.disableRedundantEventsMerging}).Count -eq 0)
-        $report.nativeCloseRepostedAfterDetach=($last.nativeCloseReposted -eq $true)
     }
     foreach($kind in @('memory','gpu')){
         $telemetry=Join-Path $repo ('benchmark\local\unity-runtime-interactive-'+$kind+'.csv')
         if($game -and (Test-Path $telemetry)){Copy-Item $telemetry (Join-Path $run ($kind+'.csv'))}
     }
     $report.completed=($report.suitePassed -eq $true -and $report.gameClosed -eq $true -and $report.launcherExitCode -eq 0)
-    if($RequireWindowsPressContext){$report.completed=$report.completed -and $report.nativeProcedureRestored -eq $true -and $report.normalMouseMergingRetained -eq $true -and $report.nativeCloseRepostedAfterDetach -eq $true}
+    if($RequireWindowsPressContext){$report.completed=$report.completed -and $report.nativeProcedureRestored -eq $true -and $report.normalMouseMergingRetained -eq $true}
     $report.finishedUtc=[DateTime]::UtcNow.ToString('o')
     $report|ConvertTo-Json -Depth 10|Set-Content (Join-Path $run 'native-input-result.json') -Encoding UTF8
     Write-Output ('UNITY_NATIVE_INPUT_REPORT '+(Join-Path $run 'native-input-result.json'))

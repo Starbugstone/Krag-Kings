@@ -1,0 +1,29 @@
+{
+  "scope": "Actual native message-context movement passes; shutdown access violation remains a release failure",
+  "buildGuid": "6f623598978b49e69cab5d5bc0b05287",
+  "gameplayAssemblySha256": "d67547fa7c675cc7d04ee9cafb5b82f7ac88429cb6872f902c3d8d767e4121cf",
+  "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "buildPassed": true,
+  "nativeMovementCasesPassed": 4,
+  "nativeMovementFailures": 0,
+  "windowProcedureNumericRestorePassed": true,
+  "normalMouseMergingRetained": true,
+  "nativeExitCode": -1073741819,
+  "overallPassed": false,
+  "windowsEventEvidence": {
+    "applicationErrorUtc": "2026-10-06T11:15:28.9271379Z",
+    "errorReportingUtc": "2026-10-06T11:15:33.5110037Z",
+    "processId": 13668,
+    "app": "KragKings-Unity.exe",
+    "exceptionCode": "0xc0000005",
+    "faultModule": "unknown",
+    "faultAddress": "0x0000026dcd38232a",
+    "WEREvent": "BEX64",
+    "exceptionData": 8,
+    "retainedDumpAvailable": false,
+    "symbolizedStackAvailable": false
+  },
+  "diagnosis": "Execute access violation after numeric WndProc restoration, Input System shutdown and CodeReloadManager destruction. A live managed forwarding stack during original WM_CLOSE is a source-supported lifecycle hypothesis; no captured stack proves the exact frame.",
+  "preparedCorrection": "Retain close request and return from callback, restore on Update and repost original close; all managed quit paths detach first. Not yet built or run.",
+  "artisticAcceptance": false
+}
