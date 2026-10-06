@@ -17,6 +17,7 @@ struct FKKMorphCurveNode : FAnimNode_Base
 {
     FPoseLink Source;
     TArray<FKKMorphDriver> Drivers;
+    FTransform MeshToWorld=FTransform::Identity;
     virtual void Initialize_AnyThread(const FAnimationInitializeContext& Context) override {Source.Initialize(Context);}
     virtual void CacheBones_AnyThread(const FAnimationCacheBonesContext& Context) override {Source.CacheBones(Context);}
     virtual void Update_AnyThread(const FAnimationUpdateContext& Context) override {Source.Update(Context);}
@@ -34,11 +35,45 @@ struct FKKMorphCurveNode : FAnimNode_Base
             const FTransform& Bind=Bones.GetRefPoseTransform(Bone);
             float Value=0.f;
             if(Driver.Channel==TEXT("rotationMagnitudeDegrees"))Value=FMath::RadiansToDegrees(Current.GetRotation().AngularDistance(Bind.GetRotation()));
-            else if(Driver.Channel==TEXT("translationDistanceMeters"))Value=FVector::Distance(Current.GetLocation(),Bind.GetLocation())*.01f;
+            else if(Driver.Channel==TEXT("translationDistanceMeters"))
+            {
+                // A bone translation is measured in its parent's space. FBX may
+                // retain scale on the armature/root, so include the full chain
+                // and component scale before converting world centimeters to meters.
+                FVector Delta=Current.GetLocation()-Bind.GetLocation();
+                for(FCompactPoseBoneIndex Parent=Bones.GetParentBoneIndex(Bone);Parent.GetInt()!=INDEX_NONE;Parent=Bones.GetParentBoneIndex(Parent))
+                    Delta=Output.Pose[Parent].TransformVector(Delta);
+                Value=MeshToWorld.TransformVector(Delta).Size()*.01f;
+            }
             else continue;
             const float Weight=FMath::Clamp((Value-Driver.Start)/FMath::Max(.000001f,Driver.End-Driver.Start),0.f,1.f)*Driver.MaxWeight;
             Output.Curve.Set(Driver.Morph,Weight);
         }
+    }
+};
+
+/** Preserve authored action lift from this frame's pre-IK pose, not last frame's
+ * already planted socket position. Terrain queries remain on the game thread. */
+struct FKKActionAwareFootIK : FAnimNode_TwoBoneIK
+{
+    bool bPreserveActionLift=false;
+    float RootFeetWorldZ=0.f,BindAnkleHeight=0.f;
+    FVector GroundPoint=FVector::ZeroVector,GroundNormal=FVector::UpVector;
+    virtual void EvaluateSkeletalControl_AnyThread(FComponentSpacePoseContext& Output,TArray<FBoneTransform>& OutBoneTransforms) override
+    {
+        if(bPreserveActionLift)
+        {
+            const FCompactPoseBoneIndex Foot=IKBone.GetCompactPoseIndex(Output.Pose.GetPose().GetBoneContainer());
+            if(Foot.GetInt()!=INDEX_NONE)
+            {
+                const FVector AnimatedFoot=Output.AnimInstanceProxy->GetComponentTransform().TransformPosition(Output.Pose.GetComponentSpaceTransform(Foot).GetLocation());
+                const float Lift=FMath::Max(0.f,AnimatedFoot.Z-RootFeetWorldZ-BindAnkleHeight);
+                const float PlaneZ=GroundPoint.Z-(GroundNormal.X*(AnimatedFoot.X-GroundPoint.X)+GroundNormal.Y*(AnimatedFoot.Y-GroundPoint.Y))/FMath::Max(.1f,GroundNormal.Z);
+                EffectorLocation=AnimatedFoot;
+                EffectorLocation.Z=FMath::Clamp(PlaneZ+BindAnkleHeight+(Lift>6.f?Lift:0.f),AnimatedFoot.Z-27.f,AnimatedFoot.Z+27.f);
+            }
+        }
+        FAnimNode_TwoBoneIK::EvaluateSkeletalControl_AnyThread(Output,OutBoneTransforms);
     }
 };
 
@@ -49,7 +84,7 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
     FAnimNode_TwoWayBlend LocomotionBlend,ActionBlend;
     FAnimNode_LayeredBoneBlend FaceLayer;
     FAnimNode_ConvertLocalToComponentSpace ToComponent;
-    FAnimNode_TwoBoneIK LeftFootIK,RightFootIK;
+    FKKActionAwareFootIK LeftFootIK,RightFootIK;
     FAnimNode_ModifyBone LeftFootTilt,RightFootTilt;
     FAnimNode_ConvertComponentToLocalSpace ToLocal;
     FKKMorphCurveNode MorphCurves;
@@ -114,6 +149,7 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
         FAnimInstanceProxy::PreUpdate(Instance,DeltaSeconds);
         const auto* Anim=CastChecked<UKKBenchmarkAnimInstance>(Instance);
         MorphCurves.Drivers=Anim->MorphDrivers;
+        MorphCurves.MeshToWorld=GetComponentTransform();
         IdlePlayer.SetSequence(Anim->IdleClip);RunPlayer.SetSequence(Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get());
         const UAnimSequence* MovingClip=Anim->bWalking && Anim->WalkClip?Anim->WalkClip.Get():Anim->RunClip.Get();
         const float CycleSeconds=Anim->bWalking?Anim->WalkCycleSeconds:Anim->RunCycleSeconds;
@@ -130,6 +166,8 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
             const FName Feet[2]={TEXT("Foot_L"),TEXT("Foot_R")};
             for(int32 i=0;i<2;i++)
             {
+                auto& FootIK=i==0?LeftFootIK:RightFootIK;
+                FootIK.bPreserveActionLift=false;
                 FootAlphas[i]=0;
                 int32 BoneIndex=Ref.FindBoneIndex(Feet[i]);
                 if(BoneIndex==INDEX_NONE) continue;
@@ -141,6 +179,10 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
                 const float RefZ=RefTransform.GetLocation().Z;
                 const float SoleZ=Mesh->GetSkeletalMeshAsset()->GetBounds().Origin.Z-Mesh->GetSkeletalMeshAsset()->GetBounds().BoxExtent.Z;
                 const float AnkleOffset=FMath::Max(3.f,RefZ-SoleZ);
+                FootIK.bPreserveActionLift=bActionActive || ActionBlend.Alpha>.01f;
+                FootIK.RootFeetWorldZ=Mesh->GetComponentTransform().TransformPosition(FVector(0,0,SoleZ)).Z;
+                FootIK.BindAnkleHeight=Mesh->GetComponentTransform().TransformVector(FVector(0,0,RefZ-SoleZ)).Size();
+                FootIK.GroundPoint=Ground.ImpactPoint;FootIK.GroundNormal=Ground.ImpactNormal;
                 const float Phase=FMath::Fmod(Anim->LocomotionPhase+(i==0?0.f:.5f),1.f);
                 const float Stance=Anim->bWalking?Anim->WalkStanceFraction:Anim->RunStanceFraction;
                 const bool bStance=bRunning && Phase<Stance;

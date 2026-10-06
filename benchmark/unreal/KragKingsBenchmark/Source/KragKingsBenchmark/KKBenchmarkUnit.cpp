@@ -5,6 +5,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/SkeletalMesh.h"
+#include "EngineUtils.h"
 #include "DrawDebugHelpers.h"
 #include "KKFootDust.h"
 #include "KKShotFlash.h"
@@ -30,7 +31,7 @@ AKKBenchmarkUnit::AKKBenchmarkUnit()
     GetCharacterMovement()->MaxAcceleration=1300.f;
     GetCharacterMovement()->BrakingDecelerationWalking=1600.f;
     GetCharacterMovement()->MaxStepHeight=40.f;
-    GetCharacterMovement()->SetWalkableFloorAngle(48.f);
+    GetCharacterMovement()->SetWalkableFloorAngle(40.f);
     GetCharacterMovement()->bRunPhysicsWithNoController=true;
 }
 
@@ -46,6 +47,13 @@ void AKKBenchmarkUnit::InitializeUnit(UKKBenchmarkAssets* Assets, bool bIsKrag)
     FootstepAttenuation->Attenuation.AttenuationShape=EAttenuationShape::Sphere;
     FootstepAttenuation->Attenuation.AttenuationShapeExtents=FVector(100.f);
     FootstepAttenuation->Attenuation.FalloffDistance=2400.f;
+    ActionAttenuation=NewObject<USoundAttenuation>(this);
+    ActionAttenuation->Attenuation.bAttenuate=true;
+    ActionAttenuation->Attenuation.bSpatialize=true;
+    ActionAttenuation->Attenuation.DistanceAlgorithm=EAttenuationDistanceModel::Linear;
+    ActionAttenuation->Attenuation.AttenuationShape=EAttenuationShape::Sphere;
+    ActionAttenuation->Attenuation.AttenuationShapeExtents=FVector(400.f);
+    ActionAttenuation->Attenuation.FalloffDistance=5600.f;
     VariantIndex=0;
     ApplyVariant();
 }
@@ -61,6 +69,9 @@ void AKKBenchmarkUnit::ApplyVariant()
 {
     const FKKCharacterVariant* V=Variant();
     if(!V || !V->Mesh) { UE_LOG(LogTemp,Error,TEXT("KK_ASSET_MISSING character variant %d"),VariantIndex); return; }
+    bMoving=false;bWalking=false;
+    GetCharacterMovement()->StopMovementImmediately();
+    PreviousContactPhase=.99f;FootContactCooldown[0]=FootContactCooldown[1]=0.f;
     const float OldHalf=GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
     GetMesh()->SetSkeletalMesh(V->Mesh);
     GetMesh()->SetAnimInstanceClass(UKKBenchmarkAnimInstance::StaticClass());
@@ -73,11 +84,11 @@ void AKKBenchmarkUnit::ApplyVariant()
     GetMesh()->SetRelativeRotation(AssetSet->MeshRotation);
     const FBoxSphereBounds B=V->Mesh->GetBounds();
     const float Half=FMath::Max(45.f,B.BoxExtent.Z);
-    const float Radius=bKrag?46.f:24.f;
+    const float Radius=bKrag?47.f:29.f;
     GetCapsuleComponent()->SetCapsuleSize(Radius,Half,true);
     AddActorWorldOffset(FVector(0,0,Half-OldHalf),false);
     GetMesh()->SetRelativeLocation(FVector(0,0,-Half-(B.Origin.Z-B.BoxExtent.Z)));
-    CurrentAction="Idle";ActionDuration=0;NextFireContact=0;ActionTimeRemaining=0;FaceTimeRemaining=0; bWasRunning=false;
+    CurrentAction="Idle";ActionDuration=0;NextFireContact=0;bHitSoundPending=false;ActionTimeRemaining=0;FaceTimeRemaining=0; bWasRunning=false;
     PlayLocomotion(false);
     UE_LOG(LogTemp,Display,TEXT("KK_VARIANT species=%s id=%s height_cm=%.2f"),bKrag?TEXT("Krag"):TEXT("Nib"),*V->Id,Half*2);
 }
@@ -103,14 +114,31 @@ FString AKKBenchmarkUnit::GetVariantLabel() const
     return V?V->Label:TEXT("MISSING CHARACTER ASSET");
 }
 
+float AKKBenchmarkUnit::GetMaximumAppliedMorphWeight(const FName& Kind) const
+{
+    const auto* V=Variant();const auto* SkinnedComponent=GetMesh();
+    if(!V || !SkinnedComponent || !SkinnedComponent->GetSkeletalMeshAsset())return 0.f;
+    float Maximum=0.f;
+    const auto& Indices=SkinnedComponent->GetSkeletalMeshAsset()->GetMorphTargetIndexMap();
+    for(const auto& Driver:V->MorphDrivers)
+        if(Driver.Kind==Kind)
+            if(const int32* Index=Indices.Find(Driver.Morph);Index && SkinnedComponent->MorphTargetWeights.IsValidIndex(*Index))
+                Maximum=FMath::Max(Maximum,FMath::Abs(SkinnedComponent->MorphTargetWeights[*Index]));
+    return Maximum;
+}
+
 void AKKBenchmarkUnit::MoveTo(const FVector& Destination,bool bWalk)
 {
+    if(FMath::Abs(Destination.X)>70000.f || FMath::Abs(Destination.Y)>70000.f)return;
+    FHitResult Ground;FCollisionQueryParams Params;Params.AddIgnoredActor(this);
+    if(!GetWorld()->LineTraceSingleByObjectType(Ground,FVector(Destination.X,Destination.Y,6000.f),FVector(Destination.X,Destination.Y,-6000.f),FCollisionObjectQueryParams(ECC_WorldStatic),Params)
+        || Ground.ImpactNormal.Z<FMath::Cos(FMath::DegreesToRadians(40.f)))return;
+    for(TActorIterator<AKKBenchmarkUnit> It(GetWorld());It;++It)
+        if(*It!=this && FVector::DistSquared2D(Ground.ImpactPoint,It->GetActorLocation())<FMath::Square(GetCapsuleComponent()->GetScaledCapsuleRadius()+It->GetCapsuleComponent()->GetScaledCapsuleRadius()+2.5f))return;
     bWalking=bWalk;
     const auto* V=Variant();
     GetCharacterMovement()->MaxWalkSpeed=V?100.f*(bWalking?V->WalkSpeedMeters:V->RunSpeedMeters):(bWalking?(bKrag?115.f:90.f):(bKrag?320.f:270.f));
-    MoveTarget=Destination;
-    MoveTarget.X=FMath::Clamp(MoveTarget.X,-3800.f,3800.f);
-    MoveTarget.Y=FMath::Clamp(MoveTarget.Y,-3800.f,3800.f);
+    MoveTarget=Ground.ImpactPoint;
     bMoving=true;
     UE_LOG(LogTemp,Display,TEXT("KK_MOVE species=%s target=%s"),bKrag?TEXT("Krag"):TEXT("Nib"),*MoveTarget.ToString());
 }
@@ -191,21 +219,33 @@ void AKKBenchmarkUnit::PlayDemoAction(const FName& Action)
     CurrentAction=Action;
     ActionTimeRemaining=FMath::Max(.1f,Clip->GetPlayLength());
     ActionDuration=ActionTimeRemaining;NextFireContact=0;
+    bHitSoundPending=Action==TEXT("Hit");
     if(auto* Anim=Cast<UKKBenchmarkAnimInstance>(GetMesh()->GetAnimInstance())) Anim->PlayAction(Clip);
     UE_LOG(LogTemp,Display,TEXT("KK_ACTION species=%s action=%s duration=%.2f"),bKrag?TEXT("Krag"):TEXT("Nib"),*Action.ToString(),ActionTimeRemaining);
 }
 
 void AKKBenchmarkUnit::EmitShot()
 {
-    const auto* V=Variant();if(!V || !AssetSet || !AssetSet->WeaponFlashMaterial)return;
+    const auto* V=Variant();if(!V || !AssetSet)return;
     if(V->WeaponMuzzleBone.IsNone() || V->WeaponAimBone.IsNone())return;
     const FVector Muzzle=GetMesh()->GetSocketLocation(V->WeaponMuzzleBone);
     const FVector Direction=(GetMesh()->GetSocketLocation(V->WeaponAimBone)-Muzzle).GetSafeNormal();
     if(Direction.IsNearlyZero())return;
     FVector End=Muzzle+Direction*3000.f;FHitResult Hit;FCollisionQueryParams Params;Params.AddIgnoredActor(this);
     if(GetWorld()->LineTraceSingleByObjectType(Hit,Muzzle,End,FCollisionObjectQueryParams(ECC_WorldStatic),Params))End=Hit.ImpactPoint;
-    if(auto* Shot=GetWorld()->SpawnActor<AKKShotFlash>(Muzzle,Direction.Rotation()))Shot->InitializeFlash(AssetSet->WeaponFlashMaterial,Direction,End,bKrag);
+    if(USoundBase* Sound=bKrag?AssetSet->KragShot.Get():AssetSet->NibShot.Get())
+        UGameplayStatics::PlaySoundAtLocation(this,Sound,Muzzle,.55f,1.f,0.f,ActionAttenuation);
+    if(AssetSet->WeaponFlashMaterial)
+        if(auto* Shot=GetWorld()->SpawnActor<AKKShotFlash>(Muzzle,Direction.Rotation()))Shot->InitializeFlash(AssetSet->WeaponFlashMaterial,Direction,End,bKrag);
     UE_LOG(LogTemp,Verbose,TEXT("KK_SHOT species=%s muzzle=%s direction=%s"),bKrag?TEXT("Krag"):TEXT("Nib"),*Muzzle.ToString(),*Direction.ToString());
+}
+
+void AKKBenchmarkUnit::EmitHitSound()
+{
+    if(!AssetSet)return;
+    const FVector Torso=GetActorLocation()+FVector(0,0,GetCapsuleComponent()->GetScaledCapsuleHalfHeight()*.2f);
+    if(USoundBase* Sound=bKrag?AssetSet->KragHit.Get():AssetSet->NibHit.Get())
+        UGameplayStatics::PlaySoundAtLocation(this,Sound,Torso,.6f,1.f,0.f,ActionAttenuation);
 }
 
 void AKKBenchmarkUnit::Tick(float DeltaSeconds)
@@ -220,11 +260,13 @@ void AKKBenchmarkUnit::Tick(float DeltaSeconds)
     if(ActionTimeRemaining>0)
     {
         ActionTimeRemaining-=DeltaSeconds;
+        const float Phase=FMath::Clamp(1.f-ActionTimeRemaining/FMath::Max(.001f,ActionDuration),0.f,1.f);
         if(CurrentAction==TEXT("Shoot"))
         {
-            const auto* V=Variant();const float Phase=FMath::Clamp(1.f-ActionTimeRemaining/FMath::Max(.001f,ActionDuration),0.f,1.f);
+            const auto* V=Variant();
             if(V)while(V->FireTimesNormalized.IsValidIndex(NextFireContact) && Phase>=V->FireTimesNormalized[NextFireContact]){EmitShot();++NextFireContact;}
         }
+        if(CurrentAction==TEXT("Hit") && bHitSoundPending && Phase>=.22f){bHitSoundPending=false;EmitHitSound();}
         if(ActionTimeRemaining<=0) PlayLocomotion(false);
     }
     else

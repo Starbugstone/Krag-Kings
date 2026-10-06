@@ -1,0 +1,25 @@
+{
+  "scope": "Small synthetic detector validation, not game capture",
+  "ffmpegVersion": "8.0.1",
+  "blackDetection": {
+    "source": "32x32 black lavfi, 10fps,1.2s",
+    "detectedStartSeconds": 0,
+    "detectedEndSeconds": 1.1,
+    "detectedDurationSeconds": 1.1
+  },
+  "audioSignal": {
+    "source": "440Hz sine,48000Hz,.1s",
+    "samples": 4800,
+    "rmsDbFS": -21.073778,
+    "peakDbFS": -18.063656
+  },
+  "audioSilence": {
+    "source": "48000Hz mono anullsrc,.1s",
+    "samples": 4800,
+    "rmsDbFS": "-inf",
+    "peakDbFS": "-inf"
+  },
+  "result": "passed",
+  "actualWindowCaptureValidated": false,
+  "listeningReviewPassed": false
+}

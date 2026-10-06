@@ -1,0 +1,18 @@
+[2026.10.06-00.02.30:923][  1]LogPlacementMode: Display: The Asset Registry is done with its initial scan, the list of placeable classes has been updated.
+[2026.10.06-00.02.30:941][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000000 seconds (updated 0 objects)
+[2026.10.06-00.02.30:960][  1]LogAssetRegistry: Display: Completed OnFilesLoaded.Broadcast: 0.055s
+[2026.10.06-00.02.30:962][  1]LogSourceControl: Uncontrolled asset discovery started...
+[2026.10.06-00.02.31:261][  2]LogSourceControl: Uncontrolled asset discovery finished in 0.297891 seconds (Found 8816 uncontrolled assets)
+[2026.10.06-00.02.31:306][  2]LogPython: KK_IMPORT_BEGIN shared assets=D:\Dev\Krag-Kings\benchmark\shared
+[2026.10.06-00.02.32:070][  2]LogAssetRegistry: Display: Asset registry cache written as 118.4 MiB to ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/CachedAssetRegistry/CachedAssetRegistry_*.ref
+[2026.10.06-00.02.32:077][  2]LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+[2026.10.06-00.02.32:078][  2]LogAssetRegistry: Display:   CachedAssetRegistry_0_C379AB6D41C386AB8C5E86B2DAAD551C.bin: deleted (orphaned, unreferenced by any .ref)
+[2026.10.06-00.02.32:078][  2]LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 2 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 1 orphans deleted, 0 orphans locked (kept)
+[2026.10.06-00.02.32:627][  2]LogStreaming: Display: FlushAsyncLoading(352): 1 QueuedPackages, 0 AsyncPackages
+[2026.10.06-00.02.33:378][  2]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 D:/Dev/Krag-Kings/benchmark/shared/characters/krag/Krag_Natural.fbx)
+[2026.10.06-00.02.33:538][  2]LogFbx: Loading FBX Scene from D:/Dev/Krag-Kings/benchmark/shared/characters/krag/Krag_Natural.fbx
+[2026.10.06-00.03.55:354][  2]LogDerivedDataCache: C:/Users/Matthew/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.287 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1588 files in 2339 folders with total size 46 MiB.
+[2026.10.06-00.04.28:419][  2]LogFbx: FBX Scene Loaded Succesfully
+[2026.10.06-00.04.28:447][  2]LogFbx: Warning: Not valid bind pose for Pose (Dark structural pauldron.001) - Node Krag_Natural_Mesh : Not all the deformers are stored in this BindPose
+[2026.10.06-00.04.28:793][  2]LogFbx: Valid bind pose for Pose (Dark structural pauldron.001) - Krag_Natural_Mesh
+[2026.10.06-00.04.29:270][  2]LogFbx: Triangulating skeletal mesh Krag_Natural_Mesh

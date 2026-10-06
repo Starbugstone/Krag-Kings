@@ -22,6 +22,8 @@
 #include "HAL/FileManager.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
+#include "Misc/DateTime.h"
+#include "Misc/EngineVersion.h"
 #include "UnrealClient.h"
 #include "Engine/Engine.h"
 #include "Engine/GameViewportClient.h"
@@ -30,6 +32,7 @@
 #include "HAL/PlatformMisc.h"
 #include "HAL/PlatformMemory.h"
 #include "RHIGlobals.h"
+#include "DynamicRHI.h"
 #include "Dom/JsonObject.h"
 #include "Serialization/JsonSerializer.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -46,7 +49,8 @@ AKKBenchmarkGameMode::AKKBenchmarkGameMode()
 void AKKBenchmarkGameMode::BeginPlay()
 {
     Super::BeginPlay();
-    bPerformancePass=FParse::Param(FCommandLine::Get(),TEXT("KKPerf"));
+    bPerformanceMoving=FParse::Param(FCommandLine::Get(),TEXT("KKPerfMoving"));
+    bPerformancePass=bPerformanceMoving || FParse::Param(FCommandLine::Get(),TEXT("KKPerf"));
     bShowcase=!bPerformancePass && FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
     bSmoke=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKSmoke"));
     bInputState=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKInputState"));
@@ -75,14 +79,15 @@ void AKKBenchmarkGameMode::BeginPlay()
     Ground->GetStaticMeshComponent()->SetMaterial(0,AssetSet->SandMaterial);
     Ground->GetStaticMeshComponent()->SetCollisionProfileName(TEXT("BlockAll"));
     Ground->GetStaticMeshComponent()->SetCastShadow(true);
-    auto* Sun=GetWorld()->SpawnActor<ADirectionalLight>(FVector(0,0,2000),FRotator(-32,-38,0));
+    // Unity Euler(42,-140,0): horizontal Unity X/Z -> Unreal X/-Y.
+    auto* Sun=GetWorld()->SpawnActor<ADirectionalLight>(FVector(0,0,2000),FRotator(-42,130,0));
     auto* SunComponent=Cast<UDirectionalLightComponent>(Sun->GetLightComponent());
     SunComponent->SetMobility(EComponentMobility::Movable);
     SunComponent->SetIntensity(55000.f);
-    SunComponent->SetLightColor(FLinearColor(1.f,.89f,.72f));
+    SunComponent->SetLightColor(FLinearColor::White);
     SunComponent->SetAtmosphereSunLight(true);
     SunComponent->SetCastShadows(true);
-    SunComponent->LightSourceAngle=1.5f;
+    SunComponent->SetLightSourceAngle(1.5f);
     auto* Atmosphere=GetWorld()->SpawnActor<ASkyAtmosphere>();
     Atmosphere->GetComponent()->SetRayleighScatteringScale(.75f);
     auto* Sky=GetWorld()->SpawnActor<ASkyLight>();
@@ -118,7 +123,8 @@ void AKKBenchmarkGameMode::BeginPlay()
     };
     auto* Krag=SpawnUnit(true,FVector(-135,0,0));
     SpawnUnit(false,FVector(120,-10,0));
-    if(auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0))) PC->SelectUnit(Krag);
+    for(int32 Index=0;Index<2;++Index)PerformanceOrigins[Index]=DemoUnits[Index]->GetActorLocation();
+    if(auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0))){PC->SelectUnit(Krag);PC->ResetCamera();}
     BenchmarkStartTime=LastFrameTime=FPlatformTime::Seconds();
     UE_LOG(LogTemp,Display,TEXT("KK_EVIDENCE_PATH %s"),*FPaths::ConvertRelativePathToFull(FPaths::ProjectSavedDir()/TEXT("Benchmark")));
     UE_LOG(LogTemp,Display,TEXT("KK_READY shared dune mesh, two species, keyboard actions and variant swapping"));
@@ -127,8 +133,7 @@ void AKKBenchmarkGameMode::BeginPlay()
     {
         bShowcaseWaiting=FParse::Param(FCommandLine::Get(),TEXT("KKShowcaseWait"));
         if(!FParse::Value(FCommandLine::Get(),TEXT("KKShowcaseGate="),ShowcaseGate))ShowcaseGate=FPaths::ProjectSavedDir()/TEXT("Benchmark/showcase-start.flag");
-        UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_READY gate=%s waiting=%d duration=72 window=Krag Kings - Unreal Benchmark"),*ShowcaseGate,bShowcaseWaiting?1:0);
-        if(!bShowcaseWaiting)BeginShowcaseRecording();
+        if(bShowcaseWaiting)IFileManager::Get().Delete(*ShowcaseGate);
     }
 }
 void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
@@ -139,6 +144,7 @@ void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
     const double WallElapsed=Now-BenchmarkStartTime;
     const double Warmup=bPerformancePass?15.0:10.0;
     const double End=bPerformancePass?45.0:70.0;
+    if(bPerformanceMoving && BenchmarkStartTime>0.0 && WallElapsed<End)TickMovingWorkload(WallElapsed);
     if(BenchmarkStartTime>0.0 && WallElapsed>=Warmup && WallElapsed<End) FrameTimes.Add(static_cast<float>((Now-LastFrameTime)*1000.0));
     LastFrameTime=Now;
     if(BenchmarkStartTime>0.0 && WallElapsed>=End && !bSavedMetrics)
@@ -161,7 +167,7 @@ void AKKBenchmarkGameMode::WriteInputState()
         bool bVisible=PC->ProjectWorldLocationToScreen(Unit->GetActorLocation(),Screen);
         const FVector P=Unit->GetActorLocation();
         if(!Units.IsEmpty())Units+=TEXT(",");
-        Units+=FString::Printf(TEXT("{\"species\":\"%s\",\"variant\":\"%s\",\"action\":\"%s\",\"selected\":%s,\"face_active\":%s,\"screen_visible\":%s,\"screen_x\":%.3f,\"screen_y\":%.3f,\"x\":%.3f,\"y\":%.3f,\"z\":%.3f}"),Unit->IsKrag()?TEXT("Krag"):TEXT("Nib"),*Unit->GetVariantLabel(),*Unit->GetActionLabel(),PC->SelectedUnit()==Unit?TEXT("true"):TEXT("false"),Unit->IsFaceActing()?TEXT("true"):TEXT("false"),bVisible?TEXT("true"):TEXT("false"),Screen.X,Screen.Y,P.X,P.Y,P.Z);
+        Units+=FString::Printf(TEXT("{\"species\":\"%s\",\"variant\":\"%s\",\"action\":\"%s\",\"selected\":%s,\"face_active\":%s,\"facial_morph_weight\":%.5f,\"body_morph_weight\":%.5f,\"screen_visible\":%s,\"screen_x\":%.3f,\"screen_y\":%.3f,\"x\":%.3f,\"y\":%.3f,\"z\":%.3f}"),Unit->IsKrag()?TEXT("Krag"):TEXT("Nib"),*Unit->GetVariantLabel(),*Unit->GetActionLabel(),PC->SelectedUnit()==Unit?TEXT("true"):TEXT("false"),Unit->IsFaceActing()?TEXT("true"):TEXT("false"),Unit->GetMaximumAppliedMorphWeight(TEXT("facial")),Unit->GetMaximumAppliedMorphWeight(TEXT("body")),bVisible?TEXT("true"):TEXT("false"),Screen.X,Screen.Y,P.X,P.Y,P.Z);
     }
     const FString Dir=FPaths::ProjectSavedDir()/TEXT("Benchmark");IFileManager::Get().MakeDirectory(*Dir,true);
     FVector CameraPosition;FRotator CameraRotation;PC->GetPlayerViewPoint(CameraPosition,CameraRotation);
@@ -178,25 +184,35 @@ void AKKBenchmarkGameMode::WriteMetrics()
     for(int32 i=0;i<FrameTimes.Num();i++){CSV+=FString::Printf(TEXT("%d,%.5f\n"),i,FrameTimes[i]);Sum+=FrameTimes[i];}
     TArray<float> Sorted=FrameTimes;Sorted.Sort();
     const FString Dir=FPaths::ProjectSavedDir()/TEXT("Benchmark");IFileManager::Get().MakeDirectory(*Dir,true);
-    const FString Prefix=bPerformancePass?TEXT("performance-idle"):TEXT("performance-diagnostic");
+    const FString Prefix=bPerformanceMoving?TEXT("performance-moving"):bPerformancePass?TEXT("performance-idle"):TEXT("performance-diagnostic");
     FFileHelper::SaveStringToFile(CSV,*(Dir/(Prefix+TEXT("-frames.csv"))));
     const FIntPoint ViewSize=GEngine && GEngine->GameViewport && GEngine->GameViewport->Viewport?GEngine->GameViewport->Viewport->GetSizeXY():FIntPoint::ZeroValue;
     TSharedRef<FJsonObject> Report=MakeShared<FJsonObject>();
-    Report->SetStringField(TEXT("mode"),bPerformancePass?TEXT("natural pair idle comparison"):TEXT("diagnostic session; not a controlled engine comparison"));
+    Report->SetStringField(TEXT("mode"),bPerformanceMoving?TEXT("natural pair movement/action workload; includes animation, movement, effects and audio costs"):bPerformancePass?TEXT("natural pair idle comparison"):TEXT("diagnostic session; not a controlled engine comparison"));
     Report->SetBoolField(TEXT("comparison_pass"),bPerformancePass);
     Report->SetBoolField(TEXT("completed_sample_window"),Sum*.001>=(bPerformancePass?29.5:59.5));
     Report->SetNumberField(TEXT("width"),ViewSize.X);Report->SetNumberField(TEXT("height"),ViewSize.Y);
     Report->SetNumberField(TEXT("samples"),Sorted.Num());Report->SetNumberField(TEXT("average_fps"),1000.0*Sorted.Num()/Sum);
+    Report->SetNumberField(TEXT("mean_frame_ms"),Sum/Sorted.Num());
     Report->SetNumberField(TEXT("p50_frame_ms"),Sorted[Sorted.Num()/2]);
     Report->SetNumberField(TEXT("p95_frame_ms"),Sorted[FMath::Min(Sorted.Num()-1,FMath::FloorToInt(Sorted.Num()*.95f))]);
+    Report->SetNumberField(TEXT("p99_frame_ms"),Sorted[FMath::Min(Sorted.Num()-1,FMath::FloorToInt(Sorted.Num()*.99f))]);
     Report->SetNumberField(TEXT("capture_seconds"),Sum*.001);Report->SetNumberField(TEXT("warmup_seconds"),bPerformancePass?15:10);
+    if(bPerformanceMoving)
+    {
+        Report->SetNumberField(TEXT("workload_cycle_seconds"),12);
+        Report->SetStringField(TEXT("workload"),TEXT("t0 both Run to initial+Krag(0.6,0,2)m/Nib(-0.4,0,1.8)m in Unity coordinates; t3 KragMelee/NibShoot; t4.3 KragHit/NibMelee; t6 Run to initial; t9 KragShoot/NibHit; idle remainder. Fixed default camera, natural variants."));
+    }
     Report->SetStringField(TEXT("cpu"),FPlatformMisc::GetCPUBrand());Report->SetStringField(TEXT("gpu"),GRHIAdapterName);
+    Report->SetStringField(TEXT("engine_version"),FEngineVersion::Current().ToString());
+    Report->SetStringField(TEXT("rhi"),GDynamicRHI?GDynamicRHI->GetName():TEXT("unavailable"));
     Report->SetNumberField(TEXT("physical_ram_gib"),double(FPlatformMemory::GetConstants().TotalPhysical)/1073741824.0);
     Report->SetBoolField(TEXT("running_on_battery"),FPlatformMisc::IsRunningOnBattery());
-    Report->SetStringField(TEXT("camera"),TEXT("distance8.5m; pitch22deg; verticalFOV38deg; fixedEV12.7"));
+    Report->SetStringField(TEXT("camera"),TEXT("distance6.4m; pitch22deg; verticalFOV38deg; fixedEV12.7"));
+    Report->SetStringField(TEXT("requested_sun"),TEXT("55000lux; RGB(1,1,1); angular diameter1.5deg; pitch-42/yaw130deg in Unreal coordinates"));
     Report->SetStringField(TEXT("requested_profile"),TEXT("DX12 SM6; Epic; software Lumen; virtual shadow maps; TSR; 100% render scale"));
     TSharedRef<FJsonObject> Settings=MakeShared<FJsonObject>();
-    for(const TCHAR* Name:{TEXT("r.ScreenPercentage"),TEXT("r.VSync"),TEXT("r.AntiAliasingMethod"),TEXT("r.DynamicGlobalIlluminationMethod"),TEXT("r.ReflectionMethod"),TEXT("r.Shadow.Virtual.Enable"),TEXT("r.RayTracing"),TEXT("r.Lumen.HardwareRayTracing"),TEXT("sg.ViewDistanceQuality"),TEXT("sg.ShadowQuality"),TEXT("sg.GlobalIlluminationQuality"),TEXT("sg.ReflectionQuality"),TEXT("sg.TextureQuality"),TEXT("sg.EffectsQuality")})
+    for(const TCHAR* Name:{TEXT("r.ScreenPercentage"),TEXT("r.DynamicRes.OperationMode"),TEXT("r.VSync"),TEXT("r.AntiAliasingMethod"),TEXT("r.DynamicGlobalIlluminationMethod"),TEXT("r.ReflectionMethod"),TEXT("r.Shadow.Virtual.Enable"),TEXT("r.RayTracing"),TEXT("r.Lumen.HardwareRayTracing"),TEXT("r.VolumetricFog"),TEXT("sg.ResolutionQuality"),TEXT("sg.AntiAliasingQuality"),TEXT("sg.PostProcessQuality"),TEXT("sg.ViewDistanceQuality"),TEXT("sg.ShadowQuality"),TEXT("sg.GlobalIlluminationQuality"),TEXT("sg.ReflectionQuality"),TEXT("sg.TextureQuality"),TEXT("sg.EffectsQuality")})
         if(const IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(Name))Settings->SetNumberField(Name,CVar->GetFloat());
     Report->SetObjectField(TEXT("actual_cvars"),Settings);
     TArray<TSharedPtr<FJsonValue>> Variants;
@@ -206,6 +222,28 @@ void AKKBenchmarkGameMode::WriteMetrics()
     FJsonSerializer::Serialize(Report,Writer);
     FFileHelper::SaveStringToFile(Summary,*(Dir/(Prefix+TEXT(".json"))));
     UE_LOG(LogTemp,Display,TEXT("KK_METRICS mode=%s samples=%d average_fps=%.2f"),*Prefix,Sorted.Num(),1000.0*Sorted.Num()/Sum);
+}
+void AKKBenchmarkGameMode::TickMovingWorkload(double WallElapsed)
+{
+    if(DemoUnits.Num()!=2)return;
+    const int32 Cycle=FMath::FloorToInt(WallElapsed/12.0);
+    if(Cycle!=PerformanceWorkloadCycle){PerformanceWorkloadCycle=Cycle;PerformanceWorkloadPhase=0;}
+    const double PhaseTime=FMath::Fmod(WallElapsed,12.0);
+    const double Times[]={0.0,3.0,4.3,6.0,9.0};
+    auto* Krag=DemoUnits[0].Get();auto* Nib=DemoUnits[1].Get();
+    while(PerformanceWorkloadPhase<UE_ARRAY_COUNT(Times) && PhaseTime>=Times[PerformanceWorkloadPhase])
+    {
+        switch(PerformanceWorkloadPhase)
+        {
+        // Shared Unity horizontal X/Z maps to Unreal X/-Y, meters to centimeters.
+        case 0:Krag->MoveTo(PerformanceOrigins[0]+FVector(60,-200,0));Nib->MoveTo(PerformanceOrigins[1]+FVector(-40,-180,0));break;
+        case 1:Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 2:Krag->PlayDemoAction(TEXT("Hit"));Nib->PlayDemoAction(TEXT("Melee"));break;
+        case 3:Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
+        case 4:Krag->PlayDemoAction(TEXT("Shoot"));Nib->PlayDemoAction(TEXT("Hit"));break;
+        }
+        ++PerformanceWorkloadPhase;
+    }
 }
 void AKKBenchmarkHUD::DrawHUD()
 {
@@ -232,8 +270,9 @@ void AKKBenchmarkGameMode::SmokeCheck(bool bPass,const FString& Name)
 }
 void AKKBenchmarkGameMode::BeginShowcaseRecording()
 {
+    const FString AudioStartUtc=FDateTime::UtcNow().ToIso8601();
     UAudioMixerBlueprintLibrary::StartRecordingOutput(this,75.f,nullptr);bShowcaseAudioRecording=true;
-    ShowcaseStartTime=FPlatformTime::Seconds();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_STARTED"));
+    ShowcaseStartTime=FPlatformTime::Seconds();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_STARTED utc=%s"),*AudioStartUtc);
 }
 void AKKBenchmarkGameMode::FinishShowcaseRecording()
 {
@@ -245,6 +284,13 @@ void AKKBenchmarkGameMode::FinishShowcaseRecording()
 void AKKBenchmarkGameMode::TickShowcase()
 {
     if(bShowcaseComplete || DemoUnits.Num()!=2)return;
+    if(!bShowcaseReady)
+    {
+        if(FPlatformTime::Seconds()-BenchmarkStartTime<15.0)return;
+        bShowcaseReady=true;
+        UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_READY gate=%s waiting=%d duration=72 window=Krag Kings - Unreal Benchmark"),*ShowcaseGate,bShowcaseWaiting?1:0);
+        if(!bShowcaseWaiting)BeginShowcaseRecording();
+    }
     if(bShowcaseWaiting)
     {
         if(!IFileManager::Get().FileExists(*ShowcaseGate))return;
@@ -254,35 +300,50 @@ void AKKBenchmarkGameMode::TickShowcase()
     auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0));if(!PC)return;
     auto* Krag=DemoUnits[0].Get();auto* Nib=DemoUnits[1].Get();
     const double Time=FPlatformTime::Seconds()-ShowcaseStartTime;
-    const double Times[]={0,6,14,16,20,24,28,34,38,44,46,48,54,58,62,68,72};
+    const double Times[]={0,6,10,14,16,18,20,24,28,36.5,38,45.5,47,48,52,56,60,62,65,68,72};
     while(ShowcasePhase<UE_ARRAY_COUNT(Times) && Time>=Times[ShowcasePhase])
     {
         switch(ShowcasePhase)
         {
         case 0:PC->ResetCamera();break;
-        case 1:Krag->MoveTo(FVector(-400,180,0),true);Nib->MoveTo(FVector(400,-180,0));break;
-        case 2:PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));PC->SelectUnit(Nib);Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 3:Krag->SetVariantIndex(1);Nib->SetVariantIndex(1);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 4:Krag->SetVariantIndex(2);Nib->SetVariantIndex(2);Krag->MoveTo(FVector(-135,0,0));Nib->MoveTo(FVector(120,-10,0));break;
-        case 5:Krag->SetVariantIndex(3);Krag->PlayDemoAction(TEXT("Shoot"));Nib->PlayDemoAction(TEXT("Hit"));break;
-        case 6:Nib->SetVariantIndex(0);PC->FocusPortrait(Nib);Nib->PlayFacePerformance();break;
-        case 7:Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 8:Krag->SetVariantIndex(0);PC->FocusPortrait(Krag);Krag->PlayFacePerformance();break;
-        case 9:Krag->PlayDemoAction(TEXT("Melee"));break;
-        case 10:Krag->PlayDemoAction(TEXT("Shoot"));break;
-        case 11:PC->ResetCamera();Krag->SetVariantIndex(3);Nib->SetVariantIndex(2);Krag->MoveTo(FVector(-520,-180,0),true);Nib->MoveTo(FVector(420,190,0));break;
-        case 12:Krag->SetVariantIndex(0);Nib->SetVariantIndex(0);Krag->MoveTo(FVector(-135,0,0));Nib->MoveTo(FVector(120,-10,0));break;
-        case 13:Krag->SetVariantIndex(1);Nib->SetVariantIndex(1);break;
-        case 14:PC->ResetCamera();PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
-        case 15:Krag->PlayDemoAction(TEXT("Shoot"));Nib->PlayFacePerformance();break;
-        case 16:bShowcaseComplete=true;FinishShowcaseRecording();PC->EndShowcase();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_COMPLETE duration=72 visual_acceptance_pending=1"));break;
+        case 1:Krag->MoveTo(PerformanceOrigins[0]+FVector(-70,-400,0),true);Nib->MoveTo(PerformanceOrigins[1]+FVector(90,-400,0));break;
+        case 2:Nib->MoveTo(PerformanceOrigins[1]);break;
+        case 3:PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));PC->SelectUnit(Nib);Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 4:Krag->SetVariantIndex(1);Nib->SetVariantIndex(1);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 5:Krag->PlayDemoAction(TEXT("Hit"));Nib->PlayDemoAction(TEXT("Hit"));break;
+        case 6:Krag->SetVariantIndex(2);Nib->SetVariantIndex(2);Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
+        case 7:Krag->SetVariantIndex(3);Krag->PlayDemoAction(TEXT("Shoot"));Nib->PlayDemoAction(TEXT("Melee"));break;
+        case 8:Nib->SetVariantIndex(0);PC->FocusPortrait(Nib);Nib->PlayFacePerformance();break;
+        case 9:Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 10:Krag->SetVariantIndex(0);PC->FocusPortrait(Krag);Krag->PlayFacePerformance();break;
+        case 11:Krag->PlayDemoAction(TEXT("Melee"));break;
+        case 12:Krag->PlayDemoAction(TEXT("Shoot"));break;
+        case 13:case 14:case 15:case 16:
+        {
+            const int32 Cycle=ShowcasePhase-13;const float Side=Cycle%2==0?1.f:-1.f;
+            Krag->SetVariantIndex(1+Cycle%3);Nib->SetVariantIndex(1+Cycle%2);
+            Krag->MoveTo(PerformanceOrigins[0]+FVector(-70,-Side*200,0),Cycle%2==0);
+            Nib->MoveTo(PerformanceOrigins[1]+FVector(70,-Side*200,0));break;
+        }
+        case 17:PC->ResetCamera();Krag->SetVariantIndex(0);Nib->SetVariantIndex(0);Krag->MoveTo(PerformanceOrigins[0]+FVector(0,100,0));Nib->MoveTo(PerformanceOrigins[1]+FVector(0,100,0));break;
+        case 18:Krag->MoveTo(PerformanceOrigins[0]);Nib->MoveTo(PerformanceOrigins[1]);break;
+        case 19:PC->SelectUnit(Krag);Krag->PlayDemoAction(TEXT("Melee"));Nib->PlayDemoAction(TEXT("Shoot"));break;
+        case 20:bShowcaseComplete=true;FinishShowcaseRecording();PC->EndShowcase();PC->ResetCamera();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_COMPLETE duration=72 visual_acceptance_pending=1"));break;
         }
         ++ShowcasePhase;
     }
-    if(Time>=48 && Time<62)
+    if((Time<28 || Time>=48) && Time<72)
     {
-        const float T=static_cast<float>((Time-48)/14);
-        PC->SetShowcaseCamera(FVector(-7.5f+FMath::Sin(T*PI)*45.f,5.f,205.f),75.f+40.f*FMath::Sin(T*PI),-22.f+5.f*FMath::Sin(T*PI),850.f-130.f*FMath::Sin(T*PI));
+        const FVector KragFeet=Krag->GetActorLocation()-FVector(0,0,Krag->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+        const FVector NibFeet=Nib->GetActorLocation()-FVector(0,0,Nib->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+        float CameraYaw=75.f+FMath::Sin(Time*.15)*30.f;
+        float CameraDistance=640.f+FMath::Sin(Time*.21)*40.f;
+        if(Time>=62)
+        {
+            const float Settle=FMath::Clamp(float((Time-62)/7),0.f,1.f);
+            CameraYaw=FMath::Lerp(CameraYaw,75.f,Settle);CameraDistance=FMath::Lerp(CameraDistance,640.f,Settle);
+        }
+        PC->SetShowcaseCamera((KragFeet+NibFeet)*.5f+FVector(0,0,95.f),CameraYaw,-22.f,CameraDistance);
     }
 }
 void AKKBenchmarkGameMode::TickSmoke()

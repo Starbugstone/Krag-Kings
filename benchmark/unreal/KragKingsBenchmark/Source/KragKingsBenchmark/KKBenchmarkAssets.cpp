@@ -23,6 +23,16 @@ TArray<FName> UKKBenchmarkAssets::GetAnimationBoneNames(UAnimSequence* Clip)
 #endif
     return Names;
 }
+TMap<FName,FVector> UKKBenchmarkAssets::GetMeshBoneReferenceScales(USkeletalMesh* Mesh)
+{
+    TMap<FName,FVector> Scales;
+    if(Mesh)
+    {
+        const FReferenceSkeleton& Ref=Mesh->GetRefSkeleton();
+        for(int32 Index=0;Index<Ref.GetNum();++Index)Scales.Add(Ref.GetBoneName(Index),Ref.GetRefBonePose()[Index].GetScale3D());
+    }
+    return Scales;
+}
 TArray<FName> UKKBenchmarkAssets::GetFaciallyAnimatedBones(UAnimSequence* Clip,USkeletalMesh* Mesh)
 {
     TArray<FName> Animated;
@@ -43,4 +53,28 @@ TArray<FName> UKKBenchmarkAssets::GetFaciallyAnimatedBones(UAnimSequence* Clip,U
     }
 #endif
     return Animated;
+}
+
+FVector UKKBenchmarkAssets::GetMeshImportedSizeMeters(USkeletalMesh* Mesh)
+{
+    return Mesh?Mesh->GetBounds().BoxExtent*.02f:FVector::ZeroVector;
+}
+
+TMap<FName,FVector2D> UKKBenchmarkAssets::GetAnimationLimbTranslationRatios(UAnimSequence* Clip,USkeletalMesh* Mesh)
+{
+    TMap<FName,FVector2D> Ratios;
+#if WITH_EDITOR
+    if(!Clip || !Mesh || !Clip->GetDataModel())return Ratios;
+    const FReferenceSkeleton& Ref=Mesh->GetRefSkeleton();
+    for(const FName Bone:{FName("Thigh_L"),FName("Thigh_R"),FName("Shin_L"),FName("Shin_R"),FName("UpperArm_L"),FName("UpperArm_R"),FName("LowerArm_L"),FName("LowerArm_R")})
+    {
+        const int32 Index=Ref.FindBoneIndex(Bone);if(Index==INDEX_NONE)continue;
+        const double BindLength=Ref.GetRefBonePose()[Index].GetTranslation().Size();if(BindLength<1.e-6)continue;
+        TArray<FTransform> Keys;Clip->GetDataModel()->GetBoneTrackTransforms(Bone,Keys);if(Keys.IsEmpty())continue;
+        FVector2D Range(TNumericLimits<double>::Max(),0);
+        for(const FTransform& Key:Keys){const double Ratio=Key.GetTranslation().Size()/BindLength;Range.X=FMath::Min(Range.X,Ratio);Range.Y=FMath::Max(Range.Y,Ratio);}
+        Ratios.Add(Bone,Range);
+    }
+#endif
+    return Ratios;
 }

@@ -23,6 +23,7 @@ private:
     bool bSavedMetrics=false;
     void WriteMetrics();
     void TickSmoke();
+    void TickMovingWorkload(double WallElapsed);
     void WriteInputState();
     void TickShowcase();
     void BeginShowcaseRecording();
@@ -31,9 +32,14 @@ private:
     UPROPERTY() TArray<TObjectPtr<AKKBenchmarkUnit>> DemoUnits;
     bool bSmoke=false;
     bool bPerformancePass=false;
+    bool bPerformanceMoving=false;
+    int32 PerformanceWorkloadCycle=INDEX_NONE;
+    int32 PerformanceWorkloadPhase=0;
+    FVector PerformanceOrigins[2]={FVector::ZeroVector,FVector::ZeroVector};
     bool bInputState=false;
     bool bShowcase=false;
     bool bShowcaseWaiting=false;
+    bool bShowcaseReady=false;
     bool bShowcaseComplete=false;
     bool bShowcaseAudioRecording=false;
     int32 ShowcasePhase=0;

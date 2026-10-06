@@ -14,6 +14,7 @@ report['native_driver_struct'] = type(unreal.KKMorphDriver()).__name__
 options = shared.mesh_options(True)
 report['morph_import_enabled'] = options.get_editor_property('skeletal_mesh_import_data').get_editor_property('import_morph_targets')
 report['custom_animation_attributes_enabled'] = options.get_editor_property('anim_sequence_import_data').get_editor_property('import_custom_attribute')
+report['animation_scene_unit_conversion_enabled'] = options.get_editor_property('anim_sequence_import_data').get_editor_property('convert_scene_unit')
 terrain_file = shared.SHARED / 'environment' / 'Dunes.fbx'
 objects = shared.imported_task(terrain_file, shared.DEST + '/Environment', shared.mesh_options(False))
 terrain = next(o for o in objects if isinstance(o, unreal.StaticMesh))

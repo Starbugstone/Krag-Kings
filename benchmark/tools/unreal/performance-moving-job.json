@@ -1,18 +1,16 @@
 {
-  "name": "unreal-showcase",
+  "name": "unreal-moving-performance",
   "executable": "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64\\KragKingsBenchmark.exe",
   "arguments": [
     "-ResX=1920",
     "-ResY=1080",
     "-NoVSync",
     "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\runtime.log",
-    "-KKShowcase",
-    "-KKShowcaseWait",
-    "-KKShowcaseGate=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\showcase-start.flag"
+    "-KKPerfMoving"
   ],
   "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64",
-  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-showcase-stdout.log",
-  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-showcase-stderr.log",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-performance-moving-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-performance-moving-stderr.log",
   "minAvailableGB": 10,
   "maxPrivateGB": 10,
   "gpuTelemetry": true

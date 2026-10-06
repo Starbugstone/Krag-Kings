@@ -6,6 +6,7 @@ using System;using System.Runtime.InteropServices;
 public static class KKInput {
  [StructLayout(LayoutKind.Sequential)]public struct POINT {public int X,Y;}
  [StructLayout(LayoutKind.Sequential)]public struct RECT {public int Left,Top,Right,Bottom;}
+ [DllImport("user32.dll")]public static extern bool SetProcessDPIAware();
  [DllImport("user32.dll")]public static extern bool SetForegroundWindow(IntPtr h);
  [DllImport("user32.dll")]public static extern IntPtr GetForegroundWindow();
  [DllImport("user32.dll")]public static extern bool ClientToScreen(IntPtr h,ref POINT p);
@@ -15,6 +16,7 @@ public static class KKInput {
  [DllImport("user32.dll")]public static extern void keybd_event(byte vk,byte scan,uint flags,UIntPtr extra);
 }
 '@
+[KKInput]::SetProcessDPIAware()|Out-Null
 $game=if($GameProcessId){Get-Process -Id $GameProcessId}else{Get-Process KragKingsBenchmark* -ErrorAction SilentlyContinue|Where-Object {$_.MainWindowHandle -ne 0}|Select-Object -First 1}
 if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible packaged Unreal demo is required.'}
 [KKInput]::SetForegroundWindow($game.MainWindowHandle)|Out-Null
@@ -102,6 +104,7 @@ try {
  Expect-State 'V changes bionic variant' {param($s)($s.units|Where-Object selected).variant -ne $variant}
  Press-Key 0x45
  Expect-State 'E starts facial acting' {param($s)($s.units|Where-Object selected).face_active}
+ Expect-State 'Facial curves reach applied mesh morph weights' {param($s)($s.units|Where-Object selected).facial_morph_weight -gt .01}
  Press-Key 0x43
  Expect-State 'C enters portrait' {param($s)$s.portrait}
  $camera=(Read-State).camera
@@ -113,6 +116,7 @@ try {
  $rect=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$rect)|Out-Null
  Click-Client ($rect.Right*.4) ($rect.Bottom*.8) $true $false
  Expect-State 'RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Expect-State 'Run activates applied body corrective weights' {param($s)($s.units|Where-Object selected).body_morph_weight -gt .01}
  $before=Read-State;Start-Sleep -Milliseconds 700;$after=Read-State
  $u0=$before.units|Where-Object selected;$u1=$after.units|Where-Object selected
  $moved=[math]::Sqrt([math]::Pow($u1.x-$u0.x,2)+[math]::Pow($u1.y-$u0.y,2))

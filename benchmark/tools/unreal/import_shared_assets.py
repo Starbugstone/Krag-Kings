@@ -2,6 +2,7 @@
 Run after compiling KragKingsBenchmarkEditor, via build_demo.ps1 -Stage Import.
 Fails on absent meshes, materials, clips, map save or data asset creation.
 """
+import gc
 import hashlib
 import json
 from pathlib import Path
@@ -78,7 +79,7 @@ def imported_task(filename, destination, options=None):
     paths = task.get_editor_property('imported_object_paths')
     if not paths:
         raise RuntimeError('Import produced no assets: ' + str(filename))
-    return [load(path) for path in paths if load(path)]
+    return [asset for path in paths if (asset := load(path)) is not None]
 
 
 def texture(path, destination, kind):
@@ -204,6 +205,12 @@ def mesh_options(skeletal):
     if skeletal:
         data.set_editor_property('import_morph_targets', True)
         anim_data = opts.get_editor_property('anim_sequence_import_data')
+        # Animation-only imports read their own transform settings. Unreal's
+        # FbxAssetImportData defaults unit conversion off, unlike our mesh setup.
+        anim_data.set_editor_property('convert_scene', True)
+        anim_data.set_editor_property('convert_scene_unit', True)
+        anim_data.set_editor_property('force_front_x_axis', False)
+        anim_data.set_editor_property('import_uniform_scale', 1.0)
         anim_data.set_editor_property('import_bone_tracks', True)
         anim_data.set_editor_property('import_custom_attribute', True)
         anim_data.set_editor_property('delete_existing_morph_target_curves', True)
@@ -255,6 +262,80 @@ def contact_assets():
     return sounds, mat
 
 
+def action_audio_assets():
+    source = SHARED / 'audio'
+    manifest = json.loads((source / 'action-audio.json').read_text(encoding='utf-8-sig'))
+    if manifest.get('schemaVersion') != 1:
+        raise RuntimeError('Unsupported action audio schema')
+    assets = {}
+    for name in ('Krag_Shot', 'Nib_Shot', 'Krag_Hit', 'Nib_Hit'):
+        spec = next((entry for entry in manifest.get('effects', []) if entry.get('name') == name), None)
+        if not spec:
+            raise RuntimeError('Missing shared action audio: ' + name)
+        filename = source / spec['file']
+        if sha256(filename) != spec['sha256']:
+            raise RuntimeError('Shared action WAV does not match its recorded hash: ' + name)
+        expected_gain = .55 if name.endswith('_Shot') else .6
+        if abs(float(spec['runtimeGain']) - expected_gain) > 1.e-6:
+            raise RuntimeError('Action gain changed; update both engines together: ' + name)
+        objects = imported_task(filename, DEST + '/Audio/Actions')
+        sound = next((obj for obj in objects if isinstance(obj, unreal.SoundWave)), None)
+        if sound is None:
+            raise RuntimeError('Action WAV import failed: ' + name)
+        # The unit applies the shared .55/.6 gain once at the authored event time.
+        sound.set_editor_property('volume', 1.0)
+        save(sound)
+        assets[name] = sound
+    REPORT['action_audio'] = {'assets': {name: sound.get_path_name() for name, sound in assets.items()},
+                             'shot_gain': .55, 'hit_gain': .6, 'hit_normalized_time': .22,
+                             'shot_timing': 'character weapon.fireTimesNormalized',
+                             'attenuation': 'linear, inner 4m, outer 60m',
+                             'status': 'Shared candidates; game mix/synchronization/listening review pending'}
+    return assets
+
+
+
+# Keep only paths and plain Python values while importing subsequent meshes. A
+# reflected variant struct strongly references its mesh/animations and defeats GC.
+VARIANT_ASSETS = ('mesh', 'idle', 'walk', 'run', 'melee', 'shoot', 'hit', 'face_performance')
+VARIANT_STRINGS = ('id', 'label', 'weapon_muzzle_bone', 'weapon_aim_bone')
+VARIANT_FLOATS = ('walk_speed_meters', 'run_speed_meters', 'walk_cycle_seconds',
+                  'run_cycle_seconds', 'walk_stance_fraction', 'run_stance_fraction')
+VARIANT_ARRAYS = ('fire_times_normalized', 'walk_left_contacts', 'walk_right_contacts',
+                  'run_left_contacts', 'run_right_contacts')
+
+
+def variant_descriptor(variant):
+    result = {key: variant.get_editor_property(key).get_path_name() for key in VARIANT_ASSETS}
+    result.update({key: str(variant.get_editor_property(key)) for key in VARIANT_STRINGS})
+    result.update({key: float(variant.get_editor_property(key)) for key in VARIANT_FLOATS})
+    result.update({key: [float(value) for value in variant.get_editor_property(key)] for key in VARIANT_ARRAYS})
+    result['morph_drivers'] = [dict(
+        **{key: str(driver.get_editor_property(key)) for key in ('morph', 'bone', 'channel', 'kind')},
+        **{key: float(driver.get_editor_property(key)) for key in ('start', 'end', 'max_weight')},
+    ) for driver in variant.get_editor_property('morph_drivers')]
+    return result
+
+
+def restore_variant(descriptor):
+    variant = unreal.KKCharacterVariant()
+    for key in VARIANT_ASSETS:
+        asset = load(descriptor[key])
+        if asset is None:
+            raise RuntimeError('Saved character asset cannot be reloaded: ' + descriptor[key])
+        variant.set_editor_property(key, asset)
+    for key in VARIANT_STRINGS + VARIANT_FLOATS + VARIANT_ARRAYS:
+        variant.set_editor_property(key, descriptor[key])
+    drivers = []
+    for spec in descriptor['morph_drivers']:
+        driver = unreal.KKMorphDriver()
+        for key, value in spec.items():
+            driver.set_editor_property(key, value)
+        drivers.append(driver)
+    variant.set_editor_property('morph_drivers', drivers)
+    return variant
+
+
 def species(folder):
     source = SHARED / 'characters' / folder
     manifest_path = next((p for p in (source / 'manifest.json', source / 'asset_manifest.json', source / 'krag_asset_contract.json') if p.exists()), None)
@@ -286,7 +367,7 @@ def species(folder):
     # Natural first, mandatory crusher second; names define the review order only.
     order = {'Natural': 0, 'Crusher': 1, 'GripReplacement': 1, 'LegReplacement': 2, 'IronJaw': 2, 'Piston': 3, 'Weapon': 4}
     files.sort(key=lambda p: order.get(p.stem.split('_', 1)[-1], 100))
-    for fbx in files:
+    def import_variant(fbx):
         variant_entry = next((e for e in entries if isinstance(e, dict) and e.get('fbx') and (source / e['fbx']).resolve() == fbx.resolve()), {}) if isinstance(entries, list) else {}
         variant_deformation = variant_entry.get('deformation', deformation)
         if variant_deformation and (variant_deformation.get('schemaVersion') != 1 or variant_deformation.get('faceRoot') != 'FaceRoot'):
@@ -347,6 +428,11 @@ def species(folder):
             variant.set_editor_property(gait.lower() + '_right_contacts', details.get('rightContacts', [0.5]))
         morph_names = [m.get_name() for m in mesh.get_editor_property('morph_targets')]
         bone_names = [str(n) for n in unreal.KKBenchmarkAssets.get_mesh_bone_names(mesh)]
+        bone_scales = {str(name): [float(scale.x), float(scale.y), float(scale.z)]
+                       for name, scale in unreal.KKBenchmarkAssets.get_mesh_bone_reference_scales(mesh).items()}
+        size = unreal.KKBenchmarkAssets.get_mesh_imported_size_meters(mesh)
+        if not .5 < size.z < 5:
+            raise RuntimeError(f'{fbx.stem}: imported height {size.z}m indicates an invalid unit scale')
         weapon = manifest.get('weapon', {})
         for source_key, property_name in (('muzzleBone', 'weapon_muzzle_bone'), ('aimBone', 'weapon_aim_bone')):
             bone = weapon.get(source_key)
@@ -363,6 +449,8 @@ def species(folder):
         for spec in variant_deformation.get('drivers', []):
             if spec['channel'] not in ('rotationMagnitudeDegrees', 'translationDistanceMeters'):
                 raise RuntimeError('Unsupported corrective channel: ' + spec['channel'])
+            if spec.get('kind') not in ('facial', 'body'):
+                raise RuntimeError('Corrective must classify facial/body kind: ' + spec['morph'])
             if float(spec['end']) <= float(spec['start']):
                 raise RuntimeError('Corrective end must exceed start: ' + spec['morph'])
             if spec['bone'] not in bone_names:
@@ -373,7 +461,7 @@ def species(folder):
             if len(candidates) != 1:
                 raise RuntimeError(f'Expected one imported morph {spec["morph"]} in {fbx.stem}; found {candidates}')
             driver = unreal.KKMorphDriver()
-            for key in ('bone', 'channel', 'start', 'end'):
+            for key in ('bone', 'channel', 'kind', 'start', 'end'):
                 driver.set_editor_property(key, spec[key])
             driver.set_editor_property('morph', candidates[0])
             driver.set_editor_property('max_weight', float(spec.get('maxWeight', 1.0)))
@@ -390,7 +478,10 @@ def species(folder):
             facial = [str(n) for n in unreal.KKBenchmarkAssets.get_facially_animated_bones(clip, mesh)]
             if 'Pelvis' not in tracks or not facial:
                 raise RuntimeError(f'{fbx.stem}/{name}: missing skeletal pelvis track or varying FaceRoot performance')
-            clip_validation[name] = {'bone_track_count': len(tracks), 'varying_facial_bones': facial}
+            ratios = {str(bone): [float(bounds.x), float(bounds.y)] for bone, bounds in unreal.KKBenchmarkAssets.get_animation_limb_translation_ratios(clip, mesh).items()}
+            if len(ratios) < 4 or any(low < .1 or high > 10 for low, high in ratios.values()):
+                raise RuntimeError(f'{fbx.stem}/{name}: animation/bind limb lengths indicate a unit mismatch: {ratios}')
+            clip_validation[name] = {'bone_track_count': len(tracks), 'varying_facial_bones': facial, 'local_limb_translation_to_bind_length_ranges': ratios}
             variant.set_editor_property(name.lower(), clip)
             clip_paths[name] = clip.get_path_name()
         for name in FACIAL_CLIPS:
@@ -403,8 +494,20 @@ def species(folder):
                 clip_validation[name] = {'varying_facial_bones': facial}
             else:
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
-        variants.append(variant)
-        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'morphs': morph_names, 'corrective_driver_count': len(drivers)})
+        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers)})
+        return variant_descriptor(variant)
+
+    for fbx in files:
+        # Import in a function scope: no previous mesh, skeleton, options or animation
+        # wrapper survives into the next expensive FBX triangulation step.
+        variants.append(import_variant(fbx))
+        gc.collect()
+        unreal.collect_garbage()
+        progress = BENCHMARK / 'unreal' / 'evidence' / 'import-progress.json'
+        progress.write_text(json.dumps({'complete': False, 'latest_completed_variant': fbx.stem,
+                                        'validated_meshes': REPORT['meshes'],
+                                        'note': 'Per-variant import validation only; final data asset/map not yet complete'}, indent=2), encoding='utf-8')
+        unreal.log('KK_VARIANT_IMPORTED_AND_RELEASED ' + fbx.stem)
     return variants
 
 
@@ -435,17 +538,19 @@ def main():
     factory = unreal.DataAssetFactory()
     factory.set_editor_property('data_asset_class', unreal.KKBenchmarkAssets)
     data = load(DEST + '/DA_Benchmark') or TOOLS.create_asset('DA_Benchmark', DEST, unreal.KKBenchmarkAssets, factory)
-    data.set_editor_property('krags', krags)
-    data.set_editor_property('nibs', nibs)
     data.set_editor_property('terrain', terrain)
     data.set_editor_property('sand_material', sand)
     sounds, dust = contact_assets()
     data.set_editor_property('krag_sand_steps', sounds['Krag'])
     data.set_editor_property('nib_sand_steps', sounds['Nib'])
+    for name, sound in action_audio_assets().items():
+        data.set_editor_property(name.lower(), sound)
     data.set_editor_property('sand_dust_material', dust)
     data.set_editor_property('weapon_flash_material', weapon_flash_material())
     # Blender -Y source forward convention: review this rotation in actual editor before accepting render.
     data.set_editor_property('mesh_rotation', unreal.Rotator(0, -90, 0))
+    data.set_editor_property('krags', [restore_variant(entry) for entry in krags])
+    data.set_editor_property('nibs', [restore_variant(entry) for entry in nibs])
     save(data)
     level_path = DEST + '/Maps/Dunes'
     unreal.EditorAssetLibrary.make_directory(DEST + '/Maps')
@@ -460,6 +565,8 @@ def main():
         raise RuntimeError('Shared source files changed during import; discard this mixed-source result and rerun against pinned files.')
     REPORT['source_snapshot'] = str(snapshot_file)
     REPORT['source_inputs_unchanged_during_import'] = True
+    progress = BENCHMARK / 'unreal' / 'evidence' / 'import-progress.json'
+    progress.write_text(json.dumps({'complete': True, 'validated_meshes': REPORT['meshes']}, indent=2), encoding='utf-8')
     out = BENCHMARK / 'unreal' / 'evidence' / 'import-report.json'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(REPORT, indent=2), encoding='utf-8')

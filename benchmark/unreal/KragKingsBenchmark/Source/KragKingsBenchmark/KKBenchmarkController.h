@@ -29,7 +29,7 @@ private:
     UPROPERTY() TObjectPtr<AKKBenchmarkUnit> Selected;
     UPROPERTY() TObjectPtr<ACameraActor> BenchmarkCamera;
     FVector Focus=FVector(0,0,150);
-    float Distance=850.f;
+    float Distance=640.f;
     float Yaw=75.f;
     float Pitch=-22.f;
     bool bPortrait=false;

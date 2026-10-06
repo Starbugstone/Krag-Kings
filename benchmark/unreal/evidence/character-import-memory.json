@@ -19,5 +19,16 @@
   },
   "source": "shared/characters/krag/Krag_Natural.fbx",
   "sourceTriangles": 1757044,
-  "nextStep": "Use artist-created runtime derivatives retaining facial/body morphs, validate imports and actual rendered quality; preserve masters."
+  "nextStep": "Export polygons already triangulated while retaining exact vertex indices, morph deltas and UVs/normals; validate the new FBX before retrying. Installed UE FbxSkeletalMeshImport.cpp:3457 skips GeometryConverter::Triangulate when IsTriangleMesh returns true. No cap increase or unchanged-asset retry.",
+  "derivativeNullRhiAttempt": {
+    "exit": 88,
+    "privateMiBAtGuard": 9755,
+    "availableMiBAtGuard": 3389,
+    "committedPercent": 73,
+    "stage": "Triangulating skeletal mesh Krag_Natural_Mesh",
+    "renderer": "NullRHI",
+    "sourceTriangles": 1026672,
+    "sourceSha256": "e2979acf2c9e147d5018824fa2edb93ce27a08563a49f94c8fa721980fee4ed5",
+    "noCharacterAssetCompleted": true
+  }
 }

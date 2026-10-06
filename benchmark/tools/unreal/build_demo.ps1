@@ -5,12 +5,14 @@ param(
     [switch]$Smoke,
     [switch]$InputProbe,
     [switch]$Perf,
+    [switch]$PerfMoving,
     [switch]$Showcase,
     [switch]$ShowcaseWait
 )
 $ErrorActionPreference='Stop'
-if($Perf -and ($Smoke -or $InputProbe)){throw 'The idle performance pass must run separately from smoke/input verification.'}
-if($Showcase -and ($Perf -or $Smoke -or $InputProbe)){throw 'Showcase recording must run separately from performance/smoke/input verification.'}
+if($Perf -and $PerfMoving){throw 'Idle and moving performance passes must be separate launches.'}
+if(($Perf -or $PerfMoving) -and ($Smoke -or $InputProbe)){throw 'Performance passes must run separately from smoke/input verification.'}
+if($Showcase -and ($Perf -or $PerfMoving -or $Smoke -or $InputProbe)){throw 'Showcase recording must run separately from performance/smoke/input verification.'}
 if($ShowcaseWait -and -not $Showcase){throw '-ShowcaseWait requires -Showcase.'}
 $BenchmarkRoot=(Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $ProjectRoot=Join-Path $BenchmarkRoot 'unreal\KragKingsBenchmark'
@@ -94,10 +96,12 @@ if($Stage -eq 'Launch'){
     # Own the real game process so the memory guard remains held through the sample.
     $Game=Join-Path $PackageRoot 'Windows\KragKingsBenchmark\Binaries\Win64\KragKingsBenchmark.exe'
     if(-not(Test-Path $Game)){throw "Packaged game not found: $Game"}
+    & (Join-Path $PSScriptRoot '..\Write-RunConditions.ps1') -OutputPath (Join-Path $Evidence 'run-conditions.json')
     $Arguments=@('-ResX=1920','-ResY=1080','-NoVSync',"-abslog=$(Join-Path $Evidence 'runtime.log')")
     if($Smoke){$Arguments+='-KKSmoke'}
     if($InputProbe){$Arguments+='-KKInputState'}
     if($Perf){$Arguments+='-KKPerf'}
+    if($PerfMoving){$Arguments+='-KKPerfMoving'}
     if($Showcase){$Arguments+='-KKShowcase'}
     if($ShowcaseWait){
         $Gate=Join-Path $Evidence 'showcase-start.flag'
@@ -107,5 +111,5 @@ if($Stage -eq 'Launch'){
     $Process=Start-Process -FilePath $Game -ArgumentList $Arguments -WorkingDirectory (Split-Path $Game) -PassThru
     $null=$Process.Handle
     Write-Output ('KK_GAME_PROCESS pid='+$Process.Id)
-    if($Perf -or $Smoke -or $Showcase){$Process.WaitForExit();exit $Process.ExitCode}
+    if($Perf -or $PerfMoving -or $Smoke -or $Showcase){$Process.WaitForExit();exit $Process.ExitCode}
 }

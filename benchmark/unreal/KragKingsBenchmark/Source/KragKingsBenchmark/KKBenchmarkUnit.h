@@ -26,6 +26,7 @@ public:
     bool IsKrag() const { return bKrag; }
     bool HasMovementTarget() const { return bMoving; }
     bool IsFaceActing() const { return FaceTimeRemaining>0.f; }
+    float GetMaximumAppliedMorphWeight(const FName& Kind) const;
 private:
     void ApplyVariant();
     void PlayLocomotion(bool bRunning);
@@ -41,12 +42,15 @@ private:
     float PreviousContactPhase=.99f;
     int32 FootSoundIndex=0;
     UPROPERTY() TObjectPtr<USoundAttenuation> FootstepAttenuation;
+    UPROPERTY() TObjectPtr<USoundAttenuation> ActionAttenuation;
     FVector MoveTarget = FVector::ZeroVector;
     FName CurrentAction = "Idle";
     float ActionTimeRemaining = 0;
     float ActionDuration = 0;
     int32 NextFireContact=0;
+    bool bHitSoundPending=false;
     float FaceTimeRemaining = 0;
     void UpdateFootContacts(float DeltaSeconds);
     void EmitShot();
+    void EmitHitSound();
 };

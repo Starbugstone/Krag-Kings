@@ -100,7 +100,9 @@ try {
     $report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
     $report.clientWidth=$clientWidth;$report.clientHeight=$clientHeight
     if(Test-Path $progress){Remove-Item $progress}
-    $arguments=@('-hide_banner','-loglevel','warning','-y','-stats_period','0.1','-thread_queue_size','8','-f','gdigrab','-draw_mouse','0','-framerate',"$FrameRate",'-i',('hwnd='+$window.ToInt64()),'-an','-vf','crop=trunc(iw/2)*2:trunc(ih/2)*2,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p','-c:v','h264_nvenc','-preset','p4','-tune','hq','-rc','vbr','-cq','19','-b:v','0','-pix_fmt','yuv420p','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-color_range','tv','-movflags','+faststart','-progress',$progress,$raw)
+    # gdigrab stamps packets in UTC microseconds. Preserve demux timestamps so
+    # encoder buffering does not bias the later engine-audio alignment.
+    $arguments=@('-hide_banner','-loglevel','info','-debug_ts','-y','-stats_period','0.1','-thread_queue_size','8','-f','gdigrab','-draw_mouse','0','-framerate',"$FrameRate",'-i',('hwnd='+$window.ToInt64()),'-an','-vf','crop=trunc(iw/2)*2:trunc(ih/2)*2,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p','-c:v','h264_nvenc','-preset','p4','-tune','hq','-rc','vbr','-cq','19','-b:v','0','-pix_fmt','yuv420p','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-color_range','tv','-movflags','+faststart','-progress',$progress,$raw)
     $capture=Start-Native $Ffmpeg $arguments $true
     $readyDeadline=[DateTime]::UtcNow.AddSeconds(15);$firstMediaSeconds=$null
     do {
@@ -130,14 +132,65 @@ try {
     }
     $capture.process.StandardInput.WriteLine('q');$capture.process.StandardInput.Flush()
     if(-not $capture.process.WaitForExit(15000)){$capture.process.Kill();throw 'Capture encoder did not finalize after its own stop request.'}
-    [IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-capture.log')),$capture.stderr.Result)
+    $captureLog=$capture.stderr.Result
+    [IO.File]::WriteAllText((Join-Path $OutputDirectory ($prefix+'-capture.log')),$captureLog)
     if($capture.process.ExitCode -ne 0){throw 'Capture encoder returned a failure exit code.'}
+    $rawTimestamp=[regex]::Match($captureLog,'demuxer ->[^\r\n]*?pkt_pts:(\d+)')
+    $normalizedTimestamp=[regex]::Match($captureLog,'demuxer\+tsfixup ->[^\r\n]*?pkt_pts:(-?\d+)')
+    if(-not $rawTimestamp.Success -or -not $normalizedTimestamp.Success){throw 'Capture lacks first-frame demux timestamps; raw video is preserved for explicit synchronization.'}
+    $epoch=[DateTimeOffset]::FromUnixTimeSeconds(0)
+    $audioStartUtc=[DateTimeOffset]$gateUtc
+    $startTimeSource='start gate'
+    $runtimeText=Get-Content $RuntimeLog -Raw
+    $engineStart=[regex]::Match($runtimeText,'SHOWCASE_STARTED[^\r\n]*?utc=([0-9T:.Z+\-]+)')
+    if($engineStart.Success){$audioStartUtc=[DateTimeOffset]::Parse($engineStart.Groups[1].Value,[Globalization.CultureInfo]::InvariantCulture);$startTimeSource='engine runtime log'}
+    else{
+        $startState=Join-Path (Split-Path $StartFlag) 'showcase-started.json'
+        if(Test-Path $startState){
+            $state=Get-Content $startState -Raw|ConvertFrom-Json
+            if($state.state -eq 'started' -and $state.utc){
+                $audioStartUtc=[DateTimeOffset]::Parse([string]$state.utc,[Globalization.CultureInfo]::InvariantCulture)
+                $startTimeSource='engine showcase-started.json'
+            }
+        }
+    }
+    $hadEngineUtc=$startTimeSource -ne 'start gate'
+    $frameEpochSeconds=[double]$rawTimestamp.Groups[1].Value/1000000.0
+    $frameMediaSeconds=[double]$normalizedTimestamp.Groups[1].Value/1000000.0
+    $audioOffset=($audioStartUtc-$epoch).TotalSeconds-$frameEpochSeconds+$frameMediaSeconds
+    if($audioOffset -lt 0 -or $audioOffset -gt 30){throw 'Captured UTC timestamp and engine/gate time disagree; refusing an unverified audio offset.'}
+    $report.audioOffsetSeconds=$audioOffset
+    $report.engineStartUtc=$audioStartUtc.ToString('o')
+    $report.engineStartTimestampSource=$startTimeSource
+    $report.firstCapturedFrameUnixMicroseconds=$rawTimestamp.Groups[1].Value
+    $report.audioSync=if($hadEngineUtc){'UTC first captured-frame timestamp aligned to engine recording-start timestamp; residual audio-thread latency and frame rounding require listening review.'}else{'UTC first captured-frame timestamp aligned to start gate; runtime lacks explicit UTC, so engine polling/audio-start latency remains and requires listening review.'}
     $audioDeadline=[DateTime]::UtcNow.AddSeconds(30);$previousSize=0;$stable=0
     while([DateTime]::UtcNow -lt $audioDeadline){
         if(Test-Path $EngineAudio){$size=(Get-Item $EngineAudio).Length;if($size -gt 44 -and $size -eq $previousSize){$stable++}else{$stable=0};$previousSize=$size;if($stable -ge 3){break}}
         Start-Sleep -Milliseconds 250
     }
     if($stable -lt 3){throw 'The game-only WAV did not finish exporting; raw video remains available without invented audio.'}
+    # A D3D12 flip-model window can be visible while HWND/GDI capture returns
+    # black. Validate the recorded pixels; never substitute desktop capture.
+    $blackLog=Join-Path $OutputDirectory ($prefix+'-black-frame-check.log')
+    Invoke-Native $Ffmpeg @('-hide_banner','-loglevel','info','-nostdin','-i',$raw,'-an','-vf','blackdetect=d=1:pix_th=0.04:pic_th=0.98','-f','null','-') $blackLog|Out-Null
+    $blackText=Get-Content $blackLog -Raw
+    $blackIntervals=@([regex]::Matches($blackText,'black_start:([0-9.]+)\s+black_end:([0-9.]+)\s+black_duration:([0-9.]+)')|ForEach-Object {
+        [ordered]@{startSeconds=[double]::Parse($_.Groups[1].Value,[Globalization.CultureInfo]::InvariantCulture);endSeconds=[double]::Parse($_.Groups[2].Value,[Globalization.CultureInfo]::InvariantCulture);durationSeconds=[double]::Parse($_.Groups[3].Value,[Globalization.CultureInfo]::InvariantCulture)}
+    })
+    $report.blackFrameCheck=[ordered]@{minimumDurationSeconds=1;blackPixelFraction=.98;pixelThreshold=.04;intervals=$blackIntervals;passed=($blackIntervals.Count -eq 0)}
+    if($blackIntervals.Count -gt 0){throw 'Target-window capture contains at least one second of nearly black frames. Raw video preserved; a validated window-only capture alternative is required.'}
+    $audioLog=Join-Path $OutputDirectory ($prefix+'-audio-signal-check.log')
+    Invoke-Native $Ffmpeg @('-hide_banner','-loglevel','info','-nostdin','-i',$EngineAudio,'-vn','-af','astats=metadata=0:reset=0','-f','null','-') $audioLog|Out-Null
+    $audioText=Get-Content $audioLog -Raw
+    $overall=[regex]::Match($audioText,'(?s)Overall\s*\r?\n(.*)$')
+    $rms=[regex]::Match($overall.Groups[1].Value,'RMS level dB:\s*(-?inf|[-+0-9.eE]+)')
+    $peak=[regex]::Match($overall.Groups[1].Value,'Peak level dB:\s*(-?inf|[-+0-9.eE]+)')
+    $samples=[regex]::Match($overall.Groups[1].Value,'Number of samples:\s*([0-9.]+)')
+    if(-not $rms.Success -or -not $peak.Success -or -not $samples.Success){throw 'Engine WAV signal statistics could not be verified; raw video/audio preserved.'}
+    $signalPresent=$rms.Groups[1].Value -notmatch 'inf' -and $peak.Groups[1].Value -notmatch 'inf' -and [double]::Parse($samples.Groups[1].Value,[Globalization.CultureInfo]::InvariantCulture) -gt 0
+    $report.audioSignalCheck=[ordered]@{rmsDbFS=$rms.Groups[1].Value;peakDbFS=$peak.Groups[1].Value;samples=$samples.Groups[1].Value;nonzeroSignal=$signalPresent;listeningReviewPassed=$false}
+    if(-not $signalPresent){throw 'Engine-only WAV is empty or silent; refusing final mux. Raw video/audio preserved for diagnosis.'}
     $offset=$audioOffset.ToString('F4',[Globalization.CultureInfo]::InvariantCulture)
     $mux=@('-hide_banner','-loglevel','warning','-nostdin','-y','-i',$raw,'-itsoffset',$offset,'-i',$EngineAudio,'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart',$final)
     Invoke-Native $Ffmpeg $mux (Join-Path $OutputDirectory ($prefix+'-mux.log'))|Out-Null

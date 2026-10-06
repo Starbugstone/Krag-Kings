@@ -7,6 +7,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "InputCoreTypes.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "UnrealClient.h"
 #include "Misc/Paths.h"
 #include "HAL/FileManager.h"
@@ -21,7 +22,7 @@ AKKBenchmarkController::AKKBenchmarkController()
 void AKKBenchmarkController::BeginPlay()
 {
     Super::BeginPlay();
-    bPerformanceLocked=FParse::Param(FCommandLine::Get(),TEXT("KKPerf")) || FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
+    bPerformanceLocked=FParse::Param(FCommandLine::Get(),TEXT("KKPerf")) || FParse::Param(FCommandLine::Get(),TEXT("KKPerfMoving")) || FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
     FInputModeGameAndUI Mode;
     Mode.SetHideCursorDuringCapture(false);
     Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
@@ -52,9 +53,17 @@ void AKKBenchmarkController::SetupInputComponent()
     InputComponent->BindKey(EKeys::MouseScrollUp,IE_Pressed,this,&AKKBenchmarkController::ZoomIn);
     InputComponent->BindKey(EKeys::MouseScrollDown,IE_Pressed,this,&AKKBenchmarkController::ZoomOut);
 }
-void AKKBenchmarkController::ResetCamera(){bPortrait=false;PortraitPan=FVector::ZeroVector;Focus=FVector(-7.5f,5.f,205.f);Distance=850;Yaw=75;Pitch=-22;}
+void AKKBenchmarkController::ResetCamera()
+{
+    bPortrait=false;PortraitPan=FVector::ZeroVector;Focus=FVector(-7.5f,-5.f,205.f);
+    FVector UnitFeet=FVector::ZeroVector;int32 Count=0;
+    for(TActorIterator<AKKBenchmarkUnit> It(GetWorld());It;++It)
+    {UnitFeet+=It->GetActorLocation()-FVector(0,0,It->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());++Count;}
+    if(Count)Focus=UnitFeet/Count+FVector(0,0,95.f);
+    Distance=640;Yaw=75;Pitch=-22;
+}
 void AKKBenchmarkController::ZoomIn(){if(!bPerformanceLocked)Distance=FMath::Max(bPortrait?60.f:260.f,Distance*.9f);}
-void AKKBenchmarkController::ZoomOut(){if(!bPerformanceLocked)Distance=FMath::Min(5200.f,Distance/ .9f);}
+void AKKBenchmarkController::ZoomOut(){if(!bPerformanceLocked)Distance=FMath::Min(2800.f,Distance/ .9f);}
 void AKKBenchmarkController::SelectUnit(AKKBenchmarkUnit* Unit)
 {
     if(Selected) Selected->SetSelected(false);
@@ -128,8 +137,20 @@ void AKKBenchmarkController::PlayerTick(float DeltaTime)
     }
     const FVector PanDelta=Pan.GetClampedToMaxSize(1)*DeltaTime*Distance*.6f;
     if(bPortrait && Selected){PortraitPan+=PanDelta;Focus=Selected->GetMesh()->GetSocketLocation(TEXT("Head"))+FVector(0,0,5.f)+PortraitPan;}
-    else Focus+=PanDelta;
-    Focus.X=FMath::Clamp(Focus.X,-3400.f,3400.f);Focus.Y=FMath::Clamp(Focus.Y,-3400.f,3400.f);
+    else if(!PanDelta.IsNearlyZero())
+    {
+        FHitResult PriorGround,NextGround;FCollisionQueryParams PanParams;
+        const bool bPriorGround=GetWorld()->LineTraceSingleByObjectType(PriorGround,FVector(Focus.X,Focus.Y,6000.f),FVector(Focus.X,Focus.Y,-6000.f),FCollisionObjectQueryParams(ECC_WorldStatic),PanParams);
+        const float HeightAboveGround=bPriorGround?Focus.Z-PriorGround.ImpactPoint.Z:0.f;
+        Focus+=PanDelta;
+        Focus.X=FMath::Clamp(Focus.X,-70000.f,70000.f);Focus.Y=FMath::Clamp(Focus.Y,-70000.f,70000.f);
+        if(bPriorGround && GetWorld()->LineTraceSingleByObjectType(NextGround,FVector(Focus.X,Focus.Y,6000.f),FVector(Focus.X,Focus.Y,-6000.f),FCollisionObjectQueryParams(ECC_WorldStatic),PanParams))Focus.Z=NextGround.ImpactPoint.Z+HeightAboveGround;
+    }
+    Focus.X=FMath::Clamp(Focus.X,-70000.f,70000.f);Focus.Y=FMath::Clamp(Focus.Y,-70000.f,70000.f);
     const FRotator Rotation(Pitch,Yaw,0);
-    BenchmarkCamera->SetActorLocationAndRotation(Focus-Rotation.Vector()*Distance,Rotation);
+    FVector CameraPosition=Focus-Rotation.Vector()*Distance;
+    FHitResult Ground;FCollisionQueryParams Params;
+    if(GetWorld()->LineTraceSingleByObjectType(Ground,CameraPosition+FVector(0,0,5000),CameraPosition-FVector(0,0,10000),FCollisionObjectQueryParams(ECC_WorldStatic),Params))
+        CameraPosition.Z=FMath::Max(CameraPosition.Z,Ground.ImpactPoint.Z+40.f);
+    BenchmarkCamera->SetActorLocationAndRotation(CameraPosition,(Focus-CameraPosition).Rotation());
 }

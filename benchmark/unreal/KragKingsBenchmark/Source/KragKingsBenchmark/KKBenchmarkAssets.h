@@ -16,6 +16,7 @@ struct FKKMorphDriver
     UPROPERTY(EditAnywhere,BlueprintReadWrite) FName Morph;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) FName Bone;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) FName Channel;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) FName Kind;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) float Start=0.f;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) float End=1.f;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) float MaxWeight=1.f;
@@ -59,6 +60,12 @@ public:
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetMeshBoneNames(USkeletalMesh* Mesh);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static TMap<FName,FVector> GetMeshBoneReferenceScales(USkeletalMesh* Mesh);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static FVector GetMeshImportedSizeMeters(USkeletalMesh* Mesh);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
+    static TMap<FName,FVector2D> GetAnimationLimbTranslationRatios(UAnimSequence* Clip,USkeletalMesh* Mesh);
+    UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetAnimationBoneNames(UAnimSequence* Clip);
     UFUNCTION(BlueprintCallable,Category="Benchmark validation")
     static TArray<FName> GetFaciallyAnimatedBones(UAnimSequence* Clip,USkeletalMesh* Mesh);
@@ -69,6 +76,10 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite) FRotator MeshRotation = FRotator(0,-90,0);
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<TObjectPtr<USoundBase>> KragSandSteps;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<TObjectPtr<USoundBase>> NibSandSteps;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<USoundBase> KragShot;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<USoundBase> NibShot;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<USoundBase> KragHit;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<USoundBase> NibHit;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<UMaterialInterface> SandDustMaterial;
     UPROPERTY(EditAnywhere,BlueprintReadWrite) TObjectPtr<UMaterialInterface> WeaponFlashMaterial;
 };
