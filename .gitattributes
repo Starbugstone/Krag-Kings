@@ -269,3 +269,7 @@ benchmark/art/reference-anatomy/tool-evaluation/original-trellis-weights/*.log -
 benchmark/art/reference-anatomy/tool-evaluation/original-trellis-weights/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 
 benchmark/art/reference-anatomy/tool-evaluation/original-trellis-weights/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+benchmark/evidence/unity/native-strands-compatibility-v1/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/evidence/unity/native-strands-compatibility-v1/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/evidence/unity/native-strands-compatibility-v1/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
