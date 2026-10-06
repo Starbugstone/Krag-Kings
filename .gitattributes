@@ -212,3 +212,8 @@ benchmark/unreal/evidence/coherent79-import/**/*.json -text whitespace=cr-at-eol
 benchmark/unreal/evidence/coherent79-import/*.json -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/coherent79-import/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/coherent79-import/**/*.log -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+
+benchmark/evidence/unity/20261006-coherent79-runtime/*.json -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+benchmark/evidence/unity/20261006-coherent79-runtime/*.jsonl -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+benchmark/evidence/unity/20261006-coherent79-runtime/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+benchmark/evidence/unity/20261006-coherent79-runtime/*.txt -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
