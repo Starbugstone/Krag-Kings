@@ -1,0 +1,366 @@
+{
+  "status": "Actual authored broad cowl source; mouth, fabric and pose acceptance require renders",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_GeodesicFace_v9lc_WIP.blend",
+    "sha256": "b46c180920e34546f220ab0c3fc563a52100cd80c85624f7c0ef65ee58966d60"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_Cowl_v9md_WIP.blend",
+    "sha256": "15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a"
+  },
+  "neck": {
+    "status": "Prepared concealed-face composition executed; actual open-mouth/neck review required",
+    "removedFaces": 2611,
+    "beforeFaces": 59155,
+    "afterFaces": 56544,
+    "selection": "All face corners are in the Neck skin domain, above Neck joint midpoint and strictly inside external Head surface",
+    "neckJointMidpointZ": 1.7319499850273132,
+    "retainedVertexCount": 59859,
+    "shapeCoordinatesPreserved": true,
+    "unchanged": [
+      "Limbs",
+      "Torso",
+      "Head anatomy",
+      "Body vertex order",
+      "Rig bind"
+    ],
+    "pending": "Actual visibility/neck seam review; cinematic seam welding is not claimed"
+  },
+  "mouthRays": {
+    "originalBodyOcclusions": 40,
+    "remainingBodyOcclusions": 0,
+    "resolved": [
+      {
+        "pixel": [
+          342,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          342,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          358,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          374,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          374,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          390,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          738
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          406,
+          754
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          722
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          422,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          438,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          438,
+          706
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          438,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          438,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          454,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          454,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          470,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          470,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          690
+        ],
+        "firstSurface": "Head"
+      },
+      {
+        "pixel": [
+          486,
+          706
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          722
+        ],
+        "firstSurface": "MouthInterior"
+      },
+      {
+        "pixel": [
+          486,
+          738
+        ],
+        "firstSurface": "MouthInterior"
+      }
+    ]
+  },
+  "cloth": {
+    "status": "Actual authored broad rest surface; no physics generation or artistic acceptance claim",
+    "method": "High shoulder/nape support, low open front and asymmetric broad crossing cloth folds, bounded exact-surface conformance",
+    "actualOpenChinMinimumZ": 1.7193669080734253,
+    "frontTopDesignZ": 1.621,
+    "actualFrontMaximumZ": 1.6269476413726807,
+    "maxConformanceMeters": 0.051680374817416795,
+    "initialBoundsMeters": [
+      [
+        -0.22253183216805264,
+        -0.2586272104481755,
+        1.484027446821191
+      ],
+      [
+        0.2225179052721646,
+        0.22041926651472768,
+        1.8259991101176825
+      ]
+    ],
+    "fittedBoundsMeters": [
+      [
+        -0.2507719099521637,
+        -0.2586272060871124,
+        1.4840275049209595
+      ],
+      [
+        0.2530757486820221,
+        0.2204192727804184,
+        1.825999140739441
+      ]
+    ],
+    "restCageVertices": 5133,
+    "restCageFaces": 4928,
+    "surfaceSubdivision": 1,
+    "thicknessMeters": 0.003,
+    "pending": [
+      "Actual concept silhouette",
+      "Open-jaw/profile and shoulder clearance",
+      "Raised-arm contact",
+      "Cloth weave, edge seams and weathering"
+    ]
+  },
+  "preservedGeometryShapesBindFingerprint": "a45f3fd9e1031877ea901c149bf524c976bd01329462472a73c62b6493088c9b",
+  "pending": [
+    "Actual open-mouth/front/profile/scarf contact review",
+    "Cinematic final neck seam integration",
+    "Concept face/iris/cloth material fidelity",
+    "IronJaw anatomical replacement"
+  ]
+}

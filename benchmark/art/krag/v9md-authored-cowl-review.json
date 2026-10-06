@@ -1,0 +1,83 @@
+{
+  "status": "Actual authored cowl source, OpenMouth and Front reviewed; jaw clearance improved, cloth and mouth artistic acceptance failed",
+  "source": {
+    "path": "benchmark/art/krag/Krag_Cowl_v9md_WIP.blend",
+    "sha256": "15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a",
+    "bytes": 111820563
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/cowl-v9md.json",
+      "sha256": "8fa8eecedcbe35474246a0dafb4dc1b410347b34bcd54d08e23bb51ccf206079",
+      "bytes": 7189
+    },
+    {
+      "path": "benchmark/art/krag/v9md-authored-cowl-prepared.json",
+      "sha256": "77cb9c6148376c9beacf187cc4bddb5d2271ab900ddecc2c6a0ee7a51efe50a1",
+      "bytes": 1943
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9md-cowl.meta.json",
+      "sha256": "e53165efd65b75a29a3806ff6850af4481693eb8f2f438f19356480ebf5ec4df",
+      "bytes": 561
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9md-cowl.png",
+      "sha256": "f37f1979d92409e8719fb632efb02cc2105cc31029cbc3a57b79d3e234b9a0e2",
+      "bytes": 1295188
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9md-cowl.meta.json",
+      "sha256": "8d4ed2faf86eda77229782a4b6a5a6082deae8795b15c3457bcf48813e860da5",
+      "bytes": 572
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9md-cowl.png",
+      "sha256": "3c6a33e44cf72c8b60998eccbeb1d9775303508c631099ab60c5e5c17aca8470",
+      "bytes": 1307124
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-cowl-v9md-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1024.0,
+      "minimumAvailableMB": 10699.0
+    },
+    {
+      "path": "benchmark/local/krag-review-cowl-v9md-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2047.0,
+      "minimumAvailableMB": 9969.0
+    },
+    {
+      "path": "benchmark/local/krag-review-cowl-v9md-Front-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2055.0,
+      "minimumAvailableMB": 9918.0
+    }
+  ],
+  "improvements": [
+    "Actual open-mouth view retains visible lower lip and teeth without cloth crossing the lowered jaw",
+    "Side knot removed; front/chest footprint is broad and low",
+    "Original oral occluder repair, actual v9lc face and other mesh/shape/bind/action data preserved"
+  ],
+  "findings": [
+    "Actual Front is a smooth U-shaped bib with two regular ledges, lacking irregular compressed/overlapping cloth folds from concept01",
+    "Mouth remains a tall empty-looking oval; gums/tongue depth poorly readable, dental crowns appear small and flat",
+    "Tusks remain applied-looking on external lower muzzle",
+    "Mandibular mass, brow/glabella/cheeks and realistic likeness remain unresolved",
+    "Raised-arm and complete side/cloth clearance not yet inspected"
+  ],
+  "unrunViews": [
+    "OpenProfile",
+    "Shoot"
+  ],
+  "next": [
+    "Preserve useful open-jaw clearance and low cowl footprint while refining wrap construction",
+    "Broad mandibular mass and actual lower-gum/lip tusk emergence next",
+    "Keep normal mouth/interior and overall source likeness unaccepted; no shared export"
+  ]
+}

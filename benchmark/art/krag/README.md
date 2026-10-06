@@ -286,3 +286,10 @@ The intentionally retained v9ma scarf is still a failed tight band/side knot. Ne
 The isolated `Krag_Cowl_v9mc_WIP.blend` rebases the ungenerated v9mb pattern onto actual v9lc without altering other meshes, shape coordinates, rig bind or action curves. Generation and the first actual OpenMouth portrait exited0; `v9mc-cowl-review.json` records the exact source/image/recipe hashes and telemetry. All54 cloth frames completed and the maximum initial fit correction was2.55mm.
 
 **The garment still fails.** The broader front folds rise across the opened lower jaw, with a bunched side and no low broad chest cowl. The settled lower bound is1.691m. Front/profile/action dependent renders were stopped. The next garment will use a coherent authored rest silhouette below the actual opened chin, with high distributed shoulder support, broad cloth flats and asymmetric chest sag; physical simulation does not need to generate the whole shape. The separate v9ld mandibular recipe is prepared but ungenerated. Shared exports remain unchanged.
+
+
+## v9md actual authored cowl: useful jaw clearance, garment still unaccepted
+
+`Krag_Cowl_v9md_WIP.blend` (SHA-256 `15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a`) and actual OpenMouth/Front views are preserved in `v9md-authored-cowl-review.json`. All three guards exited0. This source authors the rest shape directly and makes no cloth-simulation claim. The actual opened chin landmark is1.71937m; the front cowl maximum is1.62695m, leaving the visible lower lip and teeth clear. The former side knot is gone.
+
+**The garment still fails likeness:** Front reads as a smooth low U-shaped bib with two regular ledges, rather than irregular compressed overlapping wrap folds. The now-unobstructed mouth also exposes continuing failures: a tall empty-looking oval, weak visible gum/tongue depth, small flat-looking dental crowns and externally applied tusks. The mandibular/skull mass and normal opening remain unaccepted. The useful clearance/footprint will be preserved while broad lower-jaw and real gum/lip tusk fitting proceeds; no shared assets changed.

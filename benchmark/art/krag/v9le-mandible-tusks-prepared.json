@@ -1,0 +1,70 @@
+{
+  "status": "Prepared mandibular/tusk source on actual v9md; not generated",
+  "input": {
+    "path": "benchmark/art/krag/Krag_Cowl_v9md_WIP.blend",
+    "sha256": "15ff55dbe5d1e81564601e0c703d9d6b2d1b84e90fd0ce1612f23d9c4f82681a",
+    "bytes": 111820563
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "originalUngeneratedPrecursor": "benchmark/art/krag/v9ld-mandible-prepared.json",
+  "changes": [
+    "Broad bounded mental prominence/mandibular angle with fixed real oral, upper-face/eye and low-neck contact regions",
+    "Replace old three-ring tusk wedges with17 axial rings fitted to actual gingival root and true lower-lip passage, retaining reviewed tips",
+    "Exact retained ocular shape coordinates checked through Face reconstruction; new tusks rigid Jaw only",
+    "Actual v9md low-cowl/jaw clearance source retained; remaining cloth/interior/likeness failures explicit"
+  ],
+  "firstReview": "HeadSide then Head and serious OpenMouth/OpenProfile if coherent",
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_mandible_tusks_v9le.py",
+      "sha256": "75fb71d5ab3de4c5e13632a5c41b50a9574c23d5dcf832d40af030e9c2c7b41a",
+      "bytes": 4930
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/mandibular_planes.py",
+      "sha256": "218acc372b999ec55b4cf561ea7f6e2a635bfc89b2371715e60fd945c7401443",
+      "bytes": 6033
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/geodesic_planes.py",
+      "sha256": "bebc9b3c677fe5278abb9cf64cc420b7ca1491ea3274e9b9164eabfdd8d44e65",
+      "bytes": 6965
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/tusk_eruption.py",
+      "sha256": "df3aea499e5307bc7c416d3b946219ce9a93aa9c44c7e061be6f879cd814e604",
+      "bytes": 6957
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca",
+      "bytes": 12214
+    },
+    {
+      "path": "benchmark/tools/krag/build-mandible-tusks-v9le-job.json",
+      "sha256": "3bcdbb40905a960bcc278e226e4f24895d07f719135891480ec5b92ef282acad",
+      "bytes": 629
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-tusks-v9le-Head.json",
+      "sha256": "bbc336c10860026348947cd75167a1416b9aedf35d663b484cf4f972a209d302",
+      "bytes": 949
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-tusks-v9le-HeadSide.json",
+      "sha256": "52ac54954059af1546a85f4f8c4dcae360300836d98cd47e4f7e1c1e3d062a98",
+      "bytes": 965
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-tusks-v9le-OpenMouth.json",
+      "sha256": "6aae781b9bda0eecd29fa332774b50245af94450fafabb2e02d4d49aab2dff8a",
+      "bytes": 1046
+    },
+    {
+      "path": "benchmark/tools/krag/review-mandible-tusks-v9le-OpenProfile.json",
+      "sha256": "802a96dbd361fac72740c07036a41b22e7ab6b7409206b2712360f1d9c91d002",
+      "bytes": 1056
+    }
+  ]
+}
