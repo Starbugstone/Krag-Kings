@@ -1,0 +1,30 @@
+{
+  "status": "Prepared only; no character groom generated",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "sourceArtAccepted": false,
+  "proposedStrands": 26000,
+  "pointsPerStrand": 9,
+  "simulation": false,
+  "cardRefinementPaused": true,
+  "requiredViews": [
+    "Neutral",
+    "Profile"
+  ],
+  "files": {
+    "build_character_pilot.py": "039f5d086766fae33363d2d52092ca2900b9064ceef14780b68f5b6ed8643c5b",
+    "native_surface.py": "6a8eef636c4c546f246c54e6b7c233fc9dd204fbba98d585e0032e4833e54bf8",
+    "probe_hair_curves.py": "cf5fb678cdffc2810bc2e29c5c5c578202684604ea71980f0a0bc43ad01cfe26",
+    "review_character_pilot.py": "fc06a0f48503d362d80ad344b4598860071f0aa89e3b669a17cd7d6a7a24f7c7",
+    "strand_contract.py": "ad448fcdf625cb91e43a392f76d7e95d5686d8de9cbdf8b9fbbedf436070b5ed",
+    "generate-native-character-v1.job.json": "150a737ddd5671e09c717eda331405432d6abb5b717b01da23e440e7fc79ddb4",
+    "neutral-native-character-v1.job.json": "e55b33250dae0af1b5b7fae51cb82bd3c5cc02609e5bab535aefadfac6140b69",
+    "profile-native-character-v1.job.json": "30b3f48d232bc3d9535f3c0de3d26dfc3fb2208eca911c166c5eec8b84776730"
+  },
+  "dependencies": {
+    "benchmark/tools/nib/restorative_wip/contracts.py": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902",
+    "benchmark/tools/nib/macroface_wip/source_image_archive.py": "76c42681a847f7e77abe8a61b3da60adfc6ba9adb8415911d5a553b9e3c6d400",
+    "benchmark/tools/nib/surface_layers_wip/flow_guides.py": "328fdf34f47956028496d7f49b422febafabf10069b99a186a55219b393011dc",
+    "benchmark/tools/nib/v5_wip/nib_groom_v5.py": "d77e22842275146a87a7de65d8084aa5edfda7669ddd2b77318a1d81a5b6b874",
+    "benchmark/tools/nib/v6_groom_wip/guide_recipe.py": "9f558e600466f337114cd5b77f93f657962af9e4d8279179f6b7f7491713e0f6"
+  }
+}

@@ -1,0 +1,4 @@
+*.abc filter=lfs diff=lfs merge=lfs -text
+strands/*.bin filter=lfs diff=lfs merge=lfs -text
+execution/*.log -text
+execution/*-memory.csv -text

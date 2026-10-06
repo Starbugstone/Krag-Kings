@@ -1,0 +1,133 @@
+{
+  "status": "Actual source and two views completed; all owned processes closed",
+  "files": [
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/generate-native-character-v1.job.json",
+      "file": "generate-native-character-v1.job.json",
+      "bytes": 1141,
+      "sha256": "150a737ddd5671e09c717eda331405432d6abb5b717b01da23e440e7fc79ddb4"
+    },
+    {
+      "source": "benchmark/local/nib-generate-native-character-v1.log",
+      "file": "nib-generate-native-character-v1.log",
+      "bytes": 2095,
+      "sha256": "f8b987b7013a18f589cf215cf874ea751c90ae079b45e76dcd7c62328bd5f75c"
+    },
+    {
+      "source": "benchmark/local/nib-generate-native-character-v1.stderr.log",
+      "file": "nib-generate-native-character-v1.stderr.log",
+      "bytes": 277,
+      "sha256": "5264a3cc86ac3623d74cbf06f0de42f4b7c623cb6db633c010370654aca0410f"
+    },
+    {
+      "source": "benchmark/local/nib-generate-native-character-v1-memory.csv",
+      "file": "nib-generate-native-character-v1-memory.csv",
+      "bytes": 1565,
+      "sha256": "000314dc6ffd17baddb364c2d20df95d1badbca28a42492c38b66651540470f6"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/neutral-native-character-v1.job.json",
+      "file": "neutral-native-character-v1.job.json",
+      "bytes": 1190,
+      "sha256": "e55b33250dae0af1b5b7fae51cb82bd3c5cc02609e5bab535aefadfac6140b69"
+    },
+    {
+      "source": "benchmark/local/nib-neutral-native-character-v1.log",
+      "file": "nib-neutral-native-character-v1.log",
+      "bytes": 404,
+      "sha256": "bc37521ac35a6cab822aa70d1fdaccee63fc5662f97315ac931bf1584e2bfa61"
+    },
+    {
+      "source": "benchmark/local/nib-neutral-native-character-v1.stderr.log",
+      "file": "nib-neutral-native-character-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "benchmark/local/nib-neutral-native-character-v1-memory.csv",
+      "file": "nib-neutral-native-character-v1-memory.csv",
+      "bytes": 1668,
+      "sha256": "397540cb48dbce5c834dcafb21601f13bfae8449d9a17661038ad98fc2cefe16"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/profile-native-character-v1.job.json",
+      "file": "profile-native-character-v1.job.json",
+      "bytes": 1190,
+      "sha256": "30b3f48d232bc3d9535f3c0de3d26dfc3fb2208eca911c166c5eec8b84776730"
+    },
+    {
+      "source": "benchmark/local/nib-profile-native-character-v1.log",
+      "file": "nib-profile-native-character-v1.log",
+      "bytes": 404,
+      "sha256": "6a88b1d9585c46098a0af1b8b56e96bb7642e40f95a92cedb4e565ce4ecb5370"
+    },
+    {
+      "source": "benchmark/local/nib-profile-native-character-v1.stderr.log",
+      "file": "nib-profile-native-character-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "benchmark/local/nib-profile-native-character-v1-memory.csv",
+      "file": "nib-profile-native-character-v1-memory.csv",
+      "bytes": 888,
+      "sha256": "77ceb886d2c4620cd25146530d6ddf3fc1491f7504278c38db4dd8f911168ee3"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/build_character_pilot.py",
+      "file": "build_character_pilot.py",
+      "bytes": 17361,
+      "sha256": "039f5d086766fae33363d2d52092ca2900b9064ceef14780b68f5b6ed8643c5b"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/native_surface.py",
+      "file": "native_surface.py",
+      "bytes": 6253,
+      "sha256": "6a8eef636c4c546f246c54e6b7c233fc9dd204fbba98d585e0032e4833e54bf8"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/probe_hair_curves.py",
+      "file": "probe_hair_curves.py",
+      "bytes": 7538,
+      "sha256": "cf5fb678cdffc2810bc2e29c5c5c578202684604ea71980f0a0bc43ad01cfe26"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/review_character_pilot.py",
+      "file": "review_character_pilot.py",
+      "bytes": 3300,
+      "sha256": "fc06a0f48503d362d80ad344b4598860071f0aa89e3b669a17cd7d6a7a24f7c7"
+    },
+    {
+      "source": "benchmark/tools/nib/native_groom_wip/strand_contract.py",
+      "file": "strand_contract.py",
+      "bytes": 3156,
+      "sha256": "ad448fcdf625cb91e43a392f76d7e95d5686d8de9cbdf8b9fbbedf436070b5ed"
+    }
+  ],
+  "jobs": [
+    {
+      "job": "generate-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 1324.0,
+      "minAvailableMB": 10013.0,
+      "maxCommitPercent": 57.0
+    },
+    {
+      "job": "neutral-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 2696.0,
+      "minAvailableMB": 8869.0,
+      "maxCommitPercent": 61.0
+    },
+    {
+      "job": "profile-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 2580.0,
+      "minAvailableMB": 9020.0,
+      "maxCommitPercent": 61.0
+    }
+  ]
+}

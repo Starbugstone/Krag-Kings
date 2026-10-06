@@ -1,0 +1,2 @@
+D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\build_character_pilot.py:65: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material=bpy.data.materials.new(name);material.use_nodes=True;nodes=material.node_tree.nodes;nodes.clear()

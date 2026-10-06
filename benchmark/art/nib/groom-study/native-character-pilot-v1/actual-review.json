@@ -1,0 +1,54 @@
+{
+  "status": "Actual native curves technical pilot; artistic acceptance failed",
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "reference": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "viewsInspected": [
+    "Neutral",
+    "Profile"
+  ],
+  "localImprovements": [
+    "Fine native fibers instead of rectangular card roots",
+    "Softer continuous head coverage",
+    "Real strands visible in inner ears"
+  ],
+  "remainingFailures": [
+    "Head forms regular straight bob/comb rather than irregular concept tufts",
+    "Sparse short inner-ear wisps and flat tawny exterior coverage",
+    "Existing thin ear shape and hard tan basal cartilage bars",
+    "Retained rectangular chin fuzz",
+    "Unaccepted face likeness and rigid scarf"
+  ],
+  "maxPosedRootErrorMeters": 4.189665402518887e-07,
+  "nativeAlembicReadbackPassed": true,
+  "unrealTaperParity": false,
+  "unrealTaperCaveat": "Blender5.2 writes varying array but omits explicit vertex geometry scope; UE tiny fixture reduced it to uniform width. Native binary radii remain exact.",
+  "engineImported": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "memory": [
+    {
+      "job": "generate-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 1324.0,
+      "minAvailableMB": 10013.0,
+      "maxCommitPercent": 57.0
+    },
+    {
+      "job": "neutral-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 2696.0,
+      "minAvailableMB": 8869.0,
+      "maxCommitPercent": 61.0
+    },
+    {
+      "job": "profile-native-character-v1",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "peakSampledPrivateMB": 2580.0,
+      "minAvailableMB": 9020.0,
+      "maxCommitPercent": 61.0
+    }
+  ]
+}
