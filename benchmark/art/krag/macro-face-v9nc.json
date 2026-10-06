@@ -1,0 +1,415 @@
+{
+  "status": "Actual macro facial source; profile/likeness and expression reviews required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nb_WIP.blend",
+    "sha256": "82cde1e66b94804e8cfbff47ed2f48ea7a40daad23c0658bfdc509ab59e3f8e7"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nc_WIP.blend",
+    "sha256": "f581fff1e1022ac268a69cb9a7b2026c8aa9d8ffa5d4a2d4d974d612706a4299"
+  },
+  "inputChoice": "Actual v9nb macro source; broad plane pass without global head scaling, retained buried tusks remain a known fit task",
+  "landmarksWorld": {
+    "eyes": [
+      [
+        0.0587531253695488,
+        -0.11975487321615219,
+        1.9154560565948486
+      ],
+      [
+        -0.05875328555703163,
+        -0.1195666491985321,
+        1.915457010269165
+      ]
+    ],
+    "eyeRadii": [
+      0.02051062218002459,
+      0.02054031389599626
+    ],
+    "lowerOralRimMean": [
+      -3.8651494114562e-05,
+      -0.17178437371312835,
+      1.8198261584764646
+    ],
+    "nasalFrontMean": [
+      0.0005787920023207194,
+      -0.17234562222774213,
+      1.8763296439636887
+    ]
+  },
+  "method": "Measured continuous brow/cheek/mandibular planes, soft nasolabial separation and compact lip shaping; same field moves oral/ocular shapes and facial pivots",
+  "neutralHeadMetrics": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.595247974243853,
+    "normalChangeDegreesP99": 17.30111163970592,
+    "normalChangeDegreesMaximum": 28.946320105303403,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.008062891814126468,
+    "minimumJacobianDeterminant": 0.4764485503669056,
+    "minimumLocalScale": 0.46047336231646413,
+    "maximumLocalScale": 1.358511279974735,
+    "sampleCount": 6000
+  },
+  "measuredFacialPlanesY": {
+    "brow": -0.15513741225004196,
+    "cheek": -0.1378888562321663,
+    "chin": -0.19182554259896278
+  },
+  "planeMeasurementVertexCounts": {
+    "brow": 743,
+    "cheek": 464,
+    "chin": 1928
+  },
+  "ocularRigidTranslationMaximumErrorMeters": [
+    0.0,
+    0.0
+  ],
+  "changedModules": [
+    {
+      "module": "Head",
+      "vertices": 51794,
+      "shapeKeys": 26,
+      "maximumDisplacementMeters": 0.008062891814126468
+    },
+    {
+      "module": "Face",
+      "vertices": 8372,
+      "shapeKeys": 26,
+      "maximumDisplacementMeters": 0.005620972506690895
+    },
+    {
+      "module": "MouthInterior",
+      "vertices": 17010,
+      "shapeKeys": 1,
+      "maximumDisplacementMeters": 0.007332886447459723
+    }
+  ],
+  "facialPivotChanges": [
+    {
+      "bone": "BrowInner_L",
+      "beforeHeadWorld": [
+        0.029992271214723587,
+        -0.11607863754034042,
+        1.9298311471939087
+      ],
+      "translationMeters": [
+        0.0,
+        -0.002421632741451817,
+        -8.07573721483944e-13
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "BrowInner_R",
+      "beforeHeadWorld": [
+        -0.029992086812853813,
+        -0.114845871925354,
+        1.9307867288589478
+      ],
+      "translationMeters": [
+        0.0,
+        -0.002696102862768906,
+        -6.346078860482744e-13
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "BrowOuter_L",
+      "beforeHeadWorld": [
+        0.08194863051176071,
+        -0.10356754064559937,
+        1.937135100364685
+      ],
+      "translationMeters": [
+        0.0,
+        -0.004617438881328264,
+        -7.881219659354315e-14
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "BrowOuter_R",
+      "beforeHeadWorld": [
+        -0.08194813132286072,
+        -0.10294069349765778,
+        1.937143325805664
+      ],
+      "translationMeters": [
+        0.0,
+        -0.004686813648504161,
+        -7.968444970860193e-14
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Cheek_L",
+      "beforeHeadWorld": [
+        0.10218287259340286,
+        -0.0866868868470192,
+        1.8833366632461548
+      ],
+      "translationMeters": [
+        0.0,
+        -0.00461795411237263,
+        -4.991589871701726e-09
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Cheek_R",
+      "beforeHeadWorld": [
+        -0.10218298435211182,
+        -0.08668727427721024,
+        1.8833351135253906
+      ],
+      "translationMeters": [
+        0.0,
+        -0.004618062149663045,
+        -4.993032792142429e-09
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Eye_L",
+      "beforeHeadWorld": [
+        0.0587531253695488,
+        -0.11975487321615219,
+        1.9154560565948486
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Eye_R",
+      "beforeHeadWorld": [
+        -0.05875328555703163,
+        -0.1195666491985321,
+        1.915457010269165
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "FaceRoot",
+      "beforeHeadWorld": [
+        0.0,
+        -0.007637000177055597,
+        1.8841910362243652
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Jaw",
+      "beforeHeadWorld": [
+        0.0,
+        -0.0010533005697652698,
+        1.8840162754058838
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LidLower_L",
+      "beforeHeadWorld": [
+        0.06161775439977646,
+        -0.13039594888687134,
+        1.9063295125961304
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LidLower_R",
+      "beforeHeadWorld": [
+        -0.06161774322390556,
+        -0.13036252558231354,
+        1.9063293933868408
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LidUpper_L",
+      "beforeHeadWorld": [
+        0.05584926903247833,
+        -0.13190968334674835,
+        1.9231101274490356
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LidUpper_R",
+      "beforeHeadWorld": [
+        -0.05584925785660744,
+        -0.1312510222196579,
+        1.923164963722229
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LipLower",
+      "beforeHeadWorld": [
+        0.0,
+        -0.16488514840602875,
+        1.816449761390686
+      ],
+      "translationMeters": [
+        0.0,
+        -0.0004618179212742152,
+        -1.2100730759393942e-06
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "LipUpper",
+      "beforeHeadWorld": [
+        0.0,
+        -0.15407617390155792,
+        1.835153579711914
+      ],
+      "translationMeters": [
+        0.0,
+        0.000560732350858757,
+        -8.984226311538272e-07
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "MouthCorner_L",
+      "beforeHeadWorld": [
+        0.050681017339229584,
+        -0.16287946701049805,
+        1.8199406862258911
+      ],
+      "translationMeters": [
+        0.0,
+        0.0015425719670704165,
+        -0.00259160967335341
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "MouthCorner_R",
+      "beforeHeadWorld": [
+        -0.050849493592977524,
+        -0.16279327869415283,
+        1.819907307624817
+      ],
+      "translationMeters": [
+        0.0,
+        0.0015674809487040192,
+        -0.002604457160389061
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "NoseTip",
+      "beforeHeadWorld": [
+        0.0,
+        -0.16816174983978271,
+        1.8863774538040161
+      ],
+      "translationMeters": [
+        0.0,
+        -0.0005390967617226253,
+        -1.28907496768792e-09
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Tongue_01",
+      "beforeHeadWorld": [
+        0.0,
+        -0.02850443683564663,
+        1.801164150238037
+      ],
+      "translationMeters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    },
+    {
+      "bone": "Tongue_02",
+      "beforeHeadWorld": [
+        0.0,
+        -0.10651258379220963,
+        1.799643635749817
+      ],
+      "translationMeters": [
+        0.0,
+        -0.0019850886911386913,
+        -5.909780477536633e-07
+      ],
+      "retainedAxisAndLength": true,
+      "wasConnected": false
+    }
+  ],
+  "preservedBodyBindActionsEquipmentFingerprint": "f96f2a30ecffbc778500b894951b24f06b6039563c654442432c3231a89b90d0",
+  "bodyBindAndActionCurvesChanged": false,
+  "pending": [
+    "Actual profile and portrait concept likeness",
+    "Normal opening and lid/gaze contact after moved facial pivots",
+    "Short natural tusks refitted only after macro envelope passes",
+    "Cowl construction, garments/armor/material realism",
+    "Final expression corrective and runtime export verification"
+  ]
+}

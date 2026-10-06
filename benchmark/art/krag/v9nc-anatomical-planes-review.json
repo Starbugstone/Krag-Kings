@@ -1,0 +1,98 @@
+{
+  "status": "Actual coherent facial-plane source and Head/HeadSide reviewed; change too subtle, concept likeness still failed",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9nc_WIP.blend",
+    "sha256": "f581fff1e1022ac268a69cb9a7b2026c8aa9d8ffa5d4a2d4d974d612706a4299",
+    "bytes": 112010640
+  },
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/macro-face-v9nc.json",
+      "sha256": "9708512c8e30234442ab1e48b2f0e329b69adae9b3bffb50426725499621ed1d",
+      "bytes": 9784
+    },
+    {
+      "path": "benchmark/art/krag/v9nc-anatomical-planes-prepared.json",
+      "sha256": "ee295ca6561331479a400d0bc7f762fc8d1115ebfcf8e4219ebcf25914675969",
+      "bytes": 4645
+    },
+    {
+      "path": "benchmark/art/krag/v9nc-planes-math-preflight.json",
+      "sha256": "6b6b4af6e77a87f0eb80e283bb48043e4610928cdbef4ca6067bafebd7ee3765",
+      "bytes": 4590
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9nc-anatomical-planes.png",
+      "sha256": "fd035ac578395c086cf47b07ff08d8e544701806c7ac8fd4b35b524772f0b316",
+      "bytes": 1316291
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9nc-anatomical-planes.meta.json",
+      "sha256": "f2d26c6fb488b076959ef1b3d339590f8c04910efcfe449c0efb77fe0f5c84e3",
+      "bytes": 578
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9nc-anatomical-planes.png",
+      "sha256": "a0d232a96ebe976a63d099c8dca223e618061d02f25a6a84918578e113c564dd",
+      "bytes": 1127916
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9nc-anatomical-planes.meta.json",
+      "sha256": "d109287261089121aa899be530ec6e452cc18e34f0721c98cd3f65beac7fc2a4",
+      "bytes": 582
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-anatomical-planes-v9nc-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 945.0,
+      "minimumAvailableMB": 11698.0
+    },
+    {
+      "path": "benchmark/local/krag-review-anatomical-planes-v9nc-Head-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2045.0,
+      "minimumAvailableMB": 10881.0
+    },
+    {
+      "path": "benchmark/local/krag-review-anatomical-planes-v9nc-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2059.0,
+      "minimumAvailableMB": 10813.0
+    }
+  ],
+  "actualSourceMetrics": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.595247974243853,
+    "normalChangeDegreesP99": 17.30111163970592,
+    "normalChangeDegreesMaximum": 28.946320105303403,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.008062891814126468,
+    "minimumJacobianDeterminant": 0.4764485503669056,
+    "minimumLocalScale": 0.46047336231646413,
+    "maximumLocalScale": 1.358511279974735,
+    "sampleCount": 6000
+  },
+  "ocularMaximumErrorMeters": [
+    0.0,
+    0.0
+  ],
+  "preservedBodyBindActionsEquipment": true,
+  "visualFindings": [
+    "Small mouth-corner and cheek/profile changes are visible, without the required decisive anatomical relief",
+    "Inflated mid-cheeks and broad flat muzzle still dominate",
+    "Paired angular brow/glabella and oblique cheek/nasolabial separation remain weak",
+    "Mouth lacks a convincing compact lip border and chin/mandibular construction",
+    "Retained tusks remain buried slivers",
+    "Pale uniform crack texture and clean polished armor remain separate material failures"
+  ],
+  "notRendered": [
+    "OpenMouth",
+    "Blink"
+  ],
+  "next": "Change fitting approach to explicit concept frontal/profile landmarks and relief handles for brow/glabella, canthi, upper cheek crest, nasolabial groove and lip border; inspect actual optical protection weights at those controls",
+  "sharedChanged": false
+}

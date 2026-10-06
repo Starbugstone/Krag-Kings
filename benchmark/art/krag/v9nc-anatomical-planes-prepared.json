@@ -15,7 +15,7 @@
     "Measure broad brow, cheek and chin depth anchors on the current actual skin",
     "Shape distributed sloping brow/cheek/mandibular planes without increasing global head size",
     "Separate nasolabial plane and compact lip/philtrum using smoothly ended fields",
-    "Apply one continuous field to all head/oral/ocular shape targets and facial pivots; keep actual globes rigid",
+    "Apply one continuous field to all head/oral/ocular shape targets and facial pivots; actual fitted optical shell/contact neighborhoods remain exact",
     "Use a narrower26mm optical transition so protected spheres do not flatten the whole brow/cheek sculpt; validate unchanged Jacobian bounds"
   ],
   "notChanged": [
@@ -25,8 +25,8 @@
   ],
   "preflight": {
     "path": "benchmark/art/krag/v9nc-planes-math-preflight.json",
-    "sha256": "c2e809b81541a11c79c72a34be91562e7c7773c29de4b6e01423875fb9a706ad",
-    "bytes": 4593
+    "sha256": "6b6b4af6e77a87f0eb80e283bb48043e4610928cdbef4ca6067bafebd7ee3765",
+    "bytes": 4590
   },
   "preflightLimit": "Surrogate plane depths and means derived through the prior field, not actual current-source plane measurements. Native generation must measure again and enforce topology/contact bounds.",
   "reviewOrder": [
@@ -43,8 +43,8 @@
   "recipes": [
     {
       "path": "benchmark/tools/krag/v9n_wip/anatomical_planes_v9nc.py",
-      "sha256": "735b74471d8090dd135210235551331475583fd8d2ab94697ecf45c6511d2c7c",
-      "bytes": 6648
+      "sha256": "1f1128d966a42bf454c9a10ce80bdbda96be6be63072d811f8f675ac92d192aa",
+      "bytes": 6941
     },
     {
       "path": "benchmark/tools/krag/v9n_wip/build_anatomical_planes_v9nc.py",
@@ -85,6 +85,20 @@
       "path": "benchmark/tools/krag/review-anatomical-planes-v9nc-OpenMouth.json",
       "sha256": "63196b7537d7967c1d395353a8b96d0666c33d9ed8c2d99e3c1462a91613423d",
       "bytes": 1054
+    }
+  ],
+  "preparedRevision": 2,
+  "preNativeCorrection": "The original local plane field moved internal eye centers toward a skin plane. No source was generated. Keep the actual fitted globe/contact volumes fixed while the surrounding continuous sculpt changes; preserve the earlier prepared helper/math report separately.",
+  "earlierPreparation": [
+    {
+      "path": "benchmark/tools/krag/v9n_wip/diagnostics/anatomical_planes_v9nc_translating_globes.py",
+      "sha256": "735b74471d8090dd135210235551331475583fd8d2ab94697ecf45c6511d2c7c",
+      "bytes": 6648
+    },
+    {
+      "path": "benchmark/art/krag/v9nc-planes-math-preflight-translating-globes.json",
+      "sha256": "c2e809b81541a11c79c72a34be91562e7c7773c29de4b6e01423875fb9a706ad",
+      "bytes": 4593
     }
   ]
 }

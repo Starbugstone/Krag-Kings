@@ -1,0 +1,39 @@
+{
+  "status": "Prepared read-only corrected saved-skin attribution, not run",
+  "nativePoseProof": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9na_WIP.blend",
+    "sha256": "c9aec7f6678553a37dd48287a60a7df308e7b5620fd98af4d1026acc10d3d9b9",
+    "bytes": 111984169
+  },
+  "replacesFailedAudit": {
+    "path": "benchmark/art/krag/anatomy-study/actual-arm-domain-Shoot-v9na-failure.json",
+    "sha256": "39c403c0960f5dabb5888471eb37ecdbd66dcd461a19e214c4f971601c667f99",
+    "bytes": 1225
+  },
+  "method": [
+    "Reconstruct exact original cage topology and subdivided reference/fit fields",
+    "Replay existing Body/BioArm/BioForearm partition, preserving boundary duplicates",
+    "Require each saved module count and every rest coordinate to match within2micrometers",
+    "Evaluate actual Shoot at first authored discharge, verify explicit linear blend skinning against native evaluated mesh",
+    "Attribute actual morph contribution separately from source geometry/weight mismatch"
+  ],
+  "doesNotChange": [
+    "Saved source meshes and weights",
+    "Actions or rig bind",
+    "Common locomotion or new semantic fitting helper",
+    "Shared exports"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/audit_actual_arm_domain_v2.py",
+      "sha256": "8d63b1ee1508cd2b830c35e46adb4cb3e3413d234f8224d016067d9fc0ca9b4e",
+      "bytes": 9839
+    },
+    {
+      "path": "benchmark/tools/krag/audit-actual-arm-domain-v9na-v2-job.json",
+      "sha256": "45a90302194e6168428b55c2069e317eb1e37947f61a8ba39ef70754a0b449d7",
+      "bytes": 812
+    }
+  ]
+}

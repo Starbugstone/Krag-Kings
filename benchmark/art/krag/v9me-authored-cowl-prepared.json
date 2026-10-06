@@ -48,8 +48,9 @@
     },
     {
       "path": "benchmark/tools/krag/review-authored-cowl-v9me-OpenMouth.json",
-      "sha256": "6976ee441e0a8efd5d9c0cf7f7ae7fe9bf39c26d91c821bc6a30ad91f3ac8818",
-      "bytes": 1030
+      "sha256": "3f605ab4033b10ed2b8d09ca81fbc4116abee902f8c2d0f1f7606514ea2e36a6",
+      "bytes": 1033
     }
-  ]
+  ],
+  "preNativeViewCorrection": "OpenMouth action review uses the existing Natural_Head camera; the unexecuted invalid camera token was corrected before any source/render launch."
 }

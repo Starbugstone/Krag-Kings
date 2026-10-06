@@ -38,11 +38,7 @@ class Envelope:
         else:
             self.planes = dict(measured_planes)
             self.measurement_counts = None
-        # This is a local anatomical-plane sculpt, not a new global envelope.
-        # Applying a skin-plane target to an internal globe center would move
-        # the eye forward and make the socket shallower. Keep the already
-        # fitted optical shell/lid-contact volume exact instead.
-        self.eye_moves = np.zeros_like(self.eyes)
+        self.eye_moves = self.base_delta(self.eyes)
 
     def base_delta(self, points):
         p = np.asarray(points, float).reshape(-1, 3)

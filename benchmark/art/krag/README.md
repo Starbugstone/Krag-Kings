@@ -343,3 +343,13 @@ The first saved-arm audit stopped safely at its correspondence gate before any p
 
 
 The prepared `v9nc-anatomical-planes-prepared.json` pins actual v9nb for one coherent facial-plane pass. It measures brow/cheek/chin depth on the source, applies broad sloped planes and softly ended nasolabial/lip fields, and transforms head/oral/ocular targets and facial pivots together. It does not change global head scale or materials. The optical transition narrows from50mm to26mm so the rigid globe neighborhood does not flatten most surrounding brow shaping; unchanged topology/Jacobian/globe bounds remain required. Nine surrogate whole-support sweeps pass, explicitly separate from actual native geometry and rendered likeness. Source generation and front/profile/open/Blink review have not run.
+
+
+Before any v9nc generation, preparation revision2 corrects optical handling: a local skin-plane target must not pull the internal eye centers forward. The already fitted globe/contact neighborhoods now stay exact while surrounding planes change. The first prepared helper and its mathematical sweep are preserved separately; no v9nc source had been generated. The revised sweep passes all nine cases under unchanged bounds. A separate corrected arm audit now replays the existing skin partition and requires every saved module's rest coordinates to match before native Shoot attribution; it remains unrun.
+
+
+## v9nc actual broad planes: method remains insufficient
+
+`Krag_MacroFace_v9nc_WIP.blend` (SHA-256 `f581fff1e1022ac268a69cb9a7b2026c8aa9d8ffa5d4a2d4d974d612706a4299`) and actual Head/HeadSide are preserved in `v9nc-anatomical-planes-review.json`. Source and both review guards exited0. The coherent field changes the actual head by up to8.06mm, with zero flipped triangles, actual local scale0.460–1.359 and exact fitted ocular positions. Body bind/actions/equipment remain exact.
+
+**The visual result fails.** Mouth-corner/cheek changes are small, and the round flat muzzle, inflated cheeks, weak brow/glabella and shallow lip/nasolabial structure still miss sheets01/10. This mild broad-field approach has not supplied the needed anatomical relief; numerical passes are not progress toward visual acceptance by themselves. Open/Blink were not rendered and no source was promoted. The next fitting method will use explicit concept facial landmarks and relief profiles at comparable front/side projections, including actual optical-protection influence on brow controls. The current Head portrait has15-degree yaw and must not be mistaken for an exact frontal measurement. Tusk eruption, pale uniform cracked skin, clean metal, cowl and normal mouth remain open.
