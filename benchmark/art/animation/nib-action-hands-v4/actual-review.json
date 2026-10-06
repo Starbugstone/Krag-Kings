@@ -1,0 +1,34 @@
+{
+  "sourceSha256": "383762043324d2d05434113321a0cede66aa590599dd96bf9c36d6e95c62ac2e",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "generationAndReviewMarkersVerified": true,
+  "actualReviewImages": 18,
+  "inspectedImages": [
+    "Melee_46_edge.png",
+    "Melee_46_palm.png",
+    "Melee_72_back.png"
+  ],
+  "artisticAcceptance": false,
+  "finding": "Thumb now crosses the index/middle region instead of remaining beside the fist. The full pose still looks too open: fingertip contact, finger adduction and palm/thenar deformation need refinement. This remains an isolated study on the older mechanical socket input, not a combined accepted character.",
+  "fullClosureThumbBoneTargetMaxErrorMeters": 7.598131170262075e-08,
+  "boneTargetIsNotSurfaceContactProof": true,
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "frozenFiles": {
+    "executed-recipe/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "executed-recipe/fist_thumb_contact.py": "9fb7d2f3002a5c5970cfb6461f0a2073dc02b6377ab50e2797e42b386fdf0855",
+    "executed-recipe/humanoid_arms.py": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+    "executed-recipe/nib-action-hands-v4-job.json": "003cbb7e26778833eb3a4abda1ae489d1a24f345f18bdf3149e9b024c58e931d",
+    "executed-recipe/nib-action-hands-v4-review-job.json": "162ddaadd01e748c0a677fba4d93676fe23ba2f962fe75e2e6dbf778032814e2",
+    "executed-recipe/nib_anatomical_hand_pose.py": "fec80703e1c1caec1105502cbb681c83a270284f994c7095ab10b5a536bb4364",
+    "executed-recipe/refine_nib_action_hands.py": "60223f1e6a7882d6abe3096669eb773928f64f4286ccc5ea73274b67c6bd498f",
+    "executed-recipe/review_free_hand.py": "024823c6bea63da8419c6f789e1b65b799fa16af43c175f51b90ad8dbc304dfd",
+    "evidence/nib-action-hands-v4-memory.csv": "b1e413b6bf37fd6c0257fe114c373095b9c84d8de8109bc3958ca5add0662201",
+    "evidence/nib-action-hands-v4-review-memory.csv": "300f98a883f1d49e983c294d36a30c7519687efc7ef40fa250c88a8f5da622db",
+    "evidence/nib-action-hands-v4-review.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-action-hands-v4-review.stdout.txt": "d781167d7c0e25e49c2dd78bed15be8d73752082639f4f914591f53a14702036",
+    "evidence/nib-action-hands-v4.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-action-hands-v4.stdout.txt": "12167ea38d36b72b2ca023993a1ecbaad359ece31bd14232b2786ea3162e3cdc"
+  }
+}
