@@ -1,0 +1,127 @@
+{
+  "status": "Actual isolated posed surface review; no automatic visual acceptance",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\Nib_Coherent_SemanticBody_v2.blend",
+  "sourceSha256": "81b85096506a33b322017d0ef0437dc63bbd13530bec17733d1a53fa17267b02",
+  "sourceReportSha256": "ba754520044d825622d3e003aee6ca313e018b92e837c6bef5c5e9e7a7b0f83e",
+  "codeSha256": "a6d855c048deff49b7017226de9194dcfcbd5572561a241790becb1cf8911584",
+  "bodyColor": "green for ownership, all other materials neutral grey",
+  "renderer": "Blender Workbench actual skinned mesh",
+  "poses": [
+    {
+      "view": "Neutral",
+      "action": "Idle",
+      "normalizedTime": 0.0,
+      "frame": 1.0,
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\actual-views\\Neutral.png",
+      "imageSha256": "21989a629cc8c7c69f602392cf012465fcd69cc09cf292e7e76b2f8c1817a9cf",
+      "bodyBounds": [
+        [
+          -0.17001715302467346,
+          -0.07360288500785828,
+          0.6019910573959351
+        ],
+        [
+          0.16125650703907013,
+          0.08161044865846634,
+          1.0377147197723389
+        ]
+      ],
+      "garmentContacts": [
+        {
+          "name": "Sleeveless dust undershirt",
+          "samples": 2000,
+          "nearestNormalSignedMinMeters": -0.008062572243943578,
+          "belowMinus1mm": 10,
+          "belowMinus5mm": 3,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        },
+        {
+          "name": "Overalls draped bib",
+          "samples": 1553,
+          "nearestNormalSignedMinMeters": 0.0036435550791793503,
+          "belowMinus1mm": 0,
+          "belowMinus5mm": 0,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        }
+      ]
+    },
+    {
+      "view": "Shoot",
+      "action": "Shoot",
+      "normalizedTime": 0.46,
+      "frame": 14.8,
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\actual-views\\Shoot.png",
+      "imageSha256": "54b8f4c0ec8052589192607c618487896093524aab14b4237fa812598ba049b2",
+      "bodyBounds": [
+        [
+          -0.17219489812850952,
+          -0.258681058883667,
+          0.6643978357315063
+        ],
+        [
+          0.1576424241065979,
+          0.08161044865846634,
+          1.0477147102355957
+        ]
+      ],
+      "garmentContacts": [
+        {
+          "name": "Sleeveless dust undershirt",
+          "samples": 2000,
+          "nearestNormalSignedMinMeters": 0.0008891088964446681,
+          "belowMinus1mm": 0,
+          "belowMinus5mm": 0,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        },
+        {
+          "name": "Overalls draped bib",
+          "samples": 1553,
+          "nearestNormalSignedMinMeters": 0.0036436618320294656,
+          "belowMinus1mm": 0,
+          "belowMinus5mm": 0,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        }
+      ]
+    },
+    {
+      "view": "ShootSide",
+      "action": "Shoot",
+      "normalizedTime": 0.46,
+      "frame": 14.8,
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\actual-views\\ShootSide.png",
+      "imageSha256": "4a241a8dc2150728f2f90a7bf9e15a1509263758eb924add921c6627ebad3b33",
+      "bodyBounds": [
+        [
+          -0.17219489812850952,
+          -0.258681058883667,
+          0.6643978357315063
+        ],
+        [
+          0.1576424241065979,
+          0.08161044865846634,
+          1.0477147102355957
+        ]
+      ],
+      "garmentContacts": [
+        {
+          "name": "Sleeveless dust undershirt",
+          "samples": 2000,
+          "nearestNormalSignedMinMeters": 0.0008891088964446681,
+          "belowMinus1mm": 0,
+          "belowMinus5mm": 0,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        },
+        {
+          "name": "Overalls draped bib",
+          "samples": 1553,
+          "nearestNormalSignedMinMeters": 0.0036436618320294656,
+          "belowMinus1mm": 0,
+          "belowMinus5mm": 0,
+          "scope": "Nearest-surface normal samples, not a watertight collision proof"
+        }
+      ]
+    }
+  ],
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

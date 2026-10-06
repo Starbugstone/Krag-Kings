@@ -238,3 +238,24 @@ interface for **both** fitting and weighting. Its original-cage comparison has
 14.395 mm maximum fit change, no zero/inverted triangles and minimum old/new
 normal dot .7815. This is preparation only: the native revised source, actual
 raised-arm/garment contacts and motion must still be generated and inspected.
+
+
+The semantic **Natural Body v2** is now actual at
+`motion-study/semantic-body-v2/Nib_Coherent_SemanticBody_v2.blend`, SHA-256
+`81b85096506a33b322017d0ef0437dc63bbd13530bec17733d1a53fa17267b02`.
+`actual-result.json` pins generation and Neutral/Shoot/ShootSide evidence.
+The source has the same 33,838 Body vertices / 67,008 triangles; fit changes
+are bounded to 12.809 mm. Original reference point correspondence and fine-fuzz
+reconstruction errors are exactly zero. All 407 unrelated mesh payloads, the
+current migrated 79-bone bind and every action hash survive actual save/reopen,
+including all seven canonical clips. Guarded generation and review exited 0.
+
+The actual views show a smaller, continuous axillary fold instead of the previous
+jagged wing, but side Shoot still stretches visibly and is not anatomically
+accepted. The changed Body also produces ten of 2,000 neutral shirt samples
+below −1 mm (minimum −8.06 mm); Shoot has none. This nearest-normal diagnostic
+is not a full collision proof. Face, ear, groom and garment quality failures
+remain explicit. Root will fit continuous forearm wraps on this exact source;
+restorative Body parity and migrated mechanical fingers will use that resulting
+pinned source. No shared FBX or engine asset changed, and no artistic acceptance
+is claimed.

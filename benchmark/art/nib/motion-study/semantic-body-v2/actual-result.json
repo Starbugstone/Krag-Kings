@@ -1,0 +1,115 @@
+{
+  "status": "Actual semantic Natural Body repair and three posed views; partial deformation improvement, artistic acceptance false",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "source": {
+    "path": "benchmark/art/nib/motion-study/semantic-body-v2/Nib_Coherent_SemanticBody_v2.blend",
+    "sha256": "81b85096506a33b322017d0ef0437dc63bbd13530bec17733d1a53fa17267b02",
+    "bytes": 59064178
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/motion-study/semantic-body-v2/source.json",
+    "sha256": "ba754520044d825622d3e003aee6ca313e018b92e837c6bef5c5e9e7a7b0f83e",
+    "bytes": 97748
+  },
+  "reviewReport": {
+    "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-views/review.json",
+    "sha256": "8a395b7214eed71eaf6f4b567f1f73a37f988cc6203814b2baa407ac924b97ff",
+    "bytes": 4320
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-views/Neutral.png",
+      "sha256": "21989a629cc8c7c69f602392cf012465fcd69cc09cf292e7e76b2f8c1817a9cf",
+      "bytes": 1341926
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-views/Shoot.png",
+      "sha256": "54b8f4c0ec8052589192607c618487896093524aab14b4237fa812598ba049b2",
+      "bytes": 1284028
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-views/ShootSide.png",
+      "sha256": "4a241a8dc2150728f2f90a7bf9e15a1509263758eb924add921c6627ebad3b33",
+      "bytes": 1157883
+    }
+  ],
+  "processes": [
+    {
+      "pid": 31624,
+      "guardExitCode": 0,
+      "peakPrivateMB": 844.0,
+      "completionMarker": "NIB_SEMANTIC_BODY_SOURCE_SAVED_AND_REOPENED",
+      "files": [
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2.txt",
+          "sha256": "65ef8b777ad3f2864a6afc573cc8ccdd7122cf665f11897f4c2b5e50d6cb0db4",
+          "bytes": 458,
+          "originalCaptureSha256": "6b643abbeac3963f91385a831728262c04c2ad709a0767d1dcc21fb73cb26130"
+        },
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2-memory.csv",
+          "sha256": "4efb9869a38d8b4866fca790a060b9e409eae3efc7ee598f528679b9d200a048",
+          "bytes": 1140,
+          "originalCaptureSha256": "4c19c9d8895503a36280e4ca118407856000c8a2803a9495098d7b163495ae77"
+        }
+      ]
+    },
+    {
+      "pid": 14372,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1404.0,
+      "completionMarker": "NIB_SEMANTIC_BODY_ACTUAL_REVIEW_COMPLETE",
+      "files": [
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2-review.txt",
+          "sha256": "cefafa4d9679e493e0f557e84423aad0bf97daba9dd5980f7a5f950a9d8e9ee5",
+          "bytes": 654,
+          "originalCaptureSha256": "4b333745578a70d247cf3c8790af71b0a36287844b1d21339a86e06083d4a191"
+        },
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2-review.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/motion-study/semantic-body-v2/actual-evidence/nib-semantic-body-v2-review-memory.csv",
+          "sha256": "e8ede0e65eca8cdb49362d5bbc4e49f34582363a38b7e8bd7cb2bda725b03d36",
+          "bytes": 413,
+          "originalCaptureSha256": "873bda7f5fdac6069d686e6d1b0dddc485648f0ccd165e6ca735bfd40c232554"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "entire79BoneBindUnchanged": true,
+    "canonicalActionsPersisted": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "savedSourceReopened": true,
+    "unrelatedMeshPayloadCount": 407,
+    "sourcePointCorrespondenceMaxErrorMeters": 0.0,
+    "fineFuzzReconstructionMaxErrorMeters": 0.0
+  },
+  "actualReview": [
+    "The previous jagged upper-arm/flank wing is reduced to a continuous axillary fold",
+    "Side Shoot still shows stretched axillary skin; normal anatomical deformation is not accepted",
+    "Neutral shirt contact needs correction: 10/2000 nearest-normal samples below -1mm; min -8.06mm. Shoot has none below -1mm. Sampling is not a watertight collision proof",
+    "Inherited thin/jagged garment edges, rigid scarf, coil wraps, face/ear/groom likeness failures remain",
+    "Natural Body only; legacy restorative Body/finger rest geometry still requires parity before export"
+  ],
+  "nextSourceBoundary": "Root will fit continuous cloth forearm wraps to this exact source without bind/action change; restorative parity will pin the resulting output"
+}
