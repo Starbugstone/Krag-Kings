@@ -1,0 +1,58 @@
+{
+  "source": "Actual Windows packaged Unreal WGC recording",
+  "video": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\capture-wgc\\unreal-showcase.mp4",
+  "videoSha256": "3b0e586b27f6cde2efcd9b996e69197dbf0bbfb7ee7ee1cd900270103ff24cf1",
+  "videoSeconds": 74.8,
+  "frames": 2244,
+  "repeatedCompositorFrames": 17,
+  "recordingFrameRate": 30,
+  "gameFrameRateClaim": false,
+  "sourceFingerprintCompatibleWithUnity": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "exeSha256": "84afaaa70f2a18427b49f03efeaf751626a7e0ad8f3c937a4661ae62a5f0ba72",
+  "profile": "Balanced, native1920x1080, GI/reflectionsHigh; remaining groupsEpic",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "ownedGameClosed": true,
+  "windowLeaseRestored": true,
+  "blackFrameCheck": {
+    "minimumDurationSeconds": 1,
+    "blackPixelFraction": 0.98,
+    "pixelThreshold": 0.04,
+    "intervals": [],
+    "passed": true
+  },
+  "motionCheckPassed": true,
+  "visualAcceptance": false,
+  "audioAcceptance": false,
+  "synchronizedDemoVideoAccepted": false,
+  "audioDuration": {
+    "expectedSeconds": 72,
+    "actualSeconds": 34.19733333333333,
+    "passed": false,
+    "nonzeroRmsDbFS": -41.745357,
+    "originalCaptureValidationGap": "Original signal check verified only nonzero samples. Independent duration review rejects the mux despite its original completed=true flag. Strict duration gate now rejects this WAV."
+  },
+  "sourceDiagnosis": {
+    "likelyCause": "Submix auto-disable skips silent blocks before RecordingData.Append; recording state is absent from IsRenderingAudio().",
+    "installedEngineSource": "UE5.8.3 Engine/Source/Runtime/AudioMixer/Private/AudioMixerSubmix.cpp",
+    "lines": [
+      1242,
+      1410,
+      1457,
+      1686,
+      2370
+    ],
+    "fixPrepared": "Showcase-only au.NeverDisableSubmixes=1, restore previous value after StopRecordingOutput; no time stretch/padding.",
+    "fixCompiled": false,
+    "fixExecuted": false
+  },
+  "frameReview": [
+    "Real wide/action/portrait frames differ; the capture is not a frozen or black Direct3D surface.",
+    "New sand shows finer grain and soft ripples; character materials and likeness remain rejected.",
+    "Nib dark-blue tongue is visible in the31.4s expression frame; tiny projecting eyes, sparse dark fur and scarf geometry remain poor.",
+    "Krag skin remains too bright/waxy; anatomy, garment construction and likeness fail approval.",
+    "Krag shooting closeups47.4/47.6 show foreshortened raised right arm, but the barrel is cropped below the head portrait; action framing needs widening.",
+    "Wide views preserve both actors and feet. Complete gait/contact and listening review remains pending."
+  ],
+  "artisticAcceptance": false
+}

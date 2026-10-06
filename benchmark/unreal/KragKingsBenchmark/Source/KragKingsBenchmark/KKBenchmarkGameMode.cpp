@@ -359,6 +359,15 @@ void AKKBenchmarkGameMode::SmokeCheck(bool bPass,const FString& Name)
 }
 void AKKBenchmarkGameMode::BeginShowcaseRecording()
 {
+    // UE's submix auto-disable returns before the recording buffer append on
+    // silent blocks. Keep the audio clock continuous only for this recording;
+    // otherwise silent intervals disappear and sound no longer matches video.
+    if(IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(TEXT("au.NeverDisableSubmixes")))
+    {
+        ShowcasePreviousNeverDisableSubmixes=CVar->GetInt();
+        CVar->Set(1,ECVF_SetByCode);
+        UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_AUDIO_CONTINUOUS previous=%d actual=%d"),ShowcasePreviousNeverDisableSubmixes,CVar->GetInt());
+    }
     const FString AudioStartUtc=FDateTime::UtcNow().ToIso8601();
     UAudioMixerBlueprintLibrary::StartRecordingOutput(this,75.f,nullptr);bShowcaseAudioRecording=true;
     ShowcaseStartTime=FPlatformTime::Seconds();UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_STARTED utc=%s"),*AudioStartUtc);
@@ -368,6 +377,12 @@ void AKKBenchmarkGameMode::FinishShowcaseRecording()
     if(!bShowcaseAudioRecording)return;bShowcaseAudioRecording=false;
     const FString AudioDir=FPaths::ConvertRelativePathToFull(FPaths::GetPath(ShowcaseGate));IFileManager::Get().MakeDirectory(*AudioDir,true);
     UAudioMixerBlueprintLibrary::StopRecordingOutput(this,EAudioRecordingExportType::WavFile,TEXT("showcase-engine-audio"),AudioDir,nullptr);
+    // StopRecordingOutput copies the stopped buffer before asynchronous WAV IO.
+    if(ShowcasePreviousNeverDisableSubmixes!=INDEX_NONE)
+    {
+        if(IConsoleVariable* CVar=IConsoleManager::Get().FindConsoleVariable(TEXT("au.NeverDisableSubmixes")))CVar->Set(ShowcasePreviousNeverDisableSubmixes,ECVF_SetByCode);
+        ShowcasePreviousNeverDisableSubmixes=INDEX_NONE;
+    }
     UE_LOG(LogTemp,Display,TEXT("KK_SHOWCASE_AUDIO_EXPORT_REQUESTED %s"),*(AudioDir/TEXT("showcase-engine-audio.wav")));
 }
 void AKKBenchmarkGameMode::TickShowcase()

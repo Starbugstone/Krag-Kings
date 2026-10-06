@@ -49,6 +49,7 @@ private:
     bool bShowcaseReady=false;
     bool bShowcaseComplete=false;
     bool bShowcaseAudioRecording=false;
+    int32 ShowcasePreviousNeverDisableSubmixes=INDEX_NONE;
     int32 ShowcasePhase=0;
     double ShowcaseStartTime=0.0;
     FString ShowcaseGate;

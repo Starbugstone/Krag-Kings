@@ -14,7 +14,7 @@ if((Test-Path $OutputDirectory) -and @(Get-ChildItem $OutputDirectory -Force).Co
 New-Item -ItemType Directory -Force $OutputDirectory|Out-Null
 $OutputDirectory=(Resolve-Path $OutputDirectory).Path
 $prefix='performance-'+$Mode.ToLower();$nativeEvidence=Join-Path $package 'Saved\Benchmark'
-foreach($name in @($prefix+'.json',$prefix+'-frames.csv')) {
+foreach($name in @(($prefix+'.json'),($prefix+'-frames.csv'))) {
  $source=Join-Path $nativeEvidence $name
  if(Test-Path $source){Move-Item $source (Join-Path $OutputDirectory ('prior-'+$name))}
 }
@@ -49,10 +49,11 @@ try {
  while($true){
   if($guard.HasExited){throw 'Guard exited before the intended game window became ready.'}
   if(Test-Path $guardOutput){
-   $match=[regex]::Match((Get-Content $guardOutput -Raw),'HEAVY_JOB_STARTED[^\r\n]*PID=(\d+)')
+   $guardText=[string](Get-Content $guardOutput -Raw)
+   $match=[regex]::Match($guardText,'HEAVY_JOB_STARTED[^\r\n]*PID=(\d+)')
    if($match.Success){
     $game=Get-Process -Id ([int]$match.Groups[1].Value) -ErrorAction SilentlyContinue
-    if($game -and $game.MainWindowHandle -ne [IntPtr]::Zero -and (Test-Path $runtimeLog) -and (Select-String $runtimeLog -SimpleMatch 'KK_READY' -Quiet)){break}
+    if($game -and $game.MainWindowHandle -ne [IntPtr]::Zero -and (Test-Path $runtimeLog) -and (Select-String -LiteralPath $runtimeLog -Pattern 'KK_READY' -SimpleMatch -Quiet)){break}
    }
   }
   if([DateTime]::UtcNow -gt $readyDeadline){throw 'Actual game readiness timed out.'}
@@ -66,17 +67,26 @@ try {
  if(-not $guard.WaitForExit(75000)){throw 'Performance run did not close after its bounded sample.'}
  $guard.Refresh();$report.guardExit=$guard.ExitCode
  if($guard.ExitCode -ne 0){throw "Guarded performance process failed: $($guard.ExitCode)"}
- foreach($name in @($prefix+'.json',$prefix+'-frames.csv')){Copy-Item (Join-Path $nativeEvidence $name) (Join-Path $OutputDirectory $name)}
+ foreach($name in @(($prefix+'.json'),($prefix+'-frames.csv'))){Copy-Item (Join-Path $nativeEvidence $name) (Join-Path $OutputDirectory $name)}
  $metrics=Get-Content (Join-Path $OutputDirectory ($prefix+'.json')) -Raw|ConvertFrom-Json
  if(-not $metrics.comparison_pass -or -not $metrics.completed_sample_window -or $metrics.width -ne 1920 -or $metrics.height -ne 1080 -or $metrics.warmup_seconds -ne 15){throw 'Runtime did not confirm the full native-1080p comparison window.'}
  foreach($entry in @(@('r.ScreenPercentage',100),@('r.DynamicRes.OperationMode',0),@('r.VSync',0),@('sg.GlobalIlluminationQuality',$quality),@('sg.ReflectionQuality',$quality),@('sg.ShadowQuality',3),@('sg.TextureQuality',3))){if($metrics.actual_cvars.($entry[0]) -ne $entry[1]){throw ('Runtime setting mismatch: '+$entry[0])}}
  $report.comparisonComplete=$true;$report.metrics=$metrics
  $report.nativeProfileFieldNote='The executable requested_profile text describes its default. Actual CVars and this wrapper profile describe this measured launch.'
  Write-Output ('UNREAL_PERFORMANCE_COMPLETE '+$Mode+' '+$Profile+' fps='+$metrics.average_fps)
-} catch {$report.error=$_.Exception.Message;throw} finally {
+} catch {$report.error=$_.Exception.Message;$report.errorStack=$_.ScriptStackTrace;throw} finally {
  if($lease){try{$lease.Dispose();$report.windowLeaseRestored=$lease.Restored}catch{$report.windowRestoreError=$_.Exception.Message}}
+ if(-not $game -and $guardOutput -and (Test-Path $guardOutput)){
+  $guardText=[string](Get-Content $guardOutput -Raw)
+  $started=[regex]::Match($guardText,'HEAVY_JOB_STARTED[^\r\n]*PID=(\d+)')
+  if($started.Success){$candidate=Get-Process -Id ([int]$started.Groups[1].Value) -ErrorAction SilentlyContinue;if($candidate -and $candidate.Path -eq $executable){$game=$candidate}}
+ }
  if($game){try{if(-not $game.HasExited){$game.CloseMainWindow()|Out-Null}}catch{}}
  if($guard -and -not $guard.HasExited){$null=$guard.WaitForExit(10000)}
+ foreach($kind in @('memory','gpu')){
+  $telemetry=Join-Path $repo ('benchmark\local\'+$job.name+'-'+$kind+'.csv')
+  if(Test-Path $telemetry){Copy-Item $telemetry (Join-Path $OutputDirectory ($kind+'.csv'))}
+ }
  $report.finishedUtc=[DateTime]::UtcNow.ToString('o')
  $report|ConvertTo-Json -Depth 12|Set-Content (Join-Path $OutputDirectory 'run-result.json') -Encoding UTF8
 }

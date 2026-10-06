@@ -229,6 +229,13 @@ try {
     $signalPresent=$rms.Groups[1].Value -notmatch 'inf' -and $peak.Groups[1].Value -notmatch 'inf' -and [double]::Parse($samples.Groups[1].Value,[Globalization.CultureInfo]::InvariantCulture) -gt 0
     $report.audioSignalCheck=[ordered]@{rmsDbFS=$rms.Groups[1].Value;peakDbFS=$peak.Groups[1].Value;samples=$samples.Groups[1].Value;nonzeroSignal=$signalPresent;listeningReviewPassed=$false}
     if(-not $signalPresent){throw 'Engine-only WAV is empty or silent; refusing final mux. Raw video/audio preserved for diagnosis.'}
+    # Some engine recording APIs omit silent blocks. A nonzero waveform alone
+    # cannot prove that the audio preserves the showcase's real-time duration.
+    $wavMetadata=Invoke-Native $ffprobe @('-v','error','-show_streams','-show_format','-of','json',$EngineAudio) ''|ConvertFrom-Json
+    $wavDuration=[double]::Parse([string]$wavMetadata.format.duration,[Globalization.CultureInfo]::InvariantCulture)
+    $audioDurationError=[Math]::Abs($wavDuration-$ShowcaseSeconds)
+    $report.audioDurationCheck=[ordered]@{expectedSeconds=$ShowcaseSeconds;actualSeconds=$wavDuration;absoluteErrorSeconds=$audioDurationError;toleranceSeconds=.5;passed=($audioDurationError -le .5);silencePaddingOrTimeStretchApplied=$false}
+    if($audioDurationError -gt .5){throw ('Engine-only WAV duration is '+$wavDuration+'s for a '+$ShowcaseSeconds+'s showcase. Refusing misaligned final mux; raw video/audio preserved without padding or time stretching.')}
     $motionDirectory=Join-Path $OutputDirectory ($prefix+'-motion-check')
     try{
         & (Join-Path $PSScriptRoot 'Test-ShowcaseMotion.ps1') -Video $raw -Ffmpeg $Ffmpeg -OutputDirectory $motionDirectory -AudioOffsetSeconds $audioOffset

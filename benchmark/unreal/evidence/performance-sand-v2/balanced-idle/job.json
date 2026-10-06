@@ -1,0 +1,21 @@
+{
+    "name":  "unreal-idle-balanced",
+    "executable":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64\\KragKingsBenchmark.exe",
+    "arguments":  [
+                      "-ResX=1920",
+                      "-ResY=1080",
+                      "-NoVSync",
+                      "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-performance\\20261006-sandv2-balanced-idle\\runtime.log",
+                      "-ExecCmds=sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,r.VolumetricFog 1",
+                      "-KKPerf"
+                  ],
+    "workingDirectory":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64",
+    "stdout":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-performance\\20261006-sandv2-balanced-idle\\native-stdout.log",
+    "stderr":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-performance\\20261006-sandv2-balanced-idle\\native-stderr.log",
+    "minAvailableGB":  10,
+    "maxPrivateGB":  10,
+    "gpuTelemetry":  true,
+    "trackProcessTree":  false,
+    "successLog":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-performance\\20261006-sandv2-balanced-idle\\runtime.log",
+    "successMarker":  "KK_METRICS mode=performance-idle"
+}

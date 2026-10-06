@@ -1,0 +1,15 @@
+{
+  "status": "Python syntax and extracted pure-function checks passed; Unreal masked-card import/render unexecuted",
+  "importerSha256": "56f3a38048aa02f726bfeb1ad46a6f07f4c6dc39520cdaca90129410be6f95d4",
+  "utc": "2026-10-06T04:09:09.542401+00:00",
+  "currentCharacterMaterialSignaturesPreserved": 32,
+  "checks": [
+    "all current manifest-declared texture paths exist",
+    "all current opaque material content/recipe signatures equal prior algorithm",
+    "agreed MASK fields accepted",
+    "unsupported alpha source/mode/normal convention and invalid cutoff rejected",
+    "future shared groom normal filename resolves from declared manifest path",
+    "texture path escaping shared asset folder rejected"
+  ],
+  "actualUnrealMaterialExecution": false
+}

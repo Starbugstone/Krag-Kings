@@ -1,0 +1,42 @@
+{
+  "nativeExit": 0,
+  "guardExit": 0,
+  "buildCookRunSeconds": 57.32,
+  "stage": "actual Windows sand-v2 package update",
+  "artifacts": [
+    {
+      "path": "KragKingsBenchmark/Binaries/Win64/KragKingsBenchmark.exe",
+      "bytes": 331959296,
+      "sha256": "84afaaa70f2a18427b49f03efeaf751626a7e0ad8f3c937a4661ae62a5f0ba72"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak",
+      "bytes": 11240649,
+      "sha256": "aaded4f50a5eee28bb4b2408524bbf360332578319497f390bd61eed9ae1d897"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.utoc",
+      "bytes": 782,
+      "sha256": "159a4d036916d278b3ab99acc549ec8c864f350252feee7e8cf01c26921b9607"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.utoc",
+      "bytes": 293508,
+      "sha256": "152447a46fb30536d723163d504f8e62a6f3faa00aaed77f9c44331f6054aa3b"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/global.ucas",
+      "bytes": 3200240,
+      "sha256": "0f2231662ba0d68b3d3b4c8c205eb2463ed29ad2f27f1fd06ee238f032a9cfd2"
+    },
+    {
+      "path": "KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.ucas",
+      "bytes": 330692416,
+      "sha256": "e252a0128571ddc50884c866ab8ead3af6aa19e426bfc421240685cac6d29240"
+    }
+  ],
+  "sourceFingerprintCompatibleWithUnity": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "peakTreePrivateMiB": 3999.0,
+  "minimumAvailableMiB": 12200.0,
+  "artisticAcceptance": false
+}

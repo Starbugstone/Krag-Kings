@@ -1,0 +1,40 @@
+﻿{
+    "tests":  [
+                  {
+                      "source":  "benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\showcase-engine-audio.wav",
+                      "error":  "Engine-only WAV duration is 34.197333s for a 72s showcase. Refusing misaligned final mux; raw video/audio preserved without padding or time stretching.",
+                      "check":  {
+                                    "expectedSeconds":  72,
+                                    "actualSeconds":  34.197333,
+                                    "absoluteErrorSeconds":  37.802667,
+                                    "toleranceSeconds":  0.5,
+                                    "passed":  false,
+                                    "silencePaddingOrTimeStretchApplied":  false
+                                },
+                      "expectedPass":  false,
+                      "sourceSha256":  "40417d729748ced9b186ed2deef87cd1fba57aea060c3f1a7c0c0a4ccaefaaf2",
+                      "actualPass":  false,
+                      "engine":  "Unreal"
+                  },
+                  {
+                      "source":  "benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\showcase-engine-audio.wav",
+                      "error":  "",
+                      "check":  {
+                                    "expectedSeconds":  72,
+                                    "actualSeconds":  72,
+                                    "absoluteErrorSeconds":  0,
+                                    "toleranceSeconds":  0.5,
+                                    "passed":  true,
+                                    "silencePaddingOrTimeStretchApplied":  false
+                                },
+                      "expectedPass":  true,
+                      "sourceSha256":  "c353053353bd93cfc9b4f6798168128f17a4f6e457cc746da3f2241d9eecb868",
+                      "actualPass":  true,
+                      "engine":  "Unity"
+                  }
+              ],
+    "nativeAudioFixCompiled":  false,
+    "source":  "Actual shared Capture-Demo.ps1 duration block, against two existing engine-only WAV files",
+    "nativeAudioFixExecuted":  false,
+    "parserPassed":  true
+}

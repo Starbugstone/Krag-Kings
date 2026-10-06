@@ -119,14 +119,26 @@ def material_surface_contract(descriptor):
     return contract
 
 
-def material_signature(name, tex_dir, surface=None):
+def material_texture_sources(name, tex_dir, descriptor=None):
+    root = tex_dir.parent.resolve()
+    fields = {'BaseColor': 'baseColor', 'Normal': 'normal', 'Roughness': 'roughness', 'Metallic': 'metallic'}
+    sources = {}
+    for kind, field in fields.items():
+        relative = (descriptor or {}).get(field)
+        path = (root / relative).resolve() if relative else tex_dir / (name + '_' + kind + '.png')
+        if not path.resolve().is_relative_to(root):
+            raise RuntimeError('Material texture must remain inside its shared asset folder')
+        sources[kind] = path
+    return sources
+
+
+def material_signature(name, tex_dir, surface=None, sources=None):
     # Bump the recipe when shader wiring or sampling changes.
     inputs = {'recipe': 'pbr-v1-opengl-normal-subsurface', 'name': name, 'textures': {}}
     if surface:
         inputs['surfaceRecipe'] = 'masked-card-v1-alpha-coverage'
         inputs['surface'] = surface
-    for kind in ('BaseColor', 'Normal', 'Roughness', 'Metallic'):
-        path = tex_dir / (name + '_' + kind + '.png')
+    for kind, path in (sources or material_texture_sources(name, tex_dir)).items():
         if path.exists():
             inputs['textures'][kind] = sha256(path)
     return hashlib.sha256(json.dumps(inputs, sort_keys=True).encode('utf-8')).hexdigest()
@@ -224,7 +236,8 @@ def material(name, tex_dir, destination, descriptor=None):
     asset_path = destination + '/M_' + name
     mat = load(asset_path)
     surface = material_surface_contract(descriptor or {})
-    signature = material_signature(name, tex_dir, surface)
+    sources = material_texture_sources(name, tex_dir, descriptor)
+    signature = material_signature(name, tex_dir, surface, sources)
     cached = MATERIAL_CACHE.get(asset_path, {})
     if mat is not None and cached.get('signature') == signature:
         REPORT.setdefault('reused_materials', []).append({'asset': asset_path, 'signature': signature, 'reason': 'matching input/recipe hash'})
@@ -253,7 +266,7 @@ def material(name, tex_dir, destination, descriptor=None):
         'Metallic': unreal.MaterialProperty.MP_METALLIC,
     }
     for i, (kind, prop) in enumerate(props.items()):
-        source = tex_dir / (name + '_' + kind + '.png')
+        source = sources[kind]
         if kind == 'Metallic' and not source.exists() and name.lower() == 'sand':
             node = expression(mat, unreal.MaterialExpressionConstant, -400, i * 180)
             node.set_editor_property('r', 0.0)
@@ -481,9 +494,9 @@ def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, 
             raise RuntimeError('Requested variant is absent from species manifest: ' + only_variant)
     material_map = {}
     material_descriptors = {entry['name']: entry for entry in manifest.get('materials', []) if isinstance(entry, dict) and 'name' in entry}
-    for color in sorted((source / 'textures').glob('*_BaseColor.png')):
-        name = color.stem.removesuffix('_BaseColor')
-        material_map[name] = material(name, color.parent, DEST + '/Characters/' + folder + '/Materials', material_descriptors.get(name))
+    names = sorted(material_descriptors) if material_descriptors else sorted(color.stem.removesuffix('_BaseColor') for color in (source / 'textures').glob('*_BaseColor.png'))
+    for name in names:
+        material_map[name] = material(name, source / 'textures', DEST + '/Characters/' + folder + '/Materials', material_descriptors.get(name))
     if not material_map:
         raise RuntimeError('No PBR materials found for ' + folder)
     variants = []

@@ -1,0 +1,20 @@
+{
+  "name": "unreal-sandv2-balanced-showcase",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64\\KragKingsBenchmark.exe",
+  "arguments": [
+    "-ResX=1920",
+    "-ResY=1080",
+    "-NoVSync",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\runtime.log",
+    "-KKShowcase",
+    "-KKShowcaseWait",
+    "-KKShowcaseGate=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\showcase-start.flag",
+    "-ExecCmds=sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,r.VolumetricFog 1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\guard-native-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-sandv2-balanced\\guard-native-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 10,
+  "gpuTelemetry": true
+}

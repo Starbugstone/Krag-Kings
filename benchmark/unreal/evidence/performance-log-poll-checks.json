@@ -1,0 +1,22 @@
+﻿{
+    "status":  "Actual Windows PowerShell empty/partial/completed log polling checks passed",
+    "reason":  "Inline cast of empty Get-Content produced a null method argument on this host; typed intermediate assignment produces empty string",
+    "checks":  [
+                   {
+                       "content":  "",
+                       "foundProcessId":  0,
+                       "passed":  true
+                   },
+                   {
+                       "content":  "HEAVY_JOB_STARTED",
+                       "foundProcessId":  0,
+                       "passed":  true
+                   },
+                   {
+                       "content":  "HEAVY_JOB_STARTED unreal-idle-full PID=12345",
+                       "foundProcessId":  12345,
+                       "passed":  true
+                   }
+               ],
+    "gameLaunched":  false
+}
