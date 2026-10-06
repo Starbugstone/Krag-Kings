@@ -3,6 +3,8 @@
 Keeps the evaluated arm/weapon paths, body/facial/ear curves and all mesh/bind
 data. Replaces only natural left-digit rotation curves in three action takes.
 The contact poses are provisional until actual closeups have been inspected.
+The current prepared melee flexion closes the earlier loose half-fist; older
+executed recipes are preserved beside their source evidence.
 """
 import argparse
 import hashlib
@@ -15,7 +17,7 @@ import bpy
 from bpy_extras.anim_utils import action_get_channelbag_for_slot
 
 sys.path.insert(0, str(Path(__file__).parent))
-from export_contract import select_action
+from export_contract import CLIPS, select_action
 import nib_anatomical_hand_pose as hand_pose
 
 parser = argparse.ArgumentParser()
@@ -31,6 +33,7 @@ sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 input_hash = sha(args.source)
 bpy.ops.wm.open_mainfile(filepath=str(args.source), load_ui=False)
 rig = bpy.data.objects['Nib_Rig']
+source_bind = {b.name: [list(row) for row in b.matrix_local] for b in rig.data.bones}
 scene = bpy.context.scene
 for track in rig.animation_data.nla_tracks:
     track.mute = True
@@ -64,7 +67,7 @@ specs = {
     'Shoot': {'angles': {'Index': (25, 75, 35), 'Middle': (28, 78, 38),
                          'Ring': (30, 80, 40), 'Little': (33, 82, 40)},
               'thumb': (12, 18), 'opposition': 25},
-    'Melee': {'angles': {name: (65, 85, 40) for name in hand_pose.RELAXED},
+    'Melee': {'angles': {name: (82, 98, 55) for name in hand_pose.RELAXED},
               'thumb': (18, 25), 'opposition': 32},
     'Hit': {'angles': {name: (30, 40, 18) for name in hand_pose.RELAXED},
             'thumb': (10, 14), 'opposition': 18},
@@ -134,5 +137,24 @@ output = args.output/f'Nib_ActionHands_Study_{args.generation}.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(output))
 report['output'] = str(output)
 report['outputSha256'] = sha(output)
+bpy.ops.wm.open_mainfile(filepath=str(output), load_ui=False)
+rig = bpy.data.objects['Nib_Rig']
+if source_bind != {b.name: [list(row) for row in b.matrix_local] for b in rig.data.bones}:
+    raise RuntimeError('Saved action source changed skeletal bind')
+persisted = {}
+for name in CLIPS:
+    action = bpy.data.actions.get(name)
+    if action is None or not action.use_fake_user:
+        raise RuntimeError('Saved action source lost canonical take '+name)
+    select_action(bpy, rig, action)
+    if name in report['clips']:
+        digest = untouched_curves(action, rig.animation_data.action_slot)
+        if digest != report['clips'][name]['untouchedCurvesSha256']:
+            raise RuntimeError('Saved action source altered non-hand curves '+name)
+    persisted[name] = list(action.frame_range)
+report['reopenedSavedFile'] = True
+report['persistedCanonicalActions'] = persisted
+if sha(args.source) != input_hash:
+    raise RuntimeError('Action authoring changed input source')
 (args.output/'action-hands.json').write_text(json.dumps(report, indent=2)+'\n')
 print('NIB_ACTION_HANDS_COMPLETE', flush=True)

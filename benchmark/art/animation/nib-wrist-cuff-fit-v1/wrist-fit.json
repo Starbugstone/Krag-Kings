@@ -1,0 +1,106 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\semantic-body-v2\\Nib_Coherent_SemanticBody_v2.blend",
+  "sourceSha256": "81b85096506a33b322017d0ef0437dc63bbd13530bec17733d1a53fa17267b02",
+  "recipeSha256": "7996cf67507652b8eb415fe05660909b992fb79009ae0735ad6e4207d7911552",
+  "status": "Actual proximal hand cuff fitting; posed union/body fit review required",
+  "sides": {
+    "L": {
+      "actualBodyWristBoundaryVertices": 104,
+      "actualBodyBoundaryMean": [
+        0.21248067915439606,
+        -0.02740585245192051,
+        0.6284815073013306
+      ],
+      "actualHandProximalSampleMedian": [
+        0.2288190722465515,
+        -0.0368213877081871,
+        0.6343069672584534
+      ],
+      "fittedProximalCenter": [
+        0.21139074862003326,
+        -0.026353511959314346,
+        0.6343069672584534
+      ],
+      "maximumTranslation": [
+        -0.01742832362651825,
+        0.010467875748872757,
+        0.0
+      ],
+      "blendRangeZ": [
+        0.608,
+        0.635
+      ],
+      "meshes": [
+        {
+          "object": "Nib v5 coherent hand L",
+          "verticesChanged": 2225,
+          "maxDisplacementMeters": 0.0203303439897882,
+          "verticesAtOrBelowDigitCutChanged": 0
+        },
+        {
+          "object": "Fitted leather wrist band L",
+          "verticesChanged": 512,
+          "maxDisplacementMeters": 0.0054964062606377775,
+          "verticesAtOrBelowDigitCutChanged": 0
+        }
+      ]
+    },
+    "R": {
+      "actualBodyWristBoundaryVertices": 104,
+      "actualBodyBoundaryMean": [
+        -0.21248891949653625,
+        -0.02736840397119522,
+        0.6284807920455933
+      ],
+      "actualHandProximalSampleMedian": [
+        -0.22819143533706665,
+        -0.03604821115732193,
+        0.634855329990387
+      ],
+      "fittedProximalCenter": [
+        -0.21129626035690308,
+        -0.02621687389910221,
+        0.634855329990387
+      ],
+      "maximumTranslation": [
+        0.016895174980163574,
+        0.009831337258219719,
+        0.0
+      ],
+      "blendRangeZ": [
+        0.608,
+        0.635
+      ],
+      "meshes": [
+        {
+          "object": "Glove wrist strap R",
+          "verticesChanged": 96,
+          "maxDisplacementMeters": 0.01031642991603543,
+          "verticesAtOrBelowDigitCutChanged": 0
+        },
+        {
+          "object": "Nib v5 coherent hand R",
+          "verticesChanged": 2239,
+          "maxDisplacementMeters": 0.019547432662487787,
+          "verticesAtOrBelowDigitCutChanged": 0
+        }
+      ]
+    }
+  },
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "artisticAcceptance": false,
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-wrist-cuff-fit-v1\\Nib_FittedWristCuffs_Study_v1.blend",
+  "outputSha256": "d39dc37a7ac7008a4fb29ab22f4ca6f30e711b6f795783512583c840874182e9",
+  "reopenedSavedFile": true,
+  "exactBindPreserved": true,
+  "canonicalActionHashes": {
+    "Idle": "681cd6a316be135442a4b3564f077196b657b426bb3db6c40293db61f947549e",
+    "Walk": "0814d9723e4743ba48e9f17bb978ad471d5089f9c348dc66204bf9e5665f8b8c",
+    "Run": "8ee23c91398d19c0a632b2ac14636fc87beefd4b04d75dfaf9600617c7f2fe35",
+    "Melee": "2b69d3051b95847a154c6d5124e49d6dac6977ce068d61672c9e822fc749b91f",
+    "Shoot": "b1b352f47180a1ab9db8d6f269a858a2271329e60d55a863bb94c70329b517b3",
+    "Hit": "53274d6eed4d6ace8841a7fc113303445cddbcc3c2080d170fca8a52470199b9",
+    "FacePerformance": "c2dc5674481bd36ad1d80286ab0425be5b819b5a4e3ba1c6da0da27e8a7307ab"
+  }
+}

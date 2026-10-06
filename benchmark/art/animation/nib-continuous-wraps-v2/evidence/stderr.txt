@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\fit_nib_forearm_wraps.py", line 151, in <module>
+    raise RuntimeError('Wrap support outside actual forearm domain '+str({
+        'side': side, 'row': j, 'column': i, 'point': list(point),
+        'normalDot': normal.dot(outward), 'radius': (point-center).length}))
+RuntimeError: Wrap support outside actual forearm domain {'side': 'L', 'row': 279, 'column': 11, 'point': [0.20551684498786926, -0.02191244065761566, 0.6412930488586426], 'normalDot': 0.09773758053779602, 'radius': 0.008212442188933106}
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\animation\fit_nib_forearm_wraps.py', exiting.

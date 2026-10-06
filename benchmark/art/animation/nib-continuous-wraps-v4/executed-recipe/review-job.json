@@ -1,0 +1,25 @@
+{
+  "name": "nib-continuous-wraps-v4-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\review_nib_wraps.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-continuous-wraps-v4\\Nib_ContinuousWraps_Study_v1.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-continuous-wraps-v4\\posed-review"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-continuous-wraps-v4-review.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-continuous-wraps-v4-review.stderr.log",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-continuous-wraps-v4-review.stdout.log",
+  "successMarker": "NIB_ACTUAL_WRAPS_REVIEW_COMPLETE"
+}

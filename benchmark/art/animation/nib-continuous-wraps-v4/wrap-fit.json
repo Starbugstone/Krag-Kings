@@ -1,0 +1,90 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-wrist-cuff-fit-v1\\Nib_FittedWristCuffs_Study_v1.blend",
+  "sourceSha256": "d39dc37a7ac7008a4fb29ab22f4ca6f30e711b6f795783512583c840874182e9",
+  "recipeSha256": "d65b0f633b75b7575e0c01bdf2d83be9eaa6f540450f2c9f09448267caee05ee",
+  "status": "Actual cloth-strip source; native pose/material review required",
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "artisticAcceptance": false,
+  "wraps": {
+    "L": {
+      "object": "Continuous overlapping linen wrap L",
+      "vertices": 10426,
+      "triangles": 20848,
+      "archived": [
+        "Forearm desert wrap L",
+        "Forearm desert wrap L.001",
+        "Forearm desert wrap L.002",
+        "Forearm desert wrap L.003",
+        "Forearm desert wrap L.004",
+        "Forearm desert wrap L.005",
+        "Forearm desert wrap L.006",
+        "Forearm desert wrap L.007",
+        "Forearm desert wrap L.008",
+        "Forearm desert wrap L.009"
+      ],
+      "turns": 5,
+      "fabricThicknessMeters": 0.0006,
+      "skinNormalOffsetRangeMeters": [
+        0.0013019564155556415,
+        0.006898043584444359
+      ],
+      "support": "Convex cross-sections of actual forearm/proximal-hand vertices within5mm axial slices; support-edge weight interpolation, at most4 influences",
+      "supportSliceCount": 101,
+      "actualSupportRadiusRangeMeters": [
+        0.006881535135669003,
+        0.037308122595689226
+      ],
+      "maximumEnvelopeToActualSkinDistanceMeters": 0.009176100604236126,
+      "envelopeDistanceLimitMeters": 0.012,
+      "supportTriangles": 12255,
+      "material": "Existing Nib_Cloth, no new texture bake"
+    },
+    "R": {
+      "object": "Continuous overlapping linen wrap R",
+      "vertices": 10426,
+      "triangles": 20848,
+      "archived": [
+        "Forearm desert wrap R",
+        "Forearm desert wrap R.001",
+        "Forearm desert wrap R.002",
+        "Forearm desert wrap R.003",
+        "Forearm desert wrap R.004",
+        "Forearm desert wrap R.005",
+        "Forearm desert wrap R.006",
+        "Forearm desert wrap R.007",
+        "Forearm desert wrap R.008",
+        "Forearm desert wrap R.009"
+      ],
+      "turns": 5,
+      "fabricThicknessMeters": 0.0006,
+      "skinNormalOffsetRangeMeters": [
+        0.0014910189199133614,
+        0.0068334515303586085
+      ],
+      "support": "Convex cross-sections of actual forearm/proximal-hand vertices within5mm axial slices; support-edge weight interpolation, at most4 influences",
+      "supportSliceCount": 101,
+      "actualSupportRadiusRangeMeters": [
+        0.007404667228551882,
+        0.03735109335368573
+      ],
+      "maximumEnvelopeToActualSkinDistanceMeters": 0.009923256933689117,
+      "envelopeDistanceLimitMeters": 0.012,
+      "supportTriangles": 12330,
+      "material": "Existing Nib_Cloth, no new texture bake"
+    }
+  },
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-continuous-wraps-v4\\Nib_ContinuousWraps_Study_v1.blend",
+  "outputSha256": "d5a0874a4d542dba51c04a0b2bfe1f54eb1e2e9d4efba3b3aaa2cd9dc94b4893",
+  "reopenedSavedFile": true,
+  "exactBindPreserved": true,
+  "canonicalActionHashes": {
+    "Idle": "681cd6a316be135442a4b3564f077196b657b426bb3db6c40293db61f947549e",
+    "Walk": "0814d9723e4743ba48e9f17bb978ad471d5089f9c348dc66204bf9e5665f8b8c",
+    "Run": "8ee23c91398d19c0a632b2ac14636fc87beefd4b04d75dfaf9600617c7f2fe35",
+    "Melee": "2b69d3051b95847a154c6d5124e49d6dac6977ce068d61672c9e822fc749b91f",
+    "Shoot": "b1b352f47180a1ab9db8d6f269a858a2271329e60d55a863bb94c70329b517b3",
+    "Hit": "53274d6eed4d6ace8841a7fc113303445cddbcc3c2080d170fca8a52470199b9",
+    "FacePerformance": "c2dc5674481bd36ad1d80286ab0425be5b819b5a4e3ba1c6da0da27e8a7307ab"
+  }
+}

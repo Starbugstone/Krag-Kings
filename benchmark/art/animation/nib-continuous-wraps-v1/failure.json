@@ -1,0 +1,12 @@
+{
+  "status": "Actual source generation stopped before save at forearm support check",
+  "guardExit": 2,
+  "nativeExit": 2,
+  "sourceSha256": "81b85096506a33b322017d0ef0437dc63bbd13530bec17733d1a53fa17267b02",
+  "recipeSha256": "618bbb41114e80864f78a70104628de86d3c68788fb40e5d6133d70368b0203b",
+  "hypothesis": "Whole-body BVH can hit torso before a forearm when a ray begins toward the medial side; not yet attributed",
+  "sourceChanged": false,
+  "sharedAssetsChanged": false,
+  "artisticAcceptance": false,
+  "attribution": "Read-only saved-mesh ray calculation finds the same first back-face hit on the actual oblique wrist boundary in whole-body and forearm-filtered triangles. The torso-hit hypothesis was disproved. The proximal hand cuff is offset from that boundary; the following cuff source corrects the offset."
+}
