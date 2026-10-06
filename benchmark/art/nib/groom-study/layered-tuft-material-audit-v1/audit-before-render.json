@@ -1,0 +1,438 @@
+{
+  "status": "Actual assigned/evaluated source audit; tiny source geometry diagnostic follows",
+  "sourceSha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+  "object": "Nib layered alpha ear_locks_L",
+  "material": "Nib_v6_InnerEarWispsCards",
+  "selectedCard": 200,
+  "neighbourCards": [
+    200,
+    20,
+    43,
+    275,
+    261,
+    241,
+    271,
+    231,
+    246,
+    130,
+    61,
+    183
+  ],
+  "uvLayers": [
+    {
+      "name": "UVMap",
+      "activeRender": true,
+      "activeClone": false
+    }
+  ],
+  "activeUV": "UVMap",
+  "selectedUvBounds": [
+    [
+      0.00390625,
+      0.00390625
+    ],
+    [
+      0.24609375,
+      0.24609375
+    ]
+  ],
+  "bilinearSelectedUvCoverageAbove045": 0.20167057268193017,
+  "selectedTopRowsCoverageAbove045": 0.001937984496124031,
+  "selectedRootRowsCoverageAbove045": 0.22868217054263565,
+  "images": [
+    {
+      "node": "Image Texture",
+      "name": "Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\source-textures\\macroface-regional-ed53df\\Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "alphaMode": "STRAIGHT",
+      "colorSpace": "sRGB",
+      "alphaRange": [
+        0.0,
+        1.0
+      ],
+      "coverageAbove045": 0.20398998260498047
+    },
+    {
+      "node": "Image Texture.001",
+      "name": "Nib_v6_FurCards_Normal.png.001",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\source-textures\\macroface-regional-ed53df\\Nib_v6_FurCards_Normal.png.001",
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "alphaMode": "STRAIGHT",
+      "colorSpace": "Non-Color",
+      "alphaRange": [
+        1.0,
+        1.0
+      ],
+      "coverageAbove045": 1.0
+    },
+    {
+      "node": "Image Texture.002",
+      "name": "Nib_v6_FurCards_Roughness.png.001",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\source-textures\\macroface-regional-ed53df\\Nib_v6_FurCards_Roughness.png.001",
+      "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "alphaMode": "STRAIGHT",
+      "colorSpace": "Non-Color",
+      "alphaRange": [
+        1.0,
+        1.0
+      ],
+      "coverageAbove045": 1.0
+    },
+    {
+      "node": "Image Texture.003",
+      "name": "Nib_v6_FurCards_Metallic.png.001",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\source-textures\\macroface-regional-ed53df\\Nib_v6_FurCards_Metallic.png.001",
+      "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "alphaMode": "STRAIGHT",
+      "colorSpace": "Non-Color",
+      "alphaRange": [
+        1.0,
+        1.0
+      ],
+      "coverageAbove045": 1.0
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Material Output",
+      "type": "ShaderNodeOutputMaterial",
+      "operation": null,
+      "image": null,
+      "inputs": {
+        "Displacement": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Thickness": 0.0
+      },
+      "uvMap": null,
+      "interpolation": null
+    },
+    {
+      "name": "Principled BSDF",
+      "type": "ShaderNodeBsdfPrincipled",
+      "operation": null,
+      "image": null,
+      "inputs": {
+        "Base Color": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ],
+        "Metallic": 0.0,
+        "Roughness": 0.6000000238418579,
+        "IOR": 1.5,
+        "Alpha": 1.0,
+        "Thin Wall": false,
+        "Normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Weight": 0.0,
+        "Diffuse Roughness": 0.0,
+        "Subsurface Weight": 0.0,
+        "Subsurface Radius": [
+          1.0,
+          0.20000000298023224,
+          0.10000000149011612
+        ],
+        "Subsurface Scale": 0.004999999888241291,
+        "Subsurface IOR": 1.399999976158142,
+        "Subsurface Anisotropy": 0.0,
+        "Specular IOR Level": 0.3199999928474426,
+        "Specular Tint": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Anisotropic": 0.0,
+        "Anisotropic Rotation": 0.0,
+        "Tangent": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Transmission Weight": 0.0,
+        "Coat Weight": 0.0,
+        "Coat Roughness": 0.029999999329447746,
+        "Coat IOR": 1.5,
+        "Coat Tint": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Coat Normal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Sheen Weight": 0.0,
+        "Sheen Roughness": 0.5,
+        "Sheen Tint": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Emission Color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Emission Strength": 0.0,
+        "Thin Film Thickness": 0.0,
+        "Thin Film IOR": 1.3300000429153442
+      },
+      "uvMap": null,
+      "interpolation": null
+    },
+    {
+      "name": "Texture Coordinate",
+      "type": "ShaderNodeTexCoord",
+      "operation": null,
+      "image": null,
+      "inputs": {},
+      "uvMap": null,
+      "interpolation": null
+    },
+    {
+      "name": "Image Texture",
+      "type": "ShaderNodeTexImage",
+      "operation": null,
+      "image": "Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+      "inputs": {
+        "Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "uvMap": null,
+      "interpolation": "Linear"
+    },
+    {
+      "name": "Image Texture.001",
+      "type": "ShaderNodeTexImage",
+      "operation": null,
+      "image": "Nib_v6_FurCards_Normal.png.001",
+      "inputs": {
+        "Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "uvMap": null,
+      "interpolation": "Linear"
+    },
+    {
+      "name": "Image Texture.002",
+      "type": "ShaderNodeTexImage",
+      "operation": null,
+      "image": "Nib_v6_FurCards_Roughness.png.001",
+      "inputs": {
+        "Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "uvMap": null,
+      "interpolation": "Linear"
+    },
+    {
+      "name": "Image Texture.003",
+      "type": "ShaderNodeTexImage",
+      "operation": null,
+      "image": "Nib_v6_FurCards_Metallic.png.001",
+      "inputs": {
+        "Vector": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "uvMap": null,
+      "interpolation": "Linear"
+    },
+    {
+      "name": "Normal Map",
+      "type": "ShaderNodeNormalMap",
+      "operation": null,
+      "image": null,
+      "inputs": {
+        "Strength": 1.0,
+        "Color": [
+          0.5,
+          0.5,
+          1.0,
+          1.0
+        ]
+      },
+      "uvMap": "",
+      "interpolation": null
+    },
+    {
+      "name": "Math",
+      "type": "ShaderNodeMath",
+      "operation": "GREATER_THAN",
+      "image": null,
+      "inputs": {
+        "Value": 0.5
+      },
+      "uvMap": null,
+      "interpolation": null
+    },
+    {
+      "name": "Transparent BSDF",
+      "type": "ShaderNodeBsdfTransparent",
+      "operation": null,
+      "image": null,
+      "inputs": {
+        "Color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Weight": 0.0
+      },
+      "uvMap": null,
+      "interpolation": null
+    },
+    {
+      "name": "Mix Shader",
+      "type": "ShaderNodeMixShader",
+      "operation": null,
+      "image": null,
+      "inputs": {
+        "Factor": 0.5
+      },
+      "uvMap": null,
+      "interpolation": null
+    }
+  ],
+  "links": [
+    {
+      "fromNode": "Texture Coordinate",
+      "fromSocket": "UV",
+      "toNode": "Image Texture",
+      "toSocket": "Vector"
+    },
+    {
+      "fromNode": "Texture Coordinate",
+      "fromSocket": "UV",
+      "toNode": "Image Texture.001",
+      "toSocket": "Vector"
+    },
+    {
+      "fromNode": "Texture Coordinate",
+      "fromSocket": "UV",
+      "toNode": "Image Texture.002",
+      "toSocket": "Vector"
+    },
+    {
+      "fromNode": "Texture Coordinate",
+      "fromSocket": "UV",
+      "toNode": "Image Texture.003",
+      "toSocket": "Vector"
+    },
+    {
+      "fromNode": "Image Texture",
+      "fromSocket": "Color",
+      "toNode": "Principled BSDF",
+      "toSocket": "Base Color"
+    },
+    {
+      "fromNode": "Image Texture.002",
+      "fromSocket": "Color",
+      "toNode": "Principled BSDF",
+      "toSocket": "Roughness"
+    },
+    {
+      "fromNode": "Image Texture.003",
+      "fromSocket": "Color",
+      "toNode": "Principled BSDF",
+      "toSocket": "Metallic"
+    },
+    {
+      "fromNode": "Image Texture.001",
+      "fromSocket": "Color",
+      "toNode": "Normal Map",
+      "toSocket": "Color"
+    },
+    {
+      "fromNode": "Normal Map",
+      "fromSocket": "Normal",
+      "toNode": "Principled BSDF",
+      "toSocket": "Normal"
+    },
+    {
+      "fromNode": "Image Texture",
+      "fromSocket": "Alpha",
+      "toNode": "Math",
+      "toSocket": "Value"
+    },
+    {
+      "fromNode": "Math",
+      "fromSocket": "Value",
+      "toNode": "Mix Shader",
+      "toSocket": "Factor"
+    },
+    {
+      "fromNode": "Transparent BSDF",
+      "fromSocket": "BSDF",
+      "toNode": "Mix Shader",
+      "toSocket": "Shader"
+    },
+    {
+      "fromNode": "Principled BSDF",
+      "fromSocket": "BSDF",
+      "toNode": "Mix Shader",
+      "toSocket": "Shader"
+    },
+    {
+      "fromNode": "Mix Shader",
+      "fromSocket": "Shader",
+      "toNode": "Material Output",
+      "toSocket": "Surface"
+    }
+  ],
+  "originalCycles": {
+    "samples": 20,
+    "use_denoising": true,
+    "max_bounces": 12,
+    "transparent_max_bounces": 16,
+    "pixel_filter_type": "BLACKMAN_HARRIS",
+    "filter_width": 1.5
+  },
+  "sourceUnchanged": true,
+  "artisticAcceptance": false
+}

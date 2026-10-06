@@ -1,0 +1,73 @@
+{
+  "status": "Actual read-only source-card diagnostic; working transparency and exposed-root failure attributed",
+  "sourceSha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+  "sourceChanged": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "nativeExitCode": 0,
+  "guardExitCode": 0,
+  "processId": 9096,
+  "memory": {
+    "peakPrivateMB": 1542.0,
+    "minimumAvailableMB": 10075.0,
+    "maximumCommitPercent": 58.0
+  },
+  "actualViewInspection": {
+    "matched24.png": "Single card shows discrete fibers with transparent gaps and staggered upper tips; bottom root has a hard straight cutoff. Twelve actual neighbors combine into broad overlapping ribbons and expose multiple stepped roots.",
+    "raw24.png": "Removing denoising adds sample noise but retains the same root contour.",
+    "raw24_bounces32.png": "Doubling transparent bounce depth retains the exposed root contour; no missing-alpha correction occurs."
+  },
+  "attribution": {
+    "uv": "One actual active-render UVMap with expected tile-zero padded bounds; assigned straight-alpha image has sparse coverage and transparent gaps in actual rendering.",
+    "selectedUvCoverageAbove045": 0.20167057268193017,
+    "rootRowsCoverageAbove045": 0.22868217054263565,
+    "tipRowsCoverageAbove045": 0.001937984496124031,
+    "orientation": "Diagnostic local up is actual tip minus actual root. The hard lower edges are roots; working upper tips must be preserved.",
+    "supersededHypothesis": "Terminal-width hypothesis does not explain these measured exposed edges; root attenuation and attachment/flow are the next bounded repair.",
+    "samplingLimit": "Median ear lock nominal width7.8mm projects at most about16px in full Neutral camera, before orientation;78 atlas fibers are substantially unresolved there. This may amplify ribbons but is not a UV fault.",
+    "limitations": "This test samples one real ear-lock card and its11 closest neighbors, not every groom component or engine shading. The node-input dictionary keys duplicate Value/Shader socket labels, so it records graph connectivity but does not independently preserve the numeric threshold socket; .45 coverage metrics use the agreed contract."
+  },
+  "nextChange": "Preserve existing tip alpha; attenuate and hide wide root foundations, improve layered flow without wholesale density increase; retain fuller undercoat and tawny border.",
+  "artifacts": {
+    "audit-before-render.json": {
+      "sha256": "b400088a47b8a5c238aae35dfe5d33d0a6fb9a0d7448c3fce247cdf723c4e346",
+      "bytes": 10018
+    },
+    "audit.json": {
+      "sha256": "1f12ff720afd6c6a14674c3f14dcef9225b90c30eef2259550e5aea2b87c5362",
+      "bytes": 11092
+    },
+    "matched24.png": {
+      "sha256": "f91abe5eb6acd5d1fc61cb671574fd424b887cadd2b4af787779ec3c6882c79f",
+      "bytes": 1089292
+    },
+    "raw24.png": {
+      "sha256": "002a686f08aa62f0dfc1bb071428e81220d706a72088765b0f526f0c2c28ccf0",
+      "bytes": 1124995
+    },
+    "raw24_bounces32.png": {
+      "sha256": "621cafc9aa15d2f3d5c44818bc89a30f86b3ab25aeea9d5e3f8df5523b39a371",
+      "bytes": 1124995
+    },
+    "executed-recipe/audit-layered-tuft-v1.job.json": {
+      "sha256": "cb1de1a1ac594296025fe361cc44139e25e3d900b65660c1a4e53caa35aefb33",
+      "bytes": 1124
+    },
+    "executed-recipe/audit_tuft_material.py": {
+      "sha256": "f73b0471e3a7eff214d1c8a93b0a3484dd47d33a6e6badbbc574a5990586974b",
+      "bytes": 10918
+    },
+    "logs/nib-layered-groom-v1-tuft-audit-memory.csv": {
+      "sha256": "a651bd42b7dcc08500ad3fade943a40ad9d63449db40f5992f31c41d25c60d59",
+      "bytes": 711
+    },
+    "logs/nib-layered-groom-v1-tuft-audit.log": {
+      "sha256": "930189017c4f2d4ef7ecc374b6d2fb3e4ca3da4b7d53b1ed6522f7e9c8b89ebd",
+      "bytes": 803
+    },
+    "logs/nib-layered-groom-v1-tuft-audit.stderr.log": {
+      "sha256": "3010faf266ee715407f5309cc5067230f6befc8da30bb2d873e59ff4e4d451b5",
+      "bytes": 480
+    }
+  }
+}
