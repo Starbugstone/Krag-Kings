@@ -1,0 +1,23 @@
+{
+  "name": "krag-continuous-profile-v9u-ClosedRight",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\oral_volume_wip\\review_continuous_profile_v9u.py",
+    "--",
+    "--view",
+    "ClosedRight"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-continuous-profile-v9u-ClosedRight.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-continuous-profile-v9u-ClosedRight.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-continuous-profile-v9u-ClosedRight.stdout.log",
+  "successMarker": "KRAG_NORMAL_MOUTH_REVIEW_COMPLETE ClosedRight"
+}

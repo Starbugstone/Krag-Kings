@@ -1,0 +1,51 @@
+{
+  "status": "Prepared only; native source and matched neutral/open views required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "inputSource": "benchmark/art/krag/Krag_MandibularTissue_v9ta_WIP.blend",
+  "inputSourceSha256": "5a06f5890097ce0f3fa3afe3f62a686df73428d775a30d6602bc9d3a800d56e9",
+  "scope": "One continuous anterior profile from actual sagittal mesh sections. Preserve all weights, compact canines, true lip rim, facial relative deltas/full range, rig/actions and unrelated payloads.",
+  "firstNativeBoundary": [
+    "source",
+    "ClosedRight",
+    "OpenRight"
+  ],
+  "pins": [
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/continuous_profile_v9u.py",
+      "sha256": "ca3987ef0d160cc6081c9b24ed0af9a2f987714eb3e6a43c9e0c54e8f3f54c79"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/build_continuous_profile_v9u.py",
+      "sha256": "bd132d48935e6df19acd45a68a53a4868330e60ab0001f08aece36d5b617a61f"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/review_continuous_profile_v9u.py",
+      "sha256": "3140a65f3d12967ff5bac9b968e89ae8e6b30846ecf88c7af0f3b7415663138f"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/preflight_continuous_profile_v9u.py",
+      "sha256": "0ab6ce468caf7209430aca4b4350fe617c0404af5b73744a610cd9ca20a43724"
+    },
+    {
+      "path": "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py",
+      "sha256": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824"
+    },
+    {
+      "path": "benchmark/tools/krag/ironjaw_wip/replacement_surface.py",
+      "sha256": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695"
+    },
+    {
+      "path": "benchmark/tools/krag/landmark_wip/landmark_relief.py",
+      "sha256": "2019d77d6a437d00209a4bfe3acf8479d36063fbeec366b39a1246dbc964427d"
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9nb.py",
+      "sha256": "d0121572eb6831c5367feeca7ee92904e3503626ec9342d16d27e2312892c416"
+    },
+    {
+      "path": "benchmark/tools/animation/krag_hand_rebuild/morph_drivers.py",
+      "sha256": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+    }
+  ]
+}
