@@ -1,6 +1,6 @@
 {
-  "source": "../../../art/nib/Nib_Runtime_Optimized_v4b_MorphRepair.blend",
-  "sourceSha256": "db83f3d82861164a8be7bf61e08f1ee842c03564db7946c18651444cf8a07c66",
+  "source": "../../../art/nib/runtime-derivatives/coherent-neck-e1cdbd/Nib_Runtime_PBR.blend",
+  "sourceSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
   "referenceImages": [
     "krag-kings-design/concept-art/02-nib-character-sheet.png",
     "krag-kings-design/concept-art/05-jetpack-bionics-sheet.png"
@@ -12,7 +12,7 @@
   "fbxUp": "Y",
   "normalConvention": "OpenGL +Y",
   "boneRollAlignment": "local Z aligned toward world -Y",
-  "heightMeters": 1.394070416688919,
+  "heightMeters": 1.3906088173389435,
   "bones": [
     "Root",
     "Pelvis",
@@ -41,10 +41,13 @@
     "Cheek_R",
     "MouthCorner_R",
     "Ear_L",
+    "EarTip_L",
     "Ear_R",
+    "EarTip_R",
     "Clavicle_L",
     "UpperArm_L",
     "LowerArm_L",
+    "ForearmTwist_L",
     "Hand_L",
     "Index1_L",
     "Index2_L",
@@ -63,6 +66,7 @@
     "Clavicle_R",
     "UpperArm_R",
     "LowerArm_R",
+    "ForearmTwist_R",
     "Hand_R",
     "Index1_R",
     "Index2_R",
@@ -114,20 +118,6 @@
       "metallic": "textures/Nib_Dark_Metallic.png"
     },
     {
-      "name": "Nib_EarInner",
-      "baseColor": "textures/Nib_EarInner_BaseColor.png",
-      "normal": "textures/Nib_EarInner_Normal.png",
-      "roughness": "textures/Nib_EarInner_Roughness.png",
-      "metallic": "textures/Nib_EarInner_Metallic.png"
-    },
-    {
-      "name": "Nib_Eye",
-      "baseColor": "textures/Nib_Eye_BaseColor.png",
-      "normal": "textures/Nib_Eye_Normal.png",
-      "roughness": "textures/Nib_Eye_Roughness.png",
-      "metallic": "textures/Nib_Eye_Metallic.png"
-    },
-    {
       "name": "Nib_Gum",
       "baseColor": "textures/Nib_Gum_BaseColor.png",
       "normal": "textures/Nib_Gum_Normal.png",
@@ -140,6 +130,27 @@
       "normal": "textures/Nib_Hair_Normal.png",
       "roughness": "textures/Nib_Hair_Roughness.png",
       "metallic": "textures/Nib_Hair_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularGlobe",
+      "baseColor": "textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularGlobe_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularGlobe_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularGlobe_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularIris_L",
+      "baseColor": "textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_L_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_L_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_L_Metallic.png"
+    },
+    {
+      "name": "Nib_IdentityOcularIris_R",
+      "baseColor": "textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_R_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_R_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_R_Metallic.png"
     },
     {
       "name": "Nib_Leather",
@@ -161,13 +172,6 @@
       "normal": "textures/Nib_MouthInterior_Normal.png",
       "roughness": "textures/Nib_MouthInterior_Roughness.png",
       "metallic": "textures/Nib_MouthInterior_Metallic.png"
-    },
-    {
-      "name": "Nib_Muzzle",
-      "baseColor": "textures/Nib_Muzzle_BaseColor.png",
-      "normal": "textures/Nib_Muzzle_Normal.png",
-      "roughness": "textures/Nib_Muzzle_Roughness.png",
-      "metallic": "textures/Nib_Muzzle_Metallic.png"
     },
     {
       "name": "Nib_Skin",
@@ -217,6 +221,87 @@
       "normal": "textures/Nib_Workwear_Normal.png",
       "roughness": "textures/Nib_Workwear_Roughness.png",
       "metallic": "textures/Nib_Workwear_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_DustyPinkEar",
+      "baseColor": "textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "normal": "textures/Nib_v5_DustyPinkEar_Normal.png",
+      "roughness": "textures/Nib_v5_DustyPinkEar_Roughness.png",
+      "metallic": "textures/Nib_v5_DustyPinkEar_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_FacialSkinAtlas",
+      "baseColor": "textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "normal": "textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "roughness": "textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+      "metallic": "textures/Nib_v5_FacialSkinAtlas_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_HeadFur",
+      "baseColor": "textures/Nib_v5_HeadFur_BaseColor.png",
+      "normal": "textures/Nib_v5_HeadFur_Normal.png",
+      "roughness": "textures/Nib_v5_HeadFur_Roughness.png",
+      "metallic": "textures/Nib_v5_HeadFur_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_InnerEarWisps",
+      "baseColor": "textures/Nib_v5_InnerEarWisps_BaseColor.png",
+      "normal": "textures/Nib_v5_InnerEarWisps_Normal.png",
+      "roughness": "textures/Nib_v5_InnerEarWisps_Roughness.png",
+      "metallic": "textures/Nib_v5_InnerEarWisps_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_TawnyEarFur",
+      "baseColor": "textures/Nib_v5_TawnyEarFur_BaseColor.png",
+      "normal": "textures/Nib_v5_TawnyEarFur_Normal.png",
+      "roughness": "textures/Nib_v5_TawnyEarFur_Roughness.png",
+      "metallic": "textures/Nib_v5_TawnyEarFur_Metallic.png"
+    },
+    {
+      "name": "Nib_v5_TawnyEarUndercoat",
+      "baseColor": "textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "normal": "textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "roughness": "textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+      "metallic": "textures/Nib_v5_TawnyEarUndercoat_Metallic.png"
+    },
+    {
+      "name": "Nib_v6_HeadFurCards",
+      "baseColor": "textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y"
+    },
+    {
+      "name": "Nib_v6_InnerEarWispsCards",
+      "baseColor": "textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y"
+    },
+    {
+      "name": "Nib_v6_TawnyEarFurCards",
+      "baseColor": "textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y"
     }
   ],
   "variants": [
@@ -227,20 +312,24 @@
       "species": "Nib",
       "sourceRestBoundsMeters": {
         "min": [
-          -0.3121805191040039,
-          -0.09749999642372131,
+          -0.31453925371170044,
+          -0.11053996533155441,
           0.0004999972879886627
         ],
         "max": [
-          0.31204214692115784,
-          0.10431849211454391,
-          1.3945704139769077
+          0.3166258931159973,
+          0.09445063769817352,
+          1.3911088146269321
         ]
       },
       "fur": {
-        "representation": "skinned opaque strands; no simulation",
-        "strands": 10784,
-        "triangles": 112536
+        "representation": "skinned masked cards with opaque fiber accents",
+        "simulation": false,
+        "cards": 5982,
+        "strands": 10960,
+        "triangles": 200582,
+        "cardTriangles": 39206,
+        "strandTriangles": 161376
       },
       "deformation": {
         "schemaVersion": 1,
@@ -531,12 +620,12 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 538642,
-      "vertices": 304261,
+      "triangles": 750292,
+      "vertices": 440575,
       "preTriangulated": true,
       "skinnedMeshCount": 1,
-      "materialSlots": 18,
-      "weightedVertices": 304261,
+      "materialSlots": 27,
+      "weightedVertices": 440575,
       "maxInfluences": 4,
       "bionics": []
     },
@@ -547,20 +636,24 @@
       "species": "Nib",
       "sourceRestBoundsMeters": {
         "min": [
-          -0.3121805191040039,
-          -0.09749999642372131,
+          -0.31453925371170044,
+          -0.11053996533155441,
           0.0004999972879886627
         ],
         "max": [
-          0.31204214692115784,
-          0.10431849211454391,
-          1.3945704139769077
+          0.3166258931159973,
+          0.09445063769817352,
+          1.3911088146269321
         ]
       },
       "fur": {
-        "representation": "skinned opaque strands; no simulation",
-        "strands": 10784,
-        "triangles": 112566
+        "representation": "skinned masked cards with opaque fiber accents",
+        "simulation": false,
+        "cards": 5982,
+        "strands": 10653,
+        "triangles": 198740,
+        "cardTriangles": 39206,
+        "strandTriangles": 159534
       },
       "deformation": {
         "schemaVersion": 1,
@@ -851,12 +944,12 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 532244,
-      "vertices": 301078,
+      "triangles": 702894,
+      "vertices": 416009,
       "preTriangulated": true,
       "skinnedMeshCount": 1,
-      "materialSlots": 18,
-      "weightedVertices": 301078,
+      "materialSlots": 27,
+      "weightedVertices": 416009,
       "maxInfluences": 4,
       "bionics": [
         {
@@ -873,20 +966,24 @@
       "species": "Nib",
       "sourceRestBoundsMeters": {
         "min": [
-          -0.3121805191040039,
-          -0.09800002723932266,
+          -0.31453925371170044,
+          -0.11053996533155441,
           0.0004999972879886627
         ],
         "max": [
-          0.31204214692115784,
-          0.10431849211454391,
-          1.3945704139769077
+          0.3166258931159973,
+          0.09445063769817352,
+          1.3911088146269321
         ]
       },
       "fur": {
-        "representation": "skinned opaque strands; no simulation",
-        "strands": 10784,
-        "triangles": 112536
+        "representation": "skinned masked cards with opaque fiber accents",
+        "simulation": false,
+        "cards": 5982,
+        "strands": 10960,
+        "triangles": 200582,
+        "cardTriangles": 39206,
+        "strandTriangles": 161376
       },
       "deformation": {
         "schemaVersion": 1,
@@ -1177,12 +1274,12 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 533534,
-      "vertices": 301669,
+      "triangles": 745184,
+      "vertices": 437983,
       "preTriangulated": true,
       "skinnedMeshCount": 1,
-      "materialSlots": 18,
-      "weightedVertices": 301669,
+      "materialSlots": 27,
+      "weightedVertices": 437983,
       "maxInfluences": 4,
       "bionics": [
         {
@@ -1211,7 +1308,7 @@
     {
       "name": "Idle",
       "startFrame": 1,
-      "endFrame": 91,
+      "endFrame": 181,
       "fps": 30,
       "fbx": "animations/Idle.fbx"
     },
@@ -1498,32 +1595,95 @@
     "mouthAnatomyStatus": "provisional; expression-sheet review required",
     "coordinateConvention": "All drivers use magnitude of local transform delta from bind. Translation values are meters; angles are degrees. Never interpret raw imported Euler axes."
   },
+  "adaptedTopologyProvenance": {
+    "referenceLibrarySha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "referenceLicense": "CC0 per Blender Studio bundle README; retained in original reference directory.",
+    "borrowedTopology": "GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept."
+  },
   "locomotion": {
     "Walk": {
-      "speedMetersPerSecond": 0.9,
+      "durationSeconds": 0.8,
       "cycleSeconds": 0.8,
+      "speedMetersPerSecond": 0.8796227746834336,
       "leftContacts": [
-        0
+        0.065
       ],
       "rightContacts": [
-        0.5
+        0.5650000000000001
       ],
-      "stanceFraction": 0.62,
-      "strideDuringStanceMeters": 0.4464,
-      "contactCharacter": "quiet cautious forefoot placement"
+      "stanceFraction": 0.49,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
     },
     "Run": {
-      "speedMetersPerSecond": 2.7,
+      "durationSeconds": 0.6,
       "cycleSeconds": 0.6,
+      "speedMetersPerSecond": 2.5299862911031474,
       "leftContacts": [
-        0
+        0.62
       ],
       "rightContacts": [
-        0.5
+        0.12000000000000002
       ],
-      "stanceFraction": 0.32,
-      "strideDuringStanceMeters": 0.5184,
-      "contactCharacter": "brief light nimble contact"
+      "stanceFraction": 0.15999999999999998,
+      "leftFootBone": "Foot_L",
+      "rightFootBone": "Foot_R",
+      "rootMotion": false,
+      "contactDefinition": "Fully grounded core of authored support envelope; eased margins remain in source motion",
+      "status": "Source contact proposal; imported slope/contact/audio validation pending"
+    }
+  },
+  "sourceAnimationContract": {
+    "runtimeActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "excludedStudyActions": [
+      "PRESERVED pre-anatomical-hand FacePerformance",
+      "PRESERVED pre-anatomical-hand Hit",
+      "PRESERVED pre-anatomical-hand Idle",
+      "PRESERVED pre-anatomical-hand Melee",
+      "PRESERVED pre-anatomical-hand Run",
+      "PRESERVED pre-anatomical-hand Shoot",
+      "PRESERVED pre-anatomical-hand Walk",
+      "PRESERVED pre-motion integration FacePerformance",
+      "PRESERVED pre-motion integration Hit",
+      "PRESERVED pre-motion integration Idle",
+      "PRESERVED pre-motion integration Melee",
+      "PRESERVED pre-motion integration Run",
+      "PRESERVED pre-motion integration Shoot",
+      "PRESERVED pre-motion integration Walk",
+      "Preserved_Idle_BeforeHumanMotion",
+      "Preserved_Run_BeforeHumanMotion",
+      "Preserved_Walk_BeforeHumanMotion"
+    ],
+    "sourceMotionGeneration": "v7",
+    "sourceMasterModified": false,
+    "neutralTracksForMissingComponents": {
+      "Idle": [],
+      "Walk": [],
+      "Run": [],
+      "Melee": [],
+      "Shoot": [],
+      "Hit": [],
+      "FacePerformance": []
+    },
+    "actionDurationsSeconds": {
+      "Idle": 6.0,
+      "Walk": 0.8,
+      "Run": 0.6,
+      "Melee": 1.0666666666666667,
+      "Shoot": 1.0,
+      "Hit": 0.9333333333333333,
+      "FacePerformance": 5.0
     }
   },
   "facialPerformance": {
@@ -1546,22 +1706,27 @@
       "authoredInBodyClip": true
     }
   },
-  "detailedMasterSha256": "c4fc3bce0413ab65a9a96e1d70451abbc8179c63a79b2a859c2ab1e11c1185eb",
-  "runtimeReductionReport": "../../../art/nib/v5-study/runtime-morph-repair-source-v4b.json",
+  "authoredSourceReport": "../../../art/nib/runtime-derivatives/coherent-neck-e1cdbd/pbr-bake-report.json",
+  "authoredInputSourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
   "fur": {
-    "representation": "skinned opaque strands; no simulation",
-    "strands": 10784,
-    "triangles": 112536,
+    "representation": "skinned masked cards with opaque fiber accents",
+    "simulation": false,
+    "cards": 5982,
+    "strands": 10960,
+    "triangles": 200582,
+    "cardTriangles": 39206,
+    "strandTriangles": 161376,
     "cinematic": false,
-    "scope": "Batched strand meshes; legacy fine edge/brow/chin tubes are additional geometry in total counts."
+    "scope": "Tagged card and strand batches; untagged legacy fine edge/brow/chin tubes are additional geometry in total counts."
   },
   "mouthAnatomyStatus": "Provisional interior and expressions for review; dark-blue tongue canonical.",
   "geometryExport": {
     "triangulated": true,
-    "method": "Disposable assembly triangulation; validated baseline vertex-domain normal layer preserved, corrected target morphs retained unless explicitly requested otherwise",
+    "method": "Disposable assembly triangulation with original-corner provenance; exact mapped source normals preserved including hard edges, corrected target morphs retained unless explicitly requested otherwise",
     "sourceVertexOrderUnchanged": true,
     "mappedNormalMaxVectorError": 0,
-    "pointAndMorphPayloadsByteIdentical": false
+    "pointAndMorphPayloadsByteIdentical": false,
+    "referenceDirectory": "../../../unreal/evidence/nib-coherent79-corners-v2/reference"
   },
   "shapeUnion": {
     "creation": "from_mix=False",
@@ -1569,10 +1734,18 @@
     "copiedWeightsZeroedBeforeCreation": true,
     "bodyCorrectivesOnFacialVerticesChecked": true
   },
+  "groomTextureHashes": {
+    "textures/Nib_v6_HeadFurCards_BaseColor.png": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+    "textures/Nib_v6_FurCards_Normal.png": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+    "textures/Nib_v6_FurCards_Roughness.png": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+    "textures/Nib_v6_FurCards_Metallic.png": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+    "textures/Nib_v6_InnerEarWispsCards_BaseColor.png": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+    "textures/Nib_v6_TawnyEarFurCards_BaseColor.png": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e"
+  },
   "shapeUnionValidation": [
     {
       "variant": "Natural",
-      "facialVertices": 31365,
+      "facialVertices": 48274,
       "maxFacialDeltaPerBodyTargetMeters": {
         "Corrective_ElbowFlex_L": 0.0,
         "Corrective_ElbowFlex_R": 0.0,
@@ -1586,7 +1759,7 @@
     },
     {
       "variant": "GripReplacement",
-      "facialVertices": 31365,
+      "facialVertices": 48274,
       "maxFacialDeltaPerBodyTargetMeters": {
         "Corrective_ElbowFlex_L": 0.0,
         "Corrective_ElbowFlex_R": 0.0,
@@ -1600,7 +1773,7 @@
     },
     {
       "variant": "LegReplacement",
-      "facialVertices": 31365,
+      "facialVertices": 48274,
       "maxFacialDeltaPerBodyTargetMeters": {
         "Corrective_ElbowFlex_L": 0.0,
         "Corrective_ElbowFlex_R": 0.0,
@@ -1613,45 +1786,125 @@
       }
     }
   ],
+  "cornerTriangulation": [
+    {
+      "variant": "Natural",
+      "map": "Nib_Natural.corners.npz",
+      "sourcePolygons": 392664,
+      "sourceCorners": 1535620,
+      "triangles": 750292,
+      "targetCorners": 2250876,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true,
+      "basisCoordinatesByteIdentical": true,
+      "shapeCoordinatesRestored": 26,
+      "authoredCornerNormalsRetained": true
+    },
+    {
+      "variant": "GripReplacement",
+      "map": "Nib_GripReplacement.corners.npz",
+      "sourcePolygons": 369029,
+      "sourceCorners": 1440952,
+      "triangles": 702894,
+      "targetCorners": 2108682,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true,
+      "basisCoordinatesByteIdentical": true,
+      "shapeCoordinatesRestored": 26,
+      "authoredCornerNormalsRetained": true
+    },
+    {
+      "variant": "LegReplacement",
+      "map": "Nib_LegReplacement.corners.npz",
+      "sourcePolygons": 388270,
+      "sourceCorners": 1521724,
+      "triangles": 745184,
+      "targetCorners": 2235552,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true,
+      "basisCoordinatesByteIdentical": true,
+      "shapeCoordinatesRestored": 26,
+      "authoredCornerNormalsRetained": true
+    }
+  ],
   "pointPayloadPreservation": [
     {
-      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
-      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair\\Nib_Natural.fbx",
-      "sourceSha256": "3e912b71e5ee1a908bb89bf0fe3b5b0faa3977ca08a3c396a5eea46e4a9d7898",
-      "beforeSha256": "39feef3fa81c2b5e658a67189058bbb746993caf3e5765cf0f84ff9ffa786ce9",
-      "afterSha256": "39f3829f66fd5b186af1c92404e44111abf76b0054b03594f30268983ddf47c9",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-e1cdbd-v1\\reference\\Nib_Natural.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-corners-v2\\triangulated\\Nib_Natural.fbx",
+      "sourceSha256": "51901cd29114c68cac2f6c82d61dae4762fd1407c8cb10c59c87d0ca5b22b177",
+      "beforeSha256": "fc2ccfd10094f443557c755dba8d95ca2ce972e544f489bf7a3231bfce934efe",
+      "afterSha256": "00f18ff89f92c726a3090dc4b6b2e5d8ac7015e31746a7bdeec9b0551dea2363",
       "pointCoordinatesByteIdentical": true,
-      "restoredSourcePointNormalLayer": true,
-      "sourceNormalMapping": "ByVertice",
-      "sourceNormalVertexCollapseMaxError": 0.0,
+      "restoredSourcePointNormalLayer": false,
+      "restoredSourceCornerNormals": true,
+      "cornerProvenance": {
+        "sourcePolygons": 392664,
+        "sourceCorners": 1535620,
+        "triangles": 750292,
+        "targetCorners": 2250876,
+        "sameSourcePolygon": true,
+        "orientedBoundaryUnchanged": true,
+        "allSourceCornersRetained": true,
+        "vertexIdentityUnchanged": true
+      },
+      "sourceNormalMapping": "ByPolygonVertex",
+      "sourceNormalVertexCollapseMaxError": null,
       "restoredSparseMorphPayloads": 0,
       "targetMorphPayloadsPreserved": true,
       "allOtherSerializedPropertiesVerifiedUnchanged": true
     },
     {
-      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_GripReplacement.fbx",
-      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair\\Nib_GripReplacement.fbx",
-      "sourceSha256": "4b35892fcaec9456a9ff6f6f1209febcffae66ac4e05c3609017f810dace6ce8",
-      "beforeSha256": "65e3ecc7d29aea2e44a31b6e81be85d3176e91e117c73b2f99ee13ca65be5339",
-      "afterSha256": "c4c8d4282a2d9c7b7b9d75698ef9cf3aece91fc4cf95ee1d44418d1ec7cf55e7",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-e1cdbd-v1\\reference\\Nib_GripReplacement.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-corners-v2\\triangulated\\Nib_GripReplacement.fbx",
+      "sourceSha256": "d53d604cb7e2944895d3bbbf56a057ef5e323dd5912851d79579ccde048b3033",
+      "beforeSha256": "dd1fedb30d62e3bc48382100bb35faa00e76e981c2d24f4ff2af1b480ef2450e",
+      "afterSha256": "4194a6956d3ea489a50ad86010f7de91d1e33abae5c012f49ba42c68d67a662d",
       "pointCoordinatesByteIdentical": true,
-      "restoredSourcePointNormalLayer": true,
-      "sourceNormalMapping": "ByVertice",
-      "sourceNormalVertexCollapseMaxError": 0.0,
+      "restoredSourcePointNormalLayer": false,
+      "restoredSourceCornerNormals": true,
+      "cornerProvenance": {
+        "sourcePolygons": 369029,
+        "sourceCorners": 1440952,
+        "triangles": 702894,
+        "targetCorners": 2108682,
+        "sameSourcePolygon": true,
+        "orientedBoundaryUnchanged": true,
+        "allSourceCornersRetained": true,
+        "vertexIdentityUnchanged": true
+      },
+      "sourceNormalMapping": "ByPolygonVertex",
+      "sourceNormalVertexCollapseMaxError": null,
       "restoredSparseMorphPayloads": 0,
       "targetMorphPayloadsPreserved": true,
       "allOtherSerializedPropertiesVerifiedUnchanged": true
     },
     {
-      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_LegReplacement.fbx",
-      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-morph-repair\\Nib_LegReplacement.fbx",
-      "sourceSha256": "fd1716cad09d15dbb52bec187512e793820963941465dcb7478acc8cc3f133f7",
-      "beforeSha256": "6b216e6f082fa79e82422934abe0f0df71160fd74cea3fef5ce54cab09599823",
-      "afterSha256": "87a6f07060621091ecd6b57b60286a68f7657be912474bb0ca3f8929fa91a8f0",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-e1cdbd-v1\\reference\\Nib_LegReplacement.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-corners-v2\\triangulated\\Nib_LegReplacement.fbx",
+      "sourceSha256": "f737c2ffae4dda7b9bf6679a4a7e5f7086917bc7b7c585c30d523e3c4eedca99",
+      "beforeSha256": "3cb9e1e8073fe17cec1d866fe60864ff067ef207c1d9a1433c92fc130fe88513",
+      "afterSha256": "ab12fe9b4064bc891890bba16e96128b43550a01f6ba51606fe46face03831ac",
       "pointCoordinatesByteIdentical": true,
-      "restoredSourcePointNormalLayer": true,
-      "sourceNormalMapping": "ByVertice",
-      "sourceNormalVertexCollapseMaxError": 0.0,
+      "restoredSourcePointNormalLayer": false,
+      "restoredSourceCornerNormals": true,
+      "cornerProvenance": {
+        "sourcePolygons": 388270,
+        "sourceCorners": 1521724,
+        "triangles": 745184,
+        "targetCorners": 2235552,
+        "sameSourcePolygon": true,
+        "orientedBoundaryUnchanged": true,
+        "allSourceCornersRetained": true,
+        "vertexIdentityUnchanged": true
+      },
+      "sourceNormalMapping": "ByPolygonVertex",
+      "sourceNormalVertexCollapseMaxError": null,
       "restoredSparseMorphPayloads": 0,
       "targetMorphPayloadsPreserved": true,
       "allOtherSerializedPropertiesVerifiedUnchanged": true

@@ -203,6 +203,8 @@ def compare(source, target, expected_changed_morphs=None):
         expected_normals=vertex_normals[target_indices]
     target_normals = mapped(child(a,'LayerElementNormal'),'Normals','NormalsIndex',3,target_indices)
     normal_error = np.linalg.norm(target_normals-expected_normals,axis=1)
+    if provenance is not None and not np.array_equal(expected_normals,target_normals):
+        raise AssertionError('Mapped source corner-normal payload is not byte-identical')
     normal_max = float(normal_error.max())
     if normal_max > .0002:
         worst=np.argsort(normal_error)[-12:]

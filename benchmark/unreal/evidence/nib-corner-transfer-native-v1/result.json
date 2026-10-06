@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "blender": "5.2.0 LTS",
+  "fixture": "Two quads sharing a hard edge with distinct UV/material corners and one nonzero morph",
+  "nativeTriangulation": {
+    "sourcePolygons": 2,
+    "sourceCorners": 8,
+    "triangles": 4,
+    "targetCorners": 12,
+    "sameSourcePolygon": true,
+    "orientedBoundaryUnchanged": true,
+    "allSourceCornersRetained": true,
+    "vertexIdentityUnchanged": true,
+    "basisCoordinatesByteIdentical": true,
+    "shapeCoordinatesRestored": 2,
+    "authoredCornerNormalsRetained": true
+  },
+  "rawPreservation": {
+    "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-corner-transfer-fixture-v1\\source.fbx",
+    "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-corner-transfer-fixture-v1\\target.fbx",
+    "sourceSha256": "ca8d1ae60ba146367595b2cebee08dfe62e8d580ca89e3925759c6ce0eae3ed7",
+    "beforeSha256": "b694086804d298f0c6dcda2ffa4819ba187ac84360cac78cc57c5d4fa62eb0d4",
+    "afterSha256": "aa362e02bbed2a216e1eac080cf5b36c7dad6226dd39b873464630449960312e",
+    "pointCoordinatesByteIdentical": true,
+    "restoredSourcePointNormalLayer": false,
+    "restoredSourceCornerNormals": true,
+    "cornerProvenance": {
+      "sourcePolygons": 2,
+      "sourceCorners": 8,
+      "triangles": 4,
+      "targetCorners": 12,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true
+    },
+    "sourceNormalMapping": "ByPolygonVertex",
+    "sourceNormalVertexCollapseMaxError": null,
+    "restoredSparseMorphPayloads": 0,
+    "targetMorphPayloadsPreserved": true,
+    "allOtherSerializedPropertiesVerifiedUnchanged": true
+  },
+  "independentRawComparison": {
+    "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-corner-transfer-fixture-v1\\source.fbx",
+    "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-corner-transfer-fixture-v1\\target.fbx",
+    "passed": true,
+    "vertices": 6,
+    "triangles": 4,
+    "allPolygonsTriangular": true,
+    "pointPayloadSha256": "503e53e3a3489c378c428ff4b31b7fba8ef1f51043a5bb0d3dd6e2597d13a452",
+    "pointAndMorphPayloadsByteIdentical": true,
+    "shapeTargets": [
+      {
+        "name": "KnownDelta",
+        "indicesSha256": "baed642339816affb3fe8719792d0e4ce82f12db72b7373d244eaa65445800fe",
+        "deltaSha256": "2c5f9230a0b8b44bcd3fdbc51742b62ecbd07df1f4a9ed987c71fa1cf6c59cb1",
+        "candidateIndicesSha256": "baed642339816affb3fe8719792d0e4ce82f12db72b7373d244eaa65445800fe",
+        "candidateDeltaSha256": "2c5f9230a0b8b44bcd3fdbc51742b62ecbd07df1f4a9ed987c71fa1cf6c59cb1",
+        "payloadByteIdentical": true,
+        "denseDeltaMaxErrorMeters": 0.0,
+        "denseDeltaRmsErrorMeters": 0.0,
+        "expectedCorrection": false,
+        "toleranceMeters": 1e-06
+      }
+    ],
+    "mappedUvMaterialCornerSetEqual": true,
+    "uniqueVertexUvCorners": 8,
+    "uvQuantization": 1e-07,
+    "mappedNormalMaxVectorError": 0.0,
+    "cornerProvenance": {
+      "sourcePolygons": 2,
+      "sourceCorners": 8,
+      "triangles": 4,
+      "targetCorners": 12,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true
+    },
+    "mappedNormalPayloadByteIdentical": true,
+    "mappedNormalP99VectorError": 0.0,
+    "normalTolerance": 0.0002
+  },
+  "fullCharacterExportVerified": false,
+  "recipeSetSha256": "34d1e0f38469df63d13656ae2f125a828a6b91cd4898f6dfbc7de874fe0ae076"
+}

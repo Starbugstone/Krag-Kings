@@ -1,0 +1,2178 @@
+{
+  "status": "PBR derivative requires actual matched render and both-engine verification; no art acceptance implied",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\neck-junction-native-v1\\Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "sourceReportSha256": "fc3888a9aaa4b4ec60707209f2ba832c497517cc5d9bc622cfbb20a32a758489",
+  "sourceStructuralGate": {
+    "passed": false,
+    "blockingIssues": [
+      "Inherited adult likeness, sparse/stiff groom, rigid scarf and raised-arm defects; actual neck review pending"
+    ]
+  },
+  "normalConvention": "OpenGL +Y tangent space",
+  "materials": [
+    {
+      "name": "Nib_Brass",
+      "baseColor": "textures/Nib_Brass_BaseColor.png",
+      "normal": "textures/Nib_Brass_Normal.png",
+      "roughness": "textures/Nib_Brass_Roughness.png",
+      "metallic": "textures/Nib_Brass_Metallic.png",
+      "mapHashes": {
+        "baseColor": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+        "normal": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+        "roughness": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+        "metallic": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd"
+      }
+    },
+    {
+      "name": "Nib_Cloth",
+      "baseColor": "textures/Nib_Cloth_BaseColor.png",
+      "normal": "textures/Nib_Cloth_Normal.png",
+      "roughness": "textures/Nib_Cloth_Roughness.png",
+      "metallic": "textures/Nib_Cloth_Metallic.png",
+      "mapHashes": {
+        "baseColor": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+        "normal": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+        "roughness": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Dark",
+      "baseColor": "textures/Nib_Dark_BaseColor.png",
+      "normal": "textures/Nib_Dark_Normal.png",
+      "roughness": "textures/Nib_Dark_Roughness.png",
+      "metallic": "textures/Nib_Dark_Metallic.png",
+      "mapHashes": {
+        "baseColor": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+        "normal": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+        "roughness": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Gum",
+      "baseColor": "textures/Nib_Gum_BaseColor.png",
+      "normal": "textures/Nib_Gum_Normal.png",
+      "roughness": "textures/Nib_Gum_Roughness.png",
+      "metallic": "textures/Nib_Gum_Metallic.png",
+      "mapHashes": {
+        "baseColor": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+        "normal": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+        "roughness": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Hair",
+      "baseColor": "textures/Nib_Hair_BaseColor.png",
+      "normal": "textures/Nib_Hair_Normal.png",
+      "roughness": "textures/Nib_Hair_Roughness.png",
+      "metallic": "textures/Nib_Hair_Metallic.png",
+      "mapHashes": {
+        "baseColor": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+        "normal": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+        "roughness": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_IdentityOcularGlobe",
+      "baseColor": "textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularGlobe_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularGlobe_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularGlobe_Metallic.png",
+      "mapHashes": {
+        "baseColor": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+        "normal": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "roughness": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_IdentityOcularIris_L",
+      "baseColor": "textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_L_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_L_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_L_Metallic.png",
+      "mapHashes": {
+        "baseColor": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+        "normal": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+        "roughness": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_IdentityOcularIris_R",
+      "baseColor": "textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "normal": "textures/Nib_IdentityOcularIris_R_Normal.png",
+      "roughness": "textures/Nib_IdentityOcularIris_R_Roughness.png",
+      "metallic": "textures/Nib_IdentityOcularIris_R_Metallic.png",
+      "mapHashes": {
+        "baseColor": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+        "normal": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+        "roughness": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_Leather",
+      "baseColor": "textures/Nib_Leather_BaseColor.png",
+      "normal": "textures/Nib_Leather_Normal.png",
+      "roughness": "textures/Nib_Leather_Roughness.png",
+      "metallic": "textures/Nib_Leather_Metallic.png",
+      "mapHashes": {
+        "baseColor": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+        "normal": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+        "roughness": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Lens",
+      "baseColor": "textures/Nib_Lens_BaseColor.png",
+      "normal": "textures/Nib_Lens_Normal.png",
+      "roughness": "textures/Nib_Lens_Roughness.png",
+      "metallic": "textures/Nib_Lens_Metallic.png",
+      "mapHashes": {
+        "baseColor": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+        "normal": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+        "roughness": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+        "metallic": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114"
+      }
+    },
+    {
+      "name": "Nib_MouthInterior",
+      "baseColor": "textures/Nib_MouthInterior_BaseColor.png",
+      "normal": "textures/Nib_MouthInterior_Normal.png",
+      "roughness": "textures/Nib_MouthInterior_Roughness.png",
+      "metallic": "textures/Nib_MouthInterior_Metallic.png",
+      "mapHashes": {
+        "baseColor": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+        "normal": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+        "roughness": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Skin",
+      "baseColor": "textures/Nib_Skin_BaseColor.png",
+      "normal": "textures/Nib_Skin_Normal.png",
+      "roughness": "textures/Nib_Skin_Roughness.png",
+      "metallic": "textures/Nib_Skin_Metallic.png",
+      "mapHashes": {
+        "baseColor": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+        "normal": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+        "roughness": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+        "metallic": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37"
+      }
+    },
+    {
+      "name": "Nib_Steel",
+      "baseColor": "textures/Nib_Steel_BaseColor.png",
+      "normal": "textures/Nib_Steel_Normal.png",
+      "roughness": "textures/Nib_Steel_Roughness.png",
+      "metallic": "textures/Nib_Steel_Metallic.png",
+      "mapHashes": {
+        "baseColor": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+        "normal": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+        "roughness": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+        "metallic": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795"
+      }
+    },
+    {
+      "name": "Nib_Stitch",
+      "baseColor": "textures/Nib_Stitch_BaseColor.png",
+      "normal": "textures/Nib_Stitch_Normal.png",
+      "roughness": "textures/Nib_Stitch_Roughness.png",
+      "metallic": "textures/Nib_Stitch_Metallic.png",
+      "mapHashes": {
+        "baseColor": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+        "normal": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+        "roughness": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Teal",
+      "baseColor": "textures/Nib_Teal_BaseColor.png",
+      "normal": "textures/Nib_Teal_Normal.png",
+      "roughness": "textures/Nib_Teal_Roughness.png",
+      "metallic": "textures/Nib_Teal_Metallic.png",
+      "mapHashes": {
+        "baseColor": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+        "normal": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+        "roughness": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+        "metallic": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7"
+      }
+    },
+    {
+      "name": "Nib_Tongue",
+      "baseColor": "textures/Nib_Tongue_BaseColor.png",
+      "normal": "textures/Nib_Tongue_Normal.png",
+      "roughness": "textures/Nib_Tongue_Roughness.png",
+      "metallic": "textures/Nib_Tongue_Metallic.png",
+      "mapHashes": {
+        "baseColor": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+        "normal": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+        "roughness": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Tooth",
+      "baseColor": "textures/Nib_Tooth_BaseColor.png",
+      "normal": "textures/Nib_Tooth_Normal.png",
+      "roughness": "textures/Nib_Tooth_Roughness.png",
+      "metallic": "textures/Nib_Tooth_Metallic.png",
+      "mapHashes": {
+        "baseColor": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+        "normal": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+        "roughness": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_Workwear",
+      "baseColor": "textures/Nib_Workwear_BaseColor.png",
+      "normal": "textures/Nib_Workwear_Normal.png",
+      "roughness": "textures/Nib_Workwear_Roughness.png",
+      "metallic": "textures/Nib_Workwear_Metallic.png",
+      "mapHashes": {
+        "baseColor": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+        "normal": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+        "roughness": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+        "metallic": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2"
+      }
+    },
+    {
+      "name": "Nib_v5_DustyPinkEar",
+      "baseColor": "textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "normal": "textures/Nib_v5_DustyPinkEar_Normal.png",
+      "roughness": "textures/Nib_v5_DustyPinkEar_Roughness.png",
+      "metallic": "textures/Nib_v5_DustyPinkEar_Metallic.png",
+      "mapHashes": {
+        "baseColor": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+        "normal": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+        "roughness": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v5_FacialSkinAtlas",
+      "baseColor": "textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "normal": "textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "roughness": "textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+      "metallic": "textures/Nib_v5_FacialSkinAtlas_Metallic.png",
+      "mapHashes": {
+        "baseColor": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+        "normal": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+        "roughness": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v5_HeadFur",
+      "baseColor": "textures/Nib_v5_HeadFur_BaseColor.png",
+      "normal": "textures/Nib_v5_HeadFur_Normal.png",
+      "roughness": "textures/Nib_v5_HeadFur_Roughness.png",
+      "metallic": "textures/Nib_v5_HeadFur_Metallic.png",
+      "mapHashes": {
+        "baseColor": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+        "normal": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "roughness": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v5_InnerEarWisps",
+      "baseColor": "textures/Nib_v5_InnerEarWisps_BaseColor.png",
+      "normal": "textures/Nib_v5_InnerEarWisps_Normal.png",
+      "roughness": "textures/Nib_v5_InnerEarWisps_Roughness.png",
+      "metallic": "textures/Nib_v5_InnerEarWisps_Metallic.png",
+      "mapHashes": {
+        "baseColor": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+        "normal": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "roughness": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v5_TawnyEarFur",
+      "baseColor": "textures/Nib_v5_TawnyEarFur_BaseColor.png",
+      "normal": "textures/Nib_v5_TawnyEarFur_Normal.png",
+      "roughness": "textures/Nib_v5_TawnyEarFur_Roughness.png",
+      "metallic": "textures/Nib_v5_TawnyEarFur_Metallic.png",
+      "mapHashes": {
+        "baseColor": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+        "normal": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "roughness": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v5_TawnyEarUndercoat",
+      "baseColor": "textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "normal": "textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "roughness": "textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+      "metallic": "textures/Nib_v5_TawnyEarUndercoat_Metallic.png",
+      "mapHashes": {
+        "baseColor": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+        "normal": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "roughness": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+        "metallic": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      }
+    },
+    {
+      "name": "Nib_v6_HeadFurCards",
+      "baseColor": "textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y",
+      "sourceImageAgreement": {
+        "sourceConnectedImages": [
+          {
+            "node": "Image Texture.001",
+            "image": "Nib_v6_FurCards_Normal.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Normal.png",
+            "storage": "resolved source image file",
+            "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+            "contractFile": "Nib_v6_FurCards_Normal.png"
+          },
+          {
+            "node": "Image Texture.002",
+            "image": "Nib_v6_FurCards_Roughness.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Roughness.png",
+            "storage": "resolved source image file",
+            "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+            "contractFile": "Nib_v6_FurCards_Roughness.png"
+          },
+          {
+            "node": "Image Texture.003",
+            "image": "Nib_v6_FurCards_Metallic.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Metallic.png",
+            "storage": "resolved source image file",
+            "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+            "contractFile": "Nib_v6_FurCards_Metallic.png"
+          },
+          {
+            "node": "Image Texture",
+            "image": "Nib_v6_HeadFurCards_BaseColor.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_HeadFurCards_BaseColor.png",
+            "storage": "resolved source image file",
+            "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+            "contractFile": "Nib_v6_HeadFurCards_BaseColor.png"
+          }
+        ],
+        "providedContractMapHashes": {
+          "Nib_v6_HeadFurCards_BaseColor.png": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+          "Nib_v6_FurCards_Normal.png": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+          "Nib_v6_FurCards_Roughness.png": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+          "Nib_v6_FurCards_Metallic.png": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+        },
+        "copiedAtlasesMatchSourceShader": true
+      },
+      "mode": "Original masked atlas copied byte-identically, including unassociated coverage alpha",
+      "mapHashes": {
+        "baseColor": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+        "normal": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+        "roughness": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+        "metallic": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+      }
+    },
+    {
+      "name": "Nib_v6_InnerEarWispsCards",
+      "baseColor": "textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y",
+      "sourceImageAgreement": {
+        "sourceConnectedImages": [
+          {
+            "node": "Image Texture.001",
+            "image": "Nib_v6_FurCards_Normal.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Normal.png",
+            "storage": "resolved source image file",
+            "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+            "contractFile": "Nib_v6_FurCards_Normal.png"
+          },
+          {
+            "node": "Image Texture.002",
+            "image": "Nib_v6_FurCards_Roughness.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Roughness.png",
+            "storage": "resolved source image file",
+            "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+            "contractFile": "Nib_v6_FurCards_Roughness.png"
+          },
+          {
+            "node": "Image Texture.003",
+            "image": "Nib_v6_FurCards_Metallic.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Metallic.png",
+            "storage": "resolved source image file",
+            "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+            "contractFile": "Nib_v6_FurCards_Metallic.png"
+          },
+          {
+            "node": "Image Texture",
+            "image": "Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_InnerEarWispsCards_BaseColor.png",
+            "storage": "resolved source image file",
+            "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+            "contractFile": "Nib_v6_InnerEarWispsCards_BaseColor.png"
+          }
+        ],
+        "providedContractMapHashes": {
+          "Nib_v6_InnerEarWispsCards_BaseColor.png": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+          "Nib_v6_FurCards_Normal.png": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+          "Nib_v6_FurCards_Roughness.png": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+          "Nib_v6_FurCards_Metallic.png": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+        },
+        "copiedAtlasesMatchSourceShader": true
+      },
+      "mode": "Original masked atlas copied byte-identically, including unassociated coverage alpha",
+      "mapHashes": {
+        "baseColor": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+        "normal": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+        "roughness": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+        "metallic": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+      }
+    },
+    {
+      "name": "Nib_v6_TawnyEarFurCards",
+      "baseColor": "textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "normal": "textures/Nib_v6_FurCards_Normal.png",
+      "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+      "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+      "alphaMode": "MASK",
+      "alphaSource": "baseColor.a",
+      "alphaClipThreshold": 0.45,
+      "doubleSided": true,
+      "doubleSidedNormalMode": "Flip",
+      "normalConvention": "OpenGL +Y",
+      "sourceImageAgreement": {
+        "sourceConnectedImages": [
+          {
+            "node": "Image Texture.001",
+            "image": "Nib_v6_FurCards_Normal.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Normal.png",
+            "storage": "resolved source image file",
+            "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+            "contractFile": "Nib_v6_FurCards_Normal.png"
+          },
+          {
+            "node": "Image Texture.002",
+            "image": "Nib_v6_FurCards_Roughness.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Roughness.png",
+            "storage": "resolved source image file",
+            "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+            "contractFile": "Nib_v6_FurCards_Roughness.png"
+          },
+          {
+            "node": "Image Texture.003",
+            "image": "Nib_v6_FurCards_Metallic.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_FurCards_Metallic.png",
+            "storage": "resolved source image file",
+            "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+            "contractFile": "Nib_v6_FurCards_Metallic.png"
+          },
+          {
+            "node": "Image Texture",
+            "image": "Nib_v6_TawnyEarFurCards_BaseColor.png.001",
+            "resolvedSource": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\fine-strands-v1\\textures\\Nib_v6_TawnyEarFurCards_BaseColor.png",
+            "storage": "resolved source image file",
+            "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+            "contractFile": "Nib_v6_TawnyEarFurCards_BaseColor.png"
+          }
+        ],
+        "providedContractMapHashes": {
+          "Nib_v6_TawnyEarFurCards_BaseColor.png": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+          "Nib_v6_FurCards_Normal.png": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+          "Nib_v6_FurCards_Roughness.png": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+          "Nib_v6_FurCards_Metallic.png": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+        },
+        "copiedAtlasesMatchSourceShader": true
+      },
+      "mode": "Original masked atlas copied byte-identically, including unassociated coverage alpha",
+      "mapHashes": {
+        "baseColor": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+        "normal": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+        "roughness": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+        "metallic": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d"
+      }
+    }
+  ],
+  "fieldBakes": [
+    {
+      "material": "Nib_v5_FacialSkinAtlas",
+      "mode": "actual face geometry + source attribute",
+      "mask": {
+        "attribute": "NibNoseMask",
+        "sourceValuesSha256": "4ed7d49a8ef2796cdca725fd4f0495f58de3af01a396d51f16ee862a9b7fa794",
+        "minimum": 0.0,
+        "maximum": 0.999999463558197,
+        "verticesAboveHalf": 1566,
+        "connectedBaseColorMaterials": [
+          "Nib_IdentityFacialSkin"
+        ],
+        "preservation": "Connected mask is evaluated on actual face during BaseColor bake; source attribute retained for audit"
+      },
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_FacialSkinAtlas_BaseColor.png",
+          "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+          "resolution": 4096,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_FacialSkinAtlas_Normal.png",
+          "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+          "resolution": 4096,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_FacialSkinAtlas_Roughness.png",
+          "sha256": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+          "resolution": 1024,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_FacialSkinAtlas_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "uv": "Fresh packed UVMap; original shader UV isolated during bake, then removed to keep export UV0 correct",
+      "reviewRequired": "Nose pigment, eyelids, lip edge and UV seams in same-camera source/baked render"
+    },
+    {
+      "material": "Nib_IdentityOcularIris_L",
+      "mode": "Actual fitted iris geometry + point attribute",
+      "field": {
+        "object": "Nib v5 fitted iris L",
+        "attribute": "Nib_IrisCoord",
+        "sourceValuesSha256": "6bf3ea8de47effb847a9a28a1eab3ad7877193ed85ffd67fa59c4ebaee53145a",
+        "minimum": [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        "maximum": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "connectedBaseColorMaterials": [
+          "Nib_IdentityOcularIris"
+        ]
+      },
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_IdentityOcularIris_L_BaseColor.png",
+          "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_IdentityOcularIris_L_Normal.png",
+          "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_IdentityOcularIris_L_Roughness.png",
+          "sha256": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+          "resolution": 256,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_IdentityOcularIris_L_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "sourceMaterial": "Nib_IdentityOcularIris",
+      "uv": "Separate nonoverlapping actual-surface atlas; original source UV isolated during bake",
+      "geometryAttributePreservation": "Attribute hash unchanged; outer candidate gate checks vertices, polygons, morphs, weights and rig",
+      "reviewRequired": "Same-camera source/baked iris pigment, limbal edge, slit pupil and original shell curvature"
+    },
+    {
+      "material": "Nib_IdentityOcularIris_R",
+      "mode": "Actual fitted iris geometry + point attribute",
+      "field": {
+        "object": "Nib v5 fitted iris R",
+        "attribute": "Nib_IrisCoord",
+        "sourceValuesSha256": "d9e4b1d8ee309731f502be1e1c953c54753c9425ed33b9dbb0843b39e5e4e7bb",
+        "minimum": [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        "maximum": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "connectedBaseColorMaterials": [
+          "Nib_IdentityOcularIris"
+        ]
+      },
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_IdentityOcularIris_R_BaseColor.png",
+          "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_IdentityOcularIris_R_Normal.png",
+          "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_IdentityOcularIris_R_Roughness.png",
+          "sha256": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+          "resolution": 256,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_IdentityOcularIris_R_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "sourceMaterial": "Nib_IdentityOcularIris",
+      "uv": "Separate nonoverlapping actual-surface atlas; original source UV isolated during bake",
+      "geometryAttributePreservation": "Attribute hash unchanged; outer candidate gate checks vertices, polygons, morphs, weights and rig",
+      "reviewRequired": "Same-camera source/baked iris pigment, limbal edge, slit pupil and original shell curvature"
+    },
+    {
+      "material": "Nib_v5_HeadFur",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 6,
+        "explicitUvCoordinates": [
+          "Texture Coordinate.UV"
+        ],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Nib v6 opaque accents crown",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8752577304840088,
+            1.0
+          ],
+          "sampledCorners": 35616
+        },
+        {
+          "object": "Nib v6 opaque accents fringe",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.01649484597146511,
+            0.0
+          ],
+          "maximum": [
+            0.8917526006698608,
+            1.0
+          ],
+          "sampledCorners": 20160
+        },
+        {
+          "object": "Nib v6 opaque accents temple_L",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8670102953910828,
+            1.0
+          ],
+          "sampledCorners": 15456
+        },
+        {
+          "object": "Nib v6 opaque accents temple_R",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.01649484597146511,
+            0.0
+          ],
+          "maximum": [
+            0.8835051655769348,
+            1.0
+          ],
+          "sampledCorners": 15456
+        },
+        {
+          "object": "Nib v6 opaque accents nape",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8917526006698608,
+            1.0
+          ],
+          "sampledCorners": 20160
+        },
+        {
+          "object": "Nib v6 opaque accents chin",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.06597938388586044,
+            0.0
+          ],
+          "maximum": [
+            0.2319587618112564,
+            1.0
+          ],
+          "sampledCorners": 2016
+        },
+        {
+          "object": "Nib v5 fine facial fuzz",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.6666666865348816,
+            1.0
+          ],
+          "sampledCorners": 10800
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_HeadFur_BaseColor.png",
+          "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_HeadFur_Normal.png",
+          "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_HeadFur_Roughness.png",
+          "sha256": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_HeadFur_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 7,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    },
+    {
+      "material": "Nib_v5_InnerEarWisps",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 6,
+        "explicitUvCoordinates": [
+          "Texture Coordinate.UV"
+        ],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Nib v6 opaque accents inner_wisps_L",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.02474226802587509,
+            0.0
+          ],
+          "maximum": [
+            0.8917526006698608,
+            1.0
+          ],
+          "sampledCorners": 16800
+        },
+        {
+          "object": "Nib v6 opaque accents inner_wisps_R",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8670102953910828,
+            1.0
+          ],
+          "sampledCorners": 16800
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_InnerEarWisps_BaseColor.png",
+          "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_InnerEarWisps_Normal.png",
+          "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_InnerEarWisps_Roughness.png",
+          "sha256": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_InnerEarWisps_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 2,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    },
+    {
+      "material": "Nib_v5_TawnyEarFur",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 6,
+        "explicitUvCoordinates": [
+          "Texture Coordinate.UV"
+        ],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Nib v6 opaque accents outer_rim_L",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.008247422985732555,
+            0.0
+          ],
+          "maximum": [
+            0.8752577304840088,
+            1.0
+          ],
+          "sampledCorners": 26880
+        },
+        {
+          "object": "Nib v6 opaque accents outer_nap_L",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8917526006698608,
+            1.0
+          ],
+          "sampledCorners": 45120
+        },
+        {
+          "object": "Nib v6 opaque accents outer_rim_R",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.01649484597146511,
+            0.0
+          ],
+          "maximum": [
+            0.8835051655769348,
+            1.0
+          ],
+          "sampledCorners": 26880
+        },
+        {
+          "object": "Nib v6 opaque accents outer_nap_R",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            0.8917526006698608,
+            1.0
+          ],
+          "sampledCorners": 43008
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_TawnyEarFur_BaseColor.png",
+          "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_TawnyEarFur_Normal.png",
+          "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_TawnyEarFur_Roughness.png",
+          "sha256": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_TawnyEarFur_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 4,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    },
+    {
+      "material": "Nib_v5_DustyPinkEar",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 5,
+        "explicitUvCoordinates": [
+          "Texture Coordinate.UV"
+        ],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Ear inner velvet -1",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0015574683202430606,
+            0.0015576572623103857
+          ],
+          "maximum": [
+            0.499557763338089,
+            0.9984426498413086
+          ],
+          "sampledCorners": 1944
+        },
+        {
+          "object": "Ear inner velvet 1",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.001557965879328549,
+            0.0015575247816741467
+          ],
+          "maximum": [
+            0.49955764412879944,
+            0.9984424114227295
+          ],
+          "sampledCorners": 1944
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_DustyPinkEar_BaseColor.png",
+          "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_DustyPinkEar_Normal.png",
+          "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_DustyPinkEar_Roughness.png",
+          "sha256": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_DustyPinkEar_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 2,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    },
+    {
+      "material": "Nib_v5_TawnyEarUndercoat",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 5,
+        "explicitUvCoordinates": [
+          "Texture Coordinate.UV"
+        ],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Fennec cupped ear -1",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.003636920591816306,
+            0.0036367487628012896
+          ],
+          "maximum": [
+            0.9963633418083191,
+            0.9903576374053955
+          ],
+          "sampledCorners": 16992
+        },
+        {
+          "object": "Rounded auricle cartilage rim",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 5040
+        },
+        {
+          "object": "Rounded auricle cartilage rim.001",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 5040
+        },
+        {
+          "object": "Auricle basal cartilage fold",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 720
+        },
+        {
+          "object": "Fennec cupped ear 1",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0034799270797520876,
+            0.0034799922723323107
+          ],
+          "maximum": [
+            0.9965201020240784,
+            0.9833821058273315
+          ],
+          "sampledCorners": 16992
+        },
+        {
+          "object": "Rounded auricle cartilage rim.002",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 5040
+        },
+        {
+          "object": "Rounded auricle cartilage rim.003",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 5040
+        },
+        {
+          "object": "Auricle basal cartilage fold.001",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.0,
+            0.0
+          ],
+          "maximum": [
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "sampledCorners": 720
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_v5_TawnyEarUndercoat_BaseColor.png",
+          "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_v5_TawnyEarUndercoat_Normal.png",
+          "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_v5_TawnyEarUndercoat_Roughness.png",
+          "sha256": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_v5_TawnyEarUndercoat_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 8,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    },
+    {
+      "material": "Nib_IdentityOcularGlobe",
+      "mode": "Exact UV-domain field on carrier; strand UVs untouched",
+      "shaderAudit": {
+        "visitedSocketCount": 0,
+        "explicitUvCoordinates": [],
+        "geometryDependentInputs": false,
+        "implicitImageCoordinates": "same UVMap domain"
+      },
+      "sourceUvDomain": [
+        {
+          "object": "Nib v5 fitted sclera L",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.02023066207766533,
+            0.02285066246986389
+          ],
+          "maximum": [
+            0.9782191514968872,
+            0.5068723559379578
+          ],
+          "sampledCorners": 8704
+        },
+        {
+          "object": "Nib v5 fitted sclera R",
+          "uvLayer": "UVMap",
+          "minimum": [
+            0.02023066207766533,
+            0.02285066246986389
+          ],
+          "maximum": [
+            0.9782191514968872,
+            0.5068723559379578
+          ],
+          "sampledCorners": 8704
+        }
+      ],
+      "maps": {
+        "BaseColor": {
+          "file": "Nib_IdentityOcularGlobe_BaseColor.png",
+          "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+          "resolution": 1024,
+          "colorSpace": "sRGB"
+        },
+        "Normal": {
+          "file": "Nib_IdentityOcularGlobe_Normal.png",
+          "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Roughness": {
+          "file": "Nib_IdentityOcularGlobe_Roughness.png",
+          "sha256": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+          "resolution": 512,
+          "colorSpace": "Non-Color"
+        },
+        "Metallic": {
+          "file": "Nib_IdentityOcularGlobe_Metallic.png",
+          "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+          "resolution": 128,
+          "colorSpace": "Non-Color"
+        }
+      },
+      "assignedSlots": 2,
+      "reviewRequired": "Same root-to-tip/clump color and regional separation on actual geometry"
+    }
+  ],
+  "codeSha256": {
+    "prepare_runtime_pbr.py": "8c8fb7e8263047c71515e4f1c257fc0b32acb7ab087fca75c4f4943aa297ad13",
+    "bake_fields.py": "1f28559325ab9db71a29ab95fa24a809a67fc7bd6c2fe08b5625abb19e450be9",
+    "bake_ocular.py": "5d0f4ca44d866a75502940949e9ce04156996137ff82264428b2f22af4023d25",
+    "groom_source_images.py": "7639be0f76be2b9e27cf82f87a4aec58c09efeba4717b204abfe81cbc493614c",
+    "portable_save.py": "07a0a2c19bb0db1e65f60873e585fb17818c0d1682c6331bc1b74186f362aef6"
+  },
+  "geometryWeightsMorphsUnchanged": true,
+  "savedPbrImageValidation": {
+    "reopened": true,
+    "relativeRootCorrect": true,
+    "allMapsDecoded": true,
+    "allBytesMatchBake": true,
+    "imageDatablocks": 102,
+    "uniqueTextureFiles": 102,
+    "images": [
+      {
+        "image": "Nib_Brass_BaseColor.png",
+        "relativePath": "textures/Nib_Brass_BaseColor.png",
+        "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Brass_Metallic.png",
+        "relativePath": "textures/Nib_Brass_Metallic.png",
+        "sha256": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Brass_Normal.png",
+        "relativePath": "textures/Nib_Brass_Normal.png",
+        "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Brass_Roughness.png",
+        "relativePath": "textures/Nib_Brass_Roughness.png",
+        "sha256": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Cloth_BaseColor.png",
+        "relativePath": "textures/Nib_Cloth_BaseColor.png",
+        "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Cloth_Metallic.png",
+        "relativePath": "textures/Nib_Cloth_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Cloth_Normal.png",
+        "relativePath": "textures/Nib_Cloth_Normal.png",
+        "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Cloth_Roughness.png",
+        "relativePath": "textures/Nib_Cloth_Roughness.png",
+        "sha256": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Dark_BaseColor.png",
+        "relativePath": "textures/Nib_Dark_BaseColor.png",
+        "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Dark_Metallic.png",
+        "relativePath": "textures/Nib_Dark_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Dark_Normal.png",
+        "relativePath": "textures/Nib_Dark_Normal.png",
+        "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Dark_Roughness.png",
+        "relativePath": "textures/Nib_Dark_Roughness.png",
+        "sha256": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Gum_BaseColor.png",
+        "relativePath": "textures/Nib_Gum_BaseColor.png",
+        "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Gum_Metallic.png",
+        "relativePath": "textures/Nib_Gum_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Gum_Normal.png",
+        "relativePath": "textures/Nib_Gum_Normal.png",
+        "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Gum_Roughness.png",
+        "relativePath": "textures/Nib_Gum_Roughness.png",
+        "sha256": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Hair_BaseColor.png",
+        "relativePath": "textures/Nib_Hair_BaseColor.png",
+        "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Hair_Metallic.png",
+        "relativePath": "textures/Nib_Hair_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Hair_Normal.png",
+        "relativePath": "textures/Nib_Hair_Normal.png",
+        "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Hair_Roughness.png",
+        "relativePath": "textures/Nib_Hair_Roughness.png",
+        "sha256": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularGlobe_BaseColor.png",
+        "relativePath": "textures/Nib_IdentityOcularGlobe_BaseColor.png",
+        "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_IdentityOcularGlobe_Metallic.png",
+        "relativePath": "textures/Nib_IdentityOcularGlobe_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularGlobe_Normal.png",
+        "relativePath": "textures/Nib_IdentityOcularGlobe_Normal.png",
+        "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularGlobe_Roughness.png",
+        "relativePath": "textures/Nib_IdentityOcularGlobe_Roughness.png",
+        "sha256": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_L_BaseColor.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_L_BaseColor.png",
+        "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_L_Metallic.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_L_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_L_Normal.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_L_Normal.png",
+        "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_L_Roughness.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_L_Roughness.png",
+        "sha256": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_R_BaseColor.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_R_BaseColor.png",
+        "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_R_Metallic.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_R_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_R_Normal.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_R_Normal.png",
+        "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_IdentityOcularIris_R_Roughness.png",
+        "relativePath": "textures/Nib_IdentityOcularIris_R_Roughness.png",
+        "sha256": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Leather_BaseColor.png",
+        "relativePath": "textures/Nib_Leather_BaseColor.png",
+        "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Leather_Metallic.png",
+        "relativePath": "textures/Nib_Leather_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Leather_Normal.png",
+        "relativePath": "textures/Nib_Leather_Normal.png",
+        "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Leather_Roughness.png",
+        "relativePath": "textures/Nib_Leather_Roughness.png",
+        "sha256": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Lens_BaseColor.png",
+        "relativePath": "textures/Nib_Lens_BaseColor.png",
+        "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Lens_Metallic.png",
+        "relativePath": "textures/Nib_Lens_Metallic.png",
+        "sha256": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Lens_Normal.png",
+        "relativePath": "textures/Nib_Lens_Normal.png",
+        "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Lens_Roughness.png",
+        "relativePath": "textures/Nib_Lens_Roughness.png",
+        "sha256": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_MouthInterior_BaseColor.png",
+        "relativePath": "textures/Nib_MouthInterior_BaseColor.png",
+        "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_MouthInterior_Metallic.png",
+        "relativePath": "textures/Nib_MouthInterior_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_MouthInterior_Normal.png",
+        "relativePath": "textures/Nib_MouthInterior_Normal.png",
+        "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_MouthInterior_Roughness.png",
+        "relativePath": "textures/Nib_MouthInterior_Roughness.png",
+        "sha256": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Skin_BaseColor.png",
+        "relativePath": "textures/Nib_Skin_BaseColor.png",
+        "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Skin_Metallic.png",
+        "relativePath": "textures/Nib_Skin_Metallic.png",
+        "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Skin_Normal.png",
+        "relativePath": "textures/Nib_Skin_Normal.png",
+        "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Skin_Roughness.png",
+        "relativePath": "textures/Nib_Skin_Roughness.png",
+        "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Steel_BaseColor.png",
+        "relativePath": "textures/Nib_Steel_BaseColor.png",
+        "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Steel_Metallic.png",
+        "relativePath": "textures/Nib_Steel_Metallic.png",
+        "sha256": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Steel_Normal.png",
+        "relativePath": "textures/Nib_Steel_Normal.png",
+        "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Steel_Roughness.png",
+        "relativePath": "textures/Nib_Steel_Roughness.png",
+        "sha256": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Stitch_BaseColor.png",
+        "relativePath": "textures/Nib_Stitch_BaseColor.png",
+        "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Stitch_Metallic.png",
+        "relativePath": "textures/Nib_Stitch_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Stitch_Normal.png",
+        "relativePath": "textures/Nib_Stitch_Normal.png",
+        "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Stitch_Roughness.png",
+        "relativePath": "textures/Nib_Stitch_Roughness.png",
+        "sha256": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Teal_BaseColor.png",
+        "relativePath": "textures/Nib_Teal_BaseColor.png",
+        "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Teal_Metallic.png",
+        "relativePath": "textures/Nib_Teal_Metallic.png",
+        "sha256": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Teal_Normal.png",
+        "relativePath": "textures/Nib_Teal_Normal.png",
+        "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Teal_Roughness.png",
+        "relativePath": "textures/Nib_Teal_Roughness.png",
+        "sha256": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tongue_BaseColor.png",
+        "relativePath": "textures/Nib_Tongue_BaseColor.png",
+        "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Tongue_Metallic.png",
+        "relativePath": "textures/Nib_Tongue_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tongue_Normal.png",
+        "relativePath": "textures/Nib_Tongue_Normal.png",
+        "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tongue_Roughness.png",
+        "relativePath": "textures/Nib_Tongue_Roughness.png",
+        "sha256": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tooth_BaseColor.png",
+        "relativePath": "textures/Nib_Tooth_BaseColor.png",
+        "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Tooth_Metallic.png",
+        "relativePath": "textures/Nib_Tooth_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tooth_Normal.png",
+        "relativePath": "textures/Nib_Tooth_Normal.png",
+        "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Tooth_Roughness.png",
+        "relativePath": "textures/Nib_Tooth_Roughness.png",
+        "sha256": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Workwear_BaseColor.png.001",
+        "relativePath": "textures/Nib_Workwear_BaseColor.png",
+        "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+        "width": 1254,
+        "height": 1254,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_Workwear_Metallic.png",
+        "relativePath": "textures/Nib_Workwear_Metallic.png",
+        "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Workwear_Normal.png",
+        "relativePath": "textures/Nib_Workwear_Normal.png",
+        "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_Workwear_Roughness.png",
+        "relativePath": "textures/Nib_Workwear_Roughness.png",
+        "sha256": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_DustyPinkEar_BaseColor.png",
+        "relativePath": "textures/Nib_v5_DustyPinkEar_BaseColor.png",
+        "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_DustyPinkEar_Metallic.png",
+        "relativePath": "textures/Nib_v5_DustyPinkEar_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_DustyPinkEar_Normal.png",
+        "relativePath": "textures/Nib_v5_DustyPinkEar_Normal.png",
+        "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_DustyPinkEar_Roughness.png",
+        "relativePath": "textures/Nib_v5_DustyPinkEar_Roughness.png",
+        "sha256": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_FacialSkinAtlas_BaseColor.png",
+        "relativePath": "textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+        "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_FacialSkinAtlas_Metallic.png",
+        "relativePath": "textures/Nib_v5_FacialSkinAtlas_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_FacialSkinAtlas_Normal.png",
+        "relativePath": "textures/Nib_v5_FacialSkinAtlas_Normal.png",
+        "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_FacialSkinAtlas_Roughness.png",
+        "relativePath": "textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+        "sha256": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_HeadFur_BaseColor.png",
+        "relativePath": "textures/Nib_v5_HeadFur_BaseColor.png",
+        "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_HeadFur_Metallic.png",
+        "relativePath": "textures/Nib_v5_HeadFur_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_HeadFur_Normal.png",
+        "relativePath": "textures/Nib_v5_HeadFur_Normal.png",
+        "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_HeadFur_Roughness.png",
+        "relativePath": "textures/Nib_v5_HeadFur_Roughness.png",
+        "sha256": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_InnerEarWisps_BaseColor.png",
+        "relativePath": "textures/Nib_v5_InnerEarWisps_BaseColor.png",
+        "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_InnerEarWisps_Metallic.png",
+        "relativePath": "textures/Nib_v5_InnerEarWisps_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_InnerEarWisps_Normal.png",
+        "relativePath": "textures/Nib_v5_InnerEarWisps_Normal.png",
+        "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_InnerEarWisps_Roughness.png",
+        "relativePath": "textures/Nib_v5_InnerEarWisps_Roughness.png",
+        "sha256": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarFur_BaseColor.png",
+        "relativePath": "textures/Nib_v5_TawnyEarFur_BaseColor.png",
+        "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_TawnyEarFur_Metallic.png",
+        "relativePath": "textures/Nib_v5_TawnyEarFur_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarFur_Normal.png",
+        "relativePath": "textures/Nib_v5_TawnyEarFur_Normal.png",
+        "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarFur_Roughness.png",
+        "relativePath": "textures/Nib_v5_TawnyEarFur_Roughness.png",
+        "sha256": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarUndercoat_BaseColor.png",
+        "relativePath": "textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+        "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v5_TawnyEarUndercoat_Metallic.png",
+        "relativePath": "textures/Nib_v5_TawnyEarUndercoat_Metallic.png",
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+        "width": 128,
+        "height": 128,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarUndercoat_Normal.png",
+        "relativePath": "textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+        "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v5_TawnyEarUndercoat_Roughness.png",
+        "relativePath": "textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+        "sha256": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+        "width": 512,
+        "height": 512,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v6_FurCards_Metallic.png.001",
+        "relativePath": "textures/Nib_v6_FurCards_Metallic.png",
+        "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v6_FurCards_Normal.png.001",
+        "relativePath": "textures/Nib_v6_FurCards_Normal.png",
+        "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v6_FurCards_Roughness.png.001",
+        "relativePath": "textures/Nib_v6_FurCards_Roughness.png",
+        "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "Non-Color"
+      },
+      {
+        "image": "Nib_v6_HeadFurCards_BaseColor.png.001",
+        "relativePath": "textures/Nib_v6_HeadFurCards_BaseColor.png",
+        "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+        "relativePath": "textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+        "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      },
+      {
+        "image": "Nib_v6_TawnyEarFurCards_BaseColor.png.001",
+        "relativePath": "textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+        "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "colorSpace": "sRGB"
+      }
+    ]
+  },
+  "candidateSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "candidate": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-neck-e1cdbd-v1\\pbr\\Nib_Runtime_PBR.blend"
+}

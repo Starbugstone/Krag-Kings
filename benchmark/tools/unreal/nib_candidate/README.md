@@ -9,13 +9,16 @@ The frozen plan is `plans/nib-coherent79-neck-e1cdbd-v1`. Its reference export
 completed (three variants, 79 bones, seven standalone clips), but explicit
 triangulation stopped with exit 2 because the new source has authored split
 corner normals. See the [preserved export failure](../../../unreal/evidence/nib-coherent79-export-corner-failure-v1/README.md).
-The prepared correction carries exact original corners through triangulation
-and validates polygon membership, winding/boundary coverage, UVs, material and
-normal payloads. Its numerical fixture passes; native Blender/FBX verification
-remains pending. `prepare_export_resume.py` creates a fresh attempt that pins
+The corner correction now passes a real Blender/FBX hard-edge fixture and the
+full corrected pipeline in `plans/nib-coherent79-neck-corners-v2`. All three
+variants and seven standalone takes pass fresh 79-bone roundtrips; mapped
+normals are exact and maximum dense morph rounding is 0.839241µm. See the
+[actual technical delivery](../../../unreal/evidence/nib-coherent79-corners-v2/README.md).
+`prepare_export_resume.py` creates a fresh attempt that pins
 the completed bake/reference receipts and outputs without rebaking or replacing
-the failed attempt. No current engine import, shared promotion or artistic
-acceptance follows from the bake/reference alone.
+the failed attempt. The verified payload is now technically promoted with an
+exact previous-payload backup and explicitly recorded provenance normalization.
+Current engine import and artistic acceptance remain pending.
 
 
 The original saved-path failure and v2 Windows-basename validation failure are preserved. Path-only v3 candidate `2a3ab470…` now passes reopened98-map path/hash/color/decode checks and exact79-bone/seven-action/mesh parity. All three matched baked views were inspected against the original source, without an obvious new material-transfer regression. [Actual repair/parity evidence](../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md) contains the images and failures. No maps were rebaked and shared assets remain unchanged.

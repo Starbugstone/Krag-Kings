@@ -1,0 +1,1723 @@
+{
+  "source": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "sourceReport": "benchmark/art/nib/identity-study/neck-junction-native-v1/source.json",
+  "cardTextureDirectory": "benchmark/art/nib/groom-study/fine-strands-v1/textures",
+  "referenceTextures": "benchmark/shared/characters/nib/textures",
+  "schemaVersion": 1,
+  "name": "nib-coherent79-neck-corners-v2",
+  "outputRoot": "benchmark/local/candidates/nib-coherent79-neck-corners-v2",
+  "executionReady": true,
+  "executionBlockedReason": "",
+  "status": "Prepared corrected export only; not executed",
+  "artisticAcceptance": false,
+  "sharedPromotionAuthorized": false,
+  "priorPlan": "benchmark/tools/unreal/nib_candidate/plans/nib-coherent79-neck-e1cdbd-v1/plan.json",
+  "priorPlanSha256": "22b1e53666186a8567dcb1b8856e932c103e7901899af0a4211fae259ead5628",
+  "reusedCompletedStages": [
+    {
+      "stage": "snapshot-source",
+      "receipt": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/snapshot-source.json",
+      "receiptSha256": "2552a2ab73062ff3f76a468a20fed8c42adc0cadb6e7405fb5d070af2c0f3897"
+    },
+    {
+      "stage": "bake",
+      "receipt": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/bake.json",
+      "receiptSha256": "a54d7ec1149fefab46f8a1ea97596ea90617c8d70848fd93d0e20f04722a8ece"
+    },
+    {
+      "stage": "snapshot-pbr",
+      "receipt": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/snapshot-pbr.json",
+      "receiptSha256": "0db0d81a64861703b24343131d475bcb95acd7af1fc50bb852e846232e888cc9"
+    },
+    {
+      "stage": "reference",
+      "receipt": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/reference.json",
+      "receiptSha256": "5c0944695985c98d48306f1b85ec0d2a444d2a5b29d1476d75f90fa86341bbdb"
+    }
+  ],
+  "reusedInputs": {
+    "pbrRoot": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr",
+    "referenceRoot": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference",
+    "sourceSnapshot": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/source-contract.json",
+    "pbrSnapshot": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr-contract.json"
+  },
+  "pins": [
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_FurCards_Metallic.png",
+      "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+      "bytes": 4265
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_FurCards_Normal.png",
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+      "bytes": 1217166
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_FurCards_Roughness.png",
+      "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+      "bytes": 294794
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+      "bytes": 2798223
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+      "bytes": 2834868
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/fine-strands-v1/textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+      "bytes": 2617473
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+      "sha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+      "bytes": 63750526
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/neck-junction-native-v1/source.json",
+      "sha256": "fc3888a9aaa4b4ec60707209f2ba832c497517cc5d9bc622cfbb20a32a758489",
+      "bytes": 148477
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr-contract.json",
+      "sha256": "504a1535ff5b4b746b321a1abedad08a78955310f69ffe7974ed7683035e160f",
+      "bytes": 5057141
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/Nib_Runtime_PBR.blend",
+      "sha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+      "bytes": 63844443
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/pbr-bake-report.json",
+      "sha256": "46814014381237502b9f10c907ca1802eefd3c37fa523a16d4f5c0250eb31cee",
+      "bytes": 82848
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Brass_BaseColor.png",
+      "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+      "bytes": 396122
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Brass_Metallic.png",
+      "sha256": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Brass_Normal.png",
+      "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+      "bytes": 239142
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Brass_Roughness.png",
+      "sha256": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+      "bytes": 280908
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Cloth_BaseColor.png",
+      "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+      "bytes": 1270205
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Cloth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Cloth_Normal.png",
+      "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+      "bytes": 1110191
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Cloth_Roughness.png",
+      "sha256": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+      "bytes": 275880
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Dark_BaseColor.png",
+      "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+      "bytes": 729586
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Dark_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Dark_Normal.png",
+      "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+      "bytes": 2090648
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Dark_Roughness.png",
+      "sha256": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+      "bytes": 283784
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Gum_BaseColor.png",
+      "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+      "bytes": 805893
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Gum_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Gum_Normal.png",
+      "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+      "bytes": 1097712
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Gum_Roughness.png",
+      "sha256": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+      "bytes": 284893
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Hair_BaseColor.png",
+      "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+      "bytes": 447693
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Hair_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Hair_Normal.png",
+      "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+      "bytes": 16509
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Hair_Roughness.png",
+      "sha256": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+      "bytes": 286568
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+      "bytes": 15963
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularGlobe_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularGlobe_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularGlobe_Roughness.png",
+      "sha256": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+      "bytes": 446033
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_L_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_L_Normal.png",
+      "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+      "bytes": 39196
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_L_Roughness.png",
+      "sha256": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+      "bytes": 6305
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+      "bytes": 445781
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_R_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_R_Normal.png",
+      "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+      "bytes": 39685
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_IdentityOcularIris_R_Roughness.png",
+      "sha256": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+      "bytes": 6364
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Leather_BaseColor.png",
+      "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+      "bytes": 1143494
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Leather_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Leather_Normal.png",
+      "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+      "bytes": 2090835
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Leather_Roughness.png",
+      "sha256": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+      "bytes": 285772
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Lens_BaseColor.png",
+      "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+      "bytes": 273482
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Lens_Metallic.png",
+      "sha256": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Lens_Normal.png",
+      "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+      "bytes": 236763
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Lens_Roughness.png",
+      "sha256": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+      "bytes": 283243
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_MouthInterior_BaseColor.png",
+      "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+      "bytes": 255357
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_MouthInterior_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_MouthInterior_Normal.png",
+      "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+      "bytes": 1097336
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_MouthInterior_Roughness.png",
+      "sha256": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+      "bytes": 285342
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Skin_BaseColor.png",
+      "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+      "bytes": 5208031
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Skin_Metallic.png",
+      "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37",
+      "bytes": 55235
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Skin_Normal.png",
+      "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+      "bytes": 4165810
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Skin_Roughness.png",
+      "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+      "bytes": 731383
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Steel_BaseColor.png",
+      "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+      "bytes": 451864
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Steel_Metallic.png",
+      "sha256": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Steel_Normal.png",
+      "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+      "bytes": 238497
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Steel_Roughness.png",
+      "sha256": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+      "bytes": 281453
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Stitch_BaseColor.png",
+      "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+      "bytes": 1313334
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Stitch_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Stitch_Normal.png",
+      "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+      "bytes": 1117084
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Stitch_Roughness.png",
+      "sha256": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+      "bytes": 282409
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Teal_BaseColor.png",
+      "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+      "bytes": 510574
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Teal_Metallic.png",
+      "sha256": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Teal_Normal.png",
+      "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+      "bytes": 235615
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Teal_Roughness.png",
+      "sha256": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+      "bytes": 285252
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tongue_BaseColor.png",
+      "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+      "bytes": 717021
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tongue_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tongue_Normal.png",
+      "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+      "bytes": 1096508
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tongue_Roughness.png",
+      "sha256": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+      "bytes": 284438
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tooth_BaseColor.png",
+      "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+      "bytes": 1314538
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tooth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tooth_Normal.png",
+      "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+      "bytes": 1098229
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Tooth_Roughness.png",
+      "sha256": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+      "bytes": 287148
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Workwear_BaseColor.png",
+      "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+      "bytes": 2735574
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Workwear_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Workwear_Normal.png",
+      "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+      "bytes": 1119187
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_Workwear_Roughness.png",
+      "sha256": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+      "bytes": 283904
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+      "bytes": 479898
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_DustyPinkEar_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_DustyPinkEar_Normal.png",
+      "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+      "bytes": 5362
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_DustyPinkEar_Roughness.png",
+      "sha256": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+      "bytes": 8728408
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_FacialSkinAtlas_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+      "bytes": 360186
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+      "sha256": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+      "bytes": 311769
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_HeadFur_BaseColor.png",
+      "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+      "bytes": 302137
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_HeadFur_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_HeadFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_HeadFur_Roughness.png",
+      "sha256": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_InnerEarWisps_BaseColor.png",
+      "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+      "bytes": 319226
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_InnerEarWisps_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_InnerEarWisps_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_InnerEarWisps_Roughness.png",
+      "sha256": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarFur_BaseColor.png",
+      "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+      "bytes": 234659
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarFur_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarFur_Roughness.png",
+      "sha256": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+      "bytes": 427604
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarUndercoat_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+      "sha256": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_FurCards_Metallic.png",
+      "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+      "bytes": 4265
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_FurCards_Normal.png",
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+      "bytes": 1217166
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_FurCards_Roughness.png",
+      "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+      "bytes": 294794
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+      "bytes": 2798223
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+      "bytes": 2834868
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+      "bytes": 2617473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/bake.json",
+      "sha256": "a54d7ec1149fefab46f8a1ea97596ea90617c8d70848fd93d0e20f04722a8ece",
+      "bytes": 24482
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/reference.json",
+      "sha256": "5c0944695985c98d48306f1b85ec0d2a444d2a5b29d1476d75f90fa86341bbdb",
+      "bytes": 27568
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/snapshot-pbr.json",
+      "sha256": "0db0d81a64861703b24343131d475bcb95acd7af1fc50bb852e846232e888cc9",
+      "bytes": 441
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/receipts/snapshot-source.json",
+      "sha256": "2552a2ab73062ff3f76a468a20fed8c42adc0cadb6e7405fb5d070af2c0f3897",
+      "bytes": 447
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/Nib_GripReplacement.fbx",
+      "sha256": "d53d604cb7e2944895d3bbbf56a057ef5e323dd5912851d79579ccde048b3033",
+      "bytes": 38282508
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/Nib_LegReplacement.fbx",
+      "sha256": "f737c2ffae4dda7b9bf6679a4a7e5f7086917bc7b7c585c30d523e3c4eedca99",
+      "bytes": 39809388
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/Nib_Natural.fbx",
+      "sha256": "51901cd29114c68cac2f6c82d61dae4762fd1407c8cb10c59c87d0ca5b22b177",
+      "bytes": 39984140
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/FacePerformance.fbx",
+      "sha256": "b52ff806d79d506f1aa67372159e013173846593d8c7608c08d50af92684ce04",
+      "bytes": 1161708
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Hit.fbx",
+      "sha256": "945fe1ce97f345a45976d0e189dfc3764a085d540ae54c187b34859399e5bdc5",
+      "bytes": 750572
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Idle.fbx",
+      "sha256": "a2f9069ff467165d82d8912ff030e271771530f64576388aabf75afca3a5d460",
+      "bytes": 1457948
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Melee.fbx",
+      "sha256": "d206d70685dfeaebf96ac51618d637e0014366dee40d0674721316e778e84661",
+      "bytes": 735052
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Run.fbx",
+      "sha256": "88e71f3e92757ded37e09672155b69d243f3bf895a2022350ccd87bf6f6c82bf",
+      "bytes": 677132
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Shoot.fbx",
+      "sha256": "40727690895899ed2645142a38e6e83ee5cd3beeabf5ee455d89a424af76197d",
+      "bytes": 765692
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/animations/Walk.fbx",
+      "sha256": "4620b0ea21e90da7a1d85f5f3fcfa0085725153d465d8c11478a6b9956e3933f",
+      "bytes": 721052
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/asset_manifest.json",
+      "sha256": "a431c1fca88aadb3ce0d27b91b412256c6d5075e2dffbba330525abe0e7c0415",
+      "bytes": 52167
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/facial-rig.json",
+      "sha256": "163d39db4001df11b5afff58f36d8e869a1e9cd87e4ebc0f43736b33e981d3d1",
+      "bytes": 5518
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/manifest.json",
+      "sha256": "a431c1fca88aadb3ce0d27b91b412256c6d5075e2dffbba330525abe0e7c0415",
+      "bytes": 52167
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Brass_BaseColor.png",
+      "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+      "bytes": 396122
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Brass_Metallic.png",
+      "sha256": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Brass_Normal.png",
+      "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+      "bytes": 239142
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Brass_Roughness.png",
+      "sha256": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+      "bytes": 280908
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Cloth_BaseColor.png",
+      "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+      "bytes": 1270205
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Cloth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Cloth_Normal.png",
+      "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+      "bytes": 1110191
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Cloth_Roughness.png",
+      "sha256": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+      "bytes": 275880
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Dark_BaseColor.png",
+      "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+      "bytes": 729586
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Dark_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Dark_Normal.png",
+      "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+      "bytes": 2090648
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Dark_Roughness.png",
+      "sha256": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+      "bytes": 283784
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Gum_BaseColor.png",
+      "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+      "bytes": 805893
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Gum_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Gum_Normal.png",
+      "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+      "bytes": 1097712
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Gum_Roughness.png",
+      "sha256": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+      "bytes": 284893
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Hair_BaseColor.png",
+      "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+      "bytes": 447693
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Hair_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Hair_Normal.png",
+      "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+      "bytes": 16509
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Hair_Roughness.png",
+      "sha256": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+      "bytes": 286568
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularGlobe_BaseColor.png",
+      "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+      "bytes": 15963
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularGlobe_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularGlobe_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularGlobe_Roughness.png",
+      "sha256": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_L_BaseColor.png",
+      "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+      "bytes": 446033
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_L_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_L_Normal.png",
+      "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+      "bytes": 39196
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_L_Roughness.png",
+      "sha256": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+      "bytes": 6305
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_R_BaseColor.png",
+      "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+      "bytes": 445781
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_R_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_R_Normal.png",
+      "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+      "bytes": 39685
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_IdentityOcularIris_R_Roughness.png",
+      "sha256": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+      "bytes": 6364
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Leather_BaseColor.png",
+      "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+      "bytes": 1143494
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Leather_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Leather_Normal.png",
+      "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+      "bytes": 2090835
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Leather_Roughness.png",
+      "sha256": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+      "bytes": 285772
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Lens_BaseColor.png",
+      "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+      "bytes": 273482
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Lens_Metallic.png",
+      "sha256": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Lens_Normal.png",
+      "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+      "bytes": 236763
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Lens_Roughness.png",
+      "sha256": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+      "bytes": 283243
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_MouthInterior_BaseColor.png",
+      "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+      "bytes": 255357
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_MouthInterior_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_MouthInterior_Normal.png",
+      "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+      "bytes": 1097336
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_MouthInterior_Roughness.png",
+      "sha256": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+      "bytes": 285342
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Skin_BaseColor.png",
+      "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+      "bytes": 5208031
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Skin_Metallic.png",
+      "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37",
+      "bytes": 55235
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Skin_Normal.png",
+      "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+      "bytes": 4165810
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Skin_Roughness.png",
+      "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+      "bytes": 731383
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Steel_BaseColor.png",
+      "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+      "bytes": 451864
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Steel_Metallic.png",
+      "sha256": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Steel_Normal.png",
+      "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+      "bytes": 238497
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Steel_Roughness.png",
+      "sha256": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+      "bytes": 281453
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Stitch_BaseColor.png",
+      "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+      "bytes": 1313334
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Stitch_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Stitch_Normal.png",
+      "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+      "bytes": 1117084
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Stitch_Roughness.png",
+      "sha256": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+      "bytes": 282409
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Teal_BaseColor.png",
+      "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+      "bytes": 510574
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Teal_Metallic.png",
+      "sha256": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Teal_Normal.png",
+      "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+      "bytes": 235615
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Teal_Roughness.png",
+      "sha256": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+      "bytes": 285252
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tongue_BaseColor.png",
+      "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+      "bytes": 717021
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tongue_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tongue_Normal.png",
+      "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+      "bytes": 1096508
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tongue_Roughness.png",
+      "sha256": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+      "bytes": 284438
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tooth_BaseColor.png",
+      "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+      "bytes": 1314538
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tooth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tooth_Normal.png",
+      "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+      "bytes": 1098229
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Tooth_Roughness.png",
+      "sha256": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+      "bytes": 287148
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Workwear_BaseColor.png",
+      "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+      "bytes": 2735574
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Workwear_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Workwear_Normal.png",
+      "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+      "bytes": 1119187
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_Workwear_Roughness.png",
+      "sha256": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+      "bytes": 283904
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_DustyPinkEar_BaseColor.png",
+      "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+      "bytes": 479898
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_DustyPinkEar_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_DustyPinkEar_Normal.png",
+      "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+      "bytes": 5362
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_DustyPinkEar_Roughness.png",
+      "sha256": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_FacialSkinAtlas_BaseColor.png",
+      "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+      "bytes": 8728408
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_FacialSkinAtlas_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_FacialSkinAtlas_Normal.png",
+      "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+      "bytes": 360186
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_FacialSkinAtlas_Roughness.png",
+      "sha256": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+      "bytes": 311769
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_HeadFur_BaseColor.png",
+      "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+      "bytes": 302137
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_HeadFur_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_HeadFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_HeadFur_Roughness.png",
+      "sha256": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_InnerEarWisps_BaseColor.png",
+      "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+      "bytes": 319226
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_InnerEarWisps_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_InnerEarWisps_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_InnerEarWisps_Roughness.png",
+      "sha256": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarFur_BaseColor.png",
+      "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+      "bytes": 234659
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarFur_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarFur_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarFur_Roughness.png",
+      "sha256": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarUndercoat_BaseColor.png",
+      "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+      "bytes": 427604
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarUndercoat_Metallic.png",
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarUndercoat_Normal.png",
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v5_TawnyEarUndercoat_Roughness.png",
+      "sha256": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+      "bytes": 4589
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_FurCards_Metallic.png",
+      "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+      "bytes": 4265
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_FurCards_Normal.png",
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+      "bytes": 1217166
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_FurCards_Roughness.png",
+      "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+      "bytes": 294794
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_HeadFurCards_BaseColor.png",
+      "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+      "bytes": 2798223
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_InnerEarWispsCards_BaseColor.png",
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+      "bytes": 2834868
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/reference/textures/Nib_v6_TawnyEarFurCards_BaseColor.png",
+      "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+      "bytes": 2617473
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/source-contract.json",
+      "sha256": "3d4d0aa064561e3df0e8d47c7b52ec227a46b3461a6b13bd87493e5b4cf57a3b",
+      "bytes": 5056995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Brass_BaseColor.png",
+      "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+      "bytes": 396122
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Brass_Metallic.png",
+      "sha256": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Brass_Normal.png",
+      "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+      "bytes": 239142
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Brass_Roughness.png",
+      "sha256": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+      "bytes": 280908
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Cloth_BaseColor.png",
+      "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+      "bytes": 1270205
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Cloth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Cloth_Normal.png",
+      "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+      "bytes": 1110191
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Cloth_Roughness.png",
+      "sha256": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+      "bytes": 275880
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Dark_BaseColor.png",
+      "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+      "bytes": 729586
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Dark_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Dark_Normal.png",
+      "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+      "bytes": 2090648
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Dark_Roughness.png",
+      "sha256": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+      "bytes": 283784
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_EarInner_BaseColor.png",
+      "sha256": "a4998bd324f7cc24df96894462a3a597e7ea65dd4c4995b04ed0a4b8f4df4d9c",
+      "bytes": 1054381
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_EarInner_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_EarInner_Normal.png",
+      "sha256": "424143fc562dd1cf0284471bfaa521875f1a70f142be42002556073b45e7d028",
+      "bytes": 1097502
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_EarInner_Roughness.png",
+      "sha256": "cbebe73da747e5d95dea1a69fca2f3d30ba3e5b809085ee1cb5487ae76eb6305",
+      "bytes": 281089
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Eye_BaseColor.png",
+      "sha256": "7ae531e28f568681c71bc4c175f7c08ccd6d077e31cdf370181fb53a8383ffa0",
+      "bytes": 1251418
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Eye_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Eye_Normal.png",
+      "sha256": "6c8f07d11c48bce1303306749032369766259b08d7e89df0159e0dc9bfe2033a",
+      "bytes": 1097227
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Eye_Roughness.png",
+      "sha256": "d5444adcf5b2c63738ff70543639c388db72b7e2a4ca8aedc3257cead3eb1b97",
+      "bytes": 284187
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Gum_BaseColor.png",
+      "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+      "bytes": 805893
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Gum_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Gum_Normal.png",
+      "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+      "bytes": 1097712
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Gum_Roughness.png",
+      "sha256": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+      "bytes": 284893
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Hair_BaseColor.png",
+      "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+      "bytes": 447693
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Hair_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Hair_Normal.png",
+      "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+      "bytes": 16509
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Hair_Roughness.png",
+      "sha256": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+      "bytes": 286568
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Leather_BaseColor.png",
+      "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+      "bytes": 1143494
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Leather_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Leather_Normal.png",
+      "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+      "bytes": 2090835
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Leather_Roughness.png",
+      "sha256": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+      "bytes": 285772
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Lens_BaseColor.png",
+      "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+      "bytes": 273482
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Lens_Metallic.png",
+      "sha256": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Lens_Normal.png",
+      "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+      "bytes": 236763
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Lens_Roughness.png",
+      "sha256": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+      "bytes": 283243
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_MouthInterior_BaseColor.png",
+      "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+      "bytes": 255357
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_MouthInterior_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_MouthInterior_Normal.png",
+      "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+      "bytes": 1097336
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_MouthInterior_Roughness.png",
+      "sha256": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+      "bytes": 285342
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Muzzle_BaseColor.png",
+      "sha256": "d3a6ca8f2169a3df64b78d6a99325e90b7e21de919294d23cbf23df5f5b79854",
+      "bytes": 1365349
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Muzzle_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Muzzle_Normal.png",
+      "sha256": "6c264f47b3767e6c24ec60385f9fa88db7343f0cd4e55fad58708a4238beba17",
+      "bytes": 1096912
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Muzzle_Roughness.png",
+      "sha256": "0f98cfb73d9f5041bf0e35123a28044fc08cc16c32fa645ad7e61b0173c85f6b",
+      "bytes": 285637
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Skin_BaseColor.png",
+      "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+      "bytes": 5208031
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Skin_Metallic.png",
+      "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37",
+      "bytes": 55235
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Skin_Normal.png",
+      "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+      "bytes": 4165810
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Skin_Roughness.png",
+      "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+      "bytes": 731383
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Steel_BaseColor.png",
+      "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+      "bytes": 451864
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Steel_Metallic.png",
+      "sha256": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Steel_Normal.png",
+      "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+      "bytes": 238497
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Steel_Roughness.png",
+      "sha256": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+      "bytes": 281453
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Stitch_BaseColor.png",
+      "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+      "bytes": 1313334
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Stitch_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Stitch_Normal.png",
+      "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+      "bytes": 1117084
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Stitch_Roughness.png",
+      "sha256": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+      "bytes": 282409
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Teal_BaseColor.png",
+      "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+      "bytes": 510574
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Teal_Metallic.png",
+      "sha256": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7",
+      "bytes": 15961
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Teal_Normal.png",
+      "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+      "bytes": 235615
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Teal_Roughness.png",
+      "sha256": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+      "bytes": 285252
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tongue_BaseColor.png",
+      "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+      "bytes": 717021
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tongue_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tongue_Normal.png",
+      "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+      "bytes": 1096508
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tongue_Roughness.png",
+      "sha256": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+      "bytes": 284438
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tooth_BaseColor.png",
+      "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+      "bytes": 1314538
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tooth_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tooth_Normal.png",
+      "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+      "bytes": 1098229
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Tooth_Roughness.png",
+      "sha256": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+      "bytes": 287148
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Workwear_BaseColor.png",
+      "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+      "bytes": 2735574
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Workwear_Metallic.png",
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Workwear_Normal.png",
+      "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+      "bytes": 1119187
+    },
+    {
+      "path": "benchmark/shared/characters/nib/textures/Nib_Workwear_Roughness.png",
+      "sha256": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+      "bytes": 283904
+    },
+    {
+      "path": "benchmark/tools/animation/export_contract.py",
+      "sha256": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+      "bytes": 5068
+    },
+    {
+      "path": "benchmark/tools/animation/validate_motion_candidate.py",
+      "sha256": "bdfc7c619691b2469e7b5d28fede3ca332d92a4a64ea28ec2fa5f73211059f8a",
+      "bytes": 8844
+    },
+    {
+      "path": "benchmark/tools/nib/export_nib.py",
+      "sha256": "67cc0a2d7bdf92c9f3b63b91348ee611263e44aff6c8647c943969f05d78d32d",
+      "bytes": 20758
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/preserve_fbx_point_payloads.py",
+      "sha256": "60cd851301fb3d9af54cf09fac3c8738f46a1b00d52f218b36c3ccbe1590acaa",
+      "bytes": 10332
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/triangle_corner_contract.py",
+      "sha256": "67740b66d8784de1882f42d495b842527492ef0880507a4dd07054f0c57625a6",
+      "bytes": 4563
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/triangulate_corners.py",
+      "sha256": "0f24d4d657800472c41f0182c9e3a7ad65092c570c5979c213b65272b2073ff7",
+      "bytes": 3468
+    },
+    {
+      "path": "benchmark/tools/nib/v5_wip/validate_triangulated_payload.py",
+      "sha256": "49b9ac00291675646a9022c2939518d6c88c76efd320c4f9451d1aae0b900a7d",
+      "bytes": 12666
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/check_blender_corner_transfer.py",
+      "sha256": "9ef180adc8da59eac993adfe0e5f8d05d9f483d6b6a17449f7cc111bdce2ff1f",
+      "bytes": 3262
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/plans/nib-coherent79-neck-e1cdbd-v1/plan.json",
+      "sha256": "22b1e53666186a8567dcb1b8856e932c103e7901899af0a4211fae259ead5628",
+      "bytes": 23473
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/prepare_export_resume.py",
+      "sha256": "30ea6a044e61e0d063252c747394d57d750786a9d2e8e07e58314fe884746862",
+      "bytes": 5715
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/prepare_plan.py",
+      "sha256": "9ddbf21612a11a731630c9adf4c6b2aed64367ddc1e8068d60e28d1f829c0c3e",
+      "bytes": 6745
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/repair_pbr_paths.py",
+      "sha256": "e79187914f8cf0bdb566434ae2d7412cd3558ce571ef416be412ba92aa72a30b",
+      "bytes": 2817
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/review_pbr.py",
+      "sha256": "92965b481e1af44ebedc270cdbb6b4a0e06ff57137e6891ac84c4749da9379f3",
+      "bytes": 2315
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/review_pbr_optical.py",
+      "sha256": "094b32ecd3f0d2e4732e64c384f0ddcd48e441d0b7c5308786a22c51498a6e1d",
+      "bytes": 4629
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/run_stage.py",
+      "sha256": "a326296a69c24ccf8c0ac8d8541f1f5224d24e43980483f2d93c946ef933bdb2",
+      "bytes": 8743
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/snapshot_source.py",
+      "sha256": "9750fc9b933123986487afe5ce9cd0ef6b53b21fbb89dd287316a9f560bd80ff",
+      "bytes": 7213
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/validate_variant.py",
+      "sha256": "74756670478e2b21e908f4282a0590db28de9ce2894657f6f6e488be16f28c1e",
+      "bytes": 12895
+    }
+  ],
+  "stages": {
+    "triangles": {
+      "dependencies": [],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulated"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulated"
+      ]
+    },
+    "validate-payload": {
+      "dependencies": [
+        "triangles"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulation-validation.json"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulation-validation.json"
+      ]
+    },
+    "validate-variant-natural": {
+      "dependencies": [
+        "validate-payload"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-Natural-validation.json"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-Natural-validation.json"
+      ]
+    },
+    "validate-variant-grip": {
+      "dependencies": [
+        "validate-payload"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-GripReplacement-validation.json"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-GripReplacement-validation.json"
+      ]
+    },
+    "validate-variant-leg": {
+      "dependencies": [
+        "validate-payload"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-LegReplacement-validation.json"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/variant-LegReplacement-validation.json"
+      ]
+    },
+    "validate-clips": {
+      "dependencies": [
+        "validate-payload"
+      ],
+      "outputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulated/roundtrip.json"
+      ],
+      "freshOutputs": [
+        "benchmark/local/candidates/nib-coherent79-neck-corners-v2/triangulated/roundtrip.json"
+      ]
+    }
+  }
+}

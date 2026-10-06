@@ -190,3 +190,15 @@ benchmark/art/animation/krag-coherent-hand-v1/**/*.json -text whitespace=cr-at-e
 benchmark/art/animation/krag-coherent-hand-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-coherent-hand-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-coherent-hand-v1/executed-recipe/contracts.py whitespace=-blank-at-eof
+
+# Exact corrected corner-transfer evidence and large source-pose/corner records.
+benchmark/unreal/evidence/nib-corner-transfer-native-v1/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-corner-transfer-native-v1/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-corner-transfer-native-v1/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-corner-transfer-native-v1/*.log -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-corners-v2/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-corners-v2/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-corners-v2/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-corners-v2/**/*.log -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-corners-v2/*.npz filter=lfs diff=lfs merge=lfs -text
+benchmark/unreal/evidence/nib-coherent79-corners-v2/source-pose-contract.json filter=lfs diff=lfs merge=lfs -text

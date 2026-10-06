@@ -1,0 +1,69 @@
+{
+  "nativeExitCode": 0,
+  "guardExitCode": 0,
+  "pid": 20996,
+  "marker": "NIB_CORNER_FIXTURE_COMPLETE",
+  "scope": "Actual Blender5.2+FBX hard-edge numerical fixture, not full character validation",
+  "artifacts": [
+    {
+      "path": "result.json",
+      "sha256": "9c513fd71ba895c594be662a862644d6c45bf82c01f3285e96c4ae1873b8f6d1",
+      "bytes": 3522
+    },
+    {
+      "path": "source.fbx",
+      "sha256": "ca8d1ae60ba146367595b2cebee08dfe62e8d580ca89e3925759c6ce0eae3ed7",
+      "bytes": 17900
+    },
+    {
+      "path": "target.corners.npz",
+      "sha256": "9cb11f42fbf2e0263476f4e3065b3d5d125fba429a6ae9878e029c0b40dc44f5",
+      "bytes": 751
+    },
+    {
+      "path": "target.fbx",
+      "sha256": "aa362e02bbed2a216e1eac080cf5b36c7dad6226dd39b873464630449960312e",
+      "bytes": 17884
+    },
+    {
+      "path": "nib-corner-transfer-fixture-v1-memory.csv",
+      "sha256": "6aebfddc08ed76d5b503490d5dcc8e551488041ff27daeb986b477b9e52311a9",
+      "bytes": 193
+    },
+    {
+      "path": "nib-corner-transfer-fixture-v1.log",
+      "sha256": "0c8aaa64241eebf1204262c8f382827d65c74ae5ac2e1dbad3235285e2d7e5fa",
+      "bytes": 415
+    },
+    {
+      "path": "nib-corner-transfer-fixture-v1.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "executed-recipes/check_blender_corner_transfer.py",
+      "sha256": "9ef180adc8da59eac993adfe0e5f8d05d9f483d6b6a17449f7cc111bdce2ff1f",
+      "bytes": 3262
+    },
+    {
+      "path": "executed-recipes/triangulate_corners.py",
+      "sha256": "0f24d4d657800472c41f0182c9e3a7ad65092c570c5979c213b65272b2073ff7",
+      "bytes": 3468
+    },
+    {
+      "path": "executed-recipes/triangle_corner_contract.py",
+      "sha256": "67740b66d8784de1882f42d495b842527492ef0880507a4dd07054f0c57625a6",
+      "bytes": 4563
+    },
+    {
+      "path": "executed-recipes/preserve_fbx_point_payloads.py",
+      "sha256": "60cd851301fb3d9af54cf09fac3c8738f46a1b00d52f218b36c3ccbe1590acaa",
+      "bytes": 10332
+    },
+    {
+      "path": "executed-recipes/validate_triangulated_payload.py",
+      "sha256": "405ca4b1a4db32dcaa873744835a515dec6302f9b147813ae26f71770f904ff8",
+      "bytes": 12489
+    }
+  ]
+}

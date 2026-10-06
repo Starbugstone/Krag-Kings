@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "scope": "Technical coherent Nib export/roundtrip and explicit shared promotion only",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "pbrSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "jobs": {
+    "triangles": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 13380,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE triangles",
+      "sampledPeakPrivateMB": 3258,
+      "sampledMinimumAvailableMB": 8704
+    },
+    "validate-payload": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 22660,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-payload",
+      "sampledPeakPrivateMB": 1071,
+      "sampledMinimumAvailableMB": 10836
+    },
+    "validate-variant-natural": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 21244,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-variant-natural",
+      "sampledPeakPrivateMB": 1068,
+      "sampledMinimumAvailableMB": 10826
+    },
+    "validate-variant-grip": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 33328,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-variant-grip",
+      "sampledPeakPrivateMB": 1047,
+      "sampledMinimumAvailableMB": 10858
+    },
+    "validate-variant-leg": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 23588,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-variant-leg",
+      "sampledPeakPrivateMB": 1054,
+      "sampledMinimumAvailableMB": 10845
+    },
+    "validate-clips": {
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "processId": 22484,
+      "freshMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-clips",
+      "sampledPeakPrivateMB": 634,
+      "sampledMinimumAvailableMB": 11229
+    }
+  },
+  "boneCount": 79,
+  "morphCount": 25,
+  "materialCount": 27,
+  "textureFiles": 102,
+  "portableFiles": 115,
+  "variants": [
+    {
+      "name": "Nib_Natural",
+      "vertices": 440575,
+      "triangles": 750292,
+      "invalidWeights": 0,
+      "bindHierarchyMatches": true,
+      "maximumPosePositionErrorMeters": 7.234549787128076e-07,
+      "maximumPoseRotationErrorDegrees": 0.0004362574478609892
+    },
+    {
+      "name": "Nib_GripReplacement",
+      "vertices": 416009,
+      "triangles": 702894,
+      "invalidWeights": 0,
+      "bindHierarchyMatches": true,
+      "maximumPosePositionErrorMeters": 7.234549787128076e-07,
+      "maximumPoseRotationErrorDegrees": 0.0004362574478609892
+    },
+    {
+      "name": "Nib_LegReplacement",
+      "vertices": 437983,
+      "triangles": 745184,
+      "invalidWeights": 0,
+      "bindHierarchyMatches": true,
+      "maximumPosePositionErrorMeters": 7.234549787128076e-07,
+      "maximumPoseRotationErrorDegrees": 0.0004362574478609892
+    }
+  ],
+  "basisVertexPayloadByteIdentical": true,
+  "cornerNormalPayloadByteIdentical": true,
+  "mappedNormalMaxVectorError": 0.0,
+  "morphPayloadByteIdentical": false,
+  "maximumDenseMorphDeltaDifferenceMeters": 8.392410183148815e-07,
+  "morphRoundingToleranceMeters": 1e-06,
+  "standaloneClips": {
+    "Idle": {
+      "durationSeconds": 6.0,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 6.073594304195137e-07,
+      "maxPoseRotationErrorDegrees": 0.00017075472925033458,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Eye_L",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Walk": {
+      "durationSeconds": 0.8,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 5.997601687162551e-07,
+      "maxPoseRotationErrorDegrees": 0.00017343167061495448,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Eye_L",
+        "Eye_R",
+        "Ear_L",
+        "EarTip_L"
+      ]
+    },
+    "Run": {
+      "durationSeconds": 0.6,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 7.234549787128076e-07,
+      "maxPoseRotationErrorDegrees": 0.00037113924372861535,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Jaw",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Melee": {
+      "durationSeconds": 1.0666666666666667,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 5.625064995341561e-07,
+      "maxPoseRotationErrorDegrees": 0.00043440889103791755,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Jaw",
+        "LipUpper",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Shoot": {
+      "durationSeconds": 1.0,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 7.115206948705508e-07,
+      "maxPoseRotationErrorDegrees": 0.0004362574478609892,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "LipUpper",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "Hit": {
+      "durationSeconds": 0.9333333333333333,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 6.817179461537524e-07,
+      "maxPoseRotationErrorDegrees": 0.00025021249301294864,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Jaw",
+        "LidUpper_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "LidUpper_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    },
+    "FacePerformance": {
+      "durationSeconds": 5.0,
+      "hierarchyMatches": true,
+      "maxBindPositionErrorMeters": 0.0,
+      "maxBindRotationErrorDegrees": 0.0,
+      "maxPosePositionErrorMeters": 3.631728174374682e-07,
+      "maxPoseRotationErrorDegrees": 0.00014914426157769799,
+      "sampledFrames": 17,
+      "varyingFaceControls": [
+        "Jaw",
+        "TongueTip",
+        "LipUpper",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R"
+      ]
+    }
+  },
+  "sharedPromotion": true,
+  "promotionTransformScope": "Only source/report/reference paths in two manifest aliases; all FBX/texture/deformation bytes unchanged",
+  "sharedDeltaCounts": {
+    "added": 42,
+    "removed": 12,
+    "changed": 12,
+    "unchanged": 61
+  },
+  "engineImportVerified": false,
+  "artisticAcceptance": false,
+  "limits": [
+    "17 skeletal samples per take, not full-cycle mesh collision validation.",
+    "Current likeness, groom, scarf, neck shading and hand/axilla failures remain.",
+    "Actual Unity/Unreal import/render/controls/performance remain to be rerun with this snapshot."
+  ]
+}
