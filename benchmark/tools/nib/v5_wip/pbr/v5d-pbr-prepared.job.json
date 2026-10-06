@@ -1,0 +1,29 @@
+{
+  "name": "nib-v5d-pbr-preparation",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\pbr\\prepare_runtime_pbr.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5d_WIP.blend",
+    "--source-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-head-v5d.json",
+    "--out",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v5d-pbr",
+    "--reference-textures",
+    "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\textures"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v5d-pbr-job.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v5d-pbr-job.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v5d-pbr-job.log",
+  "successMarker": "NIB_V5_PBR_BAKE_COMPLETE"
+}

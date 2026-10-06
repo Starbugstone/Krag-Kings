@@ -1,0 +1,136 @@
+{
+  "status": "Approximate manual 2D image landmark picks, reviewable in accompanying HTML; not canonical dimensions or an approved proportion change.",
+  "conventions": {
+    "earSpan": "Outer visible auricle/rim silhouette; ignores isolated stray hairs.",
+    "skinFace": "Visible facial skin envelope, excludes ears/goggles/fur and exposed neck.",
+    "shoulders": "Outer upper-arm/deltoid silhouette in the displayed shoulder band; excludes straps and hands.",
+    "eyeAperture": "Visible near-eye opening rectangle in the portrait; eyelid rim, eyebrow and protruding iris are excluded.",
+    "poseCaution": "Illustrations and source cameras differ in perspective, head tilt and expression. Pixel measurements are evidence of visible tendencies, not direct 3D coordinates.",
+    "frozenSourceCaution": "No v5c full-body front exists; body comparison uses the explicitly identified v4b render. Body mesh/source scale is not changed by this measurement."
+  },
+  "images": [
+    {
+      "id": "concept_front",
+      "name": "Sheet 02 front illustration",
+      "path": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+      "viewBox": "0 0 420 950",
+      "kind": "body",
+      "uncertaintyPixels": 6,
+      "earSpan": {
+        "left": 34,
+        "right": 402,
+        "top": 9,
+        "bottom": 170
+      },
+      "skinFace": {
+        "left": 168,
+        "right": 270,
+        "top": 153,
+        "bottom": 236
+      },
+      "shoulders": {
+        "left": 106,
+        "right": 307,
+        "top": 246,
+        "bottom": 306
+      },
+      "soleY": 912,
+      "beltY": 438,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "imageSha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80",
+      "ratios": {
+        "earSpanToEarTipSoleHeight": 0.40753045404208194,
+        "skinFaceWidthToEarTipSoleHeight": 0.11295681063122924,
+        "skinFaceHeightToEarTipSoleHeight": 0.09191583610188261,
+        "shoulderBandWidthToEarTipSoleHeight": 0.22259136212624583,
+        "beltHeightFractionFromEarTip": 0.4750830564784053
+      }
+    },
+    {
+      "id": "runtime_front",
+      "name": "Actual optimized v4b Front \u00b7 unaccepted",
+      "path": "benchmark/art/nib/v5-study/runtime-renders/Nib_ReviewFront.png",
+      "viewBox": "270 100 565 1260",
+      "kind": "body",
+      "uncertaintyPixels": 4,
+      "earSpan": {
+        "left": 283,
+        "right": 816,
+        "top": 149,
+        "bottom": 338
+      },
+      "skinFace": {
+        "left": 477,
+        "right": 624,
+        "top": 332,
+        "bottom": 464
+      },
+      "shoulders": {
+        "left": 392,
+        "right": 710,
+        "top": 507,
+        "bottom": 578
+      },
+      "soleY": 1341,
+      "beltY": 774,
+      "sourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
+      "imageWidth": 1100,
+      "imageHeight": 1400,
+      "imageSha256": "46b6907eb31ed5c6a8a83640b38d3762e76261cba4be0e685a9889bc1d9293eb",
+      "ratios": {
+        "earSpanToEarTipSoleHeight": 0.4471476510067114,
+        "skinFaceWidthToEarTipSoleHeight": 0.12332214765100671,
+        "skinFaceHeightToEarTipSoleHeight": 0.11073825503355705,
+        "shoulderBandWidthToEarTipSoleHeight": 0.26677852348993286,
+        "beltHeightFractionFromEarTip": 0.5243288590604027
+      }
+    },
+    {
+      "id": "concept_portrait",
+      "name": "Sheet 02 portrait inset",
+      "path": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+      "viewBox": "1230 190 270 175",
+      "kind": "eye",
+      "uncertaintyPixels": 3,
+      "eyeAperture": {
+        "left": 1305,
+        "right": 1368,
+        "top": 225,
+        "bottom": 252
+      },
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "imageSha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80",
+      "ratios": {
+        "eyeOpeningWidthToHeight": 2.3333333333333335
+      }
+    },
+    {
+      "id": "v5c_portrait",
+      "name": "Actual v5c diagnostic Face \u00b7 unaccepted",
+      "path": "benchmark/art/nib/v5-study/native-v5c-diagnostic-renders/Nib_FaceReview.png",
+      "viewBox": "480 550 420 330",
+      "kind": "eye",
+      "uncertaintyPixels": 3,
+      "eyeAperture": {
+        "left": 574,
+        "right": 639,
+        "top": 623,
+        "bottom": 638
+      },
+      "sourceSha256": "e56d8a16218562f14f0e1ba6866751abacc27ab32adaa20b347fb5b93a2d8711",
+      "imageWidth": 1400,
+      "imageHeight": 1100,
+      "imageSha256": "910208d25b8d635e8329dba8059c1b7c723be907e69b2f3318ef21b431da1c8a",
+      "ratios": {
+        "eyeOpeningWidthToHeight": 4.333333333333333
+      }
+    }
+  ],
+  "reviewFindings": [
+    "The current eye opening is visibly flatter than the concept. Exact magnitude remains sensitive to manual endpoints and differing portrait angle.",
+    "Ear and face scale must be judged with the same silhouette definition and whole-body context. These rough ratios do not authorize a larger head or a species-proportion redesign.",
+    "Short muzzle projection and nose-pad form require the queued actual v5c depth views; frontal width alone cannot establish them."
+  ]
+}

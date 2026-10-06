@@ -149,7 +149,11 @@ def box(name,loc,scale,mat,bone='Pelvis',bevel=.006,variant='all',rot=None):
     if rot:o.rotation_euler=rot
     bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
     own(o,mat,bone,variant)
-    if bevel:m=o.modifiers.new('Soft manufactured edges','BEVEL');m.width=bevel;m.segments=3;apply(o,m)
+    if bevel:
+        m=o.modifiers.new('Soft manufactured edges','BEVEL')
+        # Keep a real planar band on thin patches/pockets. A bevel clamped at
+        # half-thickness produced collapsed triangles after float FBX export.
+        m.width=min(bevel,min(abs(float(v)) for v in scale)*.45);m.segments=3;apply(o,m)
     shade(o);return o
 
 def soft_pouch(name,center,size,mat,bone='Pelvis'):
@@ -194,6 +198,11 @@ def tube(name,points,radii,mat,bone='Head',variant='all',sides=12,res=2):
         seam=any(me.loops[k].vertex_index%sides==sides-1 for k in polygon.loop_indices)
         for k in polygon.loop_indices:
             vi=me.loops[k].vertex_index;u=(vi%sides)/sides
+            if polygon.index>=(len(ps)-1)*sides:
+                # Cap loops need a disk, not one constant longitudinal V.
+                angle=(vi%sides)/sides*math.tau
+                layer.data[k].uv=(.5+.48*math.cos(angle),.5+.48*math.sin(angle))
+                continue
             if seam and vi%sides==0:u=1
             layer.data[k].uv=(u,(vi//sides)/max(1,len(ps)-1))
     o=bpy.data.objects.new(name,me);COL.objects.link(o);own(o,mat,bone,variant)
