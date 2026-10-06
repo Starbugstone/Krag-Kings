@@ -1,0 +1,17 @@
+{
+  "status": "Read-only saved source audit completed; severe Jaw skinning defect proven, repair candidate not yet generated",
+  "sourceSha256": "3791f8405b44c1114728e357caf3c6d21172c5882feee4178e627982a5120b96",
+  "sourceUnchanged": true,
+  "guardExitCode": 0,
+  "completionMarker": "NIB_SAVED_MOUTH_DEFORMATION_AUDIT_COMPLETE",
+  "peakPrivateMB": 590.0,
+  "auditSha256": "4e7483ff9edc668787a7ea0cfe9a9fd146a8e0caa55e835226cbb89599d6339d",
+  "memoryTraceSha256": "b10ef0bd7736f06612bed2a1a336558ab419c85716d70dfc10a56e36b5e4ff35",
+  "findings": [
+    "Jaw-only maximum mouth-edge stretch17.44647; skeletal-only17.44660; morph-only1.36053; combined17.48958.",
+    "Worst original edge0.867434mm stretches15.133663mm under Jaw alone, across weight0.75667 to0.",
+    "Actual nasal probe moves4.18696mm and upper-muzzle probe13.79271mm under Jaw alone.",
+    "Source semantic domains identify105 upper oral-rim vertices and81 lower-rim vertices meeting at2 corners. No blanket mouth-face deletion is justified.",
+    "Prepared replacement uses actual source topology, pins upper mouth/nose to cranium, interpolates mandibular support along lower jaw and oral bag, and restricts residual JawOpen shape to that support. Actual source/pose validation is pending."
+  ]
+}

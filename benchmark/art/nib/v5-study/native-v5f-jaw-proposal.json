@@ -1,0 +1,38 @@
+{
+  "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+  "sourceFaceSets": {
+    "upperLipCheek": 33,
+    "lowerLipJaw": 24,
+    "oralBag": 7,
+    "nose": 11
+  },
+  "upperLipVertices": 14576,
+  "lowerLipRimVertices": 81,
+  "upperLipRimVertices": 105,
+  "cornerVertices": 2,
+  "lowerJawAnchorVertices": 5155,
+  "unknownSolvedVertices": 4871,
+  "iterations": 229,
+  "relativeLinearResidual": 9.48029917252164e-10,
+  "upperLipMaximumJawWeight": 0.0,
+  "noseMaximumJawWeight": 0.0,
+  "lowerRimJawWeightRange": [
+    0.0,
+    1.0
+  ],
+  "cornerFadeSourceMeters": 0.008,
+  "lowerJawBoundarySourceMeters": 0.009,
+  "provisional": true,
+  "requiresActualPoseReview": true,
+  "oldPredictionVersusSavedJawOnlyMaxMeters": 1.9573698992578132e-07,
+  "predictedJawOnlyMouthEdgeStretch": {
+    "maximum": 9.62284221725602,
+    "p99": 3.4221403885979607
+  },
+  "status": "Numerical proposal on actual saved audit cache; no new Blender source or render",
+  "cacheSha256": "b0eb1e8a20c28e6a44d2515f8c8ba3f3beaa519872c97bc7b90e178880c283af",
+  "authoringCode": {
+    "measure_v5f_jaw_proposal.py": "9643cdfed89463e309e559c00c2f78a1f0d7d4919a6d43dfee09d8125e6ac378",
+    "mouth_jaw_weights.py": "32e162941906005c49e32803739a4f38086b947e99ce3fa982620789a91845fb"
+  }
+}

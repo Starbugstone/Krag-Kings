@@ -157,7 +157,10 @@ positions. It records source-coordinate regions, weights, highest mouth-edge
 stretch, frontmost skin faces and potential upper/lower lip crossings, then
 checks that the source hash is unchanged. Its numerical cache stays under
 `benchmark/local/`; the small JSON report goes into the art evidence folder.
-It has not executed. Root must allocate its guard slot before launch.
+It completed exit 0 at 590 MB private memory and preserved the source hash.
+Jaw-only deformation reproduces the 17.45× edge stretch and pulls the nose/
+upper muzzle, while morph-only maximum stretch is 1.36×. Root must allocate
+the next guard slot before any repair source or render process starts.
 
 Do not remove faces merely because the closed oral bag has no boundary edges.
 Audit the actual upper/lower lip and interior surface domains, and do not
@@ -167,3 +170,15 @@ probes, but actual saved-pose decomposition is required before choosing the
 repair. Preserve v5e and create a separate repaired source with neutral and
 extreme expression evidence. Only then resume nose/brow/chin likeness and
 the prepared regional groom candidate.
+
+The prepared isolated repair chain is `native-v5f-jaw-repair.job.json`, then
+`native-v5f-mouth-audit.job.json`, then `native-v5f-jaw-review.job.json`. These
+have not run. The first reads only frozen v5e and refuses to overwrite an
+existing v5f candidate. It preserves Basis topology/UVs and bind, solves Jaw
+weights from actual upper/lower oral rim domains, restricts residual JawOpen
+support and reproduces existing fine-fuzz geometry with corrected deformation.
+Unrelated mesh components and expression keys are checked for preservation.
+The second repeats the same read-only decomposition against that saved output.
+The final explicitly diagnostic views are neutral Face, Tongue and Blink. Any
+neutral gate failure stays in their metadata; no automatic artistic acceptance
+or shared export follows a successful script exit.
