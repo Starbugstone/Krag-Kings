@@ -1,0 +1,39 @@
+{
+  "completedFocusedScope": true,
+  "fullSuiteCompleted": false,
+  "passedChecks": 11,
+  "exeSha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+  "gameProcessId": 2712,
+  "gameClosed": true,
+  "guardExitCode": 0,
+  "windowLeaseRestored": true,
+  "requestedHoldMs": 250,
+  "actualEdgeIntervalMs": 319.632,
+  "earlyPassingObservation": {
+    "observedUtc": "2026-10-06T08:55:27.0138441Z",
+    "afterKeyDownMilliseconds": 72.60900000000001,
+    "cameraManhattanDeltaCm": 8.059999999999974,
+    "selectedAction": "Melee"
+  },
+  "bothEdgesGameForeground": true,
+  "scanCode": 57421,
+  "original525msGapAttributed": false,
+  "psoDiagnostics": "Four20\u201349ms creation hitches at startup frame0; no reported PSO creation hitch in tested action/pan interval.",
+  "observationCaveat": "PowerShell sampling stretched key release; pass was already observed before250ms. Native timed-release source is now prepared separately, not tested in this game run.",
+  "performanceMeasurement": false,
+  "visualAcceptance": false,
+  "artifactHashes": {
+    "native-input-result.json": "75394fde9cebd40254b5ddb32816970d901b638092529c7dd11ea3922e3c0e0f",
+    "input-smoke-report.json": "4ff5c3a26727ecc46599346769527658f9eef3ec50e4e8a50a1d56e2a0145e0f",
+    "input-state.json": "86b9b008eae6c99703c837bd8c1bf4d5bd2cc9e3dcc02ac9fe9b02c127f1eddd",
+    "package-result.json": "5b0e6e58f89036a0a14d01ba73babd70693cf18728452ed5c744cb3e2e775f36",
+    "run-conditions.json": "029d68ea9a22ad2bb0bb29ab6cc9380f877c0678d1c7f704878a601d6a3c40ef",
+    "job.json": "e6a8f0fe68fd8324fd1d57c0e33639185abd573a808baf9d14b343babc8c3798",
+    "guard-stdout.log": "2db810cd0822c86ed5c3de687d47088972017219447ee87ccf51099ceac80c25",
+    "guard-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.log": "3d55b113c0843b4a3b196322c9c7b67c6fa9aff7bb038193ebf1da7fba8118f3",
+    "memory.csv": "b695b9379aff435618a8403e8ca90e5238d76f1ce66351b159724ff3227fcbf6",
+    "gpu.csv": "fec7d2758a46c93f8235f0b3ca1a1104388dc3f91c2c998e48b9b2a22d735c96",
+    "input-stdout.log": "c31b646fb3bef69bbe6cd65f67a39ba8e5f8db7b35a0f4f252925fe29c87a713"
+  }
+}

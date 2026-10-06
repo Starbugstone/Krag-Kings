@@ -36,6 +36,36 @@ public static class KKInput {
   var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan&0xFFu),flags=flags}}};
   if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
  }
+ public sealed class KeyEdge {
+  public uint virtualKey,scan;public bool keyUp,accepted;public long layout,foregroundBefore,foregroundAfter;
+  public string utcBefore,utcAfter;
+ }
+ public sealed class TimedKeyHold : IDisposable {
+  readonly System.Threading.ManualResetEvent cancel=new System.Threading.ManualResetEvent(false);
+  readonly System.Threading.Thread worker;readonly uint scan,code;readonly long layout;
+  readonly System.Diagnostics.Stopwatch clock=new System.Diagnostics.Stopwatch();
+  volatile bool finished;Exception failure;
+  public KeyEdge Down,Up;public double ActualHoldMilliseconds;
+  public bool Finished {get{return finished;}}
+  KeyEdge Emit(bool up) {
+   var edge=new KeyEdge {virtualKey=code,scan=scan,keyUp=up,layout=layout,utcBefore=DateTime.UtcNow.ToString("o"),foregroundBefore=GetForegroundWindow().ToInt64()};
+   try{SendScan(scan,up);edge.accepted=true;}
+   finally{edge.utcAfter=DateTime.UtcNow.ToString("o");edge.foregroundAfter=GetForegroundWindow().ToInt64();if(up)Up=edge;else Down=edge;}
+   return edge;
+  }
+  public TimedKeyHold(uint scan,uint code,long layout,int milliseconds) {
+   this.scan=scan;this.code=code;this.layout=layout;
+   Down=Emit(false);clock.Start();
+   worker=new System.Threading.Thread(()=>{
+    try{cancel.WaitOne(Math.Max(0,milliseconds-(int)clock.ElapsedMilliseconds));Emit(true);}
+    catch(Exception error){failure=error;}
+    finally{clock.Stop();ActualHoldMilliseconds=clock.Elapsed.TotalMilliseconds;finished=true;}
+   });
+   worker.IsBackground=true;
+   try{worker.Start();}catch{Emit(true);cancel.Dispose();throw;}
+  }
+  public void Dispose(){cancel.Set();worker.Join();cancel.Dispose();if(failure!=null)throw new InvalidOperationException("Timed key release failed",failure);}
+ }
 
  public static void SendQuickRmb(uint shiftScan) {
   var inputs=new System.Collections.Generic.List<INPUT>();
@@ -64,7 +94,7 @@ function Read-State {
  for($i=0;$i -lt 20;$i++) {try{return Get-Content $StatePath -Raw|ConvertFrom-Json}catch{Start-Sleep -Milliseconds 50}}
  throw 'No readable runtime input-state.json; launch with -KKInputState.'
 }
-function Send-Key([byte]$Code,[bool]$Up=$false) {
+function Resolve-Key([byte]$Code) {
  [uint32]$owner=0
  $thread=[KKInput]::GetWindowThreadProcessId($game.MainWindowHandle,[ref]$owner)
  if($owner -ne $game.Id){throw 'Demo window ownership changed; keyboard input stopped.'}
@@ -74,7 +104,11 @@ function Send-Key([byte]$Code,[bool]$Up=$false) {
  $mapped=[KKInput]::MapVirtualKeyEx($Code,4,$layout)
  if($mapped -eq 0){throw "No scan code for virtual key $Code in the demo keyboard layout."}
  if(($Code -ge 0x21 -and $Code -le 0x28) -or $Code -eq 0x2D -or $Code -eq 0x2E){$mapped=$mapped -bor 0xE000}
- $edge=[ordered]@{virtualKey=[int]$Code;scan=[uint32]$mapped;keyUp=$Up;layout=$layout.ToInt64();utcBefore=[DateTime]::UtcNow.ToString('o');foregroundBefore=[KKInput]::GetForegroundWindow().ToInt64();accepted=$false}
+ [pscustomobject]@{scan=[uint32]$mapped;layout=$layout.ToInt64()}
+}
+function Send-Key([byte]$Code,[bool]$Up=$false) {
+ $resolved=Resolve-Key $Code;$mapped=$resolved.scan
+ $edge=[ordered]@{virtualKey=[int]$Code;scan=[uint32]$mapped;keyUp=$Up;layout=$resolved.layout;utcBefore=[DateTime]::UtcNow.ToString('o');foregroundBefore=[KKInput]::GetForegroundWindow().ToInt64();accepted=$false}
  try {[KKInput]::SendScan($mapped,$Up);$edge.accepted=$true}
  finally {$edge['utcAfter']=[DateTime]::UtcNow.ToString('o');$edge['foregroundAfter']=[KKInput]::GetForegroundWindow().ToInt64();$keyboardEvidence.Add([pscustomobject]$edge)}
 }
@@ -95,17 +129,20 @@ function Observe-CameraState {
 function Hold-ObservedPan {
  Assert-Foreground
  $before=Observe-CameraState;$during=New-Object System.Collections.Generic.List[object]
- $watch=[Diagnostics.Stopwatch]::StartNew();Send-Key 0x27
+ $resolved=Resolve-Key 0x27
+ # Keep release scheduling independent from PowerShell file reads/serialization.
+ $hold=New-Object -TypeName 'KKInput+TimedKeyHold' -ArgumentList @([uint32]$resolved.scan,[uint32]0x27,[long]$resolved.layout,[int]250)
  try {
-  while($watch.ElapsedMilliseconds -lt 250){
-   $remaining=250-$watch.ElapsedMilliseconds
-   if($remaining -gt 0){Start-Sleep -Milliseconds ([Math]::Min(40,[int]$remaining))}
+  while(-not $hold.Finished){
+   Start-Sleep -Milliseconds 40
    Assert-Foreground
    $during.Add((Observe-CameraState))
   }
  } finally {
-  Send-Key 0x27 $true;$watch.Stop()
-  $cameraProbes.Add([pscustomobject]@{control='RightArrow';requestedHeldMilliseconds=250;actualHeldIncludingInjectionMilliseconds=$watch.Elapsed.TotalMilliseconds;before=$before;during=@($during.ToArray());after=(Observe-CameraState);diagnosticOnly=$true})
+  try{$hold.Dispose()}finally{
+   if($hold.Down){$keyboardEvidence.Add($hold.Down)};if($hold.Up){$keyboardEvidence.Add($hold.Up)}
+   $cameraProbes.Add([pscustomobject]@{control='RightArrow';requestedHeldMilliseconds=250;actualHoldFromDownReturnMilliseconds=$hold.ActualHoldMilliseconds;scheduling='Dedicated timer thread; observation cannot postpone release.';before=$before;during=@($during.ToArray());after=(Observe-CameraState);diagnosticOnly=$true})
+  }
  }
 }
 function Orbit-Camera {
@@ -300,5 +337,5 @@ try {
  $finalState=$null;try{$finalState=Read-State}catch{}
  $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
  $report=[ordered]@{scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}elseif($CameraPanOnly){'Focused observed-action pan diagnostic'}else{'Full native suite'});originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());keyboardEdges=@($keyboardEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
- $report|ConvertTo-Json -Depth 9|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
+ $report|ConvertTo-Json -Depth 16|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }
