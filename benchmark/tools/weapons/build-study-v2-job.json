@@ -1,0 +1,24 @@
+{
+  "name": "krag-weapon-study-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\weapons\\build_krag_weapon_study_v2.py",
+    "--",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v2",
+    "--render"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-study-v2.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-study-v2.stderr.log",
+  "maxPrivateGB": 6,
+  "minAvailableGB": 10,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\weapon-study-v2.stdout.log",
+  "successMarker": "KRAG_WEAPON_STUDY_COMPLETE"
+}
