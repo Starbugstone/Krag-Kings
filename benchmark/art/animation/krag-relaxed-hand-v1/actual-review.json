@@ -1,0 +1,47 @@
+{
+  "sourceSha256": "eebf9bebbd568cf4c350d6b04735e79139f1f92504278b584cb71ed9fb3db165",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "savedSourceReopened": true,
+  "actualReviewImages": 18,
+  "inspectedImages": [
+    "Idle_00_palm.png",
+    "Idle_00_edge.png",
+    "Run_50_palm.png",
+    "Run_50_edge.png"
+  ],
+  "artisticAcceptance": false,
+  "finding": "Finger control directions are now based on the measured hand and knuckle axes, but the proposed thumb target pulls about124mm from its rest position across the palm and creates an unnatural broad thenar fold. This is a failed pose, not a source or engine promotion. A restrained native-bend-plane thumb correction is required.",
+  "maximumThumbBoneTargetErrorMeters": 1.4975481660844222e-07,
+  "boneTargetIsNotSurfaceContactProof": true,
+  "retainedMeshComponents": 31,
+  "bodyFaceWeaponCurvesPreserved": true,
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "memory": {
+    "krag-relaxed-hand-v1": {
+      "peakPrivateMB": 1271.0,
+      "minimumAvailableMB": 11481.0
+    },
+    "krag-relaxed-hand-v1-review": {
+      "peakPrivateMB": 1264.0,
+      "minimumAvailableMB": 11746.0
+    }
+  },
+  "frozenFiles": {
+    "executed-recipe/contracts.py": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902",
+    "executed-recipe/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "executed-recipe/humanoid_arms.py": "4fc1c002ea410fc1388bee413f3a5f7cdd03a27f76f7ddad89e12fe667df41b5",
+    "executed-recipe/krag-relaxed-hand-v1-job.json": "d3df5bf18e14fde9e1ca1bf510703d8315f05eda2493fae5254ee05ec095f0d3",
+    "executed-recipe/krag-relaxed-hand-v1-review-job.json": "ab0a12bdca9861a27cb0ea0135854fec84926b6c01c8bf8b00ac4bcaa3da9a14",
+    "executed-recipe/krag_relaxed_hand_pose.py": "7dde5534d9ccc66b018bc5644c40ab3beb6615323db81ae11803e5d928c25df5",
+    "executed-recipe/refine_krag_relaxed_hand.py": "ed66d9679bfdc5b4435834457fd49a72bdf856907b52215fc4f95d0227e738a8",
+    "executed-recipe/review_free_hand.py": "b0800b0efe0facbf3a70a6fc42cc29775dd08976b7b4b7ca17e7bd033c7c5628",
+    "evidence/krag-relaxed-hand-v1-memory.csv": "afcc9f2b0c109f28c1d383ef6d25f991128e5fe53905dd8933a47003416ed205",
+    "evidence/krag-relaxed-hand-v1-review-memory.csv": "b38e22117db2fbb9d55e980229b3f1507f91dbf05f9eb619d975fe19b89d0e8e",
+    "evidence/krag-relaxed-hand-v1-review.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-relaxed-hand-v1-review.stdout.txt": "f21dbc3366b7967e8f3e78036e36c91ff534a617abae85d0735c5934050f4a05",
+    "evidence/krag-relaxed-hand-v1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/krag-relaxed-hand-v1.stdout.txt": "0353e9844c9009303b4737c230f64b5024791a2207a4122f95029c7dd7455688"
+  }
+}
