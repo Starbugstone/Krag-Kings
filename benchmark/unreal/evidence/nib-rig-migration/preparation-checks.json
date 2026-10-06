@@ -1,0 +1,25 @@
+{
+  "checkedUtc": "2026-10-06T08:33:25.677608+00:00",
+  "productionAssetsMutated": false,
+  "readOnlyProductionPlan": {
+    "exitCode": 0,
+    "fileCount": 33,
+    "bytes": 299751295
+  },
+  "fixture": {
+    "path": "benchmark/local/tests/nib-rig-migration",
+    "distinctMutex": "Local\\KragKingsNibMigrationFixture",
+    "archiveExitCode": 0,
+    "restoreExitCode": 0,
+    "verifiedOriginalFiles": 39,
+    "uexpAndUbulkPerVariant": true,
+    "newReplacementPreserved": true,
+    "corruptArchivedSidecarRejected": true,
+    "corruptRestoreExitCode": 1,
+    "restoredOriginalFilesStillMatch": true
+  },
+  "scriptSha256": "8aac1a5c451cd443958858215dfac8b28be880c72edfece56e74194beeb1cb58",
+  "productionArchiveExecuted": false,
+  "productionRestoreExecuted": false,
+  "newSkeletonImported": false
+}

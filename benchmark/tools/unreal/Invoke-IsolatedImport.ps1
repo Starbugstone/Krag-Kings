@@ -79,9 +79,12 @@ if(-not $AssembleOnly){
  foreach($name in $Variants){
   if(Test-Receipt $name){Write-Output ('KK_VARIANT_CACHE_VERIFIED '+$name);continue}
   $receiptPath=Join-Path $receiptDir ($name+'.json')
-  if(-not(Test-Path $receiptPath) -and $name -in $passed){
+  $species=$name.Split('_')[0].ToLowerInvariant()
+  $generatedFolder=Join-Path $project "Content\Benchmark\Characters\$species\$name"
+  if(-not(Test-Path $receiptPath) -and $name -in $passed -and (Test-Path -LiteralPath $generatedFolder -PathType Container)){
    # The Python validator checks this earlier pass against unchanged source
    # hashes, then reloads every package and rechecks actual tracks/morphs/binds.
+   # An intentionally archived folder needs fresh import, not saved validation.
    Invoke-EditorStage ('unreal-validate-'+$name) ('-KKValidateSavedVariant='+$name) ('KK_VARIANT_COMPLETE '+$name)
   }else{
    Invoke-EditorStage ('unreal-import-'+$name) ('-KKImportVariant='+$name) ('KK_VARIANT_COMPLETE '+$name)

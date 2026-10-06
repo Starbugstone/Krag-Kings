@@ -1,0 +1,256 @@
+{
+  "mode": "Plan",
+  "mutated": false,
+  "variants": [
+    "Nib_Natural",
+    "Nib_GripReplacement",
+    "Nib_LegReplacement"
+  ],
+  "generatedItems": [
+    {
+      "archiveRelative": "packages\\Nib_Natural",
+      "name": "Nib_Natural",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural",
+      "kind": "directory"
+    },
+    {
+      "archiveRelative": "receipts\\Nib_Natural.json",
+      "name": "Nib_Natural",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_Natural.json",
+      "kind": "receipt"
+    },
+    {
+      "archiveRelative": "packages\\Nib_GripReplacement",
+      "name": "Nib_GripReplacement",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement",
+      "kind": "directory"
+    },
+    {
+      "archiveRelative": "receipts\\Nib_GripReplacement.json",
+      "name": "Nib_GripReplacement",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_GripReplacement.json",
+      "kind": "receipt"
+    },
+    {
+      "archiveRelative": "packages\\Nib_LegReplacement",
+      "name": "Nib_LegReplacement",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement",
+      "kind": "directory"
+    },
+    {
+      "archiveRelative": "receipts\\Nib_LegReplacement.json",
+      "name": "Nib_LegReplacement",
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_LegReplacement.json",
+      "kind": "receipt"
+    }
+  ],
+  "files": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Nib_Natural.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Nib_Natural.uasset",
+      "bytes": 99516175,
+      "lastWriteUtc": "2026-10-06T02:35:40.6902393Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Nib_Natural_PhysicsAsset.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Nib_Natural_PhysicsAsset.uasset",
+      "bytes": 5260,
+      "lastWriteUtc": "2026-10-06T02:35:39.6519262Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Nib_Natural_Skeleton.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Nib_Natural_Skeleton.uasset",
+      "bytes": 23949,
+      "lastWriteUtc": "2026-10-06T02:35:39.6394149Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "bytes": 187533,
+      "lastWriteUtc": "2026-10-06T02:35:40.9416574Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Hit\\Hit.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Hit\\Hit.uasset",
+      "bytes": 105042,
+      "lastWriteUtc": "2026-10-06T02:35:41.0892287Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Idle\\Idle.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Idle\\Idle.uasset",
+      "bytes": 114140,
+      "lastWriteUtc": "2026-10-06T02:35:41.2956006Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Melee\\Melee.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Melee\\Melee.uasset",
+      "bytes": 111142,
+      "lastWriteUtc": "2026-10-06T02:35:41.4537752Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Run\\Run.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Run\\Run.uasset",
+      "bytes": 92690,
+      "lastWriteUtc": "2026-10-06T02:35:41.5890689Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Shoot\\Shoot.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Shoot\\Shoot.uasset",
+      "bytes": 106054,
+      "lastWriteUtc": "2026-10-06T02:35:41.7470915Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_Natural\\Animations\\Walk\\Walk.uasset",
+      "archiveRelative": "packages\\Nib_Natural\\Animations\\Walk\\Walk.uasset",
+      "bytes": 98684,
+      "lastWriteUtc": "2026-10-06T02:35:41.8849189Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_Natural.json",
+      "archiveRelative": "receipts\\Nib_Natural.json",
+      "bytes": 47942,
+      "lastWriteUtc": "2026-10-06T02:35:42.1470898Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Nib_GripReplacement.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Nib_GripReplacement.uasset",
+      "bytes": 98694727,
+      "lastWriteUtc": "2026-10-06T02:36:59.1618552Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Nib_GripReplacement_PhysicsAsset.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Nib_GripReplacement_PhysicsAsset.uasset",
+      "bytes": 5364,
+      "lastWriteUtc": "2026-10-06T02:36:58.1878949Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Nib_GripReplacement_Skeleton.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Nib_GripReplacement_Skeleton.uasset",
+      "bytes": 24053,
+      "lastWriteUtc": "2026-10-06T02:36:58.1768973Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "bytes": 187597,
+      "lastWriteUtc": "2026-10-06T02:36:59.3858582Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Hit\\Hit.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Hit\\Hit.uasset",
+      "bytes": 105106,
+      "lastWriteUtc": "2026-10-06T02:36:59.5287253Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Idle\\Idle.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Idle\\Idle.uasset",
+      "bytes": 114204,
+      "lastWriteUtc": "2026-10-06T02:36:59.6997297Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Melee\\Melee.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Melee\\Melee.uasset",
+      "bytes": 111206,
+      "lastWriteUtc": "2026-10-06T02:36:59.8327252Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Run\\Run.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Run\\Run.uasset",
+      "bytes": 92754,
+      "lastWriteUtc": "2026-10-06T02:36:59.9417282Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Shoot\\Shoot.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Shoot\\Shoot.uasset",
+      "bytes": 106118,
+      "lastWriteUtc": "2026-10-06T02:37:00.0697267Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_GripReplacement\\Animations\\Walk\\Walk.uasset",
+      "archiveRelative": "packages\\Nib_GripReplacement\\Animations\\Walk\\Walk.uasset",
+      "bytes": 98748,
+      "lastWriteUtc": "2026-10-06T02:37:00.1847258Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_GripReplacement.json",
+      "archiveRelative": "receipts\\Nib_GripReplacement.json",
+      "bytes": 48286,
+      "lastWriteUtc": "2026-10-06T02:37:00.4247579Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Nib_LegReplacement.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Nib_LegReplacement.uasset",
+      "bytes": 98861210,
+      "lastWriteUtc": "2026-10-06T02:38:15.4676016Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Nib_LegReplacement_PhysicsAsset.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Nib_LegReplacement_PhysicsAsset.uasset",
+      "bytes": 5351,
+      "lastWriteUtc": "2026-10-06T02:38:14.4646038Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Nib_LegReplacement_Skeleton.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Nib_LegReplacement_Skeleton.uasset",
+      "bytes": 24040,
+      "lastWriteUtc": "2026-10-06T02:38:14.4526040Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\FacePerformance\\FacePerformance.uasset",
+      "bytes": 187589,
+      "lastWriteUtc": "2026-10-06T02:38:15.6866015Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Hit\\Hit.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Hit\\Hit.uasset",
+      "bytes": 105098,
+      "lastWriteUtc": "2026-10-06T02:38:15.8306033Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Idle\\Idle.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Idle\\Idle.uasset",
+      "bytes": 114196,
+      "lastWriteUtc": "2026-10-06T02:38:15.9986038Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Melee\\Melee.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Melee\\Melee.uasset",
+      "bytes": 111198,
+      "lastWriteUtc": "2026-10-06T02:38:16.1356033Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Run\\Run.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Run\\Run.uasset",
+      "bytes": 92746,
+      "lastWriteUtc": "2026-10-06T02:38:16.2526028Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Shoot\\Shoot.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Shoot\\Shoot.uasset",
+      "bytes": 106110,
+      "lastWriteUtc": "2026-10-06T02:38:16.4066432Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\Content\\Benchmark\\Characters\\nib\\Nib_LegReplacement\\Animations\\Walk\\Walk.uasset",
+      "archiveRelative": "packages\\Nib_LegReplacement\\Animations\\Walk\\Walk.uasset",
+      "bytes": 98740,
+      "lastWriteUtc": "2026-10-06T02:38:16.5236402Z"
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-variant-cache\\Nib_LegReplacement.json",
+      "archiveRelative": "receipts\\Nib_LegReplacement.json",
+      "bytes": 48243,
+      "lastWriteUtc": "2026-10-06T02:38:16.7636416Z"
+    }
+  ],
+  "fileCount": 33,
+  "totalBytes": 299751295,
+  "includes": "Entire variant directories, including .uasset/.uexp/.ubulk sidecars, animation packages and each matching validation receipt.",
+  "nextSkeleton": "79 authored bones; record the Unreal Nib_Rig wrapper separately. Require EarTip_L/R under Ear_L/R, ForearmTwist_L/R under LowerArm_L/R and Hand_L/R under ForearmTwist_L/R.",
+  "importRequirement": "Fresh matching mesh/skeleton and all seven clips at the same final package paths, followed by assembly and validation. This is not a clip-only refresh.",
+  "sharedAssetsChanged": false,
+  "currentWindowsPackageChanged": false,
+  "productionArchiveExecuted": false,
+  "productionRestoreExecuted": false
+}
