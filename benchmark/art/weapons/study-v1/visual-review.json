@@ -1,0 +1,49 @@
+{
+  "status": "Provisional isolated exterior study; not equipped, exported or artistically accepted",
+  "reference": "krag-kings-design/concept-art/10-clan-boss-and-krag-comparison.png, regular Krag",
+  "referenceSha256": "df952ab51c5f79bbf0eeced625c0c72914a2f0dbe7888c94823bba260db9ddcf",
+  "recipeSha256": "0cf5ae34428481b81c07c9369d219c1be85b62a2ab80d63d1d6213b71721039b",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v1\\Krag_Regular_Weapon_Study_v1.blend",
+  "sourceSha256": "c4154d61534b27b994d74cc5a833710a3d4c676af8572dd5e480fa647f390d73",
+  "meshObjects": 97,
+  "triangles": 16332,
+  "gripLengthMeters": 0.18641426310500822,
+  "gripCrossSectionMeters": [
+    0.0648,
+    0.04224
+  ],
+  "forward": "-Y",
+  "up": "Z",
+  "gripBindingAddedBeyondCore": true,
+  "equippedHandContactVerified": false,
+  "sharedAssetsChanged": false,
+  "rendered": true,
+  "views": [
+    {
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v1\\Krag_Weapon_ThreeQuarter.png",
+      "sha256": "2352241515046d4dd4c48002fa63b74cc8cf121b665dd360b53f6a938f527242"
+    },
+    {
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v1\\Krag_Weapon_Side.png",
+      "sha256": "04b462dc7a92e9cefd39785cb4656cd7e111c7125a630080905a3793329e1b52"
+    },
+    {
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\art\\weapons\\study-v1\\Krag_Weapon_Muzzle.png",
+      "sha256": "ef0049475a76305bf34e3934bdf4e42e5555b701f871e37b8944eb3c2b2565d1"
+    }
+  ],
+  "visualReview": {
+    "accepted": false,
+    "actualViewsInspected": [
+      "ThreeQuarter",
+      "Side",
+      "Muzzle"
+    ],
+    "findings": [
+      "Real open muzzle and closed vent-shroud thickness are visible. Grip core retains v9f dimensions, but hand fit is not yet checked.",
+      "Cylinder shading is visibly faceted. Receiver is still a large plain cuboid, and details/material wear are too clean and sparse compared with sheet 10.",
+      "Large rectangular shroud slots and sparse broad panel details need refinement toward the regular Krag reference.",
+      "This source is an isolated provisional art study, not an approved equipped/shared asset."
+    ]
+  }
+}
