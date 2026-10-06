@@ -33,7 +33,7 @@ def build(context):
     edge_uses=Counter(tuple(sorted((a,b))) for face in polygons for a,b in zip(face,face[1:]+face[:1]))
     neck_boundary={i for edge,count in edge_uses.items() if count==1 for i in edge if vertices[i,2]>1.70}
     for i in neck_boundary:
-        vertices[i,2]=1.925
+        vertices[i,2]=1.840
     collar=np.clip((vertices[:,2]-1.68)/.17,0,1)
     collar*=np.clip((.24-np.abs(vertices[:,0]))/.09,0,1)
     vertices[:,0]*=1+.11*collar

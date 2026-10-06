@@ -23,18 +23,26 @@ def fit(points):
     # Broad projecting mandible and muzzle, with a low, flattened nasal bridge.
     mouth=gaussian(x,0,.060)*gaussian(z,.232,.030)*front
     chin=gaussian(x,0,.066)*gaussian(z,.183,.026)*front
-    target_y-=.060*mouth+.101*chin
+    target_y-=.064*mouth+.112*chin
     # Deep upper muzzle and underbite remain one connected lip/cheek surface.
     upper_muzzle=gaussian(x,0,.066)*gaussian(z,.255,.020)*front
-    target_y-=.028*upper_muzzle
+    target_y-=.038*upper_muzzle
     lower_lip=gaussian(x,0,.045)*gaussian(z,.224,.010)*front
-    target_y-=.020*lower_lip
+    target_y-=.007*lower_lip
     target_x*=1+.14*mouth
     target_z-=.010*(np.clip(abs(x)/.053,0,1)**1.5)*mouth
     nose=gaussian(x,0,.030)*gaussian(z,.271,.030)*front
     target_x*=1+.85*nose
     target_y-=.028*nose
     target_y+=.011*gaussian(x,0,.026)*gaussian(z,.295,.021)*front
+    # The earlier human-derived nose sat too low, leaving a long eye/nose
+    # interval and a short thin upper muzzle. Lift the complete nasal mass
+    # without moving the mouth seam; retain the real nostril opening loops.
+    nasal_lift=gaussian(x,0,.042)*gaussian(z,.271,.021)*front
+    target_z+=.025*nasal_lift
+    alar=gaussian(abs(x),.019,.010)*gaussian(z,.262,.015)*front
+    target_y-=.012*alar
+    target_x+=np.sign(x)*.004*alar
     # The same transformation is applied to the complete eye assemblies, so
     # lids and globes share their fitting field instead of being placed by eye.
     ocular=gaussian(abs(x),.0358764,.026)*gaussian(z,.3100375,.024)*front
@@ -43,13 +51,13 @@ def fit(points):
     target_x-=np.sign(x)*(abs(x)-.0358764)*.08*ocular
     # Continuous sloping supraorbital bone: low inner frown and rising outer
     # brow, with eye opening retained rather than flattened to a horizontal slit.
-    brow=gaussian(abs(x),.037,.022)*gaussian(z,.325+.23*abs(x),.012)*front
-    target_y-=(.055+.003*np.tanh(x/.012))*brow
-    target_z-=(.014+.0015*np.tanh(x/.012))*gaussian(abs(x),.024,.021)*brow
+    brow=gaussian(abs(x),.036,.021)*gaussian(z,.321+.43*abs(x),.010)*front
+    target_y-=(.058+.003*np.tanh(x/.012))*brow
+    target_z-=(.017+.0015*np.tanh(x/.012))*gaussian(abs(x),.022,.019)*brow
     # A recessed central bridge separates the paired ridges; overlapping broad
     # fields in v9b had turned the brow into one horizontal shelf.
     central_brow=gaussian(x,0,.011)*gaussian(z,.338,.021)*front
-    target_y+=.009*central_brow
+    target_y+=.016*central_brow
     # Flatter cheek planes, with the uninterrupted nasolabial surface retained.
     cheek=gaussian(abs(x),.057,.022)*gaussian(z,.276,.030)*front
     target_y-=.006*cheek
@@ -67,7 +75,7 @@ def fit(points):
     # the outer lateral region rather than adding disconnected ear primitives.
     auricle=np.clip((abs(x)-.068)/.019,0,1)*np.clip((y+.056)/.025,0,1)
     auricle*=gaussian(z,.289,.049)
-    target_x=target_x*(1-auricle)+np.sign(x)*(.155+(abs(x)-.068)*.60)*auricle
+    target_x=target_x*(1-auricle)+np.sign(x)*(.178+(abs(x)-.068)*.65)*auricle
     return np.column_stack((target_x,target_y,target_z))
 
 

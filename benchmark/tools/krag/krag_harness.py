@@ -14,7 +14,7 @@ def build(c):
         faces.extend(tuple(offset+i for i in face.vertices) for face in obj.data.polygons)
     skin=BVHTree.FromPolygons(vertices,faces,all_triangles=False)
 
-    def fitted(point,front=True,clearance=.011):
+    def fitted(point,front=True,clearance=.004):
         point=Vector(point)
         origin=Vector((point.x,-1 if front else 1,point.z))
         hit,normal,_,_=skin.ray_cast(origin,Vector((0,1 if front else -1,0)),2)
@@ -46,8 +46,8 @@ def build(c):
             tangent=samples[min(i+1,len(samples)-1)]-samples[max(0,i-1)]
             width_axis=Vector((tangent.z,0,-tangent.x)).normalized()
             for sign in [-1,1]:
-                a=fitted(samples[i]+width_axis*sign*(width*.5-.007),front,.017)
-                b=fitted(samples[i].lerp(samples[i+1],.65)+width_axis*sign*(width*.5-.007),front,.017)
+                a=fitted(samples[i]+width_axis*sign*(width*.5-.007),front,.010)
+                b=fitted(samples[i].lerp(samples[i+1],.65)+width_axis*sign*(width*.5-.007),front,.010)
                 c['tube']('Recessed harness saddle stitch',[a,b],.00075,c['cloth'],'Harness','Chest',6)
         return obj
 
@@ -55,10 +55,10 @@ def build(c):
     strip('Shoulder armor load strap',[(.158,0,1.404),(.187,0,1.510),(.226,0,1.622),(.270,0,1.710)],.051)
     strip('Fitted back harness',[(-.285,0,1.642),(-.175,0,1.502),(-.033,0,1.400),(.103,0,1.326),(.247,0,1.257)],.071,False)
     for x,z in [(.165,1.436),(.207,1.572),(.224,1.622)]:
-        c['uvball']('Shoulder harness retaining rivet',fitted((x,0,z),True,.020),(.0045,.0026,.0045),c['brass'],'Harness','Chest',seg=12,rings=8)
-    c['torus']('Harness load attachment ring',fitted((.115,0,1.489),True,.023),.021,.0036,c['brass'],'Harness','Chest')
+        c['uvball']('Shoulder harness retaining rivet',fitted((x,0,z),True,.013),(.0045,.0026,.0045),c['brass'],'Harness','Chest',seg=12,rings=8)
+    c['torus']('Harness load attachment ring',fitted((.115,0,1.489),True,.016),.021,.0036,c['brass'],'Harness','Chest')
     for x,z in [(.187,1.556),(-.131,1.353)]:
-        p=fitted((x,0,z),True,.022)
+        p=fitted((x,0,z),True,.015)
         frame=c['box']('Fitted harness buckle',p,(.089,.014,.053),c['brass'],'Harness','Chest',bevel=.004)
         frame.rotation_euler.y=-.54
         aperture=c['box']('Leather through harness buckle',p+Vector((0,-.009,0)),(.064,.011,.031),c['leather'],'Harness','Chest',bevel=.003)

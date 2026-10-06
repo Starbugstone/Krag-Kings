@@ -1,0 +1,26 @@
+{
+  "name": "krag-build-v9d-wip",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\build_krag.py",
+    "--",
+    "--skip-render",
+    "--master-path",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9d_WIP.blend",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9d-source",
+    "--continuous-head",
+    "--aim-solver",
+    "--bunched-scarf"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\build-v9d-wip.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\build-v9d-wip.stderr.log",
+  "maxPrivateGB": 8
+}

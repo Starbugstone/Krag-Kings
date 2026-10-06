@@ -53,6 +53,16 @@ def mat(name,color,metal=0,rough=.6,kind='plain'):
     materials[name]=m;return m
 skin=mat('Krag_SandstoneSkin',(.31,.163,.068),0,.73,'skin');cloth=mat('Krag_DesertCanvas',(.28,.205,.13),0,.9,'cloth');leather=mat('Krag_OiledLeather',(.085,.044,.017),0,.67,'leather');paint=mat('Krag_WeatheredTeal',(.046,.104,.101),.72,.58,'paint');steel=mat('Krag_BlackenedSteel',(.074,.075,.070),.82,.51,'metal');brass=mat('Krag_AgedBrass',(.31,.166,.047),.72,.49,'metal');bone=mat('Krag_Ivory',(.52,.405,.25),0,.39);dark=mat('Krag_Recess',(.023,.012,.006),0,.8);iris=mat('Krag_Amber',(.68,.27,.014),.1,.25);eye=mat('Krag_EyeWhite',(.045,.024,.011),0,.24);copper=mat('Krag_CopperHose',(.39,.13,.055),.65,.35,'metal')
 
+# The generic material recipe's 1.8mm bump is inappropriate on centimetre-size
+# optical surfaces. Preserve the fitted curvature; iris pigment relief, if
+# enabled, is authored separately in true ocular coordinates at 18 micrometres.
+for ocular,roughness in [(eye,.16),(iris,.20)]:
+    optical_bs=next(node for node in ocular.node_tree.nodes if node.type=='BSDF_PRINCIPLED')
+    for link in list(optical_bs.inputs['Normal'].links):ocular.node_tree.links.remove(link)
+    optical_bs.inputs['Metallic'].default_value=0
+    optical_bs.inputs['Roughness'].default_value=roughness
+    ocular['surface_representation']='Smooth opaque curved optical shell; generic millimetre noise bump removed'
+
 
 # CC0 scanned fracture microstructure replaces uniform procedural cells on sandstone skin.
 # Original source files, authors, URLs and hashes are retained under reference-materials.
@@ -514,7 +524,14 @@ for name,frames in [('Idle',61),('Walk',37),('Run',19),('Melee',37),('Shoot',31)
             for j in range(3):rot('Claw_'+str(j),0,(j-1)*.21*strike*(1-recover),0)
         elif name=='Shoot':
             aim=min(t/.22,1)*(1-max(0,(t-.78)/.22));kick=max(0,1-abs(t-.40)/.065)+.70*max(0,1-abs(t-.58)/.055)
-            rot('UpperArm_R',-1.20*aim-.16*kick,0,-.08*aim);rot('LowerArm_R',-.31*aim-.12*kick);rot('Hand_R',.04*kick);rot('Chest',-.05*kick,0,-.12*aim);rot('Head',0,0,.09*aim);rot('UpperArm_L',-.14*aim,0,.06)
+            rot('Chest',-.05*kick,0,-.12*aim);rot('Head',0,0,.09*aim);rot('UpperArm_L',-.14*aim,0,.06)
+            if '--aim-solver' in sys.argv:
+                import krag_weapon_pose
+                result=krag_weapon_pose.pose(rig,aim,kick)
+                if aim>.999 and result['dotIntendedDirection']<.9999:raise ValueError('Krag muzzle aim solver failed')
+                if result['wristErrorMeters']>1e-5:raise ValueError('Krag aiming wrist missed target')
+            else:
+                rot('UpperArm_R',-1.20*aim-.16*kick,0,-.08*aim);rot('LowerArm_R',-.31*aim-.12*kick);rot('Hand_R',.04*kick)
         else:
             hit=sin(min(t/.24,1)*pi/2)*math.exp(-max(0,t-.24)*4);rot('Chest',-.30*hit,0,-.14*hit);rot('Head',-.23*hit,.08*hit,.14*hit);rot('Spine',-.11*hit);rot('UpperArm_L',-.21*hit,0,.18*hit);rot('UpperArm_R',-.13*hit,0,-.16*hit);rot('Thigh_L',.14*hit);rot('Shin_L',.22*hit)
         krag_face.action_expression(rig,name,t)
@@ -569,7 +586,7 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py','krag_weapon_pose.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
 bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')

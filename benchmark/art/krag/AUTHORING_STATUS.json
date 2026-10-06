@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-triangulated.json",
-  "currentAuthoringCode": "v9c actual source is saved; separate v9c_Aim action repair saved with unchanged geometry. Neither source is accepted or exported.",
+  "currentAuthoringCode": "v9d prepared but ungenerated: nasal mass lift/alar planes and ears, gathered scarf, lower hidden body-neck boundary, closer fitted harness and integrated measured aim solver. Latest actual geometry remains v9c.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -161,10 +161,11 @@
     ]
   },
   "sourceCorrectionsPrepared": [
-    "Pending v9c: narrower rounded crown, paired asymmetric sloping brow ridges and stronger nasal/muzzle/chin profile",
-    "Pending v9c: source-anatomical blink plateau and lid closure envelope; must render Blink and OpenMouth",
-    "Pending v9c: source weapon muzzle/aim diagnostics during actual Shoot frames",
-    "Prepared but disabled: gathered scarf cross-section and radial iris detail; each needs actual review"
+    "Raise nasal mass while retaining mouth height, develop alar planes and upper muzzle, reduce isolated lower-lip protrusion",
+    "Stronger sloping paired brow fields and laterally visible cupped ears",
+    "Gather scarf cross-section, lower the exposed rear body-neck boundary and reduce harness skin clearance",
+    "Use the verified rig-space arm/hand aim solver during source Shoot authoring; posed grip still pending",
+    "Remove inherited generic 1.8mm bump from the curved optical surfaces; actual reflection/iris coverage still needs visual review"
   ],
   "pendingExportCode": {
     "actualHeadAtlas": "benchmark/tools/krag/bake_face_atlas.py",
@@ -194,7 +195,7 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": null,
+  "nextSourceJob": "benchmark/tools/krag/build-v9d-wip-job.json",
   "nextFirstReview": "benchmark/tools/krag/review-v9c-aim-Natural_Front.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",

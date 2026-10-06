@@ -1,0 +1,27 @@
+{
+  "name": "krag-review-v9d-wip-Natural_LeftHand",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9d_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9d-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_LeftHand",
+    "--tag",
+    "v9d-wip",
+    "--neutral-light"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9d-wip-Natural_LeftHand.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9d-wip-Natural_LeftHand.stderr.log",
+  "maxPrivateGB": 8
+}
