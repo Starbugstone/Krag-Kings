@@ -1,0 +1,69 @@
+{
+  "status": "Three actual expression views completed and inspected; normal-mouth and lid acceptance fail; profile is occluded",
+  "source": {
+    "path": "benchmark/art/krag/Krag_LandmarkRelief_v9o_WIP.blend",
+    "sha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "jobs": [
+    {
+      "job": "krag-v9o-OpenMouth",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2053.0,
+      "minimumAvailableMB": 10824.0
+    },
+    {
+      "job": "krag-v9o-OpenProfile",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2062.0,
+      "minimumAvailableMB": 10676.0
+    },
+    {
+      "job": "krag-v9o-Blink",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2064.0,
+      "minimumAvailableMB": 10081.0
+    }
+  ],
+  "views": [
+    {
+      "name": "OpenMouth",
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9o-landmark-relief.png",
+      "sha256": "bbf516e0e7686863231853a7e4ac5dd38f3698b9aef3ce703d6f8f867ad05f08",
+      "metadataPath": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9o-landmark-relief.meta.json",
+      "metadataSha256": "3e170221f3bde931ad9911e411b53ae875f8c976dc00c8ce0b459248286b5d38",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    },
+    {
+      "name": "OpenProfile",
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_FacePerformance_f146_v9o-landmark-relief.png",
+      "sha256": "378eda496996bd5a4f192baf1e9a718538d4f887cf08d6bca1daacc41a81f729",
+      "metadataPath": "benchmark/art/krag/renders/Krag_Natural_HeadSide_FacePerformance_f146_v9o-landmark-relief.meta.json",
+      "metadataSha256": "63c6f0899283a479c86452d4282fb4854483d308f3dfba4aebe604fad0c3fdf8",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    },
+    {
+      "name": "Blink",
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f21_v9o-landmark-relief.png",
+      "sha256": "3ef508849d7b303c5097776a3f8a445ca0cb83de7018ecffcfc6c1634dd32a1a",
+      "metadataPath": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f21_v9o-landmark-relief.meta.json",
+      "metadataSha256": "e0f290d6365b39f3c77b061d466ffbe473acab0e466b33d32068ef6fcd46b393",
+      "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+    }
+  ],
+  "findings": {
+    "OpenMouth": "Cavity is no longer blocked by duplicate neck. Both tooth rows visible, but opening remains too tall and dark with small flat-looking visible crowns, weak gum/tongue depth and a folded lower-lip/chin edge.",
+    "OpenProfile": "Inconclusive framing failure: large left pauldron occludes the lower jaw. This image does not validate profile clearance. Next review must use the opposite side.",
+    "Blink": "Eyes close, but outer/inner corners form pinched dark slots and sharply folded skin rather than a believable soft lid roll."
+  },
+  "next": [
+    "Generate true semantic IronJaw replacement, retaining complete Natural separately.",
+    "Fit mechanical hinge to actual Jaw axis and remove replaced mandible/lower oral floor instead of overlay.",
+    "Actual unobscured closed/open profile and front clearance review.",
+    "Improve natural gum/tongue/tooth visibility and continuous lip/corner movement."
+  ]
+}

@@ -369,3 +369,10 @@ The next **ungenerated** v9o recipe uses explicit named surface target constrain
 `Krag_LandmarkRelief_v9o_WIP.blend` (SHA-256 `93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86`) now exists with actual FrontClay, SideClay and FrontMaterial images. All four guarded jobs exited0; the exact camera comparison and source hashes are recorded in `v9o-landmark-relief-review.json`. Native neutral checks confirm31.56mm maximum change, zero Head/Face/MouthInterior flips,7,922 fixed ocular/contact-return vertices and exact rigid ocular surfaces. Unrelated body bind/actions and equipment remain preserved.
 
 This pass gives **visible** malar/nasolabial separation and a distinct lower-lip fold. It still fails final likeness: the brow is too level/heavily projecting, surfaces remain overly smooth, tusks are nearly buried, and material/garment/armor quality is unfinished. The lower-lip recess must be judged in motion. Next priority is the actual serious open-mouth/Blink review and an IronJaw that removes the replaced organic mandible, not another extended neutral-only cycle. No shared export or artistic acceptance is claimed.
+
+
+## v9o actual mouth and blink: defects remain
+
+The three completed actual expression views are recorded in `v9o-mouth-review.json`, with pinned source/image hashes and guard/native exit 0. OpenMouth preserves the removed-neck clearance and shows both dental rows, but the tall dark opening, small flat-looking crowns, weak visible gum/tongue and folded lower lip remain unaccepted. Blink closes with pinched dark corners rather than a convincing soft lid roll. The attempted profile is **inconclusive** because the left pauldron covers the lower jaw; the next profile camera must be on the opposite side.
+
+The semantic IronJaw preparation identifies a closed 368-vertex attachment boundary on the actual dense face. The next isolated source will preserve Natural, remove the replaced mandible and lower oral floor from alternate surfaces, and fit a real mechanical lower arch/hinge/chin assembly. This is prepared construction, not a generated or accepted replacement. No shared assets changed.
