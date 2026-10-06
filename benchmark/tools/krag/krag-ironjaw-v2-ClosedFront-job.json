@@ -1,0 +1,23 @@
+{
+  "name": "krag-ironjaw-v2-ClosedFront",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\ironjaw_wip\\review_replacement_v2.py",
+    "--",
+    "--view",
+    "ClosedFront"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-ironjaw-v2-ClosedFront.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-ironjaw-v2-ClosedFront.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-ironjaw-v2-ClosedFront.stdout.log",
+  "successMarker": "KRAG_IRONJAW_REPLACEMENT_REVIEW_COMPLETE ClosedFront"
+}
