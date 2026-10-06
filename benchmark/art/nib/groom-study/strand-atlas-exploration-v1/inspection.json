@@ -1,0 +1,15 @@
+{
+  "width": 1254,
+  "height": 1254,
+  "channels": 4,
+  "alphaZeroFraction": 0.2536622838813723,
+  "alphaAboveCutoffFraction": 0.2736073909581842,
+  "visibleRedYellowEdgePixels": 0,
+  "sha256": "2758c801ea5205e3ac91d5a2e54bf3b51d24563fedcdde1b7790da806b841f3e",
+  "status": "Rejected production atlas: generated dimensions and equal-cell layout do not meet the existing UV contract. Preview edge colors are below the current0.45 alpha cutoff; no opaque red/yellow pixels pass that cutoff. Fine strand content may guide authoring; no integration.",
+  "generator": "Built-in image_gen imagegen, transparent_background true",
+  "prompt": "prompt.txt",
+  "generatedArtifact": "generated-fur-atlas.png",
+  "engineIntegrated": false,
+  "artisticAcceptance": false
+}

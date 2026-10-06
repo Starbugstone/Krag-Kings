@@ -1,0 +1,36 @@
+{
+  "actualSourceSha256": "5b9f99762eedbb317c668114e0aaf8e7d8bf11a26bd894941e19c55f68f559ba",
+  "guardExit": 0,
+  "nativeExit": 0,
+  "generationAndReviewMarkersVerified": true,
+  "actualReviewImages": 18,
+  "inspectedImages": [
+    "Melee_46_edge.png",
+    "Melee_46_palm.png",
+    "Melee_00_palm.png",
+    "Shoot_46_palm.png"
+  ],
+  "artisticAcceptance": false,
+  "finding": "Proximal bends follow actual joints and the relaxed hand reads more naturally. Full Melee still lacks natural thumb crossing and complete fingertip contact; palm/thenar deformation needs further contact review. No engine promotion.",
+  "rawNumericalLimit": "Unsigned tip-to-palm sample distance is diagnostic only; sparse palm selection does not prove clearance or penetration.",
+  "frozenFiles": {
+    "executed-recipe/contracts.py": "d7717ccc29d27e64eab3efdb2e8b0c0720c8c64efc1126e6990161e013d76902",
+    "executed-recipe/export_contract.py": "3503d397cd3ed5c1cda86d576a4f03b5742c2f02b6196a50a2be233f250b368e",
+    "executed-recipe/hand_skin_domains.py": "71838999946aaeaf22ed20ec6e351a97fe1e471504519c9864431b94ed56e2ce",
+    "executed-recipe/nib-proximal-finger-weights-v1-job.json": "347183e8cee442062aa4541d0e0364ef0d4f391f2aaeb7c845f66832f16da235",
+    "executed-recipe/nib-proximal-finger-weights-v1-review-job.json": "a644b2512b1bc719c26550fabe0cd550d0ca1eae8384dd373d32ccc5606441bb",
+    "executed-recipe/nib_hand_v5.py": "f356517d546caf577939821eb93d5d5f6f6707330b9caf2d9154196a2fbc4c07",
+    "executed-recipe/repair_nib_finger_weights.py": "91f5cb985c84bd2539be5672e7fbe175b3ffb33bfd49ccbe163da0189ed1d4ba",
+    "executed-recipe/review_free_hand.py": "024823c6bea63da8419c6f789e1b65b799fa16af43c175f51b90ad8dbc304dfd",
+    "evidence/nib-fist-contact-preflight.json": "cd0247860b630e163c82d29999afd3f7f7e9ca68e5e44302c39969da0de35cc6",
+    "evidence/nib-proximal-finger-weights-preflight.json": "9d6c419f69bc778fbd1944b8dc65cd9bd61358640d791d9201a1205f75d380ce",
+    "evidence/nib-proximal-finger-weights-v1-memory.csv": "6479bbd47974dea577e57119fa2bc9e4e51623ac7607cb49d61b9e72ca60ba99",
+    "evidence/nib-proximal-finger-weights-v1-review-memory.csv": "73bc74351d805abc57a0cda3977007aadb2170f64453a5764020d592668644ad",
+    "evidence/nib-proximal-finger-weights-v1-review.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-proximal-finger-weights-v1-review.stdout.txt": "1aded4ff646b8180f08c1fcd0653909a94092657319bbf1664636c659a196764",
+    "evidence/nib-proximal-finger-weights-v1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nib-proximal-finger-weights-v1.stdout.txt": "35b597548105769faf67c71b77ec8c5e5939e1daff555efd23a7ddf6935c1e2d",
+    "evidence/preflight_finger_weights.py": "e3be2bbde71365d7db0c0351931fb7d20f379d3a41ba7d8f43133aebd9a06c01",
+    "evidence/solve_nib_fist_contact.py": "87d8927e3bc647a7d067a51804e294cb6dc1afd90261965062933f3a2b258f34"
+  }
+}

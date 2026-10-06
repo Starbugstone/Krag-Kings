@@ -1,0 +1,72 @@
+{
+  "domain": {
+    "coordinateSource": "Original licensed cage",
+    "digitSeedCounts": {
+      "Index": 1234,
+      "Middle": 1272,
+      "Ring": 1223,
+      "Little": 895,
+      "Thumb": 673
+    },
+    "palmSeedCount": 3723,
+    "unknownVertices": 1782,
+    "additionalProximalSeedCounts": {
+      "Index": 393,
+      "Middle": 361,
+      "Ring": 376,
+      "Little": 544,
+      "Thumb": 718
+    },
+    "iterations": 139,
+    "maximumRelativeResidual": 9.756198145193788e-10,
+    "maximumPartitionError": 3.96229971055817e-09
+  },
+  "weights": {
+    "maximumHarmonicTailReturnedToPalm": 0.2272475129584075,
+    "maximumDiscardedWeightForFourInfluences": 0.0,
+    "jointTransitionHalfWidthMeters": 0.008
+  },
+  "proximalRows": {
+    "Index": {
+      "vertices": 145,
+      "newHandWeightRange": [
+        0.0,
+        0.0046444710878523815
+      ],
+      "newOwnDigitWeightMean": 0.95628816897091
+    },
+    "Middle": {
+      "vertices": 182,
+      "newHandWeightRange": [
+        0.0,
+        0.0007489007175440173
+      ],
+      "newOwnDigitWeightMean": 0.8690661960929209
+    },
+    "Ring": {
+      "vertices": 197,
+      "newHandWeightRange": [
+        0.0,
+        0.007198404034228639
+      ],
+      "newOwnDigitWeightMean": 0.8549041884608459
+    },
+    "Little": {
+      "vertices": 124,
+      "newHandWeightRange": [
+        0.0,
+        0.0655968516800351
+      ],
+      "newOwnDigitWeightMean": 0.9591453735102567
+    },
+    "Thumb": {
+      "vertices": 101,
+      "newHandWeightRange": [
+        0.0,
+        0.0
+      ],
+      "newOwnDigitWeightMean": 1.0
+    }
+  },
+  "status": "Numerical proposal only, no native source generated"
+}

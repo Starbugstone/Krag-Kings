@@ -3,8 +3,9 @@
 Keeps the evaluated arm/weapon paths, body/facial/ear curves and all mesh/bind
 data. Replaces only natural left-digit rotation curves in three action takes.
 The contact poses are provisional until actual closeups have been inspected.
-The current prepared melee flexion closes the earlier loose half-fist; older
-executed recipes are preserved beside their source evidence.
+The stronger melee flexion still needs actual skin/contact review. Optional
+thumb fitting is a separate prepared proposal; executed recipes are preserved
+beside their source evidence.
 """
 import argparse
 import hashlib
@@ -25,10 +26,13 @@ parser.add_argument('--source', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--all-clips', action='store_true')
 parser.add_argument('--generation', default='v1')
+parser.add_argument('--fist-thumb-contact', action='store_true')
 args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 if args.output.exists():
     raise RuntimeError('Preserve previous action-hand candidate')
 args.output.mkdir(parents=True)
+if args.fist_thumb_contact:
+    import fist_thumb_contact
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 input_hash = sha(args.source)
 bpy.ops.wm.open_mainfile(filepath=str(args.source), load_ui=False)
@@ -114,9 +118,12 @@ for clip, spec in specs.items():
                   for name, rest in hand_pose.RELAXED.items()}
         thumb = tuple(a+(b-a)*amount for a, b in zip((5, 8), spec['thumb']))
         changed = hand_pose.pose(rig, angles, thumb, 12+(spec['opposition']-12)*amount)
+        thumb_contact = (fist_thumb_contact.pose(rig, amount)
+                         if args.fist_thumb_contact and clip == 'Melee' else None)
         for name in changed:
             rig.pose.bones[name].keyframe_insert('rotation_euler', frame=frame, group=name)
         samples.append({'frame': frame, 'amount': amount,
+                        'thumbContact': thumb_contact,
                         'fingertips': {name: list(rig.pose.bones[name+'3_L'].tail)
                                       for name in hand_pose.RELAXED}})
     for curve in bag.fcurves:
@@ -154,6 +161,8 @@ for name in CLIPS:
     persisted[name] = list(action.frame_range)
 report['reopenedSavedFile'] = True
 report['persistedCanonicalActions'] = persisted
+if args.fist_thumb_contact:
+    report['fistThumbContactRecipeSha256'] = sha(Path(fist_thumb_contact.__file__))
 if sha(args.source) != input_hash:
     raise RuntimeError('Action authoring changed input source')
 (args.output/'action-hands.json').write_text(json.dumps(report, indent=2)+'\n')

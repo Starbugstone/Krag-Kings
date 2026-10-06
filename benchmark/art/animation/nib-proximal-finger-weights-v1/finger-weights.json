@@ -1,0 +1,112 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-action-hands-v3\\Nib_ActionHands_Study_v3.blend",
+  "sourceSha256": "ab8439c3a6fdb3047f2ab3d9303fcfeac5c9377b245016a4e56099b3e229201b",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-proximal-finger-weights-v1\\Nib_ProximalFingerWeights_v1.blend",
+  "outputSha256": "5b9f99762eedbb317c668114e0aaf8e7d8bf11a26bd894941e19c55f68f559ba",
+  "recipeSha256": "91f5cb985c84bd2539be5672e7fbe175b3ffb33bfd49ccbe163da0189ed1d4ba",
+  "domainRecipeSha256": "71838999946aaeaf22ed20ec6e351a97fe1e471504519c9864431b94ed56e2ce",
+  "status": "Actual proximal weighting candidate, pose and contact review required",
+  "savedSourceReopened": true,
+  "preservedOtherMeshCount": 413,
+  "bindAndActionContractPreserved": true,
+  "handGeometryPreserved": true,
+  "handPayloadSha256": "0b32f7104959ae7769e18584f6f688a3d71118f715fbf7e9e96bb087b731fb7d",
+  "domain": {
+    "coordinateSource": "Original licensed cage",
+    "digitSeedCounts": {
+      "Index": 1235,
+      "Middle": 1272,
+      "Ring": 1223,
+      "Little": 894,
+      "Thumb": 667
+    },
+    "palmSeedCount": 3726,
+    "unknownVertices": 1788,
+    "additionalProximalSeedCounts": {
+      "Index": 393,
+      "Middle": 360,
+      "Ring": 373,
+      "Little": 542,
+      "Thumb": 721
+    },
+    "iterations": 138,
+    "maximumRelativeResidual": 9.458949433592607e-10,
+    "maximumPartitionError": 4.920050034051826e-09
+  },
+  "weights": {
+    "maximumHarmonicTailReturnedToPalm": 0.21385892721277353,
+    "maximumDiscardedWeightForFourInfluences": 0.0,
+    "jointTransitionHalfWidthMeters": 0.008
+  },
+  "proximalSamples": {
+    "Index": {
+      "sampleVertices": 145,
+      "beforePalmRange": [
+        0.2710789442062378,
+        0.5682717561721802
+      ],
+      "afterPalmRange": [
+        0.0,
+        0.004669897107823782
+      ],
+      "beforeOwnDigitMean": 0.4277773439884186,
+      "afterOwnDigitMean": 0.9562656925354572
+    },
+    "Middle": {
+      "sampleVertices": 170,
+      "beforePalmRange": [
+        0.150363028049469,
+        0.5590807199478149
+      ],
+      "afterPalmRange": [
+        0.0,
+        0.00038095072750215
+      ],
+      "beforeOwnDigitMean": 0.3517299241879407,
+      "afterOwnDigitMean": 0.861380183906595
+    },
+    "Ring": {
+      "sampleVertices": 204,
+      "beforePalmRange": [
+        0.230264812707901,
+        0.6089336276054382
+      ],
+      "afterPalmRange": [
+        0.0,
+        0.0034282895435822176
+      ],
+      "beforeOwnDigitMean": 0.3291710956866297,
+      "afterOwnDigitMean": 0.8538751866484069
+    },
+    "Little": {
+      "sampleVertices": 124,
+      "beforePalmRange": [
+        0.4335779547691345,
+        0.6426456570625305
+      ],
+      "afterPalmRange": [
+        0.0,
+        0.06673743509063254
+      ],
+      "beforeOwnDigitMean": 0.3053642377978371,
+      "afterOwnDigitMean": 0.9585747104650872
+    },
+    "Thumb": {
+      "sampleVertices": 100,
+      "beforePalmRange": [
+        0.6740826368331909,
+        0.9373902678489685
+      ],
+      "afterPalmRange": [
+        0.0,
+        0.0
+      ],
+      "beforeOwnDigitMean": 0.17402203544974326,
+      "afterOwnDigitMean": 1.0
+    }
+  },
+  "maximumInfluences": 4,
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "artisticAcceptance": false
+}
