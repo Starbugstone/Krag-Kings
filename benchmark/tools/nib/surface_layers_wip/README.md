@@ -17,3 +17,9 @@ The new scarf uses a continuous sheet with two actual returned folds, unequal di
 All proportions, densities and folds are fitting proposals against sheet 02, not new canon. Generation must preserve all unrelated mesh hashes, exact 79 global binds, hierarchy and every saved action curve, source images and the MASK manifest fields. Root attachment, triangle/UV areas, finite weights, goggle clearance, actual posed cloth clearance and saved reopen are explicit gates. Numerical results do not establish coverage, cloth character or likeness.
 
 The granted groom-only source and matched Neutral/Profile boundary is complete. Further launches require a new exclusive heavy-slot grant. Before another density change, inspect actual evaluated UV/alpha and an isolated real tuft against contrasting background. The inherited face/mouth and scarf failures are not cleared by this result.
+
+## Prepared attribution and separate cloth boundary
+
+The actual groom-only source `86f2b017…` remains frozen. `audit-layered-tuft-v1.job.json` is a read-only, unexecuted test of one real ear card and its actual neighborhood on a contrasting background. It inspects the evaluated render UV layer, shader/image alpha and two one-variable comparisons (denoising, then transparent bounce count). This must distinguish source alpha/UV faults from overlap and unresolved fiber sampling before another full-character density pass.
+
+`generate-returned-scarf-v1.job.json` is separately prepared, not executed. It replaces only the old scarf on that saved groom, transporting each entire folded section against the actual skin instead of collapsing individual rows onto one support. Existing thickness, section spacing and posed skin gates remain. Neutral/Profile jobs are prepared; no cloth source or image is claimed. Exact prepared hashes are in `readiness-tuft-and-scarf.json`.

@@ -1,0 +1,27 @@
+{
+  "name": "nib-layered-groom-v1-tuft-audit",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\surface_layers_wip\\audit_tuft_material.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\layered-groom-native-v1\\Nib_Coherent_LayeredGroom_v1.blend",
+    "--source-sha256",
+    "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\layered-tuft-material-audit-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-layered-groom-v1-tuft-audit.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-layered-groom-v1-tuft-audit.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-layered-groom-v1-tuft-audit.log",
+  "successMarker": "NIB_ACTUAL_TUFT_AUDIT_COMPLETE"
+}

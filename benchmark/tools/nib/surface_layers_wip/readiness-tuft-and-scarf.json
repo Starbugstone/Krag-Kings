@@ -1,0 +1,21 @@
+{
+  "status": "Prepared only; no native tuft diagnostic or returned-scarf source exists yet",
+  "source": "benchmark/art/nib/groom-study/layered-groom-native-v1/Nib_Coherent_LayeredGroom_v1.blend",
+  "sourceSha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+  "diagnostic": "Exact evaluated real single card and twelve-card neighborhood; active render UVs, assigned shader/image alpha, controlled24-sample denoising and transparency-bounce comparisons",
+  "cloth": "Separate scarf-only source, coherent cross-section transport preserves returned folds; all groom/source maps/binds/actions/unrelated surfaces retained",
+  "nativeExecuted": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "recipes": {
+    "audit_tuft_material.py": "f73b0471e3a7eff214d1c8a93b0a3484dd47d33a6e6badbbc574a5990586974b",
+    "audit-layered-tuft-v1.job.json": "cb1de1a1ac594296025fe361cc44139e25e3d900b65660c1a4e53caa35aefb33",
+    "build_returned_scarf.py": "1fcc6f6bb2bcb009fabff30cea1561a830d83bab930f44c9d7b74beed1db1282",
+    "returned_scarf.py": "326a9fb06071aaa2bb1fbd792f2b9c9218d92a775b5b11f109abf4245c104278",
+    "cloth_pattern.py": "77b2ec06a87b5c0c07e2023cc8bfde36657daf2a7de7886893d983dfcc5fab80",
+    "pattern-preflight.json": "0b02bc6e42a0685d4797e252e7f7c296f055d5ef76ba4ed316c0dc510e20d652",
+    "generate-returned-scarf-v1.job.json": "59b70b489c83977ba81f2e687ddd388430a3e01ef40356d716e9f4fc85534323",
+    "neutral-returned-scarf-v1.job.json": "998995d1a9ce5a9a54d0993a7ea5dd3a2a023575b5923de09bf22fcc0b5d2dda",
+    "profile-returned-scarf-v1.job.json": "d224f5c0fe04abbfb91126e5b04f4029da27246b39f55344b08c6ca2d7b12d55"
+  }
+}
