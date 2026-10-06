@@ -198,9 +198,13 @@ unified=anatomical_source
 bpy.context.view_layer.objects.active=unified;bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
 unified.data.update();src=unified.data
 source_arm_domain=None
+source_hand_domains=None
 if '--anatomical-domain' in sys.argv:
     import krag_skin_domains
     source_arm_domain=krag_skin_domains.read(src)
+if '--topological-hands' in sys.argv:
+    import krag_hand_domains
+    source_hand_domains=krag_hand_domains.read(src)
 bins={g:[] for g in skin_groups}
 for poly in src.polygons:
     co=poly.center
@@ -214,6 +218,7 @@ for group,polys in bins.items():
     used=sorted(set(i for poly in polys for i in poly.vertices));index={v:i for i,v in enumerate(used)}
     dat=bpy.data.meshes.new(group+' continuous surface');dat.from_pydata([src.vertices[i].co for i in used],[],[tuple(index[i] for i in poly.vertices) for poly in polys]);dat.update()
     if source_arm_domain is not None:krag_skin_domains.attach(dat,source_arm_domain[used])
+    if source_hand_domains is not None:krag_hand_domains.attach(dat,source_hand_domains[used])
     for ma in src.materials:dat.materials.append(ma)
     for a,b in zip(dat.polygons,polys):a.material_index=b.material_index;a.use_smooth=True
     try:dat.normals_split_custom_set_from_vertices([tuple(src.vertices[i].normal) for i in used])
@@ -293,7 +298,10 @@ for x in [-.208,.203]:
 # Harness surface is fitted to the actual continuous anatomy.
 krag_harness.build(globals())
 # Scarf follows the reference's thick looped fabric construction.
-krag_cloth.wrapped(globals())
+if '--broad-scarf' in sys.argv:
+    import krag_scarf_v3
+    krag_scarf_v3.build(globals())
+else:krag_cloth.wrapped(globals())
 # Hanging front sash, hem with cut irregularity.
 vs=[];fs=[]
 for i in range(22):
@@ -455,7 +463,11 @@ def bn(n,h,t,par=None):
     b=ad.edit_bones.new(n);b.head=h;b.tail=t
     if par:b.parent=ad.edit_bones[par]
     bones[n]=(Vector(h),Vector(t));return b
-bn('Root',(0,0,0),(0,0,.18));bn('Pelvis',(0,.015,1.015),(0,.015,1.175),'Root');bn('Spine',(0,.015,1.175),(0,.015,1.39),'Pelvis');bn('Chest',(0,.015,1.39),(0,.02,1.64),'Spine');bn('Neck',(0,.02,1.64),(0,.014,1.84),'Chest');bn('Head',(0,.014,1.84),(0,.014,2.105),'Neck');bn('Jaw',krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawPivot',(0,-.040,1.845))),krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawTail',(0,-.170,1.790))),'Head')
+head_base=(0,.014,1.84);head_tail=(0,.014,2.105)
+if '--reference-head-scale' in sys.argv:
+    import krag_proportions_v9f
+    head_base=krag_proportions_v9f.point(head_base);head_tail=krag_proportions_v9f.point(head_tail)
+bn('Root',(0,0,0),(0,0,.18));bn('Pelvis',(0,.015,1.015),(0,.015,1.175),'Root');bn('Spine',(0,.015,1.175),(0,.015,1.39),'Pelvis');bn('Chest',(0,.015,1.39),(0,.02,1.64),'Spine');bn('Neck',(0,.02,1.64),head_base,'Chest');bn('Head',head_base,head_tail,'Neck');bn('Jaw',krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawPivot',(0,-.040,1.845))),krag_face.H(globals().get('continuous_head_landmarks',{}).get('JawTail',(0,-.170,1.790))),'Head')
 for s,side in [(-1,'R'),(1,'L')]:
     bn('Clavicle_'+side,(s*.055,.02,1.636),(s*.348,.012,1.613),'Chest');bn('UpperArm_'+side,(s*.348,.012,1.613),(s*.509,.008,1.300),'Clavicle_'+side);bn('LowerArm_'+side,(s*.509,.008,1.300),(s*.599,-.019,1.043),'UpperArm_'+side);bn('Hand_'+side,(s*.599,-.019,1.043),(s*.620,-.042,.927),'LowerArm_'+side)
     bn('Thigh_'+side,(s*.167,.019,1.018),(s*.188,-.016,.570),'Pelvis');bn('Shin_'+side,(s*.188,-.016,.570),(s*.19,.026,.240),'Thigh_'+side);bn('Foot_'+side,(s*.19,.026,.240),(s*.19,-.149,.082),'Shin_'+side);bn('Toe_'+side,(s*.19,-.149,.082),(s*.19,-.230,.067),'Foot_'+side)
@@ -487,11 +499,12 @@ for g,o in modules.items():
         extra=[n for n in bones if n.startswith('Finger') or n.startswith('Thumb')] if g in ['Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R'] else []
         vgs={n:o.vertex_groups.new(name=n) for n in allowed+extra}
         domain=krag_skin_domains.read(o.data) if extra and '--anatomical-domain' in sys.argv else None
+        hand_domains=krag_hand_domains.read(o.data) if extra and '--topological-hands' in sys.argv else None
         for v in o.data.vertices:
             candidates=allowed
             if extra and abs(v.co.x)>.48 and v.co.z<1.05:
                 side='L' if v.co.x>0 else 'R';candidates=['Hand_'+side,'LowerArm_'+side]+[n for n in extra if n.endswith('_'+side)]
-            weighted=krag_anatomy.anatomical_weights(v.co,bones,None if domain is None else domain[v.index]) if extra else krag_anatomy.smooth_segment_weights(v.co,bones,candidates)
+            weighted=krag_anatomy.anatomical_weights(v.co,bones,None if domain is None else domain[v.index],None if hand_domains is None else hand_domains[v.index]) if extra else krag_anatomy.smooth_segment_weights(v.co,bones,candidates)
             # Contract supports up to eight influences. Only very small far-chain
             # tails can reach this cap; actual counts and deformation are reviewed.
             weighted=sorted(weighted,key=lambda item:item[1],reverse=True)[:8]
@@ -606,7 +619,7 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py','krag_weapon_pose.py','krag_skin_domains.py','krag_grip_v2.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py','krag_weapon_pose.py','krag_skin_domains.py','krag_grip_v2.py','krag_hand_domains.py','krag_proportions_v9f.py','krag_scarf_v3.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
 bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')
@@ -617,6 +630,10 @@ data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.2
 if globals().get('continuous_head_landmarks'):data['facialFitLandmarksMeters']={name:list(krag_face.H(point)) for name,point in continuous_head_landmarks.items()}
 if globals().get('continuous_head_eye_audit'):data['sourceEyeTransformVerification']=continuous_head_eye_audit
 if globals().get('anatomical_domain_statistics'):data['anatomicalDomainStudy']=anatomical_domain_statistics
+if globals().get('hand_domain_statistics'):data['handDomainStudy']=hand_domain_statistics
+if '--reference-head-scale' in sys.argv:
+    data['headProportionStudy']=krag_proportions_v9f.specification()
+    data['height_m']=krag_proportions_v9f.specification()['expectedCrownMeters']
 if grip_spec:
     data['gripMountStudy']=grip_spec
     (ART/(MASTER_PATH.stem+'-grip-target-verification.json')).write_text(json.dumps({'status':'Actual skeletal endpoint checks only; no posed skin/contact acceptance','spec':grip_spec,'samples':grip_metrics},indent=2),newline='\n')

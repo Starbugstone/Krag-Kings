@@ -1,0 +1,58 @@
+{
+  "sourceSha256": "2077bf5aef29d4398943efabe5a414dd019d1b6091dd71e417b6fcb663b991f5",
+  "statistics": {
+    "status": "Prepared topology domain; actual fingertip contact and palm deformation unverified",
+    "hands": [
+      {
+        "side": "L",
+        "sourceVertices": 749,
+        "seedCounts": [
+          60,
+          65,
+          59,
+          43,
+          40
+        ],
+        "palmSeedCount": 190,
+        "iterations": 771,
+        "residual": 9.993866290081144e-10,
+        "maxPartitionError": 1.1102230246251565e-15
+      },
+      {
+        "side": "R",
+        "sourceVertices": 749,
+        "seedCounts": [
+          60,
+          65,
+          59,
+          43,
+          40
+        ],
+        "palmSeedCount": 190,
+        "iterations": 774,
+        "residual": 9.782969434546374e-10,
+        "maxPartitionError": 6.661338147750939e-16
+      }
+    ]
+  },
+  "regions": {
+    "palm": {
+      "vertices": 214,
+      "maximumTotalDigitWeight": 0.0,
+      "meanTotalDigitWeight": 0.0,
+      "maximumSecondaryDigitWeight": 0.0
+    },
+    "distalDigits": {
+      "vertices": 454,
+      "maximumTotalDigitWeight": 1.0,
+      "meanTotalDigitWeight": 1.0,
+      "maximumSecondaryDigitWeight": 0.0
+    },
+    "forearm": {
+      "vertices": 218,
+      "maximumTotalDigitWeight": 0.0,
+      "meanTotalDigitWeight": 0.0,
+      "maximumSecondaryDigitWeight": 0.0
+    }
+  }
+}

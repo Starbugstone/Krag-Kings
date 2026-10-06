@@ -6,7 +6,7 @@ original bundle, README, and conflicting unrelated Rain Rig text are preserved
 under art/reference-anatomy; see art/krag/anatomy-study/library-inventory.json.
 This is a provisional adapted Krag sculpt, not approved final character art.
 """
-import bpy, hashlib
+import bpy, hashlib, sys
 import numpy as np
 from anatomy_warp_study import warp
 
@@ -38,6 +38,12 @@ def build(context):
     collar*=np.clip((.24-np.abs(vertices[:,0]))/.09,0,1)
     vertices[:,0]*=1+.11*collar
     vertices[:,1]=.016+(vertices[:,1]-.016)*(1+.10*collar)
+    if '--reference-head-scale' in sys.argv:
+        from krag_proportions_v9f import transform
+        # Only the continuous neck blend is affected; torso and limbs stay put.
+        neck_domain=np.clip((.270-np.abs(vertices[:,0]))/.075,0,1)
+        neck_domain=neck_domain*neck_domain*(3-2*neck_domain)
+        vertices+=(transform(vertices)-vertices)*neck_domain[:,None]
     mesh=bpy.data.meshes.new('Krag continuous anatomical control cage')
     mesh.from_pydata(vertices,[],polygons);mesh.update()
     if '--anatomical-domain' in context['sys'].argv:
@@ -46,6 +52,11 @@ def build(context):
         if not statistics['converged']:raise AssertionError('Anatomical weight domain did not converge')
         krag_skin_domains.attach(mesh,domain)
         context['anatomical_domain_statistics']=statistics
+    if '--topological-hands' in sys.argv:
+        import krag_hand_domains
+        fields,statistics=krag_hand_domains.solve(raw[used],polygons)
+        krag_hand_domains.attach(mesh,fields)
+        context['hand_domain_statistics']=statistics
     mesh.materials.append(context['skin'])
     for face in mesh.polygons:face.use_smooth=True
     obj=bpy.data.objects.new('Krag adapted anatomical sculpt',mesh)
@@ -104,10 +115,13 @@ def hand_landmarks(side):
         'Finger_3':[(.396,-.148,.813),(.421,-.160,.778),(.419,-.165,.744)],
         'Thumb':[(.373,-.110,.867),(.380,-.157,.839),(.389,-.174,.819)],
     }
+    if '--topological-hands' in sys.argv:
+        from krag_hand_domains import SOURCE_JOINTS
+        source=SOURCE_JOINTS
     return {name:[tuple(point) for point in warp(np.asarray(points)*np.array([sign,1,1]))] for name,points in source.items()}
 
 
-def anatomical_weights(point,bones,arm_domain=None):
+def anatomical_weights(point,bones,arm_domain=None,digit_domains=None):
     """Continuous regional skin weights across the shared torso/arm partitions.
 
     Joint transitions follow the actual shoulder-elbow-wrist chain. A nearby
@@ -131,7 +145,22 @@ def anatomical_weights(point,bones,arm_domain=None):
     collar=(1-smooth(-.025,.100,(point-shoulder).dot((elbow-shoulder).normalized())))*.58
     arm={'Clavicle_'+side:collar*(1-forearm),'UpperArm_'+side:(1-forearm)*(1-collar),'LowerArm_'+side:forearm*(1-hand),'Hand_'+side:forearm*hand}
     digit_names=[name for name in bones if name.startswith(('Finger','Thumb')) and name.endswith('_'+side)]
-    if hand>.001 and z<1.02:
+    if digit_domains is not None and hand>.001:
+        # No Euclidean exchange between adjacent fingers. Palm retains Hand;
+        # each digit's field is carried through original surface connectivity.
+        fractions=np.clip(np.asarray(digit_domains,dtype=float),0,1)
+        total=float(fractions.sum())
+        if total>1.00001:raise AssertionError('Finger fields exceed unity')
+        hand_weight=arm['Hand_'+side];arm['Hand_'+side]*=max(0,1-total)
+        for j,fraction in enumerate(fractions):
+            names=(['Thumb1_'+side,'Thumb2_'+side] if j==4 else
+                   ['Finger1_'+str(j)+'_'+side,'Finger2_'+str(j)+'_'+side])
+            a,joint=bones[names[0]];_,tip=bones[names[1]]
+            axis=(tip-a).normalized();halfwidth=min(.015,(tip-joint).length*.30)
+            distal=smooth(-halfwidth,halfwidth,(point-joint).dot(axis))
+            merge(arm,names[0],hand_weight*float(fraction)*(1-distal))
+            merge(arm,names[1],hand_weight*float(fraction)*distal)
+    elif hand>.001 and z<1.02:
         digit_weights=smooth_segment_weights(point,bones,digit_names)
         distances=[]
         for name in digit_names:

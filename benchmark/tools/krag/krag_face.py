@@ -2,12 +2,25 @@
 Mouth interiors are provisional concept-compatible anatomy, not approved canon.
 Runtime drivers use coordinate-invariant deltas from imported neutral bind transforms.
 """
-import bpy, math, json
+import bpy, math, json, sys
 import numpy as np
 from mathutils import Vector
 from math import sin,cos,pi
 
-def H(p):return (p[0]*.93,p[1]*.94,2.107+(p[2]-2.107)*.85)
+def H(p):
+    q=(p[0]*.93,p[1]*.94,2.107+(p[2]-2.107)*.85)
+    if '--reference-head-scale' in sys.argv:
+        from krag_proportions_v9f import point
+        return point(q)
+    return q
+
+def H_array(points):
+    q=np.asarray(points,dtype=float)*np.asarray((.93,.94,.85))
+    q[:,2]+=2.107*(1-.85)
+    if '--reference-head-scale' in sys.argv:
+        from krag_proportions_v9f import transform
+        q=transform(q)
+    return q
 FACIAL=['Blink_L','Blink_R','Squint_L','Squint_R','BrowRaise_L','BrowRaise_R','BrowLower_L','BrowLower_R','Smile_L','Smile_R','Frown_L','Frown_R','JawOpen','LipPress','Snarl_L','Snarl_R','NoseWrinkle']
 BODY=[f'Corrective_{kind}_{side}' for kind in ['ShoulderRaise','ElbowFlex','HipFlex','KneeFlex'] for side in ['L','R']]
 MORPHS=FACIAL+BODY
@@ -195,7 +208,7 @@ def add_morphs(modules,rig):
                 center=np.asarray(eye['center']);closed=raw.copy();closed[:,2]=center[2]
                 sphere_front=center[1]-np.sqrt(np.maximum(0,eye['radius']**2-(raw[:,0]-center[0])**2))-.0008
                 closed[:,1]=np.minimum(raw[:,1],sphere_front)
-                delta=(fit(closed)-fit(raw))*np.asarray((.93,.94,.85))*envelope[:,None]
+                delta=(H_array(fit(closed))-H_array(fit(raw)))*envelope[:,None]
             if name in FACIAL:
                 rigid_indices={g.index for g in o.vertex_groups if g.name.startswith(('Eye_','Tongue_'))}
                 for vertex in o.data.vertices:
@@ -239,7 +252,7 @@ def continuous_face_delta(raw,name):
         w=field((0,-.114,.274),(.032,.080,.030));delta[:,2]=.0017*w;delta[:,1]=.00065*w*np.sin(raw[:,0]*380)
     elif name=='JawOpen':
         w=field((0,-.080,.196),(.065,.100,.024));delta[:,1]=-.0015*w
-    return (fit(raw+delta)-fit(raw))*np.asarray((.93,.94,.85))
+    return H_array(fit(raw+delta))-H_array(fit(raw))
 
 def face_weights(modules):
     # Jaw deforms mandible; upper face is preserved while morphs express soft-tissue controls.

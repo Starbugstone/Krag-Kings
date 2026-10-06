@@ -1,0 +1,178 @@
+{
+  "status": "Frozen prepared recipe; no v9f Blender source, render or artistic acceptance exists",
+  "basedOnActualSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9e_WIP.blend",
+    "sha256": "c0717f5a627185664aca87bfa80b938e1a6735fb33d23cdae66473eb29067353"
+  },
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/build_krag.py",
+      "sha256": "82685ca5802d66b496c77790e0940d68734f22e3b16c30c6dfef3f0f73621583"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_face.py",
+      "sha256": "3428726f03f59ddf8a86ba78a65430e13553daa68621f05f10f890163f989db6"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_locomotion.py",
+      "sha256": "a9cf9057b2531213e8358434c34bc89443b127a2ac053f845c68f9743aa69dae"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_cloth.py",
+      "sha256": "aa1f2673112cecf42c57f0e123504b709796eb7ff6ac1c33e836badedb4b5b0d"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_anatomy.py",
+      "sha256": "5e81400dd657167ae85c49870716fbb299d38a5850dc52f0621d395aec45e48b"
+    },
+    {
+      "path": "benchmark/tools/krag/anatomy_warp_study.py",
+      "sha256": "696f7c8ea86831e6f88c487edb905aca4579cb929d2a47ff57c0022ce37adfd3"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_armor.py",
+      "sha256": "5e460c8683dd4639720bb2bcca5c7f7eff4f4d26454187d1911430cd3dc76f98"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_full_leg.py",
+      "sha256": "63f3b424a71563d75366ccda638100c0e6df010764c08b6bf1b10cbfc4c89828"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_harness.py",
+      "sha256": "ac018dfa7cc1e90e21cb54ecebf6a3092430194afc9613c93be15efff39c5c92"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_head_v9.py",
+      "sha256": "e472142e6540558f7ab24c9c8e3289b337b81a5c33aa3ae05c7d93a8693d2efb"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_iris_material.py",
+      "sha256": "358bce48f4fe88d3c21eb390759e2e8197dcc7fe39f03932c288d6cf7d963804"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_weapon_pose.py",
+      "sha256": "753273a16bcd08d59cab427370bcd9e65268c4da97a9735861f01d7622986ee3"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_skin_domains.py",
+      "sha256": "a57a6c2d84d18aa16b3f31234499f46a4a43497a31205f669ddc66a8b99d15f7"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_grip_v2.py",
+      "sha256": "795eb036e3e4f407f2caf155db60f8989de771d70e41e5f6df55f0486e27734e"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_hand_domains.py",
+      "sha256": "fbc0abb87414c8008ad49442556228997f9dbcd67930df11591846429958ee20"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_proportions_v9f.py",
+      "sha256": "490355dd8ab5051612d4cf907b608a3d11e6d53a1bb4deebb19c896302142b64"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_scarf_v3.py",
+      "sha256": "a1c5e3b93635e68814dce76591b65cf518a5d6930ed1cd6c14ec4ad37dff11ab"
+    },
+    {
+      "path": "benchmark/tools/krag/build-v9f-wip-job.json",
+      "sha256": "b241cf43b5f165707c59a0c055bbfcab3e1e9066575eeb7e1e3befafb8304719"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Blink.json",
+      "sha256": "920e677123d6689339a40b6482359b75c4469e6fa8dace07ed72c03de61f2510"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Hit-8.json",
+      "sha256": "715460a364505f0a2c845dcf44c19e7841a22c3995759db44517ea1e0ae894b0"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Melee-16.json",
+      "sha256": "f0e0abf3c7a07122d7d08f62b54e1d3bfa08236c75d0515d974059528dc3488f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Melee-23.json",
+      "sha256": "1f03ecd57fb3967ac4ceffd0269948d2974aa5feb0bc74f763da5493a11dd5d5"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_Back.json",
+      "sha256": "8c8b154d56d16b5aecd95df33caf9cbe1543992f008a0f1c149be5d4dbc82625"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_Front-Shoot.json",
+      "sha256": "352edf7f2c1923b2997d41184141d84f0449dc9a17aaec2e88a9b4745009f30b"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_Front.json",
+      "sha256": "5a5a674dda2948ca3940ffe58ee6be0e84e99a9849bfb376bbf963ea5ec6899e"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_Head.json",
+      "sha256": "ce56e40e8665719c5d9681c54066c8c777e300b5891a5e4e4493d195075fe07b"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_HeadSide.json",
+      "sha256": "1c2a3571875caf2949ac4a741af71ec90e3858f10ba3d1d3dcbf6404a77273f9"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_LeftHand.json",
+      "sha256": "2339b78d63e6aefc1c11294ed85b944e229bd51673478bd1c292bb29e70afaad"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_RightGrip-Shoot.json",
+      "sha256": "b64c909b6a7eacbb456060af607e5d678fca1766177acb6fc1622988fc7f129f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_RightGrip.json",
+      "sha256": "c34d07b4d6ba8b02395123f17f57cda7fe4d94c00163069c72e85ccfc3712e76"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Natural_Side.json",
+      "sha256": "7a2c23ac5eb9855ab14c27162e91f8c92989a40d1b4fdcd51f5576a6e1d08a31"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-OpenMouth.json",
+      "sha256": "17a156d4bbfdb13b3b9f798cb84526b490c587ba7c23d15eb8628042f356a560"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Run-6.json",
+      "sha256": "b47d9eda1d247c2f85d76106bf68aeb53c6ed80b90dc3cfdf1efcefb008ee639"
+    },
+    {
+      "path": "benchmark/tools/krag/review-v9f-wip-Walk-10.json",
+      "sha256": "b9f5819b5d47d5a3358d9ae011e89f7c6e1e6d3fb34477b135a462858974f4d2"
+    }
+  ],
+  "changes": [
+    "Whole cranial/ocular/oral/tusk/facial-pivot assembly scaled by0.77 about measured chin region, with a smooth lower-neck transition",
+    "Source blink/expression deltas follow the same complete proportion transform",
+    "One broad sheet with unequal open folds and a deep U neckline replaces hollow scarf tubes",
+    "Topology-based five-digit domains keep proximal palm and forearm on their own bones; MCP/PIP/thumb guides refitted from actual source mesh cross-sections",
+    "Firearm mount/handle length derives again from the refitted knuckle row; visible-bore/socket checks remain active"
+  ],
+  "numericalEvidence": [
+    "anatomy-study/head-fit-v9f-measurements.json",
+    "anatomy-study/hand-domain-v3-measurements.json",
+    "anatomy-study/hand-joint-cross-sections.json",
+    "anatomy-study/grip-v3-target-measurements.json"
+  ],
+  "initialActualReviewOrder": [
+    "Natural_Front",
+    "Natural_Head",
+    "Natural_Front / Shoot frame13",
+    "Natural_RightGrip / Shoot frame13"
+  ],
+  "subsequentRequiredViews": [
+    "Blink",
+    "OpenMouth",
+    "HeadSide",
+    "Side",
+    "Back",
+    "Other body actions"
+  ],
+  "notes": [
+    "No source face-set inventory is needed: retained mesh topology and cross-sections provide the required diagnostic",
+    "Joint fitting remains provisional until actual posed skin/contact views pass",
+    "Scarf is an authored cloth surface, not a simulated-cloth result",
+    "V10 complete organic lower body remains separate"
+  ]
+}

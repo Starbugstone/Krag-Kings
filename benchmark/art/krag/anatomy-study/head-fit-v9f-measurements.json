@@ -1,0 +1,176 @@
+{
+  "status": "Code-only fitted control-cage measurement; not an actual Blender render or accepted proportion",
+  "fitScriptSha256": "e472142e6540558f7ab24c9c8e3289b337b81a5c33aa3ae05c7d93a8693d2efb",
+  "sourceDataSha256": "bbe35776c14f9b9142deffc3d83826564586c36868f5fae2250806d18616005d",
+  "regions": {
+    "cranium": {
+      "minimumMeters": [
+        -0.1320397015835865,
+        -0.16994513848688136,
+        1.9231408794317562
+      ],
+      "maximumMeters": [
+        0.1320501891366246,
+        0.09093565137358903,
+        1.997193998067248
+      ],
+      "sizeMeters": [
+        0.2640898907202111,
+        0.26088078986047036,
+        0.0740531186354918
+      ]
+    },
+    "jaw": {
+      "minimumMeters": [
+        -0.10794841594811684,
+        -0.20430540595114197,
+        1.7627402697149346
+      ],
+      "maximumMeters": [
+        0.10805006981026319,
+        0.0652895844009757,
+        1.8103628937261529
+      ],
+      "sizeMeters": [
+        0.21599848575838004,
+        0.26959499035211765,
+        0.047622624011218306
+      ]
+    },
+    "head_without_neck": {
+      "minimumMeters": [
+        -0.14502833624880979,
+        -0.20747961513932492,
+        1.7581199121372046
+      ],
+      "maximumMeters": [
+        0.14416689082320605,
+        0.09093565137358903,
+        2.029489985558053
+      ],
+      "sizeMeters": [
+        0.28919522707201584,
+        0.29841526651291395,
+        0.2713700734208482
+      ]
+    }
+  },
+  "expectedFittedEyeCentersMeters": [
+    [
+      0.058660191007840645,
+      -0.1201364529967692,
+      1.9165008576398037
+    ],
+    [
+      -0.058660191007840645,
+      -0.12013236849297781,
+      1.9165019409459816
+    ]
+  ],
+  "wholeAssemblyProportion": {
+    "status": "Provisional measured whole-head correction; actual neutral/expression review required",
+    "scale": 0.77,
+    "anchorMeters": [
+      0.0,
+      0.014,
+      1.77
+    ],
+    "lowerNeckBlendZ": [
+      1.67,
+      1.775
+    ],
+    "expectedCrownMeters": 2.02949,
+    "referenceMeasurements": "benchmark/art/krag/anatomy-study/front-proportion-landmarks-v9c.json",
+    "appliesTo": [
+      "skull/face",
+      "eyes",
+      "oral meshes and tusks",
+      "facial/jaw/eye rest pivots",
+      "neck transition"
+    ],
+    "separateFromSculpt": true
+  },
+  "proportionHelperSha256": "490355dd8ab5051612d4cf907b608a3d11e6d53a1bb4deebb19c896302142b64",
+  "anatomicalShoulderBandWidthMeters": 1.0115472937993304,
+  "headToShoulderWidthRatio": 0.26107517892544624,
+  "profileLandmarks": {
+    "nasalTip": {
+      "sourceVertex": 3111,
+      "sourceMeters": [
+        6.29995483905077e-05,
+        -0.16345006227493286,
+        0.2685219645500183
+      ],
+      "fittedMeters": [
+        0.00027832675203387237,
+        -0.19974377948385819,
+        1.8845864643508061
+      ]
+    },
+    "upperLip": {
+      "sourceVertex": 3099,
+      "sourceMeters": [
+        -5.8000063290819526e-05,
+        -0.13966403901576996,
+        0.24025097489356995
+      ],
+      "fittedMeters": [
+        -0.00015103914950981363,
+        -0.1959170097468257,
+        1.837161578189927
+      ]
+    },
+    "lowerLip": {
+      "sourceVertex": 3085,
+      "sourceMeters": [
+        -6.000062057864852e-06,
+        -0.13633304834365845,
+        0.22279395163059235
+      ],
+      "fittedMeters": [
+        -1.2414154367478913e-05,
+        -0.18405224829866423,
+        1.814541879630747
+      ]
+    },
+    "chin": {
+      "sourceVertex": 3069,
+      "sourceMeters": [
+        -2.167051434298628e-06,
+        -0.11557432264089584,
+        0.18034064769744873
+      ],
+      "fittedMeters": [
+        -3.5584387553733422e-06,
+        -0.18840009108379338,
+        1.7667422239925175
+      ]
+    },
+    "brow_L": {
+      "sourceVertex": 1542,
+      "sourceMeters": [
+        0.034460004419088364,
+        -0.10631006211042404,
+        0.33033692836761475
+      ],
+      "fittedMeters": [
+        0.0511595069096955,
+        -0.13361876061288605,
+        1.9295287302935304
+      ]
+    },
+    "cheek_L": {
+      "sourceVertex": 3015,
+      "sourceMeters": [
+        0.0701259970664978,
+        -0.10235203057527542,
+        0.2831839919090271
+      ],
+      "fittedMeters": [
+        0.11521282596057422,
+        -0.11098947950917609,
+        1.886039649312144
+      ]
+    }
+  }
+}

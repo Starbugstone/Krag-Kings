@@ -1,0 +1,33 @@
+{
+  "name": "krag-review-v9f-wip-Melee-23",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9f_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9f-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_ActionFront",
+    "--tag",
+    "v9f-wip",
+    "--neutral-light",
+    "--clip",
+    "Melee",
+    "--frame",
+    "23",
+    "--keep-pose",
+    "--show-weapon"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9f-wip-Melee-23.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9f-wip-Melee-23.stderr.log",
+  "maxPrivateGB": 8
+}
