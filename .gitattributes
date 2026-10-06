@@ -284,3 +284,7 @@ benchmark/unreal/evidence/groom-native-fixture-v1/**/*.csv -text whitespace=cr-a
 benchmark/evidence/unity/native-strands-render-v1-failed/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/evidence/unity/native-strands-render-v1-failed/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/evidence/unity/native-strands-render-v1-failed/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Exact raw native Groom width-adapter evidence.
+benchmark/unreal/evidence/groom-native-width-v2/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/groom-native-width-v2/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "name": "nib-native-fixture-width-v2",
+  "pins": [
+    {
+      "path": "benchmark/art/nib/groom-study/native-hair-fixture-v1/CreamHead.abc",
+      "sha256": "433ebfa74ee1c92a88896786976e46f00cae1967096f8a426e4595796ebfd50b",
+      "bytes": 3034
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-hair-fixture-v1/PinkEarWisps.abc",
+      "sha256": "5fde84f9efd6990976eff6b16cd0a78443ec3382b8a50d62580ca27d6c8e0606",
+      "bytes": 3040
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-hair-fixture-v1/TawnyEarOuter.abc",
+      "sha256": "78b5d2be2295cd9e5e8296002b6c74a5b2447d323f5ad9543b0fc084721df8f6",
+      "bytes": 3042
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-hair-fixture-v1/fixture.json",
+      "sha256": "ba18400c190583ae3bbdb94e48a86ebcf99b8e46a24b19b2a06da99a91435b77",
+      "bytes": 29948
+    },
+    {
+      "path": "benchmark/tools/unreal/BuildConfiguration.xml",
+      "sha256": "6ac5b20d376e6207fa792499fd6c57feadf1ac9109782ebc906614ad85d0ffa4",
+      "bytes": 374
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/build.ps1",
+      "sha256": "b8d91c689a498670cdfebd78fe6465ebf32d5cf9c01d1d7da32fb460dbd65fb7",
+      "bytes": 970
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/import_fixture.py",
+      "sha256": "6d17de4184a7226fcc20f696527b6425185b6f4d17066497d956c04c78fe8dfb",
+      "bytes": 6503
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/prepare.py",
+      "sha256": "32b6fcfe1a6db8fb1eb50cd269a9c1f466fd568c1924da13e9466a8ea3e6045f",
+      "bytes": 5133
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Config/DefaultEngine.ini",
+      "sha256": "01d9520b2b81bc4a0ab062a762d90376a51110025b141e27324b9f8ddfa682ae",
+      "bytes": 245
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/GroomProbe.uproject",
+      "sha256": "1d50afe37baf9b0355c9a5e15f7c9b5932b4d1039da3d85314022eab6b90cd74",
+      "bytes": 463
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbe.Build.cs",
+      "sha256": "04f25fbb78b1baff4d53e453cd3cfd963d6d3df954bf7d1a1e28731b6101fcf9",
+      "bytes": 404
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbeLibrary.cpp",
+      "sha256": "8647638f33390cff12e1d38571967fd4612a05c0b025495c88a2cf4e26f19e98",
+      "bytes": 6683
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbe/GroomProbeLibrary.h",
+      "sha256": "63430b88e5bc9de9ba2abdfb6cc0f4aacd07de7ec75e8e09bed8277ff12f2c1b",
+      "bytes": 660
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/project/Source/GroomProbeEditor.Target.cs",
+      "sha256": "45bb3bca7283a02473a08896fd6a258e214e88e96dcd708837bec9de663f5a54",
+      "bytes": 353
+    },
+    {
+      "path": "benchmark/tools/unreal/groom_probe/reload_fixture.py",
+      "sha256": "04683554cde730c4d2b4b1f149b95cf672d9e932bf3361e457d161b1b37fdc8c",
+      "bytes": 1880
+    }
+  ],
+  "projectDirectory": "benchmark/local/groom-probe/nib-native-fixture-width-v2/GroomProbe",
+  "fixture": "benchmark/art/nib/groom-study/native-hair-fixture-v1/fixture.json",
+  "engine": "D:/Games/UE_5.8",
+  "status": "Prepared, no compile/import/render execution",
+  "characterBindingVerified": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "restorePointWidthsFromExactSidecar": true
+}

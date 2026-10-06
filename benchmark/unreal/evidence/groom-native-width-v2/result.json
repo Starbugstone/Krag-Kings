@@ -1,0 +1,56 @@
+{
+  "status": "Actual exact-width adapter and fresh-process saved-asset reload pass",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "stages": {
+    "build": {
+      "pid": 6500,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 75.0,
+      "maxTreePrivateMiB": 6324.0,
+      "minAvailableMiB": 7192.0
+    },
+    "import": {
+      "pid": 21264,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 2439.0,
+      "maxTreePrivateMiB": 2439.0,
+      "minAvailableMiB": 8723.0
+    },
+    "reload": {
+      "pid": 23828,
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarkerPresent": true,
+      "maxPrivateMiB": 2399.0,
+      "maxTreePrivateMiB": 2399.0,
+      "minAvailableMiB": 8728.0
+    }
+  },
+  "regions": [
+    "CreamHead",
+    "PinkEarWisps",
+    "TawnyEarOuter"
+  ],
+  "actualCurves": 12,
+  "authoredPoints": 108,
+  "derivedCpuPoints": 120,
+  "derivedPointNote": "Native triangle-strip builder duplicates one terminal point per curve; source topology is unchanged.",
+  "maximumPositionComponentErrorCentimeters": 4.086717151352559e-07,
+  "maximumWidthErrorCentimeters": 3.8743019209475094e-10,
+  "freshProcessReloadMatches": true,
+  "adapter": "Exact sidecar diameter restored only after topology and point-order/space gates; FHairDescription committed and native derived data rebuilt.",
+  "nativeStandardAbcScopeRepaired": false,
+  "originalAbcChanged": false,
+  "engineSourceChanged": false,
+  "rendererTested": false,
+  "bindingTested": false,
+  "performanceMeasured": false,
+  "productionProjectChanged": false,
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "incidentalLogWarnings": "Editor startup also emits LogAutomationTest Condition failed entries; raw logs are retained. These are separate from the three explicit completion gates."
+}
