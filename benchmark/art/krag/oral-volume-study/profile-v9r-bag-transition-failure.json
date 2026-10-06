@@ -1,0 +1,62 @@
+{
+  "status": "Prepared rest-profile only; no saved source or posed correction exists",
+  "source": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+  "sourceSha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72",
+  "oralTranslationMeters": [
+    0.0,
+    0.01,
+    0.008
+  ],
+  "nasalWidthScaleProposal": 1.05,
+  "nasalAnteriorSupportMeters": 0.003,
+  "artisticAcceptance": false,
+  "passed": false,
+  "failure": "Macro envelope flips/collapses an actual Head triangle",
+  "minimumAreaRatio": 0.07459611076834273,
+  "flips": 4,
+  "failedByFaceSet": {
+    "7": 6
+  },
+  "worstCenters": [
+    [
+      -0.030672155941526096,
+      -0.1687363882859548,
+      1.8425455888112385
+    ],
+    [
+      0.05975605919957161,
+      -0.13724000751972198,
+      1.8434824148813884
+    ],
+    [
+      -0.03071071890493234,
+      -0.1602270503838857,
+      1.8463956514994304
+    ],
+    [
+      -0.060716925809780754,
+      -0.13652356465657553,
+      1.8435229063034058
+    ],
+    [
+      -0.0295944989969333,
+      -0.16241096456845602,
+      1.8460788329442341
+    ],
+    [
+      0.042067778607209526,
+      -0.14561465879281363,
+      1.8457129001617432
+    ],
+    [
+      0.043894762794176735,
+      -0.1424044370651245,
+      1.8458589315414429
+    ],
+    [
+      -0.057779101034005485,
+      -0.13706828653812408,
+      1.8438525994618733
+    ]
+  ]
+}

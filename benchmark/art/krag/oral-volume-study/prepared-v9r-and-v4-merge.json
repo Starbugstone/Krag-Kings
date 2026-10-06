@@ -1,0 +1,57 @@
+{
+  "status": "Prepared only; no v9r source or merged motion source generated",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "oralInput": {
+    "path": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+    "sha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72"
+  },
+  "motionDonor": {
+    "path": "benchmark/art/animation/krag-human-motion-v4/Krag_HumanMotion_Study_v4.blend",
+    "sha256": "84822444a021194fc47e0360bfffc875c18687720bb8b8923588e486b9900607"
+  },
+  "actionLineage": {
+    "v9p": "Earlier pre-v4 actions preserved from v9o",
+    "v9qa": "Same earlier actions; complete v4 body and6sIdle absent",
+    "v9r": "Prepared oral-only change from v9p; requires independent v4 merge",
+    "nextMergedSource": "Prepared exact68-bone source/action merge; existing72-bone hand study excluded"
+  },
+  "oralProposal": [
+    "Whole oral bag and lip neighborhood translate coherently to shorten muzzle; rejected v9qa orbital compression discarded",
+    "Compact provisional canines fit actual gingival arch and true81-vertex lower rim",
+    "Finite-slope commissure weights retained; full-range lower-lip correction solved as posed residual through actual LBS",
+    "Upper lip/nose and actual ocular contact remain fixed; jaw hinge/full range and all action curves remain unchanged"
+  ],
+  "numericalPreflight": "benchmark/art/krag/oral-volume-study/profile-v9r-preflight.json",
+  "requiredActualChecks": [
+    "Native source save/reopen",
+    "Closed/open front/right visual proof of lip roll, dental depth and tusk emergence",
+    "Actual68-bone v4 merge preserving every mesh/morph/driver and matching seven take hashes plus35 sampled poses",
+    "Merged24-pose actual front/side gait/Idle review"
+  ],
+  "retainedFailedProposals": [
+    "benchmark/art/krag/oral-volume-study/profile-v9qa-numerical-failure.json",
+    "benchmark/art/krag/oral-volume-study/profile-v9r-bag-transition-failure.json"
+  ],
+  "recipeHashes": {
+    "benchmark/tools/krag/oral_volume_wip/build_profile_oral_v9r.py": "2ab3bb0c52e8b74f5a1a146703b8740b37a357230f2ed8adcbda31daabd1a223",
+    "benchmark/tools/krag/oral_volume_wip/posed_lip_corrective.py": "218fcea286d5910982747f9757e82ce727a851300bb3a2371fcb9058948a6ff5",
+    "benchmark/tools/krag/oral_volume_wip/preflight_profile.py": "94a917726f7b0ff832fd095a7d822a03deb2562065581771cccf1915b4f9a45a",
+    "benchmark/tools/krag/oral_volume_wip/preflight_profile_v9r.py": "24e9fe255969a138398534931938e9b68a8540fd1fdc98be360f254a6905cd2f",
+    "benchmark/tools/krag/oral_volume_wip/profile_and_lip.py": "d93b7ccdae302bc2976a2ec0cca0f0b2c94b8b9783eaea3cb0ea314c3bc08824",
+    "benchmark/tools/krag/oral_volume_wip/rest_profile_v9r.py": "fcaf3cf3f78cd3ef5495f1e4f43a074960b41ac64f330c3d401000dd85d8db7c",
+    "benchmark/tools/krag/oral_volume_wip/review_profile_oral_v9r.py": "71fdd40d2e58485158bf021f7a0806b153f4a03cbc99b2b4c43a234c203a2edc",
+    "benchmark/tools/krag/oral_volume_wip/stout_canines.py": "ccd20e11c80079bea7c94e97a0fb6772cf2f2cd44cce283626245347cfa40a8c",
+    "benchmark/tools/krag/motion_merge_wip/merge_v4.py": "819742354132befe4377731f5703b9cf5d0fc7b3c295464d50d1342e7b46d003",
+    "benchmark/tools/krag/motion_merge_wip/review_merge.py": "97d3307fe57ae0e3f042f48c89c450f73bb9d01ce2777c73d7191c5c0ea011d3",
+    "benchmark/tools/krag/motion_merge_wip/v9p-fallback-merge.job.json": "2a1fac26130139301096093ff576a4f5fafaca2ad10f5dd7af087f07fc4b7f0c",
+    "benchmark/tools/krag/motion_merge_wip/v9p-fallback-review.job.json": "7cdaf838b74747c256bad211aeaf36a0d63447ecc3424ed018ad2339396ff5fb",
+    "benchmark/tools/krag/motion_merge_wip/v9r-merge.job.json": "858a4a8a456610c6c8538cd28747638480b9bc6a665fba2e039e3cb53fd6f8a6",
+    "benchmark/tools/krag/motion_merge_wip/v9r-review.job.json": "16af75c6fdb7840ed39c9f17cb6204d87299f3d36474b2a31a6cc3cc176a92e0",
+    "benchmark/tools/krag/krag-profile-oral-v9r-ClosedFront-job.json": "79b2008b98ad2b11cddc5ee8b0b565e03b593b9fd30445188bbe8cf1dad1fbab",
+    "benchmark/tools/krag/krag-profile-oral-v9r-ClosedRight-job.json": "942802f62eb6f30cee3dd4c89728937f0377eefa71165ca3023ff3cb8c558f2c",
+    "benchmark/tools/krag/krag-profile-oral-v9r-OpenFront-job.json": "aaee4f088be5e1554591ea83026c60317a60b4dc3ca565efcd50b48dd567b332",
+    "benchmark/tools/krag/krag-profile-oral-v9r-OpenRight-job.json": "5ffeda5b04da763d24d507752ee7f0760a6ae5560f19120ded813eec51660dd6",
+    "benchmark/tools/krag/krag-profile-oral-v9r-source-job.json": "df833036c0a44bb2a5a90fb897e12eb2e0585fa6449821175db975ec9b2cc6b4"
+  }
+}

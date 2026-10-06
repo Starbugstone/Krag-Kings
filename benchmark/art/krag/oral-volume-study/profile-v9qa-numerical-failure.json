@@ -1,0 +1,63 @@
+{
+  "status": "Prepared rest-profile only; no saved source or posed correction exists",
+  "source": "benchmark/art/krag/Krag_VisibleMassFit_v9qa_WIP.blend",
+  "sourceSha256": "9e3a0ca39088053cbbca9e8b20b8144c8e12d51927ed9d613a42b4c1f704b01c",
+  "oralTranslationMeters": [
+    0.0,
+    0.008,
+    0.01
+  ],
+  "nasalWidthScaleProposal": 1.35,
+  "nasalAnteriorSupportMeters": 0.008,
+  "artisticAcceptance": false,
+  "passed": false,
+  "failure": "Macro envelope flips/collapses an actual Head triangle",
+  "minimumAreaRatio": 0.2436871317662269,
+  "flips": 7,
+  "failedByFaceSet": {
+    "9": 4,
+    "10": 3
+  },
+  "worstCenters": [
+    [
+      0.03157170404757342,
+      -0.1269077457988724,
+      1.9130314454952657
+    ],
+    [
+      -0.031433087587500595,
+      -0.1269961790034662,
+      1.9130800296439106
+    ],
+    [
+      -0.04161483181752693,
+      -0.1360205013268841,
+      1.9033713725132024
+    ],
+    [
+      0.029539953647938783,
+      -0.12694299616948154,
+      1.9133656990545285
+    ],
+    [
+      0.029132894839604337,
+      -0.12710570041431735,
+      1.9140938435570496
+    ],
+    [
+      -0.04345060048812093,
+      -0.13571414194111422,
+      1.9028712257267257
+    ],
+    [
+      -0.03143490723980077,
+      -0.1272704176017097,
+      1.9136301453151587
+    ],
+    [
+      0.031567519173879406,
+      -0.12721499755662954,
+      1.9135828834762572
+    ]
+  ]
+}

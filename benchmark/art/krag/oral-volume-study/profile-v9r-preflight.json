@@ -1,0 +1,27 @@
+{
+  "status": "Prepared rest-profile only; no saved source or posed correction exists",
+  "source": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+  "sourceSha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72",
+  "oralTranslationMeters": [
+    0.0,
+    0.01,
+    0.008
+  ],
+  "nasalWidthScaleProposal": 1.05,
+  "nasalAnteriorSupportMeters": 0.003,
+  "artisticAcceptance": false,
+  "trueLowerRim": {
+    "vertices": 81,
+    "minimumAdjacentXStepMeters": 0.000118304044008255,
+    "singleOpenTopologicalPath": true
+  },
+  "head": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.41809691118714837,
+    "normalChangeDegreesP99": 19.88324140236118,
+    "normalChangeDegreesMaximum": 33.218634809194135,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.012806248474865708
+  },
+  "passed": true
+}
