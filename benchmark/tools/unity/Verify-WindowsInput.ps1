@@ -139,6 +139,7 @@ function Wait-Probe([scriptblock]$Predicate,[string]$Failure,[int]$Seconds=5) {
 $checks=[System.Collections.Generic.List[string]]::new()
 $failures=[System.Collections.Generic.List[string]]::new()
 $pointerEvidence=[System.Collections.Generic.List[object]]::new()
+$cameraObservations=[System.Collections.Generic.List[object]]::new()
 $windowLease=$null
 try {
     $initial=Read-Probe
@@ -161,10 +162,11 @@ try {
     $null=Wait-Probe {param($p) ($p.units | Where-Object species -eq 'Krag').action -eq 'Melee' -and ($p.units | Where-Object species -eq 'Nib').action -eq 'Shoot'} 'Native clicks/keys did not produce concurrent Krag melee and Nib shooting' 2
     $checks.Add('Native clicks and keys started Nib shooting while Krag melee continued')
     $null=Wait-Probe {param($p) @($p.units | Where-Object action -ne 'Idle').Count -eq 0} 'Overlapping actions did not finish' 8
+    $beforeCameraFrame=(Read-Probe).frame
     Press-Key 0x41
+    $beforeCamera=Wait-Probe {param($p) $p.frame -gt $beforeCameraFrame -and $p.action -eq 'Melee'} 'Camera overlap check did not observe a fresh Melee state'
     Focus-Demo
-    $beforeCamera=Read-Probe
-    if($beforeCamera.action -ne 'Melee'){throw 'Camera overlap check did not start its action.'}
+    $cameraObservations.Add(@{control='OrbitZoom';observedUtc=[DateTime]::UtcNow.ToString('o');beforeInputFrame=$beforeCameraFrame;actionFrame=$beforeCamera.frame;action=$beforeCamera.action;cameraYaw=$beforeCamera.cameraYaw;cameraDistance=$beforeCamera.cameraDistance})
     $rect=New-Object DemoInput+RECT
     [DemoInput]::GetClientRect($window,[ref]$rect)|Out-Null
     $point=New-Object DemoInput+POINT
@@ -182,9 +184,12 @@ try {
     } finally {[DemoInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
     [DemoInput]::mouse_event(0x800,0,0,120,[UIntPtr]::Zero)
     $null=Wait-Probe {param($p) [Math]::Abs($p.cameraYaw-$beforeCamera.cameraYaw) -gt 1 -and $p.cameraDistance -lt $beforeCamera.cameraDistance-.2 -and $p.action -eq 'Melee'} 'Native orbit/zoom input did not change the camera'
+    $beforePanFrame=(Read-Probe).frame
     Press-Key 0x41 # Restart an action for a separate pan-during-animation check.
+    $beforePan=Wait-Probe {param($p) $p.frame -gt $beforePanFrame -and $p.action -eq 'Melee'} 'Pan check did not observe a fresh Melee state'
+    $cameraObservations.Add(@{control='Pan';observedUtc=[DateTime]::UtcNow.ToString('o');beforeInputFrame=$beforePanFrame;actionFrame=$beforePan.frame;action=$beforePan.action;cameraFocus=$beforePan.cameraFocus;requestedArrowHoldMilliseconds=90})
     Press-Key 0x27 # Right arrow pans the camera independently of the action.
-    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraFocus.x-$beforeCamera.cameraFocus.x)+[Math]::Abs($p.cameraFocus.z-$beforeCamera.cameraFocus.z) -gt .02 -and $p.action -eq 'Melee'} 'Native pan input did not change camera focus'
+    $null=Wait-Probe {param($p) [Math]::Abs($p.cameraFocus.x-$beforePan.cameraFocus.x)+[Math]::Abs($p.cameraFocus.z-$beforePan.cameraFocus.z) -gt .02 -and $p.action -eq 'Melee'} 'Native pan input did not change camera focus'
     $checks.Add('Native middle-mouse orbit, wheel zoom and arrow pan remained available during animation')
     Press-Key 0x24
     $null=Wait-Probe {param($p) @($p.units | Where-Object action -ne 'Idle').Count -eq 0} 'Camera test action did not finish' 8
@@ -246,7 +251,7 @@ try {
     $checks.Add('F12 capture input sent; output image must be inspected separately')
 } catch { $failures.Add($_.Exception.Message) }
 finally {if($windowLease){try{$windowLease.Dispose()}catch{$failures.Add($_.Exception.Message)}}}
-@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
+@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());cameraObservations=@($cameraObservations.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
     ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
 if($failures.Count){throw ($failures -join '; ')}
 Write-Output 'WINDOWS_INPUT_VERIFICATION_PASS'
