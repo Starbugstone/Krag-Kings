@@ -18,8 +18,7 @@ def main():
     parser.add_argument('--source-report',type=Path,required=True)
     parser.add_argument('--source-sha256',required=True)
     parser.add_argument('--name',required=True)
-    parser.add_argument('--card-texture-dir',type=Path,
-        default=ROOT/'benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/textures',
+    parser.add_argument('--card-texture-dir',type=Path,required=True,
         help='Exact original card atlas directory used by this saved source; pinned before baking')
     parser.add_argument('--repair-bake-root',type=Path,help='Reuse a preserved actual bake via a path-only derivative; never rebake or overwrite it')
     parser.add_argument('--blocked-reason',required=True,help='Use a new frozen plan after the actual source defect is resolved; empty only when ready for scheduling')

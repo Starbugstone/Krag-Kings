@@ -37,6 +37,22 @@ for bone in rig.pose.bones:bone.matrix_basis=Matrix.Identity(4)
 scene.frame_set(1);bpy.context.view_layer.update()
 source_objects=[o for o in collection.objects if o.type=='MESH']
 visibility={o.name:(o.hide_get(),o.hide_render) for o in source_objects}
+card_entries=json.loads(scene.get('nib_groom_material_contract','[]'))
+card_contract={entry['name']:entry for entry in card_entries}
+if len(card_contract)!=len(card_entries):raise RuntimeError('Duplicate groom material contract')
+card_agreements={}
+# Reject a stale supplied atlas before the expensive face/iris field bakes.
+for material in {m for obj in source_objects for m in obj.data.materials if m is not None}:
+    if material.name not in card_contract:
+        if material.get('portableAlphaMode')=='MASK':
+            raise RuntimeError('Masked surface lacks groom scene contract '+material.name)
+        continue
+    record=card_contract[material.name]
+    if (record.get('alphaMode')!='MASK' or record.get('alphaSource')!='baseColor.a'
+        or not 0<float(record.get('alphaClipThreshold',0))<1):
+        raise RuntimeError('Invalid masked groom atlas contract '+material.name)
+    if args.card_texture_dir is None:raise RuntimeError('Actual masked groom requires --card-texture-dir')
+    card_agreements[material.name]=verify_card_source_images(material,record,args.card_texture_dir)
 for obj in source_objects:obj.hide_set(True);obj.hide_render=True
 def immutable_geometry(obj):
     records={}
@@ -98,17 +114,12 @@ for name in region_names:
                                 'reviewRequired':'Same root-to-tip/clump color and regional separation on actual geometry'})
 
 used={m for obj in source_objects for m in obj.data.materials if m is not None}
-card_entries=json.loads(scene.get('nib_groom_material_contract','[]'))
-card_contract={entry['name']:entry for entry in card_entries}
-if len(card_contract)!=len(card_entries):raise RuntimeError('Duplicate groom material contract')
 for material in sorted(used,key=lambda m:m.name):
     if material.name in card_contract:
         record=dict(card_contract[material.name])
-        if (record.get('alphaMode')!='MASK' or record.get('alphaSource')!='baseColor.a'
-            or not 0<float(record.get('alphaClipThreshold',0))<1):
-            raise RuntimeError('Invalid masked groom atlas contract '+material.name)
-        if args.card_texture_dir is None:raise RuntimeError('Actual masked groom requires --card-texture-dir')
         record['sourceImageAgreement']=verify_card_source_images(material,record,args.card_texture_dir)
+        if record['sourceImageAgreement']!=card_agreements[material.name]:
+            raise RuntimeError('Source groom image binding changed during field bakes')
         for key in ['baseColor','normal','roughness','metallic']:
             relative=Path(record[key])
             if relative.is_absolute() or len(relative.parts)!=2 or relative.parts[0]!='textures':
