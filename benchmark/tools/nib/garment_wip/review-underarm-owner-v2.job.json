@@ -1,0 +1,20 @@
+{
+  "name": "nib-underarm-owner-v2",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\garment_wip\\review_underarm_owner_v2.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-underarm-owner-v2.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-underarm-owner-v2.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-underarm-owner-v2.log",
+  "successMarker": "NIB_UNDERARM_OWNERSHIP_V2_REVIEW_COMPLETE"
+}

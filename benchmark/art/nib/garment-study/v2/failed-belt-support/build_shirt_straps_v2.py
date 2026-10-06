@@ -96,18 +96,6 @@ np.savez_compressed(ROOT/'benchmark/local/nib-fitted-shirt-support-v2.npz',
     points=support_points,triangles=support_triangles,source_sha256=EXPECTED,
     cloth_patterns_sha256=sha(HERE/'sewn_undershirt_v2.py'),fabric_sha256=sha(HERE/'fitted_fabric.py'))
 report['shirt']['supportCache']='benchmark/local/nib-fitted-shirt-support-v2.npz'
-# Preserve the successful editable cloth stage even if a later accessory gate
-# fails. This checkpoint is not a complete runtime/morph or visual handoff.
-checkpoint=OUT/'Nib_SewnShirtCheckpoint_v2.blend'
-if checkpoint.exists():raise RuntimeError('Preserve earlier sewn-shirt checkpoint')
-scene['source_version']='Sewn shirt v2 checkpoint before straps/body-correctives; unaccepted partial authoring source'
-bpy.ops.wm.save_as_mainfile(filepath=str(checkpoint),compress=True)
-checkpoint_report={'status':'Actual settled sewn shirt only; straps and garment morph completion pending',
-    'source':str(SOURCE),'sourceSha256':EXPECTED,'output':str(checkpoint),'outputSha256':sha(checkpoint),
-    'shirt':report['shirt'],'artisticAcceptance':False,'sharedChanged':False}
-(OUT/'shirt-checkpoint.json').write_text(json.dumps(checkpoint_report,indent=2)+'\n',newline='\n')
-print('NIB_SEWN_SHIRT_CHECKPOINT_SAVED',flush=True)
-
 
 report['newStraps']=[];new_straps=[]
 for old in list(collection.objects):

@@ -1,0 +1,40 @@
+{
+  "status": "Actual corrected support and42cloth frames completed; new belt-supported strap endpoint failed before source save",
+  "pid": 29456,
+  "guardExitCode": 2,
+  "peakPrivateMB": 648.0,
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "failure": "Last strap row64 is the actual belt attachment below cropped body boundary; routine wrongly required body support there",
+  "nativeClothFramesCompleted": 42,
+  "sourceSaved": false,
+  "rendersCreated": false,
+  "sharedChanged": false,
+  "files": [
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-belt-support/nib-fitted-shirt-straps-v2-support-retry1.txt",
+      "sha256": "784594f3b0efde83108791d26c86d4f450d6bddbc5928cdfcd919d8aa19d6232",
+      "originalCaptureSha256": "40e492bbb448d05d67afec31af4fda4dcae50581c83b86a48b0adeb7e612d7a9"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-belt-support/nib-fitted-shirt-straps-v2-support-retry1.stderr.txt",
+      "sha256": "39a2715f4e7d9144b23105508e261c4602aff2e5dae35252c807a97a258c9c8d",
+      "originalCaptureSha256": "bd66a4a753fbcf7e815923db66f6fe852e2b99b0ea339e41a9a3419a63da3d1e"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-belt-support/nib-fitted-shirt-straps-v2-support-retry1-memory.csv",
+      "sha256": "c6282b2bd3aacdeb269d9c809705c5d93f3b4070beb7d4ba7148bfc46fc1a0a3",
+      "originalCaptureSha256": "bbf8b20bc222764e75c5c721bc8087280f48dc079f622acc897fdaa93fcd7168"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-belt-support/nib-garments-v2-python-error.txt",
+      "sha256": "644f12046ea4d81c7146cf2cc61556e87bfec961db3f18fd1b97d29ddaa4d11a",
+      "originalCaptureSha256": "644f12046ea4d81c7146cf2cc61556e87bfec961db3f18fd1b97d29ddaa4d11a"
+    }
+  ],
+  "recipe": {
+    "build_shirt_straps_v2.py": "d99f70ce62f75b22ebc5b916ba01a2870b16b55087ae92bf6dae471e86c5b3e0",
+    "sewn_undershirt_v2.py": "c9a50e83d8f1fa4784e48285feb9f06a856e3d98a8237bf5e0a03de56fc465f1",
+    "shoulder_straps_v2.py": "c523eae5a406317afd301917d669b364385470927184a155a325a039b3cc82d4",
+    "torso_fabric_v2.py": "248add772ef2622919e1e6eb3bf2d42a686eee9de61ac38fce96aa6848b194b3"
+  }
+}

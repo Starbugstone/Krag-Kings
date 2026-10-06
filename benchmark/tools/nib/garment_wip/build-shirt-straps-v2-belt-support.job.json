@@ -1,0 +1,23 @@
+{
+  "name": "nib-fitted-shirt-straps-v2-belt-support",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\garment_wip\\build_shirt_straps_v2.py",
+    "--",
+    "--stage",
+    "shirt-straps"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v2-belt-support.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v2-belt-support.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v2-belt-support.log",
+  "successMarker": "NIB_SEWN_GARMENT_V2_STUDY_SAVED"
+}

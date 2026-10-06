@@ -213,3 +213,36 @@ physical settling, fitted belt anchors and Front/Back/Shoot appearance still
 need actual native proof. `sewn-retry-readiness-v2.json` pins the current recipe
 and complete support report. Earlier numerical layouts/receipts are historical
 and do not establish that the current source was generated.
+
+
+The corrected support recipe subsequently completed all 42 native cloth frames,
+then stopped before saving because the final strap row requested bare-body
+support below the body mesh's cropped waist. This is a distinct belt-attachment
+fault; its exact source/logs are in `v2/failed-belt-support`. The prepared fix
+uses the measured belt triangle and normal for that final row. The lightweight
+`audit_strap_v2_all_support.py` executes the exact current route prefix through
+all 65 rows on both sides, using actual saved body/belt geometry and the actual
+settled-shirt cache. Both routes pass the existing curvature and clearance
+gates (49.06° / 47.06° maximum bend); no native rerun or visual approval is
+implied. `build-shirt-straps-v2-belt-support.job.json` is ready and additionally
+saves an editable partial shirt checkpoint before accessory work.
+
+Root has now identified a left-hand digit-proportion/bind defect and owns its
+isolated anatomical correction. This clothing study retains the original v5
+bind. A future coherent source requires that explicit migration once, followed
+by matching clip regeneration; do not casually transfer old clips across the
+changed hand bind. Earlier exact-bind merge planning is superseded for those
+changed hand joints. No hand or body geometry is edited by this garment work.
+
+
+### Actual v2 bounded review complete
+
+The belt-supported native source and Front/Back/Shoot now exist, guard exit 0
+with 766 / 1,401 MB private peaks. Exact evidence is in
+`art/nib/garment-study/v2/shirt-straps-review-result.json`. Shoulder exposure and
+belt attachment improve; the raised-arm sheet persists and requires the
+prepared `review-underarm-owner-v2.job.json` attribution. Thin jagged openings,
+pinched side folds, old scarf and larger character-quality failures remain.
+Keep this actual source fixed for diagnostic groom composition and root's
+future explicit anatomical hand migration. No shared promotion is authorized
+by these technical checks or images.

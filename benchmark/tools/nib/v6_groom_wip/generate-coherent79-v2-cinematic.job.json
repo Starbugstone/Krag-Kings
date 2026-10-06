@@ -1,0 +1,31 @@
+{
+  "name": "nib-coherent79-v2-groom-cinematic",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v6_groom_wip\\build_groom_candidate.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\Nib_ShirtStrapsStudy_v2.blend",
+    "--source-report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\shirt-straps-source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\coherent79-v2-cinematic",
+    "--representation",
+    "cinematic",
+    "--composition-review",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\composition-review.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-cinematic.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-cinematic.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-coherent79-v2-groom-cinematic.log",
+  "successMarker": "NIB_GROOM_CANDIDATE_SAVED"
+}

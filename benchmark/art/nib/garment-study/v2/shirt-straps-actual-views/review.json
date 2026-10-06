@@ -1,0 +1,501 @@
+{
+  "status": "Actual cloth diagnostics; concept/material/motion/contact acceptance pending",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\Nib_ShirtStrapsStudy_v2.blend",
+  "sourceSha256": "4df4d2fb46d83a457277ad1395adb63f6acde3af9d817ae430d7a282f82792f8",
+  "codeSha256": "3d4e174c00a3aa7af6a2cba7686929c434470f52019ced308522851327e2a4d7",
+  "poses": [
+    {
+      "view": "Front",
+      "clip": "Idle",
+      "normalizedTime": 0,
+      "frame": 1.0,
+      "geometry": {
+        "Sleeveless dust undershirt": {
+          "vertices": 42044,
+          "triangles": 84096,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.0004849964134336915,
+              "vertex": 31348,
+              "nearestDistanceMeters": 0.001987731782719493
+            },
+            {
+              "signedMeters": 0.0005310936321620829,
+              "vertex": 28718,
+              "nearestDistanceMeters": 0.0027096394915133715
+            },
+            {
+              "signedMeters": 0.0015967187791829929,
+              "vertex": 26368,
+              "nearestDistanceMeters": 0.0067749470472335815
+            },
+            {
+              "signedMeters": 0.0017516757361590862,
+              "vertex": 4803,
+              "nearestDistanceMeters": 0.007020363584160805
+            },
+            {
+              "signedMeters": 0.0017539206601213664,
+              "vertex": 0,
+              "nearestDistanceMeters": 0.006087909452617168
+            },
+            {
+              "signedMeters": 0.0020280866156099364,
+              "vertex": 23423,
+              "nearestDistanceMeters": 0.0020280866883695126
+            },
+            {
+              "signedMeters": 0.0021900340434513055,
+              "vertex": 22687,
+              "nearestDistanceMeters": 0.0021900341380387545
+            },
+            {
+              "signedMeters": 0.002201374361902708,
+              "vertex": 27175,
+              "nearestDistanceMeters": 0.00220137438736856
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Nib v5 layered desert scarf": {
+          "vertices": 34944,
+          "triangles": 69888,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": -0.013644980070239399,
+          "samplesBelowMinus1mm": 80,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": -0.013644980070239399,
+              "vertex": 34418,
+              "nearestDistanceMeters": 0.01364497933536768
+            },
+            {
+              "signedMeters": -0.012262237156392075,
+              "vertex": 4196,
+              "nearestDistanceMeters": 0.012262238189578056
+            },
+            {
+              "signedMeters": -0.012023475486785173,
+              "vertex": 30134,
+              "nearestDistanceMeters": 0.012023474089801311
+            },
+            {
+              "signedMeters": -0.010240380273899063,
+              "vertex": 3701,
+              "nearestDistanceMeters": 0.010240379720926285
+            },
+            {
+              "signedMeters": -0.009469933109357953,
+              "vertex": 8451,
+              "nearestDistanceMeters": 0.009469933807849884
+            },
+            {
+              "signedMeters": -0.00881087628658861,
+              "vertex": 23198,
+              "nearestDistanceMeters": 0.008810875937342644
+            },
+            {
+              "signedMeters": -0.00857526296749711,
+              "vertex": 33718,
+              "nearestDistanceMeters": 0.008575263433158398
+            },
+            {
+              "signedMeters": -0.008512525993864983,
+              "vertex": 21041,
+              "nearestDistanceMeters": 0.008512525819242
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Overalls draped bib": {
+          "vertices": 1553,
+          "triangles": 3102,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.0036418280578800477,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.0036418280578800477,
+              "vertex": 1537,
+              "nearestDistanceMeters": 0.0036418281961232424
+            },
+            {
+              "signedMeters": 0.0039730188182147685,
+              "vertex": 1142,
+              "nearestDistanceMeters": 0.00397301884368062
+            },
+            {
+              "signedMeters": 0.004090401707799174,
+              "vertex": 1140,
+              "nearestDistanceMeters": 0.0040904018096625805
+            },
+            {
+              "signedMeters": 0.005130537552759051,
+              "vertex": 1552,
+              "nearestDistanceMeters": 0.005130537319928408
+            },
+            {
+              "signedMeters": 0.005145297895069234,
+              "vertex": 1535,
+              "nearestDistanceMeters": 0.005145298317074776
+            },
+            {
+              "signedMeters": 0.005747414717916399,
+              "vertex": 1141,
+              "nearestDistanceMeters": 0.005747414659708738
+            },
+            {
+              "signedMeters": 0.006417078671802301,
+              "vertex": 362,
+              "nearestDistanceMeters": 0.006417077966034412
+            },
+            {
+              "signedMeters": 0.00681947924567794,
+              "vertex": 1155,
+              "nearestDistanceMeters": 0.006819478701800108
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        }
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\shirt-straps-actual-views\\Front.png",
+      "imageSha256": "72fe900698ca237f891bf84bb4ddf64c75a58bf68655f517915a6165e052c599"
+    },
+    {
+      "view": "Back",
+      "clip": "Idle",
+      "normalizedTime": 0,
+      "frame": 1.0,
+      "geometry": {
+        "Sleeveless dust undershirt": {
+          "vertices": 42044,
+          "triangles": 84096,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.0004849964134336915,
+              "vertex": 31348,
+              "nearestDistanceMeters": 0.001987731782719493
+            },
+            {
+              "signedMeters": 0.0005310936321620829,
+              "vertex": 28718,
+              "nearestDistanceMeters": 0.0027096394915133715
+            },
+            {
+              "signedMeters": 0.0015967187791829929,
+              "vertex": 26368,
+              "nearestDistanceMeters": 0.0067749470472335815
+            },
+            {
+              "signedMeters": 0.0017516757361590862,
+              "vertex": 4803,
+              "nearestDistanceMeters": 0.007020363584160805
+            },
+            {
+              "signedMeters": 0.0017539206601213664,
+              "vertex": 0,
+              "nearestDistanceMeters": 0.006087909452617168
+            },
+            {
+              "signedMeters": 0.0020280866156099364,
+              "vertex": 23423,
+              "nearestDistanceMeters": 0.0020280866883695126
+            },
+            {
+              "signedMeters": 0.0021900340434513055,
+              "vertex": 22687,
+              "nearestDistanceMeters": 0.0021900341380387545
+            },
+            {
+              "signedMeters": 0.002201374361902708,
+              "vertex": 27175,
+              "nearestDistanceMeters": 0.00220137438736856
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Nib v5 layered desert scarf": {
+          "vertices": 34944,
+          "triangles": 69888,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": -0.013644980070239399,
+          "samplesBelowMinus1mm": 80,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": -0.013644980070239399,
+              "vertex": 34418,
+              "nearestDistanceMeters": 0.01364497933536768
+            },
+            {
+              "signedMeters": -0.012262237156392075,
+              "vertex": 4196,
+              "nearestDistanceMeters": 0.012262238189578056
+            },
+            {
+              "signedMeters": -0.012023475486785173,
+              "vertex": 30134,
+              "nearestDistanceMeters": 0.012023474089801311
+            },
+            {
+              "signedMeters": -0.010240380273899063,
+              "vertex": 3701,
+              "nearestDistanceMeters": 0.010240379720926285
+            },
+            {
+              "signedMeters": -0.009469933109357953,
+              "vertex": 8451,
+              "nearestDistanceMeters": 0.009469933807849884
+            },
+            {
+              "signedMeters": -0.00881087628658861,
+              "vertex": 23198,
+              "nearestDistanceMeters": 0.008810875937342644
+            },
+            {
+              "signedMeters": -0.00857526296749711,
+              "vertex": 33718,
+              "nearestDistanceMeters": 0.008575263433158398
+            },
+            {
+              "signedMeters": -0.008512525993864983,
+              "vertex": 21041,
+              "nearestDistanceMeters": 0.008512525819242
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Overalls draped bib": {
+          "vertices": 1553,
+          "triangles": 3102,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.0036418280578800477,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.0036418280578800477,
+              "vertex": 1537,
+              "nearestDistanceMeters": 0.0036418281961232424
+            },
+            {
+              "signedMeters": 0.0039730188182147685,
+              "vertex": 1142,
+              "nearestDistanceMeters": 0.00397301884368062
+            },
+            {
+              "signedMeters": 0.004090401707799174,
+              "vertex": 1140,
+              "nearestDistanceMeters": 0.0040904018096625805
+            },
+            {
+              "signedMeters": 0.005130537552759051,
+              "vertex": 1552,
+              "nearestDistanceMeters": 0.005130537319928408
+            },
+            {
+              "signedMeters": 0.005145297895069234,
+              "vertex": 1535,
+              "nearestDistanceMeters": 0.005145298317074776
+            },
+            {
+              "signedMeters": 0.005747414717916399,
+              "vertex": 1141,
+              "nearestDistanceMeters": 0.005747414659708738
+            },
+            {
+              "signedMeters": 0.006417078671802301,
+              "vertex": 362,
+              "nearestDistanceMeters": 0.006417077966034412
+            },
+            {
+              "signedMeters": 0.00681947924567794,
+              "vertex": 1155,
+              "nearestDistanceMeters": 0.006819478701800108
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        }
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\shirt-straps-actual-views\\Back.png",
+      "imageSha256": "c78b5585bc1c0589521675340b01f0a5f0de733c6e78ea59427d1781dd3f75d7"
+    },
+    {
+      "view": "Shoot",
+      "clip": "Shoot",
+      "normalizedTime": 0.46,
+      "frame": 14.8,
+      "geometry": {
+        "Sleeveless dust undershirt": {
+          "vertices": 42044,
+          "triangles": 84096,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.0004849964134336915,
+              "vertex": 31348,
+              "nearestDistanceMeters": 0.001987731782719493
+            },
+            {
+              "signedMeters": 0.0005310936321620829,
+              "vertex": 28718,
+              "nearestDistanceMeters": 0.0027096394915133715
+            },
+            {
+              "signedMeters": 0.0015967187791829929,
+              "vertex": 26368,
+              "nearestDistanceMeters": 0.0067749470472335815
+            },
+            {
+              "signedMeters": 0.0017516757361590862,
+              "vertex": 4803,
+              "nearestDistanceMeters": 0.007020363584160805
+            },
+            {
+              "signedMeters": 0.0017539206601213664,
+              "vertex": 0,
+              "nearestDistanceMeters": 0.006087909452617168
+            },
+            {
+              "signedMeters": 0.0020280866156099364,
+              "vertex": 23423,
+              "nearestDistanceMeters": 0.0020280866883695126
+            },
+            {
+              "signedMeters": 0.002189069360611029,
+              "vertex": 22687,
+              "nearestDistanceMeters": 0.002189069287851453
+            },
+            {
+              "signedMeters": 0.002201004721428035,
+              "vertex": 27175,
+              "nearestDistanceMeters": 0.0022010046523064375
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Nib v5 layered desert scarf": {
+          "vertices": 34944,
+          "triangles": 69888,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": -0.01335657830350101,
+          "samplesBelowMinus1mm": 80,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": -0.01335657830350101,
+              "vertex": 34418,
+              "nearestDistanceMeters": 0.013356578536331654
+            },
+            {
+              "signedMeters": -0.012262340533197857,
+              "vertex": 4196,
+              "nearestDistanceMeters": 0.012262341566383839
+            },
+            {
+              "signedMeters": -0.012023475486785173,
+              "vertex": 30134,
+              "nearestDistanceMeters": 0.012023474089801311
+            },
+            {
+              "signedMeters": -0.010240277362754568,
+              "vertex": 3701,
+              "nearestDistanceMeters": 0.010240277275443077
+            },
+            {
+              "signedMeters": -0.00946988188661635,
+              "vertex": 8451,
+              "nearestDistanceMeters": 0.009469881653785706
+            },
+            {
+              "signedMeters": -0.008810832048766315,
+              "vertex": 23198,
+              "nearestDistanceMeters": 0.008810832165181637
+            },
+            {
+              "signedMeters": -0.008575307205319405,
+              "vertex": 33718,
+              "nearestDistanceMeters": 0.00857530813664198
+            },
+            {
+              "signedMeters": -0.00851247477112338,
+              "vertex": 21041,
+              "nearestDistanceMeters": 0.008512474596500397
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        },
+        "Overalls draped bib": {
+          "vertices": 1553,
+          "triangles": 3102,
+          "zeroAreaTriangles": 0,
+          "bodyClosestNormalSignedDistanceMinMeters": 0.003641806040832307,
+          "samplesBelowMinus1mm": 0,
+          "sampleCount": 1200,
+          "worstSamples": [
+            {
+              "signedMeters": 0.003641806040832307,
+              "vertex": 1537,
+              "nearestDistanceMeters": 0.0036418058443814516
+            },
+            {
+              "signedMeters": 0.0039730188182147685,
+              "vertex": 1142,
+              "nearestDistanceMeters": 0.00397301884368062
+            },
+            {
+              "signedMeters": 0.004090284375706688,
+              "vertex": 1140,
+              "nearestDistanceMeters": 0.004090284463018179
+            },
+            {
+              "signedMeters": 0.005130537552759051,
+              "vertex": 1552,
+              "nearestDistanceMeters": 0.005130537319928408
+            },
+            {
+              "signedMeters": 0.005145167539012618,
+              "vertex": 1535,
+              "nearestDistanceMeters": 0.0051451679319143295
+            },
+            {
+              "signedMeters": 0.0057472255139146,
+              "vertex": 1141,
+              "nearestDistanceMeters": 0.005747225601226091
+            },
+            {
+              "signedMeters": 0.006417078671802301,
+              "vertex": 362,
+              "nearestDistanceMeters": 0.006417077966034412
+            },
+            {
+              "signedMeters": 0.00681947924567794,
+              "vertex": 1155,
+              "nearestDistanceMeters": 0.006819478701800108
+            }
+          ],
+          "distanceInterpretation": "Closest-normal diagnostic, not proof of complete watertight collision absence"
+        }
+      },
+      "image": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v2\\shirt-straps-actual-views\\Shoot.png",
+      "imageSha256": "1a1061e0d0c8a900e474f35ff2da9409ff35fdfd2d2fba7c39483e52a7a0a1ad"
+    }
+  ],
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "stage": "shirt-straps",
+  "inheritedScarf": "Retained unchanged and unaccepted"
+}

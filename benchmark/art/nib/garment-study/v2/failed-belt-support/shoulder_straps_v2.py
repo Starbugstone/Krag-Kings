@@ -37,11 +37,7 @@ def build(name,side,material,collection,rig,body,shirt,belt):
     centers=[];normals=[];routing=[]
     for i,(p,d) in enumerate(zip(raw,dirs)):
         origin=Vector(p+d*.24);axis=Vector(-d);candidates=[]
-        if i==len(raw)-1:
-            # This endpoint is sewn to the actual belt, below the cropped
-            # anatomical body's waist boundary. Its support is not bare skin.
-            candidates.append((float(anchor@d),anchor.copy(),np.asarray(belt_normal),'belt',int(belt_triangle)))
-        for label,support,clearance in ([] if i==len(raw)-1 else supports):
+        for label,support,clearance in supports:
             hit,normal,triangle,distance=support.ray_cast(origin,axis,.48)
             if hit is None:continue
             if normal.dot(Vector(d))<.05:continue

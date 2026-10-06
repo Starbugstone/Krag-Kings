@@ -1,0 +1,194 @@
+{
+  "status": "Actual v2 source and three views; improved shoulder exposure/belt attachments, visual acceptance remains false",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "sharedPromotionAuthorized": false,
+  "source": {
+    "path": "benchmark/art/nib/garment-study/v2/Nib_ShirtStrapsStudy_v2.blend",
+    "sha256": "4df4d2fb46d83a457277ad1395adb63f6acde3af9d817ae430d7a282f82792f8",
+    "bytes": 63268530
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/garment-study/v2/shirt-straps-source.json",
+    "sha256": "d3e0b51ccc89716cf5504261801e726145419b46f69758fb552c94673e490aba",
+    "bytes": 2247590
+  },
+  "partialCheckpoint": {
+    "path": "benchmark/art/nib/garment-study/v2/Nib_SewnShirtCheckpoint_v2.blend",
+    "sha256": "691fdd6fb47aa122ff65bd4247dc6b72098f2fb36aa4ab949b080ca6b6477c97",
+    "bytes": 62281548
+  },
+  "reviewReport": {
+    "path": "benchmark/art/nib/garment-study/v2/shirt-straps-actual-views/review.json",
+    "sha256": "31585437d04918d40a82200c3359cb3e62f23a6caeb573f3bf5b974f909b5eb3",
+    "bytes": 17899
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/garment-study/v2/shirt-straps-actual-views/Front.png",
+      "sha256": "72fe900698ca237f891bf84bb4ddf64c75a58bf68655f517915a6165e052c599",
+      "bytes": 1171368
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/shirt-straps-actual-views/Back.png",
+      "sha256": "c78b5585bc1c0589521675340b01f0a5f0de733c6e78ea59427d1781dd3f75d7",
+      "bytes": 1095774
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/shirt-straps-actual-views/Shoot.png",
+      "sha256": "1a1061e0d0c8a900e474f35ff2da9409ff35fdfd2d2fba7c39483e52a7a0a1ad",
+      "bytes": 1128862
+    }
+  ],
+  "processes": [
+    {
+      "pid": 22256,
+      "guardExitCode": 0,
+      "peakPrivateMB": 766.0,
+      "completionMarker": "NIB_SEWN_GARMENT_V2_STUDY_SAVED",
+      "files": [
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-belt-support.txt",
+          "sha256": "871395b468d93aa3291758d71f8a53d3b4315fd32924fde6d9e55b5fd6ec8621",
+          "bytes": 657,
+          "originalCaptureSha256": "f7dfbdb4cb3f2086e91399fa8cb92d45733104b0f39430b00c1ddb23ee1edba2"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-belt-support.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-belt-support-memory.csv",
+          "sha256": "da99ecd3473a0a63ae301c7b91925d07832624a56cf36df08d1bf9f0aa7b6f92",
+          "bytes": 1943,
+          "originalCaptureSha256": "895a759a67926f5933221f0c99db9b1f7bf4afd2aef48d6232265472a77521fa"
+        }
+      ]
+    },
+    {
+      "pid": 28440,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1401.0,
+      "completionMarker": "NIB_SEWN_GARMENT_V2_REVIEW_COMPLETE",
+      "files": [
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-review.txt",
+          "sha256": "f53edb50c8ce2ef677998153e87bfcdeb869794afcd283f37053157695badecc",
+          "bytes": 624,
+          "originalCaptureSha256": "abcf91c2ebf28cd100d82a2757ac54eb611a35ba60f03c2baa79b5e06f40cf92"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-review.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v2/actual-evidence/nib-fitted-shirt-straps-v2-review-memory.csv",
+          "sha256": "78be13e46d11e3e5d559d94f0accbdad86296896ca2f31e6732ce2ce9286aae3",
+          "bytes": 489,
+          "originalCaptureSha256": "a0228c90aa738af7914001bcefdba09efa69fb76a7e35cf4e1a092b32263a7b5"
+        }
+      ]
+    }
+  ],
+  "preserved": {
+    "exactBind": true,
+    "boneCount": 79,
+    "allActionCurvesSha256": {
+      "FacePerformance": "3e8b1ca6e024849012739a59427f60f763d28d14562634650c108bf5de67088e",
+      "Hit": "18eacd0cf84ff6f1246f2c1491fa2bb7f8f0684b3cd464b73d6f8a61ee05c4de",
+      "Idle": "8800941e40062f36bea4b9e11d99c4ae82925d45e44e601732922e405aa182ed",
+      "Melee": "c7c4b2711cc693f4d8e86528aef91f0b826c45e3d14287af6f53d255d5521aef",
+      "Preserved_Idle_BeforeHumanMotion": "86de892cc5dde6cca8d5033cd8404cc7433f87a0c4d94f42d5f18fc5a1bfeb7e",
+      "Preserved_Run_BeforeHumanMotion": "fb8135f3dd8963dba0a195968307e352bf2686bb69694ea888c4ac84c58fa33c",
+      "Preserved_Walk_BeforeHumanMotion": "b0f01a00aebcf2d37e5a8e3e2ad9d292f1eeb9e58c6286d1ceeabdf8015b29af",
+      "Run": "a5c236b220bef82c833ab4f826a36851ac7185589630ce894960f24001bbefe3",
+      "Shoot": "3d460805ef406025d6f9ab2aba3980165e3f96d91b7f6a126a617973947d6670",
+      "Walk": "69899bb44d17d0cc2b371cdbe4aa61579533dde8f736d80d0c5f684bb6521d46"
+    },
+    "headEyesMouthEarsHandsAnatomicalBody": "No mesh edits in this recipe",
+    "auditedRetainedMeshHashes": {
+      "Ear inner velvet -1": "8283af424e5d83b3d02ad3fc1925b64d44de0f9a11597799640bda25fa095a6e",
+      "Ear inner velvet 1": "7714c0a7d07ca7a1d332e7c573c0d289875527d114b62f36eca46cb77875d9ae",
+      "Nib v5 fitted animation face": "d4f8edfb74e2151a29b070dd200fcb9bed2f56c47e10453c050654514ddb9512",
+      "Nib v5 coherent hand L": "38b9e51cf18848e38ffde2b8938c3522c4b5a7474fe695a9ac00472c313e2716",
+      "Nib v5 coherent hand R": "17b9ffe30cbfd058373c1ea296b1692a7c96234d9d03554248f94157ace274e4",
+      "Continuous Nib anatomy organic": "00abfbe6d86903504f689925832019cd70b444f8fd6d94182235fd2397073fd1"
+    }
+  },
+  "geometry": {
+    "Sleeveless dust undershirt": {
+      "vertices": 42044,
+      "triangles": 84096,
+      "boundsMin": [
+        -0.11387258023023605,
+        -0.07791692018508911,
+        0.6624447107315063
+      ],
+      "boundsMax": [
+        0.11464333534240723,
+        0.08640840649604797,
+        1.0200772285461426
+      ]
+    },
+    "Overalls shoulder strap": {
+      "vertices": 780,
+      "triangles": 1556,
+      "boundsMin": [
+        -0.09496975690126419,
+        -0.08146075904369354,
+        0.6571875214576721
+      ],
+      "boundsMax": [
+        0.06320406496524811,
+        0.09445063769817352,
+        1.0211949348449707
+      ]
+    },
+    "Overalls shoulder strap.001": {
+      "vertices": 780,
+      "triangles": 1556,
+      "boundsMin": [
+        -0.06337191164493561,
+        -0.08155110478401184,
+        0.6570355296134949
+      ],
+      "boundsMax": [
+        0.09508863836526871,
+        0.09436318278312683,
+        1.0200740098953247
+      ]
+    }
+  },
+  "actualReview": [
+    "Shoulders are exposed with a narrower sleeveless opening, and crossed straps now reach the actual belt",
+    "Raised-arm underarm sheet remains; ownership unproven, object-color diagnostic prepared",
+    "Opening edges remain thin/jagged; side-seam folds pinch and need construction refinement",
+    "Original failed scarf, face likeness/groom, forearm coils and tight hip/trouser silhouette remain unresolved"
+  ],
+  "contactInterpretation": "Closest-normal sampling only, not a watertight collision proof",
+  "shirtContactSamples": {
+    "Front": {
+      "zeroAreaTriangles": 0,
+      "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+      "samplesBelowMinus1mm": 0,
+      "sampleCount": 1200
+    },
+    "Back": {
+      "zeroAreaTriangles": 0,
+      "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+      "samplesBelowMinus1mm": 0,
+      "sampleCount": 1200
+    },
+    "Shoot": {
+      "zeroAreaTriangles": 0,
+      "bodyClosestNormalSignedDistanceMinMeters": 0.0004849964134336915,
+      "samplesBelowMinus1mm": 0,
+      "sampleCount": 1200
+    }
+  },
+  "futureHandIntegration": "Root owns explicit anatomical left-digit bind/mesh migration and matching all-clip regeneration; do not cross-bind copy old actions"
+}

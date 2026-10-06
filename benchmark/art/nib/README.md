@@ -173,3 +173,25 @@ Forearm tube coils need coherent overlapping fabric after those larger forms.
 Root owns concurrent hand geometry/pose repairs. All broader face, groom,
 material and likeness failures remain explicit; this study is not approved
 for runtime promotion or merchandising.
+
+
+The actual **v2 sewn shirt/strap study** now exists at
+`garment-study/v2/Nib_ShirtStrapsStudy_v2.blend`, SHA-256
+`4df4d2fb46d83a457277ad1395adb63f6acde3af9d817ae430d7a282f82792f8`.
+Generation and Front/Back/Shoot review exited 0 at 766 / 1,401 MB private-memory
+peaks. `garment-study/v2/shirt-straps-review-result.json` pins actual evidence.
+The 79-bone bind, every action curve and audited body/head/hand mesh data are
+preserved. The shirt has 42,044 vertices / 84,096 triangles and four normalized
+influences; combined arm influence is at most 0.72%. Both straps have 780
+vertices / 1,556 triangles and meet the measured belt surface.
+
+Actual views improve shoulder exposure and waist attachment, but remain
+unaccepted. The raised-arm sheet persists and needs object-color attribution
+before further shirt redesign. Cloth openings are thin/jagged; side folds need
+refinement. The original scarf and larger face/groom/trouser/wrap failures
+remain explicit. Shirt contact sampling found no points below −1 mm in the
+three views and no zero-area triangles; this is not a complete collision proof.
+A v2-pinned diagnostic groom composition is prepared, not generated. Root owns
+an explicit left-digit anatomical bind migration and matching clip regeneration;
+old actions must not be copied casually across that future changed hand bind.
+No shared package has been promoted from this study.

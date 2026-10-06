@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_shirt_straps_v2.py", line 107, in <module>
+    strap,entry=shoulder_straps.build(name,side,material,collection,rig,body,shirt,bpy.data.objects['Utility belt leather']);report['newStraps'].append(entry);new_straps.append(strap)
+                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\shoulder_straps_v2.py", line 48, in build
+    if not candidates:raise RuntimeError('No outward shoulder route support at row '+str(i))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: No outward shoulder route support at row 64
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_shirt_straps_v2.py', exiting.
