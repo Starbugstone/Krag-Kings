@@ -92,7 +92,12 @@ def geometry_digest():
                    'groups': [g.name for g in obj.vertex_groups],
                    'weights': [[(g.group, g.weight) for g in v.groups] for v in obj.data.vertices],
                    'materials': [m.name if m else None for m in obj.data.materials],
-                   'world': [list(row) for row in obj.matrix_world]}
+                   # Bone-parented prop world transforms legitimately follow
+                   # the new pose. Preserve their authored attachment/basis.
+                   'basis': [list(row) for row in obj.matrix_basis],
+                   'parentInverse': [list(row) for row in obj.matrix_parent_inverse],
+                   'parent': obj.parent.name if obj.parent else None,
+                   'parentType': obj.parent_type, 'parentBone': obj.parent_bone}
         digest.update(json.dumps(payload, separators=(',', ':')).encode())
         result[obj.name] = digest.hexdigest()
     return result
