@@ -1,0 +1,27 @@
+{
+  "name": "nib-restorative-coherent-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\restorative_wip\\build_restorative_compatibility.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-continuous-wraps-v4\\Nib_ContinuousWraps_Study_v1.blend",
+    "--source-sha256",
+    "d5a0874a4d542dba51c04a0b2bfe1f54eb1e2e9d4efba3b3aaa2cd9dc94b4893",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\restorative-study\\coherent-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-coherent-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-coherent-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-restorative-coherent-v1-generate.log",
+  "successMarker": "NIB_RESTORATIVE_COMPATIBILITY_SAVED_AND_REOPENED"
+}

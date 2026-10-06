@@ -1,0 +1,117 @@
+{
+  "status": "Actual source/three views; compatibility assembly fails wrist gap and cuff/stump interface",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "sharedPromotionAuthorized": false,
+  "source": {
+    "path": "benchmark/art/nib/restorative-study/coherent-v1/Nib_Coherent_RestorativeCompatibility_v1.blend",
+    "sha256": "ba0048d08f351c9876a947bd88cc366936cac4fa1ea50ed2aeb17db23e5174be",
+    "bytes": 63668255
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/restorative-study/coherent-v1/source.json",
+    "sha256": "667d8c4001d096a271c360cbea920362a8f2d96b845fa84943051a3902f831f9",
+    "bytes": 1255260
+  },
+  "reviewReport": {
+    "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-views/review.json",
+    "sha256": "3012b89be5c485d3404d0fac6c06d2523a7c5b44dc27123b532bdf8f5062f519",
+    "bytes": 18642
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-views/ArmNeutral.png",
+      "sha256": "89e48743cddd259141d6802a13aefd1efa8c6cc9805539ff471858baaf19ad93",
+      "bytes": 1339479
+    },
+    {
+      "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-views/HandCurl.png",
+      "sha256": "d0f646162fa4d9e4716e367a07ccd64e75b5232fe6720940f4c2609202f07d3e",
+      "bytes": 1474437
+    },
+    {
+      "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-views/Shoot.png",
+      "sha256": "7675bac4e472461fc26d95f2acb8fb0fe3c8f11359447b7224ae56ae4bed0bcc",
+      "bytes": 1270778
+    }
+  ],
+  "processes": [
+    {
+      "pid": 3232,
+      "guardExitCode": 0,
+      "peakPrivateMB": 896.0,
+      "completionMarker": "NIB_RESTORATIVE_COMPATIBILITY_SAVED_AND_REOPENED",
+      "files": [
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-generate.txt",
+          "sha256": "143f1df284ac7613dc0691e380bd3d60cb17e578cde3598ee93e482020ae3002",
+          "bytes": 493,
+          "originalCaptureSha256": "1d0ca138bbcc3dd1662f6fb25a029ec8b71a480024ac82e74a0951f31d76497e"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-generate.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-generate-memory.csv",
+          "sha256": "ffc52f33aeea68398f043df999b34f544698c0c85c84d6f3680831768d574e2e",
+          "bytes": 1054,
+          "originalCaptureSha256": "debcee7d2b13efbfd8bedf268c597baaf5cc97d432127184ef532ed9994dea3e"
+        }
+      ]
+    },
+    {
+      "pid": 23976,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1287.0,
+      "completionMarker": "NIB_RESTORATIVE_COMPATIBILITY_ACTUAL_REVIEW_COMPLETE",
+      "files": [
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-review.txt",
+          "sha256": "c510445f253fb06a303556cfb828f2f2f19e1b36186cfbf60c862ed4de1a5d37",
+          "bytes": 680,
+          "originalCaptureSha256": "93f380b1f4c290e5afd654d54df005e1728e5134e5d6052e40c7dccc700531dd"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-review.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/restorative-study/coherent-v1/actual-evidence/nib-restorative-coherent-v1-review-memory.csv",
+          "sha256": "e97a34cf57c10e48f36e969f51933d9c0910afaa2d4c0323e174ae870ecf8691",
+          "bytes": 339,
+          "originalCaptureSha256": "29a9a870a7b56463ceced20c9770619db0991edeb707995f7d2fb5bf401fdc96"
+        }
+      ]
+    }
+  ],
+  "preserved": {
+    "savedSourceReopened": true,
+    "bindBoneCount": 79,
+    "canonicalActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "unrelatedMeshes": 386,
+    "NaturalBodyHandsGlovesWraps": "Payloads unchanged from exact input",
+    "allActionHashesUnchanged": true
+  },
+  "actualReview": [
+    "The matching new torso/upper arm is visible in the Grip variant; original forearm field removed and retained morph/UV/weights exact",
+    "The refitted mechanical digits curl on the migrated anatomical joints; this is not a full contact or quality acceptance",
+    "Hard failure: existing rods terminate roughly20\u201330mm before the palm, leaving a visible wrist gap in neutral and Run views",
+    "Hard failure: semantic stump boundary lies z.737\u2013.756m, below the old cuff aroundz.770m; retained organic skin passes through/below cuff",
+    "Existing palm/cables/hardware remain primitive, detached details; pose-preserving fit requires actual wrist coupling and skin-fitted socket",
+    "Inherited axillary stretch, natural shirt/face/groom/cloth likeness and right-hand grip failures remain"
+  ],
+  "next": "Prepare fitted ordinary wrist coupling and cuff/socket around actual skin boundary. Preserve this failed source and complete Natural/bind/action payloads."
+}

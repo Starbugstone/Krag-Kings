@@ -259,3 +259,24 @@ remain explicit. Root will fit continuous forearm wraps on this exact source;
 restorative Body parity and migrated mechanical fingers will use that resulting
 pinned source. No shared FBX or engine asset changed, and no artistic acceptance
 is claimed.
+
+
+The first coherent **restorative compatibility v1** is now actual at
+`restorative-study/coherent-v1/Nib_Coherent_RestorativeCompatibility_v1.blend`,
+SHA-256 `ba0048d08f351c9876a947bd88cc366936cac4fa1ea50ed2aeb17db23e5174be`.
+`actual-result.json` pins its source, reports, logs and ArmNeutral/HandCurl/Shoot
+views. Both guarded jobs exited 0. All 386 unrelated mesh payloads, the complete
+79-bone bind and every action hash survive save/reopen, including all seven
+canonical clips. Root's corrected natural wrist cuffs and overlapping cloth
+wraps are retained exactly. The derived Grip Body retains 30,450 vertices /
+30,128 faces with exact corresponding morphs, UVs and weights; 307 omitted
+forearm fuzz strands are removed. Twenty-six mechanical finger/hinge/thumb
+parts follow the migrated anatomical joints (maximum cap error 0.183 µm).
+
+The actual assembly **fails**: old rods stop about 20–30 mm short of the palm,
+and retained skin protrudes below/through the old cuff. Correct semantic
+partition and bone endpoints do not establish a coherent fitted prosthesis.
+The next correction must construct a real wrist coupling and fitted cuff/socket
+at the actual skin boundary, preserving ordinary restorative function. Existing
+primitive hardware, axillary stretch, clothing and full facial/groom likeness
+failures remain. No shared export or artistic acceptance is claimed.
