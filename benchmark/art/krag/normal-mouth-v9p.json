@@ -1,0 +1,161 @@
+{
+  "status": "Actual full-range lip/tongue/tusk fit source; closed/open review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_LandmarkRelief_v9o_WIP.blend",
+    "sha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+    "sha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72"
+  },
+  "measuredCause": "The old lower-rim JawOpen correction shifted it backward10.94mm relative to the rigid lower dental arch; actual dental crowns already12\u201317mm high.",
+  "maximumLipCorrectiveChangeMeters": 0.013007495407826043,
+  "neutralHeadAndDentalTongueGeometryExact": true,
+  "newOralMorph": {
+    "name": "JawOpen",
+    "bone": "Jaw",
+    "channel": "rotationMagnitudeDegrees",
+    "start": 0,
+    "end": 25,
+    "maxWeight": 1,
+    "maximumDorsumLiftMeters": 0.005,
+    "maximumAnteriorShiftMeters": 0.002
+  },
+  "tusks": {
+    "method": "Rigid orientation about preserved actual gingival roots; fixed size/shape, no surface-following stretch",
+    "sides": [
+      {
+        "side": "R",
+        "fixedGingivalRoot": [
+          -0.04445215314626694,
+          -0.15323910986383757,
+          1.8012246191501617
+        ],
+        "actualBaselineOcclusion": {
+          "visibleTerminalRings": 2,
+          "terminalSurfaceClearanceMeters": -0.0005130022764205933,
+          "centerlineForwardSkinClearanceMeters": [
+            -0.019794842849175126,
+            -0.019170944889386504,
+            -0.018586752315362304,
+            -0.017888370901346207,
+            -0.01692651646832624,
+            -0.015593351796269417,
+            -0.013741411889592797,
+            -0.011388803521792085,
+            -0.008384409671028464,
+            -0.006965027501185744,
+            -0.009810704737901688,
+            -0.010149274642268807,
+            -0.008919953058163316,
+            -0.006462869544823974,
+            -0.003237983211874962,
+            0.000612504780292511,
+            0.004785412922501564
+          ]
+        },
+        "pitchDegrees": 0,
+        "outwardDegrees": 15,
+        "maximumRadialSizeErrorMeters": 1.4606831647001606e-09,
+        "visibleTerminalRings": 4,
+        "terminalSurfaceClearanceMeters": 0.011699482798576355,
+        "centerlineForwardSkinClearanceMeters": [
+          -0.019794842849175126,
+          -0.01913804312547049,
+          -0.01842009772857031,
+          -0.01749211922287941,
+          -0.016093839580814034,
+          -0.014186801388859749,
+          -0.011503972734014184,
+          -0.007971788446108491,
+          -0.0032008321334918433,
+          -0.002239452054103225,
+          -0.002635139971971512,
+          -0.0017732723305622644,
+          0.0001887095471223288,
+          0.0033897782365480966,
+          0.007897833362221718,
+          0.012559659779071808,
+          0.016521209850907326
+        ]
+      },
+      {
+        "side": "L",
+        "fixedGingivalRoot": [
+          0.044452174877127014,
+          -0.15325541297594705,
+          1.8012244900067647
+        ],
+        "actualBaselineOcclusion": {
+          "visibleTerminalRings": 2,
+          "terminalSurfaceClearanceMeters": -0.0005968660116195679,
+          "centerlineForwardSkinClearanceMeters": [
+            -0.01974790294965109,
+            -0.019131454328695924,
+            -0.018541017547249794,
+            -0.017846081405878067,
+            -0.0168912410736084,
+            -0.01556784783800444,
+            -0.013733796775341034,
+            -0.011400194838643074,
+            -0.008434085175395012,
+            -0.007209391022721917,
+            -0.010073748727639525,
+            -0.010447912539045007,
+            -0.00908626491824785,
+            -0.0066496096551418304,
+            -0.003351561725139618,
+            0.00052912284930548,
+            0.004708842063943536
+          ]
+        },
+        "pitchDegrees": 0,
+        "outwardDegrees": 15,
+        "maximumRadialSizeErrorMeters": 1.4609963239209378e-09,
+        "visibleTerminalRings": 4,
+        "terminalSurfaceClearanceMeters": 0.011624470353126526,
+        "centerlineForwardSkinClearanceMeters": [
+          -0.01974790294965109,
+          -0.01909247289101282,
+          -0.018373647704720497,
+          -0.01744065061211586,
+          -0.016046881675720215,
+          -0.014145084967215865,
+          -0.011477284133434296,
+          -0.007958145812153816,
+          -0.003238944336771965,
+          -0.0024898952494064874,
+          -0.0028965150316556387,
+          -0.002031975115338952,
+          -2.9339144627243963e-05,
+          0.003236178308725357,
+          0.00779164582490921,
+          0.01247663547595343,
+          0.01647098424534002
+        ]
+      }
+    ],
+    "maximumRemovedSoftTuskMorphMeters": 0.0,
+    "ocularShapeCoordinatesExact": true,
+    "actualNeutralOpenContactReviewRequired": true
+  },
+  "preservedBodyBindActionsOtherMeshes": "31f5af06da06b1eee4988e52bc90464c666348592888f82f0b56be4034e60a65",
+  "savedReopenedCoordinateBindActionChecksPassed": true,
+  "reopenedFullRangeJawOpenWeights": {
+    "Head": 0.9196328520774841,
+    "MouthInterior": 0.9196328520774841
+  },
+  "jawRangeReduced": false,
+  "recipeHashes": {
+    "build_normal_mouth_v9p.py": "23b8912382a78673a96c87cb21a980050ba8769c8ef41fde09634604434179d8",
+    "natural_tusk_rotation.py": "29333d50626d0bbf28cbc4d7de94695ba5af330c1eeb1b880f65c79061d92f6c",
+    "attachment_cuff.py": "d785c9cd4839c94a72a9f34257fb91d2799d0b269b139264c8b0494ba86af203"
+  },
+  "pending": [
+    "Actual closed lip/dental/tusk contact",
+    "Actual full-range front/right opening and tongue-floor visibility",
+    "Brow/skin/cowl/armor and general final likeness remain unaccepted"
+  ]
+}

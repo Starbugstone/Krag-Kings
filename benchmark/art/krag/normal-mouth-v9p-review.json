@@ -1,0 +1,95 @@
+{
+  "status": "Actual source/save/reopen and four review views completed; normal-mouth visual correction FAILED",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_NormalMouth_v9p_WIP.blend",
+    "sha256": "5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72"
+  },
+  "sourceReportSha256": "6745c2f29b2e3472404fbdbaf6c0c3e117ca97619bfccd7561d1c757a3b3e492",
+  "jobs": [
+    {
+      "name": "krag-normal-mouth-v9p-source",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1070.0,
+      "minimumAvailableMB": 10845.0,
+      "stdoutSha256": "9a47a17ac02ef8544591d9cac333bb90fb496bfe5d51032af487865dbf5b328e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "krag-normal-mouth-v9p-ClosedFront",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2105.0,
+      "minimumAvailableMB": 10099.0,
+      "stdoutSha256": "e3b443d712f32f75520f29e58674e50918d30c1024a4623813a94cfc48e01ce6",
+      "stderrSha256": "d0d1d002cf97ae9f9481aef53cc666192e840b3eda2c895f44a05426268507f6"
+    },
+    {
+      "name": "krag-normal-mouth-v9p-OpenFront",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2101.0,
+      "minimumAvailableMB": 10091.0,
+      "stdoutSha256": "098db1413e862a4e95ad567e8e865b55062186c78cea035877acb74e6bf93af4",
+      "stderrSha256": "d0d1d002cf97ae9f9481aef53cc666192e840b3eda2c895f44a05426268507f6"
+    },
+    {
+      "name": "krag-normal-mouth-v9p-OpenRight",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2111.0,
+      "minimumAvailableMB": 10066.0,
+      "stdoutSha256": "dca215f8486cf878ab9f07636b7c74485aedf1bec55f5ceee1334e878b682baa",
+      "stderrSha256": "d0d1d002cf97ae9f9481aef53cc666192e840b3eda2c895f44a05426268507f6"
+    },
+    {
+      "name": "krag-normal-mouth-v9p-ClosedRight",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2105.0,
+      "minimumAvailableMB": 10035.0,
+      "stdoutSha256": "3f7b6496820cf06adefd3e71b34f1c5209643b9c97db73eb2f2cd131491606e4",
+      "stderrSha256": "d0d1d002cf97ae9f9481aef53cc666192e840b3eda2c895f44a05426268507f6"
+    }
+  ],
+  "views": {
+    "ClosedFront": {
+      "path": "benchmark/art/krag/renders/Krag_NormalMouth_v9p_ClosedFront.png",
+      "sha256": "7dc3f597c88ee3b3195bf804229709866e04188a3e4f12ca6899166cb329731e",
+      "metadataSha256": "81be0542ffb60c8a846dc366441f2b3deb4a6eaef775891cd5de95ac06a5360c",
+      "inspection": "Neutral lip seam intact and ordinary crowns remain hidden. Tusks now visible but read as long thin external spikes; not accepted."
+    },
+    "OpenFront": {
+      "path": "benchmark/art/krag/renders/Krag_NormalMouth_v9p_OpenFront.png",
+      "sha256": "26df16f4cfe680631ed2e6bb6d91a65716acc484abef28332b07d88e5ea36623",
+      "metadataSha256": "de101f4f21bf8350abb9ac86fb2a9029d414225836b5392b8e6809d6d48c8357",
+      "inspection": "Full original jaw range remains. Lip change does not give normal-looking opening: dark tall cavity, weak gingiva/tongue exposure and hidden tusks persist."
+    },
+    "OpenRight": {
+      "path": "benchmark/art/krag/renders/Krag_NormalMouth_v9p_OpenRight.png",
+      "sha256": "8195ebda61e80369b922b2c7ff8bfc1ebb09591042877199c35667664edad017",
+      "metadataSha256": "dc8654893c1d70b9280a7043685774807497119c7d3f7f2f9ae51a22d07c827e",
+      "inspection": "Unobstructed profile confirms deep upper/lower lip overhang and withdrawn open jaw; tusks disappear."
+    },
+    "ClosedRight": {
+      "path": "benchmark/art/krag/renders/Krag_NormalMouth_v9p_ClosedRight.png",
+      "sha256": "6b6fa92412e135b18547b43d94ccfdb8c39c4d0353dd519af2b3aef3b31bf3be",
+      "metadataSha256": "cadddd5d1746909d7594e4c66e8361fc6bf595e80d7293fe00c2dc18c3476051",
+      "inspection": "Tusk reads as a hooked external attachment; chin/lip profile and general concept likeness still fail."
+    }
+  },
+  "preserved": [
+    "Neutral Head and dental/tongue Basis",
+    "Body bind and all authored action curves",
+    "Full jaw angle/range",
+    "Unrelated anatomy/equipment/ocular geometry"
+  ],
+  "conclusions": [
+    "Measured lip-local corrective repair alone does not resolve dental/tongue/tusk exposure.",
+    "Rigid root-fixed orientation preserves tusk shape but exposes its existing hook/needle geometry; a numerical skin-visibility gate is not anatomical acceptance.",
+    "Mechanical attachment must not be rebased as though Natural mouth has passed.",
+    "New concept-matched bust may guide macro face planes only; preserve real animation topology and repair oral fit."
+  ]
+}

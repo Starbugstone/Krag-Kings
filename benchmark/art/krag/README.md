@@ -401,3 +401,11 @@ The read-only audit initially reached its final JSON write and failed on a NumPy
 At the unchanged22.9908-degree jaw pose, the true central rim measures75.64mm opening from skeleton alone and80.63mm with JawOpen. The corrective adds4.99mm rather than another complete jaw opening, but shifts the lower rim backward10.94mm relative to rigid lower teeth/gums. Existing crowns are12.4–17.1mm high; they look like chips because of exposure/fit. Tongue_01 correctly parents Jaw and Tongue_02 parents Tongue_01.
 
 The separate v9p recipe is **prepared, ungenerated**: retain neutral head/dental geometry, hinge, full range and action curves; replace the lip-local corrective contribution, add contained tongue-floor movement, and rigidly orient the existing natural tusks about their actual gingival roots without enlarging or stretching them. Actual closed/open front/right images remain required. The mechanical v2 cuff/housing is also still ungenerated.
+
+## Actual v9p normal-mouth proof: visual correction failed
+
+`Krag_NormalMouth_v9p_WIP.blend` now exists, SHA256 `5be64281307b0d35541fb393311c63fcb95b4f7fdd38c2233249fb6a51d51d72`. Source generation, saved-file reopening and all four ClosedFront/OpenFront/OpenRight/ClosedRight views completed with guard/native exit 0. `normal-mouth-v9p-review.json` records the exact source, images and execution evidence. Neutral Head/dental Basis, body bind, all actions and the full jaw range remain unchanged.
+
+This targeted repair **does not yet produce a normal-looking mouth**. The closed lip seam remains intact, but the root-fixed 15-degree outward tusk rotation exposes long thin hooked exterior spikes. The open pose hides those tusks again, with a tall dark cavity and insufficient visible tongue/gum/dental depth. The unobstructed right-side views confirm lip overhang and weak mandibular profile. The numerical surface-clearance gate was not an anatomical acceptance gate. No source/export promotion or accepted bite is claimed, and the mechanical cuff must not inherit a false Natural acceptance.
+
+The next coherent face fit may use the inspected matted TripoSR bust as reference for visible skull/brow/nose/muzzle/jaw masses only. Its noisy surface, fused details and inferred rear are not anatomy to copy; existing ocular/oral loops, rig and natural-mouth work must remain controlled and inspectable.
