@@ -62,7 +62,8 @@ void AKKBenchmarkGameMode::BeginPlay()
     bShowcase=!bPerformancePass && FParse::Param(FCommandLine::Get(),TEXT("KKShowcase"));
     bSmoke=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKSmoke"));
     bInputState=!bPerformancePass && !bShowcase && FParse::Param(FCommandLine::Get(),TEXT("KKInputState"));
-    bSkinReview=FParse::Param(FCommandLine::Get(),TEXT("KKSkinReview"));
+    bGroundBounceReview=FParse::Param(FCommandLine::Get(),TEXT("KKGroundBounceReview"));
+    bSkinReview=bGroundBounceReview || FParse::Param(FCommandLine::Get(),TEXT("KKSkinReview"));
     if(bSkinReview && (bPerformancePass || bShowcase || bSmoke || bInputState))
     {
         UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED skin review must be a separate capture-only launch"));
@@ -80,6 +81,19 @@ void AKKBenchmarkGameMode::BeginPlay()
     {
         UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED unknown KKSkinMode"));
         UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);return;
+    }
+    if(bGroundBounceReview)
+    {
+        const bool bSpecified=FParse::Value(FCommandLine::Get(),TEXT("KKGroundRadianceR="),GroundBounceRadiance.R)
+            && FParse::Value(FCommandLine::Get(),TEXT("KKGroundRadianceG="),GroundBounceRadiance.G)
+            && FParse::Value(FCommandLine::Get(),TEXT("KKGroundRadianceB="),GroundBounceRadiance.B);
+        if(!bSpecified || RequestedSkinMode!=TEXT("Profile")
+            || !FMath::IsFinite(GroundBounceRadiance.R) || !FMath::IsFinite(GroundBounceRadiance.G) || !FMath::IsFinite(GroundBounceRadiance.B)
+            || GroundBounceRadiance.GetMin()<0.f || GroundBounceRadiance.GetMax()>10000.f)
+        {
+            UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED ground-bounce review needs Profile and pinned finite nonnegative radiance RGB <=10000"));
+            UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);return;
+        }
     }
     if(auto* Settings=UGameUserSettings::GetGameUserSettings())
     {
@@ -276,6 +290,8 @@ void AKKBenchmarkGameMode::TickSkinReview()
     if(Now<SkinReviewNextTime)return;
     auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0));if(!PC)return;
     const TCHAR* Modes[]={TEXT("Generic"),TEXT("DefaultLit"),TEXT("Profile")};
+    const TCHAR* BounceModes[]={TEXT("Baseline"),TEXT("Bounce12p5"),TEXT("Bounce25p0")};
+    const TCHAR** Labels=bGroundBounceReview?BounceModes:Modes;
     const TCHAR* Views[]={TEXT("Wide"),TEXT("Nib"),TEXT("Krag")};
     auto Fail=[this](const FString& Reason)
     {
@@ -285,14 +301,21 @@ void AKKBenchmarkGameMode::TickSkinReview()
     if(SkinReviewIndex>=9)
     {
         TArray<TSharedPtr<FJsonValue>> Images;
-        for(const TCHAR* Mode:Modes)for(const TCHAR* View:Views)
+        for(int32 ModeIndex=0;ModeIndex<3;++ModeIndex)for(const TCHAR* View:Views)
         {
-            const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),Mode,View);
+            const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),Labels[ModeIndex],View);
             if(IFileManager::Get().FileSize(*File)<1024){Fail(TEXT("Missing actual screenshot ")+File);return;}
             Images.Add(MakeShared<FJsonValueString>(File));
         }
         TSharedRef<FJsonObject> Report=MakeShared<FJsonObject>();
         Report->SetStringField(TEXT("source"),TEXT("Actual running engine; same fixed idle pose across all skin material/view combinations"));
+        if(bGroundBounceReview)
+        {
+            Report->SetStringField(TEXT("source"),TEXT("Actual running engine; fixed Profile skin/idle/sun/exposure; lower-hemisphere-only radiance comparison"));
+            Report->SetStringField(TEXT("unscaled_ground_radiance_linear_rgb"),GroundBounceRadiance.ToString());
+            Report->SetStringField(TEXT("fractions"),TEXT("0,0.125,0.25 of the pinned flat-Lambertian sand estimate; provisional fill approximation"));
+            Report->SetNumberField(TEXT("skylight_intensity"),SkyLightActor->GetLightComponent()->Intensity);
+        }
         Report->SetBoolField(TEXT("visual_acceptance"),false);Report->SetBoolField(TEXT("performance_sample"),false);
         Report->SetArrayField(TEXT("screenshots"),Images);
         TSharedRef<FJsonObject> CVars=MakeShared<FJsonObject>();
@@ -302,14 +325,24 @@ void AKKBenchmarkGameMode::TickSkinReview()
         const FIntPoint Size=GEngine->GameViewport->Viewport->GetSizeXY();
         Report->SetNumberField(TEXT("width"),Size.X);Report->SetNumberField(TEXT("height"),Size.Y);
         FString JSON;const auto Writer=TJsonWriterFactory<>::Create(&JSON);FJsonSerializer::Serialize(Report,Writer);
-        if(!FFileHelper::SaveStringToFile(JSON,*(SkinReviewOutput/TEXT("skin-review.json")))){Fail(TEXT("Cannot save report"));return;}
-        UE_LOG(LogTemp,Display,TEXT("KK_SKIN_REVIEW_COMPLETE %s"),*SkinReviewOutput);SkinReviewNextTime=DBL_MAX;
+        const TCHAR* ReportName=bGroundBounceReview?TEXT("ground-bounce-review.json"):TEXT("skin-review.json");
+        if(!FFileHelper::SaveStringToFile(JSON,*(SkinReviewOutput/ReportName))){Fail(TEXT("Cannot save report"));return;}
+        UE_LOG(LogTemp,Display,TEXT("%s %s"),bGroundBounceReview?TEXT("KK_GROUND_BOUNCE_REVIEW_COMPLETE"):TEXT("KK_SKIN_REVIEW_COMPLETE"),*SkinReviewOutput);SkinReviewNextTime=DBL_MAX;
         UKismetSystemLibrary::QuitGame(this,PC,EQuitPreference::Quit,false);return;
     }
-    const FName Mode(Modes[SkinReviewIndex/3]);
+    const FName Mode(bGroundBounceReview?TEXT("Profile"):Modes[SkinReviewIndex/3]);
     const int32 View=SkinReviewIndex%3;
     if(!bSkinReviewAwaitingCapture)
     {
+        if(bGroundBounceReview)
+        {
+            if(!SkyLightActor){Fail(TEXT("Missing captured sky"));return;}
+            const float Fractions[]={0.f,.125f,.25f};
+            FLinearColor Radiance=GroundBounceRadiance*Fractions[SkinReviewIndex/3];Radiance.A=1.f;
+            SkyLightActor->GetLightComponent()->SetLowerHemisphereColor(Radiance);
+            UE_LOG(LogTemp,Display,TEXT("KK_GROUND_BOUNCE_VIEW label=%s fraction=%.3f radiance=%s lower_solid=%d"),
+                Labels[SkinReviewIndex/3],Fractions[SkinReviewIndex/3],*Radiance.ToString(),SkyLightActor->GetLightComponent()->bLowerHemisphereIsBlack);
+        }
         for(const auto& Unit:DemoUnits)
         {
             Unit->GetMesh()->bPauseAnims=true;
@@ -321,7 +354,7 @@ void AKKBenchmarkGameMode::TickSkinReview()
         UE_LOG(LogTemp,Display,TEXT("KK_SKIN_REVIEW_VIEW mode=%s view=%s"),*Mode.ToString(),Views[View]);
         return;
     }
-    const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),*Mode.ToString(),Views[View]);
+    const FString File=SkinReviewOutput/FString::Printf(TEXT("%s-%s.png"),Labels[SkinReviewIndex/3],Views[View]);
     if(IFileManager::Get().FileExists(*File)){Fail(TEXT("Existing review image preserved ")+File);return;}
     FScreenshotRequest::RequestScreenshot(File,true,false);
     ++SkinReviewIndex;bSkinReviewAwaitingCapture=false;SkinReviewNextTime=Now+1.0;

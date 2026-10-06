@@ -1,6 +1,6 @@
 """Inspect one actual full-mesh FBX in a fresh Blender process.
 
-Checks the full 79-bone bind/hierarchy and all seven embedded takes against
+Checks the full pinned bind/hierarchy and all seven embedded takes against
 source samples, plus material/UV/skin/morph contracts. No art acceptance claim.
 """
 import argparse
@@ -38,6 +38,7 @@ def main():
     parser.add_argument('--source-contract', type=Path, required=True)
     parser.add_argument('--variant', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--expected-bones', type=int, default=79)
     args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
     if args.output.exists():
         raise RuntimeError('Preserve previous variant validation')
@@ -61,8 +62,8 @@ def main():
     missing = sorted(set(source['bones']) - bones)
     extra = sorted(bones - set(source['bones']))
     parents = {b.name: b.parent.name if b.parent else None for b in rig.data.bones}
-    if missing or extra or len(bones) != 79:
-        errors.append('Full 79-bone set differs from source')
+    if missing or extra or len(bones) != args.expected_bones or len(source['bones']) != args.expected_bones:
+        errors.append('Full '+str(args.expected_bones)+'-bone set differs from source')
     if parents != source['sourceParents']:
         errors.append('Full hierarchy differs from source')
     rest = {b.name: (rig.matrix_world @ b.matrix_local).copy() for b in rig.data.bones}

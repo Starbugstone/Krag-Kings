@@ -27,6 +27,8 @@ private:
     bool bWindowTitleApplied=false;
     bool bReviewFrameWritten=false;
     bool bSkinReview=false;
+    bool bGroundBounceReview=false;
+    FLinearColor GroundBounceRadiance=FLinearColor::Black;
     bool bSkinReviewAwaitingCapture=false;
     int32 SkinReviewIndex=0;
     double SkinReviewNextTime=16.0;

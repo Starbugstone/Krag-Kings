@@ -2,7 +2,11 @@
 import bpy,json,hashlib
 from pathlib import Path
 
-def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def sha(path):
+    digest=hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda:stream.read(1024*1024),b''):digest.update(block)
+    return digest.hexdigest()
 def value(v):
     if isinstance(v,(str,int,float,bool)) or v is None:return v
     try:return [float(x) for x in v]

@@ -1,0 +1,27 @@
+{
+  "name": "unreal-ambient-sand-bounce-coherent79-v1",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-game",
+    "-ResX=1920",
+    "-ResY=1080",
+    "-NoVSync",
+    "-KKSkinMode=Profile",
+    "-KKGroundBounceReview",
+    "-KKGroundRadianceR=5100.311870988",
+    "-KKGroundRadianceG=3345.747564065",
+    "-KKGroundRadianceB=1604.490628858",
+    "-KKSkinReviewOutput=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-ambient\\sand-bounce-coherent79-v1",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-ambient\\sand-bounce-coherent79-v1\\runtime.log",
+    "-ExecCmds=sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,r.VolumetricFog 1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-ambient\\sand-bounce-coherent79-v1\\guard-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-ambient\\sand-bounce-coherent79-v1\\guard-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-ambient\\sand-bounce-coherent79-v1\\runtime.log",
+  "successMarker": "KK_GROUND_BOUNCE_REVIEW_COMPLETE"
+}

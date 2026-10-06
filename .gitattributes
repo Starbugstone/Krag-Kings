@@ -240,3 +240,7 @@ benchmark/unreal/evidence/skin-ab-preparation.json -text whitespace=cr-at-eol,-b
 
 benchmark/evidence/unity/20261006-coherent79-native-input/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/art/animation/krag-convergent-hand-v2/**/*.npz filter=lfs diff=lfs merge=lfs -text
+benchmark/unreal/evidence/coherent79-native-incomplete/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-native-incomplete/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-native-incomplete/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-native-incomplete/*.ps1 -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

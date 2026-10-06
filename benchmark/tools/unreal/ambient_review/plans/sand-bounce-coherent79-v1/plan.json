@@ -1,0 +1,60 @@
+{
+  "name": "sand-bounce-coherent79-v1",
+  "status": "Prepared; new native code is not compiled and no ambient comparison has run",
+  "image": {
+    "path": "benchmark/shared/environment/Sand_BaseColor.png",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "sha256": "2cd59fccf77dff54e83420ca6010f0ebcc59bf7d9538d4b3b235225b0ec43247",
+    "meanDecodedLinearRgb": [
+      0.43538455728676695,
+      0.28560740182571465,
+      0.13696622084814436
+    ]
+  },
+  "estimate": {
+    "method": "Flat Lambertian sand approximation: mean decoded texture RGB * sunLux * sin(elevation) / pi",
+    "limitation": "Authored BaseColor is an appearance input, not measured spectral reflectance. This is a bounded far-field fill approximation, not a physically validated GI replacement.",
+    "sunLux": 55000,
+    "sunElevationDegrees": 42,
+    "unscaledLinearRgbRadiance": [
+      5100.311870987696,
+      3345.7475640648313,
+      1604.490628858015
+    ],
+    "fractions": [
+      0,
+      0.125,
+      0.25
+    ],
+    "existingSkylightIntensity": 0.85
+  },
+  "fixed": [
+    "source meshes and pose",
+    "Profile skin",
+    "camera",
+    "55klux neutral sun",
+    "manual physical exposure",
+    "upper sky",
+    "Lumen quality",
+    "native1080"
+  ],
+  "pinSha256": {
+    "benchmark/shared/environment/Sand_BaseColor.png": "2cd59fccf77dff54e83420ca6010f0ebcc59bf7d9538d4b3b235225b0ec43247",
+    "benchmark/tools/unreal/ambient_review/prepare.py": "1a8c4e1aa036960dc0dcf9ceed54a1432fd68ce8d6993d041a66a6ec44dd758d",
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkGameMode.cpp": "9f78170f2e9392cab457507d4ff80075bd0cb493902b2ffba262600c987431cd",
+    "benchmark/unreal/KragKingsBenchmark/Source/KragKingsBenchmark/KKBenchmarkGameMode.h": "3f604586047fa10755dca52a73ab99cd558b322b078e0624f4a43ae32e9b6903",
+    "benchmark/unreal/evidence/coherent79-import/import-source-snapshot.json": "1191f86f6279ce8848319b54bfd516b1604f4cb75ccf998b7fbc330e3d65498e"
+  },
+  "requires": [
+    "Compile the exact pinned editor native module",
+    "Verify pins immediately before launch",
+    "Actual nine images and lighting report",
+    "Inspect lit/shaded contour and ground contact",
+    "Measure shipped candidate separately before accepting performance"
+  ],
+  "artisticAcceptance": false,
+  "performanceSample": false
+}

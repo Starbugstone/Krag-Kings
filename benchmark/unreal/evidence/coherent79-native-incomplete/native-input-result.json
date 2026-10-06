@@ -1,0 +1,17 @@
+﻿{
+    "engine":  "Unreal",
+    "scope":  "Full native suite",
+    "completed":  false,
+    "visualAcceptance":  false,
+    "performanceMeasurement":  false,
+    "startedUtc":  "2026-10-06T17:28:08.0662510Z",
+    "exeSha256":  "6926aba6478bc42cd8db6eda6c234a3c2f4ff88184922f069deb2d19ca873a8b",
+    "inputScriptSha256":  "79fee6c1239b75930ba5146939df68929ac5173bd70dd29cd7a8a1c9c991e114",
+    "guardMarkerMeaning":  "Readiness only; inputReportCompleted and gameClosed are also required.",
+    "gameProcessId":  8696,
+    "error":  "Exception lors de l\u0027appel de « Acquire » avec « 2 » argument(s) : « Game does not own foreground; stopped without sending input to another application. »",
+    "errorStack":  "à \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 228\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\Run-NativeInput.ps1 : ligne 64",
+    "gameClosed":  true,
+    "guardExitCode":  0,
+    "finishedUtc":  "2026-10-06T17:28:20.7084519Z"
+}

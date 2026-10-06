@@ -10,12 +10,19 @@ def argument(name,default):return Path(sys.argv[sys.argv.index(name)+1]) if name
 ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/krag';BASE_OUT=ROOT/'benchmark/shared/characters/krag';OUT=argument('--output-dir',BASE_OUT);TEX=OUT/'textures';TEX.mkdir(parents=True,exist_ok=True)
 stage='export' if '--export-only' in sys.argv or '--animations-only' in sys.argv else 'bake'
 triangulate='--triangulate' in sys.argv
+normal_reference=argument('--baseline-dir',None)
+if normal_reference and (stage!='export' or not triangulate or OUT.resolve()==BASE_OUT.resolve()):
+    raise RuntimeError('Mapped-corner export requires isolated --export-only --triangulate output')
 source_blend=argument('--source-runtime',ART/'Krag_Runtime.blend') if stage=='export' else argument('--source-master',ART/'Krag_Master.blend')
 runtime_destination=argument('--runtime-output',ART/'Krag_Runtime.blend')
 texture_source=argument('--texture-source-dir',BASE_OUT/'textures')
 bpy.ops.wm.open_mainfile(filepath=str(source_blend))
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=4;scene.render.bake.margin=4
 rig=bpy.data.objects['Krag_Rig'];modules={o.get('module'):o for o in bpy.data.objects if o.type=='MESH' and 'module' in o};contract=json.loads(argument('--contract',BASE_OUT/'krag_asset_contract.json').read_text())
+source_sha256=material_cache.sha(source_blend)
+if stage=='export' and contract.get('pbr_blend_sha256'):
+    if source_sha256!=contract['pbr_blend_sha256'] or set(modules)!=set(contract['modules']) or set(rig.data.bones.keys())!=set(contract['bones']):
+        raise RuntimeError('Coherent source/contract module or full-bone inventory differs')
 sys.path.insert(0,str(Path(__file__).parent.parent/'animation'))
 import export_contract
 contract['locomotionCycles'],action_export=export_contract.prepare(bpy,contract['locomotionCycles'])
@@ -53,6 +60,20 @@ def attach_maps(m,maps):
 def save_manifest():
     manifest={'materials':[dict(name=n,baseColor='textures/'+m['BaseColor'],normal='textures/'+m['Normal'],roughness='textures/'+m['Roughness'],metallic='textures/'+m['Metallic']) for n,m in material_maps.items()], 'variants':[{'name':n,'fbx':n+'.fbx','label':n.replace('Krag_',''),'deformation':v.get('deformation',contract['deformation'])} for n,v in contract['variants'].items()], 'animations':{n:'animations/'+n+'.fbx' for n in contract['clips']}, 'normalConvention':'OpenGL', 'authoringForward':'-Y','authoringUp':'Z','heightMeters':2.107,'weapon':weapon_contract,'weaponNode':None,'weaponSourceModule':'Weapon_R','weaponGeometryIncluded':True,'weaponDefaultVisible':True,'deformation':contract['deformation'],'locomotion':contract['locomotionCycles'],'status':'Review model, artistic acceptance pending','geometryExport':{'triangulated':triangulate,'method':'Temporary assembly BMesh triangulation with cached shape coordinates and corner normals restored' if triangulate else 'Original polygon topology'}}
     manifest['sourceAnimationContract']=action_export
+    manifest['source']=os.path.relpath(source_blend,OUT).replace('\\','/')
+    manifest['sourceSha256']=source_sha256
+    manifest['bones']=list(rig.data.bones.keys())
+    if stage=='export':
+        for item in manifest['variants']:
+            variant=contract['variants'][item['name']]
+            for field in ['vertices','triangles','materialSlots','skinnedMeshCount','sourceRestBoundsMeters','maxInfluences','morphs','cornerTriangulation','pointPayloadPreservation']:
+                if field in variant:item[field]=variant[field]
+        natural=contract['variants']['Krag_Natural']
+        if 'sourceRestBoundsMeters' in natural:
+            bounds=natural['sourceRestBoundsMeters'];manifest['heightMeters']=bounds['max'][2]-bounds['min'][2]
+        if normal_reference:
+            manifest['geometryExport'].update({'method':'Disposable assembly triangles with exact raw-FBX mapped corner normals; corrected target morphs retained',
+                'referenceDirectory':os.path.relpath(normal_reference,OUT).replace('\\','/'),'mappedNormalMaxVectorError':0})
     if contract.get('runtime_derivative_sha256'):
         manifest['runtimeDerivative']={'sha256':contract['runtime_derivative_sha256'],'status':contract.get('runtime_derivative_status'),'trianglesAllModules':contract.get('runtime_triangles_all_modules')}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),newline='\n')
@@ -149,9 +170,12 @@ else:
         for g,o in modules.items():
             if g in v['off'] and g!='Weapon_R':continue
             dupe=o.copy();dupe.data=o.data.copy();bpy.context.collection.objects.link(dupe);dupe.hide_set(False);dupe.hide_render=False;dupe.select_set(True);copies.append(dupe);copy_meshes.append(dupe.data)
+            if dupe.data.shape_keys:
+                dupe.data.shape_keys.animation_data_clear()
+                for key in dupe.data.shape_keys.key_blocks:key.value=0
         bpy.context.view_layer.objects.active=copies[0];bpy.ops.object.join();assembly=copies[0];assembly.name=name+'_Mesh'
         # Shared UVMap and unique material slots survive consolidation into one runtime renderer.
-        rig.select_set(True);bpy.context.view_layer.objects.active=rig;rig.animation_data.action=bpy.data.actions.get('Idle');scene.frame_set(1)
+        rig.select_set(True);bpy.context.view_layer.objects.active=rig;export_contract.select_action(bpy,rig,bpy.data.actions['Idle']);scene.frame_set(1)
         present=[]
         if assembly.data.shape_keys:
             import numpy as np
@@ -163,10 +187,28 @@ else:
         missing_facial={d['morph'] for d in contract['deformation']['drivers'] if d['kind']=='facial'}-set(present)
         if missing_facial:raise RuntimeError('Assembly lost required facial targets: '+str(sorted(missing_facial)))
         v['deformation']={**contract['deformation'],'drivers':[d for d in contract['deformation']['drivers'] if d['morph'] in present],'morphs':present}
-        if triangulate:v['triangulation']=triangulate_assembly(assembly.data,remove_zero_area='--remove-zero-area' in sys.argv)
+        import numpy as np
+        invalid_weights=sum(not vertex.groups or abs(sum(g.weight for g in vertex.groups)-1)>.001 or len(vertex.groups)>8 for vertex in assembly.data.vertices)
+        if invalid_weights:raise RuntimeError('Invalid assembled skin weights: '+name+' '+str(invalid_weights))
+        coords=np.empty(len(assembly.data.vertices)*3,dtype=np.float32);assembly.data.vertices.foreach_get('co',coords)
+        transform=np.asarray(assembly.matrix_world,dtype=np.float64);world=coords.reshape((-1,3))@transform[:3,:3].T+transform[:3,3]
+        v.update({'vertices':len(assembly.data.vertices),'materialSlots':len(assembly.data.materials),'skinnedMeshCount':1,
+                  'sourceRestBoundsMeters':{'min':world.min(0).tolist(),'max':world.max(0).tolist()},
+                  'maxInfluences':max(len(vertex.groups) for vertex in assembly.data.vertices),'morphs':present})
+        if normal_reference:
+            if '--remove-zero-area' in sys.argv:raise RuntimeError('Exact-corner reference requires unchanged polygon coverage')
+            sys.path.insert(0,str(Path(__file__).parent.parent/'nib/v5_wip'))
+            from triangulate_corners import triangulate as triangulate_corners
+            corner_map=OUT/(name+'.corners.npz')
+            v['cornerTriangulation']=triangulate_corners(assembly.data,corner_map)
+        elif triangulate:v['triangulation']=triangulate_assembly(assembly.data,remove_zero_area='--remove-zero-area' in sys.argv)
         fp=OUT/(name+'.fbx');print('EXPORT',fp,flush=True)
         bpy.ops.export_scene.fbx(use_triangles=False,filepath=str(fp),use_selection=True,object_types={'MESH','ARMATURE'},axis_forward='-Z',axis_up='Y',apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',add_leaf_bones=False,use_armature_deform_only=False,mesh_smooth_type='FACE',use_mesh_modifiers=False,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False)
+        if normal_reference:
+            from preserve_fbx_point_payloads import preserve
+            v['pointPayloadPreservation']=preserve(normal_reference/fp.name,fp,Path(bpy.utils.system_resource('SCRIPTS'))/'addons_core',preserve_morphs=False,corner_map_path=corner_map)
         v['runtime_triangles']=sum(len(p.vertices)-2 for p in assembly.data.polygons);v['runtime_material_slots']=len(assembly.data.materials);v['runtime_mesh_count']=1
+        v['triangles']=v['runtime_triangles']
         bpy.data.objects.remove(assembly,do_unlink=True)
         for mesh_data in copy_meshes:
             try:

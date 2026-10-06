@@ -1,0 +1,341 @@
+[CmdletBinding()]
+param([Parameter(Mandatory=$true)][string]$StatePath,[int]$GameProcessId=0,[switch]$ModifierOnly,[switch]$CameraPanOnly,
+ [ValidateSet('Packaged','EditorGame')][string]$ExecutionMode='Packaged')
+$ErrorActionPreference='Stop'
+if($ModifierOnly -and $CameraPanOnly){throw 'Choose only one focused native-input scope.'}
+. (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
+. (Join-Path $PSScriptRoot 'InputGroundTargets.ps1')
+Add-Type @'
+using System;using System.Runtime.InteropServices;
+public static class KKInput {
+ [StructLayout(LayoutKind.Sequential)]public struct POINT {public int X,Y;}
+ [StructLayout(LayoutKind.Sequential)]public struct RECT {public int Left,Top,Right,Bottom;}
+ [DllImport("user32.dll")]public static extern bool SetProcessDPIAware();
+ [DllImport("user32.dll")]public static extern bool SetForegroundWindow(IntPtr h);
+ [DllImport("user32.dll")]public static extern IntPtr GetForegroundWindow();
+ [DllImport("user32.dll")]static extern bool ShowWindow(IntPtr h,int command);
+ [DllImport("user32.dll")]static extern bool BringWindowToTop(IntPtr h);
+ [DllImport("user32.dll")]static extern bool AttachThreadInput(uint first,uint second,bool attach);
+ [DllImport("kernel32.dll")]static extern uint GetCurrentThreadId();
+ [StructLayout(LayoutKind.Sequential)]struct MSG {public IntPtr hwnd;public uint message;public UIntPtr wparam;public IntPtr lparam;public uint time;public POINT point;public uint extra;}
+ [DllImport("user32.dll")]static extern bool PeekMessage(out MSG message,IntPtr hwnd,uint min,uint max,uint remove);
+ [DllImport("user32.dll")]public static extern bool ClientToScreen(IntPtr h,ref POINT p);
+ [DllImport("user32.dll")]public static extern bool GetClientRect(IntPtr h,out RECT r);
+ [DllImport("user32.dll")]public static extern bool SetCursorPos(int x,int y);
+ [DllImport("user32.dll")]public static extern void mouse_event(uint flags,uint dx,uint dy,uint data,UIntPtr extra);
+ [DllImport("user32.dll")]public static extern uint GetWindowThreadProcessId(IntPtr h,out uint processId);
+ [DllImport("user32.dll")]public static extern IntPtr GetKeyboardLayout(uint threadId);
+ [DllImport("user32.dll",EntryPoint="MapVirtualKeyExW",ExactSpelling=true)]public static extern uint MapVirtualKeyEx(uint code,uint mapType,IntPtr layout);
+ [StructLayout(LayoutKind.Sequential)]public struct KEYBDINPUT {public ushort vk,scan;public uint flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Sequential)]public struct MOUSEINPUT {public int dx,dy;public uint data,flags,time;public UIntPtr extra;}
+ [StructLayout(LayoutKind.Explicit)]public struct INPUTUNION {[FieldOffset(0)]public KEYBDINPUT key;[FieldOffset(0)]public MOUSEINPUT mouse;}
+ [StructLayout(LayoutKind.Sequential)]public struct INPUT {public uint type;public INPUTUNION value;}
+ [DllImport("user32.dll",SetLastError=true)]static extern uint SendInput(uint count,INPUT[] inputs,int size);
+ public static void SendScan(uint scan,bool up) {
+  uint flags=8u|((scan&0xFF00u)!=0?1u:0u)|(up?2u:0u);
+  var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan&0xFFu),flags=flags}}};
+  if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
+ }
+ public sealed class KeyEdge {
+  public uint virtualKey,scan;public bool keyUp,accepted;public long layout,foregroundBefore,foregroundAfter;
+  public string utcBefore,utcAfter;
+ }
+ public sealed class TimedKeyHold : IDisposable {
+  readonly System.Threading.ManualResetEvent cancel=new System.Threading.ManualResetEvent(false);
+  readonly System.Threading.Thread worker;readonly uint scan,code;readonly long layout;
+  readonly System.Diagnostics.Stopwatch clock=new System.Diagnostics.Stopwatch();
+  volatile bool finished;Exception failure;
+  public KeyEdge Down,Up;public double ActualHoldMilliseconds;
+  public bool Finished {get{return finished;}}
+  KeyEdge Emit(bool up) {
+   var edge=new KeyEdge {virtualKey=code,scan=scan,keyUp=up,layout=layout,utcBefore=DateTime.UtcNow.ToString("o"),foregroundBefore=GetForegroundWindow().ToInt64()};
+   try{SendScan(scan,up);edge.accepted=true;}
+   finally{edge.utcAfter=DateTime.UtcNow.ToString("o");edge.foregroundAfter=GetForegroundWindow().ToInt64();if(up)Up=edge;else Down=edge;}
+   return edge;
+  }
+  public TimedKeyHold(uint scan,uint code,long layout,int milliseconds) {
+   this.scan=scan;this.code=code;this.layout=layout;
+   Down=Emit(false);clock.Start();
+   worker=new System.Threading.Thread(()=>{
+    try{cancel.WaitOne(Math.Max(0,milliseconds-(int)clock.ElapsedMilliseconds));Emit(true);}
+    catch(Exception error){failure=error;}
+    finally{clock.Stop();ActualHoldMilliseconds=clock.Elapsed.TotalMilliseconds;finished=true;}
+   });
+   worker.IsBackground=true;
+   try{worker.Start();}catch{Emit(true);cancel.Dispose();throw;}
+  }
+  public void Dispose(){cancel.Set();worker.Join();cancel.Dispose();if(failure!=null)throw new InvalidOperationException("Timed key release failed",failure);}
+ }
+
+ public static void SendQuickRmb(uint shiftScan) {
+  var inputs=new System.Collections.Generic.List<INPUT>();
+  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)shiftScan,flags=8}}});
+  inputs.Add(new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=8}}});
+  inputs.Add(new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=16}}});
+  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)shiftScan,flags=10}}});
+  uint sent=SendInput((uint)inputs.Count,inputs.ToArray(),Marshal.SizeOf(typeof(INPUT)));
+  if(sent!=inputs.Count){if(shiftScan!=0)SendScan(shiftScan,true);throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());}
+ }
+}
+'@
+[KKInput]::SetProcessDPIAware()|Out-Null
+$game=if($GameProcessId){Get-Process -Id $GameProcessId}else{Get-Process KragKingsBenchmark* -ErrorAction SilentlyContinue|Where-Object {$_.MainWindowHandle -ne 0}|Select-Object -First 1}
+if(-not $game -or $game.MainWindowHandle -eq 0){throw 'A visible Unreal demo is required.'}
+if($ExecutionMode -eq 'EditorGame' -and $game.ProcessName -notlike 'UnrealEditor*'){throw 'EditorGame evidence requires the explicitly selected Unreal editor game process.'}
+if($ExecutionMode -eq 'Packaged' -and $game.ProcessName -notlike 'KragKingsBenchmark*'){throw 'Packaged evidence requires the actual standalone KragKingsBenchmark process.'}
+$windowLease=$null;$pointerEvidence=New-Object System.Collections.Generic.List[object]
+$keyboardEvidence=New-Object System.Collections.Generic.List[object]
+function Assert-Foreground {$windowLease.AssertForeground()}
+function Assert-Pointer {
+ try{$point=$windowLease.AssertPointer();$pointerEvidence.Add($point)}
+ catch{try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
+}
+function Read-State {
+ for($i=0;$i -lt 20;$i++) {try{return Get-Content $StatePath -Raw|ConvertFrom-Json}catch{Start-Sleep -Milliseconds 50}}
+ throw 'No readable runtime input-state.json; launch with -KKInputState.'
+}
+function Resolve-Key([byte]$Code) {
+ [uint32]$owner=0
+ $thread=[KKInput]::GetWindowThreadProcessId($game.MainWindowHandle,[ref]$owner)
+ if($owner -ne $game.Id){throw 'Demo window ownership changed; keyboard input stopped.'}
+ $layout=[KKInput]::GetKeyboardLayout($thread)
+ # Supply physical scan codes to raw-input consumers. This host's French HKL
+ # omits E0 from the navigation mapping even with MAPVK_VK_TO_VSC_EX (type 4).
+ $mapped=[KKInput]::MapVirtualKeyEx($Code,4,$layout)
+ if($mapped -eq 0){throw "No scan code for virtual key $Code in the demo keyboard layout."}
+ if(($Code -ge 0x21 -and $Code -le 0x28) -or $Code -eq 0x2D -or $Code -eq 0x2E){$mapped=$mapped -bor 0xE000}
+ [pscustomobject]@{scan=[uint32]$mapped;layout=$layout.ToInt64()}
+}
+function Send-Key([byte]$Code,[bool]$Up=$false) {
+ $resolved=Resolve-Key $Code;$mapped=$resolved.scan
+ $edge=[ordered]@{virtualKey=[int]$Code;scan=[uint32]$mapped;keyUp=$Up;layout=$resolved.layout;utcBefore=[DateTime]::UtcNow.ToString('o');foregroundBefore=[KKInput]::GetForegroundWindow().ToInt64();accepted=$false}
+ try {[KKInput]::SendScan($mapped,$Up);$edge.accepted=$true}
+ finally {$edge['utcAfter']=[DateTime]::UtcNow.ToString('o');$edge['foregroundAfter']=[KKInput]::GetForegroundWindow().ToInt64();$keyboardEvidence.Add([pscustomobject]$edge)}
+}
+function Press-Key([byte]$Code) {
+ Assert-Foreground
+ Send-Key $Code
+ try {Start-Sleep -Milliseconds 60} finally {Send-Key $Code $true}
+}
+function Hold-Key([byte]$Code,[int]$Milliseconds=250) {
+ Assert-Foreground
+ Send-Key $Code
+ try {Start-Sleep -Milliseconds $Milliseconds} finally {Send-Key $Code $true}
+}
+function Observe-CameraState {
+ $watch=[Diagnostics.Stopwatch]::StartNew();$state=Read-State;$watch.Stop()
+ [pscustomobject]@{observedUtc=[DateTime]::UtcNow.ToString('o');readMilliseconds=$watch.Elapsed.TotalMilliseconds;fileWriteUtc=(Get-Item -LiteralPath $StatePath).LastWriteTimeUtc.ToString('o');state=$state;frameIndexAvailable=$false}
+}
+function Hold-ObservedPan {
+ Assert-Foreground
+ $before=Observe-CameraState;$during=New-Object System.Collections.Generic.List[object]
+ $resolved=Resolve-Key 0x27
+ # Keep release scheduling independent from PowerShell file reads/serialization.
+ $hold=New-Object -TypeName 'KKInput+TimedKeyHold' -ArgumentList @([uint32]$resolved.scan,[uint32]0x27,[long]$resolved.layout,[int]250)
+ try {
+  while(-not $hold.Finished){
+   Start-Sleep -Milliseconds 40
+   Assert-Foreground
+   $during.Add((Observe-CameraState))
+  }
+ } finally {
+  try{$hold.Dispose()}finally{
+   if($hold.Down){$keyboardEvidence.Add($hold.Down)};if($hold.Up){$keyboardEvidence.Add($hold.Up)}
+   $cameraProbes.Add([pscustomobject]@{control='RightArrow';requestedHeldMilliseconds=250;actualHoldFromDownReturnMilliseconds=$hold.ActualHoldMilliseconds;scheduling='Dedicated timer thread; observation cannot postpone release.';before=$before;during=@($during.ToArray());after=(Observe-CameraState);diagnosticOnly=$true})
+  }
+ }
+}
+function Orbit-Camera {
+ Assert-Foreground
+ $rect=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$rect)|Out-Null
+ $origin=New-Object KKInput+POINT;[KKInput]::ClientToScreen($game.MainWindowHandle,[ref]$origin)|Out-Null
+ $x=$origin.X+[int]($rect.Right*.5);$y=$origin.Y+[int]($rect.Bottom*.5)
+ [KKInput]::SetCursorPos($x,$y)|Out-Null
+ Start-Sleep -Milliseconds 100;Assert-Pointer
+ [KKInput]::mouse_event(0x20,0,0,0,[UIntPtr]::Zero)
+ try {
+  Start-Sleep -Milliseconds 50
+  for($i=0;$i -lt 4;$i++){Assert-Pointer;[KKInput]::mouse_event(0x1,16,6,0,[UIntPtr]::Zero);Start-Sleep -Milliseconds 50}
+  # Keep MMB held while the final movement reaches a rendered/input frame.
+  Start-Sleep -Milliseconds 80
+ }
+ finally {[KKInput]::mouse_event(0x40,0,0,0,[UIntPtr]::Zero)}
+}
+function Click-Client([double]$X,[double]$Y,[bool]$Right=$false,[bool]$Shift=$false,[int]$HeldMilliseconds=60,[byte]$ShiftVirtualKey=0xA0) {
+ Assert-Foreground
+ $bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
+ if($X -lt 0 -or $Y -lt 0 -or $X -ge $bounds.Right -or $Y -ge $bounds.Bottom){throw 'Requested click lies outside game client; input stopped.'}
+ $origin=New-Object KKInput+POINT
+ [KKInput]::ClientToScreen($game.MainWindowHandle,[ref]$origin)|Out-Null
+ [KKInput]::SetCursorPos($origin.X+[int]$X,$origin.Y+[int]$Y)|Out-Null
+ # Let Slate observe the new pointer position before dispatching its click.
+ Start-Sleep -Milliseconds 100
+ Assert-Pointer
+ if($Right -and $HeldMilliseconds -eq 0){
+  $shiftScan=if(-not $Shift){0}elseif($ShiftVirtualKey -eq 0xA1){0x36}elseif($ShiftVirtualKey -eq 0xA0){0x2A}else{throw 'Unsupported quick-click Shift key.'}
+  [KKInput]::SendQuickRmb([uint32]$shiftScan)
+  return
+ }
+ if($Shift){Send-Key $ShiftVirtualKey}
+ try {
+  [KKInput]::mouse_event($(if($Right){0x8}else{0x2}),0,0,0,[UIntPtr]::Zero)
+  if($HeldMilliseconds -gt 0){Start-Sleep -Milliseconds $HeldMilliseconds}
+  [KKInput]::mouse_event($(if($Right){0x10}else{0x4}),0,0,0,[UIntPtr]::Zero)
+ }finally{if($Shift){Send-Key $ShiftVirtualKey $true}}
+}
+$checks=New-Object System.Collections.Generic.List[object]
+$cameraProbes=New-Object System.Collections.Generic.List[object]
+$inputComplete=$false;$inputError=$null
+function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000) {
+ $end=[DateTime]::UtcNow.AddMilliseconds($TimeoutMs);$pass=$false
+ do {Assert-Foreground;$state=Read-State;if(& $Predicate $state){$pass=$true;break};Start-Sleep -Milliseconds 75}while([DateTime]::UtcNow -lt $end)
+ $checks.Add([pscustomobject]@{check=$Name;passed=$pass;runtimeElapsed=$state.elapsed;camera=$state.camera;selectedAction=($state.units|Where-Object selected).action})
+ Write-Output "$Name : $pass"
+ if(-not $pass){throw "Runtime input check failed: $Name"}
+}
+function Wait-MovementSettled([string]$Name) {
+ # Project only a stationary observed scene; the previous moving-unit ray
+ # became self-occluded while Windows input was being prepared.
+ $deadline=[DateTime]::UtcNow.AddSeconds(8);$previous=Read-State
+ do {
+  Assert-Foreground
+  Start-Sleep -Milliseconds 120;$state=Read-State
+  $stable=$state.elapsed -gt $previous.elapsed
+  foreach($unit in $state.units){
+   $prior=$previous.units|Where-Object {$_.species -eq $unit.species}
+   if(-not $prior -or $unit.action -in @('Walk','Run') -or [Math]::Sqrt([Math]::Pow($unit.x-$prior.x,2)+[Math]::Pow($unit.y-$prior.y,2)) -gt .5){$stable=$false}
+  }
+  if($stable){return $state}
+  $previous=$state
+ }while([DateTime]::UtcNow -lt $deadline)
+ throw "Movement did not settle before $Name; no ground click sent."
+}
+function Send-GroundMove([string]$Name,[bool]$Walk=$false,[int]$HeldMilliseconds=60,[byte]$ShiftKey=0xA0) {
+ $state=Wait-MovementSettled $Name;$bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
+ $target=Get-KKGroundClickTarget $state $bounds.Right $bounds.Bottom
+ $cameraProbes.Add([pscustomobject]@{control=$Name;before=$state;target=$target;observedMovementSettled=$true;heldMilliseconds=$HeldMilliseconds;walk=$Walk;shiftVirtualKey=$ShiftKey})
+ Click-Client $target.clientPoint[0] $target.clientPoint[1] $true $Walk $HeldMilliseconds $ShiftKey
+}
+function Test-ImmediateModifiers {
+ Send-GroundMove 'QuickRightShiftWalk' $true 0 0xA1
+ Expect-State 'Immediate Right Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+ Send-GroundMove 'QuickUnmodifiedRun' $false 0
+ Expect-State 'Unmodified quick RMB clears previous Walk modifier' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Send-GroundMove 'QuickLeftShiftWalk' $true 0 0xA0
+ Expect-State 'Immediate Left Shift+RMB preserves Walk intent' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+}
+try {
+ $windowLease=[KKOwnedWindowLease]::Acquire($game.MainWindowHandle,[uint32]$game.Id)
+ Start-Sleep -Milliseconds 200
+ $initial=Read-State;Start-Sleep -Milliseconds 250
+ if((Read-State).elapsed -le $initial.elapsed){throw 'Runtime state is stale; game is not updating.'}
+ $nib=$initial.units|Where-Object {$_.species -eq 'Nib'}
+ Click-Client $nib.screen_x $nib.screen_y
+ Expect-State 'LMB selects Nib' {param($s)($s.units|Where-Object {$_.species -eq 'Nib'}).selected}
+ if($ModifierOnly){
+  Press-Key 0x24
+  Expect-State 'Focused modifier probe has observed wide camera' {param($s)(-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
+  Send-GroundMove 'FocusedNibRun' $false 60
+  Expect-State 'Focused Nib RMB establishes Run before modifier probes' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+  Test-ImmediateModifiers
+  $inputComplete=$true
+  return
+ }
+ Press-Key 0x09
+ Expect-State 'Tab changes selected unit' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).selected}
+ Press-Key 0x41
+ Expect-State 'Krag melee begins for overlap test' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).action -eq 'Melee'}
+ $nib=(Read-State).units|Where-Object {$_.species -eq 'Nib'}
+ Click-Client $nib.screen_x $nib.screen_y
+ Press-Key 0x46
+ Expect-State 'Nib shoots while Krag melee remains active' {param($s)(($s.units|Where-Object {$_.species -eq 'Krag'}).action -eq 'Melee') -and (($s.units|Where-Object {$_.species -eq 'Nib'}).action -eq 'Shoot')}
+ $krag=(Read-State).units|Where-Object {$_.species -eq 'Krag'}
+ Click-Client $krag.screen_x $krag.screen_y
+ foreach($entry in @(@(0x41,'Melee'),@(0x46,'Shoot'),@(0x48,'Hit'))) {
+  $beforeShots=((Read-State).units|Where-Object {$_.species -eq 'Krag'}).shots.count
+  Press-Key ([byte]$entry[0]);$action=$entry[1]
+  Expect-State "$action key triggers authored action" {param($s)($s.units|Where-Object selected).action -eq $action}
+  if($action -eq 'Shoot') {
+   Expect-State 'Krag emits both authored discharges before another action interrupts' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).shots.count -ge ($beforeShots+2)}
+   Expect-State 'Krag actual discharge markers pass repaired-aim 10-degree regression' {param($s)($s.units|Where-Object {$_.species -eq 'Krag'}).shots.maximum_angle_degrees -le 10}
+  }
+ }
+ Press-Key 0x41
+ Expect-State 'Melee observed before pan hold' {param($s)($s.units|Where-Object selected).action -eq 'Melee'}
+ $camera=(Read-State).camera
+ Hold-ObservedPan
+ Expect-State 'Arrow pans camera during action' {param($s)([math]::Abs($s.camera.x-$camera.x)+[math]::Abs($s.camera.y-$camera.y) -gt 5) -and (($s.units|Where-Object selected).action -eq 'Melee')}
+ if($CameraPanOnly){$inputComplete=$true;return}
+ Press-Key 0x41
+ Expect-State 'Melee remains active for orbit test' {param($s)($s.units|Where-Object selected).action -eq 'Melee'}
+ $orbitBefore=Read-State;$camera=$orbitBefore.camera
+ Orbit-Camera
+ $orbitAfter=Read-State
+ $cameraProbes.Add([pscustomobject]@{control='MMB';before=$orbitBefore;after=$orbitAfter;requestedRelativeMoves=4;requestedDeltaPerMove=@(16,6);finalHeldMilliseconds=80})
+ Expect-State 'MMB orbits camera during action' {param($s)([math]::Abs($s.camera.yaw-$camera.yaw) -gt 1) -and (($s.units|Where-Object selected).action -eq 'Melee')}
+ Press-Key 0x41
+ Expect-State 'Melee remains active for zoom test' {param($s)($s.units|Where-Object selected).action -eq 'Melee'}
+ $zoomBefore=Read-State;$camera=$zoomBefore.camera
+ Assert-Pointer;[KKInput]::mouse_event(0x800,0,0,120,[UIntPtr]::Zero)
+ Expect-State 'Mouse wheel zooms camera during action' {param($s)([math]::Abs($s.camera.z-$camera.z) -gt 3) -and (($s.units|Where-Object selected).action -eq 'Melee')}
+ $cameraProbes.Add([pscustomobject]@{control='Wheel';before=$zoomBefore;after=(Read-State);wheelDelta=120})
+ Press-Key 0x24
+ $before=Read-State;$variant=($before.units|Where-Object selected).variant
+ Press-Key 0x56
+ Expect-State 'V changes bionic variant' {param($s)($s.units|Where-Object selected).variant -ne $variant}
+ Press-Key 0x45
+ Expect-State 'E starts facial acting' {param($s)($s.units|Where-Object selected).face_active}
+ Expect-State 'Facial curves reach applied mesh morph weights' {param($s)($s.units|Where-Object selected).facial_morph_weight -gt .01}
+ Press-Key 0x43
+ Expect-State 'C enters portrait' {param($s)$s.portrait}
+ $camera=(Read-State).camera
+ Hold-Key 0x27
+ Expect-State 'Portrait camera retains pan control' {param($s)$s.portrait -and ([math]::Abs($s.camera.x-$camera.x)+[math]::Abs($s.camera.y-$camera.y) -gt 3)}
+ Press-Key 0x77
+ Press-Key 0x24
+ Expect-State 'Home resets portrait' {param($s)-not $s.portrait}
+ $rect=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$rect)|Out-Null
+ Send-GroundMove 'KragRun' $false
+ Expect-State 'RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Expect-State 'Run activates applied body corrective weights' {param($s)($s.units|Where-Object selected).body_morph_weight -gt .01}
+ $before=Read-State;Start-Sleep -Milliseconds 700;$after=Read-State
+ $u0=$before.units|Where-Object selected;$u1=$after.units|Where-Object selected
+ $moved=[math]::Sqrt([math]::Pow($u1.x-$u0.x,2)+[math]::Pow($u1.y-$u0.y,2))
+ $checks.Add([pscustomobject]@{check='RMB causes world movement';passed=($moved -gt 25);distanceCm=$moved})
+ if($moved -le 25){throw 'RMB failed to cause sufficient actual movement.'}
+ Send-GroundMove 'KragWalk' $true
+ Expect-State 'Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+ Press-Key 0x77
+ Press-Key 0x09
+ Expect-State 'Tab returns selection to Nib' {param($s)($s.units|Where-Object {$_.species -eq 'Nib'}).selected}
+ foreach($entry in @(@(0x41,'Melee'),@(0x46,'Shoot'),@(0x48,'Hit'))) {
+  Press-Key ([byte]$entry[0]);$action=$entry[1]
+  Expect-State "Nib $action key triggers authored action" {param($s)($s.units|Where-Object selected).action -eq $action}
+ }
+ $variant=((Read-State).units|Where-Object selected).variant
+ Press-Key 0x56
+ Expect-State 'Nib V changes replacement variant' {param($s)($s.units|Where-Object selected).variant -ne $variant}
+ Press-Key 0x45
+ Expect-State 'Nib E activates applied facial morphs' {param($s)($s.units|Where-Object selected).facial_morph_weight -gt .01}
+ Press-Key 0x43
+ Expect-State 'Nib C enters portrait' {param($s)$s.portrait}
+ Press-Key 0x77;Press-Key 0x24
+ # F8 performs asynchronous screenshot readback. Observe Home's actual cached
+ # camera view before interpreting a screen-space click as a wide-view target.
+ Expect-State 'Home restores wide camera before Nib movement' {param($s)(-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
+ $wideResetElapsed=(Read-State).elapsed
+ Expect-State 'Nib wide camera advances after reset' {param($s)$s.elapsed -gt $wideResetElapsed -and (-not $s.portrait) -and [math]::Abs($s.camera.yaw-75) -lt .1 -and [math]::Abs($s.camera.pitch+22) -lt .1}
+ Send-GroundMove 'NibRun' $false
+ Expect-State 'Nib RMB runs to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Send-GroundMove 'NibWalk' $true
+ Expect-State 'Nib Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
+ Send-GroundMove 'NibQuickRun' $false 0
+ Expect-State 'Immediate RMB down/up uses Run after previous Walk command' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Test-ImmediateModifiers
+ $inputComplete=$true
+} catch {$inputError=$_.Exception.Message;throw} finally {
+ $finalState=$null;try{$finalState=Read-State}catch{}
+ $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
+ $report=[ordered]@{scope=$(if($ModifierOnly){'Focused zero-hold modifier regression'}elseif($CameraPanOnly){'Focused observed-action pan diagnostic'}else{'Full native suite'});originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());keyboardEdges=@($keyboardEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());cameraProbes=@($cameraProbes.ToArray());finalCamera=$finalState.camera;finalUnits=$finalState.units}
+ $report|ConvertTo-Json -Depth 16|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
+}
