@@ -1,0 +1,110 @@
+{
+  "status": "Isolated native Jaw repair generated, audited and viewed; observed curtain defect resolved; overall art unaccepted",
+  "source": "benchmark/art/nib/Nib_Master_v5f_JawRepair_WIP.blend",
+  "sourceSha256": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e",
+  "sourceReportSha256": "affa0267956080846c4850585e0d45548612c9e4e571a8d20c565743b32fcd39",
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Strict sampled neutral/Idle oral visibility and irises; diagnostics retain any failure"
+  },
+  "preservation": {
+    "unrelatedMeshComponents": 374,
+    "basisTopologyUVAndBindChange": false,
+    "clipChange": false,
+    "facialMorphChange": [
+      "JawOpen"
+    ],
+    "noseAndUpperMuzzleJawInfluence": 0.0
+  },
+  "comparisonReport": "benchmark/art/nib/v5-study/native-v5f-jaw-comparison.json",
+  "comparisonSha256": "942650454fc950c423a04fd661d3c9cdb722df0fa9e310216f60409957bfedd9",
+  "processes": {
+    "jaw-repair": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_V5F_MOUTH_REPAIR_SAVED",
+      "peakPrivateMB": 691.0,
+      "lowestAvailableMB": 15217.0,
+      "peakCommitPercent": 44.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5f-jaw-repair-memory.csv",
+      "memoryTraceSha256": "a51a532a07efd2e4b901bb19e2bd98719ebe51b9482a33fa493f484e4e58014c",
+      "logSha256": "0080df4e00e6bfcf8db5a3d5b1d0f27a2038fd41ba55e8d5f41e00caee6c2822"
+    },
+    "mouth-audit": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_SAVED_MOUTH_DEFORMATION_AUDIT_COMPLETE",
+      "peakPrivateMB": 568.0,
+      "lowestAvailableMB": 15492.0,
+      "peakCommitPercent": 43.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5f-mouth-audit-memory.csv",
+      "memoryTraceSha256": "5e663b999f8b1e216a7b0062f3471e67c46e174c034fdd16a5ff7e5aaca9ca31",
+      "logSha256": "a2f68539d92e26c47cd212e5752b4a5673a57a19a06c62f09b9bc08cbb493a27"
+    },
+    "jaw-review": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "peakPrivateMB": 2647.0,
+      "lowestAvailableMB": 13602.0,
+      "peakCommitPercent": 48.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5f-jaw-review-memory.csv",
+      "memoryTraceSha256": "25abb136934303b721dc5870122be44a277d243da845b9af5020417e3ce63139",
+      "logSha256": "87ad5250d26c2d339d4a32d593a53a2e1acc6ff3b8e3b8c8ef1467fc0a0d5a96"
+    }
+  },
+  "images": [
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5f-jaw-diagnostic-renders/Nib_ExpressionBlink.png",
+      "sha256": "db30839c0268b375e6422bb6fd4f63b07856790eccc5c7457a50802d2bcf3e73",
+      "metadataSha256": "679810a3367395394395100cc2891ed40df992052ceff3210dcdc4169801e5fb",
+      "view": "Blink",
+      "action": "FacePerformance",
+      "frame": 16,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5f-jaw-diagnostic-renders/Nib_ExpressionTongue.png",
+      "sha256": "2823b9babfb447c2f24d723e2c9961e0298e147903a33fb0ae120e74568518d6",
+      "metadataSha256": "0df82b8e397d075939211c5614b11013c71241c9ee2a2137415a72e5f9290310",
+      "view": "Tongue",
+      "action": "FacePerformance",
+      "frame": 103,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5f-jaw-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "0e206a102fa3db18be34f39bb009f607d744dc86f8bdaf09821ad538f94032c5",
+      "metadataSha256": "0aace26e36ce46ccc51ba284b07cbcc01b679a5a193366d1513690136d0f49b4",
+      "view": "Face",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    }
+  ],
+  "findings": [
+    "Actual Tongue now opens the true lip aperture. The rectangular upper-mouth skin curtain is absent; dark-blue tongue is visible and teeth remain inside.",
+    "Actual saved source comparison confirms zero Jaw weight and displacement across upper-mouth face set33 and nasal set11. The former curtain edge stays0.867434mm instead of stretching15.133663mm.",
+    "Basis topology, neutral evaluated positions, UVs and bind are preserved;374 unrelated components retain their hashes and fine-fuzz Basis difference is exactly zero.",
+    "Commissures and open-mouth silhouette remain boxy. The worst relative stretch now involves a15.6micrometer corner edge growing to149.9micrometers; this is recorded, not concealed by a broad ratio-only pass.",
+    "Blink closes the eyes but retains bridge-side pinches. Neutral nose/brow/chin and overall likeness remain unaccepted; grey flat nose, heavy lower face, sparse groom and stiff scarf are unchanged.",
+    "Strict neutral/Idle sampled oral visibility still fails and remains in all diagnostic metadata. No PBR bake, export, engine verification or shared promotion occurred."
+  ],
+  "scope": "Native Blender saved source only; no engine repair claim",
+  "sharedChanged": false,
+  "nextStep": "Preserve this repair while refining curved commissures and coherent nose/brow/cheek/chin planes, then repeat actual neutral and extreme expressions before groom/export."
+}

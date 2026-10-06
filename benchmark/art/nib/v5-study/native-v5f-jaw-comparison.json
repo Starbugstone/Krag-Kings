@@ -1,0 +1,80 @@
+{
+  "status": "Actual saved source audit comparison; Tongue aperture improvement also separately inspected in native renders; overall art remains unaccepted",
+  "sources": {
+    "v5e": "3791f8405b44c1114728e357caf3c6d21172c5882feee4178e627982a5120b96",
+    "v5f": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e"
+  },
+  "cacheSha256": {
+    "v5e": "b0eb1e8a20c28e6a44d2515f8c8ba3f3beaa519872c97bc7b90e178880c283af",
+    "v5f": "73a4e09d9929584c148a94194918efb24b06d53a46d34ba37c3d14409d3f0481"
+  },
+  "basisTopologyAndNeutralPositionsIdentical": true,
+  "semanticDomains": {
+    "upperLipCheekSet33": {
+      "v5e": {
+        "vertices": 14576,
+        "maximumJawWeight": 1.0,
+        "maximumJawOnlyDisplacementMeters": 0.026954309861640092
+      },
+      "v5f": {
+        "vertices": 14576,
+        "maximumJawWeight": 0.0,
+        "maximumJawOnlyDisplacementMeters": 0.0
+      }
+    },
+    "nasalSet11": {
+      "v5e": {
+        "vertices": 2209,
+        "maximumJawWeight": 0.21985414624214172,
+        "maximumJawOnlyDisplacementMeters": 0.0060049263312729985
+      },
+      "v5f": {
+        "vertices": 2209,
+        "maximumJawWeight": 0.0,
+        "maximumJawOnlyDisplacementMeters": 0.0
+      }
+    }
+  },
+  "originalCurtainEdge": {
+    "v5e": {
+      "edge": 47839,
+      "vertices": [
+        16125,
+        28653
+      ],
+      "restLengthMeters": 0.0008674340431084474,
+      "posedLengthMeters": 0.015133662542817884,
+      "stretchRatio": 17.446470614165023,
+      "jawWeights": [
+        0.7566691637039185,
+        0.0
+      ]
+    },
+    "v5f": {
+      "edge": 47839,
+      "vertices": [
+        16125,
+        28653
+      ],
+      "restLengthMeters": 0.0008674340431084474,
+      "posedLengthMeters": 0.0008674340431084474,
+      "stretchRatio": 1.0,
+      "jawWeights": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "repairedWorstRelativeEdge": {
+    "edge": 76739,
+    "vertices": [
+      39496,
+      39497
+    ],
+    "restLengthMeters": 1.5575669172233405e-05,
+    "posedLengthMeters": 0.00014986937369676487,
+    "stretchRatio": 9.62201829273156,
+    "note": "A very short commissure edge, not the previous large upper-mouth curtain. Actual corner shape still needs refinement."
+  },
+  "codeSha256": "7b22e444b38d86292a6abede9a768b5350565b3bc064e86e8178a22eed507e82"
+}

@@ -1,0 +1,31 @@
+{
+  "source": "Nib_Master_v5f_JawRepair_WIP.blend",
+  "sourceSha256": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e",
+  "view": "Tongue",
+  "action": "FacePerformance",
+  "frame": 103,
+  "variant": "natural",
+  "renderer": "Blender Cycles CPU",
+  "samples": 20,
+  "status": "Diagnostic image of structurally flagged source; gate failure retained, no acceptance or export authorization",
+  "coordinateReport": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-head-v5f-jaw-repair.json",
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Strict sampled neutral/Idle oral visibility and irises; diagnostics retain any failure"
+  },
+  "diagnosticOverride": true
+}

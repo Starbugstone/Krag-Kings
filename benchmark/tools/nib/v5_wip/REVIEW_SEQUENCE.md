@@ -173,7 +173,7 @@ the prepared regional groom candidate.
 
 The prepared isolated repair chain is `native-v5f-jaw-repair.job.json`, then
 `native-v5f-mouth-audit.job.json`, then `native-v5f-jaw-review.job.json`. These
-have not run. The first reads only frozen v5e and refuses to overwrite an
+have now completed with exit 0 and completion markers. The first reads only frozen v5e and refuses to overwrite an
 existing v5f candidate. It preserves Basis topology/UVs and bind, solves Jaw
 weights from actual upper/lower oral rim domains, restricts residual JawOpen
 support and reproduces existing fine-fuzz geometry with corrected deformation.
@@ -181,4 +181,9 @@ Unrelated mesh components and expression keys are checked for preservation.
 The second repeats the same read-only decomposition against that saved output.
 The final explicitly diagnostic views are neutral Face, Tongue and Blink. Any
 neutral gate failure stays in their metadata; no automatic artistic acceptance
-or shared export follows a successful script exit.
+or shared export follows a successful script exit. The actual Tongue image
+confirms that the curtain is gone and the blue tongue is visible; corners
+remain boxy, Blink retains bridge-side pinching, and neutral art/gate still
+fail. `native-v5f-jaw-review-result.json` records the source/image hashes,
+preservation checks and guard peaks. Do not rerun generation over that saved
+candidate or interpret this local repair as an engine or likeness pass.
