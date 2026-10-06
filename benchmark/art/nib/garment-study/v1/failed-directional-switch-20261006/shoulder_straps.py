@@ -4,8 +4,7 @@ Exterior projection has explicit front/crest/back direction so a control inside
 new anatomy cannot bind to the opposite/front surface. Dimensions are fitting
 proposals, not new canon; native front/back/action review remains mandatory.
 """
-import math,json
-from pathlib import Path
+import math
 import bpy
 import numpy as np
 from mathutils import Vector
@@ -28,7 +27,7 @@ def build(name,side,material,collection,rig,body,shirt):
     direction=np.asarray([(0,-1,.10),(0,-1,.4),(0,-.65,.8),(0,0,1),
         (0,1,.45),(0,1,.1),(0,1,0),(0,1,0)],float)
     raw=smooth_curve(seed);dirs=smooth_curve(direction);dirs/=np.linalg.norm(dirs,axis=1)[:,None]
-    supports=[('body',tree(body)[0],.0115)];shirt_tree=tree(shirt)[0]
+    supports=[('shirt',tree(shirt)[0],.0045),('body',tree(body)[0],.0115)]
     centers=[];normals=[];routing=[]
     for i,(p,d) in enumerate(zip(raw,dirs)):
         origin=Vector(p+d*.24);axis=Vector(-d);candidates=[]
@@ -46,27 +45,6 @@ def build(name,side,material,collection,rig,body,shirt):
         centers.append(center);normals.append(normal);routing.append({'row':i,'regionDirection':d.tolist(),
             'support':label,'supportTriangle':triangle,'seed':p.tolist(),'center':center.tolist(),'routeAdjustmentMeters':shift})
     centers=np.asarray(centers);normals=np.asarray(normals)
-    # Keep one continuous anatomical route. The rejected attempt switched
-    # independently between distant shirt/body ray hits, causing a112deg kink.
-    # Shirt folds contribute only a local outward clearance envelope. A bounded
-    # slope spreads each required lift along the strap instead of rerouting it.
-    arc=np.r_[0,np.cumsum(np.linalg.norm(np.diff(centers,axis=0),axis=1))]
-    required=np.zeros(len(centers));clearance_rows=[]
-    for i,(center,body_normal) in enumerate(zip(centers,normals)):
-        hit,n,triangle,distance=shirt_tree.find_nearest(Vector(center))
-        if hit is None or distance>.025:continue
-        n=np.asarray(n)
-        if n@body_normal<0:n=-n
-        alignment=float(n@body_normal)
-        if alignment<.25:continue
-        signed=float((center-np.asarray(hit))@n)
-        required[i]=max(0.,(.0045-signed)/alignment)
-        clearance_rows.append({'row':i,'triangle':triangle,'signedShirtGapMeters':signed,'requiredOutwardLiftMeters':float(required[i])})
-    envelope=np.maximum(0,np.max(required[None,:]-.45*abs(arc[:,None]-arc[None,:]),axis=1))
-    if envelope.max()>.035:raise RuntimeError('Shirt clearance requires over35mm outward strap lift; inspect actual cloth before continuing')
-    centers+=normals*envelope[:,None]
-    for i,row in enumerate(routing):row['shirtClearanceLiftMeters']=float(envelope[i]);row['center']=centers[i].tolist()
-    Path(__file__).resolve().parents[4].joinpath('benchmark/local/nib-fresh-strap-route-'+str(side)+'.json').write_text(json.dumps({'routing':routing,'shirtClearance':clearance_rows},indent=2)+'\n',newline='\n')
     segments=np.diff(centers,axis=0);length=np.linalg.norm(segments,axis=1)
     if np.any(length<.0002):raise RuntimeError('Fresh strap route has collapsed longitudinal segment')
     cos=np.sum(segments[:-1]*segments[1:],axis=1)/(length[:-1]*length[1:]);bend=np.degrees(np.arccos(np.clip(cos,-1,1)))
@@ -104,5 +82,4 @@ def build(name,side,material,collection,rig,body,shirt):
     return obj,{'object':name,'construction':'New closed rounded leather ribbon, intentional replacement of obsolete strap mesh',
         'widthMeters':.019,'thicknessMeters':.003,'routeLengthMeters':total,'maximumAdjacentSegmentAngleDegrees':float(bend.max()),
         'maximumRouteAdjustmentMeters':max(r['routeAdjustmentMeters'] for r in routing),'routing':routing,'binding':binding,
-        'maximumShirtClearanceLiftMeters':float(envelope.max()),'shirtClearanceEnvelopeSlope':.45,'shirtClearanceSamples':clearance_rows,
         'artisticAcceptance':False,'geometryPreservation':'Body/bind/actions untouched; old strap archived; new strap topology/UVs authored'}

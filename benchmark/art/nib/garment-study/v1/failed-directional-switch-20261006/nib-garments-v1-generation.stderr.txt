@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py", line 84, in <module>
+    strap,entry=shoulder_straps.build(name,side,material,collection,rig,body,shirt);report['newStraps'].append(entry)
+                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\shoulder_straps.py", line 51, in build
+    if bend.max()>70:raise RuntimeError('Fresh strap route has abrupt kink above70degrees: '+str(float(bend.max())))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Fresh strap route has abrupt kink above70degrees: 112.22563171386719
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py', exiting.

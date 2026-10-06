@@ -1,0 +1,23 @@
+{
+  "name": "nib-fitted-shirt-straps-v1-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\garment_wip\\review_garments.py",
+    "--",
+    "--stage",
+    "shirt-straps"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v1-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v1-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fitted-shirt-straps-v1-review.log",
+  "successMarker": "NIB_FITTED_GARMENT_REVIEW_COMPLETE"
+}

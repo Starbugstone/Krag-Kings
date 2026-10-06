@@ -151,3 +151,25 @@ gate. The diagnostic retry exited 2 with a 579 MB private peak; no candidate,
 render, shared asset or artistic pass exists. `garment-study/v1/failure.json`
 preserves the actual failure and recipe. A regional strap correspondence repair
 is next; the cloth solver's completion alone does not establish cloth quality.
+
+
+## Actual staged shirt and straps, still unaccepted
+
+`garment-study/v1/Nib_ShirtStrapsStudy_v1.blend` is the saved 79-bone v5-motion
+clothing study, SHA-256 `70e06992721ac54970392bc96bc3b2f6602da566ee613f4ef1d6e0b8a5e28cf7`.
+Its source/report and actual Front/Back/Shoot views are captured by
+`garment-study/v1/shirt-straps-review-result.json`. Both guarded jobs exited 0
+(599 MB generation / 1,400 MB review peak private memory). Exact bind and all
+action-curve hashes remain unchanged. No shared exports were modified.
+
+The new continuous shoulder straps follow the torso more coherently, but the
+actual views fail: bare strap ends stop above the belt, shirt armholes extend
+onto the deltoids and form a jagged fabric wing during Shoot. The bib/pocket
+still read as rigid blocks. The old failed scarf remains unchanged in this
+partial source; its long-wrap replacement stopped at an initial-fit gate and
+is preserved separately. Next corrections are a narrower real sleeveless
+pattern, constructed strap anchors and a low, layered asymmetric cowl.
+Forearm tube coils need coherent overlapping fabric after those larger forms.
+Root owns concurrent hand geometry/pose repairs. All broader face, groom,
+material and likeness failures remain explicit; this study is not approved
+for runtime promotion or merchandising.

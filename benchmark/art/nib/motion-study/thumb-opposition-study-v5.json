@@ -6,12 +6,12 @@
   "savedMeshVertices": 13194,
   "savedMeshFaces": 13192,
   "maximumWeightSumError": 4.6566128730773926e-08,
-  "flexAxisHandBindSpace": [
+  "flexAxisArmatureBindSpace": [
     -1.0,
     0.0,
     0.0
   ],
-  "oppositionAxisHandBindSpace": [
+  "oppositionAxisArmatureBindSpace": [
     0.0,
     -1.0,
     0.0
@@ -290,12 +290,13 @@
       "maximumMeshDisplacementMeters": 0.05778280593565271
     }
   ],
+  "coordinateSpace": "Saved armature bind coordinates, not local Hand Euler axes; transform axes through the Hand bind frame before applying to a moving hand.",
   "interpretation": "Distances between semantic vertex clouds are upper bounds on surface separation; do not claim no intersections. Thumb opposition is an unaccepted bounded control proposal on the actual two-joint anatomy. Keep the thumb beside curled index rather than forced into the palm.",
   "nativeReviewRequired": [
     "Inspect relaxed thumb/web at Idle and Run extrema",
     "Check true triangle-surface contact and side/front silhouette",
     "Confirm no thumb-pad penetration or palm/web stretching"
   ],
-  "codeSha256": "81bef6a575f338f3aacf9e186a136de6148e2070c8d88938e6a475000ddd1372",
+  "codeSha256": "57fd6f43ba115d67ea0fac7237a51a999ea18772b61f00f4041ef7ace97c53cd",
   "sharedChanged": false
 }

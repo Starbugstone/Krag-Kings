@@ -1,0 +1,205 @@
+{
+  "status": "Actual isolated source and Front/Back/Shoot views exist; clothing and character visual review FAIL",
+  "artisticAcceptance": false,
+  "sharedPromotionAuthorized": false,
+  "sharedChanged": false,
+  "source": {
+    "path": "benchmark/art/nib/garment-study/v1/Nib_ShirtStrapsStudy_v1.blend",
+    "sha256": "70e06992721ac54970392bc96bc3b2f6602da566ee613f4ef1d6e0b8a5e28cf7",
+    "bytes": 60570802
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/garment-study/v1/shirt-straps-source.json",
+    "sha256": "696f07ed1c1eba295c30cb3aa829bd48649ae196fd064d94d65fd180ec313565",
+    "bytes": 106916
+  },
+  "reviewReport": {
+    "path": "benchmark/art/nib/garment-study/v1/shirt-straps-actual-views/review.json",
+    "sha256": "949e8d3977e0aeb804e437379319e59da9743932df607fad8dbb5f84eebd736d",
+    "bytes": 17920
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/garment-study/v1/shirt-straps-actual-views/Front.png",
+      "sha256": "c3f47dde4d2259b67f7baf8c530e527238c59cee01d62c12385f765249683456",
+      "bytes": 1170287
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/shirt-straps-actual-views/Back.png",
+      "sha256": "dbfa7bde36f9a8704d84dbdaba591fd1a6449d968cca3f7c10d05d0fc238f98c",
+      "bytes": 1087633
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v1/shirt-straps-actual-views/Shoot.png",
+      "sha256": "85ff53ff47cc4a8c97b854ee67c35030274a937d4b76ea7884089adcc4ce9cc5",
+      "bytes": 1126329
+    }
+  ],
+  "processes": [
+    {
+      "stage": "generation",
+      "pid": 24776,
+      "guardExitCode": 0,
+      "completionMarker": "NIB_FITTED_GARMENT_STUDY_SAVED",
+      "peakPrivateMB": 599.0,
+      "evidence": [
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1.txt",
+          "sha256": "a039169905863341463fb32f85e37a624313c004250d8aedcc2f32207b733a72",
+          "bytes": 574,
+          "originalCaptureSha256": "71cbe1e2420c4d5115c61357d9f621ea3ece25c546fbd27178463366b5a5a9ea"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1-memory.csv",
+          "sha256": "3762eff98c0d29a1bddc83db0e01bb8bcd5ece73241aa8892108fe01cf0bde39",
+          "bytes": 1213,
+          "originalCaptureSha256": "13f231487a38ab5b313ada1b9d5d1fb999c5f8978caaf10cbba93f97f1088178"
+        }
+      ]
+    },
+    {
+      "stage": "review",
+      "pid": 25616,
+      "guardExitCode": 0,
+      "completionMarker": "NIB_FITTED_GARMENT_REVIEW_COMPLETE",
+      "peakPrivateMB": 1400.0,
+      "evidence": [
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1-review.txt",
+          "sha256": "8fc827a0c25461ecf277e8c762c3e569e4af3d508903d4ff5cff523c73326815",
+          "bytes": 623,
+          "originalCaptureSha256": "5282ade93ec6f23f23b42ffa1273f611bcf79c90606bad14ee204102d8e82aa7"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1-review.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/garment-study/v1/shirt-straps-evidence/nib-fitted-shirt-straps-v1-review-memory.csv",
+          "sha256": "42d89cd846f78cf2056ef90f7ff21899aa7e43296dde263b0ad072a5d0edaf23",
+          "bytes": 487,
+          "originalCaptureSha256": "7d84f2c4871d710f1522bc6b9d321bb9066aa8f5161491873d66620d351bfd49"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "exactBind": true,
+    "boneCount": 79,
+    "allActionCurvesSha256": {
+      "FacePerformance": "3e8b1ca6e024849012739a59427f60f763d28d14562634650c108bf5de67088e",
+      "Hit": "18eacd0cf84ff6f1246f2c1491fa2bb7f8f0684b3cd464b73d6f8a61ee05c4de",
+      "Idle": "8800941e40062f36bea4b9e11d99c4ae82925d45e44e601732922e405aa182ed",
+      "Melee": "c7c4b2711cc693f4d8e86528aef91f0b826c45e3d14287af6f53d255d5521aef",
+      "Preserved_Idle_BeforeHumanMotion": "86de892cc5dde6cca8d5033cd8404cc7433f87a0c4d94f42d5f18fc5a1bfeb7e",
+      "Preserved_Run_BeforeHumanMotion": "fb8135f3dd8963dba0a195968307e352bf2686bb69694ea888c4ac84c58fa33c",
+      "Preserved_Walk_BeforeHumanMotion": "b0f01a00aebcf2d37e5a8e3e2ad9d292f1eeb9e58c6286d1ceeabdf8015b29af",
+      "Run": "a5c236b220bef82c833ab4f826a36851ac7185589630ce894960f24001bbefe3",
+      "Shoot": "3d460805ef406025d6f9ab2aba3980165e3f96d91b7f6a126a617973947d6670",
+      "Walk": "69899bb44d17d0cc2b371cdbe4aa61579533dde8f736d80d0c5f684bb6521d46"
+    },
+    "headEyesMouthEarsHandsAnatomicalBody": "No mesh edits in this recipe"
+  },
+  "measuredGeometry": {
+    "Sleeveless dust undershirt": {
+      "vertices": 7316,
+      "triangles": 14640,
+      "boundsMin": [
+        -0.14382018148899078,
+        -0.07847531139850616,
+        0.6660299301147461
+      ],
+      "boundsMax": [
+        0.1435796022415161,
+        0.08592511713504791,
+        0.9951863884925842
+      ]
+    },
+    "Overalls shoulder strap": {
+      "vertices": 684,
+      "triangles": 1364,
+      "boundsMin": [
+        -0.09716643393039703,
+        -0.08146075904369354,
+        0.7203210592269897
+      ],
+      "boundsMax": [
+        0.06212702766060829,
+        0.09445063769817352,
+        1.0203033685684204
+      ]
+    },
+    "Overalls shoulder strap.001": {
+      "vertices": 684,
+      "triangles": 1364,
+      "boundsMin": [
+        -0.06216476857662201,
+        -0.08155110478401184,
+        0.720332682132721
+      ],
+      "boundsMax": [
+        0.09469054639339447,
+        0.09436318278312683,
+        1.0200726985931396
+      ]
+    }
+  },
+  "reviewFindings": [
+    "Straps follow shoulder/back but have bare ends above the belt; constructed waist/bib attachment is missing.",
+    "Shirt extends across deltoids; armholes are oversized and jagged. Shoot stretches a broad fabric wing beneath the raised arm.",
+    "Bib and pocket remain rigid-looking. Original failed scarf is deliberately unchanged; replacement needs broad layered drape below the posed chin.",
+    "Inherited separate tubular forearm wraps, face and sparse groom remain below concept quality. Root owns hand/action repair.",
+    "Closest-normal contact samples are diagnostics, not watertight collision proof."
+  ],
+  "nextChanges": [
+    "Re-cut a narrow sleeveless shirt inside the shoulder and fit regional skin support.",
+    "Route straps to actual garment/belt anchors with constructed ends.",
+    "Author separate asymmetric overlapping cowl surfaces; do not reuse the failed long-wrap initial pattern.",
+    "After those forms pass, replace tube coils with coherent overlapping cloth wrap; preserve root hand meshes."
+  ],
+  "recipe": [
+    {
+      "path": "benchmark/tools/nib/garment_wip/build_garment_study.py",
+      "sha256": "f32d895d7297bd76d11bf4de901ab3d49985dc46ea93af93991b934686411753",
+      "bytes": 10316
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/cloth_patterns.py",
+      "sha256": "6936633d87dd4b0b60ee16d1bd6a1afb99f3d4519504f3ec5a0206bc804aec61",
+      "bytes": 4189
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/fitted_fabric.py",
+      "sha256": "336817fa659e125efb12a9b8a18c496734a4b14e7e47a358ea9c1a1004cbe960",
+      "bytes": 11665
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/shoulder_straps.py",
+      "sha256": "a4ec95009267a44cca6af3cbf9f46a990fc51ff1c49c767a1d4f9d3f1eee9aa1",
+      "bytes": 7312
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/review_garments.py",
+      "sha256": "25a3d9df16439c01c0288d3187a4b757f528e9bdad9defa72045cc8f9b570fc0",
+      "bytes": 5227
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/build-shirt-straps-v1.job.json",
+      "sha256": "23a6584a610c004e251ba436ac4ae58d87cfe4e0ee7bb53a63a958ade577be99",
+      "bytes": 784
+    },
+    {
+      "path": "benchmark/tools/nib/garment_wip/review-shirt-straps-v1.job.json",
+      "sha256": "15674ef881e184ee1e79e8248c5314958bf57031d1f9cf5902ebaaade89e16bb",
+      "bytes": 814
+    }
+  ]
+}

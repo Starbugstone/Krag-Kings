@@ -1,5 +1,5 @@
 """Prepared actual neutral/back/Shoot cloth review; no source writes."""
-import hashlib,json,sys
+import argparse,hashlib,json,sys
 from pathlib import Path
 import bpy
 import numpy as np
@@ -7,9 +7,13 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 HERE=Path(__file__).parent;ROOT=HERE.parents[3];BASE=ROOT/'benchmark/art/nib/garment-study/v1'
-SOURCE=BASE/'Nib_GarmentStudy_v1.blend';OUT=BASE/'actual-views'
+parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['shirt-straps','full'],default='full')
+args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+SOURCE=BASE/('Nib_ShirtStrapsStudy_v1.blend' if args.stage=='shirt-straps' else 'Nib_GarmentStudy_v1.blend')
+OUT=BASE/('shirt-straps-actual-views' if args.stage=='shirt-straps' else 'actual-views')
+REPORT_PATH=BASE/('shirt-straps-source.json' if args.stage=='shirt-straps' else 'source.json')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-expected=json.loads((BASE/'source.json').read_text())['outputSha256']
+expected=json.loads(REPORT_PATH.read_text())['outputSha256']
 if sha(SOURCE)!=expected:raise RuntimeError('Garment source/report mismatch')
 if OUT.exists():raise RuntimeError('Preserve existing actual garment views')
 OUT.mkdir(parents=True)
@@ -22,7 +26,7 @@ scene.render.engine='BLENDER_WORKBENCH';scene.render.resolution_x=1000;scene.ren
 scene.render.image_settings.file_format='PNG';scene.render.use_compositing=False;scene.render.use_sequencer=False;scene.render.film_transparent=False
 shade=scene.display.shading;shade.light='STUDIO';shade.color_type='SINGLE';shade.single_color=(.54,.54,.54);shade.show_shadows=True;shade.show_cavity=True;shade.cavity_type='BOTH';shade.background_type='WORLD'
 scene.world.color=(.065,.065,.065);scene.display.render_aa='16';camera=scene.camera;camera.data.type='ORTHO';camera.data.ortho_scale=.88
-report={'status':'Actual cloth diagnostics; concept/material/motion/contact acceptance pending','source':str(SOURCE),'sourceSha256':expected,'codeSha256':sha(Path(__file__)),'poses':[],'artisticAcceptance':False,'sharedChanged':False}
+report={'status':'Actual cloth diagnostics; concept/material/motion/contact acceptance pending','source':str(SOURCE),'sourceSha256':expected,'codeSha256':sha(Path(__file__)),'poses':[],'artisticAcceptance':False,'sharedChanged':False,'stage':args.stage,'inheritedScarf':'Retained unchanged and unaccepted' if args.stage=='shirt-straps' else 'New unaccepted garment'}
 def surface(name):
     obj=bpy.data.objects[name];evaluated=obj.evaluated_get(bpy.context.evaluated_depsgraph_get());mesh=evaluated.to_mesh()
     try:

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py", line 100, in <module>
+    scarf_pattern=patterns.scarf();report['scarf']={'initialFit':fabric.scarf_initial_fit(scarf_pattern,body,head,shirt)}
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\fitted_fabric.py", line 147, in scarf_initial_fit
+    if max_shift>.055:raise RuntimeError('Scarf initial contact correction exceeds55mm')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Scarf initial contact correction exceeds55mm
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_garment_study.py', exiting.

@@ -1,4 +1,42 @@
-# Nib garment refit — first native attempt failed
+# Nib garment refit — actual staged source, visual review failed
+
+The isolated `Nib_ShirtStrapsStudy_v1.blend` now exists, SHA-256
+`70e06992721ac54970392bc96bc3b2f6602da566ee613f4ef1d6e0b8a5e28cf7`.
+Generation and Front/Back/Shoot review exited 0, at 599 MB and 1,400 MB
+private-memory peaks. The source preserves the exact 79-bone bind and every
+action-curve hash from the pinned v5 motion source. It changes clothing only;
+the old failed scarf remains visible and unchanged in this partial stage.
+`art/nib/garment-study/v1/shirt-straps-review-result.json` records exact source,
+recipe, process and image evidence. No shared assets or exports changed.
+
+Actual views fail the clothing review: the shirt extends onto the deltoids,
+leaving oversized jagged armholes and a fabric wing under the raised Shoot arm.
+The new straps follow the shoulder/back but terminate bare above the belt.
+The rectangular bib/pocket and old collar remain visibly inadequate. The next
+source must cut a narrow sleeveless edge inside the shoulder and construct
+proper strap ends at actual waist/bib anchors. Those changes are not generated.
+
+Use the successful `build-shirt-straps-v1.job.json` only to reproduce this
+preserved partial stage. Its script refuses to overwrite the saved source.
+The separate old full-garment path still includes the failed scarf pattern;
+do not launch it as a presumed correction. A new broad asymmetric overlapping
+cowl must be authored from actual posed chin/shoulder landmarks. Root's hand
+and action corrections remain independent; do not edit those meshes here.
+
+The 42-frame shirt settle yielded 7,316 vertices / 14,640 triangles. Each fresh
+closed strap has 684 vertices / 1,364 triangles. The continuous body route plus
+slope-bounded shirt-clearance envelope passes its curvature gate (49.19° and
+23.69° maxima). These numerical checks do not approve the garment silhouette.
+Closest-body-normal diagnostics find three Shoot shirt samples below −1 mm
+(minimum −5.75 mm); they are not watertight collision proofs. Face, groom and
+materials remain unaccepted independently of this garment study.
+
+## Preserved preparation and failed attempts
+
+The following records describe earlier preparation or failures; they do not
+supersede the actual status above. All five failed attempts remain recorded in
+`art/nib/garment-study/v1/failure.json` with preserved scripts/logs.
+
 
 The v5-pinned native attempt completed all 42 undershirt cloth frames, then
 stopped at the shoulder-strap fitting gate: old-to-new radial support requested
@@ -95,3 +133,15 @@ longer applied to the intentionally rebuilt straps. A separate 90 mm region
 bound and 70-degree adjacent-segment rejection catch routing jumps. These are
 conservative authoring guards, not artistic acceptance. Native review remains
 required. No new source from this recipe has yet been generated.
+
+
+The fresh directional route's first native attempt also stopped before saving:
+independent farthest-hit selection between shirt and body produced a112.23°
+local kink. The actual saved-body-only route measures24.34° maximum, so the
+anatomical routing is coherent; the surface-switching rule is the defect.
+`strap-route-continuity-v5.json` preserves every body support row and the worst
+measured angles. The next ungenerated correction retains that single body
+route and adds a slope-bounded local shirt-clearance envelope, with per-row
+support/offset diagnostics written before the curvature gate. It does not
+relax the curvature gate or move anatomy. All failed native attempts remain in
+`art/nib/garment-study/v1/failure.json`.

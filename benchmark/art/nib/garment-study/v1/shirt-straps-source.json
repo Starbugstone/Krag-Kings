@@ -1,0 +1,3758 @@
+{
+  "status": "Isolated fitted fabric source; actual neutral/action/contact review required",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-human-motion-v5\\Nib_HumanMotion_Study_v5.blend",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "bodyShapeAndBindChanged": false,
+  "shirt": {
+    "initialFitMaximumMeters": 0.015185643407064124,
+    "patternBoundaryLoops": 4,
+    "settle": {
+      "frames": 42,
+      "selfCollision": true,
+      "quality": 8,
+      "maximumMeasuredDisplacementMeters": 0.021820601790245007,
+      "colliders": [
+        "Continuous Nib anatomy organic",
+        "Nib v5 fitted animation face"
+      ],
+      "collisionClearanceMeters": 0.0018,
+      "runtimeSimulation": false
+    },
+    "skin": {
+      "object": "Sleeveless dust undershirt",
+      "rigid": false,
+      "maximumBodySupportDistanceMeters": 0.01600239798426628,
+      "maximumInfluences": 4
+    },
+    "supportCache": "benchmark/local/nib-fitted-shirt-support-v5.npz"
+  },
+  "newStraps": [
+    {
+      "object": "Overalls shoulder strap",
+      "construction": "New closed rounded leather ribbon, intentional replacement of obsolete strap mesh",
+      "widthMeters": 0.019,
+      "thicknessMeters": 0.003,
+      "routeLengthMeters": 0.5381187200546265,
+      "maximumAdjacentSegmentAngleDegrees": 49.18731689453125,
+      "maximumRouteAdjustmentMeters": 0.031578324732722055,
+      "routing": [
+        {
+          "row": 0,
+          "regionDirection": [
+            0.0,
+            -0.9950371902099893,
+            0.09950371902099893
+          ],
+          "support": "body",
+          "supportTriangle": 19690,
+          "seed": [
+            -0.06,
+            -0.073,
+            0.88
+          ],
+          "center": [
+            -0.06127755716443062,
+            -0.07980579882860184,
+            0.882972776889801
+          ],
+          "routeAdjustmentMeters": 0.007535811332585313,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 1,
+          "regionDirection": [
+            0.0,
+            -0.9926199215037227,
+            0.12126702533641855
+          ],
+          "support": "body",
+          "supportTriangle": 15448,
+          "seed": [
+            -0.0610439453125,
+            -0.072181640625,
+            0.8841435546875
+          ],
+          "center": [
+            -0.06218156963586807,
+            -0.0780637264251709,
+            0.8875703811645508
+          ],
+          "routeAdjustmentMeters": 0.006901902793107612,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 2,
+          "regionDirection": [
+            0.0,
+            -0.9888885259727747,
+            0.14865894927448142
+          ],
+          "support": "body",
+          "supportTriangle": 15426,
+          "seed": [
+            -0.0624765625,
+            -0.071296875,
+            0.8897109375
+          ],
+          "center": [
+            -0.06358498334884644,
+            -0.07510729134082794,
+            0.8937194347381592
+          ],
+          "routeAdjustmentMeters": 0.005640560218359178,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 3,
+          "regionDirection": [
+            0.0,
+            -0.9836100529156026,
+            0.18030880123656057
+          ],
+          "support": "body",
+          "supportTriangle": 15374,
+          "seed": [
+            -0.06418652343749999,
+            -0.070263671875,
+            0.8963447265625
+          ],
+          "center": [
+            -0.06557690352201462,
+            -0.07141752541065216,
+            0.9002677798271179
+          ],
+          "routeAdjustmentMeters": 0.004319129736206292,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 4,
+          "regionDirection": [
+            0.0,
+            -0.9766068490571994,
+            0.2150327007098421
+          ],
+          "support": "body",
+          "supportTriangle": 15367,
+          "seed": [
+            -0.06606250000000001,
+            -0.06899999999999999,
+            0.9036875
+          ],
+          "center": [
+            -0.06721366941928864,
+            -0.06752218306064606,
+            0.9067908525466919
+          ],
+          "routeAdjustmentMeters": 0.003624904270074722,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 5,
+          "regionDirection": [
+            0.0,
+            -0.9677472876588855,
+            0.25192297876309383
+          ],
+          "support": "body",
+          "supportTriangle": 13807,
+          "seed": [
+            -0.06799316406249999,
+            -0.067423828125,
+            0.9113818359375
+          ],
+          "center": [
+            -0.0691424310207367,
+            -0.06320029497146606,
+            0.9136719703674316
+          ],
+          "routeAdjustmentMeters": 0.004940016452143993,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 6,
+          "regionDirection": [
+            0.0,
+            -0.9569077338113929,
+            0.2903921296659812
+          ],
+          "support": "body",
+          "supportTriangle": 13509,
+          "seed": [
+            -0.0698671875,
+            -0.06545312499999999,
+            0.9190703124999998
+          ],
+          "center": [
+            -0.0709783136844635,
+            -0.05873023718595505,
+            0.9203649163246155
+          ],
+          "routeAdjustmentMeters": 0.006935980177360937,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 7,
+          "regionDirection": [
+            0.0,
+            -0.9439155857479049,
+            0.3301868667621255
+          ],
+          "support": "body",
+          "supportTriangle": 27156,
+          "seed": [
+            -0.0715732421875,
+            -0.06300585937499999,
+            0.9263955078124999
+          ],
+          "center": [
+            -0.07259754091501236,
+            -0.05423488840460777,
+            0.9266074299812317
+          ],
+          "routeAdjustmentMeters": 0.008833121229341661,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 8,
+          "regionDirection": [
+            0.0,
+            -0.9284766908852592,
+            0.37139067635410367
+          ],
+          "support": "body",
+          "supportTriangle": 26567,
+          "seed": [
+            -0.073,
+            -0.06,
+            0.933
+          ],
+          "center": [
+            -0.07400473952293396,
+            -0.04992212355136871,
+            0.9322158694267273
+          ],
+          "routeAdjustmentMeters": 0.010158147270972386,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 9,
+          "regionDirection": [
+            0.0,
+            -0.9091761642919096,
+            0.41641169806268746
+          ],
+          "support": "body",
+          "supportTriangle": 26587,
+          "seed": [
+            -0.07420996093749999,
+            -0.056237304687499996,
+            0.9391855468750001
+          ],
+          "center": [
+            -0.07553253322839737,
+            -0.0457628071308136,
+            0.937311053276062
+          ],
+          "routeAdjustmentMeters": 0.010722780552736252,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 10,
+          "regionDirection": [
+            0.0,
+            -0.8846322389962541,
+            0.46628939697196015
+          ],
+          "support": "body",
+          "supportTriangle": 2404,
+          "seed": [
+            -0.0753359375,
+            -0.0517109375,
+            0.945421875
+          ],
+          "center": [
+            -0.0770929828286171,
+            -0.04165494441986084,
+            0.9421840906143188
+          ],
+          "routeAdjustmentMeters": 0.010709502922301401,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 11,
+          "regionDirection": [
+            0.0,
+            -0.8546031615004122,
+            0.5192816541661189
+          ],
+          "support": "body",
+          "supportTriangle": 2416,
+          "seed": [
+            -0.0763720703125,
+            -0.0466259765625,
+            0.9516035156250001
+          ],
+          "center": [
+            -0.0789194330573082,
+            -0.03724405914545059,
+            0.9473217725753784
+          ],
+          "routeAdjustmentMeters": 0.010622747051349546,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 12,
+          "regionDirection": [
+            0.0,
+            -0.8190929763436031,
+            0.5736607848760253
+          ],
+          "support": "body",
+          "supportTriangle": 2442,
+          "seed": [
+            -0.07731249999999999,
+            -0.0411875,
+            0.9576250000000001
+          ],
+          "center": [
+            -0.0806712880730629,
+            -0.03290065750479698,
+            0.9526869654655457
+          ],
+          "routeAdjustmentMeters": 0.010515324340867015,
+          "shirtClearanceLiftMeters": 0.000370999971967878
+        },
+        {
+          "row": 13,
+          "regionDirection": [
+            0.0,
+            -0.7783713224970708,
+            0.6278041767256421
+          ],
+          "support": "body",
+          "supportTriangle": 1178,
+          "seed": [
+            -0.0781513671875,
+            -0.035600585937500005,
+            0.963380859375
+          ],
+          "center": [
+            -0.08147681504487991,
+            -0.029114020988345146,
+            0.9577102661132812
+          ],
+          "routeAdjustmentMeters": 0.009773487563792389,
+          "shirtClearanceLiftMeters": 0.0006650971397517501
+        },
+        {
+          "row": 14,
+          "regionDirection": [
+            0.0,
+            -0.7329397567818656,
+            0.6802935490863776
+          ],
+          "support": "body",
+          "supportTriangle": 1248,
+          "seed": [
+            -0.0788828125,
+            -0.0300703125,
+            0.968765625
+          ],
+          "center": [
+            -0.0815381407737732,
+            -0.025706086307764053,
+            0.962655246257782
+          ],
+          "routeAdjustmentMeters": 0.00863999685810489,
+          "shirtClearanceLiftMeters": 0.0008267813379583684
+        },
+        {
+          "row": 15,
+          "regionDirection": [
+            0.0,
+            -0.6834503842219548,
+            0.7299969673271679
+          ],
+          "support": "body",
+          "supportTriangle": 1270,
+          "seed": [
+            -0.07950097656249999,
+            -0.0248017578125,
+            0.973673828125
+          ],
+          "center": [
+            -0.0815017968416214,
+            -0.02252401039004326,
+            0.9675491452217102
+          ],
+          "routeAdjustmentMeters": 0.007630033457147075,
+          "shirtClearanceLiftMeters": 0.001042863701781466
+        },
+        {
+          "row": 16,
+          "regionDirection": [
+            0.0,
+            -0.6305926250944658,
+            0.7761140001162655
+          ],
+          "support": "body",
+          "supportTriangle": 1377,
+          "seed": [
+            -0.08,
+            -0.02,
+            0.978
+          ],
+          "center": [
+            -0.08079062402248383,
+            -0.02005632221698761,
+            0.9716677665710449
+          ],
+          "routeAdjustmentMeters": 0.007103702366730686,
+          "shirtClearanceLiftMeters": 0.0012444303062212377
+        },
+        {
+          "row": 17,
+          "regionDirection": [
+            0.0,
+            -0.571959979909438,
+            0.8202815256861484
+          ],
+          "support": "body",
+          "supportTriangle": 1389,
+          "seed": [
+            -0.080341796875,
+            -0.015658203125,
+            0.9820703125
+          ],
+          "center": [
+            -0.08162286877632141,
+            -0.017387066036462784,
+            0.9757866859436035
+          ],
+          "routeAdjustmentMeters": 0.007090456516982083,
+          "shirtClearanceLiftMeters": 0.0013000013793219795
+        },
+        {
+          "row": 18,
+          "regionDirection": [
+            0.0,
+            -0.50569988032462,
+            0.8627094708183427
+          ],
+          "support": "body",
+          "supportTriangle": 31022,
+          "seed": [
+            -0.08051562500000001,
+            -0.011578125,
+            0.9861249999999999
+          ],
+          "center": [
+            -0.08144600689411163,
+            -0.015138630755245686,
+            0.979465901851654
+          ],
+          "routeAdjustmentMeters": 0.007725276658502145,
+          "shirtClearanceLiftMeters": 0.0012642919995537766
+        },
+        {
+          "row": 19,
+          "regionDirection": [
+            0.0,
+            -0.4333279615024457,
+            0.9012363051831273
+          ],
+          "support": "body",
+          "supportTriangle": 31024,
+          "seed": [
+            -0.08055664062500002,
+            -0.007677734375000002,
+            0.9899296875
+          ],
+          "center": [
+            -0.08158425986766815,
+            -0.012636525556445122,
+            0.9833171367645264
+          ],
+          "routeAdjustmentMeters": 0.008229658145857362,
+          "shirtClearanceLiftMeters": 0.0009726450636018193
+        },
+        {
+          "row": 20,
+          "regionDirection": [
+            0.0,
+            -0.35612189722726256,
+            0.934439508109142
+          ],
+          "support": "body",
+          "supportTriangle": 31028,
+          "seed": [
+            -0.0805,
+            -0.003875000000000001,
+            0.9932500000000001
+          ],
+          "center": [
+            -0.08218454569578171,
+            -0.00996845867484808,
+            0.9870624542236328
+          ],
+          "routeAdjustmentMeters": 0.008711972735128483,
+          "shirtClearanceLiftMeters": 0.00046050161859139153
+        },
+        {
+          "row": 21,
+          "regionDirection": [
+            0.0,
+            -0.27479011343055365,
+            0.9615042348116952
+          ],
+          "support": "body",
+          "supportTriangle": 4457,
+          "seed": [
+            -0.080380859375,
+            -8.789062499999986e-05,
+            0.9958515625000002
+          ],
+          "center": [
+            -0.08315904438495636,
+            -0.007187671959400177,
+            0.991038978099823
+          ],
+          "routeAdjustmentMeters": 0.009015884624077222,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 22,
+          "regionDirection": [
+            0.0,
+            -0.18922866433557642,
+            0.9819330489365218
+          ],
+          "support": "body",
+          "supportTriangle": 4477,
+          "seed": [
+            -0.080234375,
+            0.003765624999999998,
+            0.9975000000000002
+          ],
+          "center": [
+            -0.08347684144973755,
+            -0.004488181322813034,
+            0.9958412051200867
+          ],
+          "routeAdjustmentMeters": 0.009021668800494135,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 23,
+          "regionDirection": [
+            0.0,
+            -0.09835823396301813,
+            0.995151072858627
+          ],
+          "support": "body",
+          "supportTriangle": 2930,
+          "seed": [
+            -0.080095703125,
+            0.007767578125000002,
+            0.9979609375000004
+          ],
+          "center": [
+            -0.08401881903409958,
+            -0.0006850920617580414,
+            1.0013887882232666
+          ],
+          "routeAdjustmentMeters": 0.009929180847549074,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 24,
+          "regionDirection": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "support": "body",
+          "supportTriangle": 4665,
+          "seed": [
+            -0.08,
+            0.012,
+            0.997
+          ],
+          "center": [
+            -0.08474638313055038,
+            0.005102535244077444,
+            1.0073693990707397
+          ],
+          "routeAdjustmentMeters": 0.013327700850837905,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 25,
+          "regionDirection": [
+            0.0,
+            0.11832957204128226,
+            0.9929743764974638
+          ],
+          "support": "body",
+          "supportTriangle": 30840,
+          "seed": [
+            -0.080080078125,
+            0.0166064453125,
+            0.9943515625
+          ],
+          "center": [
+            -0.08547006547451019,
+            0.013755511492490768,
+            1.0126076936721802
+          ],
+          "routeAdjustmentMeters": 0.019247496269639872,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 26,
+          "regionDirection": [
+            0.0,
+            0.2636075972797953,
+            0.9646299988370532
+          ],
+          "support": "body",
+          "supportTriangle": 1558,
+          "seed": [
+            -0.080359375,
+            0.0215703125,
+            0.990125
+          ],
+          "center": [
+            -0.0860663503408432,
+            0.025519907474517822,
+            1.0148072242736816
+          ],
+          "routeAdjustmentMeters": 0.02563944350215204,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 27,
+          "regionDirection": [
+            0.0,
+            0.4240898759900255,
+            0.9056201063816796
+          ],
+          "support": "body",
+          "supportTriangle": 28890,
+          "seed": [
+            -0.08070898437500001,
+            0.026733398437500003,
+            0.9846484375000001
+          ],
+          "center": [
+            -0.08883318305015564,
+            0.04103932902216911,
+            1.0154205560684204
+          ],
+          "routeAdjustmentMeters": 0.030116408528101397,
+          "shirtClearanceLiftMeters": 0.005003740855835664
+        },
+        {
+          "row": 28,
+          "regionDirection": [
+            0.0,
+            0.5799690035207421,
+            0.8146385425175741
+          ],
+          "support": "body",
+          "supportTriangle": 29026,
+          "seed": [
+            -0.081,
+            0.0319375,
+            0.97825
+          ],
+          "center": [
+            -0.08651759475469589,
+            0.05362718924880028,
+            1.0033313035964966
+          ],
+          "routeAdjustmentMeters": 0.031578324732722055,
+          "shirtClearanceLiftMeters": 0.0021340649709989334
+        },
+        {
+          "row": 29,
+          "regionDirection": [
+            0.0,
+            0.7114175140172915,
+            0.7027696071611642
+          ],
+          "support": "body",
+          "supportTriangle": 1451,
+          "seed": [
+            -0.081103515625,
+            0.037024414062500004,
+            0.9712578124999999
+          ],
+          "center": [
+            -0.0848967656493187,
+            0.06059091165661812,
+            0.9901507496833801
+          ],
+          "routeAdjustmentMeters": 0.030441938670454628,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 30,
+          "regionDirection": [
+            0.0,
+            0.8085510476351404,
+            0.5884260389956556
+          ],
+          "support": "body",
+          "supportTriangle": 33023,
+          "seed": [
+            -0.080890625,
+            0.04183593750000001,
+            0.9639999999999997
+          ],
+          "center": [
+            -0.08460142463445663,
+            0.06624852120876312,
+            0.9783256649971008
+          ],
+          "routeAdjustmentMeters": 0.028408432887698704,
+          "shirtClearanceLiftMeters": 0.00014358336747155313
+        },
+        {
+          "row": 31,
+          "regionDirection": [
+            0.0,
+            0.8729707411082613,
+            0.48777257525294787
+          ],
+          "support": "body",
+          "supportTriangle": 33002,
+          "seed": [
+            -0.080232421875,
+            0.0462138671875,
+            0.9568046874999999
+          ],
+          "center": [
+            -0.08373437821865082,
+            0.07022103667259216,
+            0.9680084586143494
+          ],
+          "routeAdjustmentMeters": 0.026663528645583988,
+          "shirtClearanceLiftMeters": 6.09881861334311e-05
+        },
+        {
+          "row": 32,
+          "regionDirection": [
+            0.0,
+            0.9119215051751063,
+            0.41036467732879783
+          ],
+          "support": "body",
+          "supportTriangle": 33026,
+          "seed": [
+            -0.079,
+            0.05,
+            0.95
+          ],
+          "center": [
+            -0.08201128989458084,
+            0.07366993278265,
+            0.9591659307479858
+          ],
+          "routeAdjustmentMeters": 0.025433206855043754,
+          "shirtClearanceLiftMeters": 0.00012908602205187158
+        },
+        {
+          "row": 33,
+          "regionDirection": [
+            0.0,
+            0.9357329134445438,
+            0.35270939127925977
+          ],
+          "support": "body",
+          "supportTriangle": 33032,
+          "seed": [
+            -0.0771962890625,
+            0.05319824218750001,
+            0.943490234375
+          ],
+          "center": [
+            -0.07980594038963318,
+            0.07658693939447403,
+            0.9516072273254395
+          ],
+          "routeAdjustmentMeters": 0.02479774803520253,
+          "shirtClearanceLiftMeters": 9.734352285469891e-05
+        },
+        {
+          "row": 34,
+          "regionDirection": [
+            0.0,
+            0.9524039655651687,
+            0.3048387875184865
+          ],
+          "support": "body",
+          "supportTriangle": 15048,
+          "seed": [
+            -0.0749453125,
+            0.0559609375,
+            0.9369218749999999
+          ],
+          "center": [
+            -0.07711857557296753,
+            0.07937335968017578,
+            0.9447311162948608
+          ],
+          "routeAdjustmentMeters": 0.024775972923953407,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 35,
+          "regionDirection": [
+            0.0,
+            0.9646695679136038,
+            0.26346275778823314
+          ],
+          "support": "body",
+          "supportTriangle": 15043,
+          "seed": [
+            -0.0722998046875,
+            0.0583525390625,
+            0.930236328125
+          ],
+          "center": [
+            -0.07426228374242783,
+            0.08242465555667877,
+            0.9380273818969727
+          ],
+          "routeAdjustmentMeters": 0.025377522247613405,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 36,
+          "regionDirection": [
+            0.0,
+            0.9740521059517903,
+            0.22632387167703363
+          ],
+          "support": "body",
+          "supportTriangle": 19061,
+          "seed": [
+            -0.06931249999999999,
+            0.060437500000000005,
+            0.923375
+          ],
+          "center": [
+            -0.0708545446395874,
+            0.08580589294433594,
+            0.930768609046936
+          ],
+          "routeAdjustmentMeters": 0.02646882537982463,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 37,
+          "regionDirection": [
+            0.0,
+            0.9814103266705357,
+            0.19192126173103416
+          ],
+          "support": "body",
+          "supportTriangle": 19160,
+          "seed": [
+            -0.0660361328125,
+            0.06228027343750001,
+            0.9162792968749999
+          ],
+          "center": [
+            -0.06703577935695648,
+            0.08896712958812714,
+            0.9225894212722778
+          ],
+          "routeAdjustmentMeters": 0.027440941207021875,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 38,
+          "regionDirection": [
+            0.0,
+            0.9872162689370189,
+            0.15938644341998434
+          ],
+          "support": "body",
+          "supportTriangle": 13974,
+          "seed": [
+            -0.06252343749999997,
+            0.06394531250000002,
+            0.9088906249999998
+          ],
+          "center": [
+            -0.06274677067995071,
+            0.0913035124540329,
+            0.913444459438324
+          ],
+          "routeAdjustmentMeters": 0.02773550775676873,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 39,
+          "regionDirection": [
+            0.0,
+            0.9917145381784863,
+            0.1284611799939252
+          ],
+          "support": "body",
+          "supportTriangle": 17869,
+          "seed": [
+            -0.05882714843749998,
+            0.0654970703125,
+            0.9011503906249998
+          ],
+          "center": [
+            -0.05795197933912277,
+            0.09238538146018982,
+            0.9038360118865967
+          ],
+          "routeAdjustmentMeters": 0.02703626747327515,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 40,
+          "regionDirection": [
+            0.0,
+            0.9950371902099893,
+            0.09950371902099893
+          ],
+          "support": "body",
+          "supportTriangle": 17874,
+          "seed": [
+            -0.055,
+            0.067,
+            0.893
+          ],
+          "center": [
+            -0.05368496850132942,
+            0.09206340461969376,
+            0.8938051462173462
+          ],
+          "routeAdjustmentMeters": 0.025110790895634665,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 41,
+          "regionDirection": [
+            0.0,
+            0.9972101937062031,
+            0.07464468881599656
+          ],
+          "support": "body",
+          "supportTriangle": 20552,
+          "seed": [
+            -0.0511318359375,
+            0.06844921875,
+            0.884400390625
+          ],
+          "center": [
+            -0.04935720935463905,
+            0.09070215374231339,
+            0.8841469287872314
+          ],
+          "routeAdjustmentMeters": 0.022325023139605642,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 42,
+          "regionDirection": [
+            0.0,
+            0.9984866423951775,
+            0.05499477210067189
+          ],
+          "support": "body",
+          "supportTriangle": 20547,
+          "seed": [
+            -0.047210937499999994,
+            0.06978125,
+            0.875390625
+          ],
+          "center": [
+            -0.04512288421392441,
+            0.08902567625045776,
+            0.874725878238678
+          ],
+          "routeAdjustmentMeters": 0.01936878407364507,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 43,
+          "regionDirection": [
+            0.0,
+            0.9992091213204609,
+            0.03976344891973515
+          ],
+          "support": "body",
+          "supportTriangle": 20565,
+          "seed": [
+            -0.043137695312499995,
+            0.07097265625,
+            0.8660292968750001
+          ],
+          "center": [
+            -0.04116673022508621,
+            0.08732780814170837,
+            0.8650273680686951
+          ],
+          "routeAdjustmentMeters": 0.016503925536355275,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 44,
+          "regionDirection": [
+            0.0,
+            0.9996047266725819,
+            0.028113882937666375
+          ],
+          "support": "body",
+          "supportTriangle": 15001,
+          "seed": [
+            -0.0388125,
+            0.07200000000000001,
+            0.856375
+          ],
+          "center": [
+            -0.03676704317331314,
+            0.08541271090507507,
+            0.8550168871879578
+          ],
+          "routeAdjustmentMeters": 0.013635584984267916,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 45,
+          "regionDirection": [
+            0.0,
+            0.9998159332776945,
+            0.019185920985260455
+          ],
+          "support": "body",
+          "supportTriangle": 14995,
+          "seed": [
+            -0.0341357421875,
+            0.07283984375,
+            0.846486328125
+          ],
+          "center": [
+            -0.03188011422753334,
+            0.08321961015462875,
+            0.8449038863182068
+          ],
+          "routeAdjustmentMeters": 0.010739251844534154,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 46,
+          "regionDirection": [
+            0.0,
+            0.9999266895809692,
+            0.012108487256644568
+          ],
+          "support": "body",
+          "supportTriangle": 4958,
+          "seed": [
+            -0.0290078125,
+            0.07346875,
+            0.8364218750000001
+          ],
+          "center": [
+            -0.02640395611524582,
+            0.08067299425601959,
+            0.8347983360290527
+          ],
+          "routeAdjustmentMeters": 0.007830522470627438,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 47,
+          "regionDirection": [
+            0.0,
+            0.9999819653144705,
+            0.006005751061214871
+          ],
+          "support": "body",
+          "supportTriangle": 4940,
+          "seed": [
+            -0.023329101562499996,
+            0.07386328125,
+            0.8262402343749999
+          ],
+          "center": [
+            -0.020320262759923935,
+            0.07770978659391403,
+            0.8245781660079956
+          ],
+          "routeAdjustmentMeters": 0.0051586030625783786,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 48,
+          "regionDirection": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "support": "body",
+          "supportTriangle": 5260,
+          "seed": [
+            -0.017,
+            0.074,
+            0.816
+          ],
+          "center": [
+            -0.013667088933289051,
+            0.07427714765071869,
+            0.814358115196228
+          ],
+          "routeAdjustmentMeters": 0.0037257070077718634,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 49,
+          "regionDirection": [
+            0.0,
+            0.9999885513364424,
+            -0.004785101466356023
+          ],
+          "support": "body",
+          "supportTriangle": 5279,
+          "seed": [
+            -0.009386718750000002,
+            0.0737470703125,
+            0.8050087890625
+          ],
+          "center": [
+            -0.006209779996424913,
+            0.07039839029312134,
+            0.8034286499023438
+          ],
+          "routeAdjustmentMeters": 0.004878876661856931,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 50,
+          "regionDirection": [
+            0.0,
+            0.9999752816782421,
+            -0.00703107619930014
+          ],
+          "support": "body",
+          "supportTriangle": 5010,
+          "seed": [
+            -0.00031250000000000136,
+            0.0730703125,
+            0.7929140625
+          ],
+          "center": [
+            0.0006628958508372307,
+            0.06759171932935715,
+            0.7913993000984192
+          ],
+          "routeAdjustmentMeters": 0.005767225097782097,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 51,
+          "regionDirection": [
+            0.0,
+            0.9999731789889397,
+            -0.0073240223070479
+          ],
+          "support": "body",
+          "supportTriangle": 38477,
+          "seed": [
+            0.009636718749999999,
+            0.0720927734375,
+            0.7802841796875
+          ],
+          "center": [
+            0.006475338712334633,
+            0.06699684262275696,
+            0.7789434790611267
+          ],
+          "routeAdjustmentMeters": 0.0061449420486082975,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 52,
+          "regionDirection": [
+            0.0,
+            0.9999804693221861,
+            -0.0062498779332636634
+          ],
+          "support": "body",
+          "supportTriangle": 55059,
+          "seed": [
+            0.019874999999999997,
+            0.07093749999999999,
+            0.7676874999999999
+          ],
+          "center": [
+            0.017275728285312653,
+            0.06838167458772659,
+            0.7661351561546326
+          ],
+          "routeAdjustmentMeters": 0.00396209898905187,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 53,
+          "regionDirection": [
+            0.0,
+            0.9999903441874003,
+            -0.004394488817229787
+          ],
+          "support": "body",
+          "supportTriangle": 51448,
+          "seed": [
+            0.029816406250000003,
+            0.0697275390625,
+            0.7556923828125
+          ],
+          "center": [
+            0.02937445603311062,
+            0.06827137619256973,
+            0.7535898089408875
+          ],
+          "routeAdjustmentMeters": 0.002595485924361698,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 54,
+          "regionDirection": [
+            0.0,
+            0.9999972534292841,
+            -0.0023437435627248833
+          ],
+          "support": "body",
+          "supportTriangle": 51945,
+          "seed": [
+            0.038875,
+            0.06858593749999999,
+            0.7448671874999999
+          ],
+          "center": [
+            0.04064999893307686,
+            0.06563680619001389,
+            0.7425360083580017
+          ],
+          "routeAdjustmentMeters": 0.004157209747902049,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 55,
+          "regionDirection": [
+            0.0,
+            0.9999997663498743,
+            -0.0006835935902782371
+          ],
+          "support": "body",
+          "supportTriangle": 50147,
+          "seed": [
+            0.04646484374999999,
+            0.06763574218749999,
+            0.7357802734375
+          ],
+          "center": [
+            0.04934785142540932,
+            0.06200776994228363,
+            0.7336878776550293
+          ],
+          "routeAdjustmentMeters": 0.006660624967666004,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 56,
+          "regionDirection": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "support": "body",
+          "supportTriangle": 51497,
+          "seed": [
+            0.052,
+            0.067,
+            0.729
+          ],
+          "center": [
+            0.055834997445344925,
+            0.0588001124560833,
+            0.7273430824279785
+          ],
+          "routeAdjustmentMeters": 0.009202757031409445,
+          "shirtClearanceLiftMeters": 0.0
+        }
+      ],
+      "binding": {
+        "object": "Overalls shoulder strap",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.018203912302851677,
+        "maximumInfluences": 4
+      },
+      "maximumShirtClearanceLiftMeters": 0.005003740855835664,
+      "shirtClearanceEnvelopeSlope": 0.45,
+      "shirtClearanceSamples": [
+        {
+          "row": 0,
+          "triangle": 2216,
+          "signedShirtGapMeters": 0.006400998681783676,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 1,
+          "triangle": 1213,
+          "signedShirtGapMeters": 0.006595763377845287,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 2,
+          "triangle": 1211,
+          "signedShirtGapMeters": 0.006760672200471163,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 3,
+          "triangle": 1194,
+          "signedShirtGapMeters": 0.006650139577686787,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 4,
+          "triangle": 1197,
+          "signedShirtGapMeters": 0.006701507139950991,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 5,
+          "triangle": 834,
+          "signedShirtGapMeters": 0.006758405361324549,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 6,
+          "triangle": 774,
+          "signedShirtGapMeters": 0.006938097532838583,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 7,
+          "triangle": 3228,
+          "signedShirtGapMeters": 0.0070430440828204155,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 8,
+          "triangle": 3141,
+          "signedShirtGapMeters": 0.006628287490457296,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 9,
+          "triangle": 250,
+          "signedShirtGapMeters": 0.006038374733179808,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 10,
+          "triangle": 294,
+          "signedShirtGapMeters": 0.005327493418008089,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 11,
+          "triangle": 290,
+          "signedShirtGapMeters": 0.004660480190068483,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 12,
+          "triangle": 299,
+          "signedShirtGapMeters": 0.004130815155804157,
+          "requiredOutwardLiftMeters": 0.000370999971967878
+        },
+        {
+          "row": 13,
+          "triangle": 128,
+          "signedShirtGapMeters": 0.0038373263087123632,
+          "requiredOutwardLiftMeters": 0.0006650971397517501
+        },
+        {
+          "row": 14,
+          "triangle": 129,
+          "signedShirtGapMeters": 0.003674659412354231,
+          "requiredOutwardLiftMeters": 0.0008267813379583684
+        },
+        {
+          "row": 15,
+          "triangle": 133,
+          "signedShirtGapMeters": 0.0034580277279019356,
+          "requiredOutwardLiftMeters": 0.001042863701781466
+        },
+        {
+          "row": 16,
+          "triangle": 161,
+          "signedShirtGapMeters": 0.003256841329857707,
+          "requiredOutwardLiftMeters": 0.0012444303062212377
+        },
+        {
+          "row": 17,
+          "triangle": 163,
+          "signedShirtGapMeters": 0.003200205508619547,
+          "requiredOutwardLiftMeters": 0.0013000013793219795
+        },
+        {
+          "row": 18,
+          "triangle": 162,
+          "signedShirtGapMeters": 0.003237123368307948,
+          "requiredOutwardLiftMeters": 0.0012642919995537766
+        },
+        {
+          "row": 19,
+          "triangle": 3346,
+          "signedShirtGapMeters": 0.003534384071826935,
+          "requiredOutwardLiftMeters": 0.0009726450636018193
+        },
+        {
+          "row": 20,
+          "triangle": 3348,
+          "signedShirtGapMeters": 0.004043923690915108,
+          "requiredOutwardLiftMeters": 0.00046050161859139153
+        },
+        {
+          "row": 27,
+          "triangle": 3367,
+          "signedShirtGapMeters": -0.0002520717680454254,
+          "requiredOutwardLiftMeters": 0.005003740855835664
+        },
+        {
+          "row": 28,
+          "triangle": 3378,
+          "signedShirtGapMeters": 0.002404410159215331,
+          "requiredOutwardLiftMeters": 0.0021340649709989334
+        },
+        {
+          "row": 30,
+          "triangle": 3385,
+          "signedShirtGapMeters": 0.004356477875262499,
+          "requiredOutwardLiftMeters": 0.00014358336747155313
+        },
+        {
+          "row": 31,
+          "triangle": 3394,
+          "signedShirtGapMeters": 0.004439036827534437,
+          "requiredOutwardLiftMeters": 6.09881861334311e-05
+        },
+        {
+          "row": 32,
+          "triangle": 3395,
+          "signedShirtGapMeters": 0.004370942246168852,
+          "requiredOutwardLiftMeters": 0.00012908602205187158
+        },
+        {
+          "row": 33,
+          "triangle": 3392,
+          "signedShirtGapMeters": 0.004402662627398968,
+          "requiredOutwardLiftMeters": 9.734352285469891e-05
+        },
+        {
+          "row": 34,
+          "triangle": 1113,
+          "signedShirtGapMeters": 0.004519295413047075,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 35,
+          "triangle": 1115,
+          "signedShirtGapMeters": 0.005158983636647463,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 36,
+          "triangle": 2061,
+          "signedShirtGapMeters": 0.0061670043505728245,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 37,
+          "triangle": 2086,
+          "signedShirtGapMeters": 0.007064423523843288,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 38,
+          "triangle": 877,
+          "signedShirtGapMeters": 0.0072839949280023575,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 39,
+          "triangle": 1771,
+          "signedShirtGapMeters": 0.007338210009038448,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 40,
+          "triangle": 1772,
+          "signedShirtGapMeters": 0.007108290214091539,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 41,
+          "triangle": 2432,
+          "signedShirtGapMeters": 0.006537272594869137,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 42,
+          "triangle": 2435,
+          "signedShirtGapMeters": 0.006260726600885391,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 43,
+          "triangle": 2437,
+          "signedShirtGapMeters": 0.006321710534393787,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 44,
+          "triangle": 1103,
+          "signedShirtGapMeters": 0.00633690319955349,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 45,
+          "triangle": 1101,
+          "signedShirtGapMeters": 0.006879597902297974,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 46,
+          "triangle": 417,
+          "signedShirtGapMeters": 0.007100450806319714,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 47,
+          "triangle": 419,
+          "signedShirtGapMeters": 0.007384015247225761,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 48,
+          "triangle": 498,
+          "signedShirtGapMeters": 0.0070997742004692554,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 49,
+          "triangle": 502,
+          "signedShirtGapMeters": 0.006257032975554466,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 50,
+          "triangle": 3894,
+          "signedShirtGapMeters": 0.005422796122729778,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 51,
+          "triangle": 3939,
+          "signedShirtGapMeters": 0.005540656391531229,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 52,
+          "triangle": 6196,
+          "signedShirtGapMeters": 0.005623573902994394,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 53,
+          "triangle": 5295,
+          "signedShirtGapMeters": 0.0055632209405303,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 54,
+          "triangle": 5417,
+          "signedShirtGapMeters": 0.0058916169218719006,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 55,
+          "triangle": 5027,
+          "signedShirtGapMeters": 0.005231028888374567,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 56,
+          "triangle": 5024,
+          "signedShirtGapMeters": 0.004700313787907362,
+          "requiredOutwardLiftMeters": 0.0
+        }
+      ],
+      "artisticAcceptance": false,
+      "geometryPreservation": "Body/bind/actions untouched; old strap archived; new strap topology/UVs authored"
+    },
+    {
+      "object": "Overalls shoulder strap.001",
+      "construction": "New closed rounded leather ribbon, intentional replacement of obsolete strap mesh",
+      "widthMeters": 0.019,
+      "thicknessMeters": 0.003,
+      "routeLengthMeters": 0.5338767170906067,
+      "maximumAdjacentSegmentAngleDegrees": 23.693370819091797,
+      "maximumRouteAdjustmentMeters": 0.03134860092112798,
+      "routing": [
+        {
+          "row": 0,
+          "regionDirection": [
+            0.0,
+            -0.9950371902099893,
+            0.09950371902099893
+          ],
+          "support": "body",
+          "supportTriangle": 52978,
+          "seed": [
+            0.06,
+            -0.073,
+            0.88
+          ],
+          "center": [
+            0.061281852424144745,
+            -0.0799374207854271,
+            0.8830838799476624
+          ],
+          "routeAdjustmentMeters": 0.0076994329871072735,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 1,
+          "regionDirection": [
+            0.0,
+            -0.9926199215037227,
+            0.12126702533641855
+          ],
+          "support": "body",
+          "supportTriangle": 48714,
+          "seed": [
+            0.0610439453125,
+            -0.072181640625,
+            0.8841435546875
+          ],
+          "center": [
+            0.062252674251794815,
+            -0.07813772559165955,
+            0.8877046704292297
+          ],
+          "routeAdjustmentMeters": 0.007043970407714071,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 2,
+          "regionDirection": [
+            0.0,
+            -0.9888885259727747,
+            0.14865894927448142
+          ],
+          "support": "body",
+          "supportTriangle": 48710,
+          "seed": [
+            0.0624765625,
+            -0.071296875,
+            0.8897109375
+          ],
+          "center": [
+            0.06368100643157959,
+            -0.0750976949930191,
+            0.8938708305358887
+          ],
+          "routeAdjustmentMeters": 0.005762085375425119,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 3,
+          "regionDirection": [
+            0.0,
+            -0.9836100529156026,
+            0.18030880123656057
+          ],
+          "support": "body",
+          "supportTriangle": 48654,
+          "seed": [
+            0.06418652343749999,
+            -0.070263671875,
+            0.8963447265625
+          ],
+          "center": [
+            0.06557029485702515,
+            -0.07135993242263794,
+            0.9003541469573975
+          ],
+          "routeAdjustmentMeters": 0.004380874619619014,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 4,
+          "regionDirection": [
+            0.0,
+            -0.9766068490571994,
+            0.2150327007098421
+          ],
+          "support": "body",
+          "supportTriangle": 48641,
+          "seed": [
+            0.06606250000000001,
+            -0.06899999999999999,
+            0.9036875
+          ],
+          "center": [
+            0.06720598042011261,
+            -0.06743358820676804,
+            0.9068332314491272
+          ],
+          "routeAdjustmentMeters": 0.003695513459207676,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 5,
+          "regionDirection": [
+            0.0,
+            -0.9677472876588855,
+            0.25192297876309383
+          ],
+          "support": "body",
+          "supportTriangle": 47098,
+          "seed": [
+            0.06799316406249999,
+            -0.067423828125,
+            0.9113818359375
+          ],
+          "center": [
+            0.06912388652563095,
+            -0.06310563534498215,
+            0.9136739373207092
+          ],
+          "routeAdjustmentMeters": 0.00501787314755335,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 6,
+          "regionDirection": [
+            0.0,
+            -0.9569077338113929,
+            0.2903921296659812
+          ],
+          "support": "body",
+          "supportTriangle": 46785,
+          "seed": [
+            0.0698671875,
+            -0.06545312499999999,
+            0.9190703124999998
+          ],
+          "center": [
+            0.07100256532430649,
+            -0.05870534107089043,
+            0.92024827003479
+          ],
+          "routeAdjustmentMeters": 0.006943288465247952,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 7,
+          "regionDirection": [
+            0.0,
+            -0.9439155857479049,
+            0.3301868667621255
+          ],
+          "support": "body",
+          "supportTriangle": 60437,
+          "seed": [
+            0.0715732421875,
+            -0.06300585937499999,
+            0.9263955078124999
+          ],
+          "center": [
+            0.07259050756692886,
+            -0.054170526564121246,
+            0.9265798330307007
+          ],
+          "routeAdjustmentMeters": 0.008895611868625999,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 8,
+          "regionDirection": [
+            0.0,
+            -0.9284766908852592,
+            0.37139067635410367
+          ],
+          "support": "body",
+          "supportTriangle": 59841,
+          "seed": [
+            0.073,
+            -0.06,
+            0.933
+          ],
+          "center": [
+            0.07399653643369675,
+            -0.04984792321920395,
+            0.9322047829627991
+          ],
+          "routeAdjustmentMeters": 0.010231818898080537,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 9,
+          "regionDirection": [
+            0.0,
+            -0.9091761642919096,
+            0.41641169806268746
+          ],
+          "support": "body",
+          "supportTriangle": 59867,
+          "seed": [
+            0.07420996093749999,
+            -0.056237304687499996,
+            0.9391855468750001
+          ],
+          "center": [
+            0.07549837976694107,
+            -0.04567365348339081,
+            0.9373052716255188
+          ],
+          "routeAdjustmentMeters": 0.010806765698207205,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 10,
+          "regionDirection": [
+            0.0,
+            -0.8846322389962541,
+            0.46628939697196015
+          ],
+          "support": "body",
+          "supportTriangle": 35683,
+          "seed": [
+            0.0753359375,
+            -0.0517109375,
+            0.945421875
+          ],
+          "center": [
+            0.07702312618494034,
+            -0.04157862812280655,
+            0.9421553015708923
+          ],
+          "routeAdjustmentMeters": 0.010778719819232013,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 11,
+          "regionDirection": [
+            0.0,
+            -0.8546031615004122,
+            0.5192816541661189
+          ],
+          "support": "body",
+          "supportTriangle": 35705,
+          "seed": [
+            0.0763720703125,
+            -0.0466259765625,
+            0.9516035156250001
+          ],
+          "center": [
+            0.07883328944444656,
+            -0.037321653217077255,
+            0.9472844004631042
+          ],
+          "routeAdjustmentMeters": 0.010621629442298717,
+          "shirtClearanceLiftMeters": 8.243138839188336e-05
+        },
+        {
+          "row": 12,
+          "regionDirection": [
+            0.0,
+            -0.8190929763436031,
+            0.5736607848760253
+          ],
+          "support": "body",
+          "supportTriangle": 35743,
+          "seed": [
+            0.07731249999999999,
+            -0.0411875,
+            0.9576250000000001
+          ],
+          "center": [
+            0.08058953285217285,
+            -0.03310611471533775,
+            0.9526507258415222
+          ],
+          "routeAdjustmentMeters": 0.010421647468451378,
+          "shirtClearanceLiftMeters": 0.0004649798386421977
+        },
+        {
+          "row": 13,
+          "regionDirection": [
+            0.0,
+            -0.7783713224970708,
+            0.6278041767256421
+          ],
+          "support": "body",
+          "supportTriangle": 34458,
+          "seed": [
+            0.0781513671875,
+            -0.035600585937500005,
+            0.963380859375
+          ],
+          "center": [
+            0.08150530606508255,
+            -0.029224496334791183,
+            0.9577229022979736
+          ],
+          "routeAdjustmentMeters": 0.009718750851112325,
+          "shirtClearanceLiftMeters": 0.0006939352534643748
+        },
+        {
+          "row": 14,
+          "regionDirection": [
+            0.0,
+            -0.7329397567818656,
+            0.6802935490863776
+          ],
+          "support": "body",
+          "supportTriangle": 34529,
+          "seed": [
+            0.0788828125,
+            -0.0300703125,
+            0.968765625
+          ],
+          "center": [
+            0.0817243903875351,
+            -0.025690095499157906,
+            0.9627448916435242
+          ],
+          "routeAdjustmentMeters": 0.00865975710990086,
+          "shirtClearanceLiftMeters": 0.0008605512848153084
+        },
+        {
+          "row": 15,
+          "regionDirection": [
+            0.0,
+            -0.6834503842219548,
+            0.7299969673271679
+          ],
+          "support": "body",
+          "supportTriangle": 34547,
+          "seed": [
+            0.07950097656249999,
+            -0.0248017578125,
+            0.973673828125
+          ],
+          "center": [
+            0.08175228536128998,
+            -0.02248428203165531,
+            0.9676011204719543
+          ],
+          "routeAdjustmentMeters": 0.007690855998422985,
+          "shirtClearanceLiftMeters": 0.0010834415352657682
+        },
+        {
+          "row": 16,
+          "regionDirection": [
+            0.0,
+            -0.6305926250944658,
+            0.7761140001162655
+          ],
+          "support": "body",
+          "supportTriangle": 34661,
+          "seed": [
+            0.08,
+            -0.02,
+            0.978
+          ],
+          "center": [
+            0.08137147128582001,
+            -0.019871527329087257,
+            0.9718080759048462
+          ],
+          "routeAdjustmentMeters": 0.007088742741729152,
+          "shirtClearanceLiftMeters": 0.0012575098151782844
+        },
+        {
+          "row": 17,
+          "regionDirection": [
+            0.0,
+            -0.571959979909438,
+            0.8202815256861484
+          ],
+          "support": "body",
+          "supportTriangle": 34678,
+          "seed": [
+            0.080341796875,
+            -0.015658203125,
+            0.9820703125
+          ],
+          "center": [
+            0.08214264363050461,
+            -0.017371585592627525,
+            0.9756895899772644
+          ],
+          "routeAdjustmentMeters": 0.007281541761524527,
+          "shirtClearanceLiftMeters": 0.001337862551712593
+        },
+        {
+          "row": 18,
+          "regionDirection": [
+            0.0,
+            -0.50569988032462,
+            0.8627094708183427
+          ],
+          "support": "body",
+          "supportTriangle": 64315,
+          "seed": [
+            0.08051562500000001,
+            -0.011578125,
+            0.9861249999999999
+          ],
+          "center": [
+            0.08190073072910309,
+            -0.015165310353040695,
+            0.9793282151222229
+          ],
+          "routeAdjustmentMeters": 0.007905552603888696,
+          "shirtClearanceLiftMeters": 0.0012706374349294011
+        },
+        {
+          "row": 19,
+          "regionDirection": [
+            0.0,
+            -0.4333279615024457,
+            0.9012363051831273
+          ],
+          "support": "body",
+          "supportTriangle": 64312,
+          "seed": [
+            0.08055664062500002,
+            -0.007677734375000002,
+            0.9899296875
+          ],
+          "center": [
+            0.08263064920902252,
+            -0.012418799102306366,
+            0.9834194183349609
+          ],
+          "routeAdjustmentMeters": 0.008219213652779105,
+          "shirtClearanceLiftMeters": 0.000922182019087439
+        },
+        {
+          "row": 20,
+          "regionDirection": [
+            0.0,
+            -0.35612189722726256,
+            0.934439508109142
+          ],
+          "support": "body",
+          "supportTriangle": 64309,
+          "seed": [
+            0.0805,
+            -0.003875000000000001,
+            0.9932500000000001
+          ],
+          "center": [
+            0.08242888748645782,
+            -0.009600936435163021,
+            0.9868805408477783
+          ],
+          "routeAdjustmentMeters": 0.008779348773500372,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 21,
+          "regionDirection": [
+            0.0,
+            -0.27479011343055365,
+            0.9615042348116952
+          ],
+          "support": "body",
+          "supportTriangle": 37754,
+          "seed": [
+            0.080380859375,
+            -8.789062499999986e-05,
+            0.9958515625000002
+          ],
+          "center": [
+            0.083137147128582,
+            -0.007311495020985603,
+            0.9910780787467957
+          ],
+          "routeAdjustmentMeters": 0.009086458594653703,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 22,
+          "regionDirection": [
+            0.0,
+            -0.18922866433557642,
+            0.9819330489365218
+          ],
+          "support": "body",
+          "supportTriangle": 37758,
+          "seed": [
+            0.080234375,
+            0.003765624999999998,
+            0.9975000000000002
+          ],
+          "center": [
+            0.08349402248859406,
+            -0.0045204851776361465,
+            0.9960185289382935
+          ],
+          "routeAdjustmentMeters": 0.009026609559103421,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 23,
+          "regionDirection": [
+            0.0,
+            -0.09835823396301813,
+            0.995151072858627
+          ],
+          "support": "body",
+          "supportTriangle": 36202,
+          "seed": [
+            0.080095703125,
+            0.007767578125000002,
+            0.9979609375000004
+          ],
+          "center": [
+            0.08406195044517517,
+            -0.0006461925804615021,
+            1.001575231552124
+          ],
+          "routeAdjustmentMeters": 0.00997926734705987,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 24,
+          "regionDirection": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "support": "body",
+          "supportTriangle": 37949,
+          "seed": [
+            0.08,
+            0.012,
+            0.997
+          ],
+          "center": [
+            0.08480463922023773,
+            0.00513710081577301,
+            1.0074633359909058
+          ],
+          "routeAdjustmentMeters": 0.013403930144106766,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 25,
+          "regionDirection": [
+            0.0,
+            0.11832957204128226,
+            0.9929743764974638
+          ],
+          "support": "body",
+          "supportTriangle": 64124,
+          "seed": [
+            0.080080078125,
+            0.0166064453125,
+            0.9943515625
+          ],
+          "center": [
+            0.08556103706359863,
+            0.013906680978834629,
+            1.0126726627349854
+          ],
+          "routeAdjustmentMeters": 0.019313009919852367,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 26,
+          "regionDirection": [
+            0.0,
+            0.2636075972797953,
+            0.9646299988370532
+          ],
+          "support": "body",
+          "supportTriangle": 34841,
+          "seed": [
+            0.080359375,
+            0.0215703125,
+            0.990125
+          ],
+          "center": [
+            0.08619548380374908,
+            0.02570345066487789,
+            1.0146384239196777
+          ],
+          "routeAdjustmentMeters": 0.025535288314898555,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 27,
+          "regionDirection": [
+            0.0,
+            0.4240898759900255,
+            0.9056201063816796
+          ],
+          "support": "body",
+          "supportTriangle": 62159,
+          "seed": [
+            0.08070898437500001,
+            0.026733398437500003,
+            0.9846484375000001
+          ],
+          "center": [
+            0.08635257184505463,
+            0.03924292325973511,
+            1.0112310647964478
+          ],
+          "routeAdjustmentMeters": 0.029916122154987238,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 28,
+          "regionDirection": [
+            0.0,
+            0.5799690035207421,
+            0.8146385425175741
+          ],
+          "support": "body",
+          "supportTriangle": 62311,
+          "seed": [
+            0.081,
+            0.0319375,
+            0.97825
+          ],
+          "center": [
+            0.08540806174278259,
+            0.05217058211565018,
+            1.0017856359481812
+          ],
+          "routeAdjustmentMeters": 0.03134860092112798,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 29,
+          "regionDirection": [
+            0.0,
+            0.7114175140172915,
+            0.7027696071611642
+          ],
+          "support": "body",
+          "supportTriangle": 34739,
+          "seed": [
+            0.081103515625,
+            0.037024414062500004,
+            0.9712578124999999
+          ],
+          "center": [
+            0.08503888547420502,
+            0.06092553213238716,
+            0.9904928803443909
+          ],
+          "routeAdjustmentMeters": 0.030359270238737815,
+          "shirtClearanceLiftMeters": 0.0005929826748827157
+        },
+        {
+          "row": 30,
+          "regionDirection": [
+            0.0,
+            0.8085510476351404,
+            0.5884260389956556
+          ],
+          "support": "body",
+          "supportTriangle": 66282,
+          "seed": [
+            0.080890625,
+            0.04183593750000001,
+            0.9639999999999997
+          ],
+          "center": [
+            0.08453439921140671,
+            0.06628105789422989,
+            0.9785993695259094
+          ],
+          "routeAdjustmentMeters": 0.0285487381290822,
+          "shirtClearanceLiftMeters": 0.00016088717758428787
+        },
+        {
+          "row": 31,
+          "regionDirection": [
+            0.0,
+            0.8729707411082613,
+            0.48777257525294787
+          ],
+          "support": "body",
+          "supportTriangle": 66303,
+          "seed": [
+            0.080232421875,
+            0.0462138671875,
+            0.9568046874999999
+          ],
+          "center": [
+            0.08369393646717072,
+            0.07048694044351578,
+            0.9683302044868469
+          ],
+          "routeAdjustmentMeters": 0.02695522046127882,
+          "shirtClearanceLiftMeters": 0.00013996839380552711
+        },
+        {
+          "row": 32,
+          "regionDirection": [
+            0.0,
+            0.9119215051751063,
+            0.41036467732879783
+          ],
+          "support": "body",
+          "supportTriangle": 66306,
+          "seed": [
+            0.079,
+            0.05,
+            0.95
+          ],
+          "center": [
+            0.08202879130840302,
+            0.07406338304281235,
+            0.9594680666923523
+          ],
+          "routeAdjustmentMeters": 0.025807937283527798,
+          "shirtClearanceLiftMeters": 0.0002307460013130156
+        },
+        {
+          "row": 33,
+          "regionDirection": [
+            0.0,
+            0.9357329134445438,
+            0.35270939127925977
+          ],
+          "support": "body",
+          "supportTriangle": 66324,
+          "seed": [
+            0.0771962890625,
+            0.05319824218750001,
+            0.943490234375
+          ],
+          "center": [
+            0.07982577383518219,
+            0.07707342505455017,
+            0.951805055141449
+          ],
+          "routeAdjustmentMeters": 0.025212894052290994,
+          "shirtClearanceLiftMeters": 0.0002067734220280739
+        },
+        {
+          "row": 34,
+          "regionDirection": [
+            0.0,
+            0.9524039655651687,
+            0.3048387875184865
+          ],
+          "support": "body",
+          "supportTriangle": 48329,
+          "seed": [
+            0.0749453125,
+            0.0559609375,
+            0.9369218749999999
+          ],
+          "center": [
+            0.07711613923311234,
+            0.07978653162717819,
+            0.9447579383850098
+          ],
+          "routeAdjustmentMeters": 0.025169819064160534,
+          "shirtClearanceLiftMeters": 5.106407373534651e-06
+        },
+        {
+          "row": 35,
+          "regionDirection": [
+            0.0,
+            0.9646695679136038,
+            0.26346275778823314
+          ],
+          "support": "body",
+          "supportTriangle": 48324,
+          "seed": [
+            0.0722998046875,
+            0.0583525390625,
+            0.930236328125
+          ],
+          "center": [
+            0.07425165176391602,
+            0.08277232944965363,
+            0.9379259943962097
+          ],
+          "routeAdjustmentMeters": 0.02567619202539221,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 36,
+          "regionDirection": [
+            0.0,
+            0.9740521059517903,
+            0.22632387167703363
+          ],
+          "support": "body",
+          "supportTriangle": 52340,
+          "seed": [
+            0.06931249999999999,
+            0.060437500000000005,
+            0.923375
+          ],
+          "center": [
+            0.07081355154514313,
+            0.08601810783147812,
+            0.930634617805481
+          ],
+          "routeAdjustmentMeters": 0.026633112913264815,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 37,
+          "regionDirection": [
+            0.0,
+            0.9814103266705357,
+            0.19192126173103416
+          ],
+          "support": "body",
+          "supportTriangle": 52427,
+          "seed": [
+            0.0660361328125,
+            0.06228027343750001,
+            0.9162792968749999
+          ],
+          "center": [
+            0.06697335839271545,
+            0.0890493094921112,
+            0.9225271940231323
+          ],
+          "routeAdjustmentMeters": 0.027504470579433553,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 38,
+          "regionDirection": [
+            0.0,
+            0.9872162689370189,
+            0.15938644341998434
+          ],
+          "support": "body",
+          "supportTriangle": 47244,
+          "seed": [
+            0.06252343749999997,
+            0.06394531250000002,
+            0.9088906249999998
+          ],
+          "center": [
+            0.06263174116611481,
+            0.09128894656896591,
+            0.9134581685066223
+          ],
+          "routeAdjustmentMeters": 0.02772270743391589,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 39,
+          "regionDirection": [
+            0.0,
+            0.9917145381784863,
+            0.1284611799939252
+          ],
+          "support": "body",
+          "supportTriangle": 51159,
+          "seed": [
+            0.05882714843749998,
+            0.0654970703125,
+            0.9011503906249998
+          ],
+          "center": [
+            0.0580010786652565,
+            0.09232831001281738,
+            0.9038192629814148
+          ],
+          "routeAdjustmentMeters": 0.02697629875982504,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 40,
+          "regionDirection": [
+            0.0,
+            0.9950371902099893,
+            0.09950371902099893
+          ],
+          "support": "body",
+          "supportTriangle": 51152,
+          "seed": [
+            0.055,
+            0.067,
+            0.893
+          ],
+          "center": [
+            0.053629640489816666,
+            0.09199574589729309,
+            0.8938344717025757
+          ],
+          "routeAdjustmentMeters": 0.02504718629250786,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 41,
+          "regionDirection": [
+            0.0,
+            0.9972101937062031,
+            0.07464468881599656
+          ],
+          "support": "body",
+          "supportTriangle": 53850,
+          "seed": [
+            0.0511318359375,
+            0.06844921875,
+            0.884400390625
+          ],
+          "center": [
+            0.049508754163980484,
+            0.09070762246847153,
+            0.8841699957847595
+          ],
+          "routeAdjustmentMeters": 0.02231869199394104,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 42,
+          "regionDirection": [
+            0.0,
+            0.9984866423951775,
+            0.05499477210067189
+          ],
+          "support": "body",
+          "supportTriangle": 53830,
+          "seed": [
+            0.047210937499999994,
+            0.06978125,
+            0.875390625
+          ],
+          "center": [
+            0.04515599459409714,
+            0.08904069662094116,
+            0.8748155832290649
+          ],
+          "routeAdjustmentMeters": 0.01937729979975854,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 43,
+          "regionDirection": [
+            0.0,
+            0.9992091213204609,
+            0.03976344891973515
+          ],
+          "support": "body",
+          "supportTriangle": 53839,
+          "seed": [
+            0.043137695312499995,
+            0.07097265625,
+            0.8660292968750001
+          ],
+          "center": [
+            0.04111958295106888,
+            0.08732553571462631,
+            0.8649590611457825
+          ],
+          "routeAdjustmentMeters": 0.016511657966541454,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 44,
+          "regionDirection": [
+            0.0,
+            0.9996047266725819,
+            0.028113882937666375
+          ],
+          "support": "body",
+          "supportTriangle": 48272,
+          "seed": [
+            0.0388125,
+            0.07200000000000001,
+            0.856375
+          ],
+          "center": [
+            0.03684169054031372,
+            0.0855238288640976,
+            0.8549774885177612
+          ],
+          "routeAdjustmentMeters": 0.013737942910595354,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 45,
+          "regionDirection": [
+            0.0,
+            0.9998159332776945,
+            0.019185920985260455
+          ],
+          "support": "body",
+          "supportTriangle": 48278,
+          "seed": [
+            0.0341357421875,
+            0.07283984375,
+            0.846486328125
+          ],
+          "center": [
+            0.03190460801124573,
+            0.08349351584911346,
+            0.8448556065559387
+          ],
+          "routeAdjustmentMeters": 0.011006268293280897,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 46,
+          "regionDirection": [
+            0.0,
+            0.9999266895809692,
+            0.012108487256644568
+          ],
+          "support": "body",
+          "supportTriangle": 38219,
+          "seed": [
+            0.0290078125,
+            0.07346875,
+            0.8364218750000001
+          ],
+          "center": [
+            0.026295702904462814,
+            0.0811961367726326,
+            0.8346671462059021
+          ],
+          "routeAdjustmentMeters": 0.008375387628814486,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 47,
+          "regionDirection": [
+            0.0,
+            0.9999819653144705,
+            0.006005751061214871
+          ],
+          "support": "body",
+          "supportTriangle": 38237,
+          "seed": [
+            0.023329101562499996,
+            0.07386328125,
+            0.8262402343749999
+          ],
+          "center": [
+            0.020040126517415047,
+            0.07863802462816238,
+            0.8243701457977295
+          ],
+          "routeAdjustmentMeters": 0.006092024496120688,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 48,
+          "regionDirection": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "support": "body",
+          "supportTriangle": 38550,
+          "seed": [
+            0.017,
+            0.074,
+            0.816
+          ],
+          "center": [
+            0.013209301978349686,
+            0.07586732506752014,
+            0.8140432238578796
+          ],
+          "routeAdjustmentMeters": 0.004656744277873112,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 49,
+          "regionDirection": [
+            0.0,
+            0.9999885513364424,
+            -0.004785101466356023
+          ],
+          "support": "body",
+          "supportTriangle": 38556,
+          "seed": [
+            0.009386718750000002,
+            0.0737470703125,
+            0.8050087890625
+          ],
+          "center": [
+            0.005591738969087601,
+            0.07291287183761597,
+            0.8030264377593994
+          ],
+          "routeAdjustmentMeters": 0.004362049440565429,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 50,
+          "regionDirection": [
+            0.0,
+            0.9999752816782421,
+            -0.00703107619930014
+          ],
+          "support": "body",
+          "supportTriangle": 38295,
+          "seed": [
+            0.00031250000000000136,
+            0.0730703125,
+            0.7929140625
+          ],
+          "center": [
+            -0.0008257898152805865,
+            0.07075751572847366,
+            0.7909420728683472
+          ],
+          "routeAdjustmentMeters": 0.003245531654028392,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 51,
+          "regionDirection": [
+            0.0,
+            0.9999731789889397,
+            -0.0073240223070479
+          ],
+          "support": "body",
+          "supportTriangle": 5212,
+          "seed": [
+            -0.009636718749999999,
+            0.0720927734375,
+            0.7802841796875
+          ],
+          "center": [
+            -0.005720410030335188,
+            0.06952747702598572,
+            0.7785739302635193
+          ],
+          "routeAdjustmentMeters": 0.004984292603657704,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 52,
+          "regionDirection": [
+            0.0,
+            0.9999804693221861,
+            -0.0062498779332636634
+          ],
+          "support": "body",
+          "supportTriangle": 21771,
+          "seed": [
+            -0.019874999999999997,
+            0.07093749999999999,
+            0.7676874999999999
+          ],
+          "center": [
+            -0.016956087201833725,
+            0.0696963295340538,
+            0.7658515572547913
+          ],
+          "routeAdjustmentMeters": 0.0036648658655563373,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 53,
+          "regionDirection": [
+            0.0,
+            0.9999903441874003,
+            -0.004394488817229787
+          ],
+          "support": "body",
+          "supportTriangle": 18161,
+          "seed": [
+            -0.029816406250000003,
+            0.0697275390625,
+            0.7556923828125
+          ],
+          "center": [
+            -0.029337001964449883,
+            0.06870094686746597,
+            0.7534828782081604
+          ],
+          "routeAdjustmentMeters": 0.0024830687869058874,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 54,
+          "regionDirection": [
+            0.0,
+            0.9999972534292841,
+            -0.0023437435627248833
+          ],
+          "support": "body",
+          "supportTriangle": 18664,
+          "seed": [
+            -0.038875,
+            0.06858593749999999,
+            0.7448671874999999
+          ],
+          "center": [
+            -0.04065101966261864,
+            0.06575755774974823,
+            0.7425783276557922
+          ],
+          "routeAdjustmentMeters": 0.004048809360795913,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 55,
+          "regionDirection": [
+            0.0,
+            0.9999997663498743,
+            -0.0006835935902782371
+          ],
+          "support": "body",
+          "supportTriangle": 16868,
+          "seed": [
+            -0.04646484374999999,
+            0.06763574218749999,
+            0.7357802734375
+          ],
+          "center": [
+            -0.04931322857737541,
+            0.062105171382427216,
+            0.7337182760238647
+          ],
+          "routeAdjustmentMeters": 0.006553803696219785,
+          "shirtClearanceLiftMeters": 0.0
+        },
+        {
+          "row": 56,
+          "regionDirection": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "support": "body",
+          "supportTriangle": 18235,
+          "seed": [
+            -0.052,
+            0.067,
+            0.729
+          ],
+          "center": [
+            -0.05590348318219185,
+            0.059215907007455826,
+            0.7273795008659363
+          ],
+          "routeAdjustmentMeters": 0.00906813678082204,
+          "shirtClearanceLiftMeters": 0.00031890342098409914
+        }
+      ],
+      "binding": {
+        "object": "Overalls shoulder strap.001",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.016043830662965775,
+        "maximumInfluences": 4
+      },
+      "maximumShirtClearanceLiftMeters": 0.001337862551712593,
+      "shirtClearanceEnvelopeSlope": 0.45,
+      "shirtClearanceSamples": [
+        {
+          "row": 0,
+          "triangle": 5676,
+          "signedShirtGapMeters": 0.007640446070581675,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 1,
+          "triangle": 4664,
+          "signedShirtGapMeters": 0.0075854710303246975,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 2,
+          "triangle": 4668,
+          "signedShirtGapMeters": 0.007363006006926298,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 3,
+          "triangle": 4650,
+          "signedShirtGapMeters": 0.007226394023746252,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 4,
+          "triangle": 4649,
+          "signedShirtGapMeters": 0.0070625850930809975,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 5,
+          "triangle": 4295,
+          "signedShirtGapMeters": 0.006646216847002506,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 6,
+          "triangle": 4225,
+          "signedShirtGapMeters": 0.006348907947540283,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 7,
+          "triangle": 6685,
+          "signedShirtGapMeters": 0.005994904786348343,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 8,
+          "triangle": 6593,
+          "signedShirtGapMeters": 0.0058538285084068775,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 9,
+          "triangle": 3708,
+          "signedShirtGapMeters": 0.005573383532464504,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 10,
+          "triangle": 3747,
+          "signedShirtGapMeters": 0.004973246715962887,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 11,
+          "triangle": 3751,
+          "signedShirtGapMeters": 0.004417755641043186,
+          "requiredOutwardLiftMeters": 8.243138839188336e-05
+        },
+        {
+          "row": 12,
+          "triangle": 3758,
+          "signedShirtGapMeters": 0.004036286845803261,
+          "requiredOutwardLiftMeters": 0.0004649798386421977
+        },
+        {
+          "row": 13,
+          "triangle": 3585,
+          "signedShirtGapMeters": 0.003808071371167898,
+          "requiredOutwardLiftMeters": 0.0006939352534643748
+        },
+        {
+          "row": 14,
+          "triangle": 3584,
+          "signedShirtGapMeters": 0.0036411304026842117,
+          "requiredOutwardLiftMeters": 0.0008605512848153084
+        },
+        {
+          "row": 15,
+          "triangle": 3588,
+          "signedShirtGapMeters": 0.0034175370819866657,
+          "requiredOutwardLiftMeters": 0.0010834415352657682
+        },
+        {
+          "row": 16,
+          "triangle": 3622,
+          "signedShirtGapMeters": 0.0032430351711809635,
+          "requiredOutwardLiftMeters": 0.0012575098151782844
+        },
+        {
+          "row": 17,
+          "triangle": 3621,
+          "signedShirtGapMeters": 0.0031628403812646866,
+          "requiredOutwardLiftMeters": 0.001337862551712593
+        },
+        {
+          "row": 18,
+          "triangle": 3620,
+          "signedShirtGapMeters": 0.003231039736419916,
+          "requiredOutwardLiftMeters": 0.0012706374349294011
+        },
+        {
+          "row": 19,
+          "triangle": 6806,
+          "signedShirtGapMeters": 0.0035808649845421314,
+          "requiredOutwardLiftMeters": 0.000922182019087439
+        },
+        {
+          "row": 22,
+          "triangle": 6802,
+          "signedShirtGapMeters": 0.005633272230625153,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 27,
+          "triangle": 14596,
+          "signedShirtGapMeters": 0.02363656833767891,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 29,
+          "triangle": 6837,
+          "signedShirtGapMeters": 0.0039099473506212234,
+          "requiredOutwardLiftMeters": 0.0005929826748827157
+        },
+        {
+          "row": 30,
+          "triangle": 6840,
+          "signedShirtGapMeters": 0.004339175298810005,
+          "requiredOutwardLiftMeters": 0.00016088717758428787
+        },
+        {
+          "row": 31,
+          "triangle": 6850,
+          "signedShirtGapMeters": 0.004360293969511986,
+          "requiredOutwardLiftMeters": 0.00013996839380552711
+        },
+        {
+          "row": 32,
+          "triangle": 6851,
+          "signedShirtGapMeters": 0.004269387573003769,
+          "requiredOutwardLiftMeters": 0.0002307460013130156
+        },
+        {
+          "row": 33,
+          "triangle": 5296,
+          "signedShirtGapMeters": 0.004293498583137989,
+          "requiredOutwardLiftMeters": 0.0002067734220280739
+        },
+        {
+          "row": 34,
+          "triangle": 4568,
+          "signedShirtGapMeters": 0.004494907800108194,
+          "requiredOutwardLiftMeters": 5.106407373534651e-06
+        },
+        {
+          "row": 35,
+          "triangle": 4574,
+          "signedShirtGapMeters": 0.005043719429522753,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 36,
+          "triangle": 5516,
+          "signedShirtGapMeters": 0.005954127758741379,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 37,
+          "triangle": 5536,
+          "signedShirtGapMeters": 0.006589701399207115,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 38,
+          "triangle": 4330,
+          "signedShirtGapMeters": 0.006893767975270748,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 39,
+          "triangle": 5229,
+          "signedShirtGapMeters": 0.007182031869888306,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 40,
+          "triangle": 5227,
+          "signedShirtGapMeters": 0.0073649687692523,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 41,
+          "triangle": 5895,
+          "signedShirtGapMeters": 0.007089126389473677,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 42,
+          "triangle": 5894,
+          "signedShirtGapMeters": 0.0066636404953897,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 43,
+          "triangle": 5890,
+          "signedShirtGapMeters": 0.006615014281123877,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 44,
+          "triangle": 5551,
+          "signedShirtGapMeters": 0.006411366164684296,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 45,
+          "triangle": 4556,
+          "signedShirtGapMeters": 0.006769402883946896,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 46,
+          "triangle": 3875,
+          "signedShirtGapMeters": 0.006942274514585733,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 47,
+          "triangle": 3878,
+          "signedShirtGapMeters": 0.007422265596687794,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 48,
+          "triangle": 3957,
+          "signedShirtGapMeters": 0.007811303250491619,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 49,
+          "triangle": 3953,
+          "signedShirtGapMeters": 0.008295445702970028,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 50,
+          "triangle": 435,
+          "signedShirtGapMeters": 0.00878059957176447,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 51,
+          "triangle": 481,
+          "signedShirtGapMeters": 0.008867288939654827,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 52,
+          "triangle": 2736,
+          "signedShirtGapMeters": 0.008450234308838844,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 53,
+          "triangle": 524,
+          "signedShirtGapMeters": 0.00757609773427248,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 54,
+          "triangle": 1960,
+          "signedShirtGapMeters": 0.0071245296858251095,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 55,
+          "triangle": 1574,
+          "signedShirtGapMeters": 0.005691845901310444,
+          "requiredOutwardLiftMeters": 0.0
+        },
+        {
+          "row": 56,
+          "triangle": 1855,
+          "signedShirtGapMeters": 0.004186582285910845,
+          "requiredOutwardLiftMeters": 0.00031890342098409914
+        }
+      ],
+      "artisticAcceptance": false,
+      "geometryPreservation": "Body/bind/actions untouched; old strap archived; new strap topology/UVs authored"
+    }
+  ],
+  "layers": [
+    {
+      "object": "Bib pocket flap",
+      "maximumShiftMeters": 0.014918297290963256,
+      "binding": {
+        "object": "Bib pocket flap",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03848051279783249,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Strap adjustment buckle",
+      "maximumShiftMeters": 0.007966241023940291,
+      "binding": {
+        "object": "Strap adjustment buckle",
+        "rigid": true,
+        "maximumBodySupportDistanceMeters": 0.021214544773101807,
+        "maximumInfluences": 1
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Buckle hollow insert",
+      "maximumShiftMeters": 0.007533957971414223,
+      "binding": {
+        "object": "Buckle hollow insert",
+        "rigid": true,
+        "maximumBodySupportDistanceMeters": 0.024619219824671745,
+        "maximumInfluences": 1
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib stitched outer seam",
+      "maximumShiftMeters": 0.021282783341096935,
+      "binding": {
+        "object": "Bib stitched outer seam",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.044885020703077316,
+        "maximumInfluences": 4
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching",
+      "maximumShiftMeters": 0.014438107134805709,
+      "binding": {
+        "object": "Bib hand stitching",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.043705232441425323,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.001",
+      "maximumShiftMeters": 0.014608516654314337,
+      "binding": {
+        "object": "Bib hand stitching.001",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04284532740712166,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.002",
+      "maximumShiftMeters": 0.014601282750382544,
+      "binding": {
+        "object": "Bib hand stitching.002",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.043066516518592834,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.003",
+      "maximumShiftMeters": 0.014371603716694681,
+      "binding": {
+        "object": "Bib hand stitching.003",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.044352348893880844,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.004",
+      "maximumShiftMeters": 0.014067494092862886,
+      "binding": {
+        "object": "Bib hand stitching.004",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04559788852930069,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.005",
+      "maximumShiftMeters": 0.013401583379218507,
+      "binding": {
+        "object": "Bib hand stitching.005",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.046051643788814545,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.006",
+      "maximumShiftMeters": 0.012562303912943223,
+      "binding": {
+        "object": "Bib hand stitching.006",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.045406971126794815,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.007",
+      "maximumShiftMeters": 0.011476383047767838,
+      "binding": {
+        "object": "Bib hand stitching.007",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04353593662381172,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.008",
+      "maximumShiftMeters": 0.010178693107305802,
+      "binding": {
+        "object": "Bib hand stitching.008",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.041046708822250366,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.009",
+      "maximumShiftMeters": 0.008812279005963118,
+      "binding": {
+        "object": "Bib hand stitching.009",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03883829712867737,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.010",
+      "maximumShiftMeters": 0.007720545450728932,
+      "binding": {
+        "object": "Bib hand stitching.010",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03691248223185539,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.011",
+      "maximumShiftMeters": 0.007349349995025704,
+      "binding": {
+        "object": "Bib hand stitching.011",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.034364406019449234,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.012",
+      "maximumShiftMeters": 0.008055940097822283,
+      "binding": {
+        "object": "Bib hand stitching.012",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03405186906456947,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.013",
+      "maximumShiftMeters": 0.009844914118983111,
+      "binding": {
+        "object": "Bib hand stitching.013",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03479272127151489,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.014",
+      "maximumShiftMeters": 0.011674597789764738,
+      "binding": {
+        "object": "Bib hand stitching.014",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.035413555800914764,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.015",
+      "maximumShiftMeters": 0.013423510550976677,
+      "binding": {
+        "object": "Bib hand stitching.015",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03568614274263382,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.016",
+      "maximumShiftMeters": 0.014570005091746656,
+      "binding": {
+        "object": "Bib hand stitching.016",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03523331880569458,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.017",
+      "maximumShiftMeters": 0.015113510448388266,
+      "binding": {
+        "object": "Bib hand stitching.017",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.034323763102293015,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Strap adjustment buckle.001",
+      "maximumShiftMeters": 0.006892550860474417,
+      "binding": {
+        "object": "Strap adjustment buckle.001",
+        "rigid": true,
+        "maximumBodySupportDistanceMeters": 0.020243272185325623,
+        "maximumInfluences": 1
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Buckle hollow insert.001",
+      "maximumShiftMeters": 0.006771859762175537,
+      "binding": {
+        "object": "Buckle hollow insert.001",
+        "rigid": true,
+        "maximumBodySupportDistanceMeters": 0.02387751266360283,
+        "maximumInfluences": 1
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib stitched outer seam.001",
+      "maximumShiftMeters": 0.01893801402508387,
+      "binding": {
+        "object": "Bib stitched outer seam.001",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04182468354701996,
+        "maximumInfluences": 4
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.018",
+      "maximumShiftMeters": 0.011554912071763186,
+      "binding": {
+        "object": "Bib hand stitching.018",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04262474551796913,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.019",
+      "maximumShiftMeters": 0.011629819782642466,
+      "binding": {
+        "object": "Bib hand stitching.019",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.043954502791166306,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.020",
+      "maximumShiftMeters": 0.011671587162173376,
+      "binding": {
+        "object": "Bib hand stitching.020",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04476842284202576,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.021",
+      "maximumShiftMeters": 0.011584200033560128,
+      "binding": {
+        "object": "Bib hand stitching.021",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04447970166802406,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.022",
+      "maximumShiftMeters": 0.011412359840299285,
+      "binding": {
+        "object": "Bib hand stitching.022",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04299301281571388,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.023",
+      "maximumShiftMeters": 0.010955229759506292,
+      "binding": {
+        "object": "Bib hand stitching.023",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.040616996586322784,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.024",
+      "maximumShiftMeters": 0.01020488084217146,
+      "binding": {
+        "object": "Bib hand stitching.024",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03826740011572838,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.025",
+      "maximumShiftMeters": 0.00923103090636727,
+      "binding": {
+        "object": "Bib hand stitching.025",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.036854565143585205,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.026",
+      "maximumShiftMeters": 0.008023247476262695,
+      "binding": {
+        "object": "Bib hand stitching.026",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.036724820733070374,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.027",
+      "maximumShiftMeters": 0.006728708614223208,
+      "binding": {
+        "object": "Bib hand stitching.027",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03776628151535988,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.028",
+      "maximumShiftMeters": 0.0056539102721805635,
+      "binding": {
+        "object": "Bib hand stitching.028",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.038684021681547165,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.029",
+      "maximumShiftMeters": 0.005157381358605808,
+      "binding": {
+        "object": "Bib hand stitching.029",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03673751652240753,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.030",
+      "maximumShiftMeters": 0.005815923242335721,
+      "binding": {
+        "object": "Bib hand stitching.030",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03485148027539253,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.031",
+      "maximumShiftMeters": 0.007665306948195868,
+      "binding": {
+        "object": "Bib hand stitching.031",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03348124772310257,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.032",
+      "maximumShiftMeters": 0.009989396351230632,
+      "binding": {
+        "object": "Bib hand stitching.032",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03252630680799484,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.033",
+      "maximumShiftMeters": 0.012078412230462746,
+      "binding": {
+        "object": "Bib hand stitching.033",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03204722702503204,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.034",
+      "maximumShiftMeters": 0.013335667790620351,
+      "binding": {
+        "object": "Bib hand stitching.034",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.0317680798470974,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib hand stitching.035",
+      "maximumShiftMeters": 0.013880565357510184,
+      "binding": {
+        "object": "Bib hand stitching.035",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.03176860883831978,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Overalls draped bib",
+      "maximumShiftMeters": 0.023828169810431097,
+      "binding": {
+        "object": "Overalls draped bib",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.035190239548683167,
+        "maximumInfluences": 4
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    },
+    {
+      "object": "Bib sewn chest pocket",
+      "maximumShiftMeters": 0.012937546057933395,
+      "binding": {
+        "object": "Bib sewn chest pocket",
+        "rigid": false,
+        "maximumBodySupportDistanceMeters": 0.04144638776779175,
+        "maximumInfluences": 2
+      },
+      "supportMode": "radial torso layers; shoulder straps are authored separately"
+    }
+  ],
+  "scarf": {
+    "changed": false,
+    "status": "Original failed scarf retained unchanged; separate authored cowl replacement pending"
+  },
+  "preserved": {
+    "exactBind": true,
+    "boneCount": 79,
+    "allActionCurvesSha256": {
+      "FacePerformance": "3e8b1ca6e024849012739a59427f60f763d28d14562634650c108bf5de67088e",
+      "Hit": "18eacd0cf84ff6f1246f2c1491fa2bb7f8f0684b3cd464b73d6f8a61ee05c4de",
+      "Idle": "8800941e40062f36bea4b9e11d99c4ae82925d45e44e601732922e405aa182ed",
+      "Melee": "c7c4b2711cc693f4d8e86528aef91f0b826c45e3d14287af6f53d255d5521aef",
+      "Preserved_Idle_BeforeHumanMotion": "86de892cc5dde6cca8d5033cd8404cc7433f87a0c4d94f42d5f18fc5a1bfeb7e",
+      "Preserved_Run_BeforeHumanMotion": "fb8135f3dd8963dba0a195968307e352bf2686bb69694ea888c4ac84c58fa33c",
+      "Preserved_Walk_BeforeHumanMotion": "b0f01a00aebcf2d37e5a8e3e2ad9d292f1eeb9e58c6286d1ceeabdf8015b29af",
+      "Run": "a5c236b220bef82c833ab4f826a36851ac7185589630ce894960f24001bbefe3",
+      "Shoot": "3d460805ef406025d6f9ab2aba3980165e3f96d91b7f6a126a617973947d6670",
+      "Walk": "69899bb44d17d0cc2b371cdbe4aa61579533dde8f736d80d0c5f684bb6521d46"
+    },
+    "headEyesMouthEarsHandsAnatomicalBody": "No mesh edits in this recipe"
+  },
+  "garments": {
+    "Sleeveless dust undershirt": {
+      "vertices": 7316,
+      "triangles": 14640,
+      "boundsMin": [
+        -0.14382018148899078,
+        -0.07847531139850616,
+        0.6660299301147461
+      ],
+      "boundsMax": [
+        0.1435796022415161,
+        0.08592511713504791,
+        0.9951863884925842
+      ]
+    },
+    "Overalls shoulder strap": {
+      "vertices": 684,
+      "triangles": 1364,
+      "boundsMin": [
+        -0.09716643393039703,
+        -0.08146075904369354,
+        0.7203210592269897
+      ],
+      "boundsMax": [
+        0.06212702766060829,
+        0.09445063769817352,
+        1.0203033685684204
+      ]
+    },
+    "Overalls shoulder strap.001": {
+      "vertices": 684,
+      "triangles": 1364,
+      "boundsMin": [
+        -0.06216476857662201,
+        -0.08155110478401184,
+        0.720332682132721
+      ],
+      "boundsMax": [
+        0.09469054639339447,
+        0.09436318278312683,
+        1.0200726985931396
+      ]
+    }
+  },
+  "authoringCode": {
+    "build_garment_study.py": "f32d895d7297bd76d11bf4de901ab3d49985dc46ea93af93991b934686411753",
+    "cloth_patterns.py": "6936633d87dd4b0b60ee16d1bd6a1afb99f3d4519504f3ec5a0206bc804aec61",
+    "fitted_fabric.py": "336817fa659e125efb12a9b8a18c496734a4b14e7e47a358ea9c1a1004cbe960",
+    "shoulder_straps.py": "a4ec95009267a44cca6af3cbf9f46a990fc51ff1c49c767a1d4f9d3f1eee9aa1"
+  },
+  "stage": "shirt-straps",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\garment-study\\v1\\Nib_ShirtStrapsStudy_v1.blend",
+  "outputSha256": "70e06992721ac54970392bc96bc3b2f6602da566ee613f4ef1d6e0b8a5e28cf7"
+}
