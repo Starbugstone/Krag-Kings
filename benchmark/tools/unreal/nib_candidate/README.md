@@ -2,6 +2,12 @@
 
 Prepared integration code only; no bake, export, import or artistic acceptance has run through these jobs.
 
+The next scheduled plan is `plans/nib-coherent79-socket-1b992e-v1`, pinned to the
+actual corrected socket/wrist source SHA `1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732`.
+Its three source views remove the large wrist gap/exposed stump; character art
+and natural grip remain unaccepted. This plan is eligible for the coordinated
+technical bake boundary, with no shared promotion or engine build authorized.
+
 The frozen diagnostic plan pins source `ba0048d08f351c9876a947bd88cc366936cac4fa1ea50ed2aeb17db23e5174be`, its actual source report, all original groom atlases/reference maps and the recipes. That source's actual Grip views fail the wrist gap and retained-skin/cuff interface. `executionReady` is false and the stage runner refuses it. After the artist supplies the corrected saved source and receipt, create a **new** plan/output name with those exact hashes; preserve this diagnostic plan. Heavy execution still follows the parent agent's explicit serialized job grant.
 
 `prepare_plan.py` writes ten separate guarded jobs. It launches no process. The existing PBR/export scripts remain the implementation, with explicit paths overriding their old defaults. Every stage verifies frozen inputs and completed dependency hashes, preserves previous outputs, and requires its fresh completion marker. All output stays below `benchmark/local/candidates`; shared assets and current packages are untouched.

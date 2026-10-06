@@ -1,0 +1,25 @@
+{
+  "name": "nib-coherent79-socket-1b992e-v1-validate-clips",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\run_stage.py",
+    "--",
+    "--plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\plans\\nib-coherent79-socket-1b992e-v1\\plan.json",
+    "--stage",
+    "validate-clips"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-socket-1b992e-v1-validate-clips.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-socket-1b992e-v1-validate-clips.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-socket-1b992e-v1-validate-clips.log",
+  "successMarker": "NIB_CANDIDATE_STAGE_COMPLETE validate-clips"
+}
