@@ -1,0 +1,221 @@
+{
+  "curatedUtc": "2026-10-06T11:08:45.230618+00:00",
+  "files": {
+    "attribution.json": {
+      "sha256": "702f6720746180faed75f22fd8038cb050b1a91ae38b9a3bed2fb0f2855a39cf",
+      "bytes": 4233
+    },
+    "native-plan.json": {
+      "sha256": "010b0422d85814c96cf00577b4f4f9de55d606359dc7f8f6cfd3f85b6117cf6b",
+      "bytes": 36166
+    },
+    "coordinator/executed-OwnedGameWindow.ps1": {
+      "sha256": "022a1f1a3be3c1cba9907401e5c062907710d09d486d4d30a33e49d0fc8e9512",
+      "bytes": 5529
+    },
+    "coordinator/executed-Verify-WindowsInput.ps1": {
+      "sha256": "9613ad5e588c90505b26215a5571dfc510114097a65fa7fa7b4c8521e494f782",
+      "bytes": 22781
+    },
+    "coordinator/gpu.csv": {
+      "sha256": "f2f153dc6643f1cc79b51ff1f31f1924b7e7a39f4b244cfb9c7de5d18be058ab",
+      "bytes": 512
+    },
+    "coordinator/launcher-stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "coordinator/launcher-stdout.log": {
+      "sha256": "e5d9b4cc743aebe7a5c4161a5447edb60c74324550c484637a7c135cc77625db",
+      "bytes": 324
+    },
+    "coordinator/memory.csv": {
+      "sha256": "b7fe940bd91dc988c74eda01c888a14f163c67acf22808702a201659b75b37d8",
+      "bytes": 351
+    },
+    "coordinator/native-input-result.json": {
+      "sha256": "a739f2a8ecebd88d743324b4eeb0d4f890c4c9c9e649881e1f7febd8301af422",
+      "bytes": 929
+    },
+    "diagnostic-build/editor.log": {
+      "sha256": "11543f02958c8c592795c2db710b00e32ab2bf8ced9406462776e432de1a9db0",
+      "bytes": 611285
+    },
+    "diagnostic-build/guard.log": {
+      "sha256": "5734d718f91fe832ab0a02a9ec2e1e36f312584ff92bcf1b8790aae739975c47",
+      "bytes": 380
+    },
+    "diagnostic-build/job.json": {
+      "sha256": "5442712fe900533f2a1d2aba8034e31fd9b974e85800010e27c88b43584563e3",
+      "bytes": 985
+    },
+    "diagnostic-build/memory.csv": {
+      "sha256": "6d34a52392b95bd6968499158f8cbfa639a06ad40ed8944edb9dc06ebcea119e",
+      "bytes": 1042
+    },
+    "diagnostic-build/plan.json": {
+      "sha256": "530f21ef7fe65fef8b7981a63c887f626d4d1023308c464563c31cb0f0f7e9a0",
+      "bytes": 41007
+    },
+    "diagnostic-build/result.json": {
+      "sha256": "06f013f17366d9cb3ccdcfd7958c701a5ef2db2c216dbdda7a12384f2c663705",
+      "bytes": 647
+    },
+    "diagnostic-build/run.ps1": {
+      "sha256": "53881a41d584e6bf4f52eee6841f7d1bc9f88c7d0d692b458c314626c970cfd2",
+      "bytes": 2688
+    },
+    "diagnostic-build/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "diagnostic-build/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runtime/input-probe.json": {
+      "sha256": "99759d7eec427f4b11795ba953402f839c781849e05b0e4a133b08e838ea99bb",
+      "bytes": 3517
+    },
+    "runtime/input-profile.jsonl": {
+      "sha256": "7509c2eae30f3554ac849d694647bcce6c5652b9173579aa363e1376b2a6e5f9",
+      "bytes": 518
+    },
+    "runtime/player.log": {
+      "sha256": "ca62cc85d7490948bdf03f9122d845e583760a88f9f8391242f3ad111216dda6",
+      "bytes": 2511
+    },
+    "runtime/run-conditions.json": {
+      "sha256": "0d24ea799bc9a95cb24b7110be2b89f7d2a86d7e27075d089c00727f15e42550",
+      "bytes": 635
+    },
+    "runtime/windows-input-verification.json": {
+      "sha256": "ccc34f422392d68badce85316450b04410405f9a57f8e9db8cca67f8299ddc93",
+      "bytes": 48525
+    },
+    "diagnostic-build/frozen-source/benchmark/tools/Run-HeavyTask.ps1": {
+      "sha256": "722aaa9d9b7e1831980d585239528ac116a47700b6eec9f2dbfb89bb29981ab8",
+      "bytes": 8006
+    },
+    "diagnostic-build/frozen-source/benchmark/tools/unity/Check-Scripts.ps1": {
+      "sha256": "9b2b1c413125afcc679f39c9bd3cd169c1bf99929f51e317998b0daa2b3dc52a",
+      "bytes": 2389
+    },
+    "diagnostic-build/frozen-source/benchmark/tools/unity/Run-Demo.ps1": {
+      "sha256": "e6692849406cb14596f25df1b015982617dcc1cab1f1bfa2cf8c0150ba5cae6c",
+      "bytes": 2132
+    },
+    "diagnostic-build/frozen-source/benchmark/tools/unity/Run-NativeInput.ps1": {
+      "sha256": "a3771b225207e9d8c6676283870e9322072c83555e31f1177825b07c01cd7712",
+      "bytes": 5107
+    },
+    "diagnostic-build/frozen-source/benchmark/tools/unity/Verify-WindowsInput.ps1": {
+      "sha256": "9613ad5e588c90505b26215a5571dfc510114097a65fa7fa7b4c8521e494f782",
+      "bytes": 22781
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/BenchmarkBuild.cs": {
+      "sha256": "788e32b05ffb5ebd48cf3f429efffd32a866d7456bb994686cd505ceab31ea7f",
+      "bytes": 36871
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/BenchmarkBuild.cs.meta": {
+      "sha256": "e2a0f8b596a60606c2705a2c9678396d6d52c8efbc32c5ac62236d278b65e794",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/BenchmarkModelImport.cs": {
+      "sha256": "78f9a7eb71e5dae7f33286957f909c4621a85a751a8083ea57477b859f8986eb",
+      "bytes": 1724
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/BenchmarkModelImport.cs.meta": {
+      "sha256": "0552534d7443f00a7080e107b56a553c5cc3f5027337b10b3cfdf426e5161e23",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/DemoPressContextCheck.cs": {
+      "sha256": "c27e1a922287e74b5329f45fc7aac1b22b2c652740cff9770995b576e2ca7d58",
+      "bytes": 11811
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/DemoPressContextCheck.cs.meta": {
+      "sha256": "76f63fa1c80193af4ad1906d0c56cb58abb6576ab4132cc635c442ade4442f54",
+      "bytes": 60
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoAudioRecorder.cs": {
+      "sha256": "d8b88cd08c39a2ef7e12681c3f011b17c1bfd127028d3c738f814fe81d6afcff",
+      "bytes": 2046
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoAudioRecorder.cs.meta": {
+      "sha256": "1d54e9caacc9033253069da8b905db1bf78aef108b789bb974d2c51371c1586b",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoCombatAudio.cs": {
+      "sha256": "00692824a5d78074929b0363e789b7a54a7bd8cfe6e52ca24d120fd9e97254c4",
+      "bytes": 1659
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoCombatAudio.cs.meta": {
+      "sha256": "d5d33ce58b4ad9677fd4c216d070e407cca280e6c60dbd5e8ffce4d068780548",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoContacts.cs": {
+      "sha256": "8736399461453c2f07b42f3e0b2529ad8d2ebda7e9cd3ebbf601747bcd86cf3c",
+      "bytes": 4367
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoContacts.cs.meta": {
+      "sha256": "920cee7e1bd247846cf169b30f64dbdc87219b11b5b2886ebd8069bb9db28ef5",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoDeformation.cs": {
+      "sha256": "fe67635f721246a7b55c1e3811e9c7475a3caa6496d928809fdb208af2ad8aef",
+      "bytes": 4453
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoDeformation.cs.meta": {
+      "sha256": "0a4e52b1355d3185baa1a9299e50c56343d769b65c36c6f17166a5ffa6dd0338",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs": {
+      "sha256": "ae90e6af9544819599214aaf3b2f64799f4139c0ca68222dac00248f18ab6b5f",
+      "bytes": 7179
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs.meta": {
+      "sha256": "7e31c6d4a196758c9f96f048ff84fb62929b5a9fc52ecc4f18622d84d73be7b4",
+      "bytes": 60
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoRenderTuning.cs": {
+      "sha256": "d099ed79fb64e1fe3e9f1395bb47ee1e60ba431b4c7dfa8a48689fac59028bc2",
+      "bytes": 1609
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoRenderTuning.cs.meta": {
+      "sha256": "11b1059e5812d92ba347995b7224ac75a417ed6a55ea08ab93b6facbc95bcf32",
+      "bytes": 60
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs": {
+      "sha256": "4b4d66e14d1b9dca4e6df3b2d4e4b76871397342cb693c7e6a261f58b9eb06ed",
+      "bytes": 39909
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs.meta": {
+      "sha256": "7d84924cbe52a2ab604f6225568bff0f734b9f86db1c63d0700183ae478449c1",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoShowcase.cs": {
+      "sha256": "f5d91072d755f34e24d9a9e74b70d73e0b4063de3c22e941fe43fa508747da59",
+      "bytes": 8730
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoShowcase.cs.meta": {
+      "sha256": "eb32e325d52093f490232ce7449b4ee23d166943f05c8d7d27baa46261c45775",
+      "bytes": 59
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoTerrainReference.cs": {
+      "sha256": "5c6d4b552fefe66a249f2aced2de0821b7601d2374c80b3c30d1041f922620a3",
+      "bytes": 2011
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoTerrainReference.cs.meta": {
+      "sha256": "c9ccc48fef132177216e619ad20317713f10375690e33d7bb7cb335061edcdb2",
+      "bytes": 60
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoUnit.cs": {
+      "sha256": "0592dc0c7184746a3ead19892ec3135102881e4c86d3f184a213aee5159b3396",
+      "bytes": 18287
+    },
+    "diagnostic-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoUnit.cs.meta": {
+      "sha256": "fd97f36e39aee226408115476570b6da60cb98d14941ca970840db4737a271d7",
+      "bytes": 59
+    }
+  }
+}

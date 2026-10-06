@@ -39,67 +39,36 @@ namespace KragKings.Benchmark
         string renderQuality;
         DemoCombatAudio combatAudio;
         DemoMovePressQueue movePresses;
-        WindowsMovePressSource windowsPresses;
         bool sceneReady;
         DemoMovePressQueue.Press lastMovePress;
         int movePressDispatchCount,lastMoveDispatchFrame;
         bool lastMoveAccepted;
         IDisposable inputProfileLease;
         bool profileInteractiveInput;
-        string reportedInputProfile;
-        bool applicationPaused,inputSetupFailed;
-        string nativeInputRestoreStatus="not attached";
-        long nativeOriginalProcedure,nativeHookProcedure,nativeProcedureAfterDispose;
-        string MovementBackend=>WindowsMovePressSource.Supported?"Win32 message context":"InputSystem event queue";
+        bool? reportedMergingDisabled;
 
         void OnEnable()=>SynchronizeInputCapture();
-        void OnDisable(){ReleaseInputCapture();inputProfileLease?.Dispose();inputProfileLease=null;RecordInputProfile("disabled");}
-        void OnApplicationFocus(bool focused){movePresses?.Clear();windowsPresses?.Clear();windowsPresses?.SetEnabled(focused&&!applicationPaused);}
-        void OnApplicationPause(bool paused){applicationPaused=paused;movePresses?.Clear();windowsPresses?.Clear();windowsPresses?.SetEnabled(!paused&&Application.isFocused);}
-        void ReleaseInputCapture()
-        {
-            movePresses?.Dispose();movePresses=null;
-            if(windowsPresses!=null)
-            {
-                try {windowsPresses.Dispose();nativeProcedureAfterDispose=windowsPresses.ProcedureAfterDispose;nativeInputRestoreStatus=windowsPresses.Restored?"restored":windowsPresses.RestorationDeferred?"deferred behind another subclass until window destruction":"not restored";}
-                catch(Exception error){nativeInputRestoreStatus="restoration error: "+error.Message;Debug.LogError(nativeInputRestoreStatus);}
-                windowsPresses=null;
-            }
-        }
+        void OnDisable(){movePresses?.Dispose();movePresses=null;inputProfileLease?.Dispose();inputProfileLease=null;RecordInputProfile("disabled");}
+        void OnApplicationFocus(bool focused)=>movePresses?.Clear();
+        void OnApplicationPause(bool paused)=>movePresses?.Clear();
         void SynchronizeInputCapture()
         {
-            if(!sceneReady||inputSetupFailed)return;
+            if(!sceneReady)return;
             bool interactive=!performanceOnly&&!AutomatedView&&!verification;
-            if(interactive&&windowsPresses==null&&movePresses==null)
-            {
-                try
-                {
-                    if(WindowsMovePressSource.Supported)
-                    {
-                        windowsPresses=new WindowsMovePressSource(inputProbe);nativeInputRestoreStatus="attached";
-                        nativeOriginalProcedure=windowsPresses.OriginalProcedure;nativeHookProcedure=windowsPresses.HookProcedure;nativeProcedureAfterDispose=0;
-                        if(inputProbe)movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!applicationPaused,recordDiagnostics:true,captureMovement:false);
-                    }
-                    else movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!applicationPaused&&!performanceOnly&&!AutomatedView&&!verification,inputProbe);
-                }
-                catch(Exception error){inputSetupFailed=true;ReleaseInputCapture();Debug.LogError("Movement input setup failed: "+error);Application.Quit(1);return;}
-            }
-            if(!interactive&&(movePresses!=null||windowsPresses!=null))ReleaseInputCapture();
-            windowsPresses?.SetEnabled(Application.isFocused&&!applicationPaused);
-            if(profileInteractiveInput&&!WindowsMovePressSource.Supported&&inputProfileLease==null)inputProfileLease=DemoMovePressQueue.AcquirePressPositionLease();
+            if(interactive&&movePresses==null)movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!performanceOnly&&!AutomatedView&&!verification,inputProbe);
+            if(!interactive&&movePresses!=null){movePresses.Dispose();movePresses=null;}
+            if(profileInteractiveInput&&inputProfileLease==null)inputProfileLease=DemoMovePressQueue.AcquirePressPositionLease();
             RecordInputProfile("active");
         }
-        [Serializable] sealed class InputProfileRecord {public string utc,reason,buildGuid,inputSystemVersion,movementBackend,nativeRestoreStatus;public long nativeOriginalProcedure,nativeHookProcedure,nativeProcedureAfterDispose;public bool disableRedundantEventsMerging,interactiveCapture,nativeAttached,performanceRun,interactiveProfileRequested;}
+        [Serializable] sealed class InputProfileRecord {public string utc,reason,buildGuid,inputSystemVersion;public bool disableRedundantEventsMerging,interactiveCapture,performanceRun,interactiveProfileRequested;}
         void RecordInputProfile(string reason)
         {
             if(!sceneReady||string.IsNullOrEmpty(evidencePath))return;
             bool disabled=InputSystem.settings.disableRedundantEventsMerging;
-            string profileKey=disabled+":"+(windowsPresses!=null)+":"+(movePresses!=null);
-            if(reason=="active"&&reportedInputProfile==profileKey)return;
-            reportedInputProfile=profileKey;
+            if(reason=="active"&&reportedMergingDisabled==disabled)return;
+            reportedMergingDisabled=disabled;
             var profile=new InputProfileRecord {utc=DateTime.UtcNow.ToString("o"),reason=reason,buildGuid=Application.buildGUID,inputSystemVersion=InputSystem.version.ToString(),
-                disableRedundantEventsMerging=disabled,interactiveCapture=windowsPresses!=null||movePresses!=null,movementBackend=MovementBackend,nativeAttached=windowsPresses!=null,nativeRestoreStatus=nativeInputRestoreStatus,
-                nativeOriginalProcedure=nativeOriginalProcedure,nativeHookProcedure=nativeHookProcedure,nativeProcedureAfterDispose=nativeProcedureAfterDispose,performanceRun=performanceOnly,interactiveProfileRequested=profileInteractiveInput};
+                disableRedundantEventsMerging=disabled,interactiveCapture=movePresses!=null,performanceRun=performanceOnly,interactiveProfileRequested=profileInteractiveInput};
             File.AppendAllText(Path.Combine(evidencePath,"input-profile.jsonl"),JsonUtility.ToJson(profile)+Environment.NewLine);
             Debug.Log("KRAG_INPUT_PROFILE "+JsonUtility.ToJson(profile));
         }
@@ -145,7 +114,6 @@ namespace KragKings.Benchmark
             previousFrameTick=System.Diagnostics.Stopwatch.GetTimestamp();
             sceneReady=true;
             SynchronizeInputCapture();
-            if(inputSetupFailed)return;
             Debug.Log("KRAG_KINGS_DEMO_READY "+SystemInfo.graphicsDeviceName+" "+Screen.width+"x"+Screen.height);
         }
         LineRenderer Ring(string name,Color color,float width)
@@ -238,7 +206,6 @@ namespace KragKings.Benchmark
             smoothedFrame=Mathf.Lerp(smoothedFrame,frameSeconds,.06f);
             if(performanceSampling)frameTimes.Add(frameSeconds*1000);
             SynchronizeInputCapture();
-            if(inputSetupFailed)return;
             if(performanceOnly||AutomatedView){movePresses?.Clear();if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)Application.Quit();return;}
             var keyboard=Keyboard.current;var mouse=Mouse.current;
             if(keyboard!=null)
@@ -273,7 +240,9 @@ namespace KragKings.Benchmark
                 while(movePresses!=null&&movePresses.TryDequeue(out var press))
                 {
                     if(!Application.isFocused){movePresses.Clear();break;}
-                    DispatchMovePress(press);
+                    bool pressInWorld=press.position.y>92*Screen.height/1080f&&press.position.y<Screen.height-100*Screen.height/1080f;
+                    lastMovePress=press;lastMoveDispatchFrame=Time.frameCount;++movePressDispatchCount;
+                    lastMoveAccepted=pressInWorld&&Click(press.position,true,press.walk);
                 }
                 if(mouse.middleButton.isPressed)
                 {
@@ -282,20 +251,8 @@ namespace KragKings.Benchmark
                 // The pinned Input System normalizes one Windows wheel notch to 1.
                 distance=Mathf.Clamp(distance-mouse.scroll.ReadValue().y*.6f,.65f,28);
             }
-            while(windowsPresses!=null&&windowsPresses.TryDequeue(out var native))
-            {
-                if(!Application.isFocused||applicationPaused){windowsPresses.Clear();break;}
-                var position=new Vector2((native.clientX+.5f)*Screen.width/native.clientWidth-.5f,Screen.height-.5f-(native.clientY+.5f)*Screen.height/native.clientHeight);
-                DispatchMovePress(new DemoMovePressQueue.Press {position=position,walk=native.walk,eventId=native.sequence,eventTime=native.messageTimeMilliseconds/1000.0});
-            }
             markerLife-=Time.unscaledDeltaTime;
             if(markerLife<=0) destinationRing.enabled=false;
-        }
-        void DispatchMovePress(DemoMovePressQueue.Press press)
-        {
-            bool inWorld=press.position.y>92*Screen.height/1080f&&press.position.y<Screen.height-100*Screen.height/1080f;
-            lastMovePress=press;lastMoveDispatchFrame=Time.frameCount;++movePressDispatchCount;
-            lastMoveAccepted=inWorld&&Click(press.position,true,press.walk);
         }
         void LateUpdate()
         {
@@ -323,7 +280,6 @@ namespace KragKings.Benchmark
                 moving=Selected.IsMoving,walking=Selected.IsWalking,cameraDistance=distance,cameraYaw=yaw,cameraFocus=cameraFocus,moveScreen=demoCamera.WorldToScreenPoint(destination),
                 movePressCount=movePressDispatchCount,movePressFrame=lastMoveDispatchFrame,movePress=lastMovePress,movePressAccepted=lastMoveAccepted,
                 movementInputEdges=movePresses?.SnapshotDiagnosticEdges(),inputMergingDisabled=InputSystem.settings.disableRedundantEventsMerging,
-                movementBackend=MovementBackend,nativePressHistory=windowsPresses?.SnapshotHistory(),nativeWindowHandle=windowsPresses?.WindowHandle??0,nativeInputError=windowsPresses?.CallbackError,
                 currentMousePosition=Mouse.current?.position.ReadValue()??Vector2.zero,
                 units=units.Select(u=>new InputUnit {species=u.species,position=u.transform.position,
                     action=u.CurrentAction,facePlaying=u.FacePlaying,
@@ -334,7 +290,7 @@ namespace KragKings.Benchmark
             if(File.Exists(path)) File.Replace(temp,path,null);else File.Move(temp,path);
         }
         [Serializable] class InputUnit {public string species,action;public bool facePlaying;public Vector3 position,screen;}
-        [Serializable] class InputProbe {public int frame,width,height,variant,movePressCount,movePressFrame;public long nativeWindowHandle;public string selected,action,keyboardLayout,physicalAKeyLabel,lastKey,buildGuid,contentFingerprint,movementBackend,nativeInputError;public bool moving,walking,facePlaying,movePressAccepted,inputMergingDisabled;public DemoMovePressQueue.Press movePress;public DemoMovePressQueue.DiagnosticEdge[] movementInputEdges;public WindowsMovePressSource.Press[] nativePressHistory;public Vector2 currentMousePosition;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
+        [Serializable] class InputProbe {public int frame,width,height,variant,movePressCount,movePressFrame;public string selected,action,keyboardLayout,physicalAKeyLabel,lastKey,buildGuid,contentFingerprint;public bool moving,walking,facePlaying,movePressAccepted,inputMergingDisabled;public DemoMovePressQueue.Press movePress;public DemoMovePressQueue.DiagnosticEdge[] movementInputEdges;public Vector2 currentMousePosition;public float cameraDistance,cameraYaw;public Vector3 cameraFocus,moveScreen;public InputUnit[] units;}
         void Effect(DemoUnit unit,string action) { if(combatAudio)combatAudio.Action(unit,action);if(action=="Shoot")StartCoroutine(Tracer(unit)); }
         IEnumerator Tracer(DemoUnit unit)
         {
@@ -581,7 +537,7 @@ namespace KragKings.Benchmark
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
                 workload=performanceMoving?"Natural Krag and Nib, repeated 12-second run/melee/shoot/hit sequence, fixed default camera; no captures or input probes during sample":"Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
                 quality=renderQuality,internalResolution=$"{demoCamera.scaledPixelWidth}x{demoCamera.scaledPixelHeight}",
-                inputSystemVersion=InputSystem.version.ToString(),movementBackend=MovementBackend,disableRedundantEventsMerging=InputSystem.settings.disableRedundantEventsMerging,interactiveInputProfileRequested=profileInteractiveInput,
+                inputSystemVersion=InputSystem.version.ToString(),disableRedundantEventsMerging=InputSystem.settings.disableRedundantEventsMerging,interactiveInputProfileRequested=profileInteractiveInput,
                 cameraDistance=Vector3.Distance(demoCamera.transform.position,cameraFocus),
                 failures=runtimeErrors.Distinct().ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"performance.json"),JsonUtility.ToJson(report,true));
@@ -618,6 +574,6 @@ namespace KragKings.Benchmark
         [Serializable] class ShotEvidence {public string species,variant;public float requestedNormalizedTime,observedNormalizedTime,forwardDeviationDegrees;public Vector3 origin,direction,unitForward;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
         [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation;public ShotEvidence[] shots;public DemoTerrainReference.Evidence[] terrain; }
-        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc,inputSystemVersion,movementBackend;public bool disableRedundantEventsMerging,interactiveInputProfileRequested;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
+        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc,inputSystemVersion;public bool disableRedundantEventsMerging,interactiveInputProfileRequested;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }

@@ -1,0 +1,154 @@
+{
+  "scope": "Actual native backend order on b5ca diagnostic build",
+  "buildGuid": "b5ca1584d97449cab6fd30c77b82e8f7",
+  "sourceContentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "buildPassed": true,
+  "nativeResult": "failed",
+  "passingNativeGroups": 0,
+  "inputBatchOrder": [
+    "RightShift down",
+    "RMB down",
+    "RMB up",
+    "RightShift up"
+  ],
+  "actualInputSystemOrder": [
+    {
+      "utc": "2026-10-06T10:54:33.5914257Z",
+      "deviceKind": "KeyboardShift",
+      "eventType": "STAT",
+      "updateType": "Dynamic",
+      "frame": 199,
+      "eventId": 10,
+      "deviceId": 1,
+      "keyboardDeviceId": 1,
+      "inputUpdateCount": 199,
+      "eventTime": 7.4009416,
+      "leftShiftBefore": 0.0,
+      "rightShiftBefore": 0.0,
+      "leftShiftEvent": 0.0,
+      "rightShiftEvent": 1.0,
+      "rightButtonBefore": 0.0,
+      "rightButtonEvent": 0.0,
+      "hasLeftShift": true,
+      "hasRightShift": true,
+      "hasRightButton": false,
+      "leftShiftPressedBefore": false,
+      "rightShiftPressedBefore": false,
+      "eventPosition": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "currentPosition": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "utc": "2026-10-06T10:54:33.6049677Z",
+      "deviceKind": "KeyboardShift",
+      "eventType": "STAT",
+      "updateType": "Dynamic",
+      "frame": 200,
+      "eventId": 11,
+      "deviceId": 1,
+      "keyboardDeviceId": 1,
+      "inputUpdateCount": 200,
+      "eventTime": 7.4145209,
+      "leftShiftBefore": 0.0,
+      "rightShiftBefore": 1.0,
+      "leftShiftEvent": 0.0,
+      "rightShiftEvent": 0.0,
+      "rightButtonBefore": 0.0,
+      "rightButtonEvent": 0.0,
+      "hasLeftShift": true,
+      "hasRightShift": true,
+      "hasRightButton": false,
+      "leftShiftPressedBefore": false,
+      "rightShiftPressedBefore": true,
+      "eventPosition": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "currentPosition": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "utc": "2026-10-06T10:54:33.6049677Z",
+      "deviceKind": "MouseRightButton",
+      "eventType": "STAT",
+      "updateType": "Dynamic",
+      "frame": 200,
+      "eventId": 12,
+      "deviceId": 2,
+      "keyboardDeviceId": 1,
+      "inputUpdateCount": 200,
+      "eventTime": 7.414690299999999,
+      "leftShiftBefore": 0.0,
+      "rightShiftBefore": 0.0,
+      "leftShiftEvent": 0.0,
+      "rightShiftEvent": 0.0,
+      "rightButtonBefore": 0.0,
+      "rightButtonEvent": 1.0,
+      "hasLeftShift": false,
+      "hasRightShift": false,
+      "hasRightButton": true,
+      "leftShiftPressedBefore": false,
+      "rightShiftPressedBefore": false,
+      "eventPosition": {
+        "x": 690.0,
+        "y": 197.0
+      },
+      "currentPosition": {
+        "x": 1276.0,
+        "y": 491.0
+      }
+    },
+    {
+      "utc": "2026-10-06T10:54:33.6059681Z",
+      "deviceKind": "MouseRightButton",
+      "eventType": "STAT",
+      "updateType": "Dynamic",
+      "frame": 200,
+      "eventId": 13,
+      "deviceId": 2,
+      "keyboardDeviceId": 1,
+      "inputUpdateCount": 200,
+      "eventTime": 7.4148182,
+      "leftShiftBefore": 0.0,
+      "rightShiftBefore": 0.0,
+      "leftShiftEvent": 0.0,
+      "rightShiftEvent": 0.0,
+      "rightButtonBefore": 1.0,
+      "rightButtonEvent": 0.0,
+      "hasLeftShift": false,
+      "hasRightShift": false,
+      "hasRightButton": true,
+      "leftShiftPressedBefore": false,
+      "rightShiftPressedBefore": false,
+      "eventPosition": {
+        "x": 690.0,
+        "y": 197.0
+      },
+      "currentPosition": {
+        "x": 690.0,
+        "y": 197.0
+      }
+    }
+  ],
+  "acceptedMove": {
+    "position": {
+      "x": 690.0,
+      "y": 197.0
+    },
+    "walk": false,
+    "mouseDeviceId": 2,
+    "eventId": 12,
+    "eventTime": 7.414690299999999
+  },
+  "actualCursorMatchesRequestedDestinationWithinPixels": 2,
+  "cursorIssueFromPreviousRunExplained": false,
+  "conclusion": "The actual Input System native backend delivered RightShift release before RMB press, so current keyboard state at onEvent loses the authoritative press modifier. A Windows message-context adapter is prepared separately; this run does not validate it.",
+  "artisticAcceptance": false
+}

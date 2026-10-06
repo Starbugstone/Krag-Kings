@@ -31,7 +31,7 @@ namespace KragKings.Benchmark
         readonly Queue<DiagnosticEdge> diagnosticEdges=new();
         readonly Func<bool> acceptEvents;
         readonly IDisposable mergingLease;
-        readonly bool recordDiagnostics,captureMovement;
+        readonly bool recordDiagnostics;
         bool disposed;
 
         sealed class LeaseState {public int users;public bool original;}
@@ -63,12 +63,11 @@ namespace KragKings.Benchmark
         }
         public static IDisposable AcquirePressPositionLease()=>new MergingLease();
 
-        public DemoMovePressQueue(Func<bool> acceptEvents,bool recordDiagnostics=false,bool captureMovement=true)
+        public DemoMovePressQueue(Func<bool> acceptEvents,bool recordDiagnostics=false)
         {
             this.acceptEvents=acceptEvents??throw new ArgumentNullException(nameof(acceptEvents));
             this.recordDiagnostics=recordDiagnostics;
-            this.captureMovement=captureMovement;
-            mergingLease=captureMovement?AcquirePressPositionLease():null;
+            mergingLease=AcquirePressPositionLease();
             InputSystem.onEvent+=OnEvent;
             InputSystem.onDeviceChange+=OnDeviceChange;
         }
@@ -108,7 +107,6 @@ namespace KragKings.Benchmark
         {
             if(disposed||!acceptEvents()) {pending.Clear();return;}
             RecordDiagnostic(input,device);
-            if(!captureMovement)return;
             if(input.handled||!device.enabled||device is not Mouse mouse ||
                 (!input.IsA<StateEvent>()&&!input.IsA<DeltaStateEvent>()))return;
             if(!mouse.rightButton.ReadValueFromEvent(input,out float value) ||
@@ -135,7 +133,7 @@ namespace KragKings.Benchmark
             disposed=true;pending.Clear();
             InputSystem.onEvent-=OnEvent;
             InputSystem.onDeviceChange-=OnDeviceChange;
-            mergingLease?.Dispose();
+            mergingLease.Dispose();
         }
     }
 }

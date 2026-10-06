@@ -2,8 +2,7 @@ param(
     [Parameter(Mandatory=$true)][int]$DemoProcessId,
     [Parameter(Mandatory=$true)][string]$EvidencePath,
     [string]$WindowHelperPath=(Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1'),
-    [switch]$ModifierOnly,
-    [switch]$RequireWindowsPressContext
+    [switch]$ModifierOnly
 )
 $ErrorActionPreference='Stop'
 . $WindowHelperPath
@@ -191,10 +190,6 @@ try {
     $null=Wait-Probe {param($p) $p.frame -ge 120} 'Runtime did not finish initial rendered-frame warmup' 45
     $demo.Refresh();$window=$demo.MainWindowHandle
     $windowLease=[KKOwnedWindowLease]::Acquire($window,[uint32]$demo.Id)
-    if($RequireWindowsPressContext){
-        $initial=Read-Probe
-        if($initial.movementBackend -ne 'Win32 message context' -or $initial.nativeWindowHandle -ne $window.ToInt64() -or $initial.inputMergingDisabled -or $initial.nativeInputError){throw 'Native movement source/profile does not match this owned game window.'}
-    }
     if($ModifierOnly) {
         if(-not $initial.PSObject.Properties['movePressCount']){throw 'This package does not expose the press-context queue probe; build the authorized fix first.'}
         Press-Key 0x24
@@ -211,13 +206,8 @@ try {
             $modifierObservations.Add(@{name=$case.name;before=$before;after=$after;target=$target;requestedHoldMilliseconds=0})
             if($after.movePressCount -ne $before.movePressCount+1 -or -not $after.movePressAccepted -or $after.movePress.walk -ne $expectedWalk){throw ($case.name+' did not retain exactly one accepted press with the expected modifier')}
             if([Math]::Abs($after.movePress.position.x-$target.x) -gt 2 -or [Math]::Abs($after.movePress.position.y-$target.y) -gt 2){throw ($case.name+' captured pointer differs from the actual projected destination')}
-            if($RequireWindowsPressContext){
-                $native=@($after.nativePressHistory|Where-Object {$_.sequence -eq $after.movePress.eventId})
-                if($native.Count -ne 1 -or $native[0].walk -ne $expectedWalk -or (($native[0].flags -band 4) -ne 0) -ne $expectedWalk -or $after.nativeInputError){throw ($case.name+' lacks one matching native press context with authoritative MK_SHIFT')}
-            }
             $null=Wait-Probe {param($p) $p.moving -and $p.walking -eq $expectedWalk -and $p.action -eq $(if($expectedWalk){'Walk'}else{'Run'})} ($case.name+' did not produce the expected movement clip')
-            $settled=Wait-Probe {param($p) -not $p.moving -and $p.action -eq 'Idle'} ($case.name+' movement did not finish') 12
-            if($RequireWindowsPressContext -and $settled.movePressCount -ne $before.movePressCount+1){throw ($case.name+' produced a duplicate movement command')}
+            $null=Wait-Probe {param($p) -not $p.moving -and $p.action -eq 'Idle'} ($case.name+' movement did not finish') 12
             $checks.Add($case.name+' zero-hold native batch retained cursor/modifier and completed movement')
         }
     } else {
@@ -325,7 +315,7 @@ try {
     }
 } catch { $failures.Add($_.Exception.Message) }
 finally {if($windowLease){try{$windowLease.Dispose()}catch{$failures.Add($_.Exception.Message)}}}
-@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;modifierOnly=[bool]$ModifierOnly;requireWindowsPressContext=[bool]$RequireWindowsPressContext;movementBackend=$initial.movementBackend;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());cameraObservations=@($cameraObservations.ToArray());inputEdges=@($inputEdges.ToArray());modifierObservations=@($modifierObservations.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
+@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;modifierOnly=[bool]$ModifierOnly;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());cameraObservations=@($cameraObservations.ToArray());inputEdges=@($inputEdges.ToArray());modifierObservations=@($modifierObservations.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
     ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
 if($failures.Count){throw ($failures -join '; ')}
 Write-Output 'WINDOWS_INPUT_VERIFICATION_PASS'

@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateSet('Full','Balanced')][string]$Quality='Balanced',[switch]$ModifierOnly,[switch]$RequireWindowsPressContext)
+param([ValidateSet('Full','Balanced')][string]$Quality='Balanced',[switch]$ModifierOnly)
 $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 $executable=Join-Path $repo 'benchmark\builds\Unity\KragKings-Unity.exe'
@@ -8,7 +8,7 @@ $run=Join-Path $repo ('benchmark\local\evidence\unity-native-input\'+(Get-Date -
 New-Item -ItemType Directory $run|Out-Null
 $stdout=Join-Path $run 'launcher-stdout.log'
 $stderr=Join-Path $run 'launcher-stderr.log'
-$report=[ordered]@{engine='Unity';quality=$Quality;modifierOnly=[bool]$ModifierOnly;requireWindowsPressContext=[bool]$RequireWindowsPressContext;startedUtc=[DateTime]::UtcNow.ToString('o');completed=$false;artisticAcceptance=$false;performanceMeasurement=$false}
+$report=[ordered]@{engine='Unity';quality=$Quality;modifierOnly=[bool]$ModifierOnly;startedUtc=[DateTime]::UtcNow.ToString('o');completed=$false;artisticAcceptance=$false;performanceMeasurement=$false}
 $launcher=$null;$game=$null;$evidence=$null
 try {
     $script=Join-Path $PSScriptRoot 'Run-Demo.ps1'
@@ -39,7 +39,7 @@ try {
     $windowHelper=Join-Path $run 'executed-OwnedGameWindow.ps1'
     Copy-Item (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1') $windowHelper
     $report.windowHelperSha256=(Get-FileHash $windowHelper -Algorithm SHA256).Hash.ToLower()
-    & $verifier -DemoProcessId $game.Id -EvidencePath $evidence -WindowHelperPath $windowHelper -ModifierOnly:$ModifierOnly -RequireWindowsPressContext:$RequireWindowsPressContext
+    & $verifier -DemoProcessId $game.Id -EvidencePath $evidence -WindowHelperPath $windowHelper -ModifierOnly:$ModifierOnly
     $inputResult=Get-Content (Join-Path $evidence 'windows-input-verification.json') -Raw|ConvertFrom-Json
     if(@($inputResult.failures).Count -ne 0){throw 'Native input checks failed; preserve the report.'}
     $report.buildGuid=$inputResult.buildGuid;$report.contentFingerprint=$inputResult.contentFingerprint
@@ -61,18 +61,11 @@ try {
         if($finished){$launcher.Refresh();$report.launcherExitCode=$launcher.ExitCode}
         else{$report.launcherStillRunning=$true}
     }
-    if($RequireWindowsPressContext -and $evidence -and (Test-Path (Join-Path $evidence 'input-profile.jsonl'))){
-        $profiles=@(Get-Content (Join-Path $evidence 'input-profile.jsonl') | ForEach-Object {$_|ConvertFrom-Json})
-        $last=$profiles|Select-Object -Last 1
-        $report.nativeProcedureRestored=($last.reason -eq 'disabled' -and $last.nativeRestoreStatus -eq 'restored' -and -not $last.nativeAttached -and $last.nativeOriginalProcedure -gt 0 -and $last.nativeProcedureAfterDispose -eq $last.nativeOriginalProcedure -and $last.nativeHookProcedure -ne $last.nativeOriginalProcedure)
-        $report.normalMouseMergingRetained=(@($profiles|Where-Object {$_.disableRedundantEventsMerging}).Count -eq 0)
-    }
     foreach($kind in @('memory','gpu')){
         $telemetry=Join-Path $repo ('benchmark\local\unity-runtime-interactive-'+$kind+'.csv')
         if($game -and (Test-Path $telemetry)){Copy-Item $telemetry (Join-Path $run ($kind+'.csv'))}
     }
     $report.completed=($report.suitePassed -eq $true -and $report.gameClosed -eq $true -and $report.launcherExitCode -eq 0)
-    if($RequireWindowsPressContext){$report.completed=$report.completed -and $report.nativeProcedureRestored -eq $true -and $report.normalMouseMergingRetained -eq $true}
     $report.finishedUtc=[DateTime]::UtcNow.ToString('o')
     $report|ConvertTo-Json -Depth 10|Set-Content (Join-Path $run 'native-input-result.json') -Encoding UTF8
     Write-Output ('UNITY_NATIVE_INPUT_REPORT '+(Join-Path $run 'native-input-result.json'))
