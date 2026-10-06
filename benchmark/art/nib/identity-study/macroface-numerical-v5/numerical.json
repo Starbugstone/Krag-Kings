@@ -1,0 +1,1093 @@
+{
+  "status": "Actual numerical proposal only; no native source/render",
+  "sourceSha256": "ed53df0741441724ea84b09af8124132a1be6f33c1d02a31b9b377ddb53c8903",
+  "cacheSha256": "123a38e07264cb6b31ccbe6145e0a23b091556f141f8ccc1118a25cb02772e24",
+  "ocularCacheSha256": "f03659a8742c390b6dc3ec796d2400df9458d38b174b1c83470c8e4323d0df7e",
+  "params": {
+    "controls": [
+      {
+        "name": "brow_arch_R",
+        "vertex": 26648,
+        "source": [
+          -0.040987465530633926,
+          -0.060525838285684586,
+          1.1943678855895996
+        ],
+        "delta": [
+          -0.005,
+          -0.009,
+          -0.001
+        ],
+        "referenceSourceTarget": [
+          -0.04,
+          -0.13,
+          0.342
+        ]
+      },
+      {
+        "name": "outer_brow_R",
+        "vertex": 29245,
+        "source": [
+          -0.06779440492391586,
+          -0.0435652919113636,
+          1.184253215789795
+        ],
+        "delta": [
+          -0.003,
+          -0.008,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          -0.064,
+          -0.108,
+          0.329
+        ]
+      },
+      {
+        "name": "cheek_peak_R",
+        "vertex": 6135,
+        "source": [
+          -0.08270858228206635,
+          -0.0378514789044857,
+          1.1423380374908447
+        ],
+        "delta": [
+          0.006,
+          -0.008,
+          0.002
+        ],
+        "referenceSourceTarget": [
+          -0.075,
+          -0.1,
+          0.275
+        ]
+      },
+      {
+        "name": "lower_cheek_R",
+        "vertex": 27375,
+        "source": [
+          -0.05562715604901314,
+          -0.043035369366407394,
+          1.110926628112793
+        ],
+        "delta": [
+          0.008,
+          -0.004,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.065,
+          -0.1,
+          0.229
+        ]
+      },
+      {
+        "name": "muzzle_pad_R",
+        "vertex": 24376,
+        "source": [
+          -0.020664675161242485,
+          -0.09635915607213974,
+          1.1266971826553345
+        ],
+        "delta": [
+          -0.002,
+          -0.005,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.023,
+          -0.147,
+          0.25
+        ]
+      },
+      {
+        "name": "nasal_ala_R",
+        "vertex": 6468,
+        "source": [
+          -0.02155427820980549,
+          -0.0913119912147522,
+          1.1409496068954468
+        ],
+        "delta": [
+          -0.0005,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.019,
+          -0.145,
+          0.268
+        ]
+      },
+      {
+        "name": "smile_corner_R",
+        "vertex": 22704,
+        "source": [
+          -0.039581041783094406,
+          -0.07487576454877853,
+          1.1195255517959595
+        ],
+        "delta": [
+          -0.001,
+          -0.001,
+          0.004
+        ],
+        "referenceSourceTarget": [
+          -0.038,
+          -0.136,
+          0.235
+        ]
+      },
+      {
+        "name": "brow_arch_L",
+        "vertex": 38510,
+        "source": [
+          0.041032593697309494,
+          -0.06038949266076088,
+          1.194458246231079
+        ],
+        "delta": [
+          0.005,
+          -0.009,
+          -0.001
+        ],
+        "referenceSourceTarget": [
+          0.04,
+          -0.13,
+          0.342
+        ]
+      },
+      {
+        "name": "outer_brow_L",
+        "vertex": 40701,
+        "source": [
+          0.06780608743429184,
+          -0.0435509979724884,
+          1.18431556224823
+        ],
+        "delta": [
+          0.003,
+          -0.008,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          0.064,
+          -0.108,
+          0.329
+        ]
+      },
+      {
+        "name": "cheek_peak_L",
+        "vertex": 15853,
+        "source": [
+          0.08276698738336563,
+          -0.03786321356892586,
+          1.1423274278640747
+        ],
+        "delta": [
+          -0.006,
+          -0.008,
+          0.002
+        ],
+        "referenceSourceTarget": [
+          0.075,
+          -0.1,
+          0.275
+        ]
+      },
+      {
+        "name": "lower_cheek_L",
+        "vertex": 39231,
+        "source": [
+          0.05564510077238083,
+          -0.04302624240517616,
+          1.1110278367996216
+        ],
+        "delta": [
+          -0.008,
+          -0.004,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.065,
+          -0.1,
+          0.229
+        ]
+      },
+      {
+        "name": "muzzle_pad_L",
+        "vertex": 36238,
+        "source": [
+          0.020766358822584152,
+          -0.09633694589138031,
+          1.1272300481796265
+        ],
+        "delta": [
+          0.002,
+          -0.005,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.023,
+          -0.147,
+          0.25
+        ]
+      },
+      {
+        "name": "nasal_ala_L",
+        "vertex": 3241,
+        "source": [
+          0.021788083016872406,
+          -0.0909850224852562,
+          1.1409375667572021
+        ],
+        "delta": [
+          0.0005,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.019,
+          -0.145,
+          0.268
+        ]
+      },
+      {
+        "name": "smile_corner_L",
+        "vertex": 34576,
+        "source": [
+          0.039579592645168304,
+          -0.0748705342411995,
+          1.1221797466278076
+        ],
+        "delta": [
+          0.001,
+          -0.001,
+          -0.001
+        ],
+        "referenceSourceTarget": [
+          0.038,
+          -0.136,
+          0.235
+        ]
+      },
+      {
+        "name": "nasal_dome",
+        "vertex": 25095,
+        "source": [
+          -0.001794077455997467,
+          -0.10488108545541763,
+          1.14504075050354
+        ],
+        "delta": [
+          0,
+          -0.002,
+          0.005
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.16,
+          0.271
+        ]
+      },
+      {
+        "name": "nasal_bridge",
+        "vertex": 23408,
+        "source": [
+          -0.0020826661493629217,
+          -0.06165025755763054,
+          1.1545137166976929
+        ],
+        "delta": [
+          0,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.146,
+          0.291
+        ]
+      },
+      {
+        "name": "lip_center",
+        "vertex": 16988,
+        "source": [
+          2.111273488480947e-06,
+          -0.10007641464471817,
+          1.1195130348205566
+        ],
+        "delta": [
+          0,
+          0,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.149,
+          0.237
+        ]
+      },
+      {
+        "name": "chin_front",
+        "vertex": 4068,
+        "source": [
+          1.056057408277411e-05,
+          -0.06537438184022903,
+          1.098393201828003
+        ],
+        "delta": [
+          0,
+          -0.002,
+          0
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.1367,
+          0.2
+        ]
+      }
+    ],
+    "centers": [
+      [
+        -0.040987465530633926,
+        -0.060525838285684586,
+        1.1943678855895996
+      ],
+      [
+        -0.06779440492391586,
+        -0.0435652919113636,
+        1.184253215789795
+      ],
+      [
+        -0.08270858228206635,
+        -0.0378514789044857,
+        1.1423380374908447
+      ],
+      [
+        -0.05562715604901314,
+        -0.043035369366407394,
+        1.110926628112793
+      ],
+      [
+        -0.020664675161242485,
+        -0.09635915607213974,
+        1.1266971826553345
+      ],
+      [
+        -0.02155427820980549,
+        -0.0913119912147522,
+        1.1409496068954468
+      ],
+      [
+        -0.039581041783094406,
+        -0.07487576454877853,
+        1.1195255517959595
+      ],
+      [
+        0.041032593697309494,
+        -0.06038949266076088,
+        1.194458246231079
+      ],
+      [
+        0.06780608743429184,
+        -0.0435509979724884,
+        1.18431556224823
+      ],
+      [
+        0.08276698738336563,
+        -0.03786321356892586,
+        1.1423274278640747
+      ],
+      [
+        0.05564510077238083,
+        -0.04302624240517616,
+        1.1110278367996216
+      ],
+      [
+        0.020766358822584152,
+        -0.09633694589138031,
+        1.1272300481796265
+      ],
+      [
+        0.021788083016872406,
+        -0.0909850224852562,
+        1.1409375667572021
+      ],
+      [
+        0.039579592645168304,
+        -0.0748705342411995,
+        1.1221797466278076
+      ],
+      [
+        -0.001794077455997467,
+        -0.10488108545541763,
+        1.14504075050354
+      ],
+      [
+        -0.0020826661493629217,
+        -0.06165025755763054,
+        1.1545137166976929
+      ],
+      [
+        2.111273488480947e-06,
+        -0.10007641464471817,
+        1.1195130348205566
+      ],
+      [
+        1.056057408277411e-05,
+        -0.06537438184022903,
+        1.098393201828003
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.05
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.27
+      ],
+      [
+        -0.12,
+        -0.04,
+        1.05
+      ],
+      [
+        -0.12,
+        -0.04,
+        1.27
+      ],
+      [
+        -0.12,
+        0.07,
+        1.05
+      ],
+      [
+        -0.12,
+        0.07,
+        1.27
+      ],
+      [
+        0.0,
+        -0.15,
+        1.05
+      ],
+      [
+        0.0,
+        -0.15,
+        1.27
+      ],
+      [
+        0.0,
+        -0.04,
+        1.05
+      ],
+      [
+        0.0,
+        -0.04,
+        1.27
+      ],
+      [
+        0.0,
+        0.07,
+        1.05
+      ],
+      [
+        0.0,
+        0.07,
+        1.27
+      ],
+      [
+        0.12,
+        -0.15,
+        1.05
+      ],
+      [
+        0.12,
+        -0.15,
+        1.27
+      ],
+      [
+        0.12,
+        -0.04,
+        1.05
+      ],
+      [
+        0.12,
+        -0.04,
+        1.27
+      ],
+      [
+        0.12,
+        0.07,
+        1.05
+      ],
+      [
+        0.12,
+        0.07,
+        1.27
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.12
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.2
+      ],
+      [
+        -0.12,
+        0.07,
+        1.12
+      ],
+      [
+        -0.12,
+        0.07,
+        1.2
+      ],
+      [
+        0.12,
+        -0.15,
+        1.12
+      ],
+      [
+        0.12,
+        -0.15,
+        1.2
+      ],
+      [
+        0.12,
+        0.07,
+        1.12
+      ],
+      [
+        0.12,
+        0.07,
+        1.2
+      ]
+    ],
+    "radiusMeters": 0.075,
+    "ocular": [
+      {
+        "side": "R",
+        "center": [
+          -0.04071560129523277,
+          -0.04441801831126213,
+          1.1650718450546265
+        ],
+        "matrix": [
+          [
+            1.1029846833736732,
+            0.0,
+            0.194485958986962
+          ],
+          [
+            0.0,
+            1.12,
+            0.0
+          ],
+          [
+            -0.194485958986962,
+            0.0,
+            1.1029846833736732
+          ]
+        ],
+        "translation": [
+          -0.0015,
+          -0.0045,
+          0.0028
+        ],
+        "innerRadii": [
+          0.023,
+          0.022,
+          0.019
+        ],
+        "outerNormalizedRadius": 1.7
+      },
+      {
+        "side": "L",
+        "center": [
+          0.04071545600891113,
+          -0.044418010860681534,
+          1.1650718450546265
+        ],
+        "matrix": [
+          [
+            1.1029846833736732,
+            0.0,
+            -0.194485958986962
+          ],
+          [
+            0.0,
+            1.12,
+            0.0
+          ],
+          [
+            0.194485958986962,
+            0.0,
+            1.1029846833736732
+          ]
+        ],
+        "translation": [
+          0.0015,
+          -0.0045,
+          0.0028
+        ],
+        "innerRadii": [
+          0.023,
+          0.022,
+          0.019
+        ],
+        "outerNormalizedRadius": 1.7
+      }
+    ],
+    "sourceDimensionsProvisional": true,
+    "coefficients": [
+      [
+        -0.0043026840320678494,
+        -0.0073881108541139695,
+        -0.0010269696407250563
+      ],
+      [
+        -0.0026462093608782553,
+        -0.005889413451744341,
+        -6.743268998521901e-05
+      ],
+      [
+        0.0052798116619160946,
+        -0.007035647424789055,
+        0.0017237817292665271
+      ],
+      [
+        0.0077801638312435546,
+        -0.00367779683523354,
+        0.0021536613748931463
+      ],
+      [
+        -0.003305184760746113,
+        -0.013975498460070474,
+        0.0035639742890595954
+      ],
+      [
+        0.0024958529090525197,
+        0.0045336512500763915,
+        -0.0023364423539990594
+      ],
+      [
+        -0.002152981241698465,
+        0.0028647715610768,
+        0.0031279027725281436
+      ],
+      [
+        0.004303912022866843,
+        -0.007413374508905131,
+        -0.0010195576141134497
+      ],
+      [
+        0.002624234523484714,
+        -0.0058586577318243925,
+        -1.4653760122380271e-05
+      ],
+      [
+        -0.005276232200531712,
+        -0.00705066053871616,
+        0.0015984204671833017
+      ],
+      [
+        -0.007750076219894005,
+        -0.003622124902266479,
+        0.0033799950426263476
+      ],
+      [
+        0.0035443713863062675,
+        -0.013937289162515291,
+        0.005504604966691664
+      ],
+      [
+        -0.002825038735621739,
+        0.004366358770466629,
+        -0.001097976421898664
+      ],
+      [
+        0.0021492691079856795,
+        0.002783272595026029,
+        -0.0030815343860402656
+      ],
+      [
+        4.06238984204588e-05,
+        -0.0010580522241718743,
+        0.00526293631497827
+      ],
+      [
+        3.5131621058764075e-05,
+        -0.003204719252651402,
+        0.002791192856577733
+      ],
+      [
+        -3.928436474900747e-05,
+        0.01285201542286724,
+        -0.005188348633741121
+      ],
+      [
+        3.156445961865124e-05,
+        -0.0032020790962011547,
+        4.981326343875528e-05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -6.706984028363849e-07,
+        6.803947735917736e-05,
+        -1.0584586789092275e-06
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "controlMatrixCondition": 20.962543502873032,
+    "maximumControlResidualMeters": 1.5398417889384488e-07
+  },
+  "shapes": {
+    "Basis": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Blink_L": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Blink_R": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Squint_L": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Squint_R": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "BrowRaise_L": {
+      "maximumMoveMeters": 0.01065129104377348,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3565370145519867,
+      "maximumEdgeStretch": 1.3782584615230076
+    },
+    "BrowRaise_R": {
+      "maximumMoveMeters": 0.01066021924696256,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.2936486886512149,
+      "maximumEdgeStretch": 1.3805957027260147
+    },
+    "BrowLower_L": {
+      "maximumMoveMeters": 0.010650301075126559,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.3649764812509668
+    },
+    "BrowLower_R": {
+      "maximumMoveMeters": 0.010659983568114874,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990659659918634,
+      "maximumEdgeStretch": 1.3620981586611423
+    },
+    "Smile_L": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.39906822290171323,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Smile_R": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.35971600365074624,
+      "maximumEdgeStretch": 1.3651623297613371
+    },
+    "Frown_L": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.39907483241309166,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Frown_R": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.4266479305733721,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "JawOpen": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "LipPress": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.4065197440756297,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "TongueOut": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "CheekTension_L": {
+      "maximumMoveMeters": 0.010660055302039423,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "CheekTension_R": {
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3929291001083523,
+      "maximumEdgeStretch": 1.3631221843658319
+    }
+  },
+  "jacobian": {
+    "samples": 6139,
+    "minimumDeterminant": 0.4547587162455093,
+    "maximumDeterminant": 1.483492963730197,
+    "minimumSingularValue": 0.3237888143519177
+  },
+  "optical": {
+    "L": {
+      "sclera": {
+        "vertices": 2178,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      },
+      "iris": {
+        "vertices": 1600,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      }
+    },
+    "R": {
+      "sclera": {
+        "vertices": 2178,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      },
+      "iris": {
+        "vertices": 1600,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      }
+    }
+  },
+  "combined": {
+    "Blink": {
+      "maximumMorphSuperpositionErrorMeters": 0.0,
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Squint": {
+      "maximumMorphSuperpositionErrorMeters": 0.0,
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3990727492459381,
+      "maximumEdgeStretch": 1.365162949960934
+    },
+    "Playful": {
+      "maximumMorphSuperpositionErrorMeters": 0.0004886403823854203,
+      "maximumMoveMeters": 0.010660092527223117,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3597991914142706,
+      "maximumEdgeStretch": 1.3651623297613371
+    }
+  },
+  "closure": {
+    "L": {
+      "upperRimVertices": 37,
+      "baselineMaximumNearestOppositeRimMeters": 0.0008212451840101602,
+      "candidateMaximumSamePairMeters": 0.0009197946060913672,
+      "baselineP95Meters": 0.0007727765110929054,
+      "candidateP95Meters": 0.0008655096924240689
+    },
+    "R": {
+      "upperRimVertices": 37,
+      "baselineMaximumNearestOppositeRimMeters": 0.0007959709740781489,
+      "candidateMaximumSamePairMeters": 0.0008914874909675299,
+      "baselineP95Meters": 0.0007462876058724634,
+      "candidateP95Meters": 0.0008358421185771518
+    }
+  },
+  "blockingIssues": [
+    "Morph-combination nonlinear error exceeds0.25mm Playful"
+  ],
+  "hardStructuralFailure": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "codeSha256": {
+    "preflight_candidate.py": "acd46ca696379bb4cd4122b3d019ee70de813f90b391d29b6eb3bbdb0c797909",
+    "macro_field_candidate.py": "d115d1a5ebbfa582d38d06402ce62243848337e9615b3de314d75eac0c85f26b"
+  },
+  "pending": [
+    "Actual native same-source geometry/shape checks",
+    "Refit Eye rest axes/centers by exact ocular similarity; explicit migration report",
+    "Actual neutral/profile and Blink/Tongue evaluated LBS; oral collision check",
+    "Camera-matched broad identity and materials/groom after shape"
+  ],
+  "proposalSha256": "d3c3c90b678deca446d9d293b3595d4b4112ca0374c719f7f3c67aaa30da1568"
+}

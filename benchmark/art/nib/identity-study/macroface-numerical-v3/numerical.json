@@ -1,0 +1,1220 @@
+{
+  "status": "Actual numerical proposal only; no native source/render",
+  "sourceSha256": "ed53df0741441724ea84b09af8124132a1be6f33c1d02a31b9b377ddb53c8903",
+  "cacheSha256": "123a38e07264cb6b31ccbe6145e0a23b091556f141f8ccc1118a25cb02772e24",
+  "ocularCacheSha256": "f03659a8742c390b6dc3ec796d2400df9458d38b174b1c83470c8e4323d0df7e",
+  "params": {
+    "controls": [
+      {
+        "name": "brow_arch_R",
+        "vertex": 26648,
+        "source": [
+          -0.040987465530633926,
+          -0.060525838285684586,
+          1.1943678855895996
+        ],
+        "delta": [
+          -0.005,
+          -0.009,
+          -0.001
+        ],
+        "referenceSourceTarget": [
+          -0.04,
+          -0.13,
+          0.342
+        ],
+        "effectiveDelta": [
+          -0.004999956973159678,
+          -0.008999926121143892,
+          -0.000999989737968665
+        ]
+      },
+      {
+        "name": "outer_brow_R",
+        "vertex": 29245,
+        "source": [
+          -0.06779440492391586,
+          -0.0435652919113636,
+          1.184253215789795
+        ],
+        "delta": [
+          -0.003,
+          -0.008,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          -0.064,
+          -0.108,
+          0.329
+        ],
+        "effectiveDelta": [
+          -0.0029999766095117203,
+          -0.007999947942179085,
+          0.0010000005964001524
+        ]
+      },
+      {
+        "name": "cheek_peak_R",
+        "vertex": 6135,
+        "source": [
+          -0.08270858228206635,
+          -0.0378514789044857,
+          1.1423380374908447
+        ],
+        "delta": [
+          0.006,
+          -0.008,
+          0.002
+        ],
+        "referenceSourceTarget": [
+          -0.075,
+          -0.1,
+          0.275
+        ],
+        "effectiveDelta": [
+          0.005999947201883377,
+          -0.007999929635019554,
+          0.001999982780735987
+        ]
+      },
+      {
+        "name": "lower_cheek_R",
+        "vertex": 27375,
+        "source": [
+          -0.05562715604901314,
+          -0.043035369366407394,
+          1.110926628112793
+        ],
+        "delta": [
+          0.008,
+          -0.004,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.065,
+          -0.1,
+          0.229
+        ],
+        "effectiveDelta": [
+          -0.0013939893543293766,
+          -0.0030812778204072563,
+          0.004924145794900525
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "muzzle_pad_R",
+        "vertex": 24376,
+        "source": [
+          -0.020664675161242485,
+          -0.09635915607213974,
+          1.1266971826553345
+        ],
+        "delta": [
+          -0.002,
+          -0.005,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.023,
+          -0.147,
+          0.25
+        ],
+        "effectiveDelta": [
+          -0.0008265870064496986,
+          -0.0030000000000000027,
+          0.002427028799519615
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "nasal_ala_R",
+        "vertex": 6468,
+        "source": [
+          -0.02155427820980549,
+          -0.0913119912147522,
+          1.1409496068954468
+        ],
+        "delta": [
+          -0.0005,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          -0.019,
+          -0.145,
+          0.268
+        ],
+        "effectiveDelta": [
+          -0.0005583307302405617,
+          -0.003000038126514573,
+          0.002913818147207259
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "smile_corner_R",
+        "vertex": 22704,
+        "source": [
+          -0.039581041783094406,
+          -0.07487576454877853,
+          1.1195255517959595
+        ],
+        "delta": [
+          -0.001,
+          -0.001,
+          0.004
+        ],
+        "referenceSourceTarget": [
+          -0.038,
+          -0.136,
+          0.235
+        ],
+        "effectiveDelta": [
+          -0.0015832416713237804,
+          -0.0030000000000000027,
+          0.003566658868635164
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "brow_arch_L",
+        "vertex": 38510,
+        "source": [
+          0.041032593697309494,
+          -0.06038949266076088,
+          1.194458246231079
+        ],
+        "delta": [
+          0.005,
+          -0.009,
+          -0.001
+        ],
+        "referenceSourceTarget": [
+          0.04,
+          -0.13,
+          0.342
+        ],
+        "effectiveDelta": [
+          0.004999956960879771,
+          -0.008999925867262448,
+          -0.0009999898501440452
+        ]
+      },
+      {
+        "name": "outer_brow_L",
+        "vertex": 40701,
+        "source": [
+          0.06780608743429184,
+          -0.0435509979724884,
+          1.18431556224823
+        ],
+        "delta": [
+          0.003,
+          -0.008,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          0.064,
+          -0.108,
+          0.329
+        ],
+        "effectiveDelta": [
+          0.0029999767086817813,
+          -0.007999948001818094,
+          0.0010000002263408359
+        ]
+      },
+      {
+        "name": "cheek_peak_L",
+        "vertex": 15853,
+        "source": [
+          0.08276698738336563,
+          -0.03786321356892586,
+          1.1423274278640747
+        ],
+        "delta": [
+          -0.006,
+          -0.008,
+          0.002
+        ],
+        "referenceSourceTarget": [
+          0.075,
+          -0.1,
+          0.275
+        ],
+        "effectiveDelta": [
+          -0.005999947237677994,
+          -0.00799992948818544,
+          0.0019999829180821216
+        ]
+      },
+      {
+        "name": "lower_cheek_L",
+        "vertex": 39231,
+        "source": [
+          0.05564510077238083,
+          -0.04302624240517616,
+          1.1110278367996216
+        ],
+        "delta": [
+          -0.008,
+          -0.004,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.065,
+          -0.1,
+          0.229
+        ],
+        "effectiveDelta": [
+          0.001384016430251489,
+          -0.003082317590469244,
+          0.00492380045742391
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "muzzle_pad_L",
+        "vertex": 36238,
+        "source": [
+          0.020766358822584152,
+          -0.09633694589138031,
+          1.1272300481796265
+        ],
+        "delta": [
+          0.002,
+          -0.005,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.023,
+          -0.147,
+          0.25
+        ],
+        "effectiveDelta": [
+          0.0008306543529033664,
+          -0.0030000000000000027,
+          0.0024312416587484176
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "nasal_ala_L",
+        "vertex": 3241,
+        "source": [
+          0.021788083016872406,
+          -0.0909850224852562,
+          1.1409375667572021
+        ],
+        "delta": [
+          0.0005,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0.019,
+          -0.145,
+          0.268
+        ],
+        "effectiveDelta": [
+          0.0005602637383112369,
+          -0.003000036696492764,
+          0.0029148453352394466
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "smile_corner_L",
+        "vertex": 34576,
+        "source": [
+          0.039579592645168304,
+          -0.0748705342411995,
+          1.1221797466278076
+        ],
+        "delta": [
+          0.001,
+          -0.001,
+          0.004
+        ],
+        "referenceSourceTarget": [
+          0.038,
+          -0.136,
+          0.235
+        ],
+        "effectiveDelta": [
+          0.0015831837058067344,
+          -0.0030000000000000027,
+          0.003566544153957407
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "nasal_dome",
+        "vertex": 25095,
+        "source": [
+          -0.001794077455997467,
+          -0.10488108545541763,
+          1.14504075050354
+        ],
+        "delta": [
+          0,
+          -0.002,
+          0.005
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.16,
+          0.271
+        ],
+        "effectiveDelta": [
+          -4.062389838584146e-10,
+          -0.001999989816361916,
+          0.00499993726072967
+        ]
+      },
+      {
+        "name": "nasal_bridge",
+        "vertex": 23408,
+        "source": [
+          -0.0020826661493629217,
+          -0.06165025755763054,
+          1.1545137166976929
+        ],
+        "delta": [
+          0,
+          -0.003,
+          0.003
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.146,
+          0.291
+        ],
+        "effectiveDelta": [
+          -3.513162104978873e-10,
+          -0.002999967811062723,
+          0.002999972477984336
+        ]
+      },
+      {
+        "name": "lip_center",
+        "vertex": 16988,
+        "source": [
+          2.111273488480947e-06,
+          -0.10007641464471817,
+          1.1195130348205566
+        ],
+        "delta": [
+          0,
+          0,
+          0.001
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.149,
+          0.237
+        ],
+        "effectiveDelta": [
+          8.445093953923791e-08,
+          -0.0030000000000000027,
+          0.0020000000044575472
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      },
+      {
+        "name": "chin_front",
+        "vertex": 4068,
+        "source": [
+          1.056057408277411e-05,
+          -0.06537438184022903,
+          1.098393201828003
+        ],
+        "delta": [
+          0,
+          -0.002,
+          0.004
+        ],
+        "referenceSourceTarget": [
+          0,
+          -0.1367,
+          0.2
+        ],
+        "effectiveDelta": [
+          4.224229633109652e-07,
+          -0.0030000000000000027,
+          0.0020000001115256794
+        ],
+        "domain": "Smooth composition with the coherent separable mouth"
+      }
+    ],
+    "centers": [
+      [
+        -0.040987465530633926,
+        -0.060525838285684586,
+        1.1943678855895996
+      ],
+      [
+        -0.06779440492391586,
+        -0.0435652919113636,
+        1.184253215789795
+      ],
+      [
+        -0.08270858228206635,
+        -0.0378514789044857,
+        1.1423380374908447
+      ],
+      [
+        -0.05562715604901314,
+        -0.043035369366407394,
+        1.110926628112793
+      ],
+      [
+        -0.020664675161242485,
+        -0.09635915607213974,
+        1.1266971826553345
+      ],
+      [
+        -0.02155427820980549,
+        -0.0913119912147522,
+        1.1409496068954468
+      ],
+      [
+        -0.039581041783094406,
+        -0.07487576454877853,
+        1.1195255517959595
+      ],
+      [
+        0.041032593697309494,
+        -0.06038949266076088,
+        1.194458246231079
+      ],
+      [
+        0.06780608743429184,
+        -0.0435509979724884,
+        1.18431556224823
+      ],
+      [
+        0.08276698738336563,
+        -0.03786321356892586,
+        1.1423274278640747
+      ],
+      [
+        0.05564510077238083,
+        -0.04302624240517616,
+        1.1110278367996216
+      ],
+      [
+        0.020766358822584152,
+        -0.09633694589138031,
+        1.1272300481796265
+      ],
+      [
+        0.021788083016872406,
+        -0.0909850224852562,
+        1.1409375667572021
+      ],
+      [
+        0.039579592645168304,
+        -0.0748705342411995,
+        1.1221797466278076
+      ],
+      [
+        -0.001794077455997467,
+        -0.10488108545541763,
+        1.14504075050354
+      ],
+      [
+        -0.0020826661493629217,
+        -0.06165025755763054,
+        1.1545137166976929
+      ],
+      [
+        2.111273488480947e-06,
+        -0.10007641464471817,
+        1.1195130348205566
+      ],
+      [
+        1.056057408277411e-05,
+        -0.06537438184022903,
+        1.098393201828003
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.05
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.27
+      ],
+      [
+        -0.12,
+        -0.04,
+        1.05
+      ],
+      [
+        -0.12,
+        -0.04,
+        1.27
+      ],
+      [
+        -0.12,
+        0.07,
+        1.05
+      ],
+      [
+        -0.12,
+        0.07,
+        1.27
+      ],
+      [
+        0.0,
+        -0.15,
+        1.05
+      ],
+      [
+        0.0,
+        -0.15,
+        1.27
+      ],
+      [
+        0.0,
+        -0.04,
+        1.05
+      ],
+      [
+        0.0,
+        -0.04,
+        1.27
+      ],
+      [
+        0.0,
+        0.07,
+        1.05
+      ],
+      [
+        0.0,
+        0.07,
+        1.27
+      ],
+      [
+        0.12,
+        -0.15,
+        1.05
+      ],
+      [
+        0.12,
+        -0.15,
+        1.27
+      ],
+      [
+        0.12,
+        -0.04,
+        1.05
+      ],
+      [
+        0.12,
+        -0.04,
+        1.27
+      ],
+      [
+        0.12,
+        0.07,
+        1.05
+      ],
+      [
+        0.12,
+        0.07,
+        1.27
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.12
+      ],
+      [
+        -0.12,
+        -0.15,
+        1.2
+      ],
+      [
+        -0.12,
+        0.07,
+        1.12
+      ],
+      [
+        -0.12,
+        0.07,
+        1.2
+      ],
+      [
+        0.12,
+        -0.15,
+        1.12
+      ],
+      [
+        0.12,
+        -0.15,
+        1.2
+      ],
+      [
+        0.12,
+        0.07,
+        1.12
+      ],
+      [
+        0.12,
+        0.07,
+        1.2
+      ]
+    ],
+    "radiusMeters": 0.075,
+    "ocular": [
+      {
+        "side": "R",
+        "center": [
+          -0.04071560129523277,
+          -0.04441801831126213,
+          1.1650718450546265
+        ],
+        "matrix": [
+          [
+            1.1029846833736732,
+            0.0,
+            0.194485958986962
+          ],
+          [
+            0.0,
+            1.12,
+            0.0
+          ],
+          [
+            -0.194485958986962,
+            0.0,
+            1.1029846833736732
+          ]
+        ],
+        "translation": [
+          -0.0015,
+          -0.0045,
+          0.0028
+        ],
+        "innerRadii": [
+          0.023,
+          0.022,
+          0.019
+        ],
+        "outerNormalizedRadius": 1.7
+      },
+      {
+        "side": "L",
+        "center": [
+          0.04071545600891113,
+          -0.044418010860681534,
+          1.1650718450546265
+        ],
+        "matrix": [
+          [
+            1.1029846833736732,
+            0.0,
+            -0.194485958986962
+          ],
+          [
+            0.0,
+            1.12,
+            0.0
+          ],
+          [
+            0.194485958986962,
+            0.0,
+            1.1029846833736732
+          ]
+        ],
+        "translation": [
+          0.0015,
+          -0.0045,
+          0.0028
+        ],
+        "innerRadii": [
+          0.023,
+          0.022,
+          0.019
+        ],
+        "outerNormalizedRadius": 1.7
+      }
+    ],
+    "sourceDimensionsProvisional": true,
+    "mouth": {
+      "center": [
+        0,
+        -0.067,
+        1.112
+      ],
+      "innerHalfSpan": [
+        0.053,
+        0.05,
+        0.02
+      ],
+      "outerHalfSpan": [
+        0.068,
+        0.075,
+        0.032
+      ],
+      "xScale": 1.04,
+      "translation": [
+        0,
+        -0.003,
+        0.002
+      ],
+      "commissureQuadraticZMetersInverse": 1.0
+    },
+    "coefficients": [
+      [
+        -0.0043026840320678494,
+        -0.0073878856099838085,
+        -0.0010262031352041856
+      ],
+      [
+        -0.0026462093608782553,
+        -0.005889397919017685,
+        -6.747184662075606e-05
+      ],
+      [
+        0.0052798116619160946,
+        -0.007036498044898392,
+        0.0017219263913919815
+      ],
+      [
+        0.0077801638312435546,
+        -0.0036683997264582643,
+        0.00217645199697163
+      ],
+      [
+        -0.003305184760746113,
+        -0.01395500265023571,
+        0.003211177264159073
+      ],
+      [
+        0.0024958529090525197,
+        0.004544284205083522,
+        -0.0023846552849626527
+      ],
+      [
+        -0.002152981241698465,
+        0.002799181764116052,
+        0.0029271909069773557
+      ],
+      [
+        0.004303912022866843,
+        -0.007413273754613244,
+        -0.0010149855902091898
+      ],
+      [
+        0.002624234523484714,
+        -0.005858638949524183,
+        -2.5501829575780458e-05
+      ],
+      [
+        -0.005276232200531712,
+        -0.007051181456225065,
+        0.0017081917941487463
+      ],
+      [
+        -0.007750076219894005,
+        -0.0036151501568353617,
+        0.002211587754508159
+      ],
+      [
+        0.0035443713863062675,
+        -0.013917843974377724,
+        0.0032516267262980886
+      ],
+      [
+        -0.002825038735621739,
+        0.004379806094313247,
+        -0.0019035882757134999
+      ],
+      [
+        0.0021492691079856795,
+        0.0027262512190079453,
+        0.002927132108892773
+      ],
+      [
+        4.06238984204588e-05,
+        -0.0010183638089282519,
+        0.006273927036083612
+      ],
+      [
+        3.5131621058764075e-05,
+        -0.0032188937282577462,
+        0.0027522015748834686
+      ],
+      [
+        -3.928436474900747e-05,
+        0.012702252027353462,
+        -0.0049184466860629095
+      ],
+      [
+        3.156445961865124e-05,
+        -0.0023938126871287163,
+        0.0038481865589732613
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -6.706984028363849e-07,
+        5.0865003403955295e-05,
+        -8.176831189578578e-05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "controlMatrixCondition": 20.962543502873032,
+    "maximumControlResidualMeters": 1.4725556891977595e-07,
+    "maximumOriginalHandleDeviationAfterOralCompositionMeters": 0.009632934312688043
+  },
+  "shapes": {
+    "Basis": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Blink_L": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Blink_R": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Squint_L": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Squint_R": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "BrowRaise_L": {
+      "maximumMoveMeters": 0.010651266961187832,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3782189082384368
+    },
+    "BrowRaise_R": {
+      "maximumMoveMeters": 0.010660186978698489,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.29366561308891204,
+      "maximumEdgeStretch": 1.3806045120775317
+    },
+    "BrowLower_L": {
+      "maximumMoveMeters": 0.010650162598589471,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667615982017252
+    },
+    "BrowLower_R": {
+      "maximumMoveMeters": 0.010659951789072787,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667608649168044
+    },
+    "Smile_L": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.33921633093022846,
+      "maximumEdgeStretch": 1.368462156718263
+    },
+    "Smile_R": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.34086746763198544,
+      "maximumEdgeStretch": 1.3652460530978514
+    },
+    "Frown_L": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3655204423842535
+    },
+    "Frown_R": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3480069338990964,
+      "maximumEdgeStretch": 1.365151431451534
+    },
+    "JawOpen": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3967443466125047
+    },
+    "LipPress": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3620815119592509,
+      "maximumEdgeStretch": 1.365151431451534
+    },
+    "TongueOut": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "CheekTension_L": {
+      "maximumMoveMeters": 0.01066002329753323,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.34530045352474603,
+      "maximumEdgeStretch": 1.366829275219673
+    },
+    "CheekTension_R": {
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.34429464852583025,
+      "maximumEdgeStretch": 1.3671806623842344
+    }
+  },
+  "jacobian": {
+    "samples": 6139,
+    "minimumDeterminant": -0.02010161774881007,
+    "maximumDeterminant": 1.4833698138310027,
+    "minimumSingularValue": 0.0036878295947348917
+  },
+  "optical": {
+    "L": {
+      "sclera": {
+        "vertices": 2178,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      },
+      "iris": {
+        "vertices": 1600,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      }
+    },
+    "R": {
+      "sclera": {
+        "vertices": 2178,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      },
+      "iris": {
+        "vertices": 1600,
+        "maximumNonSimilarityErrorMeters": 2.222613395836815e-16,
+        "scale": 1.12
+      }
+    }
+  },
+  "combined": {
+    "Blink": {
+      "maximumMorphSuperpositionErrorMeters": 0.0,
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Squint": {
+      "maximumMorphSuperpositionErrorMeters": 0.0,
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.3460706511185958,
+      "maximumEdgeStretch": 1.3667623914448142
+    },
+    "Playful": {
+      "maximumMorphSuperpositionErrorMeters": 0.00041899468206365356,
+      "maximumMoveMeters": 0.010660060558708167,
+      "introducedDegenerates": 0,
+      "trianglesTurnedBeyond90FromSameOriginalShape": 0,
+      "minimumAreaRatio": 0.33921633093022846,
+      "maximumEdgeStretch": 1.3747816051536215
+    }
+  },
+  "closure": {
+    "L": {
+      "upperRimVertices": 37,
+      "baselineMaximumNearestOppositeRimMeters": 0.0008212451840101602,
+      "candidateMaximumSamePairMeters": 0.0009197946060913672,
+      "baselineP95Meters": 0.0007727765110929054,
+      "candidateP95Meters": 0.0008655096924240689
+    },
+    "R": {
+      "upperRimVertices": 37,
+      "baselineMaximumNearestOppositeRimMeters": 0.0007959709740781489,
+      "candidateMaximumSamePairMeters": 0.0008914874909675299,
+      "baselineP95Meters": 0.0007462876058724634,
+      "candidateP95Meters": 0.0008358421185771518
+    }
+  },
+  "blockingIssues": [
+    "Volume-field Jacobian determinant <=0.10",
+    "Volume field collapses a local direction below25%",
+    "Morph-combination nonlinear error exceeds0.25mm Playful"
+  ],
+  "hardStructuralFailure": true,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "codeSha256": {
+    "preflight_macro.py": "f6fc786e373c975482fd814e37f4d30817b8358e8043075c81109a11a942587b",
+    "macro_field.py": "210224a5ac27193e23e8fefef2e6095da7c7270701b502f7395e3df997d1b7cb"
+  },
+  "pending": [
+    "Actual native same-source geometry/shape checks",
+    "Refit Eye rest axes/centers by exact ocular similarity; explicit migration report",
+    "Actual neutral/profile and Blink/Tongue evaluated LBS; oral collision check",
+    "Camera-matched broad identity and materials/groom after shape"
+  ],
+  "proposalSha256": "b040066ca45793e81b2340a34a9cc6b3f77468bbd418198985773b6bcae687de"
+}

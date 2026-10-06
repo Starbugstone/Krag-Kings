@@ -1,0 +1,922 @@
+{
+  "status": "Actual numerical camera fit/landmark target proposal; no native geometry generated",
+  "sourceCacheSha256": "123a38e07264cb6b31ccbe6145e0a23b091556f141f8ccc1118a25cb02772e24",
+  "sourceSha256": "ed53df0741441724ea84b09af8124132a1be6f33c1d02a31b9b377ddb53c8903",
+  "referenceSha256": "b4e6d08dcb08120087a8959d53c71c9a14399e62969c75933c2ab4cbc76be5f1",
+  "ocularReportSha256": "4c27a4476b36b670c73371a4d2b8a7ba6e5b6e9882761bf753ece638f74ff9b4",
+  "coordinateSpace": "Saved Head-local metres; fitted weak-perspective image coordinates",
+  "features": {
+    "outer_R": {
+      "vertex": 289,
+      "point": [
+        -0.05753941833972931,
+        -0.04562671482563019,
+        1.1656596660614014
+      ],
+      "selection": "Audited visible orbital-margin canthus"
+    },
+    "inner_R": {
+      "vertex": 1230,
+      "point": [
+        -0.026513315737247467,
+        -0.04740617424249649,
+        1.1616123914718628
+      ],
+      "selection": "Audited visible orbital-margin canthus"
+    },
+    "outer_L": {
+      "vertex": 1544,
+      "point": [
+        0.0575750358402729,
+        -0.04559336602687836,
+        1.165668249130249
+      ],
+      "selection": "Audited visible orbital-margin canthus"
+    },
+    "inner_L": {
+      "vertex": 2485,
+      "point": [
+        0.026218384504318237,
+        -0.04738929495215416,
+        1.1616538763046265
+      ],
+      "selection": "Audited visible orbital-margin canthus"
+    },
+    "brow_R": {
+      "vertex": 26648,
+      "point": [
+        -0.040987465530633926,
+        -0.060525838285684586,
+        1.1943678855895996
+      ],
+      "sourcePoint": [
+        -0.04048781469464302,
+        -0.1299719363451004,
+        0.34215325117111206
+      ],
+      "sourceTarget": [
+        -0.04,
+        -0.13,
+        0.342
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "cheek_R": {
+      "vertex": 6135,
+      "point": [
+        -0.08270858228206635,
+        -0.0378514789044857,
+        1.1423380374908447
+      ],
+      "sourcePoint": [
+        -0.07152599841356277,
+        -0.09822104126214981,
+        0.2742312252521515
+      ],
+      "sourceTarget": [
+        -0.075,
+        -0.1,
+        0.275
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "mouth_R": {
+      "vertex": 22704,
+      "point": [
+        -0.039581041783094406,
+        -0.07487576454877853,
+        1.1195255517959595
+      ],
+      "sourcePoint": [
+        -0.03484006226062775,
+        -0.13127240538597107,
+        0.23561540246009827
+      ],
+      "sourceTarget": [
+        -0.038,
+        -0.136,
+        0.235
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "brow_L": {
+      "vertex": 38510,
+      "point": [
+        0.041032593697309494,
+        -0.06038949266076088,
+        1.194458246231079
+      ],
+      "sourcePoint": [
+        0.04055674746632576,
+        -0.12991736829280853,
+        0.3422951102256775
+      ],
+      "sourceTarget": [
+        0.04,
+        -0.13,
+        0.342
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "cheek_L": {
+      "vertex": 15853,
+      "point": [
+        0.08276698738336563,
+        -0.03786321356892586,
+        1.1423274278640747
+      ],
+      "sourcePoint": [
+        0.07161050289869308,
+        -0.0982687920331955,
+        0.2742159962654114
+      ],
+      "sourceTarget": [
+        0.075,
+        -0.1,
+        0.275
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "mouth_L": {
+      "vertex": 34576,
+      "point": [
+        0.039579592645168304,
+        -0.0748705342411995,
+        1.1221797466278076
+      ],
+      "sourcePoint": [
+        0.034849125891923904,
+        -0.13131174445152283,
+        0.23547987639904022
+      ],
+      "sourceTarget": [
+        0.038,
+        -0.136,
+        0.235
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "lip_center": {
+      "vertex": 16988,
+      "point": [
+        2.111273488480947e-06,
+        -0.10007641464471817,
+        1.1195130348205566
+      ],
+      "sourcePoint": [
+        -4.249961057212204e-05,
+        -0.15076954662799835,
+        0.23694798350334167
+      ],
+      "sourceTarget": [
+        0,
+        -0.149,
+        0.237
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "chin": {
+      "vertex": 15610,
+      "point": [
+        1.867738683358766e-05,
+        -0.04507867991924286,
+        1.0862681865692139
+      ],
+      "sourcePoint": [
+        3.07494483422488e-05,
+        -0.1290665566921234,
+        0.1852637529373169
+      ],
+      "sourceTarget": [
+        0,
+        -0.128,
+        0.188
+      ],
+      "selection": "Nearest audited source anatomical landmark; actual exterior interpretation still reviewed"
+    },
+    "nose_tip": {
+      "vertex": 36179,
+      "point": [
+        0.0011059383396059275,
+        -0.11053996533155441,
+        1.135831594467163
+      ],
+      "selection": "Foremost actual nose-mask exterior point"
+    }
+  },
+  "cameras": {
+    "front": {
+      "yawDegrees": -9.0,
+      "pitchDegrees": 5.0,
+      "rollDegrees": 8.349106790447658,
+      "scalePixelsPerMeter": 645.4801498421685,
+      "matrixPixelsPerMeter": [
+        [
+          632.0543324685676,
+          -91.83694749915314,
+          93.36980091024847
+        ],
+        [
+          83.86522040625141,
+          -69.63783845000373,
+          -636.2089437460704
+        ]
+      ],
+      "offsetPixels": [
+        116.63070111748029,
+        904.435718047907
+      ],
+      "weightedSquaredErrorPixels": 31.373405454048314,
+      "rmsPixels": 5.601196787656037,
+      "manualUncertaintyPixels": 3,
+      "landmarks": {
+        "outer_R": {
+          "reference": [
+            192.0,
+            156.0
+          ],
+          "projected": [
+            193.29029163139302,
+            161.18440293050844
+          ],
+          "residualPixels": 5.342554280483013
+        },
+        "inner_R": {
+          "reference": [
+            217.0,
+            168.0
+          ],
+          "projected": [
+            212.68600109929525,
+            166.48524386267331
+          ],
+          "residualPixels": 4.572206542890491
+        },
+        "outer_L": {
+          "reference": [
+            267.0,
+            166.0
+          ],
+          "projected": [
+            266.0466198731672,
+            170.830719038834
+          ],
+          "residualPixels": 4.923898871665925
+        },
+        "inner_L": {
+          "reference": [
+            249.0,
+            173.0
+          ],
+          "projected": [
+            246.01762398348563,
+            170.88003106690041
+          ],
+          "residualPixels": 3.659075700390399
+        },
+        "brow_R": {
+          "reference": [
+            199.0,
+            148.0
+          ],
+          "projected": [
+            207.80079587601705,
+            145.3456528306897
+          ],
+          "residualPixels": 9.192364600392239
+        },
+        "brow_L": {
+          "reference": [
+            261.0,
+            155.0
+          ],
+          "projected": [
+            259.6378450494744,
+            152.15730011270125
+          ],
+          "residualPixels": 3.152206966315788
+        },
+        "nose_tip": {
+          "reference": [
+            238.0,
+            189.0
+          ],
+          "projected": [
+            233.53373707215258,
+            189.60001306917275
+          ],
+          "residualPixels": 4.506386603903658
+        },
+        "mouth_R": {
+          "reference": [
+            198.0,
+            189.0
+          ],
+          "projected": [
+            203.019571717806,
+            194.0782628454831
+          ],
+          "residualPixels": 7.140367900746569
+        },
+        "mouth_L": {
+          "reference": [
+            249.0,
+            203.0
+          ],
+          "projected": [
+            253.300734976694,
+            199.0281001815274
+          ],
+          "residualPixels": 5.854255674954911
+        },
+        "lip_center": {
+          "reference": [
+            230.0,
+            201.0
+          ],
+          "projected": [
+            230.3514571722896,
+            199.16079491286393
+          ],
+          "residualPixels": 1.8724843114165155
+        },
+        "chin": {
+          "reference": [
+            224.0,
+            218.0
+          ],
+          "projected": [
+            222.20703891692642,
+            216.48293065866721
+          ],
+          "residualPixels": 2.348661072149038
+        },
+        "cheek_R": {
+          "reference": [
+            177.0,
+            183.0
+          ],
+          "projected": [
+            174.49042276740792,
+            173.36956350536786
+          ],
+          "residualPixels": 9.952049284619074
+        },
+        "cheek_L": {
+          "reference": [
+            269.0,
+            188.0
+          ],
+          "projected": [
+            279.0800605491713,
+            187.25477574331683
+          ],
+          "residualPixels": 10.10757042358395
+        }
+      }
+    },
+    "side_oblique": {
+      "yawDegrees": -30.0,
+      "pitchDegrees": 4.0,
+      "rollDegrees": 6.569101834721638,
+      "scalePixelsPerMeter": 620.3315915558316,
+      "matrixPixelsPerMeter": [
+        [
+          536.17103344971,
+          -303.84226634636354,
+          70.79395138828251
+        ],
+        [
+          39.96504874140541,
+          -72.71215105759126,
+          -614.7576932823746
+        ]
+      ],
+      "offsetPixels": [
+        556.3132592769479,
+        886.2908631536493
+      ],
+      "weightedSquaredErrorPixels": 39.97042291112074,
+      "rmsPixels": 6.322216613745589,
+      "manualUncertaintyPixels": 3,
+      "landmarks": {
+        "outer_R": {
+          "reference": [
+            623.0,
+            166.0
+          ],
+          "projected": [
+            621.8472680546312,
+            170.71066661560258
+          ],
+          "residualPixels": 4.8496567817966705
+        },
+        "inner_R": {
+          "reference": [
+            642.0,
+            176.0
+          ],
+          "projected": [
+            638.7367179724658,
+            174.56810783103174
+          ],
+          "residualPixels": 3.5636111985989847
+        },
+        "brow_R": {
+          "reference": [
+            627.0,
+            157.0
+          ],
+          "projected": [
+            637.2812974342953,
+            154.8069147166376
+          ],
+          "residualPixels": 10.512597204903651
+        },
+        "nose_tip": {
+          "reference": [
+            672.0,
+            194.0
+          ],
+          "projected": [
+            670.9029516515977,
+            196.1114497185108
+          ],
+          "residualPixels": 2.3794400586128517
+        },
+        "mouth_R": {
+          "reference": [
+            628.0,
+            199.0
+          ],
+          "projected": [
+            637.0971106857909,
+            201.91643699921417
+          ],
+          "residualPixels": 9.553168458679872
+        },
+        "lip_center": {
+          "reference": [
+            662.0,
+            211.0
+          ],
+          "projected": [
+            665.9765872797408,
+            205.33846802390997
+          ],
+          "residualPixels": 6.918539637068368
+        },
+        "chin": {
+          "reference": [
+            654.0,
+            223.0
+          ],
+          "projected": [
+            646.9212990159324,
+            221.77765271877115
+          ],
+          "residualPixels": 7.183462987846969
+        },
+        "cheek_R": {
+          "reference": [
+            609.0,
+            188.0
+          ],
+          "projected": [
+            604.3388158696254,
+            183.47657620668372
+          ],
+          "residualPixels": 6.495229042242946
+        }
+      }
+    },
+    "portrait": {
+      "yawDegrees": -21.0,
+      "pitchDegrees": 0.0,
+      "rollDegrees": 15.592292160432704,
+      "scalePixelsPerMeter": 1070.545254733288,
+      "matrixPixelsPerMeter": [
+        [
+          962.6594357991908,
+          -369.53033539079416,
+          287.75212305856365
+        ],
+        [
+          268.6397497704891,
+          -103.12113831780438,
+          -1031.1478352337501
+        ]
+      ],
+      "offsetPixels": [
+        1035.2068796203016,
+        1445.8714149241282
+      ],
+      "weightedSquaredErrorPixels": 159.54488241659507,
+      "rmsPixels": 12.631107727218348,
+      "manualUncertaintyPixels": 4,
+      "landmarks": {
+        "outer_R": {
+          "reference": [
+            1330.0,
+            226.0
+          ],
+          "projected": [
+            1332.0975145303642,
+            233.1516774714146
+          ],
+          "residualPixels": 7.452922772995014
+        },
+        "inner_R": {
+          "reference": [
+            1371.0,
+            249.0
+          ],
+          "projected": [
+            1361.4580373361052,
+            245.84336022315574
+          ],
+          "residualPixels": 10.050543575345417
+        },
+        "outer_L": {
+          "reference": [
+            1448.0,
+            254.0
+          ],
+          "projected": [
+            1442.9036764471125,
+            264.063706258346
+          ],
+          "residualPixels": 11.280545084790353
+        },
+        "inner_L": {
+          "reference": [
+            1418.0,
+            266.0
+          ],
+          "projected": [
+            1412.226406078264,
+            259.9646733738889
+          ],
+          "residualPixels": 8.35221852306031
+        },
+        "brow_R": {
+          "reference": [
+            1338.0,
+            208.0
+          ],
+          "projected": [
+            1361.7979372906357,
+            209.53218608348425
+          ],
+          "residualPixels": 23.847209763061397
+        },
+        "brow_L": {
+          "reference": [
+            1441.0,
+            244.0
+          ],
+          "projected": [
+            1440.7309388531435,
+            231.45879897474106
+          ],
+          "residualPixels": 12.544086935951285
+        },
+        "nose_tip": {
+          "reference": [
+            1418.0,
+            278.0
+          ],
+          "projected": [
+            1403.957344806311,
+            286.35723115262795
+          ],
+          "residualPixels": 16.341342583377088
+        },
+        "mouth_R": {
+          "reference": [
+            1331.0,
+            282.0
+          ],
+          "projected": [
+            1346.9185370029934,
+            288.56329861327504
+          ],
+          "residualPixels": 17.218499034546763
+        },
+        "mouth_L": {
+          "reference": [
+            1410.0,
+            311.0
+          ],
+          "projected": [
+            1423.8850861197723,
+            307.0915850273366
+          ],
+          "residualPixels": 14.424677609986023
+        },
+        "lip_center": {
+          "reference": [
+            1394.0,
+            310.0
+          ],
+          "projected": [
+            1394.3324356873686,
+            301.808533521855
+          ],
+          "residualPixels": 8.198209350145284
+        },
+        "chin": {
+          "reference": [
+            1368.0,
+            333.0
+          ],
+          "projected": [
+            1364.4587761887724,
+            330.42190813565344
+          ],
+          "residualPixels": 4.380276674162869
+        },
+        "cheek_R": {
+          "reference": [
+            1307.0,
+            263.0
+          ],
+          "projected": [
+            1298.2841476980525,
+            249.63649520378976
+          ],
+          "residualPixels": 15.954602526785104
+        },
+        "cheek_L": {
+          "reference": [
+            1438.0,
+            293.0
+          ],
+          "projected": [
+            1457.5820496025854,
+            294.1019610174719
+          ],
+          "residualPixels": 19.613030992739013
+        }
+      }
+    }
+  },
+  "landmarkTargets": {
+    "outer_R": {
+      "source": [
+        -0.05753941833972931,
+        -0.04562671482563019,
+        1.1656596660614014
+      ],
+      "proposed": [
+        -0.05989206536653723,
+        -0.04592191659248471,
+        1.1719985394070995
+      ],
+      "deltaMeters": [
+        -0.0023526470268079233,
+        -0.00029520176685451927,
+        0.006338873345698159
+      ],
+      "distanceMeters": 0.006767821466964444,
+      "views": 3
+    },
+    "inner_R": {
+      "source": [
+        -0.026513315737247467,
+        -0.04740617424249649,
+        1.1616123914718628
+      ],
+      "proposed": [
+        -0.019824844784658294,
+        -0.049587264663165834,
+        1.160666899276188
+      ],
+      "deltaMeters": [
+        0.006688470952589173,
+        -0.0021810904206693432,
+        -0.0009454921956748574
+      ],
+      "distanceMeters": 0.007098362811159116,
+      "views": 3
+    },
+    "outer_L": {
+      "source": [
+        0.0575750358402729,
+        -0.04559336602687836,
+        1.165668249130249
+      ],
+      "proposed": [
+        0.05857028294251672,
+        -0.04661672327336111,
+        1.1738894819636008
+      ],
+      "deltaMeters": [
+        0.0009952471022438153,
+        -0.0010233572464827534,
+        0.008221232833351744
+      ],
+      "distanceMeters": 0.008344246290027292,
+      "views": 2
+    },
+    "inner_L": {
+      "source": [
+        0.026218384504318237,
+        -0.04738929495215416,
+        1.1616538763046265
+      ],
+      "proposed": [
+        0.03124641766286644,
+        -0.04932788547647879,
+        1.1586544914498556
+      ],
+      "deltaMeters": [
+        0.0050280331585482035,
+        -0.0019385905243246293,
+        -0.0029993848547709145
+      ],
+      "distanceMeters": 0.006167297639281779,
+      "views": 2
+    },
+    "brow_R": {
+      "source": [
+        -0.040987465530633926,
+        -0.060525838285684586,
+        1.1943678855895996
+      ],
+      "proposed": [
+        -0.0558011549200295,
+        -0.05361168841461607,
+        1.1895155461277187
+      ],
+      "deltaMeters": [
+        -0.014813689389395576,
+        0.006914149871068517,
+        -0.004852339461880906
+      ],
+      "distanceMeters": 0.017052743474831683,
+      "views": 3
+    },
+    "cheek_R": {
+      "source": [
+        -0.08270858228206635,
+        -0.0378514789044857,
+        1.1423380374908447
+      ],
+      "proposed": [
+        -0.07557779888963899,
+        -0.042383492881550106,
+        1.1331374453609389
+      ],
+      "deltaMeters": [
+        0.007130783392427356,
+        -0.004532013977064403,
+        -0.009200592129905871
+      ],
+      "distanceMeters": 0.012491521845592343,
+      "views": 3
+    },
+    "mouth_R": {
+      "source": [
+        -0.039581041783094406,
+        -0.07487576454877853,
+        1.1195255517959595
+      ],
+      "proposed": [
+        -0.050193499468938196,
+        -0.0671836993718671,
+        1.1226173001320972
+      ],
+      "deltaMeters": [
+        -0.01061245768584379,
+        0.007692065176911428,
+        0.0030917483361376785
+      ],
+      "distanceMeters": 0.01346666375141551,
+      "views": 3
+    },
+    "brow_L": {
+      "source": [
+        0.041032593697309494,
+        -0.06038949266076088,
+        1.194458246231079
+      ],
+      "proposed": [
+        0.04384380360680516,
+        -0.060620452854976095,
+        1.1870175801378837
+      ],
+      "deltaMeters": [
+        0.0028112099094956683,
+        -0.00023096019421521563,
+        -0.0074406660931953805
+      ],
+      "distanceMeters": 0.00795737115365282,
+      "views": 2
+    },
+    "cheek_L": {
+      "source": [
+        0.08276698738336563,
+        -0.03786321356892586,
+        1.1423274278640747
+      ],
+      "proposed": [
+        0.06864020725790186,
+        -0.03288132904464679,
+        1.1389541718204386
+      ],
+      "deltaMeters": [
+        -0.01412678012546377,
+        0.0049818845242790705,
+        -0.0033732560436361414
+      ],
+      "distanceMeters": 0.015354606685368961,
+      "views": 2
+    },
+    "mouth_L": {
+      "source": [
+        0.039579592645168304,
+        -0.0748705342411995,
+        1.1221797466278076
+      ],
+      "proposed": [
+        0.032220756263091246,
+        -0.07087654134822112,
+        1.1158866282541686
+      ],
+      "deltaMeters": [
+        -0.007358836382077058,
+        0.0039939928929783736,
+        -0.006293118373638995
+      ],
+      "distanceMeters": 0.010474148700108063,
+      "views": 2
+    },
+    "lip_center": {
+      "source": [
+        2.111273488480947e-06,
+        -0.10007641464471817,
+        1.1195130348205566
+      ],
+      "proposed": [
+        0.00011032604299832896,
+        -0.09794776861426763,
+        1.1132555956353165
+      ],
+      "deltaMeters": [
+        0.00010821476950984802,
+        0.002128646030450543,
+        -0.006257439185240132
+      ],
+      "distanceMeters": 0.006610475740540284,
+      "views": 3
+    },
+    "chin": {
+      "source": [
+        1.867738683358766e-05,
+        -0.04507867991924286,
+        1.0862681865692139
+      ],
+      "proposed": [
+        0.003741308717589887,
+        -0.05008172993358731,
+        1.0851640781025444
+      ],
+      "deltaMeters": [
+        0.003722631330756299,
+        -0.005003050014344451,
+        -0.0011041084666694179
+      ],
+      "distanceMeters": 0.006333052105970037,
+      "views": 3
+    },
+    "nose_tip": {
+      "source": [
+        0.0011059383396059275,
+        -0.11053996533155441,
+        1.135831594467163
+      ],
+      "proposed": [
+        0.007409800063180181,
+        -0.11209501521981008,
+        1.141690020211442
+      ],
+      "deltaMeters": [
+        0.0063038617235742535,
+        -0.0015550498882556663,
+        0.005858425744278861
+      ],
+      "distanceMeters": 0.008745170380623687,
+      "views": 3
+    }
+  },
+  "cautions": [
+    "The portrait/front illustrations differ in head roll, perspective, expression and stylized construction. A single exact 3D solution is not assumed.",
+    "Brow and cheek picks indicate broad visible peaks, not exact human-template vertices. Native matching views must verify their surface interpretation.",
+    "Manual mouth corners include the visible smile crease; they are not the internal oral-bag boundary. Source selections must use exterior skin.",
+    "These picks are modeling evidence with uncertainty, never approved species proportion changes."
+  ],
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "codeSha256": "ffac24e94cd3bd3cf2b3abb5c3f9e098068e78abc04bb8f4dd2dbeb2349ad57d"
+}

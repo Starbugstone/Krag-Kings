@@ -1,0 +1,8 @@
+{
+  "status": "Preserved actual numerical failure; no native source created",
+  "maximumErrorMeters": 0.0005041348076081103,
+  "vertex": 1846,
+  "anatomy": "Lower lip, Jaw weight1",
+  "cause": "Independent nonlinear volume transforms of overlapping Smile and JawOpen shapes do not commute under engine linear morph addition. No new degenerate/fold or negative sampled volume Jacobian was found.",
+  "proposedCorrection": "Explicit separable mouth region: common X scale and X-dependent commissure elevation, linear Y/Z transport; same field for lip/oral parts and every shape. Broader transition remains smooth. Threshold unchanged."
+}
