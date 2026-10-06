@@ -15,7 +15,8 @@ ART=ROOT/'benchmark/art/nib'
 sys.path.insert(0,str(Path(__file__).parent))
 sys.path.insert(0,str(Path(__file__).parent.parent))
 sys.path.insert(0,str(ROOT/'benchmark/tools/krag'))
-from fit_head import fit_head
+from fit_head_v5d import fit_head,nose_mask,oral_translation,shape_receipt
+from nib_neck_v5d import cut_and_close,conform_to_body
 from nib_face import FACIAL_MORPHS, morph_delta, smoothstep
 from runtime_reduction import attach_portable_drivers
 from nib_groom_v5 import build_groom, deepen_ears
@@ -52,7 +53,7 @@ report={'status':'Work in progress: native geometry review required','artisticAc
         'borrowedTopology':'GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept.',
         'changes':[]}
 report['authoringCode']={}
-for filename in ['rebuild_head_v5.py','fit_head.py','nib_groom_v5.py','nib_cloth_v5.py',
+for filename in ['rebuild_head_v5.py','fit_head.py','fit_head_v5d.py','nib_neck_v5d.py','nib_groom_v5.py','nib_cloth_v5.py',
                  'nib_hand_v5.py','nib_opaque_eyes.py','nib_ocular_materials.py','nib_groom_materials.py','audit_face_coordinates.py']:
     path=Path(__file__).with_name(filename)
     report['authoringCode'][filename]=sha(path)
@@ -126,9 +127,9 @@ if face_sets is None:raise RuntimeError('Expected audited animation-head face se
 ears=[face for face in bm.faces if face[face_sets] in {3,4}]
 if not ears:raise RuntimeError('Audited original ear face sets are absent')
 bmesh.ops.delete(bm,geom=ears,context='FACES_ONLY')
-# Keep only the short neck that can meet the existing anatomy inside the scarf;
-# the reference bust's shoulders must never float over the Nib torso.
-bmesh.ops.delete(bm,geom=[v for v in bm.verts if v.co.z<.166],context='VERTS')
+# A vertex-delete cutoff left a jagged, visibly open ring in the real profile.
+# Bisect and close the actual lower neck before conforming it to retained skin.
+report['neckBoundary']=cut_and_close(bm)
 bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS')
 # Repair the two lateral openings while retaining the source's facial loops.
 boundaries=[edge for edge in bm.edges if edge.is_boundary]
@@ -155,25 +156,18 @@ original=np.asarray([tuple(v.co) for v in head.data.vertices],dtype=float)
 source_attribute=head.data.attributes.new('nib_source_position','FLOAT_VECTOR','POINT')
 source_attribute.data.foreach_set('vector',original.astype(np.float32).ravel())
 fitted=fit_head(original)
-# Suppress the human chin and philtrum while keeping cheek/lip continuity.
-front=np.clip((-original[:,1]-.015)/.05,0,1)
-chin=np.exp(-((original[:,2]-.184)/.026)**2)*front
-fitted[:,0]*=1-.10*chin
-fitted[:,1]+=.004*chin
-# Lower nasal tip becomes the compact, downward triangular feline leather pad.
-nose=np.exp(-(original[:,0]/.025)**4-((original[:,2]-.263)/.017)**4)*front
-fitted[:,0]*=1-.13*nose*np.clip((.266-original[:,2])/.015,0,1)
+report['shapeCorrection']=shape_receipt(original)
+neck_weights,report['neckSurfaceFit']=conform_to_body(original,fitted,collection,HEAD_DROP)
+neck_attribute=head.data.attributes.new('NibNeckBlend','FLOAT','POINT')
+neck_attribute.data.foreach_set('value',neck_weights.astype(np.float32))
+mouth_shift=Vector(oral_translation())
 head.data.vertices.foreach_set('co',fitted.astype(np.float32).ravel())
 head.matrix_world=Matrix.Translation((0,0,HEAD_DROP))
 setmaterial(head,'Nib_Skin','Nib_EarInner','Nib_MouthInterior')
 face_material=bpy.data.materials['Nib_Skin'].copy();face_material.name='Nib_v5_FacialSkin'
 head.data.materials[0]=face_material
 mask=head.data.attributes.new('NibNoseMask','FLOAT','POINT')
-for index,(x,y,z) in enumerate(original):
-    # Source audit places the front nasal pad at z .263.. .276, not .258.
-    pad=math.exp(-(abs(x)/.018)**6-((z-.268)/.013)**6)
-    pad*=smoothstep(.143,.155,-y)
-    mask.data[index].value=pad
+mask.data.foreach_set('value',nose_mask(original).astype(np.float32))
 nodes=face_material.node_tree.nodes;links=face_material.node_tree.links
 principled=next(node for node in nodes if node.type=='BSDF_PRINCIPLED')
 base=principled.inputs['Base Color'];old_link=base.links[0].from_socket if base.links else None
@@ -184,25 +178,42 @@ else:mix.inputs[1].default_value=base.default_value
 links.new(attribute.outputs['Fac'],mix.inputs[0]);links.new(mix.outputs[0],base)
 for polygon in head.data.polygons:
     center=original[list(polygon.vertices)].mean(0)
-    if abs(center[0])<.038 and .222<center[2]<.249 and center[1]>-.088:polygon.material_index=2
+    # Audited set7 is the oral region. The old unbounded y test also painted
+    # posterior neck faces black, visible as rectangles in the actual profile.
+    face_set=head.data.attributes['.sculpt_face_set'].data[polygon.index].value
+    if face_set==7 and -.115<center[1]<-.025:polygon.material_index=2
 apply_subdivision(head,2)
+surface_check=bmesh.new();surface_check.from_mesh(head.data)
+boundary_edges=[e for e in surface_check.edges if e.is_boundary]
+neck_open=[e for e in boundary_edges if max(v.co.z+HEAD_DROP for v in e.verts)<1.07]
+report['neckBoundary']['evaluatedOpenNeckEdges']=len(neck_open)
+report['neckBoundary']['allSurfaceBoundaryEdges']=len(boundary_edges)
+surface_check.free()
+if neck_open:raise RuntimeError('Visible lower-neck boundary is still open after subdivision')
 bind(head,None)
-headgroup=head.vertex_groups.new(name='Head');jawgroup=head.vertex_groups.new(name='Jaw')
+headgroup=head.vertex_groups.new(name='Head');jawgroup=head.vertex_groups.new(name='Jaw');neckgroup=head.vertex_groups.new(name='Neck')
 for v in head.data.vertices:
     x,y,z=v.co
-    jaw=(1-smoothstep(1.104,1.135,z))*max(0,min(1,(-y+.004)/.043))
+    oldz=z-mouth_shift.z;oldy=y-mouth_shift.y
+    jaw=(1-smoothstep(1.104,1.135,oldz))*max(0,min(1,(-oldy+.004)/.043))
     # The source mouth has separate upper/lower interior loops. A narrow seam
     # preserves lip closure during smiles; Jaw opens the lower lip and chin.
-    if abs(x)<.05 and y<-.05 and 1.102<z<1.119:
+    if abs(x)<.05 and oldy<-.05 and 1.102<oldz<1.119:
         seam=1.110+.0015*(x/.045)**3
-        jaw=1-smoothstep(seam-.0012,seam+.0012,z)
-    if jaw<1:headgroup.add([v.index],1-jaw,'REPLACE')
+        jaw=1-smoothstep(seam-.0012,seam+.0012,oldz)
+    neck=max(0,min(1,head.data.attributes['NibNeckBlend'].data[v.index].value))
+    jaw*=1-neck;head_weight=max(0,1-jaw-neck)
+    if head_weight>0:headgroup.add([v.index],head_weight,'REPLACE')
     if jaw>0:jawgroup.add([v.index],jaw,'REPLACE')
+    if neck>0:neckgroup.add([v.index],neck,'REPLACE')
 head.shape_key_add(name='Basis',from_mix=False)
 for name in FACIAL_MORPHS:
     key=head.shape_key_add(name=name,from_mix=False)
     for vertex in head.data.vertices:
-        delta=morph_delta(name,vertex.co)
+        sample=vertex.co.copy()
+        if name.startswith(('Smile','Frown','CheekTension')) or name in ['JawOpen','LipPress']:
+            sample-=mouth_shift
+        delta=morph_delta(name,sample)
         # Orbital loops receive an explicit continuous closing motion. The
         # exact eyeball collision/closure is assessed in the Blink review.
         if name.startswith('Blink'):
@@ -247,7 +258,7 @@ for side in ['L','R']:
 
 # Refit deforming facial pivots and the complete existing provisional interior
 # together. Control-only facial translations remain portable scalar channels.
-oral_shift=Vector((0,0,0))
+oral_shift=mouth_shift.copy()
 oral_prefixes=('Provisional recessed oral cavity','Upper provisional gum ridge','Lower provisional gum ridge',
                'Upper provisional tooth','Lower provisional tooth','Canonical dark blue Nib tongue')
 for obj in collection.objects:
@@ -257,12 +268,12 @@ bpy.ops.object.mode_set(mode='EDIT')
 for side,center in fitted_eye_centers.items():
     bone=rig.data.edit_bones['Eye_'+side];direction=bone.tail-bone.head
     bone.head=center;bone.tail=center+direction
-for name in ['Jaw','TongueBase','TongueTip']:
+for name in ['Jaw','TongueBase','TongueTip','LipUpper','LipLower','MouthCorner_L','MouthCorner_R']:
     bone=rig.data.edit_bones[name];bone.head+=oral_shift;bone.tail+=oral_shift
 bpy.ops.object.mode_set(mode='OBJECT')
 report['fittedEyeCentersMeters']={side:list(point) for side,point in fitted_eye_centers.items()}
 report['provisionalOralShiftMeters']=list(oral_shift)
-report['oralFitNote']='Retained v4b oral meshes and Jaw/Tongue pivots already include HEAD_DROP. No second drop or guessed forward offset; neutral world bounds/occlusion are audited before any review render.'
+report['oralFitNote']='Retained oral meshes and Jaw/Tongue/lip pivots move by the measured old-to-new fitted seam landmark delta only. Existing HEAD_DROP is not repeated. Actual closure/interior/pose review is required.'
 
 old_names=['Nib facial surface with eyelid and lip loops','Recessed eyeball ',
            'Amber iris ','Nib vertical pupil ','Wet eye glint ','Small triangular Nib nose',
@@ -301,7 +312,7 @@ blockers=[pose+': '+issue for pose in ['neutralCoordinates','idleCoordinates']
           for issue in report[pose]['neutralStructuralBlockersIfClosedMouthExpected']]
 report['preRenderGate']={'passed':not blockers,'blockingIssues':blockers,
                         'scope':'Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too'}
-scene['source_version']=args.revision+' opaque iris projection, corrected retained oral/groom spaces; unaccepted'
+scene['source_version']=args.revision+' continuous muzzle and broad nose, open orbital fit, closed conformed neck; unaccepted'
 scene['v5_reference_provenance']=json.dumps({key:report[key] for key in ['referenceLibrarySha256','referenceLicense','borrowedTopology']})
 bpy.ops.wm.save_as_mainfile(filepath=str(TARGET),compress=True)
 assert sha(SOURCE)==source_hash,'Pinned input was modified'

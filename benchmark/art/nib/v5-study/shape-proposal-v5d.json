@@ -1,0 +1,143 @@
+{
+  "status": "Computed raw control-cage proposal only; not an evaluated saved mesh, visual pass or canonical dimension",
+  "regions": {
+    "muzzle": {
+      "vertices": 664,
+      "oldMin": [
+        -0.05904264485994394,
+        -0.0983356843474433,
+        1.0867671529386433
+      ],
+      "oldMax": [
+        0.059128780636965646,
+        -0.031186311518276114,
+        1.1427152630632813
+      ],
+      "proposedMin": [
+        -0.060999398139770636,
+        -0.11005684789853128,
+        1.0920387363506512
+      ],
+      "proposedMax": [
+        0.06107339979651005,
+        -0.035708746090982166,
+        1.1441019405848851
+      ],
+      "maximumDisplacementMeters": 0.01708181417410063
+    },
+    "nasalPad": {
+      "vertices": 167,
+      "oldMin": [
+        -0.0341748955396639,
+        -0.0983356843474433,
+        1.1238058052952604
+      ],
+      "oldMax": [
+        0.034277869761065755,
+        -0.06120816712787946,
+        1.150494278974861
+      ],
+      "proposedMin": [
+        -0.03958221746737669,
+        -0.10039556284299919,
+        1.1293232108857854
+      ],
+      "proposedMax": [
+        0.039672754799411965,
+        -0.05955927621289486,
+        1.150885091766433
+      ],
+      "maximumDisplacementMeters": 0.01051674703798268
+    },
+    "orbital": {
+      "vertices": 840,
+      "oldMin": [
+        -0.0747447008148495,
+        -0.06455443550885273,
+        1.1528291921759652
+      ],
+      "oldMax": [
+        0.07475121387676063,
+        -0.02309045746919595,
+        1.1866967336116236
+      ],
+      "proposedMin": [
+        -0.07491548075846337,
+        -0.06456172164361836,
+        1.1513426874572703
+      ],
+      "proposedMax": [
+        0.07493882168733583,
+        -0.023122560748652717,
+        1.1884865912635632
+      ],
+      "maximumDisplacementMeters": 0.003595320206630972
+    }
+  },
+  "oralTranslationMeters": [
+    0.0,
+    -0.015170835992111956,
+    0.007778976710500984
+  ],
+  "eyeVerticalField": "Cancel legacy -0.22; add +0.16 about same source eye centers",
+  "noseWidthField": "Replace legacy 1-0.34*weight with 1+0.10*weight; taper lower pad by up to20% of its local weight",
+  "coordinateSpace": "Fitted source metres before common HEAD_DROP -0.032 m",
+  "referenceTopologySha256": "bbe35776c14f9b9142deffc3d83826564586c36868f5fae2250806d18616005d",
+  "codeSha256": {
+    "measure_v5d_proposal.py": "4715fde0b77c7ff7138904bec45afd04baa609731cb18691082544339b2d2005",
+    "fit_head_v5d.py": "59b09ababb0e4237e14342643cb6ba879476407c789931d961396aa4839935e4",
+    "fit_head.py": "bf727d80861720fff3b89bee34db0c964c205728b869bfc15970d37eb8faf601"
+  },
+  "noseMask": {
+    "verticesAboveHalf": 101,
+    "maximum": 0.9999994850873266
+  },
+  "eyeLocalVerticalSpanStudy": [
+    {
+      "side": -1,
+      "sourceProbePoints": [
+        [
+          -0.035876,
+          -0.128,
+          0.304
+        ],
+        [
+          -0.035876,
+          -0.128,
+          0.310037
+        ],
+        [
+          -0.035876,
+          -0.128,
+          0.316
+        ]
+      ],
+      "oldSpanMeters": 0.006769514133273091,
+      "proposedSpanMeters": 0.010896446041934071,
+      "scope": "Regional warp sensitivity at fixed eye X/Y; not a measured final eyelid aperture"
+    },
+    {
+      "side": 1,
+      "sourceProbePoints": [
+        [
+          0.035876,
+          -0.128,
+          0.304
+        ],
+        [
+          0.035876,
+          -0.128,
+          0.310037
+        ],
+        [
+          0.035876,
+          -0.128,
+          0.316
+        ]
+      ],
+      "oldSpanMeters": 0.00676951413308724,
+      "proposedSpanMeters": 0.01089644604174822,
+      "scope": "Regional warp sensitivity at fixed eye X/Y; not a measured final eyelid aperture"
+    }
+  ]
+}

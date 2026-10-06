@@ -57,3 +57,41 @@ A v5 source cannot use the promoted v4b FBX as its normal/morph preservation ref
 3. Run raw mapped UV/material/normal/shape checks against the new v5 reference, then fresh bind/clip/morph roundtrip and posed proof before asking root to promote.
 
 The explicit baseline/texture CLI options are syntax-checked preparation only. They have not produced a v5 export. The validated v4b repair remains reproducible from checkpoint f85c4f6 (exporter fix introduced in 761b3af), its recorded source and tool hashes.
+
+## Actual v5c depth evidence and prepared v5d
+
+The preserved v5c diagnostic profile/three-quarter job has now completed with
+exit 0 and a 2,631 MB peak private working allocation. Source SHA remains
+`e56d8a16218562f14f0e1ba6866751abacc27ab32adaa20b347fb5b93a2d8711`.
+`art/nib/v5-study/native-v5c-depth-review-result.json` records image hashes and
+the failed review. The profile exposes a human nasal tip/vertical philtrum and
+long lower jaw, plus jagged/open lower-neck edges. Three-quarter confirms slit
+eyes and flat muzzle planes. The dark rectangular posterior patch also has a
+separate cause: a mouth-material test with no upper Y bound.
+
+`fit_head_v5d.py` keeps the legacy fit intact and prepares a bounded continuous
+volume correction: broaden the alar/nose-pad loops, bring the upper lip/muzzle
+toward the pad, shorten the lower face and reopen the entire ocular region.
+The source code retains nostril topology and moves the existing cavity, teeth,
+gums, canonical blue tongue and their pivots by the same fitted seam delta.
+It is a proposal, not accepted anatomy. A lightweight raw-cage check reports a
+proposed oral shift of approximately 15.17 mm forward and 7.78 mm upward; the
+local eye-height probe changes from 6.77 to 10.90 mm. Those probes are not final
+evaluated lid apertures or proof of visibility/closure.
+
+`nib_neck_v5d.py` prepares an actual planar boundary and cap, conforms the lower
+neck to retained body geometry, and blends Neck/Head weights. The generation
+report checks for remaining open lower-neck edges after subdivision. The body
+remains a separate module: a whole-character topology weld is not claimed.
+No scarf geometry is added to cover the fault. The oral material is restricted
+to the audited mouth face set. The cut API direction was checked against the
+[Blender BMesh documentation](https://docs.blender.org/api/5.1/bmesh.ops.html#bmesh.ops.bisect_plane).
+
+The next allocated slot starts with `native-v5d-generate.job.json`, then report
+inspection and `native-v5d-face-review.job.json`. A failed gate stops dependent
+exports; an explicitly labeled diagnostic image can be scheduled when needed
+to interpret the actual failure. The v5d source does not yet exist. New shape,
+ocular materials and neck behavior need actual neutral, depth, blink, tongue
+and body-action review before any PBR bake or engine handoff. Fur and clothing
+still require substantial later work; neither the prior depth images nor the
+prepared correction is artistic acceptance.
