@@ -30,8 +30,22 @@
     "terrain distance-field presence, validity, dimensions and Lumen card count",
     "effective sky/Lumen/DF/AO console variables before performance warmup ends"
   ],
-  "diagnosticsCompiled": false,
-  "diagnosticsExecuted": false,
+  "diagnosticsCompiled": true,
+  "diagnosticsExecuted": true,
   "lightingExposureTextureChanged": false,
-  "interpretation": "Hard dark shadows need actual lighting diagnosis. CPU AverageBrightness/irradiance are not authoritative for the GPU realtime capture. No ambient cause established yet."
+  "interpretation": "Hard dark shadows need actual lighting diagnosis. CPU AverageBrightness/irradiance are not authoritative for the GPU realtime capture. No ambient cause established yet.",
+  "actualRuntimeEvidence": "showcase-profile-audio-fixed/review.json",
+  "subsequentFindings": {
+    "skyRealtimeEffective": true,
+    "skyIntensity": 0.85,
+    "skyIndirectIntensity": 1,
+    "terrainDistanceFieldValid": true,
+    "terrainDistanceFieldIndirectionGrid": [
+      18,
+      18,
+      18
+    ],
+    "terrainLumenCards": 1,
+    "ambientCauseEstablished": false
+  }
 }

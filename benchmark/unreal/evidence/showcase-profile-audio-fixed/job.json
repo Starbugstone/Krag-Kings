@@ -1,0 +1,24 @@
+{
+    "name":  "unreal-recording",
+    "executable":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64\\KragKingsBenchmark.exe",
+    "arguments":  [
+                      "-ResX=1920",
+                      "-ResY=1080",
+                      "-NoVSync",
+                      "-KKShowcase",
+                      "-KKShowcaseWait",
+                      "-KKSkinMode=Profile",
+                      "-KKShowcaseGate=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-profile-audio-fixed-retry1\\showcase-start.flag",
+                      "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-profile-audio-fixed-retry1\\runtime.log",
+                      "-ExecCmds=sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,sg.ShadingQuality 3,r.VolumetricFog 1"
+                  ],
+    "workingDirectory":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64",
+    "stdout":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-profile-audio-fixed-retry1\\native-stdout.log",
+    "stderr":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-profile-audio-fixed-retry1\\native-stderr.log",
+    "minAvailableGB":  10,
+    "maxPrivateGB":  10,
+    "gpuTelemetry":  true,
+    "trackProcessTree":  false,
+    "successLog":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-showcase\\20261006-profile-audio-fixed-retry1\\runtime.log",
+    "successMarker":  "KK_SHOWCASE_COMPLETE"
+}

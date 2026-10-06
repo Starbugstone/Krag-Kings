@@ -2,6 +2,7 @@
 param(
  [ValidateSet('Idle','Moving')][string]$Mode='Idle',
  [ValidateSet('Full','Balanced')][string]$Profile='Full',
+ [ValidateSet('Generic','DefaultLit','Profile')][string]$SkinMode='Generic',
  [Parameter(Mandatory=$true)][string]$OutputDirectory
 )
 $ErrorActionPreference='Stop'
@@ -25,7 +26,7 @@ $commands=@('sg.ViewDistanceQuality 3','sg.AntiAliasingQuality 3','sg.ShadowQual
 $runtimeLog=Join-Path $OutputDirectory 'runtime.log'
 $job=[ordered]@{
  name=('unreal-'+$Mode.ToLower()+'-'+$Profile.ToLower());executable=$executable
- arguments=@('-ResX=1920','-ResY=1080','-NoVSync',('-abslog='+$runtimeLog),('-ExecCmds='+($commands -join ',')),$(if($Mode -eq 'Moving'){'-KKPerfMoving'}else{'-KKPerf'}))
+ arguments=@('-ResX=1920','-ResY=1080','-NoVSync',('-KKSkinMode='+$SkinMode),('-abslog='+$runtimeLog),('-ExecCmds='+($commands -join ',')),$(if($Mode -eq 'Moving'){'-KKPerfMoving'}else{'-KKPerf'}))
  workingDirectory=(Split-Path $executable);stdout=(Join-Path $OutputDirectory 'native-stdout.log');stderr=(Join-Path $OutputDirectory 'native-stderr.log')
  minAvailableGB=10;maxPrivateGB=10;gpuTelemetry=$true;trackProcessTree=$false;successLog=$runtimeLog;successMarker=('KK_METRICS mode='+$prefix)
 }
@@ -39,6 +40,7 @@ foreach($artifact in $packageMetadata.artifacts){
 }
 Copy-Item $packageReceipt (Join-Path $OutputDirectory 'package-result.json')
 $report=[ordered]@{engine='Unreal';mode=$Mode;profile=$Profile;profileDescription=$(if($Profile -eq 'Balanced'){'High software Lumen GI/reflections; all other recorded groups Epic, native pixels'}else{'Epic software Lumen GI/reflections and remaining recorded groups, native pixels'});commands=$commands;source='actual packaged native Windows process';exeSha256=(Get-FileHash $executable -Algorithm SHA256).Hash.ToLower();comparisonComplete=$false;artisticAcceptance=$false;startedUtc=[DateTime]::UtcNow.ToString('o')}
+$report.skinMode=$SkinMode
 $guard=$null;$game=$null;$lease=$null
 try {
  $guardScript=Join-Path $PSScriptRoot '..\Run-HeavyTask.ps1'
@@ -70,6 +72,10 @@ try {
  foreach($name in @(($prefix+'.json'),($prefix+'-frames.csv'))){Copy-Item (Join-Path $nativeEvidence $name) (Join-Path $OutputDirectory $name)}
  $metrics=Get-Content (Join-Path $OutputDirectory ($prefix+'.json')) -Raw|ConvertFrom-Json
  if(-not $metrics.comparison_pass -or -not $metrics.completed_sample_window -or $metrics.width -ne 1920 -or $metrics.height -ne 1080 -or $metrics.warmup_seconds -ne 15){throw 'Runtime did not confirm the full native-1080p comparison window.'}
+ if($metrics.skin_mode -ne $SkinMode){
+  if($SkinMode -eq 'Generic' -and -not $metrics.skin_mode){$report.legacySkinModeNote='Older preserved package has only Generic; no material-mode override evidence.'}
+  else{throw 'Runtime did not confirm the requested skin-material mode.'}
+ }
  foreach($entry in @(@('r.ScreenPercentage',100),@('r.DynamicRes.OperationMode',0),@('r.VSync',0),@('sg.GlobalIlluminationQuality',$quality),@('sg.ReflectionQuality',$quality),@('sg.ShadowQuality',3),@('sg.TextureQuality',3))){if($metrics.actual_cvars.($entry[0]) -ne $entry[1]){throw ('Runtime setting mismatch: '+$entry[0])}}
  $report.comparisonComplete=$true;$report.metrics=$metrics
  $report.nativeProfileFieldNote='The executable requested_profile text describes its default. Actual CVars and this wrapper profile describe this measured launch.'
