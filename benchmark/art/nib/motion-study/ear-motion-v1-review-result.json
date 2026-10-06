@@ -1,0 +1,154 @@
+{
+  "status": "Actual isolated source and three static mesh views; temporal and engine review pending; overall art still fails",
+  "source": "benchmark/art/nib/Nib_EarMotionStudy_v1.blend",
+  "sourceSha256": "4f5465424ae61376af51e5f57a38cc197f6e4c5bb127b4748193e435d87bbd47",
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "sourceAuditFindings": [
+    "Fourteen ear/rim/fur components were previously 100 percent rigid Ear_L/R weights.",
+    "Saved Walk elbow bend is 25.14\u201330.78 degrees; Run is 43.29\u201357.73 degrees.",
+    "Run ipsilateral wrist/foot fore-aft correlation is +0.50 to +0.52; root owns captured-human whole-body correction."
+  ],
+  "changes": [
+    "Added EarTip_L/R for 77 total bones, preserving all previous rest matrices.",
+    "Continuous Head/Ear/EarTip weights on the fourteen authored ear modules; neutral geometry and all non-ear curves preserved.",
+    "Independent short ear-only curves for all seven clips, with delayed small distal follow-through and rest endpoints."
+  ],
+  "quantitative": {
+    "maximumHeadAnchoredDisplacementMeters": 1.415722404903125e-07,
+    "maximumHeadRelativeDisplacementMeters": 0.014015880389464054,
+    "method": "Linear blend skinning from actual saved rig poses and authored weights, in current Head-relative space; independent of dense evaluated mesh rendering"
+  },
+  "actualReview": {
+    "views": [
+      "EarRest",
+      "EarLeftPeak",
+      "EarLeftRecovery"
+    ],
+    "inspectedDirectly": true,
+    "observations": [
+      "The left tip lifts modestly; the skull attachment remains seated, without a newly visible base split at these three poses.",
+      "Recovery returns the left ear near its rest silhouette.",
+      "Existing thin membrane, sparse clumped fur, weak orbital/cheek form, glossy nose and rigid scarf remain artistically failed."
+    ],
+    "limitations": [
+      "Three stills do not establish temporal naturalness or readable timing in the game.",
+      "No new FBX, portable PBR bake or native engine import exists.",
+      "The inherited facial structural/oral gate remains false; the ear study is explicitly diagnostic."
+    ]
+  },
+  "stages": [
+    {
+      "name": "nib-v5h-motion-source-audit",
+      "exitCode": 0,
+      "completionMarker": "NIB_MOTION_SOURCE_AUDIT_COMPLETE",
+      "processId": 14964,
+      "processClosed": true,
+      "peakPrivateMB": 315.0,
+      "memory": "benchmark/art/nib/motion-study/v5h-motion-source-audit-memory.csv",
+      "memorySha256": "13a229a7aa98b096724ec18023b262b30d002685b0c832ecf1f96e97e4d84a61"
+    },
+    {
+      "name": "nib-ear-motion-v1-build",
+      "exitCode": 0,
+      "completionMarker": "NIB_EAR_MOTION_CANDIDATE_SAVED",
+      "processId": 28200,
+      "processClosed": true,
+      "peakPrivateMB": 636.0,
+      "memory": "benchmark/art/nib/motion-study/ear-motion-v1-build-memory.csv",
+      "memorySha256": "15cc70d579186e1dc20c8b7a6ee95edb3034c78bcc43cbfc07141fae351bc28b"
+    },
+    {
+      "name": "nib-ear-motion-v1-review",
+      "exitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "processId": 32596,
+      "processClosed": true,
+      "peakPrivateMB": 2626.0,
+      "memory": "benchmark/art/nib/motion-study/ear-motion-v1-review-memory.csv",
+      "memorySha256": "d71bd6d7904e395b756615d998fc3a984ad24fdd351437b1464d348e1ffd433c"
+    }
+  ],
+  "files": [
+    {
+      "path": "benchmark/art/nib/Nib_EarMotionStudy_v1.blend",
+      "sha256": "4f5465424ae61376af51e5f57a38cc197f6e4c5bb127b4748193e435d87bbd47",
+      "bytes": 55937855
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/v5h-motion-source-audit.json",
+      "sha256": "01fc3fa9be8f48cbf46ab3d758583bdbba811c203f962467a8a44ea4e011250a",
+      "bytes": 594566
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1.json",
+      "sha256": "85bba19ff2ca699146091515c3edbc3f8b8fa6aaad9048c62f93bcf01dac901a",
+      "bytes": 446298
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarLeftPeak.png",
+      "sha256": "b6f12bc58d101f83a235aec2756ca7eb9855c94cfe326ee65254b62e0a8b7923",
+      "bytes": 1839967
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarLeftPeak.png.json",
+      "sha256": "e63f4a666fdb9c16a624ae5e400ddd07a69818dee5c756e91eff1da674750295",
+      "bytes": 3185
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarLeftRecovery.png",
+      "sha256": "671b9389d442270f19812c53791962c0da7757907e7755c9b926e155837c7f66",
+      "bytes": 1839276
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarLeftRecovery.png.json",
+      "sha256": "a70403ebbc7f78b8897615ba473c284b2f5b5e07e034f85b64131cee79380543",
+      "bytes": 3204
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarRest.png",
+      "sha256": "5253417301abce68dfef5b45507467b265712977ffe7a54879472cc2990b9694",
+      "bytes": 1837960
+    },
+    {
+      "path": "benchmark/art/nib/motion-study/ear-motion-v1-renders/Nib_EarRest.png.json",
+      "sha256": "45d8c3b2093d07d2d4f285a750d71e97eb8032eb5678d8f9900be851a4ebd4ff",
+      "bytes": 3179
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/audit_motion_source.py",
+      "sha256": "1b878147309a917a72774bb604da1306a8584d88619c4e46d915173f4d24dad0",
+      "bytes": 5610
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/audit-v5h-motion.job.json",
+      "sha256": "45e72a8c85a6bf3c83149ee68fa897ab596e8654d3abd1921ce874261ed551ce",
+      "bytes": 1005
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/ear_motion.py",
+      "sha256": "6365392ab2cd7c3dbb03dc8788b1cc35ea654f55d5131f17f561ca04267f26ef",
+      "bytes": 7861
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/build_ear_candidate.py",
+      "sha256": "2a180e5454e4c385e7fac472194f423ad8b0c7a8bb839796d7a78042b683bc72",
+      "bytes": 7376
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/build-ear-motion-v1.job.json",
+      "sha256": "d76cfd4caf1c8c6f128a10fe7629359fbd4870677fdea3e0ba58e42279840fb2",
+      "bytes": 766
+    },
+    {
+      "path": "benchmark/tools/nib/motion_wip/review-ear-motion-v1.job.json",
+      "sha256": "e110a815630164fc5c9a5da2876d96bae2b21a39ca5238a280bf2d6dccb3f49b",
+      "bytes": 1160
+    },
+    {
+      "path": "benchmark/tools/nib/render_review.py",
+      "sha256": "5bfda201bef5742aeb414c8142cfe8459fa83a7eaefadf7b74d15a2eb21caced",
+      "bytes": 6489
+    }
+  ]
+}

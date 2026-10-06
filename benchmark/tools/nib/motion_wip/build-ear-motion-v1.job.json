@@ -1,0 +1,20 @@
+{
+  "name": "nib-ear-motion-v1-build",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\motion_wip\\build_ear_candidate.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\ear-motion-v1-build.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\ear-motion-v1-build.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\ear-motion-v1-build.log",
+  "successMarker": "NIB_EAR_MOTION_CANDIDATE_SAVED"
+}

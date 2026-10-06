@@ -1,8 +1,9 @@
 # Nib natural-motion and ear preparation
 
 Prepared after the user's direct review of awkward arm orientation and their
-request for natural whole-body/idle motion and Nib ear twitches. No script in
-this folder has yet authored or rendered a Blender candidate.
+request for natural whole-body/idle motion and Nib ear twitches. The read-only
+source audit and isolated ear study have now run. Their actual receipt is
+`benchmark/art/nib/motion-study/ear-motion-v1-review-result.json`.
 
 Root owns the common captured-human torso/pelvis/clavicle/arm adaptation under
 `benchmark/tools/animation/`. Do not fork another arm solver here. Preserve
@@ -23,7 +24,7 @@ are rigidly assigned to one ear bone. Idle and gait use small repeated sine
 sway, while Hit adds 16–18 degree rotation. Nonzero tracks do not demonstrate
 the rooted, independent natural twitch requested by the user.
 
-`ear_motion.py` prepares the following isolated change:
+`ear_motion.py` and `build_ear_candidate.py` have authored the following isolated change:
 
 - Preserve existing bones and their bind matrices. Add EarTip_L/R as children
   of Ear_L/R, still inside the FaceRoot subtree.
@@ -34,13 +35,23 @@ the rooted, independent natural twitch requested by the user.
   large whole-ear flap is used. Seven clip endpoints return to rest.
 - Keep all other action curves, body motion, facial keys and geometry intact.
 
-These amplitudes, timing and skinning ranges are tuning proposals. The plain
-Python curve/weight checks do not establish appearance. Before promotion,
-inspect actual neutral/peak/recovery geometry and temporal motion, attachment
-at the skull/goggles and both ears' silhouette. Then export the full matching
-rig and all standalone clips, validate their bind/ear tracks, and inspect the
-same updated content in Unity and Unreal. Do not mix new 77-bone source clips
-with the previous 75-bone exports or claim either count until generated.
+The resulting `Nib_EarMotionStudy_v1.blend` has 77 bones. All existing bind
+matrices, neutral geometry, UVs, materials, morphs and non-ear action curves
+pass preservation checks. A saved-pose linear-skinning calculation in current
+Head-relative space measures at most 0.15 micrometres of anchored-base drift
+and 14.02 mm of tip movement. These are numerical displacement checks, not
+an animation-quality verdict.
+
+Actual rest, left peak and recovery images were inspected. They show a modest
+tip lift and return with no newly visible base split at those poses. Timing,
+naturalness and right-side temporal review remain pending. These amplitudes,
+timing and skinning ranges remain tuning proposals. Before promotion, inspect
+actual motion and both ears' attachment at the skull/goggles. Then export the
+full matching rig and all standalone clips, validate bind/ear tracks, and
+inspect the same updated content in Unity and Unreal. Do not mix this new
+77-bone source with the previous 75-bone exports. If a body retarget changes
+clip duration, reauthor ear-only tracks after it rather than retaining pulses
+on the previous time range.
 
 The source facial/cloth/fur quality failures remain recorded separately in the
 Nib art README. Motion work is not artistic acceptance of those surfaces.

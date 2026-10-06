@@ -1,0 +1,42 @@
+{
+  "source": "Nib_EarMotionStudy_v1.blend",
+  "sourceSha256": "4f5465424ae61376af51e5f57a38cc197f6e4c5bb127b4748193e435d87bbd47",
+  "view": "EarLeftPeak",
+  "action": "Idle",
+  "frame": 19,
+  "subframe": 0.75,
+  "variant": "natural",
+  "renderer": "Blender Cycles CPU",
+  "samples": 20,
+  "status": "Diagnostic image of structurally flagged source; gate failure retained, no acceptance or export authorization",
+  "coordinateReport": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\motion-study\\ear-motion-v1.json",
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Existing facial/neutral gate retained; this isolated study does not repair face geometry"
+  },
+  "diagnosticOverride": true
+}

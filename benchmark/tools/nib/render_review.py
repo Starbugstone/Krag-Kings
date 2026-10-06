@@ -49,12 +49,17 @@ for view in requested:
         rig.animation_data.action=bpy.data.actions[action_name];scene.frame_set({'Walk':7,'Run':7,'Shoot':15,'Melee':19,'Hit':8}[action_name])
     camera.location=(1.9,-4.4,1.6);aim((0,0,.745))
     output='Nib_Review'+view+'.png'
-    if view in ['Face','FaceProfile','FaceThreeQuarter','Wary','Tongue','Blink']:
+    if view in ['Face','FaceProfile','FaceThreeQuarter','Wary','Tongue','Blink','EarRest','EarLeftPeak','EarRightPeak','EarLeftRecovery']:
         camera.location=(.35,-3,1.33);aim((0,-.005,1.17));camera.data.ortho_scale=.69
         scene.render.resolution_x=1400;scene.render.resolution_y=1100;output='Nib_FaceReview.png' if view=='Face' else 'Nib_Expression'+view+'.png'
         if view in ['FaceProfile','FaceThreeQuarter']:
             camera.location=(3,0,1.20) if view=='FaceProfile' else (.9,-1.3,1.27)
             aim((0,0,1.165));camera.data.ortho_scale=.56 if view=='FaceProfile' else .69
+            output='Nib_'+view+'.png'
+        elif view.startswith('Ear'):
+            rig.animation_data.action=bpy.data.actions['Idle']
+            frame={'EarRest':1.,'EarLeftPeak':19.75,'EarRightPeak':59.05,'EarLeftRecovery':25.15}[view]
+            scene.frame_set(int(frame),subframe=frame%1)
             output='Nib_'+view+'.png'
         elif view!='Face':
             rig.animation_data.action=bpy.data.actions['FacePerformance'];scene.frame_set({'Wary':31,'Tongue':103,'Blink':16}[view])
@@ -66,7 +71,7 @@ for view in requested:
         aim(target);camera.data.ortho_scale=.23 if view=='Hands' else .40
         scene.render.resolution_x=1200;scene.render.resolution_y=1000
     scene.render.filepath=str(RENDER_OUT/output);bpy.ops.render.render(write_still=True)
-    metadata={'source':SOURCE.name,'sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'view':view,'action':rig.animation_data.action.name,'frame':scene.frame_current,'variant':variant,'renderer':'Blender Cycles CPU','samples':scene.cycles.samples,'status':'Visual review evidence; no artistic approval implied'}
+    metadata={'source':SOURCE.name,'sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'view':view,'action':rig.animation_data.action.name,'frame':scene.frame_current,'subframe':scene.frame_subframe,'variant':variant,'renderer':'Blender Cycles CPU','samples':scene.cycles.samples,'status':'Visual review evidence; no artistic approval implied'}
     if args.coordinate_report:
         metadata['coordinateReport']=str(args.coordinate_report);metadata['preRenderGate']=gate_report.get('preRenderGate')
         metadata['diagnosticOverride']=args.diagnostic_allow_failed_gate
