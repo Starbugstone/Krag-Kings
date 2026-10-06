@@ -115,6 +115,11 @@ def build(head, rig, removed_faces, interface_edges, material):
                 group.add([i], w[name], 'REPLACE')
     obj.shape_key_add(name='Basis', from_mix=False)
     base = np.asarray(vertices, float)
+    stored_basis = np.asarray([v.co[:] for v in mesh.vertices], float)
+    contact_error = float(np.linalg.norm(stored_basis[:n]-points[ids], axis=1).max())
+    if contact_error > .0000003:
+        raise RuntimeError('Stored cuff contact exceeds0.3 micrometres')
+    maximum_morph_error = 0.
     source_drivers = head.data.shape_keys.animation_data.drivers if head.data.shape_keys.animation_data else []
     for key in head.data.shape_keys.key_blocks:
         if key.name == 'Basis':
@@ -127,6 +132,10 @@ def build(head, rig, removed_faces, interface_edges, material):
             generated[row*n:(row+1)*n] += delta[ids]*(1-t*t*(3-2*t))
         target = obj.shape_key_add(name=key.name, from_mix=False)
         target.data.foreach_set('co', generated.astype(np.float32).ravel())
+        stored = np.asarray([v.co[:] for v in target.data[:n]], float)
+        expected = points[ids]+delta[ids]
+        maximum_morph_error = max(maximum_morph_error,
+                                 float(np.linalg.norm(stored-expected, axis=1).max()))
         target.slider_min, target.slider_max = key.slider_min, key.slider_max
         driver = next((d for d in source_drivers if d.data_path == key.path_from_id('value')), None)
         copy_driver(driver, target)
@@ -134,7 +143,10 @@ def build(head, rig, removed_faces, interface_edges, material):
     mod.object = rig
     if not np.array_equal(base[:n], points[ids]):
         raise RuntimeError('Mechanical cuff outer contact moved')
+    if maximum_morph_error > .0000003:
+        raise RuntimeError('Stored cuff morph contact exceeds0.3 micrometres')
     return obj, {'boundaryVertexCount': n, 'rows': rows, 'vertices': len(vertices),
-                 'outerCoordinatesExact': True, 'outerMorphDeltasExact': True,
+                 'outerCoordinateStorageErrorMeters': contact_error,
+                 'outerMorphStorageErrorMeters': maximum_morph_error,
                  'outerWeightsCopied': True, 'innerWeights': 'Jaw=1',
                  'proposedWidthMeters': .014, 'actualPosedClearanceVerified': False}

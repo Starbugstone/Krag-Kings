@@ -1,0 +1,23 @@
+{
+  "name": "krag-normal-mouth-v9p-OpenRight",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\ironjaw_wip\\review_normal_mouth_v9p.py",
+    "--",
+    "--view",
+    "OpenRight"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-normal-mouth-v9p-OpenRight.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-normal-mouth-v9p-OpenRight.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-normal-mouth-v9p-OpenRight.stdout.log",
+  "successMarker": "KRAG_NORMAL_MOUTH_REVIEW_COMPLETE OpenRight"
+}

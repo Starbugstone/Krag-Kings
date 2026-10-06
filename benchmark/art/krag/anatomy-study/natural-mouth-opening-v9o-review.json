@@ -1,0 +1,29 @@
+{
+  "status": "Actual full-range mouth attribution complete; first JSON serialization failure retained",
+  "sourceSha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86",
+  "reportSha256": "cd0e600e5e5753bca9c038ceefd774c2910a250c4c039a13ee4bc351fc1d3d4b",
+  "toolSha256": "b1f4d790e9f102565b274dc06729c2ecf3e0b9f0b4f4dd672c264a8cb2d583cc",
+  "jobs": [
+    {
+      "name": "krag-natural-mouth-attribution",
+      "guardExitCode": 2,
+      "nativeExitCode": 2,
+      "peakPrivateMB": 682.0,
+      "minimumAvailableMB": 11968.0,
+      "stdoutSha256": "c4b95a53293fec96f3eaf414e6823114127ba828e56f172c381333d9fd9f8dd7",
+      "stderrSha256": "8bc20c0d20d0ffbbea44432367198660f0a0e01d6a84b6b310473b15c469b483"
+    },
+    {
+      "name": "krag-natural-mouth-attribution-json-retry",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 882.0,
+      "minimumAvailableMB": 11876.0,
+      "stdoutSha256": "364275a466a8b77f5a9d448e86cf0da6235ce6a575806dd0a2618c81c61f1d6d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "conclusion": "No duplicated full jaw opening. Bone supplies75.64mm central aperture; corrective adds4.99mm but shifts lower rim backward10.94mm relative to rigid dental arch. Crowns already12.4\u201317.1mm high; exposure/fit is the visible failure.",
+  "geometryOrExpressionRangeChanged": false,
+  "preparedCorrection": "Preserve full hinge/range/actions and neutral head/bite; reauthor lip-specific JawOpen support, contained tongue-floor motion and rigid root-fixed tusk orientation."
+}

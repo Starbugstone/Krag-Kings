@@ -112,10 +112,38 @@ materials = {}
 for index, mat in enumerate(oral.data.materials):
     ids = sorted({i for p in oral.data.polygons if p.material_index == index for i in p.vertices})
     materials[mat.name] = {'vertices': len(ids), 'posedBounds': [opoints[ids].min(0).tolist(), opoints[ids].max(0).tolist()]}
+adjacency = [[] for _ in oral.data.vertices]
+for edge in oral.data.edges:
+    a, b = edge.vertices
+    adjacency[a].append(b)
+    adjacency[b].append(a)
+visited = set()
+oral_rest = world(oral, coords(oral.data.shape_keys.key_blocks['Basis'].data))
+enamel_ids = {i for p in oral.data.polygons
+              if oral.data.materials[p.material_index].name == 'Krag_DentalEnamel' for i in p.vertices}
+crowns = []
+for start in sorted(enamel_ids):
+    if start in visited:
+        continue
+    todo, component = [start], []
+    visited.add(start)
+    while todo:
+        i = todo.pop()
+        component.append(i)
+        for j in adjacency[i]:
+            if j not in visited:
+                visited.add(j)
+                todo.append(j)
+    crown_points = oral_rest[component]
+    weights = {oral.vertex_groups[g.group].name: float(g.weight)
+               for g in oral.data.vertices[start].groups}
+    crowns.append({'vertices': len(component), 'boneWeights': weights,
+                   'restCenter': crown_points.mean(0).tolist(),
+                   'restDimensions': np.ptp(crown_points, axis=0).tolist()})
 report = {
     'status': 'Actual read-only natural-mouth decomposition; no expression range changed',
     'sourceSha256': EXPECTED, 'sourceChanged': False, 'clip': 'FacePerformance', 'frame': 146,
-    'jawPoseEulerDegrees': list(np.degrees(rig.pose.bones['Jaw'].rotation_euler)),
+    'jawPoseEulerDegrees': [float(value) for value in np.degrees(rig.pose.bones['Jaw'].rotation_euler)],
     'jawOpenValue': float(keys['JawOpen'].value), 'activeHeadMorphs': active,
     'actualLbsReproductionMaxErrorMeters': float(error.max()),
     'centralOralRims': {name: rim(values) for name, values in cases.items()},
@@ -123,10 +151,11 @@ report = {
                      'upperRimMaximumMeters': float(np.linalg.norm(jaw_delta[upper], axis=1).max()),
                      'lowerRimMaximumMeters': float(np.linalg.norm(jaw_delta[lower], axis=1).max())},
     'oralWeightDomains': oral_groups, 'oralMaterials': materials,
+    'actualRestDentalCrowns': crowns,
     'oralBoneChains': {name: {'parent': rig.data.bones[name].parent.name if rig.data.bones[name].parent else None,
                              'head': list(rig.data.bones[name].head_local),
                              'tail': list(rig.data.bones[name].tail_local),
-                             'poseEulerDegrees': list(np.degrees(rig.pose.bones[name].rotation_euler))}
+                             'poseEulerDegrees': [float(value) for value in np.degrees(rig.pose.bones[name].rotation_euler)]}
                       for name in ['Head', 'Jaw', 'Tongue_01', 'Tongue_02']},
     'artisticAcceptance': False,
 }

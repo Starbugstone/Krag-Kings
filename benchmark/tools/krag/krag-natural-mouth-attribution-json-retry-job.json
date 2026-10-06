@@ -1,0 +1,20 @@
+{
+  "name": "krag-natural-mouth-attribution-json-retry",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\ironjaw_wip\\audit_natural_mouth_opening.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-natural-mouth-attribution-json-retry.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-natural-mouth-attribution-json-retry.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-natural-mouth-attribution-json-retry.stdout.log",
+  "successMarker": "KRAG_NATURAL_MOUTH_OPENING_ATTRIBUTION_COMPLETE"
+}

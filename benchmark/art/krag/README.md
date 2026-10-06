@@ -392,3 +392,12 @@ The read-only `anatomy-study/motion-strips-v4-attribution.json` samples the actu
 **Compatibility still fails:** the inherited metal lip rim hides crowns, a casing bump protrudes through the front shield, and the rigid mechanism pulls away from the retained cheek boundary when opening. The next source needs a real flexible attachment, a shaped low casing rim and measured shield clearance. This actual source is not exported or accepted. `ironjaw-replacement-v1-review.json` retains the findings and hashes.
 
 The matched shadow-disabled v4 Walk frame separately confirms the long floor strips were Workbench shadow artifacts. `anatomy-study/motion-strips-v4-shadow-result.json` records the unchanged source/camera/pose comparison; no character geometry fix is indicated by those strips.
+
+
+## Actual natural-mouth attribution: corrective fit, not duplicate full opening
+
+The read-only audit initially reached its final JSON write and failed on a NumPy scalar. The scalar-safe retry passed guard/native0; the first failure and the unchanged source are preserved. `anatomy-study/natural-mouth-opening-v9o-review.json` records the exact result/tool/log hashes. Analytical skinning matches actual Blender within0.364 micrometres.
+
+At the unchanged22.9908-degree jaw pose, the true central rim measures75.64mm opening from skeleton alone and80.63mm with JawOpen. The corrective adds4.99mm rather than another complete jaw opening, but shifts the lower rim backward10.94mm relative to rigid lower teeth/gums. Existing crowns are12.4–17.1mm high; they look like chips because of exposure/fit. Tongue_01 correctly parents Jaw and Tongue_02 parents Tongue_01.
+
+The separate v9p recipe is **prepared, ungenerated**: retain neutral head/dental geometry, hinge, full range and action curves; replace the lip-local corrective contribution, add contained tongue-floor movement, and rigidly orient the existing natural tusks about their actual gingival roots without enlarging or stretching them. Actual closed/open front/right images remain required. The mechanical v2 cuff/housing is also still ungenerated.
