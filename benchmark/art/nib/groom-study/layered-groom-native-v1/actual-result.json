@@ -1,0 +1,184 @@
+{
+  "status": "Actual saved/reopened groom-only source and two reviewed images; artistic acceptance FAILED",
+  "candidateSha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+  "sourceSha256": "e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592",
+  "sourceReportSha256": "fd8d3eb40c21a40aa3b19f4ffe0a41fcbe2594dcaa61919fa7ba27ed2170e871",
+  "stage": "groom only; exact old scarf retained",
+  "jobs": [
+    {
+      "stage": "generate",
+      "processId": 31788,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 1266.0,
+      "minimumAvailableMB": 10160.0,
+      "maximumCommitPercent": 58.0
+    },
+    {
+      "stage": "neutral",
+      "processId": 13176,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2677.0,
+      "minimumAvailableMB": 9158.0,
+      "maximumCommitPercent": 61.0
+    },
+    {
+      "stage": "profile",
+      "processId": 2732,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2674.0,
+      "minimumAvailableMB": 9083.0,
+      "maximumCommitPercent": 61.0
+    }
+  ],
+  "views": {
+    "Neutral": "68dd841dab12ed36aebbe9ccfc0cc290e72cfa43557ed116003ab0f73e651f6d",
+    "Profile": "6ffbe6e50078ee8e169b0055501760461715e7be695ef1486b3e5ec2e7cbd64b"
+  },
+  "boneCount": 79,
+  "retainedMeshCount": 398,
+  "changedGroupCount": 12,
+  "imageCount": 70,
+  "newCards": 5383,
+  "newTriangles": 129192,
+  "removedTriangles": 186482,
+  "removedOpaqueStrands": 7284,
+  "observedLocalChanges": [
+    "Tan basal crossbars removed with underlying closed ears intact",
+    "Denser rim/base coverage and fuller head locks",
+    "Fewer isolated opaque rope strands; lower geometry count in changed groups"
+  ],
+  "failedVisuals": [
+    "Neutral inner-ear tufts form squared pale paper strips across almost every clump",
+    "Profile head locks read as long smooth/glossy combed hair rather than fine irregular fur",
+    "Ear exterior remains a flat mottled leaf with inadequate fur silhouette",
+    "Face/scarf, body/hand art and .493993mm inherited mouth warning remain unresolved"
+  ],
+  "readOnlyMapCheck": {
+    "file": "Nib_v6_InnerEarWispsCards_BaseColor.png.001",
+    "channels": 4,
+    "size": [
+      2048,
+      2048
+    ],
+    "alphaMin": 0,
+    "alphaMax": 1,
+    "coverageAbove045": 0.20398998260498047,
+    "method": "OpenImageIO FLOAT standalone read; this does not validate assigned shader/UV evaluation"
+  },
+  "nextAttribution": "Actual assigned UV/alpha path and tiny isolated source tuft versus stacked cards on contrasting background, including transparent bounce and denoising settings",
+  "sharedChanged": false,
+  "artisticAcceptance": false,
+  "artifactHashes": {
+    "Nib_Coherent_LayeredGroom_v1.blend": {
+      "sha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+      "bytes": 64442937
+    },
+    "actual-views/Neutral.json": {
+      "sha256": "998778e26bbc4a9246d225982f66d3e8ee8f0e827d9b58c57bba0bfbaee04c49",
+      "bytes": 1850
+    },
+    "actual-views/Neutral.png": {
+      "sha256": "68dd841dab12ed36aebbe9ccfc0cc290e72cfa43557ed116003ab0f73e651f6d",
+      "bytes": 1879170
+    },
+    "actual-views/Profile.json": {
+      "sha256": "c3c6673271df34a9cbc13fa793f84e47b34475eea6f0dfd2c977ce3694599a43",
+      "bytes": 1850
+    },
+    "actual-views/Profile.png": {
+      "sha256": "6ffbe6e50078ee8e169b0055501760461715e7be695ef1486b3e5ec2e7cbd64b",
+      "bytes": 1469415
+    },
+    "executed-recipe/alpha_clumps.py": {
+      "sha256": "f7ad1714bde6ab40d350728917596089af0053cbc07bb7a29b73081ebda1a02b",
+      "bytes": 4284
+    },
+    "executed-recipe/build_surface_layers.py": {
+      "sha256": "f68bdcea6026bdc02d5a2a116c99a6fc3bf773c2aef0b36bfec3d664180abab5",
+      "bytes": 11903
+    },
+    "executed-recipe/cloth_pattern.py": {
+      "sha256": "77b2ec06a87b5c0c07e2023cc8bfde36657daf2a7de7886893d983dfcc5fab80",
+      "bytes": 1793
+    },
+    "executed-recipe/flow_guides.py": {
+      "sha256": "328fdf34f47956028496d7f49b422febafabf10069b99a186a55219b393011dc",
+      "bytes": 6686
+    },
+    "executed-recipe/generate-layered-groom-v1.job.json": {
+      "sha256": "447da4e4bc2b80d7fafafcd4fc20c5fbef40c34525ee955fbef6456d6a2fe489",
+      "bytes": 1163
+    },
+    "executed-recipe/neutral-layered-groom-v1.job.json": {
+      "sha256": "e1db198697757c9675e67282ea0c4d276fe3991cf561de32e703187eceecacf2",
+      "bytes": 1175
+    },
+    "executed-recipe/preflight_pattern.py": {
+      "sha256": "a4b4105861a9ebbbdded8ea79217f560ee4814bad2f758d5f6a1ad14874514db",
+      "bytes": 2080
+    },
+    "executed-recipe/profile-layered-groom-v1.job.json": {
+      "sha256": "18ede97394c064f16f9a2792e1b1e545a075180647e0936f9802ee3ba7d01379",
+      "bytes": 1175
+    },
+    "executed-recipe/readiness-groom-only.json": {
+      "sha256": "0f2ca007a1ffeb2a4c9e8c04046a0780f3898edf457d24a6aefad439a2626535",
+      "bytes": 2317
+    },
+    "executed-recipe/returned_scarf.py": {
+      "sha256": "326a9fb06071aaa2bb1fbd792f2b9c9218d92a775b5b11f109abf4245c104278",
+      "bytes": 6527
+    },
+    "executed-recipe/review_macroface.py": {
+      "sha256": "5809df8c73e4f4044b10d22a08a94a0a27bc9e0857a2cd4b4520d7325f46875b",
+      "bytes": 5628
+    },
+    "guides.json": {
+      "sha256": "139a38ff0e8cdc5b944e911aae9a3d37b4b2b60a3b6351c188dbf235dc500b6e",
+      "bytes": 5076334
+    },
+    "logs/nib-layered-groom-v1-generate-memory.csv": {
+      "sha256": "35de6a93748408e80c50ce9b3723cdce3e1ff8b808057852175a0083d5c870f7",
+      "bytes": 1381
+    },
+    "logs/nib-layered-groom-v1-generate.log": {
+      "sha256": "9257c0f2cdf4d65a565f6a4d7c4dc724e0b0d844a7d6aa74476590eb9d2d0da1",
+      "bytes": 490
+    },
+    "logs/nib-layered-groom-v1-generate.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-layered-groom-v1-neutral-memory.csv": {
+      "sha256": "cf940eb510b4d203b65588011b4b8ecc22d06357981b06ee332a1dda071a39a2",
+      "bytes": 1898
+    },
+    "logs/nib-layered-groom-v1-neutral.log": {
+      "sha256": "8752898f391d5faf3521b4ee283cfea8b4773a888cae1a11c6ea9d264b6ca915",
+      "bytes": 412
+    },
+    "logs/nib-layered-groom-v1-neutral.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/nib-layered-groom-v1-profile-memory.csv": {
+      "sha256": "caf556baf7cdde37985cc272e664987519145303e5fddbbf20fa46a85eb5cd15",
+      "bytes": 953
+    },
+    "logs/nib-layered-groom-v1-profile.log": {
+      "sha256": "20f1dad0e7f28349f052241b5cfd277774fb98f011905d3b3c551a3fcee59b19",
+      "bytes": 412
+    },
+    "logs/nib-layered-groom-v1-profile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "source.json": {
+      "sha256": "fd8d3eb40c21a40aa3b19f4ffe0a41fcbe2594dcaa61919fa7ba27ed2170e871",
+      "bytes": 8015322
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "status": "Actual diagnostic mesh image; normal/oral warnings retained and artistic acceptance pending",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\layered-groom-native-v1\\Nib_Coherent_LayeredGroom_v1.blend",
+  "sourceSha256": "86f2b017e706b3ca62745c15c57714e2746db8823ad5f92f3fff4aa346419a2c",
+  "sourceReportSha256": "fd8d3eb40c21a40aa3b19f4ffe0a41fcbe2594dcaa61919fa7ba27ed2170e871",
+  "view": "Neutral",
+  "action": "Idle",
+  "frame": 1,
+  "headMorphValues": {
+    "Blink_L": 0.0,
+    "Blink_R": 0.0,
+    "Squint_L": 0.0,
+    "Squint_R": 0.0,
+    "BrowRaise_L": 0.13332897424697876,
+    "BrowRaise_R": 0.13332897424697876,
+    "BrowLower_L": 0.0,
+    "BrowLower_R": 0.0,
+    "Smile_L": 0.0,
+    "Smile_R": 0.0,
+    "Frown_L": 0.0,
+    "Frown_R": 0.0,
+    "JawOpen": 0.0,
+    "LipPress": 0.0,
+    "TongueOut": 0.0,
+    "CheekTension_L": 0.0,
+    "CheekTension_R": 0.0
+  },
+  "headHasCustomNormals": false,
+  "headMaterialNames": [
+    "Nib_IdentityFacialSkin",
+    "Nib_EarInner",
+    "Nib_MouthInterior"
+  ],
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "Inherited adult likeness, sparse/stiff groom, rigid scarf and raised-arm defects; actual neck review pending",
+      "Morph-combination nonlinear error exceeds0.25mm Playful"
+    ],
+    "diagnosticOverride": "Known combined morph nonlinearity 0.0004939928167744587 metres; no topology/Jacobian override"
+  },
+  "numericalWarnings": [
+    "Morph-combination nonlinear error exceeds0.25mm Playful"
+  ],
+  "render": {
+    "engine": "Cycles CPU",
+    "samples": 24,
+    "width": 1400,
+    "height": 1100
+  },
+  "imageSha256": "68dd841dab12ed36aebbe9ccfc0cc290e72cfa43557ed116003ab0f73e651f6d",
+  "scriptSha256": "5809df8c73e4f4044b10d22a08a94a0a27bc9e0857a2cd4b4520d7325f46875b",
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}

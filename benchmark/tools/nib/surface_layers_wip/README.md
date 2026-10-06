@@ -1,12 +1,12 @@
-# Actual construction failures; groom-only checkpoint prepared
+# Actual layered groom reviewed — appearance failed
 
 The first native source attempt stopped before save because broad card corners crossed a lens despite a clear center. Its exact recipe and logs are preserved. The footprint-aware retry completed groom emission/root fitting, then stopped before save because independent cloth fitting collapsed separated folds onto the same skin surface. Neither attempt produced a source or render; both exited 2 and kept the gates intact.
 
-`generate-layered-groom-v1.job.json` is the next prepared boundary: save/reopen the new groom while retaining the old scarf exactly, then matched Neutral/Profile. It is not yet executed. The separate cloth fitter now transports complete cross-sections with a smooth conservative radial offset, retaining internal fold geometry and required skin clearance; that correction is also unexecuted. The earlier full-stage jobs remain historical recipes and are not the next launch.
+`generate-layered-groom-v1.job.json` now saved/reopened source `86f2b017…`, and matched Neutral/Profile both exited 0. All 79 binds, actions, 398 unrelated meshes and 70 images are exact. The new 5,383 cards / 129,192 triangles give fuller coverage but expose squared paper-like ear strips and long combed head locks. Artistic acceptance failed; see `art/nib/groom-study/layered-groom-native-v1/actual-result.json`. The separate cloth fitter now transports complete cross-sections with a smooth conservative radial offset, retaining internal fold geometry and required skin clearance; that correction is also unexecuted. The earlier full-stage jobs remain historical recipes and are not the next launch.
 
 ## Design and gates
 
-This is ungenerated code, pinned to actual macroface diagnostic `e7a39cdb…`. It does not edit the frozen engine source or imply that the failed macroface is accepted. Its facial shape, morphs, five migrated pivots and unresolved 0.494 mm full-weight mouth warning remain unchanged.
+The groom-only stage is actual, pinned to macroface diagnostic `e7a39cdb…`; the cloth section-transport stage remains ungenerated. It does not edit the frozen engine source or imply that the failed macroface is accepted. Its facial shape, morphs, five migrated pivots and unresolved 0.494 mm full-weight mouth warning remain unchanged.
 
 The actual Neutral/Profile images show two distinct construction problems. The nine main groom groups contain 86,688 opaque-fiber triangles versus 36,720 masked-card triangles. Opaque bundles remain visible as pale ropes; the masked sheets also converge to one shared tip, compressing independent atlas fibers into leaf-like silhouettes. The old scarf is three sloped rings whose cross-sections never return upward/inward, making a collar rather than folded cloth.
 
@@ -16,4 +16,4 @@ The new scarf uses a continuous sheet with two actual returned folds, unequal di
 
 All proportions, densities and folds are fitting proposals against sheet 02, not new canon. Generation must preserve all unrelated mesh hashes, exact 79 global binds, hierarchy and every saved action curve, source images and the MASK manifest fields. Root attachment, triangle/UV areas, finite weights, goggle clearance, actual posed cloth clearance and saved reopen are explicit gates. Numerical results do not establish coverage, cloth character or likeness.
 
-The first granted native boundary is source plus matched Neutral/Profile, followed by one rear view if the first images are useful. Do not launch without the parent-granted exclusive heavy slot. Native results and image costs are still pending.
+The granted groom-only source and matched Neutral/Profile boundary is complete. Further launches require a new exclusive heavy-slot grant. Before another density change, inspect actual evaluated UV/alpha and an isolated real tuft against contrasting background. The inherited face/mouth and scarf failures are not cleared by this result.
