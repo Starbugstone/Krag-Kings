@@ -533,6 +533,7 @@
       ],
       "triangles": 538642,
       "vertices": 304261,
+      "preTriangulated": true,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
       "weightedVertices": 304261,
@@ -852,6 +853,7 @@
       ],
       "triangles": 532244,
       "vertices": 301078,
+      "preTriangulated": true,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
       "weightedVertices": 301078,
@@ -1177,6 +1179,7 @@
       ],
       "triangles": 533534,
       "vertices": 301669,
+      "preTriangulated": true,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
       "weightedVertices": 301669,
@@ -1565,5 +1568,47 @@
   "animationBindCarrier": {
     "mesh": "Nib_AnimationBindCarrier",
     "purpose": "Preserve identical FBX rest skeleton; animation import ignores carrier geometry."
+  },
+  "pointPayloadPreservation": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-triangulated\\Nib_Natural.fbx",
+      "sourceSha256": "1629c1fb4165ef00e3ba5245285130564d70fd89ed3859b4a69ce8ffd9afb577",
+      "beforeSha256": "6b26806b4ef9382b979289a0f79c35ac61c7bd6c957dbee7feda893051cd696e",
+      "afterSha256": "3e912b71e5ee1a908bb89bf0fe3b5b0faa3977ca08a3c396a5eea46e4a9d7898",
+      "pointCoordinatesByteIdentical": true,
+      "restoredSourcePointNormalLayer": true,
+      "restoredSparseMorphPayloads": 25,
+      "allOtherSerializedPropertiesVerifiedUnchanged": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_GripReplacement.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-triangulated\\Nib_GripReplacement.fbx",
+      "sourceSha256": "1696938be1c107dd0023d4e17f8ffad3ae8b3ff86c3ae2abfc0d87eee8e39b54",
+      "beforeSha256": "6850e40d456af94533e95853c34d8511a6fc2522e7f3ac26fa543666bbf3f598",
+      "afterSha256": "4b35892fcaec9456a9ff6f6f1209febcffae66ac4e05c3609017f810dace6ce8",
+      "pointCoordinatesByteIdentical": true,
+      "restoredSourcePointNormalLayer": true,
+      "restoredSparseMorphPayloads": 25,
+      "allOtherSerializedPropertiesVerifiedUnchanged": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_LegReplacement.fbx",
+      "target": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-triangulated\\Nib_LegReplacement.fbx",
+      "sourceSha256": "c6675f617761ff2ce92bf3447ab4f931002a9a8855d118dc63a29e2d146084ba",
+      "beforeSha256": "a6edb3a05725bdd26eb328173ec10b589a05a484cab2089e21f276a987c87b47",
+      "afterSha256": "fd1716cad09d15dbb52bec187512e793820963941465dcb7478acc8cc3f133f7",
+      "pointCoordinatesByteIdentical": true,
+      "restoredSourcePointNormalLayer": true,
+      "restoredSparseMorphPayloads": 25,
+      "allOtherSerializedPropertiesVerifiedUnchanged": true
+    }
+  ],
+  "geometryExport": {
+    "triangulated": true,
+    "method": "Disposable assembly triangulation; validated baseline vertex-domain normal and sparse shape payloads preserved with Blender binary FBX parser/writer",
+    "sourceVertexOrderUnchanged": true,
+    "mappedNormalMaxVectorError": 0,
+    "pointAndMorphPayloadsByteIdentical": true
   }
 }

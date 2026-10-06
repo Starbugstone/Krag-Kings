@@ -1,0 +1,20 @@
+{
+  "name": "nib-runtime-triangulated-preserve-v4b",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\python\\bin\\python.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\preserve_fbx_point_payloads.py",
+    "--source-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib",
+    "--candidate-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-triangulated",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-preservation-v4b.json",
+    "--addons",
+    "D:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\scripts\\addons_core"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-preserve-v4b.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-preserve-v4b.stderr.log"
+}

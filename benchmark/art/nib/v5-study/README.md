@@ -1,6 +1,6 @@
 # Nib next-pass studies
 
-These files distinguish the validated, promoted runtime derivative from the still-unexecuted v5 art work. The dense v4b `Nib_Master.blend` remains preserved; shared FBXs now use the measured optimized derivative after root verified all 85 files.
+These files distinguish the validated, promoted runtime derivative from the generated, failed v5 study and the still-unexecuted v5b corrections. The dense v4b `Nib_Master.blend` remains preserved; shared FBXs now use the measured optimized derivative after root verified all 85 files.
 
 The head studies use the actual 3,242-vertex `GEO-head_animation_realistic` topology from Blender Studio's Human Base Meshes bundle v1.4.1. Its bundle README states CC0. The source inventory, provenance and unrelated Rain Rig license text are preserved under `benchmark/art/reference-anatomy/` and `benchmark/art/krag/anatomy-study/`. No outside anatomy was present in v4b.
 
@@ -20,11 +20,18 @@ The separate `runtime-cost-audit.job.json` loads the pinned source read-only and
 
 The existing export, render and roundtrip tools accept optional source/output/report paths. Their default v4b behavior is unchanged. Exports were generated and validated in `benchmark/local/candidates/nib-v4b-optimized`, outside the Unity auto-imported shared tree, then root promoted them. Images/reports stay here. The initial 250–350k aspiration was exceeded to preserve the measured surface/deformation limits.
 
-## Native v5 code prepared, not yet generated
+## Native v5b corrections prepared, not generated
 
-`rebuild_head_v5.py` now prepares a separate `Nib_Master_v5_WIP.blend`: fitted CC0 animation-head topology and matched eye geometry, explicit removal of the two original human ears, deterministic scalp/ear guide clumps, three compressed scarf wraps and common bib/pocket shaping. It preserves the pinned source and shared exports. `--cinematic` uses the same guide field with denser strands into a separately named master; `--hands` additionally fits the CC0 coherent hand topology and corrects right finger ordering, which requires matching clip re-export.
-
-These scripts have passed Python syntax checking only. The ear patches, eyes/blinks, lip/teeth fit, scalp clearance, cloth action clearance and hand weighting must be inspected in actual Blender output before any promotion. They are queued after the runtime derivative, not evidence that v5 exists yet.
+The first native v5 artifact now exists and fails visual review, documented below.
+`rebuild_head_v5.py` currently targets separate `Nib_Master_v5b_WIP.blend` and
+`Nib_Cinematic_v5b_WIP.blend` outputs. These files have not been generated.
+Prepared fixes cache/detach reference parent transforms before fitting eyes,
+refit eye and mouth pivots/interior together, trim the reference bust, smooth the
+nose mask, deepen ear cups, move curved finer hair clumps around the goggles and
+inner rim, raise compressed scarf wraps and remove remaining trouser ring bulges.
+The v5b guarded job also enables the prepared coherent CC0 hand replacement.
+All of these changes need actual new neutral/posed renders and matching clip
+exports before any promotion. Only Python syntax checks have run on v5b.
 
 ## Promoted runtime derivative — technically validated, artistically unaccepted
 
@@ -39,3 +46,58 @@ These scripts have passed Python syntax checking only. The ear patches, eyes/bli
 - All three variant FBXs and seven standalone animation FBXs passed fresh-process reimport. Each variant has one mesh, 75 bones, 25 morphs and no invalid weights. All seven clips have one skeletal take and verified varying face controls; maximum bind-matrix difference is exactly zero. Peak private memory for export was 1,507 MB and roundtrip validation was recorded in the receipt. Actual engine checks remain pending.
 
 Failed trial reports remain in the ignored `../versions/runtime-reduction-v4b-failures/` local archive. None of these results imply artistic acceptance or measured engine performance. Root verified the 85-file receipt, normalized candidate JSONs to LF and promoted the selected derivative to shared. The receipt records the final promoted hashes.
+
+### Native v5 first build — generated, failed artistic review
+
+`Nib_Master_v5_WIP.blend` was generated from the pinned optimized v4b source,
+with SHA256 `53290a5bce862a637832d5ba175d1537e78da7902a9bf44cd7aaa6059a8c3b75`.
+Actual Face, Front, Side, Blink and Shoot captures are in `native-renders/`, each
+with its source hash and action/frame metadata. Generation and CPU review exited
+0 under the shared guard; this establishes artifact existence, not visual approval.
+
+The continuous CC0-derived mouth/cheek/lid surface removes the old detached
+facial construction. However, **this build fails likeness and expression review**:
+
+- The imported reference eyes were transformed after their parent head moved;
+  the Side capture reveals a detached eye above the head. Cache all original
+  reference world matrices and detach parents before fitting; refit Eye rest
+  pivots and verify actual eye/lid bounds and blink occlusion.
+- The reference head's lower neck/shoulder base protrudes over the old torso.
+  Trim that base and conceal/join the remaining short neck correctly.
+- The nose material boundary is jagged, and facial proportions still read too
+  human and inert. Keep continuous cheek/lip topology, then refine the compact
+  feline muzzle, leather nose/nostrils and slanted eye shape.
+- Hair covers a goggle edge and reads as straight sparse hay-like tufts. Ear
+  membranes need deeper cups and thick, irregular inner-rim fringe; the crown
+  needs fuller curved clumps and fine wispy tips with the forehead visible.
+- The attempted trouser reshape still retains periodic ring bulges. Replace the
+  residual radial modulation instead of preserving it through the remap.
+- Mouth interior and Jaw/Tongue pivots still require refitting together with the
+  new face; dark-blue tongue and provisional teeth must be checked in open-mouth
+  and playful expression captures. Right-hand coherent topology remains pending.
+
+The isolated pretriangulated export uses **optimized v4b**, never this failed v5
+study. No v5 art or changed facial bind has been promoted to either engine.
+
+## Promoted pretriangulated v4b
+
+Root verified all 85 candidate hashes/sizes and four report hashes, then promoted
+12 changed files to shared. `runtime-triangulated-candidate-v4b.contract.json`
+records the selected hashes. Raw Basis and all 25 sparse morph arrays are exactly
+identical to the previous runtime derivative; mapped material/UV corners and
+normals are unchanged. Three assembled variants and seven clips pass fresh
+Blender roundtrip with zero bind-matrix error and actual facial motion.
+
+The automatic triangulation attempt introduced small sparse-key roundoff and a
+substantive custom-normal defect. The reproducible export now preserves the
+baseline point-normal and sparse-morph payloads using Blender's binary FBX
+parser/writer after asserting identical vertex coordinates/order. It re-parses
+and compares every unrelated serialized property. The final raw check reports
+exact zero normal error and exact morph payloads; no tolerance relaxation was
+needed. An optional `--morphs-only` mode exists for the Krag pipeline, which must
+independently validate its loop-mapped normals.
+
+One duplicate triangle is removed on Blender import (Natural vertex set
+6192/9363/24611), so imported counts are one lower than raw FBX counts. This is
+recorded in `runtime-triangulated-import-cleanup-v4b.json`. This technical handoff
+uses the unchanged, artistically unaccepted v4b model, not the failed v5 study.

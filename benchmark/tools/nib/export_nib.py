@@ -1,5 +1,5 @@
 """Consolidate editable Nib source into three efficient, self-contained FBX variants."""
-import bpy,json,shutil,hashlib,sys,argparse,os
+import bpy,bmesh,json,shutil,hashlib,sys,argparse,os
 import numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/nib';OUT=ROOT/'benchmark/shared/characters/nib'
@@ -7,6 +7,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--out',type=Path,default=OUT)
 parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
+parser.add_argument('--triangulate',action='store_true',help='Export a temporary triangulated mesh while retaining source vertices and shape keys')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source;BASELINE_OUT=OUT;OUT=args.out
 OUT.mkdir(parents=True,exist_ok=True)
@@ -50,6 +51,8 @@ if candidate:
     manifest['runtimeReductionReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
 manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','furStrands','furTriangles','cinematic']}
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
+if args.triangulate:
+    manifest['geometryExport']={'triangulated':True,'method':'Disposable assembly triangulation; validated baseline vertex-domain normal and sparse shape payloads preserved with Blender binary FBX parser/writer','sourceVertexOrderUnchanged':True,'mappedNormalMaxVectorError':0,'pointAndMorphPayloadsByteIdentical':True}
 for m in bpy.data.materials:
     if not m.name.startswith('Nib_'):continue
     manifest['materials'].append({'name':m.name,'baseColor':'textures/'+m.name+'_BaseColor.png','normal':'textures/'+m.name+'_Normal.png','roughness':'textures/'+m.name+'_Roughness.png','metallic':'textures/'+m.name+'_Metallic.png'})
@@ -103,10 +106,40 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
     if variant=='natural':manifest['heightMeters']=bounds['max'][2]-bounds['min'][2]
     if max_influences>(8 if candidate else 4):raise RuntimeError(f'{label}: unsupported bone influence count {max_influences}')
     if empty or badsum:raise RuntimeError(f'{label}: unweighted={empty}, invalid sums={badsum}')
+    if args.triangulate:
+        # FBX's built-in BMesh conversion perturbs a few near-zero shape deltas.
+        # Triangulate this disposable assembly explicitly, then restore every
+        # cached key coordinate before export. No vertex may move or reorder.
+        vertex_normals=np.zeros((len(mesh.data.vertices),3),dtype=np.float32)
+        for loop,normal in zip(mesh.data.loops,mesh.data.corner_normals):
+            vertex_normals[loop.vertex_index]=normal.vector
+        if any((np.asarray(normal.vector)-vertex_normals[loop.vertex_index]).dot(np.asarray(normal.vector)-vertex_normals[loop.vertex_index])>1e-12 for loop,normal in zip(mesh.data.loops,mesh.data.corner_normals)):
+            raise RuntimeError('Nib source split normals need explicit corner transfer')
+        cached_keys={}
+        for key in mesh.data.shape_keys.key_blocks:
+            values=np.empty(len(mesh.data.vertices)*3,dtype=np.float32);key.data.foreach_get('co',values)
+            cached_keys[key.name]=values
+        original_positions=np.empty(len(mesh.data.vertices)*3,dtype=np.float32);mesh.data.vertices.foreach_get('co',original_positions)
+        bm=bmesh.new();bm.from_mesh(mesh.data)
+        bmesh.ops.triangulate(bm,faces=list(bm.faces));bm.to_mesh(mesh.data);bm.free()
+        resulting_positions=np.empty(len(mesh.data.vertices)*3,dtype=np.float32);mesh.data.vertices.foreach_get('co',resulting_positions)
+        if not np.array_equal(original_positions,resulting_positions):raise RuntimeError('Triangulation moved/reordered Basis vertices')
+        for key in mesh.data.shape_keys.key_blocks:key.data.foreach_set('co',cached_keys[key.name])
+        mesh.data.normals_split_custom_set_from_vertices(vertex_normals.tolist())
+        if any(len(p.vertices)!=3 for p in mesh.data.polygons):raise RuntimeError('Explicit triangulation left nontriangular faces')
     rig.hide_set(False);rig.select_set(True);bpy.context.view_layer.objects.active=rig
     fbx='Nib_'+label+'.fbx'
-    bpy.ops.export_scene.fbx(filepath=str(OUT/fbx),use_selection=True,object_types={'ARMATURE','MESH'},global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False,mesh_smooth_type='FACE',use_mesh_modifiers=False)
-    manifest['variants'].append({'name':'Nib_'+label,'fbx':fbx,'label':{'Natural':'Natural','GripReplacement':'Grip replacement','LegReplacement':'Leg replacement'}[label],'species':'Nib','sourceRestBoundsMeters':bounds,'fur':variant_fur,'deformation':deformation,'morphs':present,'triangles':triangles,'vertices':len(mesh.data.vertices),'skinnedMeshCount':1,'materialSlots':len(mesh.data.materials),'weightedVertices':len(mesh.data.vertices),'maxInfluences':max(len(v.groups) for v in mesh.data.vertices),'bionics':[] if variant=='natural' else [{'region':'left forearm/hand' if variant=='grip' else 'right lower leg/foot','function':'restoration only','upgrade':False}]})
+    bpy.ops.export_scene.fbx(filepath=str(OUT/fbx),use_selection=True,object_types={'ARMATURE','MESH'},global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False,mesh_smooth_type='FACE',use_mesh_modifiers=False,use_triangles=False)
+    if args.triangulate:
+        # Preserve the already validated point-domain shading and shape arrays.
+        # The helper refuses any changed vertex coordinates/order, shape list or
+        # non-point normal mapping, and verifies every other serialized property.
+        if not candidate:raise RuntimeError('Pretriangulation must first be exported to an isolated candidate')
+        sys.path.insert(0,str(Path(__file__).parent/'v5_wip'))
+        from preserve_fbx_point_payloads import preserve
+        preservation=preserve(BASELINE_OUT/fbx,OUT/fbx,Path(bpy.utils.system_resource('SCRIPTS'))/'addons_core')
+        manifest.setdefault('pointPayloadPreservation',[]).append(preservation)
+    manifest['variants'].append({'name':'Nib_'+label,'fbx':fbx,'label':{'Natural':'Natural','GripReplacement':'Grip replacement','LegReplacement':'Leg replacement'}[label],'species':'Nib','sourceRestBoundsMeters':bounds,'fur':variant_fur,'deformation':deformation,'morphs':present,'triangles':triangles,'vertices':len(mesh.data.vertices),'preTriangulated':args.triangulate,'skinnedMeshCount':1,'materialSlots':len(mesh.data.materials),'weightedVertices':len(mesh.data.vertices),'maxInfluences':max(len(v.groups) for v in mesh.data.vertices),'bionics':[] if variant=='natural' else [{'region':'left forearm/hand' if variant=='grip' else 'right lower leg/foot','function':'restoration only','upgrade':False}]})
     temporary_mesh=mesh.data
     bpy.data.objects.remove(mesh,do_unlink=True)
     if temporary_mesh.users==0:bpy.data.meshes.remove(temporary_mesh)

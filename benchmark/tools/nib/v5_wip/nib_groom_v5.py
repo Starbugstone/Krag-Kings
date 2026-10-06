@@ -8,16 +8,54 @@ import bpy, math, random
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
+EAR_CENTERS=[(.066,1.210),(.114,1.250),(.170,1.289),(.220,1.333),(.269,1.379),(.309,1.417)]
+EAR_WIDTHS=[.009,.056,.069,.060,.036,.0004]
+
+def ear_coordinates(point):
+    xz=Vector((abs(point.x),point.z));best=None
+    for i in range(5):
+        a=Vector(EAR_CENTERS[i]);b=Vector(EAR_CENTERS[i+1]);d=b-a
+        q=max(0,min(1,(xz-a).dot(d)/d.length_squared));center=a+d*q
+        distance=(xz-center).length_squared
+        if best is None or distance<best[0]:
+            width=EAR_WIDTHS[i]*(1-q)+EAR_WIDTHS[i+1]*q
+            u=(xz-center).dot(Vector((.64,-.77)))/max(width,.001)
+            best=(distance,(i+q)/5,u)
+    return best[1],best[2]
+
+def deepen_ears(collection):
+    changed=[]
+    for obj in collection.objects:
+        if obj.type!='MESH' or not obj.name.startswith(('Fennec cupped ear','Ear inner velvet','Rounded auricle cartilage rim','Auricle basal cartilage fold')):continue
+        inverse=obj.matrix_world.inverted()
+        for vertex in obj.data.vertices:
+            p=obj.matrix_world@vertex.co;t,u=ear_coordinates(p);u=max(-1,min(1,u))
+            belly=math.sin(math.pi*t)**.65
+            p.y+=.021*belly*(1-u*u)-.005*belly*abs(u)**6-.009*t**7
+            vertex.co=inverse@p
+        obj.data.update();changed.append(obj.name)
+    return changed
+
+def avoid_goggles(point):
+    point=point.copy()
+    for side in [-1,1]:
+        dx=point.x-side*.040;dz=point.z-1.228;r=math.hypot(dx,dz)
+        if r<.033 and point.y<-.048:
+            # Keep the guide behind the real gasket/lens envelope. Fine hairs
+            # may emerge around its silhouette, never lie across the glass.
+            point.y=max(point.y,-.048+.003*(1-r/.033))
+    return point
+
 def strand_mesh(name,guide_clumps,collection,rig,material,bone='Head',cinematic=False):
     vertices=[];faces=[];uvs=[];rng=random.Random(8141)
-    count=0;rings=6 if cinematic else 3;sides=3
+    count=0;rings=7 if cinematic else 4;sides=3
     for root,normal,mid,tip,width,seed in guide_clumps:
         rng.seed(seed)
         tangent=normal.cross(Vector((0,0,1)))
         if tangent.length<.01:tangent=normal.cross(Vector((0,1,0)))
         tangent.normalize();bitangent=normal.cross(tangent).normalized()
         # Nested random seeds retain the runtime subset in the denser master.
-        density=24 if cinematic else 8
+        density=28 if cinematic else 12
         for strand in range(density):
             strand_rng=random.Random(seed*100+strand)
             radial=width*math.sqrt(strand_rng.random());angle=strand_rng.random()*math.tau
@@ -26,10 +64,11 @@ def strand_mesh(name,guide_clumps,collection,rig,material,bone='Head',cinematic=
             start=root+offset
             middle=mid+offset*.62
             end=root+(tip-root)*length+offset*.12
-            radius=strand_rng.uniform(.00017,.00032)
+            radius=strand_rng.uniform(.00010,.00024)
             base=len(vertices)
             for j in range(rings):
                 t=j/(rings-1);point=start*(1-t)**2+middle*(2*t*(1-t))+end*t*t
+                if bone=='Head':point=avoid_goggles(point)
                 direction=(2*(1-t)*(middle-start)+2*t*(end-middle)).normalized()
                 across=direction.cross(normal)
                 if across.length<.01:across=direction.cross(Vector((1,0,0)))
@@ -67,41 +106,43 @@ def build_groom(head,collection,rig,material,cinematic=False):
         points.append((point,normal))
     if not points:raise RuntimeError('No fitted scalp root samples')
     clumps=[]
-    for index in range(850):
+    for index in range(730):
         root,normal=rng.choice(points);root=root+normal*.0003
         front=root.y<-.015
-        if front:flow=Vector((-.020,-.012,-.019))
-        else:flow=Vector((math.copysign(.019,root.x),.004,-.026))
+        if front:flow=Vector((-.026,-.004,-.013))
+        else:flow=Vector((math.copysign(.019,root.x),.009,-.025))
         # Subtract the inward component and lift the whole path off the scalp.
         flow-=normal*flow.dot(normal)
         if flow.length<.006:flow=normal.cross(Vector((1,0,0)))*.026
-        flow.normalize();flow*=rng.uniform(.029,.047)
-        mid=root+flow*.48+normal*rng.uniform(.009,.014)
-        tip=root+flow+normal*rng.uniform(.003,.007)
-        clumps.append((root,normal,mid,tip,.0038,1000+index))
+        flow.normalize();flow*=rng.uniform(.031,.052)
+        mid=root+flow*.42+normal*rng.uniform(.012,.021)
+        tip=root+flow+normal*rng.uniform(.007,.012)
+        clumps.append((root,normal,mid,tip,.0024,1000+index))
     output=[strand_mesh('Nib v5 scalp clumped coat',clumps,collection,rig,material,cinematic=cinematic)]
     # Ear roots use the actual closed cupped auricle. A nearer surface query
     # fits each clump to its rim/interior rather than relying on old dimensions.
     for side,sign in [('L',1),('R',-1)]:
         ear=next(o for o in collection.objects if o.name.startswith('Fennec cupped ear ') and o.get('bone')=='Ear_'+side)
-        candidates=[]
+        rim=[];base=[];interior=[]
         for vertex in ear.data.vertices:
             point=ear.matrix_world@vertex.co;normal=(ear.matrix_world.to_3x3()@vertex.normal).normalized()
-            if normal.y<-.25 and abs(point.x)>.085:
-                candidates.append((point,normal))
+            if normal.y<-.25 and abs(point.x)>.075:
+                t,u=ear_coordinates(point)
+                if abs(u)>.66:rim.append((point,normal,t,u))
+                elif t<.35:base.append((point,normal,t,u))
+                else:interior.append((point,normal,t,u))
         clumps=[]
-        for index in range(420):
-            root,normal=rng.choice(candidates)
-            # Distribute mostly across the basal/outer region; inner velvet stays
-            # visible. Existing sparse perimeter tubes are removed by caller.
-            along=max(0,min(1,(abs(root.x)-.066)/.245))
-            if .40<along<.86 and rng.random()<.45:continue
+        for index in range(330):
+            choice=rng.random();candidates=rim if choice<.75 else base if choice<.96 else interior
+            root,normal,along,u=rng.choice(candidates or rim)
             root=root+normal*.0003
-            flow=Vector((-sign*.014,-.002,.006))
+            flow=Vector((-sign*u*.021,-.002,u*.019))
+            flow+=Vector((sign*.005,0,.008))
             flow-=normal*flow.dot(normal)
-            mid=root+flow*.50+normal*.005
-            tip=root+flow+normal*rng.uniform(.002,.006)
-            clumps.append((root,normal,mid,tip,.0028,3000+(0 if sign==1 else 1000)+index))
+            flow*=rng.uniform(.75,1.45)
+            mid=root+flow*.44+normal*rng.uniform(.010,.018)
+            tip=root+flow+normal*rng.uniform(.005,.010)
+            clumps.append((root,normal,mid,tip,.0024,3000+(0 if sign==1 else 1000)+index))
         output.append(strand_mesh('Nib v5 auricle clumped coat '+side,clumps,collection,rig,material,'Ear_'+side,cinematic))
     # A longer tapered chin cluster follows the jaw, with irregular strand ends.
     points=[]

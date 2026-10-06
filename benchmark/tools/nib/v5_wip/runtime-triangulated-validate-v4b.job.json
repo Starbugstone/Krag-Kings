@@ -1,0 +1,23 @@
+{
+  "name": "nib-runtime-triangulated-validate-v4b",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\validate_exports.py",
+    "--",
+    "--out",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-v4b-triangulated",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-validation-v4b.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-validate-v4b.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\runtime-triangulated-validate-v4b.stderr.log"
+}

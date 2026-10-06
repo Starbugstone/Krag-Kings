@@ -20,6 +20,8 @@ for item in manifest['variants']:
     missing=[name for name in ['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'] if not any(name in a for a in actions)]
     errors=[]
     if len(meshes)!=1:errors.append('Expected one consolidated mesh')
+    all_triangles=all(len(p.vertices)==3 for obj in meshes for p in obj.data.polygons)
+    if item.get('preTriangulated') and not all_triangles:errors.append('Pretriangulated variant contains nontriangular polygons')
     if len(rigs)!=1:errors.append('Expected one armature')
     if missing:errors.append('Missing clips: '+','.join(missing))
     if len(rigs)==1 and not reference_rest:reference_rest={bone.name:[value for row in (rigs[0].matrix_world@bone.matrix_local) for value in row] for bone in rigs[0].data.bones}
@@ -35,6 +37,7 @@ for item in manifest['variants']:
     bad_weights=sum(1 for o in meshes for v in o.data.vertices if not v.groups or len(v.groups)>influence_limit or abs(sum(g.weight for g in v.groups)-1)>.005)
     if bad_weights:errors.append(str(bad_weights)+' invalid skin vertices')
     entry={'variant':item['name'],'meshCount':len(meshes),'boneCount':len(rigs[0].data.bones) if rigs else 0,'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in meshes),'materials':sorted(set(m.name for o in meshes for m in o.data.materials)),'boundsMin':minimum,'boundsMax':maximum,'bindMatrixMaxAbsoluteError':rest_error,'actions':actions,'morphs':morphs,'invalidWeightCount':bad_weights,'errors':errors}
+    entry['allPolygonsTriangular']=all_triangles
     report['variants'].append(entry)
 for clip in manifest['clips']:
     bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
@@ -66,5 +69,5 @@ for clip in manifest['clips']:
     report['animations'].append({'clip':clip['name'],'actions':actions,'singleTake':len(actions)==1,'activeFaceBones':active,'movingFaceBones':moving,'facialMotionVerified':bool(moving),'bindMatrixMaxAbsoluteError':rest_error,'missingBones':missing_bones,'bindPoseVerified':not missing_bones and rest_error<1e-4})
 report['passed']=all(not r['errors'] for r in report['variants']) and all(r['singleTake'] and r['facialMotionVerified'] and r['bindPoseVerified'] for r in report['animations'])
 args.report.parent.mkdir(parents=True,exist_ok=True)
-args.report.write_text(json.dumps(report,indent=2));print('NIB_FBX_VALIDATION '+json.dumps(report),flush=True)
+args.report.write_text(json.dumps(report,indent=2),newline='\n');print('NIB_FBX_VALIDATION '+json.dumps(report),flush=True)
 if not report['passed']:raise RuntimeError('Nib export validation failed; see export-validation.json')

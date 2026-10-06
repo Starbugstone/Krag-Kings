@@ -1,8 +1,8 @@
 # Nib benchmark asset work
 
-**Current handoff: optimized v4b, structurally validated and artistically unaccepted.** Root promoted the measured runtime derivative into the three shared variants and seven standalone clips after checking all 85 file hashes. The dense `Nib_Master.blend` remains preserved. Neither version meets the requested concept likeness or finished hero-quality bar.
+**Current handoff: pretriangulated optimized v4b, structurally validated and artistically unaccepted.** Root promoted the measured runtime derivative into the three shared variants and seven standalone clips after checking all 85 file hashes. The dense `Nib_Master.blend` remains preserved. Neither version meets the requested concept likeness or finished hero-quality bar.
 
-The dense v4b pipeline was checkpointed in `c523810`. `create_nib.py` incorporates the scarf fitting, neutral-lid cleanup and lossless saves; `patch_nib_v4.py` records the equivalent changes applied to the saved v4 source. `source-report.json` retains original generation hashes, patch hash and reproduction-code hashes. The measured reduction, pose checks, matched captures and export receipt are in `v5-study/`; the authoring tools are in `tools/nib/v5_wip`. Separate native v5 art scripts remain unexecuted and do not change the preserved master. Export/review/validation tools support explicit alternative paths while retaining their baseline defaults.
+The dense v4b pipeline was checkpointed in `c523810`. `create_nib.py` incorporates the scarf fitting, neutral-lid cleanup and lossless saves; `patch_nib_v4.py` records the equivalent changes applied to the saved v4 source. `source-report.json` retains original generation hashes, patch hash and reproduction-code hashes. The measured reduction, pose checks, matched captures and export receipt are in `v5-study/`; the authoring tools are in `tools/nib/v5_wip`. The separate native v5 art build exists and failed visual review; actual captures and the failure record are in `v5-study/native-renders/`. Corrective v5b scripts are explicitly ungenerated and do not change the preserved master. Export/review/validation tools support explicit alternative paths while retaining their baseline defaults.
 
 ## Current artifacts and measured structure
 
@@ -14,7 +14,13 @@ The dense v4b pipeline was checkpointed in `c523810`. `create_nib.py` incorporat
 - Height is about 1.394 m to ear/fur tip. Bind ankle height is 0.10 m; source sole minimum is approximately 0.0005 m.
 - Batched runtime fur: all 10,784 original strands retained, now 112,536 triangles per variant instead of 258,816. Additional fine edge, eyebrow and chin tubes are included in the complete character counts. Representation is skinned opaque geometry, without simulation or a cutout-material dependency. Engine frame-time/VRAM measurement is still required before further tuning.
 
-The source is original procedural construction from concept sheets 02 and 05. No outside anatomical library has been incorporated into v4b. The official Blender Studio CC0 reference library is being considered for the next topology pass, preserving the creature identity.
+The source is original procedural construction from concept sheets 02 and 05. No outside anatomical library has been incorporated into v4b. The isolated failed native v5 study uses the official Blender Studio CC0 animation-head topology. It has not been promoted; the next corrective v5b pass remains ungenerated.
+
+## Pretriangulated engine handoff
+
+Root verified the 85-file receipt and promoted the triangle-only runtime FBXs. `v5-study/runtime-triangulated-candidate-v4b.contract.json` records the exact handoff; adjacent raw payload, preservation and fresh Blender roundtrip reports provide the checks. All Basis coordinates and 25 sparse morph payloads are byte-identical to the previous validated derivative. Vertex/material/UV corner sets are unchanged, and mapped normal difference is exactly zero. The serializer preserves the existing point-normal layer with Blender's own FBX parser/writer and verifies every other serialized property. This avoids Unreal's high-memory FBX SDK triangulation step; actual Unreal import still needs verification.
+
+All three assembled variants and seven single-take clips pass fresh roundtrip with 75 bones, 25 morphs, normalized weights and zero bind-matrix difference. Blender removes one duplicate triangle from each imported variant (Natural indices 6192, 9363, 24611); raw FBX triangle counts above remain exact. This cleanup is recorded, not silently counted as identical topology. Guard peaks were 2,246 MB export, 381 MB payload preservation, 301 MB raw comparison and 768 MB roundtrip.
 
 ## Verification evidence
 
@@ -37,6 +43,7 @@ The successful derivative stages peaked at 1,287 MB (reduction), 2,597 MB (five 
 | v3 | `versions/v3-source/`, `versions/v3-renders/` | Failed: connected facial surface introduced, but cavity/teeth protruded at neutral; eyes, shoulders, scarf and hair remained wrong. Shoot now aimed forward. |
 | v4 before patch | `versions/v4-prepatch/` | Neutral mouth sealed and torso/arms united; dark polygon lid margins looked jagged and the lowered scarf intersected the chest. |
 | v4b current | `renders/Nib_FaceReview.png`, `renders/Nib_ReviewFront.png` and adjacent source-hash JSON | Major lid-material/scarf penetration corrected. **Still fails likeness:** face reads flat, orange iris pieces protrude from dark eye slits, nose/nostril/cheek/muzzle/lip construction lacks the reference continuity; head/ear groom is sparse; scarf reads as a broad sheet instead of compressed fabric loops; bib and hands remain insufficiently shaped. |
+| native v5 failed | `v5-study/native-renders/` plus source-hash JSON | Continuous cheeks/lips improve construction, but source-eye parent transforms are wrong, the bust/neck base protrudes, nose mask is jagged, and groom/ears/cloth still fail. Source retained for review; v5b fixes are ungenerated. |
 | optimized v4b | `v5-study/runtime-renders/` Front/Face/Shoot/Run/Blink and source-hash JSON | Reduction preserves the baseline appearance. Blink explicitly fails eye occlusion; the same face/groom/cloth weaknesses remain. This is the current technical engine baseline, not a visual approval. |
 
 Current Shoot/Tongue images outside the version archive were captured before the v4b material/scarf patch; their JSON identifies that older source hash. Front/Face are the current v4b captures. No pass has received artistic approval.

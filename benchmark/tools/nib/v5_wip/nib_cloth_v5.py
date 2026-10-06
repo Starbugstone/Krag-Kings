@@ -19,7 +19,7 @@ def revise_cloth(collection,rig):
                 fold=.0018*math.sin(a*9+winding*1.2)+.0010*math.sin(a*17-across*4)
                 x=rx*math.cos(a)+.003*math.sin(a*2+winding)
                 y=.005+(ry+.005*ridge+fold)*math.sin(a)
-                z=1.006-winding*.013-across*.014-front**1.4*(.012+winding*.012)+.005*math.cos(a*2+.4*winding)
+                z=1.030-winding*.013-across*.014-front**1.4*(.010+winding*.008)+.005*math.cos(a*2+.4*winding)
                 z+=fold*ridge
                 vertices.append((x,y,z));uvs.append((i/N*2,across*.22+winding*.25))
         for j in range(M-1):
@@ -38,6 +38,19 @@ def revise_cloth(collection,rig):
     obj['variant']='all';obj['bone']='Chest'
     mod=obj.modifiers.new('Nib deformation','ARMATURE');mod.object=rig
     changed=[]
+    # Preserve the fixed proportions while recovering the reference's waist
+    # taper in both skin and the fitted underlayer. The belt remains the anchor.
+    for piece in collection.objects:
+        if piece.get('bone')!='BodyAnatomy' and piece.name!='Sleeveless dust undershirt':continue
+        inverse=piece.matrix_world.inverted()
+        arrays=[key.data for key in piece.data.shape_keys.key_blocks] if piece.data.shape_keys else [piece.data.vertices]
+        for array in arrays:
+            for vertex in array:
+                p=piece.matrix_world@vertex.co
+                if .675<p.z<.875 and abs(p.x)<.12:
+                    taper=.12*math.exp(-((p.z-.755)/.065)**2)
+                    p.x*=1-taper;p.y*=1-taper*.22
+                    vertex.co=inverse@p
     # Apply the same world-space field to cloth, pockets and stitches so the
     # attachments follow the fabric rather than floating over a changed bib.
     for piece in collection.objects:
@@ -53,5 +66,57 @@ def revise_cloth(collection,rig):
                 p.y-=swelling+tension
                 vertex.co=inverse@p
         changed.append(piece.name)
-    return {'scarfTriangles':sum(len(p.vertices)-2 for p in obj.data.polygons),'bibPiecesReformed':changed,
+    trousers=[]
+    # Replace the periodic inflated-ring profile with a broad cloth silhouette,
+    # compression at the gathered hem and directional folds from knee/hip.
+    for side,sign in [('L',1),('R',-1)]:
+        piece=bpy.data.objects.get('Shaped overalls trouser '+side)
+        if not piece:continue
+        inverse=piece.matrix_world.inverted()
+        arrays=[key.data for key in piece.data.shape_keys.key_blocks] if piece.data.shape_keys else [piece.data.vertices]
+        def old_profile(t):
+            return (.055-t*.018+.010*math.sin(t*math.pi*13)**3,.057-t*.020+.007*math.cos(t*math.pi*17))
+        def profile(t,values):
+            controls=[0,.18,.40,.59,.77,1]
+            for i in range(len(controls)-1):
+                if controls[i]<=t<=controls[i+1]:
+                    q=(t-controls[i])/(controls[i+1]-controls[i]);q=q*q*(3-2*q)
+                    return values[i]*(1-q)+values[i+1]*q
+            return values[0] if t<0 else values[-1]
+        for array in arrays:
+            for vertex in array:
+                p=piece.matrix_world@vertex.co;t=max(0,min(1,(.604-p.z)/.400))
+                center=Vector((sign*(.066+.008*math.sin(t*math.pi)),.009+.009*math.sin(t*7),p.z))
+                old_x,old_y=old_profile(t);offset=p-center
+                angle=math.atan2(offset.y/max(old_y,.008),offset.x/max(old_x,.008))
+                radius_x=profile(t,[.054,.065,.067,.058,.054,.042])
+                radius_y=profile(t,[.057,.067,.065,.058,.051,.038])
+                # Long diagonal tension folds below the hip, local knee folds,
+                # and a small nonperiodic bunching field at the rolled cuff.
+                hip=.0034*math.sin(angle*5+t*8)*math.exp(-((t-.27)/.24)**2)
+                knee=.0028*math.sin(angle*3-t*17)*math.exp(-((t-.61)/.13)**2)
+                cuff=.0038*math.sin(angle*7+t*13)*math.exp(-((t-.94)/.065)**2)
+                fold=hip+knee+cuff
+                # Preserve cap/interior vertices relative to their cross-section.
+                rho=1 if .02<t<.98 else min(1,math.sqrt((offset.x/max(old_x,.008))**2+(offset.y/max(old_y,.008))**2))
+                p.x=center.x+math.cos(angle)*(radius_x+fold)*rho
+                p.y=center.y+math.sin(angle)*(radius_y+fold*.8)*rho
+                vertex.co=inverse@p
+        trousers.append(piece.name)
+        for attached in collection.objects:
+            if attached.name.startswith(('Cargo sewn pocket '+side,'Cargo pocket flap '+side)):
+                attached.location.x+=sign*.028
+            elif attached.name.startswith('Knee patched panel '+side):
+                attached.location.y-=.015
+            elif attached.name.startswith('Knee visible stitch') and attached.get('bone')=='Shin_'+side:
+                attached.location.y-=.015
+            elif attached.name.startswith('Trouser raised seam '+side):
+                # Side seams follow the broader gathered silhouette.
+                for vertex in attached.data.vertices:
+                    p=attached.matrix_world@vertex.co;t=max(0,min(1,(.604-p.z)/.400))
+                    center=sign*(.066+.008*math.sin(t*math.pi))
+                    direction=1 if p.x>center else -1
+                    p.x=center+direction*(profile(t,[.054,.065,.067,.058,.054,.042])+.001)
+                    vertex.co=attached.matrix_world.inverted()@p
+    return {'scarfTriangles':sum(len(p.vertices)-2 for p in obj.data.polygons),'bibPiecesReformed':changed,'trousersReformed':trousers,
             'status':'Native cloth review required in Front/Back/Side/Shoot; no simulation.'}

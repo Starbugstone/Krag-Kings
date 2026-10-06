@@ -18,7 +18,7 @@ sys.path.insert(0,str(ROOT/'benchmark/tools/krag'))
 from fit_head import fit_head
 from nib_face import FACIAL_MORPHS, morph_delta, smoothstep
 from runtime_reduction import attach_portable_drivers
-from nib_groom_v5 import build_groom
+from nib_groom_v5 import build_groom, deepen_ears
 from nib_cloth_v5 import revise_cloth
 from nib_hand_v5 import rebuild_hands
 
@@ -28,8 +28,8 @@ parser.add_argument('--cinematic',action='store_true')
 parser.add_argument('--hands',action='store_true')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source
-TARGET=ART/('Nib_Cinematic_v5_WIP.blend' if args.cinematic else 'Nib_Master_v5_WIP.blend')
-REPORT=ART/'v5-study'/('native-head-cinematic-v5.json' if args.cinematic else 'native-head-v5.json')
+TARGET=ART/('Nib_Cinematic_v5b_WIP.blend' if args.cinematic else 'Nib_Master_v5b_WIP.blend')
+REPORT=ART/'v5-study'/('native-head-cinematic-v5b.json' if args.cinematic else 'native-head-v5b.json')
 LIBRARY=ROOT/'benchmark/art/reference-anatomy/blender-studio-human-base-meshes/source/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend'
 HEAD_DROP=-.032
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -75,13 +75,20 @@ names += ['GEO-head_animation_realistic.'+part+'.'+side for part in ['iris','scl
 with bpy.data.libraries.load(str(LIBRARY),link=False) as (available,requested):
     requested.objects=names
 reference={o.name:o for o in requested.objects}
-head=reference['GEO-head_animation_realistic'];head_matrix=head.matrix_world.copy()
+def authored_world(obj):
+    if obj.parent is None:return obj.matrix_basis.copy()
+    return authored_world(obj.parent)@obj.matrix_parent_inverse@obj.matrix_basis
+reference_world={name:authored_world(obj) for name,obj in reference.items()}
+head=reference['GEO-head_animation_realistic'];head_matrix=reference_world[head.name].copy()
+report['originalReferenceMatrices']={name:[list(row) for row in matrix] for name,matrix in reference_world.items()}
 source_vertices=np.asarray([tuple(v.co) for v in head.data.vertices],dtype=float)
-for obj in reference.values():
+for name,obj in reference.items():
     for c in list(obj.users_collection):c.objects.unlink(obj)
     collection.objects.link(obj)
     obj.modifiers.clear()
     obj.vertex_groups.clear()
+    obj.parent=None;obj.matrix_parent_inverse=Matrix.Identity(4)
+    obj.matrix_world=reference_world[name]
 
 # Remove the original human auricles, including their hidden posterior roots.
 # No additional ears are retained: the existing two fennec auricles remain.
@@ -94,6 +101,9 @@ if face_sets is None:raise RuntimeError('Expected audited animation-head face se
 ears=[face for face in bm.faces if face[face_sets] in {3,4}]
 if not ears:raise RuntimeError('Audited original ear face sets are absent')
 bmesh.ops.delete(bm,geom=ears,context='FACES_ONLY')
+# Keep only the short neck that can meet the existing anatomy inside the scarf;
+# the reference bust's shoulders must never float over the Nib torso.
+bmesh.ops.delete(bm,geom=[v for v in bm.verts if v.co.z<.166],context='VERTS')
 bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS')
 # Repair the two lateral openings while retaining the source's facial loops.
 boundaries=[edge for edge in bm.edges if edge.is_boundary]
@@ -131,9 +141,23 @@ fitted[:,0]*=1-.13*nose*np.clip((.266-original[:,2])/.015,0,1)
 head.data.vertices.foreach_set('co',fitted.astype(np.float32).ravel())
 head.matrix_world=Matrix.Translation((0,0,HEAD_DROP))
 setmaterial(head,'Nib_Skin','Nib_EarInner','Nib_MouthInterior')
+face_material=bpy.data.materials['Nib_Skin'].copy();face_material.name='Nib_v5_FacialSkin'
+head.data.materials[0]=face_material
+mask=head.data.attributes.new('NibNoseMask','FLOAT','POINT')
+for index,(x,y,z) in enumerate(original):
+    pad=math.exp(-(abs(x)/.021)**6-((z-.258)/.012)**6)
+    pad*=smoothstep(.126,.143,-y)
+    mask.data[index].value=pad
+nodes=face_material.node_tree.nodes;links=face_material.node_tree.links
+principled=next(node for node in nodes if node.type=='BSDF_PRINCIPLED')
+base=principled.inputs['Base Color'];old_link=base.links[0].from_socket if base.links else None
+attribute=nodes.new('ShaderNodeAttribute');attribute.attribute_name='NibNoseMask'
+mix=nodes.new('ShaderNodeMixRGB');mix.blend_type='MIX';mix.inputs[2].default_value=(.115,.062,.044,1)
+if old_link:links.new(old_link,mix.inputs[1])
+else:mix.inputs[1].default_value=base.default_value
+links.new(attribute.outputs['Fac'],mix.inputs[0]);links.new(mix.outputs[0],base)
 for polygon in head.data.polygons:
     center=original[list(polygon.vertices)].mean(0)
-    if abs(center[0])<.023 and .247<center[2]<.276 and center[1]<-.137:polygon.material_index=1
     if abs(center[0])<.038 and .222<center[2]<.249 and center[1]>-.088:polygon.material_index=2
 apply_subdivision(head,2)
 bind(head,None)
@@ -170,10 +194,14 @@ report['changes'].append({'part':'Face','vertices':len(head.data.vertices),'tria
 
 # Replace floating discs with the topology that was fitted to the source lids.
 # Applying the identical regional warp to eyes and lids preserves their relation.
+fitted_eye_centers={}
 for side in ['L','R']:
     for part in ['sclera','iris']:
         obj=reference['GEO-head_animation_realistic.'+part+'.'+side]
-        source_transform=head_matrix.inverted()@obj.matrix_world
+        source_transform=head_matrix.inverted()@reference_world['GEO-head_animation_realistic.'+part+'.'+side]
+        if part=='sclera':
+            center=np.asarray([tuple(source_transform.translation)])
+            fitted_eye_centers[side]=Vector(fit_head(center)[0])+Vector((0,0,HEAD_DROP))
         if part=='iris':
             for vertex in obj.data.vertices:
                 x,y,z=vertex.co;radius=math.sqrt(x*x+z*z)
@@ -188,6 +216,24 @@ for side in ['L','R']:
         apply_subdivision(obj,1);bind(obj,'Eye_'+side)
         report['changes'].append({'part':obj.name,'vertices':len(obj.data.vertices)})
 
+# Refit deforming facial pivots and the complete existing provisional interior
+# together. Control-only facial translations remain portable scalar channels.
+oral_shift=Vector((0,-.010,HEAD_DROP-.002))
+oral_prefixes=('Provisional recessed oral cavity','Upper provisional gum ridge','Lower provisional gum ridge',
+               'Upper provisional tooth','Lower provisional tooth','Canonical dark blue Nib tongue')
+for obj in collection.objects:
+    if obj.name.startswith(oral_prefixes):obj.location+=oral_shift
+bpy.ops.object.select_all(action='DESELECT');rig.hide_set(False);rig.select_set(True);bpy.context.view_layer.objects.active=rig
+bpy.ops.object.mode_set(mode='EDIT')
+for side,center in fitted_eye_centers.items():
+    bone=rig.data.edit_bones['Eye_'+side];direction=bone.tail-bone.head
+    bone.head=center;bone.tail=center+direction
+for name in ['Jaw','TongueBase','TongueTip']:
+    bone=rig.data.edit_bones[name];bone.head+=oral_shift;bone.tail+=oral_shift
+bpy.ops.object.mode_set(mode='OBJECT')
+report['fittedEyeCentersMeters']={side:list(point) for side,point in fitted_eye_centers.items()}
+report['provisionalOralShiftMeters']=list(oral_shift)
+
 old_names=['Nib facial surface with eyelid and lip loops','Recessed eyeball ',
            'Amber iris ','Nib vertical pupil ','Wet eye glint ','Small triangular Nib nose',
            'Inset nostril','Fine eyebrow hair ','Fine chin fur']
@@ -199,7 +245,15 @@ for obj in list(collection.objects):
 for obj in list(collection.objects):
     if obj.name.startswith(('Swept fine head and cheek coat','Soft inner auricle hair','Fine auricle fur')):
         discard(obj)
-groom=build_groom(head,collection,rig,bpy.data.materials['Nib_Hair'],args.cinematic)
+report['deepenedAuricleParts']=deepen_ears(collection)
+hair=bpy.data.materials['Nib_Hair'].copy();hair.name='Nib_v5_CreamHair'
+hair_principled=next(n for n in hair.node_tree.nodes if n.type=='BSDF_PRINCIPLED')
+hair_base=hair_principled.inputs['Base Color'];hair_original=hair_base.links[0].from_socket if hair_base.links else None
+hair_mix=hair.node_tree.nodes.new('ShaderNodeMixRGB');hair_mix.blend_type='MIX';hair_mix.inputs[0].default_value=.42;hair_mix.inputs[2].default_value=(.72,.60,.39,1)
+if hair_original:hair.node_tree.links.new(hair_original,hair_mix.inputs[1])
+else:hair_mix.inputs[1].default_value=hair_base.default_value
+hair.node_tree.links.new(hair_mix.outputs[0],hair_base)
+groom=build_groom(head,collection,rig,hair,args.cinematic)
 report['cloth']=revise_cloth(collection,rig)
 if args.hands:report['hands']=rebuild_hands(LIBRARY,collection,rig,discard)
 report['groom']={'cinematic':args.cinematic,'guideCount':sum(int(o.get('fur_guides',0)) for o in groom),
@@ -213,5 +267,5 @@ bpy.ops.wm.save_as_mainfile(filepath=str(TARGET),compress=True)
 assert sha(SOURCE)==source_hash,'Pinned input was modified'
 report['candidateSha256']=sha(TARGET)
 report['pending']=['Inspect Side/Back ear patch silhouette','Eye and eyelid collisions/neutral mouth fit','Review new scalp-bound groom and reattach fine facial fuzz','Right-hand anatomical ordering and coherent topology','Review compressed scarf loops, back and action cloth fit','Final portable PBR/morph export and both-engine checks']
-REPORT.write_text(json.dumps(report,indent=2))
+REPORT.write_text(json.dumps(report,indent=2),newline='\n')
 print('NIB_V5_HEAD_STUDY_SAVED',str(TARGET),flush=True)
