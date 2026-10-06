@@ -1,0 +1,83 @@
+{
+  "status": "Generated and rendered diagnostic views; artistic acceptance false; shared assets unchanged",
+  "source": "benchmark/art/nib/Nib_Master_v5d_WIP.blend",
+  "sourceSha256": "e10d1ab65cae5922f7f379c471a6c16a8fb740bd725ee7237c7758d7690a3490",
+  "sourceReport": "benchmark/art/nib/v5-study/native-head-v5d.json",
+  "sourceReportSha256": "a10c631198d2c86861c95bc4acb7f0800f85b8203f3d135b77ccdb4d8176385f",
+  "generation": {
+    "guardExitCode": 0,
+    "completionMarker": "NIB_V5_HEAD_STUDY_SAVED",
+    "peakPrivateMB": 784.0,
+    "lowestAvailableMB": 16477.0,
+    "peakCommitPercent": 41.0
+  },
+  "review": {
+    "guardExitCode": 0,
+    "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+    "peakPrivateMB": 2635.0,
+    "lowestAvailableMB": 14900.0,
+    "peakCommitPercent": 46.0
+  },
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional gum ridge",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too"
+  },
+  "neckBoundary": {
+    "cutSourceZ": 0.166,
+    "cutBoundaryEdges": 44,
+    "closed": true,
+    "method": "Actual planar bisect and filled lower boundary; no scarf coverage change",
+    "evaluatedOpenNeckEdges": 0,
+    "allSurfaceBoundaryEdges": 0
+  },
+  "neckSurfaceFit": {
+    "retainedBody": "Continuous Nib anatomy organic",
+    "fittedVertices": 204,
+    "maximumAdjustmentMeters": 0.025892107611426726,
+    "terminalInsetMeters": 0.0002,
+    "wholeCharacterTopologyWeld": false,
+    "reviewRequired": "Actual bare neck silhouette plus Head/Neck posed seam; source body remains separate"
+  },
+  "images": [
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5d-diagnostic-renders/Nib_FaceProfile.png",
+      "sha256": "2681bb2df492004f4ed73ffb6bfc2e54a6ae80c6dbeef14d8b090ae0dad05e67",
+      "metadataSha256": "ef22556ccc24fbe78f812421b546649a38dfc855d9f9011240746c572560ba5a",
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5d-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "9ac8bbe5283d5c17472da190b8bab99969fc60ec89858b50f668f68c1a8a704d",
+      "metadataSha256": "c4637590f2f13f71f232ec62396523c54dd1b20f19ae6b3976985c91d86bfd0d",
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5d-diagnostic-renders/Nib_FaceThreeQuarter.png",
+      "sha256": "cb50f61dcc1d71c107d14f0258a89dbf5064ab539f088a589c59ad68098723ed",
+      "metadataSha256": "3f6930f3202c5a1a34a4aac635d1e1f616978db1991140c9211e00d49890c111",
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    }
+  ],
+  "findings": [
+    "The lower head boundary is closed: no remaining boundary edges after subdivision; the body is a separate conformed module, not a whole-character weld.",
+    "Eyes are more open and irises visible, but orbital folds and adult angular expression still fail the concept.",
+    "Actual profile shows upper lip extending farther than the nose, forming a sharp beak-like wedge instead of a compact rounded muzzle.",
+    "The frontal lower jaw is a dark broad plane; a material/normal audit is prepared to distinguish assigned material from self-shadow before correction.",
+    "A narrow dark anterior neck strip is still visible beneath the chin; actual assigned-face bounds require the prepared audit.",
+    "Nasal pad reads as a flattened grey human nostril strip; broad brown mask alone did not establish the reference volume or identity.",
+    "Groom remains sparse pale curtains and flat ear wisps; ears/scarf remain below concept. No new groom was introduced in this shape pass."
+  ],
+  "next": "Read-only saved material/normal audit, then a separate geometry correction from explicit nose-versus-lip profile landmarks. No dependent bake/export or shared promotion.",
+  "sharedAssetsModified": false
+}

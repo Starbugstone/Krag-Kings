@@ -1,0 +1,48 @@
+{
+  "status": "Prepared optional manifest extension; no card textures, source or engine validation exists yet",
+  "defaultWhenOmitted": {
+    "alphaMode": "OPAQUE",
+    "doubleSided": "Preserve existing importer behavior; Unity currently enables it for opaque characters"
+  },
+  "materialEntryExample": {
+    "name": "Nib_v6_HeadFurCards",
+    "baseColor": "textures/Nib_v6_HeadFurCards_BaseColor.png",
+    "normal": "textures/Nib_v6_FurCards_Normal.png",
+    "roughness": "textures/Nib_v6_FurCards_Roughness.png",
+    "metallic": "textures/Nib_v6_FurCards_Metallic.png",
+    "alphaMode": "MASK",
+    "alphaSource": "baseColor.a",
+    "alphaClipThreshold": 0.45,
+    "doubleSided": true,
+    "doubleSidedNormalMode": "Flip",
+    "normalConvention": "OpenGL +Y"
+  },
+  "plannedCardSlots": [
+    "Nib_v6_HeadFurCards",
+    "Nib_v6_InnerEarWispsCards",
+    "Nib_v6_TawnyEarFurCards"
+  ],
+  "colorSpaces": {
+    "baseColorRGB": "sRGB",
+    "baseColorAlpha": "linear coverage mask",
+    "normal": "linear tangent-space RGB, OpenGL positive Y",
+    "roughness": "linear scalar",
+    "metallic": "linear scalar, zero for fur"
+  },
+  "rendering": {
+    "surface": "Standard lit PBR, masked depth-writing, no transparent sorting",
+    "alphaCoverageMips": "Preserve coverage at the same alphaClipThreshold where supported; record engine differences",
+    "doubleSidedNormals": "Flip backface shading orientation; verify actual backfaces in both engines",
+    "anisotropy": "Deferred until coverage/shape validation; not essential for first candidate",
+    "simulation": false,
+    "existingOpaqueAccents": "Retain ordinary opaque materials and the fine visible-skin fuzz"
+  },
+  "validationRequired": [
+    "Near/far silhouette and temporal stability at actual 1080p output",
+    "No sorting halos or depth holes between clumps",
+    "Readable front/back card lighting and consistent tangent normals",
+    "No goggle/eyelid/muzzle intrusion throughout body/facial clips",
+    "Preserved pink inner skin, tawny perimeter and cream inner/head color fields",
+    "Actual triangles, material/draw calls, alpha overdraw, VRAM and frame time per engine"
+  ]
+}

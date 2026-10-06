@@ -1,11 +1,12 @@
-# Isolated Nib v5c review sequence
+# Isolated Nib facial review sequence
 
-Status: v5c generation and one explicit diagnostic Face render completed; the
-source failed likeness and its strict numeric aperture gate remains false.
-Remaining views, poses, baking and exports have not run. The immediate priority
-is the separate v4b runtime morph-union repair, not promotion of this art pass.
-Current shared v4b triangle exports remain pinned. Launch only after root grants
-the serialized heavy slot, using `benchmark/tools/Run-HeavyTask.ps1 -JobSpec`.
+Current status: v5c and v5d sources plus diagnostic Face/Profile/ThreeQuarter
+views exist and fail likeness. Both retain a false sampled oral-occlusion gate.
+The separate v4b deformation repair is already validated and promoted. Current
+shared assets remain pinned; no v5 art export is authorized by these results.
+Launch only after root grants the serialized heavy slot, using
+`benchmark/tools/Run-HeavyTask.ps1 -JobSpec`. The historical v5c sequence below
+is retained as provenance, not a request to rerun or overwrite that source.
 Every job below uses four Blender threads, an eight-GiB private-memory cap,
 `--python-exit-code 2` and a fresh completion marker.
 
@@ -90,8 +91,29 @@ to the audited mouth face set. The cut API direction was checked against the
 The next allocated slot starts with `native-v5d-generate.job.json`, then report
 inspection and `native-v5d-face-review.job.json`. A failed gate stops dependent
 exports; an explicitly labeled diagnostic image can be scheduled when needed
-to interpret the actual failure. The v5d source does not yet exist. New shape,
+to interpret the actual failure. The v5d source now exists and the results below supersede its proposal-only status. New shape,
 ocular materials and neck behavior need actual neutral, depth, blink, tongue
 and body-action review before any PBR bake or engine handoff. Fur and clothing
 still require substantial later work; neither the prior depth images nor the
 prepared correction is artistic acceptance.
+
+
+## Actual v5d result and next audit
+
+`native-v5d-generate.job.json` completed, followed by the explicitly diagnostic
+`native-v5d-diagnostic-depth.job.json` with Face/Profile/ThreeQuarter. Both exited
+0 with completion markers. The exact source hash, image hashes, guard memory
+and candid failure record are in `art/nib/v5-study/native-v5d-review-result.json`.
+The false gate was preserved; no gate tolerance was relaxed. The source remains
+unchanged, and no dependent export or shared promotion is queued.
+
+Next allocated inspection is the read-only `native-v5d-material-audit.job.json`.
+It records actual assigned facial material bounds, nose-mask overlap, region
+normals and frontal surface-hit material IDs. This separates the flat jaw's
+self-shadow from a selector fault and identifies the remaining dark neck strip.
+It is prepared and syntax checked only. After its evidence, the next isolated
+shape must place the compact nose ahead of a rounded continuous muzzle, curve
+the upper-lip pads/smile instead of translating a flat shelf, and retain the
+wider ocular aperture. Any source revision needs fresh neutral/depth and posed
+closure proof before material bake. The separate provisional groom recipe is
+prepared in `../v6_groom_wip/`; it must not conceal unresolved facial geometry.
