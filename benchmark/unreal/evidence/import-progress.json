@@ -3525,9 +3525,9 @@
       "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
       "asset": "/Game/Benchmark/Characters/nib/Nib_Natural/Nib_Natural.Nib_Natural",
       "size_meters": [
-        0.6242226461122335,
-        0.20181864287364526,
-        1.3940704415946348
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
       ],
       "clips": {
         "Idle": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Idle/Idle.Idle",
@@ -3540,7 +3540,8 @@
       },
       "clip_validation": {
         "Idle": {
-          "bone_track_count": 76,
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "lidupper_l",
@@ -3549,7 +3550,9 @@
             "lidupper_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -3561,118 +3564,121 @@
               1.0
             ],
             "Shin_L": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "Shin_R": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "UpperArm_L": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "UpperArm_R": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "LowerArm_L": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999995028804318,
+              0.9999995028804318
             ],
             "LowerArm_R": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999999999999979,
+              0.9999999999999979
             ]
           }
         },
         "Walk": {
-          "bone_track_count": 76,
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "eye_r",
             "ear_l",
-            "ear_r"
+            "eartip_l"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              1.000000022796937,
+              1.000000022796937
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000809391811,
+              1.0000000809391811
             ],
             "Shin_L": [
-              0.9999999389732248,
-              0.9999999389732248
+              0.9999999389732284,
+              0.9999999389732284
             ],
             "Shin_R": [
-              1.0000000610267754,
-              1.0000000610267754
+              1.0000000610267759,
+              1.0000000610267759
             ],
             "UpperArm_L": [
-              1.000000000000028,
-              1.000000000000028
+              0.9999996510629309,
+              0.9999996510629309
             ],
             "UpperArm_R": [
-              1.000000000000028,
-              1.000000000000028
+              1.0000000000001659,
+              1.0000000000001659
             ],
             "LowerArm_L": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999995028804379,
+              0.9999995028804379
             ],
             "LowerArm_R": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999997514402181,
+              0.9999997514402181
             ]
           }
         },
         "Run": {
-          "bone_track_count": 76,
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
-            "ear_l",
-            "ear_r"
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              0.99999996089004,
+              0.99999996089004
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000558419477,
+              1.0000000558419477
             ],
             "Shin_L": [
-              0.9999996948661299,
-              0.9999996948661299
+              0.9999997558928996,
+              0.9999997558928996
             ],
             "Shin_R": [
-              0.9999997558928984,
-              0.9999997558928984
+              0.9999998779464502,
+              0.9999998779464502
             ],
             "UpperArm_L": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.9999998836876139,
+              0.9999998836876139
             ],
             "UpperArm_R": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.999999883687633,
+              0.999999883687633
             ],
             "LowerArm_L": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999996685869562,
+              0.9999996685869562
             ],
             "LowerArm_R": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999998342934849,
+              0.9999998342934849
             ]
           }
         },
         "Melee": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lipupper",
@@ -3681,7 +3687,11 @@
             "mouthcorner_l",
             "browinner_r",
             "browouter_r",
-            "mouthcorner_r"
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -3719,7 +3729,8 @@
           }
         },
         "Shoot": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "lipupper",
             "lidupper_l",
@@ -3727,7 +3738,11 @@
             "browinner_l",
             "lidupper_r",
             "lidlower_r",
-            "browinner_r"
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -3765,7 +3780,8 @@
           }
         },
         "Hit": {
-          "bone_track_count": 76,
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lidupper_l",
@@ -3775,7 +3791,9 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -3813,6 +3831,7 @@
           }
         },
         "FacePerformance": {
+          "length_seconds": 5.0,
           "varying_facial_bones": [
             "jaw",
             "tonguetip",
@@ -3830,7 +3849,33 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
           ]
         }
       },
@@ -3863,10 +3908,13 @@
         "Cheek_R",
         "MouthCorner_R",
         "Ear_L",
+        "EarTip_L",
         "Ear_R",
+        "EarTip_R",
         "Clavicle_L",
         "UpperArm_L",
         "LowerArm_L",
+        "ForearmTwist_L",
         "Hand_L",
         "Index1_L",
         "Index2_L",
@@ -3885,6 +3933,7 @@
         "Clavicle_R",
         "UpperArm_R",
         "LowerArm_R",
+        "ForearmTwist_R",
         "Hand_R",
         "Index1_R",
         "Index2_R",
@@ -4053,10 +4102,20 @@
           0.9999999403953552,
           1.0
         ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
         "Ear_R": [
           1.0,
           0.9999999403953552,
           1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
         ],
         "Clavicle_L": [
           1.0,
@@ -4073,80 +4132,85 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_L": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_L": [
           1.0000001192092896,
-          1.000000238418579,
+          1.0000001192092896,
           1.0
         ],
         "Index2_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Index3_L": [
-          0.9999999403953552,
-          0.9999999403953552,
-          1.0
-        ],
-        "Middle1_L": [
-          1.0000001192092896,
-          1.0000001192092896,
-          1.0
-        ],
-        "Middle2_L": [
-          0.9999998211860657,
-          1.0,
-          1.0000001192092896
-        ],
-        "Middle3_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Ring1_L": [
-          1.000000238418579,
-          1.000000238418579,
-          1.0
-        ],
-        "Ring2_L": [
-          0.9999998211860657,
-          1.0,
-          0.9999999403953552
-        ],
-        "Ring3_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0
-        ],
-        "Little1_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0000001192092896
-        ],
-        "Little2_L": [
           0.9999998807907104,
           1.0,
           0.9999998807907104
         ],
-        "Little3_L": [
-          1.0000001192092896,
+        "Index3_L": [
+          1.0,
           1.0,
           1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
         ],
         "Thumb1_L": [
           1.0000001192092896,
           0.9999999403953552,
-          1.0000001192092896
+          0.9999999403953552
         ],
         "Thumb2_L": [
+          1.0000001192092896,
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          1.0000001192092896
         ],
         "Clavicle_R": [
           1.0,
@@ -4163,29 +4227,34 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_R": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0000001192092896
         ],
         "Index2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999997615814209,
+          1.0
         ],
         "Index3_R": [
           1.0,
-          1.0000001192092896,
+          1.0,
           1.0000001192092896
         ],
         "Middle1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0
         ],
         "Middle2_R": [
@@ -4199,14 +4268,14 @@
           1.0000001192092896
         ],
         "Ring1_R": [
-          1.0,
+          0.9999999403953552,
           1.0,
           1.0
         ],
         "Ring2_R": [
           1.0,
           0.9999998211860657,
-          0.9999998211860657
+          0.9999997615814209
         ],
         "Ring3_R": [
           1.0,
@@ -4214,14 +4283,14 @@
           1.0000001192092896
         ],
         "Little1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
-          1.0000001192092896
+          1.0
         ],
         "Little2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999998211860657,
+          0.9999997615814209
         ],
         "Little3_R": [
           1.0,
@@ -4229,19 +4298,19 @@
           1.0000001192092896
         ],
         "Thumb1_R": [
-          0.9999999403953552,
+          0.9999998807907104,
           1.0,
-          1.0
+          1.0000001192092896
         ],
         "Thumb2_R": [
-          1.0000001192092896,
           0.9999999403953552,
-          0.9999999403953552
+          1.000000238418579,
+          0.9999998807907104
         ],
         "Weapon": [
-          1.0,
+          0.9999999403953552,
           1.0000001192092896,
-          0.9999999403953552
+          0.9999998807907104
         ],
         "WeaponMuzzle": [
           1.0,
@@ -4329,203 +4398,302 @@
       "material_bindings": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
         }
       ],
       "material_binding_repairs": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
+          "name": "Nib_v5_FacialSkinAtlas",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
         }
       ],
       "material_bindings_verified_after_reload": true,
@@ -4535,9 +4703,9 @@
       "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_GripReplacement.fbx",
       "asset": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Nib_GripReplacement.Nib_GripReplacement",
       "size_meters": [
-        0.6242226461122335,
-        0.20181864287364526,
-        1.3940704415946348
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
       ],
       "clips": {
         "Idle": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Idle/Idle.Idle",
@@ -4550,7 +4718,8 @@
       },
       "clip_validation": {
         "Idle": {
-          "bone_track_count": 76,
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "lidupper_l",
@@ -4559,7 +4728,9 @@
             "lidupper_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -4571,118 +4742,121 @@
               1.0
             ],
             "Shin_L": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "Shin_R": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "UpperArm_L": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "UpperArm_R": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "LowerArm_L": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999995028804318,
+              0.9999995028804318
             ],
             "LowerArm_R": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999999999999979,
+              0.9999999999999979
             ]
           }
         },
         "Walk": {
-          "bone_track_count": 76,
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "eye_r",
             "ear_l",
-            "ear_r"
+            "eartip_l"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              1.000000022796937,
+              1.000000022796937
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000809391811,
+              1.0000000809391811
             ],
             "Shin_L": [
-              0.9999999389732248,
-              0.9999999389732248
+              0.9999999389732284,
+              0.9999999389732284
             ],
             "Shin_R": [
-              1.0000000610267754,
-              1.0000000610267754
+              1.0000000610267759,
+              1.0000000610267759
             ],
             "UpperArm_L": [
-              1.000000000000028,
-              1.000000000000028
+              0.9999996510629309,
+              0.9999996510629309
             ],
             "UpperArm_R": [
-              1.000000000000028,
-              1.000000000000028
+              1.0000000000001659,
+              1.0000000000001659
             ],
             "LowerArm_L": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999995028804379,
+              0.9999995028804379
             ],
             "LowerArm_R": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999997514402181,
+              0.9999997514402181
             ]
           }
         },
         "Run": {
-          "bone_track_count": 76,
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
-            "ear_l",
-            "ear_r"
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              0.99999996089004,
+              0.99999996089004
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000558419477,
+              1.0000000558419477
             ],
             "Shin_L": [
-              0.9999996948661299,
-              0.9999996948661299
+              0.9999997558928996,
+              0.9999997558928996
             ],
             "Shin_R": [
-              0.9999997558928984,
-              0.9999997558928984
+              0.9999998779464502,
+              0.9999998779464502
             ],
             "UpperArm_L": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.9999998836876139,
+              0.9999998836876139
             ],
             "UpperArm_R": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.999999883687633,
+              0.999999883687633
             ],
             "LowerArm_L": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999996685869562,
+              0.9999996685869562
             ],
             "LowerArm_R": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999998342934849,
+              0.9999998342934849
             ]
           }
         },
         "Melee": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lipupper",
@@ -4691,7 +4865,11 @@
             "mouthcorner_l",
             "browinner_r",
             "browouter_r",
-            "mouthcorner_r"
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -4729,7 +4907,8 @@
           }
         },
         "Shoot": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "lipupper",
             "lidupper_l",
@@ -4737,7 +4916,11 @@
             "browinner_l",
             "lidupper_r",
             "lidlower_r",
-            "browinner_r"
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -4775,7 +4958,8 @@
           }
         },
         "Hit": {
-          "bone_track_count": 76,
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lidupper_l",
@@ -4785,7 +4969,9 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -4823,6 +5009,7 @@
           }
         },
         "FacePerformance": {
+          "length_seconds": 5.0,
           "varying_facial_bones": [
             "jaw",
             "tonguetip",
@@ -4840,7 +5027,33 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
           ]
         }
       },
@@ -4873,10 +5086,13 @@
         "Cheek_R",
         "MouthCorner_R",
         "Ear_L",
+        "EarTip_L",
         "Ear_R",
+        "EarTip_R",
         "Clavicle_L",
         "UpperArm_L",
         "LowerArm_L",
+        "ForearmTwist_L",
         "Hand_L",
         "Index1_L",
         "Index2_L",
@@ -4895,6 +5111,7 @@
         "Clavicle_R",
         "UpperArm_R",
         "LowerArm_R",
+        "ForearmTwist_R",
         "Hand_R",
         "Index1_R",
         "Index2_R",
@@ -5063,10 +5280,20 @@
           0.9999999403953552,
           1.0
         ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
         "Ear_R": [
           1.0,
           0.9999999403953552,
           1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
         ],
         "Clavicle_L": [
           1.0,
@@ -5083,80 +5310,85 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_L": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_L": [
           1.0000001192092896,
-          1.000000238418579,
+          1.0000001192092896,
           1.0
         ],
         "Index2_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Index3_L": [
-          0.9999999403953552,
-          0.9999999403953552,
-          1.0
-        ],
-        "Middle1_L": [
-          1.0000001192092896,
-          1.0000001192092896,
-          1.0
-        ],
-        "Middle2_L": [
-          0.9999998211860657,
-          1.0,
-          1.0000001192092896
-        ],
-        "Middle3_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Ring1_L": [
-          1.000000238418579,
-          1.000000238418579,
-          1.0
-        ],
-        "Ring2_L": [
-          0.9999998211860657,
-          1.0,
-          0.9999999403953552
-        ],
-        "Ring3_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0
-        ],
-        "Little1_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0000001192092896
-        ],
-        "Little2_L": [
           0.9999998807907104,
           1.0,
           0.9999998807907104
         ],
-        "Little3_L": [
-          1.0000001192092896,
+        "Index3_L": [
+          1.0,
           1.0,
           1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
         ],
         "Thumb1_L": [
           1.0000001192092896,
           0.9999999403953552,
-          1.0000001192092896
+          0.9999999403953552
         ],
         "Thumb2_L": [
+          1.0000001192092896,
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          1.0000001192092896
         ],
         "Clavicle_R": [
           1.0,
@@ -5173,29 +5405,34 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_R": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0000001192092896
         ],
         "Index2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999997615814209,
+          1.0
         ],
         "Index3_R": [
           1.0,
-          1.0000001192092896,
+          1.0,
           1.0000001192092896
         ],
         "Middle1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0
         ],
         "Middle2_R": [
@@ -5209,14 +5446,14 @@
           1.0000001192092896
         ],
         "Ring1_R": [
-          1.0,
+          0.9999999403953552,
           1.0,
           1.0
         ],
         "Ring2_R": [
           1.0,
           0.9999998211860657,
-          0.9999998211860657
+          0.9999997615814209
         ],
         "Ring3_R": [
           1.0,
@@ -5224,14 +5461,14 @@
           1.0000001192092896
         ],
         "Little1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
-          1.0000001192092896
+          1.0
         ],
         "Little2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999998211860657,
+          0.9999997615814209
         ],
         "Little3_R": [
           1.0,
@@ -5239,19 +5476,19 @@
           1.0000001192092896
         ],
         "Thumb1_R": [
-          0.9999999403953552,
+          0.9999998807907104,
           1.0,
-          1.0
+          1.0000001192092896
         ],
         "Thumb2_R": [
-          1.0000001192092896,
           0.9999999403953552,
-          0.9999999403953552
+          1.000000238418579,
+          0.9999998807907104
         ],
         "Weapon": [
-          1.0,
+          0.9999999403953552,
           1.0000001192092896,
-          0.9999999403953552
+          0.9999998807907104
         ],
         "WeaponMuzzle": [
           1.0,
@@ -5339,203 +5576,302 @@
       "material_bindings": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
         }
       ],
       "material_binding_repairs": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
+          "name": "Nib_v5_FacialSkinAtlas",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
         }
       ],
       "material_bindings_verified_after_reload": true,
@@ -5545,9 +5881,9 @@
       "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_LegReplacement.fbx",
       "asset": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Nib_LegReplacement.Nib_LegReplacement",
       "size_meters": [
-        0.6242226461122335,
-        0.20231867338004683,
-        1.3940704415946348
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
       ],
       "clips": {
         "Idle": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Idle/Idle.Idle",
@@ -5560,7 +5896,8 @@
       },
       "clip_validation": {
         "Idle": {
-          "bone_track_count": 76,
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "lidupper_l",
@@ -5569,7 +5906,9 @@
             "lidupper_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -5581,118 +5920,121 @@
               1.0
             ],
             "Shin_L": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "Shin_R": [
-              0.9999999389732245,
-              0.9999999389732245
+              0.9999998169196742,
+              0.9999998169196742
             ],
             "UpperArm_L": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "UpperArm_R": [
-              1.000000000000001,
-              1.000000000000001
+              1.000000000000146,
+              1.000000000000146
             ],
             "LowerArm_L": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999995028804318,
+              0.9999995028804318
             ],
             "LowerArm_R": [
-              0.9999999999999966,
-              0.9999999999999966
+              0.9999999999999979,
+              0.9999999999999979
             ]
           }
         },
         "Walk": {
-          "bone_track_count": 76,
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "eye_l",
             "eye_r",
             "ear_l",
-            "ear_r"
+            "eartip_l"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              1.000000022796937,
+              1.000000022796937
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000809391811,
+              1.0000000809391811
             ],
             "Shin_L": [
-              0.9999999389732248,
-              0.9999999389732248
+              0.9999999389732284,
+              0.9999999389732284
             ],
             "Shin_R": [
-              1.0000000610267754,
-              1.0000000610267754
+              1.0000000610267759,
+              1.0000000610267759
             ],
             "UpperArm_L": [
-              1.000000000000028,
-              1.000000000000028
+              0.9999996510629309,
+              0.9999996510629309
             ],
             "UpperArm_R": [
-              1.000000000000028,
-              1.000000000000028
+              1.0000000000001659,
+              1.0000000000001659
             ],
             "LowerArm_L": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999995028804379,
+              0.9999995028804379
             ],
             "LowerArm_R": [
-              1.0000001657065243,
-              1.0000001657065243
+              0.9999997514402181,
+              0.9999997514402181
             ]
           }
         },
         "Run": {
-          "bone_track_count": 76,
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
-            "ear_l",
-            "ear_r"
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
-              1.0,
-              1.0
+              0.99999996089004,
+              0.99999996089004
             ],
             "Thigh_R": [
-              1.0,
-              1.0
+              1.0000000558419477,
+              1.0000000558419477
             ],
             "Shin_L": [
-              0.9999996948661299,
-              0.9999996948661299
+              0.9999997558928996,
+              0.9999997558928996
             ],
             "Shin_R": [
-              0.9999997558928984,
-              0.9999997558928984
+              0.9999998779464502,
+              0.9999998779464502
             ],
             "UpperArm_L": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.9999998836876139,
+              0.9999998836876139
             ],
             "UpperArm_R": [
-              1.0000000000000993,
-              1.0000000000000993
+              0.999999883687633,
+              0.999999883687633
             ],
             "LowerArm_L": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999996685869562,
+              0.9999996685869562
             ],
             "LowerArm_R": [
-              0.9999995857336926,
-              0.9999995857336926
+              0.9999998342934849,
+              0.9999998342934849
             ]
           }
         },
         "Melee": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lipupper",
@@ -5701,7 +6043,11 @@
             "mouthcorner_l",
             "browinner_r",
             "browouter_r",
-            "mouthcorner_r"
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -5739,7 +6085,8 @@
           }
         },
         "Shoot": {
-          "bone_track_count": 76,
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "lipupper",
             "lidupper_l",
@@ -5747,7 +6094,11 @@
             "browinner_l",
             "lidupper_r",
             "lidlower_r",
-            "browinner_r"
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -5785,7 +6136,8 @@
           }
         },
         "Hit": {
-          "bone_track_count": 76,
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
           "varying_facial_bones": [
             "jaw",
             "lidupper_l",
@@ -5795,7 +6147,9 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
           ],
           "local_limb_translation_to_bind_length_ranges": {
             "Thigh_L": [
@@ -5833,6 +6187,7 @@
           }
         },
         "FacePerformance": {
+          "length_seconds": 5.0,
           "varying_facial_bones": [
             "jaw",
             "tonguetip",
@@ -5850,7 +6205,33 @@
             "browouter_r",
             "mouthcorner_r",
             "ear_l",
-            "ear_r"
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
           ]
         }
       },
@@ -5883,10 +6264,13 @@
         "Cheek_R",
         "MouthCorner_R",
         "Ear_L",
+        "EarTip_L",
         "Ear_R",
+        "EarTip_R",
         "Clavicle_L",
         "UpperArm_L",
         "LowerArm_L",
+        "ForearmTwist_L",
         "Hand_L",
         "Index1_L",
         "Index2_L",
@@ -5905,6 +6289,7 @@
         "Clavicle_R",
         "UpperArm_R",
         "LowerArm_R",
+        "ForearmTwist_R",
         "Hand_R",
         "Index1_R",
         "Index2_R",
@@ -6073,10 +6458,20 @@
           0.9999999403953552,
           1.0
         ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
         "Ear_R": [
           1.0,
           0.9999999403953552,
           1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
         ],
         "Clavicle_L": [
           1.0,
@@ -6093,80 +6488,85 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_L": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_L": [
           1.0000001192092896,
-          1.000000238418579,
+          1.0000001192092896,
           1.0
         ],
         "Index2_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Index3_L": [
-          0.9999999403953552,
-          0.9999999403953552,
-          1.0
-        ],
-        "Middle1_L": [
-          1.0000001192092896,
-          1.0000001192092896,
-          1.0
-        ],
-        "Middle2_L": [
-          0.9999998211860657,
-          1.0,
-          1.0000001192092896
-        ],
-        "Middle3_L": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "Ring1_L": [
-          1.000000238418579,
-          1.000000238418579,
-          1.0
-        ],
-        "Ring2_L": [
-          0.9999998211860657,
-          1.0,
-          0.9999999403953552
-        ],
-        "Ring3_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0
-        ],
-        "Little1_L": [
-          1.0000001192092896,
-          1.000000238418579,
-          1.0000001192092896
-        ],
-        "Little2_L": [
           0.9999998807907104,
           1.0,
           0.9999998807907104
         ],
-        "Little3_L": [
-          1.0000001192092896,
+        "Index3_L": [
+          1.0,
           1.0,
           1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
         ],
         "Thumb1_L": [
           1.0000001192092896,
           0.9999999403953552,
-          1.0000001192092896
+          0.9999999403953552
         ],
         "Thumb2_L": [
+          1.0000001192092896,
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          1.0000001192092896
         ],
         "Clavicle_R": [
           1.0,
@@ -6183,29 +6583,34 @@
           0.9999998211860657,
           0.9999998807907104
         ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
         "Hand_R": [
-          0.9999998807907104,
+          0.9999999403953552,
           1.0,
           1.0000001192092896
         ],
         "Index1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0000001192092896
         ],
         "Index2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999997615814209,
+          1.0
         ],
         "Index3_R": [
           1.0,
-          1.0000001192092896,
+          1.0,
           1.0000001192092896
         ],
         "Middle1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
           1.0
         ],
         "Middle2_R": [
@@ -6219,14 +6624,14 @@
           1.0000001192092896
         ],
         "Ring1_R": [
-          1.0,
+          0.9999999403953552,
           1.0,
           1.0
         ],
         "Ring2_R": [
           1.0,
           0.9999998211860657,
-          0.9999998211860657
+          0.9999997615814209
         ],
         "Ring3_R": [
           1.0,
@@ -6234,14 +6639,14 @@
           1.0000001192092896
         ],
         "Little1_R": [
+          0.9999999403953552,
           1.0,
-          1.0000001192092896,
-          1.0000001192092896
+          1.0
         ],
         "Little2_R": [
           1.0,
-          0.9999999403953552,
-          0.9999999403953552
+          0.9999998211860657,
+          0.9999997615814209
         ],
         "Little3_R": [
           1.0,
@@ -6249,19 +6654,19 @@
           1.0000001192092896
         ],
         "Thumb1_R": [
-          0.9999999403953552,
+          0.9999998807907104,
           1.0,
-          1.0
+          1.0000001192092896
         ],
         "Thumb2_R": [
-          1.0000001192092896,
           0.9999999403953552,
-          0.9999999403953552
+          1.000000238418579,
+          0.9999998807907104
         ],
         "Weapon": [
-          1.0,
+          0.9999999403953552,
           1.0000001192092896,
-          0.9999999403953552
+          0.9999998807907104
         ],
         "WeaponMuzzle": [
           1.0,
@@ -6349,203 +6754,302 @@
       "material_bindings": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
-          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
         }
       ],
       "material_binding_repairs": [
         {
           "slot": 0,
-          "name": "Nib_Skin",
+          "name": "Nib_v5_FacialSkinAtlas",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
         },
         {
           "slot": 1,
-          "name": "Nib_EarInner",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner"
-        },
-        {
-          "slot": 2,
-          "name": "Nib_Cloth",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
-        },
-        {
-          "slot": 3,
-          "name": "Nib_Eye",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye"
-        },
-        {
-          "slot": 4,
-          "name": "Nib_Dark",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
-        },
-        {
-          "slot": 5,
-          "name": "Nib_Muzzle",
-          "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle"
-        },
-        {
-          "slot": 6,
           "name": "Nib_MouthInterior",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
         },
         {
-          "slot": 7,
+          "slot": 2,
           "name": "Nib_Gum",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
         },
         {
-          "slot": 8,
+          "slot": 3,
           "name": "Nib_Tooth",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
         },
         {
-          "slot": 9,
+          "slot": 4,
           "name": "Nib_Tongue",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
         },
         {
-          "slot": 10,
-          "name": "Nib_Hair",
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
           "previous": null,
-          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
         },
         {
-          "slot": 11,
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
           "name": "Nib_Brass",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
         },
         {
-          "slot": 12,
+          "slot": 8,
           "name": "Nib_Lens",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
         },
         {
-          "slot": 13,
+          "slot": 9,
           "name": "Nib_Leather",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
         },
         {
-          "slot": 14,
+          "slot": 10,
           "name": "Nib_Steel",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
         },
         {
-          "slot": 15,
+          "slot": 11,
           "name": "Nib_Workwear",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
         },
         {
-          "slot": 16,
+          "slot": 12,
           "name": "Nib_Stitch",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
         },
         {
-          "slot": 17,
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
           "name": "Nib_Teal",
           "previous": null,
           "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
         }
       ],
       "material_bindings_verified_after_reload": true,

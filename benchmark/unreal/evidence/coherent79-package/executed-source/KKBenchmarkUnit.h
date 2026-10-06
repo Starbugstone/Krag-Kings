@@ -1,0 +1,72 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "GameFramework/Character.h"
+#include "KKBenchmarkAssets.h"
+#include "KKBenchmarkUnit.generated.h"
+class USoundAttenuation;
+
+UCLASS()
+class KRAGKINGSBENCHMARK_API AKKBenchmarkUnit : public ACharacter
+{
+    GENERATED_BODY()
+public:
+    AKKBenchmarkUnit();
+    virtual void Tick(float DeltaSeconds) override;
+    void InitializeUnit(UKKBenchmarkAssets* Assets, bool bIsKrag);
+    void MoveTo(const FVector& Destination,bool bWalk=false);
+    void PlayDemoAction(const FName& Action);
+    void PlayFacePerformance();
+    UFUNCTION(BlueprintImplementableEvent,Category="Presentation")
+    void OnFootstepImpact(FName Foot,FVector Location,FVector SurfaceNormal,float Strength,bool bIsWalking);
+    void CycleVariant();
+    void SetVariantIndex(int32 Index);
+    void SetSelected(bool bNewSelected) { bSelected = bNewSelected; }
+    FString GetVariantLabel() const;
+    FString GetActionLabel() const { return CurrentAction.ToString(); }
+    bool IsKrag() const { return bKrag; }
+    bool HasMovementTarget() const { return bMoving; }
+    bool IsFaceActing() const { return FaceTimeRemaining>0.f; }
+    bool SetSkinMode(FName Mode);
+    FName GetSkinMode() const { return SkinMode; }
+    float GetMaximumAppliedMorphWeight(const FName& Kind) const;
+    FString GetShotDiagnosticsJson() const;
+    int32 GetShotEventCount() const { return ShotEventCount; }
+    float GetMaximumShotForwardAngle() const { return MaximumShotForwardAngle; }
+private:
+    void ApplyVariant();
+    void PlayLocomotion(bool bRunning);
+    const FKKCharacterVariant* Variant() const;
+    UPROPERTY() TObjectPtr<UKKBenchmarkAssets> AssetSet;
+    int32 VariantIndex = 0;
+    FName SkinMode=TEXT("Generic");
+    bool bKrag = true;
+    bool bSelected = false;
+    bool bMoving = false;
+    bool bWasRunning = false;
+    bool bWalking = false;
+    float FootContactCooldown[2] = {0.f,0.f};
+    float PreviousContactPhase=.99f;
+    uint32 PreviousLocomotionSerial=0;
+    int32 FootSoundIndex=0;
+    UPROPERTY() TObjectPtr<USoundAttenuation> FootstepAttenuation;
+    UPROPERTY() TObjectPtr<USoundAttenuation> ActionAttenuation;
+    FVector MoveTarget = FVector::ZeroVector;
+    FName CurrentAction = "Idle";
+    float ActionTimeRemaining = 0;
+    float ActionDuration = 0;
+    int32 NextFireContact=0;
+    bool bHitSoundPending=false;
+    bool bShotDiagnostics=false;
+    int32 ShotEventCount=0;
+    float LastShotPhase=0.f;
+    float LastShotForwardAngle=0.f;
+    float MaximumShotForwardAngle=0.f;
+    FVector LastShotMuzzle=FVector::ZeroVector;
+    FVector LastShotDirection=FVector::ZeroVector;
+    FVector LastShotActorForward=FVector::ZeroVector;
+    TArray<FString> ShotDiagnosticEvents;
+    float FaceTimeRemaining = 0;
+    void UpdateFootContacts(float DeltaSeconds);
+    void EmitShot();
+    void EmitHitSound();
+};

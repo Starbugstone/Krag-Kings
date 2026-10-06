@@ -1,0 +1,858 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "importerSha256": "0aa2c5d1f9e31344dccce3ffb0c707497a1ec7b998067343f263a6b97dc1b44b",
+  "inputs": {
+    "audio/action-audio.json": {
+      "sha256": "539698d6bee5b2a356f90691a588121884ef2d624c8fc9cb4a7f959a546387da",
+      "bytes": 2494
+    },
+    "audio/Krag_Hit.wav": {
+      "sha256": "da4cc3676451725022a8b3a7d0e7d380fa21b1a5c644ec3ae9a00a2aeb55307b",
+      "bytes": 63684
+    },
+    "audio/Krag_Sand_01.wav": {
+      "sha256": "d65d456cf39e37383b338061eed81e1630ca9ced22a0ccf3ae7a919ccb45b362",
+      "bytes": 50078
+    },
+    "audio/Krag_Sand_02.wav": {
+      "sha256": "3fdf9c6df9713614000255afa950829a6a9b21cf47f3fb6d6af06cc2aac8ac5f",
+      "bytes": 36192
+    },
+    "audio/Krag_Sand_03.wav": {
+      "sha256": "4f5a3345eb49beea10ac05a57d1bcc9030ee15852f527bd18ded38eb8730f3e5",
+      "bytes": 33926
+    },
+    "audio/Krag_Sand_04.wav": {
+      "sha256": "8ed62443d04cb459e5469ca644c03ab26d22d4dde95bde77eb35a458cef2c953",
+      "bytes": 45924
+    },
+    "audio/Krag_Sand_05.wav": {
+      "sha256": "ce741eb40fe96ab7944e74daca262ce5a9b1280c594af59769ebe28992cb7798",
+      "bytes": 38518
+    },
+    "audio/Krag_Sand_06.wav": {
+      "sha256": "4e02cc9ebe0c5f61e38380de2cf49772977d78eeb46ed66f1befaf382e2e950f",
+      "bytes": 37306
+    },
+    "audio/Krag_Shot.wav": {
+      "sha256": "8e19df68e12555e106ae1f2dc6e885fa9e2e03ad0ff8215867d397b1c93cc294",
+      "bytes": 519734
+    },
+    "audio/manifest.json": {
+      "sha256": "558d750f0ba8576791cfcf39773b5f7f99a5f7636db37234f9ea8bcad6038961",
+      "bytes": 2385
+    },
+    "audio/Nib_Hit.wav": {
+      "sha256": "24b5e8cc9dddb5625041e58e8d52d406cd2fa76d2e715eb81c19e15a87c2315e",
+      "bytes": 11128
+    },
+    "audio/Nib_Sand_01.wav": {
+      "sha256": "c1624d19ab6ff6f21dfca7e82adeeae460cdcee677d274bddcb3816dbfe1a3a0",
+      "bytes": 41344
+    },
+    "audio/Nib_Sand_02.wav": {
+      "sha256": "ec31a52ff0de403cc95f4a3789daef68ccf2de4484a4d117f10c3ce7e75b239b",
+      "bytes": 29884
+    },
+    "audio/Nib_Sand_03.wav": {
+      "sha256": "5ee130fbd9755380b488d9ce9c173e62e033b7e2a7afb49dd6b2db2a1d1e9191",
+      "bytes": 28014
+    },
+    "audio/Nib_Sand_04.wav": {
+      "sha256": "c5b3262497edfb08089324bf1ed4ad497c04d227a6678bb2b5a25777a148cc68",
+      "bytes": 37916
+    },
+    "audio/Nib_Sand_05.wav": {
+      "sha256": "663e1df2eadb9b39101c40f4d073bade4ff65b193bba8c336227ad0daf02d928",
+      "bytes": 31804
+    },
+    "audio/Nib_Sand_06.wav": {
+      "sha256": "bc95912246a1ef23f1a6318696c6325a3ccd7ffb98578af88b1823b09f1d704e",
+      "bytes": 30804
+    },
+    "audio/Nib_Shot.wav": {
+      "sha256": "0f81688bada45e9842c615b77b45be07d3daed40708f794641330d6ca9dc2dcb",
+      "bytes": 153792
+    },
+    "characters/krag/animations/FacePerformance.fbx": {
+      "sha256": "dd74f1dc297e23dbfb274b8cfde95f184cd061bee176f8fbff0b7f9f1f3ff344",
+      "bytes": 1096236
+    },
+    "characters/krag/animations/Hit.fbx": {
+      "sha256": "b15a2e426b09ad3270806a66d42659b1873db81375e92d6839f401bf72468c38",
+      "bytes": 643692
+    },
+    "characters/krag/animations/Idle.fbx": {
+      "sha256": "0db69216cb3aa8e7f4dfac604b7805b4d56276eb372c485278f03580924d6b39",
+      "bytes": 749740
+    },
+    "characters/krag/animations/Melee.fbx": {
+      "sha256": "fedac86cb58aee6422086ede64bfb74aa7ca30bca3bd2f60bb7f6d41bc182100",
+      "bytes": 650764
+    },
+    "characters/krag/animations/Run.fbx": {
+      "sha256": "a560d55ec79acacbbe9fb1cf12fdde30022dd9d50714a95cc409898b8db495ae",
+      "bytes": 585932
+    },
+    "characters/krag/animations/Shoot.fbx": {
+      "sha256": "310aa63f0caaeb1aa04fdab1aa4db3dbaabf6c01902a38d7c09f553ff17cb0a6",
+      "bytes": 662332
+    },
+    "characters/krag/animations/Walk.fbx": {
+      "sha256": "4ee3b6cf5572df05d0ab50db55424c42391e6470b0735365b77f84f5fd8f710c",
+      "bytes": 649324
+    },
+    "characters/krag/delivery-v7.json": {
+      "sha256": "e8bbba6a2de350a4566844676c3c9556cd30ec09f57d06b435bf8a767ddcf20b",
+      "bytes": 12791
+    },
+    "characters/krag/facial-rig.json": {
+      "sha256": "1ea4e52b4683b4a7ec3f9c1acdc6e1f10f86e079281f893101090e818f0fff66",
+      "bytes": 5873
+    },
+    "characters/krag/krag_asset_contract.json": {
+      "sha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+      "bytes": 46864
+    },
+    "characters/krag/Krag_Crusher.fbx": {
+      "sha256": "7009d481ca88898ca969a1fe1b7ad93a641583eeec31c605c32cd93107b4353d",
+      "bytes": 50993820
+    },
+    "characters/krag/Krag_IronJaw.fbx": {
+      "sha256": "5ca8604a5fad78ccd92e9418906c29d39b7390caba2c8346f9b89c7daa47a0fd",
+      "bytes": 53286348
+    },
+    "characters/krag/Krag_Natural.fbx": {
+      "sha256": "197ba160f28061dc2f54c7f9cac6d572acd5498191db73bb3c6bead5b84158ff",
+      "bytes": 53076748
+    },
+    "characters/krag/Krag_Piston.fbx": {
+      "sha256": "144ff92cfc468ba63ccb85ecb8c3267142e5c7f09d60e15f059c767e89d0619f",
+      "bytes": 51294364
+    },
+    "characters/krag/Krag_Weapon.fbx": {
+      "sha256": "350950cb3285c6351fa474c67e52322596d19adb5dbee8e9502efbd9f1ed2511",
+      "bytes": 201436
+    },
+    "characters/krag/manifest.json": {
+      "sha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+      "bytes": 43481
+    },
+    "characters/krag/textures/Krag_AgedBrass_BaseColor.png": {
+      "sha256": "68508fcb06ef32ac789d5b430d17b4d5ab5560cbcc58e07a65e943d21f1cef20",
+      "bytes": 1318648
+    },
+    "characters/krag/textures/Krag_AgedBrass_Metallic.png": {
+      "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_AgedBrass_Normal.png": {
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+      "bytes": 1326622
+    },
+    "characters/krag/textures/Krag_AgedBrass_Roughness.png": {
+      "sha256": "7c14dae4a1be5f62bef1f6735527ca4e0dca63c0dc1d0db57eb0df975d720ea7",
+      "bytes": 670
+    },
+    "characters/krag/textures/Krag_Amber_BaseColor.png": {
+      "sha256": "6b07b52631a4eaf473dd64a8d7f70fc9aa4a1af852870e903b64feec3b0b2106",
+      "bytes": 92700
+    },
+    "characters/krag/textures/Krag_Amber_Metallic.png": {
+      "sha256": "31a6b1f0a431573153df3389b7bcee163d8a9f7e45094d2e6442907a54693cae",
+      "bytes": 304
+    },
+    "characters/krag/textures/Krag_Amber_Normal.png": {
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+      "bytes": 72177
+    },
+    "characters/krag/textures/Krag_Amber_Roughness.png": {
+      "sha256": "40d8c60d41a13bc16c871a3a8709aff9f668a7f4cf42da94b846c696b1ef48cf",
+      "bytes": 304
+    },
+    "characters/krag/textures/Krag_BlackenedSteel_BaseColor.png": {
+      "sha256": "53bc90e240a728437734c21a8e867d5e50bc4b080203f846873bd95b9591703c",
+      "bytes": 1211061
+    },
+    "characters/krag/textures/Krag_BlackenedSteel_Metallic.png": {
+      "sha256": "5d13cd7656afd45cdd2dcf431dd89dac831571ec0e691410064697fc28c0458d",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_BlackenedSteel_Normal.png": {
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+      "bytes": 1326622
+    },
+    "characters/krag/textures/Krag_BlackenedSteel_Roughness.png": {
+      "sha256": "25ca1d79469c4a26b9f3204dc8b115dd189c50655417b1889cabb55f19346721",
+      "bytes": 670
+    },
+    "characters/krag/textures/Krag_CopperHose_BaseColor.png": {
+      "sha256": "ce7b2156bcf1a87f6d81945b891281b860aa179188d0124fe85a5bac4c586444",
+      "bytes": 1325770
+    },
+    "characters/krag/textures/Krag_CopperHose_Metallic.png": {
+      "sha256": "cc468da0217c494e6b689bf78ee02c4bed0d7a5132092ffebff9273ffbb0c405",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_CopperHose_Normal.png": {
+      "sha256": "92d22b1dc9d843e850604f4430567149e45f4bb625cdb89db915220990ef40fc",
+      "bytes": 1326622
+    },
+    "characters/krag/textures/Krag_CopperHose_Roughness.png": {
+      "sha256": "e051386f21d4b2c36ec7f2739b373a6fef3126fd09b11ba4441177b04450bb4f",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_DesertCanvas_BaseColor.png": {
+      "sha256": "b44f123c84f2c27feb1c146897f145cf89e5939507293b159bfd90d5488d3fd9",
+      "bytes": 1271197
+    },
+    "characters/krag/textures/Krag_DesertCanvas_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_DesertCanvas_Normal.png": {
+      "sha256": "54ee0da5da9cc21f8c3ee60fa7d6370729685a716f2236d8113dcea6e1ac1d3d",
+      "bytes": 1493547
+    },
+    "characters/krag/textures/Krag_DesertCanvas_Roughness.png": {
+      "sha256": "4f5cabf2ffc9a8cef0ec091483db5ad741b95ac54445d821b7ad7f03e69f8bb9",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_EyeWhite_BaseColor.png": {
+      "sha256": "fa1a1cd2de88ef4efa8bc1ba6559ddb35e86519a5f252a1cc57ee806e4c89392",
+      "bytes": 74859
+    },
+    "characters/krag/textures/Krag_EyeWhite_Metallic.png": {
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+      "bytes": 275
+    },
+    "characters/krag/textures/Krag_EyeWhite_Normal.png": {
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+      "bytes": 72177
+    },
+    "characters/krag/textures/Krag_EyeWhite_Roughness.png": {
+      "sha256": "3195366d40c99e13ca9b7d6716f86211ad678e9374d633df5a99283ee82be6af",
+      "bytes": 304
+    },
+    "characters/krag/textures/Krag_FacialSkin_BaseColor.png": {
+      "sha256": "d5126b4b9f4080d2fb1c371da58af056649000bb3f6e21ee102ec6d4aae686a1",
+      "bytes": 2030417
+    },
+    "characters/krag/textures/Krag_FacialSkin_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_FacialSkin_Normal.png": {
+      "sha256": "31aec9af3b4a58b1da52c95e29eb3bd8a01fa14b799f99ae76d24cb6b0694d18",
+      "bytes": 1831777
+    },
+    "characters/krag/textures/Krag_FacialSkin_Roughness.png": {
+      "sha256": "3f6f10373addcffcf34bdd5009413d70c573de2fbdfc7f1f217db1f5db66466d",
+      "bytes": 10783
+    },
+    "characters/krag/textures/Krag_Ivory_BaseColor.png": {
+      "sha256": "33f017fbf5862b1ae71e9e2ca628111011fc24cb69782d20b339bd9d924e8d8e",
+      "bytes": 93212
+    },
+    "characters/krag/textures/Krag_Ivory_Metallic.png": {
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+      "bytes": 275
+    },
+    "characters/krag/textures/Krag_Ivory_Normal.png": {
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+      "bytes": 72177
+    },
+    "characters/krag/textures/Krag_Ivory_Roughness.png": {
+      "sha256": "dba7a2dbde5c5a6a16c03162e2082ff7bb814d87acd447a7fa63b3a78684cbe9",
+      "bytes": 304
+    },
+    "characters/krag/textures/Krag_OiledLeather_BaseColor.png": {
+      "sha256": "5c89d0593da62969048b4a8dbda0115a9a936127c4c4195ba78614338f36c8b6",
+      "bytes": 1127334
+    },
+    "characters/krag/textures/Krag_OiledLeather_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_OiledLeather_Normal.png": {
+      "sha256": "4aa7fbe2e764ccfced4adb0191b6becfc48e3cd507b63bb206687154cf723044",
+      "bytes": 1384041
+    },
+    "characters/krag/textures/Krag_OiledLeather_Roughness.png": {
+      "sha256": "0664bd804439f72e8a7d69dddf7e69ff63656ebf94c31867d3738c66edde5f68",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_OralTissue_BaseColor.png": {
+      "sha256": "2c1dd7e4f65c8cefe2d16bdf491211897a1aba1e67fd52f7791d6f07c54c7e36",
+      "bytes": 955107
+    },
+    "characters/krag/textures/Krag_OralTissue_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_OralTissue_Normal.png": {
+      "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+      "bytes": 1074697
+    },
+    "characters/krag/textures/Krag_OralTissue_Roughness.png": {
+      "sha256": "b23f437cc1a28c49a4b1aba51ba7026a5107554639e91e28c0c1c2525a1288f9",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_Recess_BaseColor.png": {
+      "sha256": "9a3e6a96f13a6a3d6be610c89cc13783dffb47be955779a367064e7e14a01840",
+      "bytes": 69601
+    },
+    "characters/krag/textures/Krag_Recess_Metallic.png": {
+      "sha256": "f4232e5bad0ee3498f2d43cbe1ef524e9f1dc13196f54e618ad8f459b882d86c",
+      "bytes": 275
+    },
+    "characters/krag/textures/Krag_Recess_Normal.png": {
+      "sha256": "e658ecbd7ed6471d26923ddf660f664e622c170edbc1fc1bc91294aa9b47c28f",
+      "bytes": 72177
+    },
+    "characters/krag/textures/Krag_Recess_Roughness.png": {
+      "sha256": "9a96c2f6dffebf877ebea04a3aa52982e75daf76f74c343d7221f7407d299cb5",
+      "bytes": 304
+    },
+    "characters/krag/textures/Krag_SandstoneSkin_BaseColor.png": {
+      "sha256": "1578980b65be81afbaf5fdebf968fb6b9a230c5862bd82127756d8a03751d87f",
+      "bytes": 7457768
+    },
+    "characters/krag/textures/Krag_SandstoneSkin_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_SandstoneSkin_Normal.png": {
+      "sha256": "ff19b5d0bb6b5858a82911af22eb157cde4cd0c88d62cc5694028a0792a7d0ca",
+      "bytes": 7522343
+    },
+    "characters/krag/textures/Krag_SandstoneSkin_Roughness.png": {
+      "sha256": "0ec7d3236259ad5a327a30531df4b5dfec2bc4bcd7e627a969c2d4b512d4d7c5",
+      "bytes": 10912
+    },
+    "characters/krag/textures/Krag_Tongue_BaseColor.png": {
+      "sha256": "17f2dcf7888742d903bb4309f6a0f05aa53a22e3dd0781cd55990ca8625d1e3d",
+      "bytes": 954264
+    },
+    "characters/krag/textures/Krag_Tongue_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/krag/textures/Krag_Tongue_Normal.png": {
+      "sha256": "7a6cd49209d05e6752bb4105b04e8d81b2338f2ac513dc18b265d5e2bac432ce",
+      "bytes": 1074697
+    },
+    "characters/krag/textures/Krag_Tongue_Roughness.png": {
+      "sha256": "58172b32174b6003b8f8ae1ad6711bd176835ac94a68dc2e52b9b7c0c0943eba",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_WeatheredTeal_BaseColor.png": {
+      "sha256": "d0689e9e6a8d5a154b431e146f772479d6f2d7c43290033dfc8d5eb3a3fcfaf0",
+      "bytes": 483781
+    },
+    "characters/krag/textures/Krag_WeatheredTeal_Metallic.png": {
+      "sha256": "af9eb68d72c12f3bed7c703338c64b6054a75af006cb10c6bff59b8ef9affa2d",
+      "bytes": 671
+    },
+    "characters/krag/textures/Krag_WeatheredTeal_Normal.png": {
+      "sha256": "e11000bffc8b6b2f9fe79c4342e64abbd96085dffd1d1be67b79039ea3736278",
+      "bytes": 803373
+    },
+    "characters/krag/textures/Krag_WeatheredTeal_Roughness.png": {
+      "sha256": "681b49bcdaae0ec07b2822263556690b208e9809f8e1355439ae88639caac443",
+      "bytes": 671
+    },
+    "characters/nib/animations/FacePerformance.fbx": {
+      "sha256": "32634ef36be15db121734c2c0af87c0d7733b683955204ef265ac145431256f0",
+      "bytes": 1161708
+    },
+    "characters/nib/animations/Hit.fbx": {
+      "sha256": "a9979da0e14f29a564c600b179daadc198f77cac5751ae12e1700d90bb2f0a23",
+      "bytes": 750572
+    },
+    "characters/nib/animations/Idle.fbx": {
+      "sha256": "bccc8678862c994ad1fd5e0f215c13ffcec2f751ca3786eb37ef07e848a45162",
+      "bytes": 1457948
+    },
+    "characters/nib/animations/Melee.fbx": {
+      "sha256": "a3c3401181f854ac30420e0350a8be750ddff3ae766d4fcf3eb3cec65fe9a286",
+      "bytes": 735052
+    },
+    "characters/nib/animations/Run.fbx": {
+      "sha256": "1f6b4f548811641f917467b1c941aac154f64e41df111a1a0f00f3e96423c236",
+      "bytes": 677132
+    },
+    "characters/nib/animations/Shoot.fbx": {
+      "sha256": "65a5d4a096fbb11523c8c915a461c82a2a4cdbf4b1db92f98a083b72082d5c73",
+      "bytes": 765692
+    },
+    "characters/nib/animations/Walk.fbx": {
+      "sha256": "278d38ab1dcd980ad4a8d2882123978a0dc26a07d680a3449b9761a708e606f8",
+      "bytes": 721052
+    },
+    "characters/nib/asset_manifest.json": {
+      "sha256": "ba01d48da8eee7a9b605245bffd9614c86b00e481d1f3df86fb636dde628dfc7",
+      "bytes": 58070
+    },
+    "characters/nib/facial-rig.json": {
+      "sha256": "163d39db4001df11b5afff58f36d8e869a1e9cd87e4ebc0f43736b33e981d3d1",
+      "bytes": 5518
+    },
+    "characters/nib/manifest.json": {
+      "sha256": "ba01d48da8eee7a9b605245bffd9614c86b00e481d1f3df86fb636dde628dfc7",
+      "bytes": 58070
+    },
+    "characters/nib/Nib_GripReplacement.fbx": {
+      "sha256": "4194a6956d3ea489a50ad86010f7de91d1e33abae5c012f49ba42c68d67a662d",
+      "bytes": 45709276
+    },
+    "characters/nib/Nib_LegReplacement.fbx": {
+      "sha256": "ab12fe9b4064bc891890bba16e96128b43550a01f6ba51606fe46face03831ac",
+      "bytes": 47805340
+    },
+    "characters/nib/Nib_Natural.fbx": {
+      "sha256": "00f18ff89f92c726a3090dc4b6b2e5d8ac7015e31746a7bdeec9b0551dea2363",
+      "bytes": 47978300
+    },
+    "characters/nib/textures/Nib_Brass_BaseColor.png": {
+      "sha256": "8741769a3198150a9f5e95f6b5adfba1e464f9d9416e5b10fa2daddd4fce4605",
+      "bytes": 396122
+    },
+    "characters/nib/textures/Nib_Brass_Metallic.png": {
+      "sha256": "bb4c0a630263f389d6ffec18ac4cf7ac1d0e134ca4d7d2a7928ff7dfb2016ecd",
+      "bytes": 15961
+    },
+    "characters/nib/textures/Nib_Brass_Normal.png": {
+      "sha256": "d08b1c689deeb2f34958209f643a8079ee852d330bb18f5d4f105d6cf0d65fae",
+      "bytes": 239142
+    },
+    "characters/nib/textures/Nib_Brass_Roughness.png": {
+      "sha256": "fceac23815f73998881683a3e6b6a2917c7586eb3ef4437a67d2c2ae561bf2ec",
+      "bytes": 280908
+    },
+    "characters/nib/textures/Nib_Cloth_BaseColor.png": {
+      "sha256": "c1e1628fc8288e7b22453b472f436e75bd0744f1e55d12c52e6f86e30eeea0ea",
+      "bytes": 1270205
+    },
+    "characters/nib/textures/Nib_Cloth_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Cloth_Normal.png": {
+      "sha256": "c325b1e8b92160e8d12e0f1d5f12e780faaf8a72fb8d541c7a18efb91cd6916b",
+      "bytes": 1110191
+    },
+    "characters/nib/textures/Nib_Cloth_Roughness.png": {
+      "sha256": "2b15d4e4b8e965381634326381e11928ae7deede7f04864651f5e64d93de9d44",
+      "bytes": 275880
+    },
+    "characters/nib/textures/Nib_Dark_BaseColor.png": {
+      "sha256": "529955a8c839636c35d11ed85e3376213f1f02d3c548215643060a91273cc186",
+      "bytes": 729586
+    },
+    "characters/nib/textures/Nib_Dark_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Dark_Normal.png": {
+      "sha256": "397e53f97a3d64f71f322e9d36dfceb95ef10eebdfff5d43094bf52392cf11b5",
+      "bytes": 2090648
+    },
+    "characters/nib/textures/Nib_Dark_Roughness.png": {
+      "sha256": "95ee28d2e4afbea3d1fe7c977c40c09102ea818a9f4117c45a8274a31cac7d65",
+      "bytes": 283784
+    },
+    "characters/nib/textures/Nib_Gum_BaseColor.png": {
+      "sha256": "5b16eae6e63ec7064b736a484597b9ba2428c63a22be9ee166ee686c1789d44a",
+      "bytes": 805893
+    },
+    "characters/nib/textures/Nib_Gum_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Gum_Normal.png": {
+      "sha256": "d26f58b3df2677199d0606238ae1f8f9b0cec42562f124e9a57539871d4415dd",
+      "bytes": 1097712
+    },
+    "characters/nib/textures/Nib_Gum_Roughness.png": {
+      "sha256": "49f884996bb242e641149d8057a64729c7dcffee78d31c96343f0e40ddb2bc3c",
+      "bytes": 284893
+    },
+    "characters/nib/textures/Nib_Hair_BaseColor.png": {
+      "sha256": "51e60b869dc34fc7b13c9c9116e9c303c8cb15ae4a41e75c36f36b492eb33746",
+      "bytes": 447693
+    },
+    "characters/nib/textures/Nib_Hair_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Hair_Normal.png": {
+      "sha256": "8eed073938d15daab0ee41a3d77b0e2a1e4562cd0562c27995a6de570f6429cf",
+      "bytes": 16509
+    },
+    "characters/nib/textures/Nib_Hair_Roughness.png": {
+      "sha256": "82ee87edf4e2f8d73c1b073b842900620d5f9ee417e04058cb49bf1e24829f9f",
+      "bytes": 286568
+    },
+    "characters/nib/textures/Nib_IdentityOcularGlobe_BaseColor.png": {
+      "sha256": "9bbf93938c93e9d70ff3f0693ce08ad96a5d25f5973e21da306e29478b8b61ef",
+      "bytes": 15963
+    },
+    "characters/nib/textures/Nib_IdentityOcularGlobe_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_IdentityOcularGlobe_Normal.png": {
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    "characters/nib/textures/Nib_IdentityOcularGlobe_Roughness.png": {
+      "sha256": "992b9c35e4cd14e810c3c481f32e178e683e0433ff911a977384dcd294e52c65",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_L_BaseColor.png": {
+      "sha256": "13b7cc8b0802cb284c0267dfb8a6d7a9a8983677c9107e11e4cf1f6a1df9bb35",
+      "bytes": 446033
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_L_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_L_Normal.png": {
+      "sha256": "0badcb317ff3c090ac79972972c72204309c8dca7b2c9769e708b4b240b08615",
+      "bytes": 39196
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_L_Roughness.png": {
+      "sha256": "875eb36aad8904f9e5f458c37d402fedb9c67784dda0e7a99427953c0c75e21b",
+      "bytes": 6305
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_R_BaseColor.png": {
+      "sha256": "a07d1d431468d9f80f488357690681490fd48d8f70e0e97f70f9868e37ea34f6",
+      "bytes": 445781
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_R_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_R_Normal.png": {
+      "sha256": "98435268ebc1e73766fa16a551b675b93f1bd5cee1378cd8d4f99c7e49fdeb84",
+      "bytes": 39685
+    },
+    "characters/nib/textures/Nib_IdentityOcularIris_R_Roughness.png": {
+      "sha256": "d6631ca3dba44bdd244feeb0f322aa093b21d3fd4f9ae3a93181f884e31708a8",
+      "bytes": 6364
+    },
+    "characters/nib/textures/Nib_Leather_BaseColor.png": {
+      "sha256": "621da6ad93522d7eafcda0a9c88d3748e5cb83ada0b7e3ac5bed71efe6c572d2",
+      "bytes": 1143494
+    },
+    "characters/nib/textures/Nib_Leather_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Leather_Normal.png": {
+      "sha256": "1e60ea8addf62a998590e66630c937af012b01e3df20978ce7dd4b4027df5a63",
+      "bytes": 2090835
+    },
+    "characters/nib/textures/Nib_Leather_Roughness.png": {
+      "sha256": "45a8dc959dd3d3b60c775d0952092725aba34ff9ee9a2315c4bd3274d64bc84a",
+      "bytes": 285772
+    },
+    "characters/nib/textures/Nib_Lens_BaseColor.png": {
+      "sha256": "15877d38beb5e894f424ed0a76a476911bddffe93b90207265c7b587a33d16f4",
+      "bytes": 273482
+    },
+    "characters/nib/textures/Nib_Lens_Metallic.png": {
+      "sha256": "47b534e544ce160b5a79d8cc6842849a4abec9dbec4f7d5ef286c1df4c6c6114",
+      "bytes": 15961
+    },
+    "characters/nib/textures/Nib_Lens_Normal.png": {
+      "sha256": "33b921c5664fe1b34f6db135d0beeb0b919a625bd3614ab9a24b280ce1155c94",
+      "bytes": 236763
+    },
+    "characters/nib/textures/Nib_Lens_Roughness.png": {
+      "sha256": "7f8bf52b584289af709e82380b49976a744aaad27cde8602a8615099a09d2381",
+      "bytes": 283243
+    },
+    "characters/nib/textures/Nib_MouthInterior_BaseColor.png": {
+      "sha256": "864c89f6ea7f81cf2b632a08eb35e2f580ad7c4ad5fb0b6abd14ec9321cd5bf3",
+      "bytes": 255357
+    },
+    "characters/nib/textures/Nib_MouthInterior_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_MouthInterior_Normal.png": {
+      "sha256": "b48598ebfc2f4b4228c29e7019c3ccad584847afcf6682ab35c3f30b955490c5",
+      "bytes": 1097336
+    },
+    "characters/nib/textures/Nib_MouthInterior_Roughness.png": {
+      "sha256": "3a6b5c8b8171f1d5e7800eba521eac2738bcd0e988734edf1db06221acdaf36e",
+      "bytes": 285342
+    },
+    "characters/nib/textures/Nib_Skin_BaseColor.png": {
+      "sha256": "4ef2b9aa163aede7e870e54270d244bdd1aa0c4c5496977691f34797f2eb5040",
+      "bytes": 5208031
+    },
+    "characters/nib/textures/Nib_Skin_Metallic.png": {
+      "sha256": "5630edf42913f842e57308503a7e0977e721d09027a12c453b8878c22108cd37",
+      "bytes": 55235
+    },
+    "characters/nib/textures/Nib_Skin_Normal.png": {
+      "sha256": "bbc75d1e71be6c4ab8833d7661f495a64894404e1661b0ae544c488ee28e4e81",
+      "bytes": 4165810
+    },
+    "characters/nib/textures/Nib_Skin_Roughness.png": {
+      "sha256": "cfcbb48bc5221c4071db9766d438250f40b0d49fc2b951b5eab653d5fdbfcce6",
+      "bytes": 731383
+    },
+    "characters/nib/textures/Nib_Steel_BaseColor.png": {
+      "sha256": "d0b7b105cc8ece6015cf1b7784e358691dd0a489d1a26d07ad73b111454462cc",
+      "bytes": 451864
+    },
+    "characters/nib/textures/Nib_Steel_Metallic.png": {
+      "sha256": "a94c3ace4579f92ad887afb99d99c5f0f3788e54ae236e199b656b083ea19795",
+      "bytes": 15961
+    },
+    "characters/nib/textures/Nib_Steel_Normal.png": {
+      "sha256": "e39a293406af2ddeec58b4b72f31166bdc85388481fafd4411939159c0f9df37",
+      "bytes": 238497
+    },
+    "characters/nib/textures/Nib_Steel_Roughness.png": {
+      "sha256": "2f9f5947752f243bd3fe77e3ec2479bfc8df660cc43e5a10b927fbfad30fb978",
+      "bytes": 281453
+    },
+    "characters/nib/textures/Nib_Stitch_BaseColor.png": {
+      "sha256": "05963d6617890679e91456bb6d039a35f94f8bc59743fb1122b45abb627bbcb1",
+      "bytes": 1313334
+    },
+    "characters/nib/textures/Nib_Stitch_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Stitch_Normal.png": {
+      "sha256": "fc62796866d0499d13829cf73d6ddb545572f81e97f52555fe858722b7a21b4b",
+      "bytes": 1117084
+    },
+    "characters/nib/textures/Nib_Stitch_Roughness.png": {
+      "sha256": "5b44cbdf61759d63926ad97cb798f2dc4a00bddabd6407813b8f45e5fc25dca2",
+      "bytes": 282409
+    },
+    "characters/nib/textures/Nib_Teal_BaseColor.png": {
+      "sha256": "1cadcefd078d6ab68ed3676f17bad3afb11b9bb74b58f662bdece101d3ed1a09",
+      "bytes": 510574
+    },
+    "characters/nib/textures/Nib_Teal_Metallic.png": {
+      "sha256": "dbf65a93b851cce6b81c4c3891ba8b1b4ce028c7e137fb28f34e653d8138efa7",
+      "bytes": 15961
+    },
+    "characters/nib/textures/Nib_Teal_Normal.png": {
+      "sha256": "03612061c87030d91bb8dbf08eab48895e8f0a8e492a87eae3292ed79eb6e721",
+      "bytes": 235615
+    },
+    "characters/nib/textures/Nib_Teal_Roughness.png": {
+      "sha256": "1a66312c5f70b128993a79d82f915eef1b8cb3a830c37c387b9c4e00a1c9e742",
+      "bytes": 285252
+    },
+    "characters/nib/textures/Nib_Tongue_BaseColor.png": {
+      "sha256": "45c1f902bffa20006de766fc59f79d6d4e5dec25695977b51ff226c33ccbce13",
+      "bytes": 717021
+    },
+    "characters/nib/textures/Nib_Tongue_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Tongue_Normal.png": {
+      "sha256": "e523cda43b20f6e33454a03cb28f6a6722481e1ae03088538a0ab809a2e6e23e",
+      "bytes": 1096508
+    },
+    "characters/nib/textures/Nib_Tongue_Roughness.png": {
+      "sha256": "e76e69f3fc69d4228856713ca7876150b70e54f1a32bd8be207db3169a8971f0",
+      "bytes": 284438
+    },
+    "characters/nib/textures/Nib_Tooth_BaseColor.png": {
+      "sha256": "f0e3f41e1820a409e7fabbbcbebdebdc71493c37dc4e27d0521c91dfa406446b",
+      "bytes": 1314538
+    },
+    "characters/nib/textures/Nib_Tooth_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Tooth_Normal.png": {
+      "sha256": "41a759065a69612777274cbb64310f8fe92072aa83365c8ee225d2006c307f9d",
+      "bytes": 1098229
+    },
+    "characters/nib/textures/Nib_Tooth_Roughness.png": {
+      "sha256": "35b109234e0d9d35d6567748c442b7840b9d9ee75cb62bf4194b6aeb7e2aa1d3",
+      "bytes": 287148
+    },
+    "characters/nib/textures/Nib_v5_DustyPinkEar_BaseColor.png": {
+      "sha256": "37c5619743f0d001befdc340afeb61a22000383a02e280854289023ef1ec4c4a",
+      "bytes": 479898
+    },
+    "characters/nib/textures/Nib_v5_DustyPinkEar_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_DustyPinkEar_Normal.png": {
+      "sha256": "c6e5f17b72599c44c44f09bd11f61b1555d17135ac74b6d452729f79ac2bd6a9",
+      "bytes": 5362
+    },
+    "characters/nib/textures/Nib_v5_DustyPinkEar_Roughness.png": {
+      "sha256": "f100594992c8de0c65ee16899ccd77e5825802005c32d0768a8274949e2d749e",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_v5_FacialSkinAtlas_BaseColor.png": {
+      "sha256": "7edafae2d685ea9436df6fdd603f95ec6802e896455712cd0b7343332e7d2b33",
+      "bytes": 8728408
+    },
+    "characters/nib/textures/Nib_v5_FacialSkinAtlas_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_FacialSkinAtlas_Normal.png": {
+      "sha256": "39ec64ba078d2609acd04a418dcbb257e7fd2665951abb2e494dad5f6ac0f406",
+      "bytes": 360186
+    },
+    "characters/nib/textures/Nib_v5_FacialSkinAtlas_Roughness.png": {
+      "sha256": "01066b7ea848fd866a3f673ad2a0add83eca6fc44f9354f3d709e9b249c41089",
+      "bytes": 311769
+    },
+    "characters/nib/textures/Nib_v5_HeadFur_BaseColor.png": {
+      "sha256": "b8a37be851842f01e6eb1ab6f244fe81822f324d6d628d2977ebf2ec7e6a1c83",
+      "bytes": 302137
+    },
+    "characters/nib/textures/Nib_v5_HeadFur_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_HeadFur_Normal.png": {
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    "characters/nib/textures/Nib_v5_HeadFur_Roughness.png": {
+      "sha256": "b43c72d4a5559b483add2cfce3358467b7f120328772c75ce3664f102c47141c",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_v5_InnerEarWisps_BaseColor.png": {
+      "sha256": "2f17ee3f21e8297dcece494b74e8b1216218b46ffbd44b05c188aa28e2eff88b",
+      "bytes": 319226
+    },
+    "characters/nib/textures/Nib_v5_InnerEarWisps_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_InnerEarWisps_Normal.png": {
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    "characters/nib/textures/Nib_v5_InnerEarWisps_Roughness.png": {
+      "sha256": "63177883c9bbfe9e9f5b41d9bde9b54e4f7f37a751e35d0237d2881fb9e811df",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarFur_BaseColor.png": {
+      "sha256": "b989c46c5ed1570ed4c5270c3ad5d94348c0b204e6911750027283437cf7a481",
+      "bytes": 234659
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarFur_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarFur_Normal.png": {
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarFur_Roughness.png": {
+      "sha256": "345929645747a6e80477eeb7319b97fdd5600ca2c8667d007f687e6e342a9eb3",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarUndercoat_BaseColor.png": {
+      "sha256": "448b048068a91502730de4effda93be9fb9e791623a187843072359e63ba80db",
+      "bytes": 427604
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarUndercoat_Metallic.png": {
+      "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45",
+      "bytes": 473
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarUndercoat_Normal.png": {
+      "sha256": "3b8dfb8c3b14effa2ec38e69ef1a4882de1fa69c367859e73cbedef159afbe90",
+      "bytes": 4588
+    },
+    "characters/nib/textures/Nib_v5_TawnyEarUndercoat_Roughness.png": {
+      "sha256": "b43a2e7498d97ca6057257314fb48fb8f0fea460fbd3005223385d3bffb65bd0",
+      "bytes": 4589
+    },
+    "characters/nib/textures/Nib_v6_FurCards_Metallic.png": {
+      "sha256": "98850c5191114299e2d7afe5e1d30106b024f408fcf7dc5943d3c10a9b3baf2d",
+      "bytes": 4265
+    },
+    "characters/nib/textures/Nib_v6_FurCards_Normal.png": {
+      "sha256": "d956ebbb58ab4cfe7fed5a908952f65fcffca9f5bf457538aad51c792d83a340",
+      "bytes": 1217166
+    },
+    "characters/nib/textures/Nib_v6_FurCards_Roughness.png": {
+      "sha256": "78aa814b0d2c883e1646836965fd0dc156ffa86dca3790c004ce65667deb6827",
+      "bytes": 294794
+    },
+    "characters/nib/textures/Nib_v6_HeadFurCards_BaseColor.png": {
+      "sha256": "419ee0e6c702b3d215e33d5468ad3c5c2bd50d635f64653a7705c64186be70a5",
+      "bytes": 2798223
+    },
+    "characters/nib/textures/Nib_v6_InnerEarWispsCards_BaseColor.png": {
+      "sha256": "2f4f048fbb3fee2aac63a46774706184a4ff2bada10e1333baf5c7b91294aa47",
+      "bytes": 2834868
+    },
+    "characters/nib/textures/Nib_v6_TawnyEarFurCards_BaseColor.png": {
+      "sha256": "7b1aee53f66575f675707df396d1a8603f350dab222ab669a8d52b973b2f948e",
+      "bytes": 2617473
+    },
+    "characters/nib/textures/Nib_Workwear_BaseColor.png": {
+      "sha256": "74275f8b41b0924538a3e25479848c6b085321359f16a3476d71bab15c08bd72",
+      "bytes": 2735574
+    },
+    "characters/nib/textures/Nib_Workwear_Metallic.png": {
+      "sha256": "1a5e57350822bcd0cdb03f4dc88a26b4a281ba170756106cf0e2df2b298a2cd2",
+      "bytes": 13995
+    },
+    "characters/nib/textures/Nib_Workwear_Normal.png": {
+      "sha256": "07659005bc8d0a1c7c083665bf6c194eea52f34afec350adbb1319c5db84d67a",
+      "bytes": 1119187
+    },
+    "characters/nib/textures/Nib_Workwear_Roughness.png": {
+      "sha256": "4cf29333bbd77e8bb18e1d9af6d9e3b5343ca9bcfce5d12c1b8875dea7c51c20",
+      "bytes": 283904
+    },
+    "effects/manifest.json": {
+      "sha256": "a9035e49a49a08b9b778d8a767e3f8d081ff6a4d2e9c7334b9c3b0a0407976c8",
+      "bytes": 311
+    },
+    "effects/SandDustMask.png": {
+      "sha256": "fff2e8062cd161021e12bcc3c9d30332b9110987b78580203e79283eb2a46785",
+      "bytes": 7591
+    },
+    "environment/Dunes.fbx": {
+      "sha256": "0ca08ef8f2193083977fd6f296d533aa8a2828136949f63845e023c0d3036b24",
+      "bytes": 2209212
+    },
+    "environment/manifest.json": {
+      "sha256": "1af849d99e299b89a972152c9650434ef4455beaf3106a30fa93753fb464c08f",
+      "bytes": 2460
+    },
+    "environment/Sand_BaseColor.png": {
+      "sha256": "2cd59fccf77dff54e83420ca6010f0ebcc59bf7d9538d4b3b235225b0ec43247",
+      "bytes": 4661783
+    },
+    "environment/Sand_MaskHDRP.png": {
+      "sha256": "d488260ba3db150b1bc37712bfea76feadb7ae9bddab8b1c2ab1af5c75e7f342",
+      "bytes": 2702147
+    },
+    "environment/Sand_Normal.png": {
+      "sha256": "451744609b414e057e228512cb16047a9582c31ed9961157a2b286716b325736",
+      "bytes": 7003285
+    },
+    "environment/Sand_Roughness.png": {
+      "sha256": "60d2e483eb042e333d8384c35eb7966665f244eeb8f1b1c2c9e973ed8056fe39",
+      "bytes": 2562386
+    }
+  }
+}

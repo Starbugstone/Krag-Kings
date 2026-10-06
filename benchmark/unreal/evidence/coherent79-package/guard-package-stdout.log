@@ -1,0 +1,978 @@
+{
+    "engineRoot":  "D:\\Games\\UE_5.8",
+    "engineVersion":  "5.8.3",
+    "project":  "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "stage":  "Package",
+    "startedUtc":  "2026-10-06T17:08:50.9872958Z"
+}
+Running AutomationTool...
+Using bundled DotNet SDK version: 10.0 win-x64
+Starting AutomationTool...
+Parsing command line: BuildCookRun -project=D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -prereqs -archive -archivedirectory=D:\Dev\Krag-Kings\benchmark\builds\unreal -utf8output
+Initializing script modules...
+Total script module initialization time: 0.39 s.
+Using D:\DevTools\VS2022BuildTools\MSBuild\Current\Bin\MSBuild.exe
+Executing commands...
+Setting up ProjectParams for D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject
+********** BUILD COMMAND STARTED **********
+Running: D:\Games\UE_5.8\Engine\Binaries\ThirdParty\DotNet\10.0\win-x64\dotnet.exe "D:\Games\UE_5.8\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Target="KragKingsBenchmarkEditor Win64 Development -Project=D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" -Target="KragKingsBenchmark Win64 Development -Project=D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject  -remoteini=\"D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\"  " -log="C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\UBA-KragKingsBenchmarkEditor-Win64-Development.txt"
+Log file: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\UBA-KragKingsBenchmarkEditor-Win64-Development.txt
+Executing up to 2 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+UHT compiled-in object format Default
+UHT processed KragKingsBenchmark in 8.3541184 seconds (3 generated files written)
+Building KragKingsBenchmark and KragKingsBenchmarkEditor...
+===== Toolchain Information =====
+KragKingsBenchmark Win64 Development:
+  Using ISPC compiler (D:\Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+    Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+  Using Visual Studio 14.44.35229 toolchain (D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+KragKingsBenchmarkEditor Win64 Development:
+  Using ISPC compiler (D:\Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+    Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+  Using Visual Studio 14.44.35229 toolchain (D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+=================================
+Using Unreal Build Accelerator local executor to run 8 action(s)
+  CPU 6 physical cores, 12 logical cores
+  Memory 31.79 GB physical, 23.45 GB/39.04 GB committed
+  UBA Storage capacity 40 GB
+** For KragKingsBenchmark-Win64-Development **
+[1/8] Compile [x64] KKBenchmarkAssets.cpp [NoUba]
+[2/8] Compile [x64] KKBenchmarkAnimInstance.cpp [NoUba]
+[3/8] Compile [x64] KKBenchmarkController.cpp [NoUba]
+[4/8] Compile [x64] KKBenchmarkUnit.cpp [NoUba]
+[5/8] Compile [x64] KKBenchmarkGameMode.cpp [NoUba]
+[6/8] Compile [x64] Module.KragKingsBenchmark.gen.cpp [NoUba]
+[7/8] Link [x64] KragKingsBenchmark.exe [NoUba]
+[8/8] WriteMetadata KragKingsBenchmark.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 55.71 seconds
+Output binary: D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Binaries\Win64\KragKingsBenchmark.exe
+Output binary: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 67.28 seconds
+Trace written to file C:\Users\Matthew\AppData\Local\UnrealBuildTool\Trace.uba with size 10.5kb
+Took 67,56s to run dotnet.exe, ExitCode=0
+No build products were made
+Build command time: 67.57 s
+********** BUILD COMMAND COMPLETED **********
+********** COOK COMMAND STARTED **********
+Running UnrealEditor Cook for project D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject
+Commandlet log file is D:\Games\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.10.06-19.10.03.txt
+Running: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" -run=Cook  -TargetPlatform=Windows  -unversioned -fileopenlog -abslog="D:\Games\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.10.06-19.10.03.txt" -stdout -CrashForUAT -unattended -NoLogTimes
+LogInit: Display: Running engine for game: KragKingsBenchmark
+LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+LogTrace: Display: Control listening on port 40956
+LogCsvProfiler: Display: Metadata set : platform="Windows"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.8-CL-58210709"
+LogCsvProfiler: Display: Metadata set : engineversion="5.8.3-58210709+++UE5+Release-5.8"
+LogCsvProfiler: Display: Metadata set : enginereleaseversion="5.8.3"
+LogCsvProfiler: Display: Metadata set : os="Windows 11 (25H2) [10.0.26200.9457] "
+LogCsvProfiler: Display: Metadata set : cpu="GenuineIntel|Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : mergedmodules="0"
+LogCsvProfiler: Display: Metadata set : compacttset="0"
+LogCsvProfiler: Display: Metadata set : commandline="" D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -run=Cook -TargetPlatform=Windows -unversioned -fileopenlog -abslog=D:\Games\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.10.06-19.10.03.txt -stdout -CrashForUAT -unattended -NoLogTimes""
+LogCsvProfiler: Display: Metadata set : loginid="b0bbc7f94fa73bbaf821ddafc6002691"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogCsvProfiler: Display: Metadata set : zenstreaming="0"
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+LogConfig: Display: Loading Android ini files took 0.06 seconds
+LogConfig: Display: Loading Mac ini files took 0.06 seconds
+LogConfig: Display: Loading VulkanPC ini files took 0.07 seconds
+LogConfig: Display: Loading IOS ini files took 0.07 seconds
+LogAudio: Display: Audio Device Manager not initializing due to all audio being disabled. If this is not intentional, please check command line arguments for "-nosound".
+LogAssetRegistry: Display: FindShardedCacheFiles: 1 via .ref, 0 via migration fallback, 1 total
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PreLoad): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogAssetRegistry: Display: LoadCacheFiles: loading 1 cache files, memory-mapping=enabled
+LogConfig: Display: Loading TVOS ini files took 0.08 seconds
+LogConfig: Display: Loading Windows ini files took 0.09 seconds
+LogConfig: Display: Loading Unix ini files took 0.09 seconds
+LogConfig: Display: Loading Linux ini files took 0.09 seconds
+LogConfig: Display: Loading VisionOS ini files took 0.04 seconds
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/KragKingsBenchmark.uproject" -log="D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps
+LogAssetRegistry: Display: Asset registry cache read as 118.6 MiB from ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_0C5F5AB14095916FA91DCAA4275904B8.bin (memory-mapped=yes)
+Log file: D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Logs\AutoSDKInfo.txt
+RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+##PlatformValidate: Win64 VALID 10.0.22621.0
+##PlatformValidate: Mac INVALID 26.1.1
+##PlatformValidate: IOS INVALID 26.1.1
+##PlatformValidate: Android INVALID r27c
+##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS INVALID 26.1.1
+##PlatformValidate: VisionOS INVALID <UNKNOWN>
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+Trace written to file C:\Users\Matthew\AppData\Local\UnrealBuildTool\Trace.uba with size 322b
+LogAsyncCompilation: Display: MemorySharingInfo: UsedMemory=329MiB, MaxMemoryAvailable=39977MiB
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogConsoleManager: Warning: Setting the console variable 'r.Streaming.PoolSize' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '3000'
+LogHAL: Display: Platform has ~ 32 GB [34134720512 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+LogConsoleManager: Warning: Setting the console variable 'r.ScreenPercentage' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '100'
+LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+LogObj: Display: Attempting to load config data for Default__DownlinkBandwidthManagerConfig before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogTextureFormatASTC: Display: ASTCEnc version 5.0.1 library loaded
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatASTC
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatDXT
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatETC2
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+LogTextureFormatOodle: Display: Oodle Texture TFO init; latest sdk version = 2.9.16
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.16.dll
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatOodle
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatUncompressed
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Android'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'IOS'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Linux'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Mac'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'TVOS'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsEditor'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+LogTargetPlatformManager: Display: Building Assets For Windows
+LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+LogObj: Display: Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogCsvProfiler: Display: Metadata set : verbatimrhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhifeaturelevel="SM6"
+LogCsvProfiler: Display: Metadata set : shaderplatform="PCD3D_SM6"
+LogCsvProfiler: Display: Metadata set : gpu=""
+LogCsvProfiler: Display: Metadata set : gpudriver=""
+LogDerivedDataCache: Display: ../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (1670 MiB)
+LogZenServiceInstance: Display: Launching zen utility 'D:/Games/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\Matthew\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 25056  --child-id Zen_25056_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogDerivedDataCache: Display: ZenLocal: Using ZenServer HTTP service at [::1] with namespace ue.ddc. Status: OK!.
+LogDerivedDataCache: Display: C:/Users/Matthew/AppData/Local/UnrealEngine/Common/DerivedDataCache: Performance: Latency=0.10ms. RandomReadSpeed=169.11MBs, RandomWriteSpeed=155.29MBs. Assigned SpeedClass 'Local'
+LogUbaHorde: Display: UBA/Horde Configuration [Uba.Provider.Horde]: Not Enabled
+LogShaderCompilers: Display: No distributed shader compiler controller found
+LogShaderCompilers: Display: Using 2 local workers for shader compilation
+LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush
+LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+LogEditorDomain: Display: EditorDomain is Disabled
+LogAssetRegistry: Display: AssetDataGatherer spent 0.000s loading caches from ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/CachedAssetRegistry.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+LogCsvProfiler: Display: Metadata set : deviceprofile="WindowsEditor"
+LogStreaming: Display: FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+LogMeshReduction: Display: Using QuadricMeshReduction for automatic static mesh reduction
+LogMeshReduction: Display: Using SkeletalMeshReduction for automatic skeletal mesh reduction
+LogMeshReduction: Display: Using ProxyLODMeshReduction for automatic mesh merging
+LogMeshReduction: Display: No distributed automatic mesh merging module available
+LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush
+LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+LogVirtualization: Display: VirtualizationSystem name found in ini file: None
+LogVirtualization: Display: FNullVirtualizationSystem mounted, virtualization will be disabled
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize started...
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 2.723 ms
+LogMetaSound: Display: MetaSound Page Target Initialized to 'Default'
+LogAudio: Display: Registering Engine Module Parameter Interfaces...
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+LogCsvProfiler: Display: Metadata set : raytracing="0"
+LogCook: Display: CookProcessCount=1. CookMultiprocess is disabled and the cooker is running as a single process.
+LogCook: Display: CookSettings for Memory:
+	MemoryMaxUsedVirtual 0MiB
+	MemoryMaxUsedPhysical 0MiB
+	MemoryMinFreeVirtual 2048MiB
+	MemoryMinFreePhysical 2048MiB
+	MemoryTriggerGCAtPressureLevel None
+	SoftGCMemoryUseTrigger disabled
+	SoftGCTimeBudgetTrigger enabled (0.05 budget, 30s min period)
+LogCook: Display: SkipOnlyEditorOnly is enabled, unsolicited packages will not be cooked unless they are referenced from the cooked version of the instigator package.
+LogCook: Display: ---- Pre Content Initialisation: End ----
+LogCook: Display: ---- Post Content Initialisation: Start ----
+LogEditorDomain: Display: Cycle detected in parents of class /Script/RigVMDeveloper.RigVMUnitNode. Allow flags for editordomain and incremental cooking will be invalid.
+LogZenStore: Display: Establishing oplog 'KragKingsBenchmark.3b447ac7/EditorDomain'
+LogZenStore: Display: Zen project 'KragKingsBenchmark.3b447ac7' already exists
+LogZenStore: Display: Zen oplog 'KragKingsBenchmark.3b447ac7/EditorDomain' already exists
+LogCook: Display: Waiting for Asset Registry
+LogAssetRegistry: Display: Starting OnFilesLoaded.Broadcast
+LogAssetRegistry: Display: Completed OnFilesLoaded.Broadcast: 0.016s
+LogAssetRegistry: Display: Asset registry cache written as 118.6 MiB to ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Intermediate/CachedAssetRegistry/CachedAssetRegistry_*.ref
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display:   CachedAssetRegistry_0_0C5F5AB14095916FA91DCAA4275904B8.bin: deleted (orphaned, unreferenced by any .ref)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 2 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 1 orphans deleted, 0 orphans locked (kept)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogCook: Display: INCREMENTAL COOK DEPENDENCIES: Enabled. Incremental Cook Dependencies are enabled in Editor.ini:[CookSettings]:LegacyIterative=false.
+LogZenStore: Display: Establishing oplog 'KragKingsBenchmark.3b447ac7/Windows'
+LogZenStore: Display: Zen project 'KragKingsBenchmark.3b447ac7' already exists
+LogStorageServerPlatformFile: Display: Found 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using connection settings from ue.projectstore: HostAddrs='[::1]+192.168.31.40+172.17.32.1+172.26.16.1' and HostPort='8558'
+LogStorageServerPlatformFile: Display: Found 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using password authentication from ue.projectstore
+LogStorageServerPlatformFile: Display: Using settings from ue.projectstore: ServerProject='KragKingsBenchmark.3b447ac7' and ServerPlatform='Windows'
+LogStorageServerConnection: Display: Creating zen store connection to [::1]:8558 ("::1").
+LogStorageServerConnection: Display: Zen store connection established to [::1]:8558.
+LogCook: Display: CalculateGlobalDependenciesHash(Windows):
+LogCook: Display: 	FGuid CookIncrementalVersion = ffa12fdc-c822-1fe2-7757-627a12f1d3a7
+LogCook: Display: 	[Editor]:CookSettings.ProjectCookIncrementalVersion = 00000000-0000-0000-0000-000000000000
+LogCook: Display: 	[Engine]:Core.System.CanStripEditorOnlyExportsAndImports = True
+LogCook: Display: 	[Engine]:Core.System.CanSkipEditorReferencedPackagesWhenCooking = False
+LogCook: Display: 	CanUseUnversionedPropertySerialization = True
+LogCook: Display: 	[Editor]:CookSettings.AutomaticOptionalInclusionAssetType = /Script/Niagara.NiagaraScript, /Script/Niagara.NiagaraEmitter, /Script/Niagara.NiagaraSystem, /Script/NiagaraEditor.NiagaraParameterDefinitions, /Script/Niagara.NiagaraEffectType, /Script/Niagara.NiagaraValidationRuleSet, /Script/OptimusCore.OptimusDeformer
+LogCook: Display: 	IsCookFlagSet(ECookInitializationFlags::Unversioned) = True
+LogCook: Display: 	FCoreRedirects::AppendHashOfGlobalRedirects = 02c9fd35aac3c00095df0219fc925d7070b41f449d3b97578d818a4016ee6805
+LogCook: Display: 	GlobalDependenciesHash(Windows) = 2de5b37f143f8e25d634acd39f60ca4c07ed1761ed763f60105e89ce30e27192
+LogCook: Display: FULL COOK: Incremental Cooks are disabled by default in Editor.ini:[CookSettings]:CookIncrementalDefaultIncremental=false, and commandline did not specify -forcerecook=false. Deleting previously cooked packages for platform Windows and recooking all packages discovered in the current cook.
+LogZenStore: Display: Deleting oplog 'KragKingsBenchmark.3b447ac7/Windows' if it exists
+LogZenStoreWriter: Display: Deleting D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/...
+LogZenStore: Display: Zen oplog 'KragKingsBenchmark.3b447ac7/Windows' created
+LogCook: Display: Sandbox cleanup took 5.015 seconds for platforms Windows
+LogCook: Display: Compiling global changed shaders for platform 'Windows'
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'Global' (PCD3D_SM5-PCD3D_SM5) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 361 (36100.00%)
+LogShaderLibrary: Display: Total Shaders: 4371, Unique Shaders: 4356 (99.66%)
+LogShaderLibrary: Display: Total Shader Size: 12.71mb, Unique Shaders Size: 12.71mb (99.96%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 3
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 309
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     3, 3, 3, 2, 2, 2, 2, 2, 2, 2
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Pixel: 1778 shaders (40.82%), compressed size: 6.66 MB (3.84 KB avg per shader), uncompressed size: 31.36 MB (18.06 KB avg per shader)
+LogShaderLibrary: Display: SF_Compute: 2457 shaders (56.40%), compressed size: 5.97 MB (2.49 KB avg per shader), uncompressed size: 23.12 MB (9.64 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 119 shaders (2.73%), compressed size: 0.07 MB (0.61 KB avg per shader), uncompressed size: 0.15 MB (1.32 KB avg per shader)
+LogShaderLibrary: Display: SF_Geometry: 2 shaders (0.05%), compressed size: 0.00 MB (0.49 KB avg per shader), uncompressed size: 0.00 MB (1.55 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Shaders/PCD3D_SM5-PCD3D_SM5/ShaderDebug-Global-PCD3D_SM5-PCD3D_SM5/Dump.txt'
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'Global' (PCD3D_SM6-PCD3D_SM6) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 478 (47800.00%)
+LogShaderLibrary: Display: Total Shaders: 8941, Unique Shaders: 8939 (99.98%)
+LogShaderLibrary: Display: Total Shader Size: 106.03mb, Unique Shaders Size: 106.03mb (100.00%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 3
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 530
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     2, 2, 1, 1, 1, 1, 1, 1, 1, 1
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Compute: 6723 shaders (75.21%), compressed size: 83.53 MB (12.72 KB avg per shader), uncompressed size: 110.24 MB (16.79 KB avg per shader)
+LogShaderLibrary: Display: SF_Pixel: 2068 shaders (23.13%), compressed size: 22.11 MB (10.95 KB avg per shader), uncompressed size: 29.04 MB (14.38 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 144 shaders (1.61%), compressed size: 0.38 MB (2.73 KB avg per shader), uncompressed size: 0.48 MB (3.39 KB avg per shader)
+LogShaderLibrary: Display: SF_Geometry: 3 shaders (0.03%), compressed size: 0.01 MB (2.15 KB avg per shader), uncompressed size: 0.01 MB (3.31 KB avg per shader)
+LogShaderLibrary: Display: SF_WorkGraphComputeNode: 1 shaders (0.01%), compressed size: 0.00 MB (2.75 KB avg per shader), uncompressed size: 0.00 MB (3.35 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Shaders/PCD3D_SM6-PCD3D_SM6/ShaderDebug-Global-PCD3D_SM6-PCD3D_SM6/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Discovering localized assets for cultures: en
+LogCook: Display: Found 0 localized assets
+LogCook: Display: ---- Post Content Initialisation: End ----
+LogCook: Display: Cooked packages 0 Packages Remain 777 Total 777
+LogCook: Display: Cook Diagnostics: OpenFileHandles=274, VirtualMemory=1608MiB, VirtualMemoryAvailable=16350MiB
+LogCook: Display: Garbage collection triggered (Soft). Triggered by conditions:
+  CookSettings.SoftGCTimeTrigger: Periodic triggering of SoftGC: No duration data.
+LogCookCommandlet: Display: GarbageCollection... (Periodic GC)
+LogCook: Display: Cooked packages 56 Packages Remain 775 Total 831
+LogCook: Display: Cooked packages 80 Packages Remain 751 Total 831
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Effects/M_SandDust.M_SandDust in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1b7e483731f2d031e05617bde406b23324be72a6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_FacialSkin_Profile.M_Krag_FacialSkin_Profile in PCD3D_SM5, Default, SM5, Game (DDC key hash: 79df9332e054841c50fee9406a392cca69ed9d04), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_FacialSkinAtlas_Profile.M_Nib_v5_FacialSkinAtlas_Profile in PCD3D_SM5, Default, SM5, Game (DDC key hash: 13d69e96c7716536bbce5b5e7897426ea843864c), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_FacialSkin_Profile.M_Krag_FacialSkin_Profile in PCD3D_SM6, Default, SM6, Game (DDC key hash: 9858bface66e1119989fe7b19f0cb76cf545da87), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_SandstoneSkin_Profile.M_Krag_SandstoneSkin_Profile in PCD3D_SM5, Default, SM5, Game (DDC key hash: 87bafbe88ba5e1adb03d289ce79e681292328f97), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_Skin_Profile.M_Nib_Skin_Profile in PCD3D_SM5, Default, SM5, Game (DDC key hash: a0792d93ea0529de79f6e50199e68e60e17c6c23), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_DustyPinkEar_Profile.M_Nib_v5_DustyPinkEar_Profile in PCD3D_SM5, Default, SM5, Game (DDC key hash: 59c22f30057c90f6d7eed5c2d3f52348e89a0424), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_FacialSkinAtlas_Profile.M_Nib_v5_FacialSkinAtlas_Profile in PCD3D_SM6, Default, SM6, Game (DDC key hash: e15bb50393413eec8c79df21422bca0b0614cd6e), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Effects/M_SandDust.M_SandDust in PCD3D_SM6, Default, SM6, Game (DDC key hash: 26dec643456e56e0bac61347f51553051fd5180d), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_SandstoneSkin_Profile.M_Krag_SandstoneSkin_Profile in PCD3D_SM6, Default, SM6, Game (DDC key hash: ecebc863a88d4aa2db5dbb759b50348a674c3814), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_Skin_Profile.M_Nib_Skin_Profile in PCD3D_SM6, Default, SM6, Game (DDC key hash: 0a60febe2c11056175f8f84683dd1be09e76e103), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_DustyPinkEar_Profile.M_Nib_v5_DustyPinkEar_Profile in PCD3D_SM6, Default, SM6, Game (DDC key hash: 7a2faf6a5708889a1d6a5962b8186e99cafb50db), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_FacialSkin_DefaultLit.M_Krag_FacialSkin_DefaultLit in PCD3D_SM5, Default, SM5, Game (DDC key hash: e56558dc1a4d3ec01e438c72264e376d724b7935), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe in PCD3D_SM5, Default, SM5, Game (DDC key hash: e209a793bfd15448b1cc1d943074e041c8d9c302), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3c90b53057d1d70370ed425fae492af200b1c3e9), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_SandstoneSkin_DefaultLit.M_Krag_SandstoneSkin_DefaultLit in PCD3D_SM5, Default, SM5, Game (DDC key hash: 5c72c94b2fbf3a3bbd2b2423a72f25ec9dc3904c), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards in PCD3D_SM5, Default, SM5, Game (DDC key hash: fc514e6bffa67314128311c9c74f04f7abbc7f7a), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_FacialSkin_DefaultLit.M_Krag_FacialSkin_DefaultLit in PCD3D_SM6, Default, SM6, Game (DDC key hash: ffe17d2a40df506e493858d1d92ed6569f00043e), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe in PCD3D_SM6, Default, SM6, Game (DDC key hash: b62f3b2edbae7e863ee5e345ad9192be4bb734b8), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L in PCD3D_SM6, Default, SM6, Game (DDC key hash: 9e5c7c4ead485393188301c00220ffcb92e160a2), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Krag_SandstoneSkin_DefaultLit.M_Krag_SandstoneSkin_DefaultLit in PCD3D_SM6, Default, SM6, Game (DDC key hash: 7bbfa73ee73c6ede94cfbe1bd9dc7cf33df6b88f), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R in PCD3D_SM5, Default, SM5, Game (DDC key hash: 40a6ee871b9792233c65d91dbdcd7e4fa82319b8), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_Skin_DefaultLit.M_Nib_Skin_DefaultLit in PCD3D_SM5, Default, SM5, Game (DDC key hash: 10d28d60989f923038f83e4057b8c814ed3800b7), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_DustyPinkEar_DefaultLit.M_Nib_v5_DustyPinkEar_DefaultLit in PCD3D_SM5, Default, SM5, Game (DDC key hash: c3a6385eca56af29f62e83c2ec08bf65e31038e6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar in PCD3D_SM5, Default, SM5, Game (DDC key hash: ca6e2c4e4b8895954e6a6c7286cf954ec147ca64), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_FacialSkinAtlas_DefaultLit.M_Nib_v5_FacialSkinAtlas_DefaultLit in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3f57243fa7533241f2e1d7d3020f8ef89c96aa7a), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas in PCD3D_SM5, Default, SM5, Game (DDC key hash: 131df9eec77346c0618ebd149bd94e4b55c78840), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur in PCD3D_SM5, Default, SM5, Game (DDC key hash: fdfbf31319b8d9b0ea26b216c36f2b9ec620b1b4), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps in PCD3D_SM5, Default, SM5, Game (DDC key hash: 64d30aaf23f5cf408afe026ca71047e1cfe8fc25), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1c5da2990a0bcf29f1bc774313a2646cbd904a13), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat in PCD3D_SM5, Default, SM5, Game (DDC key hash: 7657d6f12c281d4112f778d066c3a3b2e729cef8), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards in PCD3D_SM5, Default, SM5, Game (DDC key hash: 974d8e7356cc7efa3fe1475170cc2eeb4dbb3b45), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R in PCD3D_SM6, Default, SM6, Game (DDC key hash: 5ab8e0bb6dc5ca4db1925e369a4fdfeca1bc74f7), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_Skin_DefaultLit.M_Nib_Skin_DefaultLit in PCD3D_SM6, Default, SM6, Game (DDC key hash: f5dcf117e11b1e75f916f8ae7c1909f359685b45), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_DustyPinkEar_DefaultLit.M_Nib_v5_DustyPinkEar_DefaultLit in PCD3D_SM6, Default, SM6, Game (DDC key hash: d617084a2386682a3a4b4c5083529c70b75cc926), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar in PCD3D_SM6, Default, SM6, Game (DDC key hash: 14992550fb3bbd1c66f90b84b8c7f3287fba1563), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Review/SkinAB/M_Nib_v5_FacialSkinAtlas_DefaultLit.M_Nib_v5_FacialSkinAtlas_DefaultLit in PCD3D_SM6, Default, SM6, Game (DDC key hash: 53836a51f5125079d763bb4764b13a88a54a23e9), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas in PCD3D_SM6, Default, SM6, Game (DDC key hash: 5b9960c6c060f888809008b6e206ebf9a1113fb2), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur in PCD3D_SM6, Default, SM6, Game (DDC key hash: 54b4a4e39363aa8879c9d6c934a3ca5c970c166d), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps in PCD3D_SM6, Default, SM6, Game (DDC key hash: 630b01eee3a1bb0322b748662a6d21bc963a5576), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur in PCD3D_SM6, Default, SM6, Game (DDC key hash: 6eaeb0360d20ba9eb0f3938a17c2aef7e31803a9), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards in PCD3D_SM5, Default, SM5, Game (DDC key hash: f140d8476d5a01593cc24ad67ac4d8632439d094), compiling.
+LogCook: Display: Cooked packages 295 Packages Remain 536 Total 831
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat in PCD3D_SM6, Default, SM6, Game (DDC key hash: c5cd0dd1d1aa19b623f617a173dbd2e484a7588c), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Effects/M_WeaponFlash.M_WeaponFlash in PCD3D_SM5, Default, SM5, Game (DDC key hash: caf57d99c8fac1eef220b2c6e8261d4014fda7a0), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Effects/M_WeaponFlash.M_WeaponFlash in PCD3D_SM6, Default, SM6, Game (DDC key hash: bb313bd1fe8bc642f1b3202d8c9562dd05229eb5), compiling.
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.11.dll
+LogCook: Display: Cooked packages 655 Packages Remain 176 Total 831
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.12.dll
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.15.dll
+LogCook: Display: Cooked packages 725 Packages Remain 106 Total 831
+LogCook: Display: Cooked packages 765 Packages Remain 66 Total 831
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.13.dll
+LogCook: Display: Cooked packages 828 Packages Remain 3 Total 831
+LogCook: Display: Cooked packages 828 Packages Remain 3 Total 831
+LogCook: Display: Cooked packages 828 Packages Remain 3 Total 831
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards in PCD3D_SM6, Default, SM6, Game (DDC key hash: 37c501ee5939cadf679883ee89f545492663953d), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards in PCD3D_SM6, Default, SM6, Game (DDC key hash: a94275c8c8d5d843638d5876f2da6f9ac9e351f5), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards in PCD3D_SM6, Default, SM6, Game (DDC key hash: 435218a6f3bdac458f297a13b7fccf115222ad87), compiling.
+LogCook: Display: Cook Diagnostics: OpenFileHandles=5574, VirtualMemory=3768MiB, VirtualMemoryAvailable=13881MiB
+LogCook: Display: Garbage collection triggered (Soft). Triggered by conditions:
+  CookSettings.SoftGCTimeTrigger: Periodic triggering of SoftGC: SoftGCTimeFractionBudget == 0.050. TimeSinceLastGCSeconds == 30.004. CurrentTimeBudget == 1.579. ExpectedDuration == 0.021.
+LogCookCommandlet: Display: GarbageCollection... (Periodic GC)
+LogCook: Display: Cooked packages 828 Packages Remain 3 Total 831
+LogCook: Display: Cooked packages 831 Packages Remain 0 Total 831
+LogCook: Display: Cook Diagnostics: OpenFileHandles=1935, VirtualMemory=2444MiB, VirtualMemoryAvailable=15160MiB
+LogCook: Display: ---- Finalisation: Start ----
+LogShaderCompilers: Display: ================================================
+LogShaderCompilers: Display: === FShaderJobCache stats ===
+LogShaderCompilers: Display: Total job queries 534, among them cache hits 258 (48.31%), DDC hits 74 (13.86%), Duplicates 135 (25.28%)
+LogShaderCompilers: Display: Tracking 141 distinct input hashes that result in 94 distinct outputs (66.67%)
+LogShaderCompilers: Display: RAM used: 578,89 KiB of 1,60 GiB budget. Usage: 0.03%
+LogShaderCompilers: Display: === Shader Compilation stats ===
+LogShaderCompilers: Display: Shaders Compiled: 67
+LogShaderCompilers: Display: Jobs assigned 67, completed 67 (100%)
+LogShaderCompilers: Display: Average time worker was idle: 0.38 s
+LogShaderCompilers: Display: Time job spent in pending queue: average 4.06 s, longest 16.98 s
+LogShaderCompilers: Display: Job execution time: average 4.88 s, max 10.20 s
+LogShaderCompilers: Display: Job life time (pending + execution): average 8.95 s, max 20.17
+LogShaderCompilers: Display: Shader code size: total 471,594 KiB, numShaders 77, average 6,124 KiB, min 580 B, max 15,016 KiB
+LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 24.94 s
+LogShaderCompilers: Display: Jobs were issued in 14 batches (only local compilation was used), average 4.79 jobs/batch
+LogShaderCompilers: Display: Average processing rate: 2.69 jobs/sec
+LogShaderCompilers: Display: Total thread time: 44,529 s
+LogShaderCompilers: Display: Total thread preprocess time: 13,772 s
+LogShaderCompilers: Display: Percentage time preprocessing: 30.93%
+LogShaderCompilers: Display: Effective parallelization: 1.79 (times faster than compiling all shaders on one thread). Compare with number of workers: 2 - 0.892580
+LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+LogShaderCompilers: Display:            TVelocityPS<EVelocityPassMode::Velocity_Standard> (compiled    5 times, average 0.92 sec, max 1.34 sec, min 0.40 sec)
+LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    5 times, average 0.88 sec, max 1.94 sec, min 0.30 sec)
+LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    5 times, average 0.88 sec, max 1.21 sec, min 0.42 sec)
+LogShaderCompilers: Display:                                       TShadowDepthVSCombined (compiled    5 times, average 0.63 sec, max 1.49 sec, min 0.20 sec)
+LogShaderCompilers: Display:                             TShadowDepthPSPerspectiveCorrect (compiled    6 times, average 0.59 sec, max 1.52 sec, min 0.20 sec)
+LogShaderCompilers: Display: Top 5 shader types by total compile time:
+LogShaderCompilers: Display:            TVelocityPS<EVelocityPassMode::Velocity_Standard> - 10.37% of total time (compiled    5 times, average 0.92 sec, max 1.34 sec, min 0.40 sec)
+LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 9.93% of total time (compiled    5 times, average 0.88 sec, max 1.94 sec, min 0.30 sec)
+LogShaderCompilers: Display:                                                 FDepthOnlyPS - 9.91% of total time (compiled    5 times, average 0.88 sec, max 1.21 sec, min 0.42 sec)
+LogShaderCompilers: Display:                                          TDepthOnlyVS<false> - 9.31% of total time (compiled   11 times, average 0.38 sec, max 0.59 sec, min 0.17 sec)
+LogShaderCompilers: Display:                             TShadowDepthPSPerspectiveCorrect - 7.90% of total time (compiled    6 times, average 0.59 sec, max 1.52 sec, min 0.20 sec)
+LogShaderCompilers: Display: === Material stats ===
+LogShaderCompilers: Display: Materials Cooked:        174
+LogShaderCompilers: Display: Materials Translated:    48
+LogShaderCompilers: Display: Material Total Translate Time: 0.06 s
+LogShaderCompilers: Display: Material Translation Only: 0.03 s (55%)
+LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+LogShaderCompilers: Display: ================================================
+LogCook: Display: CookArtifact 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Metadata/ValidationCookArtifact.json' saved.
+LogAssetRegistryGenerator: Display: Saving asset registry v24.
+LogAssetRegistryGenerator: Display: Generated development asset registry D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Metadata/DevelopmentAssetRegistry.bin num assets 833, size is 681.69kb, XxHash64[LE] = 0xF601BC3141DD2A4F, waited on hash 0.00 seconds
+LogAssetRegistryGenerator: Display: Generated asset registry num assets 826, size is 252.59kb
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'KragKingsBenchmark' (PCD3D_SM5-PCD3D_SM5) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 163, Unique Shadermaps: 108 (66.26%)
+LogShaderLibrary: Display: Total Shaders: 1640, Unique Shaders: 937 (57.13%)
+LogShaderLibrary: Display: Total Shader Size: 3.66mb, Unique Shaders Size: 2.05mb (55.86%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 8
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 361
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     20, 18, 17, 17, 17, 16, 16, 16, 15, 15
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Vertex: 438 shaders (46.74%), compressed size: 1.11 MB (2.60 KB avg per shader), uncompressed size: 3.39 MB (7.94 KB avg per shader)
+LogShaderLibrary: Display: SF_Pixel: 450 shaders (48.03%), compressed size: 0.84 MB (1.90 KB avg per shader), uncompressed size: 2.95 MB (6.71 KB avg per shader)
+LogShaderLibrary: Display: SF_Compute: 49 shaders (5.23%), compressed size: 0.10 MB (2.06 KB avg per shader), uncompressed size: 0.36 MB (7.47 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Shaders/PCD3D_SM5-PCD3D_SM5/ShaderDebug-KragKingsBenchmark-PCD3D_SM5-PCD3D_SM5/Dump.txt'
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'KragKingsBenchmark' (PCD3D_SM6-PCD3D_SM6) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 163, Unique Shadermaps: 109 (66.87%)
+LogShaderLibrary: Display: Total Shaders: 2573, Unique Shaders: 1705 (66.27%)
+LogShaderLibrary: Display: Total Shader Size: 20.41mb, Unique Shaders Size: 14.76mb (72.34%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 10
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 853
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     26, 26, 22, 20, 18, 17, 17, 17, 17, 16
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Compute: 387 shaders (22.70%), compressed size: 5.69 MB (15.06 KB avg per shader), uncompressed size: 7.62 MB (20.17 KB avg per shader)
+LogShaderLibrary: Display: SF_Pixel: 656 shaders (38.48%), compressed size: 4.08 MB (6.37 KB avg per shader), uncompressed size: 5.25 MB (8.20 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 541 shaders (31.73%), compressed size: 3.85 MB (7.29 KB avg per shader), uncompressed size: 5.08 MB (9.62 KB avg per shader)
+LogShaderLibrary: Display: SF_Mesh: 121 shaders (7.10%), compressed size: 1.14 MB (9.64 KB avg per shader), uncompressed size: 1.38 MB (11.66 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Shaders/PCD3D_SM6-PCD3D_SM6/ShaderDebug-KragKingsBenchmark-PCD3D_SM6-PCD3D_SM6/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Dependent plugin "UAF" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "UAFAnimGraph" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "SteamShared" referenced by "EOS Shared" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Finalize package store(s)...
+LogZenStoreWriter: Display: Flushing...
+LogZenStoreWriter: Display: Saving Zen filesystem manifest 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Metadata/zenfs.manifest'
+LogZenStoreWriter: Display: Output:	48577 Public runtime script objects
+LogCook: Display: Cook by the book total time in tick 34.326330s total time 58.385227
+LogCook: Display: Peak Used virtual 3924 MiB Peak Used physical 3943 MiB
+LogCook: Display: Packages Cooked: 824, Packages Incrementally Skipped: 0, Packages Skipped by Platform: 7, Total Packages: 831
+LogCookStats: Display: Hierarchy Timer Information:
+LogCookStats: Display:   Root: 0.000s (0)
+LogCookStats: Display:     CleanSandbox: 5.014s (1)
+LogCookStats: Display:     CollectFilesToCook: 0.019s (1)
+LogCookStats: Display:       CookModificationDelegate: 0.000s (1)
+LogCookStats: Display:     GenerateLongPackageName: 0.001s (1)
+LogCookStats: Display:     TickMainCookLoop: 34.326s (3)
+LogCookStats: Display:       PumpPollables: 0.010s (10)
+LogCookStats: Display:       PumpRequests: 0.026s (26)
+LogCookStats: Display:       LoadPackageForCooking: 8.302s (4234)
+LogCookStats: Display:       ValidateSourcePackage: 0.000s (831)
+LogCookStats: Display:       SavingPackages: 7.700s (1914)
+LogCookStats: Display:         PollPendingCookedPlatformDatas: 0.828s (9222)
+LogCookStats: Display:         PrepareSave: 1.166s (8497)
+LogCookStats: Display:         PrecachePlatformDataForNextPackage: 1.194s (830)
+LogCookStats: Display:           PrepareSave: 1.194s (1075)
+LogCookStats: Display:         SaveCookedPackage: 4.405s (831)
+LogCookStats: Display:           GEditorSavePackage: 4.040s (831)
+LogCookStats: Display:             VerifyCanCookPackage: 0.006s (824)
+LogCookStats: Display:           TargetDomainDependencies: 0.213s (831)
+LogCookStats: Display:         ClearAllCachedCookedPlatformData: 0.058s (831)
+LogCookStats: Display:       PostLoadPackageFixup: 0.000s (2)
+LogCookStats: Display:       WaitForAsync: 17.334s (830690)
+LogCookStats: Display:     CookByTheBookFinished: 0.604s (1)
+LogCookStats: Display:       SavingCurrentIniSettings: 0.039s (1)
+LogCookStats: Display:         ProcessingAccessedStrings: 0.003s (1)
+LogCookStats: Display:       ChunkGeneration: 0.015s (1)
+LogCookStats: Display:       FinishPopulateShaderLibrary: 0.002s (1)
+LogCookStats: Display:       CalculateReferencedSet: 0.000s (1)
+LogCookStats: Display:       CookArtifacts.UpdateOplogPackages: 0.009s (1)
+LogCookStats: Display:       PruneShaderLibrary: 0.001s (1)
+LogCookStats: Display:       GeneratorPreSave: 0.000s (1)
+LogCookStats: Display:       BuildChunkManifest: 0.015s (1)
+LogCookStats: Display:         FixupPackageDependenciesForChunks: 0.007s (1)
+LogCookStats: Display:       SaveManifests: 0.000s (1)
+LogCookStats: Display:       SaveAssetRegistry: 0.054s (1)
+LogCookStats: Display:       WriteCookerOpenOrder: 0.005s (1)
+LogCookStats: Display:       WriteCookMetadata: 0.002s (1)
+LogCookStats: Display:       WriteReferencedSet: 0.002s (1)
+LogCookStats: Display:       FinalizePackageStore: 0.318s (1)
+LogCookStats: Display: Misc Cook Stats
+LogCookStats: Display: ===============
+LogCookStats: Display: Validation
+LogCookStats: Display:     Stats=[]
+LogCookStats: Display: Niagara
+LogCookStats: Display:     NiagaraScriptTranslationCount=0
+LogCookStats: Display:     NiagaraCpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraGpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraSystemWaitForCompilationCompleteTime=0.000000
+LogCookStats: Display: ComputeKernelShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: NiagaraShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: ShaderCompiler
+LogCookStats: Display:     BlockingTimeSec=0.000108
+LogCookStats: Display:     AsyncCompileTimeSec=46.812223
+LogCookStats: Display:     GlobalBeginCompileShaderTimeSec=0.090709
+LogCookStats: Display:     GlobalBeginCompileShaderCalls=570
+LogCookStats: Display:     ProcessAsyncResultsTimeSec=0.139675
+LogCookStats: Display: GlobalShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: Material
+LogCookStats: Display:     FinishCacheShadersSec=0.711796
+LogCookStats: Display: Cook.Profile.Params
+LogCookStats: Display:     CookProject=KragKingsBenchmark
+LogCookStats: Display:     CookCultures=
+LogCookStats: Display:     CookLabel=
+LogCookStats: Display:     TargetPlatforms=Windows
+LogCookStats: Display:     IsCookAll=false
+LogCookStats: Display:     IsCookOnTheFly=false
+LogCookStats: Display:     IsIncrementalCook=false
+LogCookStats: Display:     IsIterativeCook=false
+LogCookStats: Display:     IsFastCook=false
+LogCookStats: Display:     IsUnversioned=true
+LogCookStats: Display: CookOnTheFlyServer.Package.Load
+LogCookStats: Display:     NumRequestedLoads=3407
+LogCookStats: Display:     NumPackagesLoaded=3644
+LogCookStats: Display:     NumInlineLoads=237
+LogCookStats: Display: CookOnTheFlyServer.Package.Save
+LogCookStats: Display:     NumPackagesIncrementallySkipped=0
+LogCookStats: Display: CookOnTheFlyServer.QueueSize
+LogCookStats: Display:     PeakRequest=830
+LogCookStats: Display:     PeakLoad=105
+LogCookStats: Display:     PeakSave=151
+LogCookStats: Display: Package.Load
+LogCookStats: Display:     LoadPackageTimeSec=8.555444
+LogCookStats: Display: Package.Save
+LogCookStats: Display:     NumPackagesSaved=831
+LogCookStats: Display:     SavePackageTimeSec=3.996675
+LogCookStats: Display:     TagPackageExportsPresaveTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsTimeSec=0.000000
+LogCookStats: Display:     FullyLoadLoadersTimeSec=0.000000
+LogCookStats: Display:     ResetLoadersTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithOuter=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithMarks=0.000000
+LogCookStats: Display:     SerializeImportsTimeSec=0.000000
+LogCookStats: Display:     SortExportsSeekfreeInnerTimeSec=0.000000
+LogCookStats: Display:     SerializeExportsTimeSec=0.000000
+LogCookStats: Display:     SerializeBulkDataTimeSec=0.011885
+LogCookStats: Display:     AsyncWriteTimeSec=0.000000
+LogCookStats: Display:     MBWritten=0.000000
+LogCookStats: Display: Package.DifferentPackagesSizeMBPerAsset
+LogCookStats: Display: Package.NumberOfDifferencesInPackagesPerAsset
+LogCookStats: Display: Package.PackageDifferencesSizeMBPerAsset
+LogCookStats: Display: Package.DiffTotal
+LogCookStats: Display:     NumberOfDifferentPackages=0
+LogCookStats: Display:     DifferentPackagesSizeMB=0.000000
+LogCookStats: Display:     NumberOfDifferencesInPackages=0
+LogCookStats: Display:     PackageDifferencesSizeMB=0.000000
+LogCookStats: Display: UnversionedProperties
+LogCookStats: Display:     SavedStructs=0
+LogCookStats: Display:     SavedMB=0
+LogCookStats: Display:     EquivalentTaggedMB=0
+LogCookStats: Display:     CompressionRatio=-nan(ind)
+LogCookStats: Display:     BitfieldWasteKB=0
+LogCookStats: Display:
+LogCookStats: Display: Cook Profile
+LogCookStats: Display: ============
+LogCookStats: Display:  0.CookWallTimeSec=70.330583
+LogCookStats: Display:  0. 0.StartupWallTimeSec=11.162638
+LogCookStats: Display:  0. 1.CookProcessingTime=59.167945
+LogCookStats: Display:  0. 1. 1.StartCookByTheBookTimeSec=23.938639
+LogCookStats: Display:  0. 1. 1. 0.BlockOnAssetRegistryTimeSec=1.031569
+LogCookStats: Display:  0. 1. 1. 1.GameCookModificationDelegateTimeSec=0.000399
+LogCookStats: Display:  0. 1. 2.TickCookOnTheSideTimeSec=30.484729
+LogCookStats: Display:  0. 1. 2. 0.TickCookOnTheSideLoadPackagesTimeSec=8.305291
+LogCookStats: Display:  0. 1. 2. 1.TickCookOnTheSideSaveCookedPackageTimeSec=4.405110
+LogCookStats: Display:  0. 1. 2. 1. 0.TickCookOnTheSideResolveRedirectorsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 2. 2.TickCookOnTheSidePrepareSaveTimeSec=2.360223
+LogCookStats: Display:  0. 1. 3.TickLoopGCTimeSec=0.282214
+LogCookStats: Display:  0. 1. 4.TickLoopRecompileShaderRequestsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 5.TickLoopShaderProcessAsyncResultsTimeSec=0.000031
+LogCookStats: Display:  0. 1. 6.TickLoopProcessDeferredCommandsTimeSec=0.000013
+LogCookStats: Display:  0. 1. 7.TickLoopTickCommandletStatsTimeSec=0.000002
+LogCookStats: Display:  0. 1. 8.TickLoopFlushRenderingCommandsTimeSec=0.010234
+LogCookStats: Display:  0. 1. 9.ShaderFlushTimeSec=0.000000
+LogCookStats: Display:  0. 1. 10.ValidationTimeSec=0.000199
+LogCookStats: Display:
+LogCookStats: Display: DDC Summary Stats
+LogCookStats: Display: =================
+LogCookStats: Display: BackEnd         = Installed
+LogCookStats: Display: HasLocalCache   =      true
+LogCookStats: Display: HasSharedCache  =     false
+LogCookStats: Display: HasCloudCache   =     false
+LogCookStats: Display: HasZenCache     =      true
+LogCookStats: Display: TotalGetHits    =      5883
+LogCookStats: Display: TotalGetMisses  =       130
+LogCookStats: Display: TotalGets       =      6013
+LogCookStats: Display: TotalGetHitPct  =  0.978380
+LogCookStats: Display: GetMissPct      =  0.021620
+LogCookStats: Display: TotalPutHits    =       130
+LogCookStats: Display: TotalPutMisses  =         0
+LogCookStats: Display: TotalPuts       =       130
+LogCookStats: Display: TotalPutHitPct  =  1.000000
+LogCookStats: Display: PutMissPct      =  0.000000
+LogCookStats: Display: LocalGetHits    =      4504
+LogCookStats: Display: LocalGetMisses  =       130
+LogCookStats: Display: LocalGetTotal   =      4634
+LogCookStats: Display: LocalGetHitPct  =  0.971946
+LogCookStats: Display: SharedGetHits   =         0
+LogCookStats: Display: SharedGetTotal  =         0
+LogCookStats: Display: SharedGetHitPct =  0.000000
+LogCookStats: Display: ZenLocalGetHits =      4504
+LogCookStats: Display: ZenLocalGetTotal=      4634
+LogCookStats: Display: ZenLocalGetHitPct=  0.971946
+LogCookStats: Display: ZenRemoteGetHits=         0
+LogCookStats: Display: ZenRemoteGetTotal=         0
+LogCookStats: Display: ZenRemoteGetHitPct=  0.000000
+LogCookStats: Display: ZenRemoteReadSpeed=  0.000000
+LogCookStats: Display: ZenRemoteWriteSpeed=  0.000000
+LogCookStats: Display: ZenRemoteLatency=  0.000000
+LogCookStats: Display: CloudGetHits    =         0
+LogCookStats: Display: CloudGetTotal   =         0
+LogCookStats: Display: CloudGetHitPct  =  0.000000
+LogCookStats: Display: LocalLatency    =  1.002469
+LogCookStats: Display: LocalReadSpeed  = 81.650413
+LogCookStats: Display: LocalWriteSpeed =  1.974559
+LogCookStats: Display: SharedLatency   =  0.000000
+LogCookStats: Display: SharedReadSpeed =  0.000000
+LogCookStats: Display: SharedWriteSpeed=  0.000000
+LogCookStats: Display: CloudLatency    =  0.000000
+LogCookStats: Display: CloudReadSpeed  =  0.000000
+LogCookStats: Display: CloudWriteSpeed =  0.000000
+LogCookStats: Display:
+LogCookStats: Display: DDC Resource Stats
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: Asset Type                          Total Time (Sec)  GameThread Time (Sec)  Assets Built  MB Processed
+LogCookStats: Display: ----------------------------------  ----------------  ---------------------  ------------  ------------
+LogCookStats: Display: BulkDataList                                    5.38                   0.00             0          0.60
+LogCookStats: Display: GlobalShader                                    2.75                   2.75             0        118.07
+LogCookStats: Display: MaterialShader                                  1.86                   0.83            48         27.30
+LogCookStats: Display: Texture                                         1.60                   0.00             0         75.49
+LogCookStats: Display: SkeletalMesh                                    0.87                   0.00             0        373.75
+LogCookStats: Display: Shader                                          0.30                   0.00            67          0.39
+LogCookStats: Display: STREAMEDAUDIO                                   0.08                   0.00             0          0.20
+LogCookStats: Display: MaterialTranslation                             0.05                   0.00            15          0.00
+LogCookStats: Display: StaticMesh                                      0.04                   0.00             0          1.99
+LogCookStats: Display: DistanceField                                   0.03                   0.00             0          1.62
+LogCookStats: Display: AnimationSequence                               0.03                   0.00             0          0.13
+LogCookStats: Display: Audio                                           0.03                   0.00             0          0.19
+LogCookStats: Display: CardRepresentation                              0.03                   0.00             0          0.02
+LogCookStats: Display: NavCollision                                    0.02                   0.00             0          1.13
+LogCookStats: Display: BodySetup                                       0.01                   0.00             0          2.19
+LogCookStats: Display: CKERSM                                          0.00                   0.00             0          0.16
+LogCookStats: Display:
+LogCookStats: Display: Accumulated DDC Resource Stats Per Asset Type
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: AnimationSequence                               0.03                   0.00             0          0.13
+LogCookStats: Display: Audio                                           0.03                   0.00             0          0.19
+LogCookStats: Display: CardRepresentation                              0.03                   0.00             0          0.02
+LogCookStats: Display: DistanceField                                   0.03                   0.00             0          1.62
+LogCookStats: Display: MaterialShader                                  1.86                   0.83            48         27.30
+LogCookStats: Display: MaterialTranslation                             0.05                   0.00            15          0.00
+LogCookStats: Display: NiagaraScript                                   0.00                   0.00             0          0.00
+LogCookStats: Display: SkeletalMesh                                    0.87                   0.00             0        373.75
+LogCookStats: Display: StaticMesh                                      0.04                   0.00             0          1.99
+LogCookStats: Display: Texture                                         1.60                   0.00             0         75.49
+LogCookStats: Display: Other                                           8.55                   2.75            67        122.74
+LogPackageBuildDependencyTracker: Display: Package Accesses (104 referencing packages with a total of 506 unique accesses)
+LogConfigBuildDependencyTracker: Display: Config Accesses (531 referencing packages with a total of 1164 unique accesses). 1833 unique accesses that were not associated with a package.
+LogCook: Display: ---- Finalisation: End ----
+LogCook: Display: Done!
+LogSavePackage: Display: Took 0.000918s to verify the EDL loading graph.
+LogInit: Display:
+LogInit: Display: Warning/Error Summary (Unique only)
+LogInit: Display: -----------------------------------
+LogInit: Display: LogConsoleManager: Warning: Setting the console variable 'r.Streaming.PoolSize' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '3000'
+LogInit: Display: LogConsoleManager: Warning: Setting the console variable 'r.ScreenPercentage' with 'SetByScalability' was ignored as it is lower priority than the previous 'SetByProjectSetting'. Value remains '100'
+LogInit: Display:
+LogInit: Display: Success - 0 error(s), 2 warning(s)
+LogInit: Display:
+
+Execution of commandlet took:  59.18 seconds, PeakPhysMemoryMB=3943 MB, PeakVirtMemoryMB=3924 MB
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogStreaming: Display: ============ Loader Stats ============
+LogStreaming: Display: Unique Partial Flushes: 0
+LogStreaming: Display: ============ Loader Stats End ============
+LogShaderCompilers: Display: Exiting ShaderCompilingThread
+Took 72,83s to run UnrealEditor-Cmd.exe, ExitCode=0
+Cook command time: 72.94 s
+********** COOK COMMAND COMPLETED **********
+********** STAGE COMMAND STARTED **********
+Creating Staging Manifest...
+Patching bootstrap executable; D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Intermediate\Staging\KragKingsBenchmark.exe
+Begin update resource 'D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Intermediate\Staging\KragKingsBenchmark.exe' (0)
+Add resource 101, length 104 (True)
+Add resource 1, length 1996 (True)
+Add resource 2, length 2447 (True)
+Add resource 3, length 2535 (True)
+Add resource 4, length 3037 (True)
+Add resource 5, length 3244 (True)
+Add resource 6, length 3531 (True)
+Add resource 7, length 6931 (True)
+Add resource 201, length 114 (True)
+Add resource 202, length 38 (True)
+Add resource 205, length 2 (True)
+End update resource (True/0)
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\Keywords.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseEditorKeyBindings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\RepairData.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\Category.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\Editor.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Windows\WindowsEditorPerProjectUserSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\PortableObjectExport.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseEditor.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseSourceControlSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseLightmass.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseEditorPerProjectUserSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseEditorSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Windows\WindowsEditorSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\Engine.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\PortableObjectImport.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BaseUnrealInsightsSettings.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\BasePakFileRules.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\ToolTips.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\PropertyNames.ini
+Excluding config file D:\Games\UE_5.8\Engine\Config\Localization\WordCount.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\WindowsInput.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\WindowsGame.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseEngine.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseInput.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseHardware.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseGameUserSettings.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseGame.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseMaterialExpressions.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseInstallBundle.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseScalability.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseRuntimeOptions.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseDeviceProfiles.ini
+Including config file D:\Games\UE_5.8\Engine\Config\BaseCompat.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Base.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\DataDrivenPlatformInfo.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\BaseWindowsInput.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Layouts\UE4ClassicLayout.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Layouts\DefaultLayout.ini
+Including config file D:\Games\UE_5.8\Engine\Config\PluginBase.ini
+Including config file D:\Games\UE_5.8\Engine\Config\ConsoleVariables.ini
+Including config file D:\Games\UE_5.8\Engine\Config\ConfigRedirects.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\BaseWindowsGame.ini
+Including config file D:\Games\UE_5.8\Engine\Config\Windows\BaseWindowsEngine.ini
+Including config file D:\Games\UE_5.8\Engine\Config\VulkanPC\DataDrivenPlatformInfo.ini
+Including config file D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Config\DefaultGameUserSettings.ini
+Including config file D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Config\DefaultInput.ini
+Including config file D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Config\DefaultGame.ini
+Including config file D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Config\DefaultEngine.ini
+Reading oplog from Zen...
+Running UnrealPak with arguments: "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" IoStore -StartZenServerForStage -SponsorProcessID=33576 -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -unattended
+Running: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" IoStore -StartZenServerForStage -SponsorProcessID=33576 -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -unattended
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Using command line for crypto configuration
+LogZenServiceInstance: Display: Launching zen utility 'D:/Games/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\Matthew\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 26708  --child-id Zen_26708_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogPakFile: Display: UnrealPak executed in 3.647917 seconds
+Took 4,59s to run UnrealPak.exe, ExitCode=0
+Reading oplog from http://[::1]:8558/prj/KragKingsBenchmark.3b447ac7/oplog/Windows/entries?trim_by_referencedset=true
+Parsed 826 package entries from oplog.
+Cleaning Stage Directory: D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\StagedBuilds\Windows
+Creating pak using staging manifest.
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\PrePak_Windows_NonUFSFiles.txt, NumItems: 36
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\PrePak_Windows_NonUFSFilesDebug.txt, NumItems: 6
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\PrePak_Windows_UFSFiles.txt, NumItems: 2865
+No matching platform for PakFileRules for Section ExcludeContentForMobile : Windows
+Using 0 pak order files:
+Running UnrealPak with arguments: "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject"  -cryptokeys="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\KragKingsBenchmark\Metadata\Crypto.json" -unattended -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken  -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -platform=Windows  -CreateMultiple="C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\PakCommands.txt"
+Running: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject"  -cryptokeys="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\KragKingsBenchmark\Metadata\Crypto.json" -unattended -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken  -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -platform=Windows  -CreateMultiple="C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\PakCommands.txt"
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Kraken, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/
+LogPakFile: Display: Parsing crypto keys from a crypto key cache file
+LogPakFile: Display: CompressionFormats in priority order: Oodle, Zlib
+LogZenServiceInstance: Display: Launching zen utility 'D:/Games/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog KragKingsBenchmark.3b447ac7 / Windows
+LogIoStore: Display: Fetched 827 oplog items from Zen in 0.66 seconds
+LogIoStore: Display: Parsed 827 oplog items 0.01 seconds, 3986 chunks
+LogIoStore: Display: Loaded 1124 chunk hashes from Zen in 0.17 seconds, 1124 hashes updated in 0.00 seconds
+LogPakFile: Display: Oodle enabled on 'NoPluginCompression' files
+LogPakFile: Display: Loading response file D:\Games\UE_5.8\Engine\Programs\AutomationTool\Saved\ResponseFiles\PakList_KragKingsBenchmark-Windows.txt
+LogPakFile: Display: Added 1737 entries to add to pak file.
+LogPakFile: Display: Collecting files to add to pak file...
+LogPakFile: Display: Collected 1737 files in 0.01s.
+LogPakFile: Display: Creating pak D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/StagedBuilds/Windows/KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak.
+LogPakFile: Display: Created pak file: D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/StagedBuilds/Windows/KragKingsBenchmark/Content/Paks/KragKingsBenchmark-Windows.pak
+LogPakFile: Display: CompressionFormat 0 [Oodle] : 401 files, 28163871 -> 9790191 bytes
+LogPakFile: Display: CompressionFormat 2 [None] : 1336 files, 782474 -> 782474 bytes
+LogPakFile: Display: Added 1737 files, 11244745 bytes total
+LogPakFile: Display: PrimaryIndex size: 24190 bytes
+LogPakFile: Display: PathHashIndex size: 54387 bytes
+LogPakFile: Display: FullDirectoryIndex size: 57683 bytes
+LogPakFile: Display: Compression summary: 34.76% of original size. Compressed Size 9790191 bytes, Original Size 28163871 bytes.
+LogPakFile: Display: Encryption - DISABLED
+LogPakFile: Display:
+LogPakFile: Display: Writer and Compression Threads exited.
+LogPakFile: Display: UnrealPak executed in 1.058529 seconds
+Took 1,36s to run UnrealPak.exe, ExitCode=0
+Running UnrealPak with arguments: "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -CreateGlobalContainer="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\StagedBuilds\Windows\KragKingsBenchmark\Content\Paks\global.utoc" -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -CookedDirectory="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows" -Commands="C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\IoStoreCommands.txt" -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken   -cryptokeys="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\KragKingsBenchmark\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Windows  -unattended
+Running: D:\Games\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject" D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\KragKingsBenchmark.uproject -CreateGlobalContainer="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\StagedBuilds\Windows\KragKingsBenchmark\Content\Paks\global.utoc" -ProjectStore="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\ue.projectstore" -CookedDirectory="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows" -Commands="C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\IoStoreCommands.txt" -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken   -cryptokeys="D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\KragKingsBenchmark\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Windows  -unattended
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Kraken, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Parsing crypto keys from a crypto key cache file 'D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows\KragKingsBenchmark\Metadata\Crypto.json'
+LogIoStore: Display: Container signing - DISABLED
+LogIoStore: Display: Directory index - ENABLED
+LogIoStore: Display: Using compression format 'Oodle'
+LogConfig: Display: Read in platform Windows ini files took 0.02 seconds
+LogIoStore: Display: Using memory mapping alignment '16384'
+LogIoStore: Display: Using compression block size '65536'
+LogIoStore: Display: Using compression block alignment '2048'
+LogIoStore: Display: Using compression min bytes saved '1024'
+LogIoStore: Display: Using compression min percent saved '5'
+LogIoStore: Display: Using max partition size '0'
+LogIoStore: Display: Not using DDC for compression
+LogIoStore: Display: Container metadata disabled
+LogIoStore: Display: Using command list file: 'C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\IoStoreCommands.txt'
+LogIoStore: Display: Selected Oodle level 4 (Normal) from command line for shaders
+LogZenServiceInstance: Display: Launching zen utility 'D:/Games/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/Matthew/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog KragKingsBenchmark.3b447ac7 / Windows
+LogIoStore: Display: Fetched 827 oplog items from Zen in 1.26 seconds
+LogIoStore: Display: Parsed 827 oplog items 0.01 seconds, 3986 chunks
+LogIoStore: Display: Loaded 1124 chunk hashes from Zen in 0.01 seconds, 1124 hashes updated in 0.00 seconds
+LogIoStore: Display: Searching for cooked assets in folder 'D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\Cooked\Windows'
+LogIoStore: Display: Found '8' files
+LogIoStore: Display: Creating container targets...
+LogIoStore: Display: Processing shader libraries, compressing with Oodle Mermaid, level 4 (Normal)
+LogIoStore: Display: Shader library chunk override is disabled
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 174 groups (104 of them didn't need new indices), average uncompressed size 40374 bytes, min 502 bytes, max 963602 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: KragKingsBenchmark-PCD3D_SM5(PCD3D_SM5): Recompressed 937 shaders as 174 groups. Library size changed from 2095 KB (3.27 : 1 ratio) to 1072 KB (6.39 : 1 ratio), 51.20% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'KragKingsBenchmark-PCD3D_SM5-PCD3D_SM5' with ChunkId 'b458c19e042ee20100000008' for target file 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Content/ShaderArchive-KragKingsBenchmark-PCD3D_SM5-PCD3D_SM5.ushaderbytecode'
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 401 groups (163 of them didn't need new indices), average uncompressed size 142888 bytes, min 249 bytes, max 1042761 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: Global-PCD3D_SM5(PCD3D_SM5): Recompressed 4356 shaders as 401 groups. Library size changed from 13012 KB (4.30 : 1 ratio) to 5469 KB (10.23 : 1 ratio), 42.03% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'Global-PCD3D_SM5-PCD3D_SM5' with ChunkId 'c3fad98e7ca0cc3100000008' for target file 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Content/ShaderArchive-Global-PCD3D_SM5-PCD3D_SM5.ushaderbytecode'
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 206 groups (63 of them didn't need new indices), average uncompressed size 98451 bytes, min 2378 bytes, max 977167 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: KragKingsBenchmark-PCD3D_SM6(PCD3D_SM6): Recompressed 1705 shaders as 206 groups. Library size changed from 15116 KB (1.31 : 1 ratio) to 9871 KB (2.01 : 1 ratio), 65.30% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'KragKingsBenchmark-PCD3D_SM6-PCD3D_SM6' with ChunkId '96956844a498ef2500000008' for target file 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Content/ShaderArchive-KragKingsBenchmark-PCD3D_SM6-PCD3D_SM6.ushaderbytecode'
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 580 groups (184 of them didn't need new indices), average uncompressed size 252689 bytes, min 1249 bytes, max 1042314 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: Global-PCD3D_SM6(PCD3D_SM6): Recompressed 8939 shaders as 580 groups. Library size changed from 108572 KB (1.32 : 1 ratio) to 63855 KB (2.24 : 1 ratio), 58.81% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'Global-PCD3D_SM6-PCD3D_SM6' with ChunkId '1680bae1ae38d5b900000008' for target file 'D:/Dev/Krag-Kings/benchmark/unreal/KragKingsBenchmark/Saved/Cooked/Windows/KragKingsBenchmark/Content/ShaderArchive-Global-PCD3D_SM6-PCD3D_SM6.ushaderbytecode'
+LogIoStore: Display: Shaders processed in 1.77 seconds
+LogIoStore: Display: Initialized WriteRequestManager with MaxConcurrentSourceReads=6 (12 cores), MaxSourceBufferMemory=3072MiB
+LogIoStore: Display: Processing redirects...
+LogIoStore: Display: Creating disk layout...
+LogIoStore: Display: Ordered 824 packages using fallback bundle order
+LogIoStore: Display: Disabled WriteRequestManager memory throttling, MaxConcurrentSourceReads=6 (12 cores)
+LogIoStore: Display: Writing container(s)...
+LogIoStore: Display: Writing and compressing took 1.88 seconds, writes to disk took 0.31 seconds for 356,385,296 bytes @ 1,161,269,276 bytes per second.
+LogIoStore: Display: global: Found perfect hashmap for 1 items.
+LogIoStore: Display: KragKingsBenchmark-Windows: Found perfect hashmap for 2490 items.
+LogIoStore: Display: Finalize took 0.0 seconds for 2 writers to write 325,091 bytes, 28,077,125 bytes per second
+LogIoStore: Display: Writing tocs... [Physical: 810 MiB, Virtual: 3468 MiB]
+LogIoStore: Display: 1,124 / 2,491 hashes were loaded from the hash database, by type:
+LogIoStore: Display:     ExportBundleData           824
+LogIoStore: Display:     BulkData                   300
+LogIoStore: Display: 1,124 / 2,491 chunks attempted to compress, by type:
+LogIoStore: Display:     ExportBundleData           824 / 824
+LogIoStore: Display:     BulkData                   300 / 300
+LogIoStore: Display:     ScriptObjects              0 / 1
+LogIoStore: Display:     ContainerHeader            0 / 1
+LogIoStore: Display:     ShaderCodeLibrary          0 / 4
+LogIoStore: Display:     ShaderCode                 0 / 1,361
+LogIoStore: Display: Source bytes read:
+LogIoStore: Display:     Zen:                        608,412,200
+LogIoStore: Display:         ExportBundleData        412,543,008 bytes over 824 reads
+LogIoStore: Display:         BulkData                195,869,192 bytes over 300 reads
+LogIoStore: Display:     Loose File:                           0
+LogIoStore: Display:     Memory:                     165,272,384
+LogIoStore: Display:         ShaderCodeLibrary           882,832 bytes over 8 reads
+LogIoStore: Display:         ShaderCode              164,389,552 bytes over 2,722 reads
+LogIoStore: Display: Calculating stats...
+LogIoStore: Display:
+LogIoStore: Display: Container Summary
+LogIoStore: Display: ==================
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Flags      Chunk(s) #       TOC (KiB)       Raw Size (MiB)           Size (MiB)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                         global  -/-/-/-/-               1            0.76                 3.05                 3.05 -
+LogIoStore: Display:     KragKingsBenchmark-Windows  C/-/-/I/-            2490          316.71               660.87               336.82 (49.03% Oodle)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                          Total                       2491          317.47               663.93               339.88
+LogIoStore: Display:
+LogIoStore: Display: ** Flags: (C)ompressed / (E)ncrypted / (S)igned) / (I)ndexed) / (O)nDemand **
+LogIoStore: Display:
+LogIoStore: Display: Compression block padding:     1.81 MiB
+LogIoStore: Display:
+LogIoStore: Display: Container Directory Index
+LogIoStore: Display: ==========================
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Size (KiB)
+LogIoStore: Display: ----------------------------------------------
+LogIoStore: Display:                         global            0.00
+LogIoStore: Display:     KragKingsBenchmark-Windows           52.81
+LogIoStore: Display:
+LogIoStore: Display: Container Patch Report
+LogIoStore: Display: ========================
+LogIoStore: Display:
+LogIoStore: Display:                      Container          Total #       Modified #          Added #   Modified (MiB)      Added (MiB)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                         global                1                0                0             0.00             0.00
+LogIoStore: Display:     KragKingsBenchmark-Windows             2490                0             2490             0.00           335.01
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:
+LogIoStore: Display: PackageStore
+LogIoStore: Display: =============
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Size (KiB)      Packages #     Localized #
+LogIoStore: Display: ------------------------------------------------------------------------------
+LogIoStore: Display:     KragKingsBenchmark-Windows              25             824               0
+LogIoStore: Display: ------------------------------------------------------------------------------
+LogIoStore: Display:                          Total              25             824               0
+LogIoStore: Display:
+LogIoStore: Display:
+LogIoStore: Display: Input:       824 Packages
+LogIoStore: Display: Input:         0   B UExp
+LogIoStore: Display: Input:    393.43 MiB UAsset
+LogIoStore: Display: Input:    186.80 MiB UBulk
+LogIoStore: Display: Input:     67.70 MiB for 981 Global shaders
+LogIoStore: Display: Input:      1.58 MiB for 179 Shared shaders
+LogIoStore: Display: Input:         0   B for 0 Unique shaders
+LogIoStore: Display: Input:      9.11 MiB for 201 Inline shaders
+LogIoStore: Display:
+LogIoStore: Display: Output:     1175 Imported package entries
+LogIoStore: Display: Output:      524 Packages without imports
+LogIoStore: Display: Output:        0 Public runtime script objects
+LogIoStore: Display: Output:     3.05 MiB InitialLoadData
+LogIoStore: Display:
+LogIoStore: Display: Success
+LogPakFile: Display: UnrealPak executed in 5.049684 seconds
+Took 5,41s to run UnrealPak.exe, ExitCode=0
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\FinalCopyWin64_UFSFiles.txt, NumItems: 2866
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\FinalCopyWin64_NonUFSFiles.txt, NumItems: 36
+DumpManifest: C:\Users\Matthew\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Games+UE_5.8\FinalCopyWin64_NonUFSFilesDebug.txt, NumItems: 6
+Copying NonUFSFiles to staging directory: D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\StagedBuilds\Windows
+Copying DebugFiles to staging directory: D:\Dev\Krag-Kings\benchmark\unreal\KragKingsBenchmark\Saved\StagedBuilds\Windows
+Stage command time: 40.04 s
+********** STAGE COMMAND COMPLETED **********
+********** ARCHIVE COMMAND STARTED **********
+Archiving to D:\Dev\Krag-Kings\benchmark\builds\unreal
+Archive command time: 0.69 s
+********** ARCHIVE COMMAND COMPLETED **********
+BuildCookRun time: 183.26 s
+BUILD SUCCESSFUL
+AutomationTool executed for 0h 3m 4s
+AutomationTool exiting with ExitCode=0 (Success)
+KK_PACKAGE_COMPLETE

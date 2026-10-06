@@ -221,3 +221,19 @@ benchmark/evidence/unity/20261006-coherent79-runtime/*.txt -text whitespace=-bla
 benchmark/art/animation/krag-convergent-hand-v2/**/*.json -text whitespace=cr-at-eol
 benchmark/art/animation/krag-convergent-hand-v2/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-convergent-hand-v2/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve exact native coherent79 review/package receipts and raw execution bytes.
+benchmark/unreal/evidence/coherent79-editor-review/**/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-editor-review/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-editor-review/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-editor-review/**/*.ini -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-package/**/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-package/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-package/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/coherent79-package/**/*.ini -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/package-result.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/last-build-attempt.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/import-progress.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/import-report.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/import-source-snapshot.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/unreal/evidence/skin-ab-preparation.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

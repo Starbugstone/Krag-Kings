@@ -39,10 +39,10 @@ def expected_maps(report):
     return expected
 
 
-def validate_saved_pbr(target, report):
+def validate_saved_pbr(target, report, image_inventory=None):
     target = Path(target).resolve()
     bpy.ops.wm.open_mainfile(filepath=str(target))
-    materials, images = material_images()
+    materials, images = (image_inventory or material_images)()
     if {m.name for m in materials} != {m['name'] for m in report['materials']}:
         raise RuntimeError('Reopened material set differs from PBR report')
     expected = expected_maps(report)
@@ -76,10 +76,10 @@ def validate_saved_pbr(target, report):
             'uniqueTextureFiles': len(expected), 'images': records}
 
 
-def save_and_validate_pbr(target, report):
+def save_and_validate_pbr(target, report, image_inventory=None):
     target = Path(target).resolve()
     expected = expected_maps(report)
-    _, images = material_images()
+    _, images = (image_inventory or material_images)()
     for image in images:
         name = image.filepath.replace('\\', '/').rsplit('/', 1)[-1]
         local = target.parent / 'textures' / name
@@ -88,4 +88,4 @@ def save_and_validate_pbr(target, report):
         # The intended root belongs to target, not the still-current source file.
         image.filepath = '//textures/' + name
     bpy.ops.wm.save_as_mainfile(filepath=str(target), compress=True, relative_remap=False)
-    return validate_saved_pbr(target, report)
+    return validate_saved_pbr(target, report, image_inventory=image_inventory)
