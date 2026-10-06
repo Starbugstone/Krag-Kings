@@ -96,8 +96,61 @@ if($Stage -in @('Import','All')){
     if($LASTEXITCODE -ne 0){throw "Isolated Unreal shared asset import failed: $LASTEXITCODE"}
 }
 if($Stage -in @('Package','All')){
-    & $UAT BuildCookRun "-project=$Project" -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive "-archivedirectory=$PackageRoot" -utf8output 2>&1 | Tee-Object -FilePath (Join-Path $Evidence 'package.log')
+    $PackageLog=Join-Path $Evidence 'package.log'
+    $CompletionLog=Join-Path $Evidence 'package-completion.log'
+    $PackageReport=Join-Path $Evidence 'package-result.json'
+    Clear-CompletionLogs @($PackageLog,$CompletionLog,$PackageReport)
+    # Do not cook partial/stale generated content just because editor compilation
+    # succeeds. Final assembly proves every variant reloads with its dependencies.
+    $Progress=Get-Content (Join-Path $Evidence 'import-progress.json') -Raw|ConvertFrom-Json
+    $ImportReport=Get-Content (Join-Path $Evidence 'import-report.json') -Raw|ConvertFrom-Json
+    if(-not $Progress.complete -or -not $ImportReport.source_inputs_unchanged_during_import){throw 'Complete validated character/scene assembly is required before packaging.'}
+    foreach($RequiredAsset in @('Content\Benchmark\Maps\Dunes.umap','Content\Benchmark\DA_Benchmark.uasset')){
+        if(-not(Test-Path -LiteralPath (Join-Path $ProjectRoot $RequiredAsset) -PathType Leaf)){throw "Missing assembled asset: $RequiredAsset"}
+    }
+    $SourceSnapshot=Get-Content (Join-Path $Evidence 'import-source-snapshot.json') -Raw|ConvertFrom-Json
+    $Shared=Join-Path $BenchmarkRoot 'shared'
+    $SourceFiles=@(Get-ChildItem -LiteralPath $Shared -Recurse -File|Where-Object {$_.Extension.ToLowerInvariant() -in @('.fbx','.png','.json','.wav')})
+    if($SourceFiles.Count -ne @($SourceSnapshot.inputs.PSObject.Properties).Count){throw 'Shared source file set changed after assembly; rerun import before packaging.'}
+    foreach($Entry in $SourceSnapshot.inputs.PSObject.Properties){
+        $InputPath=Join-Path $Shared $Entry.Name
+        if(-not(Test-Path -LiteralPath $InputPath -PathType Leaf) -or
+           (Get-Item -LiteralPath $InputPath).Length -ne $Entry.Value.bytes -or
+           (Get-FileHash -LiteralPath $InputPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Entry.Value.sha256){
+            throw "Shared input changed after assembly: $($Entry.Name)"
+        }
+    }
+    $PackageStarted=[DateTime]::UtcNow
+    & $UAT BuildCookRun "-project=$Project" -nop4 -unattended -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive "-archivedirectory=$PackageRoot" -utf8output 2>&1 | Tee-Object -FilePath $PackageLog
     if($LASTEXITCODE -ne 0){throw "Unreal Windows package failed: $LASTEXITCODE"}
+    if(-not(Select-String -LiteralPath $PackageLog -SimpleMatch 'BUILD SUCCESSFUL' -Quiet)){throw 'UAT returned without its fresh BUILD SUCCESSFUL marker.'}
+    $WindowsPackage=Join-Path $PackageRoot 'Windows'
+    $Game=Join-Path $WindowsPackage 'KragKingsBenchmark\Binaries\Win64\KragKingsBenchmark.exe'
+    $Paks=Join-Path $WindowsPackage 'KragKingsBenchmark\Content\Paks'
+    if(-not(Test-Path -LiteralPath $Game -PathType Leaf)){throw "UAT did not produce the expected standalone game: $Game"}
+    $GameFile=Get-Item -LiteralPath $Game
+    $Header=New-Object byte[] 2
+    $Stream=[IO.File]::OpenRead($Game)
+    try{$Read=$Stream.Read($Header,0,2)}finally{$Stream.Dispose()}
+    if($GameFile.Length -lt 1024 -or $Read -ne 2 -or $Header[0] -ne 0x4D -or $Header[1] -ne 0x5A){throw 'Packaged game is not a nonempty Windows PE executable.'}
+    $Containers=@()
+    foreach($Extension in @('.pak','.utoc','.ucas')){
+        $Matches=@(Get-ChildItem -LiteralPath $Paks -Filter ('*'+$Extension) -File|Where-Object {$_.Length -gt 0})
+        if(-not $Matches.Count){throw "Packaged data container missing or empty: $Extension"}
+        $Containers+=$Matches
+    }
+    $PackagedFiles=@($GameFile)+$Containers
+    $ArtifactRecords=@($PackagedFiles|ForEach-Object {
+        [ordered]@{path=$_.FullName.Substring($WindowsPackage.Length+1).Replace('\','/');bytes=$_.Length;sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
+    })
+    [ordered]@{
+        complete=$true;stage='Windows Development package';startedUtc=$PackageStarted.ToString('o');completedUtc=[DateTime]::UtcNow.ToString('o')
+        engineVersion=$Manifest.engineVersion;packageRoot=$WindowsPackage;artifacts=$ArtifactRecords
+        importedSourceSnapshotSha256=(Get-FileHash -LiteralPath (Join-Path $Evidence 'import-source-snapshot.json') -Algorithm SHA256).Hash.ToLowerInvariant()
+        runtimeExecuted=$false;visualAcceptance=$false
+    }|ConvertTo-Json -Depth 6|Set-Content -LiteralPath $PackageReport -Encoding UTF8
+    'KK_PACKAGE_COMPLETE'|Set-Content -LiteralPath $CompletionLog -Encoding UTF8
+    Write-Output 'KK_PACKAGE_COMPLETE'
 }
 if($Stage -eq 'Launch'){
     # Own the real game process so the memory guard remains held through the sample.

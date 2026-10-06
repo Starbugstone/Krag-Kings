@@ -75,6 +75,7 @@ void AKKBenchmarkGameMode::BeginPlay()
         if(auto* CVar=IConsoleManager::Get().FindConsoleVariable(TEXT("r.VSync")))CVar->Set(0,ECVF_SetByCode);
     }
     AStaticMeshActor* Ground=GetWorld()->SpawnActor<AStaticMeshActor>();
+    TerrainActor=Ground;
     Ground->GetStaticMeshComponent()->SetMobility(EComponentMobility::Movable);
     Ground->GetStaticMeshComponent()->SetStaticMesh(AssetSet->Terrain);
     Ground->GetStaticMeshComponent()->SetMaterial(0,AssetSet->SandMaterial);
@@ -90,7 +91,10 @@ void AKKBenchmarkGameMode::BeginPlay()
     SunComponent->SetCastShadows(true);
     SunComponent->SetLightSourceAngle(1.5f);
     auto* Atmosphere=GetWorld()->SpawnActor<ASkyAtmosphere>();
-    Atmosphere->GetComponent()->SetRayleighScatteringScale(.75f);
+    // This is an absolute coefficient, not a normalized intensity multiplier.
+    // Keep UE's Earth-like 0.0331 default for the neutral comparison lighting.
+    UE_LOG(LogTemp,Display,TEXT("KK_LIGHTING sun_lux=%.1f color=%s rotation=%s rayleigh_scale=%.6f"),
+        SunComponent->Intensity,*SunComponent->GetLightColor().ToString(),*Sun->GetActorRotation().ToString(),Atmosphere->GetComponent()->RayleighScatteringScale);
     auto* Sky=GetWorld()->SpawnActor<ASkyLight>();
     Sky->GetLightComponent()->SetMobility(EComponentMobility::Movable);
     Sky->GetLightComponent()->SetIntensity(.85f);
@@ -112,18 +116,32 @@ void AKKBenchmarkGameMode::BeginPlay()
     PP->Settings.bOverride_BloomIntensity=true;PP->Settings.BloomIntensity=.15f;
     PP->Settings.bOverride_MotionBlurAmount=true;PP->Settings.MotionBlurAmount=0;
     PP->Settings.bOverride_VignetteIntensity=true;PP->Settings.VignetteIntensity=.16f;
+    bWaitingForTerrain=true;
+    TerrainWaitStarted=FPlatformTime::Seconds();
+    if(!TryStartDemo())UE_LOG(LogTemp,Display,TEXT("KK_WAITING_FOR_TERRAIN actual collision queries must succeed before spawning"));
+}
+bool AKKBenchmarkGameMode::TryStartDemo()
+{
+    FVector Positions[2]={FVector(-135,0,0),FVector(120,-10,0)};
+    for(FVector& Position:Positions)
+    {
+        FHitResult GroundHit;
+        if(!GetWorld()->LineTraceSingleByObjectType(GroundHit,Position+FVector(0,0,6000),Position-FVector(0,0,6000),FCollisionObjectQueryParams(ECC_WorldStatic))
+            || GroundHit.GetActor()!=TerrainActor || GroundHit.ImpactNormal.Z<.7f)return false;
+        Position.Z=GroundHit.ImpactPoint.Z+112.f;
+        UE_LOG(LogTemp,Display,TEXT("KK_START_GROUND point=%s normal=%s"),*GroundHit.ImpactPoint.ToString(),*GroundHit.ImpactNormal.ToString());
+    }
     auto SpawnUnit=[this](bool bKrag,FVector Position)
     {
-        FHitResult Hit;
-        if(GetWorld()->LineTraceSingleByChannel(Hit,Position+FVector(0,0,3000),Position-FVector(0,0,3000),ECC_Visibility)) Position.Z=Hit.ImpactPoint.Z+112;
         FActorSpawnParameters Params;Params.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
         auto* Unit=GetWorld()->SpawnActor<AKKBenchmarkUnit>(Position,FRotator(0,-90,0),Params);
         Unit->InitializeUnit(AssetSet,bKrag);
         DemoUnits.Add(Unit);
         return Unit;
     };
-    auto* Krag=SpawnUnit(true,FVector(-135,0,0));
-    SpawnUnit(false,FVector(120,-10,0));
+    auto* Krag=SpawnUnit(true,Positions[0]);
+    SpawnUnit(false,Positions[1]);
+    bWaitingForTerrain=false;Elapsed=0.f;
     for(int32 Index=0;Index<2;++Index)PerformanceOrigins[Index]=DemoUnits[Index]->GetActorLocation();
     if(auto* PC=Cast<AKKBenchmarkController>(UGameplayStatics::GetPlayerController(this,0))){PC->SelectUnit(Krag);PC->ResetCamera();}
     BenchmarkStartTime=LastFrameTime=FPlatformTime::Seconds();
@@ -136,10 +154,34 @@ void AKKBenchmarkGameMode::BeginPlay()
         if(!FParse::Value(FCommandLine::Get(),TEXT("KKShowcaseGate="),ShowcaseGate))ShowcaseGate=FPaths::ProjectSavedDir()/TEXT("Benchmark/showcase-start.flag");
         if(bShowcaseWaiting)IFileManager::Get().Delete(*ShowcaseGate);
     }
+    return true;
 }
 void AKKBenchmarkGameMode::Tick(float DeltaSeconds)
 {
-    Super::Tick(DeltaSeconds);Elapsed+=DeltaSeconds;
+    Super::Tick(DeltaSeconds);
+    if(bWaitingForTerrain)
+    {
+        if(!TryStartDemo() && FPlatformTime::Seconds()-TerrainWaitStarted>30.0)
+        {
+            bWaitingForTerrain=false;
+            UE_LOG(LogTemp,Error,TEXT("KK_SETUP_FAILED terrain collision did not become ready within 30 seconds; no units spawned"));
+            UKismetSystemLibrary::QuitGame(this,UGameplayStatics::GetPlayerController(this,0),EQuitPreference::Quit,false);
+        }
+        return;
+    }
+    if(DemoUnits.Num()!=2)return;
+    Elapsed+=DeltaSeconds;
+    if(!bWindowTitleApplied && Elapsed>1.f && GEngine && GEngine->GameViewport && GEngine->GameViewport->GetWindow().IsValid())
+    {
+        GEngine->GameViewport->GetWindow()->SetTitle(FText::FromString(TEXT("Krag Kings - Unreal Benchmark")));
+        bWindowTitleApplied=true;
+    }
+    if(!bReviewFrameWritten && Elapsed>20.f && FParse::Param(FCommandLine::Get(),TEXT("KKReviewFrame")))
+    {
+        const FString Dir=FPaths::ProjectSavedDir()/TEXT("Benchmark");IFileManager::Get().MakeDirectory(*Dir,true);
+        FScreenshotRequest::RequestScreenshot(Dir/TEXT("review-frame.png"),true,false);
+        bReviewFrameWritten=true;
+    }
     if(bShowcase){TickShowcase();return;}
     const double Now=FPlatformTime::Seconds();
     const double WallElapsed=Now-BenchmarkStartTime;

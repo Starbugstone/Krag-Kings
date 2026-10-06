@@ -1,0 +1,25 @@
+{
+  "name": "unreal-render-asset-repair",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\inspect_terrain_runtime.py",
+    "-unattended",
+    "-nosplash",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\render-asset-repair.log",
+    "-NoSound",
+    "-NullRHI",
+    "-corelimit=2",
+    "-KKRepairRenderAssets"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-render-asset-repair-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-render-asset-repair-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\render-asset-repair.log",
+  "successMarker": "KK_TERRAIN_INSPECTION_COMPLETE"
+}

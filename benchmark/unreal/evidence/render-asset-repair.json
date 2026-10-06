@@ -1,0 +1,634 @@
+{
+  "repairRequested": true,
+  "asset": "/Game/Benchmark/Environment/Dunes.Dunes",
+  "bounds": "<Struct 'BoxSphereBounds' (0x0000020688DC5380) {origin: {x: 0.000000, y: 0.000000, z: 479.419006}, box_extent: {x: 76000.000000, y: 76000.000000, z: 1246.568359}, sphere_radius: 107486.726562}>",
+  "boundingBox": "<Struct 'Box' (0x0000020688DC4F80) {min: {x: -76000.000000, y: -76000.000000, z: -767.149353}, max: {x: 76000.000000, y: 76000.000000, z: 1725.987366}, is_valid: True}>",
+  "collisionTraceFlag": "<CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+  "lodCount": 1,
+  "triangles": 107648,
+  "sectionCollision": [
+    true
+  ],
+  "before": {
+    "componentBounds": "(<Struct 'Vector' (0x0000020690A53F30) {x: 0.000000, y: 0.000000, z: 479.419006}>, <Struct 'Vector' (0x0000020690A53F80) {x: 76000.000000, y: 76000.000000, z: 1246.568359}>)",
+    "collisionEnabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+    "objectType": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+    "traces": {
+      "(-135, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(120, -10, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A53F30) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A53F30) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(0, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(1000, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A7CC40) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A53F30) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A53F30) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC7260) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_0' (0x000002069672D700) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      }
+    }
+  },
+  "after": {
+    "componentBounds": "(<Struct 'Vector' (0x0000020690A51960) {x: 0.000000, y: 0.000000, z: 479.419006}>, <Struct 'Vector' (0x0000020690A53F80) {x: 76000.000000, y: 76000.000000, z: 1246.568359}>)",
+    "collisionEnabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+    "objectType": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+    "traces": {
+      "(-135, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5911.6943359375,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: -135.000000, y: 0.000000, z: 88.305643}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.168013, y: -0.040615, z: 0.984948}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(-135, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(120, -10, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A51960) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5873.61962890625,
+        "point": "<Struct 'Vector' (0x0000020690A51960) {x: 120.000000, y: -10.000000, z: 126.380183}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.133976, y: -0.066874, z: 0.988726}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(120, -10, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(0, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5890.0,
+        "point": "<Struct 'Vector' (0x0000020690A53F80) {x: 0.000000, y: 0.000000, z: 110.000001}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.155556, y: -0.053893, z: 0.986356}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(0, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      },
+      "(1000, 0, False, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, False, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A7EB30) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'Visibility')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A51960) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'WorldStatic')": {
+        "blockingHit": true,
+        "initialOverlap": false,
+        "distance": 5808.263671875,
+        "point": "<Struct 'Vector' (0x0000020690A51960) {x: 1000.000000, y: 0.000000, z: 191.736194}>",
+        "normal": "<Struct 'Vector' (0x0000020690AC74E0) {x: -0.033494, y: -0.091120, z: 0.995277}>",
+        "actor": "<Object '/Game/Benchmark/Maps/Dunes.Dunes:PersistentLevel.StaticMeshActor_1' (0x000002069672F500) Class 'StaticMeshActor'>"
+      },
+      "(1000, 0, True, 'UpwardVisibility')": {
+        "blockingHit": false
+      }
+    }
+  },
+  "meshRotationBefore": "<Struct 'Rotator' (0x000002067AB89980) {pitch: -90.000000, yaw: 0.000000, roll: 0.000000}>",
+  "meshRotationAfter": {
+    "pitch": 0.0,
+    "yaw": -90.0,
+    "roll": 0.0
+  },
+  "materials": {
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_CopperHose.M_Krag_CopperHose": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear": {
+      "before": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      },
+      "after": {
+        "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+        "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": true
+      }
+    }
+  }
+}

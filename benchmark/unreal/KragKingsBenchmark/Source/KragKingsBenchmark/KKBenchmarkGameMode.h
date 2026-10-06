@@ -5,6 +5,7 @@
 #include "KKBenchmarkGameMode.generated.h"
 class UKKBenchmarkAssets;
 class AKKBenchmarkUnit;
+class AStaticMeshActor;
 UCLASS()
 class KRAGKINGSBENCHMARK_API AKKBenchmarkGameMode : public AGameModeBase
 {
@@ -16,6 +17,12 @@ public:
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
 private:
     UPROPERTY() TObjectPtr<UKKBenchmarkAssets> AssetSet;
+    UPROPERTY() TObjectPtr<AStaticMeshActor> TerrainActor;
+    bool TryStartDemo();
+    bool bWaitingForTerrain=false;
+    bool bWindowTitleApplied=false;
+    bool bReviewFrameWritten=false;
+    double TerrainWaitStarted=0.0;
     TArray<float> FrameTimes;
     float Elapsed=0;
     double BenchmarkStartTime=0.0;

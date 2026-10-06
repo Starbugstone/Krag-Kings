@@ -1,0 +1,162 @@
+{
+  "asset": "/Game/Benchmark/Environment/Dunes.Dunes",
+  "bounds": "<Struct 'BoxSphereBounds' (0x000001FBAE22E400) {origin: {x: 0.000000, y: 0.000000, z: 479.419006}, box_extent: {x: 76000.000000, y: 76000.000000, z: 1246.568298}, sphere_radius: 107486.729207}>",
+  "boundingBox": "<Struct 'Box' (0x000001FBAE22E4C0) {min: {x: -76000.000000, y: -76000.000000, z: -767.149292}, max: {x: 76000.000000, y: 76000.000000, z: 1725.987305}, is_valid: True}>",
+  "collisionTraceFlag": "<CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE: 3>",
+  "lodCount": 1,
+  "triangles": 107648,
+  "sectionCollision": [
+    true
+  ],
+  "componentBounds": "(<Struct 'Vector' (0x000001FBBB2E3C60) {x: 0.000000, y: 0.000000, z: 479.419006}>, <Struct 'Vector' (0x000001FBBB2E3C10) {x: 76000.000000, y: 76000.000000, z: 1246.568298}>)",
+  "collisionEnabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+  "collisionObjectType": "<CollisionChannel.ECC_WORLD_STATIC: 0>",
+  "traces": {
+    "(-135, 0, False)": "<Struct 'HitResult' (0x000001FC0EEBD340) {}>",
+    "(-135, 0, False, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBD840) {}>",
+    "(-135, 0, True)": "<Struct 'HitResult' (0x000001FC0EEBDD40) {}>",
+    "(-135, 0, True, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBC800) {}>",
+    "(120, -10, False)": "<Struct 'HitResult' (0x000001FC0EEBCF80) {}>",
+    "(120, -10, False, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBCE40) {}>",
+    "(120, -10, True)": "<Struct 'HitResult' (0x000001FC0EEBCD00) {}>",
+    "(120, -10, True, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBC300) {}>",
+    "(0, 0, False)": "<Struct 'HitResult' (0x000001FC0EEBCA80) {}>",
+    "(0, 0, False, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBBE00) {}>",
+    "(0, 0, True)": "<Struct 'HitResult' (0x000001FC0EEBB7C0) {}>",
+    "(0, 0, True, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBB900) {}>",
+    "(1000, 0, False)": "<Struct 'HitResult' (0x000001FC0EEBC1C0) {}>",
+    "(1000, 0, False, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBBB80) {}>",
+    "(1000, 0, True)": "<Struct 'HitResult' (0x000001FC0EEBE600) {}>",
+    "(1000, 0, True, 'WorldStatic')": "<Struct 'HitResult' (0x000001FC0EEBEC40) {}>"
+  },
+  "materials": {
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_CopperHose.M_Krag_CopperHose": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_EarInner.M_Nib_EarInner": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Eye.M_Nib_Eye": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Muzzle.M_Nib_Muzzle": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    },
+    "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear": {
+      "<MaterialUsage.MATUSAGE_SKELETAL_MESH: 0>": true,
+      "<MaterialUsage.MATUSAGE_MORPH_TARGETS: 5>": false
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "complete": true,
-  "validated_meshes": [
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "meshes": [
     {
       "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
       "asset": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural",
@@ -6730,5 +6730,58 @@
       ],
       "material_bindings_verified_after_reload": true
     }
-  ]
+  ],
+  "materials": [
+    "/Game/Benchmark/Environment/Materials/M_Sand.M_Sand"
+  ],
+  "warnings": [],
+  "import_resource_controls": {
+    "requestedLogicalCoreLimit": 2,
+    "renderer": "NullRHI",
+    "scope": "Importer process only; runtime/performance jobs are unchanged"
+  },
+  "character_import_mode": "one guarded editor process per variant; verified generated package/source hashes before assembly",
+  "reused_materials": [
+    {
+      "asset": "/Game/Benchmark/Environment/Materials/M_Sand",
+      "signature": "04356ee5e2b4ec8a4b67af4f2bd23ac88753989b97cb6ed22ebb10d193f9c787",
+      "reason": "explicit pinned prior import seed"
+    }
+  ],
+  "contact_audio": {
+    "Krag": [
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_01.Krag_Sand_01",
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_02.Krag_Sand_02",
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_03.Krag_Sand_03",
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_04.Krag_Sand_04",
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_05.Krag_Sand_05",
+      "/Game/Benchmark/Audio/Krag/Krag_Sand_06.Krag_Sand_06"
+    ],
+    "Nib": [
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_01.Nib_Sand_01",
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_02.Nib_Sand_02",
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_03.Nib_Sand_03",
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_04.Nib_Sand_04",
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_05.Nib_Sand_05",
+      "/Game/Benchmark/Audio/Nib/Nib_Sand_06.Nib_Sand_06"
+    ]
+  },
+  "dust_material": "/Game/Benchmark/Effects/M_SandDust.M_SandDust",
+  "contact_status": "Shared candidates; runtime synchronization, appearance and listening review pending",
+  "action_audio": {
+    "assets": {
+      "Krag_Shot": "/Game/Benchmark/Audio/Actions/Krag_Shot.Krag_Shot",
+      "Nib_Shot": "/Game/Benchmark/Audio/Actions/Nib_Shot.Nib_Shot",
+      "Krag_Hit": "/Game/Benchmark/Audio/Actions/Krag_Hit.Krag_Hit",
+      "Nib_Hit": "/Game/Benchmark/Audio/Actions/Nib_Hit.Nib_Hit"
+    },
+    "shot_gain": 0.55,
+    "hit_gain": 0.6,
+    "hit_normalized_time": 0.22,
+    "shot_timing": "character weapon.fireTimesNormalized",
+    "attenuation": "linear, inner 4m, outer 60m",
+    "status": "Shared candidates; game mix/synchronization/listening review pending"
+  },
+  "source_snapshot": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\import-source-snapshot.json",
+  "source_inputs_unchanged_during_import": true
 }

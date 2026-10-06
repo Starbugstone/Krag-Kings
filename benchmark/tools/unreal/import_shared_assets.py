@@ -163,6 +163,20 @@ def connect(mat, node, output, prop):
         raise RuntimeError('Material connection failed: ' + mat.get_name() + ' ' + str(prop))
 
 
+def ensure_character_material_usage(mat):
+    usages = (unreal.MaterialUsage.MATUSAGE_SKELETAL_MESH, unreal.MaterialUsage.MATUSAGE_MORPH_TARGETS)
+    changed = False
+    for usage in usages:
+        if not unreal.MaterialEditingLibrary.has_material_usage(mat, usage):
+            unreal.MaterialEditingLibrary.set_base_material_usage(mat, usage, True)
+            changed = True
+    if changed:
+        unreal.MaterialEditingLibrary.recompile_material(mat)
+        save(mat)
+    if not all(unreal.MaterialEditingLibrary.has_material_usage(mat, usage) for usage in usages):
+        raise RuntimeError('Required skeletal/morph material shader usage missing: ' + mat.get_path_name())
+
+
 def weapon_flash_material():
     destination = DEST + '/Effects'
     mat = load(destination + '/M_WeaponFlash')
@@ -390,7 +404,9 @@ def restore_variant(descriptor, validation):
         actual = slots[binding['slot']].get_editor_property('material_interface')
         if actual is None or actual.get_path_name() != binding['asset']:
             raise RuntimeError(descriptor['id'] + ': material binding did not survive final package reload')
+        ensure_character_material_usage(actual)
     validation['material_bindings_verified_after_reload'] = True
+    validation['skeletal_and_morph_material_usage_verified'] = True
     for key in VARIANT_STRINGS + VARIANT_FLOATS + VARIANT_ARRAYS:
         variant.set_editor_property(key, descriptor[key])
     drivers = []
@@ -732,7 +748,7 @@ def main():
     data.set_editor_property('sand_dust_material', dust)
     data.set_editor_property('weapon_flash_material', weapon_flash_material())
     # Blender -Y source forward convention: review this rotation in actual editor before accepting render.
-    data.set_editor_property('mesh_rotation', unreal.Rotator(0, -90, 0))
+    data.set_editor_property('mesh_rotation', unreal.Rotator(roll=0.0, pitch=0.0, yaw=-90.0))
     validations = {entry['asset']: entry for entry in REPORT['meshes']}
     data.set_editor_property('krags', [restore_variant(entry, validations[entry['mesh']]) for entry in krags])
     data.set_editor_property('nibs', [restore_variant(entry, validations[entry['mesh']]) for entry in nibs])

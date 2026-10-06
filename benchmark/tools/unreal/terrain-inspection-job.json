@@ -1,0 +1,24 @@
+{
+  "name": "unreal-terrain-inspection",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\inspect_terrain_runtime.py",
+    "-unattended",
+    "-nosplash",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\terrain-inspection.log",
+    "-NoSound",
+    "-NullRHI",
+    "-corelimit=2"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-terrain-inspection-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\guard-terrain-inspection-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "gpuTelemetry": true,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\terrain-inspection.log",
+  "successMarker": "KK_TERRAIN_INSPECTION_COMPLETE"
+}

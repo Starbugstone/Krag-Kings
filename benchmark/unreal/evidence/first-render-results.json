@@ -1,0 +1,36 @@
+{
+  "executionMode": "EditorGame",
+  "packaged": false,
+  "nativeProcessId": 1860,
+  "renderer": "DX12 SM6",
+  "outputResolution": [
+    1920,
+    1080
+  ],
+  "actualImage": "first-render-upright-lighting-review.png",
+  "terrainStartup": "Passed after deferring spawn by one tick until real collision queries hit",
+  "meshOrientation": "Upright after changing Python Rotator to named yaw argument",
+  "materialMorphUsage": "Persisted and no missing-usage warning in latest runtime",
+  "cachedLightingExposure": "CVar8 observed; prior clipping warning absent",
+  "visualAccepted": false,
+  "openIssues": [
+    "Strong orange cast remains despite neutral-white requested sun; diagnose actual light/atmosphere/material state before acceptance",
+    "Shared character likeness still unaccepted",
+    "Actual mouse/keyboard, action and packaged performance checks remain pending"
+  ],
+  "camera": {
+    "x": -161.083,
+    "y": -578.178,
+    "z": 444.799,
+    "pitch": -22.0,
+    "yaw": 75.0
+  },
+  "orangeCastDiagnosis": {
+    "source": "UE5.8 Engine/Source/Runtime/Engine/Private/Components/SkyAtmosphereComponent.cpp",
+    "engineDefaultRayleighScatteringScale": 0.0331,
+    "incorrectRequestedCoefficient": 0.75,
+    "ratio": 22.658610271903324,
+    "preparedFix": "Retain installed default coefficient instead of treating this absolute coefficient as a 75% multiplier",
+    "fixRuntimeVerified": false
+  }
+}
