@@ -336,3 +336,19 @@ the earlier yellow reference map or a generic UV carrier cannot substitute.
 The next native source is intended to retain the current socket, all seven
 clips, exact 79-bone bind and attached groom. Root's later hand-weight/thumb
 studies are independent and are not silently included in the orbital source.
+
+The **adult face/ocular v1** source and six actual views now exist at
+`identity-study/adult-native-v1/`, source SHA-256
+`37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4`.
+All seven guarded jobs passed. Exact 79-bone bind/all action hashes and 404
+unrelated mesh payloads survive reopen; existing expression deltas differ by
+at most 3.73 nm. Iris pigment and dry nose response improve locally, while
+frontal Blink and the true mouth/dark-blue tongue remain intact.
+
+Adult likeness still fails. The six actual views expose smooth juvenile facial
+planes, simplified eyes, sparse/coarse groom and a severe retained sawtooth neck
+edge above the rigid scarf. Actual Head custom normals are absent. Eleven
+neutral oral flags remain explicit. The full receipt and material integration
+handoff require actual assigned-surface face/iris baking; no current shared
+source or engine build was changed. Root's fine-alpha comparison and the
+separate regional guide proposal must not conceal the neck seam failure.

@@ -1,0 +1,547 @@
+{
+  "status": "Actual coherent facial/ocular source and six inspected views; local improvements only, adult concept likeness still fails",
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "sharedPromotionAuthorized": false,
+  "source": {
+    "path": "benchmark/art/nib/identity-study/adult-native-v1/Nib_Coherent_AdultIdentity_v1.blend",
+    "sha256": "37c0d919e4844cb98339e03fd4e31f5cc04a5b52172561b0aeb65cfab0296db4",
+    "bytes": 63912585
+  },
+  "sourceReport": {
+    "path": "benchmark/art/nib/identity-study/adult-native-v1/source.json",
+    "sha256": "2733f9706499430c648865419fa3e3d94ed942676d14eb69831b6baac8d542b5",
+    "bytes": 179758
+  },
+  "images": [
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Neutral.png",
+      "sha256": "75d7cb0685dfc68d83b8b3d53aef0d484c6a6124868d4b308234586ea0926b94",
+      "bytes": 1913519
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Profile.png",
+      "sha256": "12a9c3cd5078b63b2e246fd7158cf8e2f8f4f3f38a75aa971df4f79b2c1ecbe5",
+      "bytes": 1508343
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Blink.png",
+      "sha256": "c7013510f1c5d0ba7b8db09cf37a3de08d6e0e8a7dbfeacc693126f116cc3e33",
+      "bytes": 1918967
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Tongue.png",
+      "sha256": "cec232a37209b9aaa6bf7f28a9c22f300086420ffdea823f8e357bffd80689f3",
+      "bytes": 1927906
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/EyeCloseup.png",
+      "sha256": "0b57e0026f24ea7d5fd16cd5d145fa7b73a5f6434ed503348e05aa7a0a24a71c",
+      "bytes": 1903849
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/ThreeQuarter.png",
+      "sha256": "2077b23a8c50bc374ee7ed126d441c3362e45d391274e8ee3717905515c89761",
+      "bytes": 1891996
+    }
+  ],
+  "viewMetadata": [
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Neutral.json",
+      "sha256": "edce4abf254229d250e5f4501b3de5c036eca4bb6709074589b68eaec050fe84",
+      "bytes": 6322
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Profile.json",
+      "sha256": "bae48524ef7464dd44b79cd9b09a2dff85130e4199af6831de07a3c1a42756c3",
+      "bytes": 6322
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Blink.json",
+      "sha256": "0ccb9c9d8d9edffe8cef2ffad11b2ee360dad4c2f0d84e14041008b80c2e595d",
+      "bytes": 6380
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/Tongue.json",
+      "sha256": "3c9c4a734864858b28cd447e22d546ed753bd4d570b44662d057bbb9522fed20",
+      "bytes": 6366
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/EyeCloseup.json",
+      "sha256": "a8e3b1573d67b2cd9c7e02b26b4b4ebf39c1dbe4d7f14a5c755f066d6a97384f",
+      "bytes": 6324
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-views/ThreeQuarter.json",
+      "sha256": "f96380be5f144222cebb92e7de4feb2385cb1abf65aff3c134ee3937e13af4cc",
+      "bytes": 6464
+    }
+  ],
+  "processes": [
+    {
+      "stage": "generate",
+      "pid": 26584,
+      "guardExitCode": 0,
+      "peakPrivateMB": 991.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-generate.log",
+          "sha256": "e6c637bb86132752f8c849350df074da63dad63b4ff3f0cbb0644c91cc752d22",
+          "bytes": 461,
+          "originalCaptureSha256": "f12d6d3deb4395a0b3a0c5edee57498227b547fd79dde326fcfe6aa506dab82b"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-generate.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-generate-memory.csv",
+          "sha256": "208cf70416e39833083a00c6f8c7eaaedb55db04609fddc61c9a18f1f4e3a3bb",
+          "bytes": 1067,
+          "originalCaptureSha256": "4ac7f5e163616c904036c0a794fbb9fc7582fb50e7688a2f451d9d58421167df"
+        }
+      ]
+    },
+    {
+      "stage": "neutral",
+      "pid": 15932,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2657.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-neutral.log",
+          "sha256": "a9231fc4c6118532a7ecbd8a44497a63a3f2e46a58de6275274cceaf945bd7ca",
+          "bytes": 396,
+          "originalCaptureSha256": "68dc96caeaca097009fd42486525b8ce3575e7e80c7514d75cd58082c9952bb6"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-neutral.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-neutral-memory.csv",
+          "sha256": "d6dff058f1cf524658beb02981130520643c5ae1d15142a91980d9f5b285f2c0",
+          "bytes": 1492,
+          "originalCaptureSha256": "d72fa1711a594136af1f4e22f4106178631d56973b500de41b6c4ca8377d083f"
+        }
+      ]
+    },
+    {
+      "stage": "profile",
+      "pid": 34628,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2651.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-profile.log",
+          "sha256": "77ef90b0b495e196f0b162f416e04dc99aab96ddbd0d2ecfc0934335e2849c31",
+          "bytes": 396,
+          "originalCaptureSha256": "631b64fd67b6091fa0e364b231f2af5455331277f5fe093d312491d670217a8d"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-profile.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-profile-memory.csv",
+          "sha256": "8ab58d4d7eb9ed6be1739a10b26cd831a5157e0b004c0e856fa808f7c26be2dc",
+          "bytes": 799,
+          "originalCaptureSha256": "aece715ca42d20fa391c9f53b7aee7b6a533807c4a765229a22a636cdbe5392f"
+        }
+      ]
+    },
+    {
+      "stage": "blink",
+      "pid": 34520,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2658.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-blink.log",
+          "sha256": "59e7224a8546ea834cf93879c9123cbf6c44ff7a461d25e69a40e8b3e3ac303b",
+          "bytes": 394,
+          "originalCaptureSha256": "d102bba6ebc90240c500b9cb7e61abc12f02a422d90c90e4e9dd49d72c0cf0ec"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-blink.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-blink-memory.csv",
+          "sha256": "413810aba4fe6fece727e384457422de5c847661e015a10f5fb86f7121e04098",
+          "bytes": 1492,
+          "originalCaptureSha256": "a76bcaa6a17461cb2cc3bfa9e29272c75aa3bf1acf79404449306a25b29b5cee"
+        }
+      ]
+    },
+    {
+      "stage": "tongue",
+      "pid": 5224,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2659.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-tongue.log",
+          "sha256": "7c931136cf13be941ddb115c072c3bf309f1b88317719cc8c140b90d2fe3edf0",
+          "bytes": 395,
+          "originalCaptureSha256": "382c95655fddcdbb40559714f018e5b66604a8b3eeef827a188f0cb0b628fd88"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-tongue.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-tongue-memory.csv",
+          "sha256": "9cb8aef6427d0470a1955bd56603caf66e8c843f4a51ebf7be59df15dd35b8f7",
+          "bytes": 1474,
+          "originalCaptureSha256": "f95cfdd951524eff21e734a150b0f3e5c79ba31156f439ee1283c7a5de322d64"
+        }
+      ]
+    },
+    {
+      "stage": "eyecloseup",
+      "pid": 28764,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2454.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-eyecloseup.log",
+          "sha256": "fe48f0f8da06cf0a7221a16e0e488a0346ebd5e3a0ead7672527427dc4cad7e4",
+          "bytes": 399,
+          "originalCaptureSha256": "7b60609d601c40ef9ec6e54a2a47862337e6e218cb0c7bc612f025c64e35f603"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-eyecloseup.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-eyecloseup-memory.csv",
+          "sha256": "73302449a49610d4f4fedbd185522a4c1e40d5797dc0806d06eb992119b8ad24",
+          "bytes": 2417,
+          "originalCaptureSha256": "ca4eb63c326908a24f642ffc451b8c84fe8de77dfadcf7251ac2b0edeb00b37e"
+        }
+      ]
+    },
+    {
+      "stage": "threequarter",
+      "pid": 25428,
+      "guardExitCode": 0,
+      "peakPrivateMB": 2653.0,
+      "files": [
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-threequarter.log",
+          "sha256": "aa41a1f88f99727d676ece70d756c1ee7c75770fe75a8dd74807bd77a0fdab02",
+          "bytes": 401,
+          "originalCaptureSha256": "ab150c5d56294a387857eb54e6c6daabd83f26ca985e48fd4187679b4c5d494d"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-threequarter.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "originalCaptureSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/nib/identity-study/adult-native-v1/actual-evidence/nib-adult-identity-v1-threequarter-memory.csv",
+          "sha256": "448b5026ee83e6607c777d84542a067226f3acb102577b46effbbcb3e88d0953",
+          "bytes": 1493,
+          "originalCaptureSha256": "b01835083cfef1514923e4c408278591ac95751857cac52753ad831717f2ece5"
+        }
+      ]
+    }
+  ],
+  "preserved": {
+    "unrelatedMeshPayloads": 404,
+    "restBones": 79,
+    "allActionHashes": true,
+    "canonicalActions": [
+      "Idle",
+      "Walk",
+      "Run",
+      "Melee",
+      "Shoot",
+      "Hit",
+      "FacePerformance"
+    ],
+    "savedSourceReopened": true,
+    "headTopologyUVsWeightsAndRepairedMouthLidSemantics": true,
+    "ocularGeometryAndPivots": true,
+    "relativeExpressionDeltaMaximumErrorMeters": 3.725290298461914e-09
+  },
+  "actualReview": {
+    "Neutral": "No gross new mouth/lid break; modest broad facial relief and less uniform iris pigment. Smooth juvenile human-like planes still fail the adult concept.",
+    "Profile": "Nose remains ahead of lips, coherent silhouette without a new sharp field boundary. Still over-rounded brow/cheek, coarse outer-ear nap, and severe sawtooth retained neck plus rigid flat scarf. Fixed neck region was excluded from this warp.",
+    "Blink": "Actual frontal lid closure remains without the previous nasal wedge or exposed globe. This is not proof of all oblique contact poses.",
+    "Tongue": "True oral aperture and canonical dark-blue tongue remain visible; no inherited upper-lip Jaw curtain. Large angular mouth sides/interior remain unaccepted.",
+    "EyeCloseup": "Real radial amber pigment, dark limbal variation and drier nose are visible. Optical surfaces remain simplified; adult brow folds/cheek/nasal planes and rectangular root bands still fail.",
+    "ThreeQuarter": "Confirms broad smooth cheek/nose and jagged neck/cloth, sparse isolated cream ear strips and large bald pink membrane. No artistic acceptance."
+  },
+  "normalAttribution": {
+    "headHasCustomNormals": false,
+    "headMaterialNames": [
+      "Nib_IdentityFacialSkin",
+      "Nib_EarInner",
+      "Nib_MouthInterior"
+    ],
+    "meaning": "Actual saved Head uses geometry-derived normals; stale custom normals do not explain the modest sculpt relief"
+  },
+  "geometry": {
+    "status": "Offline numerical proposal; no Blender source, posed check or actual render",
+    "method": "Broad anatomical form controls with screened graph interpolation and exact semantic boundary constraints",
+    "fixedVertices": 22662,
+    "ocularAndOralMaximumDisplacementMeters": 0.0,
+    "maximumDisplacementMeters": 0.0042273517374345005,
+    "edgeDisplacementGradientMaximum": 0.6839547107251144,
+    "edgeDisplacementGradientP99": 0.24753542306022222,
+    "actualSurfaceBoundaryFadeMeters": 0.006,
+    "iterations": 23,
+    "relativeResidual": 4.1439401530583395e-11,
+    "provisionalDimensions": true,
+    "unchanged": [
+      "topology",
+      "ocular shells",
+      "all bone bind transforms",
+      "repaired Jaw semantics",
+      "mouth opening",
+      "actual lid contact"
+    ],
+    "pending": [
+      "Neutral/profile/three-quarter adult likeness",
+      "Blink and Tongue actual mesh review",
+      "Nasal material and actual-geometry ocular atlas"
+    ],
+    "actualOrbitalSourceSha256": "09da9c1eb51eabd0402fc1ed52b3d4b07f53a5a74150810796a2b04169d8c88e",
+    "geometryCacheSha256": "f03659a8742c390b6dc3ec796d2400df9458d38b174b1c83470c8e4323d0df7e",
+    "neutralCacheSha256": "8ff6010159ff333b7962966ba9f772838de395ee0897b4cd1140bdb6dd9a0f01",
+    "proposalReportSha256": "4c27a4476b36b670c73371a4d2b8a7ba6e5b6e9882761bf753ece638f74ff9b4",
+    "neutralMetrics": {
+      "introducedDegenerates": 0,
+      "trianglesRotatedOver90": 0,
+      "minimumAreaRatio": 0.43188537104698055,
+      "normalRotationP99Degrees": 15.185737054485456,
+      "normalRotationMaximumDegrees": 46.4651518746927
+    },
+    "hardStructuralFailure": false,
+    "artisticAcceptance": false,
+    "sharedChanged": false,
+    "codeSha256": {
+      "prepare_adult_face.py": "f152c6e1f8f06b5696576e0ef50fd444bd6814cdbe076ff83fdbf9cf3c0ec6b5",
+      "adult_face_field.py": "10f6ddef9d41af1656ec70c23b0dbb30d007a7b7ff23ad1d75eea28a9359fb20"
+    },
+    "proposalCacheSha256": "76c8748c2ab4c22659e16ce6534ea12e9df8cfb175b3c23f1c7e6d1aaaa6a2a6"
+  },
+  "groomSurfaceTransfer": [
+    {
+      "object": "Nib v6 cards crown",
+      "changedVertices": 361,
+      "maximumWorldMoveMeters": 0.0037679994221941995,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents crown",
+      "changedVertices": 716,
+      "maximumWorldMoveMeters": 0.00376504467056667,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 cards fringe",
+      "changedVertices": 2322,
+      "maximumWorldMoveMeters": 0.003776725919598185,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents fringe",
+      "changedVertices": 5421,
+      "maximumWorldMoveMeters": 0.0037662527919965867,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 cards temple_L",
+      "changedVertices": 567,
+      "maximumWorldMoveMeters": 0.0022174926296488822,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents temple_L",
+      "changedVertices": 908,
+      "maximumWorldMoveMeters": 0.0004454339199742788,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 cards temple_R",
+      "changedVertices": 624,
+      "maximumWorldMoveMeters": 0.0030728231074623304,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents temple_R",
+      "changedVertices": 1477,
+      "maximumWorldMoveMeters": 0.0006069684732017918,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 cards nape",
+      "changedVertices": 0,
+      "maximumWorldMoveMeters": 0.0,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents nape",
+      "changedVertices": 0,
+      "maximumWorldMoveMeters": 0.0,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 cards chin",
+      "changedVertices": 162,
+      "maximumWorldMoveMeters": 3.5500916011440144e-05,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": true,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    },
+    {
+      "object": "Nib v6 opaque accents chin",
+      "changedVertices": 428,
+      "maximumWorldMoveMeters": 2.7419996013067005e-05,
+      "method": "Closest original face triangle barycentric displacement; exact near-surface follow, smooth falloff by25mm",
+      "customNormalsTransported": false,
+      "introducedDegenerateTriangles": 0,
+      "topologyUVsWeightsMaterialsUnchanged": true,
+      "requiresActualRootAndGuideFlowReview": true
+    }
+  ],
+  "irisAttributeHashes": {
+    "Nib v5 fitted iris L": "6bf3ea8de47effb847a9a28a1eab3ad7877193ed85ffd67fa59c4ebaee53145a",
+    "Nib v5 fitted iris R": "d9e4b1d8ee309731f502be1e1c953c54753c9425ed33b9dbb0843b39e5e4e7bb"
+  },
+  "retainedWarnings": {
+    "passed": false,
+    "blockingIssues": [
+      "neutral: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutral: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "Idle: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "Full Blink normal rotation warning retained; actual folds/collisions require the native posed views",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "new neutral: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "new Idle: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Inherited flags plus actual new neutral/Idle coordinate checks; face geometry and optical views still require review"
+  },
+  "actualNeutralOralFlagCount": 11,
+  "integrationHandoff": {
+    "path": "benchmark/art/nib/identity-study/adult-native-v1/integration-handoff.json",
+    "sha256": "da05f761b07d4502ce1cc0ab80147ac29d01dc18d6adb514b62a6fae3fbf8aa4",
+    "bytes": 2810
+  },
+  "executedRendererRecipes": [
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/executed-recipe/review_adult_identity_final_metadata.py",
+      "sha256": "5e720c662731d2e9c53a7be171a20a9c8bc49cd0e293bd4e910df19c4a91d781",
+      "bytes": 3870
+    },
+    {
+      "path": "benchmark/art/nib/identity-study/adult-native-v1/executed-recipe/review_adult_identity_first5.py",
+      "sha256": "7742ea623d1a30da2ca31ce470d86331f701d1ddbe90196cc339905ed54f2853",
+      "bytes": 3744
+    }
+  ],
+  "rendererProvenance": "First five views use frozen original renderer; last view adds read-only head custom-normal/material fields only, with exact version hashes preserved.",
+  "nextWork": [
+    "Root fine-alpha comparison on this exact geometry before regional guide changes",
+    "Attribute actual sawtooth neck boundary to retained component, then separate exact-rig seam repair",
+    "Layered gathered scarf construction, preserving face and body rather than hiding a seam",
+    "Regional fuller cream inner-rim/root tufts with tawny outer ear coverage and visible central membrane",
+    "Fresh actual Head/iris attribute atlas bake, matching clips and actual engine material/deformation validation"
+  ]
+}

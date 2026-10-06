@@ -1,0 +1,232 @@
+{
+  "status": "Prepared concept-directed regional groom proposal only; no new guide mesh generated",
+  "actualGuideFile": "benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/groom-guides.json",
+  "actualGuideSha256": "454d25d3a6a5633e1c37afa36c8893f3ca84f7708467737a83da97e92203ef2f",
+  "actualGuideMeasurements": [
+    {
+      "region": "crown",
+      "guides": 210,
+      "lengthMetersMinMedianMax": [
+        0.03157639351303926,
+        0.048296925574328874,
+        0.05579132427418923
+      ],
+      "widthMetersMinMedianMax": [
+        0.003200692308039212,
+        0.004259612589924099,
+        0.005184089379441318
+      ]
+    },
+    {
+      "region": "fringe",
+      "guides": 120,
+      "lengthMetersMinMedianMax": [
+        0.02481615871222626,
+        0.03787332360732776,
+        0.04534926050346623
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032018431851261256,
+        0.004265937759395948,
+        0.005199632211369725
+      ]
+    },
+    {
+      "region": "temple_L",
+      "guides": 90,
+      "lengthMetersMinMedianMax": [
+        0.029584419814153447,
+        0.03509356404439615,
+        0.04118999233889777
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032693306796403344,
+        0.004345015346261137,
+        0.005174833077275672
+      ]
+    },
+    {
+      "region": "temple_R",
+      "guides": 90,
+      "lengthMetersMinMedianMax": [
+        0.029495165584411134,
+        0.035063495644113735,
+        0.0411534099875544
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032070491623281375,
+        0.004227726512345964,
+        0.005168630391117974
+      ]
+    },
+    {
+      "region": "nape",
+      "guides": 120,
+      "lengthMetersMinMedianMax": [
+        0.030966625963913363,
+        0.037479430939113774,
+        0.046671273553353494
+      ],
+      "widthMetersMinMedianMax": [
+        0.003220820080147972,
+        0.004174590745388083,
+        0.005178999971202965
+      ]
+    },
+    {
+      "region": "outer_rim_L",
+      "guides": 160,
+      "lengthMetersMinMedianMax": [
+        0.017892073895806153,
+        0.022384046268933463,
+        0.02690911748644858
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032053848554266353,
+        0.00414730610318253,
+        0.005175418122228988
+      ]
+    },
+    {
+      "region": "inner_wisps_L",
+      "guides": 100,
+      "lengthMetersMinMedianMax": [
+        0.028014981688560547,
+        0.03466854520742356,
+        0.04017466627249846
+      ],
+      "widthMetersMinMedianMax": [
+        0.003226775706110233,
+        0.004021263960871449,
+        0.005148619277751186
+      ]
+    },
+    {
+      "region": "outer_nap_L",
+      "guides": 1873,
+      "lengthMetersMinMedianMax": [
+        0.009676037062458853,
+        0.01202082056882573,
+        0.014442888931553384
+      ],
+      "widthMetersMinMedianMax": [
+        0.006400362504032557,
+        0.007202743052357831,
+        0.00799989485876201
+      ]
+    },
+    {
+      "region": "outer_rim_R",
+      "guides": 160,
+      "lengthMetersMinMedianMax": [
+        0.01785997937986588,
+        0.02205599532353532,
+        0.026873087951493485
+      ],
+      "widthMetersMinMedianMax": [
+        0.003200453130040696,
+        0.004225500632235056,
+        0.00518596304105687
+      ]
+    },
+    {
+      "region": "inner_wisps_R",
+      "guides": 100,
+      "lengthMetersMinMedianMax": [
+        0.027756206825302717,
+        0.03362411257552202,
+        0.04011234339297752
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032162750534287985,
+        0.004177237376724461,
+        0.0051853903907272455
+      ]
+    },
+    {
+      "region": "outer_nap_R",
+      "guides": 1785,
+      "lengthMetersMinMedianMax": [
+        0.009676150006635967,
+        0.012132966876885205,
+        0.014443381989745301
+      ],
+      "widthMetersMinMedianMax": [
+        0.006400907059191076,
+        0.00717700129486382,
+        0.007999555286327693
+      ]
+    },
+    {
+      "region": "chin",
+      "guides": 12,
+      "lengthMetersMinMedianMax": [
+        0.009875635938037435,
+        0.010750390607874246,
+        0.012592873810559346
+      ],
+      "widthMetersMinMedianMax": [
+        0.0032404086689991622,
+        0.004155963285416255,
+        0.005060995831232522
+      ]
+    }
+  ],
+  "reference": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "reviewedImages": [
+    "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/Neutral.png",
+    "benchmark/art/nib/groom-study/root-attachment-v3/actual-views/EyeCloseup.png"
+  ],
+  "actualDefects": [
+    "Front ear has large nearly naked pink interior with only sparse isolated cream strips near rim",
+    "Current external short nap does not provide the missing inward-flowing cream silhouette",
+    "Head clumps converge into rigid pale wedges with straight root bands",
+    "Current broad flat ear cup and juvenile facial proportions remain separate geometry failures; do not cover them with groom"
+  ],
+  "boundedNextProposal": {
+    "order": "Actual adult face/ocular gate, then same-geometry finer-alpha comparison, then regional guide placement comparison with one variable group changed per evidence pair",
+    "innerRimAndBase": {
+      "guidesPerEarCurrent": 100,
+      "guidesPerEarProposed": 280,
+      "guideArcLengthMeters": [
+        0.022,
+        0.047
+      ],
+      "fullWidthMeters": [
+        0.0022,
+        0.0035
+      ],
+      "placement": "Three staggered guide bands along actual inner rim plus compact root tufts; no uniformly scattered hair across central membrane",
+      "flow": "Local anatomical ear-axis tangent and inward cross-ear direction, unequal clumps with curved lift and gravity at base; preserve tip length variance"
+    },
+    "outerRim": {
+      "guidesPerEarCurrent": 160,
+      "guidesPerEarProposed": 240,
+      "guideArcLengthMeters": [
+        0.016,
+        0.032
+      ],
+      "fullWidthMeters": [
+        0.0022,
+        0.0035
+      ],
+      "placement": "Layered tawny root/rim toward ear tip; cream overlap belongs to separate inward material field"
+    },
+    "centralMembrane": "Keep visibly pink; mask direct roots away from central upper interior and report rendered exposed region rather than presume a coverage percentage",
+    "outerNap": "Initially preserve actual existing exterior population; inspect back and oblique view before adding density or narrowing every card",
+    "head": "Keep actual root support and goggle exclusions, add staggered crown/temple guide flow and uneven free ends after ear comparison; avoid curtains crossing lenses",
+    "body": "Do not alter visible skin or fine facial/body fuzz coverage",
+    "proposedAdditionalRuntimeCardTriangles": 9360,
+    "costInterpretation": "With current two-layer nine-triangle long cards, +260guides/ear gives +1040cards, +9360triangles before any reduction; actual alpha overdraw and VRAM remain unmeasured",
+    "rootContract": "Reuse actual same-side support fitting and measured burial; preserve ear-base/EarTip weight field and pose review",
+    "materials": "Existing MASK names, 4x4 atlas layout, cutoff0.45, double-sided Flip, normalGL+Y, no anisotropy or transparency sorting change"
+  },
+  "acceptanceEvidence": [
+    "Same source/camera actual Neutral and oblique ear closeup with original and finer-alpha atlas",
+    "Actual back showing tawny external fur",
+    "Ear neutral/peak/recovery verifies rooted deformation with fuller layers",
+    "Actual engine import with measured frame time/overdraw before character acceptance"
+  ],
+  "canon": "All counts and dimensions are provisional production tuning; selected concept identity unchanged",
+  "sharedChanged": false
+}

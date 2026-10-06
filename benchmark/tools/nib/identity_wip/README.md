@@ -30,3 +30,22 @@ The first offline field failed near the oral corners: a 0.4 mm neighboring displ
 The current eye's dark globe inherits the old `Nib_Dark` leather albedo network, while its iris inherits generic `Nib_Eye` skin mottling. Their generic bump was already removed. The new prepared materials `Nib_IdentityOcularGlobe` and `Nib_IdentityOcularIris` preserve the curved opaque shell and real pupil opening, replace those generic fields, and introduce `Nib_IrisCoord` POINT-vector pigment coordinates. The iris **requires an actual assigned-surface UV atlas bake**, never the old yellow reference map or generic UV carrier. Names and requirements were handed to the engine agent. No new transparent cornea, bind/optical geometry change, bake or engine acceptance is claimed.
 
 `build_adult_identity.py` is the prepared native wrapper, with mandatory source/report/hash arguments and no automatic promotion. It retains every existing relative facial morph, all source weights/topology/UVs, the exact rig/actions and unrelated components. `transfer_face_groom.py` carries attached head cards/opaque accents by barycentric correspondence on the original face, transports custom normals, and rejects introduced degenerate triangles; the fine skin fuzz is regenerated from the changed face. The ocular pigment coordinate attribute is hashed before saving and after reopening. The existing nose pigment remains, with a provisional dry roughness adjustment. `review_adult_identity.py` adds true Profile and ThreeQuarter to the existing Neutral/Blink/Tongue/EyeCloseup cameras. These native scripts are syntax-checked only. `generate-adult-identity-v1.job.json` now pins actual reviewed root-v3 source `b4eec1df…`; the six separate review jobs retain the same diagnostic/source evidence gates. No adult native source or image exists yet. Start with Neutral/Profile, then inspect Blink/Tongue/EyeCloseup only if the new geometry has no gross structural failure; ThreeQuarter is prepared for further review.
+
+
+## Actual adult boundary and next scoped work
+
+`adult-native-v1` now contains the saved/reopened source and Neutral, Profile,
+Blink, Tongue, EyeCloseup and ThreeQuarter. All seven guarded jobs passed; see
+its actual receipt for local improvements and explicit artistic failures. The
+final view adds a read-only custom-normal/material record: the Head has no
+custom split normals. All first-five/final renderer versions are archived with
+actual metadata hashes.
+
+`regional_groom_recipe.py` and `groom-study/regional-flow-preparation-v1` remain
+**ungenerated**. The bounded proposal replaces only inner/rim ear guides after
+the same-geometry alpha comparison, using three staggered anatomical strata,
+curved inward flow and explicit central-membrane bounds. It adds at most the
+proposed 9,360 card triangles before actual fitting; rendered overdraw/coverage
+are not measured. Existing root support, ear deformation/material names and
+fine body fuzz remain required. Adult face and retained sawtooth neck/scarf
+failures are not hidden by that groom work.

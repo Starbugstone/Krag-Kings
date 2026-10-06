@@ -42,8 +42,6 @@ shapes={k.name:float(k.value) for k in head.data.shape_keys.key_blocks if k.name
 result={'status':'Actual diagnostic mesh image; normal/oral warnings retained and artistic acceptance pending',
     'source':str(args.source),'sourceSha256':source_sha,'sourceReportSha256':sha(args.report),
     'view':args.view,'action':action,'frame':frame,'headMorphValues':shapes,
-    'headHasCustomNormals':bool(head.data.has_custom_normals),
-    'headMaterialNames':[m.name for m in head.data.materials],
     'preRenderGate':report['preRenderGate'],'numericBlinkWarning':report['numericEvidence']['poses']['Blink_1.0'],
     'render':{'engine':'Cycles CPU','samples':24,'width':scene.render.resolution_x,'height':scene.render.resolution_y},
     'imageSha256':sha(image),'scriptSha256':sha(Path(__file__)),'artisticAcceptance':False,'sharedChanged':False}
