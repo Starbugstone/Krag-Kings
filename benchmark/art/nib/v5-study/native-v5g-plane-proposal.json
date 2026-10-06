@@ -1,0 +1,48 @@
+{
+  "status": "Numerical proposal on actual saved cache; no Blender source, rendered anatomy or acceptance",
+  "sourceSha256": "9b3380fd9b44eb2cff299310ae89f95d3faa4600c5653cc6ca06fba6fcf5c90e",
+  "cacheSha256": "73a4e09d9929584c148a94194918efb24b06d53a46d34ba37c3d14409d3f0481",
+  "fields": {
+    "status": "Ungenerated continuous face-plane proposal",
+    "maximumDisplacementMeters": 0.004944022775302248,
+    "eyeAssemblyMoved": false,
+    "newDetachedFaceMeshes": false,
+    "lowerNeckMaximumDeltaMeters": 0.0,
+    "features": [
+      "projecting tapered nasal pad",
+      "paired muzzle pads and philtrum",
+      "tapered chin/cheek planes",
+      "curved asymmetric commissures",
+      "arched upper orbital fold and crease"
+    ]
+  },
+  "contact": {
+    "upperRimVertices": 105,
+    "lowerRimVertices": 81,
+    "rimMaximumAdjustmentMeters": 0.0022097406816766934,
+    "sampledContactMaximumGapMeters": 2.1112222984200546e-05,
+    "sampledContactRmsGapMeters": 4.662988273634092e-06,
+    "iterations": 135,
+    "relativeLinearResidual": 9.455478386070477e-10,
+    "topologyWelded": false,
+    "scope": "Provisional neutral lip-contact fit; actual visibility/pose review mandatory",
+    "applied": false,
+    "status": "Rejected lip-curve contact: introduces 43 >90 degree triangle rotations; selected proposal uses only the independent shape field"
+  },
+  "surface": {
+    "triangulation": "Read-only polygon fan diagnostic; not an exported topology",
+    "triangleCount": 85744,
+    "oldDegenerateAtDoubleArea1e12": 0,
+    "newDegenerateAtDoubleArea1e12": 0,
+    "introducedDegenerateCount": 0,
+    "rotatedOver90DegreesCount": 0,
+    "rotatedOver90ByFaceSet": {},
+    "maximumNormalRotationDegrees": 45.11394688997301,
+    "lowestAreaRatio": 0.6343316333368012
+  },
+  "totalMaximumDisplacementMeters": 0.004944022775302183,
+  "authoringCode": {
+    "face_planes_v5g.py": "79e85ba425b416111bc9469cf8614194acaad3d67d7ad447d6f853dc867fb035",
+    "measure_v5g_planes.py": "2062c0ece85e6409c82d2eca04027986864d52622f149f8705e0190f741b254f"
+  }
+}

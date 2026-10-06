@@ -187,3 +187,6 @@ remain boxy, Blink retains bridge-side pinching, and neutral art/gate still
 fail. `native-v5f-jaw-review-result.json` records the source/image hashes,
 preservation checks and guard peaks. Do not rerun generation over that saved
 candidate or interpret this local repair as an engine or likeness pass.
+
+
+The separate **v5g shape-only recipe is prepared, not yet generated**. It preserves the v5f Jaw repair, eye assembly, mouth interiors, UVs and full scalp/ear groom while proposing a projecting brown nasal pad, continuous muzzle/cheek/chin planes and an upper orbital fold. A lightweight actual-cache check records a maximum 4.94 mm displacement, no new degenerate triangles and no triangles rotating over 90 degrees. The attempted neutral lip-curve contact is explicitly **omitted**: its separate rejected report records 43 lip/oral triangles rotating over 90 degrees. No closure or neutral oral-gate success is claimed. Source job `native-v5g-face-planes.job.json` is followed by explicitly diagnostic depth and Tongue/Blink jobs; all prior source/evidence and shared assets stay fixed. Actual native review is required before any subsequent grooming or export.
