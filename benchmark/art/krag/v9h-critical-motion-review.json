@@ -1,0 +1,108 @@
+{
+  "status": "Actual saved-source gait poses and oral contact attribution; user-critical movement/appearance failures confirmed",
+  "source": {
+    "path": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+    "sha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+    "bytes": 142381118
+  },
+  "artisticAcceptance": false,
+  "motionAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Run_f5_v9h-critical-motion.png",
+      "sha256": "7898db1e279592a5db6be4f447de7629e1aac2f9de594e2c6258e07385b7641e",
+      "bytes": 1267779
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Walk_f10_v9h-critical-motion.png",
+      "sha256": "a8f83d5c36e9dade770eddd1e5cbfce68abac77c18af840ca1c02593276408ef",
+      "bytes": 1271867
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Side_Run_f5_v9h-critical-motion.png",
+      "sha256": "d56bea520411411a11f89103105508d4579a35d7851acdfd6bd640c7075edf02",
+      "bytes": 1211945
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Side_Walk_f10_v9h-critical-motion.png",
+      "sha256": "805dc1637f8d0baad544babd381125a338fc61833310e5ed24d03e5e8785d208",
+      "bytes": 1206611
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Run_f5_v9h-critical-motion.meta.json",
+      "sha256": "58c74ddd875d2674173a65b991ef70658fbd694cba737b5e7d204ee7d29492f6",
+      "bytes": 569
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_Walk_f10_v9h-critical-motion.meta.json",
+      "sha256": "c3faae1e8b60b99832b2fa661c40a496d416140bf04d2412d5fc3c1230d27630",
+      "bytes": 571
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Side_Run_f5_v9h-critical-motion.meta.json",
+      "sha256": "6aee5f181e93c36d4a15d6199d83c771cbfffd2786590eafd9d63f897a3d7cc1",
+      "bytes": 568
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Side_Walk_f10_v9h-critical-motion.meta.json",
+      "sha256": "973e4ead079e144664fb5177c220843a1081e0ba2d2faf35a6674fdb03cec119",
+      "bytes": 570
+    },
+    {
+      "path": "benchmark/art/krag/anatomy-study/locomotion-source-poses-v9h.json",
+      "sha256": "40f56782f75de818c19324bc09b8ab682a91932c0c4be841a34e86b768ce2f9f",
+      "bytes": 280085
+    },
+    {
+      "path": "benchmark/art/krag/anatomy-study/mouth-posed-contact-v9h.json",
+      "sha256": "db6e0f1cd55fa9006de09b610ec3a0952a1a14538fa39be963203af554d79fc3",
+      "bytes": 27082
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/audit_critical_source.py",
+      "sha256": "ea2fd6d98ccbba69616221cebbd1d689ec3e28a36660ff3a28893ef7b20b1796",
+      "bytes": 2661
+    }
+  ],
+  "findings": [
+    "Walk and Run remain deeply crouched with little coherent torso/shoulder counter-motion",
+    "Nearly straight wide-splayed arms have a quarter-cycle phase mismatch relative to the authored foot trajectory",
+    "Free hand fingers remain spread instead of relaxed",
+    "Continuous source torso improves on old separated engine muscle masses but is not sufficient for natural motion or final anatomy",
+    "Open mouth: upper teeth hidden by upper skin33, most lower teeth and tongue hidden by inner bag7; direct sampled saved-pose evidence identifies responsible surfaces"
+  ],
+  "ownership": "Root owns a separate reference-derived whole-body motion candidate; original Krag common locomotion files unchanged",
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-audit-v9h-critical-source-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 994.0,
+      "minimumAvailableMB": 13437.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-critical-Walk-Natural_Front-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2148.0,
+      "minimumAvailableMB": 12369.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-critical-Walk-Natural_Side-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2153.0,
+      "minimumAvailableMB": 12381.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-critical-Run-Natural_Front-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2145.0,
+      "minimumAvailableMB": 12370.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9h-critical-Run-Natural_Side-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2152.0,
+      "minimumAvailableMB": 12457.0
+    }
+  ]
+}

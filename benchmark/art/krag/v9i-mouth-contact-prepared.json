@@ -1,0 +1,39 @@
+{
+  "status": "Frozen isolated oral contact repair; ungenerated",
+  "source": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+  "sourceSha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+  "attribution": "benchmark/art/krag/anatomy-study/mouth-posed-contact-v9h.json",
+  "changes": [
+    "Broader topological lower-rim Jaw transition",
+    "Explicit oral floor and roof anchors",
+    "Provisional dental/gum arc fit toward true lip aperture"
+  ],
+  "preserved": [
+    "External neutral face",
+    "Body actions and common locomotion source",
+    "Weapon",
+    "Shared exports"
+  ],
+  "files": [
+    {
+      "path": "benchmark/tools/krag/repair-mouth-v9i-job.json",
+      "sha256": "41579a86b16e9ce29907ad5f2b5c1876e0812b38fac20320e1c4196a0b4e1d34"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/repair_saved_mouth.py",
+      "sha256": "90e67afdaa1fe3163bb251fc293202f2c2bc5e0997185f9c73d381dd2ab359c7"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/semantic_jaw_v2.py",
+      "sha256": "0b62795a4025e95466182d484ef81d918f2b13af7181049698f2f84fd63d1d80"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9i-Neutral.json",
+      "sha256": "3d3738735c38432b4e976243e1852d658c87ba2949fdeecdd69decceacf0da83"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9i-OpenMouth.json",
+      "sha256": "ecc4aaed3c335435ab76c999ccfdc166e0cac5d4f4553548356f1a86cb548d4c"
+    }
+  ]
+}

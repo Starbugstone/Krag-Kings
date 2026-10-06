@@ -1,0 +1,95 @@
+{
+  "status": "Actual isolated mouth-contact repair reviewed; partial visibility improvement but normal-mouth and likeness acceptance failed",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthContact_v9i_WIP.blend",
+    "sha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff",
+    "bytes": 142363852
+  },
+  "inputSource": {
+    "path": "benchmark/art/krag/Krag_Master_v9h_WIP.blend",
+    "sha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+    "bytes": 142381118
+  },
+  "artisticAcceptance": false,
+  "mouthAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9i-mouth-contact.png",
+      "sha256": "213c521dc5ad44a5300a5fdf945200b46b0f730001def9af4c3aa569ea1e19ff",
+      "bytes": 1250647
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9i-mouth-contact.png",
+      "sha256": "221ce7cf43b335f2e5b91d3cabe278aa78107bb1a3e9260517c4e481b64e3f6a",
+      "bytes": 1250407
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9i-mouth-contact.meta.json",
+      "sha256": "41736f652f91362e5e6af09539b8342cae5ca58485e95a4552e2878b7c8e93c5",
+      "bytes": 587
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9i-mouth-contact.meta.json",
+      "sha256": "70bbce7e234f90ec447089caa83648ee898dd21e6a33d18832b141a17857cbe0",
+      "bytes": 575
+    },
+    {
+      "path": "benchmark/art/krag/mouth-contact-repair-v9i.json",
+      "sha256": "2167d8bb4801e5346da5fb5b6c5fb8a8172fc4d64fbb25cd4a0338e837a5c8f5",
+      "bytes": 5118
+    },
+    {
+      "path": "benchmark/art/krag/v9i-mouth-contact-prepared.json",
+      "sha256": "d1457349c2d4d00c63f20128cfafc88164ec6dc506366c891f4a00579bf8e05e",
+      "bytes": 1440
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/repair_saved_mouth.py",
+      "sha256": "90e67afdaa1fe3163bb251fc293202f2c2bc5e0997185f9c73d381dd2ab359c7",
+      "bytes": 6402
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/semantic_jaw_v2.py",
+      "sha256": "0b62795a4025e95466182d484ef81d918f2b13af7181049698f2f84fd63d1d80",
+      "bytes": 7286
+    }
+  ],
+  "improvements": [
+    "Upper row and more lower teeth are visible when open",
+    "Inner floor follows mandible, with upper lip/nose Jaw influence remaining zero",
+    "Neutral mouth stays closed with no visible dental breakout in inspected portrait"
+  ],
+  "failedChecks": [
+    "Open aperture remains too rectangular despite a broader lower-rim transition",
+    "Provisional tooth crowns are blocky and too widely spaced; real dental arch/gum/lip contact needs further authoring",
+    "Tongue and cavity remain poorly shaped/readable",
+    "Overall face likeness, skin detail, scarf and equipment still fail; no IronJaw replacement correction yet"
+  ],
+  "next": [
+    "Round the lower-lip movement through the full anatomical commissure-to-center arc",
+    "Size/shape dental crowns from fitted arch spacing and refit visible gum/tongue cavity",
+    "After natural mouth works, replace covered organic mandible for IronJaw and inspect closed/open clearance",
+    "Integrate reviewed reference-derived body motion with natural relaxed free hand; preserve weapon grip"
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-repair-mouth-v9i-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1033.0,
+      "minimumAvailableMB": 13273.0
+    },
+    {
+      "path": "benchmark/local/krag-review-mouth-v9i-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2166.0,
+      "minimumAvailableMB": 12373.0
+    },
+    {
+      "path": "benchmark/local/krag-review-mouth-v9i-Neutral-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2150.0,
+      "minimumAvailableMB": 12342.0
+    }
+  ]
+}

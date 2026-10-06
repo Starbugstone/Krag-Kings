@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Frozen v9h source generated and five actual views reviewed. Brow/chin profile and gum-rooted tusks improve; semantic Jaw repair works, but mouth/interior/likeness and scarf remain failed. No shared promotion.",
+  "currentAuthoringCode": "Actual v9h critical movement/contact audit and four gait views confirm unnatural crouched posture, rigid torso/arms and splayed hand. Isolated v9i mouth source and two renders improve dental visibility but still fail normal aperture/interior appearance. Root owns new reference-derived body motion; no shared promotion.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -201,8 +201,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "benchmark/tools/krag/build-v9h-scarf-study-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9h-scarf-study-Natural_HeadSide.json",
+  "nextSourceJob": "Pending mouth follow-up and root-owned reference body motion candidate; scarf study deferred behind critical corrections",
+  "nextFirstReview": "Actual repaired mouth neutral/open and body motion front/side",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -383,5 +383,21 @@
       "Preserved v9f scarf is still a rigid terrace collar; armor/trousers/boots remain simplified; iris pigment unchanged"
     ],
     "reviewReceipt": "v9g-face-source-review.json"
-  }
+  },
+  "mouthContactStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_MouthContact_v9i_WIP.blend",
+      "sha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff",
+      "bytes": 142363852
+    },
+    "review": "v9i-mouth-contact-review.json",
+    "status": "Actual isolated mouth-contact repair reviewed; partial visibility improvement but normal-mouth and likeness acceptance failed"
+  },
+  "criticalMotionReview": "v9h-critical-motion-review.json",
+  "userCriticalCorrections": [
+    "Natural full-body idle/walk/run with coherent torso/shoulder/arm action; root reference-motion candidate",
+    "Normal rounded lip/corner opening and fitted dental/gum/tongue anatomy",
+    "Organic mandibular exclusion and closed/open clearance for IronJaw",
+    "Realistic continuous muscle forms, concept likeness and materials"
+  ]
 }

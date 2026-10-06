@@ -1,0 +1,196 @@
+{
+  "status": "Actual isolated mouth study; neutral/open contact and artistic acceptance pending",
+  "source": "benchmark\\art\\krag\\Krag_Master_v9h_WIP.blend",
+  "sourceSha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+  "output": "benchmark\\art\\krag\\Krag_MouthContact_v9i_WIP.blend",
+  "outputSha256": "a288c9446680929052aaf90213379e671588188d31072ee4ebf01b57148e87ff",
+  "jaw": {
+    "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+    "sourceFaceSets": {
+      "upperLipCheek": 33,
+      "lowerLipJaw": 24,
+      "oralBag": 7,
+      "nose": 11
+    },
+    "upperLipVertices": 14242,
+    "lowerLipRimVertices": 81,
+    "upperLipRimVertices": 105,
+    "cornerVertices": 2,
+    "lowerJawAnchorVertices": 6064,
+    "unknownSolvedVertices": 2499,
+    "iterations": 113,
+    "relativeLinearResidual": 8.636025153099424e-10,
+    "upperLipMaximumJawWeight": 0.0,
+    "noseMaximumJawWeight": 0.0,
+    "lowerRimJawWeightRange": [
+      0.0,
+      1.0
+    ],
+    "cornerFadeSourceMeters": 0.02,
+    "lowerJawBoundarySourceMeters": 0.009,
+    "oralFloorAnchorVertices": 909,
+    "oralRoofAnchorVertices": 1463,
+    "sourceMouthHeight": 0.22888289391994476,
+    "provisional": true,
+    "requiresActualPoseReview": true
+  },
+  "changedJawVertices": 4451,
+  "oralPartsAdjusted": [
+    {
+      "part": 0,
+      "upper": false,
+      "material": "gum",
+      "vertices": 112,
+      "maximumForwardShiftMeters": 0.017,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 2,
+      "upper": true,
+      "material": "gum",
+      "vertices": 112,
+      "maximumForwardShiftMeters": 0.017,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 3,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.00894182772751724,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 4,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.012477885626760936,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 5,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.015395913599543905,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 6,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.01693761012054923,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 7,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.01693761012054923,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 8,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.015395913599543905,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 9,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.012477885626760936,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 10,
+      "upper": true,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.00894182772751724,
+      "verticalShiftMeters": -0.007
+    },
+    {
+      "part": 11,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.010483041289098138,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 12,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.013851047962947782,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 13,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.016062249587799293,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 14,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.01698189363862187,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 15,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.01698189363862187,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 16,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.016062249587799293,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 17,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.013851047962947782,
+      "verticalShiftMeters": -0.003
+    },
+    {
+      "part": 18,
+      "upper": false,
+      "material": "ivory",
+      "vertices": 96,
+      "maximumForwardShiftMeters": 0.010483041289098138,
+      "verticalShiftMeters": -0.003
+    }
+  ],
+  "preserved": [
+    "Body/locomotion actions",
+    "External neutral face geometry",
+    "Rig bind",
+    "Weapon",
+    "Shared exports"
+  ],
+  "pending": [
+    "Actual neutral/open review",
+    "Dental/gum/tusk-root contact after refit",
+    "Rounded oral aperture and floor clearance"
+  ]
+}

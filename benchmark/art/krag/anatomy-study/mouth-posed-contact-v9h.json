@@ -1,0 +1,1078 @@
+{
+  "status": "Actual saved-source posed occlusion attribution; no repair or artistic acceptance",
+  "source": "benchmark\\art\\krag\\Krag_Master_v9h_WIP.blend",
+  "sourceSha256": "5f89b7f1492c46e8ff3a1d9d90bd725ca7353c5474bf93af01a7dd6b2493234e",
+  "camera": [
+    1.100000023841858,
+    -4.0,
+    2.049999952316284
+  ],
+  "poses": {
+    "Neutral": [
+      {
+        "component": 0,
+        "materials": [
+          "Krag_OralTissue"
+        ],
+        "vertices": 112,
+        "boundsMeters": [
+          [
+            -0.07305894047021866,
+            -0.15007956326007843,
+            1.7999451160430908
+          ],
+          [
+            0.07305894047021866,
+            -0.11061704158782959,
+            1.8138073682785034
+          ]
+        ],
+        "sampledVertices": 112,
+        "hiddenByHead": 112,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 112
+        },
+        "largestCameraOcclusionGapMeters": 0.06900584473478055
+      },
+      {
+        "component": 1,
+        "materials": [
+          "Krag_Recess"
+        ],
+        "vertices": 922,
+        "boundsMeters": [
+          [
+            -0.07519053667783737,
+            -0.11898903548717499,
+            1.7682472467422485
+          ],
+          [
+            0.07519051432609558,
+            0.04603738337755203,
+            1.8782103061676025
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 160,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=11": 34,
+          "Krag_FacialSkin/sourceFaceSet=33": 53,
+          "Krag_FacialSkin/sourceFaceSet=24": 73
+        },
+        "largestCameraOcclusionGapMeters": 0.23610137007443743
+      },
+      {
+        "component": 2,
+        "materials": [
+          "Krag_OralTissue"
+        ],
+        "vertices": 112,
+        "boundsMeters": [
+          [
+            -0.07792048156261444,
+            -0.15838129818439484,
+            1.8287562131881714
+          ],
+          [
+            0.07792048156261444,
+            -0.10830864310264587,
+            1.8441402912139893
+          ]
+        ],
+        "sampledVertices": 112,
+        "hiddenByHead": 112,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 112
+        },
+        "largestCameraOcclusionGapMeters": 0.08588827543931199
+      },
+      {
+        "component": 3,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.06791328638792038,
+            -0.14164137840270996,
+            1.8219131231307983
+          ],
+          [
+            -0.05645568296313286,
+            -0.12716536223888397,
+            1.8356575965881348
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.06960295103952596
+      },
+      {
+        "component": 4,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.05374978855252266,
+            -0.1568724811077118,
+            1.8229247331619263
+          ],
+          [
+            -0.042292188853025436,
+            -0.142396479845047,
+            1.8366690874099731
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05815794056463197
+      },
+      {
+        "component": 5,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.03664615750312805,
+            -0.1645164042711258,
+            1.8239246606826782
+          ],
+          [
+            -0.02518855594098568,
+            -0.1500403881072998,
+            1.8376691341400146
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05310516026204937
+      },
+      {
+        "component": 6,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.016425199806690216,
+            -0.16695503890514374,
+            1.8246670961380005
+          ],
+          [
+            -0.004967598244547844,
+            -0.15247903764247894,
+            1.838411569595337
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05084731574461632
+      },
+      {
+        "component": 7,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.004967598244547844,
+            -0.16695503890514374,
+            1.8246670961380005
+          ],
+          [
+            0.016425199806690216,
+            -0.15247903764247894,
+            1.838411569595337
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04953165755670064
+      },
+      {
+        "component": 8,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.02518855594098568,
+            -0.1645164042711258,
+            1.8239246606826782
+          ],
+          [
+            0.03664615750312805,
+            -0.1500403881072998,
+            1.8376691341400146
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04526966311822367
+      },
+      {
+        "component": 9,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.042292188853025436,
+            -0.1568724811077118,
+            1.8229247331619263
+          ],
+          [
+            0.05374978855252266,
+            -0.142396479845047,
+            1.8366690874099731
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.03835720572999701
+      },
+      {
+        "component": 10,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.05645568296313286,
+            -0.14164137840270996,
+            1.8219131231307983
+          ],
+          [
+            0.06791328638792038,
+            -0.12716536223888397,
+            1.8356575965881348
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.03763322645280898
+      },
+      {
+        "component": 11,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.06222815439105034,
+            -0.14094915986061096,
+            1.8061727285385132
+          ],
+          [
+            -0.05077055096626282,
+            -0.12647314369678497,
+            1.8179537057876587
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 94,
+          "Krag_FacialSkin/sourceFaceSet=33": 2
+        },
+        "largestCameraOcclusionGapMeters": 0.06215747793638737
+      },
+      {
+        "component": 12,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.0467492900788784,
+            -0.1515248566865921,
+            1.8067198991775513
+          ],
+          [
+            -0.03529168665409088,
+            -0.1370488554239273,
+            1.8185008764266968
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.056460752088288046
+      },
+      {
+        "component": 13,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.03071657009422779,
+            -0.1566513031721115,
+            1.8073111772537231
+          ],
+          [
+            -0.01925896853208542,
+            -0.14217530190944672,
+            1.8190921545028687
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05266403676213027
+      },
+      {
+        "component": 14,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.014133717864751816,
+            -0.1586819291114807,
+            1.8077954053878784
+          ],
+          [
+            -0.0026761163026094437,
+            -0.14420592784881592,
+            1.819576382637024
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05041506333381385
+      },
+      {
+        "component": 15,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.0026761163026094437,
+            -0.1586819291114807,
+            1.8077954053878784
+          ],
+          [
+            0.014133717864751816,
+            -0.14420592784881592,
+            1.819576382637024
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04916784568701349
+      },
+      {
+        "component": 16,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.01925896853208542,
+            -0.1566513031721115,
+            1.8073111772537231
+          ],
+          [
+            0.03071657009422779,
+            -0.14217530190944672,
+            1.8190921545028687
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.046192053185294846
+      },
+      {
+        "component": 17,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.03529168665409088,
+            -0.1515248566865921,
+            1.8067198991775513
+          ],
+          [
+            0.0467492900788784,
+            -0.1370488554239273,
+            1.8185008764266968
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 94,
+          "Krag_FacialSkin/sourceFaceSet=33": 2
+        },
+        "largestCameraOcclusionGapMeters": 0.040595670557423524
+      },
+      {
+        "component": 18,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.05077055096626282,
+            -0.14094915986061096,
+            1.8061727285385132
+          ],
+          [
+            0.06222815439105034,
+            -0.12647314369678497,
+            1.8179537057876587
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.03864365655305235
+      },
+      {
+        "component": 19,
+        "materials": [
+          "Krag_Tongue"
+        ],
+        "vertices": 686,
+        "boundsMeters": [
+          [
+            -0.03866937756538391,
+            -0.1356886923313141,
+            1.792844533920288
+          ],
+          [
+            0.038669392466545105,
+            -0.06475630402565002,
+            1.8072435855865479
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 160,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 160
+        },
+        "largestCameraOcclusionGapMeters": 0.12481473781831731
+      },
+      {
+        "component": 20,
+        "materials": [
+          "Krag_Tongue"
+        ],
+        "vertices": 610,
+        "boundsMeters": [
+          [
+            -0.028643973171710968,
+            -0.16277891397476196,
+            1.794622540473938
+          ],
+          [
+            0.02864399179816246,
+            -0.11935096234083176,
+            1.8077125549316406
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 160,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 160
+        },
+        "largestCameraOcclusionGapMeters": 0.06812229894254518
+      }
+    ],
+    "OpenMouth": [
+      {
+        "component": 0,
+        "materials": [
+          "Krag_OralTissue"
+        ],
+        "vertices": 112,
+        "boundsMeters": [
+          [
+            -0.07305894047021866,
+            -0.10922253131866455,
+            1.7522404193878174
+          ],
+          [
+            0.07305894047021866,
+            -0.07111775875091553,
+            1.772932529449463
+          ]
+        ],
+        "sampledVertices": 112,
+        "hiddenByHead": 112,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 52,
+          "Krag_Recess/sourceFaceSet=7": 60
+        },
+        "largestCameraOcclusionGapMeters": 0.08093520202591975
+      },
+      {
+        "component": 1,
+        "materials": [
+          "Krag_Recess"
+        ],
+        "vertices": 922,
+        "boundsMeters": [
+          [
+            -0.07519053667783737,
+            -0.12021039426326752,
+            1.7682472467422485
+          ],
+          [
+            0.07519051432609558,
+            0.04603738337755203,
+            1.8782103061676025
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 152,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=11": 33,
+          "Krag_FacialSkin/sourceFaceSet=33": 55,
+          "Krag_FacialSkin/sourceFaceSet=24": 26,
+          "Krag_Recess/sourceFaceSet=7": 38
+        },
+        "largestCameraOcclusionGapMeters": 0.23689601919858294
+      },
+      {
+        "component": 2,
+        "materials": [
+          "Krag_OralTissue"
+        ],
+        "vertices": 112,
+        "boundsMeters": [
+          [
+            -0.07792048156261444,
+            -0.15883255004882812,
+            1.8287562131881714
+          ],
+          [
+            0.07792048156261444,
+            -0.1090860441327095,
+            1.8441402912139893
+          ]
+        ],
+        "sampledVertices": 112,
+        "hiddenByHead": 112,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 112
+        },
+        "largestCameraOcclusionGapMeters": 0.08587850104303829
+      },
+      {
+        "component": 3,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.06791328638792038,
+            -0.14164137840270996,
+            1.8219131231307983
+          ],
+          [
+            -0.05645568296313286,
+            -0.12716536223888397,
+            1.8356575965881348
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.07016371153757284
+      },
+      {
+        "component": 4,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.05374978855252266,
+            -0.1568724811077118,
+            1.8229247331619263
+          ],
+          [
+            -0.042292188853025436,
+            -0.142396479845047,
+            1.8366690874099731
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05840446537542299
+      },
+      {
+        "component": 5,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.03664615750312805,
+            -0.1645164042711258,
+            1.8239246606826782
+          ],
+          [
+            -0.02518855594098568,
+            -0.1500403881072998,
+            1.8376691341400146
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.05329041149801128
+      },
+      {
+        "component": 6,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.016425199806690216,
+            -0.16695503890514374,
+            1.8246670961380005
+          ],
+          [
+            -0.004967598244547844,
+            -0.15247903764247894,
+            1.838411569595337
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.051013493494250106
+      },
+      {
+        "component": 7,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.004967598244547844,
+            -0.16695503890514374,
+            1.8246670961380005
+          ],
+          [
+            0.016425199806690216,
+            -0.15247903764247894,
+            1.838411569595337
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.049824197153258254
+      },
+      {
+        "component": 8,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.02518855594098568,
+            -0.1645164042711258,
+            1.8239246606826782
+          ],
+          [
+            0.03664615750312805,
+            -0.1500403881072998,
+            1.8376691341400146
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04593985774407816
+      },
+      {
+        "component": 9,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.042292188853025436,
+            -0.1568724811077118,
+            1.8229247331619263
+          ],
+          [
+            0.05374978855252266,
+            -0.142396479845047,
+            1.8366690874099731
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.038661189418351505
+      },
+      {
+        "component": 10,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.05645568296313286,
+            -0.14164137840270996,
+            1.8219131231307983
+          ],
+          [
+            0.06791328638792038,
+            -0.12716536223888397,
+            1.8356575965881348
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=33": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.03773336225603163
+      },
+      {
+        "component": 11,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.06222815439105034,
+            -0.10327452421188354,
+            1.758492112159729
+          ],
+          [
+            -0.05077055096626282,
+            -0.08686602115631104,
+            1.7734370231628418
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 60,
+          "Krag_Recess/sourceFaceSet=7": 36
+        },
+        "largestCameraOcclusionGapMeters": 0.06389274024880454
+      },
+      {
+        "component": 12,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.0467492900788784,
+            -0.1132238507270813,
+            1.754865050315857
+          ],
+          [
+            -0.03529168665409088,
+            -0.09681534767150879,
+            1.7698101997375488
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04621328589276885
+      },
+      {
+        "component": 13,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.03071657009422779,
+            -0.11817407608032227,
+            1.7534070014953613
+          ],
+          [
+            -0.01925896853208542,
+            -0.10176557302474976,
+            1.7683521509170532
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.03411305177709956
+      },
+      {
+        "component": 14,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            -0.014133717864751816,
+            -0.12023252248764038,
+            1.7530596256256104
+          ],
+          [
+            -0.0026761163026094437,
+            -0.1038239598274231,
+            1.7680047750473022
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 79,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 79
+        },
+        "largestCameraOcclusionGapMeters": 0.018767138662338922
+      },
+      {
+        "component": 15,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.0026761163026094437,
+            -0.12023252248764038,
+            1.7530596256256104
+          ],
+          [
+            0.014133717864751816,
+            -0.1038239598274231,
+            1.7680047750473022
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 79,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 79
+        },
+        "largestCameraOcclusionGapMeters": 0.03644240203301319
+      },
+      {
+        "component": 16,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.01925896853208542,
+            -0.11817407608032227,
+            1.7534070014953613
+          ],
+          [
+            0.03071657009422779,
+            -0.10176557302474976,
+            1.7683521509170532
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 31,
+          "Krag_Recess/sourceFaceSet=7": 65
+        },
+        "largestCameraOcclusionGapMeters": 0.04541999915429429
+      },
+      {
+        "component": 17,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.03529168665409088,
+            -0.1132238507270813,
+            1.754865050315857
+          ],
+          [
+            0.0467492900788784,
+            -0.09681534767150879,
+            1.7698101997375488
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.047935785271467246
+      },
+      {
+        "component": 18,
+        "materials": [
+          "Krag_Ivory"
+        ],
+        "vertices": 96,
+        "boundsMeters": [
+          [
+            0.05077055096626282,
+            -0.10327452421188354,
+            1.758492112159729
+          ],
+          [
+            0.06222815439105034,
+            -0.08686602115631104,
+            1.7734370231628418
+          ]
+        ],
+        "sampledVertices": 96,
+        "hiddenByHead": 96,
+        "firstHeadSurfaceHits": {
+          "Krag_FacialSkin/sourceFaceSet=24": 96
+        },
+        "largestCameraOcclusionGapMeters": 0.04530225725137882
+      },
+      {
+        "component": 19,
+        "materials": [
+          "Krag_Tongue"
+        ],
+        "vertices": 686,
+        "boundsMeters": [
+          [
+            -0.03866937756538391,
+            -0.09223407506942749,
+            1.752629041671753
+          ],
+          [
+            0.038669392466545105,
+            -0.02686011791229248,
+            1.783332109451294
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 160,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 125,
+          "Krag_FacialSkin/sourceFaceSet=24": 35
+        },
+        "largestCameraOcclusionGapMeters": 0.13287714539712514
+      },
+      {
+        "component": 20,
+        "materials": [
+          "Krag_Tongue"
+        ],
+        "vertices": 610,
+        "boundsMeters": [
+          [
+            -0.028643973171710968,
+            -0.11772704124450684,
+            1.742659330368042
+          ],
+          [
+            0.02864399179816246,
+            -0.07744109630584717,
+            1.7634650468826294
+          ]
+        ],
+        "sampledVertices": 160,
+        "hiddenByHead": 160,
+        "firstHeadSurfaceHits": {
+          "Krag_Recess/sourceFaceSet=7": 89,
+          "Krag_FacialSkin/sourceFaceSet=24": 71
+        },
+        "largestCameraOcclusionGapMeters": 0.06336895308286117
+      }
+    ]
+  }
+}
