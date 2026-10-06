@@ -1,0 +1,27 @@
+{
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 4.5,
+  "name": "krag-anatomical-hand-v3-source",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\krag_hand_rebuild\\refine_pose_v3.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-convergent-hand-v2\\Krag_ConvergentHand_v2.blend",
+    "--source-sha256",
+    "fcfa7606bc088aebda96300600b3921127f11964de4204d3b6e5a9091a134ce2",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-anatomical-hand-v3"
+  ],
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-anatomical-hand-v3-source.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-anatomical-hand-v3-source.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\krag-anatomical-hand-v3-source.stdout.log",
+  "successMarker": "KRAG_ANATOMICAL_HAND_POSE_SAVED_AND_REOPENED"
+}

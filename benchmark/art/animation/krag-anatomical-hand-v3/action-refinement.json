@@ -1,0 +1,69 @@
+{
+  "sourceSha256": "fcfa7606bc088aebda96300600b3921127f11964de4204d3b6e5a9091a134ce2",
+  "outputSha256": "8dcd32ea7fe743915dad87c3fd818209323ee33cd8861f0e026f70989e0b5def",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-anatomical-hand-v3\\Krag_AnatomicalPose_v3.blend",
+  "savedSourceReopened": true,
+  "allMeshPayloadsPreserved": 31,
+  "allBindBonesPreserved": 72,
+  "correctiveDriversPreserved": 25,
+  "clips": {
+    "Idle": {
+      "frameRange": [
+        1,
+        181
+      ],
+      "nonDigitCurvesSha256": "7b5cfa813d5ce77d9f71188a327c202102c94d9e15110c6370357ac31cb4ecc2"
+    },
+    "Walk": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "nonDigitCurvesSha256": "aa2c4d259738217fafd8b1fc33d0c02f6652b03e3aa6b216c17b911ae6e331db"
+    },
+    "Run": {
+      "frameRange": [
+        1,
+        25
+      ],
+      "nonDigitCurvesSha256": "fdf704c6b2cdbfee4ac13aa307f7760fc28edbce9891923ec3418f44f78664ff"
+    },
+    "Melee": {
+      "frameRange": [
+        1,
+        37
+      ],
+      "nonDigitCurvesSha256": "4d2a67396348365efc8f4108907e73b5f190b4d0620fd823d999802890b6e019"
+    },
+    "Shoot": {
+      "frameRange": [
+        1,
+        31
+      ],
+      "nonDigitCurvesSha256": "398fe44a92444cf9ec904d597f7a6f9de3df2c2f9fa8ec9c34b7b8976232e8f8"
+    },
+    "Hit": {
+      "frameRange": [
+        1,
+        28
+      ],
+      "nonDigitCurvesSha256": "b1738f75f34a2ede6173bd3c1d9c31fdb2a24c1d89da8da1590a07578ebcda95"
+    },
+    "FacePerformance": {
+      "frameRange": [
+        1,
+        180
+      ],
+      "nonDigitCurvesSha256": "417f13b3933069f1484cfe5f13e5d0db3a29e85402b1737deae1c3e191749901"
+    }
+  },
+  "preparedPoseProposals": "Explicit hand-relative digit planes; full MCP/PIP/DIP83/101/70 degrees, convergent yaw and palmar thumb opposition with14mm pad offset.",
+  "visualReviewCompleted": false,
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "recipeHashes": {
+    "refine_pose_v3.py": "cac37650a6f7bce1300ab168376d7d0bd511a5cd7f4af39149e01425973256d1",
+    "pose_anatomical.py": "90d4706d1a76c24cb2a6d76ed7379299e3e8bf551f789b8eb7fdaa1787c80732",
+    "morph_drivers.py": "762518f5e2db5221f7160b23d46a8d8ecd62d83e7c40e0ba0838bed643a993e5"
+  }
+}
