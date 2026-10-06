@@ -1,0 +1,444 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-Matthew doesn't exist
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'fr' Physical Memory: 32553 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T10:19:22Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 32012)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+-projectPath
+D:\Dev\Krag-Kings\benchmark\unity
+-batchmode
+-quit
+-nographics
+-job-worker-count
+2
+-logFile
+D:\Dev\Krag-Kings\benchmark\local\evidence\unity-press-context-build-v2\editor.log
+-executeMethod
+KragKings.Editor.DemoPressContextCheck.RunAndBuildPrepared
+-pressContextReport
+D:\Dev\Krag-Kings\benchmark\local\evidence\unity-press-context-build-v2\queued-event-report.json
+Successfully changed project path to: D:\Dev\Krag-Kings\benchmark\unity
+D:/Dev/Krag-Kings/benchmark/unity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [23480]  Target information:
+
+Player connection [23480]  * "[IP] 172.17.32.1 [Port] 55504 [Flags] 2 [Guid] 3919725520 [EditorId] 3919725520 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23480]  * "[IP] 172.26.16.1 [Port] 55504 [Flags] 2 [Guid] 3919725520 [EditorId] 3919725520 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23480]  * "[IP] 192.168.31.40 [Port] 55504 [Flags] 2 [Guid] 3919725520 [EditorId] 3919725520 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-E39AUCND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23480] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23480] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 2
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-Matthew, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew" at "2026-10-06T10:19:23.0411812Z"
+[Package Manager] Connected to IPC stream "Upm-9664" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              9be6d17dd0d64bde9486b4849f42df1a
+  Correlation Id:          46124bff6c6b0d958066b49ee2fe0462
+  External correlation Id: 4480034029279058115
+  Machine Id:              H9ywjWMk/aJPg3YR91m8eMuX6rE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Matthew" (connect: 0.56s, validation: 0.06s, handshake: 1.16s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Matthew-notifications" at "2026-10-06T10:19:24.2599839Z"
+[Licensing::Module] Connected to LicensingClient (PId: 32012, launch time: 0.01, total connection time: 1.78s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 1.82s
+[Licensing::Module] Licensing is initialized (took 1.16s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/unity/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001739 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.445 seconds
+Domain Reload Profiling: 987ms
+	BeginReloadAssembly (185ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (228ms)
+		LoadAssemblies (169ms)
+		AnalyzeDomain (218ms)
+			TypeCache.Refresh (216ms)
+				TypeCache.ScanAssembly (201ms)
+	FinalizeReload (447ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (50ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (121ms)
+			ProcessInitializeOnLoadMethodAttributes (101ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-DJ6W-5N43-F9Y2-7JQE-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9070992302932-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 29 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.19.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.searcher@4.9.4 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+  Built-in packages:
+    com.unity.render-pipelines.high-definition@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.high-definition@4509f627d0da)
+    com.unity.ugui@2.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.uielements@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.ui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.video@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.animation@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.physics@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.physics)
+    com.unity.render-pipelines.core@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.core@2269be549234)
+    com.unity.shadergraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.shadergraph@cd28a7c13031)
+    com.unity.visualeffectgraph@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.collections@6.4.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.collections@9c2353fb96f6)
+    com.unity.modules.terrain@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.audio@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.test-framework@1.6.0 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ext.nunit@2.0.5 (location: D:\Dev\Krag-Kings\benchmark\unity\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: D:\Dev\Krag-Kings\benchmark\unity
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 31.9274ms
+Starting: D:\Unity\Hub\6000.4.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Dev/Krag-Kings/benchmark/unity
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "D:\Unity\Hub\6000.4.4f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "D:\Unity\Hub\6000.4.4f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "D:\Unity\Hub\6000.4.4f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "D:\Unity\Hub\6000.4.4f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+DisplayProgressbar: Compiling Scripts
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library\PackageCache\com.unity.burst@6bb9aca3ef38\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Mono.Cecil, Version=0.11.5.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 58.6645ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 137 defines and 311 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null with Library\Bee\artifacts\1900b0aE.dag\Unity.Collections.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null with D:\Unity\Hub\6000.4.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null with D:\Unity\Hub\6000.4.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Resolved Unity.Burst.Cecil.Rocks, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e with Library\PackageCache\com.unity.burst@6bb9aca3ef38\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 410.8543ms
+ExitCode: 0 Duration: 2s506ms
+[515/643    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[639/643    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[640/643    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 137 defines and 311 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[641/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[642/643    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (2.47 seconds), 5 items updated, 643 evaluated
+AssetDatabase: script compilation time: 2.970928s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.193 seconds
+Domain Reload Profiling: 4175ms
+	BeginReloadAssembly (371ms)
+		DisableScriptedObjects (26ms)
+		CreateAndSetChildDomain (157ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (177ms)
+	LoadAllAssembliesAndSetupDomain (378ms)
+		LoadAssemblies (324ms)
+		AnalyzeDomain (182ms)
+			TypeCache.Refresh (131ms)
+				TypeCache.ScanAssembly (122ms)
+			BuildScriptInfoCaches (37ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (3194ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			BeforeProcessingInitializeOnLoad (169ms)
+			ProcessInitializeOnLoadAttributes (2252ms)
+			ProcessInitializeOnLoadMethodAttributes (500ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=7d5c024c0b7d6e343a83f6a7b38c7d93): Total: 7.850 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3598 ms
+		Asset DB Callback time: managed=233 ms, native=24 ms
+		Scripting: domain reloads=1, domain reload time=982 ms, compile time=2973 ms, other=35 ms
+		Project Asset Count: scripts=1062, non-scripts=2772
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 22.739ms
+	ApplyChangesToAssetFolders: 0.491ms
+	Scan: 106.478ms
+	OnSourceAssetsModified: 0.796ms
+	CategorizeScriptCompilationAssets: 20.808ms
+	ProcessAssetsWithTransientArtifactChanges: 64.509ms
+	CategorizeAssets: 85.409ms
+	CompileScripts: 2973.062ms
+	ImportOutOfDateAssets: 3203.186ms (3198.741ms without children)
+		UnloadImportedAssets: 3.082ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.724ms
+		OnDemandSchedulerStart: 0.591ms
+	PostProcessAllAssets: 235.267ms
+		VCAutoAddAssetPostprocess 2.012ms
+		XRBuildSystem.XRAssetImported 0.100ms
+		MonoPostProcessAllAssets: 232.568ms
+			AssetPostprocessor.OnPostprocessAllAssets 129.823ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.108ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 15.283ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.152ms
+			MaterialPostprocessor.OnPostprocessAllAssets 4.718ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.393ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.177ms
+			SyncVS.PostprocessSyncProject 2.174ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.986ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.485ms
+			AssetChangedListener.OnPostprocessAllAssets 1.435ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.148ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 1.103ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.607ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.494ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.449ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.429ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.379ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.324ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.307ms
+			PostProcessor.OnPostprocessAllAssets 0.277ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.264ms
+			AssetEvents.OnPostprocessAllAssets 0.248ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.195ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.194ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.187ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.184ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.172ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.079ms
+	PostAssetChangesProfiler: 1.788ms
+	UnloadStreamsBegin: 1.676ms
+	PersistCurrentRevisions: 0.129ms
+	GenerateScriptTypeHashes: 3.260ms
+	GenerateScriptTypeSerializationHashes: 6.433ms
+	Untracked: 1127.962ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 4.162ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Krag Kings — Engine Comparison
+Unloading 70 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4760 unused Assets / (10.2 MB). Loaded Objects now: 5824.
+Memory consumption went from 238.6 MB to 228.4 MB.
+Total: 15.866400 ms (FindLiveObjects: 0.744100 ms CreateObjectMapping: 0.930700 ms MarkObjects: 6.631300 ms  DeleteObjects: 7.556800 ms)
+
+InvalidOperationException: Queued input regression failed: Held-button pointer reports do not duplicate a press
+  at KragKings.Editor.DemoPressContextCheck+<>c__DisplayClass3_0.<Run>g__Check|5 (System.String name, System.Boolean[] expected, UnityEngine.Vector2[] positions, System.Boolean requireReleasedShift) [0x00106] in D:\Dev\Krag-Kings\benchmark\unity\Assets\Benchmark\Editor\DemoPressContextCheck.cs:73 
+  at KragKings.Editor.DemoPressContextCheck.Run () [0x00521] in D:\Dev\Krag-Kings\benchmark\unity\Assets\Benchmark\Editor\DemoPressContextCheck.cs:102 
+  at KragKings.Editor.DemoPressContextCheck.RunAndBuildPrepared () [0x00000] in D:\Dev\Krag-Kings\benchmark\unity\Assets\Benchmark\Editor\DemoPressContextCheck.cs:29 
+
+(Filename: Assets/Benchmark/Editor/DemoPressContextCheck.cs Line: 102)
+
+executeMethod method KragKings.Editor.DemoPressContextCheck.RunAndBuildPrepared threw exception.
+Exiting without the bug reporter. Application will terminate with return code 1Shut down.

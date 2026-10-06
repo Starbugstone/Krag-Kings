@@ -22,54 +22,14 @@ namespace KragKings.Editor
         }
         [Serializable] sealed class Report
         {
-            public bool completed,nativeWindowsInputSent,artisticAcceptance,originalMergingDisabled,mergingSettingRestored,overlappingLeaseChecksPassed;
+            public bool completed,nativeWindowsInputSent,artisticAcceptance;
             public string startedUtc,finishedUtc,error,inputSystemVersion;
             public Observation[] checks;
-            public DispatchDiagnostic[] editorDispatchDiagnostics;
-        }
-        [Serializable] sealed class DispatchDiagnostic
-        {
-            public string scope="Editor backend queued dispatch only; no real-time cadence, rendering or native FPS measurement",updateType;
-            public bool disableRedundantEventsMerging,productionQueueActive;
-            public int queuedReports=1000,simulatedUpdates=60,eventCallbacks;
-            public double totalDispatchMilliseconds;
-        }
-        static DispatchDiagnostic MeasureEditorDispatch(bool preservePresses)
-        {
-            var settings=InputSystem.settings;bool previous=settings.disableRedundantEventsMerging;
-            Mouse device=null;DemoMovePressQueue queue=null;
-            var result=new DispatchDiagnostic {disableRedundantEventsMerging=preservePresses,productionQueueActive=preservePresses};
-            void Count(InputEventPtr input,InputDevice owner){if(owner==device&&input.IsA<StateEvent>())++result.eventCallbacks;}
-            try
-            {
-                settings.disableRedundantEventsMerging=false;
-                device=InputSystem.AddDevice<Mouse>("KragKings-Dispatch-Mouse");
-                if(preservePresses)queue=new DemoMovePressQueue(()=>true);
-                InputSystem.onEvent+=Count;
-                int queued=0;
-                for(int frame=0;frame<60;frame++)
-                {
-                    int end=(frame+1)*1000/60;
-                    while(queued<end){++queued;InputSystem.QueueStateEvent(device,new MouseState {position=new Vector2(queued,100)});}
-                    long start=System.Diagnostics.Stopwatch.GetTimestamp();
-                    InputSystem.Update();
-                    result.totalDispatchMilliseconds+=(System.Diagnostics.Stopwatch.GetTimestamp()-start)*1000.0/System.Diagnostics.Stopwatch.Frequency;
-                }
-                result.updateType=InputState.currentUpdateType.ToString();
-                if(preservePresses&&result.eventCallbacks!=1000)throw new InvalidOperationException("Unmerged dispatch did not deliver all 1000 queued reports");
-                return result;
-            }
-            finally
-            {
-                InputSystem.onEvent-=Count;queue?.Dispose();
-                if(device!=null&&device.added)InputSystem.RemoveDevice(device);
-                settings.disableRedundantEventsMerging=previous;
-            }
         }
         public static void RunAndBuildPrepared(){Run();BenchmarkBuild.BuildPrepared();}
         public static void Run()
         {
-            var report=new Report {startedUtc=DateTime.UtcNow.ToString("o"),inputSystemVersion=InputSystem.version.ToString(),originalMergingDisabled=InputSystem.settings.disableRedundantEventsMerging};
+            var report=new Report {startedUtc=DateTime.UtcNow.ToString("o"),inputSystemVersion=InputSystem.version.ToString()};
             var checks=new List<Observation>();
             Keyboard keyboard=null;Mouse mouse=null;DemoMovePressQueue presses=null;
             var previousKeyboard=Keyboard.current;var previousMouse=Mouse.current;
@@ -137,28 +97,12 @@ namespace KragKings.Editor
 
                 Neutral();Button(true,new Vector2(100,200));InputSystem.Update();InputSystem.RemoveDevice(mouse);
                 Check("Device removal clears pending commands",Array.Empty<bool>(),Array.Empty<Vector2>());
-                presses.Dispose();presses=null;
-                if(InputSystem.settings.disableRedundantEventsMerging!=report.originalMergingDisabled)throw new InvalidOperationException("Queue disposal did not restore its original merging setting");
-                foreach(bool prior in new[]{false,true})
-                {
-                    InputSystem.settings.disableRedundantEventsMerging=prior;
-                    var first=DemoMovePressQueue.AcquirePressPositionLease();var second=DemoMovePressQueue.AcquirePressPositionLease();
-                    try {first.Dispose();if(!InputSystem.settings.disableRedundantEventsMerging)throw new InvalidOperationException("Overlapping lease released the setting prematurely");}
-                    finally {first.Dispose();second.Dispose();}
-                    if(InputSystem.settings.disableRedundantEventsMerging!=prior)throw new InvalidOperationException("Overlapping leases did not restore the exact original setting");
-                }
-                InputSystem.settings.disableRedundantEventsMerging=report.originalMergingDisabled;
-                report.overlappingLeaseChecksPassed=true;
-                report.editorDispatchDiagnostics=new[]{MeasureEditorDispatch(false),MeasureEditorDispatch(true)};
                 report.completed=true;
             }
             catch(Exception e){report.error=e.ToString();throw;}
             finally
             {
                 presses?.Dispose();
-                report.mergingSettingRestored=InputSystem.settings.disableRedundantEventsMerging==report.originalMergingDisabled;
-                InputSystem.settings.disableRedundantEventsMerging=report.originalMergingDisabled;
-                if(!report.mergingSettingRestored){report.completed=false;report.error+=("\nMerging setting was not restored before final cleanup");}
                 if(mouse!=null&&mouse.added)InputSystem.RemoveDevice(mouse);
                 if(keyboard!=null&&keyboard.added)InputSystem.RemoveDevice(keyboard);
                 if(previousKeyboard!=null&&previousKeyboard.added)previousKeyboard.MakeCurrent();
@@ -166,7 +110,6 @@ namespace KragKings.Editor
                 report.checks=checks.ToArray();report.finishedUtc=DateTime.UtcNow.ToString("o");
                 File.WriteAllText(path,JsonUtility.ToJson(report,true));
             }
-            if(!report.completed)throw new InvalidOperationException("Queued-event check or exact settings restoration failed; inspect the saved report");
             Debug.Log("KRAG_PRESS_CONTEXT_EVENTS_PASS "+checks.Count);
         }
     }

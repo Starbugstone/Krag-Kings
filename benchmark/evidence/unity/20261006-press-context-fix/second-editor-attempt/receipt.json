@@ -1,0 +1,55 @@
+{
+  "capturedUtc": "2026-10-06T10:23:15.558351+00:00",
+  "completed": false,
+  "passedCases": 3,
+  "failedCase": "Held-button pointer reports do not duplicate a press",
+  "failedReason": "One command retained the second held report position instead of the first press position",
+  "windowsBuildExecuted": false,
+  "nativeInputSent": false,
+  "files": {
+    "queued-event-report.json": {
+      "sha256": "a829af616bed11dd79165cfbdb4594b65a0bf2f202143e3aff0de71027bc5c1e",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/queued-event-report.json"
+    },
+    "result.json": {
+      "sha256": "b4f34960169fa504578481b29cd2c214544f33b37db03dbcb0279f12a15fec66",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/result.json"
+    },
+    "editor.log": {
+      "sha256": "3e3cbf5a191bb96e73a7e74cc6673aa1a0b6d3d3193c5d504a13ee5cbe1463cd",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/editor.log"
+    },
+    "guard.log": {
+      "sha256": "60f2a3cc9e68203131f50d516d471836f0e203beabe0f9d0285628d1136564fb",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/guard.log"
+    },
+    "memory.csv": {
+      "sha256": "bbc88b1af51b0bdf819af4741826a665decd549c84ef6f93bed343a89db0390b",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/memory.csv"
+    },
+    "job.json": {
+      "sha256": "a1ffe5571c04bc792cc63f32b2dfc81f1dbf99b6f7b1ed150494f522fc2b9e1e",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/job.json"
+    },
+    "run.ps1": {
+      "sha256": "7e01f600f0afdf8fcbf3c0948a18a49dad8f30ea0bc0ee210c3a7ae0b037d899",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/run.ps1"
+    },
+    "plan.json": {
+      "sha256": "1617bb7d6225fc69744e5bb767d4d5d959492fe5e58b3e2e9cae32cbf8a5c06f",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/plan.json"
+    },
+    "executed-source/Editor/DemoPressContextCheck.cs": {
+      "sha256": "1bedf2503ffb1c1d2b962682a8d7e83cba08b0f9a3c52bb773f671d2374773db",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/frozen-source/benchmark/unity/Assets/Benchmark/Editor/DemoPressContextCheck.cs"
+    },
+    "executed-source/Scripts/DemoMovePressQueue.cs": {
+      "sha256": "1624ea20ded56934b6dd50387913251e2f7b8eb0549d2012bb306d44e9546a14",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs"
+    },
+    "executed-source/Scripts/DemoScene.cs": {
+      "sha256": "6ac0f964284a64dacf80be0181faf274791ba7682f618bf567976db6043c2c8f",
+      "source": "benchmark/local/evidence/unity-press-context-build-v2/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs"
+    }
+  }
+}

@@ -12,6 +12,7 @@ if($Mode -eq 'Verify'){$arguments+='-benchmarkVerify'}
 if($Mode -eq 'Review'){$arguments+='-benchmarkReview'}
 if($Mode -eq 'Performance'){$arguments+='-benchmarkPerformance'}
 if($Mode -eq 'PerformanceMoving'){$arguments+='-benchmarkPerformanceMoving'}
+if($Mode -in @('Performance','PerformanceMoving')){$arguments+='-benchmarkInteractiveInputProfile'}
 if($Mode -eq 'Showcase'){
     $arguments+=@('-benchmarkShowcase','-showcaseWait')
     Remove-Item (Join-Path $evidence 'showcase-start.flag'),(Join-Path $evidence 'showcase-ready.json'),(Join-Path $evidence 'showcase-started.json'),(Join-Path $evidence 'showcase-complete.json') -Force -ErrorAction SilentlyContinue

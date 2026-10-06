@@ -43,35 +43,11 @@ namespace KragKings.Benchmark
         DemoMovePressQueue.Press lastMovePress;
         int movePressDispatchCount,lastMoveDispatchFrame;
         bool lastMoveAccepted;
-        IDisposable inputProfileLease;
-        bool profileInteractiveInput;
-        bool? reportedMergingDisabled;
 
-        void OnEnable()=>SynchronizeInputCapture();
-        void OnDisable(){movePresses?.Dispose();movePresses=null;inputProfileLease?.Dispose();inputProfileLease=null;RecordInputProfile("disabled");}
+        void OnEnable()=>movePresses=new DemoMovePressQueue(()=>sceneReady&&isActiveAndEnabled&&Application.isFocused&&!performanceOnly&&!AutomatedView);
+        void OnDisable(){movePresses?.Dispose();movePresses=null;}
         void OnApplicationFocus(bool focused)=>movePresses?.Clear();
         void OnApplicationPause(bool paused)=>movePresses?.Clear();
-        void SynchronizeInputCapture()
-        {
-            if(!sceneReady)return;
-            bool interactive=!performanceOnly&&!AutomatedView&&!verification;
-            if(interactive&&movePresses==null)movePresses=new DemoMovePressQueue(()=>isActiveAndEnabled&&Application.isFocused&&!performanceOnly&&!AutomatedView&&!verification);
-            if(!interactive&&movePresses!=null){movePresses.Dispose();movePresses=null;}
-            if(profileInteractiveInput&&inputProfileLease==null)inputProfileLease=DemoMovePressQueue.AcquirePressPositionLease();
-            RecordInputProfile("active");
-        }
-        [Serializable] sealed class InputProfileRecord {public string utc,reason,buildGuid,inputSystemVersion;public bool disableRedundantEventsMerging,interactiveCapture,performanceRun,interactiveProfileRequested;}
-        void RecordInputProfile(string reason)
-        {
-            if(!sceneReady||string.IsNullOrEmpty(evidencePath))return;
-            bool disabled=InputSystem.settings.disableRedundantEventsMerging;
-            if(reason=="active"&&reportedMergingDisabled==disabled)return;
-            reportedMergingDisabled=disabled;
-            var profile=new InputProfileRecord {utc=DateTime.UtcNow.ToString("o"),reason=reason,buildGuid=Application.buildGUID,inputSystemVersion=InputSystem.version.ToString(),
-                disableRedundantEventsMerging=disabled,interactiveCapture=movePresses!=null,performanceRun=performanceOnly,interactiveProfileRequested=profileInteractiveInput};
-            File.AppendAllText(Path.Combine(evidencePath,"input-profile.jsonl"),JsonUtility.ToJson(profile)+Environment.NewLine);
-            Debug.Log("KRAG_INPUT_PROFILE "+JsonUtility.ToJson(profile));
-        }
 
         public static bool TryGround(Vector3 point,out RaycastHit hit) => Physics.Raycast(new Vector3(point.x,60,point.z),Vector3.down,out hit,120,1<<8,QueryTriggerInteraction.Ignore);
 
@@ -93,7 +69,6 @@ namespace KragKings.Benchmark
             verification=args.Contains("-benchmarkVerify");
             performanceMoving=args.Contains("-benchmarkPerformanceMoving");
             performanceOnly=args.Contains("-benchmarkPerformance")||performanceMoving;
-            profileInteractiveInput=args.Contains("-benchmarkInteractiveInputProfile");
             if(verification && performanceOnly)throw new InvalidOperationException("Run functional verification and performance sampling separately.");
             inputProbe=args.Contains("-inputProbe") && !performanceOnly;
             evidencePath=Path.Combine(Application.persistentDataPath,"Evidence");
@@ -113,7 +88,6 @@ namespace KragKings.Benchmark
             }
             previousFrameTick=System.Diagnostics.Stopwatch.GetTimestamp();
             sceneReady=true;
-            SynchronizeInputCapture();
             Debug.Log("KRAG_KINGS_DEMO_READY "+SystemInfo.graphicsDeviceName+" "+Screen.width+"x"+Screen.height);
         }
         LineRenderer Ring(string name,Color color,float width)
@@ -205,7 +179,6 @@ namespace KragKings.Benchmark
             previousFrameTick=tick;
             smoothedFrame=Mathf.Lerp(smoothedFrame,frameSeconds,.06f);
             if(performanceSampling)frameTimes.Add(frameSeconds*1000);
-            SynchronizeInputCapture();
             if(performanceOnly||AutomatedView){movePresses?.Clear();if(Keyboard.current?.escapeKey.wasPressedThisFrame==true)Application.Quit();return;}
             var keyboard=Keyboard.current;var mouse=Mouse.current;
             if(keyboard!=null)
@@ -535,7 +508,6 @@ namespace KragKings.Benchmark
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
                 workload=performanceMoving?"Natural Krag and Nib, repeated 12-second run/melee/shoot/hit sequence, fixed default camera; no captures or input probes during sample":"Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
                 quality=renderQuality,internalResolution=$"{demoCamera.scaledPixelWidth}x{demoCamera.scaledPixelHeight}",
-                inputSystemVersion=InputSystem.version.ToString(),disableRedundantEventsMerging=InputSystem.settings.disableRedundantEventsMerging,interactiveInputProfileRequested=profileInteractiveInput,
                 cameraDistance=Vector3.Distance(demoCamera.transform.position,cameraFocus),
                 failures=runtimeErrors.Distinct().ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"performance.json"),JsonUtility.ToJson(report,true));
@@ -572,6 +544,6 @@ namespace KragKings.Benchmark
         [Serializable] class ShotEvidence {public string species,variant;public float requestedNormalizedTime,observedNormalizedTime,forwardDeviationDegrees;public Vector3 origin,direction,unitForward;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
         [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation;public ShotEvidence[] shots;public DemoTerrainReference.Evidence[] terrain; }
-        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc,inputSystemVersion;public bool disableRedundantEventsMerging,interactiveInputProfileRequested;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
+        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid,sampleStartedUtc,sampleEndedUtc;public double sampleElapsedSeconds;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }

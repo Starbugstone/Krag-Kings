@@ -1,0 +1,22 @@
+{
+  "preparedUtc": "2026-10-06T10:31:36.799005+00:00",
+  "status": "Source compiled; next real backend check and Windows build not executed",
+  "nativeInputSent": false,
+  "sourceSha256": {
+    "benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs": "7f54be10c3a71ac91bd50b20c73717e58c991094bc3a50bfa4a9fcbd8d52e612",
+    "benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs": "728927e3c69b9eec2824cdb5cdb76c9bd2d0da92ce27063f91303a8ccad9cd22",
+    "benchmark/unity/Assets/Benchmark/Editor/DemoPressContextCheck.cs": "c27e1a922287e74b5329f45fc7aac1b22b2c652740cff9770995b576e2ca7d58",
+    "benchmark/tools/unity/Run-Demo.ps1": "e6692849406cb14596f25df1b015982617dcc1cab1f1bfa2cf8c0150ba5cae6c"
+  },
+  "compileLogSha256": {
+    "Assembly-CSharp.log": "6a55aac5baf42ee3af122ea0686e0bff27e9c5e79f313ad7b593437d5e7ea0de",
+    "Assembly-CSharp-Editor.log": "ee44127585a2f1a55e3533859f396d4002a090c49285b03eb257304fe8d89dd7"
+  },
+  "frozenNextRecipe": "benchmark/local/evidence/unity-press-context-build-v3",
+  "queuedEventCaseCount": 8,
+  "additionalGates": [
+    "Overlapping leases restore prior false and true settings exactly",
+    "1000 unmerged queued pointer states are delivered; bounded editor diagnostic is not native FPS"
+  ],
+  "performancePolicy": "Performance launcher requests shipped interactive input profile; every run writes actual setting/profile transitions outside the timed sample."
+}

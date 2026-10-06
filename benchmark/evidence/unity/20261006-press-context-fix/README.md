@@ -13,3 +13,15 @@ Installed `InputManager.defaultUpdateType` chooses Editor outside play mode; `Fl
 Both runtime and Editor sources compile using the cached project compiler/references. The prepared native helper has a focused `-ModifierOnly` path with zero-hold Right Shift, ordinary, Left Shift, ordinary batches. It asserts one accepted command, actual projected cursor, Walk/Run and completion; it records key edges/foreground/modifiers and aborts before new input if foreground or external Windows/Ctrl/Alt state conflicts. It has passed PowerShell parsing and C# helper compilation only. No new native input was sent.
 
 All raw first-attempt artifacts and its exact executed sources remain immutable below this directory. These checks do not establish new character/motion integration, visual acceptance, or a completed new Windows build.
+
+## Second real queued-event attempt
+
+The [corrected v2 run](second-editor-attempt/queued-event-report.json) passed both Shift-release cases and ordered Walk/Run/Walk. Its added held-button report case retained one command, but at the later pointer `(920,960)` instead of the first press `(120,220)`. The strict cursor assertion failed, the editor exited 1, and the build did not run. Remaining lifecycle cases were not reached.
+
+The [installed merger audit](second-editor-attempt/merger-attribution.json) attributes this to FastMouse coalescing adjacent same-button reports before `onEvent`. The setting and per-device interfaces were inspected; no settings were changed during the audit. A supported, scoped preservation setting and bounded dispatch-cost check are proposed. The unchanged existing package remains the only current Windows build.
+
+## Scoped merger correction prepared
+
+The compiled source now leases `InputSettings.disableRedundantEventsMerging` while an interactive movement queue exists. Overlapping leases share ownership and the final disposal restores the exact original value. Automated views retain their prior setting. The standard performance launcher explicitly requests the shipped interactive input profile; startup/profile-change JSON records the actual setting, and performance results also record it. Timed samples still exclude captures and probe writes.
+
+The next frozen v3 job retains all eight strict event cases and checks nested ownership/restoration from both original values. One bounded editor diagnostic queues 1000 pointer reports across 60 updates with merging, then with the production queue/unmerged setting. Its timings measure editor backend dispatch only, without real-time cadence or rendering; they cannot establish native FPS or high-frequency-mouse responsiveness. Real v3 execution, Windows rebuilding and focused native regression remain pending. See the [source preparation receipt](merger-lease-prepared/preparation.json).

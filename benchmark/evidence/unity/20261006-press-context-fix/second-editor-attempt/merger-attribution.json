@@ -1,0 +1,35 @@
+{
+  "status": "Actual queued-backend failure correlated with installed source; correction not yet executed",
+  "inputSystemVersion": "1.19.0",
+  "actualRetainedCommandCount": 1,
+  "expectedCursor": [
+    120,
+    220
+  ],
+  "actualCursor": [
+    920,
+    960
+  ],
+  "explanation": "FastMouse merges adjacent same-button reports into the later position before onEvent. InputManager skip-next protection preserves a press after a differing-button report in the same batch, but not a first-event press followed by a held report.",
+  "supportedControl": "InputSettings.disableRedundantEventsMerging",
+  "perDeviceControls": "hasEventMerger and IEventMerger are internal; no supported per-device toggle found",
+  "proposedScope": "Only interactive scene queue lifetime; restore the previous setting on disposal, keep automated runs unchanged.",
+  "sources": {
+    "Devices/Precompiled/FastMouse.partial.cs": {
+      "sha256": "4ed64eb42b7a4f62be0c4713ab1322ea2f25551daa40a69bb57d0cc3c31423a8",
+      "bytes": 2992
+    },
+    "InputManager.cs": {
+      "sha256": "71c69ea70d421d7c44c890fd8a7c6ee9d2c20990a1a00265071db9c9f691dbb4",
+      "bytes": 210960
+    },
+    "InputSettings.cs": {
+      "sha256": "7f40a1cc06d0f842e36eaa775643b3a07b021c18ff63d7304c0b052f1646eb2d",
+      "bytes": 55294
+    },
+    "Devices/InputDevice.cs": {
+      "sha256": "ba7998be9cbe251bdc30881f210a9b571a9d657cac6d6c78102614e7ba2559bc",
+      "bytes": 60015
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+    "completed": false,
+    "nativeWindowsInputSent": false,
+    "artisticAcceptance": false,
+    "startedUtc": "2026-10-06T10:19:33.9709580Z",
+    "finishedUtc": "2026-10-06T10:19:34.0941633Z",
+    "error": "System.InvalidOperationException: Queued input regression failed: Held-button pointer reports do not duplicate a press\r\n  at KragKings.Editor.DemoPressContextCheck+<>c__DisplayClass3_0.<Run>g__Check|5 (System.String name, System.Boolean[] expected, UnityEngine.Vector2[] positions, System.Boolean requireReleasedShift) [0x00106] in D:\\Dev\\Krag-Kings\\benchmark\\unity\\Assets\\Benchmark\\Editor\\DemoPressContextCheck.cs:73 \r\n  at KragKings.Editor.DemoPressContextCheck.Run () [0x00348] in D:\\Dev\\Krag-Kings\\benchmark\\unity\\Assets\\Benchmark\\Editor\\DemoPressContextCheck.cs:86 ",
+    "inputSystemVersion": "1.19.0",
+    "checks": [
+        {
+            "name": "LeftShift released in the same update retains Walk and press cursor",
+            "updateType": "Editor",
+            "inputUpdateCount": 2,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 4,
+                    "eventTime": 0.20787310000000049
+                }
+            ]
+        },
+        {
+            "name": "RightShift released in the same update retains Walk and press cursor",
+            "updateType": "Editor",
+            "inputUpdateCount": 4,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 10,
+                    "eventTime": 0.21162330000000119
+                }
+            ]
+        },
+        {
+            "name": "Multiple presses preserve ordered Walk/Run/Walk",
+            "updateType": "Editor",
+            "inputUpdateCount": 6,
+            "passed": true,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 16,
+                    "eventTime": 0.21165200000000085
+                },
+                {
+                    "position": {
+                        "x": 300.0,
+                        "y": 400.0
+                    },
+                    "walk": false,
+                    "mouseDeviceId": 2,
+                    "eventId": 19,
+                    "eventTime": 0.21165440000000047
+                },
+                {
+                    "position": {
+                        "x": 500.0,
+                        "y": 600.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 22,
+                    "eventTime": 0.21165690000000127
+                }
+            ]
+        },
+        {
+            "name": "Held-button pointer reports do not duplicate a press",
+            "updateType": "Editor",
+            "inputUpdateCount": 8,
+            "passed": false,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 920.0,
+                        "y": 960.0
+                    },
+                    "walk": false,
+                    "mouseDeviceId": 2,
+                    "eventId": 28,
+                    "eventTime": 0.21167900000000018
+                }
+            ]
+        }
+    ]
+}

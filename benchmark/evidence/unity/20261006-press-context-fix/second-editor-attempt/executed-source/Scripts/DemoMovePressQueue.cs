@@ -19,42 +19,11 @@ namespace KragKings.Benchmark
         }
         readonly Queue<Press> pending=new();
         readonly Func<bool> acceptEvents;
-        readonly IDisposable mergingLease;
         bool disposed;
-
-        sealed class LeaseState {public int users;public bool original;}
-        static readonly Dictionary<InputSettings,LeaseState> mergingLeases=new();
-        sealed class MergingLease : IDisposable
-        {
-            InputSettings settings;
-            public MergingLease()
-            {
-                settings=InputSystem.settings;
-                if(!mergingLeases.TryGetValue(settings,out var state))
-                {
-                    state=new LeaseState {original=settings.disableRedundantEventsMerging};
-                    mergingLeases.Add(settings,state);
-                }
-                ++state.users;
-                // FastMouse can merge a first-event press with a later held
-                // report before onEvent, replacing its original cursor.
-                settings.disableRedundantEventsMerging=true;
-            }
-            public void Dispose()
-            {
-                if(settings==null)return;
-                var owned=settings;settings=null;
-                if(--mergingLeases[owned].users!=0)return;
-                bool original=mergingLeases[owned].original;mergingLeases.Remove(owned);
-                owned.disableRedundantEventsMerging=original;
-            }
-        }
-        public static IDisposable AcquirePressPositionLease()=>new MergingLease();
 
         public DemoMovePressQueue(Func<bool> acceptEvents)
         {
             this.acceptEvents=acceptEvents??throw new ArgumentNullException(nameof(acceptEvents));
-            mergingLease=AcquirePressPositionLease();
             InputSystem.onEvent+=OnEvent;
             InputSystem.onDeviceChange+=OnDeviceChange;
         }
@@ -90,7 +59,6 @@ namespace KragKings.Benchmark
             disposed=true;pending.Clear();
             InputSystem.onEvent-=OnEvent;
             InputSystem.onDeviceChange-=OnDeviceChange;
-            mergingLease.Dispose();
         }
     }
 }
