@@ -1,0 +1,35 @@
+{
+  "status": "Prepared only; native generation not yet run",
+  "source": "benchmark/art/animation/nib-human-motion-v5/Nib_HumanMotion_Study_v5.blend",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "scope": [
+    "Sewn sleeveless shirt with four openings",
+    "Actual torso-only support and portable skinning",
+    "Crossed strap waist attachment"
+  ],
+  "preserved": [
+    "79 bone bind matrices",
+    "All source actions",
+    "Root-owned hands and all anatomy",
+    "Current shared assets",
+    "Previous shirt/strap study"
+  ],
+  "pending": [
+    "Actual neutral and Shoot construction review",
+    "New scarf/cowl layers",
+    "Coherent overlapping forearm wraps",
+    "Loose cargo/overall hip-thigh silhouette",
+    "Coherent groom on the final garment source"
+  ],
+  "files": {
+    "benchmark/tools/nib/garment_wip/build-shirt-straps-v2.job.json": "485f5980250c97d408f4ec876e5be884b62d229120872d958a13e79d3d866263",
+    "benchmark/tools/nib/garment_wip/build_shirt_straps_v2.py": "d99f70ce62f75b22ebc5b916ba01a2870b16b55087ae92bf6dae471e86c5b3e0",
+    "benchmark/tools/nib/garment_wip/review-shirt-straps-v2.job.json": "6cc37bdfe9b88489e21c0cacb9e2111cd6437d0b4cb28677f6d8b1e7f6839aa9",
+    "benchmark/tools/nib/garment_wip/review_shirt_straps_v2.py": "3d4e174c00a3aa7af6a2cba7686929c434470f52019ced308522851327e2a4d7",
+    "benchmark/tools/nib/garment_wip/sewn_undershirt_v2.py": "ffbb4a075cc7b341afe6b541d30e8c425ccaa19729e6d08cec18e8cc48c64e0e",
+    "benchmark/tools/nib/garment_wip/shoulder_straps_v2.py": "c523eae5a406317afd301917d669b364385470927184a155a325a039b3cc82d4",
+    "benchmark/tools/nib/garment_wip/torso_fabric_v2.py": "1a624c5fabec54e0ebfce90509bc7d97114f950f188616ea0efb4683c4709812"
+  },
+  "artisticAcceptance": false,
+  "sharedPromotionAuthorized": false
+}

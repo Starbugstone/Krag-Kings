@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_shirt_straps_v2.py", line 84, in <module>
+    fit_report=torso_fabric_v2.fit(pattern,body)
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\torso_fabric_v2.py", line 28, in fit
+    raise RuntimeError('Sewn shirt lacks outward actual torso support at '+str((i,pattern['regions'][i],p.tolist())))
+RuntimeError: Sewn shirt lacks outward actual torso support at (0, 'front', [-0.095, -0.076, 0.668])
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\garment_wip\build_shirt_straps_v2.py', exiting.

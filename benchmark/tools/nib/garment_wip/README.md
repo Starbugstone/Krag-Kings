@@ -145,3 +145,71 @@ route and adds a slope-bounded local shirt-clearance envelope, with per-row
 support/offset diagnostics written before the curvature gate. It does not
 relax the curvature gate or move anatomy. All failed native attempts remain in
 `art/nib/garment-study/v1/failure.json`.
+
+
+## Prepared v2 sewn shirt and completed strap routes
+
+The separate v2 recipe remains ungenerated. `sewn_undershirt_v2.py` constructs
+front/back panels, sewn lower sides and narrow shoulder bridges instead of
+cropping a shoulder-shaped sleeve from the anatomy. Its numerical layout has
+5,468 vertices, 5,308 quads and exactly four closed openings, with no zero
+first-corner face area. `torso_fabric_v2.py` projects those guides onto actual
+body triangles with a low anatomical arm-domain value, then transfers portable
+LBS weights from the same torso region. Actual cloth settling and pose proof
+remain necessary; a topology check is not a successful garment.
+
+`shoulder_straps_v2.py` extends the crossed back straps to measured points on
+the actual utility belt with a smooth final attachment adjustment. Source job
+`build-shirt-straps-v2.job.json` and `review-shirt-straps-v2.job.json` preserve
+the v5 input, all 79 bone binds, all action curves and independently hashed
+body/head/hand data. They write only separately named v2 study outputs. Current
+v1 sources and shared exports stay unchanged. No new cowl or groom is included
+in this bounded correction; both remain separate pending construction work.
+
+The remaining clothing list also includes loose cargo/overall trousers: the
+current tight hips/thighs and separate briefs-like pelvic contour fail the
+reference. Root owns the current hand reconstruction and animation changes;
+those will be merged into a coherent reviewed garment source by exact bind.
+
+
+Cowl construction note after directly viewing Krag's actual v9md Front: its
+clearance footprint is informative, but its monotone vertical sheet with two
+radial Gaussian bumps reads as a regular U-shaped bib with ledges. Do not copy
+that cross-section as accepted Nib cloth. The next Nib cowl needs overlapping
+free fabric edges and folds with real returned cross-sections, unequal diagonal
+sag and broad relaxed flats. Measure the actual posed chin and shoulder support
+first; keep the exposed face clear, and never lift the front rows wholesale to
+shoulder height. A later rest-surface pass may use bounded conformance, with
+physical settling refining folds only after the intended silhouette exists.
+This is a construction plan, not authored or rendered new scarf geometry.
+
+
+### V2 actual initial failure and corrected support preparation
+
+The first native v2 attempt stopped before simulation/save at a missed hem ray
+(PID 16248, exit 2). The exact executed recipe is preserved in
+`art/nib/garment-study/v2/failed-initial-ray`, reconstructed where necessary and
+verified byte-for-byte against the prelaunch readiness hashes. All actual logs
+are retained. A complete lightweight actual-mesh audit found 356 ray misses:
+most are loose hem/side guides outside the curved waist, while two original
+shoulder bridge guides entered the neck. No full cloth solve was repeated to
+locate those errors.
+
+The corrected sewn guide uses measured shoulder/neck placement and actual
+nearest torso support with explicit 8–12 mm cloth ease. A maximum 4 mm tangential
+support residual prevents boundary collapse; interior fairing is capped at 2 mm
+and fixes every opening edge. The complete saved-mesh numerical check now
+covers 5,342 vertices: maximum fitting correction 38.15 mm, zero collapsed or
+backfacing faces, minimum fitted/support normal dot 0.920. These are preparation
+checks, not a native cloth or visual pass. `audit_sewn_nearest_v2.py` reproduces
+them from `local/nib-actual-v5-body.json`, which is made by the read-only DNA
+extractor with `--mesh-name 'Continuous Nib anatomy organic'` on the pinned v5
+source. All scripts use the actual cached Basis and weights; the native fitter
+reads the retained Nib_ArmDomain attribute directly and repeats geometry gates.
+
+`build-shirt-straps-v2-support-retry1.job.json` is the single prepared corrected
+native retry. Its logs are separate from the failed attempt. Source geometry,
+physical settling, fitted belt anchors and Front/Back/Shoot appearance still
+need actual native proof. `sewn-retry-readiness-v2.json` pins the current recipe
+and complete support report. Earlier numerical layouts/receipts are historical
+and do not establish that the current source was generated.

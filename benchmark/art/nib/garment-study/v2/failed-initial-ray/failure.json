@@ -1,0 +1,33 @@
+{
+  "status": "Native pre-fit failure; no cloth simulation/source save/render",
+  "guardExitCode": 2,
+  "pid": 16248,
+  "peakPrivateMB": 537.0,
+  "failure": "First rectangular hem guide has no directional ray hit on open curved actual torso waist",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "files": [
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-initial-ray/nib-fitted-shirt-straps-v2.txt",
+      "sha256": "34fc7a43738050f45e941c76e624acf81b83a44de56d4c919cb0d8dc468fc1b3",
+      "originalCaptureSha256": "34fc7a43738050f45e941c76e624acf81b83a44de56d4c919cb0d8dc468fc1b3"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-initial-ray/nib-fitted-shirt-straps-v2.stderr.txt",
+      "sha256": "ebe4dfced245eedc789fd826b5bdfde26be74d4cc7118f16610de2214efe2b2e",
+      "originalCaptureSha256": "34f0618f4034677aa6705f738ccda4c01d3c6e8ee2143367f8c44c74d265a23d"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-initial-ray/nib-fitted-shirt-straps-v2-memory.csv",
+      "sha256": "c3597753f56bf3bef64d98af1f9ed7f4f21b3a54097fced22cbc299fe252016b",
+      "originalCaptureSha256": "9196288ab7c43abbdfd964d51c9c07d76f68c7e515e87d0890eff29faaf53321"
+    },
+    {
+      "path": "benchmark/art/nib/garment-study/v2/failed-initial-ray/nib-garments-v2-python-error.txt",
+      "sha256": "5429f5a79fa2531335e3a3fbea5e8399df0f05409de1f35ebc96a5b83bc890d0",
+      "originalCaptureSha256": "5429f5a79fa2531335e3a3fbea5e8399df0f05409de1f35ebc96a5b83bc890d0"
+    }
+  ],
+  "recipeSnapshot": "Reconstructed executed recipe verified against all exact prelaunch readiness hashes",
+  "next": "Audit all actual surface correspondences without Blender; one corrected native retry only after support gates pass",
+  "sharedChanged": false
+}

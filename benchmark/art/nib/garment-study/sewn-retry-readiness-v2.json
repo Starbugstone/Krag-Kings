@@ -1,0 +1,33 @@
+{
+  "status": "Prepared corrected native retry; no new source/save/render yet",
+  "source": "benchmark/art/animation/nib-human-motion-v5/Nib_HumanMotion_Study_v5.blend",
+  "sourceSha256": "b82786d632424fd93b798b1a347aab29e568585ee700ce57b0ab435ee76a10da",
+  "nativeAttempts": [
+    {
+      "pid": 16248,
+      "exitCode": 2,
+      "stage": "Initial torso fit; before simulation",
+      "record": "benchmark/art/nib/garment-study/v2/failed-initial-ray/failure.json"
+    }
+  ],
+  "correctedSupportReport": {
+    "path": "benchmark/art/nib/garment-study/sewn-nearest-support-preparation-v2.json",
+    "sha256": "0f09e595c39bb59463bd985276ca23e53b4bd03a2bec3c14271990d73c2aca48"
+  },
+  "numericalGates": true,
+  "recipe": {
+    "benchmark/tools/nib/garment_wip/audit_sewn_nearest_v2.py": "36f18e7e1115e8854435b24947852c91fb2b5bf4f962b4075968efe0cd5247ba",
+    "benchmark/tools/nib/garment_wip/audit_sewn_support_v2.py": "ed65176073016785eaa867c1fbd31237202c6e64e03c9bdbddbd5c7324d4d373",
+    "benchmark/tools/nib/garment_wip/build-shirt-straps-v2-support-retry1.job.json": "2bb2da0ac5219e29e160b67995a0ebee9d54c55bed467b7ae914618214ff49bc",
+    "benchmark/tools/nib/garment_wip/build-shirt-straps-v2.job.json": "485f5980250c97d408f4ec876e5be884b62d229120872d958a13e79d3d866263",
+    "benchmark/tools/nib/garment_wip/build_shirt_straps_v2.py": "d99f70ce62f75b22ebc5b916ba01a2870b16b55087ae92bf6dae471e86c5b3e0",
+    "benchmark/tools/nib/garment_wip/review-shirt-straps-v2.job.json": "6cc37bdfe9b88489e21c0cacb9e2111cd6437d0b4cb28677f6d8b1e7f6839aa9",
+    "benchmark/tools/nib/garment_wip/review_shirt_straps_v2.py": "3d4e174c00a3aa7af6a2cba7686929c434470f52019ced308522851327e2a4d7",
+    "benchmark/tools/nib/garment_wip/sewn_undershirt_v2.py": "c9a50e83d8f1fa4784e48285feb9f06a856e3d98a8237bf5e0a03de56fc465f1",
+    "benchmark/tools/nib/garment_wip/shoulder_straps_v2.py": "c523eae5a406317afd301917d669b364385470927184a155a325a039b3cc82d4",
+    "benchmark/tools/nib/garment_wip/torso_fabric_v2.py": "248add772ef2622919e1e6eb3bf2d42a686eee9de61ac38fce96aa6848b194b3"
+  },
+  "artisticAcceptance": false,
+  "sharedChanged": false,
+  "sharedPromotionAuthorized": false
+}
