@@ -1,0 +1,26 @@
+{
+  "name": "nib-fist-v3-native-audit",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\audit_nib_fist_pose.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-action-hands-v3\\Nib_ActionHands_Study_v3.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-fist-v3-native-audit.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fist-v3-native-audit.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fist-v3-native-audit.stderr.log",
+  "maxPrivateGB": 2.5,
+  "minAvailableGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-fist-v3-native-audit.stdout.log",
+  "successMarker": "NIB_FIST_NATIVE_AUDIT_COMPLETE",
+  "memoryBudgetReason": "Previous matching source generation peaked542MB and wholecycle render1257MB; bounded2.5GiB worker preserves at least5.5GiB launch headroom. Global guard unchanged."
+}
