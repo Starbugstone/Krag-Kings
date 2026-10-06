@@ -1,0 +1,45 @@
+{
+  "status": "Numerically prepared; no saved v9t source or actual views",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "inputSourceSha256": "bbe3deadd7d9507a027afc0474206ad8528de8820606539246bc3242ffd171fd",
+  "actualCacheSha256": "5407ee8e83729337f36fa7d1d95502858d817c080a0771f7abf572091bf800b7",
+  "neutralSurface": {
+    "flippedTriangles": 0,
+    "minimumTriangleAreaRatio": 0.3348896433682834,
+    "normalChangeDegreesP99": 34.72143476167396,
+    "normalChangeDegreesMaximum": 74.55579607080222,
+    "preexistingDegenerateTriangles": 0,
+    "maxDisplacementMeters": 0.00999999630508791
+  },
+  "mandibularSupport": {
+    "transitionMeters": 0.045,
+    "changedVertices": 2874,
+    "maximumWeightChange": 1.0,
+    "trueOralRimsUpperFaceNoseUnchanged": true,
+    "method": "Broad posterior/lateral tissue transition to fixed upper cheek; full jaw rotation retained",
+    "actualPoseAcceptance": false
+  },
+  "exactOpticalPoints": true,
+  "exactTrueOralRims": true,
+  "v9sSupportReconstruction": {
+    "iterations": 1095,
+    "freeVertices": 3462,
+    "maximumSolvedWeightDelta": 0.1578259542420707,
+    "maximumIterationResidualWeight": 2.9866774583706124e-07,
+    "method": "True lower-rim quartic mandibular support plus bounded graph-harmonic neighborhood",
+    "lowerRimVertices": 81,
+    "fixedUpperNoseVertices": 16353,
+    "maxWeightChange": 0.1578259542420707,
+    "artisticAcceptance": false
+  },
+  "lateralMaximumWeightGradientBeforePerMeter": 112.67040468750363,
+  "lateralMaximumWeightGradientAfterPerMeter": 123.25419843754231,
+  "actualV9pLateralMaximumEdgeStretch": 5.06706418811431,
+  "predictedWeightOnlyV9pLateralMaximumEdgeStretch": 4.3263823472964535,
+  "predictionLimit": "Actual cached v9p combined shape, changed lateral skin weights only; current v9s native posed proof still required",
+  "tools": {
+    "preflight_mandibular_v9t.py": "1e34651b24faa13ec642aa60194d6b61d535fdbf95f8eb21a7c0877254f8da3c",
+    "mandibular_tissue_v9t.py": "071e7efa91230ba43e66d6415edd6718741e88e8487aa2affdc78a899c83fcb0"
+  }
+}
