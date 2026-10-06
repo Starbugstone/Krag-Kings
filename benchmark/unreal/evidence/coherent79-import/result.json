@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "completedUtc": "2026-10-06T16:38:46.114974+00:00",
+  "status": "fresh imports, assembly and Profile preparation passed; new Windows package and runtime review pending",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "authoredSourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "pbrSourceSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "importSourceSnapshotSha256": "1191f86f6279ce8848319b54bfd516b1604f4cb75ccf998b7fbc330e3d65498e",
+  "sharedInputsUnchanged": true,
+  "freshVariants": [
+    {
+      "name": "Nib_Natural",
+      "authoredBones": 79,
+      "importedSkeletalEntries": 80,
+      "wrapperBone": "Nib_Rig",
+      "morphs": 25,
+      "materials": 27,
+      "clipLengthsSeconds": {
+        "Idle": 6.0,
+        "Walk": 0.800000011920929,
+        "Run": 0.6000000238418579,
+        "Melee": 1.0666667222976685,
+        "Shoot": 1.0,
+        "Hit": 0.9333333373069763,
+        "FacePerformance": 5.0
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      }
+    },
+    {
+      "name": "Nib_GripReplacement",
+      "authoredBones": 79,
+      "importedSkeletalEntries": 80,
+      "wrapperBone": "Nib_Rig",
+      "morphs": 25,
+      "materials": 27,
+      "clipLengthsSeconds": {
+        "Idle": 6.0,
+        "Walk": 0.800000011920929,
+        "Run": 0.6000000238418579,
+        "Melee": 1.0666667222976685,
+        "Shoot": 1.0,
+        "Hit": 0.9333333373069763,
+        "FacePerformance": 5.0
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      }
+    },
+    {
+      "name": "Nib_LegReplacement",
+      "authoredBones": 79,
+      "importedSkeletalEntries": 80,
+      "wrapperBone": "Nib_Rig",
+      "morphs": 25,
+      "materials": 27,
+      "clipLengthsSeconds": {
+        "Idle": 6.0,
+        "Walk": 0.800000011920929,
+        "Run": 0.6000000238418579,
+        "Melee": 1.0666667222976685,
+        "Shoot": 1.0,
+        "Hit": 0.9333333373069763,
+        "FacePerformance": 5.0
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      }
+    }
+  ],
+  "reusedKragVariants": [
+    "Krag_Natural",
+    "Krag_Crusher",
+    "Krag_IronJaw",
+    "Krag_Piston"
+  ],
+  "stages": [
+    {
+      "name": "unreal-import-Nib_Natural",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarker": "KK_VARIANT_COMPLETE Nib_Natural",
+      "processId": 30264,
+      "samples": 65,
+      "peakPrivateMB": 8404.0,
+      "minimumAvailableMB": 3399.0,
+      "maximumCommitPercent": 74.0,
+      "zeroLengthTangentNormalMessages": 3
+    },
+    {
+      "name": "unreal-import-Nib_GripReplacement",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarker": "KK_VARIANT_COMPLETE Nib_GripReplacement",
+      "processId": 28316,
+      "samples": 46,
+      "peakPrivateMB": 8043.0,
+      "minimumAvailableMB": 3866.0,
+      "maximumCommitPercent": 73.0,
+      "zeroLengthTangentNormalMessages": 3
+    },
+    {
+      "name": "unreal-import-Nib_LegReplacement",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarker": "KK_VARIANT_COMPLETE Nib_LegReplacement",
+      "processId": 31792,
+      "samples": 48,
+      "peakPrivateMB": 8145.0,
+      "minimumAvailableMB": 3815.0,
+      "maximumCommitPercent": 73.0,
+      "zeroLengthTangentNormalMessages": 3
+    },
+    {
+      "name": "unreal-assemble",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarker": "KK_IMPORT_COMPLETE",
+      "processId": 27960,
+      "samples": 12,
+      "peakPrivateMB": 3648.0,
+      "minimumAvailableMB": 8174.0,
+      "maximumCommitPercent": 62.0,
+      "zeroLengthTangentNormalMessages": 0
+    },
+    {
+      "name": "unreal-skin-ab-prepare",
+      "nativeExit": 0,
+      "guardExit": 0,
+      "completionMarker": "KK_SKIN_AB_READY",
+      "processId": 4000,
+      "samples": 10,
+      "peakPrivateMB": 3803.0,
+      "minimumAvailableMB": 8216.0,
+      "maximumCommitPercent": 62.0,
+      "zeroLengthTangentNormalMessages": 0
+    }
+  ],
+  "profileMaterials": [
+    "Krag_FacialSkin",
+    "Krag_SandstoneSkin",
+    "Nib_Skin",
+    "Nib_v5_DustyPinkEar",
+    "Nib_v5_FacialSkinAtlas"
+  ],
+  "previousWindowsExeSha256": "fe65cc4aeb991cd2df103fcdfa76b07ce1495cf353c10799187469a041215a9d",
+  "previousWindowsPackageChanged": false,
+  "newContentPackaged": false,
+  "newContentRendered": false,
+  "artisticAcceptance": false,
+  "limitations": [
+    "Actual new-content rendered motion, masks and skin review remain pending.",
+    "Unused auto physics root and zero-length tangent-normal warnings remain in raw editor logs; source normals passed independent payload verification.",
+    "Editor bootstrap includes UnifiedError/AutomationTest self-test error text; semantic stage completion is validated separately.",
+    "This import is not an FPS or clean-machine package result."
+  ]
+}

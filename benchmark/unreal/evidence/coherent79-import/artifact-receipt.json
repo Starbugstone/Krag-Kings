@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 2489,
+      "sha256": "62634e895db1bb71c532f725e7f757143c6b3f082cb51c9632250715e06a5344"
+    },
+    {
+      "path": "executed/Invoke-IsolatedImport.ps1",
+      "bytes": 6168,
+      "sha256": "4d65eba93719a929d4bccb1152f7d7f826b47c8395c41da62bdebb71bcecea9e"
+    },
+    {
+      "path": "executed/prepare_skin_ab.py",
+      "bytes": 7034,
+      "sha256": "795a07b624b12324082ed9e15c16577da2ef12ec7d60505f097cd0815084431d"
+    },
+    {
+      "path": "executed/skin-ab-plan.json",
+      "bytes": 7981,
+      "sha256": "e7951b43b1e0859944fdd532681e1e1879e78691f821319b7cbbf2e5f990f431"
+    },
+    {
+      "path": "executed/skin-ab-prepare-job.json",
+      "bytes": 959,
+      "sha256": "884aeece02f59434cd5e6b622ae375b64db2ce6093a4376ffd63bb7b45132b72"
+    },
+    {
+      "path": "executed/unreal-assemble/import_shared_assets.py",
+      "bytes": 52710,
+      "sha256": "0aa2c5d1f9e31344dccce3ffb0c707497a1ec7b998067343f263a6b97dc1b44b"
+    },
+    {
+      "path": "executed/unreal-assemble/job.json",
+      "bytes": 1370,
+      "sha256": "c461c27f6a6659975a03dbfcc09a946d4c922e4ca0f70859e087faaeb079a8be"
+    },
+    {
+      "path": "executed/unreal-import-Nib_GripReplacement/import_shared_assets.py",
+      "bytes": 52710,
+      "sha256": "0aa2c5d1f9e31344dccce3ffb0c707497a1ec7b998067343f263a6b97dc1b44b"
+    },
+    {
+      "path": "executed/unreal-import-Nib_GripReplacement/job.json",
+      "bytes": 1524,
+      "sha256": "dd52065f28b2b7854f29f9b240c2fbcc08c016041b98805e70513766196c03a0"
+    },
+    {
+      "path": "executed/unreal-import-Nib_LegReplacement/import_shared_assets.py",
+      "bytes": 52710,
+      "sha256": "0aa2c5d1f9e31344dccce3ffb0c707497a1ec7b998067343f263a6b97dc1b44b"
+    },
+    {
+      "path": "executed/unreal-import-Nib_LegReplacement/job.json",
+      "bytes": 1516,
+      "sha256": "40ac5a9d96109dbded97eb0775a4eba5ae60dc1afd66dbcd32e6f7e081d818fc"
+    },
+    {
+      "path": "executed/unreal-import-Nib_Natural/import_shared_assets.py",
+      "bytes": 52710,
+      "sha256": "0aa2c5d1f9e31344dccce3ffb0c707497a1ec7b998067343f263a6b97dc1b44b"
+    },
+    {
+      "path": "executed/unreal-import-Nib_Natural/job.json",
+      "bytes": 1460,
+      "sha256": "076f308d34caef5c84ac786a4cb50d536932f604bd1adb388b1c1ee55058819d"
+    },
+    {
+      "path": "import-progress.json",
+      "bytes": 188201,
+      "sha256": "ab9789edc4d7b8fe18a437ab13d5add55ca21ac729289a8868993e9734ede2ac"
+    },
+    {
+      "path": "import-report.json",
+      "bytes": 190620,
+      "sha256": "f4861e98cd4ca84ae9bf4d71c57488da4d195ce9e07ff4a2f2f5eb4711bd30dc"
+    },
+    {
+      "path": "import-source-snapshot.json",
+      "bytes": 36796,
+      "sha256": "1191f86f6279ce8848319b54bfd516b1604f4cb75ccf998b7fbc330e3d65498e"
+    },
+    {
+      "path": "logs/unreal-assemble-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/unreal-assemble-stdout.log",
+      "bytes": 338938,
+      "sha256": "4a379ec5968a25044fcabb83ec3ff66707892fa1caeba7966f521cb538432511"
+    },
+    {
+      "path": "logs/unreal-assemble.log",
+      "bytes": 337873,
+      "sha256": "75df6e1227edbc83975a4d0bbbd1490372a2c845c352a971e1636beb83529eb8"
+    },
+    {
+      "path": "logs/unreal-import-Nib_GripReplacement-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/unreal-import-Nib_GripReplacement-stdout.log",
+      "bytes": 307822,
+      "sha256": "a9bb2fea5d74cf0c18525cff5bd0f04da1ed8c9c95114e97fe249a03f42d9c26"
+    },
+    {
+      "path": "logs/unreal-import-Nib_GripReplacement.log",
+      "bytes": 306788,
+      "sha256": "d86d80c256ed6364f3671b63dc1d6435210f0bee9889b9a9bff8d5376741a783"
+    },
+    {
+      "path": "logs/unreal-import-Nib_LegReplacement-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/unreal-import-Nib_LegReplacement-stdout.log",
+      "bytes": 307661,
+      "sha256": "cbcc921db702ae73a30854aa174d85c362925b927f7b31722aabcc2e1cdf8288"
+    },
+    {
+      "path": "logs/unreal-import-Nib_LegReplacement.log",
+      "bytes": 306627,
+      "sha256": "2676ea3231165c779092d4b122f2557a939bde449d7a330d2f36ec359e4086f5"
+    },
+    {
+      "path": "logs/unreal-import-Nib_Natural-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/unreal-import-Nib_Natural-stdout.log",
+      "bytes": 498460,
+      "sha256": "5866862c49f151db70f3cd80bb1f9a626300a16a37eb4d440194aa3246e973a3"
+    },
+    {
+      "path": "logs/unreal-import-Nib_Natural.log",
+      "bytes": 497424,
+      "sha256": "a91a5eca240955b9c1de068945011abf0197bb7450b97463c8a8446b3b105bee"
+    },
+    {
+      "path": "logs/unreal-skin-ab-prepare-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/unreal-skin-ab-prepare-stdout.log",
+      "bytes": 273248,
+      "sha256": "dbd33a08904de4ab00b36a3fe35faf74841a57ddd9dc81b7d9c7a7dce95eddd3"
+    },
+    {
+      "path": "logs/unreal-skin-ab-prepare.log",
+      "bytes": 272202,
+      "sha256": "94999655aeb568d1a86b999e1f0bbe00edcf92154c3b23e8ab84455c9b8979c3"
+    },
+    {
+      "path": "migration.json",
+      "bytes": 20653,
+      "sha256": "9e94dba92fd50052dcb28feaf766add3fa9a7ca429994ec4008526c2ece38e97"
+    },
+    {
+      "path": "receipts/Nib_GripReplacement.json",
+      "bytes": 59607,
+      "sha256": "e0b583c8d4637b1681ff55ef62ca53c2b9a36ce91f8aa91e4f41d77bc4d87fb7"
+    },
+    {
+      "path": "receipts/Nib_LegReplacement.json",
+      "bytes": 59564,
+      "sha256": "6daacbbc1d7b52a43bdfd1d1f468213828ef3a249566cfbad8279b79683a5fc1"
+    },
+    {
+      "path": "receipts/Nib_Natural.json",
+      "bytes": 59263,
+      "sha256": "123f2ecd705fb6f782573b5d89d64ee8f3fa430759d64229c58305ab49e788ff"
+    },
+    {
+      "path": "result.json",
+      "bytes": 6444,
+      "sha256": "c2142e016ecb56f6ed10c2daf0ae8c625b543addc5d28d934ac30b15069871be"
+    },
+    {
+      "path": "skin-ab-preparation.json",
+      "bytes": 15152,
+      "sha256": "f8651c5b22b175ae50c0e570b1c850c6b298c913f41d498bf27281672b7f419d"
+    },
+    {
+      "path": "telemetry/unreal-assemble-gpu.csv",
+      "bytes": 1313,
+      "sha256": "2a58ea6fe2ec6f38ae7d556d0dd7265a890333bb5a80e954ca4b14497beb4fd5"
+    },
+    {
+      "path": "telemetry/unreal-assemble-memory.csv",
+      "bytes": 1034,
+      "sha256": "f82f3020935914c19eb1eda60ec38e3c99c23d3e9c1b6a8516f5b2305220ff81"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_GripReplacement-gpu.csv",
+      "bytes": 4346,
+      "sha256": "492e1e5d50885d88a9eeb5c944375f6f51c978873ba01fe7ef0546bc656961c3"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_GripReplacement-memory.csv",
+      "bytes": 3652,
+      "sha256": "7f6613d2c72011b1c79fe840e8aa44805188aebc73a6b399acb177c51cc1e6f8"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_LegReplacement-gpu.csv",
+      "bytes": 4523,
+      "sha256": "ccbcf8080f10cfbc83153756d9e260d856dab333f9af254dba243799c43b863b"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_LegReplacement-memory.csv",
+      "bytes": 3806,
+      "sha256": "00c045c21ddde2afd71f3be92f9c78d3dc0a1a89d38dca2c1f495ebe65296a95"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_Natural-gpu.csv",
+      "bytes": 6021,
+      "sha256": "c207c8cf41ebf32a505bef0c26002fe166e9d590bbbbca234dca304e3d137cde"
+    },
+    {
+      "path": "telemetry/unreal-import-Nib_Natural-memory.csv",
+      "bytes": 5090,
+      "sha256": "542d55208a0ce48b9c199069cc9e6dbddedbae84b35a148098129eed6a432043"
+    },
+    {
+      "path": "telemetry/unreal-skin-ab-prepare-memory.csv",
+      "bytes": 871,
+      "sha256": "a1af8724677a6c840954b5ff2ac7d35c54c578658b1549c2044a2464f71f5d7d"
+    }
+  ]
+}

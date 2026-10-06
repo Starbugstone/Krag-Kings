@@ -1,0 +1,7059 @@
+{
+  "complete": true,
+  "validated_meshes": [
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Natural.fbx",
+      "asset": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural.Krag_Natural",
+      "size_meters": [
+        1.3425204167696734,
+        0.5067577058056507,
+        2.101744967213012
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/krag/Krag_Natural/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "Shin_R": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "UpperArm_L": [
+              1.0000000924216683,
+              1.0000000924216683
+            ],
+            "UpperArm_R": [
+              0.9999999910566546,
+              0.9999999910566546
+            ],
+            "LowerArm_L": [
+              0.9999995285349619,
+              0.9999995285349619
+            ],
+            "LowerArm_R": [
+              0.9999996131999127,
+              0.9999996131999127
+            ]
+          }
+        },
+        "Walk": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "mouthcorner_l",
+            "eye_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.000000005193195,
+              1.000000005193195
+            ],
+            "Shin_R": [
+              0.9999998064002114,
+              0.9999998064002114
+            ],
+            "UpperArm_L": [
+              0.9999999910566253,
+              0.9999999910566253
+            ],
+            "UpperArm_R": [
+              0.9999999910566253,
+              0.9999999910566253
+            ],
+            "LowerArm_L": [
+              0.9999997825298611,
+              0.9999997825298611
+            ],
+            "LowerArm_R": [
+              0.9999997825298611,
+              0.9999997825298611
+            ]
+          }
+        },
+        "Run": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "cheek_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Thigh_R": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Shin_L": [
+              0.9999998064607917,
+              0.9999998064607917
+            ],
+            "Shin_R": [
+              0.9999998064286564,
+              0.9999998064286564
+            ],
+            "UpperArm_L": [
+              0.9999999910566327,
+              0.9999999910566327
+            ],
+            "UpperArm_R": [
+              0.9999999910566327,
+              0.9999999910566327
+            ],
+            "LowerArm_L": [
+              1.0000000365247874,
+              1.0000000365247874
+            ],
+            "LowerArm_R": [
+              1.0000000365247874,
+              1.0000000365247874
+            ]
+          }
+        },
+        "Melee": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "Shin_R": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "UpperArm_L": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "UpperArm_R": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "LowerArm_L": [
+              0.9999993592049842,
+              0.9999993592049842
+            ],
+            "LowerArm_R": [
+              0.9999996131999249,
+              0.9999996131999249
+            ]
+          }
+        },
+        "Shoot": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "Shin_R": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "UpperArm_L": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "UpperArm_R": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "LowerArm_L": [
+              0.9999996131999128,
+              0.9999996131999128
+            ],
+            "LowerArm_R": [
+              0.99999978252987,
+              0.99999978252987
+            ]
+          }
+        },
+        "Hit": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "Shin_R": [
+              1.000000071394292,
+              1.000000071394292
+            ],
+            "UpperArm_L": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "UpperArm_R": [
+              0.9999999910566406,
+              0.9999999910566406
+            ],
+            "LowerArm_L": [
+              0.99999978252987,
+              0.99999978252987
+            ],
+            "LowerArm_R": [
+              0.99999978252987,
+              0.99999978252987
+            ]
+          }
+        },
+        "FacePerformance": {
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ]
+        }
+      },
+      "bones": [
+        "Krag_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "Tongue_01",
+        "Tongue_02",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "LipLower",
+        "NoseTip",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "Hand_R",
+        "Finger1_0_R",
+        "Finger2_0_R",
+        "Finger1_1_R",
+        "Finger2_1_R",
+        "Finger1_2_R",
+        "Finger2_2_R",
+        "Finger1_3_R",
+        "Finger2_3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "Hand_L",
+        "Finger1_0_L",
+        "Finger2_0_L",
+        "Finger1_1_L",
+        "Finger2_1_L",
+        "Finger1_2_L",
+        "Finger2_2_L",
+        "Finger1_3_L",
+        "Finger2_3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Claw_0",
+        "Claw_1",
+        "Claw_2",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L"
+      ],
+      "reference_bone_local_scales": {
+        "Krag_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.00000008565127,
+          1.0000000260585427
+        ],
+        "Neck": [
+          1.0,
+          0.9999998936850985,
+          1.0000000125094772
+        ],
+        "Head": [
+          1.0,
+          0.9999999017112204,
+          0.9999999611751104
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          0.9999999175230595,
+          0.999999801393167
+        ],
+        "Tongue_01": [
+          1.0000000000000038,
+          0.9999996555374442,
+          0.9999999698952184
+        ],
+        "Tongue_02": [
+          0.999999999999996,
+          0.999999940395307,
+          0.9999999999999942
+        ],
+        "Eye_L": [
+          1.0000000000000038,
+          1.0,
+          1.0000000000000038
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          0.9999999403953481,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          0.9999999403953481,
+          1.0
+        ],
+        "Eye_R": [
+          1.0000000000000038,
+          1.0,
+          1.0000000000000038
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          0.9999999403953481,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          0.9999999403953481,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NoseTip": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Clavicle_R": [
+          1.000000132894528,
+          1.0000000986678044,
+          1.0000000654372414
+        ],
+        "UpperArm_R": [
+          0.9999999689355977,
+          1.0000000647799696,
+          0.9999999861952785
+        ],
+        "LowerArm_R": [
+          1.0000000142802485,
+          1.0000001159813354,
+          0.9999999769707716
+        ],
+        "Hand_R": [
+          1.0000000230851325,
+          1.0000000095895771,
+          0.9999998951935126
+        ],
+        "Finger1_0_R": [
+          1.0000001784630947,
+          1.0000000281243826,
+          1.000000218300564
+        ],
+        "Finger2_0_R": [
+          0.999999975696366,
+          0.9999998813913381,
+          0.9999999816731342
+        ],
+        "Finger1_1_R": [
+          1.000000178463094,
+          0.999999946656402,
+          1.000000198162409
+        ],
+        "Finger2_1_R": [
+          1.0000000984511777,
+          0.9999999195700313,
+          0.9999999123251359
+        ],
+        "Finger1_2_R": [
+          1.0000001784630934,
+          0.9999999494025177,
+          1.000000198162409
+        ],
+        "Finger2_2_R": [
+          1.000000089003187,
+          1.0000001087226889,
+          0.9999999516343657
+        ],
+        "Finger1_3_R": [
+          1.0000000592538298,
+          1.0000000867081202,
+          1.000000218300564
+        ],
+        "Finger2_3_R": [
+          0.9999998794031206,
+          0.9999999460606651,
+          0.9999998453498283
+        ],
+        "Thumb1_R": [
+          1.000000116642171,
+          1.0000001477965081,
+          1.0000001337727555
+        ],
+        "Thumb2_R": [
+          0.9999999768844053,
+          1.0000001573207506,
+          1.000000001841721
+        ],
+        "WeaponMuzzle": [
+          1.0000000592538387,
+          0.9999999688448478,
+          1.0000001042269921
+        ],
+        "WeaponAim": [
+          1.000000059253831,
+          1.000000088054125,
+          1.000000104227024
+        ],
+        "Clavicle_L": [
+          1.000000132894528,
+          1.0000000986678044,
+          1.0000000654372414
+        ],
+        "UpperArm_L": [
+          0.9999999689355977,
+          1.0000000647799696,
+          0.9999999861952785
+        ],
+        "LowerArm_L": [
+          1.0000000142802485,
+          1.0000001159813354,
+          0.9999999769707716
+        ],
+        "Hand_L": [
+          1.0000000230851325,
+          1.0000000095895771,
+          0.9999998951935126
+        ],
+        "Finger1_0_L": [
+          1.0000001784630947,
+          1.0000000281243826,
+          1.000000218300564
+        ],
+        "Finger2_0_L": [
+          0.999999975696366,
+          0.9999998813913381,
+          0.9999999816731342
+        ],
+        "Finger1_1_L": [
+          1.000000178463094,
+          0.999999946656402,
+          1.000000198162409
+        ],
+        "Finger2_1_L": [
+          1.0000000984511777,
+          0.9999999195700313,
+          0.9999999123251359
+        ],
+        "Finger1_2_L": [
+          1.0000001784630934,
+          0.9999999494025177,
+          1.000000198162409
+        ],
+        "Finger2_2_L": [
+          1.000000089003187,
+          1.0000001087226889,
+          0.9999999516343657
+        ],
+        "Finger1_3_L": [
+          1.0000000592538298,
+          1.0000000867081202,
+          1.000000218300564
+        ],
+        "Finger2_3_L": [
+          0.9999998794031206,
+          0.9999999460606651,
+          0.9999998453498283
+        ],
+        "Thumb1_L": [
+          1.000000116642171,
+          1.0000001477965081,
+          1.0000001337727555
+        ],
+        "Thumb2_L": [
+          0.9999999768844053,
+          1.0000001573207506,
+          1.000000001841721
+        ],
+        "Claw_0": [
+          1.0000001295715613,
+          1.0000000891330145,
+          1.0000001464986579
+        ],
+        "Claw_1": [
+          1.0000001784630925,
+          1.0000000197296588,
+          1.0000000938736675
+        ],
+        "Claw_2": [
+          1.0000000289417401,
+          0.9999999313189943,
+          1.0000001115010724
+        ],
+        "Thigh_R": [
+          1.0000045360575318,
+          1.000000028696421,
+          1.0000125522530616
+        ],
+        "Shin_R": [
+          0.9999999514225602,
+          0.9999999864809213,
+          1.0000000297894305
+        ],
+        "Foot_R": [
+          0.9999999133972036,
+          1.0000000950625603,
+          1.000000140071541
+        ],
+        "Toe_R": [
+          1.0,
+          1.0000000915727987,
+          1.0000001651081223
+        ],
+        "Thigh_L": [
+          1.0000045360575318,
+          1.000000028696421,
+          1.0000125522530616
+        ],
+        "Shin_L": [
+          0.9999999514225602,
+          0.9999999864809213,
+          1.0000000297894305
+        ],
+        "Foot_L": [
+          0.9999999133972036,
+          1.0000000950625603,
+          1.000000140071541
+        ],
+        "Toe_L": [
+          1.0,
+          1.0000000915727987,
+          1.0000001651081223
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "Snarl_L",
+        "Snarl_R",
+        "NoseWrinkle",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_Skeleton.Krag_Natural_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/krag/Krag_Natural/Krag_Natural_PhysicsAsset.Krag_Natural_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_Recess",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_FacialSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Amber",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_EyeWhite",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_Ivory",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_OralTissue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_Tongue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "material_binding_repairs": [],
+      "shoot_only_refresh": {
+        "rawProof": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-clip-refresh\\unreal-refresh-Krag_Natural-20261006-031626-2076774\\raw-patch-proof.json",
+        "rawProofSha256": "770e746721cc3a0e51206cac529510869af7b139261f9aa997440a2faca3d6fb",
+        "promotionReceiptSha256": "65cf5e5db1c9aef955a33238e615d1b1cf301c4439b25026adcd8db14be1fb61",
+        "metadata": {
+          "characters/krag/manifest.json": {
+            "previousSha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+            "newSha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+            "runtimeContractUnchanged": true
+          },
+          "characters/krag/krag_asset_contract.json": {
+            "previousSha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+            "newSha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+            "runtimeContractUnchanged": true
+          }
+        },
+        "updatedBones": {
+          "upperarm_r": {
+            "maximumAngularChangeDegrees": 63.017935004531466,
+            "samples": 31
+          },
+          "lowerarm_r": {
+            "maximumAngularChangeDegrees": 69.30977297678675,
+            "samples": 31
+          },
+          "hand_r": {
+            "maximumAngularChangeDegrees": 47.45172281495967,
+            "samples": 31
+          }
+        },
+        "changedPackage": "Content/Benchmark/Characters/krag/Krag_Natural/Animations/Shoot/Shoot.uasset",
+        "fullSkeletalFbxReimport": false,
+        "allOtherSavedPackagesByteIdentical": true
+      },
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Crusher.fbx",
+      "asset": "/Game/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher.Krag_Crusher",
+      "size_meters": [
+        1.5520091663596958,
+        0.5067577058056507,
+        2.101744967213012
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/krag/Krag_Crusher/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.000000101365044,
+              1.000000101365044
+            ],
+            "UpperArm_R": [
+              1.0000000000000293,
+              1.0000000000000293
+            ],
+            "LowerArm_L": [
+              0.9999994920101861,
+              0.9999994920101861
+            ],
+            "LowerArm_R": [
+              0.9999995766751337,
+              0.9999995766751337
+            ]
+          }
+        },
+        "Walk": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "mouthcorner_l",
+            "eye_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000000475455,
+              1.0000000000475455
+            ],
+            "Shin_R": [
+              0.9999998012545628,
+              0.9999998012545628
+            ],
+            "UpperArm_L": [
+              1.0,
+              1.0
+            ],
+            "UpperArm_R": [
+              1.0,
+              1.0
+            ],
+            "LowerArm_L": [
+              0.999999746005076,
+              0.999999746005076
+            ],
+            "LowerArm_R": [
+              0.999999746005076,
+              0.999999746005076
+            ]
+          }
+        },
+        "Run": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "cheek_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Thigh_R": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Shin_L": [
+              0.9999998013151431,
+              0.9999998013151431
+            ],
+            "Shin_R": [
+              0.9999998012830078,
+              0.9999998012830078
+            ],
+            "UpperArm_L": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "UpperArm_R": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "LowerArm_L": [
+              0.9999999999999931,
+              0.9999999999999931
+            ],
+            "LowerArm_R": [
+              0.9999999999999931,
+              0.9999999999999931
+            ]
+          }
+        },
+        "Melee": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999993226802145,
+              0.9999993226802145
+            ],
+            "LowerArm_R": [
+              0.999999576675146,
+              0.999999576675146
+            ]
+          }
+        },
+        "Shoot": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.999999576675134,
+              0.999999576675134
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "Hit": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999997460050849,
+              0.9999997460050849
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "FacePerformance": {
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ]
+        }
+      },
+      "bones": [
+        "Krag_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "Tongue_01",
+        "Tongue_02",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "LipLower",
+        "NoseTip",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "Hand_R",
+        "Finger1_0_R",
+        "Finger2_0_R",
+        "Finger1_1_R",
+        "Finger2_1_R",
+        "Finger1_2_R",
+        "Finger2_2_R",
+        "Finger1_3_R",
+        "Finger2_3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "Hand_L",
+        "Finger1_0_L",
+        "Finger2_0_L",
+        "Finger1_1_L",
+        "Finger2_1_L",
+        "Finger1_2_L",
+        "Finger2_2_L",
+        "Finger1_3_L",
+        "Finger2_3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Claw_0",
+        "Claw_1",
+        "Claw_2",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L"
+      ],
+      "reference_bone_local_scales": {
+        "Krag_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          0.9999998807907104,
+          0.9999999403953552
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Tongue_01": [
+          1.0,
+          0.9999996423721313,
+          0.9999999403953552
+        ],
+        "Tongue_02": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NoseTip": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Clavicle_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_R": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_R": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_R": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_R": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Clavicle_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_L": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_L": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_L": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_L": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Claw_0": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Claw_1": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Claw_2": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "Thigh_R": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thigh_L": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "Snarl_L",
+        "Snarl_R",
+        "NoseWrinkle",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R"
+      ],
+      "corrective_driver_count": 24,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher_Skeleton.Krag_Crusher_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/krag/Krag_Crusher/Krag_Crusher_PhysicsAsset.Krag_Crusher_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_CopperHose",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_CopperHose.M_Krag_CopperHose"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_Recess",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Ivory",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_FacialSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_Amber",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_EyeWhite",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_OralTissue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 13,
+          "name": "Krag_Tongue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "material_binding_repairs": [],
+      "shoot_only_refresh": {
+        "rawProof": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-clip-refresh\\unreal-refresh-Krag_Crusher-20261006-031653-4865433\\raw-patch-proof.json",
+        "rawProofSha256": "770e746721cc3a0e51206cac529510869af7b139261f9aa997440a2faca3d6fb",
+        "promotionReceiptSha256": "65cf5e5db1c9aef955a33238e615d1b1cf301c4439b25026adcd8db14be1fb61",
+        "metadata": {
+          "characters/krag/manifest.json": {
+            "previousSha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+            "newSha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+            "runtimeContractUnchanged": true
+          },
+          "characters/krag/krag_asset_contract.json": {
+            "previousSha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+            "newSha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+            "runtimeContractUnchanged": true
+          }
+        },
+        "updatedBones": {
+          "upperarm_r": {
+            "maximumAngularChangeDegrees": 63.017935004531466,
+            "samples": 31
+          },
+          "lowerarm_r": {
+            "maximumAngularChangeDegrees": 69.30977297678675,
+            "samples": 31
+          },
+          "hand_r": {
+            "maximumAngularChangeDegrees": 47.45172281495967,
+            "samples": 31
+          }
+        },
+        "changedPackage": "Content/Benchmark/Characters/krag/Krag_Crusher/Animations/Shoot/Shoot.uasset",
+        "fullSkeletalFbxReimport": false,
+        "allOtherSavedPackagesByteIdentical": true
+      },
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_IronJaw.fbx",
+      "asset": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw.Krag_IronJaw",
+      "size_meters": [
+        1.3425204167696734,
+        0.5067577058056507,
+        2.101744967213012
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.000000101365044,
+              1.000000101365044
+            ],
+            "UpperArm_R": [
+              1.0000000000000293,
+              1.0000000000000293
+            ],
+            "LowerArm_L": [
+              0.9999994920101861,
+              0.9999994920101861
+            ],
+            "LowerArm_R": [
+              0.9999995766751337,
+              0.9999995766751337
+            ]
+          }
+        },
+        "Walk": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "mouthcorner_l",
+            "eye_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000000475455,
+              1.0000000000475455
+            ],
+            "Shin_R": [
+              0.9999998012545628,
+              0.9999998012545628
+            ],
+            "UpperArm_L": [
+              1.0,
+              1.0
+            ],
+            "UpperArm_R": [
+              1.0,
+              1.0
+            ],
+            "LowerArm_L": [
+              0.999999746005076,
+              0.999999746005076
+            ],
+            "LowerArm_R": [
+              0.999999746005076,
+              0.999999746005076
+            ]
+          }
+        },
+        "Run": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "cheek_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Thigh_R": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Shin_L": [
+              0.9999998013151431,
+              0.9999998013151431
+            ],
+            "Shin_R": [
+              0.9999998012830078,
+              0.9999998012830078
+            ],
+            "UpperArm_L": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "UpperArm_R": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "LowerArm_L": [
+              0.9999999999999931,
+              0.9999999999999931
+            ],
+            "LowerArm_R": [
+              0.9999999999999931,
+              0.9999999999999931
+            ]
+          }
+        },
+        "Melee": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999993226802145,
+              0.9999993226802145
+            ],
+            "LowerArm_R": [
+              0.999999576675146,
+              0.999999576675146
+            ]
+          }
+        },
+        "Shoot": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.999999576675134,
+              0.999999576675134
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "Hit": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999997460050849,
+              0.9999997460050849
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "FacePerformance": {
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ]
+        }
+      },
+      "bones": [
+        "Krag_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "Tongue_01",
+        "Tongue_02",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "LipLower",
+        "NoseTip",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "Hand_R",
+        "Finger1_0_R",
+        "Finger2_0_R",
+        "Finger1_1_R",
+        "Finger2_1_R",
+        "Finger1_2_R",
+        "Finger2_2_R",
+        "Finger1_3_R",
+        "Finger2_3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "Hand_L",
+        "Finger1_0_L",
+        "Finger2_0_L",
+        "Finger1_1_L",
+        "Finger2_1_L",
+        "Finger1_2_L",
+        "Finger2_2_L",
+        "Finger1_3_L",
+        "Finger2_3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Claw_0",
+        "Claw_1",
+        "Claw_2",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L"
+      ],
+      "reference_bone_local_scales": {
+        "Krag_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          0.9999998807907104,
+          0.9999999403953552
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Tongue_01": [
+          1.0,
+          0.9999996423721313,
+          0.9999999403953552
+        ],
+        "Tongue_02": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NoseTip": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Clavicle_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_R": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_R": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_R": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_R": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Clavicle_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_L": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_L": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_L": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_L": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Claw_0": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Claw_1": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Claw_2": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "Thigh_R": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thigh_L": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "Snarl_L",
+        "Snarl_R",
+        "NoseWrinkle",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw_Skeleton.Krag_IronJaw_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/krag/Krag_IronJaw/Krag_IronJaw_PhysicsAsset.Krag_IronJaw_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_Amber",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_Ivory",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Recess",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_FacialSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_EyeWhite",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_OralTissue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_Tongue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "material_binding_repairs": [],
+      "shoot_only_refresh": {
+        "rawProof": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-clip-refresh\\unreal-refresh-Krag_IronJaw-20261006-031720-6119164\\raw-patch-proof.json",
+        "rawProofSha256": "770e746721cc3a0e51206cac529510869af7b139261f9aa997440a2faca3d6fb",
+        "promotionReceiptSha256": "65cf5e5db1c9aef955a33238e615d1b1cf301c4439b25026adcd8db14be1fb61",
+        "metadata": {
+          "characters/krag/manifest.json": {
+            "previousSha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+            "newSha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+            "runtimeContractUnchanged": true
+          },
+          "characters/krag/krag_asset_contract.json": {
+            "previousSha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+            "newSha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+            "runtimeContractUnchanged": true
+          }
+        },
+        "updatedBones": {
+          "upperarm_r": {
+            "maximumAngularChangeDegrees": 63.017935004531466,
+            "samples": 31
+          },
+          "lowerarm_r": {
+            "maximumAngularChangeDegrees": 69.30977297678675,
+            "samples": 31
+          },
+          "hand_r": {
+            "maximumAngularChangeDegrees": 47.45172281495967,
+            "samples": 31
+          }
+        },
+        "changedPackage": "Content/Benchmark/Characters/krag/Krag_IronJaw/Animations/Shoot/Shoot.uasset",
+        "fullSkeletalFbxReimport": false,
+        "allOtherSavedPackagesByteIdentical": true
+      },
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\krag\\Krag_Piston.fbx",
+      "asset": "/Game/Benchmark/Characters/krag/Krag_Piston/Krag_Piston.Krag_Piston",
+      "size_meters": [
+        1.3425204167696734,
+        0.5067577058056507,
+        2.101744967213012
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/krag/Krag_Piston/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.000000101365044,
+              1.000000101365044
+            ],
+            "UpperArm_R": [
+              1.0000000000000293,
+              1.0000000000000293
+            ],
+            "LowerArm_L": [
+              0.9999994920101861,
+              0.9999994920101861
+            ],
+            "LowerArm_R": [
+              0.9999995766751337,
+              0.9999995766751337
+            ]
+          }
+        },
+        "Walk": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "eye_l",
+            "mouthcorner_l",
+            "eye_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000000475455,
+              1.0000000000475455
+            ],
+            "Shin_R": [
+              0.9999998012545628,
+              0.9999998012545628
+            ],
+            "UpperArm_L": [
+              1.0,
+              1.0
+            ],
+            "UpperArm_R": [
+              1.0,
+              1.0
+            ],
+            "LowerArm_L": [
+              0.999999746005076,
+              0.999999746005076
+            ],
+            "LowerArm_R": [
+              0.999999746005076,
+              0.999999746005076
+            ]
+          }
+        },
+        "Run": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "cheek_r",
+            "mouthcorner_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Thigh_R": [
+              0.9999999930603077,
+              0.9999999930603077
+            ],
+            "Shin_L": [
+              0.9999998013151431,
+              0.9999998013151431
+            ],
+            "Shin_R": [
+              0.9999998012830078,
+              0.9999998012830078
+            ],
+            "UpperArm_L": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "UpperArm_R": [
+              1.0000000000000073,
+              1.0000000000000073
+            ],
+            "LowerArm_L": [
+              0.9999999999999931,
+              0.9999999999999931
+            ],
+            "LowerArm_R": [
+              0.9999999999999931,
+              0.9999999999999931
+            ]
+          }
+        },
+        "Melee": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999993226802145,
+              0.9999993226802145
+            ],
+            "LowerArm_R": [
+              0.999999576675146,
+              0.999999576675146
+            ]
+          }
+        },
+        "Shoot": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.999999576675134,
+              0.999999576675134
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "Hit": {
+          "bone_track_count": 69,
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidlower_l",
+            "browinner_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "Shin_R": [
+              1.0000000662486421,
+              1.0000000662486421
+            ],
+            "UpperArm_L": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "UpperArm_R": [
+              1.0000000000000153,
+              1.0000000000000153
+            ],
+            "LowerArm_L": [
+              0.9999997460050849,
+              0.9999997460050849
+            ],
+            "LowerArm_R": [
+              0.9999997460050849,
+              0.9999997460050849
+            ]
+          }
+        },
+        "FacePerformance": {
+          "varying_facial_bones": [
+            "jaw",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "cheek_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "cheek_r",
+            "mouthcorner_r",
+            "lipupper",
+            "nosetip"
+          ]
+        }
+      },
+      "bones": [
+        "Krag_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "Tongue_01",
+        "Tongue_02",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "LipUpper",
+        "LipLower",
+        "NoseTip",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "Hand_R",
+        "Finger1_0_R",
+        "Finger2_0_R",
+        "Finger1_1_R",
+        "Finger2_1_R",
+        "Finger1_2_R",
+        "Finger2_2_R",
+        "Finger1_3_R",
+        "Finger2_3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "Hand_L",
+        "Finger1_0_L",
+        "Finger2_0_L",
+        "Finger1_1_L",
+        "Finger2_1_L",
+        "Finger1_2_L",
+        "Finger2_2_L",
+        "Finger1_3_L",
+        "Finger2_3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Claw_0",
+        "Claw_1",
+        "Claw_2",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L"
+      ],
+      "reference_bone_local_scales": {
+        "Krag_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          0.9999998807907104,
+          0.9999999403953552
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Tongue_01": [
+          1.0,
+          0.9999996423721313,
+          0.9999999403953552
+        ],
+        "Tongue_02": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NoseTip": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Clavicle_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_R": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_R": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_R": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_R": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_R": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_R": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Clavicle_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "UpperArm_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0
+        ],
+        "LowerArm_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Finger1_0_L": [
+          1.0000001192092896,
+          1.0,
+          1.000000238418579
+        ],
+        "Finger2_0_L": [
+          1.0,
+          0.9999998807907104,
+          1.0
+        ],
+        "Finger1_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Finger1_2_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          1.000000238418579
+        ],
+        "Finger2_2_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Finger1_3_L": [
+          1.0,
+          1.0000001192092896,
+          1.000000238418579
+        ],
+        "Finger2_3_L": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998211860657
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb2_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Claw_0": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Claw_1": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Claw_2": [
+          1.0,
+          0.9999999403953552,
+          1.0000001192092896
+        ],
+        "Thigh_R": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thigh_L": [
+          1.000004529953003,
+          1.0,
+          1.0000125169754028
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Foot_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "Snarl_L",
+        "Snarl_R",
+        "NoseWrinkle",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/krag/Krag_Piston/Krag_Piston_Skeleton.Krag_Piston_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/krag/Krag_Piston/Krag_Piston_PhysicsAsset.Krag_Piston_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Krag_BlackenedSteel",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_BlackenedSteel.M_Krag_BlackenedSteel"
+        },
+        {
+          "slot": 1,
+          "name": "Krag_WeatheredTeal",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_WeatheredTeal.M_Krag_WeatheredTeal"
+        },
+        {
+          "slot": 2,
+          "name": "Krag_AgedBrass",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_AgedBrass.M_Krag_AgedBrass"
+        },
+        {
+          "slot": 3,
+          "name": "Krag_OiledLeather",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OiledLeather.M_Krag_OiledLeather"
+        },
+        {
+          "slot": 4,
+          "name": "Krag_DesertCanvas",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_DesertCanvas.M_Krag_DesertCanvas"
+        },
+        {
+          "slot": 5,
+          "name": "Krag_SandstoneSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_SandstoneSkin.M_Krag_SandstoneSkin"
+        },
+        {
+          "slot": 6,
+          "name": "Krag_Recess",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Recess.M_Krag_Recess"
+        },
+        {
+          "slot": 7,
+          "name": "Krag_FacialSkin",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_FacialSkin.M_Krag_FacialSkin"
+        },
+        {
+          "slot": 8,
+          "name": "Krag_Amber",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Amber.M_Krag_Amber"
+        },
+        {
+          "slot": 9,
+          "name": "Krag_EyeWhite",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_EyeWhite.M_Krag_EyeWhite"
+        },
+        {
+          "slot": 10,
+          "name": "Krag_Ivory",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Ivory.M_Krag_Ivory"
+        },
+        {
+          "slot": 11,
+          "name": "Krag_OralTissue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_OralTissue.M_Krag_OralTissue"
+        },
+        {
+          "slot": 12,
+          "name": "Krag_Tongue",
+          "asset": "/Game/Benchmark/Characters/krag/Materials/M_Krag_Tongue.M_Krag_Tongue"
+        }
+      ],
+      "material_binding_repairs": [],
+      "shoot_only_refresh": {
+        "rawProof": "D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-clip-refresh\\unreal-refresh-Krag_Piston-20261006-031747-7819054\\raw-patch-proof.json",
+        "rawProofSha256": "770e746721cc3a0e51206cac529510869af7b139261f9aa997440a2faca3d6fb",
+        "promotionReceiptSha256": "65cf5e5db1c9aef955a33238e615d1b1cf301c4439b25026adcd8db14be1fb61",
+        "metadata": {
+          "characters/krag/krag_asset_contract.json": {
+            "previousSha256": "057aba57ee92383161d1e5cbd883cc5036a14dc3d26357d70893221f07a389ac",
+            "newSha256": "ac1f1a4975911d7a40df20622ebfe7ae85b661ef3dd21dc82e1657b93e4302ba",
+            "runtimeContractUnchanged": true
+          },
+          "characters/krag/manifest.json": {
+            "previousSha256": "5b45d00827a5b55afc731d6120840292ac8f3a7ac162330d4a4c3c60d821d917",
+            "newSha256": "2b60a93d2359f6839d6492b84bf62d2cc521f095289d1b737f1935be11902feb",
+            "runtimeContractUnchanged": true
+          }
+        },
+        "updatedBones": {
+          "upperarm_r": {
+            "maximumAngularChangeDegrees": 63.017935004531466,
+            "samples": 31
+          },
+          "lowerarm_r": {
+            "maximumAngularChangeDegrees": 69.30977297678675,
+            "samples": 31
+          },
+          "hand_r": {
+            "maximumAngularChangeDegrees": 47.45172281495967,
+            "samples": 31
+          }
+        },
+        "changedPackage": "Content/Benchmark/Characters/krag/Krag_Piston/Animations/Shoot/Shoot.uasset",
+        "fullSkeletalFbxReimport": false,
+        "allOtherSavedPackagesByteIdentical": true
+      },
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
+      "asset": "/Game/Benchmark/Characters/nib/Nib_Natural/Nib_Natural.Nib_Natural",
+      "size_meters": [
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/nib/Nib_Natural/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "Shin_R": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "UpperArm_L": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "UpperArm_R": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "LowerArm_L": [
+              0.9999995028804318,
+              0.9999995028804318
+            ],
+            "LowerArm_R": [
+              0.9999999999999979,
+              0.9999999999999979
+            ]
+          }
+        },
+        "Walk": {
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "eye_r",
+            "ear_l",
+            "eartip_l"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.000000022796937,
+              1.000000022796937
+            ],
+            "Thigh_R": [
+              1.0000000809391811,
+              1.0000000809391811
+            ],
+            "Shin_L": [
+              0.9999999389732284,
+              0.9999999389732284
+            ],
+            "Shin_R": [
+              1.0000000610267759,
+              1.0000000610267759
+            ],
+            "UpperArm_L": [
+              0.9999996510629309,
+              0.9999996510629309
+            ],
+            "UpperArm_R": [
+              1.0000000000001659,
+              1.0000000000001659
+            ],
+            "LowerArm_L": [
+              0.9999995028804379,
+              0.9999995028804379
+            ],
+            "LowerArm_R": [
+              0.9999997514402181,
+              0.9999997514402181
+            ]
+          }
+        },
+        "Run": {
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.99999996089004,
+              0.99999996089004
+            ],
+            "Thigh_R": [
+              1.0000000558419477,
+              1.0000000558419477
+            ],
+            "Shin_L": [
+              0.9999997558928996,
+              0.9999997558928996
+            ],
+            "Shin_R": [
+              0.9999998779464502,
+              0.9999998779464502
+            ],
+            "UpperArm_L": [
+              0.9999998836876139,
+              0.9999998836876139
+            ],
+            "UpperArm_R": [
+              0.999999883687633,
+              0.999999883687633
+            ],
+            "LowerArm_L": [
+              0.9999996685869562,
+              0.9999996685869562
+            ],
+            "LowerArm_R": [
+              0.9999998342934849,
+              0.9999998342934849
+            ]
+          }
+        },
+        "Melee": {
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lipupper",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999996685869665,
+              0.9999996685869665
+            ],
+            "LowerArm_R": [
+              0.9999999999999966,
+              0.9999999999999966
+            ]
+          }
+        },
+        "Shoot": {
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "lipupper",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999995028804453,
+              0.9999995028804453
+            ],
+            "LowerArm_R": [
+              0.9999995028804453,
+              0.9999995028804453
+            ]
+          }
+        },
+        "Hit": {
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lidupper_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              1.000000000000006,
+              1.000000000000006
+            ],
+            "LowerArm_R": [
+              1.000000000000006,
+              1.000000000000006
+            ]
+          }
+        },
+        "FacePerformance": {
+          "length_seconds": 5.0,
+          "varying_facial_bones": [
+            "jaw",
+            "tonguetip",
+            "lipupper",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      },
+      "bones": [
+        "Nib_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "TongueBase",
+        "TongueTip",
+        "LipUpper",
+        "LipLower",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "ForearmTwist_L",
+        "Hand_L",
+        "Index1_L",
+        "Index2_L",
+        "Index3_L",
+        "Middle1_L",
+        "Middle2_L",
+        "Middle3_L",
+        "Ring1_L",
+        "Ring2_L",
+        "Ring3_L",
+        "Little1_L",
+        "Little2_L",
+        "Little3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "ForearmTwist_R",
+        "Hand_R",
+        "Index1_R",
+        "Index2_R",
+        "Index3_R",
+        "Middle1_R",
+        "Middle2_R",
+        "Middle3_R",
+        "Ring1_R",
+        "Ring2_R",
+        "Ring3_R",
+        "Little1_R",
+        "Little2_R",
+        "Little3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "Weapon",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R"
+      ],
+      "reference_bone_local_scales": {
+        "Nib_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueBase": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueTip": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Ear_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Ear_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Clavicle_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_L": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0
+        ],
+        "Index2_L": [
+          0.9999998807907104,
+          1.0,
+          0.9999998807907104
+        ],
+        "Index3_L": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb2_L": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Clavicle_R": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_R": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index2_R": [
+          1.0,
+          0.9999997615814209,
+          1.0
+        ],
+        "Index3_R": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Middle2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Middle3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Ring2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Ring3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Little1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Little2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Little3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb1_R": [
+          0.9999998807907104,
+          1.0,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          0.9999999403953552,
+          1.000000238418579,
+          0.9999998807907104
+        ],
+        "Weapon": [
+          0.9999999403953552,
+          1.0000001192092896,
+          0.9999998807907104
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Thigh_L": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_L": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ],
+        "Thigh_R": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_R": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "TongueOut",
+        "CheekTension_L",
+        "CheekTension_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/nib/Nib_Natural/Nib_Natural_Skeleton.Nib_Natural_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/nib/Nib_Natural/Nib_Natural_PhysicsAsset.Nib_Natural_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        }
+      ],
+      "material_binding_repairs": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        }
+      ],
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_GripReplacement.fbx",
+      "asset": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Nib_GripReplacement.Nib_GripReplacement",
+      "size_meters": [
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "Shin_R": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "UpperArm_L": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "UpperArm_R": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "LowerArm_L": [
+              0.9999995028804318,
+              0.9999995028804318
+            ],
+            "LowerArm_R": [
+              0.9999999999999979,
+              0.9999999999999979
+            ]
+          }
+        },
+        "Walk": {
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "eye_r",
+            "ear_l",
+            "eartip_l"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.000000022796937,
+              1.000000022796937
+            ],
+            "Thigh_R": [
+              1.0000000809391811,
+              1.0000000809391811
+            ],
+            "Shin_L": [
+              0.9999999389732284,
+              0.9999999389732284
+            ],
+            "Shin_R": [
+              1.0000000610267759,
+              1.0000000610267759
+            ],
+            "UpperArm_L": [
+              0.9999996510629309,
+              0.9999996510629309
+            ],
+            "UpperArm_R": [
+              1.0000000000001659,
+              1.0000000000001659
+            ],
+            "LowerArm_L": [
+              0.9999995028804379,
+              0.9999995028804379
+            ],
+            "LowerArm_R": [
+              0.9999997514402181,
+              0.9999997514402181
+            ]
+          }
+        },
+        "Run": {
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.99999996089004,
+              0.99999996089004
+            ],
+            "Thigh_R": [
+              1.0000000558419477,
+              1.0000000558419477
+            ],
+            "Shin_L": [
+              0.9999997558928996,
+              0.9999997558928996
+            ],
+            "Shin_R": [
+              0.9999998779464502,
+              0.9999998779464502
+            ],
+            "UpperArm_L": [
+              0.9999998836876139,
+              0.9999998836876139
+            ],
+            "UpperArm_R": [
+              0.999999883687633,
+              0.999999883687633
+            ],
+            "LowerArm_L": [
+              0.9999996685869562,
+              0.9999996685869562
+            ],
+            "LowerArm_R": [
+              0.9999998342934849,
+              0.9999998342934849
+            ]
+          }
+        },
+        "Melee": {
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lipupper",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999996685869665,
+              0.9999996685869665
+            ],
+            "LowerArm_R": [
+              0.9999999999999966,
+              0.9999999999999966
+            ]
+          }
+        },
+        "Shoot": {
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "lipupper",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999995028804453,
+              0.9999995028804453
+            ],
+            "LowerArm_R": [
+              0.9999995028804453,
+              0.9999995028804453
+            ]
+          }
+        },
+        "Hit": {
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lidupper_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              1.000000000000006,
+              1.000000000000006
+            ],
+            "LowerArm_R": [
+              1.000000000000006,
+              1.000000000000006
+            ]
+          }
+        },
+        "FacePerformance": {
+          "length_seconds": 5.0,
+          "varying_facial_bones": [
+            "jaw",
+            "tonguetip",
+            "lipupper",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      },
+      "bones": [
+        "Nib_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "TongueBase",
+        "TongueTip",
+        "LipUpper",
+        "LipLower",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "ForearmTwist_L",
+        "Hand_L",
+        "Index1_L",
+        "Index2_L",
+        "Index3_L",
+        "Middle1_L",
+        "Middle2_L",
+        "Middle3_L",
+        "Ring1_L",
+        "Ring2_L",
+        "Ring3_L",
+        "Little1_L",
+        "Little2_L",
+        "Little3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "ForearmTwist_R",
+        "Hand_R",
+        "Index1_R",
+        "Index2_R",
+        "Index3_R",
+        "Middle1_R",
+        "Middle2_R",
+        "Middle3_R",
+        "Ring1_R",
+        "Ring2_R",
+        "Ring3_R",
+        "Little1_R",
+        "Little2_R",
+        "Little3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "Weapon",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R"
+      ],
+      "reference_bone_local_scales": {
+        "Nib_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueBase": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueTip": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Ear_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Ear_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Clavicle_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_L": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0
+        ],
+        "Index2_L": [
+          0.9999998807907104,
+          1.0,
+          0.9999998807907104
+        ],
+        "Index3_L": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb2_L": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Clavicle_R": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_R": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index2_R": [
+          1.0,
+          0.9999997615814209,
+          1.0
+        ],
+        "Index3_R": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Middle2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Middle3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Ring2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Ring3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Little1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Little2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Little3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb1_R": [
+          0.9999998807907104,
+          1.0,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          0.9999999403953552,
+          1.000000238418579,
+          0.9999998807907104
+        ],
+        "Weapon": [
+          0.9999999403953552,
+          1.0000001192092896,
+          0.9999998807907104
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Thigh_L": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_L": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ],
+        "Thigh_R": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_R": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "TongueOut",
+        "CheekTension_L",
+        "CheekTension_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Nib_GripReplacement_Skeleton.Nib_GripReplacement_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/nib/Nib_GripReplacement/Nib_GripReplacement_PhysicsAsset.Nib_GripReplacement_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        }
+      ],
+      "material_binding_repairs": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        }
+      ],
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    },
+    {
+      "source": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_LegReplacement.fbx",
+      "asset": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Nib_LegReplacement.Nib_LegReplacement",
+      "size_meters": [
+        0.6311651470251718,
+        0.2049905635791145,
+        1.390608832785289
+      ],
+      "clips": {
+        "Idle": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Idle/Idle.Idle",
+        "Walk": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Walk/Walk.Walk",
+        "Run": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Run/Run.Run",
+        "Melee": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Melee/Melee.Melee",
+        "Shoot": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Shoot/Shoot.Shoot",
+        "Hit": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/Hit/Hit.Hit",
+        "FacePerformance": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Animations/FacePerformance/FacePerformance.FacePerformance"
+      },
+      "clip_validation": {
+        "Idle": {
+          "length_seconds": 6.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "lidupper_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "Shin_R": [
+              0.9999998169196742,
+              0.9999998169196742
+            ],
+            "UpperArm_L": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "UpperArm_R": [
+              1.000000000000146,
+              1.000000000000146
+            ],
+            "LowerArm_L": [
+              0.9999995028804318,
+              0.9999995028804318
+            ],
+            "LowerArm_R": [
+              0.9999999999999979,
+              0.9999999999999979
+            ]
+          }
+        },
+        "Walk": {
+          "length_seconds": 0.800000011920929,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "eye_l",
+            "eye_r",
+            "ear_l",
+            "eartip_l"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.000000022796937,
+              1.000000022796937
+            ],
+            "Thigh_R": [
+              1.0000000809391811,
+              1.0000000809391811
+            ],
+            "Shin_L": [
+              0.9999999389732284,
+              0.9999999389732284
+            ],
+            "Shin_R": [
+              1.0000000610267759,
+              1.0000000610267759
+            ],
+            "UpperArm_L": [
+              0.9999996510629309,
+              0.9999996510629309
+            ],
+            "UpperArm_R": [
+              1.0000000000001659,
+              1.0000000000001659
+            ],
+            "LowerArm_L": [
+              0.9999995028804379,
+              0.9999995028804379
+            ],
+            "LowerArm_R": [
+              0.9999997514402181,
+              0.9999997514402181
+            ]
+          }
+        },
+        "Run": {
+          "length_seconds": 0.6000000238418579,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              0.99999996089004,
+              0.99999996089004
+            ],
+            "Thigh_R": [
+              1.0000000558419477,
+              1.0000000558419477
+            ],
+            "Shin_L": [
+              0.9999997558928996,
+              0.9999997558928996
+            ],
+            "Shin_R": [
+              0.9999998779464502,
+              0.9999998779464502
+            ],
+            "UpperArm_L": [
+              0.9999998836876139,
+              0.9999998836876139
+            ],
+            "UpperArm_R": [
+              0.999999883687633,
+              0.999999883687633
+            ],
+            "LowerArm_L": [
+              0.9999996685869562,
+              0.9999996685869562
+            ],
+            "LowerArm_R": [
+              0.9999998342934849,
+              0.9999998342934849
+            ]
+          }
+        },
+        "Melee": {
+          "length_seconds": 1.0666667222976685,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lipupper",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999996685869665,
+              0.9999996685869665
+            ],
+            "LowerArm_R": [
+              0.9999999999999966,
+              0.9999999999999966
+            ]
+          }
+        },
+        "Shoot": {
+          "length_seconds": 1.0,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "lipupper",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              0.9999995028804453,
+              0.9999995028804453
+            ],
+            "LowerArm_R": [
+              0.9999995028804453,
+              0.9999995028804453
+            ]
+          }
+        },
+        "Hit": {
+          "length_seconds": 0.9333333373069763,
+          "bone_track_count": 80,
+          "varying_facial_bones": [
+            "jaw",
+            "lidupper_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "lidupper_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ],
+          "local_limb_translation_to_bind_length_ranges": {
+            "Thigh_L": [
+              1.0,
+              1.0
+            ],
+            "Thigh_R": [
+              1.0,
+              1.0
+            ],
+            "Shin_L": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "Shin_R": [
+              0.9999999389732245,
+              0.9999999389732245
+            ],
+            "UpperArm_L": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "UpperArm_R": [
+              1.000000000000001,
+              1.000000000000001
+            ],
+            "LowerArm_L": [
+              1.000000000000006,
+              1.000000000000006
+            ],
+            "LowerArm_R": [
+              1.000000000000006,
+              1.000000000000006
+            ]
+          }
+        },
+        "FacePerformance": {
+          "length_seconds": 5.0,
+          "varying_facial_bones": [
+            "jaw",
+            "tonguetip",
+            "lipupper",
+            "eye_l",
+            "lidupper_l",
+            "lidlower_l",
+            "browinner_l",
+            "browouter_l",
+            "mouthcorner_l",
+            "eye_r",
+            "lidupper_r",
+            "lidlower_r",
+            "browinner_r",
+            "browouter_r",
+            "mouthcorner_r",
+            "ear_l",
+            "eartip_l",
+            "ear_r",
+            "eartip_r"
+          ]
+        }
+      },
+      "locomotion": {
+        "Walk": {
+          "speedMetersPerSecond": 0.8796227746834336,
+          "cycleSeconds": 0.8,
+          "stanceFraction": 0.49,
+          "leftContacts": [
+            0.065
+          ],
+          "rightContacts": [
+            0.5650000000000001
+          ]
+        },
+        "Run": {
+          "speedMetersPerSecond": 2.5299862911031474,
+          "cycleSeconds": 0.6,
+          "stanceFraction": 0.15999999999999998,
+          "leftContacts": [
+            0.62
+          ],
+          "rightContacts": [
+            0.12000000000000002
+          ]
+        }
+      },
+      "bones": [
+        "Nib_Rig",
+        "Root",
+        "Pelvis",
+        "Spine",
+        "Chest",
+        "Neck",
+        "Head",
+        "FaceRoot",
+        "Jaw",
+        "TongueBase",
+        "TongueTip",
+        "LipUpper",
+        "LipLower",
+        "Eye_L",
+        "LidUpper_L",
+        "LidLower_L",
+        "BrowInner_L",
+        "BrowOuter_L",
+        "Cheek_L",
+        "MouthCorner_L",
+        "Eye_R",
+        "LidUpper_R",
+        "LidLower_R",
+        "BrowInner_R",
+        "BrowOuter_R",
+        "Cheek_R",
+        "MouthCorner_R",
+        "Ear_L",
+        "EarTip_L",
+        "Ear_R",
+        "EarTip_R",
+        "Clavicle_L",
+        "UpperArm_L",
+        "LowerArm_L",
+        "ForearmTwist_L",
+        "Hand_L",
+        "Index1_L",
+        "Index2_L",
+        "Index3_L",
+        "Middle1_L",
+        "Middle2_L",
+        "Middle3_L",
+        "Ring1_L",
+        "Ring2_L",
+        "Ring3_L",
+        "Little1_L",
+        "Little2_L",
+        "Little3_L",
+        "Thumb1_L",
+        "Thumb2_L",
+        "Clavicle_R",
+        "UpperArm_R",
+        "LowerArm_R",
+        "ForearmTwist_R",
+        "Hand_R",
+        "Index1_R",
+        "Index2_R",
+        "Index3_R",
+        "Middle1_R",
+        "Middle2_R",
+        "Middle3_R",
+        "Ring1_R",
+        "Ring2_R",
+        "Ring3_R",
+        "Little1_R",
+        "Little2_R",
+        "Little3_R",
+        "Thumb1_R",
+        "Thumb2_R",
+        "Weapon",
+        "WeaponMuzzle",
+        "WeaponAim",
+        "Thigh_L",
+        "Shin_L",
+        "Foot_L",
+        "Toe_L",
+        "Thigh_R",
+        "Shin_R",
+        "Foot_R",
+        "Toe_R"
+      ],
+      "reference_bone_local_scales": {
+        "Nib_Rig": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "Root": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Pelvis": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Spine": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Chest": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Neck": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Head": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "FaceRoot": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Jaw": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueBase": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "TongueTip": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "LipUpper": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LipLower": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Eye_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidUpper_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LidLower_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowInner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "BrowOuter_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Cheek_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "MouthCorner_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Ear_L": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_L": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Ear_R": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "EarTip_R": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "Clavicle_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_L": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_L": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_L": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0
+        ],
+        "Index2_L": [
+          0.9999998807907104,
+          1.0,
+          0.9999998807907104
+        ],
+        "Index3_L": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_L": [
+          1.0,
+          1.0,
+          0.9999998211860657
+        ],
+        "Middle2_L": [
+          0.9999998807907104,
+          0.9999997019767761,
+          0.9999998807907104
+        ],
+        "Middle3_L": [
+          1.0000001192092896,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_L": [
+          1.0000001192092896,
+          1.0,
+          1.0
+        ],
+        "Ring2_L": [
+          1.0,
+          1.0,
+          0.9999998807907104
+        ],
+        "Ring3_L": [
+          1.0,
+          1.000000238418579,
+          1.0
+        ],
+        "Little1_L": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Little2_L": [
+          1.0,
+          1.0000001192092896,
+          0.9999999403953552
+        ],
+        "Little3_L": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb1_L": [
+          1.0000001192092896,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "Thumb2_L": [
+          1.0000001192092896,
+          1.0,
+          1.0000001192092896
+        ],
+        "Clavicle_R": [
+          1.0,
+          0.9999999403953552,
+          0.9999999403953552
+        ],
+        "UpperArm_R": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "LowerArm_R": [
+          0.9999999403953552,
+          0.9999998211860657,
+          0.9999998807907104
+        ],
+        "ForearmTwist_R": [
+          1.0,
+          1.0000001192092896,
+          1.0
+        ],
+        "Hand_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0000001192092896
+        ],
+        "Index2_R": [
+          1.0,
+          0.9999997615814209,
+          1.0
+        ],
+        "Index3_R": [
+          1.0,
+          1.0,
+          1.0000001192092896
+        ],
+        "Middle1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Middle2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Middle3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Ring1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Ring2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Ring3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Little1_R": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "Little2_R": [
+          1.0,
+          0.9999998211860657,
+          0.9999997615814209
+        ],
+        "Little3_R": [
+          1.0,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Thumb1_R": [
+          0.9999998807907104,
+          1.0,
+          1.0000001192092896
+        ],
+        "Thumb2_R": [
+          0.9999999403953552,
+          1.000000238418579,
+          0.9999998807907104
+        ],
+        "Weapon": [
+          0.9999999403953552,
+          1.0000001192092896,
+          0.9999998807907104
+        ],
+        "WeaponMuzzle": [
+          1.0,
+          0.9999999403953552,
+          1.0
+        ],
+        "WeaponAim": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Thigh_L": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_L": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_L": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_L": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ],
+        "Thigh_R": [
+          1.000000238418579,
+          1.0,
+          1.0000001192092896
+        ],
+        "Shin_R": [
+          0.9999999403953552,
+          1.0000001192092896,
+          1.0000001192092896
+        ],
+        "Foot_R": [
+          1.0,
+          0.9999997615814209,
+          1.0000001192092896
+        ],
+        "Toe_R": [
+          1.0,
+          0.9999998807907104,
+          0.9999998807907104
+        ]
+      },
+      "morphs": [
+        "Blink_L",
+        "Blink_R",
+        "Squint_L",
+        "Squint_R",
+        "BrowRaise_L",
+        "BrowRaise_R",
+        "BrowLower_L",
+        "BrowLower_R",
+        "Smile_L",
+        "Smile_R",
+        "Frown_L",
+        "Frown_R",
+        "JawOpen",
+        "LipPress",
+        "TongueOut",
+        "CheekTension_L",
+        "CheekTension_R",
+        "Corrective_ElbowFlex_L",
+        "Corrective_ElbowFlex_R",
+        "Corrective_HipFlex_L",
+        "Corrective_HipFlex_R",
+        "Corrective_KneeFlex_L",
+        "Corrective_KneeFlex_R",
+        "Corrective_ShoulderRaise_L",
+        "Corrective_ShoulderRaise_R"
+      ],
+      "corrective_driver_count": 25,
+      "saved_dependencies": {
+        "skeleton": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Nib_LegReplacement_Skeleton.Nib_LegReplacement_Skeleton",
+        "physics_asset": "/Game/Benchmark/Characters/nib/Nib_LegReplacement/Nib_LegReplacement_PhysicsAsset.Nib_LegReplacement_PhysicsAsset"
+      },
+      "material_bindings": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "asset": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        }
+      ],
+      "material_binding_repairs": [
+        {
+          "slot": 0,
+          "name": "Nib_v5_FacialSkinAtlas",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_FacialSkinAtlas.M_Nib_v5_FacialSkinAtlas"
+        },
+        {
+          "slot": 1,
+          "name": "Nib_MouthInterior",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_MouthInterior.M_Nib_MouthInterior"
+        },
+        {
+          "slot": 2,
+          "name": "Nib_Gum",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Gum.M_Nib_Gum"
+        },
+        {
+          "slot": 3,
+          "name": "Nib_Tooth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tooth.M_Nib_Tooth"
+        },
+        {
+          "slot": 4,
+          "name": "Nib_Tongue",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Tongue.M_Nib_Tongue"
+        },
+        {
+          "slot": 5,
+          "name": "Nib_v5_TawnyEarUndercoat",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarUndercoat.M_Nib_v5_TawnyEarUndercoat"
+        },
+        {
+          "slot": 6,
+          "name": "Nib_v5_DustyPinkEar",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_DustyPinkEar.M_Nib_v5_DustyPinkEar"
+        },
+        {
+          "slot": 7,
+          "name": "Nib_Brass",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Brass.M_Nib_Brass"
+        },
+        {
+          "slot": 8,
+          "name": "Nib_Lens",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Lens.M_Nib_Lens"
+        },
+        {
+          "slot": 9,
+          "name": "Nib_Leather",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Leather.M_Nib_Leather"
+        },
+        {
+          "slot": 10,
+          "name": "Nib_Steel",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Steel.M_Nib_Steel"
+        },
+        {
+          "slot": 11,
+          "name": "Nib_Workwear",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Workwear.M_Nib_Workwear"
+        },
+        {
+          "slot": 12,
+          "name": "Nib_Stitch",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Stitch.M_Nib_Stitch"
+        },
+        {
+          "slot": 13,
+          "name": "Nib_Cloth",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Cloth.M_Nib_Cloth"
+        },
+        {
+          "slot": 14,
+          "name": "Nib_Skin",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Skin.M_Nib_Skin"
+        },
+        {
+          "slot": 15,
+          "name": "Nib_Dark",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Dark.M_Nib_Dark"
+        },
+        {
+          "slot": 16,
+          "name": "Nib_Teal",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Teal.M_Nib_Teal"
+        },
+        {
+          "slot": 17,
+          "name": "Nib_IdentityOcularIris_L",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_L.M_Nib_IdentityOcularIris_L"
+        },
+        {
+          "slot": 18,
+          "name": "Nib_IdentityOcularIris_R",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularIris_R.M_Nib_IdentityOcularIris_R"
+        },
+        {
+          "slot": 19,
+          "name": "Nib_IdentityOcularGlobe",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_IdentityOcularGlobe.M_Nib_IdentityOcularGlobe"
+        },
+        {
+          "slot": 20,
+          "name": "Nib_Hair",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_Hair.M_Nib_Hair"
+        },
+        {
+          "slot": 21,
+          "name": "Nib_v6_HeadFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_HeadFurCards.M_Nib_v6_HeadFurCards"
+        },
+        {
+          "slot": 22,
+          "name": "Nib_v5_HeadFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_HeadFur.M_Nib_v5_HeadFur"
+        },
+        {
+          "slot": 23,
+          "name": "Nib_v6_TawnyEarFurCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_TawnyEarFurCards.M_Nib_v6_TawnyEarFurCards"
+        },
+        {
+          "slot": 24,
+          "name": "Nib_v5_TawnyEarFur",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_TawnyEarFur.M_Nib_v5_TawnyEarFur"
+        },
+        {
+          "slot": 25,
+          "name": "Nib_v6_InnerEarWispsCards",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v6_InnerEarWispsCards.M_Nib_v6_InnerEarWispsCards"
+        },
+        {
+          "slot": 26,
+          "name": "Nib_v5_InnerEarWisps",
+          "previous": null,
+          "expected": "/Game/Benchmark/Characters/nib/Materials/M_Nib_v5_InnerEarWisps.M_Nib_v5_InnerEarWisps"
+        }
+      ],
+      "material_bindings_verified_after_reload": true,
+      "skeletal_and_morph_material_usage_verified": true
+    }
+  ]
+}

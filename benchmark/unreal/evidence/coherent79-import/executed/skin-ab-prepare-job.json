@@ -1,0 +1,23 @@
+{
+  "name": "unreal-skin-ab-prepare",
+  "executable": "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "arguments": [
+    "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+    "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\prepare_skin_ab.py",
+    "-NullRHI",
+    "-corelimit=2",
+    "-unattended",
+    "-nosplash",
+    "-NoSound",
+    "-stdout",
+    "-FullStdOutLogOutput",
+    "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unreal-skin-ab-prepare.log"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unreal-skin-ab-prepare-stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unreal-skin-ab-prepare-stderr.log",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 9,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\unreal-skin-ab-prepare.log",
+  "successMarker": "KK_SKIN_AB_READY"
+}

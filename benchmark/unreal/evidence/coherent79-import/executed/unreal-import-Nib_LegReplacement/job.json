@@ -1,0 +1,26 @@
+﻿{
+    "name":  "unreal-import-Nib_LegReplacement",
+    "executable":  "D:\\Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+    "arguments":  [
+                      "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\KragKingsBenchmark\\KragKingsBenchmark.uproject",
+                      "-ExecutePythonScript=D:\\Dev\\Krag-Kings\\benchmark\\local\\unreal-isolated-import\\unreal-import-Nib_LegReplacement-20261006-163247-8246222\\import_shared_assets.py",
+                      "-unattended",
+                      "-nosplash",
+                      "-stdout",
+                      "-FullStdOutLogOutput",
+                      "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\unreal-import-Nib_LegReplacement.log",
+                      "-NoSound",
+                      "-NullRHI",
+                      "-corelimit=2",
+                      "-KKReuseMaterials",
+                      "-KKImportVariant=Nib_LegReplacement"
+                  ],
+    "workingDirectory":  "D:\\Dev\\Krag-Kings",
+    "stdout":  "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\unreal-import-Nib_LegReplacement-stdout.log",
+    "stderr":  "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\unreal-import-Nib_LegReplacement-stderr.log",
+    "minAvailableGB":  10,
+    "maxPrivateGB":  9,
+    "gpuTelemetry":  true,
+    "successLog":  "D:\\Dev\\Krag-Kings\\benchmark\\unreal\\evidence\\unreal-import-Nib_LegReplacement.log",
+    "successMarker":  "KK_VARIANT_COMPLETE Nib_LegReplacement"
+}
