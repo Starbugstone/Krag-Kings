@@ -1,0 +1,47 @@
+{
+  "status": "Direct reference and actual mesh-image comparison; preparation only, no geometry or canon change",
+  "reference": {
+    "path": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+    "sha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80"
+  },
+  "actual": {
+    "path": "benchmark/art/nib/groom-study/coherent79-v2-runtime-wide-nap/renders/Nib_FaceReview.png",
+    "sha256": "c4c80c167de7f50f46195853dfa511f8a514cce31d541c83f6f727ec6a1415f3"
+  },
+  "review": [
+    {
+      "region": "Orbital volume",
+      "reference": "Alert angular almond aperture, hooded outer brow and visible upper-lid fold; iris recessed behind continuous lids",
+      "actual": "Flat narrow eye openings, orange irises dominate most of the slit, little curved upper-lid/brow structure",
+      "nextBoundedConstruction": "Audit actual rim vertices and globe coordinates; enlarge aperture using a continuous orbital arc. Rebuild Blink on the same ocular surface, retaining the proven nasal exclusion continuity. No floating eyelid tubes."
+    },
+    {
+      "region": "Nose and muzzle",
+      "reference": "Small projecting warm brown animal nose, compact paired muzzle planes and rising smile-corner contour; narrow chin",
+      "actual": "Pale human nostril bridge, broad smooth lower face and flat nearly straight mouth",
+      "nextBoundedConstruction": "Shape broad connected nasal-pad/alar/philtrum surfaces with source-semantic and geodesic support; preserve actual lip aperture and repaired Jaw weights. Judge front and profile together, with neutral/Tongue/Blink."
+    },
+    {
+      "region": "Auricle envelope",
+      "reference": "Two steep tapered cupped ears with tawny external fur and cream inner-rim locks around visible pink membrane",
+      "actual": "Broad flat lateral pink panels and thin geometric rim; presentation lower/more spread than illustration",
+      "nextBoundedConstruction": "Measure root-to-tip axes and cup section in actual mesh; a coherent ear-envelope fit must carry cartilage, inner surface, all groom roots and EarTip pivots together. Preserve exactly two ears and body/head scale."
+    },
+    {
+      "region": "Groom",
+      "reference": "Layered curved fine cream head/inner-ear fibers and rich short tawny outer coat; organic tufts overlap without concealing anatomy",
+      "actual": "Wide blade-like cream cards and stiff isolated accents; repetitive separated inner-rim clumps, slick low-volume scalp",
+      "nextBoundedConstruction": "Replace dominance of opaque accent blades with curved multi-layer masked clusters and finer tapered fibers. Flow around goggles and over crown/nape with varied clump lengths; preserve exposed skin/fuzz coverage. Inspect silhouette and alpha-overdraw, not triangle count alone."
+    }
+  ],
+  "preserve": [
+    "Current natural body and all hand/bind changes during facial preparation",
+    "Proven loop-aware Jaw semantics, dark-blue tongue and true oral aperture",
+    "Actual orbital closure improvements without repeating abrupt semantic mask cutoffs",
+    "Visible mottled skin and fine body/face fuzz, exactly two ears",
+    "Original concept and every failed source/render"
+  ],
+  "executionBoundary": "After coherent Body/restorative compatibility and root right-hand boundary; one coordinated head/ear/groom recipe with actual neutral/profile and extreme expressions. No render/source generation authorized by this note alone.",
+  "artisticAcceptance": false,
+  "sharedChanged": false
+}
