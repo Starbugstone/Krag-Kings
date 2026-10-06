@@ -26,6 +26,8 @@ namespace KragKings.Editor
             public string alphaMode,alphaSource,doubleSidedNormalMode,normalConvention;
             public float alphaClipThreshold;
             public bool doubleSided;
+            public bool hasCoatParameters;
+            public float coatWeight,coatRoughness,coatIor;
         }
         [Serializable] public class VariantEntry { public string name,fbx,label;public DemoDeformation.Contract deformation; }
         [Serializable] class ImportReport {public string engine,species;public ImportedMeshReport[] variants;}
@@ -324,8 +326,28 @@ namespace KragKings.Editor
                 material.SetFloat("_DoubleSidedNormalMode",0); // Pinned HDRP Lit: Flip=0.
             }
             else material.SetFloat("_DoubleSidedEnable",1); // Preserve the existing opaque baseline.
+            ApplyCoat(material,entry);
             HDMaterial.ValidateMaterial(material);EditorUtility.SetDirty(material);
             return material;
+        }
+        static void ApplyCoat(Material material,MaterialEntry entry)
+        {
+            // HDRP 17.4 Lit exposes coat weight, but fixes the top-layer IOR at
+            // 1.5 and physical roughness at .01 (perceptual roughness .1).
+            // Preserve the authored values in the manifest and report this
+            // approximation rather than silently dropping the ocular coat.
+            if(!material.HasProperty("_CoatMask"))throw new Exception(entry.name+": shader has no coat mask");
+            if(entry.hasCoatParameters &&
+                (!(entry.coatWeight>=0 && entry.coatWeight<=1) ||
+                 !(entry.coatRoughness>=0 && entry.coatRoughness<=1) ||
+                 !(entry.coatIor>=1 && entry.coatIor<=4)))
+                throw new Exception(entry.name+": invalid authored coat parameters");
+            material.SetTexture("_CoatMaskMap",null);
+            material.SetFloat("_CoatMask",entry.hasCoatParameters?entry.coatWeight:0);
+            if(entry.hasCoatParameters)
+                Debug.Log("KRAG_COAT_MAPPING "+entry.name+" weight="+entry.coatWeight+
+                    " sourcePerceptualRoughness="+entry.coatRoughness+" sourceIOR="+entry.coatIor+
+                    " shader=HDRP/Lit runtimePerceptualRoughness=0.1 runtimeIOR=1.5 visualAcceptancePending=true");
         }
         static bool IsSkin(string name)=>name.Contains("Skin")||name.Contains("Muzzle")||name.Contains("EarInner")||name=="Nib_v5_DustyPinkEar";
         static void ApplySkinProfile(Material material,string name)
