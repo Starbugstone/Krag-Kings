@@ -295,6 +295,10 @@ scene.frame_set(1)
 report['neutralCoordinates']=facial_snapshot(scene,rig,head)
 rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
 report['idleCoordinates']=facial_snapshot(scene,rig,head)
+blockers=[pose+': '+issue for pose in ['neutralCoordinates','idleCoordinates']
+          for issue in report[pose]['neutralStructuralBlockersIfClosedMouthExpected']]
+report['preRenderGate']={'passed':not blockers,'blockingIssues':blockers,
+                        'scope':'Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too'}
 scene['source_version']=args.revision+' opaque iris projection, corrected retained oral/groom spaces; unaccepted'
 scene['v5_reference_provenance']=json.dumps({key:report[key] for key in ['referenceLibrarySha256','referenceLicense','borrowedTopology']})
 bpy.ops.wm.save_as_mainfile(filepath=str(TARGET),compress=True)

@@ -7,9 +7,14 @@ ART=ROOT/'benchmark/art/nib'
 parser=argparse.ArgumentParser()
 parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
 parser.add_argument('--output-dir',type=Path,default=ART/'renders')
+parser.add_argument('--coordinate-report',type=Path,help='Require a matching saved-source structural pre-render gate')
 parser.add_argument('views',nargs='*',default=['Perspective','Face'])
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source;RENDER_OUT=args.output_dir;RENDER_OUT.mkdir(parents=True,exist_ok=True)
+if args.coordinate_report:
+    gate_report=json.loads(args.coordinate_report.read_text())
+    if gate_report.get('candidateSha256')!=hashlib.sha256(SOURCE.read_bytes()).hexdigest():raise RuntimeError('Coordinate report does not match this saved source')
+    if not gate_report.get('preRenderGate',{}).get('passed',False):raise RuntimeError('Saved source has unresolved pre-render structural blockers: '+str(gate_report.get('preRenderGate')))
 bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
 report_path=ART/'source-report.json'
 if report_path.exists() and SOURCE.resolve()==(ART/'Nib_Master.blend').resolve():
@@ -42,10 +47,14 @@ for view in requested:
         rig.animation_data.action=bpy.data.actions[action_name];scene.frame_set({'Walk':7,'Run':7,'Shoot':15,'Melee':19,'Hit':8}[action_name])
     camera.location=(1.9,-4.4,1.6);aim((0,0,.745))
     output='Nib_Review'+view+'.png'
-    if view in ['Face','Wary','Tongue','Blink']:
+    if view in ['Face','FaceProfile','FaceThreeQuarter','Wary','Tongue','Blink']:
         camera.location=(.35,-3,1.33);aim((0,-.005,1.17));camera.data.ortho_scale=.69
         scene.render.resolution_x=1400;scene.render.resolution_y=1100;output='Nib_FaceReview.png' if view=='Face' else 'Nib_Expression'+view+'.png'
-        if view!='Face':
+        if view in ['FaceProfile','FaceThreeQuarter']:
+            camera.location=(3,0,1.20) if view=='FaceProfile' else (.9,-1.3,1.27)
+            aim((0,0,1.165));camera.data.ortho_scale=.56 if view=='FaceProfile' else .69
+            output='Nib_'+view+'.png'
+        elif view!='Face':
             rig.animation_data.action=bpy.data.actions['FacePerformance'];scene.frame_set({'Wary':31,'Tongue':103,'Blink':16}[view])
     elif view in ['Front','Back','Side']:
         camera.location={'Front':(0,-4,.85),'Back':(0,4,.85),'Side':(4,0,.85)}[view];aim((0,0,.745))

@@ -28,7 +28,45 @@ def evaluated(obj,depsgraph):
         return points,faces
     finally:copy.to_mesh_clear()
 
+def enable_facial_evaluation(rig,head):
+    rig.hide_set(False);rig.hide_viewport=False
+    required=[head]+[o for o in bpy.data.collections['Nib_Authored_Components'].objects
+                     if o.name.startswith(ORAL_PREFIXES+('Nib v5 fitted sclera','Nib v5 fitted iris'))]
+    for obj in required:
+        obj.hide_set(False);obj.hide_viewport=False
+        for modifier in obj.modifiers:
+            if modifier.type=='ARMATURE':modifier.show_viewport=True
+
+def ocular_visibility(head_tree,depsgraph,side):
+    parts={}
+    for part in ['sclera','iris']:
+        obj=bpy.data.objects['Nib v5 fitted '+part+' '+side]
+        points,faces=evaluated(obj,depsgraph)
+        parts[part]=(BVHTree.FromPolygons(points,faces),np.asarray(points))
+    box=bounds(parts['sclera'][1]);lo=box['minimum'];hi=box['maximum']
+    counts={'skin':0,'sclera':0,'iris':0,'empty':0};visible=[]
+    for x in np.linspace(lo[0],hi[0],49):
+        for z in np.linspace(lo[2],hi[2],33):
+            origin=Vector((x,-1,z));hits=[]
+            for label,tree in [('skin',head_tree)]+[(p,value[0]) for p,value in parts.items()]:
+                hit,_,_,_=tree.ray_cast(origin,Vector((0,1,0)),2)
+                if hit is not None:hits.append((hit.y,label,list(hit)))
+            label=min(hits,key=lambda h:h[0])[1] if hits else 'empty';counts[label]+=1
+            if label in ['sclera','iris']:visible.append(min(hits,key=lambda h:h[0])[2])
+    return {'grid':[49,33],'frontmostSurfaceSamples':counts,'visibleOcularBounds':bounds(visible),
+            'scleraWorld':box,'irisWorld':bounds(parts['iris'][1])}
+
+def neutral_blockers(snapshot):
+    issues=[]
+    for name,item in snapshot['oral'].items():
+        if item['unoccludedSamples'] or any(item['obliqueUnoccludedSamples'].values()):
+            issues.append('Neutral oral part is not fully occluded by facial skin: '+name)
+    for side,eye in snapshot['ocularVisibility'].items():
+        if not eye['frontmostSurfaceSamples']['iris']:issues.append('No visible neutral iris samples: '+side)
+    return issues
+
 def facial_snapshot(scene,rig,head):
+    enable_facial_evaluation(rig,head)
     bpy.context.view_layer.update();depsgraph=bpy.context.evaluated_depsgraph_get()
     points,faces=evaluated(head,depsgraph)
     tree=BVHTree.FromPolygons(points,faces,all_triangles=False)
@@ -39,7 +77,8 @@ def facial_snapshot(scene,rig,head):
     upper=mouth&(source[:,2]>.235);lower=mouth&(source[:,2]<=.235)
     p=np.asarray(points)
     result={'headWorld':bounds(p),'upperLipRegionWorld':bounds(p[upper]),'lowerLipRegionWorld':bounds(p[lower]),
-            'oral':{},'bones':{},'morphValues':{key.name:key.value for key in head.data.shape_keys.key_blocks}}
+            'oral':{},'bones':{},'morphValues':{key.name:key.value for key in head.data.shape_keys.key_blocks},
+            'ocularVisibility':{side:ocular_visibility(tree,depsgraph,side) for side in ['L','R']}}
     mask=head.data.attributes.get('NibNoseMask')
     if mask:
         values=np.asarray([item.value for item in mask.data]);result['noseMask']={
@@ -48,21 +87,26 @@ def facial_snapshot(scene,rig,head):
     for obj in bpy.data.collections['Nib_Authored_Components'].objects:
         if obj.type!='MESH' or not obj.name.startswith(ORAL_PREFIXES):continue
         q,_=evaluated(obj,depsgraph)
-        exposed=[];sampled=list(range(0,len(q),max(1,len(q)//256)))
+        exposed=[];oblique={'left':0,'right':0};sampled=list(range(0,len(q),max(1,len(q)//256)))
         for index in sampled:
             point=q[index];origin=Vector((point.x,-1,point.z));hit,normal,face,distance=tree.ray_cast(origin,Vector((0,1,0)),2)
             # Negative Y is the viewing side. A strictly nearer facial surface
             # occludes this sample; a missed ray is also exposed.
             if hit is None or hit.y>point.y-.0001:exposed.append(index)
+            for label,sign in [('left',-1),('right',1)]:
+                direction=Vector((sign*.18,1,0)).normalized();origin=point-direction*1.2
+                hit,_,_,distance=tree.ray_cast(origin,direction,2)
+                if hit is None or distance>1.2-.0001:oblique[label]+=1
         result['oral'][obj.name]={'world':bounds(q),'objectLocation':list(obj.location),
                                  'frontalSamples':len(sampled),'unoccludedSamples':len(exposed),
-                                 'unoccludedVertexIds':exposed[:12]}
+                                 'unoccludedVertexIds':exposed[:12],'obliqueUnoccludedSamples':oblique}
     for name in ['Head','FaceRoot','Jaw','TongueBase','TongueTip','Eye_L','Eye_R','LidUpper_L','LidUpper_R']:
         bone=rig.pose.bones[name]
         result['bones'][name]={'restHeadWorld':list(rig.matrix_world@bone.bone.head_local),
                                'posedHeadWorld':list(rig.matrix_world@bone.head),
                                'basisTranslation':list(bone.matrix_basis.translation),
                                'basisQuaternion':list(bone.matrix_basis.to_quaternion())}
+    result['neutralStructuralBlockersIfClosedMouthExpected']=neutral_blockers(result)
     return result
 
 def surface_diagnostics():
