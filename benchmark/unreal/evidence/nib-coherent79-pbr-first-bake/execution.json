@@ -1,0 +1,85 @@
+{
+  "status": "Actual source snapshot and first portable PBR bake completed; saved-PBR reopen, visual parity and FBX exports pending",
+  "sourceSha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732",
+  "bakedSha256": "d3b682d455832dcc153f5e41c7b65c5cdfad1911b5706a1b6b73a426bb1870d2",
+  "bakedLocalPath": "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-coherent79-socket-1b992e-v1\\pbr\\Nib_Runtime_PBR.blend",
+  "materials": 26,
+  "fieldBakes": 8,
+  "mapFiles": 98,
+  "geometryWeightsMorphsUnchangedInBake": true,
+  "maskedMaterialNames": [
+    "Nib_v6_HeadFurCards",
+    "Nib_v6_InnerEarWispsCards",
+    "Nib_v6_TawnyEarFurCards"
+  ],
+  "processes": [
+    {
+      "stage": "snapshot-source",
+      "pid": 14428,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "NIB_CANDIDATE_STAGE_COMPLETE snapshot-source",
+      "peakPrivateMB": 559.0,
+      "minimumAvailableMB": 12696.0,
+      "files": [
+        {
+          "source": "benchmark/local/nib-coherent79-socket-1b992e-v1-snapshot-source-memory.csv",
+          "sourceSha256": "3f9fdb9724ab4c14ae2d2921503b011c9c75ed5026e6e71269c80ca11147313e",
+          "curatedFile": "snapshot-source-memory.csv",
+          "curatedSha256": "fa66a169af383f82d8d5460be7e40b40ce461347b8fb1fea22096b1e175f5785",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "source": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-snapshot-source.log",
+          "sourceSha256": "846b883b196c1abb19f5fb9bcd28f617cd71336ad08105ba80f44826320c4cb8",
+          "curatedFile": "snapshot-source.log",
+          "curatedSha256": "2f990173f6440425ff93c3a8cce3315b85800d0a68a92a88f6e693edd14ac28d",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "source": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-snapshot-source.stderr.log",
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "snapshot-source.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        }
+      ]
+    },
+    {
+      "stage": "bake",
+      "pid": 18688,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "freshCompletionMarker": "NIB_CANDIDATE_STAGE_COMPLETE bake",
+      "peakPrivateMB": 3035.0,
+      "minimumAvailableMB": 9452.0,
+      "files": [
+        {
+          "source": "benchmark/local/nib-coherent79-socket-1b992e-v1-bake-memory.csv",
+          "sourceSha256": "b7c6813c09c4a116ab8a1817ab9200e5b89afd13fc382acda77a311769700ee6",
+          "curatedFile": "bake-memory.csv",
+          "curatedSha256": "7e24701903e0cf27f5680b66cb375fd82dce85f5896a95a3b1e521559c4387f0",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "source": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-bake.log",
+          "sourceSha256": "5a520b502fb4cf6f9c3868a8fead7706b681f7a15db803e3a83b88e652c83630",
+          "curatedFile": "bake.log",
+          "curatedSha256": "de33ba0e9967e2e4b20157a13624c70ed39189e91b977cb377cd8f159717d7b1",
+          "normalization": "CRLF to LF only"
+        },
+        {
+          "source": "benchmark/local/logs/nib-coherent79-socket-1b992e-v1-bake.stderr.log",
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "curatedFile": "bake.stderr.log",
+          "curatedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "normalization": "CRLF to LF only"
+        }
+      ]
+    }
+  ],
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "engineImportVerified": false,
+  "materialVisualParityVerified": false
+}

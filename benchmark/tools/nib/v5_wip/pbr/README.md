@@ -1,10 +1,11 @@
 # Prepared v5 material transfer
 
-Status: portable bake/export preparation only; no current coherent-source PBR
-bake or engine import has run. Later saved Nib sources and actual renders now
-exist, including the coherent 79-bone garment/groom/hand source. Its first
-restorative assembly (`ba0048d0…`) fails the actual wrist/cuff interface and is
-held for correction. The existing corrected v4b shared files remain unchanged.
+Status: the actual corrected coherent source (`1b992ebb…`) now passes its
+source snapshot and first guarded PBR bake, producing `d3b682d4…`, 26 materials
+and 98 maps. Saved-PBR reopening, matched source/baked images, new FBX exports
+and engine import remain pending. Its earlier restorative assembly (`ba0048d0…`)
+failed the wrist/cuff interface and remains preserved. Overall character art is
+unaccepted; the existing corrected v4b shared files remain unchanged.
 Use the current [isolated integration plan](../../../unreal/nib_candidate/README.md),
 not the historical `v5d-pbr-prepared.job.json` paths.
 

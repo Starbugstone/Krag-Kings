@@ -1,0 +1,35 @@
+{
+  "source": "benchmark/art/nib/restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend",
+  "baked": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr/Nib_Runtime_PBR.blend",
+  "outputRoot": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr-review",
+  "savedPbrSnapshotReceipt": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/receipts/snapshot-pbr.json",
+  "pins": [
+    {
+      "path": "benchmark/art/nib/restorative-study/socket-wrist-v1/Nib_Coherent_RestorativeSocket_v1.blend",
+      "sha256": "1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr/Nib_Runtime_PBR.blend",
+      "sha256": "d3b682d455832dcc153f5e41c7b65c5cdfad1911b5706a1b6b73a426bb1870d2"
+    },
+    {
+      "path": "benchmark/local/candidates/nib-coherent79-socket-1b992e-v1/pbr/pbr-bake-report.json",
+      "sha256": "0b8d5a4b566e4658e1c9371a3b7b6df77378fceac8b1e48ba169b9c4ea2deb38"
+    },
+    {
+      "path": "benchmark/tools/nib/render_review.py",
+      "sha256": "5bfda201bef5742aeb414c8142cfe8459fa83a7eaefadf7b74d15a2eb21caced"
+    },
+    {
+      "path": "benchmark/tools/unreal/nib_candidate/review_pbr.py",
+      "sha256": "d4a6366704955acda2f89aa77ec2c56a20ad784c6009fe32f2a5a16be2da883a"
+    }
+  ],
+  "views": [
+    "Face",
+    "Tongue",
+    "Front"
+  ],
+  "artisticAcceptance": false,
+  "actualRenderingPending": true
+}

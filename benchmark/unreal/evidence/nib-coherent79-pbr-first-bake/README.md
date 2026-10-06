@@ -1,0 +1,7 @@
+# First coherent Nib PBR bake
+
+Actual source snapshot and bake both exited native/guard0 with fresh completion markers. Source `1b992ebb…` retains the79-bone rig and seven canonical takes; the snapshot records6s Idle, .8s Walk and .6s Run with the authored grounded contacts. The bake saved isolated `Nib_Runtime_PBR.blend` SHA `d3b682d455832dcc153f5e41c7b65c5cdfad1911b5706a1b6b73a426bb1870d2`, 26 materials, eight field bakes and98 PNG maps. The three MASK materials preserve their original atlas bytes, and the bake's geometry/weight/morph hashes remain unchanged.
+
+Snapshot peak private559MB; bake peak3035MB. Both remain under the unchanged8GB cap. [Execution and provenance](execution.json), [actual bake report](pbr-bake-report.json), and [source contract summary](source-contract-summary.json) retain exact hashes and the limits of this result. The full5MB source-pose report remains at the recorded local candidate path; its hash is recorded, while the committed summary retains exact rig/action contracts and sample coverage.
+
+The saved PBR reopen gate and actual matched Face/Tongue/Front comparisons are next. No new FBX export, engine import, material visual-parity pass or artistic acceptance is claimed. The corrected socket removes the earlier large wrist gap in source review; likeness, natural grip and other recorded art failures remain. Shared assets and existing executables are untouched.

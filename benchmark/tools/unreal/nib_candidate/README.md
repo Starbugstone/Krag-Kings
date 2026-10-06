@@ -1,6 +1,9 @@
 # Isolated coherent Nib PBR/FBX preparation
 
-Prepared integration code only; no bake, export, import or artistic acceptance has run through these jobs.
+The first corrected-source snapshot and portable PBR bake now pass actual
+guarded execution. See [the execution evidence](../../../unreal/evidence/nib-coherent79-pbr-first-bake/README.md).
+Saved-PBR reopening, matched images, FBX exports and engine imports remain pending;
+there is no artistic acceptance.
 
 The next scheduled plan is `plans/nib-coherent79-socket-1b992e-v1`, pinned to the
 actual corrected socket/wrist source SHA `1b992ebb4f759fadae2a602006c1a691d8be37d2951142bed470a1a283a20732`.
