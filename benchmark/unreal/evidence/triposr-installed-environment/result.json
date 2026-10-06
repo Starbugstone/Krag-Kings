@@ -1,0 +1,46 @@
+{
+  "status": "ISOLATED_INSTALL_AND_CPU_SMOKE_PASSED",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "pid": 31568,
+  "freshCompletionMarker": "TRIPOSR_ISOLATED_INSTALL_COMPLETE",
+  "inventorySha256": "10a72e576e6613644ef9aeb30a6f67039387779aaf3695a08168d31466e598ca",
+  "lockedRuntimePackages": 60,
+  "allResolvedVersionsMatch": true,
+  "cpuSmoke": {
+    "torchVersion": "2.5.1+cu121",
+    "vertices": 480,
+    "triangles": 956,
+    "modelLoaded": false,
+    "gpuInference": false
+  },
+  "peakProcessTreePrivateMB": 1761.0,
+  "minimumSystemAvailableMB": 10967.0,
+  "sharedAssetsChanged": false,
+  "existingEnvironmentsModified": false,
+  "globalPathOrDriversChanged": false,
+  "inferenceExecuted": false,
+  "logs": [
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-install-cpu-extension.log",
+      "rawSha256": "34a40544918314929d87c2473ab82fefa440a3b14019d17cb9b699cc0adb08dc",
+      "curatedFile": "triposr-reference-install-cpu-extension.log",
+      "curatedSha256": "2334be406cec5d9776d68c208e09962215e635fe7c9f623b5a752159dd5ad900",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/logs/triposr-reference-install-cpu-extension.stderr.log",
+      "rawSha256": "f6e7cb12f844812a54f712f9d4e172340af3c66be2d104d705609b77c5262b47",
+      "curatedFile": "triposr-reference-install-cpu-extension.stderr.log",
+      "curatedSha256": "22bd2a3814e691f6f142970899ae01e9eeb3880974e02c39caeaa4aa1dc38707",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "rawPath": "benchmark/local/triposr-reference-install-cpu-extension-memory.csv",
+      "rawSha256": "36a1e8ec4c87ee1162d32b13696762ef3138586415b7ed80ed253ad9a199f591",
+      "curatedFile": "triposr-reference-install-cpu-extension-memory.csv",
+      "curatedSha256": "112a452f52541cc49492c3e6819f3e3614fda60459b12b7e9dc457b41396a37f",
+      "normalization": "CRLF to LF only"
+    }
+  ]
+}

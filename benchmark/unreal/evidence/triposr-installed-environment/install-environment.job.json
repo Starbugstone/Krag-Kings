@@ -1,0 +1,19 @@
+{
+  "name": "triposr-reference-install-cpu-extension",
+  "executable": "C:\\Python310\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\install_environment.py",
+    "--inventory-sha256",
+    "10a72e576e6613644ef9aeb30a6f67039387779aaf3695a08168d31466e598ca"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 6,
+  "trackProcessTree": true,
+  "maxTreePrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-install-cpu-extension.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-install-cpu-extension.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-install-cpu-extension.log",
+  "successMarker": "TRIPOSR_ISOLATED_INSTALL_COMPLETE"
+}

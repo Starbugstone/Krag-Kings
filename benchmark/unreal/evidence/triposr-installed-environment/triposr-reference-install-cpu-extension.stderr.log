@@ -1,0 +1,18 @@
+Emitting ninja build file D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\build.ninja...
+Compiling objects...
+Using envvar MAX_JOBS (2) as the number of workers...
+D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\setuptools\_distutils\cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\setuptools\command\bdist_wheel.py:108: RuntimeWarning: Config variable 'Py_DEBUG' is unset, Python ABI tag may be incorrect
+  if get_flag("Py_DEBUG", hasattr(sys, "gettotalrefcount"), warn=(impl == "cp")):

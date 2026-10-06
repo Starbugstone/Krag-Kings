@@ -1,0 +1,207 @@
+ISOLATED_INSTALL_COMMAND ["D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe", "-m", "pip", "install", "--require-hashes", "--no-deps", "--no-build-isolation", "-r", "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\windows-reference.lock"]
+Collecting Jinja2@ https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Collecting MarkupSafe@ https://files.pythonhosted.org/packages/50/50/394a1c61c9b9972cb4f76875c332af7109bd39bdad09d3a0ec5327a339dc/markupsafe-3.0.4-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 2))
+  Downloading markupsafe-3.0.4-cp310-cp310-win_amd64.whl (14 kB)
+Collecting Pillow@ https://files.pythonhosted.org/packages/2d/7e/18ffce67b6e7637eead295b8a78d293d170d404a633010c3549da9a5e674/Pillow-10.1.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 3))
+  Downloading Pillow-10.1.0-cp310-cp310-win_amd64.whl (2.6 MB)
+     ---------------------------------------- 2.6/2.6 MB 21.5 MB/s  0:00:00
+Collecting PyMatting@ https://files.pythonhosted.org/packages/47/8e/2c00f3615fc906c01f5168d2caedf61811db6259b8d0c9a1b14d7c9af61a/pymatting-1.1.16-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 4))
+  Downloading pymatting-1.1.16-py3-none-any.whl (56 kB)
+Collecting PyYAML@ https://files.pythonhosted.org/packages/2a/fa/926c003379b19fca39dd4634818b00dec6c62d87faf628d1394e137354d4/pyyaml-6.0.3-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 5))
+  Downloading pyyaml-6.0.3-cp310-cp310-win_amd64.whl (158 kB)
+Collecting antlr4-python3-runtime@ https://files.pythonhosted.org/packages/3e/38/7859ff46355f76f8d19459005ca000b6e7012f2f1ca597746cbcd1fbfe5e/antlr4-python3-runtime-4.9.3.tar.gz (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 6))
+  Using cached antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting attrs@ https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 7))
+  Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Collecting certifi@ https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 8))
+  Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Collecting charset-normalizer@ https://files.pythonhosted.org/packages/ae/ab/fb8b5178fdf7bf68efa61cbe892286bc9f73846f26147d4725fb89388475/charset_normalizer-3.5.2-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 9))
+  Downloading charset_normalizer-3.5.2-cp310-cp310-win_amd64.whl (215 kB)
+Collecting colorama@ https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 10))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting coloredlogs@ https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 11))
+  Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Collecting einops@ https://files.pythonhosted.org/packages/29/0b/2d1c0ebfd092e25935b86509a9a817159212d82aa43d7fb07eca4eeff2c2/einops-0.7.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 12))
+  Downloading einops-0.7.0-py3-none-any.whl (44 kB)
+Collecting filelock@ https://files.pythonhosted.org/packages/da/a1/b047e1c486a2c66283633b7dbb73872ca16ca1ce6a426f70d4d037fc8e1c/filelock-4.0.12-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 13))
+  Downloading filelock-4.0.12-py3-none-any.whl (111 kB)
+Collecting flatbuffers@ https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 14))
+  Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Collecting fsspec@ https://files.pythonhosted.org/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 15))
+  Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Collecting glcontext@ https://files.pythonhosted.org/packages/4c/6e/0f155e2b8bf9899e3d937a4467c88b3ad11b273e537ecf83eec22710d359/glcontext-2.5.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 16))
+  Downloading glcontext-2.5.0-cp310-cp310-win_amd64.whl (12 kB)
+Collecting huggingface-hub@ https://files.pythonhosted.org/packages/aa/f3/3fc97336a0e90516901befd4f500f08d691034d387406fdbde85bea827cc/huggingface_hub-0.17.3-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 17))
+  Downloading huggingface_hub-0.17.3-py3-none-any.whl (295 kB)
+Collecting humanfriendly@ https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 18))
+  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Collecting idna@ https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 19))
+  Downloading idna-3.20-py3-none-any.whl (69 kB)
+Collecting imageio@ https://files.pythonhosted.org/packages/02/25/66533a8390e3763cf8254dee143dbf8a830391ea60d2762512ba7f9ddfbe/imageio-2.34.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 20))
+  Downloading imageio-2.34.0-py3-none-any.whl (313 kB)
+Collecting imageio-ffmpeg@ https://files.pythonhosted.org/packages/2c/c6/fa760e12a2483469e2bf5058c5faff664acf66cadb4df2ad6205b016a73d/imageio_ffmpeg-0.6.0-py3-none-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 21))
+  Downloading imageio_ffmpeg-0.6.0-py3-none-win_amd64.whl (31.2 MB)
+     ---------------------------------------- 31.2/31.2 MB 82.6 MB/s  0:00:00
+Collecting jsonschema@ https://files.pythonhosted.org/packages/69/90/f63fb5873511e014207a475e2bb4e8b2e570d655b00ac19a9a0ca0a385ee/jsonschema-4.26.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 22))
+  Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Collecting jsonschema-specifications@ https://files.pythonhosted.org/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 23))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Collecting lazy-loader@ https://files.pythonhosted.org/packages/23/93/4e45e37f26c820216704b36b8e67cc55c490a7abd287a78a26a2c0e21386/lazy_loader-0.6-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 24))
+  Downloading lazy_loader-0.6-py3-none-any.whl (8.8 kB)
+Collecting llvmlite@ https://files.pythonhosted.org/packages/87/d3/853c8e0d91a1570fa06caa15cb94919f038f472b68b5995aaa5c9045ca20/llvmlite-0.50.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 25))
+  Downloading llvmlite-0.50.0-cp310-cp310-win_amd64.whl (41.9 MB)
+     ---------------------------------------- 41.9/41.9 MB 91.8 MB/s  0:00:00
+Collecting moderngl@ https://files.pythonhosted.org/packages/cb/d1/e514f1e6d1e28edd3d9c46f61c55c8fc9ab6421cd9e231c2c0a94d8e0ff0/moderngl-5.10.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 26))
+  Downloading moderngl-5.10.0-cp310-cp310-win_amd64.whl (104 kB)
+Collecting mpmath@ https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 27))
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ---------------------------------------- 536.2/536.2 kB 17.1 MB/s  0:00:00
+Collecting networkx@ https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 28))
+  Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ---------------------------------------- 1.7/1.7 MB 45.7 MB/s  0:00:00
+Collecting ninja@ https://files.pythonhosted.org/packages/03/93/09a9f7672b4f97438aca6217ac54212a63273f1cd3b46b731d0bb22c53e7/ninja-1.11.1.3-py3-none-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 29))
+  Downloading ninja-1.11.1.3-py3-none-win_amd64.whl (296 kB)
+Collecting numba@ https://files.pythonhosted.org/packages/fa/53/344c32e45cf7d59896d872351ca5b630010cc228f27892d9c6a59a753c18/numba-0.68.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 30))
+  Downloading numba-0.68.0-cp310-cp310-win_amd64.whl (2.8 MB)
+     ---------------------------------------- 2.8/2.8 MB 54.7 MB/s  0:00:00
+Collecting numpy@ https://files.pythonhosted.org/packages/19/77/538f202862b9183f54108557bfda67e17603fc560c384559e769321c9d92/numpy-1.26.4-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 31))
+  Downloading numpy-1.26.4-cp310-cp310-win_amd64.whl (15.8 MB)
+     ---------------------------------------- 15.8/15.8 MB 82.7 MB/s  0:00:00
+Collecting omegaconf@ https://files.pythonhosted.org/packages/e3/94/1843518e420fa3ed6919835845df698c7e27e183cb997394e4a670973a65/omegaconf-2.3.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 32))
+  Downloading omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Collecting onnxruntime@ https://files.pythonhosted.org/packages/cd/6d/738e50c47c2fd285b1e6c8083f15dac1a5f6199213378a5f14092497296d/onnxruntime-1.23.2-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 33))
+  Downloading onnxruntime-1.23.2-cp310-cp310-win_amd64.whl (13.5 MB)
+     ---------------------------------------- 13.5/13.5 MB 84.7 MB/s  0:00:00
+Collecting opencv-python-headless@ https://files.pythonhosted.org/packages/86/8a/69176a64335aed183529207ba8bc3d329c2999d852b4f3818027203f50e6/opencv_python_headless-4.11.0.86-cp37-abi3-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 34))
+  Downloading opencv_python_headless-4.11.0.86-cp37-abi3-win_amd64.whl (39.4 MB)
+     ---------------------------------------- 39.4/39.4 MB 92.7 MB/s  0:00:00
+Collecting packaging@ https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 35))
+  Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Collecting platformdirs@ https://files.pythonhosted.org/packages/c5/9b/6ce1ead737fe496611bda600c263b9a11ae7bd8f41bb13f9bd7e0a2c37a4/platformdirs-4.12.3-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 36))
+  Downloading platformdirs-4.12.3-py3-none-any.whl (32 kB)
+Collecting pooch@ https://files.pythonhosted.org/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 37))
+  Downloading pooch-1.9.0-py3-none-any.whl (67 kB)
+Collecting protobuf@ https://files.pythonhosted.org/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 38))
+  Downloading protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Collecting psutil@ https://files.pythonhosted.org/packages/b4/90/e2159492b5426be0c1fef7acba807a03511f97c5f86b3caeda6ad92351a7/psutil-7.2.2-cp37-abi3-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 39))
+  Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Collecting pyreadline3@ https://files.pythonhosted.org/packages/f7/5e/35c856e186b74678c24927847ad9895a51f1bc02a0c6126477a6c6040064/pyreadline3-3.5.6-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 40))
+  Downloading pyreadline3-3.5.6-py3-none-any.whl (85 kB)
+Collecting referencing@ https://files.pythonhosted.org/packages/2c/58/ca301544e1fa93ed4f80d724bf5b194f6e4b945841c5bfd555878eea9fcb/referencing-0.37.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 41))
+  Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Collecting regex@ https://files.pythonhosted.org/packages/0c/f6/b127312ebc8092357f435c9e4594fd8cf50abb85f8b4b16ab8d262abab2a/regex-2026.9.29-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 42))
+  Downloading regex-2026.9.29-cp310-cp310-win_amd64.whl (280 kB)
+Collecting rembg@ https://files.pythonhosted.org/packages/c4/49/f13f89b0904a81277cb5db81246c35ef3df5b69cfbfb38c6b63a532d8b02/rembg-2.0.60-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 43))
+  Downloading rembg-2.0.60-py3-none-any.whl (39 kB)
+Collecting requests@ https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 44))
+  Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Collecting rpds-py@ https://files.pythonhosted.org/packages/96/cb/156d7a5cf4f78a7cc571465d8aec7a3c447c94f6749c5123f08438bcf7bc/rpds_py-0.30.0-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 45))
+  Downloading rpds_py-0.30.0-cp310-cp310-win_amd64.whl (235 kB)
+Collecting safetensors@ https://files.pythonhosted.org/packages/1b/6d/3fba214c1e5e0f69991677ec3bc17023f0421776975e1de0c682dca475e2/safetensors-0.8.0-cp310-abi3-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 46))
+  Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+Collecting scikit-image@ https://files.pythonhosted.org/packages/5f/ee/c53a009e3997dda9d285402f19226fbd17b5b3cb215da391c4ed084a1424/scikit_image-0.25.2-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 47))
+  Downloading scikit_image-0.25.2-cp310-cp310-win_amd64.whl (12.8 MB)
+     ---------------------------------------- 12.8/12.8 MB 89.0 MB/s  0:00:00
+Collecting scipy@ https://files.pythonhosted.org/packages/d1/84/55bc4881973d3f79b479a5a2e2df61c8c9a04fcb986a213ac9c02cfb659b/scipy-1.15.3-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 48))
+  Downloading scipy-1.15.3-cp310-cp310-win_amd64.whl (41.3 MB)
+     ---------------------------------------- 41.3/41.3 MB 84.5 MB/s  0:00:00
+Collecting setuptools@ https://files.pythonhosted.org/packages/55/21/47d163f615df1d30c094f6c8bbb353619274edccf0327b185cc2493c2c33/setuptools-75.6.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 49))
+  Downloading setuptools-75.6.0-py3-none-any.whl (1.2 MB)
+     ---------------------------------------- 1.2/1.2 MB 60.1 MB/s  0:00:00
+Collecting sympy@ https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 50))
+  Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+     ---------------------------------------- 6.2/6.2 MB 63.1 MB/s  0:00:00
+Collecting tifffile@ https://files.pythonhosted.org/packages/5d/06/bd0a6097da704a7a7c34a94cfd771c3ea3c2f405dd214e790d22c93f6be1/tifffile-2025.5.10-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 51))
+  Downloading tifffile-2025.5.10-py3-none-any.whl (226 kB)
+Collecting tokenizers@ https://files.pythonhosted.org/packages/92/02/15556b80450301d2ef014bc598df4352bfb39631c5fcff758d8e0ac9f065/tokenizers-0.14.1-cp310-none-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 52))
+  Downloading tokenizers-0.14.1-cp310-none-win_amd64.whl (2.2 MB)
+     ---------------------------------------- 2.2/2.2 MB 62.4 MB/s  0:00:00
+Processing d:\dev\krag-kings\benchmark\local\triposr-downloads-v1\torch-2.5.1+cu121-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 53))
+Collecting tqdm@ https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 54))
+  Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Collecting transformers@ https://files.pythonhosted.org/packages/9a/06/e4ec2a321e57c03b7e9345d709d554a52c33760e5015fdff0919d9459af0/transformers-4.35.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 55))
+  Downloading transformers-4.35.0-py3-none-any.whl (7.9 MB)
+     ---------------------------------------- 7.9/7.9 MB 81.5 MB/s  0:00:00
+Collecting trimesh@ https://files.pythonhosted.org/packages/c4/28/f3c55fad13f908fdbedd763ed63bd07f409c32ef40bb0381d6107738fed3/trimesh-4.0.5-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 56))
+  Downloading trimesh-4.0.5-py3-none-any.whl (688 kB)
+     ---------------------------------------- 688.5/688.5 kB 26.6 MB/s  0:00:00
+Collecting typing_extensions@ https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 57))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Collecting urllib3@ https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 58))
+  Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Collecting wheel@ https://files.pythonhosted.org/packages/0b/2c/87f3254fd8ffd29e4c02732eee68a83a1d3c346ae39bc6822dcbcb697f2b/wheel-0.45.1-py3-none-any.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 59))
+  Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+Collecting xatlas@ https://files.pythonhosted.org/packages/8a/85/1be08a07e3be83fd35d3d2ad08205ed883f802f7e22c0ee6040bca0b8ca3/xatlas-0.0.9-cp310-cp310-win_amd64.whl (from -r D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\windows-reference.lock (line 60))
+  Downloading xatlas-0.0.9-cp310-cp310-win_amd64.whl (193 kB)
+Building wheels for collected packages: antlr4-python3-runtime
+  Building wheel for antlr4-python3-runtime (pyproject.toml): started
+  Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144578 sha256=0b88bd656ca9bdb422e94a747963cbb3f2a1ec890bd221dd53b9dae3340a0fd0
+  Stored in directory: d:\dev\krag-kings\benchmark\local\triposr-reference-v1\cache\pip\wheels\48\6a\c2\acb58c7afdf57e4cddf5e1513f5a2d62aa8e98f82a00c76d7c
+Successfully built antlr4-python3-runtime
+Installing collected packages: mpmath, glcontext, flatbuffers, antlr4-python3-runtime, xatlas, urllib3, typing_extensions, trimesh, transformers, tqdm, torch, tokenizers, tifffile, sympy, scipy, scikit-image, safetensors, rpds-py, requests, rembg, regex, referencing, PyYAML, pyreadline3, PyMatting, psutil, protobuf, pooch, platformdirs, Pillow, opencv-python-headless, onnxruntime, omegaconf, numpy, numba, ninja, networkx, moderngl, MarkupSafe, llvmlite, lazy-loader, jsonschema-specifications, jsonschema, Jinja2, imageio-ffmpeg, imageio, idna, humanfriendly, huggingface-hub, fsspec, filelock, einops, coloredlogs, colorama, charset-normalizer, certifi, attrs
+
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 Pillow-10.1.0 PyMatting-1.1.16 PyYAML-6.0.3 antlr4-python3-runtime-4.9.3 attrs-26.1.0 certifi-2026.7.22 charset-normalizer-3.5.2 colorama-0.4.6 coloredlogs-15.0.1 einops-0.7.0 filelock-4.0.12 flatbuffers-25.12.19 fsspec-2026.9.0 glcontext-2.5.0 huggingface-hub-0.17.3 humanfriendly-10.0 idna-3.20 imageio-2.34.0 imageio-ffmpeg-0.6.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lazy-loader-0.6 llvmlite-0.50.0 moderngl-5.10.0 mpmath-1.3.0 networkx-3.4.2 ninja-1.11.1.3 numba-0.68.0 numpy-1.26.4 omegaconf-2.3.0 onnxruntime-1.23.2 opencv-python-headless-4.11.0.86 platformdirs-4.12.3 pooch-1.9.0 protobuf-7.36.2 psutil-7.2.2 pyreadline3-3.5.6 referencing-0.37.0 regex-2026.9.29 rembg-2.0.60 requests-2.34.2 rpds-py-0.30.0 safetensors-0.8.0 scikit-image-0.25.2 scipy-1.15.3 sympy-1.13.1 tifffile-2025.5.10 tokenizers-0.14.1 torch-2.5.1+cu121 tqdm-4.70.1 transformers-4.35.0 trimesh-4.0.5 typing_extensions-4.16.0 urllib3-2.8.0 xatlas-0.0.9
+ISOLATED_INSTALL_COMMAND ["cmd.exe", "/d", "/c", "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\build-cpu-extension.cmd"]
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.14.41
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+running bdist_wheel
+running build
+running build_py
+creating build\lib.win-amd64-cpython-310\torchmcubes
+copying torchmcubes\__init__.py -> build\lib.win-amd64-cpython-310\torchmcubes
+running build_ext
+building 'torchmcubes_module' extension
+creating D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx
+[1/3] cl /showIncludes /nologo /O2 /W3 /GL /DNDEBUG /MD /MD /wd4819 /wd4251 /wd4244 /wd4267 /wd4275 /wd4018 /wd4190 /wd4624 /wd4067 /wd4068 /EHsc -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\torch\csrc\api\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\TH -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\THC -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\include -IC:\Python310\include -IC:\Python310\Include -ID:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207\include -ID:\DevTools\VS2022BuildTools\VC\Auxiliary\VS\include "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -c D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\mcubes.cpp /FoD:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/mcubes.obj -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=torchmcubes_module -D_GLIBCXX_USE_CXX11_ABI=0 /std:c++17
+[2/3] cl /showIncludes /nologo /O2 /W3 /GL /DNDEBUG /MD /MD /wd4819 /wd4251 /wd4244 /wd4267 /wd4275 /wd4018 /wd4190 /wd4624 /wd4067 /wd4068 /EHsc -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\torch\csrc\api\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\TH -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\THC -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\include -IC:\Python310\include -IC:\Python310\Include -ID:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207\include -ID:\DevTools\VS2022BuildTools\VC\Auxiliary\VS\include "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -c D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\grid_interp_cpu.cpp /FoD:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/grid_interp_cpu.obj -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=torchmcubes_module -D_GLIBCXX_USE_CXX11_ABI=0 /std:c++17
+D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\grid_interp_cpu.cpp(16): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\grid_interp_cpu.cpp(20): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+[3/3] cl /showIncludes /nologo /O2 /W3 /GL /DNDEBUG /MD /MD /wd4819 /wd4251 /wd4244 /wd4267 /wd4275 /wd4018 /wd4190 /wd4624 /wd4067 /wd4068 /EHsc -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\torch\csrc\api\include -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\TH -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\include\THC -ID:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\include -IC:\Python310\include -IC:\Python310\Include -ID:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207\include -ID:\DevTools\VS2022BuildTools\VC\Auxiliary\VS\include "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -c D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\mcubes_cpu.cpp /FoD:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/mcubes_cpu.obj -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=torchmcubes_module -D_GLIBCXX_USE_CXX11_ABI=0 /std:c++17
+D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\cxx\mcubes_cpu.cpp(524): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /nologo /INCREMENTAL:NO /LTCG /DLL /MANIFEST:EMBED,ID=2 /MANIFESTUAC:NO /LIBPATH:D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\lib\site-packages\torch\lib /LIBPATH:D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\libs /LIBPATH:C:\Python310\libs /LIBPATH:C:\Python310 /LIBPATH:D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\venv\PCbuild\amd64 /LIBPATH:D:\DevTools\VS2022BuildTools\VC\Tools\MSVC\14.44.35207\lib\x64 "/LIBPATH:C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64" c10.lib torch.lib torch_cpu.lib torch_python.lib sleef.lib /EXPORT:PyInit_torchmcubes_module D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/grid_interp_cpu.obj D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/mcubes.obj D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx/mcubes_cpu.obj /OUT:build\lib.win-amd64-cpython-310\torchmcubes_module.cp310-win_amd64.pyd /IMPLIB:D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx\torchmcubes_module.cp310-win_amd64.lib
+   Creating library D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx\torchmcubes_module.cp310-win_amd64.lib and object D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\sources\torchmcubes\build\temp.win-amd64-cpython-310\Release\cxx\torchmcubes_module.cp310-win_amd64.exp
+Generating code
+Finished generating code
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\torchmcubes
+copying build\lib.win-amd64-cpython-310\torchmcubes\__init__.py -> build\bdist.win-amd64\wheel\.\torchmcubes
+copying build\lib.win-amd64-cpython-310\torchmcubes_module.cp310-win_amd64.pyd -> build\bdist.win-amd64\wheel\.
+running install_egg_info
+running egg_info
+creating torchmcubes.egg-info
+writing torchmcubes.egg-info\PKG-INFO
+writing dependency_links to torchmcubes.egg-info\dependency_links.txt
+writing top-level names to torchmcubes.egg-info\top_level.txt
+writing manifest file 'torchmcubes.egg-info\SOURCES.txt'
+reading manifest file 'torchmcubes.egg-info\SOURCES.txt'
+writing manifest file 'torchmcubes.egg-info\SOURCES.txt'
+Copying torchmcubes.egg-info to build\bdist.win-amd64\wheel\.\torchmcubes-0.1.0-py3.10.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\torchmcubes-0.1.0.dist-info\WHEEL
+creating 'D:\Dev\Krag-Kings\benchmark\local\triposr-reference-v1\downloads\torchmcubes-0.1.0-cp310-cp310-win_amd64.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'torchmcubes_module.cp310-win_amd64.pyd'
+adding 'torchmcubes/__init__.py'
+adding 'torchmcubes-0.1.0.dist-info/METADATA'
+adding 'torchmcubes-0.1.0.dist-info/WHEEL'
+adding 'torchmcubes-0.1.0.dist-info/top_level.txt'
+adding 'torchmcubes-0.1.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+ISOLATED_INSTALL_COMMAND ["D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe", "-m", "pip", "install", "--no-index", "--no-deps", "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\downloads\\torchmcubes-0.1.0-cp310-cp310-win_amd64.whl"]
+Processing d:\dev\krag-kings\benchmark\local\triposr-reference-v1\downloads\torchmcubes-0.1.0-cp310-cp310-win_amd64.whl
+Installing collected packages: torchmcubes
+Successfully installed torchmcubes-0.1.0
+ISOLATED_INSTALL_COMMAND ["D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe", "-m", "pip", "check"]
+No broken requirements found.
+ISOLATED_INSTALL_COMMAND ["D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe", "-c", "import torch,torchmcubes; a=torch.arange(16,dtype=torch.float32); x,y,z=torch.meshgrid(a,a,a,indexing='ij'); v,f=torchmcubes.marching_cubes((x-7.5)**2+(y-7.5)**2+(z-7.5)**2,25.0); assert len(v)>0 and len(f)>0; print('CPU_EXTENSION_SMOKE',torch.__version__,len(v),len(f))"]
+CPU_EXTENSION_SMOKE 2.5.1+cu121 480 956
+TRIPOSR_ISOLATED_INSTALL_COMPLETE

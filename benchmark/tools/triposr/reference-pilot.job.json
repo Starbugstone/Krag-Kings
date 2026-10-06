@@ -1,0 +1,16 @@
+{
+  "name": "triposr-reference-krag-bust-pilot",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\run_reference_pilot.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-krag-bust-pilot.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-krag-bust-pilot.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-krag-bust-pilot.log",
+  "successMarker": "TRIPOSR_REFERENCE_PILOT_GENERATED",
+  "gpuTelemetry": true
+}

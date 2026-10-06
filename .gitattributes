@@ -140,3 +140,5 @@ benchmark/art/animation/krag-human-motion-v4/motion-video*/decode.log.txt -text 
 benchmark/unreal/evidence/triposr-resolved-environment/*.json -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/triposr-resolved-environment/*.lock -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/triposr-resolved-environment/*.in -text whitespace=cr-at-eol,-blank-at-eof
+
+benchmark/unreal/evidence/triposr-installed-environment/installation.json -text whitespace=cr-at-eol,-blank-at-eof

@@ -1,0 +1,20 @@
+{
+  "name": "triposr-reference-mesh-review",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\review_reference_mesh.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-mesh-review.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-mesh-review.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-mesh-review.log",
+  "successMarker": "TRIPOSR_REFERENCE_MESH_REVIEW_COMPLETE"
+}

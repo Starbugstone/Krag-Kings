@@ -1,0 +1,15 @@
+{
+  "name": "triposr-reference-prepare-input",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\local\\triposr-reference-v1\\venv\\Scripts\\python.exe",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\triposr\\prepare_pilot_input.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 2,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-prepare-input.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-prepare-input.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\triposr-reference-prepare-input.log",
+  "successMarker": "TRIPOSR_CONDITIONING_INPUT_COMPLETE"
+}
