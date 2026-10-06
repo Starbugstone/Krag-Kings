@@ -1,0 +1,124 @@
+{
+  "status": "Actual source/save-reopen and two inspected whole-face views; likeness and normal-mouth detail remain unaccepted",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_WholeFaceOral_v9va_WIP.blend",
+    "sha256": "e1e979e13546a87ede94aa82cb917c103c59b2a82c4031e872c588652a373e04"
+  },
+  "sourceReceipt": {
+    "path": "benchmark/art/krag/whole-face-v9va.json",
+    "sha256": "7fef79eb29171d7fcd4d505164b5b8d1f532060d847a2e207f6d77527d0c6890"
+  },
+  "execution": [
+    {
+      "job": "krag-whole-face-v9va-source",
+      "processId": 5740,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 1165.0,
+      "minimumAvailableMB": 10244.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-source.stdout.txt",
+          "sha256": "94bf06a1b264ca310b82d39d578c51d284bc0ffec5a1ed2bd409d98c697cdcd1"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-source.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-source-memory.csv",
+          "sha256": "13da6ba9376bc64ce4db6a1eba8f0e1ae2b10d3b7aeb7085d611b83562dfd9f2"
+        }
+      ]
+    },
+    {
+      "job": "krag-whole-face-v9va-NeutralFrontClay",
+      "processId": 11288,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2121.0,
+      "minimumAvailableMB": 9562.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-NeutralFrontClay.stdout.txt",
+          "sha256": "1b7e5c7d9ea9bf59bb85862ee0ffae8bba45a91f4533a2ff3b2e96ff50667f15"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-NeutralFrontClay.stderr.txt",
+          "sha256": "cf830d410f4a61f9ef54ff42d1508e8b5e83afaf32343ad2f352cf5ff456c993"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-NeutralFrontClay-memory.csv",
+          "sha256": "787ecc0a92912d1a60ce271de39e165aa1c681f2358a12561663710a6a6e0a08"
+        }
+      ]
+    },
+    {
+      "job": "krag-whole-face-v9va-OpenFront",
+      "processId": 28532,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2098.0,
+      "minimumAvailableMB": 9535.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-OpenFront.stdout.txt",
+          "sha256": "b07caff8a19dd132cd4060d33fbc9e6d83980e824d7460182637fe885f577934"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-OpenFront.stderr.txt",
+          "sha256": "e0099e477e0698a4e827b52c3bbb3241d04c5fc2eee2a48d8387e59e867169ed"
+        },
+        {
+          "path": "benchmark/art/krag/whole-face-v9va-evidence/krag-whole-face-v9va-OpenFront-memory.csv",
+          "sha256": "1147365a623f2ae64ce9b658235f8d6e2df2b205883e5e692ffe0cc6aca0a80b"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "view": "NeutralFrontClay",
+      "path": "benchmark/art/krag/renders/Krag_WholeFaceOral_v9va_NeutralFrontClay.png",
+      "sha256": "c280c669d4e5d7291d99d8f92929c59c14e6bc6c2d3f9f718e3357d193e45d40",
+      "metadata": "benchmark/art/krag/renders/Krag_WholeFaceOral_v9va_NeutralFrontClay.meta.json",
+      "metadataSha256": "8910454b8798aa27a3d4fef5b0ec12429c2bb18de4dce4358d6a544dff71645c",
+      "inspected": true
+    },
+    {
+      "view": "OpenFront",
+      "path": "benchmark/art/krag/renders/Krag_WholeFaceOral_v9va_OpenFront.png",
+      "sha256": "a2f20661452fb2bd696cfcf56c86352d36ea890671524e61412e3bd99367ad80",
+      "metadata": "benchmark/art/krag/renders/Krag_WholeFaceOral_v9va_OpenFront.meta.json",
+      "metadataSha256": "b88410db286fa70958357fb7d446734a282aee95ade2cc0552f483f71b9b54af",
+      "inspected": true
+    }
+  ],
+  "measuredSourceGates": {
+    "savedReopenedPassed": true,
+    "fullJawRotationDegrees": 22.990797529309148,
+    "lipSourceResidualMeters": 0.0182317490258756,
+    "unchangedLimitMeters": 0.025,
+    "actualInverseSkinReproductionErrorMeters": 2.87053987130496e-07,
+    "neutralFlippedTriangles": 0,
+    "minimumNeutralTriangleAreaRatio": 0.4999076905919101
+  },
+  "observedImprovements": [
+    "Supported brow/glabella and cheek turns are visible without skin texture in the clay view",
+    "Short canines sit farther toward the lip corners",
+    "Full opening is rounder and tongue floor is now visible",
+    "Continuous lower-face outline and full jaw range are retained"
+  ],
+  "observedFailures": [
+    "Skull and cheek/muzzle masses remain too uniformly rounded and smooth compared with concept01",
+    "Lip margins still lack convincing continuous anatomical rolls and differentiated tissue",
+    "Lower incisor crowns remain mostly hidden; gum/dental depth still weak",
+    "Oral cavity remains disproportionately dark; current source skin/cowl remain unaccepted",
+    "Lower tusks still read as seated on exterior skin, and the mouth as a cut-out cavity"
+  ],
+  "interpretation": "The neutral sculpt preserves relative existing expression deltas; the separately declared JawOpen residual is intentionally changed. Numerical gates do not establish artistic acceptance.",
+  "next": "Stop incremental oral-only iterations. Prepare stronger whole-face anatomical fitting using inspected concept massing; the separately prepared original TRELLIS first condition stage may supply a reference aid after a guarded slot is granted. No rig replacement, source promotion or new inference claim.",
+  "motionLineage": "Retains pre-v4 oral actions. Frozen coherent68 fe15213d and all engine/shared inputs are unchanged."
+}
