@@ -1,0 +1,24 @@
+{
+  "status": "Actual isolated environment and three small native GPU kernels passed",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "memory": {
+    "installation": {
+      "peakPrivateMB": 56.0,
+      "peakTreePrivateMB": 160.0,
+      "minimumAvailableMB": 9235.0
+    },
+    "kernel-probe": {
+      "peakPrivateMB": 1.0,
+      "peakTreePrivateMB": 694.0,
+      "minimumAvailableMB": 10842.0
+    }
+  },
+  "kernelResultSha256": "a66461738666cb3595fdbf405ef50188cfd7759e621e034e03cf5f8c598a9c41",
+  "priorEnvironmentChanged": false,
+  "modelWeightsDownloaded": false,
+  "inferenceRan": false,
+  "engineIntegrated": false,
+  "artisticAcceptance": false,
+  "limitation": "Original TRELLIS recommends16GB VRAM. Small kernel success on the6GB RTX2060 does not prove complete inference fits."
+}

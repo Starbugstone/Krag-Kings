@@ -1,0 +1,5 @@
+KERNEL_PROBE fp16_memory_efficient_attention {'shape': [1, 512, 8, 64], 'maximumAbsoluteErrorVsFloat32': 0.00014349818229675293, 'tolerance': 0.01}
+KERNEL_PROBE spconv_native_small_grid {'shape': [64, 32], 'allFinite': True, 'dtypes': ['torch.float32', 'torch.float16'], 'maximumHalfAbsoluteErrorVsFloat32': 0.001938939094543457, 'tolerance': 0.01}
+[SPARSE] Backend: spconv, Attention: xformers
+KERNEL_PROBE flexicubes_small_sphere {'vertices': 128, 'triangles': 252, 'allFinite': True}
+TRELLIS_ORIGINAL_KERNEL_PROBE_COMPLETE

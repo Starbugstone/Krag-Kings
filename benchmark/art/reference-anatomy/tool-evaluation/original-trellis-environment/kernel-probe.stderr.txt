@@ -1,0 +1,22 @@
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\xformers\ops\fmha\flash.py:211: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_fwd")
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\xformers\ops\fmha\flash.py:344: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_bwd")
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:47: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  _TORCH_CUSTOM_FWD = amp.custom_fwd(cast_inputs=torch.float16)
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:97: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:163: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:243: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:332: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:369: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:389: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\local\trellis-original-pilot-v1\venv\lib\site-packages\spconv\pytorch\functional.py:412: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+D:\Dev\Krag-Kings\benchmark\tools\reconstruction\trellis_original\probe_kernels.py:55: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:555.)
+  reference=torch.nn.functional.scaled_dot_product_attention(q.float().transpose(1,2),k.float().transpose(1,2),v.float().transpose(1,2)).transpose(1,2)

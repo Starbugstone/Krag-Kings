@@ -1,0 +1,56 @@
+{
+  "status": "Small native kernels passed; full inference remains untested",
+  "torch": "2.4.0+cu121",
+  "xformers": "0.0.27.post2",
+  "cuda": "12.1",
+  "recipeSha256": "34463c7802353992f6d1e23aa378b4f909588e005e35411ca737aa1b8c0dd8b6",
+  "sourcePreparationSha256": "fdc5d3fcc7cf89e5a8d6ed7efaa04f8c0493b3c553ca27b9a89c880d8ad069f9",
+  "modelWeightsLoaded": false,
+  "inferenceRan": false,
+  "checks": [
+    {
+      "name": "fp16_memory_efficient_attention",
+      "elapsedSeconds": 0.08481790000223555,
+      "shape": [
+        1,
+        512,
+        8,
+        64
+      ],
+      "maximumAbsoluteErrorVsFloat32": 0.00014349818229675293,
+      "tolerance": 0.01
+    },
+    {
+      "name": "spconv_native_small_grid",
+      "elapsedSeconds": 0.08861750000505708,
+      "shape": [
+        64,
+        32
+      ],
+      "allFinite": true,
+      "dtypes": [
+        "torch.float32",
+        "torch.float16"
+      ],
+      "maximumHalfAbsoluteErrorVsFloat32": 0.001938939094543457,
+      "tolerance": 0.01
+    },
+    {
+      "name": "flexicubes_small_sphere",
+      "elapsedSeconds": 0.29684049999923445,
+      "vertices": 128,
+      "triangles": 252,
+      "allFinite": true
+    }
+  ],
+  "device": {
+    "name": "NVIDIA GeForce RTX 2060",
+    "capability": [
+      7,
+      5
+    ],
+    "vramBytes": 6442123264
+  },
+  "peakAllocatedBytes": 8838144,
+  "peakReservedBytes": 27262976
+}

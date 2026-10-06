@@ -1,0 +1,21 @@
+{
+  "name": "trellis-original-isolated-environment-v1",
+  "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\reconstruction\\trellis_original\\Install-Pilot.ps1"
+  ],
+  "minAvailableGB": 10,
+  "maxPrivateGB": 4,
+  "maxTreePrivateGB": 4,
+  "trackProcessTree": true,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-environment-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-environment-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-environment-v1.stdout.log",
+  "successMarker": "TRELLIS_ORIGINAL_ENVIRONMENT_PREPARED"
+}

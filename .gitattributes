@@ -256,3 +256,7 @@ benchmark/art/krag/material-study/organic-skin-v1/matched-mesh-review/evidence/*
 # Preserve native coherent68 material-preparation evidence bytes.
 benchmark/unreal/evidence/krag-coherent68-pbr-initial/**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/krag-coherent68-pbr-initial/**/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.txt -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/art/reference-anatomy/tool-evaluation/original-trellis-environment/*.csv -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
