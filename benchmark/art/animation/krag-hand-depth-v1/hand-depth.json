@@ -1,0 +1,29 @@
+{
+  "status": "Actual isolated hand-depth proposal; native pose/shape review required",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-relaxed-hand-v2\\Krag_RelaxedHand_v2.blend",
+  "sourceSha256": "af3cdbdcad160e4fb48cbd843c915f2b19b4ac601c069ebce85db23cc7d2f0ad",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\krag-hand-depth-v1\\Krag_HandDepth_v1.blend",
+  "outputSha256": "8ff377bf980a79c2e0208f3de6f49e563df16a76d521d40212d73a220adf0316",
+  "savedSourceReopened": true,
+  "proposal": {
+    "palmDepthScale": 0.55,
+    "digitDepthScale": 0.78
+  },
+  "maximumPointMoveMeters": 0.06262601098831064,
+  "changedPoints": 50810,
+  "unchangedMeshComponents": 30,
+  "allBindAndActionHashesPreserved": true,
+  "handLengthAndWidthCoordinatesPreserved": {
+    "maxAlongErrorMeters": 1.173416086519552e-10,
+    "maxAcrossErrorMeters": 1.2912400434907795e-10
+  },
+  "triangleCount": 129534,
+  "newDegenerateTriangles": 0,
+  "normalRotationsOver90": 0,
+  "minimumAreaRatio": 0.41834325337177203,
+  "recipeSha256": "6b63785d013dc8c400cec751c1fd6f6f2f598eec559dae0a9d0ce912dae68e8e",
+  "artisticAcceptance": false,
+  "surfaceIntersectionProven": false,
+  "sharedChanged": false,
+  "engineExported": false
+}

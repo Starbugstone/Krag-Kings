@@ -175,3 +175,8 @@ benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/**/*.csv -text whitespace=c
 benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/source-contract.json filter=lfs diff=lfs merge=lfs -text
 benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/pbr-contract.json filter=lfs diff=lfs merge=lfs -text
+
+benchmark/art/animation/krag-hand-depth-v1/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-depth-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-depth-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/art/animation/krag-hand-depth-v1/executed-recipe/contracts.py whitespace=-blank-at-eof

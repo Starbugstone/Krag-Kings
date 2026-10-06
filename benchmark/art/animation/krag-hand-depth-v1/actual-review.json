@@ -1,0 +1,29 @@
+{
+  "status": "Actual isolated hand depth proposal rejected visually",
+  "sourceSha256": "8ff377bf980a79c2e0208f3de6f49e563df16a76d521d40212d73a220adf0316",
+  "actualViewsInspected": [
+    "BasisRest_00_palm",
+    "BasisRest_00_back",
+    "BasisRest_00_edge"
+  ],
+  "finding": "The broad transverse palmar ridge remains after depth compression, while the thumb web becomes an unnatural thin blade and the wrist contour is distorted. This confirms that scaling hand depth around the legacy bone centers is not an adequate anatomical correction. Do not run the prepared action review or promote this candidate.",
+  "nextEvidence": "A coherent anatomical hand topology with continuous wrist connection and matching digit controls; needs actual native rest and action review.",
+  "allBindAndActionHashesPreserved": true,
+  "artisticAcceptance": false,
+  "engineIntegrated": false,
+  "sharedChanged": false,
+  "memory": {
+    "krag-hand-depth-v1": {
+      "peakPrivateMB": 1227.0,
+      "minimumAvailableMB": 9775.0,
+      "guardExit": 0,
+      "nativeExit": 0
+    },
+    "krag-hand-depth-v1-rest": {
+      "peakPrivateMB": 991.0,
+      "minimumAvailableMB": 9918.0,
+      "guardExit": 0,
+      "nativeExit": 0
+    }
+  }
+}
