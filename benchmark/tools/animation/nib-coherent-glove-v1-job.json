@@ -1,0 +1,28 @@
+{
+  "name": "nib-coherent-glove-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\animation\\fit_nib_glove_details.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-action-hands-v1\\Nib_ActionHands_Study_v2.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-glove-v1",
+    "--panel-width",
+    ".034"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-glove-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-glove-v1.stderr.log",
+  "maxPrivateGB": 2.5,
+  "minAvailableGB": 8,
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent-glove-v1.stdout.log",
+  "successMarker": "NIB_GLOVE_FIT_STUDY_COMPLETE",
+  "memoryBudgetReason": "Previous matching source generation peaked542MB and wholecycle render1257MB; bounded2.5GiB worker preserves at least5.5GiB launch headroom. Global guard unchanged."
+}

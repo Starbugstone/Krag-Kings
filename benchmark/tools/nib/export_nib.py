@@ -59,11 +59,13 @@ source_report=json.loads(args.source_report.read_text())
 reported_source=(source_report.get('candidateSha256') or source_report.get('outputSha256') or source_report.get('sourceSha256'))
 if reported_source!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
 if candidate:
-    if source_report.get('candidateSha256'):
+    if source_report.get('candidateSha256') and 'trianglesByVariant' in source_report and 'method' in source_report:
         manifest['detailedMasterSha256']=source_report['sourceSha256']
         manifest['runtimeReductionReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
     else:
         manifest['authoredSourceReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
+        if source_report.get('candidateSha256') and source_report.get('sourceSha256'):
+            manifest['authoredInputSourceSha256']=source_report['sourceSha256']
 manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','furStrands','furTriangles','cinematic']}
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
 if args.triangulate:

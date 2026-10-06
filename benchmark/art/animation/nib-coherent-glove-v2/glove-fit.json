@@ -1,0 +1,103 @@
+{
+  "status": "Actual fitted left glove details; posed review required",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-action-hands-v2\\Nib_ActionHands_Study_v2.blend",
+  "sourceSha256": "c17aede3a7d17aa43bf6bfe51723f121d3823c13e07b4b790d23e54734a33523",
+  "output": "D:\\Dev\\Krag-Kings\\benchmark\\art\\animation\\nib-coherent-glove-v2\\Nib_FittedGlove_Study_v1.blend",
+  "outputSha256": "92e9fe76d4521f873edea5ecf0c2281f47da0a6e6b8a660927b1d8212d0905bb",
+  "recipeSha256": "a8db0e57e025dc76394ec4601f76752d759fd7773d3d68069796640cfd05be27",
+  "archivedLegacyDetails": [
+    "Glove wrist strap L",
+    "Set rivet.010",
+    "Set rivet.011",
+    "Set rivet.012",
+    "Set rivet.013"
+  ],
+  "panelWidthMeters": 0.034,
+  "added": [
+    {
+      "name": "Anatomical dorsal glove reinforcement L",
+      "vertices": 462
+    },
+    {
+      "name": "Fitted leather wrist band L",
+      "vertices": 640
+    },
+    {
+      "name": "Fitted dorsal glove rivet L 0",
+      "vertices": 62
+    },
+    {
+      "name": "Fitted dorsal glove rivet L 1",
+      "vertices": 62
+    },
+    {
+      "name": "Fitted dorsal glove rivet L 2",
+      "vertices": 62
+    },
+    {
+      "name": "Fitted dorsal glove rivet L 3",
+      "vertices": 62
+    }
+  ],
+  "geometryFit": "Directional actual-hand triangle rays; barycentric skin-weight transfer",
+  "remaining": [
+    "Actual posed contact",
+    "Right-hand equipment fit",
+    "Forearm cloth wrap reconstruction"
+  ],
+  "sharedAssetsChanged": false,
+  "engineExported": false,
+  "artisticAcceptance": false,
+  "reopenedSavedFile": true,
+  "persistedCanonicalActions": {
+    "Idle": {
+      "frameRange": [
+        1.0,
+        181.0
+      ],
+      "fakeUser": true
+    },
+    "Walk": {
+      "frameRange": [
+        1.0,
+        25.0
+      ],
+      "fakeUser": true
+    },
+    "Run": {
+      "frameRange": [
+        1.0,
+        19.0
+      ],
+      "fakeUser": true
+    },
+    "Melee": {
+      "frameRange": [
+        1.0,
+        33.0
+      ],
+      "fakeUser": true
+    },
+    "Shoot": {
+      "frameRange": [
+        1.0,
+        31.0
+      ],
+      "fakeUser": true
+    },
+    "Hit": {
+      "frameRange": [
+        1.0,
+        29.0
+      ],
+      "fakeUser": true
+    },
+    "FacePerformance": {
+      "frameRange": [
+        1.0,
+        151.0
+      ],
+      "fakeUser": true
+    }
+  }
+}

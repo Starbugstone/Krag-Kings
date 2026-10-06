@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\animation\refine_nib_action_hands.py", line 79, in <module>
+    original = bpy.data.actions[clip]
+               ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'bpy_prop_collection[key]: key "Shoot" not found'
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\animation\refine_nib_action_hands.py', exiting.
