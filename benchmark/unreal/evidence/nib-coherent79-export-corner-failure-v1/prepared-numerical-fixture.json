@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "NumPy provenance fixture only; actual Blender/FBX execution remains required",
+  "checks": [
+    {
+      "case": "two-quads-hard-edge-uv-seam",
+      "passed": true,
+      "sourcePolygons": 2,
+      "sourceCorners": 8,
+      "triangles": 4,
+      "targetCorners": 12,
+      "sameSourcePolygon": true,
+      "orientedBoundaryUnchanged": true,
+      "allSourceCornersRetained": true,
+      "vertexIdentityUnchanged": true
+    },
+    {
+      "case": "changed-winding",
+      "passed": true,
+      "rejected": "Triangulation changed oriented polygon boundaries or winding"
+    },
+    {
+      "case": "cross-face-corner-alias",
+      "passed": true,
+      "rejected": "Triangle combines corners from different source polygons"
+    },
+    {
+      "case": "vertex-identity-change",
+      "passed": true,
+      "rejected": "Corner provenance changes vertex identity"
+    },
+    {
+      "case": "uv-change",
+      "passed": true,
+      "rejected": "Original per-corner UV payload changed"
+    },
+    {
+      "case": "material-change",
+      "passed": true,
+      "rejected": "Original per-corner material assignment changed"
+    },
+    {
+      "case": "missing-original-corner",
+      "passed": true,
+      "rejected": "An authored source corner disappeared"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Keep baseline point-domain normals/morphs on an already triangulated FBX.
+"""Keep exact source shading/morphs on an already triangulated FBX.
 
 No polygons, UVs, skeletons, weights, connections or animation are replaced.
 The source and target must have exactly identical vertex coordinates/order.
@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 
 
-def preserve(source,target,addons,preserve_normals=True,preserve_morphs=True):
+def preserve(source,target,addons,preserve_normals=True,preserve_morphs=True,corner_map_path=None):
     package='io_scene_fbx'
     if package not in sys.modules:
         module=types.ModuleType(package);module.__path__=[str(addons/package)];sys.modules[package]=module
@@ -24,11 +24,48 @@ def preserve(source,target,addons,preserve_normals=True,preserve_morphs=True):
     source_vertices=child(bm[0],b'Vertices').props[0]
     target_vertices=child(am[0],b'Vertices').props[0]
     if source_vertices.tobytes()!=target_vertices.tobytes():raise ValueError('Cannot preserve point payloads after a vertex change')
-    source_normal_mapping=None;normal_collapse_error=0.
+    source_normal_mapping=None;normal_collapse_error=None;corner_report=None
     if preserve_normals:
         source_normal=child(bm[0],b'LayerElementNormal')
         source_normal_mapping=child(source_normal,b'MappingInformationType').props[0]
-        if source_normal_mapping==b'ByPolygonVertex':
+        if corner_map_path is not None:
+            from triangle_corner_contract import load_and_validate, decode_polygons
+            source_raw=np.asarray(child(bm[0],b'PolygonVertexIndex').props[0],dtype=np.int64)
+            target_raw=np.asarray(child(am[0],b'PolygonVertexIndex').props[0],dtype=np.int64)
+            source_indices,source_sizes=decode_polygons(source_raw)
+            target_indices,target_sizes=decode_polygons(target_raw)
+            def mapped(layer,value,index,width,vertices):
+                values=np.asarray(child(layer,value).props[0]).reshape((-1,width))
+                mapping=child(layer,b'MappingInformationType').props[0]
+                reference=child(layer,b'ReferenceInformationType').props[0]
+                if mapping in [b'ByVertice',b'ByVertex']:selected=vertices
+                elif mapping==b'ByPolygonVertex':selected=np.arange(len(vertices))
+                elif mapping==b'AllSame':selected=np.zeros(len(vertices),dtype=np.int64)
+                else:raise ValueError('Unsupported corner mapping '+str(mapping))
+                if reference==b'IndexToDirect':selected=np.asarray(child(layer,index).props[0],dtype=np.int64)[selected]
+                elif reference!=b'Direct':raise ValueError('Unsupported corner reference')
+                return values[selected]
+            def materials(mesh,sizes):
+                layer=child(mesh,b'LayerElementMaterial')
+                values=np.asarray(child(layer,b'Materials').props[0])
+                mode=child(layer,b'MappingInformationType').props[0]
+                if mode==b'ByPolygon':return np.repeat(values,sizes)
+                if mode==b'AllSame':return np.full(int(sizes.sum()),values[0])
+                raise ValueError('Unsupported material mapping')
+            mapping,corner_report=load_and_validate(corner_map_path,source_raw,target_raw,
+                source_uv=mapped(child(bm[0],b'LayerElementUV'),b'UV',b'UVIndex',2,source_indices),
+                target_uv=mapped(child(am[0],b'LayerElementUV'),b'UV',b'UVIndex',2,target_indices),
+                source_material=materials(bm[0],source_sizes),target_material=materials(am[0],target_sizes))
+            normals=mapped(source_normal,b'Normals',b'NormalsIndex',3,source_indices)[mapping]
+            children=[]
+            for node in source_normal.elems:
+                if node.id in [b'NormalsIndex',b'NormalsW']:continue
+                if node.id==b'MappingInformationType':node=node._replace(props=[b'ByPolygonVertex'])
+                elif node.id==b'ReferenceInformationType':node=node._replace(props=[b'Direct'])
+                elif node.id==b'Normals':node=node._replace(props=[array.array('d',normals.ravel())])
+                children.append(node)
+            source_normal=source_normal._replace(elems=children)
+        elif source_normal_mapping==b'ByPolygonVertex':
             raw=np.asarray(child(bm[0],b'PolygonVertexIndex').props[0],dtype=np.int64)
             indices=np.where(raw<0,-raw-1,raw)
             normals=np.asarray(child(source_normal,b'Normals').props[0],dtype=np.float64).reshape((-1,3))
@@ -85,7 +122,9 @@ def preserve(source,target,addons,preserve_normals=True,preserve_morphs=True):
     temporary.replace(target)
     return {'source':str(source),'target':str(target),'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'beforeSha256':original_hash,'afterSha256':hashlib.sha256(target.read_bytes()).hexdigest(),
-            'pointCoordinatesByteIdentical':True,'restoredSourcePointNormalLayer':preserve_normals,
+            'pointCoordinatesByteIdentical':True,'restoredSourcePointNormalLayer':preserve_normals and corner_map_path is None,
+            'restoredSourceCornerNormals':preserve_normals and corner_map_path is not None,
+            'cornerProvenance':corner_report,
             'sourceNormalMapping':source_normal_mapping.decode() if source_normal_mapping else None,
             'sourceNormalVertexCollapseMaxError':normal_collapse_error,
             'restoredSparseMorphPayloads':len(bs) if preserve_morphs else 0,

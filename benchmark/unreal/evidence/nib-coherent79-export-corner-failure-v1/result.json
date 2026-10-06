@@ -1,0 +1,114 @@
+{
+  "status": "Reference export complete; pretriangulation rejected before validated delivery",
+  "passed": false,
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "pbrSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "sourceBones": 79,
+  "sourceClips": [
+    "FacePerformance",
+    "Hit",
+    "Idle",
+    "Melee",
+    "Run",
+    "Shoot",
+    "Walk"
+  ],
+  "variants": [
+    {
+      "name": "Nib_Natural",
+      "vertices": 440575,
+      "triangles": 750292
+    },
+    {
+      "name": "Nib_GripReplacement",
+      "vertices": 416009,
+      "triangles": 702894
+    },
+    {
+      "name": "Nib_LegReplacement",
+      "vertices": 437983,
+      "triangles": 745184
+    }
+  ],
+  "stages": {
+    "reference": {
+      "processId": 12580,
+      "peakPrivateMB": 1970,
+      "minimumAvailableMB": 10145,
+      "nativeExitCode": 0,
+      "guardExitCode": 0
+    },
+    "triangles": {
+      "processId": 31232,
+      "peakPrivateMB": 1037,
+      "minimumAvailableMB": 11031,
+      "nativeExitCode": 2,
+      "guardExitCode": 2
+    }
+  },
+  "failure": "Nib source split normals need explicit corner transfer",
+  "diagnosis": "Earlier disposable triangulation, payload preservation and validation assumed one normal per vertex. Current source has true authored split corner normals. No source smoothing or tolerance change authorized.",
+  "preparedCorrection": "Carry original corner provenance through BMesh triangulation and raw FBX, preserving same-polygon identity, oriented boundaries, exact corner UV/material and source normal payloads. Seven-case numerical fixture passes; actual Blender/FBX fixture not executed.",
+  "artisticAcceptance": false,
+  "sharedAssetsChanged": false,
+  "engineImportVerified": false,
+  "rawPayloadValidationRun": false,
+  "fullVariantOrClipRoundtripRun": false,
+  "artifacts": [
+    {
+      "path": "reference.log",
+      "sha256": "59a4001880b7a4f241f4b70b03dbe09a06d469f97d1462c69185196c13a60a02",
+      "bytes": 38867
+    },
+    {
+      "path": "reference.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reference-memory.csv",
+      "sha256": "19fd76e1a130df848aea092e4f1c89735998d9eee31c59ef522bb8b5a949095b",
+      "bytes": 1965
+    },
+    {
+      "path": "triangles.log",
+      "sha256": "baccf2978398813f10524d9e1507db5eedcfa3dae621d4e82c48644a2ba38889",
+      "bytes": 223
+    },
+    {
+      "path": "triangles.stderr.log",
+      "sha256": "3ffae26d75a135cb23a9d244bc733353b267110b83084cb2e61d0a579054c105",
+      "bytes": 1073
+    },
+    {
+      "path": "triangles-memory.csv",
+      "sha256": "10ccb9cae75257788bdbf0adbf11bc34704b30f1fb4547144375afc4da69986c",
+      "bytes": 565
+    },
+    {
+      "path": "reference-receipt.json",
+      "sha256": "5c0944695985c98d48306f1b85ec0d2a444d2a5b29d1476d75f90fa86341bbdb",
+      "bytes": 27568
+    },
+    {
+      "path": "reference-manifest.json",
+      "sha256": "a431c1fca88aadb3ce0d27b91b412256c6d5075e2dffbba330525abe0e7c0415",
+      "bytes": 52167
+    },
+    {
+      "path": "prepared-numerical-fixture.json",
+      "sha256": "82250acc7e46f588a819d06dfb239574bdbdbc9166174db84a0bcde658af6da9",
+      "bytes": 1294
+    },
+    {
+      "path": "executed-export_nib.py",
+      "sha256": "abd024c0be732f1d3935f15f4f74e026c0a19cf708ff4acf478c1ed9d5277e0f",
+      "bytes": 22197
+    },
+    {
+      "path": "executed-run_stage.py",
+      "sha256": "3bfc41b10baf65f49ed5d6e99ae8117a276712f4648129ae32cc218a242c5268",
+      "bytes": 8455
+    }
+  ]
+}

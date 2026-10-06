@@ -1,0 +1,25 @@
+{
+  "name": "nib-corner-transfer-fixture-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\check_blender_corner_transfer.py",
+    "--",
+    "--out",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\nib-corner-transfer-fixture-v1",
+    "--recipes",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\check-corner-transfer-v1.recipes.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 2,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-corner-transfer-fixture-v1.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-corner-transfer-fixture-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-corner-transfer-fixture-v1.log",
+  "successMarker": "NIB_CORNER_FIXTURE_COMPLETE"
+}

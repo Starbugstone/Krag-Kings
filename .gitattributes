@@ -180,3 +180,8 @@ benchmark/art/animation/krag-hand-depth-v1/**/*.json -text whitespace=cr-at-eol,
 benchmark/art/animation/krag-hand-depth-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-hand-depth-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-hand-depth-v1/executed-recipe/contracts.py whitespace=-blank-at-eof
+
+# Preserve native split-normal failure evidence byte-for-byte.
+benchmark/unreal/evidence/nib-coherent79-export-corner-failure-v1/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-export-corner-failure-v1/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-export-corner-failure-v1/*.log -text whitespace=cr-at-eol,-blank-at-eof

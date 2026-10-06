@@ -5,10 +5,17 @@ candidate `fee71393…`. Its 102 maps reopen/decode/hash correctly, all 79 bones
 seven actions and source geometry/weights/morphs match, and eight matched
 Face/Tongue/Front/EyeCloseup images were inspected without an obvious new
 material-transfer regression. See the [actual current evidence](../../../unreal/evidence/nib-coherent79-neck-pbr-v1/README.md).
-The frozen plan is `plans/nib-coherent79-neck-e1cdbd-v1`. Its full variant/clip
-FBX stages are next; no current engine import, shared promotion or artistic
-acceptance follows from this bake. The earlier path-only bake below remains
-historical evidence.
+The frozen plan is `plans/nib-coherent79-neck-e1cdbd-v1`. Its reference export
+completed (three variants, 79 bones, seven standalone clips), but explicit
+triangulation stopped with exit 2 because the new source has authored split
+corner normals. See the [preserved export failure](../../../unreal/evidence/nib-coherent79-export-corner-failure-v1/README.md).
+The prepared correction carries exact original corners through triangulation
+and validates polygon membership, winding/boundary coverage, UVs, material and
+normal payloads. Its numerical fixture passes; native Blender/FBX verification
+remains pending. `prepare_export_resume.py` creates a fresh attempt that pins
+the completed bake/reference receipts and outputs without rebaking or replacing
+the failed attempt. No current engine import, shared promotion or artistic
+acceptance follows from the bake/reference alone.
 
 
 The original saved-path failure and v2 Windows-basename validation failure are preserved. Path-only v3 candidate `2a3ab470…` now passes reopened98-map path/hash/color/decode checks and exact79-bone/seven-action/mesh parity. All three matched baked views were inspected against the original source, without an obvious new material-transfer regression. [Actual repair/parity evidence](../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md) contains the images and failures. No maps were rebaked and shared assets remain unchanged.
@@ -35,17 +42,18 @@ For the next source, pass its actual atlas directory through
 `--card-texture-dir`. The prepared bake gate follows connected source shader
 images and requires their exact hashes to match those supplied files, including
 packed-image bytes and linked-library paths. Reusing older map filenames is not
-sufficient. The gate and new actual-iris adapter are syntax-checked only; their
-native execution is pending the final coherent-source handoff. Older frozen
-plans and executed recipe hashes remain unchanged.
+sufficient. These gates and the actual-iris adapter now pass the executed
+e1cdbd source bake and reopened-image checks. Older frozen plans and executed
+recipe hashes remain unchanged.
 
 The prepared `review_pbr_optical.py` adds a separate matched EyeCloseup pair
 after the saved-PBR snapshot. It uses the exact existing adult-review camera:
 1500 × 900, 0.18 m orthographic span, centered between the two animated eye
 bones with the same camera offset. Both inputs, both review recipes and the
 saved snapshot outputs must be pinned. This supplements Face/Tongue/Front so
-the new actual-iris atlas can be judged at useful scale. It is syntax-checked
-only; no new optical bake or comparison has run.
+the new actual-iris atlas can be judged at useful scale. The actual e1cdbd
+source/baked optical pair has been inspected; no obvious new field-transfer
+regression was seen, while source likeness remains failed.
 
 1. `snapshot-source`: capture exact 79-bone hierarchy/bind, canonical action curve hashes, geometry/weights/morph payloads, contracts and 17 skeletal poses per take.
 2. `bake`: use the existing PBR bridge, retaining the original masked-card RGBA bytes. The actual face attribute is baked on its geometry; UV-only regions use the existing carrier bake.

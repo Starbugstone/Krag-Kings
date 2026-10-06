@@ -33,7 +33,7 @@ def main():
         manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8-sig"))
         for mat in manifest["materials"]:
             name = mat["name"]
-            if mat.get("alphaMode") == "MASK" or not any(word in name.lower() for word in ("skin", "muzzle", "earinner")):
+            if mat.get("alphaMode") == "MASK" or not (name == "Nib_v5_DustyPinkEar" or any(word in name.lower() for word in ("skin", "muzzle", "earinner"))):
                 continue
             paths = {kind: root / mat[kind] for kind in ("baseColor", "normal", "roughness", "metallic")}
             candidates.append({

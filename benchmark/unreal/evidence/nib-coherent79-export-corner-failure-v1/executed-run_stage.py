@@ -79,14 +79,13 @@ def main():
     for path in stage.get('freshOutputs', []):
         if local(path).exists():
             raise RuntimeError('Preserve earlier output: ' + path)
-    reused = plan.get('reusedInputs', {})
-    output = local(reused['pbrRoot']) if 'pbrRoot' in reused else base / 'pbr'
+    output = base / 'pbr'
     baked = output / 'Nib_Runtime_PBR.blend'
     bake_report = output / 'pbr-bake-report.json'
-    reference = local(reused['referenceRoot']) if 'referenceRoot' in reused else base / 'reference'
+    reference = base / 'reference'
     final = base / 'triangulated'
-    snapshot = local(reused['sourceSnapshot']) if 'sourceSnapshot' in reused else base / 'source-contract.json'
-    pbr_snapshot = local(reused['pbrSnapshot']) if 'pbrSnapshot' in reused else base / 'pbr-contract.json'
+    snapshot = base / 'source-contract.json'
+    pbr_snapshot = base / 'pbr-contract.json'
     cards = local(plan['cardTextureDirectory'])
     if args.stage in ['snapshot-source', 'snapshot-pbr']:
         source = local(plan['source']) if args.stage == 'snapshot-source' else baked

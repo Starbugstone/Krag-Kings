@@ -8,8 +8,10 @@ import hashlib
 import json
 from pathlib import Path
 import struct
+import sys
 import zlib
 import numpy as np
+sys.path.insert(0,str(Path(__file__).parent))
 
 
 def geometry(path):
@@ -121,6 +123,18 @@ def uv_corner_set(mesh):
     return np.unique(rows)
 
 
+def material_corners(mesh):
+    indices=polygon_vertices(mesh)
+    layer=child(mesh,'LayerElementMaterial')
+    values=data(layer,'Materials')
+    mode=data(layer,'MappingInformationType')
+    if mode=='AllSame':return np.full(len(indices),values[0])
+    if mode=='ByPolygon':
+        ends=np.flatnonzero(data(mesh,'PolygonVertexIndex')<0)
+        return np.repeat(values,np.diff(np.r_[-1,ends]))
+    raise ValueError('Unsupported material mapping '+mode)
+
+
 def compare(source, target, expected_changed_morphs=None):
     expected_changed_morphs=set(expected_changed_morphs or [])
     before, after = geometry(source), geometry(target)
@@ -171,20 +185,31 @@ def compare(source, target, expected_changed_morphs=None):
     if not np.array_equal(u0,u1): raise AssertionError('Mapped vertex/material/UV corner set changed')
     baseline_indices = polygon_vertices(b)
     baseline_normals = mapped(child(b,'LayerElementNormal'),'Normals','NormalsIndex',3,baseline_indices)
-    vertex_normals = np.zeros((len(bp)//3,3),dtype=np.float64)
-    vertex_normals[baseline_indices] = baseline_normals
-    baseline_split = np.linalg.norm(baseline_normals-vertex_normals[baseline_indices],axis=1).max()
-    if baseline_split > 1e-7: raise AssertionError('Source has split normals; per-vertex baseline comparison is insufficient')
     target_indices = polygon_vertices(a)
+    provenance=None
+    corner_map=Path(target).with_suffix('.corners.npz')
+    if corner_map.exists():
+        from triangle_corner_contract import load_and_validate
+        mapping,provenance=load_and_validate(corner_map,data(b,'PolygonVertexIndex'),data(a,'PolygonVertexIndex'),
+            source_uv=mapped(child(b,'LayerElementUV'),'UV','UVIndex',2,baseline_indices),
+            target_uv=mapped(child(a,'LayerElementUV'),'UV','UVIndex',2,target_indices),
+            source_material=material_corners(b),target_material=material_corners(a))
+        expected_normals=baseline_normals[mapping]
+    else:
+        vertex_normals = np.zeros((len(bp)//3,3),dtype=np.float64)
+        vertex_normals[baseline_indices] = baseline_normals
+        baseline_split = np.linalg.norm(baseline_normals-vertex_normals[baseline_indices],axis=1).max()
+        if baseline_split > 1e-7: raise AssertionError('Source has split normals; per-vertex baseline comparison is insufficient')
+        expected_normals=vertex_normals[target_indices]
     target_normals = mapped(child(a,'LayerElementNormal'),'Normals','NormalsIndex',3,target_indices)
-    normal_error = np.linalg.norm(target_normals-vertex_normals[target_indices],axis=1)
+    normal_error = np.linalg.norm(target_normals-expected_normals,axis=1)
     normal_max = float(normal_error.max())
     if normal_max > .0002:
         worst=np.argsort(normal_error)[-12:]
         print('NORMAL_MISMATCH',json.dumps({'max':normal_max,'p99':float(np.quantile(normal_error,.99)),
-              'aboveTolerance':int(np.sum(normal_error>.0002)),'sourceZeroNormals':int(np.sum(np.linalg.norm(vertex_normals[target_indices],axis=1)<1e-7)),
+              'aboveTolerance':int(np.sum(normal_error>.0002)),'sourceZeroNormals':int(np.sum(np.linalg.norm(expected_normals,axis=1)<1e-7)),
               'targetZeroNormals':int(np.sum(np.linalg.norm(target_normals,axis=1)<1e-7)),
-              'vertices':target_indices[worst].tolist(),'source':vertex_normals[target_indices[worst]].tolist(),'target':target_normals[worst].tolist()}),flush=True)
+              'vertices':target_indices[worst].tolist(),'source':expected_normals[worst].tolist(),'target':target_normals[worst].tolist()}),flush=True)
         raise AssertionError(f'Mapped normal error {normal_max} exceeds 0.0002 vector length')
     return {'source':str(source),'target':str(target),'passed':True,
             'vertices':len(bp)//3,'triangles':len(sizes),'allPolygonsTriangular':True,
@@ -192,6 +217,8 @@ def compare(source, target, expected_changed_morphs=None):
             'shapeTargets':shapes,'mappedUvMaterialCornerSetEqual':True,
             'uniqueVertexUvCorners':len(u0),'uvQuantization':1e-7,
             'mappedNormalMaxVectorError':normal_max,
+            'cornerProvenance':provenance,
+            'mappedNormalPayloadByteIdentical':np.array_equal(expected_normals,target_normals),
             'mappedNormalP99VectorError':float(np.quantile(normal_error,.99)),
             'normalTolerance':.0002}
 

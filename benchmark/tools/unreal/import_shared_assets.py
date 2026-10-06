@@ -161,6 +161,8 @@ def material_texture_sources(name, tex_dir, descriptor=None):
 def material_signature(name, tex_dir, surface=None, sources=None):
     # Bump the recipe when shader wiring or sampling changes.
     inputs = {'recipe': 'pbr-v1-opengl-normal-subsurface', 'name': name, 'textures': {}}
+    if name == 'Nib_v5_DustyPinkEar':
+        inputs['surfaceRole'] = 'explicit-ear-skin-v1'
     if surface:
         inputs['surfaceRecipe'] = 'masked-card-v1-alpha-coverage'
         inputs['surface'] = surface
@@ -309,7 +311,7 @@ def material(name, tex_dir, destination, descriptor=None):
         connect(mat, node, 'RGB' if kind in ('BaseColor', 'Normal') else 'R', prop)
         if masked and kind == 'BaseColor':
             connect(mat, node, 'A', unreal.MaterialProperty.MP_OPACITY_MASK)
-    if not masked and any(word in name.lower() for word in ('skin', 'muzzle', 'earinner')):
+    if not masked and (name == 'Nib_v5_DustyPinkEar' or any(word in name.lower() for word in ('skin', 'muzzle', 'earinner'))):
         mat.set_editor_property('shading_model', unreal.MaterialShadingModel.MSM_SUBSURFACE)
         scatter = expression(mat, unreal.MaterialExpressionConstant3Vector, -400, 800)
         scatter.set_editor_property('constant', unreal.LinearColor(0.28, 0.15, 0.075, 1))

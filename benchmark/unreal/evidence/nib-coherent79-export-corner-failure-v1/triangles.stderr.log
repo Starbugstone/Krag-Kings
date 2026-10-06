@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 165, in <module>
+    main()
+    ~~~~^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 112, in main
+    invoke('benchmark/tools/nib/export_nib.py', command)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py", line 38, in invoke
+    runpy.run_path(str(path), run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\export_nib.py", line 189, in <module>
+    raise RuntimeError('Nib source split normals need explicit corner transfer')
+RuntimeError: Nib source split normals need explicit corner transfer
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\unreal\nib_candidate\run_stage.py', exiting.
