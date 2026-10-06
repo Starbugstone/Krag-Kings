@@ -85,6 +85,8 @@ void AKKBenchmarkUnit::ApplyVariant()
         Anim->Configure(V->Idle,V->Walk,V->Run);Anim->MorphDrivers=V->MorphDrivers;
         Anim->WalkCycleSeconds=V->WalkCycleSeconds;Anim->RunCycleSeconds=V->RunCycleSeconds;
         Anim->WalkStanceFraction=V->WalkStanceFraction;Anim->RunStanceFraction=V->RunStanceFraction;
+        Anim->WalkLeftContacts=V->WalkLeftContacts;Anim->WalkRightContacts=V->WalkRightContacts;
+        Anim->RunLeftContacts=V->RunLeftContacts;Anim->RunRightContacts=V->RunRightContacts;
     }
     GetMesh()->SetRelativeRotation(AssetSet->MeshRotation);
     const FBoxSphereBounds B=V->Mesh->GetBounds();

@@ -1,0 +1,22 @@
+{
+    "name":  "unreal-native-input",
+    "executable":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64\\KragKingsBenchmark.exe",
+    "arguments":  [
+                      "-ResX=1920",
+                      "-ResY=1080",
+                      "-NoVSync",
+                      "-KKSkinMode=Profile",
+                      "-KKInputState",
+                      "-abslog=D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-native-input-modifier-focused\\runtime.log",
+                      "-ExecCmds=sg.GlobalIlluminationQuality 2,sg.ReflectionQuality 2"
+                  ],
+    "workingDirectory":  "D:\\Dev\\Krag-Kings\\benchmark\\builds\\unreal\\Windows\\KragKingsBenchmark\\Binaries\\Win64",
+    "stdout":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-native-input-modifier-focused\\native-stdout.log",
+    "stderr":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-native-input-modifier-focused\\native-stderr.log",
+    "minAvailableGB":  10,
+    "maxPrivateGB":  10,
+    "gpuTelemetry":  true,
+    "trackProcessTree":  false,
+    "successLog":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unreal-native-input-modifier-focused\\runtime.log",
+    "successMarker":  "KK_READY"
+}

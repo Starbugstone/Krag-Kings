@@ -1,0 +1,22 @@
+{
+  "completed": false,
+  "checksPassed": 4,
+  "checksFailed": 1,
+  "nativeAndGuardExitCode": 0,
+  "coordinatorExitCode": 1,
+  "gameClosed": true,
+  "windowLeaseRestored": true,
+  "sameFrameRightShiftProof": {
+    "frame": 145,
+    "pressWalk": true,
+    "dispatchWalk": true,
+    "currentShiftAtDispatch": false,
+    "acceptedGroundCommand": true,
+    "observedAction": "Walk"
+  },
+  "failure": "Unmodified quick press correctly captured walk=0, but the moving Nib reached the planned ray before dispatch and blocked it. No Run command issued.",
+  "leftShiftReached": false,
+  "visualAcceptance": false,
+  "rawRuntimeLogSha256": "6470a83ff06014d5471883fc8e7c92e0a345719bc0585ab7283724ce5de287a5",
+  "textEvidenceNormalization": "UTF-8/LF and trailing whitespace only; raw local logs retained."
+}

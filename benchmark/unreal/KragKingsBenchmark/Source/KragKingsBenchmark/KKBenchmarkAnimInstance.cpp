@@ -183,14 +183,20 @@ struct FKKBenchmarkAnimProxy : FAnimInstanceProxy
                 FootIK.RootFeetWorldZ=Mesh->GetComponentTransform().TransformPosition(FVector(0,0,SoleZ)).Z;
                 FootIK.BindAnkleHeight=Mesh->GetComponentTransform().TransformVector(FVector(0,0,RefZ-SoleZ)).Size();
                 FootIK.GroundPoint=Ground.ImpactPoint;FootIK.GroundNormal=Ground.ImpactNormal;
-                const float Phase=FMath::Fmod(Anim->LocomotionPhase+(i==0?0.f:.5f),1.f);
                 const float Stance=Anim->bWalking?Anim->WalkStanceFraction:Anim->RunStanceFraction;
-                const bool bStance=bRunning && Phase<Stance;
+                const TArray<float>& Contacts=Anim->bWalking?(i==0?Anim->WalkLeftContacts:Anim->WalkRightContacts):(i==0?Anim->RunLeftContacts:Anim->RunRightContacts);
+                bool bStance=false;float StanceAlpha=0.f;
+                if(bRunning)for(float Contact:Contacts)
+                {
+                    const float Phase=FMath::Frac(Anim->LocomotionPhase-Contact+1.f);
+                    if(Phase>=Stance)continue;
+                    bStance=true;
+                    StanceAlpha=FMath::Max(StanceAlpha,FMath::Min(FMath::Clamp(Phase/.06f,0.f,1.f),FMath::Clamp((Stance-Phase)/.08f,0.f,1.f)));
+                }
                 const FVector ContactTarget=Ground.ImpactPoint+Ground.ImpactNormal*(AnkleOffset+1.f);
                 if(bStance && !bFeetPlanted[i])PlantLocations[i]=ContactTarget;
                 if(!bStance || !bFeetPlanted[i])GroundTilts[i]=FQuat::FindBetweenNormals(FVector::UpVector,Ground.ImpactNormal).Rotator();
                 bFeetPlanted[i]=bStance;
-                const float StanceAlpha=FMath::Min(FMath::Clamp(Phase/.06f,0.f,1.f),FMath::Clamp((Stance-Phase)/.08f,0.f,1.f));
                 const float Alpha=bRunning?(bStance?StanceAlpha:0.f):1.f;
                 FootTargets[i]=bStance?PlantLocations[i]:ContactTarget;
                 KneeTargets[i]=FootWorld+Mesh->GetOwner()->GetActorForwardVector()*80.f+FVector(0,0,60);

@@ -1,0 +1,17 @@
+{
+    "engine":  "Unreal",
+    "scope":  "Focused zero-hold modifier regression",
+    "completed":  false,
+    "visualAcceptance":  false,
+    "performanceMeasurement":  false,
+    "startedUtc":  "2026-10-06T07:21:51.1029251Z",
+    "exeSha256":  "e538b28ac26d42c665e274a9aa15ec1e1185f5f4893a2c1bd63dbdbe475b4de5",
+    "inputScriptSha256":  "4d45b4f1e9a8ab61d0dc58e0c10c3630828c8c2dfce91f44cb7a6917148491b2",
+    "guardMarkerMeaning":  "Readiness only; inputReportCompleted and gameClosed are also required.",
+    "gameProcessId":  21196,
+    "error":  "Runtime input check failed: Unmodified quick RMB clears previous Walk modifier",
+    "errorStack":  "à Expect-State, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 133\r\nà Test-ImmediateModifiers, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 145\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\input_smoke.ps1 : ligne 162\r\nà \u003cScriptBlock\u003e, D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\Run-NativeInput.ps1 : ligne 57",
+    "gameClosed":  true,
+    "guardExitCode":  0,
+    "finishedUtc":  "2026-10-06T07:22:07.0790908Z"
+}

@@ -132,27 +132,10 @@ function Expect-State([string]$Name,[scriptblock]$Predicate,[int]$TimeoutMs=3000
  Write-Output "$Name : $pass"
  if(-not $pass){throw "Runtime input check failed: $Name"}
 }
-function Wait-MovementSettled([string]$Name) {
- # Project only a stationary observed scene; the previous moving-unit ray
- # became self-occluded while Windows input was being prepared.
- $deadline=[DateTime]::UtcNow.AddSeconds(8);$previous=Read-State
- do {
-  Assert-Foreground
-  Start-Sleep -Milliseconds 120;$state=Read-State
-  $stable=$state.elapsed -gt $previous.elapsed
-  foreach($unit in $state.units){
-   $prior=$previous.units|Where-Object {$_.species -eq $unit.species}
-   if(-not $prior -or $unit.action -in @('Walk','Run') -or [Math]::Sqrt([Math]::Pow($unit.x-$prior.x,2)+[Math]::Pow($unit.y-$prior.y,2)) -gt .5){$stable=$false}
-  }
-  if($stable){return $state}
-  $previous=$state
- }while([DateTime]::UtcNow -lt $deadline)
- throw "Movement did not settle before $Name; no ground click sent."
-}
 function Send-GroundMove([string]$Name,[bool]$Walk=$false,[int]$HeldMilliseconds=60,[byte]$ShiftKey=0xA0) {
- $state=Wait-MovementSettled $Name;$bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
+ $state=Read-State;$bounds=New-Object KKInput+RECT;[KKInput]::GetClientRect($game.MainWindowHandle,[ref]$bounds)|Out-Null
  $target=Get-KKGroundClickTarget $state $bounds.Right $bounds.Bottom
- $cameraProbes.Add([pscustomobject]@{control=$Name;before=$state;target=$target;observedMovementSettled=$true;heldMilliseconds=$HeldMilliseconds;walk=$Walk;shiftVirtualKey=$ShiftKey})
+ $cameraProbes.Add([pscustomobject]@{control=$Name;before=$state;target=$target;heldMilliseconds=$HeldMilliseconds;walk=$Walk;shiftVirtualKey=$ShiftKey})
  Click-Client $target.clientPoint[0] $target.clientPoint[1] $true $Walk $HeldMilliseconds $ShiftKey
 }
 function Test-ImmediateModifiers {
@@ -267,7 +250,7 @@ try {
  Send-GroundMove 'NibWalk' $true
  Expect-State 'Nib Shift+RMB walks to terrain' {param($s)($s.units|Where-Object selected).action -eq 'Walk'}
  Send-GroundMove 'NibQuickRun' $false 0
- Expect-State 'Immediate RMB down/up uses Run after previous Walk command' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
+ Expect-State 'Immediate RMB down/up changes Nib Walk to Run' {param($s)($s.units|Where-Object selected).action -eq 'Run'}
  Test-ImmediateModifiers
  $inputComplete=$true
 } catch {$inputError=$_.Exception.Message;throw} finally {

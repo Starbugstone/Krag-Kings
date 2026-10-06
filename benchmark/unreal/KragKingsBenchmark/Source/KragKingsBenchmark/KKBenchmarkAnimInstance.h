@@ -32,6 +32,7 @@ public:
     float RunCycleSeconds=0.f;
     float WalkStanceFraction=.62f;
     float RunStanceFraction=.42f;
+    TArray<float> WalkLeftContacts,WalkRightContacts,RunLeftContacts,RunRightContacts;
     float LocomotionPhase=0.f;
 protected:
     virtual FAnimInstanceProxy* CreateAnimInstanceProxy() override;

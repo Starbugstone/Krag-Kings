@@ -5,6 +5,7 @@ Fails on absent meshes, materials, clips, map save or data asset creation.
 import gc
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 import unreal
@@ -26,6 +27,31 @@ MATERIAL_CACHE = json.loads(CACHE_FILE.read_text(encoding='utf-8')) if CACHE_FIL
 SOURCE_SNAPSHOT = {}
 RECEIPT_DIR = BENCHMARK / 'local' / 'unreal-variant-cache'
 VARIANT_RECIPE = 'skeletal-v2-explicit-dependencies-casefold-tracks'
+
+
+def validated_locomotion(manifest, label):
+    """Existing shared contract; fail instead of silently imposing old cadence."""
+    result = {}
+    for gait in ('Walk', 'Run'):
+        entry = manifest.get('locomotion', {}).get(gait)
+        if not isinstance(entry, dict):
+            raise RuntimeError(f'{label}: missing {gait} locomotion metadata')
+        details = {}
+        for key in ('speedMetersPerSecond', 'cycleSeconds', 'stanceFraction'):
+            value = float(entry.get(key, float('nan')))
+            if not math.isfinite(value) or value <= 0 or (key == 'stanceFraction' and value >= 1):
+                raise RuntimeError(f'{label}/{gait}: invalid {key}')
+            details[key] = value
+        for key in ('leftContacts', 'rightContacts'):
+            raw = entry.get(key)
+            if not isinstance(raw, list) or not raw:
+                raise RuntimeError(f'{label}/{gait}: missing {key}')
+            values = [float(value) for value in raw]
+            if any(not math.isfinite(value) or not 0 <= value < 1 for value in values) or values != sorted(set(values)):
+                raise RuntimeError(f'{label}/{gait}: {key} must contain unique ascending normalized phases')
+            details[key] = values
+        result[gait] = details
+    return result
 
 
 def option(name):
@@ -598,16 +624,16 @@ def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, 
         variant.set_editor_property('id', fbx.stem)
         variant.set_editor_property('label', fbx.stem.replace('_', ' / '))
         variant.set_editor_property('mesh', mesh)
-        locomotion = manifest.get('locomotion', {})
-        variant.set_editor_property('walk_speed_meters', float(locomotion.get('Walk', {}).get('speedMetersPerSecond', 1.15 if folder == 'krag' else 0.9)))
-        variant.set_editor_property('run_speed_meters', float(locomotion.get('Run', {}).get('speedMetersPerSecond', 3.2 if folder == 'krag' else 2.7)))
-        variant.set_editor_property('walk_cycle_seconds', float(locomotion.get('Walk', {}).get('cycleSeconds', 0)))
-        variant.set_editor_property('run_cycle_seconds', float(locomotion.get('Run', {}).get('cycleSeconds', 0)))
+        locomotion = validated_locomotion(manifest, fbx.stem)
+        variant.set_editor_property('walk_speed_meters', locomotion['Walk']['speedMetersPerSecond'])
+        variant.set_editor_property('run_speed_meters', locomotion['Run']['speedMetersPerSecond'])
+        variant.set_editor_property('walk_cycle_seconds', locomotion['Walk']['cycleSeconds'])
+        variant.set_editor_property('run_cycle_seconds', locomotion['Run']['cycleSeconds'])
         for gait in ('Walk', 'Run'):
-            details = locomotion.get(gait, {})
-            variant.set_editor_property(gait.lower() + '_stance_fraction', float(details.get('stanceFraction', .62 if gait == 'Walk' else .42 if folder == 'krag' else .32)))
-            variant.set_editor_property(gait.lower() + '_left_contacts', details.get('leftContacts', [0.0]))
-            variant.set_editor_property(gait.lower() + '_right_contacts', details.get('rightContacts', [0.5]))
+            details = locomotion[gait]
+            variant.set_editor_property(gait.lower() + '_stance_fraction', details['stanceFraction'])
+            variant.set_editor_property(gait.lower() + '_left_contacts', details['leftContacts'])
+            variant.set_editor_property(gait.lower() + '_right_contacts', details['rightContacts'])
         morph_names = [m.get_name() for m in mesh.get_editor_property('morph_targets')]
         bone_names = [str(n) for n in unreal.KKBenchmarkAssets.get_mesh_bone_names(mesh)]
         bone_scales = {str(name): [float(scale.x), float(scale.y), float(scale.z)]
@@ -672,7 +698,7 @@ def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, 
             ratios = {str(bone): [float(bounds.x), float(bounds.y)] for bone, bounds in unreal.KKBenchmarkAssets.get_animation_limb_translation_ratios(clip, mesh).items()}
             if len(ratios) < 4 or any(low < .1 or high > 10 for low, high in ratios.values()):
                 raise RuntimeError(f'{fbx.stem}/{name}: animation/bind limb lengths indicate a unit mismatch: {ratios}')
-            clip_validation[name] = {'bone_track_count': len(tracks), 'varying_facial_bones': facial, 'local_limb_translation_to_bind_length_ranges': ratios}
+            clip_validation[name] = {'length_seconds': clip.get_play_length(), 'bone_track_count': len(tracks), 'varying_facial_bones': facial, 'local_limb_translation_to_bind_length_ranges': ratios}
             variant.set_editor_property(name.lower(), clip)
             clip_paths[name] = clip.get_path_name()
         for name in FACIAL_CLIPS:
@@ -682,10 +708,10 @@ def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, 
                 facial = [str(n) for n in unreal.KKBenchmarkAssets.get_facially_animated_bones(explicit_animations[name], mesh)]
                 if not facial:
                     raise RuntimeError(f'{fbx.stem}/{name}: no varying imported facial controls')
-                clip_validation[name] = {'varying_facial_bones': facial}
+                clip_validation[name] = {'length_seconds': explicit_animations[name].get_play_length(), 'varying_facial_bones': facial}
             else:
                 raise RuntimeError(f'{fbx.stem}: required facial acting clip {name} not supplied')
-        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies, 'material_bindings': material_bindings, 'material_binding_repairs': binding_repairs})
+        REPORT['meshes'].append({'source': str(fbx), 'asset': mesh.get_path_name(), 'size_meters': [float(size.x), float(size.y), float(size.z)], 'clips': clip_paths, 'clip_validation': clip_validation, 'locomotion': locomotion, 'bones': bone_names, 'reference_bone_local_scales': bone_scales, 'morphs': morph_names, 'corrective_driver_count': len(drivers), 'saved_dependencies': dependencies, 'material_bindings': material_bindings, 'material_binding_repairs': binding_repairs})
         descriptor = variant_descriptor(variant)
         if write_receipts:
             write_variant_receipt(folder, descriptor, REPORT['meshes'][-1])
