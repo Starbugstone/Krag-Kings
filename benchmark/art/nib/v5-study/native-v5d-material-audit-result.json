@@ -1,0 +1,19 @@
+{
+  "status": "Actual read-only saved-material audit completed; no source/render/export mutation",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5d_WIP.blend",
+  "sourceSha256": "e10d1ab65cae5922f7f379c471a6c16a8fb740bd725ee7237c7758d7690a3490",
+  "sourceUnchanged": true,
+  "auditSha256": "f56138e9924ffba3d54caaaa98c33b062c5b2e094fb84e9471b6e9252612d510",
+  "guardExitCode": 0,
+  "completionMarker": "NIB_SAVED_FACE_MATERIAL_AUDIT_COMPLETE",
+  "peakPrivateMB": 567.0,
+  "lowestAvailableMB": 16099.0,
+  "findings": [
+    "Every sampled frontal head hit is FacialSkin; all 2140 anterior-neck region faces are FacialSkin, with no MouthInterior assignment.",
+    "The recessed oral material bounds begin at z=1.06494 m; the lower neck strip is not an oral-material face assignment.",
+    "The frontal chin at (x=0,z=1.070) has normal approximately (0,-0.329,-0.944): a strongly downward-facing plane. Geometry/self-shadow dominates the dark wedge; rendered luminance itself was not separately decomposed.",
+    "The nose mask is connected to the intended brown BaseColor mix on the FacialSkin material; 1566 vertices exceed mask0.5. There is no EarInner or MouthInterior misassignment in the nasal region.",
+    "Correct regional geometry before treating surface color or groom as a solution."
+  ],
+  "next": "Prepared separate v5e fit; actual generation, depth, closure/pose proof still pending."
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nib-native-v5e-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\rebuild_head_v5e.py",
+    "--",
+    "--hands",
+    "--revision",
+    "v5e",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b_MorphRepair.blend"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-generate.log",
+  "successMarker": "NIB_V5_HEAD_STUDY_SAVED"
+}

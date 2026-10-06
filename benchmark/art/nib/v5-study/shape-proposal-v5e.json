@@ -1,0 +1,132 @@
+{
+  "status": "Raw control-cage measurements only; not an evaluated saved mesh, render, or approved anatomy",
+  "regions": {
+    "muzzle": {
+      "vertices": 664,
+      "priorMin": [
+        -0.060999398139770636,
+        -0.11005684789853128,
+        1.0920387363506512
+      ],
+      "priorMax": [
+        0.06107339979651005,
+        -0.035708746090982166,
+        1.1441019405848851
+      ],
+      "proposedMin": [
+        -0.060999398139770636,
+        -0.10419848859184944,
+        1.092041480695057
+      ],
+      "proposedMax": [
+        0.06107339979651005,
+        -0.03568285527987165,
+        1.1441019459553816
+      ],
+      "maximumDisplacementMeters": 0.010472006757367477
+    },
+    "nasalPad": {
+      "vertices": 167,
+      "priorMin": [
+        -0.03958221746737669,
+        -0.10039556284299919,
+        1.1293232108857854
+      ],
+      "priorMax": [
+        0.039672754799411965,
+        -0.05955927621289486,
+        1.150885091766433
+      ],
+      "proposedMin": [
+        -0.03958221746737669,
+        -0.10419848859184944,
+        1.129452640340633
+      ],
+      "proposedMax": [
+        0.039672754799411965,
+        -0.06172233332372618,
+        1.150885091766525
+      ],
+      "maximumDisplacementMeters": 0.007154973971125146
+    },
+    "orbital": {
+      "vertices": 757,
+      "priorMin": [
+        -0.07437799202932745,
+        -0.06456172164361836,
+        1.1546711821230853
+      ],
+      "priorMax": [
+        0.07429827961783453,
+        -0.023122560748652717,
+        1.1884865912635632
+      ],
+      "proposedMin": [
+        -0.07437799202932745,
+        -0.06456172164361836,
+        1.1546711821230853
+      ],
+      "proposedMax": [
+        0.07429827961783453,
+        -0.023122560748652717,
+        1.1884865912635632
+      ],
+      "maximumDisplacementMeters": 0.0
+    },
+    "lowerNeck": {
+      "vertices": 330,
+      "priorMin": [
+        -0.09460765891822454,
+        -0.03141876793466728,
+        0.9335573965690354
+      ],
+      "priorMax": [
+        0.09468550439535622,
+        0.09232543206214903,
+        1.078518896716036
+      ],
+      "proposedMin": [
+        -0.09460765891822454,
+        -0.03141876793466728,
+        0.9335573965690354
+      ],
+      "proposedMax": [
+        0.09468550439535622,
+        0.09232543206214903,
+        1.078518896716036
+      ],
+      "maximumDisplacementMeters": 0.0
+    }
+  },
+  "oralTranslationMeters": [
+    0.0,
+    -0.00470093120147734,
+    0.007871046614695176
+  ],
+  "diagnosis": "Actual v5d lip leads nose by 9.51 mm; frontal dark jaw/neck hits are FacialSkin with strongly downward normals",
+  "change": "Recess central lip shelf, lead with whole nasal pad, paired continuous upper-muzzle pads and curved crease; retain exact orbital and lower-neck fit",
+  "materialChange": false,
+  "newDetachedMuzzleMeshes": false,
+  "coordinateSpace": "Metres before common HEAD_DROP -0.032 m",
+  "profileRelationship": {
+    "actualRecipeV5dRaw": {
+      "lipMinimumY": -0.11005684789853128,
+      "noseMinimumY": -0.09988858462382626,
+      "noseLeadMeters": -0.01016826327470502,
+      "definition": "Positive means nose leads lip toward negative Y"
+    },
+    "proposedV5eRaw": {
+      "lipMinimumY": -0.1011048949244268,
+      "noseMinimumY": -0.10419848859184944,
+      "noseLeadMeters": 0.0030935936674226366,
+      "definition": "Positive means nose leads lip toward negative Y"
+    }
+  },
+  "referenceTopologySha256": "bbe35776c14f9b9142deffc3d83826564586c36868f5fae2250806d18616005d",
+  "codeSha256": {
+    "measure_v5e_proposal.py": "ed72e15b294693e297f93ac12f9af0e6360a458816a956dba579f5a8c0009fd0",
+    "fit_head_v5e.py": "9fd4bfc7809ad0546e0895b5aa35692b0c59167e6486293da3ae6b39854771bc",
+    "fit_head_v5d.py": "59b09ababb0e4237e14342643cb6ba879476407c789931d961396aa4839935e4",
+    "fit_head.py": "bf727d80861720fff3b89bee34db0c964c205728b869bfc15970d37eb8faf601"
+  }
+}

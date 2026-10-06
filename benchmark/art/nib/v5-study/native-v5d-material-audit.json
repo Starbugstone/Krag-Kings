@@ -1,0 +1,1524 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5d_WIP.blend",
+  "sourceSha256": "e10d1ab65cae5922f7f379c471a6c16a8fb740bd725ee7237c7758d7690a3490",
+  "status": "Read-only actual saved mesh audit; no artistic acceptance",
+  "action": "Idle",
+  "frame": 1,
+  "space": "World metres; forward is negative Y",
+  "materialFaces": [
+    {
+      "slot": 0,
+      "material": "Nib_v5_FacialSkin",
+      "faces": 41560,
+      "worldVertexBounds": {
+        "count": 41605,
+        "minimum": [
+          -0.0910559669137001,
+          -0.10948684066534042,
+          1.0211520195007324
+        ],
+        "maximum": [
+          0.09111817926168442,
+          0.07088489085435867,
+          1.2271316051483154
+        ],
+        "mean": [
+          4.173591204541741e-06,
+          -0.04276371859572135,
+          1.1146825162138938
+        ]
+      },
+      "worldCenterBounds": {
+        "count": 41560,
+        "minimum": [
+          -0.09103808179497719,
+          -0.10946229845285416,
+          1.0211803317070007
+        ],
+        "maximum": [
+          0.09110371582210064,
+          0.07076914981007576,
+          1.227035254240036
+        ],
+        "mean": [
+          4.231309432628265e-06,
+          -0.04273984697347268,
+          1.114715913055004
+        ]
+      },
+      "sourceVertexBounds": {
+        "count": 41605,
+        "minimum": [
+          -0.08673799782991409,
+          -0.16345006227493286,
+          0.16599999368190765
+        ],
+        "maximum": [
+          0.08668000996112823,
+          0.07727692276239395,
+          0.4362730085849762
+        ],
+        "mean": [
+          6.879782477432992e-06,
+          -0.0994218601648211,
+          0.2798088053487382
+        ]
+      },
+      "noseMaskAboveHalfVertices": 1566,
+      "sampleFaceIds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "slot": 1,
+      "material": "Nib_EarInner",
+      "faces": 0,
+      "worldVertexBounds": {
+        "count": 0
+      },
+      "worldCenterBounds": {
+        "count": 0
+      },
+      "sourceVertexBounds": {
+        "count": 0
+      },
+      "noseMaskAboveHalfVertices": 0,
+      "sampleFaceIds": []
+    },
+    {
+      "slot": 2,
+      "material": "Nib_MouthInterior",
+      "faces": 1312,
+      "worldVertexBounds": {
+        "count": 1357,
+        "minimum": [
+          -0.04557948559522629,
+          -0.07797075808048248,
+          1.0649406909942627
+        ],
+        "maximum": [
+          0.045663170516490936,
+          -0.006741922348737717,
+          1.108038067817688
+        ],
+        "mean": [
+          7.4705095909380265e-06,
+          -0.03791823378038663,
+          1.0840229208010825
+        ]
+      },
+      "worldCenterBounds": {
+        "count": 1312,
+        "minimum": [
+          -0.04555826261639595,
+          -0.07635670341551304,
+          1.0649664402008057
+        ],
+        "maximum": [
+          0.04563464783132076,
+          -0.0067966775968670845,
+          1.1080055832862854
+        ],
+        "mean": [
+          8.508377716890851e-06,
+          -0.03695049964952021,
+          1.0840474701054938
+        ]
+      },
+      "sourceVertexBounds": {
+        "count": 1357,
+        "minimum": [
+          -0.04089299961924553,
+          -0.12175802141427994,
+          0.2037632167339325
+        ],
+        "maximum": [
+          0.04099399596452713,
+          -0.027474038302898407,
+          0.26785796880722046
+        ],
+        "mean": [
+          9.573057318384593e-06,
+          -0.07432805200079257,
+          0.2339024565724125
+        ]
+      },
+      "noseMaskAboveHalfVertices": 0,
+      "sampleFaceIds": [
+        7548,
+        7549,
+        7550,
+        7551,
+        7552,
+        7553,
+        7554,
+        7555,
+        7556,
+        7557,
+        7558,
+        7559
+      ]
+    }
+  ],
+  "sourceRegions": {
+    "upperMuzzle": {
+      "faces": 2577,
+      "materialFaceCounts": {
+        "Nib_v5_FacialSkin": 2497,
+        "Nib_EarInner": 0,
+        "Nib_MouthInterior": 80
+      },
+      "centerBounds": {
+        "count": 2577,
+        "minimum": [
+          -0.04575972631573677,
+          -0.10946229845285416,
+          1.0834722816944122
+        ],
+        "maximum": [
+          0.045844556763768196,
+          -0.05321695003658533,
+          1.1053546965122223
+        ],
+        "mean": [
+          -0.00010896831395319086,
+          -0.08936612004848601,
+          1.0949392485720362
+        ]
+      },
+      "worldNormalMean": [
+        -0.002072603283121135,
+        -0.14753307086163694,
+        3.14640444576685e-05
+      ],
+      "downFacingFraction": 0.37640667442762904
+    },
+    "lowerMuzzleChin": {
+      "faces": 7706,
+      "materialFaceCounts": {
+        "Nib_v5_FacialSkin": 7393,
+        "Nib_EarInner": 0,
+        "Nib_MouthInterior": 313
+      },
+      "centerBounds": {
+        "count": 7706,
+        "minimum": [
+          -0.050117937847971916,
+          -0.10938617214560509,
+          1.045486718416214
+        ],
+        "maximum": [
+          0.05058907810598612,
+          -0.016209811437875032,
+          1.0863458216190338
+        ],
+        "mean": [
+          1.1324768001191812e-05,
+          -0.07464498625558219,
+          1.073488301579407
+        ]
+      },
+      "worldNormalMean": [
+        0.0018852450151037032,
+        -0.1804448545941818,
+        -0.3393681119328153
+      ],
+      "downFacingFraction": 0.675058396055022
+    },
+    "anteriorNeck": {
+      "faces": 2140,
+      "materialFaceCounts": {
+        "Nib_v5_FacialSkin": 2140,
+        "Nib_EarInner": 0,
+        "Nib_MouthInterior": 0
+      },
+      "centerBounds": {
+        "count": 2140,
+        "minimum": [
+          -0.027250408194959164,
+          -0.055434972047805786,
+          1.023621678352356
+        ],
+        "maximum": [
+          0.027149039786309004,
+          0.004197488393401727,
+          1.0619061291217804
+        ],
+        "mean": [
+          2.778431120857455e-05,
+          -0.02706321518537458,
+          1.0456361611034268
+        ]
+      },
+      "worldNormalMean": [
+        0.00022100427434273786,
+        -0.42712067767420664,
+        -0.7218656391908238
+      ],
+      "downFacingFraction": 0.8570093457943925
+    },
+    "nosePad": {
+      "faces": 2398,
+      "materialFaceCounts": {
+        "Nib_v5_FacialSkin": 2398,
+        "Nib_EarInner": 0,
+        "Nib_MouthInterior": 0
+      },
+      "centerBounds": {
+        "count": 2398,
+        "minimum": [
+          -0.03947416413575411,
+          -0.09983204118907452,
+          1.096493273973465
+        ],
+        "maximum": [
+          0.03956702910363674,
+          -0.06004481390118599,
+          1.1159818470478058
+        ],
+        "mean": [
+          9.711828756617911e-05,
+          -0.08447900259427671,
+          1.1066107767959552
+        ]
+      },
+      "worldNormalMean": [
+        -9.372488393007876e-05,
+        -0.35692370094862014,
+        0.19440312605107554
+      ],
+      "downFacingFraction": 0.292743953294412
+    }
+  },
+  "frontalHits": [
+    {
+      "queryXZ": [
+        -0.035,
+        1.015
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.015
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        0,
+        1.015
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.015
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.015
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.035
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.035
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.012555420398712158,
+        1.034999966621399
+      ],
+      "normal": [
+        -0.3564915955066681,
+        -0.9132629632949829,
+        0.19714109599590302
+      ],
+      "face": 42577,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.035
+      ],
+      "hit": [
+        0.0,
+        -0.015350341796875,
+        1.034999966621399
+      ],
+      "normal": [
+        0.004112517926841974,
+        -0.756598711013794,
+        0.6538664698600769
+      ],
+      "face": 42767,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.035
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.01258164644241333,
+        1.034999966621399
+      ],
+      "normal": [
+        0.3547903597354889,
+        -0.9127568602561951,
+        0.20248128473758698
+      ],
+      "face": 42381,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.035
+      ],
+      "hit": null,
+      "normal": null,
+      "face": null,
+      "material": null
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.055
+      ],
+      "hit": [
+        -0.03500000014901161,
+        -0.022168874740600586,
+        1.0549999475479126
+      ],
+      "normal": [
+        -0.43439704179763794,
+        -0.027967769652605057,
+        -0.9002871513366699
+      ],
+      "face": 3807,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.055
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.04467034339904785,
+        1.0549999475479126
+      ],
+      "normal": [
+        -0.2120557576417923,
+        -0.5777384638786316,
+        -0.788194477558136
+      ],
+      "face": 15508,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.055
+      ],
+      "hit": [
+        0.0,
+        -0.046443164348602295,
+        1.0549999475479126
+      ],
+      "normal": [
+        0.0046095396392047405,
+        -0.6623277068138123,
+        -0.7492000460624695
+      ],
+      "face": 3380,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.055
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.044663071632385254,
+        1.0549999475479126
+      ],
+      "normal": [
+        0.21317937970161438,
+        -0.5772842764854431,
+        -0.7882242202758789
+      ],
+      "face": 36540,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.055
+      ],
+      "hit": [
+        0.03500000014901161,
+        -0.02271568775177002,
+        1.0549999475479126
+      ],
+      "normal": [
+        0.4329587519168854,
+        -0.029813295230269432,
+        -0.9009206891059875
+      ],
+      "face": 24909,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.07
+      ],
+      "hit": [
+        -0.03500000014901161,
+        -0.06482326984405518,
+        1.0700000524520874
+      ],
+      "normal": [
+        -0.32647591829299927,
+        -0.4196372926235199,
+        -0.8469462990760803
+      ],
+      "face": 4382,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.07
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.07392680644989014,
+        1.0700000524520874
+      ],
+      "normal": [
+        -0.08387160301208496,
+        -0.3518337905406952,
+        -0.9322974681854248
+      ],
+      "face": 5022,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.07
+      ],
+      "hit": [
+        0.0,
+        -0.07470226287841797,
+        1.0700000524520874
+      ],
+      "normal": [
+        0.0004530885489657521,
+        -0.32909300923347473,
+        -0.9442974328994751
+      ],
+      "face": 15601,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.07
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.07352161407470703,
+        1.0700000524520874
+      ],
+      "normal": [
+        0.1068010926246643,
+        -0.3612655997276306,
+        -0.926326334476471
+      ],
+      "face": 26086,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.07
+      ],
+      "hit": [
+        0.03500000014901161,
+        -0.06395226716995239,
+        1.0700000524520874
+      ],
+      "normal": [
+        0.35238590836524963,
+        -0.44265982508659363,
+        -0.8245462775230408
+      ],
+      "face": 25487,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.085
+      ],
+      "hit": [
+        -0.03500000014901161,
+        -0.08846276998519897,
+        1.0850000381469727
+      ],
+      "normal": [
+        -0.7250353097915649,
+        -0.6843422055244446,
+        0.07745730131864548
+      ],
+      "face": 8483,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.085
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.10378694534301758,
+        1.0850000381469727
+      ],
+      "normal": [
+        -0.4548531472682953,
+        -0.7961767315864563,
+        -0.39901259541511536
+      ],
+      "face": 16173,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.085
+      ],
+      "hit": [
+        0.0,
+        -0.10871732234954834,
+        1.0850000381469727
+      ],
+      "normal": [
+        0.01974179781973362,
+        -0.7330136895179749,
+        -0.6799272894859314
+      ],
+      "face": 30126,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.085
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.10353356599807739,
+        1.0850000381469727
+      ],
+      "normal": [
+        0.4037116467952728,
+        -0.6904546022415161,
+        -0.6002412438392639
+      ],
+      "face": 37180,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.085
+      ],
+      "hit": [
+        0.03500000014901161,
+        -0.08811533451080322,
+        1.0850000381469727
+      ],
+      "normal": [
+        0.6309685111045837,
+        -0.6266269087791443,
+        -0.45740291476249695
+      ],
+      "face": 38206,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.1
+      ],
+      "hit": [
+        -0.03500000014901161,
+        -0.07658743858337402,
+        1.100000023841858
+      ],
+      "normal": [
+        -0.42097118496894836,
+        -0.6831238865852356,
+        0.5967621803283691
+      ],
+      "face": 9238,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.1
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.08947962522506714,
+        1.100000023841858
+      ],
+      "normal": [
+        -0.4652964472770691,
+        -0.5761865973472595,
+        0.6719435453414917
+      ],
+      "face": 10090,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.1
+      ],
+      "hit": [
+        0.0,
+        -0.0982128381729126,
+        1.100000023841858
+      ],
+      "normal": [
+        -0.02725474163889885,
+        -0.7610338926315308,
+        0.6481393575668335
+      ],
+      "face": 8216,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.1
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.08960413932800293,
+        1.100000023841858
+      ],
+      "normal": [
+        0.45478078722953796,
+        -0.5648819804191589,
+        0.6885366439819336
+      ],
+      "face": 31151,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.1
+      ],
+      "hit": [
+        0.03500000014901161,
+        -0.0767667293548584,
+        1.100000023841858
+      ],
+      "normal": [
+        0.42916837334632874,
+        -0.6790181994438171,
+        0.5956078767776489
+      ],
+      "face": 28244,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.035,
+        1.11
+      ],
+      "hit": [
+        -0.03500000014901161,
+        -0.0667121410369873,
+        1.1100000143051147
+      ],
+      "normal": [
+        -0.22374770045280457,
+        -0.5667188167572021,
+        0.7929481267929077
+      ],
+      "face": 15846,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        -0.0175,
+        1.11
+      ],
+      "hit": [
+        -0.017500000074505806,
+        -0.08510613441467285,
+        1.1100000143051147
+      ],
+      "normal": [
+        -0.36253711581230164,
+        -0.3805472254753113,
+        0.8507353663444519
+      ],
+      "face": 13794,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0,
+        1.11
+      ],
+      "hit": [
+        0.0,
+        -0.09289270639419556,
+        1.1100000143051147
+      ],
+      "normal": [
+        -0.02549486607313156,
+        -0.4684193730354309,
+        0.8831383585929871
+      ],
+      "face": 11304,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.0175,
+        1.11
+      ],
+      "hit": [
+        0.017500000074505806,
+        -0.08519959449768066,
+        1.1100000143051147
+      ],
+      "normal": [
+        0.3827795684337616,
+        -0.43332740664482117,
+        0.8159088492393494
+      ],
+      "face": 34855,
+      "material": "Nib_v5_FacialSkin"
+    },
+    {
+      "queryXZ": [
+        0.035,
+        1.11
+      ],
+      "hit": [
+        0.03500000014901161,
+        -0.06674641370773315,
+        1.1100000143051147
+      ],
+      "normal": [
+        0.2230575531721115,
+        -0.5670490860939026,
+        0.7929063439369202
+      ],
+      "face": 36863,
+      "material": "Nib_v5_FacialSkin"
+    }
+  ],
+  "materialGraphs": {
+    "Nib_v5_FacialSkin": {
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.5899999737739563,
+              0.38999998569488525,
+              0.23000000417232513,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.7200000286102295,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.10000000149011612,
+            "Subsurface Radius": [
+              1.0,
+              0.47999998927116394,
+              0.20000000298023224
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "name": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "Nib_Skin_BaseColor.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "TEX_IMAGE",
+          "image": "Nib_Skin_Roughness.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "TEX_IMAGE",
+          "image": "Nib_Skin_Metallic.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.003",
+          "type": "TEX_IMAGE",
+          "image": "Nib_Skin_Normal.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Normal Map",
+          "type": "NORMAL_MAP",
+          "inputs": {
+            "Strength": 0.5,
+            "Color": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "name": "Attribute",
+          "type": "ATTRIBUTE",
+          "attribute": "NibNoseMask",
+          "inputs": {}
+        },
+        {
+          "name": "Mix (Legacy)",
+          "type": "MIX_RGB",
+          "inputs": {
+            "Factor": 0.5,
+            "Color1": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "Color2": [
+              0.11500000208616257,
+              0.06199999898672104,
+              0.04399999976158142,
+              1.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "Principled BSDF",
+          "BSDF",
+          "Material Output",
+          "Surface"
+        ],
+        [
+          "Image Texture.001",
+          "Color",
+          "Principled BSDF",
+          "Roughness"
+        ],
+        [
+          "Image Texture.002",
+          "Color",
+          "Principled BSDF",
+          "Metallic"
+        ],
+        [
+          "Image Texture.003",
+          "Color",
+          "Normal Map",
+          "Color"
+        ],
+        [
+          "Normal Map",
+          "Normal",
+          "Principled BSDF",
+          "Normal"
+        ],
+        [
+          "Image Texture",
+          "Color",
+          "Mix (Legacy)",
+          "Color1"
+        ],
+        [
+          "Attribute",
+          "Factor",
+          "Mix (Legacy)",
+          "Factor"
+        ],
+        [
+          "Mix (Legacy)",
+          "Color",
+          "Principled BSDF",
+          "Base Color"
+        ]
+      ]
+    },
+    "Nib_EarInner": {
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.23999999463558197,
+              0.10499999672174454,
+              0.052000001072883606,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.8399999737739563,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.10000000149011612,
+            "Subsurface Radius": [
+              1.0,
+              0.47999998927116394,
+              0.20000000298023224
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "name": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "Nib_EarInner_BaseColor.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "TEX_IMAGE",
+          "image": "Nib_EarInner_Roughness.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "TEX_IMAGE",
+          "image": "Nib_EarInner_Metallic.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.003",
+          "type": "TEX_IMAGE",
+          "image": "Nib_EarInner_Normal.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Normal Map",
+          "type": "NORMAL_MAP",
+          "inputs": {
+            "Strength": 0.5,
+            "Color": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "Principled BSDF",
+          "BSDF",
+          "Material Output",
+          "Surface"
+        ],
+        [
+          "Image Texture",
+          "Color",
+          "Principled BSDF",
+          "Base Color"
+        ],
+        [
+          "Image Texture.001",
+          "Color",
+          "Principled BSDF",
+          "Roughness"
+        ],
+        [
+          "Image Texture.002",
+          "Color",
+          "Principled BSDF",
+          "Metallic"
+        ],
+        [
+          "Image Texture.003",
+          "Color",
+          "Normal Map",
+          "Color"
+        ],
+        [
+          "Normal Map",
+          "Normal",
+          "Principled BSDF",
+          "Normal"
+        ]
+      ]
+    },
+    "Nib_MouthInterior": {
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.012000000104308128,
+              0.007000000216066837,
+              0.00800000037997961,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.6200000047683716,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.10000000149011612,
+            "Subsurface Radius": [
+              1.0,
+              0.47999998927116394,
+              0.20000000298023224
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "name": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "name": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "Nib_MouthInterior_BaseColor.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "TEX_IMAGE",
+          "image": "Nib_MouthInterior_Roughness.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "TEX_IMAGE",
+          "image": "Nib_MouthInterior_Metallic.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Image Texture.003",
+          "type": "TEX_IMAGE",
+          "image": "Nib_MouthInterior_Normal.png",
+          "inputs": {
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "name": "Normal Map",
+          "type": "NORMAL_MAP",
+          "inputs": {
+            "Strength": 0.5,
+            "Color": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "Principled BSDF",
+          "BSDF",
+          "Material Output",
+          "Surface"
+        ],
+        [
+          "Image Texture",
+          "Color",
+          "Principled BSDF",
+          "Base Color"
+        ],
+        [
+          "Image Texture.001",
+          "Color",
+          "Principled BSDF",
+          "Roughness"
+        ],
+        [
+          "Image Texture.002",
+          "Color",
+          "Principled BSDF",
+          "Metallic"
+        ],
+        [
+          "Image Texture.003",
+          "Color",
+          "Normal Map",
+          "Color"
+        ],
+        [
+          "Normal Map",
+          "Normal",
+          "Principled BSDF",
+          "Normal"
+        ]
+      ]
+    }
+  },
+  "noseAttribute": {
+    "verticesAboveHalf": 1566,
+    "worldBoundsAboveHalf": {
+      "count": 1566,
+      "minimum": [
+        -0.024754801765084267,
+        -0.09997927397489548,
+        1.0977938175201416
+      ],
+      "maximum": [
+        0.024880409240722656,
+        -0.06955067068338394,
+        1.116445779800415
+      ],
+      "mean": [
+        8.330035598888829e-05,
+        -0.08783350703645483,
+        1.1073698766082336
+      ]
+    }
+  },
+  "sourceUnchanged": true,
+  "auditCodeSha256": "1d111d423a2c99431cc164e4fe755c8534dd4869c2cbab4c5784792488b24b05"
+}

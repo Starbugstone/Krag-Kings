@@ -111,9 +111,29 @@ Next allocated inspection is the read-only `native-v5d-material-audit.job.json`.
 It records actual assigned facial material bounds, nose-mask overlap, region
 normals and frontal surface-hit material IDs. This separates the flat jaw's
 self-shadow from a selector fault and identifies the remaining dark neck strip.
-It is prepared and syntax checked only. After its evidence, the next isolated
-shape must place the compact nose ahead of a rounded continuous muzzle, curve
+It has completed exit 0 and the source is unchanged. The sampled dark jaw and
+neck hits are FacialSkin with strongly downward normals, not an oral-material
+assignment. After that evidence, the next isolated shape must place the compact
+nose ahead of a rounded continuous muzzle, curve
 the upper-lip pads/smile instead of translating a flat shelf, and retain the
 wider ocular aperture. Any source revision needs fresh neutral/depth and posed
 closure proof before material bake. The separate provisional groom recipe is
 prepared in `../v6_groom_wip/`; it must not conceal unresolved facial geometry.
+
+
+## Prepared v5e sequence, not executed
+
+1. `native-v5e-generate.job.json` uses the separate `rebuild_head_v5e.py` and
+   `fit_head_v5e.py`, reading the repaired baseline. It does not overwrite v5d
+   or shared assets. The wider eye fit and closed-neck helper remain intact.
+2. Inspect its actual `native-head-v5e.json` coordinates, strict oral gate and
+   source hash. The lightweight `shape-proposal-v5e.json` is only a raw-cage
+   check: it proves the proposal changes the nose/lip relationship and leaves
+   protected regions unchanged, not that the final subdivided face passes.
+3. `native-v5e-depth-review.job.json` requires the matching source gate and
+   renders Face/Profile/ThreeQuarter. A diagnostic override needs explicit
+   scheduling if the sampled gate still fails; never erase its failure.
+4. Verify actual nose lead, rounded paired pads/crease, chin silhouette, neck,
+   wider eyes, neutral mouth and provisional oral placement. Blink/tongue/body
+   poses follow the neutral structural review. No bake/export/groom promotion
+   is queued from this prepared correction.
