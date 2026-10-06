@@ -1,0 +1,29 @@
+{
+  "name": "nib-native-appearance-v2c-profile",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\native_groom_wip\\review_character_pilot.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-appearance-v2c\\Nib_NativeFlow_Study_v2c.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-appearance-v2c\\source.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-appearance-v2c\\actual-views",
+    "--view",
+    "Profile"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2c-profile.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2c-profile.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2c-profile.log",
+  "successMarker": "NIB_NATIVE_GROOM_ACTUAL_VIEW_COMPLETE"
+}
