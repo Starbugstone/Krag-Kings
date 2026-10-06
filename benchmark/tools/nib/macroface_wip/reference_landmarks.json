@@ -1,0 +1,57 @@
+{
+  "status": "Manual visible landmark picks on original sheet02; provisional image fitting constraints, not canonical 3D dimensions",
+  "image": "krag-kings-design/concept-art/02-nib-character-sheet.png",
+  "imageSha256": "935b65f5dbe6b33f308f752867382e10a7785649ae087c2ec62c959d0d1b1b80",
+  "imageSize": [1536,1024],
+  "convention": "Pixels from original upper-left. Character R appears on the left of the front view. The sheet's side view is oblique, not a strict orthographic profile. Landmarks are visible exterior anatomy, not hair tips.",
+  "views": {
+    "front": {
+      "crop": [145,130,285,242],
+      "uncertaintyPixels": 3,
+      "yawDegreesRange": [-40,5],
+      "pitchDegreesRange": [-25,25],
+      "points": {
+        "outer_R":[192,156], "inner_R":[217,168],
+        "outer_L":[267,166], "inner_L":[249,173],
+        "brow_R":[199,148], "brow_L":[261,155],
+        "nose_tip":[238,189],
+        "mouth_R":[198,189], "mouth_L":[249,203],
+        "lip_center":[230,201], "chin":[224,218],
+        "cheek_R":[177,183], "cheek_L":[269,188]
+      }
+    },
+    "side_oblique": {
+      "crop":[580,139,684,242],
+      "uncertaintyPixels":3,
+      "yawDegreesRange":[-80,-30],
+      "pitchDegreesRange":[-20,25],
+      "points":{
+        "outer_R":[623,166], "inner_R":[642,176],
+        "brow_R":[627,157], "nose_tip":[672,194],
+        "mouth_R":[628,199], "lip_center":[662,211],
+        "chin":[654,223], "cheek_R":[609,188]
+      }
+    },
+    "portrait":{
+      "crop":[1240,184,1475,341],
+      "uncertaintyPixels":4,
+      "yawDegreesRange":[-50,-5],
+      "pitchDegreesRange":[-25,25],
+      "points":{
+        "outer_R":[1330,226], "inner_R":[1371,249],
+        "outer_L":[1448,254], "inner_L":[1418,266],
+        "brow_R":[1338,208], "brow_L":[1441,244],
+        "nose_tip":[1418,278],
+        "mouth_R":[1331,282], "mouth_L":[1410,311],
+        "lip_center":[1394,310], "chin":[1368,333],
+        "cheek_R":[1307,263], "cheek_L":[1438,293]
+      }
+    }
+  },
+  "cautions":[
+    "The portrait/front illustrations differ in head roll, perspective, expression and stylized construction. A single exact 3D solution is not assumed.",
+    "Brow and cheek picks indicate broad visible peaks, not exact human-template vertices. Native matching views must verify their surface interpretation.",
+    "Manual mouth corners include the visible smile crease; they are not the internal oral-bag boundary. Source selections must use exterior skin.",
+    "These picks are modeling evidence with uncertainty, never approved species proportion changes."
+  ]
+}

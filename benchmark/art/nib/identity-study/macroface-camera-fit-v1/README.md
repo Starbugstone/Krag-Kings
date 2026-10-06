@@ -1,0 +1,9 @@
+# Actual landmark/camera calculation — sculpt targets unaccepted
+
+This is a numerical fit to manually picked visible landmarks on original sheet02, using exact saved Head vertices and the previously audited visible canthus IDs. The read-only DNA extraction includes all17 actual facial shape targets from the regional source `ed53df07…`; it launches no Blender application and changes no source.
+
+The fitted weak-perspective cameras have front yaw−11°/roll9.13°, portrait yaw−23°/roll16.73°, and an oblique-side fit at the−30° search boundary. The sheet's side illustration is not a strict90° profile. Weighted RMS residuals are5.87,13.04 and5.96 pixels respectively, larger than the3–4-pixel manual uncertainty. The boundary result and disagreement remain explicit; these are not calibrated cameras or automatically accepted target coordinates.
+
+The unconstrained multi-view target estimates suggest higher outer canthi, changed brow framing and a narrower cheek envelope. They also disagree in depth/asymmetry. Do not move every landmark to those estimates independently: that would distort eyes and bake illustrated head pose/expression into anatomy. The next prepared field uses broad symmetric controls, coherent optical transformations and explicit anatomical depth constraints, then checks all actual facial keys. No macroface source or render has been generated.
+
+The exact reference pixels and uncertainty live in `benchmark/tools/nib/macroface_wip/reference_landmarks.json`. The cache can be reproduced using `read_saved_face.py` with `--source` set to the regional blend, `--mesh-name "Nib v5 fitted animation face"`, `--attribute nib_source_position --attribute NibNoseMask --all-bones`, and `--output benchmark/local/nib-regional-macroface-cache.json`. Then run `fit_reference_cameras.py` with Blender's bundled standalone NumPy Python and a fresh `--output-dir`. This is read-only preparation, not native generation.
