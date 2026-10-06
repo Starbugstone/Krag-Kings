@@ -28,6 +28,14 @@ sufficient. The gate and new actual-iris adapter are syntax-checked only; their
 native execution is pending the final coherent-source handoff. Older frozen
 plans and executed recipe hashes remain unchanged.
 
+The prepared `review_pbr_optical.py` adds a separate matched EyeCloseup pair
+after the saved-PBR snapshot. It uses the exact existing adult-review camera:
+1500 × 900, 0.18 m orthographic span, centered between the two animated eye
+bones with the same camera offset. Both inputs, both review recipes and the
+saved snapshot outputs must be pinned. This supplements Face/Tongue/Front so
+the new actual-iris atlas can be judged at useful scale. It is syntax-checked
+only; no new optical bake or comparison has run.
+
 1. `snapshot-source`: capture exact 79-bone hierarchy/bind, canonical action curve hashes, geometry/weights/morph payloads, contracts and 17 skeletal poses per take.
 2. `bake`: use the existing PBR bridge, retaining the original masked-card RGBA bytes. The actual face attribute is baked on its geometry; UV-only regions use the existing carrier bake.
 3. `snapshot-pbr`: reopen the actual saved bake and demand unchanged rig, seven actions, geometry, weights, morphs and groom/deformation contracts. UV/material changes are expected.
