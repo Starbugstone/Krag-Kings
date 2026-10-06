@@ -1,0 +1,27 @@
+{
+  "name": "nib-native-v5e-mouth-audit",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\v5_wip\\audit_saved_mouth_deformation.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Master_v5e_WIP.blend",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-mouth-audit.json",
+    "--cache",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-v5e-mouth-audit.npz"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-mouth-audit.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-mouth-audit.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-v5e-mouth-audit.log",
+  "successMarker": "NIB_SAVED_MOUTH_DEFORMATION_AUDIT_COMPLETE"
+}

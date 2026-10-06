@@ -1,0 +1,146 @@
+{
+  "status": "Generated and six explicitly diagnostic renders reviewed; hard Tongue deformation failure; no artistic acceptance or promotion",
+  "source": "benchmark/art/nib/Nib_Master_v5e_WIP.blend",
+  "sourceSha256": "3791f8405b44c1114728e357caf3c6d21172c5882feee4178e627982a5120b96",
+  "sourceReport": "benchmark/art/nib/v5-study/native-head-v5e.json",
+  "sourceReportSha256": "a354af12c89eb52471c5d9fc19cc97222845525f582ba2cd628bafe1edf65519",
+  "processes": {
+    "generate": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_V5_HEAD_STUDY_SAVED",
+      "peakPrivateMB": 746.0,
+      "lowestAvailableMB": 16373.0,
+      "peakCommitPercent": 41.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5e-generate-memory.csv",
+      "memoryTraceSha256": "f4b36134fa9467ffdbee27971b3a9e7c505676afa60f4ae83964bf6b60dd65b4",
+      "logSha256": "8f3d85732bfb37d87da5c91c0207ae8651efa22f77e1e7a537dca800ac8de866"
+    },
+    "diagnostic-depth": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "peakPrivateMB": 2658.0,
+      "lowestAvailableMB": 14628.0,
+      "peakCommitPercent": 46.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5e-diagnostic-depth-memory.csv",
+      "memoryTraceSha256": "675f09cb5559db8dffa6e67b101216afd67394e034493bd239411d6d6abf6a8d",
+      "logSha256": "0bf7ed441b40bf44152a0a93bb279cc0af8fe0e075986d6baf3b77c352a8960b"
+    },
+    "diagnostic-expressions": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "peakPrivateMB": 2641.0,
+      "lowestAvailableMB": 14528.0,
+      "peakCommitPercent": 46.0,
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5e-diagnostic-expressions-memory.csv",
+      "memoryTraceSha256": "a8fbbede2aeec87f82690fbb162e531c21b29f95bcfc83ac67f3fcfc7451bfd9",
+      "logSha256": "ebb2f4569f7f033c0452be6c639739671e5a0cc58ae41bee0a3a2a4bb3df7cad"
+    }
+  },
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too"
+  },
+  "neckBoundary": {
+    "cutSourceZ": 0.166,
+    "cutBoundaryEdges": 44,
+    "closed": true,
+    "method": "Actual planar bisect and filled lower boundary; no scarf coverage change",
+    "evaluatedOpenNeckEdges": 0,
+    "allSurfaceBoundaryEdges": 0
+  },
+  "images": [
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_ExpressionBlink.png",
+      "sha256": "37140701cfca5b5e9e921ff59813e3d4cd928e7702b63102873b60270fd2291d",
+      "metadataSha256": "f495cfa5d01e23058d072a919e360f7fcfaf68dc433f82a88a9e9925e47a7177",
+      "view": "Blink",
+      "action": "FacePerformance",
+      "frame": 16,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_ExpressionTongue.png",
+      "sha256": "ac0d023915aeb6c37f24387d32906eb6a8c0e1f3552f95bce9d12a3a53c96573",
+      "metadataSha256": "68b0947745caddeec21f60dbb53266371c3a04be70620f0710fcecda56cde84a",
+      "view": "Tongue",
+      "action": "FacePerformance",
+      "frame": 103,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_ExpressionWary.png",
+      "sha256": "33a5cb9b6d4c7f15ef31648d107cd80ab02ec76ef42bd5e446b6eefcf12073c5",
+      "metadataSha256": "949d88d2eb019c8184ab569eed8563ffaf72c3b073e02c073873aa1a2906a0b0",
+      "view": "Wary",
+      "action": "FacePerformance",
+      "frame": 31,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_FaceProfile.png",
+      "sha256": "1a02298c3639fa67bb4904d2d1d31ed30b3b847e6cb2f03a546b9e64d56de578",
+      "metadataSha256": "bb2c5edc0600c6d4faf8ecf64c9ba70ca167dcf4d72a9850df0034e2358339d8",
+      "view": "FaceProfile",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "29627ae2ec2b12b58ce161d10c1be237b819f0f4d9cb78acaad51f02c0725da9",
+      "metadataSha256": "fec436f01cad5ccd48d3d33beb9a392618f83cabff8e5685dc0f56687d112847",
+      "view": "Face",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5e-diagnostic-renders/Nib_FaceThreeQuarter.png",
+      "sha256": "4b5e0908e164c906666597917fb8e083f5f1d2de4b0453e1fddbebd6dc97b1f3",
+      "metadataSha256": "5c4dd9366aa1c816b3356f1d1468deb915dedf44256e5f7495198686678e81ba",
+      "view": "FaceThreeQuarter",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    }
+  ],
+  "findings": [
+    "Profile improves: nose now leads the lip by 2.77566 mm, replacing the v5d lip-leading beak. Closed neck and wider eyes are retained.",
+    "Neutral likeness still fails: broad heavy downward chin and flat midcheek, flattened grey nasal strip, insufficient brow/upper-lid structure, sparse head/ear coat and stiff scarf.",
+    "Tongue at FacePerformance frame 103 is a hard failure: a rectangular skin curtain stretches over the mouth; nearly all of the dark-blue tongue remains hidden beneath it.",
+    "Blink at frame 16 closes the eyes but creates bridge-side pinches. Wary at frame 31 remains too smooth and visually weak for the adult expressive reference.",
+    "Actual neutral views do not show the old dangling teeth, but strict sampled oral visibility remains failed. No gate was relaxed or erased.",
+    "The raw-cage weight diagnostic reproduces Jaw influence on nasal-tip and upper-muzzle probes. Actual saved-pose decomposition and mouth-loop audit are prepared, not yet executed. Do not conclude the complete cause from raw probes alone."
+  ],
+  "nextStep": "Read-only actual saved mouth topology/weight/morph decomposition, then a separately named repair with actual neutral and extreme expression verification before more face shaping or groom generation.",
+  "sharedChanged": false,
+  "rawWeightDiagnostic": {
+    "path": "benchmark/art/nib/v5-study/native-v5e-raw-jaw-field.json",
+    "sha256": "877e9da8b0c0d341c78d12896f6338843503e76946ca0f0e973502b32a2e9da0",
+    "scope": "Original unsubdivided source cage and exact frozen authoring field; not an evaluated saved pose"
+  },
+  "preparedAudit": {
+    "job": "benchmark/tools/nib/v5_wip/native-v5e-mouth-audit.job.json",
+    "executed": false
+  }
+}

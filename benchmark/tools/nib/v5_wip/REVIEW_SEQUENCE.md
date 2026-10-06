@@ -1,7 +1,9 @@
 # Isolated Nib facial review sequence
 
-Current status: v5c and v5d sources plus diagnostic Face/Profile/ThreeQuarter
-views exist and fail likeness. Both retain a false sampled oral-occlusion gate.
+Current status: v5c, v5d and v5e sources plus diagnostic views exist and fail
+likeness. All retain a false sampled oral-occlusion gate. The v5e Tongue extreme
+also exposes a hard mouth deformation failure; topology/skinning inspection
+now takes priority over additional face shaping or groom generation.
 The separate v4b deformation repair is already validated and promoted. Current
 shared assets remain pinned; no v5 art export is authorized by these results.
 Launch only after root grants the serialized heavy slot, using
@@ -121,7 +123,7 @@ closure proof before material bake. The separate provisional groom recipe is
 prepared in `../v6_groom_wip/`; it must not conceal unresolved facial geometry.
 
 
-## Prepared v5e sequence, not executed
+## Frozen v5e sequence and actual result
 
 1. `native-v5e-generate.job.json` uses the separate `rebuild_head_v5e.py` and
    `fit_head_v5e.py`, reading the repaired baseline. It does not overwrite v5d
@@ -137,3 +139,31 @@ prepared in `../v6_groom_wip/`; it must not conceal unresolved facial geometry.
    wider eyes, neutral mouth and provisional oral placement. Blink/tongue/body
    poses follow the neutral structural review. No bake/export/groom promotion
    is queued from this prepared correction.
+
+The frozen generation has now completed. Its strict gate still failed, so
+separately named `native-v5e-diagnostic-depth.job.json` and
+`native-v5e-diagnostic-expressions.job.json` preserved that failure while
+producing the explicitly authorized diagnostic views. All three processes
+exited 0; source hash, six image hashes and guard telemetry are preserved in
+`art/nib/v5-study/native-v5e-review-result.json`. The nose now leads the lip by
+2.77566 mm, but the grey flat nose, heavy chin and weak brows still fail. Tongue
+frame 103 has a large rectangular skin curtain over the mouth. Blink closes
+the eyes with bridge-side pinching. No asset is promoted.
+
+The next prepared job is **read-only**:
+`native-v5e-mouth-audit.job.json`. It opens the exact saved v5e source and
+compares neutral, full Tongue, skeletal-only, morph-only and Jaw-only evaluated
+positions. It records source-coordinate regions, weights, highest mouth-edge
+stretch, frontmost skin faces and potential upper/lower lip crossings, then
+checks that the source hash is unchanged. Its numerical cache stays under
+`benchmark/local/`; the small JSON report goes into the art evidence folder.
+It has not executed. Root must allocate its guard slot before launch.
+
+Do not remove faces merely because the closed oral bag has no boundary edges.
+Audit the actual upper/lower lip and interior surface domains, and do not
+assume that a coordinate threshold describes their topology. The raw-cage
+diagnostic already identifies incorrect Jaw influence on nasal/upper-muzzle
+probes, but actual saved-pose decomposition is required before choosing the
+repair. Preserve v5e and create a separate repaired source with neutral and
+extreme expression evidence. Only then resume nose/brow/chin likeness and
+the prepared regional groom candidate.

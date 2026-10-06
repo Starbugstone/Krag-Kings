@@ -1,0 +1,31 @@
+{
+  "source": "Nib_Master_v5e_WIP.blend",
+  "sourceSha256": "3791f8405b44c1114728e357caf3c6d21172c5882feee4178e627982a5120b96",
+  "view": "Wary",
+  "action": "FacePerformance",
+  "frame": 31,
+  "variant": "natural",
+  "renderer": "Blender Cycles CPU",
+  "samples": 20,
+  "status": "Diagnostic image of structurally flagged source; gate failure retained, no acceptance or export authorization",
+  "coordinateReport": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\v5-study\\native-head-v5e.json",
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Sampled neutral frontal/oblique oral occlusion and visible iris; requires actual visual review too"
+  },
+  "diagnosticOverride": true
+}
