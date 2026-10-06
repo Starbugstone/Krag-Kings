@@ -1,0 +1,51 @@
+{
+  "status": "Actual public pilot weights downloaded; inference has not run",
+  "files": [
+    {
+      "url": "https://huggingface.co/microsoft/TRELLIS-image-large/resolve/25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\weights\\ckpts\\ss_dec_conv3d_16l8_fp16.safetensors",
+      "sha256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "bytes": 147591972,
+      "etag": "\"6ac386147a7d3c547af80d0f813e4d4a380e514ac0c1e3a9096ae60c94a497e1\"",
+      "upstreamHashPinned": true,
+      "role": "sparse_structure_decoder"
+    },
+    {
+      "url": "https://huggingface.co/microsoft/TRELLIS-image-large/resolve/25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/ss_flow_img_dit_L_16l8_fp16.safetensors",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\weights\\ckpts\\ss_flow_img_dit_L_16l8_fp16.safetensors",
+      "sha256": "96dc6bfd4136fd950af564dd16b4ae533c9ba6af8f26c670646b2a9f2789b1db",
+      "bytes": 1130770840,
+      "etag": "\"2235ba5568195f3ac0ef7eb16f46e596a6a93c5cdf409004130a50cc1f032126\"",
+      "upstreamHashPinned": true,
+      "role": "sparse_structure_flow_model"
+    },
+    {
+      "url": "https://huggingface.co/microsoft/TRELLIS-image-large/resolve/25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/slat_flow_img_dit_L_64l8p2_fp16.safetensors",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\weights\\ckpts\\slat_flow_img_dit_L_64l8p2_fp16.safetensors",
+      "sha256": "693fb2a58ad497bd222007301eeec49d14d60f8c12d2f2f00c221fa747b4c66c",
+      "bytes": 1203755136,
+      "etag": "\"48327f38cd327356fd2fe0a413429b8f9dfc7cc1a9ca4564b2ec9291c73bfb76\"",
+      "upstreamHashPinned": true,
+      "role": "slat_flow_model"
+    },
+    {
+      "url": "https://huggingface.co/microsoft/TRELLIS-image-large/resolve/25e0d31ffbebe4b5a97464dd851910efc3002d96/ckpts/slat_dec_mesh_swin8_B_64l8m256c_fp16.safetensors",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\weights\\ckpts\\slat_dec_mesh_swin8_B_64l8m256c_fp16.safetensors",
+      "sha256": "3e87aba94b5786407eb06d0502c1ed0885a0027a3f2b8537bfe15b0a92c01859",
+      "bytes": 181903412,
+      "etag": "\"90cbb9469e3bb19934ab40a8cec5331b88323c0636b89139383b632d396503cb\"",
+      "upstreamHashPinned": true,
+      "role": "slat_decoder_mesh"
+    },
+    {
+      "url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_pretrain.pth",
+      "path": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\weights\\dinov2_vitl14_reg4_pretrain.pth",
+      "sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "bytes": 1217607321,
+      "etag": "\"b6cbe2bf3ce2f370d5a67bcd465144b0-146\"",
+      "upstreamHashPinned": false
+    }
+  ],
+  "sourceConceptUploaded": false,
+  "modelRevision": "25e0d31ffbebe4b5a97464dd851910efc3002d96"
+}
