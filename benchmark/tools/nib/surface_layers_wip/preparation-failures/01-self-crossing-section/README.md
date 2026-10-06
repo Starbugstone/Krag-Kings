@@ -1,0 +1,1 @@
+The first numerical section self-intersected before any Blender job: its inward return crossed the preceding descending panel. Preserve this failed rest-pattern recipe. The correction offsets return crests radially outside the previous panel, rather than loosening the thickness/separation gate. No native source exists for this proposal.

@@ -1,0 +1,27 @@
+{
+  "name": "nib-surface-layers-v1-generate",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\surface_layers_wip\\build_surface_layers.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\macroface-native-diagnostic-v1\\Nib_Coherent_Macroface_Diagnostic_v1.blend",
+    "--source-sha256",
+    "e7a39cdb0c731c80157ff4fc502fc50581e9c296ab5948ddc0f04366b6189592",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\surface-layers-native-v1"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-surface-layers-v1-generate.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-surface-layers-v1-generate.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-surface-layers-v1-generate.log",
+  "successMarker": "NIB_SURFACE_LAYERS_SAVED_AND_REOPENED"
+}

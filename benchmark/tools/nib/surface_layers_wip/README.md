@@ -1,0 +1,13 @@
+# Prepared substantive fur / scarf construction candidate
+
+This is ungenerated code, pinned to actual macroface diagnostic `e7a39cdb…`. It does not edit the frozen engine source or imply that the failed macroface is accepted. Its facial shape, morphs, five migrated pivots and unresolved 0.494 mm full-weight mouth warning remain unchanged.
+
+The actual Neutral/Profile images show two distinct construction problems. The nine main groom groups contain 86,688 opaque-fiber triangles versus 36,720 masked-card triangles. Opaque bundles remain visible as pale ropes; the masked sheets also converge to one shared tip, compressing independent atlas fibers into leaf-like silhouettes. The old scarf is three sloped rings whose cross-sections never return upward/inward, making a collar rather than folded cloth.
+
+The bounded new source replaces head/ear groom with separate undercoat and longer guard locks. Each card keeps a finite-width transparent end; individual strand tips come from the existing fine-strands atlas. Unequal width, length, roll and flow plus overlapping short undercoat break up card roots. Cream inner locks originate around the rim/base; central membrane remains visible. Tawny exterior/border undercoat stays a distinct layer. Thick opaque accent bundles are removed; fine facial/body fuzz is retained exactly. The two unsupported tan cartilage tubes are removed while the closed ear and its skin/ear rig remain intact. Ear silhouette and acting still need actual comparison.
+
+The new scarf uses a continuous sheet with two actual returned folds, unequal diagonal front sag, a gathered nape and sewn free edges. It replaces the three monotone bands, with real thickness and blended Chest/Neck weights. Actual body/neck support and opened-chin clearance are measured before saving; insufficient support stops the job. No broad cloth simulation, face redesign, hand change or rig change is hidden in this pass.
+
+All proportions, densities and folds are fitting proposals against sheet 02, not new canon. Generation must preserve all unrelated mesh hashes, exact 79 global binds, hierarchy and every saved action curve, source images and the MASK manifest fields. Root attachment, triangle/UV areas, finite weights, goggle clearance, actual posed cloth clearance and saved reopen are explicit gates. Numerical results do not establish coverage, cloth character or likeness.
+
+The first granted native boundary is source plus matched Neutral/Profile, followed by one rear view if the first images are useful. Do not launch without the parent-granted exclusive heavy slot. Native results and image costs are still pending.
