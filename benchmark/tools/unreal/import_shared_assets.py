@@ -100,9 +100,31 @@ def cache_material(asset_path, signature, provenance):
     temporary.replace(CACHE_FILE)
 
 
-def material_signature(name, tex_dir):
+MATERIAL_SURFACE_FIELDS = ('alphaMode', 'alphaSource', 'alphaClipThreshold', 'doubleSided', 'doubleSidedNormalMode', 'normalConvention')
+
+
+def material_surface_contract(descriptor):
+    contract = {key: descriptor[key] for key in MATERIAL_SURFACE_FIELDS if key in descriptor}
+    if contract.get('alphaMode', 'OPAQUE') not in ('OPAQUE', 'MASK'):
+        raise RuntimeError('Only opaque or masked character surfaces are supported')
+    if contract.get('normalConvention', 'OpenGL +Y') != 'OpenGL +Y':
+        raise RuntimeError('Unexpected shared normal-map convention')
+    if contract.get('doubleSidedNormalMode', 'Flip') != 'Flip':
+        raise RuntimeError('Only ordinary flipped backface normals are supported')
+    if contract.get('alphaMode') == 'MASK':
+        if contract.get('alphaSource') != 'baseColor.a' or not 0 < contract.get('alphaClipThreshold', -1) < 1:
+            raise RuntimeError('Masked material requires baseColor.a and an explicit valid clipping threshold')
+        if contract.get('doubleSided') is not True:
+            raise RuntimeError('Current masked groom contract requires explicitly double-sided cards')
+    return contract
+
+
+def material_signature(name, tex_dir, surface=None):
     # Bump the recipe when shader wiring or sampling changes.
     inputs = {'recipe': 'pbr-v1-opengl-normal-subsurface', 'name': name, 'textures': {}}
+    if surface:
+        inputs['surfaceRecipe'] = 'masked-card-v1-alpha-coverage'
+        inputs['surface'] = surface
     for kind in ('BaseColor', 'Normal', 'Roughness', 'Metallic'):
         path = tex_dir / (name + '_' + kind + '.png')
         if path.exists():
@@ -198,16 +220,17 @@ def weapon_flash_material():
     return mat
 
 
-def material(name, tex_dir, destination):
+def material(name, tex_dir, destination, descriptor=None):
     asset_path = destination + '/M_' + name
     mat = load(asset_path)
-    signature = material_signature(name, tex_dir)
+    surface = material_surface_contract(descriptor or {})
+    signature = material_signature(name, tex_dir, surface)
     cached = MATERIAL_CACHE.get(asset_path, {})
     if mat is not None and cached.get('signature') == signature:
         REPORT.setdefault('reused_materials', []).append({'asset': asset_path, 'signature': signature, 'reason': 'matching input/recipe hash'})
         REPORT['materials'].append(mat.get_path_name())
         return mat
-    if mat is not None and REUSE_MATERIALS and not cached:
+    if mat is not None and REUSE_MATERIALS and not cached and not surface:
         # Explicit one-time recovery of materials saved during the pinned failed import.
         # Later imports require matching content hashes and do not rely on this flag.
         cache_material(asset_path, signature, 'seeded from explicitly pinned prior import')
@@ -217,6 +240,12 @@ def material(name, tex_dir, destination):
     if mat is None:
         mat = TOOLS.create_asset('M_' + name, destination, unreal.Material, unreal.MaterialFactoryNew())
     unreal.MaterialEditingLibrary.delete_all_material_expressions(mat)
+    masked = surface.get('alphaMode') == 'MASK'
+    mat.set_editor_property('blend_mode', unreal.BlendMode.BLEND_MASKED if masked else unreal.BlendMode.BLEND_OPAQUE)
+    if 'doubleSided' in surface:
+        mat.set_editor_property('two_sided', surface['doubleSided'])
+    if masked:
+        mat.set_editor_property('opacity_mask_clip_value', surface['alphaClipThreshold'])
     props = {
         'BaseColor': unreal.MaterialProperty.MP_BASE_COLOR,
         'Normal': unreal.MaterialProperty.MP_NORMAL,
@@ -231,11 +260,17 @@ def material(name, tex_dir, destination):
             connect(mat, node, '', prop)
             continue
         tex = texture(source, destination + '/Textures', kind)
+        if masked and kind == 'BaseColor':
+            tex.set_editor_property('do_scale_mips_for_alpha_coverage', True)
+            tex.set_editor_property('alpha_coverage_thresholds', unreal.Vector4(0, 0, 0, surface['alphaClipThreshold']))
+            save(tex)
         node = expression(mat, unreal.MaterialExpressionTextureSample, -400, i * 180)
         node.set_editor_property('texture', tex)
         node.set_editor_property('sampler_type', unreal.MaterialSamplerType.SAMPLERTYPE_NORMAL if kind == 'Normal' else unreal.MaterialSamplerType.SAMPLERTYPE_COLOR if kind == 'BaseColor' else unreal.MaterialSamplerType.SAMPLERTYPE_MASKS)
         connect(mat, node, 'RGB' if kind in ('BaseColor', 'Normal') else 'R', prop)
-    if any(word in name.lower() for word in ('skin', 'muzzle', 'earinner')):
+        if masked and kind == 'BaseColor':
+            connect(mat, node, 'A', unreal.MaterialProperty.MP_OPACITY_MASK)
+    if not masked and any(word in name.lower() for word in ('skin', 'muzzle', 'earinner')):
         mat.set_editor_property('shading_model', unreal.MaterialShadingModel.MSM_SUBSURFACE)
         scatter = expression(mat, unreal.MaterialExpressionConstant3Vector, -400, 800)
         scatter.set_editor_property('constant', unreal.LinearColor(0.28, 0.15, 0.075, 1))
@@ -445,9 +480,10 @@ def species(folder, only_variant=None, validate_saved=False, refresh_clip=None, 
         if len(files) != 1:
             raise RuntimeError('Requested variant is absent from species manifest: ' + only_variant)
     material_map = {}
+    material_descriptors = {entry['name']: entry for entry in manifest.get('materials', []) if isinstance(entry, dict) and 'name' in entry}
     for color in sorted((source / 'textures').glob('*_BaseColor.png')):
         name = color.stem.removesuffix('_BaseColor')
-        material_map[name] = material(name, color.parent, DEST + '/Characters/' + folder + '/Materials')
+        material_map[name] = material(name, color.parent, DEST + '/Characters/' + folder + '/Materials', material_descriptors.get(name))
     if not material_map:
         raise RuntimeError('No PBR materials found for ' + folder)
     variants = []

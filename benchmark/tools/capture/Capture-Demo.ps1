@@ -108,7 +108,7 @@ try {
     if($clientWidth -lt 640 -or $clientHeight -lt 360){throw 'Game client is too small for a review recording.'}
     $windowLease=[KKOwnedWindowLease]::Acquire($window,[uint32]$windowOwner)
     Start-Sleep -Milliseconds 250;Assert-Window
-    $report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
+    $report.originalTopmost=$windowLease.OriginalTopmost;$report.windowHandle=$window.ToInt64();$report.gameProcessId=$windowOwner;$report.windowTitle=$game.MainWindowTitle
     $report.clientWidth=$clientWidth;$report.clientHeight=$clientHeight
     if(Test-Path $progress){Remove-Item $progress}
     # WGC is the verified default; GDI remains available for diagnostics.

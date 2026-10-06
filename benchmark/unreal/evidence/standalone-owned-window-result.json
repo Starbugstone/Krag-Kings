@@ -1,0 +1,25 @@
+{
+  "stage": "actual packaged Windows input retry",
+  "executableSha256": "84afaaa70f2a18427b49f03efeaf751626a7e0ad8f3c937a4661ae62a5f0ba72",
+  "nativeExit": 0,
+  "guardExit": 0,
+  "inputVerificationCompleted": false,
+  "mouseEventsSent": 0,
+  "gameplayMouseFaultDiagnosed": false,
+  "obstruction": {
+    "gameHwnd": 11602272,
+    "foregroundHwnd": 11602272,
+    "pointerHwnd": 7735740,
+    "gamePid": 31264,
+    "foregroundPid": 31264,
+    "pointerPid": 27968,
+    "x": 668,
+    "y": 529
+  },
+  "obstructionProcessName": "PickerHost",
+  "gameOriginalTopmost": false,
+  "gameWindowLeaseRestored": true,
+  "unrelatedWindowModified": false,
+  "nextAction": "User dismisses their Windows file picker or overlay, then repeat guarded actual native mouse/keyboard verification. Performance and explicit-window recording can proceed separately without pointer injection.",
+  "artisticAcceptance": false
+}

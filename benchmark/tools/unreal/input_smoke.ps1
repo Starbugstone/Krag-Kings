@@ -197,6 +197,6 @@ try {
 } catch {$inputError=$_.Exception.Message;throw} finally {
  $finalState=$null;try{$finalState=Read-State}catch{}
  $restoreError=$null;if($windowLease){try{$windowLease.Dispose()}catch{$restoreError=$_.Exception.Message}}
- $report=[ordered]@{completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());finalUnits=$finalState.units}
+ $report=[ordered]@{originalTopmost=$(if($windowLease){$windowLease.OriginalTopmost}else{$null});completed=$inputComplete;error=$inputError;windowLeaseRestored=($windowLease -and $windowLease.Restored);windowRestoreError=$restoreError;pointerGuards=@($pointerEvidence.ToArray());source='Windows mouse and keyboard delivered to visible Unreal demo';executionMode=$ExecutionMode;packagedBuildTested=($ExecutionMode -eq 'Packaged');mouse_keyboard_delivery_tested=($checks.Count -gt 0);visual_quality_accepted=$false;timestampUtc=[DateTime]::UtcNow.ToString('o');checks=@($checks.ToArray());finalUnits=$finalState.units}
  $report|ConvertTo-Json -Depth 9|Set-Content (Join-Path (Split-Path $StatePath) 'input-smoke-report.json') -Encoding UTF8
 }

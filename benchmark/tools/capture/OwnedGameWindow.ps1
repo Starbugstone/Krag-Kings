@@ -62,6 +62,7 @@ public sealed class KKOwnedWindowLease : IDisposable {
   // Reinsert only our HWND after its saved surviving neighbor in the same band.
   if(previousNeighbor!=IntPtr.Zero&&IsWindow(previousNeighbor)&&Topmost(previousNeighbor)==wasTopmost)
    if(!SetWindowPos(window,previousNeighbor,0,0,0,0,0x13))throw new Win32Exception(Marshal.GetLastWin32Error());
+  if(Topmost(window)!=wasTopmost)throw new InvalidOperationException("Game topmost state did not restore.");
   restored=true;
  }
 }
