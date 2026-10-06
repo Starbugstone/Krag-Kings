@@ -1,0 +1,142 @@
+{
+  "status": "Actual isolated shape-only source and five diagnostic views; art and Blink fail; no promotion",
+  "source": "benchmark/art/nib/Nib_Master_v5g_FacePlanes_WIP.blend",
+  "sourceSha256": "1586cb3a4c66897be5d1b2c5ba43fdb34a462a6fc96d6d51d90fa417dd185db9",
+  "sourceReportSha256": "2d9859b3662c57412a4964414d0f8d30a8ddc30c344d4ebf474de08262b90ef8",
+  "preRenderGate": {
+    "passed": false,
+    "blockingIssues": [
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "neutralCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Provisional recessed oral cavity",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.001",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.002",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.003",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.005",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.006",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.007",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.008",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Lower provisional tooth.009",
+      "idleCoordinates: Neutral oral part is not fully occluded by facial skin: Canonical dark blue Nib tongue"
+    ],
+    "scope": "Strict neutral/Idle oral visibility and visible irises; actual pose/art review still required"
+  },
+  "preserved": {
+    "repairedJawWeightsSha256": "97e422dc0e4c34a351a2875fc1109bbe413b49e0c049fb53130651205cc37c47",
+    "skeletonBindSha256": "f18e4c7c74b19922bebcf1b22323697d8b624960d99cb99472253553a7f28e57",
+    "uvLayers": {
+      "UVMap": "30d1ced5d99a09b03179f2f39caa7ff32f0ac5de261098ea5eb4343830451109"
+    },
+    "unrelatedComponents": 374,
+    "eyeMeshesAndPivots": true,
+    "darkBlueTongueAndInteriors": true,
+    "scalpEarGroom": true
+  },
+  "contactProposal": {
+    "applied": false,
+    "status": "Deferred: curve-matching closure rotates 43 lip/oral triangles over 90 degrees in the actual-cache diagnostic; existing v5f aperture retained"
+  },
+  "processes": {
+    "face-planes": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_V5G_FACE_PLANES_SAVED",
+      "logSha256": "9e1eb250016530970b210d4e144727b431e2f316dc9843841744e6e840210200",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5g-face-planes-memory.csv",
+      "memoryTraceSha256": "092e1eb5c3028c98236add073762e0a07824a5a8f2da0ecb9ba660b78e79494f",
+      "peakPrivateMB": 715.0,
+      "lowestAvailableMB": 14617.0,
+      "peakCommitPercent": 45.0
+    },
+    "depth-review": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "logSha256": "8b8ddcde3bd750242d3fcbf244814bc38310b356320b824524c95ca2fe687b7a",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5g-depth-review-memory.csv",
+      "memoryTraceSha256": "89bc8459aa07999d40e9f2f017e9adc25194052c2600e917298683498975bf6d",
+      "peakPrivateMB": 2621.0,
+      "lowestAvailableMB": 12994.0,
+      "peakCommitPercent": 50.0
+    },
+    "expressions-review": {
+      "guardExitCode": 0,
+      "completionMarker": "NIB_REVIEW_RENDER_COMPLETE",
+      "logSha256": "d5da56dec04c7e8f4058c347534bb5074cca75a015f581a8f452da1a0429d6a0",
+      "memoryTrace": "benchmark/art/nib/v5-study/native-v5g-expressions-review-memory.csv",
+      "memoryTraceSha256": "032641b16db23e9282ade7c7bc02fc73e3a0e57687dd18f28834b1f779ad52a7",
+      "peakPrivateMB": 2651.0,
+      "lowestAvailableMB": 12952.0,
+      "peakCommitPercent": 50.0
+    }
+  },
+  "images": [
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5g-diagnostic-renders/Nib_ExpressionBlink.png",
+      "sha256": "e542c1b8c4327efbb4639622a9f02ee6533cd5c2e1048f6b6130ed3788d112a6",
+      "metadataSha256": "7394d35e558cece6a5af58e36ae753ee26f59bab52ed6babbef038babaa4fdd0",
+      "view": "Blink",
+      "action": "FacePerformance",
+      "frame": 16,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5g-diagnostic-renders/Nib_ExpressionTongue.png",
+      "sha256": "a8d63f632634a73f9716e3b178e0115014acb23564931e85dd42da733f9036b5",
+      "metadataSha256": "0d41dccb33de3d4993cccd06e1bc55f7221e18c4836d22429e364ad4f4899927",
+      "view": "Tongue",
+      "action": "FacePerformance",
+      "frame": 103,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5g-diagnostic-renders/Nib_FaceProfile.png",
+      "sha256": "02280b4967e8c57532a270f1974988a1897f460b497c2be6a5b6b37be70c5d5e",
+      "metadataSha256": "e6efac784c1000adb393d56f231ffff1c99536b57b4639bcdfcfef6369f6a6bc",
+      "view": "FaceProfile",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5g-diagnostic-renders/Nib_FaceReview.png",
+      "sha256": "59c0e3991827e9be64163b276aa0bb620e9142bcd86f907653a670400e28664f",
+      "metadataSha256": "0e8ee74bacc3890baead90708840886657bbe18220b742ce3a82d55e89eb7d0d",
+      "view": "Face",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    },
+    {
+      "image": "benchmark/art/nib/v5-study/native-v5g-diagnostic-renders/Nib_FaceThreeQuarter.png",
+      "sha256": "8e3ec06ce5e0d264ff1acb801c139ec5809150e2d3fd2913cbaffb9b2d4274d2",
+      "metadataSha256": "606c122ce05feb01ffcfc5eb8d105bac43444cfffd8bda95485d1cc8da388fd6",
+      "view": "FaceThreeQuarter",
+      "action": "Idle",
+      "frame": 1,
+      "diagnosticOverride": true,
+      "preRenderGate": false
+    }
+  ],
+  "visualFindings": {
+    "neutral": "Raised brown nose and upper orbital fold are visible, but glossy nose, high fold separated from narrow eye opening, smooth cheek/chin and existing sparse groom/ear/scarf remain below the concept.",
+    "profile": "Rounded nose-leading muzzle and closed neck persist; no source eye/interior/bind change.",
+    "tongue": "The prior large curtain remains removed; dark-blue tongue visible through the true aperture. Corners remain boxy and squint forms an overlong crease across the bridge.",
+    "blink": "Eyes close, but a new hard nasal/cheek patch is visible. The explicit binary nasal-face-set cutoff is a strong source candidate; exact saved-pose attribution remains pending.",
+    "acceptance": "No artistic approval. Neutral oral-visibility gate remains false. No maps, FBX, shared promotion or engine validation from this pass."
+  },
+  "sharedChanged": false,
+  "artisticAcceptance": false
+}
