@@ -1659,7 +1659,7 @@
     "Krag_Weapon.fbx"
   ],
   "files_are_generated": true,
-  "runtime_derivative_sha256": "87c4d751a5710029949c29ad0475f6596de4141134849b8792d982498e1b6c12",
+  "runtime_derivative_sha256": "3b2c62336a284ae1d6f2087ecc9c79551713fb9917dba4b01b4718554ca2744b",
   "runtime_derivative": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Runtime_Optimized_v7.blend",
   "runtime_derivative_status": "Unaccepted derived candidate; structural/surface transfer checks only",
   "geometryExport": {
@@ -1672,5 +1672,22 @@
       "mappedNormalMaxError": 0,
       "uvMaterialCornerCoveragePreserved": true
     }
+  },
+  "animationRepair": {
+    "kind": "Shoot right-arm aim only",
+    "sourceRuntimeSha256": "3b2c62336a284ae1d6f2087ecc9c79551713fb9917dba4b01b4718554ca2744b",
+    "changedBones": [
+      "UpperArm_R",
+      "LowerArm_R",
+      "Hand_R"
+    ],
+    "changedChannel": "Shoot / Lcl Rotation / XYZ KeyValueFloat",
+    "rawPreservationEvidence": "benchmark/art/krag/weapon-aim-payload-validation-v7.json",
+    "actualRoundtripEvidence": "benchmark/art/krag/weapon-aim-roundtrip-v7.json",
+    "artisticAcceptance": false,
+    "remainingPoseDefects": [
+      "Open right fingers do not wrap firearm grip",
+      "Severe right axillary/chest skin stretching in raised-arm pose"
+    ]
   }
 }
