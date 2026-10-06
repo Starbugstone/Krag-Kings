@@ -197,6 +197,10 @@ skin_groups={'Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R'}
 unified=anatomical_source
 bpy.context.view_layer.objects.active=unified;bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
 unified.data.update();src=unified.data
+source_arm_domain=None
+if '--anatomical-domain' in sys.argv:
+    import krag_skin_domains
+    source_arm_domain=krag_skin_domains.read(src)
 bins={g:[] for g in skin_groups}
 for poly in src.polygons:
     co=poly.center
@@ -209,6 +213,7 @@ for poly in src.polygons:
 for group,polys in bins.items():
     used=sorted(set(i for poly in polys for i in poly.vertices));index={v:i for i,v in enumerate(used)}
     dat=bpy.data.meshes.new(group+' continuous surface');dat.from_pydata([src.vertices[i].co for i in used],[],[tuple(index[i] for i in poly.vertices) for poly in polys]);dat.update()
+    if source_arm_domain is not None:krag_skin_domains.attach(dat,source_arm_domain[used])
     for ma in src.materials:dat.materials.append(ma)
     for a,b in zip(dat.polygons,polys):a.material_index=b.material_index;a.use_smooth=True
     try:dat.normals_split_custom_set_from_vertices([tuple(src.vertices[i].normal) for i in used])
@@ -396,6 +401,10 @@ for o in list(bpy.data.objects):
 WEAPON_REST_SHIFT=Vector((-.060,-.029,.010))
 for o in list(bpy.data.objects):
     if o.type=='MESH' and o.get('module')=='Weapon_R':o.matrix_world=Matrix.Translation(WEAPON_REST_SHIFT)@o.matrix_world
+grip_spec=None
+if '--anatomical-grip' in sys.argv:
+    import krag_grip_v2
+    grip_spec=krag_grip_v2.mount(globals())
 # Blend upper trouser cloth into one tailored surface; accessories remain separate.
 trouser_parts=[o for o in bpy.data.objects if o.type=='MESH' and (o.name=='Trouser seat' or o.name.startswith('Trousers_upper_'))]
 trousers=join_sculpt(trouser_parts,'Tailored trouser base',.0032,3);trousers['module']='Garments'
@@ -460,8 +469,10 @@ for s,side in [(-1,'R'),(1,'L')]:
     joint=bn('Thumb1_'+side,a,b,'Hand_'+side);joint.align_roll(Vector((s,0,0)))
     joint=bn('Thumb2_'+side,b,c,'Thumb1_'+side);joint.align_roll(Vector((s,0,0)))
 for j,dx in enumerate([-.106,0,.106]):bn('Claw_'+str(j),(.652+dx,-.063 if j!=1 else .072,.962),(.652+dx*.65,-.070 if j!=1 else .065,.82),'Hand_L')
-bn('WeaponMuzzle',Vector((-.450,-.048,.567))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.542))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
-bn('WeaponAim',Vector((-.450,-.048,.467))+WEAPON_REST_SHIFT,Vector((-.450,-.048,.442))+WEAPON_REST_SHIFT,'Hand_R').use_deform=False
+weapon_muzzle=Vector(grip_spec['muzzle']) if grip_spec else Vector((-.450,-.048,.567))+WEAPON_REST_SHIFT
+weapon_aim=Vector(grip_spec['aim']) if grip_spec else Vector((-.450,-.048,.467))+WEAPON_REST_SHIFT
+bn('WeaponMuzzle',weapon_muzzle,weapon_muzzle+Vector((0,0,-.025)),'Hand_R').use_deform=False
+bn('WeaponAim',weapon_aim,weapon_aim+Vector((0,0,-.025)),'Hand_R').use_deform=False
 krag_face.bones(bn,globals().get('continuous_head_landmarks')); ad.edit_bones['Jaw'].parent=ad.edit_bones['FaceRoot']
 bpy.ops.object.mode_set(mode='OBJECT');rig.show_in_front=True
 # Art-directed deformation skinning via nearest anatomical segment weights.
@@ -475,11 +486,12 @@ for g,o in modules.items():
         o.vertex_groups.clear()
         extra=[n for n in bones if n.startswith('Finger') or n.startswith('Thumb')] if g in ['Body','BioArm_L','BioArm_R','BioForearm_L','BioForearm_R'] else []
         vgs={n:o.vertex_groups.new(name=n) for n in allowed+extra}
+        domain=krag_skin_domains.read(o.data) if extra and '--anatomical-domain' in sys.argv else None
         for v in o.data.vertices:
             candidates=allowed
             if extra and abs(v.co.x)>.48 and v.co.z<1.05:
                 side='L' if v.co.x>0 else 'R';candidates=['Hand_'+side,'LowerArm_'+side]+[n for n in extra if n.endswith('_'+side)]
-            weighted=krag_anatomy.anatomical_weights(v.co,bones) if extra else krag_anatomy.smooth_segment_weights(v.co,bones,candidates)
+            weighted=krag_anatomy.anatomical_weights(v.co,bones,None if domain is None else domain[v.index]) if extra else krag_anatomy.smooth_segment_weights(v.co,bones,candidates)
             # Contract supports up to eight influences. Only very small far-chain
             # tails can reach this cap; actual counts and deformation are reviewed.
             weighted=sorted(weighted,key=lambda item:item[1],reverse=True)[:8]
@@ -503,9 +515,10 @@ def key(frame):
     for p in rig.pose.bones:
         p.keyframe_insert(data_path='rotation_euler',frame=frame,group=p.name);p.keyframe_insert(data_path='location',frame=frame,group=p.name)
 rig.animation_data_create()
-locomotion_metrics=[]
+locomotion_metrics=[];grip_metrics=[]
 for name,frames in [('Idle',61),('Walk',37),('Run',19),('Melee',37),('Shoot',31),('Hit',28)]:
     action=bpy.data.actions.new(name);action.use_fake_user=True;rig.animation_data.action=action
+    previous_grip_rotations={}
     for f in range(1,frames+1):
         scene.frame_set(f);reset();t=(f-1)/(frames-1);wave=sin(t*2*pi)
         for j in range(4):
@@ -535,6 +548,12 @@ for name,frames in [('Idle',61),('Walk',37),('Run',19),('Melee',37),('Shoot',31)
         else:
             hit=sin(min(t/.24,1)*pi/2)*math.exp(-max(0,t-.24)*4);rot('Chest',-.30*hit,0,-.14*hit);rot('Head',-.23*hit,.08*hit,.14*hit);rot('Spine',-.11*hit);rot('UpperArm_L',-.21*hit,0,.18*hit);rot('UpperArm_R',-.13*hit,0,-.16*hit);rot('Thigh_L',.14*hit);rot('Shin_L',.22*hit)
         krag_face.action_expression(rig,name,t)
+        if grip_spec:
+            grip_metrics.append({'clip':name,'frame':f,**krag_grip_v2.pose(rig,grip_spec,left_fist=name=='Melee')})
+            for pb in rig.pose.bones:
+                if not pb.name.startswith(('Finger','Thumb')):continue
+                if pb.name in previous_grip_rotations:pb.rotation_euler.make_compatible(previous_grip_rotations[pb.name])
+                previous_grip_rotations[pb.name]=pb.rotation_euler.copy()
         key(f)
     action['facial_performance']='Authored FaceRoot subtree tracks accompany this body animation; serious fearless Krag direction.'
     action['clip_name']=name;action['loop']=name in ('Idle','Walk','Run');action['root_motion']=False
@@ -586,7 +605,7 @@ camd=bpy.data.cameras.new('Review camera');cam=bpy.data.objects.new('Review came
 scene.render.engine='CYCLES';scene.cycles.samples=16;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.resolution_x=900;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX'
 cam.location=(3,-6,2.8);cam.rotation_euler=(Vector((0,0,1.08))-cam.location).to_track_quat('-Z','Y').to_euler()
 # Embed the exact authoring sources so later external script edits cannot obscure provenance.
-for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py','krag_weapon_pose.py']:
+for source_script in ['build_krag.py','krag_face.py','krag_locomotion.py','krag_cloth.py','krag_anatomy.py','anatomy_warp_study.py','krag_armor.py','krag_full_leg.py','krag_harness.py','krag_head_v9.py','krag_iris_material.py','krag_weapon_pose.py','krag_skin_domains.py','krag_grip_v2.py']:
     content=(Path(__file__).parent/source_script).read_text();text_block=bpy.data.texts.get(source_script) or bpy.data.texts.new(source_script);text_block.clear();text_block.write(content)
 bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True);bpy.ops.file.make_paths_relative();bpy.ops.wm.save_as_mainfile(filepath=str(MASTER_PATH),compress=True)
 scene.render.filepath=str(ART/'renders/Krag_Natural_Perspective.png')
@@ -596,5 +615,9 @@ log('Source saved; render '+('skipped' if '--skip-render' in sys.argv else 'fini
 data={'height_m':2.107,'forward':'-Y','up':'Z','ankles_m':{'Foot_L':[.19,.026,.24],'Foot_R':[-.19,.026,.24]},'ground_z':0,'bones':list(bones),'clips':['Idle','Walk','Run','Melee','Shoot','Hit','FacePerformance'],'deformation':deformation,'locomotionCycles':krag_locomotion.manifest(),'variants':variants,'modules':list(modules),'source':str(MASTER_PATH.relative_to(ROOT)).replace('\\','/'),'materials':list(materials),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in modules.values())}
 if globals().get('continuous_head_landmarks'):data['facialFitLandmarksMeters']={name:list(krag_face.H(point)) for name,point in continuous_head_landmarks.items()}
 if globals().get('continuous_head_eye_audit'):data['sourceEyeTransformVerification']=continuous_head_eye_audit
+if globals().get('anatomical_domain_statistics'):data['anatomicalDomainStudy']=anatomical_domain_statistics
+if grip_spec:
+    data['gripMountStudy']=grip_spec
+    (ART/(MASTER_PATH.stem+'-grip-target-verification.json')).write_text(json.dumps({'status':'Actual skeletal endpoint checks only; no posed skin/contact acceptance','spec':grip_spec,'samples':grip_metrics},indent=2),newline='\n')
 (OUT/'krag_asset_contract.json').write_text(json.dumps(data,indent=2),newline='\n')
 log('COMPLETE source creation; use export_krag.py for PBR texture baking and FBX.')

@@ -40,6 +40,12 @@ def build(context):
     vertices[:,1]=.016+(vertices[:,1]-.016)*(1+.10*collar)
     mesh=bpy.data.meshes.new('Krag continuous anatomical control cage')
     mesh.from_pydata(vertices,[],polygons);mesh.update()
+    if '--anatomical-domain' in context['sys'].argv:
+        import krag_skin_domains
+        domain,statistics=krag_skin_domains.solve(raw[used],polygons)
+        if not statistics['converged']:raise AssertionError('Anatomical weight domain did not converge')
+        krag_skin_domains.attach(mesh,domain)
+        context['anatomical_domain_statistics']=statistics
     mesh.materials.append(context['skin'])
     for face in mesh.polygons:face.use_smooth=True
     obj=bpy.data.objects.new('Krag adapted anatomical sculpt',mesh)
@@ -101,7 +107,7 @@ def hand_landmarks(side):
     return {name:[tuple(point) for point in warp(np.asarray(points)*np.array([sign,1,1]))] for name,points in source.items()}
 
 
-def anatomical_weights(point,bones):
+def anatomical_weights(point,bones,arm_domain=None):
     """Continuous regional skin weights across the shared torso/arm partitions.
 
     Joint transitions follow the actual shoulder-elbow-wrist chain. A nearby
@@ -134,7 +140,7 @@ def anatomical_weights(point,bones):
         digits=(1-smooth(.020,.063,min(distances)))*(1-smooth(.955,1.015,z))
         transferred=arm['Hand_'+side]*digits;arm['Hand_'+side]-=transferred
         for name,value in digit_weights:merge(arm,name,value*transferred)
-    arm_fraction=smooth(.235,.359,abs(point.x))
+    arm_fraction=smooth(.235,.359,abs(point.x)) if arm_domain is None else max(0,min(1,float(arm_domain)))
     weights={}
     for name,value in torso.items():merge(weights,name,value*(1-arm_fraction))
     for name,value in arm.items():merge(weights,name,value*arm_fraction)

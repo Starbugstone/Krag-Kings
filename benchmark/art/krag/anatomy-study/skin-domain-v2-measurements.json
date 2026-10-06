@@ -1,0 +1,38 @@
+{
+  "status": "Code-only domain study; no saved Blender mesh, posed deformation or art acceptance",
+  "sourceSha256": "2077bf5aef29d4398943efabe5a414dd019d1b6091dd71e417b6fcb663b991f5",
+  "helperSha256": "a57a6c2d84d18aa16b3f31234499f46a4a43497a31205f669ddc66a8b99d15f7",
+  "solver": {
+    "iterations": 463,
+    "maxIterationDelta": 9.88659940026615e-09,
+    "converged": true,
+    "torsoSeedVertices": 963,
+    "armSeedVertices": 2152,
+    "vertices": 3533,
+    "undirectedEdges": 7017,
+    "status": "Anatomical weighting proposal; actual raised-arm deformation review required"
+  },
+  "regions": {
+    "lower_lateral_ribs": {
+      "vertices": 194,
+      "oldArmDomainMaximum": 1.0,
+      "newArmDomainMaximum": 0.0,
+      "oldArmDomainMean": 0.6703934542061177,
+      "newArmDomainMean": 0.0
+    },
+    "source_arms": {
+      "vertices": 330,
+      "oldArmDomainMaximum": 1.0,
+      "newArmDomainMaximum": 1.0,
+      "oldArmDomainMean": 1.0,
+      "newArmDomainMean": 1.0
+    },
+    "shoulder_transition": {
+      "vertices": 216,
+      "oldArmDomainMaximum": 1.0,
+      "newArmDomainMaximum": 0.8608362307036831,
+      "oldArmDomainMean": 0.8999918880262752,
+      "newArmDomainMean": 0.2547791668333121
+    }
+  }
+}

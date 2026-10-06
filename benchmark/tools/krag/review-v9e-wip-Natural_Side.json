@@ -1,0 +1,27 @@
+{
+  "name": "krag-review-v9e-wip-Natural_Side",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_Master_v9e_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9e-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Side",
+    "--tag",
+    "v9e-wip",
+    "--neutral-light"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9e-wip-Natural_Side.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-v9e-wip-Natural_Side.stderr.log",
+  "maxPrivateGB": 8
+}

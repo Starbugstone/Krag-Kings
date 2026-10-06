@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "v9d prepared but ungenerated: nasal mass lift/alar planes and ears, gathered scarf, lower hidden body-neck boundary, closer fitted harness and integrated measured aim solver. Latest actual geometry remains v9c.",
+  "currentAuthoringCode": "v9e prepared but ungenerated: carries ungenerated v9d face/eye/neck/scarf improvements, adds explicit source-anatomy arm domain and articulated firearm grip/mount. v9d was never generated; v10 remains separate.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -195,8 +195,8 @@
       "Hands and facial/body poses require actual verification"
     ]
   },
-  "nextSourceJob": "benchmark/tools/krag/build-v9d-wip-job.json",
-  "nextFirstReview": "benchmark/tools/krag/review-v9d-wip-Natural_Front.json",
+  "nextSourceJob": "benchmark/tools/krag/build-v9e-wip-job.json",
+  "nextFirstReview": "benchmark/tools/krag/review-v9e-wip-Natural_Front.json",
   "optionalPreparedDetail": {
     "iris": "--iris-detail: actual ocular coordinate field, radial amber pigment/limbal edge and wet response; not enabled in current v9c job",
     "export": "Head and optional Face PBR UV atlases plus opt-in exact-zero-area face removal; none run yet"
@@ -254,5 +254,13 @@
   "sharedAimPromotion": {
     "status": "Root promoted bounded functional correction after artifact/hash verification; visual/pose acceptance remains failed",
     "rootReceipt": "benchmark/evidence/shared/20261006-krag-aim-repair-promotion.json"
+  },
+  "preparedRigCorrection": {
+    "domainHelper": "benchmark/tools/krag/krag_skin_domains.py",
+    "gripHelper": "benchmark/tools/krag/krag_grip_v2.py",
+    "codeOnlyDomainEvidence": "anatomy-study/skin-domain-v2-measurements.json",
+    "status": "Prepared options only; actual neutral/head and Shoot/Grip source reviews required",
+    "v9dGenerated": false,
+    "v10MixedIntoCandidate": false
   }
 }
