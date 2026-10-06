@@ -1,0 +1,40 @@
+{
+  "status": "Actual Blender material comparison; visual acceptance and engine review pending",
+  "renderer": "Cycles CPU, 24 samples, 960x640",
+  "geometry": "Unmodified shared dune geometry",
+  "lighting": "Identical neutral white sun with blue ambient fill",
+  "images": [
+    {
+      "material": "baseline",
+      "view": "near",
+      "source": "benchmark\\art\\environment\\Dunes.blend",
+      "sourceSha256": "c1504576b7e6881f2ee49ca4d502582f746ff4d7611ce371fd31d8a71d810889",
+      "image": "baseline_near.png",
+      "imageSha256": "83049c6b4bc4dc05bb978aafc0c538b5b0be4fb1f5fc0190cec3a3a3e96fb672"
+    },
+    {
+      "material": "baseline",
+      "view": "wide",
+      "source": "benchmark\\art\\environment\\Dunes.blend",
+      "sourceSha256": "c1504576b7e6881f2ee49ca4d502582f746ff4d7611ce371fd31d8a71d810889",
+      "image": "baseline_wide.png",
+      "imageSha256": "7746c7057a92b2f5247cd173c4569d459714d21670b5590ea485e459c8602f16"
+    },
+    {
+      "material": "scan_candidate",
+      "view": "near",
+      "source": "benchmark\\local\\candidates\\sand-scan-v2\\Dunes_ScanCandidate.blend",
+      "sourceSha256": "2f6328b7318f9d921c44c85ac46c1b607007aa09f64b56606e120ad1c5f6bd97",
+      "image": "scan_candidate_near.png",
+      "imageSha256": "8c9c1ce613c423631b619dc195d9aa385225608b63017ed0fb8c054429a9c185"
+    },
+    {
+      "material": "scan_candidate",
+      "view": "wide",
+      "source": "benchmark\\local\\candidates\\sand-scan-v2\\Dunes_ScanCandidate.blend",
+      "sourceSha256": "2f6328b7318f9d921c44c85ac46c1b607007aa09f64b56606e120ad1c5f6bd97",
+      "image": "scan_candidate_wide.png",
+      "imageSha256": "7b39500d4fae324551ed428580a6e19fb9f0c8257b167e438b33b06b95e390f3"
+    }
+  ]
+}

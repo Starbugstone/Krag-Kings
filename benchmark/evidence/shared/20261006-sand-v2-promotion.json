@@ -1,0 +1,33 @@
+{
+  "status": "Promoted for actual engine validation after bounded Blender source review",
+  "finalArtisticAcceptance": false,
+  "actualEngineReview": "Pending both engines",
+  "changedFiles": [
+    "Sand_BaseColor.png",
+    "Sand_Normal.png",
+    "Sand_Roughness.png",
+    "Sand_MaskHDRP.png",
+    "manifest.json"
+  ],
+  "beforeSha256": {
+    "Sand_BaseColor.png": "0e14d4d6ec059df5d2115fed9c5b048c99434b40fbbcf41f0f57d1dfd5ac8299",
+    "Sand_Normal.png": "de71be94f27835f60df75fac30d856916bdad8cb75b3d43ff6e67f2a599904d4",
+    "Sand_Roughness.png": "955dc7a4c55bab0082e03b51c7f8cc1f8523eb71b891dc9bddd69678173dc8d1",
+    "Sand_MaskHDRP.png": "1ecb248a754b75e0cd48f1b3f172e0d3d498f5644126bebf0396c24934ded506",
+    "manifest.json": "b3e6492af1c4a76918e9258b005a14890b6729f2142cebfa7d8b487c5ce8a16e"
+  },
+  "afterSha256": {
+    "Sand_BaseColor.png": "2cd59fccf77dff54e83420ca6010f0ebcc59bf7d9538d4b3b235225b0ec43247",
+    "Sand_Normal.png": "451744609b414e057e228512cb16047a9582c31ed9961157a2b286716b325736",
+    "Sand_Roughness.png": "60d2e483eb042e333d8384c35eb7966665f244eeb8f1b1c2c9e973ed8056fe39",
+    "Sand_MaskHDRP.png": "d488260ba3db150b1bc37712bfea76feadb7ae9bddab8b1c2ab1af5c75e7f342",
+    "manifest.json": "1af849d99e299b89a972152c9650434ef4455beaf3106a30fa93753fb464c08f"
+  },
+  "unchangedTerrainFbxSha256": "0ca08ef8f2193083977fd6f296d533aa8a2828136949f63845e023c0d3036b24",
+  "baselineBackup": "benchmark/local/shared-backups/environment-before-sand-v2-20261006",
+  "sourceReview": "benchmark/art/environment/material-study-v2/source-review.json",
+  "characterAssetsChanged": false,
+  "textureDimensions": "2048x2048; unchanged",
+  "runtimeShaderSampleCountChanged": false,
+  "sourceReviewFinding": "Dry scan grain improves near detail; quieter regular ripples retain dune shape. Actual engine lighting, normals, repetition and movement still require review."
+}
