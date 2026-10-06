@@ -1,0 +1,20 @@
+{
+  "name": "trellis-original-structure-v1",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\venv\\Scripts\\python.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\reconstruction\\trellis_original\\run_stage.py",
+    "--stage",
+    "structure"
+  ],
+  "minAvailableGB": 10,
+  "maxPrivateGB": 6,
+  "maxTreePrivateGB": 6,
+  "trackProcessTree": true,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-structure-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-structure-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-structure-v1.stdout.log",
+  "successMarker": "TRELLIS_ORIGINAL_STAGE_COMPLETE",
+  "gpuTelemetry": true
+}

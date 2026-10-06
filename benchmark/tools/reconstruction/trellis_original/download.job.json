@@ -1,0 +1,18 @@
+{
+  "name": "trellis-original-download-v1",
+  "executable": "D:\\Dev\\Krag-Kings\\benchmark\\local\\trellis-original-pilot-v1\\venv\\Scripts\\python.exe",
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "arguments": [
+    "-u",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\reconstruction\\trellis_original\\download_weights.py"
+  ],
+  "minAvailableGB": 10,
+  "maxPrivateGB": 6,
+  "maxTreePrivateGB": 6,
+  "trackProcessTree": true,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-download-v1.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-download-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\trellis-original-download-v1.stdout.log",
+  "successMarker": "TRELLIS_ORIGINAL_WEIGHTS_READY",
+  "gpuTelemetry": false
+}
