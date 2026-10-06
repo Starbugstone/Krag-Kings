@@ -237,3 +237,6 @@ benchmark/unreal/evidence/import-progress.json -text whitespace=cr-at-eol,-blank
 benchmark/unreal/evidence/import-report.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/import-source-snapshot.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 benchmark/unreal/evidence/skin-ab-preparation.json -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+benchmark/evidence/unity/20261006-coherent79-native-input/* -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/art/animation/krag-convergent-hand-v2/**/*.npz filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,46 @@
+Mono path[0] = 'D:/Dev/Krag-Kings/benchmark/builds/Unity/KragKings-Unity_Data/Managed'
+Mono config path = 'D:/Dev/Krag-Kings/benchmark/builds/Unity/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.4.4f1 (360f97ecca93)
+[Subsystems] Discovering subsystems at path D:/Dev/Krag-Kings/benchmark/builds/Unity/KragKings-Unity_Data/UnitySubsystems
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:          NVIDIA
+    VRAM:            5955 MB
+    App VRAM Budget: 5187 MB
+    Driver:          32.0.15.9144
+[D3D12 Device Filter] Vendor Name: NVIDIA
+[D3D12 Device Filter] Device Name: NVIDIA GeForce RTX 2060
+[D3D12 Device Filter] Driver Version: 32.0.15.9144
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 5955 MB
+[D3D12 Device Filter] Processor Count: 12
+[D3D12 Device Filter] Device Type: Discrete
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.005 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+Using Windows.Gaming.Input
+UnloadTime: 2.416500 ms
+KRAG_INPUT_PROFILE {"utc":"2026-10-06T17:13:03.8813753Z","reason":"active","buildGuid":"c4e6c9de5a7a4094aff6182feeae4ae2","inputSystemVersion":"1.19.0","movementBackend":"Win32 message context","nativeRestoreStatus":"attached","nativeOriginalProcedure":140729439608368,"nativeHookProcedure":2606796376448,"nativeProcedureAfterDispose":0,"disableRedundantEventsMerging":false,"interactiveCapture":true,"nativeAttached":true,"performanceRun":false,"interactiveProfileRequested":false,"nativeCloseReposted":false}
+KRAG_KINGS_DEMO_READY NVIDIA GeForce RTX 2060 1920x1080
+KRAG_INPUT_PROFILE {"utc":"2026-10-06T17:13:41.8464281Z","reason":"native close reposted after detach","buildGuid":"c4e6c9de5a7a4094aff6182feeae4ae2","inputSystemVersion":"1.19.0","movementBackend":"Win32 message context","nativeRestoreStatus":"restored","nativeOriginalProcedure":140729439608368,"nativeHookProcedure":2606796376448,"nativeProcedureAfterDispose":140729439608368,"disableRedundantEventsMerging":false,"interactiveCapture":false,"nativeAttached":false,"performanceRun":false,"interactiveProfileRequested":false,"nativeCloseReposted":true}
+KRAG_INPUT_PROFILE {"utc":"2026-10-06T17:13:41.9002615Z","reason":"disabled","buildGuid":"c4e6c9de5a7a4094aff6182feeae4ae2","inputSystemVersion":"1.19.0","movementBackend":"Win32 message context","nativeRestoreStatus":"restored","nativeOriginalProcedure":140729439608368,"nativeHookProcedure":2606796376448,"nativeProcedureAfterDispose":140729439608368,"disableRedundantEventsMerging":false,"interactiveCapture":false,"nativeAttached":false,"performanceRun":false,"interactiveProfileRequested":false,"nativeCloseReposted":true}
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed

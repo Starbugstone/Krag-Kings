@@ -1,0 +1,3503 @@
+﻿{
+    "buildGuid":  "c4e6c9de5a7a4094aff6182feeae4ae2",
+    "movementBackend":  "Win32 message context",
+    "contentFingerprint":  "e2c0a7ff6ee969a81d16f382e30dadb66caaaed09721fe5ad19b0f4fe47debd0",
+    "timestamp":  "2026-10-06T19:13:41.7749706+02:00",
+    "modifierObservations":  [
+
+                             ],
+    "checks":  [
+                   "Native clicks and keys started Nib shooting while Krag melee continued",
+                   "Native middle-mouse orbit, wheel zoom and arrow pan remained available during animation",
+                   "Krag selected with native Windows left mouse input",
+                   "Krag portrait and facial performance activated with C and E",
+                   "Krag Melee activated with native keyboard input",
+                   "Krag Shoot activated with native keyboard input",
+                   "Krag Hit activated with native keyboard input",
+                   "Krag variant changed with V",
+                   "Krag moved 2.71 meters after native right mouse input",
+                   "Krag walked after native Shift + right mouse input",
+                   "Krag immediate Shift + right-click preserved walking after all input events were queued together",
+                   "Nib selected with native Windows left mouse input",
+                   "Nib portrait and facial performance activated with C and E",
+                   "Nib Melee activated with native keyboard input",
+                   "Nib Shoot activated with native keyboard input",
+                   "Nib Hit activated with native keyboard input",
+                   "Nib variant changed with V",
+                   "Nib moved 2.7 meters after native right mouse input",
+                   "Nib walked after native Shift + right mouse input",
+                   "Nib immediate Shift + right-click preserved walking after all input events were queued together",
+                   "F12 capture input sent; output image must be inspected separately"
+               ],
+    "windowLeaseRestored":  true,
+    "cameraObservations":  [
+                               {
+                                   "beforeInputFrame":  280,
+                                   "actionFrame":  287,
+                                   "cameraYaw":  165.0,
+                                   "action":  "Melee",
+                                   "cameraDistance":  6.400000095367432,
+                                   "observedUtc":  "2026-10-06T17:13:10.8820955Z",
+                                   "control":  "OrbitZoom"
+                               },
+                               {
+                                   "beforeInputFrame":  315,
+                                   "cameraFocus":  {
+                                                       "x":  -0.07499992847442627,
+                                                       "y":  2.0234289169311525,
+                                                       "z":  0.04999998211860657
+                                                   },
+                                   "actionFrame":  322,
+                                   "requestedArrowHoldMilliseconds":  90,
+                                   "action":  "Melee",
+                                   "observedUtc":  "2026-10-06T17:13:11.4414052Z",
+                                   "control":  "Pan"
+                               }
+                           ],
+    "modifierOnly":  false,
+    "requireWindowsPressContext":  true,
+    "keyboardLayout":  "0000040C",
+    "pointerGuards":  [
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  1276,
+                              "y":  588
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  668,
+                              "y":  523
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  960,
+                              "y":  540
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  1276,
+                              "y":  588
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  690,
+                              "y":  882
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  503,
+                              "y":  889
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  365,
+                              "y":  898
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  1375,
+                              "y":  403
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  924,
+                              "y":  622
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  657,
+                              "y":  703
+                          },
+                          {
+                              "gameHwnd":  11601702,
+                              "foregroundHwnd":  11601702,
+                              "pointerHwnd":  11601702,
+                              "gamePid":  33628,
+                              "foregroundPid":  33628,
+                              "pointerPid":  33628,
+                              "x":  338,
+                              "y":  795
+                          }
+                      ],
+    "failures":  [
+
+                 ],
+    "inputEdges":  [
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:08.5912977Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:08.6044258Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:08.7068290Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:08.7088316Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  588,
+                                                                  "x":  1276
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  1276.1859130859375,
+                                                                 "y":  491.9005432128906,
+                                                                 "z":  6.172665596008301
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  492,
+                                                                                       "x":  1276
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  588,
+                                                                                "x":  1276
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  588,
+                                                                                "x":  1276
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:09.0814234Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:09.2352804Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:09.2362908Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:09.3280162Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:09.3290154Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  523,
+                                                                  "x":  668
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  667.5718994140625,
+                                                                 "y":  557.2520751953125,
+                                                                 "z":  6.674155235290527
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  557,
+                                                                                       "x":  668
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  523,
+                                                                                "x":  668
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  523,
+                                                                                "x":  668
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:09.4991441Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:09.6167492Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:09.6167492Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:09.7153936Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:09.7163809Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:10.7764326Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:10.7774330Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:10.8682231Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:10.8692243Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.3220331Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.3230534Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.4288749Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.4298764Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  39,
+                                          "up":  false,
+                                          "scan":  57421
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.4439329Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  39,
+                                          "up":  false,
+                                          "scan":  57421
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.4449306Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  39,
+                                          "up":  true,
+                                          "scan":  57421
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.5382195Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  39,
+                                          "up":  true,
+                                          "scan":  57421
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.5392185Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.5537931Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.5547937Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:11.6471485Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:11.6481495Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:12.4955189Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:12.4965180Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:12.5867852Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:12.5880117Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  588,
+                                                                  "x":  1276
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  1276.1859130859375,
+                                                                 "y":  491.9005432128906,
+                                                                 "z":  6.172665596008301
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  492,
+                                                                                       "x":  1276
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  588,
+                                                                                "x":  1276
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  588,
+                                                                                "x":  1276
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:13.0214918Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  false,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.1400630Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  false,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.1415719Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  true,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.2383747Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  true,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.2393779Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  false,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.2556631Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  false,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.2566658Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  true,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.3480211Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  true,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.3490269Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.3621297Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.3641344Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.4718771Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.4718771Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.4738839Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.4738839Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:13.5656431Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:13.5666273Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:14.8428936Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:14.8438949Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:14.9461521Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:14.9471547Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  false,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:16.0069879Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  false,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:16.0079870Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  true,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:16.0980588Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  true,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:16.0990586Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  false,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:16.9881988Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  false,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:16.9892004Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  true,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:17.0956689Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  true,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:17.0972010Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  882,
+                                                                  "x":  690
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  689.5380859375,
+                                                                 "y":  197.6480712890625,
+                                                                 "z":  6.987154960632324
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  198,
+                                                                                       "x":  690
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  882,
+                                                                                "x":  690
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  882,
+                                                                                "x":  690
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:17.5153902Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:18.7899555Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:18.7920970Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:18.8885098Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:18.8900210Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  889,
+                                                                  "x":  503
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  503.47882080078127,
+                                                                 "y":  190.7434844970703,
+                                                                 "z":  8.172321319580079
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  191,
+                                                                                       "x":  503
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  889,
+                                                                                "x":  503
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  889,
+                                                                                "x":  503
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:19.9426425Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  false,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:19.9426425Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  false,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  true,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:19.9436368Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  true,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  true,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:20.0527027Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  true,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:20.0537022Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:22.4544817Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:22.4554819Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:22.5471459Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:22.5481463Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  898,
+                                                                  "x":  365
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  365.34014892578127,
+                                                                 "y":  182.497314453125,
+                                                                 "z":  9.366701126098633
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  182,
+                                                                                       "x":  365
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:23.8378673Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedHoldMilliseconds":  0,
+                                          "pressPosition":  {
+                                                                "x":  365.34014892578127,
+                                                                "y":  182.497314453125,
+                                                                "z":  9.366701126098633
+                                                            },
+                                          "shiftScan":  42,
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  182,
+                                                                                       "x":  365
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "ImmediateMoveBefore",
+                           "utc":  "2026-10-06T17:13:23.8436650Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedHoldMilliseconds":  0,
+                                          "pressPosition":  {
+                                                                "x":  365.34014892578127,
+                                                                "y":  182.497314453125,
+                                                                "z":  9.366701126098633
+                                                            },
+                                          "shiftScan":  42,
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  182,
+                                                                                       "x":  365
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  898,
+                                                                                "x":  365
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "ImmediateMoveAfter",
+                           "utc":  "2026-10-06T17:13:23.8572123Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:26.3514784Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:26.3530000Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:26.4564925Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:26.4574960Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  403,
+                                                                  "x":  1375
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  1374.626708984375,
+                                                                 "y":  677.2391357421875,
+                                                                 "z":  8.604299545288086
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  677,
+                                                                                       "x":  1375
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  403,
+                                                                                "x":  1375
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  403,
+                                                                                "x":  1375
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:26.9047819Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  false,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.0139472Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  false,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.0149465Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  true,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.1052699Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  67,
+                                          "up":  true,
+                                          "scan":  46
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.1062774Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  false,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.1087819Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  false,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.1087819Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  true,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.2147764Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  69,
+                                          "up":  true,
+                                          "scan":  18
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.2147764Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.4676453Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.4686371Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.5724630Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.5734575Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.5754663Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  false,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.5764659Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:27.6675215Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  65,
+                                          "up":  true,
+                                          "scan":  16
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:27.6704943Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:29.3824626Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  false,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:29.3834629Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:29.4876183Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  70,
+                                          "up":  true,
+                                          "scan":  33
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:29.4886175Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  false,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:30.5185605Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  false,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:30.5200108Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  true,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:30.6248552Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  72,
+                                          "up":  true,
+                                          "scan":  35
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:30.6258543Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  false,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:31.5142116Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  false,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:31.5152098Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  true,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:31.6177264Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  86,
+                                          "up":  true,
+                                          "scan":  47
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:31.6187242Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  622,
+                                                                  "x":  924
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  923.6871948242188,
+                                                                 "y":  457.9102478027344,
+                                                                 "z":  7.542755126953125
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  458,
+                                                                                       "x":  924
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  622,
+                                                                                "x":  924
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  622,
+                                                                                "x":  924
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:31.6953386Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:33.0367027Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:33.0377129Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:33.1405919Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:33.1415854Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  703,
+                                                                  "x":  657
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  657.2017822265625,
+                                                                 "y":  377.2559814453125,
+                                                                 "z":  6.943599700927734
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  377,
+                                                                                       "x":  657
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  703,
+                                                                                "x":  657
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  703,
+                                                                                "x":  657
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:33.4805851Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  false,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:33.4805851Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  false,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  true,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:33.4815858Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  true,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  true,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:33.5905416Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  160,
+                                          "up":  true,
+                                          "scan":  42
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:33.5905416Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:36.8308616Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:36.8323641Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:36.9362286Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:36.9372352Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedScreen":  {
+                                                                  "y":  795,
+                                                                  "x":  338
+                                                              },
+                                          "requestedUnity":  {
+                                                                 "x":  338.2755126953125,
+                                                                 "y":  284.7169494628906,
+                                                                 "z":  6.334856986999512
+                                                             },
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  285,
+                                                                                       "x":  338
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "PointerBeforeClick",
+                           "utc":  "2026-10-06T17:13:37.3426141Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedHoldMilliseconds":  0,
+                                          "pressPosition":  {
+                                                                "x":  338.2755126953125,
+                                                                "y":  284.7169494628906,
+                                                                "z":  6.334856986999512
+                                                            },
+                                          "shiftScan":  42,
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  285,
+                                                                                       "x":  338
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "ImmediateMoveBefore",
+                           "utc":  "2026-10-06T17:13:37.3439346Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "requestedHoldMilliseconds":  0,
+                                          "pressPosition":  {
+                                                                "x":  338.2755126953125,
+                                                                "y":  284.7169494628906,
+                                                                "z":  6.334856986999512
+                                                            },
+                                          "shiftScan":  42,
+                                          "geometry":  {
+                                                           "threadDpiAwareness":  0,
+                                                           "clientWidth":  1920,
+                                                           "windowDpiAwareness":  2,
+                                                           "outputWidth":  1920,
+                                                           "expectedUnityCursor":  {
+                                                                                       "y":  285,
+                                                                                       "x":  338
+                                                                                   },
+                                                           "screenCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "outputHeight":  1080,
+                                                           "clientOrigin":  {
+                                                                                "y":  0,
+                                                                                "x":  0
+                                                                            },
+                                                           "clientCursor":  {
+                                                                                "y":  795,
+                                                                                "x":  338
+                                                                            },
+                                                           "windowDpi":  96,
+                                                           "clientHeight":  1080
+                                                       }
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "ImmediateMoveAfter",
+                           "utc":  "2026-10-06T17:13:37.3459351Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:41.1031476Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  false,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:41.1041540Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:41.2079892Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  36,
+                                          "up":  true,
+                                          "scan":  57415
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:41.2090029Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  123,
+                                          "up":  false,
+                                          "scan":  88
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:41.5345068Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  123,
+                                          "up":  false,
+                                          "scan":  88
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:41.5345068Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  123,
+                                          "up":  true,
+                                          "scan":  88
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyBefore",
+                           "utc":  "2026-10-06T17:13:41.6422417Z",
+                           "foregroundPid":  33628
+                       },
+                       {
+                           "detail":  {
+                                          "virtualKey":  123,
+                                          "up":  true,
+                                          "scan":  88
+                                      },
+                           "modifiers":  {
+                                             "0xA0":  false,
+                                             "0xA1":  false,
+                                             "0xA2":  false,
+                                             "0xA3":  false,
+                                             "0xA4":  false,
+                                             "0xA5":  false,
+                                             "0x5B":  false,
+                                             "0x5C":  false
+                                         },
+                           "foregroundHwnd":  11601702,
+                           "kind":  "KeyAfter",
+                           "utc":  "2026-10-06T17:13:41.6432482Z",
+                           "foregroundPid":  33628
+                       }
+                   ],
+    "processId":  33628,
+    "physicalAKeyLabel":  "Q"
+}
