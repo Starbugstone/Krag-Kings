@@ -13,6 +13,20 @@ function Preserve-PreviousTelemetry([string]$Path) {
         Copy-Item -LiteralPath $Path -Destination (Join-Path $history $name) -ErrorAction Stop
     }
 }
+function Get-TaskProcessTree([int]$RootProcessId) {
+    # Query identifiers only. Wrapper jobs include their compiler/cooker children;
+    # ordinary direct game runs avoid this extra enumeration entirely.
+    $links=@(Get-CimInstance Win32_Process -Property ProcessId,ParentProcessId)
+    $ids=[System.Collections.Generic.HashSet[int]]::new()
+    $null=$ids.Add($RootProcessId)
+    do {
+        $added=$false
+        foreach($link in $links){
+            if($ids.Contains([int]$link.ParentProcessId) -and $ids.Add([int]$link.ProcessId)){$added=$true}
+        }
+    } while($added)
+    @(Get-Process -Id @($ids) -ErrorAction SilentlyContinue)
+}
 $mutex=New-Object System.Threading.Mutex($false,'Local\KragKingsBenchmarkHeavyJob')
 $locked=$false
 try {
@@ -22,6 +36,8 @@ try {
     $minimum=if($spec.minAvailableGB){[double]$spec.minAvailableGB}else{10.0}
     if($memory.AvailableMBytes -lt ($minimum*1024) -or $memory.PercentCommittedBytesInUse -gt 75) { throw ('Not enough memory headroom to start: availableMB='+$memory.AvailableMBytes+' commit='+$memory.PercentCommittedBytesInUse+'%') }
     $maxPrivate=if($spec.maxPrivateGB){[double]$spec.maxPrivateGB}else{10.0}
+    $trackTree=[bool]$spec.trackProcessTree -or [bool]$spec.maxTreePrivateGB
+    $maxTreePrivate=if($spec.maxTreePrivateGB){[double]$spec.maxTreePrivateGB}else{$maxPrivate}
     $quoted=@($spec.arguments | ForEach-Object { if($_ -match '[\s"]') { '"'+($_ -replace '"','\"')+'"' } else { $_ } })
     $params=@{FilePath=$spec.executable;ArgumentList=$quoted;PassThru=$true}
     if($spec.workingDirectory){$params.WorkingDirectory=$spec.workingDirectory}
@@ -38,7 +54,7 @@ try {
     $safeName=$spec.name -replace '[^a-zA-Z0-9_-]','_'
     $telemetry=Join-Path $local ($safeName+'-memory.csv')
     Preserve-PreviousTelemetry $telemetry
-    'time,processId,availableMB,commitPercent,privateMB,workingSetMB' | Set-Content $telemetry
+    'time,processId,availableMB,commitPercent,privateMB,workingSetMB,treeTracked,treePrivateMB,treeWorkingSetMB,treeProcessCount' | Set-Content $telemetry
     $process=Start-Process @params
     # Cache the native handle before the process can exit, so ExitCode remains readable.
     $null=$process.Handle
@@ -50,12 +66,20 @@ try {
         $memory=Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory
         $privateMB=[math]::Round($process.PrivateMemorySize64/1MB)
         $workingMB=[math]::Round($process.WorkingSet64/1MB)
-        ((Get-Date).ToString('o')+','+$process.Id+','+$memory.AvailableMBytes+','+$memory.PercentCommittedBytesInUse+','+$privateMB+','+$workingMB) | Add-Content $telemetry
+        $treePrivateMB=$privateMB;$treeWorkingMB=$workingMB;$treeCount=1
+        if($trackTree){
+            $members=@(Get-TaskProcessTree $process.Id)
+            $treePrivateMB=[math]::Round(($members|Measure-Object -Property PrivateMemorySize64 -Sum).Sum/1MB)
+            # Working sets may share pages; their sum is diagnostic, not unique RAM.
+            $treeWorkingMB=[math]::Round(($members|Measure-Object -Property WorkingSet64 -Sum).Sum/1MB)
+            $treeCount=$members.Count
+        }
+        ((Get-Date).ToString('o')+','+$process.Id+','+$memory.AvailableMBytes+','+$memory.PercentCommittedBytesInUse+','+$privateMB+','+$workingMB+','+$trackTree+','+$treePrivateMB+','+$treeWorkingMB+','+$treeCount) | Add-Content $telemetry
         if($gpuTool){
             & $gpuTool.Source --query-gpu=timestamp,index,name,memory.used,memory.total,utilization.gpu,temperature.gpu,power.draw,clocks.current.graphics --format=csv,noheader,nounits | ForEach-Object {('running,'+$_)|Add-Content $gpuLog}
         }
-        if(-not $process.HasExited -and ($memory.AvailableMBytes -lt 2048 -or $memory.PercentCommittedBytesInUse -gt 90 -or $privateMB -gt ($maxPrivate*1024))) {
-            Write-Output ('HEAVY_JOB_MEMORY_LIMIT availableMB='+$memory.AvailableMBytes+' commit='+$memory.PercentCommittedBytesInUse+'% privateMB='+$privateMB)
+        if(-not $process.HasExited -and ($memory.AvailableMBytes -lt 2048 -or $memory.PercentCommittedBytesInUse -gt 90 -or $privateMB -gt ($maxPrivate*1024) -or ($trackTree -and $treePrivateMB -gt ($maxTreePrivate*1024)))) {
+            Write-Output ('HEAVY_JOB_MEMORY_LIMIT availableMB='+$memory.AvailableMBytes+' commit='+$memory.PercentCommittedBytesInUse+'% privateMB='+$privateMB+' treeTracked='+$trackTree+' treePrivateMB='+$treePrivateMB+' treeProcesses='+$treeCount)
             & taskkill.exe /PID $process.Id /T /F | Out-Null
             $terminated=$true
             break

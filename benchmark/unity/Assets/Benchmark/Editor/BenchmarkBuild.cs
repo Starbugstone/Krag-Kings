@@ -54,6 +54,7 @@ namespace KragKings.Editor
             {
                 var sun=RenderSettings.sun.GetComponent<HDAdditionalLightData>();
                 if(sun)sun.angularDiameter=1.5f;
+                RenderSettings.sun.color=Color.white;
             }
             EditorSceneManager.SaveScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene(),scenePath);
             AssetDatabase.SaveAssets();
@@ -75,6 +76,8 @@ namespace KragKings.Editor
             AssetDatabase.ForceToDesiredWorkerCount();
             Directory.CreateDirectory(Imported);Directory.CreateDirectory(Generated);Directory.CreateDirectory(AssetRoot+"/Scenes");
             CopyTree(Path.Combine(Repo,"benchmark/shared"),Imported);
+            if(ContentFingerprint(Imported)!=ContentFingerprint(Path.Combine(Repo,"benchmark/shared")))
+                throw new Exception("Imported file snapshot differs from shared content; inspect stale or changed files before building");
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             SetProjectSettings();
             var krag=ImportSpecies("krag");var nib=ImportSpecies("nib");
@@ -304,8 +307,11 @@ namespace KragKings.Editor
                 update.Invoke(null,new object[]{profile});
                 serialized.Update();
                 if(serialized.FindProperty("profile.hash").uintValue==0)throw new Exception("Diffusion profile has no persistent shader hash: "+path);
-                EditorUtility.SetDirty(profile);
             }
+            // OnEnable can compute a hash while an existing asset is loading,
+            // before Unity retains its dirty state. Persist even that path.
+            EditorUtility.SetDirty(profile);
+            AssetDatabase.SaveAssetIfDirty(profile);
             return profile;
         }
         static Material MakeSand()
@@ -336,7 +342,7 @@ namespace KragKings.Editor
         }
         static void MakeLighting()
         {
-            var light=new GameObject("Late afternoon sun").AddComponent<Light>();light.type=LightType.Directional;light.transform.rotation=Quaternion.Euler(42,-140,0);light.color=new Color(1,.89f,.73f);light.lightUnit=LightUnit.Lux;light.intensity=55000;light.shadows=LightShadows.Soft;
+            var light=new GameObject("Late afternoon sun").AddComponent<Light>();light.type=LightType.Directional;light.transform.rotation=Quaternion.Euler(42,-140,0);light.color=Color.white;light.lightUnit=LightUnit.Lux;light.intensity=55000;light.shadows=LightShadows.Soft;
             var hd=light.gameObject.AddComponent<HDAdditionalLightData>();hd.EnableShadows(true);hd.SetShadowResolution(2048);hd.angularDiameter=1.5f;
             var volume=new GameObject("Desert lighting and grade").AddComponent<Volume>();volume.isGlobal=true;
             var profile=ScriptableObject.CreateInstance<VolumeProfile>();
@@ -378,7 +384,7 @@ namespace KragKings.Editor
             {
                 string ext=Path.GetExtension(sourcePath).ToLowerInvariant();if(ext!=".fbx"&&ext!=".png"&&ext!=".json"&&ext!=".wav")continue;
                 string relative=Path.GetRelativePath(source,sourcePath);string path=Path.Combine(destination,relative);Directory.CreateDirectory(Path.GetDirectoryName(path));
-                if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path)) File.Copy(sourcePath,path,true);
+                CopyIfChanged(sourcePath,path);
             }
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             // Process high-resolution FBXs separately, releasing temporary model
@@ -386,11 +392,18 @@ namespace KragKings.Editor
             foreach(var sourcePath in files.Where(p=>p.EndsWith(".fbx",StringComparison.OrdinalIgnoreCase)).OrderBy(p=>new FileInfo(p).Length))
             {
                 string relative=Path.GetRelativePath(source,sourcePath);string path=Path.Combine(destination,relative).Replace('\\','/');Directory.CreateDirectory(Path.GetDirectoryName(path));
-                if(!File.Exists(path)||File.GetLastWriteTimeUtc(sourcePath)>File.GetLastWriteTimeUtc(path))File.Copy(sourcePath,path,true);
+                CopyIfChanged(sourcePath,path);
                 AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);
                 EditorUtility.UnloadUnusedAssetsImmediate();GC.Collect();GC.WaitForPendingFinalizers();
                 Debug.Log("KRAG_MODEL_IMPORTED "+relative); // External guard records reliable native-process memory.
             }
+        }
+        static void CopyIfChanged(string source,string destination)
+        {
+            // Restored candidates can be older than the local import. Content,
+            // not modification time, defines the cross-engine comparison.
+            if(!File.Exists(destination)||new FileInfo(source).Length!=new FileInfo(destination).Length||HashFile(source)!=HashFile(destination))
+                File.Copy(source,destination,true);
         }
         static string HashFile(string path){using var hash=SHA256.Create();using var input=File.OpenRead(path);return BitConverter.ToString(hash.ComputeHash(input)).Replace("-","").ToLowerInvariant();}
         static string HashText(string value){using var hash=SHA256.Create();return BitConverter.ToString(hash.ComputeHash(System.Text.Encoding.UTF8.GetBytes(value))).Replace("-","").ToLowerInvariant();}

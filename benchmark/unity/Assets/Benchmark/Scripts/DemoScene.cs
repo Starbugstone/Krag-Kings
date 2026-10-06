@@ -18,7 +18,7 @@ namespace KragKings.Benchmark
         public bool AutomatedView {get;set;}
         LineRenderer selectionRing, destinationRing;
         Vector3 cameraFocus;
-        float yaw=165, pitch=22, distance=8.5f;
+        float yaw=165, pitch=22, distance=6.4f;
         float markerLife;
         bool showStats;
         float smoothedFrame;
@@ -34,6 +34,7 @@ namespace KragKings.Benchmark
         bool inputProbe;
         float nextProbe;
         string evidencePath;
+        string renderQuality;
         DemoCombatAudio combatAudio;
 
         public static bool TryGround(Vector3 point,out RaycastHit hit) => Physics.Raycast(new Vector3(point.x,60,point.z),Vector3.down,out hit,120,1<<8,QueryTriggerInteraction.Ignore);
@@ -52,6 +53,7 @@ namespace KragKings.Benchmark
             Select(units[0]);
             ResetCamera();
             string[] args=Environment.GetCommandLineArgs();
+            renderQuality=DemoRenderTuning.Apply(args);
             verification=args.Contains("-benchmarkVerify");
             performanceMoving=args.Contains("-benchmarkPerformanceMoving");
             performanceOnly=args.Contains("-benchmarkPerformance")||performanceMoving;
@@ -60,6 +62,11 @@ namespace KragKings.Benchmark
             evidencePath=Path.Combine(Application.persistentDataPath,"Evidence");
             for(int i=0;i<args.Length-1;i++) if(args[i]=="-evidencePath") evidencePath=args[i+1];
             Directory.CreateDirectory(evidencePath);
+            if(args.Contains("-benchmarkReview"))
+            {
+                if(verification||performanceOnly||args.Contains("-benchmarkShowcase"))throw new InvalidOperationException("Run visual review separately");
+                AutomatedView=true;StartCoroutine(Review());
+            }
             if(verification) StartCoroutine(Verify());
             if(performanceOnly) StartCoroutine(MeasurePerformance());
             if(args.Contains("-benchmarkShowcase"))
@@ -124,12 +131,13 @@ namespace KragKings.Benchmark
                 destinationRing.enabled=true;markerLife=2;
                 return true;
             }
+            message="Choose an open spot on walkable sand.";
             return false;
         }
         public void ResetCamera()
         {
             cameraFocus=(units[0].transform.position+units[1].transform.position)*.5f+Vector3.up*.95f;
-            yaw=165;pitch=22;distance=8.5f;
+            yaw=165;pitch=22;distance=6.4f;
         }
         public void PortraitCamera()
         {
@@ -163,7 +171,13 @@ namespace KragKings.Benchmark
                 if(keyboard.f3Key.wasPressedThisFrame) showStats=!showStats;
                 if(keyboard.f12Key.wasPressedThisFrame) ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"capture-"+DateTime.Now.ToString("yyyyMMdd-HHmmss")+".png"));
                 Vector3 pan=new((keyboard.rightArrowKey.isPressed?1:0)-(keyboard.leftArrowKey.isPressed?1:0),0,(keyboard.upArrowKey.isPressed?1:0)-(keyboard.downArrowKey.isPressed?1:0));
-                cameraFocus+=Quaternion.Euler(0,yaw,0)*pan*(distance*.4f*Time.unscaledDeltaTime);
+                if(pan.sqrMagnitude>0)
+                {
+                    float aboveGround=TryGround(cameraFocus,out var beforePan)?cameraFocus.y-beforePan.point.y:.95f;
+                    cameraFocus+=Quaternion.Euler(0,yaw,0)*pan*(distance*.4f*Time.unscaledDeltaTime);
+                    cameraFocus.x=Mathf.Clamp(cameraFocus.x,-700,700);cameraFocus.z=Mathf.Clamp(cameraFocus.z,-700,700);
+                    if(TryGround(cameraFocus,out var afterPan))cameraFocus.y=afterPan.point.y+aboveGround;
+                }
             }
             if(mouse!=null)
             {
@@ -274,6 +288,25 @@ namespace KragKings.Benchmark
         }
         static void Panel(Rect rect) { Color old=GUI.color;GUI.color=new Color(.026f,.047f,.049f,.92f);GUI.DrawTexture(rect,Texture2D.whiteTexture);GUI.color=old; }
 
+        IEnumerator Review()
+        {
+            yield return new WaitForSecondsRealtime(12);
+            foreach(var unit in units)unit.SetVariant(0);
+            Select(units[0]);ResetCamera();yield return new WaitForSecondsRealtime(.6f);
+            ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"Unity-Natural-Pair.png"));
+            yield return new WaitForSecondsRealtime(.5f);
+            foreach(var unit in units)
+            {
+                Select(unit);PortraitCamera();yield return new WaitForSecondsRealtime(.6f);
+                ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.species+"-Portrait.png"));
+                yield return new WaitForSecondsRealtime(.5f);
+                unit.TriggerFace();yield return new WaitForSeconds(unit.ActionDuration("FacePerformance")*.35f);
+                ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.species+"-Expression.png"));
+                yield return new WaitForSecondsRealtime(.5f);
+            }
+            Debug.Log("BENCHMARK_VISUAL_REVIEW_CAPTURED "+contentFingerprint);
+            Application.Quit(runtimeErrors.Count==0?0:1);
+        }
         IEnumerator Verify()
         {
             yield return new WaitForSeconds(12);
@@ -396,7 +429,8 @@ namespace KragKings.Benchmark
                 resolution=$"{Screen.width}x{Screen.height}",warmupSeconds=15,sampleSeconds=30,frames=times.Length,
                 meanMs=times.Length>0?times.Average():0,p95Ms=Percentile(times,.95f),p99Ms=Percentile(times,.99f),
                 workload=performanceMoving?"Natural Krag and Nib, repeated 12-second run/melee/shoot/hit sequence, fixed default camera; no captures or input probes during sample":"Natural Krag and Nib, Idle, default camera, same dune surface; no captures or input probes during sample",
-                quality="HDRP High Fidelity, TAA, fixed native resolution, SSGI/SSR, no hardware ray tracing; VSync disabled",
+                quality=renderQuality,internalResolution=$"{demoCamera.scaledPixelWidth}x{demoCamera.scaledPixelHeight}",
+                cameraDistance=Vector3.Distance(demoCamera.transform.position,cameraFocus),
                 failures=runtimeErrors.Distinct().ToArray()};
             File.WriteAllText(Path.Combine(evidencePath,"performance.json"),JsonUtility.ToJson(report,true));
             ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,"performance-view.png"));
@@ -431,6 +465,6 @@ namespace KragKings.Benchmark
         [Serializable] class ActionExpressionEvidence {public string action;public float maximumFacialMorphWeight;}
         [Serializable] class DeformationEvidence {public string variant;public float maximumBodyMorphWeight,maximumFacialMorphWeight;public List<ActionExpressionEvidence> actionExpressions=new();}
         [Serializable] class VerificationReport { public string engine,gpu,resolution,contentFingerprint,buildGuid;public string[] checks,failures;public DeformationEvidence[] deformation; }
-        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,workload,quality,contentFingerprint,buildGuid;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
+        [Serializable] class PerformanceReport {public string engine,gpu,graphicsAPI,cpu,resolution,internalResolution,workload,quality,contentFingerprint,buildGuid;public float cameraDistance;public int vramMB,warmupSeconds,sampleSeconds,frames;public float meanMs,p95Ms,p99Ms;public string[] failures;}
     }
 }

@@ -77,8 +77,8 @@ namespace KragKings.Benchmark
             if(t>=28&&t<48){scene.PortraitCamera();return;}
             Vector3 focus=(scene.units[0].transform.position+scene.units[1].transform.position)*.5f+Vector3.up*.95f;
             float yaw=165+Mathf.Sin(t*.15f)*30;
-            float distance=8.5f+Mathf.Sin(t*.21f)*.6f;
-            if(t>=62){float settle=Mathf.Clamp01((t-62)/7);yaw=Mathf.Lerp(yaw,165,settle);distance=Mathf.Lerp(distance,8.5f,settle);}
+            float distance=6.4f+Mathf.Sin(t*.21f)*.4f;
+            if(t>=62){float settle=Mathf.Clamp01((t-62)/7);yaw=Mathf.Lerp(yaw,165,settle);distance=Mathf.Lerp(distance,6.4f,settle);}
             scene.SetView(focus,yaw,22,distance);
         }
         [Serializable] class CaptureState {public string state,utc;public int durationSeconds,width,height;}

@@ -156,6 +156,7 @@ namespace KragKings.Benchmark
 
         public bool MoveTo(Vector3 destination, bool walk=false)
         {
+            if(Mathf.Abs(destination.x)>700||Mathf.Abs(destination.z)>700)return false;
             if (!DemoScene.TryGround(destination, out var hit) || Vector3.Angle(hit.normal, Vector3.up) > 40 || !ClearFootprint(hit.point,false)) return false;
             Destination = hit.point;
             IsWalking = walk;
@@ -242,6 +243,11 @@ namespace KragKings.Benchmark
                 if(!DemoScene.TryGround(leg.ankle.position,out var contact)) continue;
                 Vector3 target=leg.ankle.position;
                 float groundY=contact.point.y+leg.sole;
+                // An action may deliberately lift a foot. Preserve its authored
+                // height above the neutral root/sole plane when adapting to sand.
+                bool action=CurrentAction=="Melee"||CurrentAction=="Shoot"||CurrentAction=="Hit";
+                float actionLift=Mathf.Max(0,leg.ankle.position.y-transform.position.y-leg.sole);
+                if(action&&actionLift>.06f)groundY+=actionLift;
                 float[] contacts=leg.side=="L"?cycle?.leftContacts:cycle?.rightContacts;
                 bool plantedPhase=false,footfall=false;
                 if(contacts!=null)foreach(float phase in contacts)

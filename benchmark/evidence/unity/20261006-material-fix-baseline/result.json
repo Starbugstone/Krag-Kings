@@ -1,0 +1,37 @@
+{
+  "status": "Corrected skin confirmed in actual engine captures; character artistic acceptance still failed. Dense idle baseline only, no engine ranking.",
+  "buildGuid": "86dead8b1ac74f57bc07ff30709b5a6c",
+  "contentFingerprint": "e0b7da174e1908bbc21552ac0c1c7c63fc8970e5eec6700d946a98e61b06a24d",
+  "runtimePrivatePeakMiB": 3954,
+  "meanFpsFromMeanFrameTime": 41.93790680020766,
+  "camera": {
+    "orbitDistanceMeters": 6.4,
+    "pitchDegrees": 22,
+    "yawDegrees": 165,
+    "verticalFovDegrees": 38
+  },
+  "sun": {
+    "intensityLux": 55000,
+    "color": [
+      1,
+      0.89,
+      0.73
+    ],
+    "angularDiameterDegrees": 1.5
+  },
+  "rendering": "Native1920x1080, TAA, full-resolution screen-space GI, screen-space reflections, SSS, SSAO, no hardware ray tracing.",
+  "remainingVisualIssues": [
+    "Overall warm/orange cast; neutral-white key planned next.",
+    "Krag face, hands, scarf, armor and body anatomy still not concept-faithful.",
+    "Nib orbital/muzzle/lip topology, bib/scarf and groom still not concept-faithful.",
+    "Surface wind ripples look overly uniform."
+  ],
+  "pending": [
+    "Reduced-runtime asset imports",
+    "Movement/combat performance sample",
+    "Native Windows input validation",
+    "Showcase video/audio",
+    "Unreal packaged comparison"
+  ],
+  "gpuTelemetryScope": "Whole device, not process-attributed. No other benchmark heavy task ran concurrently."
+}
