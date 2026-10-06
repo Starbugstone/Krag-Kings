@@ -1,0 +1,130 @@
+{
+  "version": "v9g-face-source-review",
+  "status": "Actual neutral Front/Head/HeadSide reviewed; hard profile/likeness failure",
+  "artisticAcceptance": false,
+  "poseAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP.blend",
+    "sha256": "2898288570fa840f656986d1b7673cf1daaa5203347c5e65df21e6bd7651d875",
+    "bytes": 142199898
+  },
+  "inputRecipe": {
+    "path": "benchmark/art/krag/v9g-face-prepared-recipe.json",
+    "sha256": "1628d886b0ecc8cc743cf53bbfb8cb838a2052199822618b086596b4c0162ec3",
+    "bytes": 2014
+  },
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9g-face-wip.png",
+      "sha256": "e5ddfa7755051c56bef02d4fe89efc515a660129f94e14182343db01eba17f48",
+      "bytes": 1297418
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9g-face-wip.png",
+      "sha256": "b0f0f0663cfcba0da1021ec1331fa446cddf406c2ffebf17346126d6b102c1b9",
+      "bytes": 1142015
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9g-face-wip.png",
+      "sha256": "82ba6490ee87768572dc7510bcd78b72ef01c2c8e376b8d86b27eb625c68f251",
+      "bytes": 1251470
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Front_v9g-face-wip.meta.json",
+      "sha256": "2b8849d3dfad02e5c55231823be89492bbd30ef6c421d771aa66629921439d71",
+      "bytes": 569
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9g-face-wip.meta.json",
+      "sha256": "232cc985ee8ec7353a8c605f285fa388487b609c38e36976437bad440c8ea2f4",
+      "bytes": 572
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_v9g-face-wip.meta.json",
+      "sha256": "280bb57baa8c8f994dd539e2ce29b2bb1fd307eec80232dec0694150e1c01082",
+      "bytes": 568
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP-grip-target-verification.json",
+      "sha256": "6a20a1f3a29ecf386571580a131cab1ae5dc432550bc07aa3dae9f67279b87a8",
+      "bytes": 48483
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP-locomotion-target-verification.json",
+      "sha256": "1e6dc54b1ad6d469d2c856e06671dc7f8784ddb129d206e1f646e7a32926dad0",
+      "bytes": 42935
+    },
+    {
+      "path": "benchmark/art/krag/Krag_Master_v9gFace_WIP-weapon-pose-verification.json",
+      "sha256": "20a1e8e765035eabbaa85f64d5649eb8ab91a8d682730fe34e54ce6e2eb673a0",
+      "bytes": 1791
+    },
+    {
+      "path": "benchmark/art/krag/v9g-scarf-placement-audit.json",
+      "sha256": "befa59aa4eacf134ec27ac9ff72b6d9797da5aa6d725815766788defdd602271",
+      "bytes": 459859
+    }
+  ],
+  "observedImprovements": [
+    "Longer curved tusks are readable at portrait scale; attachment still fails",
+    "v9f whole-head scale and torso/hand improvements preserved"
+  ],
+  "failedChecks": [
+    "Profile brow forms a long pointed shelf; chin forms a separate thin projecting wedge, unlike the continuous heavy concept skull/jaw",
+    "Frontal cheeks/muzzle remain broad smooth masses; geometric nasolabial/glabellar and lid structure insufficient",
+    "Tusks are visible but roots emerge from cheek skin outside the true oral aperture",
+    "Known upper-lip Jaw classification defect remains deliberately unpatched in this neutral study",
+    "Preserved v9f scarf is still a rigid terrace collar; armor/trousers/boots remain simplified; iris pigment unchanged"
+  ],
+  "scarfAuditInterpretation": {
+    "samples": 5133,
+    "overProvisionalRadiusCap": 350,
+    "worstSupportMeters": [
+      -0.441823,
+      -0.046409,
+      1.64463
+    ],
+    "worstRequiredRadiusMeters": 0.4556382563,
+    "armDomainAtWorstSupport": 0.2933912873,
+    "finding": "Starting sheet falls into lateral upper torso/shoulder at low side rows. Coarse threshold labels blend as torso/neck; actual face coordinates locate shoulder support. Do not widen radius cap or mistake this for forearm-only collision."
+  },
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-v9g-face-wip-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1267.0,
+      "minimumAvailableMB": 13626.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9g-face-wip-Natural_Front-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2162.0,
+      "minimumAvailableMB": 13183.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9g-face-wip-Natural_Head-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2160.0,
+      "minimumAvailableMB": 13313.0
+    },
+    {
+      "path": "benchmark/local/krag-review-v9g-face-wip-Natural_HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2172.0,
+      "minimumAvailableMB": 13332.0
+    },
+    {
+      "path": "benchmark/local/krag-audit-v9g-scarf-placement-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 872.0,
+      "minimumAvailableMB": 14457.0
+    }
+  ],
+  "pending": [
+    "Coherent broad bounded profile fitting and actual side comparison",
+    "Tusk roots on lower gum with crown passing true lip aperture",
+    "Topology-aware isolated Jaw patch and actual neutral/Blink/OpenMouth views",
+    "High gathered scarf side sections with deep front drape and actual collision/pose review"
+  ]
+}
