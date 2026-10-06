@@ -1,0 +1,29 @@
+{
+  "name": "nib-native-flow-audit-v1",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\native_groom_wip\\appearance_v2\\audit_flow.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-character-pilot-v1\\Nib_NativeGroom_Pilot_v1.blend",
+    "--source-sha256",
+    "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-character-pilot-v1\\source.json",
+    "--output",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-flow-audit-v1.json"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-flow-audit-v1.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-flow-audit-v1.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-flow-audit-v1.log",
+  "successMarker": "NIB_NATIVE_FLOW_AUDIT_COMPLETE"
+}

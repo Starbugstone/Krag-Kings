@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 326, in <module>
+    main()
+    ~~~~^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 207, in main
+    points, lift = lift_ear_path(points, normals[i], tree)
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py", line 62, in lift_ear_path
+    raise RuntimeError('Ear path requires more than the bounded 25mm coherent lift')
+RuntimeError: Ear path requires more than the bounded 25mm coherent lift
+
+Error: script failed, file: 'D:\Dev\Krag-Kings\benchmark\tools\nib\native_groom_wip\appearance_v2\build_flow_revision.py', exiting.

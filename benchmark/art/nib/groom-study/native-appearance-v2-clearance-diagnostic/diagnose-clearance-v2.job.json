@@ -1,0 +1,30 @@
+{
+  "name": "nib-native-appearance-v2-clearance-diagnostic",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\nib\\native_groom_wip\\appearance_v2\\build_flow_revision.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-character-pilot-v1\\Nib_NativeGroom_Pilot_v1.blend",
+    "--report",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-character-pilot-v1\\source.json",
+    "--audit",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-flow-attribution-v1\\nib-native-flow-audit-v1.json",
+    "--output-dir",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2-clearance-diagnostic",
+    "--diagnostic-only"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 8,
+  "maxPrivateGB": 3.5,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2-clearance-diagnostic.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2-clearance-diagnostic.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\nib-native-appearance-v2-clearance-diagnostic.log",
+  "successMarker": "NIB_NATIVE_FLOW_DIAGNOSTIC_COMPLETE"
+}

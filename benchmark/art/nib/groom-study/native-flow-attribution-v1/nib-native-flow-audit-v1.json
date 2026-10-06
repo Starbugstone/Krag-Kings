@@ -1,0 +1,1933 @@
+{
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\groom-study\\native-character-pilot-v1\\Nib_NativeGroom_Pilot_v1.blend",
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "sourceReportSha256": "4af5db725dd90dc5ac652bf8d94fc5fe84034fc7c89f944e666832b67bcaa755",
+  "recipeSha256": "c8e9ebe77d9149791d76d49a5b65000aacfe366d20a31b1322b8aa0a43c63185",
+  "regions": [
+    {
+      "name": "HeadCream",
+      "parts": [
+        {
+          "region": "undercoat",
+          "curves": 4000,
+          "arcLengthMeters": {
+            "min": 0.005707599222660065,
+            "median": 0.010787568986415863,
+            "max": 0.0173322893679142
+          },
+          "tipDeltaZMedianMeters": -0.0052756667137146,
+          "sampledNonRootPoints": 640,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0022111454454716295,
+            "median": 0.0012762671904056333,
+            "negativeBeyond0_5mm": 5
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 299,
+            "Profile": 292
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 299
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 292
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Nib v5 fitted animation face": 89
+          },
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 1575,
+              "point": 8,
+              "signedNearestMeters": -0.0022111454454716295,
+              "position": [
+                -0.03328993543982506,
+                -0.057431742548942566,
+                1.163455605506897
+              ],
+              "nearestTriangle": 21742
+            },
+            {
+              "curve": 125,
+              "point": 6,
+              "signedNearestMeters": -0.002006973052630201,
+              "position": [
+                0.03154100850224495,
+                -0.057413507252931595,
+                1.1640795469284058
+              ],
+              "nearestTriangle": 63858
+            },
+            {
+              "curve": 1575,
+              "point": 6,
+              "signedNearestMeters": -0.0008220474392146571,
+              "position": [
+                -0.03209121525287628,
+                -0.057254765182733536,
+                1.165795087814331
+              ],
+              "nearestTriangle": 21736
+            },
+            {
+              "curve": 125,
+              "point": 4,
+              "signedNearestMeters": -0.000820951204332232,
+              "position": [
+                0.031291235238313675,
+                -0.05726037919521332,
+                1.1659497022628784
+              ],
+              "nearestTriangle": 63871
+            },
+            {
+              "curve": 125,
+              "point": 8,
+              "signedNearestMeters": -0.0007449309775893198,
+              "position": [
+                0.03195970132946968,
+                -0.061010390520095825,
+                1.1622940301895142
+              ],
+              "nearestTriangle": 63879
+            }
+          ]
+        },
+        {
+          "region": "crown",
+          "curves": 1700,
+          "arcLengthMeters": {
+            "min": 0.02292814664542675,
+            "median": 0.039216116070747375,
+            "max": 0.06093810126185417
+          },
+          "tipDeltaZMedianMeters": -0.001621246337890625,
+          "sampledNonRootPoints": 680,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0012911700341646792,
+            "median": 0.0077784377233456325,
+            "negativeBeyond0_5mm": 2
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 76,
+            "Profile": 247
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 76
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 247
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Nib v5 fitted animation face": 74
+          },
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 4200,
+              "point": 8,
+              "signedNearestMeters": -0.0012911700341646792,
+              "position": [
+                -0.03891746699810028,
+                -0.05981455370783806,
+                1.1616392135620117
+              ],
+              "nearestTriangle": 28113
+            },
+            {
+              "curve": 4080,
+              "point": 8,
+              "signedNearestMeters": -0.0008586529438616708,
+              "position": [
+                -0.045918576419353485,
+                -0.05504145100712776,
+                1.163520336151123
+              ],
+              "nearestTriangle": 24024
+            }
+          ]
+        },
+        {
+          "region": "fringe",
+          "curves": 1000,
+          "arcLengthMeters": {
+            "min": 0.020110009238123894,
+            "median": 0.031994543969631195,
+            "max": 0.049246907234191895
+          },
+          "tipDeltaZMedianMeters": -0.021030783653259277,
+          "sampledNonRootPoints": 668,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0037782948020321783,
+            "median": 0.004463488716282882,
+            "negativeBeyond0_5mm": 39
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 39,
+            "Profile": 259
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 39
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 259
+            }
+          },
+          "rootFrontOccluderCounts": {},
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 6426,
+              "point": 8,
+              "signedNearestMeters": -0.0037782948020321783,
+              "position": [
+                -0.03538402169942856,
+                -0.06091291084885597,
+                1.1581957340240479
+              ],
+              "nearestTriangle": 28108
+            },
+            {
+              "curve": 6036,
+              "point": 8,
+              "signedNearestMeters": -0.003233995579648763,
+              "position": [
+                -0.05296044424176216,
+                -0.052856624126434326,
+                1.1584300994873047
+              ],
+              "nearestTriangle": 24066
+            },
+            {
+              "curve": 6102,
+              "point": 8,
+              "signedNearestMeters": -0.0031166754197329283,
+              "position": [
+                -0.04154674708843231,
+                -0.05909700319170952,
+                1.1560795307159424
+              ],
+              "nearestTriangle": 25944
+            },
+            {
+              "curve": 6684,
+              "point": 8,
+              "signedNearestMeters": -0.002945972475572489,
+              "position": [
+                0.03478822484612465,
+                -0.059801049530506134,
+                1.160159707069397
+              ],
+              "nearestTriangle": 72226
+            },
+            {
+              "curve": 6438,
+              "point": 6,
+              "signedNearestMeters": -0.0028079646654077806,
+              "position": [
+                -0.040476005524396896,
+                -0.05933036282658577,
+                1.159855842590332
+              ],
+              "nearestTriangle": 28103
+            },
+            {
+              "curve": 5772,
+              "point": 8,
+              "signedNearestMeters": -0.0027454424125608057,
+              "position": [
+                0.040134355425834656,
+                -0.061480700969696045,
+                1.1568658351898193
+              ],
+              "nearestTriangle": 68070
+            },
+            {
+              "curve": 5844,
+              "point": 8,
+              "signedNearestMeters": -0.0026422592636663467,
+              "position": [
+                -0.03825291991233826,
+                -0.060209207236766815,
+                1.1549413204193115
+              ],
+              "nearestTriangle": 25947
+            },
+            {
+              "curve": 6192,
+              "point": 8,
+              "signedNearestMeters": -0.0025843740622804035,
+              "position": [
+                0.036116182804107666,
+                -0.05749103054404259,
+                1.1623222827911377
+              ],
+              "nearestTriangle": 63883
+            },
+            {
+              "curve": 5928,
+              "point": 8,
+              "signedNearestMeters": -0.0024665184610057622,
+              "position": [
+                0.061630625277757645,
+                -0.04895433038473129,
+                1.1538052558898926
+              ],
+              "nearestTriangle": 78128
+            },
+            {
+              "curve": 6426,
+              "point": 6,
+              "signedNearestMeters": -0.0023607586140315107,
+              "position": [
+                -0.028377993032336235,
+                -0.05919373780488968,
+                1.1621230840682983
+              ],
+              "nearestTriangle": 27436
+            },
+            {
+              "curve": 5868,
+              "point": 8,
+              "signedNearestMeters": -0.0023023728281259537,
+              "position": [
+                -0.0596582368016243,
+                -0.04959733784198761,
+                1.1563791036605835
+              ],
+              "nearestTriangle": 17538
+            },
+            {
+              "curve": 5982,
+              "point": 8,
+              "signedNearestMeters": -0.002231843987829052,
+              "position": [
+                -0.039274197071790695,
+                -0.06191466003656387,
+                1.1561298370361328
+              ],
+              "nearestTriangle": 25949
+            }
+          ]
+        },
+        {
+          "region": "temple_L",
+          "curves": 1000,
+          "arcLengthMeters": {
+            "min": 0.026645099744200706,
+            "median": 0.04150831699371338,
+            "max": 0.06439155340194702
+          },
+          "tipDeltaZMedianMeters": -0.03556162118911743,
+          "sampledNonRootPoints": 668,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.00759854685747996,
+            "median": 0.007364805365796201,
+            "negativeBeyond0_5mm": 10
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 62,
+            "Profile": 11
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 62
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 11
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Nib v5 fitted animation face": 54
+          },
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 7282,
+              "point": 8,
+              "signedNearestMeters": -0.00759854685747996,
+              "position": [
+                0.07527410238981247,
+                -0.03342340886592865,
+                1.1100503206253052
+              ],
+              "nearestTriangle": 78997
+            },
+            {
+              "curve": 7594,
+              "point": 8,
+              "signedNearestMeters": -0.006593014171812683,
+              "position": [
+                0.07797428220510483,
+                -0.03249131143093109,
+                1.112363576889038
+              ],
+              "nearestTriangle": 54051
+            },
+            {
+              "curve": 7384,
+              "point": 6,
+              "signedNearestMeters": -0.005971519538434222,
+              "position": [
+                0.07665779441595078,
+                -0.03781934827566147,
+                1.112331748008728
+              ],
+              "nearestTriangle": 76810
+            },
+            {
+              "curve": 7282,
+              "point": 6,
+              "signedNearestMeters": -0.0053133543115109205,
+              "position": [
+                0.07369159162044525,
+                -0.039789069443941116,
+                1.118570327758789
+              ],
+              "nearestTriangle": 79801
+            },
+            {
+              "curve": 7594,
+              "point": 6,
+              "signedNearestMeters": -0.004118212033063173,
+              "position": [
+                0.0766892284154892,
+                -0.037424322217702866,
+                1.1200875043869019
+              ],
+              "nearestTriangle": 52723
+            },
+            {
+              "curve": 7108,
+              "point": 8,
+              "signedNearestMeters": -0.0011475248393253423,
+              "position": [
+                0.08537235110998154,
+                -0.02732742950320244,
+                1.1124835014343262
+              ],
+              "nearestTriangle": 52806
+            },
+            {
+              "curve": 6874,
+              "point": 8,
+              "signedNearestMeters": -0.0010426476146676578,
+              "position": [
+                0.08483558148145676,
+                -0.02781028486788273,
+                1.1228606700897217
+              ],
+              "nearestTriangle": 80061
+            },
+            {
+              "curve": 7384,
+              "point": 4,
+              "signedNearestMeters": -0.0008111331553664058,
+              "position": [
+                0.07367589324712753,
+                -0.043156590312719345,
+                1.1225696802139282
+              ],
+              "nearestTriangle": 54377
+            },
+            {
+              "curve": 7438,
+              "point": 8,
+              "signedNearestMeters": -0.0007864700273785274,
+              "position": [
+                0.08547185361385345,
+                -0.026031676679849625,
+                1.124137282371521
+              ],
+              "nearestTriangle": 80087
+            },
+            {
+              "curve": 7384,
+              "point": 8,
+              "signedNearestMeters": -0.0006955374537938042,
+              "position": [
+                0.07840339839458466,
+                -0.029930558055639267,
+                1.101364016532898
+              ],
+              "nearestTriangle": 79908
+            }
+          ]
+        },
+        {
+          "region": "temple_R",
+          "curves": 1000,
+          "arcLengthMeters": {
+            "min": 0.025860685855150223,
+            "median": 0.04204457253217697,
+            "max": 0.06301869451999664
+          },
+          "tipDeltaZMedianMeters": -0.03572559356689453,
+          "sampledNonRootPoints": 668,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.006371046765707433,
+            "median": 0.007610798420500942,
+            "negativeBeyond0_5mm": 10
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 146,
+            "Profile": 668
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 146
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 668
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Nib v5 fitted animation face": 57
+          },
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 7730,
+              "point": 8,
+              "signedNearestMeters": -0.006371046765707433,
+              "position": [
+                -0.07855232059955597,
+                -0.03236483037471771,
+                1.1158194541931152
+              ],
+              "nearestTriangle": 38867
+            },
+            {
+              "curve": 7712,
+              "point": 8,
+              "signedNearestMeters": -0.005455621721921489,
+              "position": [
+                -0.07746699452400208,
+                -0.035279687494039536,
+                1.110532522201538
+              ],
+              "nearestTriangle": 11929
+            },
+            {
+              "curve": 8114,
+              "point": 6,
+              "signedNearestMeters": -0.004137719399295747,
+              "position": [
+                -0.07639257609844208,
+                -0.03968954458832741,
+                1.117869257926941
+              ],
+              "nearestTriangle": 38912
+            },
+            {
+              "curve": 7814,
+              "point": 6,
+              "signedNearestMeters": -0.0040021383902058005,
+              "position": [
+                -0.07450094819068909,
+                -0.041567545384168625,
+                1.1181180477142334
+              ],
+              "nearestTriangle": 39086
+            },
+            {
+              "curve": 8138,
+              "point": 8,
+              "signedNearestMeters": -0.0036107860796619207,
+              "position": [
+                -0.08104721456766129,
+                -0.03194776922464371,
+                1.1114921569824219
+              ],
+              "nearestTriangle": 11917
+            },
+            {
+              "curve": 7814,
+              "point": 8,
+              "signedNearestMeters": -0.0034593899035826325,
+              "position": [
+                -0.07844111323356628,
+                -0.03462496027350426,
+                1.1077537536621094
+              ],
+              "nearestTriangle": 38273
+            },
+            {
+              "curve": 7712,
+              "point": 6,
+              "signedNearestMeters": -0.0030106379417702556,
+              "position": [
+                -0.07408185303211212,
+                -0.04154978320002556,
+                1.1201717853546143
+              ],
+              "nearestTriangle": 39104
+            },
+            {
+              "curve": 8114,
+              "point": 8,
+              "signedNearestMeters": -0.0027309137149131857,
+              "position": [
+                -0.08009424805641174,
+                -0.0328826941549778,
+                1.108130931854248
+              ],
+              "nearestTriangle": 11923
+            },
+            {
+              "curve": 8138,
+              "point": 6,
+              "signedNearestMeters": -0.0024904729798436165,
+              "position": [
+                -0.07802516222000122,
+                -0.03803876414895058,
+                1.1207648515701294
+              ],
+              "nearestTriangle": 10562
+            },
+            {
+              "curve": 8420,
+              "point": 8,
+              "signedNearestMeters": -0.0006636640509896097,
+              "position": [
+                -0.08461514115333557,
+                -0.03219825029373169,
+                1.1131452322006226
+              ],
+              "nearestTriangle": 39151
+            }
+          ]
+        },
+        {
+          "region": "nape",
+          "curves": 1300,
+          "arcLengthMeters": {
+            "min": 0.02429141104221344,
+            "median": 0.04258403927087784,
+            "max": 0.0649852454662323
+          },
+          "tipDeltaZMedianMeters": -0.03978848457336426,
+          "sampledNonRootPoints": 652,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0065689591283444315,
+            "median": 0.005358957874705084,
+            "negativeBeyond0_5mm": 20
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 594,
+            "Profile": 195
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Nib v5 fitted animation face": 594
+            },
+            "Profile": {
+              "Nib v5 fitted animation face": 195
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Nib v5 fitted animation face": 163
+          },
+          "actualOccluders": [
+            "Nib v5 fitted animation face"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 9268,
+              "point": 8,
+              "signedNearestMeters": -0.0065689591283444315,
+              "position": [
+                0.014259319752454758,
+                0.04177373647689819,
+                1.0589241981506348
+              ],
+              "nearestTriangle": 74515
+            },
+            {
+              "curve": 9788,
+              "point": 8,
+              "signedNearestMeters": -0.006561016838531941,
+              "position": [
+                0.01837856136262417,
+                0.04043718799948692,
+                1.0588518381118774
+              ],
+              "nearestTriangle": 74519
+            },
+            {
+              "curve": 8996,
+              "point": 8,
+              "signedNearestMeters": -0.00509902456542477,
+              "position": [
+                0.014829879626631737,
+                0.04619763046503067,
+                1.0725862979888916
+              ],
+              "nearestTriangle": 74975
+            },
+            {
+              "curve": 9316,
+              "point": 8,
+              "signedNearestMeters": -0.004063382211825228,
+              "position": [
+                0.00636253459379077,
+                0.04701206088066101,
+                1.0648212432861328
+              ],
+              "nearestTriangle": 74765
+            },
+            {
+              "curve": 9740,
+              "point": 8,
+              "signedNearestMeters": -0.0040335213707294315,
+              "position": [
+                -0.014935413375496864,
+                0.04587266966700554,
+                1.0649513006210327
+              ],
+              "nearestTriangle": 33793
+            },
+            {
+              "curve": 9284,
+              "point": 8,
+              "signedNearestMeters": -0.003993663704022765,
+              "position": [
+                -0.027020417153835297,
+                0.04245997220277786,
+                1.067776083946228
+              ],
+              "nearestTriangle": 34535
+            },
+            {
+              "curve": 9940,
+              "point": 8,
+              "signedNearestMeters": -0.003763016327866353,
+              "position": [
+                0.02475401945412159,
+                0.04535793885588646,
+                1.074653148651123
+              ],
+              "nearestTriangle": 74959
+            },
+            {
+              "curve": 9636,
+              "point": 8,
+              "signedNearestMeters": -0.0035953691694885492,
+              "position": [
+                -0.022861260920763016,
+                0.04478500410914421,
+                1.0680699348449707
+              ],
+              "nearestTriangle": 33778
+            },
+            {
+              "curve": 9892,
+              "point": 8,
+              "signedNearestMeters": -0.0022999414359219372,
+              "position": [
+                0.033491846174001694,
+                0.036191146820783615,
+                1.0599234104156494
+              ],
+              "nearestTriangle": 74565
+            },
+            {
+              "curve": 9732,
+              "point": 8,
+              "signedNearestMeters": -0.0021575574937742203,
+              "position": [
+                -0.031112542375922203,
+                0.0446755513548851,
+                1.0749472379684448
+              ],
+              "nearestTriangle": 34546
+            },
+            {
+              "curve": 9828,
+              "point": 8,
+              "signedNearestMeters": -0.0020865461992798373,
+              "position": [
+                -0.028946595266461372,
+                0.042698934674263,
+                1.0649884939193726
+              ],
+              "nearestTriangle": 34529
+            },
+            {
+              "curve": 9572,
+              "point": 8,
+              "signedNearestMeters": -0.001949219949892722,
+              "position": [
+                0.0358184352517128,
+                0.04275352880358696,
+                1.0766106843948364
+              ],
+              "nearestTriangle": 57941
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EarInnerCream_L",
+      "parts": [
+        {
+          "region": "ear_locks",
+          "curves": 2200,
+          "arcLengthMeters": {
+            "min": 0.012667120434343815,
+            "median": 0.03614983707666397,
+            "max": 0.06118255853652954
+          },
+          "tipDeltaZMedianMeters": 0.00544893741607666,
+          "sampledNonRootPoints": 680,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.002884496267029135,
+            "median": 0.002251789381261915,
+            "negativeBeyond0_5mm": 110
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 246,
+            "Profile": 611
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Ear inner velvet 1": 208,
+              "Auricle basal cartilage fold.001": 33,
+              "Rounded auricle cartilage rim.003": 5
+            },
+            "Profile": {
+              "Fennec cupped ear 1": 581,
+              "Rounded auricle cartilage rim.003": 30
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Ear inner velvet 1": 115,
+            "Rounded auricle cartilage rim.002": 18,
+            "Rounded auricle cartilage rim.003": 28,
+            "Auricle basal cartilage fold.001": 6
+          },
+          "actualOccluders": [
+            "Fennec cupped ear 1",
+            "Ear inner velvet 1",
+            "Rounded auricle cartilage rim.002",
+            "Rounded auricle cartilage rim.003",
+            "Auricle basal cartilage fold.001"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 325,
+              "point": 8,
+              "signedNearestMeters": -0.002884496267029135,
+              "position": [
+                0.14969685673713684,
+                0.036169759929180145,
+                1.2540931701660156
+              ],
+              "nearestTriangle": 2707
+            },
+            {
+              "curve": 325,
+              "point": 8,
+              "signedNearestMeters": -0.002884496267029135,
+              "position": [
+                0.14969685673713684,
+                0.036169759929180145,
+                1.2540931701660156
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.00407719612121582
+            },
+            {
+              "curve": 1885,
+              "point": 8,
+              "signedNearestMeters": -0.002702361396586639,
+              "position": [
+                0.14636826515197754,
+                0.0352976992726326,
+                1.2429736852645874
+              ],
+              "nearestTriangle": 2443
+            },
+            {
+              "curve": 1885,
+              "point": 8,
+              "signedNearestMeters": -0.002702361396586639,
+              "position": [
+                0.14636826515197754,
+                0.0352976992726326,
+                1.2429736852645874
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.004340171813964844
+            },
+            {
+              "curve": 845,
+              "point": 8,
+              "signedNearestMeters": -0.002680083482118789,
+              "position": [
+                0.21581342816352844,
+                0.04511238634586334,
+                1.2736642360687256
+              ],
+              "nearestTriangle": 4220
+            },
+            {
+              "curve": 845,
+              "point": 8,
+              "signedNearestMeters": -0.002680083482118789,
+              "position": [
+                0.21581342816352844,
+                0.04511238634586334,
+                1.2736642360687256
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.004256725311279297
+            },
+            {
+              "curve": 442,
+              "point": 8,
+              "signedNearestMeters": -0.002658469055859314,
+              "position": [
+                0.13342754542827606,
+                0.028720097616314888,
+                1.2189240455627441
+              ],
+              "nearestTriangle": 1899
+            },
+            {
+              "curve": 442,
+              "point": 8,
+              "signedNearestMeters": -0.002658469055859314,
+              "position": [
+                0.13342754542827606,
+                0.028720097616314888,
+                1.2189240455627441
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.004266500473022461
+            },
+            {
+              "curve": 39,
+              "point": 8,
+              "signedNearestMeters": -0.002620885741634993,
+              "position": [
+                0.150909423828125,
+                0.03619453310966492,
+                1.2432807683944702
+              ],
+              "nearestTriangle": 2457
+            },
+            {
+              "curve": 39,
+              "point": 8,
+              "signedNearestMeters": -0.002620885741634993,
+              "position": [
+                0.150909423828125,
+                0.03619453310966492,
+                1.2432807683944702
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.004399776458740234
+            },
+            {
+              "curve": 676,
+              "point": 8,
+              "signedNearestMeters": -0.002549820623244159,
+              "position": [
+                0.25498664379119873,
+                0.052931323647499084,
+                1.3481087684631348
+              ],
+              "nearestTriangle": 5860
+            },
+            {
+              "curve": 676,
+              "point": 8,
+              "signedNearestMeters": -0.002549820623244159,
+              "position": [
+                0.25498664379119873,
+                0.052931323647499084,
+                1.3481087684631348
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.0039560794830322266
+            }
+          ]
+        },
+        {
+          "region": "ear_undercoat",
+          "curves": 1300,
+          "arcLengthMeters": {
+            "min": 0.008014223538339138,
+            "median": 0.014082915149629116,
+            "max": 0.02323884889483452
+          },
+          "tipDeltaZMedianMeters": 0.005154907703399658,
+          "sampledNonRootPoints": 652,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0026280811807737336,
+            "median": 0.0010133569867321057,
+            "negativeBeyond0_5mm": 25
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 203,
+            "Profile": 591
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Ear inner velvet 1": 80,
+              "Rounded auricle cartilage rim.002": 43,
+              "Rounded auricle cartilage rim.003": 62,
+              "Auricle basal cartilage fold.001": 16,
+              "Fennec cupped ear 1": 2
+            },
+            "Profile": {
+              "Fennec cupped ear 1": 508,
+              "Rounded auricle cartilage rim.002": 30,
+              "Rounded auricle cartilage rim.003": 52,
+              "Ear inner velvet 1": 1
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Ear inner velvet 1": 92,
+            "Rounded auricle cartilage rim.002": 31,
+            "Rounded auricle cartilage rim.003": 27,
+            "Auricle basal cartilage fold.001": 5,
+            "Fennec cupped ear 1": 1
+          },
+          "actualOccluders": [
+            "Fennec cupped ear 1",
+            "Ear inner velvet 1",
+            "Rounded auricle cartilage rim.002",
+            "Rounded auricle cartilage rim.003",
+            "Auricle basal cartilage fold.001"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 2392,
+              "point": 8,
+              "signedNearestMeters": -0.0026280811807737336,
+              "position": [
+                0.08035669475793839,
+                0.014244704507291317,
+                1.1920225620269775
+              ],
+              "nearestTriangle": 425
+            },
+            {
+              "curve": 2392,
+              "point": 8,
+              "signedNearestMeters": -0.0026280811807737336,
+              "position": [
+                0.08035669475793839,
+                0.014244704507291317,
+                1.1920225620269775
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.0042383670806884766
+            },
+            {
+              "curve": 3256,
+              "point": 6,
+              "signedNearestMeters": -0.0020786960412806366,
+              "position": [
+                0.09639793634414673,
+                0.01926184445619583,
+                1.2036916017532349
+              ],
+              "nearestTriangle": 995
+            },
+            {
+              "curve": 3256,
+              "point": 6,
+              "signedNearestMeters": -0.0020786960412806366,
+              "position": [
+                0.09639793634414673,
+                0.01926184445619583,
+                1.2036916017532349
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.0032196044921875
+            },
+            {
+              "curve": 2832,
+              "point": 6,
+              "signedNearestMeters": -0.0019190817620255984,
+              "position": [
+                0.07649797201156616,
+                0.011377637274563313,
+                1.189107894897461
+              ],
+              "nearestTriangle": 417
+            },
+            {
+              "curve": 3192,
+              "point": 6,
+              "signedNearestMeters": -0.0017882943720906042,
+              "position": [
+                0.08245646953582764,
+                0.014043728820979595,
+                1.1958661079406738
+              ],
+              "nearestTriangle": 705
+            },
+            {
+              "curve": 3192,
+              "point": 6,
+              "signedNearestMeters": -0.0017882943720906042,
+              "position": [
+                0.08245646953582764,
+                0.014043728820979595,
+                1.1958661079406738
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.002982616424560547
+            },
+            {
+              "curve": 3080,
+              "point": 6,
+              "signedNearestMeters": -0.0016585135592492861,
+              "position": [
+                0.09328852593898773,
+                0.013919103890657425,
+                1.1903038024902344
+              ],
+              "nearestTriangle": 758
+            },
+            {
+              "curve": 3080,
+              "point": 6,
+              "signedNearestMeters": -0.0016585135592492861,
+              "position": [
+                0.09328852593898773,
+                0.013919103890657425,
+                1.1903038024902344
+              ],
+              "firstVisibleOccluder": "Auricle basal cartilage fold.001",
+              "cameraRayBurialMeters": 0.012753009796142578
+            },
+            {
+              "curve": 3192,
+              "point": 8,
+              "signedNearestMeters": -0.0012803390800399939,
+              "position": [
+                0.08575858175754547,
+                0.017989734187722206,
+                1.1964274644851685
+              ],
+              "nearestTriangle": 718
+            },
+            {
+              "curve": 3192,
+              "point": 8,
+              "signedNearestMeters": -0.0012803390800399939,
+              "position": [
+                0.08575858175754547,
+                0.017989734187722206,
+                1.1964274644851685
+              ],
+              "firstVisibleOccluder": "Ear inner velvet 1",
+              "cameraRayBurialMeters": 0.005661725997924805
+            },
+            {
+              "curve": 3424,
+              "point": 8,
+              "signedNearestMeters": -0.0012520445734480745,
+              "position": [
+                0.1064661294221878,
+                -0.0011054016649723053,
+                1.1786738634109497
+              ],
+              "nearestTriangle": 821
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EarOuterTawny_L",
+      "parts": [
+        {
+          "region": "ear_exterior",
+          "curves": 4500,
+          "arcLengthMeters": {
+            "min": 0.005611523054540157,
+            "median": 0.01157351117581129,
+            "max": 0.01840352825820446
+          },
+          "tipDeltaZMedianMeters": 0.006720781326293945,
+          "sampledNonRootPoints": 644,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0012931725723319687,
+            "median": 0.0010742863378254697,
+            "negativeBeyond0_5mm": 11
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 612,
+            "Profile": 359
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Rounded auricle cartilage rim.003": 84,
+              "Ear inner velvet 1": 435,
+              "Fennec cupped ear 1": 10,
+              "Rounded auricle cartilage rim.002": 72,
+              "Auricle basal cartilage fold.001": 11
+            },
+            "Profile": {
+              "Fennec cupped ear 1": 276,
+              "Ear inner velvet 1": 29,
+              "Rounded auricle cartilage rim.002": 34,
+              "Rounded auricle cartilage rim.003": 20
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Rounded auricle cartilage rim.003": 13,
+            "Ear inner velvet 1": 115,
+            "Rounded auricle cartilage rim.002": 17,
+            "Fennec cupped ear 1": 13,
+            "Auricle basal cartilage fold.001": 2
+          },
+          "actualOccluders": [
+            "Fennec cupped ear 1",
+            "Ear inner velvet 1",
+            "Rounded auricle cartilage rim.002",
+            "Rounded auricle cartilage rim.003",
+            "Auricle basal cartilage fold.001"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 2716,
+              "point": 8,
+              "signedNearestMeters": -0.0012931725723319687,
+              "position": [
+                0.07958342134952545,
+                -0.005743278656154871,
+                1.2507808208465576
+              ],
+              "nearestTriangle": 1160
+            },
+            {
+              "curve": 2716,
+              "point": 8,
+              "signedNearestMeters": -0.0012931725723319687,
+              "position": [
+                0.07958342134952545,
+                -0.005743278656154871,
+                1.2507808208465576
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.002",
+              "cameraRayBurialMeters": 0.006250858306884766
+            },
+            {
+              "curve": 2716,
+              "point": 6,
+              "signedNearestMeters": -0.0012224555503053125,
+              "position": [
+                0.07853378355503082,
+                -0.0059769852086901665,
+                1.2475029230117798
+              ],
+              "nearestTriangle": 1163
+            },
+            {
+              "curve": 2716,
+              "point": 6,
+              "signedNearestMeters": -0.0012224555503053125,
+              "position": [
+                0.07853378355503082,
+                -0.0059769852086901665,
+                1.2475029230117798
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.002",
+              "cameraRayBurialMeters": 0.006324052810668945
+            },
+            {
+              "curve": 756,
+              "point": 4,
+              "signedNearestMeters": -0.0009535635961128719,
+              "position": [
+                0.1303117722272873,
+                -0.00753558287397027,
+                1.1772396564483643
+              ],
+              "nearestTriangle": 1410
+            },
+            {
+              "curve": 756,
+              "point": 4,
+              "signedNearestMeters": -0.0009535635961128719,
+              "position": [
+                0.1303117722272873,
+                -0.00753558287397027,
+                1.1772396564483643
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.003",
+              "cameraRayBurialMeters": 0.005552530288696289
+            },
+            {
+              "curve": 4368,
+              "point": 4,
+              "signedNearestMeters": -0.0007909791238489561,
+              "position": [
+                0.06855691224336624,
+                -0.009694049134850502,
+                1.2137730121612549
+              ],
+              "nearestTriangle": 591
+            },
+            {
+              "curve": 4368,
+              "point": 4,
+              "signedNearestMeters": -0.0007909791238489561,
+              "position": [
+                0.06855691224336624,
+                -0.009694049134850502,
+                1.2137730121612549
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.002",
+              "cameraRayBurialMeters": 0.005402088165283203
+            },
+            {
+              "curve": 4368,
+              "point": 6,
+              "signedNearestMeters": -0.0007415915024466813,
+              "position": [
+                0.06988617777824402,
+                -0.009307236410677433,
+                1.2158082723617554
+              ],
+              "nearestTriangle": 593
+            },
+            {
+              "curve": 4368,
+              "point": 6,
+              "signedNearestMeters": -0.0007415915024466813,
+              "position": [
+                0.06988617777824402,
+                -0.009307236410677433,
+                1.2158082723617554
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.002",
+              "cameraRayBurialMeters": 0.004781007766723633
+            },
+            {
+              "curve": 1344,
+              "point": 4,
+              "signedNearestMeters": -0.0007189261682469805,
+              "position": [
+                0.0992974266409874,
+                -0.011073858477175236,
+                1.1739671230316162
+              ],
+              "nearestTriangle": 848
+            },
+            {
+              "curve": 1344,
+              "point": 4,
+              "signedNearestMeters": -0.0007189261682469805,
+              "position": [
+                0.0992974266409874,
+                -0.011073858477175236,
+                1.1739671230316162
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.003",
+              "cameraRayBurialMeters": 0.0043795108795166016
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EarInnerCream_R",
+      "parts": [
+        {
+          "region": "ear_locks",
+          "curves": 2200,
+          "arcLengthMeters": {
+            "min": 0.014601599425077438,
+            "median": 0.03678296506404877,
+            "max": 0.06250423192977905
+          },
+          "tipDeltaZMedianMeters": 0.005513787269592285,
+          "sampledNonRootPoints": 680,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.002766561374301091,
+            "median": 0.002334371349917319,
+            "negativeBeyond0_5mm": 117
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 237,
+            "Profile": 650
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Ear inner velvet -1": 205,
+              "Auricle basal cartilage fold": 32
+            },
+            "Profile": {
+              "Fennec cupped ear -1": 650
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Ear inner velvet -1": 112,
+            "Rounded auricle cartilage rim": 24,
+            "Rounded auricle cartilage rim.001": 26,
+            "Auricle basal cartilage fold": 8
+          },
+          "actualOccluders": [
+            "Fennec cupped ear -1",
+            "Ear inner velvet -1",
+            "Rounded auricle cartilage rim",
+            "Rounded auricle cartilage rim.001",
+            "Auricle basal cartilage fold"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 1560,
+              "point": 8,
+              "signedNearestMeters": -0.002766561374301091,
+              "position": [
+                -0.19269967079162598,
+                0.044996242970228195,
+                1.299864649772644
+              ],
+              "nearestTriangle": 4132
+            },
+            {
+              "curve": 1560,
+              "point": 8,
+              "signedNearestMeters": -0.002766561374301091,
+              "position": [
+                -0.19269967079162598,
+                0.044996242970228195,
+                1.299864649772644
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.00434565544128418
+            },
+            {
+              "curve": 1430,
+              "point": 8,
+              "signedNearestMeters": -0.0027159335322721745,
+              "position": [
+                -0.1475871205329895,
+                0.035897985100746155,
+                1.2489994764328003
+              ],
+              "nearestTriangle": 2447
+            },
+            {
+              "curve": 1430,
+              "point": 8,
+              "signedNearestMeters": -0.0027159335322721745,
+              "position": [
+                -0.1475871205329895,
+                0.035897985100746155,
+                1.2489994764328003
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.004506826400756836
+            },
+            {
+              "curve": 130,
+              "point": 8,
+              "signedNearestMeters": -0.002640436650835909,
+              "position": [
+                -0.2617303431034088,
+                0.053846847265958786,
+                1.3517152070999146
+              ],
+              "nearestTriangle": 6166
+            },
+            {
+              "curve": 130,
+              "point": 8,
+              "signedNearestMeters": -0.002640436650835909,
+              "position": [
+                -0.2617303431034088,
+                0.053846847265958786,
+                1.3517152070999146
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.004488229751586914
+            },
+            {
+              "curve": 793,
+              "point": 8,
+              "signedNearestMeters": -0.0026003490056609735,
+              "position": [
+                -0.2600436508655548,
+                0.05444036051630974,
+                1.349269986152649
+              ],
+              "nearestTriangle": 6154
+            },
+            {
+              "curve": 793,
+              "point": 8,
+              "signedNearestMeters": -0.0026003490056609735,
+              "position": [
+                -0.2600436508655548,
+                0.05444036051630974,
+                1.349269986152649
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.004702568054199219
+            },
+            {
+              "curve": 1586,
+              "point": 8,
+              "signedNearestMeters": -0.002594415413000206,
+              "position": [
+                -0.1540871560573578,
+                0.032796867191791534,
+                1.2299894094467163
+              ],
+              "nearestTriangle": 2467
+            },
+            {
+              "curve": 1586,
+              "point": 8,
+              "signedNearestMeters": -0.002594415413000206,
+              "position": [
+                -0.1540871560573578,
+                0.032796867191791534,
+                1.2299894094467163
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.0038232803344726562
+            },
+            {
+              "curve": 390,
+              "point": 6,
+              "signedNearestMeters": -0.002503258641809225,
+              "position": [
+                -0.11265642195940018,
+                0.025640778243541718,
+                1.2229299545288086
+              ],
+              "nearestTriangle": 1569
+            },
+            {
+              "curve": 390,
+              "point": 6,
+              "signedNearestMeters": -0.002503258641809225,
+              "position": [
+                -0.11265642195940018,
+                0.025640778243541718,
+                1.2229299545288086
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.0038688182830810547
+            }
+          ]
+        },
+        {
+          "region": "ear_undercoat",
+          "curves": 1300,
+          "arcLengthMeters": {
+            "min": 0.00756085105240345,
+            "median": 0.013267319649457932,
+            "max": 0.023521704599261284
+          },
+          "tipDeltaZMedianMeters": 0.0017760396003723145,
+          "sampledNonRootPoints": 652,
+          "nearestSurfaceSignedMeters": {
+            "min": -0.0026542385494394694,
+            "median": 0.0010160043384530582,
+            "negativeBeyond0_5mm": 19
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 151,
+            "Profile": 632
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Ear inner velvet -1": 76,
+              "Rounded auricle cartilage rim": 30,
+              "Auricle basal cartilage fold": 14,
+              "Rounded auricle cartilage rim.001": 31
+            },
+            "Profile": {
+              "Fennec cupped ear -1": 609,
+              "Rounded auricle cartilage rim": 21,
+              "Rounded auricle cartilage rim.001": 2
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Rounded auricle cartilage rim.001": 22,
+            "Ear inner velvet -1": 107,
+            "Rounded auricle cartilage rim": 32,
+            "Auricle basal cartilage fold": 1
+          },
+          "actualOccluders": [
+            "Fennec cupped ear -1",
+            "Ear inner velvet -1",
+            "Rounded auricle cartilage rim",
+            "Rounded auricle cartilage rim.001",
+            "Auricle basal cartilage fold"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 2680,
+              "point": 8,
+              "signedNearestMeters": -0.0026542385494394694,
+              "position": [
+                -0.0845433697104454,
+                0.015692494809627533,
+                1.1958380937576294
+              ],
+              "nearestTriangle": 709
+            },
+            {
+              "curve": 2680,
+              "point": 8,
+              "signedNearestMeters": -0.0026542385494394694,
+              "position": [
+                -0.0845433697104454,
+                0.015692494809627533,
+                1.1958380937576294
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.004122018814086914
+            },
+            {
+              "curve": 2224,
+              "point": 8,
+              "signedNearestMeters": -0.0026230897556160926,
+              "position": [
+                -0.09969817847013474,
+                0.02201385796070099,
+                1.2194712162017822
+              ],
+              "nearestTriangle": 1259
+            },
+            {
+              "curve": 2224,
+              "point": 8,
+              "signedNearestMeters": -0.0026230897556160926,
+              "position": [
+                -0.09969817847013474,
+                0.02201385796070099,
+                1.2194712162017822
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.004584312438964844
+            },
+            {
+              "curve": 2744,
+              "point": 8,
+              "signedNearestMeters": -0.0017494042967882706,
+              "position": [
+                -0.09382907301187515,
+                0.018441393971443176,
+                1.2153440713882446
+              ],
+              "nearestTriangle": 962
+            },
+            {
+              "curve": 2744,
+              "point": 8,
+              "signedNearestMeters": -0.0017494042967882706,
+              "position": [
+                -0.09382907301187515,
+                0.018441393971443176,
+                1.2153440713882446
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.003332376480102539
+            },
+            {
+              "curve": 2504,
+              "point": 8,
+              "signedNearestMeters": -0.001713391880002746,
+              "position": [
+                -0.10633759200572968,
+                0.019681887701153755,
+                1.2018015384674072
+              ],
+              "nearestTriangle": 1318
+            },
+            {
+              "curve": 2504,
+              "point": 8,
+              "signedNearestMeters": -0.001713391880002746,
+              "position": [
+                -0.10633759200572968,
+                0.019681887701153755,
+                1.2018015384674072
+              ],
+              "firstVisibleOccluder": "Auricle basal cartilage fold",
+              "cameraRayBurialMeters": 0.012961864471435547
+            },
+            {
+              "curve": 2360,
+              "point": 8,
+              "signedNearestMeters": -0.0016726547728467267,
+              "position": [
+                -0.10261005908250809,
+                0.020839031785726547,
+                1.208126425743103
+              ],
+              "nearestTriangle": 1303
+            },
+            {
+              "curve": 2360,
+              "point": 8,
+              "signedNearestMeters": -0.0016726547728467267,
+              "position": [
+                -0.10261005908250809,
+                0.020839031785726547,
+                1.208126425743103
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.0029020309448242188
+            },
+            {
+              "curve": 3472,
+              "point": 8,
+              "signedNearestMeters": -0.0013796695493510924,
+              "position": [
+                -0.10063902288675308,
+                0.01752881333231926,
+                1.2405881881713867
+              ],
+              "nearestTriangle": 1506
+            },
+            {
+              "curve": 3472,
+              "point": 8,
+              "signedNearestMeters": -0.0013796695493510924,
+              "position": [
+                -0.10063902288675308,
+                0.01752881333231926,
+                1.2405881881713867
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.002994537353515625
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EarOuterTawny_R",
+      "parts": [
+        {
+          "region": "ear_exterior",
+          "curves": 4500,
+          "arcLengthMeters": {
+            "min": 0.005859218072146177,
+            "median": 0.01093670167028904,
+            "max": 0.01843300834298134
+          },
+          "tipDeltaZMedianMeters": 0.006355762481689453,
+          "sampledNonRootPoints": 644,
+          "nearestSurfaceSignedMeters": {
+            "min": 0.0002807149212458171,
+            "median": 0.0010582979939144366,
+            "negativeBeyond0_5mm": 0
+          },
+          "sourceSurfaceOccludedPoints": {
+            "Neutral": 634,
+            "Profile": 300
+          },
+          "actualFirstOccluderCounts": {
+            "Neutral": {
+              "Ear inner velvet -1": 460,
+              "Rounded auricle cartilage rim": 57,
+              "Fennec cupped ear -1": 12,
+              "Rounded auricle cartilage rim.001": 81,
+              "Auricle basal cartilage fold": 24
+            },
+            "Profile": {
+              "Fennec cupped ear -1": 292,
+              "Ear inner velvet -1": 8
+            }
+          },
+          "rootFrontOccluderCounts": {
+            "Ear inner velvet -1": 121,
+            "Rounded auricle cartilage rim": 10,
+            "Fennec cupped ear -1": 4,
+            "Rounded auricle cartilage rim.001": 21,
+            "Auricle basal cartilage fold": 5
+          },
+          "actualOccluders": [
+            "Fennec cupped ear -1",
+            "Ear inner velvet -1",
+            "Rounded auricle cartilage rim",
+            "Rounded auricle cartilage rim.001",
+            "Auricle basal cartilage fold"
+          ],
+          "worstNearestSamples": [
+            {
+              "curve": 3220,
+              "point": 2,
+              "signedNearestMeters": 0.0002807149212458171,
+              "position": [
+                -0.2552800178527832,
+                0.02116420678794384,
+                1.2621911764144897
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.001",
+              "cameraRayBurialMeters": 0.009303569793701172
+            },
+            {
+              "curve": 448,
+              "point": 2,
+              "signedNearestMeters": 0.00028667030164797325,
+              "position": [
+                -0.276005357503891,
+                0.04543919116258621,
+                1.3728281259536743
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.009765386581420898
+            },
+            {
+              "curve": 1876,
+              "point": 2,
+              "signedNearestMeters": 0.00029734772397205234,
+              "position": [
+                -0.23426134884357452,
+                0.004864277318120003,
+                1.2287869453430176
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim.001",
+              "cameraRayBurialMeters": 0.0063610076904296875
+            },
+            {
+              "curve": 812,
+              "point": 2,
+              "signedNearestMeters": 0.00030912301735952497,
+              "position": [
+                -0.20834337174892426,
+                0.040687594562768936,
+                1.33622407913208
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.008683443069458008
+            },
+            {
+              "curve": 4284,
+              "point": 2,
+              "signedNearestMeters": 0.00033185373808919394,
+              "position": [
+                -0.21440431475639343,
+                0.048354532569646835,
+                1.2731058597564697
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.007370710372924805
+            },
+            {
+              "curve": 2268,
+              "point": 2,
+              "signedNearestMeters": 0.00036191850813338533,
+              "position": [
+                -0.19824260473251343,
+                0.015141172334551811,
+                1.3519784212112427
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim",
+              "cameraRayBurialMeters": 0.009917020797729492
+            },
+            {
+              "curve": 4256,
+              "point": 2,
+              "signedNearestMeters": 0.00036806107164011337,
+              "position": [
+                -0.20358124375343323,
+                0.010905459523200989,
+                1.2084929943084717
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.006909847259521484
+            },
+            {
+              "curve": 3080,
+              "point": 8,
+              "signedNearestMeters": 0.00036834694765275344,
+              "position": [
+                -0.13208557665348053,
+                0.02181651070713997,
+                1.287460446357727
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.00879359245300293
+            },
+            {
+              "curve": 1232,
+              "point": 2,
+              "signedNearestMeters": 0.0003768684155147639,
+              "position": [
+                -0.1488286703824997,
+                0.03681178390979767,
+                1.232034683227539
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.007584333419799805
+            },
+            {
+              "curve": 2632,
+              "point": 2,
+              "signedNearestMeters": 0.00037930170219624415,
+              "position": [
+                -0.10609431564807892,
+                -0.002143366262316704,
+                1.2864772081375122
+              ],
+              "firstVisibleOccluder": "Rounded auricle cartilage rim",
+              "cameraRayBurialMeters": 0.008381366729736328
+            },
+            {
+              "curve": 2212,
+              "point": 2,
+              "signedNearestMeters": 0.0003844460512709702,
+              "position": [
+                -0.12115207314491272,
+                0.004899214953184128,
+                1.181024432182312
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.007245779037475586
+            },
+            {
+              "curve": 2240,
+              "point": 2,
+              "signedNearestMeters": 0.00038893417331564706,
+              "position": [
+                -0.08140666037797928,
+                0.015683665871620178,
+                1.2098512649536133
+              ],
+              "firstVisibleOccluder": "Ear inner velvet -1",
+              "cameraRayBurialMeters": 0.008820056915283203
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Nearest signed distances and camera occlusion are attribution only; rear-facing hair is naturally occluded. Inspect actual sampled locations before correcting flow.",
+  "sourceChanged": false,
+  "artisticAcceptance": false
+}

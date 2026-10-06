@@ -1,0 +1,97 @@
+{
+  "status": "Actual read-only native root/visible-surface attribution; source unchanged",
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "rootOcclusion": [
+    {
+      "region": "EarInnerCream_L",
+      "part": "ear_locks",
+      "rootSamples": 170,
+      "occludedRoots": 167,
+      "firstOccluders": {
+        "Ear inner velvet 1": 115,
+        "Rounded auricle cartilage rim.002": 18,
+        "Rounded auricle cartilage rim.003": 28,
+        "Auricle basal cartilage fold.001": 6
+      }
+    },
+    {
+      "region": "EarInnerCream_L",
+      "part": "ear_undercoat",
+      "rootSamples": 163,
+      "occludedRoots": 156,
+      "firstOccluders": {
+        "Ear inner velvet 1": 92,
+        "Rounded auricle cartilage rim.002": 31,
+        "Rounded auricle cartilage rim.003": 27,
+        "Auricle basal cartilage fold.001": 5,
+        "Fennec cupped ear 1": 1
+      }
+    },
+    {
+      "region": "EarInnerCream_R",
+      "part": "ear_locks",
+      "rootSamples": 170,
+      "occludedRoots": 170,
+      "firstOccluders": {
+        "Ear inner velvet -1": 112,
+        "Rounded auricle cartilage rim": 24,
+        "Rounded auricle cartilage rim.001": 26,
+        "Auricle basal cartilage fold": 8
+      }
+    },
+    {
+      "region": "EarInnerCream_R",
+      "part": "ear_undercoat",
+      "rootSamples": 163,
+      "occludedRoots": 162,
+      "firstOccluders": {
+        "Rounded auricle cartilage rim.001": 22,
+        "Ear inner velvet -1": 107,
+        "Rounded auricle cartilage rim": 32,
+        "Auricle basal cartilage fold": 1
+      }
+    }
+  ],
+  "nativeExitCode": 0,
+  "guardExitCode": 0,
+  "peakPrivateMB": 730,
+  "minimumAvailableMB": 11200,
+  "files": [
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/.gitattributes",
+      "sha256": "0f5335e347b71895b2fd264acf35771cd59534f5d88bf1156d27fabfd1c4098f",
+      "bytes": 122
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/audit-flow-v1.job.json",
+      "sha256": "6e0388574e9cafabff0460b5479f969b5a43f36af7fea0a5bc03f4cdf956717c",
+      "bytes": 1194
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/audit_flow.py",
+      "sha256": "c8e9ebe77d9149791d76d49a5b65000aacfe366d20a31b1322b8aa0a43c63185",
+      "bytes": 7254
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/nib-native-flow-audit-v1-memory.csv",
+      "sha256": "4cfedad9700bfea60fa47ebf547606f5f12968db435e05d835654bbf94c67683",
+      "bytes": 341
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/nib-native-flow-audit-v1.json",
+      "sha256": "df9122174dddfde672309dea2d93fedeae66f39c092f2dfb047153c7b2d0e3d6",
+      "bytes": 62541
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/nib-native-flow-audit-v1.log",
+      "sha256": "f3731d316ed13dda9e5760987f96125312c20bc932effabf0008918d0e70fb6d",
+      "bytes": 259
+    },
+    {
+      "path": "benchmark/art/nib/groom-study/native-flow-attribution-v1/nib-native-flow-audit-v1.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "conclusion": "The inner groom is attached to the closed underlying Fennec shell, while separate pink lining and cartilage pieces are in front. A flow-only fixed-root revision is insufficient. Attach the same3500 inner strands per ear to actual visible pink border skin and keep the exposed central membrane. No increased total count."
+}

@@ -1,0 +1,326 @@
+{
+  "status": "Actual isolated path attribution; no source save or geometric gate relaxation",
+  "sourceSha256": "0e60a9dbd59a88c64befbf3f05bd543d051d47d23857e31478f3bce8f9ab0cf7",
+  "region": "EarInnerCream_L",
+  "part": "ear_locks",
+  "curveIndex": 41,
+  "sourceSurface": "Ear inner velvet 1",
+  "root": {
+    "point": [
+      0.11193425953388214,
+      0.013067939318716526,
+      1.19491446018219
+    ],
+    "normal": [
+      -0.0438714362680912,
+      -0.8256098031997681,
+      0.562533438205719
+    ],
+    "sourceHint": [
+      0.11193425953388214,
+      0.013067939318716526,
+      1.19491446018219
+    ],
+    "triangle": 97,
+    "polygon": 48,
+    "vertices": [
+      50,
+      70,
+      69
+    ],
+    "barycentric": [
+      0.036649906930038334,
+      0.8742473454704477,
+      0.08910274759951399
+    ],
+    "attachmentUv": [
+      0.12488429248332977,
+      0.11093321442604065
+    ],
+    "sourceUv": [
+      0.16220323741436005,
+      0.8882316946983337
+    ],
+    "weights": {
+      "Head": 0.19622847249078842,
+      "Ear_L": 0.8037715275092115
+    }
+  },
+  "guideIndex": 2154,
+  "guide": {
+    "region": "ear_locks",
+    "root": [
+      0.11817033588886261,
+      0.012108305469155312,
+      1.1941841840744019
+    ],
+    "normal": [
+      -0.0581514947116375,
+      -0.7936882376670837,
+      0.6055390238761902
+    ],
+    "middle": [
+      0.13159887492656708,
+      0.007593046873807907,
+      1.21492600440979
+    ],
+    "tip": [
+      0.13829804956912994,
+      0.02922387421131134,
+      1.2269622087478638
+    ],
+    "seed": 765774,
+    "lengthProposalMeters": 0.041779131233364915,
+    "tipLiftProposalMeters": 0.0050934876167927955,
+    "undercoat": false
+  },
+  "lengthScale": 0.9575449417329722,
+  "curlPhase": 1.472780616873874,
+  "exception": "Ear path requires more than the bounded 25mm coherent lift",
+  "path": {
+    "front": true,
+    "rootNormal": [
+      -0.0438714362680912,
+      -0.8256098031997681,
+      0.562533438205719
+    ],
+    "requiredLiftMeters": 0.03308440337333808,
+    "intersections": [
+      {
+        "pointIndex": 0,
+        "point": [
+          0.11193425953388214,
+          0.013067939318716526,
+          1.19491446018219
+        ],
+        "hit": [
+          0.11193425953388214,
+          0.013067960739135742,
+          1.19491446018219
+        ],
+        "hitNormal": [
+          -0.03575343266129494,
+          -0.8498240113258362,
+          0.5258525609970093
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.8498240113258362,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8593,
+        "depthMeters": -2.1420419216156006e-08,
+        "hitDistanceMeters": 0.40000003576278687
+      },
+      {
+        "pointIndex": 1,
+        "point": [
+          0.11485510319471359,
+          0.012255043722689152,
+          1.1998051404953003
+        ],
+        "hit": [
+          0.11485510319471359,
+          0.006443232297897339,
+          1.1998051404953003
+        ],
+        "hitNormal": [
+          0.308216392993927,
+          -0.9348569512367249,
+          -0.17619588971138
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.9348569512367249,
+        "hitSource": "Auricle basal cartilage fold.001",
+        "hitTriangle": 14613,
+        "depthMeters": 0.005811811424791813,
+        "hitDistanceMeters": 0.39418819546699524,
+        "clearanceMarginMeters": 0.0006426354830241924,
+        "smoothLiftEnvelope": 0.19509032201612825,
+        "requiredWholePathLiftMeters": 0.03308440337333808
+      },
+      {
+        "pointIndex": 2,
+        "point": [
+          0.11816545575857162,
+          0.012044612318277359,
+          1.2042467594146729
+        ],
+        "hit": [
+          0.11816545575857162,
+          0.0073944926261901855,
+          1.2042467594146729
+        ],
+        "hitNormal": [
+          0.07045093178749084,
+          -0.9281549453735352,
+          0.36546576023101807
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.9281549453735352,
+        "hitSource": "Auricle basal cartilage fold.001",
+        "hitTriangle": 14610,
+        "depthMeters": 0.0046501196920871735,
+        "hitDistanceMeters": 0.3953498899936676,
+        "clearanceMarginMeters": 0.0009240251485476347,
+        "smoothLiftEnvelope": 0.3826834323650898,
+        "requiredWholePathLiftMeters": 0.014565942419260344
+      },
+      {
+        "pointIndex": 3,
+        "point": [
+          0.1217755451798439,
+          0.012468122877180576,
+          1.208279013633728
+        ],
+        "hit": [
+          0.1217755451798439,
+          0.00965726375579834,
+          1.208279013633728
+        ],
+        "hitNormal": [
+          -0.0400303453207016,
+          -0.812992513179779,
+          0.5808965563774109
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.812992513179779,
+        "hitSource": "Auricle basal cartilage fold.001",
+        "hitTriangle": 14601,
+        "depthMeters": 0.0028108591213822365,
+        "hitDistanceMeters": 0.3971891403198242,
+        "clearanceMarginMeters": 0.0011833553495294033,
+        "smoothLiftEnvelope": 0.5555702330196022,
+        "requiredWholePathLiftMeters": 0.007189396107855749
+      },
+      {
+        "pointIndex": 4,
+        "point": [
+          0.1250373274087906,
+          0.013752841390669346,
+          1.2121843099594116
+        ],
+        "hit": [
+          0.1250373274087906,
+          0.021624773740768433,
+          1.2121843099594116
+        ],
+        "hitNormal": [
+          0.03309639170765877,
+          -0.925723135471344,
+          0.37675103545188904
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.925723135471344,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8663,
+        "depthMeters": -0.007871932350099087,
+        "hitDistanceMeters": 0.40787193179130554,
+        "clearanceMarginMeters": 0.0014106601717798215,
+        "smoothLiftEnvelope": 0.7071067811865476,
+        "requiredWholePathLiftMeters": -0.009137618744763055
+      },
+      {
+        "pointIndex": 5,
+        "point": [
+          0.1275249868631363,
+          0.016048096120357513,
+          1.2161489725112915
+        ],
+        "hit": [
+          0.1275249868631363,
+          0.023032695055007935,
+          1.2161489725112915
+        ],
+        "hitNormal": [
+          0.08512601256370544,
+          -0.955651044845581,
+          0.2819300591945648
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.955651044845581,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8696,
+        "depthMeters": -0.006984598934650421,
+        "hitDistanceMeters": 0.4069845974445343,
+        "clearanceMarginMeters": 0.001597204418453818,
+        "smoothLiftEnvelope": 0.8314696123025452,
+        "requiredWholePathLiftMeters": -0.006479364292433458
+      },
+      {
+        "pointIndex": 6,
+        "point": [
+          0.1295517086982727,
+          0.01924404501914978,
+          1.220036268234253
+        ],
+        "hit": [
+          0.1295517086982727,
+          0.024361461400985718,
+          1.220036268234253
+        ],
+        "hitNormal": [
+          0.0850273072719574,
+          -0.9554981589317322,
+          0.2824777066707611
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.9554981589317322,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8697,
+        "depthMeters": -0.0051174163818359375,
+        "hitDistanceMeters": 0.4051174223423004,
+        "clearanceMarginMeters": 0.0017358192987669302,
+        "smoothLiftEnvelope": 0.9238795325112867,
+        "requiredWholePathLiftMeters": -0.003660214307245404
+      },
+      {
+        "pointIndex": 7,
+        "point": [
+          0.13178607821464539,
+          0.02310623787343502,
+          1.223554015159607
+        ],
+        "hit": [
+          0.13178607821464539,
+          0.02557307481765747,
+          1.223554015159607
+        ],
+        "hitNormal": [
+          0.1410587579011917,
+          -0.973149836063385,
+          0.18188440799713135
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.973149836063385,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8730,
+        "depthMeters": -0.0024668369442224503,
+        "hitDistanceMeters": 0.4024668335914612,
+        "clearanceMarginMeters": 0.0018211779206048458,
+        "smoothLiftEnvelope": 0.9807852804032304,
+        "requiredWholePathLiftMeters": -0.0006583082316979253
+      },
+      {
+        "pointIndex": 8,
+        "point": [
+          0.13444113731384277,
+          0.02755996212363243,
+          1.2266093492507935
+        ],
+        "hit": [
+          0.13444113731384277,
+          0.026528984308242798,
+          1.2266093492507935
+        ],
+        "hitNormal": [
+          0.1410587579011917,
+          -0.973149836063385,
+          0.18188440799713135
+        ],
+        "hitNormalDotOutwardRayOrigin": 0.973149836063385,
+        "hitSource": "Ear inner velvet 1",
+        "hitTriangle": 8730,
+        "depthMeters": 0.0010309778153896332,
+        "hitDistanceMeters": 0.39896902441978455,
+        "clearanceMarginMeters": 0.00185,
+        "smoothLiftEnvelope": 1.0,
+        "requiredWholePathLiftMeters": 0.0028809778153896333
+      }
+    ]
+  },
+  "recipeSha256": "3bad56308bcb6e76a03264230f6f1ce64dcc01b8e217d185c2356cf7b334d17d",
+  "flowRecipeSha256": "30ef76fb85a0231fe6a6212cd0ed44a5ef124f56e4c79d135da72fe508eb6ead",
+  "sourceChanged": false,
+  "artisticAcceptance": false
+}
