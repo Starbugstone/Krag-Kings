@@ -1,0 +1,110 @@
+{
+  "status": "Numerical support-domain parameter sweep only; no saved source or visual proof",
+  "helperSha256": "50c8b1e6aa2f1cfdcc049bd68d00f787a764e1c3611ecb51c4981a58692db6b9",
+  "cachedEyeLandmarkSource": "benchmark\\art\\krag\\anatomy-study\\head-fit-v9f-measurements.json",
+  "cachedEyeLandmarksAreCodeFitNotCurrentSourceQuery": true,
+  "otherLandmarks": "LipZ1.8197 from retained tusk/lip report; nose height and globe radius intentionally bracket plausible current values, not an exact saved-source claim",
+  "supportBoundsMeters": [
+    [
+      -0.17,
+      -0.29,
+      1.695
+    ],
+    [
+      0.17,
+      0.1,
+      2.065
+    ]
+  ],
+  "pointsPerCase": 72283,
+  "cases": [
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.862,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.31937395182894673,
+        "minimumLocalScale": 0.3055382224984409,
+        "maximumLocalScale": 2.0076446772360783,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.876,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.35507306909945174,
+        "minimumLocalScale": 0.2700435162924723,
+        "maximumLocalScale": 2.034692378161673,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.89,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.3646153822858563,
+        "minimumLocalScale": 0.29115954683041745,
+        "maximumLocalScale": 1.8109520148375404,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.862,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.31937395182894673,
+        "minimumLocalScale": 0.23682901989030294,
+        "maximumLocalScale": 2.0462375458176245,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.876,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.25824466357306136, 'minScale': 0.1958128820168202, 'maxScale': 2.090242517044388, 'maxScalePointMeters': [0.03578947368421054, -0.11449999999999999, 1.888809523809524], 'minScalePointMeters': [-0.04473684210526316, -0.14375, 1.8976190476190475]}"
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.89,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.26063455095147536,
+        "minimumLocalScale": 0.2090592559764775,
+        "maximumLocalScale": 1.8186997815583037,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.862,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.23887896192278693, 'minScale': 0.1604250784448623, 'maxScale': 2.2382182935036514, 'maxScalePointMeters': [0.03578947368421054, -0.11449999999999999, 1.88], 'minScalePointMeters': [-0.04473684210526316, -0.14375, 1.888809523809524]}"
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.876,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.15842276897473323, 'minScale': 0.10613279563684783, 'maxScale': 2.1217330260219303, 'maxScalePointMeters': [0.04473684210526316, -0.11449999999999999, 1.88], 'minScalePointMeters': [-0.04473684210526316, -0.14375, 1.888809523809524]}"
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.89,
+      "passed": false,
+      "metrics": {
+        "failure": "Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.16980949647704868, 'minScale': 0.14366468376760072, 'maxScale': 1.819307369741076, 'maxScalePointMeters': [0.026842105263157917, -0.11449999999999999, 1.888809523809524], 'minScalePointMeters': [-0.04473684210526316, -0.15349999999999997, 1.8976190476190475]}"
+      }
+    }
+  ],
+  "allPass": false
+}

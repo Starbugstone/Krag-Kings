@@ -1,0 +1,26 @@
+{
+  "status": "Actual native generation stopped before mutation/save at field-Jacobian gate; no rendered source",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "sourceSaved": false,
+  "rendered": false,
+  "guardExitCode": 2,
+  "blenderPid": 29072,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "recipeReceipt": {
+    "path": "benchmark/art/krag/v9n-macro-face-prepared.json",
+    "sha256": "46844f770c38b9e9acbff8daf89b3097ee58fc63dc52e27493a08c5351c3cdb2",
+    "bytes": 3372
+  },
+  "errorEvidence": "Traceback (most recent call last):\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9n_wip\\build_macro_face_v9n.py\", line 71, in <module>\n    metrics.update(envelope.jacobian_report(probe))\n                   ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^\n  File \"D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9n_wip\\macro_envelope.py\", line 81, in jacobian_report\n    raise RuntimeError('Broad envelope folds/collapses space or exceeds bounded scale: '+str({'minDet':float(det.min()),'minScale':float(sv.min()),'maxScale':float(sv.max())}))\nRuntimeError: Broad envelope folds/collapses space or exceeds bounded scale: {'minDet': 0.20273983880394303, 'minScale': 0.14626370338607678, 'maxScale': 20.581623060866356}\n\nError: script failed, file: 'D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9n_wip\\build_macro_face_v9n.py', exiting.\n",
+  "diagnosis": "Lateral widening used sign(x) with nonzero midline support, producing a discontinuity. The separately prepared smooth odd field then exposed an overly short optical blend in a whole-domain numerical sweep; both are corrected before a new native attempt.",
+  "sampledMemory": {
+    "peakPrivateMB": 749.0,
+    "minimumAvailableMB": 12612.0
+  },
+  "next": "v9na smooth odd support and45mm ocular transition; same actual geometry/field bounds"
+}

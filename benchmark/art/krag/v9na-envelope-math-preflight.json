@@ -1,0 +1,122 @@
+{
+  "status": "Numerical support-domain parameter sweep only; no saved source or visual proof",
+  "helperSha256": "40ae3a5b442aded3a96fb39c2242d3d28d95ba0bec7835d35383c388814b36e2",
+  "cachedEyeLandmarkSource": "benchmark\\art\\krag\\anatomy-study\\head-fit-v9f-measurements.json",
+  "cachedEyeLandmarksAreCodeFitNotCurrentSourceQuery": true,
+  "otherLandmarks": "LipZ1.8197 from retained tusk/lip report; nose height and globe radius intentionally bracket plausible current values, not an exact saved-source claim",
+  "supportBoundsMeters": [
+    [
+      -0.17,
+      -0.29,
+      1.695
+    ],
+    [
+      0.17,
+      0.1,
+      2.065
+    ]
+  ],
+  "pointsPerCase": 72283,
+  "cases": [
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.862,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.31937395182894673,
+        "minimumLocalScale": 0.3055382224984409,
+        "maximumLocalScale": 1.787403224143471,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.876,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.35507306909945174,
+        "minimumLocalScale": 0.3418965868054192,
+        "maximumLocalScale": 1.6704474183193452,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.014,
+      "noseZ": 1.89,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.413229464027447,
+        "minimumLocalScale": 0.3992607622287943,
+        "maximumLocalScale": 1.4789334112296257,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.862,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.31937395182894673,
+        "minimumLocalScale": 0.3055382224984409,
+        "maximumLocalScale": 1.7978878544549624,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.876,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.35507306909945174,
+        "minimumLocalScale": 0.31277409876253376,
+        "maximumLocalScale": 1.7038327955115893,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.019,
+      "noseZ": 1.89,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.4135931287702016,
+        "minimumLocalScale": 0.3845054958308007,
+        "maximumLocalScale": 1.4924082164157078,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.862,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.31937395182894673,
+        "minimumLocalScale": 0.2669735630926217,
+        "maximumLocalScale": 1.870922381107015,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.876,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.3531179791767855,
+        "minimumLocalScale": 0.27797378927745003,
+        "maximumLocalScale": 1.7049005964081916,
+        "sampleCount": 72283
+      }
+    },
+    {
+      "radiusMeters": 0.025,
+      "noseZ": 1.89,
+      "passed": true,
+      "metrics": {
+        "minimumJacobianDeterminant": 0.4135931287702016,
+        "minimumLocalScale": 0.36536071996989233,
+        "maximumLocalScale": 1.5010387931673361,
+        "sampleCount": 72283
+      }
+    }
+  ],
+  "allPass": true
+}

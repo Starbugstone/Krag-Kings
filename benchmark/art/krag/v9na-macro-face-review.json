@@ -1,0 +1,88 @@
+{
+  "status": "Actual coherent macro source and HeadSide reviewed; shorter nasal profile and stronger jaw, still failed concept likeness",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MacroFace_v9na_WIP.blend",
+    "sha256": "c9aec7f6678553a37dd48287a60a7df308e7b5620fd98af4d1026acc10d3d9b9",
+    "bytes": 111984169
+  },
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/macro-face-v9na.json",
+      "sha256": "75d2357b972817cc5482935b35d64c6a22cd414a4834ec40c0b43f4452af0c37",
+      "bytes": 10085
+    },
+    {
+      "path": "benchmark/art/krag/v9n-macro-face-failure.json",
+      "sha256": "bd6404823edc27c44e63a152fd6bb5bf4433a59fa068a075969f9276dd46222d",
+      "bytes": 1965
+    },
+    {
+      "path": "benchmark/art/krag/v9na-macro-face-prepared.json",
+      "sha256": "7f5d2c0d81ba36c50f99c77b010b30728282a0c61e963596dc25eab9d920cec7",
+      "bytes": 4537
+    },
+    {
+      "path": "benchmark/art/krag/v9na-envelope-math-preflight.json",
+      "sha256": "9d10953b583fbb22754341ab95dbc54b822ce5652b3dc23c0aa2353b16a666db",
+      "bytes": 3394
+    },
+    {
+      "path": "benchmark/art/krag/v9na-envelope-math-preflight-27mm-failure.json",
+      "sha256": "22ab43167e8033cd5fc049e5547bbae9d9fdb9ef66369ca48050d8caad53c4ff",
+      "bytes": 4020
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9na-macro-face.png",
+      "sha256": "489fa960f822a70de64ce812c5e538d3d5d183f7386a5ba8bd353d2c98854a8f",
+      "bytes": 1125935
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_HeadSide_v9na-macro-face.meta.json",
+      "sha256": "f8760039e1addf8d5a29c5ebaea039183f57f319cf3419b021bfd0ff2481b3b2",
+      "bytes": 575
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-macro-face-v9na-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 960.0,
+      "minimumAvailableMB": 12340.0
+    },
+    {
+      "path": "benchmark/local/krag-review-macro-face-v9na-HeadSide-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2045.0,
+      "minimumAvailableMB": 11492.0
+    }
+  ],
+  "actualSourceMetrics": {
+    "maximumHeadDisplacementMillimeters": 26.72261821150319,
+    "flippedHeadTriangles": 0,
+    "minimumLocalScale": 0.32604389737748407,
+    "maximumLocalScale": 1.4816131900917184,
+    "bodyBindActionsEquipmentExact": true
+  },
+  "improvements": [
+    "Nasal/upper-muzzle projection is visibly shorter than v9le",
+    "Mandibular front has stronger mass",
+    "Skin, oral and ocular shapes and facial pivots use one coherent field; actual globes retain rigid shape/contact"
+  ],
+  "failures": [
+    "Lower lip projects too far and reads as a pout; mandibular advance needs support below the lip",
+    "Brow profile remains a narrow point rather than a broad sloped supraorbital mass",
+    "Cheek/skull surface remains inflated and smooth relative to concept anatomical planes",
+    "Short tusk eruption remains deferred; retained v9le crowns are buried",
+    "Cowl still has regular ledges and stiff rear ends"
+  ],
+  "notRendered": [
+    "Head",
+    "OpenMouth",
+    "OpenProfile",
+    "Blink"
+  ],
+  "boundary": "Released after requested source/HeadSide for root integration work; further portraits/expressions need a new queued slot",
+  "sharedAssetsChanged": false
+}

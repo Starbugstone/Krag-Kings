@@ -1,0 +1,112 @@
+{
+  "status": "Prepared corrected smooth macro envelope; numerical parameter sweep passes, no native source yet",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "inputChoice": "Retain actual v9le chin and complete source; exclude rejected v9lfa skin-following crown changes",
+  "reference": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+  "aim": [
+    "Compress excessive nasal/upper-muzzle projection",
+    "Support broad mandibular front and continuous supraorbital mass",
+    "Move connected skin, ocular/oral surfaces, shape targets and facial pivots coherently",
+    "Preserve body bind/actions, cowl/equipment and shared engine assets"
+  ],
+  "tuningNotCanon": {
+    "nasalFieldRecessionMeters": 0.025,
+    "upperMuzzleFieldRecessionMeters": 0.007,
+    "broadChinFieldAdvanceMeters": 0.017,
+    "pairedBrowFieldAdvanceMeters": 0.0085,
+    "actualCombinedDisplacementBoundMeters": 0.035,
+    "ocularTransitionWidthMeters": 0.045
+  },
+  "gates": [
+    "Actual globe geometry bounds establish moving rigid ocular neighborhoods; lids share the same field",
+    "Actual head surface has no newly flipped/collapsed triangles",
+    "Sampled field Jacobian preserves positive volume and bounded scale",
+    "Complete body bind/action curves and unrelated mesh/shape coordinates fingerprint exact"
+  ],
+  "reviewOrder": [
+    "HeadSide first; stop if macro silhouette fails",
+    "Head portrait",
+    "Serious OpenMouth and OpenProfile",
+    "Blink"
+  ],
+  "knownDeferred": [
+    "Short tusk emergence after face envelope is coherent",
+    "Normal dental/gingival/tongue appearance",
+    "Cowl returned-fold construction",
+    "Final facial material relief and runtime bake",
+    "IronJaw replacement/exclusion"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope_v9na.py",
+      "sha256": "40ae3a5b442aded3a96fb39c2242d3d28d95ba0bec7835d35383c388814b36e2",
+      "bytes": 5326
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/build_macro_face_v9na.py",
+      "sha256": "f5a40c94bd240c8a01e50ffe0ab7920c15d90015cee3a1e54503c6bdef710814",
+      "bytes": 8772
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/preflight_envelope_v9na.py",
+      "sha256": "3f2729894f02c2581366c1b17f33ebd6e78778de18ef4edaf797a0797bc4af4a",
+      "bytes": 1881
+    },
+    {
+      "path": "benchmark/tools/krag/build-macro-face-v9na-job.json",
+      "sha256": "804d0d10cd50e004293cc6728756fb2763fe317fd93e6f0cc47332ebb1163fc6",
+      "bytes": 613
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9na-Blink.json",
+      "sha256": "76b844ef572dfede555521d06d6a7b6c1c4a4ec19e6c0dabdf03008d0f98e3f4",
+      "bytes": 1013
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9na-Head.json",
+      "sha256": "d29c9de81ba030676c93a6fbd1a5ebc4e4963c9ff3a08e0c60e781132136f43f",
+      "bytes": 929
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9na-HeadSide.json",
+      "sha256": "946497c6c9dddf318563ab778d1149c591cdffa064dd02fda5f30b15821f6a72",
+      "bytes": 945
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9na-OpenMouth.json",
+      "sha256": "53f6ccad5da33b9dd7094d5cbe123b811f0834c8aab07900a1b33ee8e37bc00f",
+      "bytes": 1026
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9na-OpenProfile.json",
+      "sha256": "e32a36939d7dd6e734ab532215a6c0c0775e479764dd36e5fbc70943498a0cf2",
+      "bytes": 1036
+    }
+  ],
+  "priorFailure": {
+    "path": "benchmark/art/krag/v9n-macro-face-failure.json",
+    "sha256": "bd6404823edc27c44e63a152fd6bb5bf4433a59fa068a075969f9276dd46222d",
+    "bytes": 1965
+  },
+  "numericalPreflight": {
+    "path": "benchmark/art/krag/v9na-envelope-math-preflight.json",
+    "sha256": "9d10953b583fbb22754341ab95dbc54b822ce5652b3dc23c0aa2353b16a666db",
+    "bytes": 3394
+  },
+  "priorNumericalFailure": {
+    "path": "benchmark/art/krag/v9na-envelope-math-preflight-27mm-failure.json",
+    "sha256": "22ab43167e8033cd5fc049e5547bbae9d9fdb9ef66369ca48050d8caad53c4ff",
+    "bytes": 4020
+  },
+  "corrections": [
+    "Smooth odd lateral support and smooth absolute-X field instead of sign discontinuity",
+    "45mm optical neighborhood transition instead of27mm; same scale/displacement safety bounds",
+    "Error reports include actual worst field sample positions"
+  ]
+}

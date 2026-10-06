@@ -1,0 +1,18 @@
+{
+  "name": "krag-build-macro-face-v9na",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\v9n_wip\\build_macro_face_v9na.py"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-macro-face-v9na.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-build-macro-face-v9na.stderr.log",
+  "maxPrivateGB": 4,
+  "minAvailableGB": 8.5
+}

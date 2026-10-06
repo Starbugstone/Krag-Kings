@@ -1,0 +1,86 @@
+{
+  "status": "Prepared coherent macro facial envelope; not generated",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MandibleTusks_v9le_WIP.blend",
+    "sha256": "6fb2ef32e092b2924359dc9857727606b35e41d9fe8ae5497c61c807308115a7",
+    "bytes": 111780932
+  },
+  "inputChoice": "Retain actual v9le chin and complete source; exclude rejected v9lfa skin-following crown changes",
+  "reference": "krag-kings-design/concept-art/01-krag-character-sheet.png",
+  "aim": [
+    "Compress excessive nasal/upper-muzzle projection",
+    "Support broad mandibular front and continuous supraorbital mass",
+    "Move connected skin, ocular/oral surfaces, shape targets and facial pivots coherently",
+    "Preserve body bind/actions, cowl/equipment and shared engine assets"
+  ],
+  "tuningNotCanon": {
+    "nasalFieldRecessionMeters": 0.025,
+    "upperMuzzleFieldRecessionMeters": 0.007,
+    "broadChinFieldAdvanceMeters": 0.017,
+    "pairedBrowFieldAdvanceMeters": 0.0085,
+    "actualCombinedDisplacementBoundMeters": 0.035
+  },
+  "gates": [
+    "Actual globe geometry bounds establish moving rigid ocular neighborhoods; lids share the same field",
+    "Actual head surface has no newly flipped/collapsed triangles",
+    "Sampled field Jacobian preserves positive volume and bounded scale",
+    "Complete body bind/action curves and unrelated mesh/shape coordinates fingerprint exact"
+  ],
+  "reviewOrder": [
+    "HeadSide first; stop if macro silhouette fails",
+    "Head portrait",
+    "Serious OpenMouth and OpenProfile",
+    "Blink"
+  ],
+  "knownDeferred": [
+    "Short tusk emergence after face envelope is coherent",
+    "Normal dental/gingival/tongue appearance",
+    "Cowl returned-fold construction",
+    "Final facial material relief and runtime bake",
+    "IronJaw replacement/exclusion"
+  ],
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9n_wip/macro_envelope.py",
+      "sha256": "f6a8bf68f830ccfa8eb3b0469686ef26b7b45e957ae28072e447c3c44d03bca4",
+      "bytes": 5193
+    },
+    {
+      "path": "benchmark/tools/krag/v9n_wip/build_macro_face_v9n.py",
+      "sha256": "4c9b26a67c9c8a54e9db31c543679ee70e50551798ffaf0e9941fffa7f628bd2",
+      "bytes": 8758
+    },
+    {
+      "path": "benchmark/tools/krag/build-macro-face-v9n-job.json",
+      "sha256": "c7b9604ff98fd32058f7e66de1475caa6c063410438b8369e82dca832a02c36b",
+      "bytes": 609
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9n-Blink.json",
+      "sha256": "17efb90840269ac485b3692aa1ad0b17046b546688cdbf0adf901f9296dccfc3",
+      "bytes": 1008
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9n-Head.json",
+      "sha256": "08212fd471b55883a825c080fcadadedf05ef2b9d7a03d7d7a64fbdc222352b7",
+      "bytes": 924
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9n-HeadSide.json",
+      "sha256": "121843d9176532d75893bbb314dbbe2ba77d47d95758017e6b0ddf033d3d1891",
+      "bytes": 940
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9n-OpenMouth.json",
+      "sha256": "59540b54762c7aa7de567e2ef92e95fb86bf726e817c54edc1b327de38c07cb6",
+      "bytes": 1021
+    },
+    {
+      "path": "benchmark/tools/krag/review-macro-face-v9n-OpenProfile.json",
+      "sha256": "2d57096961505f4c2917528ed0f93b102fcd469d3af0be49899c44cdead30f54",
+      "bytes": 1031
+    }
+  ]
+}
