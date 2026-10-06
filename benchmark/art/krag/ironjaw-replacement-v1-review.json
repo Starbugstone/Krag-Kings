@@ -1,0 +1,67 @@
+{
+  "status": "Actual semantic replacement and two reviewed views; compatibility and art FAIL",
+  "source": {
+    "path": "benchmark/art/krag/Krag_IronJaw_Replacement_v1_WIP.blend",
+    "sha256": "20c48d2e23c112ebca5b855247eca3e3aea630b1c463e8f99d4c4594adb5f031"
+  },
+  "artisticAcceptance": false,
+  "runtimeReady": false,
+  "sharedPromotion": false,
+  "jobs": [
+    {
+      "job": "krag-ironjaw-v1-source",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 1157.0,
+      "minimumAvailableMB": 11694.0
+    },
+    {
+      "job": "krag-ironjaw-v1-ClosedFront",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2171.0,
+      "minimumAvailableMB": 10570.0
+    },
+    {
+      "job": "krag-ironjaw-v1-OpenRight",
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2230.0,
+      "minimumAvailableMB": 10687.0
+    }
+  ],
+  "views": [
+    {
+      "name": "ClosedFront",
+      "path": "benchmark/art/krag/renders/Krag_IronJaw_Replacement_v1_ClosedFront.png",
+      "sha256": "25b8ec9dccfc0118a4dfba9d432eb7f72d2e43790c7d369301539091da4b99bc",
+      "sourceSha256": "20c48d2e23c112ebca5b855247eca3e3aea630b1c463e8f99d4c4594adb5f031"
+    },
+    {
+      "name": "OpenRight",
+      "path": "benchmark/art/krag/renders/Krag_IronJaw_Replacement_v1_OpenRight.png",
+      "sha256": "4adb1cfcb8b102c06ab1f8cd5c8b0e5e3ce6c955e7e44fd49ee538758fc63124",
+      "sourceSha256": "20c48d2e23c112ebca5b855247eca3e3aea630b1c463e8f99d4c4594adb5f031"
+    }
+  ],
+  "verifiedConstruction": [
+    "Natural geometry/weights/bind/actions retained exactly.",
+    "Actual external mandibular and lower oral-floor polygons removed from alternate Head.",
+    "Lower natural gums/teeth and old natural tusks removed from alternate oral and Face surfaces.",
+    "Bearing cylinders aligned with actual Jaw X hinge axis.",
+    "Opposite-side camera exposes the mechanism without pauldron occlusion."
+  ],
+  "failures": [
+    "ClosedFront: organic-derived lip-shaped metal rim occludes lower crowns.",
+    "ClosedFront: casing central bulge visibly protrudes through the front shield.",
+    "OpenRight: retained upper-cheek attachment and rigid casing diverge, leaving angular open boundary; flexible attachment required.",
+    "Side cheek plates are thin, smooth and lack the forged construction/finish of concept07.",
+    "Natural normal mouth, lid motion, buried tusks and general likeness remain unaccepted."
+  ],
+  "next": [
+    "Build a fitted flexible cuff from the actual retained attachment loop to the moving casing, preserving skin-side morph/weight continuity.",
+    "Reshape casing upper rim below dental crowns and remove organic lip bulges; place shield outside measured casing surface.",
+    "Improve natural upper-lip release and seated visible oral anatomy with actual closed/open front/right review.",
+    "Keep all variant edits isolated until anatomy/motion/art and eventual runtime checks pass."
+  ]
+}

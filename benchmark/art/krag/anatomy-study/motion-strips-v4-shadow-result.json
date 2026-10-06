@@ -1,0 +1,17 @@
+{
+  "status": "Actual matched view confirms long floor strips are Workbench shadow artifacts, not evidence of stretched character geometry",
+  "sourceSha256": "84822444a021194fc47e0360bfffc875c18687720bb8b8923588e486b9900607",
+  "sourceChanged": false,
+  "image": {
+    "path": "benchmark/art/krag/renders/Krag_v4_Walk_front_f1_NoWorkbenchShadows.png",
+    "sha256": "07ac95389b608d7d0c3a0f3a06358bb7143e1638083d62e0cce1b4a5b677e565"
+  },
+  "baseline": "benchmark/art/animation/krag-human-motion-v4/motion-review/Walk/front/0000.png",
+  "baselineSha256": "344c790e7df69ae82d7a026485502266b0b7b9e8c99973ed0140b8798d3225d4",
+  "onlyIntentionalRenderDifference": "Workbench show_shadows=False",
+  "guardExitCode": 0,
+  "nativeExitCode": 0,
+  "peakPrivateMB": 1508.0,
+  "minimumAvailableMB": 11619.0,
+  "result": "The long diagonal floor strip disappears. No source mesh fix indicated by this artifact."
+}

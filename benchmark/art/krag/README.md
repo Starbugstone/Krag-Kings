@@ -383,3 +383,12 @@ The semantic IronJaw preparation identifies a closed 368-vertex attachment bound
 The read-only `anatomy-study/motion-strips-v4-attribution.json` samples the actual v4 source in Walk frames1/15. Neither frame contains a visible mesh edge growing by more than150mm to a length above200mm. This does not establish the floor-reaching strips as a character defect; the Workbench shadow projection is a plausible cause pending one matched shadow-disabled frame. The report also records all22 hand/finger/thumb rest bones for root-owned relaxed-hand authoring. No source geometry or actions changed.
 
 `ironjaw_wip/build_replacement_v1.py` and its jobs are prepared, not yet executed. They retain full Natural surfaces and create explicit alternate head/ocular/oral surfaces, a fitted steel casing and lower liner, coaxial cheek bearings, forged plates and a socketed dental/tusk assembly. The opposite-side review camera avoids the pauldron occlusion. All fit, opening, material and concept checks remain pending until actual generation and inspection.
+
+
+## Actual IronJaw replacement v1: semantic removal works; fit still fails
+
+`Krag_IronJaw_Replacement_v1_WIP.blend` now exists (SHA20c48d2e23c112ebca5b855247eca3e3aea630b1c463e8f99d4c4594adb5f031), with actual ClosedFront and unobscured OpenRight views. All three jobs passed guard/native0. The complete Natural geometry, weights, bind and actions stay exact. Alternate surfaces remove8,220 Head polygons,772 old tusk/Face polygons and7,744 lower dental/gum polygons; the explicit lower lining is separate. The new34-part mechanism has19,958 vertices and correctly oriented coaxial bearings.
+
+**Compatibility still fails:** the inherited metal lip rim hides crowns, a casing bump protrudes through the front shield, and the rigid mechanism pulls away from the retained cheek boundary when opening. The next source needs a real flexible attachment, a shaped low casing rim and measured shield clearance. This actual source is not exported or accepted. `ironjaw-replacement-v1-review.json` retains the findings and hashes.
+
+The matched shadow-disabled v4 Walk frame separately confirms the long floor strips were Workbench shadow artifacts. `anatomy-study/motion-strips-v4-shadow-result.json` records the unchanged source/camera/pose comparison; no character geometry fix is indicated by those strips.

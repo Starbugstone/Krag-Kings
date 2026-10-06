@@ -1,0 +1,1551 @@
+{
+  "status": "Actual semantic mechanical replacement source; visual clearance unreviewed",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_LandmarkRelief_v9o_WIP.blend",
+    "sha256": "93661a93f12ab2510bed8d8746452b14573edc71b61b943c53f1c36db2d1bc86"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_IronJaw_Replacement_v1_WIP.blend",
+    "sha256": "20c48d2e23c112ebca5b855247eca3e3aea630b1c463e8f99d4c4594adb5f031"
+  },
+  "reference": "krag-kings-design/concept-art/07-crusher-claw-and-metal-jaw-sheet.png",
+  "naturalGeometryWeightsBindActionsFingerprint": "0f7180d46590e0fff399f264360e83dd432ee2abb8a09863f4bc93216990888c",
+  "naturalSourceFileUnchanged": true,
+  "partition": {
+    "status": "Prepared semantic partition; requires fitted replacement mesh and closed/open clearance review",
+    "method": "External mandibular face set24 plus oral floor nearer lower rim along actual set7 edges",
+    "removedFaces": 8220,
+    "removedExternalMandibleFaces": 6624,
+    "removedOralFloorFaces": 1596,
+    "retainedUpperLipNoseFaces": 15968,
+    "interfaceEdges": [
+      [
+        3141,
+        13835
+      ],
+      [
+        13835,
+        13836
+      ],
+      [
+        13836,
+        13837
+      ],
+      [
+        1114,
+        13837
+      ],
+      [
+        983,
+        20441
+      ],
+      [
+        20441,
+        20442
+      ],
+      [
+        20442,
+        20443
+      ],
+      [
+        984,
+        20443
+      ],
+      [
+        1115,
+        14293
+      ],
+      [
+        14292,
+        14293
+      ],
+      [
+        14291,
+        14292
+      ],
+      [
+        982,
+        14291
+      ],
+      [
+        984,
+        4333
+      ],
+      [
+        4332,
+        4333
+      ],
+      [
+        4331,
+        4332
+      ],
+      [
+        985,
+        4331
+      ],
+      [
+        982,
+        18910
+      ],
+      [
+        983,
+        18908
+      ],
+      [
+        18908,
+        18909
+      ],
+      [
+        18909,
+        18910
+      ],
+      [
+        323,
+        9613
+      ],
+      [
+        9612,
+        9613
+      ],
+      [
+        9611,
+        9612
+      ],
+      [
+        612,
+        9611
+      ],
+      [
+        985,
+        5650
+      ],
+      [
+        5649,
+        5650
+      ],
+      [
+        5648,
+        5649
+      ],
+      [
+        986,
+        5648
+      ],
+      [
+        759,
+        18950
+      ],
+      [
+        18950,
+        18951
+      ],
+      [
+        18951,
+        18952
+      ],
+      [
+        755,
+        18952
+      ],
+      [
+        755,
+        6278
+      ],
+      [
+        6278,
+        6279
+      ],
+      [
+        6279,
+        6280
+      ],
+      [
+        754,
+        6280
+      ],
+      [
+        987,
+        7454
+      ],
+      [
+        7454,
+        7455
+      ],
+      [
+        7455,
+        7456
+      ],
+      [
+        986,
+        7456
+      ],
+      [
+        754,
+        5945
+      ],
+      [
+        5945,
+        5946
+      ],
+      [
+        5946,
+        5947
+      ],
+      [
+        290,
+        5947
+      ],
+      [
+        611,
+        22153
+      ],
+      [
+        22152,
+        22153
+      ],
+      [
+        22151,
+        22152
+      ],
+      [
+        703,
+        22151
+      ],
+      [
+        759,
+        20729
+      ],
+      [
+        758,
+        20731
+      ],
+      [
+        20730,
+        20731
+      ],
+      [
+        20729,
+        20730
+      ],
+      [
+        988,
+        9275
+      ],
+      [
+        9275,
+        9276
+      ],
+      [
+        9276,
+        9277
+      ],
+      [
+        987,
+        9277
+      ],
+      [
+        703,
+        22268
+      ],
+      [
+        612,
+        22270
+      ],
+      [
+        22269,
+        22270
+      ],
+      [
+        22268,
+        22269
+      ],
+      [
+        758,
+        15605
+      ],
+      [
+        834,
+        15607
+      ],
+      [
+        15606,
+        15607
+      ],
+      [
+        15605,
+        15606
+      ],
+      [
+        757,
+        12278
+      ],
+      [
+        756,
+        12280
+      ],
+      [
+        12279,
+        12280
+      ],
+      [
+        12278,
+        12279
+      ],
+      [
+        988,
+        9314
+      ],
+      [
+        467,
+        9316
+      ],
+      [
+        9315,
+        9316
+      ],
+      [
+        9314,
+        9315
+      ],
+      [
+        757,
+        11159
+      ],
+      [
+        11159,
+        11160
+      ],
+      [
+        11160,
+        11161
+      ],
+      [
+        834,
+        11161
+      ],
+      [
+        323,
+        7316
+      ],
+      [
+        7316,
+        7317
+      ],
+      [
+        7317,
+        7318
+      ],
+      [
+        467,
+        7318
+      ],
+      [
+        756,
+        8315
+      ],
+      [
+        8315,
+        8316
+      ],
+      [
+        8316,
+        8317
+      ],
+      [
+        760,
+        8317
+      ],
+      [
+        375,
+        20954
+      ],
+      [
+        20954,
+        20955
+      ],
+      [
+        20955,
+        20956
+      ],
+      [
+        760,
+        20956
+      ],
+      [
+        407,
+        20567
+      ],
+      [
+        20567,
+        20568
+      ],
+      [
+        20568,
+        20569
+      ],
+      [
+        375,
+        20569
+      ],
+      [
+        407,
+        20909
+      ],
+      [
+        947,
+        20911
+      ],
+      [
+        20910,
+        20911
+      ],
+      [
+        20909,
+        20910
+      ],
+      [
+        242,
+        6838
+      ],
+      [
+        6837,
+        6838
+      ],
+      [
+        6836,
+        6837
+      ],
+      [
+        251,
+        6836
+      ],
+      [
+        242,
+        15724
+      ],
+      [
+        15723,
+        15724
+      ],
+      [
+        15722,
+        15723
+      ],
+      [
+        374,
+        15722
+      ],
+      [
+        351,
+        21860
+      ],
+      [
+        21860,
+        21861
+      ],
+      [
+        21861,
+        21862
+      ],
+      [
+        374,
+        21862
+      ],
+      [
+        27985,
+        27988
+      ],
+      [
+        27987,
+        27988
+      ],
+      [
+        27987,
+        27990
+      ],
+      [
+        5111,
+        27985
+      ],
+      [
+        6807,
+        27990
+      ],
+      [
+        6806,
+        6807
+      ],
+      [
+        251,
+        6806
+      ],
+      [
+        28501,
+        28502
+      ],
+      [
+        28502,
+        28503
+      ],
+      [
+        12467,
+        28501
+      ],
+      [
+        6292,
+        28503
+      ],
+      [
+        28512,
+        28515
+      ],
+      [
+        28515,
+        28518
+      ],
+      [
+        7765,
+        28512
+      ],
+      [
+        15761,
+        28518
+      ],
+      [
+        351,
+        21896
+      ],
+      [
+        947,
+        21898
+      ],
+      [
+        21897,
+        21898
+      ],
+      [
+        21896,
+        21897
+      ],
+      [
+        29221,
+        29222
+      ],
+      [
+        29222,
+        29223
+      ],
+      [
+        15761,
+        29221
+      ],
+      [
+        12467,
+        29223
+      ],
+      [
+        29302,
+        29305
+      ],
+      [
+        29305,
+        29308
+      ],
+      [
+        16769,
+        29302
+      ],
+      [
+        5111,
+        29308
+      ],
+      [
+        29765,
+        29766
+      ],
+      [
+        29766,
+        29767
+      ],
+      [
+        10361,
+        29767
+      ],
+      [
+        7765,
+        29765
+      ],
+      [
+        30488,
+        30491
+      ],
+      [
+        30491,
+        30494
+      ],
+      [
+        10361,
+        30488
+      ],
+      [
+        16769,
+        30494
+      ],
+      [
+        31344,
+        31345
+      ],
+      [
+        31345,
+        31346
+      ],
+      [
+        6292,
+        31344
+      ],
+      [
+        7153,
+        31346
+      ],
+      [
+        1114,
+        7531
+      ],
+      [
+        7530,
+        7531
+      ],
+      [
+        7529,
+        7530
+      ],
+      [
+        1115,
+        7529
+      ],
+      [
+        964,
+        10145
+      ],
+      [
+        611,
+        10147
+      ],
+      [
+        10146,
+        10147
+      ],
+      [
+        10145,
+        10146
+      ],
+      [
+        964,
+        10073
+      ],
+      [
+        10073,
+        10074
+      ],
+      [
+        10074,
+        10075
+      ],
+      [
+        290,
+        10075
+      ],
+      [
+        2655,
+        18113
+      ],
+      [
+        18113,
+        18114
+      ],
+      [
+        18114,
+        18115
+      ],
+      [
+        3141,
+        18115
+      ],
+      [
+        2525,
+        15433
+      ],
+      [
+        2526,
+        15431
+      ],
+      [
+        15431,
+        15432
+      ],
+      [
+        15432,
+        15433
+      ],
+      [
+        2524,
+        8429
+      ],
+      [
+        8429,
+        8430
+      ],
+      [
+        8430,
+        8431
+      ],
+      [
+        2656,
+        8431
+      ],
+      [
+        2526,
+        18769
+      ],
+      [
+        2527,
+        18767
+      ],
+      [
+        18767,
+        18768
+      ],
+      [
+        18768,
+        18769
+      ],
+      [
+        2525,
+        12215
+      ],
+      [
+        2524,
+        12217
+      ],
+      [
+        12216,
+        12217
+      ],
+      [
+        12215,
+        12216
+      ],
+      [
+        2154,
+        4850
+      ],
+      [
+        4850,
+        4851
+      ],
+      [
+        4851,
+        4852
+      ],
+      [
+        1865,
+        4852
+      ],
+      [
+        2527,
+        18152
+      ],
+      [
+        2528,
+        18154
+      ],
+      [
+        18153,
+        18154
+      ],
+      [
+        18152,
+        18153
+      ],
+      [
+        2301,
+        11819
+      ],
+      [
+        2297,
+        11821
+      ],
+      [
+        11820,
+        11821
+      ],
+      [
+        11819,
+        11820
+      ],
+      [
+        2296,
+        4354
+      ],
+      [
+        4353,
+        4354
+      ],
+      [
+        4352,
+        4353
+      ],
+      [
+        2297,
+        4352
+      ],
+      [
+        2528,
+        4540
+      ],
+      [
+        4539,
+        4540
+      ],
+      [
+        4538,
+        4539
+      ],
+      [
+        2529,
+        4538
+      ],
+      [
+        1832,
+        3385
+      ],
+      [
+        3384,
+        3385
+      ],
+      [
+        3383,
+        3384
+      ],
+      [
+        2296,
+        3383
+      ],
+      [
+        2245,
+        12848
+      ],
+      [
+        12848,
+        12849
+      ],
+      [
+        12849,
+        12850
+      ],
+      [
+        2153,
+        12850
+      ],
+      [
+        2301,
+        11999
+      ],
+      [
+        11999,
+        12000
+      ],
+      [
+        12000,
+        12001
+      ],
+      [
+        2300,
+        12001
+      ],
+      [
+        2530,
+        4901
+      ],
+      [
+        2529,
+        4903
+      ],
+      [
+        4902,
+        4903
+      ],
+      [
+        4901,
+        4902
+      ],
+      [
+        2245,
+        13220
+      ],
+      [
+        13220,
+        13221
+      ],
+      [
+        13221,
+        13222
+      ],
+      [
+        2154,
+        13222
+      ],
+      [
+        2300,
+        8663
+      ],
+      [
+        8663,
+        8664
+      ],
+      [
+        8664,
+        8665
+      ],
+      [
+        2376,
+        8665
+      ],
+      [
+        2299,
+        7496
+      ],
+      [
+        7496,
+        7497
+      ],
+      [
+        7497,
+        7498
+      ],
+      [
+        2298,
+        7498
+      ],
+      [
+        2530,
+        5192
+      ],
+      [
+        5192,
+        5193
+      ],
+      [
+        5193,
+        5194
+      ],
+      [
+        2009,
+        5194
+      ],
+      [
+        2299,
+        8270
+      ],
+      [
+        2376,
+        8272
+      ],
+      [
+        8271,
+        8272
+      ],
+      [
+        8270,
+        8271
+      ],
+      [
+        2009,
+        4145
+      ],
+      [
+        4145,
+        4146
+      ],
+      [
+        4146,
+        4147
+      ],
+      [
+        1865,
+        4147
+      ],
+      [
+        2302,
+        14969
+      ],
+      [
+        14969,
+        14970
+      ],
+      [
+        14970,
+        14971
+      ],
+      [
+        2298,
+        14971
+      ],
+      [
+        2302,
+        15077
+      ],
+      [
+        15077,
+        15078
+      ],
+      [
+        15078,
+        15079
+      ],
+      [
+        1917,
+        15079
+      ],
+      [
+        1917,
+        12352
+      ],
+      [
+        12351,
+        12352
+      ],
+      [
+        12350,
+        12351
+      ],
+      [
+        1949,
+        12350
+      ],
+      [
+        1949,
+        13628
+      ],
+      [
+        13628,
+        13629
+      ],
+      [
+        13629,
+        13630
+      ],
+      [
+        2489,
+        13630
+      ],
+      [
+        1793,
+        3518
+      ],
+      [
+        3518,
+        3519
+      ],
+      [
+        3519,
+        3520
+      ],
+      [
+        1784,
+        3520
+      ],
+      [
+        1916,
+        9815
+      ],
+      [
+        9815,
+        9816
+      ],
+      [
+        9816,
+        9817
+      ],
+      [
+        1784,
+        9817
+      ],
+      [
+        1893,
+        12749
+      ],
+      [
+        1916,
+        12751
+      ],
+      [
+        12750,
+        12751
+      ],
+      [
+        12749,
+        12750
+      ],
+      [
+        40339,
+        40340
+      ],
+      [
+        40339,
+        40342
+      ],
+      [
+        40341,
+        40342
+      ],
+      [
+        1793,
+        21532
+      ],
+      [
+        21531,
+        21532
+      ],
+      [
+        21531,
+        40340
+      ],
+      [
+        18631,
+        40341
+      ],
+      [
+        40853,
+        40856
+      ],
+      [
+        40856,
+        40859
+      ],
+      [
+        7427,
+        40853
+      ],
+      [
+        4360,
+        40859
+      ],
+      [
+        40868,
+        40869
+      ],
+      [
+        40869,
+        40870
+      ],
+      [
+        8453,
+        40870
+      ],
+      [
+        14459,
+        40868
+      ],
+      [
+        2489,
+        10990
+      ],
+      [
+        1893,
+        10988
+      ],
+      [
+        10988,
+        10989
+      ],
+      [
+        10989,
+        10990
+      ],
+      [
+        41573,
+        41576
+      ],
+      [
+        41576,
+        41579
+      ],
+      [
+        8453,
+        41573
+      ],
+      [
+        7427,
+        41579
+      ],
+      [
+        41654,
+        41655
+      ],
+      [
+        41655,
+        41656
+      ],
+      [
+        10646,
+        41654
+      ],
+      [
+        18631,
+        41656
+      ],
+      [
+        42111,
+        42112
+      ],
+      [
+        42112,
+        42113
+      ],
+      [
+        14459,
+        42111
+      ],
+      [
+        6137,
+        42113
+      ],
+      [
+        42840,
+        42843
+      ],
+      [
+        42843,
+        42846
+      ],
+      [
+        10646,
+        42840
+      ],
+      [
+        6137,
+        42846
+      ],
+      [
+        43702,
+        43703
+      ],
+      [
+        43703,
+        43704
+      ],
+      [
+        4117,
+        43704
+      ],
+      [
+        4360,
+        43702
+      ],
+      [
+        2656,
+        18133
+      ],
+      [
+        18132,
+        18133
+      ],
+      [
+        18131,
+        18132
+      ],
+      [
+        2655,
+        18131
+      ],
+      [
+        2506,
+        5348
+      ],
+      [
+        5348,
+        5349
+      ],
+      [
+        5349,
+        5350
+      ],
+      [
+        2153,
+        5350
+      ],
+      [
+        1832,
+        5572
+      ],
+      [
+        5571,
+        5572
+      ],
+      [
+        5570,
+        5571
+      ],
+      [
+        2506,
+        5570
+      ],
+      [
+        3192,
+        9706
+      ],
+      [
+        3192,
+        10195
+      ],
+      [
+        47446,
+        47447
+      ],
+      [
+        47447,
+        47448
+      ],
+      [
+        7153,
+        47448
+      ],
+      [
+        12577,
+        47446
+      ],
+      [
+        47451,
+        47454
+      ],
+      [
+        47454,
+        47457
+      ],
+      [
+        12577,
+        47451
+      ],
+      [
+        9706,
+        47457
+      ],
+      [
+        47464,
+        47465
+      ],
+      [
+        47465,
+        47466
+      ],
+      [
+        10195,
+        47466
+      ],
+      [
+        12811,
+        47464
+      ],
+      [
+        47469,
+        47472
+      ],
+      [
+        47472,
+        47475
+      ],
+      [
+        12811,
+        47469
+      ],
+      [
+        4117,
+        47475
+      ]
+    ],
+    "interfaceSourceBounds": [
+      [
+        -0.12703905999660492,
+        -0.15924009680747986,
+        1.7561649084091187
+      ],
+      [
+        0.12721991539001465,
+        -0.03580203652381897,
+        1.8589314222335815
+      ]
+    ],
+    "coordinateCutoffUsed": false,
+    "naturalSourceMutated": false,
+    "stillRequired": [
+      "Generate alternate head while preserving full natural master",
+      "Fit hinge bearings to actual Jaw pivot and retained attachment boundary",
+      "Replace lower dental/gingival assembly while retaining upper teeth and tongue",
+      "Mount selected tusks in mechanical assembly without organic chin overlap",
+      "Actual closed/open and side clearance renders plus intersection checks"
+    ]
+  },
+  "alternates": {
+    "Head_IronJaw": {
+      "removedFaces": 8220,
+      "retainedFaces": 43572,
+      "retainedVertexCount": 51794,
+      "shapeCoordinateHashes": {
+        "BasisMesh": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Basis": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Blink_L": "a96e3b43b1b5dbc8ee77d3a71008f7be2698455b555d2091c824ddbe9a71d9e3",
+        "Blink_R": "d0e32d80114a8b57e5aa755d6986bc354593caed5bf24226ae26c1579d57cd4c",
+        "Squint_L": "4bf1f830662852e476e5be8617ae07ac79e41e8631177b6f12f0f232b717304d",
+        "Squint_R": "84d6690590cb7f05ebb030f6828fbd0a95e67481b959c98adde30de6aeab449f",
+        "BrowRaise_L": "c3561a85af53ac17b994affb490a769018d57fb9650e4e4caef0ed7b8e4d9fa8",
+        "BrowRaise_R": "3706e5cce486c470faa6bb0c5a3dbeedda56429292dcaa171fb5249da47bf336",
+        "BrowLower_L": "6cdf83bdc0d6d1eb4dcbcb51dc1dd8fcc700a337c213bc4cefc624bbb05a6280",
+        "BrowLower_R": "d7505873d468c605928540b967e0f546ea2982f6be0f5c0f2e2a67b63d0679af",
+        "Smile_L": "f699faff0dc98f942152091a27d08cd5f321076696e38ef52b4e2314aa6ab948",
+        "Smile_R": "88bf86be0f0937cf0eab76e3b5d2a3e34d34e61120558991ca0ee4e484fe94f5",
+        "Frown_L": "5101fa802f2abdea92f5b0ddedcc86edd66cd5abcbfc5f2e7f1b361c9207dbc0",
+        "Frown_R": "4d07160b6a0075b2593042987feee54fff0095c93839dda016d8ab96b78a2a05",
+        "JawOpen": "4fdfb194a90d7ec8aede633d1ba4c13824617748d8626518390c3c34ae812a95",
+        "LipPress": "9d04240a7c562709028a5ad9bf64c45cf1c982130e345d526a11ca64c69ecceb",
+        "Snarl_L": "faca06e0254480fd5bb2fec3ebc0a91cb3addc997efc106209c6b1c35190ada5",
+        "Snarl_R": "eca6e0a17502b6754da114762e1e52cc5f6a882e1c0935ace99b898b00c7b744",
+        "NoseWrinkle": "cd8965747f12098d62a33022cf0a164ae42751797c63786d23411333f0e7ae47",
+        "Corrective_ShoulderRaise_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ShoulderRaise_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ElbowFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ElbowFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_HipFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_HipFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_KneeFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_KneeFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3"
+      },
+      "originalNaturalMutated": false,
+      "unusedVerticesKeptForEditableIdentity": true
+    },
+    "Face_IronJaw": {
+      "removedFaces": 772,
+      "retainedFaces": 7552,
+      "retainedVertexCount": 8372,
+      "shapeCoordinateHashes": {
+        "BasisMesh": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Basis": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Blink_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Blink_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Squint_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Squint_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "BrowRaise_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "BrowRaise_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "BrowLower_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "BrowLower_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Smile_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Smile_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Frown_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Frown_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "JawOpen": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "LipPress": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Snarl_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Snarl_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "NoseWrinkle": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_ShoulderRaise_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_ShoulderRaise_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_ElbowFlex_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_ElbowFlex_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_HipFlex_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_HipFlex_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_KneeFlex_L": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45",
+        "Corrective_KneeFlex_R": "98c95ca0c3bd43ed7aaf57ef18f93ca6ce283e882d62cb6b3bc99645dcd1ca45"
+      },
+      "originalNaturalMutated": false,
+      "unusedVerticesKeptForEditableIdentity": true
+    },
+    "Mouth_IronJaw": {
+      "removedFaces": 7744,
+      "retainedFaces": 10184,
+      "retainedVertexCount": 17010,
+      "shapeCoordinateHashes": {
+        "BasisMesh": "e324cb8a59872d319f5ce0880b29dc392f521f5d1c2e41b73b6dce447661d7ab",
+        "Basis": "e324cb8a59872d319f5ce0880b29dc392f521f5d1c2e41b73b6dce447661d7ab"
+      },
+      "originalNaturalMutated": false,
+      "unusedVerticesKeptForEditableIdentity": true
+    },
+    "IronJaw_Lining": {
+      "removedFaces": 50196,
+      "retainedFaces": 1596,
+      "retainedVertexCount": 51794,
+      "shapeCoordinateHashes": {
+        "BasisMesh": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Basis": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Blink_L": "a96e3b43b1b5dbc8ee77d3a71008f7be2698455b555d2091c824ddbe9a71d9e3",
+        "Blink_R": "d0e32d80114a8b57e5aa755d6986bc354593caed5bf24226ae26c1579d57cd4c",
+        "Squint_L": "4bf1f830662852e476e5be8617ae07ac79e41e8631177b6f12f0f232b717304d",
+        "Squint_R": "84d6690590cb7f05ebb030f6828fbd0a95e67481b959c98adde30de6aeab449f",
+        "BrowRaise_L": "c3561a85af53ac17b994affb490a769018d57fb9650e4e4caef0ed7b8e4d9fa8",
+        "BrowRaise_R": "3706e5cce486c470faa6bb0c5a3dbeedda56429292dcaa171fb5249da47bf336",
+        "BrowLower_L": "6cdf83bdc0d6d1eb4dcbcb51dc1dd8fcc700a337c213bc4cefc624bbb05a6280",
+        "BrowLower_R": "d7505873d468c605928540b967e0f546ea2982f6be0f5c0f2e2a67b63d0679af",
+        "Smile_L": "f699faff0dc98f942152091a27d08cd5f321076696e38ef52b4e2314aa6ab948",
+        "Smile_R": "88bf86be0f0937cf0eab76e3b5d2a3e34d34e61120558991ca0ee4e484fe94f5",
+        "Frown_L": "5101fa802f2abdea92f5b0ddedcc86edd66cd5abcbfc5f2e7f1b361c9207dbc0",
+        "Frown_R": "4d07160b6a0075b2593042987feee54fff0095c93839dda016d8ab96b78a2a05",
+        "JawOpen": "4fdfb194a90d7ec8aede633d1ba4c13824617748d8626518390c3c34ae812a95",
+        "LipPress": "9d04240a7c562709028a5ad9bf64c45cf1c982130e345d526a11ca64c69ecceb",
+        "Snarl_L": "faca06e0254480fd5bb2fec3ebc0a91cb3addc997efc106209c6b1c35190ada5",
+        "Snarl_R": "eca6e0a17502b6754da114762e1e52cc5f6a882e1c0935ace99b898b00c7b744",
+        "NoseWrinkle": "cd8965747f12098d62a33022cf0a164ae42751797c63786d23411333f0e7ae47",
+        "Corrective_ShoulderRaise_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ShoulderRaise_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ElbowFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_ElbowFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_HipFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_HipFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_KneeFlex_L": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3",
+        "Corrective_KneeFlex_R": "21a5319b2ac64c0d244490db9de9c6ce7b085f1d7a75a467ad1dd5ca919eb3c3"
+      },
+      "originalNaturalMutated": false,
+      "unusedVerticesKeptForEditableIdentity": true
+    }
+  },
+  "mechanismObjects": 34,
+  "mechanismVertices": 19958,
+  "hinge": {
+    "pivotWorld": [
+      0.0,
+      -0.0010533005697652698,
+      1.8840162754058838
+    ],
+    "axisWorld": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "bearingCenters": [
+      [
+        -0.13500000536441803,
+        -0.0010533005697652698,
+        1.8840162754058838
+      ],
+      [
+        0.13500000536441803,
+        -0.0010533005697652698,
+        1.8840162754058838
+      ]
+    ]
+  },
+  "bonesAddedOrMoved": [],
+  "recipeHashes": {
+    "build_replacement_v1.py": "31a22786df526719a3d75074bce2e51426643e60e718af1ced7ba47fbc6ec971",
+    "mechanical_parts.py": "06e56c4be599854a57f280059cf61e4f41a007b9d0d5cf3c03ba63375a77d79e",
+    "replacement_surface.py": "e0fd7dc4395e8cfea1deabadec4f40bb403bdc400fee5acb515a1fa01b2d2695",
+    "anatomical_exclusion.py": "3e06a702daf4a857c28e4e653ebc1628075163bbebc0237f6922c9a68d8b619a"
+  },
+  "pending": [
+    "Actual closed/open front and unobscured side clearance",
+    "Flesh attachment and casing silhouette against concept07",
+    "Natural mouth and buried tusk defects remain separate",
+    "Runtime remap/UV/bake/export after source review"
+  ]
+}
