@@ -1,5 +1,16 @@
 # Isolated coherent Nib PBR/FBX preparation
 
+The newest actual neck/fine-atlas source `e1cdbd03…` now has a fresh saved PBR
+candidate `fee71393…`. Its 102 maps reopen/decode/hash correctly, all 79 bones,
+seven actions and source geometry/weights/morphs match, and eight matched
+Face/Tongue/Front/EyeCloseup images were inspected without an obvious new
+material-transfer regression. See the [actual current evidence](../../../unreal/evidence/nib-coherent79-neck-pbr-v1/README.md).
+The frozen plan is `plans/nib-coherent79-neck-e1cdbd-v1`. Its full variant/clip
+FBX stages are next; no current engine import, shared promotion or artistic
+acceptance follows from this bake. The earlier path-only bake below remains
+historical evidence.
+
+
 The original saved-path failure and v2 Windows-basename validation failure are preserved. Path-only v3 candidate `2a3ab470…` now passes reopened98-map path/hash/color/decode checks and exact79-bone/seven-action/mesh parity. All three matched baked views were inspected against the original source, without an obvious new material-transfer regression. [Actual repair/parity evidence](../../../unreal/evidence/nib-coherent79-pbr-path-repair/README.md) contains the images and failures. No maps were rebaked and shared assets remain unchanged.
 
 `plans/nib-coherent79-socket-pathfix-v3` preserves the executed 194-input plan.

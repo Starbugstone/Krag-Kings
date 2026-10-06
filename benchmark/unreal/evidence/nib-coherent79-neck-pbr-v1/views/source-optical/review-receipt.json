@@ -1,0 +1,41 @@
+{
+  "side": "source",
+  "contractSha256": "5f3658558d4d2eba2f8c649654525d757b920b7e4bf28bc8ddaee3faa72631bd",
+  "source": "benchmark/art/nib/identity-study/neck-junction-native-v1/Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "view": "EyeCloseup",
+  "action": "Idle",
+  "frame": 1,
+  "camera": {
+    "type": "ORTHO",
+    "scaleMeters": 0.18,
+    "position": [
+      0.11999992281198502,
+      -3.0444180965423584,
+      1.20307195186615
+    ],
+    "target": [
+      -7.264316082000732e-08,
+      -0.04441801458597183,
+      1.1230719089508057
+    ],
+    "relativeOffsetMeters": [
+      0.12,
+      -3,
+      0.08
+    ]
+  },
+  "render": {
+    "engine": "Blender Cycles CPU",
+    "threads": 4,
+    "samples": 24,
+    "width": 1500,
+    "height": 900,
+    "denoising": true
+  },
+  "image": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/material-review/source-optical/EyeCloseup.png",
+  "imageSha256": "3c8ed42487737ae282e117d775a73f2106950256234b0d35b8706ef7b8c01e56",
+  "visualParityInspected": false,
+  "artisticAcceptance": false,
+  "status": "Actual matched iris transfer image; inspect source/baked pair before acceptance"
+}

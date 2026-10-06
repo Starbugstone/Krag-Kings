@@ -1,0 +1,41 @@
+{
+  "side": "baked",
+  "contractSha256": "5f3658558d4d2eba2f8c649654525d757b920b7e4bf28bc8ddaee3faa72631bd",
+  "source": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/Nib_Runtime_PBR.blend",
+  "sourceSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "view": "EyeCloseup",
+  "action": "Idle",
+  "frame": 1,
+  "camera": {
+    "type": "ORTHO",
+    "scaleMeters": 0.18,
+    "position": [
+      0.11999992281198502,
+      -3.0444180965423584,
+      1.20307195186615
+    ],
+    "target": [
+      -7.264316082000732e-08,
+      -0.04441801458597183,
+      1.1230719089508057
+    ],
+    "relativeOffsetMeters": [
+      0.12,
+      -3,
+      0.08
+    ]
+  },
+  "render": {
+    "engine": "Blender Cycles CPU",
+    "threads": 4,
+    "samples": 24,
+    "width": 1500,
+    "height": 900,
+    "denoising": true
+  },
+  "image": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/material-review/baked-optical/EyeCloseup.png",
+  "imageSha256": "417c2adef2d67742b9836148a9166d20480da9ff34358f4992d277787201dce4",
+  "visualParityInspected": false,
+  "artisticAcceptance": false,
+  "status": "Actual matched iris transfer image; inspect source/baked pair before acceptance"
+}

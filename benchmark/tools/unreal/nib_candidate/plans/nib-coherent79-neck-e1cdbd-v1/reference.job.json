@@ -1,0 +1,25 @@
+{
+  "name": "nib-coherent79-neck-e1cdbd-v1-reference",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\run_stage.py",
+    "--",
+    "--plan",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\unreal\\nib_candidate\\plans\\nib-coherent79-neck-e1cdbd-v1\\plan.json",
+    "--stage",
+    "reference"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "minAvailableGB": 10,
+  "maxPrivateGB": 8,
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-neck-e1cdbd-v1-reference.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-neck-e1cdbd-v1-reference.stderr.log",
+  "successLog": "D:\\Dev\\Krag-Kings\\benchmark\\local\\logs\\nib-coherent79-neck-e1cdbd-v1-reference.log",
+  "successMarker": "NIB_CANDIDATE_STAGE_COMPLETE reference"
+}

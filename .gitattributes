@@ -167,3 +167,11 @@ benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.json -text whitespa
 benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/animation/krag-hand-basis-rest-diagnostic/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
 benchmark/art/nib/groom-study/fine-strands-v1/verification-recipe/contracts.py whitespace=-blank-at-eof
+
+# Exact raw receipts and telemetry for the new coherent Nib material transfer.
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/**/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/*.json -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/**/*.csv -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/**/*.txt -text whitespace=cr-at-eol,-blank-at-eof
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/source-contract.json filter=lfs diff=lfs merge=lfs -text
+benchmark/unreal/evidence/nib-coherent79-neck-pbr-v1/pbr-contract.json filter=lfs diff=lfs merge=lfs -text

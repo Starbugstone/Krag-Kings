@@ -1,0 +1,408 @@
+{
+  "status": "Actual isolated portable material transfer passes the recorded structural and sampled visual checks; art remains failed",
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\identity-study\\neck-junction-native-v1\\Nib_Coherent_NeckJunction_v1.blend",
+  "sourceSha256": "e1cdbd030b8b4de9abd073807e93c40e9d69348e5bcf97c519656f5e3599804b",
+  "pbrCandidate": "benchmark/local/candidates/nib-coherent79-neck-e1cdbd-v1/pbr/Nib_Runtime_PBR.blend",
+  "pbrCandidateSha256": "fee71393f1a41355e309994118656494b320f1284f995259a5362fa82db0b4b1",
+  "planSha256": "22b1e53666186a8567dcb1b8856e932c103e7901899af0a4211fae259ead5628",
+  "reviewContractSha256": "5f3658558d4d2eba2f8c649654525d757b920b7e4bf28bc8ddaee3faa72631bd",
+  "bones": 79,
+  "clips": {
+    "Idle": {
+      "frames": [
+        1,
+        181
+      ],
+      "fps": 30.0,
+      "durationSeconds": 6.0
+    },
+    "Walk": {
+      "frames": [
+        1,
+        25
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.8
+    },
+    "Run": {
+      "frames": [
+        1,
+        19
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.6
+    },
+    "Melee": {
+      "frames": [
+        1,
+        33
+      ],
+      "fps": 30.0,
+      "durationSeconds": 1.0666666666666667
+    },
+    "Shoot": {
+      "frames": [
+        1,
+        31
+      ],
+      "fps": 30.0,
+      "durationSeconds": 1.0
+    },
+    "Hit": {
+      "frames": [
+        1,
+        29
+      ],
+      "fps": 30.0,
+      "durationSeconds": 0.9333333333333333
+    },
+    "FacePerformance": {
+      "frames": [
+        1,
+        151
+      ],
+      "fps": 30.0,
+      "durationSeconds": 5.0
+    }
+  },
+  "meshObjects": 379,
+  "materialCount": 27,
+  "fieldBakeCount": 9,
+  "textureFiles": 102,
+  "geometryWeightsMorphsRigActionsUnchanged": true,
+  "actualIrisFieldBakes": [
+    "Nib_IdentityOcularIris_L",
+    "Nib_IdentityOcularIris_R"
+  ],
+  "allMapsReopenedDecodedAndHashed": true,
+  "originalCardImageBindingsVerifiedBeforeAndAfterBake": true,
+  "visualReview": {
+    "inspectedImages": 8,
+    "views": [
+      "Face",
+      "Tongue",
+      "Front",
+      "EyeCloseup"
+    ],
+    "matchedOpticalCameraExactly": true,
+    "limitedMaterialParity": true,
+    "findings": [
+      "Nose pigment placement/contrast is retained.",
+      "Amber radial iris pigment, dark limbal border and original slit geometry remain visible in both matched close-ups.",
+      "Pink ear skin, tawny rim, pale head coverage and fine cards retain the source appearance.",
+      "Dark blue tongue and sampled expression shading remain coherent.",
+      "No missing or magenta texture, obvious new seam or major color/normal loss was observed in these samples."
+    ],
+    "limitations": [
+      "These are frontal samples; they do not prove all rear/side UV seams.",
+      "No Unity/Unreal import or GPU appearance has run for this candidate.",
+      "Existing likeness, coarse card roots, neck shading seam, cloth construction and hand/axilla defects remain artistic failures."
+    ]
+  },
+  "executions": [
+    {
+      "stage": "snapshot-source",
+      "processId": 13988,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 564.0,
+      "minimumAvailableMB": 10299.0,
+      "maximumSystemCommitPercent": 57.0
+    },
+    {
+      "stage": "bake",
+      "processId": 24060,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2863.0,
+      "minimumAvailableMB": 8262.0,
+      "maximumSystemCommitPercent": 62.0
+    },
+    {
+      "stage": "snapshot-pbr",
+      "processId": 30264,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 561.0,
+      "minimumAvailableMB": 10420.0,
+      "maximumSystemCommitPercent": 56.0
+    },
+    {
+      "stage": "review-source",
+      "processId": 7000,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2719.0,
+      "minimumAvailableMB": 8504.0,
+      "maximumSystemCommitPercent": 62.0
+    },
+    {
+      "stage": "review-baked",
+      "processId": 12552,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2931.0,
+      "minimumAvailableMB": 8457.0,
+      "maximumSystemCommitPercent": 62.0
+    },
+    {
+      "stage": "review-source-optical",
+      "processId": 23700,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2384.0,
+      "minimumAvailableMB": 10512.0,
+      "maximumSystemCommitPercent": 57.0
+    },
+    {
+      "stage": "review-baked-optical",
+      "processId": 32408,
+      "guardExitCode": 0,
+      "nativeExitCode": 0,
+      "peakPrivateMB": 2653.0,
+      "minimumAvailableMB": 10244.0,
+      "maximumSystemCommitPercent": 57.0
+    }
+  ],
+  "sharedAssetsChanged": false,
+  "fbxExported": false,
+  "engineImported": false,
+  "artisticAcceptance": false,
+  "artifacts": [
+    {
+      "path": "source-contract.json",
+      "sha256": "3d4d0aa064561e3df0e8d47c7b52ec227a46b3461a6b13bd87493e5b4cf57a3b",
+      "bytes": 5056995
+    },
+    {
+      "path": "pbr-contract.json",
+      "sha256": "504a1535ff5b4b746b321a1abedad08a78955310f69ffe7974ed7683035e160f",
+      "bytes": 5057141
+    },
+    {
+      "path": "pbr-bake-report.json",
+      "sha256": "46814014381237502b9f10c907ca1802eefd3c37fa523a16d4f5c0250eb31cee",
+      "bytes": 82848
+    },
+    {
+      "path": "receipts/snapshot-source.json",
+      "sha256": "2552a2ab73062ff3f76a468a20fed8c42adc0cadb6e7405fb5d070af2c0f3897",
+      "bytes": 447
+    },
+    {
+      "path": "receipts/bake.json",
+      "sha256": "a54d7ec1149fefab46f8a1ea97596ea90617c8d70848fd93d0e20f04722a8ece",
+      "bytes": 24482
+    },
+    {
+      "path": "receipts/snapshot-pbr.json",
+      "sha256": "0db0d81a64861703b24343131d475bcb95acd7af1fc50bb852e846232e888cc9",
+      "bytes": 441
+    },
+    {
+      "path": "execution/snapshot-source.log.txt",
+      "sha256": "7d879477bf493ec8c4103c2282c8868074aaa5dda53098688527832312fe2038",
+      "bytes": 317
+    },
+    {
+      "path": "execution/snapshot-source.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/snapshot-source-memory.csv",
+      "sha256": "bd48df4ba58deef58725f995ce18ea3754e057dc70b9799d7bb57d0d7e387a48",
+      "bytes": 489
+    },
+    {
+      "path": "execution/bake.log.txt",
+      "sha256": "1e17e2b62abb0c008674a15820842724b04f84c169d49fea7e87b60ce9945fea",
+      "bytes": 4985
+    },
+    {
+      "path": "execution/bake.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/bake-memory.csv",
+      "sha256": "f9cc4465d15f8b0fd34f49e763528b71141740274ee9c15688bab1a53d935ed5",
+      "bytes": 2959
+    },
+    {
+      "path": "execution/snapshot-pbr.log.txt",
+      "sha256": "a1749b9101cdd931bd668610ece5e425e13706c14ab7a1c43ea54967bf84156f",
+      "bytes": 305
+    },
+    {
+      "path": "execution/snapshot-pbr.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/snapshot-pbr-memory.csv",
+      "sha256": "4390245f76f9a1e3d78350710b345fcdb09ebec079c2efcd909b4674f5b36021",
+      "bytes": 489
+    },
+    {
+      "path": "execution/review-source.log.txt",
+      "sha256": "be744c9b481d98fe9531a45d45ad0324c156727412d056c77db21d235d2be709",
+      "bytes": 776
+    },
+    {
+      "path": "execution/review-source.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/review-source-memory.csv",
+      "sha256": "2065c39953c0744bc36bab9efd77bda74bf10cddfcea3b544065220f5e3d36bd",
+      "bytes": 3219
+    },
+    {
+      "path": "execution/review-baked.log.txt",
+      "sha256": "493f60b61242b12ce0c65f219e09b3604bfaeedddf4b512aed5ec4bb2475218f",
+      "bytes": 763
+    },
+    {
+      "path": "execution/review-baked.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/review-baked-memory.csv",
+      "sha256": "8162d25612fa4df1ad205f3909485123f237ec72ea523edd1635ec829b3333ee",
+      "bytes": 3350
+    },
+    {
+      "path": "execution/review-source-optical.log.txt",
+      "sha256": "6d460739569564bf3b5457028c5cc5061a0b374c0dbb888354b35c0e988664e4",
+      "bytes": 441
+    },
+    {
+      "path": "execution/review-source-optical.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/review-source-optical-memory.csv",
+      "sha256": "75eb2f1e2b56b70f4835d11ee0550a4c77dbfa3ecbd254921b52b1411d440bda",
+      "bytes": 2209
+    },
+    {
+      "path": "execution/review-baked-optical.log.txt",
+      "sha256": "76163135ec1e42752eb585372681f13086d3409d7562399924043500a1cc6f62",
+      "bytes": 430
+    },
+    {
+      "path": "execution/review-baked-optical.stderr.log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "execution/review-baked-optical-memory.csv",
+      "sha256": "b480a6f9297a525d52e8978561cf6604d40fc00ec926da9ccfea96c39b627980",
+      "bytes": 2209
+    },
+    {
+      "path": "views/source/Nib_ExpressionTongue.png",
+      "sha256": "6bcc774c8ddd51e51a9ce919c4c8066a06f55571d26dda4314f21582749884ed",
+      "bytes": 1887026
+    },
+    {
+      "path": "views/source/Nib_ExpressionTongue.png.json",
+      "sha256": "3150e62e1b2e5d17274bea7b6f7a1e43aeeb9cf08fa5cae55e417030c96de947",
+      "bytes": 369
+    },
+    {
+      "path": "views/source/Nib_FaceReview.png",
+      "sha256": "00bf8903481b34d1aeccb11e322cb944f6898d8794d4ea3ef03b9c379362bae1",
+      "bytes": 1870609
+    },
+    {
+      "path": "views/source/Nib_FaceReview.png.json",
+      "sha256": "11983ffc6c21cdc9e6ecb4b184ca2759ff6705ee079f8013e2c9db5970db0799",
+      "bytes": 354
+    },
+    {
+      "path": "views/source/Nib_ReviewFront.png",
+      "sha256": "af1e2e58b37db8fe998983986cf355849d2e720a2a349ca0213e3fdc9d3bbf41",
+      "bytes": 1781358
+    },
+    {
+      "path": "views/source/Nib_ReviewFront.png.json",
+      "sha256": "848e8937de48f1b53012520d349dcfc2943add3adb82a8f11b7504d04f30e301",
+      "bytes": 355
+    },
+    {
+      "path": "views/source/review-receipt.json",
+      "sha256": "bece8d591dc690e27b92508087b8239b57c30e5ce92626949eaaed5244420a23",
+      "bytes": 911
+    },
+    {
+      "path": "views/baked/Nib_ExpressionTongue.png",
+      "sha256": "da2dc80dffa31c1e690ff7b1ad533de677db06126388bd28a685c9c84460b825",
+      "bytes": 1887438
+    },
+    {
+      "path": "views/baked/Nib_ExpressionTongue.png.json",
+      "sha256": "9acaedb5887540aaae60f730783ff48582bacee188ffd29bc7d97d4a932ec0a4",
+      "bytes": 356
+    },
+    {
+      "path": "views/baked/Nib_FaceReview.png",
+      "sha256": "6d09f8cb97f0ecb28a3e9e7447e91f6cf7ce0e8ad09da1cce8e042b185ac0ae0",
+      "bytes": 1871125
+    },
+    {
+      "path": "views/baked/Nib_FaceReview.png.json",
+      "sha256": "c208ee4e337e2c4e6d6f5b93f3a439544fbadc33c890e59639e1ee0602a48a00",
+      "bytes": 341
+    },
+    {
+      "path": "views/baked/Nib_ReviewFront.png",
+      "sha256": "ff0d998031d9d8552512423d6a976c4ebb107615b368cac3a419fd47621a5d33",
+      "bytes": 1781583
+    },
+    {
+      "path": "views/baked/Nib_ReviewFront.png.json",
+      "sha256": "ad53aceb483476bec7fd255e3ce2ab6f8381695f9e1606351c66e8f0b217e59a",
+      "bytes": 342
+    },
+    {
+      "path": "views/baked/review-receipt.json",
+      "sha256": "478c796d28da285b3d928d35c140e6711234ec7396a8666ab181d4d0936e76c2",
+      "bytes": 907
+    },
+    {
+      "path": "views/source-optical/EyeCloseup.png",
+      "sha256": "3c8ed42487737ae282e117d775a73f2106950256234b0d35b8706ef7b8c01e56",
+      "bytes": 1854516
+    },
+    {
+      "path": "views/source-optical/review-receipt.json",
+      "sha256": "773d01bfde8486c403696b9337f8e685929f9ffef437934eff1fa404b333d988",
+      "bytes": 1218
+    },
+    {
+      "path": "views/baked-optical/EyeCloseup.png",
+      "sha256": "417c2adef2d67742b9836148a9166d20480da9ff34358f4992d277787201dce4",
+      "bytes": 1843217
+    },
+    {
+      "path": "views/baked-optical/review-receipt.json",
+      "sha256": "066d769514d3b51f4fade12c29c8d42234722f79a2c61cf66756868f9c16a40d",
+      "bytes": 1207
+    },
+    {
+      "path": "executed-plan.json",
+      "sha256": "22b1e53666186a8567dcb1b8856e932c103e7901899af0a4211fae259ead5628",
+      "bytes": 23473
+    },
+    {
+      "path": "executed-review-contract.json",
+      "sha256": "5f3658558d4d2eba2f8c649654525d757b920b7e4bf28bc8ddaee3faa72631bd",
+      "bytes": 45400
+    }
+  ]
+}

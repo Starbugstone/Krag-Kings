@@ -1,6 +1,15 @@
-# Prepared v5 material transfer
+# Portable Nib material transfer
 
-Status: the first source bake (`d3b682d4…`) passed structural checks but
+Latest result: coherent neck source `e1cdbd03…` now produces actual saved PBR
+candidate `fee71393…`, with 102 reopened/decoded/hash-checked maps and exact
+79-bone/seven-action/geometry/weight/morph parity. All eight paired
+Face/Tongue/Front/EyeCloseup images were inspected without an obvious new
+transfer regression. Both actual iris attributes are preserved and baked on
+their fitted surfaces. [Current evidence](../../../../unreal/evidence/nib-coherent79-neck-pbr-v1/README.md)
+remains a limited technical result; full FBX export/engine review and artistic
+acceptance are pending.
+
+History: the first source bake (`d3b682d4…`) passed structural checks but
 failed reopened rendering because its texture paths were remapped from the old
 source root. The preserved failure is now followed by an actual path-only
 derivative (`2a3ab470…`): all98 original maps decode with matching hashes/color
@@ -28,8 +37,8 @@ each connected image's packed bytes or resolved file hash to match the supplied
 atlas. An older atlas with the same filenames cannot silently replace the
 saved source's finer groom. This gate runs before expensive field baking and
 again before copying maps. Linked-image paths resolve against their library.
-This new gate is syntax-checked; its first actual Blender execution is pending
-the next coherent-source handoff. Shared normal/roughness/metal filenames remain
+This gate now passes actual Blender execution on the coherent neck source
+and its fine-strands atlas. Shared normal/roughness/metal filenames remain
 explicit manifest paths rather than guessed per-material filenames.
 
 | Field | Prepared transfer | Reason |
@@ -90,4 +99,4 @@ alone is not an acceptance measure; do not replace fur with a solid rolled rim.
 Use the same close-up/front/profile cameras for runtime and denser cinematic
 representations, then measure runtime cost separately from cinematic density.
 
-The adult identity source requires the prepared `bake_ocular.py` extension. Its two actual fitted iris surfaces receive separate small atlases from connected `Nib_IrisCoord` point attributes; the helper verifies source-report hashes and attribute retention. The original slit geometry, shell curvature, bind and weights remain subject to the existing unchanged-source gates. The uniform `Nib_IdentityOcularGlobe` uses its constant PBR field. This extension is syntax-checked only: no new iris bake, saved parity render or engine import has run. New plans pin the helper; previous executed plans/receipts are preserved.
+The adult identity source requires the prepared `bake_ocular.py` extension. Its two actual fitted iris surfaces receive separate small atlases from connected `Nib_IrisCoord` point attributes; the helper verifies source-report hashes and attribute retention. The original slit geometry, shell curvature, bind and weights remain subject to the existing unchanged-source gates. The uniform `Nib_IdentityOcularGlobe` uses its constant PBR field. This extension now passes the actual coherent-neck bake and matched optical review. Engine import remains pending. New plans pin the helper; previous executed plans/receipts are preserved.
