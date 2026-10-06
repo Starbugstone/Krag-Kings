@@ -21,15 +21,19 @@ from runtime_reduction import attach_portable_drivers
 from nib_groom_v5 import build_groom, deepen_ears
 from nib_cloth_v5 import revise_cloth
 from nib_hand_v5 import rebuild_hands
+from nib_opaque_eyes import fit_opaque_eye
+from nib_groom_materials import create_regions
+from audit_face_coordinates import facial_snapshot
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--source',type=Path,default=ART/'Nib_Runtime_Optimized_v4b.blend')
 parser.add_argument('--cinematic',action='store_true')
 parser.add_argument('--hands',action='store_true')
+parser.add_argument('--revision',required=True,choices=['v5c'],help='Explicit isolated revision; older job recipes require their recorded source revision')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 SOURCE=args.source
-TARGET=ART/('Nib_Cinematic_v5b_WIP.blend' if args.cinematic else 'Nib_Master_v5b_WIP.blend')
-REPORT=ART/'v5-study'/('native-head-cinematic-v5b.json' if args.cinematic else 'native-head-v5b.json')
+TARGET=ART/('Nib_Cinematic_'+args.revision+'_WIP.blend' if args.cinematic else 'Nib_Master_'+args.revision+'_WIP.blend')
+REPORT=ART/'v5-study'/('native-head-'+('cinematic-' if args.cinematic else '')+args.revision+'.json')
 LIBRARY=ROOT/'benchmark/art/reference-anatomy/blender-studio-human-base-meshes/source/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend'
 HEAD_DROP=-.032
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -46,6 +50,14 @@ report={'status':'Work in progress: native geometry review required','artisticAc
         'referenceLicense':'CC0 per Blender Studio bundle README; retained in original reference directory.',
         'borrowedTopology':'GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept.',
         'changes':[]}
+report['authoringCode']={}
+for filename in ['rebuild_head_v5.py','fit_head.py','nib_groom_v5.py','nib_cloth_v5.py',
+                 'nib_hand_v5.py','nib_opaque_eyes.py','nib_groom_materials.py','audit_face_coordinates.py']:
+    path=Path(__file__).with_name(filename)
+    report['authoringCode'][filename]=sha(path)
+    text_name='Nib source '+args.revision+' '+filename
+    text=bpy.data.texts.get(text_name) or bpy.data.texts.new(text_name)
+    text.clear();text.write(path.read_text())
 
 def discard(obj):
     mesh=obj.data if obj.type=='MESH' else None
@@ -75,16 +87,28 @@ names += ['GEO-head_animation_realistic.'+part+'.'+side for part in ['iris','scl
 with bpy.data.libraries.load(str(LIBRARY),link=False) as (available,requested):
     requested.objects=names
 reference={o.name:o for o in requested.objects}
+for obj in reference.values():
+    for c in list(obj.users_collection):c.objects.unlink(obj)
+    collection.objects.link(obj)
+# Evaluate the original, intact parent hierarchy before caching source space.
+# matrix_world on an unlinked appended object can be stale. The independent
+# source-center assertion below is against the audited CC0 library coordinates.
+bpy.context.view_layer.update()
 def authored_world(obj):
     if obj.parent is None:return obj.matrix_basis.copy()
     return authored_world(obj.parent)@obj.matrix_parent_inverse@obj.matrix_basis
-reference_world={name:authored_world(obj) for name,obj in reference.items()}
+reference_world={name:obj.matrix_world.copy() for name,obj in reference.items()}
 head=reference['GEO-head_animation_realistic'];head_matrix=reference_world[head.name].copy()
 report['originalReferenceMatrices']={name:[list(row) for row in matrix] for name,matrix in reference_world.items()}
+report['referenceEyeLocalCenters']={}
+for side,sign in [('L',1),('R',-1)]:
+    name='GEO-head_animation_realistic.sclera.'+side
+    local=(head_matrix.inverted()@reference_world[name]).translation
+    expected=Vector((sign*.0358764,-.1153812,.3100375))
+    if (local-expected).length>.00005:raise RuntimeError('Reference eye parent evaluation differs from audited source: '+side+' '+str(tuple(local)))
+    report['referenceEyeLocalCenters'][side]=list(local)
 source_vertices=np.asarray([tuple(v.co) for v in head.data.vertices],dtype=float)
 for name,obj in reference.items():
-    for c in list(obj.users_collection):c.objects.unlink(obj)
-    collection.objects.link(obj)
     obj.modifiers.clear()
     obj.vertex_groups.clear()
     obj.parent=None;obj.matrix_parent_inverse=Matrix.Identity(4)
@@ -145,8 +169,9 @@ face_material=bpy.data.materials['Nib_Skin'].copy();face_material.name='Nib_v5_F
 head.data.materials[0]=face_material
 mask=head.data.attributes.new('NibNoseMask','FLOAT','POINT')
 for index,(x,y,z) in enumerate(original):
-    pad=math.exp(-(abs(x)/.021)**6-((z-.258)/.012)**6)
-    pad*=smoothstep(.126,.143,-y)
+    # Source audit places the front nasal pad at z .263.. .276, not .258.
+    pad=math.exp(-(abs(x)/.018)**6-((z-.268)/.013)**6)
+    pad*=smoothstep(.143,.155,-y)
     mask.data[index].value=pad
 nodes=face_material.node_tree.nodes;links=face_material.node_tree.links
 principled=next(node for node in nodes if node.type=='BSDF_PRINCIPLED')
@@ -195,25 +220,22 @@ report['changes'].append({'part':'Face','vertices':len(head.data.vertices),'tria
 # Replace floating discs with the topology that was fitted to the source lids.
 # Applying the identical regional warp to eyes and lids preserves their relation.
 fitted_eye_centers={}
+report['opaqueEyeProjection']={}
 for side in ['L','R']:
+    source_matrices={part:head_matrix.inverted()@reference_world['GEO-head_animation_realistic.'+part+'.'+side] for part in ['sclera','iris']}
+    report['opaqueEyeProjection'][side]=fit_opaque_eye(
+        reference['GEO-head_animation_realistic.sclera.'+side],
+        reference['GEO-head_animation_realistic.iris.'+side],
+        source_matrices['sclera'],source_matrices['iris'],fit_head,HEAD_DROP,apply_subdivision)
     for part in ['sclera','iris']:
         obj=reference['GEO-head_animation_realistic.'+part+'.'+side]
-        source_transform=head_matrix.inverted()@reference_world['GEO-head_animation_realistic.'+part+'.'+side]
+        source_transform=source_matrices[part]
         if part=='sclera':
             center=np.asarray([tuple(source_transform.translation)])
             fitted_eye_centers[side]=Vector(fit_head(center)[0])+Vector((0,0,HEAD_DROP))
-        if part=='iris':
-            for vertex in obj.data.vertices:
-                x,y,z=vertex.co;radius=math.sqrt(x*x+z*z)
-                weight=1-smoothstep(.0023,.006,radius)
-                vertex.co.x*=1-.55*weight;vertex.co.z*=1+.65*weight
-        points=np.asarray([tuple(source_transform@v.co) for v in obj.data.vertices],dtype=float)
-        transformed=fit_head(points)
-        obj.data.vertices.foreach_set('co',transformed.astype(np.float32).ravel())
-        obj.matrix_world=Matrix.Translation((0,0,HEAD_DROP))
         obj.name='Nib v5 fitted '+part+' '+side
         setmaterial(obj,'Nib_Dark' if part=='sclera' else 'Nib_Eye')
-        apply_subdivision(obj,1);bind(obj,'Eye_'+side)
+        bind(obj,'Eye_'+side)
         eye_points=np.asarray([tuple(obj.matrix_world@v.co) for v in obj.data.vertices])
         head_points=np.asarray([tuple(head.matrix_world@v.co) for v in head.data.vertices])
         if np.any(eye_points.min(axis=0)<head_points.min(axis=0)-.012) or np.any(eye_points.max(axis=0)>head_points.max(axis=0)+.012):
@@ -223,7 +245,7 @@ for side in ['L','R']:
 
 # Refit deforming facial pivots and the complete existing provisional interior
 # together. Control-only facial translations remain portable scalar channels.
-oral_shift=Vector((0,-.010,HEAD_DROP-.002))
+oral_shift=Vector((0,0,0))
 oral_prefixes=('Provisional recessed oral cavity','Upper provisional gum ridge','Lower provisional gum ridge',
                'Upper provisional tooth','Lower provisional tooth','Canonical dark blue Nib tongue')
 for obj in collection.objects:
@@ -238,6 +260,7 @@ for name in ['Jaw','TongueBase','TongueTip']:
 bpy.ops.object.mode_set(mode='OBJECT')
 report['fittedEyeCentersMeters']={side:list(point) for side,point in fitted_eye_centers.items()}
 report['provisionalOralShiftMeters']=list(oral_shift)
+report['oralFitNote']='Retained v4b oral meshes and Jaw/Tongue pivots already include HEAD_DROP. No second drop or guessed forward offset; neutral world bounds/occlusion are audited before any review render.'
 
 old_names=['Nib facial surface with eyelid and lip loops','Recessed eyeball ',
            'Amber iris ','Nib vertical pupil ','Wet eye glint ','Small triangular Nib nose',
@@ -251,14 +274,8 @@ for obj in list(collection.objects):
     if obj.name.startswith(('Swept fine head and cheek coat','Soft inner auricle hair','Fine auricle fur')):
         discard(obj)
 report['deepenedAuricleParts']=deepen_ears(collection)
-hair=bpy.data.materials['Nib_Hair'].copy();hair.name='Nib_v5_CreamHair'
-hair_principled=next(n for n in hair.node_tree.nodes if n.type=='BSDF_PRINCIPLED')
-hair_base=hair_principled.inputs['Base Color'];hair_original=hair_base.links[0].from_socket if hair_base.links else None
-hair_mix=hair.node_tree.nodes.new('ShaderNodeMixRGB');hair_mix.blend_type='MIX';hair_mix.inputs[0].default_value=.42;hair_mix.inputs[2].default_value=(.72,.60,.39,1)
-if hair_original:hair.node_tree.links.new(hair_original,hair_mix.inputs[1])
-else:hair_mix.inputs[1].default_value=hair_base.default_value
-hair.node_tree.links.new(hair_mix.outputs[0],hair_base)
-groom=build_groom(head,collection,rig,hair,args.cinematic)
+groom_materials,report['groomColorRegions']=create_regions(collection)
+groom=build_groom(head,collection,rig,groom_materials,args.cinematic)
 for obj in groom:
     if obj.data.shape_keys:attach_portable_drivers(obj,rig,deformation)
 report['cloth']=revise_cloth(collection,rig)
@@ -266,9 +283,19 @@ if args.hands:report['hands']=rebuild_hands(LIBRARY,collection,rig,discard)
 report['groom']={'cinematic':args.cinematic,'guideCount':sum(int(o.get('fur_guides',0)) for o in groom),
                  'strands':sum(int(o.get('fur_strands',0)) for o in groom),
                  'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in groom),
-                 'representation':'Opaque skinned tapered strands; no simulation; identical deterministic guide field between densities.'}
+                 'representation':'Opaque skinned tapered strands; no simulation; identical deterministic guide field between densities.',
+                 'mainStrandRadiusRangeMeters':[.000035,.000080],
+                 'retainedEarCoordinatesIncludeHeadDrop':True,'goggleAvoidance':'Measured lens world centers/back bounds',
+                 'groups':[{'name':o.name,'strands':int(o.get('fur_strands',0)),
+                            'triangles':sum(len(p.vertices)-2 for p in o.data.polygons),
+                            'materials':[m.name for m in o.data.materials]} for o in groom]}
+rig.animation_data.action=None
+for bone in rig.pose.bones:bone.matrix_basis=Matrix.Identity(4)
+scene.frame_set(1)
+report['neutralCoordinates']=facial_snapshot(scene,rig,head)
 rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
-scene['source_version']='v5b fitted eyes, continuous face, coherent hands and clumped groom; unaccepted'
+report['idleCoordinates']=facial_snapshot(scene,rig,head)
+scene['source_version']=args.revision+' opaque iris projection, corrected retained oral/groom spaces; unaccepted'
 scene['v5_reference_provenance']=json.dumps({key:report[key] for key in ['referenceLibrarySha256','referenceLicense','borrowedTopology']})
 bpy.ops.wm.save_as_mainfile(filepath=str(TARGET),compress=True)
 assert sha(SOURCE)==source_hash,'Pinned input was modified'

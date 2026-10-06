@@ -1,0 +1,333 @@
+{
+  "status": "Work in progress: native geometry review required",
+  "artisticAcceptance": false,
+  "source": "D:\\Dev\\Krag-Kings\\benchmark\\art\\nib\\Nib_Runtime_Optimized_v4b.blend",
+  "sourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
+  "referenceLibrarySha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "referenceLicense": "CC0 per Blender Studio bundle README; retained in original reference directory.",
+  "borrowedTopology": "GEO-head_animation_realistic and its matching eye topology; original sculpt and proportions adapted to the Nib concept.",
+  "changes": [
+    {
+      "part": "Face",
+      "vertices": 41753,
+      "triangles": 83328,
+      "removedHumanEarPatches": 2
+    },
+    {
+      "part": "Nib v5 fitted sclera L",
+      "vertices": 2178,
+      "worldBoundsMin": [
+        0.024550078436732292,
+        -0.05233849585056305,
+        1.126460313796997
+      ],
+      "worldBoundsMax": [
+        0.056762486696243286,
+        -0.03643564507365227,
+        1.1427093744277954
+      ]
+    },
+    {
+      "part": "Nib v5 fitted iris L",
+      "vertices": 1600,
+      "worldBoundsMin": [
+        0.031692177057266235,
+        -0.05123582109808922,
+        1.1299105882644653
+      ],
+      "worldBoundsMax": [
+        0.0476716086268425,
+        -0.04967423900961876,
+        1.1375586986541748
+      ]
+    },
+    {
+      "part": "Nib v5 fitted sclera R",
+      "vertices": 2178,
+      "worldBoundsMin": [
+        -0.056775543838739395,
+        -0.05233677476644516,
+        1.1264617443084717
+      ],
+      "worldBoundsMax": [
+        -0.024562977254390717,
+        -0.03643759340047836,
+        1.1427134275436401
+      ]
+    },
+    {
+      "part": "Nib v5 fitted iris R",
+      "vertices": 1600,
+      "worldBoundsMin": [
+        -0.047663599252700806,
+        -0.05123686417937279,
+        1.1299097537994385
+      ],
+      "worldBoundsMax": [
+        -0.031685035675764084,
+        -0.049671418964862823,
+        1.1375577449798584
+      ]
+    }
+  ],
+  "originalReferenceMatrices": {
+    "GEO-head_animation_realistic": [
+      [
+        0.8999999761581421,
+        0.0,
+        0.0,
+        1.4625719785690308
+      ],
+      [
+        0.0,
+        0.8999999761581421,
+        0.0,
+        -0.021928103640675545
+      ],
+      [
+        0.0,
+        0.0,
+        0.8999999761581421,
+        0.4876616895198822
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.iris.L": [
+      [
+        0.6379984021186829,
+        0.04461317136883736,
+        0.0,
+        1.4948607683181763
+      ],
+      [
+        -0.04461317136883736,
+        0.6379984021186829,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.766695499420166
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.iris.R": [
+      [
+        0.6379706859588623,
+        -0.04500812292098999,
+        0.0,
+        1.4302829504013062
+      ],
+      [
+        0.04500812292098999,
+        0.6379706859588623,
+        0.0,
+        -0.125771164894104
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666953802108765
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.sclera.L": [
+      [
+        0.639556348323822,
+        0.0,
+        0.0,
+        1.4948607683181763
+      ],
+      [
+        0.0,
+        0.639556348323822,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666954398155212
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "GEO-head_animation_realistic.sclera.R": [
+      [
+        0.6395564079284668,
+        0.0,
+        0.0,
+        1.4302829504013062
+      ],
+      [
+        0.0,
+        0.6395564079284668,
+        0.0,
+        -0.1257711797952652
+      ],
+      [
+        0.0,
+        0.0,
+        0.639556348323822,
+        0.7666954398155212
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "referenceEyeLocalCenters": {
+    "L": [
+      0.03587651252746582,
+      -0.11538119614124298,
+      0.3100374937057495
+    ],
+    "R": [
+      -0.03587663173675537,
+      -0.11538119614124298,
+      0.3100374937057495
+    ]
+  },
+  "fittedEyeCentersMeters": {
+    "L": [
+      0.040494389832019806,
+      -0.04436040297150612,
+      1.1329971551895142
+    ],
+    "R": [
+      -0.040494538843631744,
+      -0.044360410422086716,
+      1.1329971551895142
+    ]
+  },
+  "provisionalOralShiftMeters": [
+    0.0,
+    -0.009999999776482582,
+    -0.03400000184774399
+  ],
+  "deepenedAuricleParts": [
+    "Fennec cupped ear -1",
+    "Ear inner velvet -1",
+    "Rounded auricle cartilage rim",
+    "Rounded auricle cartilage rim.001",
+    "Auricle basal cartilage fold",
+    "Fennec cupped ear 1",
+    "Ear inner velvet 1",
+    "Rounded auricle cartilage rim.002",
+    "Rounded auricle cartilage rim.003",
+    "Auricle basal cartilage fold.001"
+  ],
+  "cloth": {
+    "scarfTriangles": 69888,
+    "bibPiecesReformed": [
+      "Bib pocket flap",
+      "Bib stitched outer seam",
+      "Bib hand stitching",
+      "Bib hand stitching.001",
+      "Bib hand stitching.002",
+      "Bib hand stitching.003",
+      "Bib hand stitching.004",
+      "Bib hand stitching.005",
+      "Bib hand stitching.006",
+      "Bib hand stitching.007",
+      "Bib hand stitching.008",
+      "Bib hand stitching.009",
+      "Bib hand stitching.010",
+      "Bib hand stitching.011",
+      "Bib hand stitching.012",
+      "Bib hand stitching.013",
+      "Bib hand stitching.014",
+      "Bib hand stitching.015",
+      "Bib hand stitching.016",
+      "Bib hand stitching.017",
+      "Bib stitched outer seam.001",
+      "Bib hand stitching.018",
+      "Bib hand stitching.019",
+      "Bib hand stitching.020",
+      "Bib hand stitching.021",
+      "Bib hand stitching.022",
+      "Bib hand stitching.023",
+      "Bib hand stitching.024",
+      "Bib hand stitching.025",
+      "Bib hand stitching.026",
+      "Bib hand stitching.027",
+      "Bib hand stitching.028",
+      "Bib hand stitching.029",
+      "Bib hand stitching.030",
+      "Bib hand stitching.031",
+      "Bib hand stitching.032",
+      "Bib hand stitching.033",
+      "Bib hand stitching.034",
+      "Bib hand stitching.035",
+      "Overalls draped bib",
+      "Bib sewn chest pocket"
+    ],
+    "trousersReformed": [
+      "Shaped overalls trouser L",
+      "Shaped overalls trouser R"
+    ],
+    "status": "Native cloth review required in Front/Back/Side/Shoot; no simulation."
+  },
+  "hands": {
+    "referenceObject": "Hand  - Realistic",
+    "referenceAuthor": "Dan Ulrich",
+    "license": "CC0 in asset metadata and bundle README",
+    "rightFingerOrderCorrected": true,
+    "requiresMatchingReexportedClips": true,
+    "hands": [
+      {
+        "side": "L",
+        "vertices": 13194,
+        "triangles": 26384
+      },
+      {
+        "side": "R",
+        "vertices": 13194,
+        "triangles": 26384
+      }
+    ],
+    "status": "Native hand/grip review required; this changes right finger bind positions and cannot reuse old standalone FBX clips."
+  },
+  "groom": {
+    "cinematic": false,
+    "guideCount": 2314,
+    "strands": 17868,
+    "triangles": 310824,
+    "representation": "Opaque skinned tapered strands; no simulation; identical deterministic guide field between densities."
+  },
+  "candidateSha256": "fbe314c1506157ee27e1fdd90f2db92ea0d62156da11d7970724caa58e9e43bf",
+  "pending": [
+    "Inspect Side/Back ear patch silhouette",
+    "Eye and eyelid collisions/neutral mouth fit",
+    "Review scalp/ear clumps and morph-following fine facial fuzz",
+    "Review coherent hands and corrected right-hand ordering/grip",
+    "Review compressed scarf loops, back and action cloth fit",
+    "Final portable PBR/morph export and both-engine checks"
+  ]
+}

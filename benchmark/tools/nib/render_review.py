@@ -18,7 +18,7 @@ if report_path.exists() and SOURCE.resolve()==(ART/'Nib_Master.blend').resolve()
         report['priorUncompressedSha256']=report['sourceSha256']
         bpy.ops.wm.save_as_mainfile(filepath=str(ART/'Nib_Master.blend'),compress=True)
         report['sourceSha256']=hashlib.sha256((ART/'Nib_Master.blend').read_bytes()).hexdigest();report['nativeCompressed']=True
-        report_path.write_text(json.dumps(report,indent=2))
+        report_path.write_text(json.dumps(report,indent=2),newline='\n')
 scene=bpy.context.scene;camera=scene.camera
 scene.render.threads_mode='FIXED';scene.render.threads=4;scene.cycles.device='CPU'
 scene.render.engine='CYCLES';scene.cycles.samples=20;scene.cycles.use_denoising=True
@@ -56,5 +56,5 @@ for view in requested:
         scene.render.resolution_x=1200;scene.render.resolution_y=1000
     scene.render.filepath=str(RENDER_OUT/output);bpy.ops.render.render(write_still=True)
     metadata={'source':SOURCE.name,'sourceSha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'view':view,'action':rig.animation_data.action.name,'frame':scene.frame_current,'variant':variant,'renderer':'Blender Cycles CPU','samples':scene.cycles.samples,'status':'Visual review evidence; no artistic approval implied'}
-    (RENDER_OUT/(output+'.json')).write_text(json.dumps(metadata,indent=2))
+    (RENDER_OUT/(output+'.json')).write_text(json.dumps(metadata,indent=2),newline='\n')
 print('NIB_REVIEW_RENDER_COMPLETE')

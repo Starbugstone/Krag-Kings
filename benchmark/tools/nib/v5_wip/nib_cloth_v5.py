@@ -15,12 +15,15 @@ def revise_cloth(collection,rig):
             across=j/(M-1);ridge=math.sin(across*math.pi)
             for i in range(N):
                 a=i/N*math.tau;front=max(0,-math.sin(a));back=max(0,math.sin(a))
-                rx=.046+winding*.009+across*.009
-                ry=.046+winding*.013+across*.014
+                rx=.046+winding*.008+across*.012
+                ry=.046+winding*.011+across*.017
                 fold=.0018*math.sin(a*9+winding*1.2)+.0010*math.sin(a*17-across*4)
                 x=rx*math.cos(a)+.003*math.sin(a*2+winding)
                 y=.005+(ry+.005*ridge+fold)*math.sin(a)
-                z=1.030-winding*.013-across*.014-front**1.4*(.010+winding*.008)+.005*math.cos(a*2+.4*winding)
+                # Adjacent wraps overlap in both radius and height. The v5b
+                # .021 m front descent per wrap exceeded its .014 m width,
+                # leaving visible open bands rather than compressed fabric.
+                z=1.030-winding*.009-across*.021-front**1.4*(.010+winding*.004)+.005*math.cos(a*2+.4*winding)
                 z+=fold*ridge
                 vertices.append((x,y,z));uvs.append((i/N*2,across*.22+winding*.25))
         for j in range(M-1):
