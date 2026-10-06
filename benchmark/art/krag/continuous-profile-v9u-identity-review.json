@@ -1,0 +1,122 @@
+{
+  "status": "Actual three-view whole-face review of unchanged v9u; likeness and mouth detail remain unaccepted",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "source": {
+    "path": "benchmark/art/krag/Krag_ContinuousMandible_v9u_WIP.blend",
+    "sha256": "7c6d88870a8ac46112708147bce98f44b3516387a462b7536ccb117bf0883f19"
+  },
+  "views": [
+    {
+      "view": "NeutralFront",
+      "path": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_NeutralFront.png",
+      "sha256": "deb52ce3530b36cd318d3c0ad79f783cae2c902ae03247025cc94f02de196cde",
+      "metadata": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_NeutralFront.meta.json",
+      "metadataSha256": "5d91ce232ab9d207a16d73525f8bef51aae1f22e59e26a37fdb08ea8565ebd04",
+      "inspected": true
+    },
+    {
+      "view": "NeutralThreeQuarter",
+      "path": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_NeutralThreeQuarter.png",
+      "sha256": "c16494ecff101bc86b651adf15dd5e1861d3d842b96c9207999213f91f9c45af",
+      "metadata": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_NeutralThreeQuarter.meta.json",
+      "metadataSha256": "a555afd6bb79d62d21ef9b5556f04d8965d5f7b4c0d978084b0c62d2a2b97b32",
+      "inspected": true
+    },
+    {
+      "view": "OpenFront",
+      "path": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_OpenFront.png",
+      "sha256": "91801016b248c83e834d40b3b2be47d1198ad1a32579f1db0e4a49f056ad3ab7",
+      "metadata": "benchmark/art/krag/renders/Krag_ContinuousMandible_v9u_Identity_OpenFront.meta.json",
+      "metadataSha256": "79de935a7172b936332e47141041e7ee692419483e57daa88001948c26c89344",
+      "inspected": true
+    }
+  ],
+  "execution": [
+    {
+      "job": "krag-continuous-profile-v9u-Identity-NeutralFront",
+      "processId": 34536,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2078.0,
+      "minimumAvailableMB": 10157.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralFront.stdout.txt",
+          "sha256": "89a853089c3f73d178322089177c7666f05b79e3884ec3bd2826639d1c8b0e32"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralFront.stderr.txt",
+          "sha256": "738478b6323451138514453b234996080631bb577d47527b20335060f911f297"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralFront-memory.csv",
+          "sha256": "255455225b303f770d2bf684d7321d4b4611569afa124cf97f9039fc34c75379"
+        }
+      ]
+    },
+    {
+      "job": "krag-continuous-profile-v9u-Identity-NeutralThreeQuarter",
+      "processId": 31188,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2093.0,
+      "minimumAvailableMB": 10178.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralThreeQuarter.stdout.txt",
+          "sha256": "71d7dff90cefa65c0c3f8314923467e96d118d7f09e8754070610d43789bf311"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralThreeQuarter.stderr.txt",
+          "sha256": "738478b6323451138514453b234996080631bb577d47527b20335060f911f297"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-NeutralThreeQuarter-memory.csv",
+          "sha256": "66a994da03ae9660ba9969f4bc51b1d6366c8e60b1eb2e00b32b5b32a6326537"
+        }
+      ]
+    },
+    {
+      "job": "krag-continuous-profile-v9u-Identity-OpenFront",
+      "processId": 3200,
+      "nativeExitCode": 0,
+      "guardExitCode": 0,
+      "maximumPrivateMB": 2104.0,
+      "minimumAvailableMB": 10087.0,
+      "artifacts": [
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-OpenFront.stdout.txt",
+          "sha256": "593e38620682f05a7228c389b6732e22e80da3565d05cd11c2e028f4f36dcf0f"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-OpenFront.stderr.txt",
+          "sha256": "738478b6323451138514453b234996080631bb577d47527b20335060f911f297"
+        },
+        {
+          "path": "benchmark/art/krag/continuous-profile-v9u-identity-evidence/krag-continuous-profile-v9u-Identity-OpenFront-memory.csv",
+          "sha256": "5acd5742c702eda9a4d64fd986d4e4c6be9089960664df7f96a6d1738137b9dd"
+        }
+      ]
+    }
+  ],
+  "preNativeInvocationError": {
+    "view": "OpenFront",
+    "nativeProcessStarted": false,
+    "description": "The first PowerShell invocation accidentally passed the JSON job as -File and was rejected for lacking a.ps1 extension. The corrected Run-HeavyTask.ps1 -JobSpec launch is the recorded successful native run."
+  },
+  "observedImprovements": [
+    "Continuous lower-face silhouette retained across front and three-quarter",
+    "Open front has a broad coherent aperture, with visible upper crowns and short canine tips"
+  ],
+  "observedFailures": [
+    "Skull remains uniformly domed and forehead/cheek/muzzle too smooth and inflated",
+    "Glabella, nasal wings, cheek and lip planes remain weak versus approved concept01",
+    "Canines sit too medially within the widened mouth rather than near the lower corners",
+    "Most lower incisor crowns remain hidden by the lip; gum/tongue depth and realism need improved fit",
+    "Neck cowl and source skin remain visually unaccepted"
+  ],
+  "nextDecision": "Preserve coherent mouth topology, lower-face continuity and full-range hinge. Plan the face as a whole against matched concept landmarks; fit provisional dental/gum anatomy inside that envelope. Do not add more isolated profile bumps.",
+  "geometryChanges": false,
+  "motionLineage": "Source retains pre-v4 oral actions. Frozen coherent68 engine candidate fe15213d is unchanged."
+}
