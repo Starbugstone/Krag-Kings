@@ -329,7 +329,7 @@ namespace KragKings.Benchmark
                 while(unit.FacePlaying)yield return null;
                 foreach(string action in new[]{"Melee","Shoot","Hit"})
                 {
-                    unit.Trigger(action);PortraitCamera();
+                    unit.Trigger(action);PortraitCamera(true);
                     float normalized=action=="Shoot"?unit.weapon.fireTimesNormalized[0]:.45f;
                     yield return new WaitForSeconds(unit.ActionDuration(action)*normalized);
                     ScreenCapture.CaptureScreenshot(Path.Combine(evidencePath,unit.species+"-"+action+"-Expression.png"));
