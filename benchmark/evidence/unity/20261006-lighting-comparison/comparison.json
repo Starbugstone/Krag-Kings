@@ -1,0 +1,131 @@
+{
+  "buildGuid": "c4767943faf24b91b8fbc5157f46b339",
+  "contentFingerprint": "afe5b84d72dece36b6fa1fb852fbb124a9a5af9ae15f950a3de65b0b55dd7351",
+  "runOrder": [
+    "full-moving",
+    "balanced-moving",
+    "balanced-idle"
+  ],
+  "sourceFilesUnchanged": true,
+  "screenshotReview": "Wide-view Full and Balanced captures inspected; no material loss obvious at this view. Close-up and animation quality still require review. Art likeness remains unaccepted.",
+  "telemetryNote": "GPU memory is device-wide used memory, not an isolated game allocation; GPU timestamps use the verified CEST +02:00 host offset. Metrics below use only rows within the actual sample UTC window.",
+  "runs": [
+    {
+      "run": "full-moving",
+      "meanFps": 40.77298578162195,
+      "meanMs": 24.526042938232422,
+      "p95Ms": 30.727998733520508,
+      "p99Ms": 42.47739791870117,
+      "frames": 1224,
+      "sampleSeconds": 30.014797,
+      "telemetrySampleCounts": {
+        "gpu": 9,
+        "memory": 9
+      },
+      "gpuTemperatureC": {
+        "min": 82.0,
+        "max": 83.0,
+        "mean": 82.77777777777777
+      },
+      "gpuGraphicsMHz": {
+        "min": 555.0,
+        "max": 1230.0,
+        "mean": 1073.3333333333333
+      },
+      "totalGpuUsedMiB": {
+        "min": 1842.0,
+        "max": 1843.0,
+        "mean": 1842.4444444444443
+      },
+      "gpuUtilizationPercent": {
+        "min": 99.0,
+        "max": 99.0,
+        "mean": 99.0
+      },
+      "gpuPowerW": {
+        "min": 56.82,
+        "max": 75.38,
+        "mean": 70.75999999999999
+      },
+      "maxGamePrivateMiB": 3207.0
+    },
+    {
+      "run": "balanced-moving",
+      "meanFps": 57.94700010477782,
+      "meanMs": 17.25714874267578,
+      "p95Ms": 21.46649932861328,
+      "p99Ms": 24.068700790405273,
+      "frames": 1739,
+      "sampleSeconds": 30.0052579,
+      "telemetrySampleCounts": {
+        "gpu": 9,
+        "memory": 9
+      },
+      "gpuTemperatureC": {
+        "min": 81.0,
+        "max": 85.0,
+        "mean": 82.66666666666667
+      },
+      "gpuGraphicsMHz": {
+        "min": 1155.0,
+        "max": 1620.0,
+        "mean": 1351.6666666666667
+      },
+      "totalGpuUsedMiB": {
+        "min": 1814.0,
+        "max": 1816.0,
+        "mean": 1815.0
+      },
+      "gpuUtilizationPercent": {
+        "min": 100.0,
+        "max": 100.0,
+        "mean": 100.0
+      },
+      "gpuPowerW": {
+        "min": 60.52,
+        "max": 101.69,
+        "mean": 77.84777777777778
+      },
+      "maxGamePrivateMiB": 3170.0
+    },
+    {
+      "run": "balanced-idle",
+      "meanFps": 58.1526940797694,
+      "meanMs": 17.196107864379883,
+      "p95Ms": 20.725299835205078,
+      "p99Ms": 23.43429946899414,
+      "frames": 1745,
+      "sampleSeconds": 30.0010996,
+      "telemetrySampleCounts": {
+        "gpu": 9,
+        "memory": 9
+      },
+      "gpuTemperatureC": {
+        "min": 81.0,
+        "max": 84.0,
+        "mean": 82.88888888888889
+      },
+      "gpuGraphicsMHz": {
+        "min": 1185.0,
+        "max": 1605.0,
+        "mean": 1328.3333333333333
+      },
+      "totalGpuUsedMiB": {
+        "min": 1814.0,
+        "max": 1815.0,
+        "mean": 1814.7777777777778
+      },
+      "gpuUtilizationPercent": {
+        "min": 99.0,
+        "max": 100.0,
+        "mean": 99.88888888888889
+      },
+      "gpuPowerW": {
+        "min": 64.6,
+        "max": 89.69,
+        "mean": 78.88888888888889
+      },
+      "maxGamePrivateMiB": 3170.0
+    }
+  ]
+}

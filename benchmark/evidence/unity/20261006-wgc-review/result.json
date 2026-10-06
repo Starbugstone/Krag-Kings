@@ -1,0 +1,19 @@
+{
+  "status": "real capture passed; visual review FAILED; not final investor footage",
+  "buildGuid": "c4767943faf24b91b8fbc5157f46b339",
+  "contentFingerprint": "afe5b84d72dece36b6fa1fb852fbb124a9a5af9ae15f950a3de65b0b55dd7351",
+  "quality": "Balanced",
+  "resolution": "1920x1080",
+  "sourceDirectory": "benchmark/local/evidence/unity-showcase/20261006-035316",
+  "videoSha256": "b2a9ee6c5671a80a4519af1af93a5f09f06733dcd9f03142bb9fddc850078443",
+  "captureFramesPerSecond": 30,
+  "gameFramesPerSecondMeasuredInThisRecording": false,
+  "reviewed": "Eight cue frames and additional walk/melee/shoot frames, not every frame; audio listening review pending",
+  "blockingFindings": [
+    "Nib Shoot has 0.154m forehead deformation from contaminated body morphs",
+    "Nib face is backlit after return walk and ears cropped",
+    "Wide camera crops feet at some route positions",
+    "Both character sources remain below approved concept likeness"
+  ],
+  "next": "Correct shared Nib export, actor aim and artwork; validate prepared framing changes in a new build; repeat actual capture"
+}

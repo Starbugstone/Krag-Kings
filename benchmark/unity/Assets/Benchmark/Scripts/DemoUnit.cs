@@ -32,6 +32,17 @@ namespace KragKings.Benchmark
         public Vector3 PortraitFocus => head ? head.position+Vector3.up*(species=="Krag"?.11f:.08f) : transform.position+Vector3.up*bodyHeight*.85f;
         public Vector3 Destination { get; private set; }
         public GameObject Model { get; private set; }
+        Renderer[] modelRenderers=Array.Empty<Renderer>();
+        public Bounds VisualBounds
+        {
+            get
+            {
+                Bounds bounds=new(transform.position+Vector3.up*bodyHeight*.5f,new Vector3(FootprintRadius*2,bodyHeight,FootprintRadius*2));
+                foreach(var renderer in modelRenderers)
+                    if(renderer && renderer.enabled && renderer.gameObject.activeInHierarchy)bounds.Encapsulate(renderer.bounds);
+                return bounds;
+            }
+        }
         public string VariantLabel => variantLabels != null && VariantIndex < variantLabels.Length ? variantLabels[VariantIndex] : "Natural";
         public event Action<DemoUnit, string> ActionStarted;
         public event Action<DemoUnit, Vector3, Vector3> FootContact;
@@ -89,6 +100,7 @@ namespace KragKings.Benchmark
             Model.name = variants[VariantIndex].name;
             Model.transform.localPosition = Vector3.zero;
             Model.transform.localRotation = Quaternion.identity;
+            modelRenderers=Model.GetComponentsInChildren<Renderer>();
             foreach (var child in Model.GetComponentsInChildren<Transform>()) child.gameObject.layer = 9;
             foreach (var animator in Model.GetComponentsInChildren<Animator>()) animator.enabled = false;
             animationPlayer = Model.GetComponent<Animation>() ?? Model.AddComponent<Animation>();

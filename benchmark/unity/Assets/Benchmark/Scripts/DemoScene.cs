@@ -145,7 +145,7 @@ namespace KragKings.Benchmark
             if(!Selected)return;
             cameraFocus=Selected.PortraitFocus;
             yaw=Selected.transform.eulerAngles.y+165;pitch=7;
-            distance=Selected.species=="Krag"?1.35f:1.05f;
+            distance=Selected.species=="Krag"?1.35f:1.45f;
         }
         public void SetView(Vector3 focus,float viewYaw,float viewPitch,float viewDistance)
         {cameraFocus=focus;yaw=viewYaw;pitch=viewPitch;distance=viewDistance;}
@@ -293,7 +293,7 @@ namespace KragKings.Benchmark
             }
             GUI.Label(new Rect(35,1001,1530,30),"SELECT  Left click     RUN  Right click     WALK  Shift + Right click     MELEE  A     SHOOT  F     HIT  H     BIONICS  V     NEXT  Tab",labelStyle);
             GUI.Label(new Rect(35,1038,1540,28),"FACE  E     PORTRAIT  C     CAMERA  Arrows · Middle drag · Scroll     RESET  Home     CAPTURE  F12     PERFORMANCE  F3     EXIT  Esc",smallStyle);
-            if(Selected) GUI.Label(new Rect(1580,1010,315,40),Selected.CurrentAction.ToUpper(),valueStyle);
+            if(Selected) GUI.Label(new Rect(1580,1010,315,40),Selected.FacePlaying && Selected.CurrentAction=="Idle" ? "EXPRESSION" : Selected.CurrentAction.ToUpper(),valueStyle);
             if(showStats) { Panel(new Rect(25,110,445,91));GUI.Label(new Rect(40,120,420,30),$"{1/Mathf.Max(.0001f,smoothedFrame):F0} FPS  ·  {smoothedFrame*1000:F1} ms",labelStyle);GUI.Label(new Rect(40,158,420,25),SystemInfo.graphicsDeviceName,smallStyle); }
         }
         static void Panel(Rect rect) { Color old=GUI.color;GUI.color=new Color(.026f,.047f,.049f,.92f);GUI.DrawTexture(rect,Texture2D.whiteTexture);GUI.color=old; }

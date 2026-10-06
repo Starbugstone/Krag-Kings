@@ -1,0 +1,290 @@
+﻿{
+    "engine":  "Unity",
+    "source":  "real-time capture of explicit game HWND client area",
+    "desktopCapture":  false,
+    "systemAudioCapture":  false,
+    "microphoneCapture":  false,
+    "captureBackend":  "WGC",
+    "encoder":  "h264_nvenc",
+    "recordingFrameRate":  30,
+    "gameFrameRateClaim":  false,
+    "ffmpeg":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\capture\\ffmpeg-compatible\\ffmpeg-8.0.1-essentials_build\\bin\\ffmpeg.exe",
+    "showcaseSeconds":  72,
+    "completed":  true,
+    "visualAcceptance":  false,
+    "startedUtc":  "2026-10-06T01:53:40.8229577Z",
+    "windowHandle":  8063304,
+    "gameProcessId":  21212,
+    "windowTitle":  "Krag Kings — Engine Comparison",
+    "clientWidth":  1920,
+    "clientHeight":  1080,
+    "gateUtc":  "2026-10-06T01:53:42.9046897Z",
+    "audioOffsetSeconds":  0.73718857765197754,
+    "audioSync":  "UTC first captured-frame timestamp aligned to engine recording-start timestamp; residual audio-thread latency and frame rounding require listening review.",
+    "wgc":  {
+                "backend":  "WindowsGraphicsCapture",
+                "explicitHwndOnly":  true,
+                "desktopCapture":  false,
+                "completed":  true,
+                "hwnd":  8063304,
+                "processId":  21212,
+                "width":  1920,
+                "height":  1080,
+                "frameRate":  30,
+                "pixelFormat":  "BGRA8 SDR",
+                "frames":  2257,
+                "duplicatedFrames":  15,
+                "firstOutputUnixMicroseconds":  1791251622205851.2,
+                "firstCompositorUnixMicroseconds":  1791251622192610,
+                "timing":  "Real-time CFR schedule; newest available compositor frame, repeat only when compositor has no newer frame"
+            },
+    "engineStartUtc":  "2026-10-06T01:53:42.9430400+00:00",
+    "engineStartTimestampSource":  "engine showcase-started.json",
+    "firstCapturedFrameUnixMicroseconds":  1791251622205851.3,
+    "blackFrameCheck":  {
+                            "minimumDurationSeconds":  1,
+                            "blackPixelFraction":  0.98,
+                            "pixelThreshold":  0.04,
+                            "intervals":  [
+
+                                          ],
+                            "passed":  true
+                        },
+    "audioSignalCheck":  {
+                             "rmsDbFS":  "-39.248944",
+                             "peakDbFS":  "-7.186073",
+                             "samples":  "3456000",
+                             "nonzeroSignal":  true,
+                             "listeningReviewPassed":  false
+                         },
+    "motionCheck":  {
+                        "passed":  true,
+                        "scope":  "Known 72-second showcase camera/pose cues; excludes top and bottom HUD",
+                        "visualAcceptance":  false,
+                        "minimumMeanAbsoluteDifference":  0.005,
+                        "minimumChangedPixelFraction":  0.05,
+                        "frames":  [
+                                       {
+                                           "cueSeconds":  3,
+                                           "sha256":  "f2fe5566c586326f21212ae92ab04710d027331f0490a17eb25697e29363fc68",
+                                           "videoSeconds":  3.7372
+                                       },
+                                       {
+                                           "cueSeconds":  18,
+                                           "sha256":  "97f56af2fa880d864673525f5e5e4f49f8c3c0c5965ff2e2230c7b179e192ecc",
+                                           "videoSeconds":  18.7372
+                                       },
+                                       {
+                                           "cueSeconds":  31,
+                                           "sha256":  "b511fad20a6f0fa32b194daee73331732ab505333f7b197c0027385961dde1a0",
+                                           "videoSeconds":  31.7372
+                                       },
+                                       {
+                                           "cueSeconds":  41,
+                                           "sha256":  "4c7fb73bcca46589f27ee1a7f834c2104263ee1710cb76e184d052184fe1f579",
+                                           "videoSeconds":  41.7372
+                                       },
+                                       {
+                                           "cueSeconds":  54,
+                                           "sha256":  "2267edc9cef90ba5f3776382069f2ed19c799ad6c16441cd2b39f266748ec503",
+                                           "videoSeconds":  54.7372
+                                       },
+                                       {
+                                           "cueSeconds":  64,
+                                           "sha256":  "dc3a4480d89a9bb60d4a50da6e17b623d14df57f40fc32ef1bd8a0f3541fcb96",
+                                           "videoSeconds":  64.7372
+                                       }
+                                   ],
+                        "comparisons":  [
+                                            {
+                                                "changedPixelFraction":  0.66861979166666663,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.064680351307189549,
+                                                "toCue":  18
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.82541232638888884,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.13799104711328977,
+                                                "toCue":  31
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.88943142361111116,
+                                                "passed":  true,
+                                                "fromCue":  3,
+                                                "meanAbsoluteDifference":  0.13315589256535948,
+                                                "toCue":  41
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.87478298611111116,
+                                                "passed":  true,
+                                                "fromCue":  31,
+                                                "meanAbsoluteDifference":  0.11470205269607843,
+                                                "toCue":  41
+                                            },
+                                            {
+                                                "changedPixelFraction":  0.64312065972222221,
+                                                "passed":  true,
+                                                "fromCue":  54,
+                                                "meanAbsoluteDifference":  0.048372395833333331,
+                                                "toCue":  64
+                                            }
+                                        ],
+                        "freezeDetection":  {
+                                                "longestPlateauSeconds":  0,
+                                                "minimumDurationSeconds":  5,
+                                                "passed":  true,
+                                                "intervals":  [
+
+                                                              ],
+                                                "noiseThresholdDb":  -60
+                                            }
+                    },
+    "output":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\capture-wgc\\unity-showcase.mp4",
+    "engineAudio":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\showcase-engine-audio.wav",
+    "rawVideo":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\capture-wgc\\unity-showcase-video-only.mp4",
+    "media":  {
+                  "streams":  [
+                                  {
+                                      "index":  0,
+                                      "codec_name":  "h264",
+                                      "codec_long_name":  "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+                                      "profile":  "Main",
+                                      "codec_type":  "video",
+                                      "codec_tag_string":  "avc1",
+                                      "codec_tag":  "0x31637661",
+                                      "width":  1920,
+                                      "height":  1080,
+                                      "coded_width":  1920,
+                                      "coded_height":  1080,
+                                      "has_b_frames":  2,
+                                      "sample_aspect_ratio":  "1:1",
+                                      "display_aspect_ratio":  "16:9",
+                                      "pix_fmt":  "yuv420p",
+                                      "level":  40,
+                                      "color_range":  "tv",
+                                      "color_space":  "bt709",
+                                      "chroma_location":  "left",
+                                      "field_order":  "progressive",
+                                      "refs":  1,
+                                      "is_avc":  "true",
+                                      "nal_length_size":  "4",
+                                      "id":  "0x1",
+                                      "r_frame_rate":  "30/1",
+                                      "avg_frame_rate":  "30/1",
+                                      "time_base":  "1/15360",
+                                      "start_pts":  0,
+                                      "start_time":  "0.000000",
+                                      "duration_ts":  1155579,
+                                      "duration":  "75.233008",
+                                      "bit_rate":  "6186499",
+                                      "bits_per_raw_sample":  "8",
+                                      "nb_frames":  "2257",
+                                      "extradata_size":  58,
+                                      "disposition":  {
+                                                          "default":  1,
+                                                          "dub":  0,
+                                                          "original":  0,
+                                                          "comment":  0,
+                                                          "lyrics":  0,
+                                                          "karaoke":  0,
+                                                          "forced":  0,
+                                                          "hearing_impaired":  0,
+                                                          "visual_impaired":  0,
+                                                          "clean_effects":  0,
+                                                          "attached_pic":  0,
+                                                          "timed_thumbnails":  0,
+                                                          "non_diegetic":  0,
+                                                          "captions":  0,
+                                                          "descriptions":  0,
+                                                          "metadata":  0,
+                                                          "dependent":  0,
+                                                          "still_image":  0,
+                                                          "multilayer":  0
+                                                      },
+                                      "tags":  {
+                                                   "language":  "und",
+                                                   "handler_name":  "VideoHandler",
+                                                   "vendor_id":  "[0][0][0][0]",
+                                                   "encoder":  "Lavc62.11.100 h264_nvenc"
+                                               }
+                                  },
+                                  {
+                                      "index":  1,
+                                      "codec_name":  "aac",
+                                      "codec_long_name":  "AAC (Advanced Audio Coding)",
+                                      "profile":  "LC",
+                                      "codec_type":  "audio",
+                                      "codec_tag_string":  "mp4a",
+                                      "codec_tag":  "0x6134706d",
+                                      "sample_fmt":  "fltp",
+                                      "sample_rate":  "48000",
+                                      "channels":  2,
+                                      "channel_layout":  "stereo",
+                                      "bits_per_sample":  0,
+                                      "initial_padding":  0,
+                                      "id":  "0x2",
+                                      "r_frame_rate":  "0/0",
+                                      "avg_frame_rate":  "0/0",
+                                      "time_base":  "1/48000",
+                                      "start_pts":  34320,
+                                      "start_time":  "0.715000",
+                                      "duration_ts":  3457024,
+                                      "duration":  "72.021333",
+                                      "bit_rate":  "74614",
+                                      "nb_frames":  "3376",
+                                      "extradata_size":  5,
+                                      "disposition":  {
+                                                          "default":  1,
+                                                          "dub":  0,
+                                                          "original":  0,
+                                                          "comment":  0,
+                                                          "lyrics":  0,
+                                                          "karaoke":  0,
+                                                          "forced":  0,
+                                                          "hearing_impaired":  0,
+                                                          "visual_impaired":  0,
+                                                          "clean_effects":  0,
+                                                          "attached_pic":  0,
+                                                          "timed_thumbnails":  0,
+                                                          "non_diegetic":  0,
+                                                          "captions":  0,
+                                                          "descriptions":  0,
+                                                          "metadata":  0,
+                                                          "dependent":  0,
+                                                          "still_image":  0,
+                                                          "multilayer":  0
+                                                      },
+                                      "tags":  {
+                                                   "language":  "und",
+                                                   "handler_name":  "SoundHandler",
+                                                   "vendor_id":  "[0][0][0][0]"
+                                               }
+                                  }
+                              ],
+                  "format":  {
+                                 "filename":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\capture-wgc\\unity-showcase.mp4",
+                                 "nb_streams":  2,
+                                 "nb_programs":  0,
+                                 "nb_stream_groups":  0,
+                                 "format_name":  "mov,mp4,m4a,3gp,3g2,mj2",
+                                 "format_long_name":  "QuickTime / MOV",
+                                 "start_time":  "0.000000",
+                                 "duration":  "75.233008",
+                                 "size":  "58932599",
+                                 "bit_rate":  "6266674",
+                                 "probe_score":  100,
+                                 "tags":  {
+                                              "major_brand":  "isom",
+                                              "minor_version":  "512",
+                                              "compatible_brands":  "isomiso2avc1mp41",
+                                              "encoder":  "Lavf62.3.100"
+                                          }
+                             }
+              },
+    "reviewFrames":  "D:\\Dev\\Krag-Kings\\benchmark\\local\\evidence\\unity-showcase\\20261006-035316\\capture-wgc\\unity-showcase-frames",
+    "outputSha256":  "b2a9ee6c5671a80a4519af1af93a5f09f06733dcd9f03142bb9fddc850078443",
+    "finishedUtc":  "2026-10-06T01:55:27.3304008Z"
+}
