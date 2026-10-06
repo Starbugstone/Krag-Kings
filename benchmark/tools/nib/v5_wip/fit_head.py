@@ -20,10 +20,15 @@ def fit_head(source):
     # The human nostril/upper-lip loops become a compact feline nose and broad
     # muzzle. Preserve their topology and depth, instead of overlaying primitives.
     muzzle=gaussian(x,0,.052)*gaussian(z,.230,.031)*front
-    target_y-=.022*muzzle
+    target_y-=.028*muzzle
     lips=gaussian(x,0,.041)*gaussian(z,.232,.014)*front
     target_x*=1+.30*lips
     target_z-=(z-.232)*.18*lips
+    # Feline cheek-to-chin taper: retain the broad lip/muzzle shelf while
+    # narrowing the lower lateral jaw, rather than keeping the human jowl arc.
+    lateral=np.clip((abs(x)-.038)/.032,0,1)
+    lateral=lateral*lateral*(3-2*lateral)
+    target_x*=1-.17*gaussian(z,.220,.040)*lateral
     nose=gaussian(x,0,.030)*gaussian(z,.267,.025)*front
     target_x*=1-.34*nose
     target_y-=.020*nose
@@ -41,7 +46,7 @@ def fit_head(source):
     target_z+=(abs(x)-.035876)*.14*eyes
     target_z-=(z-.310037)*.22*eyes
     brow=gaussian(abs(x),.032,.028)*gaussian(z,.333,.012)*front
-    target_y-=.003*brow
+    target_y-=.008*brow
     target_z-=.004*gaussian(abs(x),.018,.018)*brow
     # Collapse human ear relief into the lateral skull. The existing two large
     # fennec auricles remain the only visible ears when this study is integrated.

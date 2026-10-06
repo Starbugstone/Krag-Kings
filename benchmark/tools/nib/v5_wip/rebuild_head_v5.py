@@ -214,7 +214,12 @@ for side in ['L','R']:
         obj.name='Nib v5 fitted '+part+' '+side
         setmaterial(obj,'Nib_Dark' if part=='sclera' else 'Nib_Eye')
         apply_subdivision(obj,1);bind(obj,'Eye_'+side)
-        report['changes'].append({'part':obj.name,'vertices':len(obj.data.vertices)})
+        eye_points=np.asarray([tuple(obj.matrix_world@v.co) for v in obj.data.vertices])
+        head_points=np.asarray([tuple(head.matrix_world@v.co) for v in head.data.vertices])
+        if np.any(eye_points.min(axis=0)<head_points.min(axis=0)-.012) or np.any(eye_points.max(axis=0)>head_points.max(axis=0)+.012):
+            raise RuntimeError('Fitted eye is detached from the facial volume: '+obj.name)
+        report['changes'].append({'part':obj.name,'vertices':len(obj.data.vertices),
+                                  'worldBoundsMin':eye_points.min(axis=0).tolist(),'worldBoundsMax':eye_points.max(axis=0).tolist()})
 
 # Refit deforming facial pivots and the complete existing provisional interior
 # together. Control-only facial translations remain portable scalar channels.
@@ -254,6 +259,8 @@ if hair_original:hair.node_tree.links.new(hair_original,hair_mix.inputs[1])
 else:hair_mix.inputs[1].default_value=hair_base.default_value
 hair.node_tree.links.new(hair_mix.outputs[0],hair_base)
 groom=build_groom(head,collection,rig,hair,args.cinematic)
+for obj in groom:
+    if obj.data.shape_keys:attach_portable_drivers(obj,rig,deformation)
 report['cloth']=revise_cloth(collection,rig)
 if args.hands:report['hands']=rebuild_hands(LIBRARY,collection,rig,discard)
 report['groom']={'cinematic':args.cinematic,'guideCount':sum(int(o.get('fur_guides',0)) for o in groom),
@@ -261,11 +268,11 @@ report['groom']={'cinematic':args.cinematic,'guideCount':sum(int(o.get('fur_guid
                  'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in groom),
                  'representation':'Opaque skinned tapered strands; no simulation; identical deterministic guide field between densities.'}
 rig.animation_data.action=bpy.data.actions['Idle'];scene.frame_set(1)
-scene['source_version']='v5 fitted animation-head topology study; unaccepted'
+scene['source_version']='v5b fitted eyes, continuous face, coherent hands and clumped groom; unaccepted'
 scene['v5_reference_provenance']=json.dumps({key:report[key] for key in ['referenceLibrarySha256','referenceLicense','borrowedTopology']})
 bpy.ops.wm.save_as_mainfile(filepath=str(TARGET),compress=True)
 assert sha(SOURCE)==source_hash,'Pinned input was modified'
 report['candidateSha256']=sha(TARGET)
-report['pending']=['Inspect Side/Back ear patch silhouette','Eye and eyelid collisions/neutral mouth fit','Review new scalp-bound groom and reattach fine facial fuzz','Right-hand anatomical ordering and coherent topology','Review compressed scarf loops, back and action cloth fit','Final portable PBR/morph export and both-engine checks']
+report['pending']=['Inspect Side/Back ear patch silhouette','Eye and eyelid collisions/neutral mouth fit','Review scalp/ear clumps and morph-following fine facial fuzz','Review coherent hands and corrected right-hand ordering/grip' if args.hands else 'Generate and review coherent hand replacement','Review compressed scarf loops, back and action cloth fit','Final portable PBR/morph export and both-engine checks']
 REPORT.write_text(json.dumps(report,indent=2),newline='\n')
 print('NIB_V5_HEAD_STUDY_SAVED',str(TARGET),flush=True)

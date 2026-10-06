@@ -46,6 +46,47 @@ def avoid_goggles(point):
             point.y=max(point.y,-.048+.003*(1-r/.033))
     return point
 
+def fine_face_fuzz(head,collection,rig,material,cinematic=False):
+    """Fine fuzz inherits each surface root's weights and every facial delta."""
+    rng=random.Random(28913);candidates=[]
+    for v in head.data.vertices:
+        x,y,z=v.co
+        if y>-.023 or not 1.075<z<1.210:continue
+        if .014<abs(x)<.071 and 1.141<z<1.181:continue
+        if abs(x)<.043 and 1.098<z<1.146:continue
+        candidates.append(v.index)
+    if not candidates:raise RuntimeError('No facial fuzz root surface')
+    vertices=[];faces=[];roots=[];rng.shuffle(candidates)
+    for i in range(2700 if cinematic else 900):
+        source=head.data.vertices[rng.choice(candidates)];root=source.co;normal=source.normal.normalized()
+        direction=(normal+Vector((root.x*2,.05,-.65))).normalized()
+        length=rng.uniform(.0008,.0020);axis=direction.cross(Vector((0,1,0))).normalized();other=direction.cross(axis).normalized()
+        start=len(vertices);radius=rng.uniform(.000020,.000040)
+        for j in range(2):
+            center=root+normal*.00005+direction*(length*j)
+            for k in range(3):
+                a=k/3*math.tau;vertices.append(tuple(center+(axis*math.cos(a)+other*math.sin(a))*(radius if j==0 else .000002)));roots.append(source.index)
+        for k in range(3):faces.append((start+k,start+(k+1)%3,start+3+(k+1)%3,start+3+k))
+    mesh=bpy.data.meshes.new('Fine skin fuzz following facial topology');mesh.from_pydata(vertices,[],faces);mesh.update()
+    obj=bpy.data.objects.new('Nib v5 fine facial fuzz',mesh);collection.objects.link(obj);obj.matrix_world=head.matrix_world.copy()
+    mesh.materials.append(material);uv=mesh.uv_layers.new(name='UVMap')
+    for loop in mesh.loops:uv.data[loop.index].uv=((loop.vertex_index%3)/3,(loop.vertex_index%6)//3)
+    for polygon in mesh.polygons:polygon.use_smooth=True
+    groups={group.name:obj.vertex_groups.new(name=group.name) for group in head.vertex_groups}
+    for index,root in enumerate(roots):
+        for group in head.data.vertices[root].groups:
+            groups[head.vertex_groups[group.group].name].add([index],group.weight,'REPLACE')
+    obj.shape_key_add(name='Basis');basis=head.data.shape_keys.key_blocks['Basis']
+    for source_key in head.data.shape_keys.key_blocks:
+        if source_key.name=='Basis':continue
+        target=obj.shape_key_add(name=source_key.name)
+        for index,root in enumerate(roots):target.data[index].co=mesh.vertices[index].co+source_key.data[root].co-basis.data[root].co
+    world=obj.matrix_world.copy();obj.parent=rig;obj.matrix_world=world
+    mod=obj.modifiers.new('Nib deformation','ARMATURE');mod.object=rig
+    obj['variant']='all';obj['bone']='FaceSurfaceFuzz';obj['fur_strands']=len(roots)//6;obj['fur_guides']=len(roots)//6;obj['fur_rings']=2
+    obj['fur_design']='Fine concept-visible skin fuzz; surface-root morph and weight inheritance'
+    return obj
+
 def strand_mesh(name,guide_clumps,collection,rig,material,bone='Head',cinematic=False):
     vertices=[];faces=[];uvs=[];rng=random.Random(8141)
     count=0;rings=7 if cinematic else 4;sides=3
@@ -156,4 +197,5 @@ def build_groom(head,collection,rig,material,cinematic=False):
             root,normal=rng.choice(points);tip=root+Vector((root.x*.12,.001,-rng.uniform(.014,.022)))
             clumps.append((root,normal,root.lerp(tip,.5)+normal*.002,tip,.0015,5000+index))
         output.append(strand_mesh('Nib v5 tapered chin tuft',clumps,collection,rig,material,'Jaw',cinematic))
+    output.append(fine_face_fuzz(head,collection,rig,material,cinematic))
     return output

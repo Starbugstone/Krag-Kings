@@ -36,7 +36,7 @@ def rebuild_hands(library,collection,rig,discard):
         for c in list(hand.users_collection):c.objects.unlink(hand)
         collection.objects.link(hand);hand.modifiers.clear();hand.vertex_groups.clear()
         hand.name='Nib v5 coherent hand '+side
-        hand.matrix_world=Matrix.Identity(4)
+        hand.parent=None;hand.matrix_parent_inverse=Matrix.Identity(4);hand.matrix_world=Matrix.Identity(4)
         hand.data.materials.clear()
         hand.data.materials.append(bpy.data.materials['Nib_Skin']);hand.data.materials.append(bpy.data.materials['Nib_Leather'])
         # Native topology remains connected; no separate finger cylinders.

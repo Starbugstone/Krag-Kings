@@ -1,5 +1,6 @@
 """Fitted compressed scarf loops and bib tension for the isolated v5 study."""
 import bpy, math
+from array import array as numeric_array
 from mathutils import Vector
 
 def revise_cloth(collection,rig):
@@ -44,13 +45,19 @@ def revise_cloth(collection,rig):
         if piece.get('bone')!='BodyAnatomy' and piece.name!='Sleeveless dust undershirt':continue
         inverse=piece.matrix_world.inverted()
         arrays=[key.data for key in piece.data.shape_keys.key_blocks] if piece.data.shape_keys else [piece.data.vertices]
-        for array in arrays:
-            for vertex in array:
+        fitted_offsets={}
+        for array_index,array in enumerate(arrays):
+            for vertex_index,vertex in enumerate(array):
+                if array_index:
+                    vertex.co+=fitted_offsets[vertex_index]
+                    continue
+                original_local=vertex.co.copy()
                 p=piece.matrix_world@vertex.co
                 if .675<p.z<.875 and abs(p.x)<.12:
                     taper=.12*math.exp(-((p.z-.755)/.065)**2)
                     p.x*=1-taper;p.y*=1-taper*.22
                     vertex.co=inverse@p
+                fitted_offsets[vertex_index]=vertex.co-original_local
     # Apply the same world-space field to cloth, pockets and stitches so the
     # attachments follow the fabric rather than floating over a changed bib.
     for piece in collection.objects:
@@ -83,8 +90,13 @@ def revise_cloth(collection,rig):
                     q=(t-controls[i])/(controls[i+1]-controls[i]);q=q*q*(3-2*q)
                     return values[i]*(1-q)+values[i+1]*q
             return values[0] if t<0 else values[-1]
-        for array in arrays:
-            for vertex in array:
+        fitted_offsets={}
+        for array_index,array in enumerate(arrays):
+            for vertex_index,vertex in enumerate(array):
+                if array_index:
+                    vertex.co+=fitted_offsets[vertex_index]
+                    continue
+                original_local=vertex.co.copy()
                 p=piece.matrix_world@vertex.co;t=max(0,min(1,(.604-p.z)/.400))
                 center=Vector((sign*(.066+.008*math.sin(t*math.pi)),.009+.009*math.sin(t*7),p.z))
                 old_x,old_y=old_profile(t);offset=p-center
@@ -102,6 +114,7 @@ def revise_cloth(collection,rig):
                 p.x=center.x+math.cos(angle)*(radius_x+fold)*rho
                 p.y=center.y+math.sin(angle)*(radius_y+fold*.8)*rho
                 vertex.co=inverse@p
+                fitted_offsets[vertex_index]=vertex.co-original_local
         trousers.append(piece.name)
         for attached in collection.objects:
             if attached.name.startswith(('Cargo sewn pocket '+side,'Cargo pocket flap '+side)):
@@ -118,5 +131,14 @@ def revise_cloth(collection,rig):
                     direction=1 if p.x>center else -1
                     p.x=center+direction*(profile(t,[.054,.065,.067,.058,.054,.042])+.001)
                     vertex.co=attached.matrix_world.inverted()@p
+    # The FBX base geometry comes from mesh positions, while relative targets
+    # come from key-block coordinates. Keep both representations in agreement
+    # after editing the Basis of an existing shaped garment/body.
+    for piece in collection.objects:
+        if piece.type!='MESH' or not piece.data.shape_keys:continue
+        if piece.get('bone')!='BodyAnatomy' and piece.name not in changed+trousers+['Sleeveless dust undershirt']:continue
+        coordinates=numeric_array('f',[0])*(len(piece.data.vertices)*3)
+        piece.data.shape_keys.key_blocks['Basis'].data.foreach_get('co',coordinates)
+        piece.data.vertices.foreach_set('co',coordinates);piece.data.update()
     return {'scarfTriangles':sum(len(p.vertices)-2 for p in obj.data.polygons),'bibPiecesReformed':changed,'trousersReformed':trousers,
             'status':'Native cloth review required in Front/Back/Side/Shoot; no simulation.'}

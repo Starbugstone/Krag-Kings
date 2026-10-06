@@ -101,3 +101,15 @@ One duplicate triangle is removed on Blender import (Natural vertex set
 6192/9363/24611), so imported counts are one lower than raw FBX counts. This is
 recorded in `runtime-triangulated-import-cleanup-v4b.json`. This technical handoff
 uses the unchanged, artistically unaccepted v4b model, not the failed v5 study.
+
+Additional v5b readiness work (still **ungenerated**) preserves each garment's
+existing corrective deltas during the new fit and synchronizes its Basis with
+mesh positions for FBX export. Fine facial fuzz follows sampled skin-root bone
+weights and all facial morph deltas: 900 runtime strands / 5,400 triangles, or
+2,700 strands in the denser cinematic option. The hand import also clears source
+parent transforms. Eye world bounds are recorded and checked against the fitted
+face volume before saving, so the detached-eye failure cannot silently recur.
+A slightly stronger continuous brow ridge, broader muzzle shelf and tapered
+lower lateral jaw are provisional fit controls for the upcoming actual review.
+Python syntax checks pass; Blender geometry, expression and grip checks remain
+pending. Current shared files remain the validated v4b triangle-only baseline.
