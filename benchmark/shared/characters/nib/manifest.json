@@ -1,6 +1,6 @@
 {
-  "source": "../../../art/nib/Nib_Master.blend",
-  "sourceSha256": "c4fc3bce0413ab65a9a96e1d70451abbc8179c63a79b2a859c2ab1e11c1185eb",
+  "source": "../../../art/nib/Nib_Runtime_Optimized_v4b.blend",
+  "sourceSha256": "6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f",
   "referenceImages": [
     "krag-kings-design/concept-art/02-nib-character-sheet.png",
     "krag-kings-design/concept-art/05-jetpack-bionics-sheet.png"
@@ -240,7 +240,7 @@
       "fur": {
         "representation": "skinned opaque strands; no simulation",
         "strands": 10784,
-        "triangles": 258816
+        "triangles": 112536
       },
       "deformation": {
         "schemaVersion": 1,
@@ -531,11 +531,11 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 1158384,
-      "vertices": 614132,
+      "triangles": 538642,
+      "vertices": 304261,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
-      "weightedVertices": 614132,
+      "weightedVertices": 304261,
       "maxInfluences": 4,
       "bionics": []
     },
@@ -559,7 +559,7 @@
       "fur": {
         "representation": "skinned opaque strands; no simulation",
         "strands": 10784,
-        "triangles": 258816
+        "triangles": 112566
       },
       "deformation": {
         "schemaVersion": 1,
@@ -850,11 +850,11 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 1103608,
-      "vertices": 586760,
+      "triangles": 532244,
+      "vertices": 301078,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
-      "weightedVertices": 586760,
+      "weightedVertices": 301078,
       "maxInfluences": 4,
       "bionics": [
         {
@@ -884,7 +884,7 @@
       "fur": {
         "representation": "skinned opaque strands; no simulation",
         "strands": 10784,
-        "triangles": 258816
+        "triangles": 112536
       },
       "deformation": {
         "schemaVersion": 1,
@@ -1175,11 +1175,11 @@
         "Corrective_ShoulderRaise_L",
         "Corrective_ShoulderRaise_R"
       ],
-      "triangles": 1147908,
-      "vertices": 608856,
+      "triangles": 533534,
+      "vertices": 301669,
       "skinnedMeshCount": 1,
       "materialSlots": 18,
-      "weightedVertices": 608856,
+      "weightedVertices": 301669,
       "maxInfluences": 4,
       "bionics": [
         {
@@ -1543,11 +1543,14 @@
       "authoredInBodyClip": true
     }
   },
+  "detailedMasterSha256": "c4fc3bce0413ab65a9a96e1d70451abbc8179c63a79b2a859c2ab1e11c1185eb",
+  "runtimeReductionReport": "../../../art/nib/v5-study/runtime-reduction-v4b.json",
   "fur": {
-    "furRepresentation": "Skinned opaque geometric strands; no simulation",
-    "furStrands": 13084,
-    "furTriangles": 314016,
-    "cinematic": false
+    "representation": "skinned opaque strands; no simulation",
+    "strands": 10784,
+    "triangles": 112536,
+    "cinematic": false,
+    "scope": "Batched strand meshes; legacy fine edge/brow/chin tubes are additional geometry in total counts."
   },
   "mouthAnatomyStatus": "Provisional interior and expressions for review; dark-blue tongue canonical.",
   "animations": {

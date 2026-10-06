@@ -1,27 +1,32 @@
 # Nib benchmark asset work
 
-**Current handoff: v4b, structurally validated and artistically unaccepted.** `Nib_Master.blend`, the three shared variants, seven standalone clips and current Front/Face captures are pinned for the first Unity/Unreal imports. They do not meet the requested concept likeness or finished hero-quality bar.
+**Current handoff: optimized v4b, structurally validated and artistically unaccepted.** Root promoted the measured runtime derivative into the three shared variants and seven standalone clips after checking all 85 file hashes. The dense `Nib_Master.blend` remains preserved. Neither version meets the requested concept likeness or finished hero-quality bar.
 
-`benchmark/tools/nib` is the current v4b pipeline, with no ungenerated v5 art changes. `create_nib.py` incorporates the scarf fitting, neutral-lid cleanup and lossless saves. `patch_nib_v4.py` records the equivalent small changes applied to the saved v4 source. `source-report.json` retains original generation hashes, patch hash and current reproduction-code hashes. New likeness work must use new work-in-progress files until root checkpoints these outputs.
+The dense v4b pipeline was checkpointed in `c523810`. `create_nib.py` incorporates the scarf fitting, neutral-lid cleanup and lossless saves; `patch_nib_v4.py` records the equivalent changes applied to the saved v4 source. `source-report.json` retains original generation hashes, patch hash and reproduction-code hashes. The measured reduction, pose checks, matched captures and export receipt are in `v5-study/`; the authoring tools are in `tools/nib/v5_wip`. Separate native v5 art scripts remain unexecuted and do not change the preserved master. Export/review/validation tools support explicit alternative paths while retaining their baseline defaults.
 
 ## Current artifacts and measured structure
 
 - Editable, losslessly compressed source: `Nib_Master.blend` (about 85 MB), SHA-256 `c4fc3bce0413ab65a9a96e1d70451abbc8179c63a79b2a859c2ab1e11c1185eb`.
+- Promoted runtime source: `Nib_Runtime_Optimized_v4b.blend`, SHA-256 `6a8a65e66a4f37f799ec97cb0ecb2259073be6391fdded340667892dcb147f1f`.
 - Shared outputs: `../../shared/characters/nib/manifest.json`, identical current `asset_manifest.json`, `facial-rig.json`, three FBXs, seven per-clip FBXs and 72 PBR PNG maps.
 - Every variant: one consolidated skinned mesh, 75 bones, 25 nonzero morph targets, 18 material slots, maximum four normalized bone influences per vertex.
-- Natural: 1,158,384 triangles / 614,132 vertices. Grip replacement: 1,103,608 / 586,760. Leg replacement: 1,147,908 / 608,856. These are current review costs, not accepted runtime budgets.
+- Promoted runtime counts: Natural 538,642 triangles / 304,261 vertices; Grip replacement 532,244 / 301,078; Leg replacement 533,534 / 301,669. Dense v4b had 1,158,384 / 1,103,608 / 1,147,908 triangles respectively. Actual engine costs still need measurement.
 - Height is about 1.394 m to ear/fur tip. Bind ankle height is 0.10 m; source sole minimum is approximately 0.0005 m.
-- Batched runtime fur: 10,784 strands / 258,816 triangles per variant. Additional fine edge, eyebrow and chin tubes are included in the complete character triangle counts above. Representation is skinned opaque geometry, without simulation or a cutout-material dependency. Engine frame-time/VRAM measurement is still required before tuning.
+- Batched runtime fur: all 10,784 original strands retained, now 112,536 triangles per variant instead of 258,816. Additional fine edge, eyebrow and chin tubes are included in the complete character counts. Representation is skinned opaque geometry, without simulation or a cutout-material dependency. Engine frame-time/VRAM measurement is still required before further tuning.
 
 The source is original procedural construction from concept sheets 02 and 05. No outside anatomical library has been incorporated into v4b. The official Blender Studio CC0 reference library is being considered for the next topology pass, preserving the creature identity.
 
 ## Verification evidence
 
-`export-validation.json` records a fresh-process FBX roundtrip of all three assembled variants and all seven standalone clips. It passed with one mesh per variant, all required bones/morphs, no invalid skin weights, and exactly zero bind-matrix difference between every standalone clip and the assembled Natural skeleton. Each standalone clip contains one take and actual varying FaceRoot controls.
+`v5-study/runtime-export-validation-v4b.json` records the promoted derivative's fresh-process FBX roundtrip of all three variants and all seven standalone clips. It passed with one mesh per variant, all required bones/morphs, no invalid skin weights, and exactly zero bind-matrix difference between every standalone clip and the assembled Natural skeleton. Each standalone clip contains one take and actual varying FaceRoot controls. `export-validation.json` remains the earlier dense-source result.
+
+`v5-study/runtime-posed-validation-v4b.json` compares all 64 changed components at 23 actual authored poses, using up to 4,000 rest-surface correspondences each. Maximum sampled difference was 2.287 mm on head strands. The shared barycentric helper uses float64 intermediates because float32 arithmetic falsely failed very thin triangles. This is a source/derivative comparison, not artistic acceptance.
 
 `animation-targets.json` records 112 hand/foot targets, with maximum solved bone-position error about 1.84e-7 m, and zero full-aim barrel-direction error. These are skeletal checks, not proof of good animation, sole contact on terrain, or lack of sliding in an engine. `facial-performance.json` records authored per-frame facial controls in every clip.
 
 Guarded v4 generation peaked at 2,080 MB private memory; export peaked at 2,604 MB. All generation, review, patch, export and validation jobs exited 0 under the serialized heavy-task guard. No AAA, engine-performance or investor acceptance is inferred from these checks.
+
+The successful derivative stages peaked at 1,287 MB (reduction), 2,597 MB (five renders), 669 MB (all-component pose check), 1,507 MB (export) and 770 MB (roundtrip). Rejected reduction trials are preserved only in the ignored local version archive. The undershirt and both trousers retain source density after their surface-error checks failed; tolerances were not relaxed.
 
 ## Visual review progression
 
@@ -32,8 +37,11 @@ Guarded v4 generation peaked at 2,080 MB private memory; export peaked at 2,604 
 | v3 | `versions/v3-source/`, `versions/v3-renders/` | Failed: connected facial surface introduced, but cavity/teeth protruded at neutral; eyes, shoulders, scarf and hair remained wrong. Shoot now aimed forward. |
 | v4 before patch | `versions/v4-prepatch/` | Neutral mouth sealed and torso/arms united; dark polygon lid margins looked jagged and the lowered scarf intersected the chest. |
 | v4b current | `renders/Nib_FaceReview.png`, `renders/Nib_ReviewFront.png` and adjacent source-hash JSON | Major lid-material/scarf penetration corrected. **Still fails likeness:** face reads flat, orange iris pieces protrude from dark eye slits, nose/nostril/cheek/muzzle/lip construction lacks the reference continuity; head/ear groom is sparse; scarf reads as a broad sheet instead of compressed fabric loops; bib and hands remain insufficiently shaped. |
+| optimized v4b | `v5-study/runtime-renders/` Front/Face/Shoot/Run/Blink and source-hash JSON | Reduction preserves the baseline appearance. Blink explicitly fails eye occlusion; the same face/groom/cloth weaknesses remain. This is the current technical engine baseline, not a visual approval. |
 
 Current Shoot/Tongue images outside the version archive were captured before the v4b material/scarf patch; their JSON identifies that older source hash. Front/Face are the current v4b captures. No pass has received artistic approval.
+
+The first actual Unity captures are `../../local/evidence/unity-verify/20261006-010937/Nib_Natural.png` and `Nib_Natural-face.png`. Their geometry generally reproduces this source's silhouette and visible defects. Skin renders incorrectly red in that initial engine pass; root is investigating the HDRP material/profile setup. Do not recolor source art to match that fault or count these images as visual acceptance. The portrait also exposes the sparse rectangular chin tuft and a light mouth-interior strip during idle; the next continuous-lip/groom pass must check animated poses as well as neutral.
 
 ## Animation, face and weapon contract
 
@@ -57,7 +65,7 @@ These variants grant no crusher claw, enlarged limb, heavy upgrade or stat advan
 
 Maps are explicit BaseColor, OpenGL normal, roughness and metallic PNGs, shared by all variants. Most are 1024²; skin is 2048² and the generated workwear albedo is 1254². The canvas source/prompt are retained in `Nib_Workwear_BaseColor_v1.png` and `canvas-texture-prompt.txt`; its darker material tint is baked into the shared albedo. It is not a scanned PBR set or a verified seamless texture.
 
-Confirmed fur coverage follows the concept: visible mottled skin with fine facial/body fuzz, fuller head and ear fur, and visible inner ear skin. `--cinematic` is prepared to generate a separate denser `Nib_Cinematic.blend` with the same coverage. That cinematic file has **not yet been generated**.
+Confirmed fur coverage follows the concept: visible mottled skin with fine facial/body fuzz, fuller head and ear fur, and visible inner ear skin. A cinematic master has **not yet been generated**. Do not run the old generator's `--cinematic` path against the pinned assets: it also rewrites shared maps and evidence. The isolated v5 study now has a separate cinematic output path with an identical deterministic guide field; it remains unexecuted and unreviewed.
 
 ## Pipeline and remaining work
 

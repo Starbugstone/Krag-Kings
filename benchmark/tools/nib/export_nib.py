@@ -1,13 +1,24 @@
 """Consolidate editable Nib source into three efficient, self-contained FBX variants."""
-import bpy,json,shutil,hashlib
+import bpy,json,shutil,hashlib,sys,argparse,os
 import numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];ART=ROOT/'benchmark/art/nib';OUT=ROOT/'benchmark/shared/characters/nib'
+parser=argparse.ArgumentParser()
+parser.add_argument('--source',type=Path,default=ART/'Nib_Master.blend')
+parser.add_argument('--out',type=Path,default=OUT)
+parser.add_argument('--source-report',type=Path,default=ART/'source-report.json')
+args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+SOURCE=args.source;BASELINE_OUT=OUT;OUT=args.out
+OUT.mkdir(parents=True,exist_ok=True)
+candidate=OUT.resolve()!=BASELINE_OUT.resolve()
+if candidate:
+    if SOURCE.resolve()==(ART/'Nib_Master.blend').resolve():raise RuntimeError('Candidate export requires an explicit derivative source')
+    shutil.copytree(BASELINE_OUT/'textures',OUT/'textures',dirs_exist_ok=True)
 legacy=ART/'versions/pre-v4-shared';legacy.mkdir(parents=True,exist_ok=True)
-for filename in ['asset_manifest.json','manifest.json','Nib_Natural.fbx','Nib_GripReplacement.fbx','Nib_LegReplacement.fbx']:
+for filename in ([] if candidate else ['asset_manifest.json','manifest.json','Nib_Natural.fbx','Nib_GripReplacement.fbx','Nib_LegReplacement.fbx']):
     old=OUT/filename
     if old.exists() and not (legacy/filename).exists():shutil.copy2(old,legacy/filename)
-bpy.ops.wm.open_mainfile(filepath=str(ART/'Nib_Master.blend'))
+bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
 rig=bpy.data.objects['Nib_Rig'];scene=bpy.context.scene
 for required in ['FaceRoot','WeaponMuzzle','WeaponAim']:
     if required not in rig.data.bones:raise RuntimeError('Saved source is missing current required bone '+required)
@@ -26,10 +37,17 @@ def visible(o,variant):
 manifest={'source':'../../../art/nib/Nib_Master.blend','sourceSha256':hashlib.sha256((ART/'Nib_Master.blend').read_bytes()).hexdigest(),'referenceImages':['krag-kings-design/concept-art/02-nib-character-sheet.png','krag-kings-design/concept-art/05-jetpack-bionics-sheet.png'],'units':'meters','sourceForward':'-Y','sourceUp':'Z','fbxForward':'-Z','fbxUp':'Y','normalConvention':'OpenGL +Y','boneRollAlignment':'local Z aligned toward world -Y','heightMeters':1.385,'bones':[b.name for b in rig.data.bones],'bindAnkleHeightMeters':.10,'materials':[],'variants':[],'clips':[],'acceptance':'Authored review candidate; likeness and investor acceptance remain unverified.'}
 manifest['weapon']={'muzzleBone':'WeaponMuzzle','aimBone':'WeaponAim','fireTimesNormalized':[.46],'forwardDefinition':'normalize(worldPosition(WeaponAim)-worldPosition(WeaponMuzzle))','sourceRestMuzzleMeters':[-.227,-.083,.427],'sourceRestBarrelForward':[0,0,-1]}
 manifest['deformation']=json.loads(scene['deformation_contract'])
+manifest['source']=os.path.relpath(SOURCE,OUT).replace('\\','/')
+manifest['sourceSha256']=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
+if 'v5_reference_provenance' in scene:
+    manifest['adaptedTopologyProvenance']=json.loads(scene['v5_reference_provenance'])
 manifest['locomotion']=json.loads(scene['locomotion_contract'])
 manifest['facialPerformance']={name:{'authoredInBodyClip':True} for name in ['Idle','Walk','Run','Melee','Shoot','Hit']}
-source_report=json.loads((ART/'source-report.json').read_text())
-if source_report['sourceSha256']!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
+source_report=json.loads(args.source_report.read_text())
+if source_report.get('candidateSha256',source_report['sourceSha256'])!=manifest['sourceSha256']:raise RuntimeError('Saved source/report hash mismatch')
+if candidate:
+    manifest['detailedMasterSha256']=source_report['sourceSha256']
+    manifest['runtimeReductionReport']=os.path.relpath(args.source_report,OUT).replace('\\','/')
 manifest['fur']={key:source_report.get(key) for key in ['furRepresentation','furStrands','furTriangles','cinematic']}
 manifest['mouthAnatomyStatus']='Provisional interior and expressions for review; dark-blue tongue canonical.'
 for m in bpy.data.materials:
@@ -45,6 +63,7 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
         o=src.copy();o.data=src.data.copy();scene.collection.objects.link(o);o.hide_set(False);o.hide_render=False;o.select_set(True);copies.append(o)
         o.data.uv_layers.active.name='UVMap'
     variant_fur={'representation':'skinned opaque strands; no simulation','strands':sum(int(o.get('fur_strands',0)) for o in copies),'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in copies if o.get('fur_strands'))}
+    if candidate and variant=='natural':manifest['fur']={**variant_fur,'cinematic':False,'scope':'Batched strand meshes; legacy fine edge/brow/chin tubes are additional geometry in total counts.'}
     # The active head owns the union of shape names; missing shapes on other
     # components are joined as their Basis, preserving both face and body targets.
     active=next(o for o in copies if o.get('bone')=='FaceSurface')
@@ -82,7 +101,7 @@ for variant,label in [('natural','Natural'),('grip','GripReplacement'),('leg','L
     transform=np.array(mesh.matrix_world,dtype=np.float64);world=positions@transform[:3,:3].T+transform[:3,3]
     bounds={'min':world.min(axis=0).tolist(),'max':world.max(axis=0).tolist()}
     if variant=='natural':manifest['heightMeters']=bounds['max'][2]-bounds['min'][2]
-    if max_influences>4:raise RuntimeError(f'{label}: more than four bone influences')
+    if max_influences>(8 if candidate else 4):raise RuntimeError(f'{label}: unsupported bone influence count {max_influences}')
     if empty or badsum:raise RuntimeError(f'{label}: unweighted={empty}, invalid sums={badsum}')
     rig.hide_set(False);rig.select_set(True);bpy.context.view_layer.objects.active=rig
     fbx='Nib_'+label+'.fbx'
@@ -110,10 +129,11 @@ for clip in manifest['clips']:
     bpy.ops.export_scene.fbx(filepath=str(path),use_selection=True,object_types={'ARMATURE','MESH'},use_mesh_modifiers=False,global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',add_leaf_bones=False,use_armature_deform_only=False,bake_anim=True,bake_anim_use_all_actions=False,bake_anim_use_nla_strips=False,bake_anim_force_startend_keying=True,bake_anim_simplify_factor=0,path_mode='RELATIVE',embed_textures=False)
     clip['fbx']='animations/'+name+'.fbx';manifest['animations'][name]=clip['fbx']
 for filename in ['manifest.json','asset_manifest.json']:
-    (OUT/filename).write_text(json.dumps(manifest,indent=2))
+    (OUT/filename).write_text(json.dumps(manifest,indent=2),newline='\n')
+(OUT/'facial-rig.json').write_text(json.dumps(manifest['deformation'],indent=2),newline='\n')
 # Archive only the redundant texture-copy directories generated by the superseded
 # first exporter; all variants now share the explicit textures/ manifest paths.
-for label in ['Natural','GripReplacement','LegReplacement']:
+for label in ([] if candidate else ['Natural','GripReplacement','LegReplacement']):
     stale=OUT/('Nib_'+label+'.fbm')
     if stale.exists():
         destination=legacy/stale.name

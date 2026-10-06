@@ -1,0 +1,118 @@
+"""Scalp-bound clumped Nib groom for the separate v5 native study.
+
+All guides are deterministic. Runtime/cinematic density only changes the number
+of strands around each existing guide; it never changes the guide field itself.
+Opaque triangles avoid full strand simulation. Real costs are reported by caller.
+"""
+import bpy, math, random
+from mathutils import Vector
+from mathutils.bvhtree import BVHTree
+
+def strand_mesh(name,guide_clumps,collection,rig,material,bone='Head',cinematic=False):
+    vertices=[];faces=[];uvs=[];rng=random.Random(8141)
+    count=0;rings=6 if cinematic else 3;sides=3
+    for root,normal,mid,tip,width,seed in guide_clumps:
+        rng.seed(seed)
+        tangent=normal.cross(Vector((0,0,1)))
+        if tangent.length<.01:tangent=normal.cross(Vector((0,1,0)))
+        tangent.normalize();bitangent=normal.cross(tangent).normalized()
+        # Nested random seeds retain the runtime subset in the denser master.
+        density=24 if cinematic else 8
+        for strand in range(density):
+            strand_rng=random.Random(seed*100+strand)
+            radial=width*math.sqrt(strand_rng.random());angle=strand_rng.random()*math.tau
+            offset=tangent*(radial*math.cos(angle))+bitangent*(radial*math.sin(angle))
+            length=1+strand_rng.uniform(-.12,.12)
+            start=root+offset
+            middle=mid+offset*.62
+            end=root+(tip-root)*length+offset*.12
+            radius=strand_rng.uniform(.00017,.00032)
+            base=len(vertices)
+            for j in range(rings):
+                t=j/(rings-1);point=start*(1-t)**2+middle*(2*t*(1-t))+end*t*t
+                direction=(2*(1-t)*(middle-start)+2*t*(end-middle)).normalized()
+                across=direction.cross(normal)
+                if across.length<.01:across=direction.cross(Vector((1,0,0)))
+                across.normalize();other=direction.cross(across).normalized()
+                taper=radius*(1-t)**.8+.000006
+                for k in range(sides):
+                    a=k/sides*math.tau;vertices.append(tuple(point+taper*(math.cos(a)*across+math.sin(a)*other)));uvs.append((k/sides,t))
+            for j in range(rings-1):
+                for k in range(sides):
+                    a=base+j*sides+k;b=base+j*sides+(k+1)%sides
+                    faces.append((a,b,b+sides,a+sides))
+            count+=1
+    mesh=bpy.data.meshes.new(name);mesh.from_pydata(vertices,[],faces);mesh.update()
+    obj=bpy.data.objects.new(name,mesh);collection.objects.link(obj)
+    mesh.materials.append(material)
+    layer=mesh.uv_layers.new(name='UVMap')
+    for loop in mesh.loops:layer.data[loop.index].uv=uvs[loop.vertex_index]
+    for polygon in mesh.polygons:polygon.use_smooth=True
+    obj['bone']=bone;obj['variant']='all';obj['fur_strands']=count;obj['fur_rings']=rings
+    obj['fur_guides']=len(guide_clumps);obj['fur_design']='v5 deterministic clumped guides, no simulation'
+    obj.parent=rig;group=obj.vertex_groups.new(name=bone);group.add(list(range(len(vertices))),1,'REPLACE')
+    mod=obj.modifiers.new('Nib deformation','ARMATURE');mod.object=rig
+    return obj
+
+def build_groom(head,collection,rig,material,cinematic=False):
+    """Roots are sampled from the actual fitted scalp, with outward clearance."""
+    rng=random.Random(651220)
+    points=[]
+    for vertex in head.data.vertices:
+        point=head.matrix_world@vertex.co
+        normal=(head.matrix_world.to_3x3()@vertex.normal).normalized()
+        z=point.z+.032
+        if z<1.16 or (point.y<-.01 and z<1.207):continue
+        if normal.z<-.2:continue
+        points.append((point,normal))
+    if not points:raise RuntimeError('No fitted scalp root samples')
+    clumps=[]
+    for index in range(850):
+        root,normal=rng.choice(points);root=root+normal*.0003
+        front=root.y<-.015
+        if front:flow=Vector((-.020,-.012,-.019))
+        else:flow=Vector((math.copysign(.019,root.x),.004,-.026))
+        # Subtract the inward component and lift the whole path off the scalp.
+        flow-=normal*flow.dot(normal)
+        if flow.length<.006:flow=normal.cross(Vector((1,0,0)))*.026
+        flow.normalize();flow*=rng.uniform(.029,.047)
+        mid=root+flow*.48+normal*rng.uniform(.009,.014)
+        tip=root+flow+normal*rng.uniform(.003,.007)
+        clumps.append((root,normal,mid,tip,.0038,1000+index))
+    output=[strand_mesh('Nib v5 scalp clumped coat',clumps,collection,rig,material,cinematic=cinematic)]
+    # Ear roots use the actual closed cupped auricle. A nearer surface query
+    # fits each clump to its rim/interior rather than relying on old dimensions.
+    for side,sign in [('L',1),('R',-1)]:
+        ear=next(o for o in collection.objects if o.name.startswith('Fennec cupped ear ') and o.get('bone')=='Ear_'+side)
+        candidates=[]
+        for vertex in ear.data.vertices:
+            point=ear.matrix_world@vertex.co;normal=(ear.matrix_world.to_3x3()@vertex.normal).normalized()
+            if normal.y<-.25 and abs(point.x)>.085:
+                candidates.append((point,normal))
+        clumps=[]
+        for index in range(420):
+            root,normal=rng.choice(candidates)
+            # Distribute mostly across the basal/outer region; inner velvet stays
+            # visible. Existing sparse perimeter tubes are removed by caller.
+            along=max(0,min(1,(abs(root.x)-.066)/.245))
+            if .40<along<.86 and rng.random()<.45:continue
+            root=root+normal*.0003
+            flow=Vector((-sign*.014,-.002,.006))
+            flow-=normal*flow.dot(normal)
+            mid=root+flow*.50+normal*.005
+            tip=root+flow+normal*rng.uniform(.002,.006)
+            clumps.append((root,normal,mid,tip,.0028,3000+(0 if sign==1 else 1000)+index))
+        output.append(strand_mesh('Nib v5 auricle clumped coat '+side,clumps,collection,rig,material,'Ear_'+side,cinematic))
+    # A longer tapered chin cluster follows the jaw, with irregular strand ends.
+    points=[]
+    for vertex in head.data.vertices:
+        p=head.matrix_world@vertex.co;z=p.z+.032
+        if abs(p.x)<.015 and 1.066<z<1.083 and p.y<-.024:
+            n=(head.matrix_world.to_3x3()@vertex.normal).normalized();points.append((p,n))
+    if points:
+        clumps=[]
+        for index in range(24):
+            root,normal=rng.choice(points);tip=root+Vector((root.x*.12,.001,-rng.uniform(.014,.022)))
+            clumps.append((root,normal,root.lerp(tip,.5)+normal*.002,tip,.0015,5000+index))
+        output.append(strand_mesh('Nib v5 tapered chin tuft',clumps,collection,rig,material,'Jaw',cinematic))
+    return output

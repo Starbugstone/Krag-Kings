@@ -1,0 +1,205 @@
+{
+  "fbx": "D:\\Dev\\Krag-Kings\\benchmark\\shared\\characters\\nib\\Nib_Natural.fbx",
+  "fbxVersion": 7400,
+  "status": "Read-only geometry audit; source and shared exports unchanged",
+  "meshes": [
+    {
+      "name": "Nib connected facial loops.001",
+      "vertices": 614132,
+      "polygons": 581346,
+      "triangles": 1158384,
+      "meshLocalBoundsNotWorldBounds": {
+        "min": [
+          -0.3121805191040039,
+          -0.09749999642372131,
+          0.032499998807907104
+        ],
+        "max": [
+          0.31204214692115784,
+          0.10431849211454391,
+          1.4265704154968262
+        ]
+      },
+      "trianglesByMaterial": {
+        "Nib_Skin": 663632,
+        "Nib_EarInner": 8968,
+        "Nib_Cloth": 96048,
+        "Nib_Eye": 4416,
+        "Nib_Dark": 3884,
+        "Nib_Muzzle": 1680,
+        "Nib_MouthInterior": 2160,
+        "Nib_Gum": 2320,
+        "Nib_Tooth": 3760,
+        "Nib_Tongue": 2688,
+        "Nib_Hair": 269036,
+        "Nib_Leather": 31792,
+        "Nib_Brass": 7620,
+        "Nib_Lens": 3680,
+        "Nib_Steel": 3012,
+        "Nib_Workwear": 41716,
+        "Nib_Stitch": 10656,
+        "Nib_Teal": 1316
+      },
+      "trianglesByOverlappingMeshLocalRegion": {
+        "Head above 1.025m": 392288,
+        "Neck and torso": 408268,
+        "Arms and hands": 347872,
+        "Legs and clothing below waist": 86130
+      },
+      "fullMeshMorphPositionBufferMB": 175.70457458496094,
+      "fullMeshMorphPositionAndNormalAndTangentMB": 527.1137237548828
+    }
+  ],
+  "shapeTargets": [
+    {
+      "name": "Blink_L",
+      "sparseAffectedVertices": 5520,
+      "deltaComponents": 16560,
+      "compressedDeltaBytes": 33610
+    },
+    {
+      "name": "Blink_R",
+      "sparseAffectedVertices": 5478,
+      "deltaComponents": 16434,
+      "compressedDeltaBytes": 31939
+    },
+    {
+      "name": "Squint_L",
+      "sparseAffectedVertices": 13055,
+      "deltaComponents": 39165,
+      "compressedDeltaBytes": 65265
+    },
+    {
+      "name": "Squint_R",
+      "sparseAffectedVertices": 12704,
+      "deltaComponents": 38112,
+      "compressedDeltaBytes": 62498
+    },
+    {
+      "name": "BrowRaise_L",
+      "sparseAffectedVertices": 12725,
+      "deltaComponents": 38175,
+      "compressedDeltaBytes": 67602
+    },
+    {
+      "name": "BrowRaise_R",
+      "sparseAffectedVertices": 12640,
+      "deltaComponents": 37920,
+      "compressedDeltaBytes": 65274
+    },
+    {
+      "name": "BrowLower_L",
+      "sparseAffectedVertices": 12987,
+      "deltaComponents": 38961,
+      "compressedDeltaBytes": 69363
+    },
+    {
+      "name": "BrowLower_R",
+      "sparseAffectedVertices": 12904,
+      "deltaComponents": 38712,
+      "compressedDeltaBytes": 67403
+    },
+    {
+      "name": "Smile_L",
+      "sparseAffectedVertices": 15468,
+      "deltaComponents": 46404,
+      "compressedDeltaBytes": 120458
+    },
+    {
+      "name": "Smile_R",
+      "sparseAffectedVertices": 15074,
+      "deltaComponents": 45222,
+      "compressedDeltaBytes": 120262
+    },
+    {
+      "name": "Frown_L",
+      "sparseAffectedVertices": 14484,
+      "deltaComponents": 43452,
+      "compressedDeltaBytes": 81134
+    },
+    {
+      "name": "Frown_R",
+      "sparseAffectedVertices": 14098,
+      "deltaComponents": 42294,
+      "compressedDeltaBytes": 78120
+    },
+    {
+      "name": "JawOpen",
+      "sparseAffectedVertices": 11184,
+      "deltaComponents": 33552,
+      "compressedDeltaBytes": 57325
+    },
+    {
+      "name": "LipPress",
+      "sparseAffectedVertices": 13296,
+      "deltaComponents": 39888,
+      "compressedDeltaBytes": 70798
+    },
+    {
+      "name": "TongueOut",
+      "sparseAffectedVertices": 1297,
+      "deltaComponents": 3891,
+      "compressedDeltaBytes": 1032
+    },
+    {
+      "name": "CheekTension_L",
+      "sparseAffectedVertices": 13189,
+      "deltaComponents": 39567,
+      "compressedDeltaBytes": 40243
+    },
+    {
+      "name": "CheekTension_R",
+      "sparseAffectedVertices": 12468,
+      "deltaComponents": 37404,
+      "compressedDeltaBytes": 38069
+    },
+    {
+      "name": "Corrective_ElbowFlex_L",
+      "sparseAffectedVertices": 53266,
+      "deltaComponents": 159798,
+      "compressedDeltaBytes": 492646
+    },
+    {
+      "name": "Corrective_ElbowFlex_R",
+      "sparseAffectedVertices": 105593,
+      "deltaComponents": 316779,
+      "compressedDeltaBytes": 996315
+    },
+    {
+      "name": "Corrective_HipFlex_L",
+      "sparseAffectedVertices": 56822,
+      "deltaComponents": 170466,
+      "compressedDeltaBytes": 532931
+    },
+    {
+      "name": "Corrective_HipFlex_R",
+      "sparseAffectedVertices": 105964,
+      "deltaComponents": 317892,
+      "compressedDeltaBytes": 1015253
+    },
+    {
+      "name": "Corrective_KneeFlex_L",
+      "sparseAffectedVertices": 8747,
+      "deltaComponents": 26241,
+      "compressedDeltaBytes": 51801
+    },
+    {
+      "name": "Corrective_KneeFlex_R",
+      "sparseAffectedVertices": 8782,
+      "deltaComponents": 26346,
+      "compressedDeltaBytes": 51928
+    },
+    {
+      "name": "Corrective_ShoulderRaise_L",
+      "sparseAffectedVertices": 39105,
+      "deltaComponents": 117315,
+      "compressedDeltaBytes": 346744
+    },
+    {
+      "name": "Corrective_ShoulderRaise_R",
+      "sparseAffectedVertices": 93765,
+      "deltaComponents": 281295,
+      "compressedDeltaBytes": 876427
+    }
+  ]
+}
