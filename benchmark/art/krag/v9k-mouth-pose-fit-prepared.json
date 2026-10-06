@@ -1,0 +1,45 @@
+{
+  "status": "Frozen prepared source recipe; no v9k source or render exists",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthAnatomy_v9j_WIP.blend",
+    "sha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f"
+  },
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9k_wip/build_mouth_pose_fit.py",
+      "sha256": "4e583fb3d89742d1d9166aeb88a7592483c2d175544c0a4e53cb1e5dadb2a0e9"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/semantic_jaw_v3.py",
+      "sha256": "8c83abd15a75e731dbc0049b1ccd8cdb951e98235099c38b87ccf8fd997cc17a"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/build-mouth-v9k-job.json",
+      "sha256": "98d2e57fa6d63ccd8e197f81f915252acb916c8b4920acaf82dd83c6df9f4a79"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9k-Neutral.json",
+      "sha256": "4bc3093f2c32bcef77c5600b2c7b085b951ebdcc044290b3ed6ad45051db971b"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9k-OpenMouth.json",
+      "sha256": "cd83a8716109082dbbf922f810763fbef7abbb4288806fcc3a526846b620913e"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9k-OpenProfile.json",
+      "sha256": "e80f92a55d86f8f85a916ef742ecb69324b48ef560c77e4fac82fd148e1f0a16"
+    }
+  ],
+  "actualValidationRequired": [
+    "Canonical lower-rim error <=0.2mm in evaluated 23 degree jaw pose",
+    "OpenMouth actual portrait first; stop on structural failure",
+    "Neutral dental occlusion and open side view"
+  ],
+  "sharedMutation": false,
+  "bodyActionOrBindChange": false,
+  "provisionalMouthAnatomy": true
+}

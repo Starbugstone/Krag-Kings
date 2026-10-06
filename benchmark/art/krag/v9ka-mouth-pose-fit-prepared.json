@@ -1,0 +1,40 @@
+{
+  "status": "Frozen prepared corrected profile; not run",
+  "inputSourceSha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f",
+  "failedPredecessor": "benchmark/art/krag/anatomy-study/mouth-pose-fit-v9k-failure.json",
+  "correction": "True half-ellipse lower-rim jaw support replaces mistaken sine-power support; original30mm stored-corrective and0.2mm actual-pose limits retained",
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9k_wip/build_mouth_pose_fit_v9ka.py",
+      "sha256": "aa9d7a5f96ab39abef17b33f0e827d1a59d41739d84036723d40f6e5f135d4b2"
+    },
+    {
+      "path": "benchmark/tools/krag/v9k_wip/semantic_jaw_v4.py",
+      "sha256": "b02f88782fd97566353ebe822a8afee022a78ecd70750218b2b671eceb685c52"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/semantic_jaw_v3.py",
+      "sha256": "8c83abd15a75e731dbc0049b1ccd8cdb951e98235099c38b87ccf8fd997cc17a"
+    },
+    {
+      "path": "benchmark/tools/krag/build-mouth-v9ka-job.json",
+      "sha256": "ecf2cf648b00d50b8fac85ee709d3fb7a75b1e06913dc27b9b6100d068abc7ce"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9ka-Neutral.json",
+      "sha256": "37ed74c21625ce87e5c76b3bfb51cb9f1a58539c448841389fb28427600ac845"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9ka-OpenMouth.json",
+      "sha256": "765089ca42d62081a14a0f00429fddd07112659ead9e76ca31d53fb4478ba44f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-mouth-v9ka-OpenProfile.json",
+      "sha256": "f722efbd949de0a9c28eedbd0c8a339ca62c3bafe16d666c1c719009b7ee9691"
+    }
+  ]
+}

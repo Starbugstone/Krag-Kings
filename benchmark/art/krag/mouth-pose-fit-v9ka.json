@@ -1,0 +1,74 @@
+{
+  "status": "Generated isolated cavity/open-pose mouth study; actual neutral/open/profile review required",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "input": {
+    "path": "benchmark/art/krag/Krag_MouthAnatomy_v9j_WIP.blend",
+    "sha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f"
+  },
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+    "sha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297"
+  },
+  "jawProfile": {
+    "method": "Audited semantic domains and edge-geodesic anchors with harmonic inner-mouth/lower-jaw interpolation",
+    "sourceFaceSets": {
+      "upperLipCheek": 33,
+      "lowerLipJaw": 24,
+      "oralBag": 7,
+      "nose": 11
+    },
+    "upperLipVertices": 14242,
+    "lowerLipRimVertices": 81,
+    "upperLipRimVertices": 105,
+    "cornerVertices": 2,
+    "lowerJawAnchorVertices": 6064,
+    "unknownSolvedVertices": 2499,
+    "iterations": 113,
+    "relativeLinearResidual": 9.324161851640002e-10,
+    "upperLipMaximumJawWeight": 0.0,
+    "noseMaximumJawWeight": 0.0,
+    "lowerRimJawWeightRange": [
+      0.0,
+      1.0
+    ],
+    "lowerRimCornerToCenterSourceMeters": 0.029720546582932723,
+    "lowerRimProfile": "sqrt(1 - (1-geodesicFraction)^2)",
+    "lowerJawBoundarySourceMeters": 0.009,
+    "oralFloorAnchorVertices": 909,
+    "oralRoofAnchorVertices": 1463,
+    "sourceMouthHeight": 0.22888289391994476,
+    "provisional": true,
+    "requiresActualPoseReview": true
+  },
+  "cavity": {
+    "affineScale": [
+      2.1,
+      1.2,
+      0.85
+    ],
+    "rimBlendSourceMeters": 0.014,
+    "maximumRestCorrectionMeters": 0.028098331732762487,
+    "externalSkinNeutralUnchanged": true
+  },
+  "lip": {
+    "canonicalJawDegrees": 23.0,
+    "driverWeight": 0.9199998378753662,
+    "targetIncisalClearanceMeters": 0.0055,
+    "openingDepthMeters": 0.06971590173566677,
+    "maximumStoredCorrectiveMeters": 0.014610138480558267,
+    "actualCanonicalRimErrorMaximumMeters": 2.2023016057857285e-07,
+    "harmonicIterations": [
+      107,
+      104,
+      105
+    ]
+  },
+  "preserved": [
+    "Body geometry/bind/actions",
+    "Weapon",
+    "Dental and tongue source geometry",
+    "Full natural master",
+    "Shared exports"
+  ]
+}

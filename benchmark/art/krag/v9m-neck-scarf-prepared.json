@@ -1,0 +1,44 @@
+{
+  "status": "Prepared, not generated. Actual v9ka all-mesh rays identify Body neck and Scarf occlusion; next guarded source removes concealed duplicate faces and physically settles a new broad asymmetric cloth sheet.",
+  "inputSha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "recipes": [
+    {
+      "path": "benchmark/tools/krag/v9m_wip/audit_mouth_scene.py",
+      "sha256": "3c4c3bb47898094bda527151068900fa5b2fa779f671b208d9aedf28be54bbfa"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/build_neck_scarf.py",
+      "sha256": "c7a410f187cf0bdc713d8bd694f0bea9609a10deaa8cd989ad0f7db1428b9263"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/neck_composition.py",
+      "sha256": "14204d317782b642a5be645cbdbdf3ff50ec3045ab2eba7d0178ca870c60c0db"
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/scarf_cloth_v5.py",
+      "sha256": "8232b492dc7d0b5844ae8a0dbd94d24715bb42eb6462c171a70e45c8148080c6"
+    },
+    {
+      "path": "benchmark/tools/krag/build-neck-scarf-v9m-job.json",
+      "sha256": "7cfde5c809c21060beae668f67546a278c2edf33a1cfff1cd140f5c132da491f"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9m-Front.json",
+      "sha256": "c8c72bec606299396ee9fbdfcc0a5008be072fa29f046dc3154ec905b3d149d8"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9m-OpenMouth.json",
+      "sha256": "7e390b69f80b0b4ab696d878e2867c01b3f4486ba54d5604bf68b436a944a935"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9m-OpenProfile.json",
+      "sha256": "4b6c4f613f12e9e27d4f0e6533377ed837813bd8d4683a99276485d77d1dc47d"
+    },
+    {
+      "path": "benchmark/tools/krag/review-neck-scarf-v9m-Shoot.json",
+      "sha256": "05d82e4a2cbaa5fa8a9c07341d19902ee4e5cdcefd0422a3c5de69724ae8c3f3"
+    }
+  ]
+}

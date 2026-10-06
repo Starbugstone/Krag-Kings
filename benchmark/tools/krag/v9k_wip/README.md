@@ -1,0 +1,9 @@
+# Krag v9k mouth pose fit
+
+The first isolated correction ran and stopped at its unchanged 30 mm stored-corrective gate before saving. No v9k source or render exists. See `art/krag/anatomy-study/mouth-pose-fit-v9k-failure.json`: maximum30.508mm, skin condition number1.0205. The separately prepared v9ka corrects the mistaken sine-power jaw profile to a true half-ellipse and retains both numeric limits. The source is hash pinned; body actions/bind, weapon, teeth/tongue geometry and shared assets stay unchanged.
+
+The inner bag receives a coherent anatomical fit blended into the retained lip rims, removing inherited exterior nose/muzzle warping. Its expression support tapers into the cranium/mandible instead of following external brow/nose sculpt fields. A canonical 23-degree jaw opening then places the lower lip relative to the actual evaluated central incisors and tapers it into real mouth corners. The correction is carried through adjacent topology harmonically and transformed back through the actual skin matrices into the ordinary portable JawOpen target.
+
+The source must pass an actual canonical rim-position check before saving, then the first OpenMouth render must be inspected before neutral/profile follow-ups. This numeric constraint is not artistic acceptance. Overall facial sculpt/iris, cloth and bionic replacement remain required work.
+
+v9ka has now generated and passed that numerical gate. Its actual first OpenMouth render still fails: all-mesh portrait rays prove a duplicate Body neck surface inside the opening, and the old high Scarf hides the lowered chin. The source and failure are preserved in `art/krag/v9ka-mouth-pose-fit-review.json`; neutral/profile follow-ups were stopped. The separately prepared v9m source addresses the assembled surfaces and fabric without changing the body bind or motion.

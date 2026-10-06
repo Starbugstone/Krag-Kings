@@ -13,7 +13,7 @@
     "derived": true
   },
   "sharedReceipt": "benchmark/art/krag/delivery-v7-aim.json",
-  "currentAuthoringCode": "Actual v9h critical movement/contact audit and four gait views confirm unnatural crouched posture, rigid torso/arms and splayed hand. Isolated v9i mouth source and two renders improve dental visibility but still fail normal aperture/interior appearance. Root owns new reference-derived body motion; no shared promotion.",
+  "currentAuthoringCode": "Actual v9ka mouth pose/cavity fit passed source numeric gate but first assembled render fails. All-mesh portrait rays prove duplicate Body neck is the main oral occluder and Scarf hides the lowered chin. Prepared v9m removes concealed overlap and physically settles new cloth; not generated. Root owns actual CMU body-motion studies. Shared stays unchanged.",
   "pendingChanges": [
     "Correct v9c nasal vertical interval, upper muzzle/cheek planes, paired brow shape and visible cupped ears; retain proven ocular positioning",
     "Verify actual eyelid closure, provisional mouth anatomy, gaze and every facial/body action on corrected geometry",
@@ -406,5 +406,18 @@
     "review": "benchmark/art/krag/v9j-mouth-anatomy-review.json",
     "status": "Actual isolated mouth source and first OpenMouth review; structural mouth failure persists, dependent views stopped",
     "accepted": false
-  }
+  },
+  "mouthPoseFitStudy": {
+    "source": {
+      "path": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+      "sha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+      "bytes": 142216329
+    },
+    "review": "benchmark/art/krag/v9ka-mouth-pose-fit-review.json",
+    "status": "Actual isolated source and first OpenMouth render fail assembled-mouth review; all-mesh rays now identify duplicate Body neck as the major occluder",
+    "accepted": false
+  },
+  "failedV9kGeneration": "benchmark/art/krag/v9k-failed-generation-review.json",
+  "preparedNeckScarfStudy": "benchmark/art/krag/v9m-neck-scarf-prepared.json",
+  "preparedFacialPlaneStudy": "benchmark/art/krag/v9l-facial-planes-prepared.json"
 }

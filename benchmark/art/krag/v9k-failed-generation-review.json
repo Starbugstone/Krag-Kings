@@ -1,0 +1,38 @@
+{
+  "status": "Actual rejected generation and read-only attribution; no source/render saved",
+  "failure": "Required stored correction30.508mm exceeded unchanged30mm bound; no conditioning failure",
+  "sourcePreservedSha256": "dc62a79bd51e3be04593287fb2a66fc5b8d34555d75ca89c744ba731c973874f",
+  "artisticAcceptance": false,
+  "sharedPromotion": false,
+  "files": [
+    {
+      "path": "benchmark/tools/krag/v9k_wip/build_mouth_pose_fit.py",
+      "sha256": "4e583fb3d89742d1d9166aeb88a7592483c2d175544c0a4e53cb1e5dadb2a0e9"
+    },
+    {
+      "path": "benchmark/tools/krag/v9k_wip/diagnose_failed_pose_fit.py",
+      "sha256": "6780ba0a36ed81adb678ddc85e628aacbc0d32a61379458f95bac7d90a6690ad"
+    },
+    {
+      "path": "benchmark/art/krag/v9k-mouth-pose-fit-prepared.json",
+      "sha256": "42c7cee202c251a0f7d54f3ddad36860384e0be9ea6c83d957c36b79b036b917"
+    },
+    {
+      "path": "benchmark/art/krag/anatomy-study/mouth-pose-fit-v9k-failure.json",
+      "sha256": "fc3891b22e16f3d1f8dae2b9264d0721a9c6fd6c5ec19e49707649b39634bd08"
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-mouth-v9k-memory.csv",
+      "exitCode": 2,
+      "peakPrivateMB": 852.0
+    },
+    {
+      "path": "benchmark/local/krag-diagnose-mouth-v9k-memory.csv",
+      "exitCode": 2,
+      "peakPrivateMB": 858.0
+    }
+  ],
+  "next": "Prepared v9ka true half-ellipse lower-rim support; same gates, actual output pending"
+}

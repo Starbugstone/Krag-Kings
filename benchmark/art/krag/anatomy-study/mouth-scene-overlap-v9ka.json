@@ -1,0 +1,4073 @@
+{
+  "status": "Actual saved-source all-mesh portrait-ray attribution; not a repair",
+  "source": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+  "sourceSha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+  "clip": "FacePerformance",
+  "frame": 146,
+  "view": "Natural_Head",
+  "pixelSpace": "1000x1000, origin top-left, neutral portrait camera",
+  "visibleSurfaceCounts": {
+    "Body/Krag_SandstoneSkin": 40,
+    "Head/Krag_FacialSkin": 9,
+    "Face/Krag_Ivory": 2,
+    "MouthInterior/Krag_DentalEnamel": 1,
+    "Scarf/Krag_DesertCanvas": 7,
+    "Head/Krag_InnerMouth_v9k": 1,
+    "MouthInterior/Krag_OralTongue": 10
+  },
+  "evaluatedModuleBounds": {
+    "Armor": [
+      [
+        0.1591334044933319,
+        -0.2088000774383545,
+        1.5621393918991089
+      ],
+      [
+        0.5862361788749695,
+        0.22783204913139343,
+        1.8361386060714722
+      ]
+    ],
+    "Belt": [
+      [
+        -0.27896878123283386,
+        -0.23691250383853912,
+        0.6272920966148376
+      ],
+      [
+        0.2849999964237213,
+        0.2258879542350769,
+        1.1309999227523804
+      ]
+    ],
+    "BioArm_L": [
+      [
+        0.31856751441955566,
+        -0.15829505026340485,
+        1.2644639015197754
+      ],
+      [
+        0.5870217084884644,
+        0.22344620525836945,
+        1.718469500541687
+      ]
+    ],
+    "BioArm_R": [
+      [
+        -0.5855322480201721,
+        -0.1583176851272583,
+        1.2564350366592407
+      ],
+      [
+        -0.3218781352043152,
+        0.2234163135290146,
+        1.710920810699463
+      ]
+    ],
+    "BioForearm_L": [
+      [
+        0.398338258266449,
+        -0.22734391689300537,
+        0.773440957069397
+      ],
+      [
+        0.6743965148925781,
+        0.1425592005252838,
+        1.3328338861465454
+      ]
+    ],
+    "BioForearm_R": [
+      [
+        -0.6494905948638916,
+        -0.18434573709964752,
+        0.8200340867042542
+      ],
+      [
+        -0.39631807804107666,
+        0.14243964850902557,
+        1.3188666105270386
+      ]
+    ],
+    "BioLowerLeg_L": [
+      [
+        0.04207027330994606,
+        -0.14385850727558136,
+        0.2499639391899109
+      ],
+      [
+        0.32272806763648987,
+        0.14332982897758484,
+        0.6000358462333679
+      ]
+    ],
+    "BioLowerLeg_R": [
+      [
+        -0.32492971420288086,
+        -0.14385850727558136,
+        0.2499639391899109
+      ],
+      [
+        -0.044271938502788544,
+        0.14332982897758484,
+        0.6000358462333679
+      ]
+    ],
+    "Body": [
+      [
+        -0.33151713013648987,
+        -0.2369796633720398,
+        1.0686962604522705
+      ],
+      [
+        0.3277866244316101,
+        0.24117477238178253,
+        1.8252949714660645
+      ]
+    ],
+    "Boot_L": [
+      [
+        0.06900237500667572,
+        -0.25699999928474426,
+        0.004999984987080097
+      ],
+      [
+        0.3109976351261139,
+        0.14450740814208984,
+        0.3123423457145691
+      ]
+    ],
+    "Boot_R": [
+      [
+        -0.3109976351261139,
+        -0.25699999928474426,
+        0.004999984987080097
+      ],
+      [
+        -0.06900237500667572,
+        0.14450740814208984,
+        0.3123423457145691
+      ]
+    ],
+    "Face": [
+      [
+        -0.08448571711778641,
+        -0.16677629947662354,
+        1.7424328327178955
+      ],
+      [
+        0.07196168601512909,
+        -0.10742084681987762,
+        1.9281597137451172
+      ]
+    ],
+    "Garments": [
+      [
+        -0.30126523971557617,
+        -0.1681586056947708,
+        0.5499723553657532
+      ],
+      [
+        0.33030933141708374,
+        0.21160125732421875,
+        1.1100162267684937
+      ]
+    ],
+    "Harness": [
+      [
+        -0.31462758779525757,
+        -0.24886831641197205,
+        1.2133495807647705
+      ],
+      [
+        0.3126929998397827,
+        0.2516838312149048,
+        1.7229411602020264
+      ]
+    ],
+    "Head": [
+      [
+        -0.23776793479919434,
+        -0.20327027142047882,
+        1.6303143501281738
+      ],
+      [
+        0.23060935735702515,
+        0.15168751776218414,
+        2.027897834777832
+      ]
+    ],
+    "MouthInterior": [
+      [
+        -0.08829152584075928,
+        -0.1844358742237091,
+        1.7355509996414185
+      ],
+      [
+        0.07803602516651154,
+        0.01305621862411499,
+        1.8419148921966553
+      ]
+    ],
+    "NaturalThigh_R": [
+      [
+        -0.3328856825828552,
+        -0.16640135645866394,
+        0.5499722957611084
+      ],
+      [
+        -0.043046511709690094,
+        0.20706871151924133,
+        1.0170878171920776
+      ]
+    ],
+    "Scarf": [
+      [
+        -0.23658673465251923,
+        -0.26018765568733215,
+        1.609464406967163
+      ],
+      [
+        0.2292707860469818,
+        0.2060876339673996,
+        1.8896267414093018
+      ]
+    ],
+    "TrouserLeg_L": [
+      [
+        0.09799998998641968,
+        -0.16351428627967834,
+        0.4859998822212219
+      ],
+      [
+        0.3460000157356262,
+        0.06450000405311584,
+        0.9869997501373291
+      ]
+    ],
+    "TrouserLeg_R": [
+      [
+        -0.3460000157356262,
+        -0.16351428627967834,
+        0.4859998822212219
+      ],
+      [
+        -0.09799998998641968,
+        0.06450000405311584,
+        0.9869997501373291
+      ]
+    ]
+  },
+  "probes": [
+    {
+      "pixel": [
+        342,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.115516185760498,
+          "point": [
+            -0.07511091232299805,
+            -0.061586618423461914,
+            1.799697995185852
+          ],
+          "face": 25743,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.127556800842285,
+          "point": [
+            -0.078316330909729,
+            -0.049988746643066406,
+            1.7992608547210693
+          ],
+          "face": 43983,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.339264392852783,
+          "point": [
+            -0.13467693328857422,
+            0.15393400192260742,
+            1.7915754318237305
+          ],
+          "face": 16246,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.117101192474365,
+          "point": [
+            -0.07545077800750732,
+            -0.06035637855529785,
+            1.791166067123413
+          ],
+          "face": 25745,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1311163902282715,
+          "point": [
+            -0.07918190956115723,
+            -0.04685664176940918,
+            1.7906572818756104
+          ],
+          "face": 12575,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.345050811767578,
+          "point": [
+            -0.13613533973693848,
+            0.1592111587524414,
+            1.782891035079956
+          ],
+          "face": 16264,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.018836975097656,
+          "point": [
+            -0.049208998680114746,
+            -0.155303955078125,
+            1.7862590551376343
+          ],
+          "face": 8593,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.116552829742432,
+          "point": [
+            -0.07522284984588623,
+            -0.06118130683898926,
+            1.7827117443084717
+          ],
+          "face": 12668,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.118563652038574,
+          "point": [
+            -0.07575809955596924,
+            -0.059244394302368164,
+            1.782638669013977
+          ],
+          "face": 25687,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.3371262550354,
+          "point": [
+            -0.13394367694854736,
+            0.15128135681152344,
+            1.7747043371200562
+          ],
+          "face": 16468,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.022044658660889,
+          "point": [
+            -0.049980878829956055,
+            -0.1525113582611084,
+            1.7776681184768677
+          ],
+          "face": 15312,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.096693992614746,
+          "point": [
+            -0.0698540210723877,
+            -0.08060693740844727,
+            1.7749581336975098
+          ],
+          "face": 13067,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.119731903076172,
+          "point": [
+            -0.07598710060119629,
+            -0.058416128158569336,
+            1.7741217613220215
+          ],
+          "face": 25665,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.344735622406006,
+          "point": [
+            -0.13588738441467285,
+            0.15831375122070312,
+            1.7659536600112915
+          ],
+          "face": 16291,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.0276570320129395,
+          "point": [
+            -0.05139315128326416,
+            -0.14740204811096191,
+            1.76898992061615
+          ],
+          "face": 15296,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.076567649841309,
+          "point": [
+            -0.06441402435302734,
+            -0.10028982162475586,
+            1.767214298248291
+          ],
+          "face": 13467,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.120231628417969,
+          "point": [
+            -0.07603824138641357,
+            -0.058231353759765625,
+            1.7656291723251343
+          ],
+          "face": 25651,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.352721214294434,
+          "point": [
+            -0.1379314661026001,
+            0.1657090187072754,
+            1.7571892738342285
+          ],
+          "face": 16114,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "Face",
+          "module": "Face",
+          "distance": 4.017169952392578,
+          "point": [
+            -0.048519253730773926,
+            -0.15779995918273926,
+            1.7608962059020996
+          ],
+          "face": 7573,
+          "material": "Krag_Ivory",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.035897731781006,
+          "point": [
+            -0.05350494384765625,
+            -0.13976073265075684,
+            1.7602163553237915
+          ],
+          "face": 5945,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.064390182495117,
+          "point": [
+            -0.06109023094177246,
+            -0.11231613159179688,
+            1.7591819763183594
+          ],
+          "face": 13292,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.119687557220459,
+          "point": [
+            -0.07581138610839844,
+            -0.0590519905090332,
+            1.7571746110916138
+          ],
+          "face": 25701,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.359601974487305,
+          "point": [
+            -0.13968122005462646,
+            0.17204046249389648,
+            1.7484650611877441
+          ],
+          "face": 16127,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        342,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Face",
+          "module": "Face",
+          "distance": 4.020891189575195,
+          "point": [
+            -0.04942786693572998,
+            -0.15451264381408691,
+            1.752286672592163
+          ],
+          "face": 7571,
+          "material": "Krag_Ivory",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.033814430236816,
+          "point": [
+            -0.05286836624145508,
+            -0.14206457138061523,
+            1.7518175840377808
+          ],
+          "face": 81031,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.046202659606934,
+          "point": [
+            -0.05616629123687744,
+            -0.13013195991516113,
+            1.7513678073883057
+          ],
+          "face": 15322,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.072641849517822,
+          "point": [
+            -0.06320488452911377,
+            -0.10466504096984863,
+            1.7504080533981323
+          ],
+          "face": 9266,
+          "material": "Krag_Gingiva",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.118175506591797,
+          "point": [
+            -0.07532680034637451,
+            -0.060805559158325195,
+            1.7487549781799316
+          ],
+          "face": 2278,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.1062421798706055,
+          "point": [
+            -0.0644683837890625,
+            -0.06826043128967285,
+            1.8000346422195435
+          ],
+          "face": 25832,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.130346298217773,
+          "point": [
+            -0.0708853006362915,
+            -0.04504251480102539,
+            1.7991596460342407
+          ],
+          "face": 43984,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.345085620880127,
+          "point": [
+            -0.12805306911468506,
+            0.16180038452148438,
+            1.791364073753357
+          ],
+          "face": 15869,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.107924461364746,
+          "point": [
+            -0.06483423709869385,
+            -0.06693649291992188,
+            1.7914992570877075
+          ],
+          "face": 25834,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.137781143188477,
+          "point": [
+            -0.07278263568878174,
+            -0.0381777286529541,
+            1.7904154062271118
+          ],
+          "face": 43985,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.345945835113525,
+          "point": [
+            -0.12820005416870117,
+            0.16233253479003906,
+            1.7828584909439087
+          ],
+          "face": 15885,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.109492301940918,
+          "point": [
+            -0.0651695728302002,
+            -0.06572294235229492,
+            1.7829680442810059
+          ],
+          "face": 25874,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1327385902404785,
+          "point": [
+            -0.07135820388793945,
+            -0.04333138465881348,
+            1.7821240425109863
+          ],
+          "face": 7752,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.341870307922363,
+          "point": [
+            -0.12703299522399902,
+            0.1581101417541504,
+            1.7745320796966553
+          ],
+          "face": 16087,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.107707977294922,
+          "point": [
+            -0.0646125078201294,
+            -0.06773877143859863,
+            1.7745583057403564
+          ],
+          "face": 12480,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.1108174324035645,
+          "point": [
+            -0.06544029712677002,
+            -0.0647435188293457,
+            1.7744454145431519
+          ],
+          "face": 25797,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1198954582214355,
+          "point": [
+            -0.06785702705383301,
+            -0.0559992790222168,
+            1.7741159200668335
+          ],
+          "face": 7748,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.349550247192383,
+          "point": [
+            -0.12899553775787354,
+            0.16521072387695312,
+            1.7657787799835205
+          ],
+          "face": 15911,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.02756404876709,
+          "point": [
+            -0.04319477081298828,
+            -0.1452322006225586,
+            1.7689932584762573
+          ],
+          "face": 8627,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.08634614944458,
+          "point": [
+            -0.05884373188018799,
+            -0.08861160278320312,
+            1.7668592929840088
+          ],
+          "face": 12881,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.111622333526611,
+          "point": [
+            -0.06557273864746094,
+            -0.06426477432250977,
+            1.7659417390823364
+          ],
+          "face": 25786,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.356738090515137,
+          "point": [
+            -0.1308271884918213,
+            0.17183780670166016,
+            1.7570433616638184
+          ],
+          "face": 15733,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.0303850173950195,
+          "point": [
+            -0.043863773345947266,
+            -0.14281153678894043,
+            1.7604165077209473
+          ],
+          "face": 7136,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.065558433532715,
+          "point": [
+            -0.05322766304016113,
+            -0.1089315414428711,
+            1.7591396570205688
+          ],
+          "face": 13285,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.111553192138672,
+          "point": [
+            -0.06547224521636963,
+            -0.06462812423706055,
+            1.757469892501831
+          ],
+          "face": 25770,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        358,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.030397415161133,
+          "point": [
+            -0.04378509521484375,
+            -0.1430966854095459,
+            1.7519415616989136
+          ],
+          "face": 81412,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Face",
+          "module": "Face",
+          "distance": 4.0309739112854,
+          "point": [
+            -0.043938517570495605,
+            -0.14254140853881836,
+            1.7519207000732422
+          ],
+          "face": 7558,
+          "material": "Krag_Ivory",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.032707691192627,
+          "point": [
+            -0.04440009593963623,
+            -0.14087128639221191,
+            1.7518577575683594
+          ],
+          "face": 15306,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.062424659729004,
+          "point": [
+            -0.05231130123138428,
+            -0.11224722862243652,
+            1.7507789134979248
+          ],
+          "face": 9436,
+          "material": "Krag_Gingiva",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.110500812530518,
+          "point": [
+            -0.06511008739471436,
+            -0.06593894958496094,
+            1.7490336894989014
+          ],
+          "face": 2297,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.097593307495117,
+          "point": [
+            -0.053992271423339844,
+            -0.07433247566223145,
+            1.8003486394882202
+          ],
+          "face": 24807,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.133366107940674,
+          "point": [
+            -0.06351566314697266,
+            -0.039875030517578125,
+            1.799049973487854
+          ],
+          "face": 43977,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.350200653076172,
+          "point": [
+            -0.12124121189117432,
+            0.16898632049560547,
+            1.7911783456802368
+          ],
+          "face": 15489,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.099684238433838,
+          "point": [
+            -0.054466962814331055,
+            -0.07261490821838379,
+            1.7917983531951904
+          ],
+          "face": 24809,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1400957107543945,
+          "point": [
+            -0.06522524356842041,
+            -0.03368949890136719,
+            1.7903313636779785
+          ],
+          "face": 43987,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.346484661102295,
+          "point": [
+            -0.12016987800598145,
+            0.16511011123657227,
+            1.7828389406204224
+          ],
+          "face": 15696,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.1015472412109375,
+          "point": [
+            -0.05488085746765137,
+            -0.07111716270446777,
+            1.7832564115524292
+          ],
+          "face": 24816,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.13440465927124,
+          "point": [
+            -0.06362807750701904,
+            -0.039467811584472656,
+            1.782063603401184
+          ],
+          "face": 8442,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.346590518951416,
+          "point": [
+            -0.12011599540710449,
+            0.1649155616760254,
+            1.7743607759475708
+          ],
+          "face": 15707,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.103110313415527,
+          "point": [
+            -0.05521500110626221,
+            -0.06990861892700195,
+            1.7747251987457275
+          ],
+          "face": 24851,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1200151443481445,
+          "point": [
+            -0.0597153902053833,
+            -0.05362534523010254,
+            1.7741115093231201
+          ],
+          "face": 8445,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.353529930114746,
+          "point": [
+            -0.12188148498535156,
+            0.17130279541015625,
+            1.765634298324585
+          ],
+          "face": 15529,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.104167461395264,
+          "point": [
+            -0.055414557456970215,
+            -0.06918692588806152,
+            1.7662123441696167
+          ],
+          "face": 24768,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.104814529418945,
+          "point": [
+            -0.055586814880371094,
+            -0.06856369972229004,
+            1.7661888599395752
+          ],
+          "face": 8424,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.360046863555908,
+          "point": [
+            -0.1235344409942627,
+            0.17728376388549805,
+            1.7569233179092407
+          ],
+          "face": 15543,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.030620098114014,
+          "point": [
+            -0.03575277328491211,
+            -0.14032649993896484,
+            1.7604079246520996
+          ],
+          "face": 7183,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.104371070861816,
+          "point": [
+            -0.05538666248321533,
+            -0.06928730010986328,
+            1.7577306032180786
+          ],
+          "face": 24758,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        374,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.027128219604492,
+          "point": [
+            -0.03474116325378418,
+            -0.14398694038391113,
+            1.7520602941513062
+          ],
+          "face": 6993,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.027307987213135,
+          "point": [
+            -0.03478896617889404,
+            -0.1438138484954834,
+            1.7520537376403809
+          ],
+          "face": 81795,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Face",
+          "module": "Face",
+          "distance": 4.048131942749023,
+          "point": [
+            -0.040332794189453125,
+            -0.12375545501708984,
+            1.7512977123260498
+          ],
+          "face": 7559,
+          "material": "Krag_Ivory",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.103636264801025,
+          "point": [
+            -0.05510902404785156,
+            -0.07029223442077637,
+            1.7492828369140625
+          ],
+          "face": 24784,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.0861310958862305,
+          "point": [
+            -0.04276740550994873,
+            -0.0831139087677002,
+            1.800764799118042
+          ],
+          "face": 25066,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.136559009552002,
+          "point": [
+            -0.05619227886199951,
+            -0.03454017639160156,
+            1.7989341020584106
+          ],
+          "face": 43978,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.354510307312012,
+          "point": [
+            -0.11421501636505127,
+            0.17539644241333008,
+            1.7910219430923462
+          ],
+          "face": 15109,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.089295864105225,
+          "point": [
+            -0.043527841567993164,
+            -0.08036208152770996,
+            1.792175531387329
+          ],
+          "face": 25106,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.141293048858643,
+          "point": [
+            -0.057370543479919434,
+            -0.030277013778686523,
+            1.7902878522872925
+          ],
+          "face": 43913,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.3472137451171875,
+          "point": [
+            -0.11219048500061035,
+            0.16807174682617188,
+            1.782812476158142
+          ],
+          "face": 15315,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.092464923858643,
+          "point": [
+            -0.044289469718933105,
+            -0.077606201171875,
+            1.7835861444473267
+          ],
+          "face": 25009,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.133939743041992,
+          "point": [
+            -0.055330872535705566,
+            -0.037656307220458984,
+            1.7820805311203003
+          ],
+          "face": 8440,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.350481986999512,
+          "point": [
+            -0.11297857761383057,
+            0.17092323303222656,
+            1.7742195129394531
+          ],
+          "face": 15327,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.095321178436279,
+          "point": [
+            -0.0449678897857666,
+            -0.07515192031860352,
+            1.775007963180542
+          ],
+          "face": 25026,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.119239330291748,
+          "point": [
+            -0.05133533477783203,
+            -0.05211329460144043,
+            1.774139642715454
+          ],
+          "face": 8447,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.356759071350098,
+          "point": [
+            -0.11456763744354248,
+            0.17667245864868164,
+            1.7655171155929565
+          ],
+          "face": 15146,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.097325801849365,
+          "point": [
+            -0.04541969299316406,
+            -0.0735177993774414,
+            1.7664607763290405
+          ],
+          "face": 24975,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.103671550750732,
+          "point": [
+            -0.047109007835388184,
+            -0.06740522384643555,
+            1.7662303447723389
+          ],
+          "face": 8416,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.362725257873535,
+          "point": [
+            -0.1160740852355957,
+            0.18212270736694336,
+            1.7568260431289673
+          ],
+          "face": 15160,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.087547302246094,
+          "point": [
+            -0.042734384536743164,
+            -0.08323311805725098,
+            1.7583413124084473
+          ],
+          "face": 7611,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.098087310791016,
+          "point": [
+            -0.04554033279418945,
+            -0.07308077812194824,
+            1.7579587697982788
+          ],
+          "face": 24948,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        390,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.024312973022461,
+          "point": [
+            -0.025818228721618652,
+            -0.1444394588470459,
+            1.7521624565124512
+          ],
+          "face": 6233,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.0245466232299805,
+          "point": [
+            -0.02588045597076416,
+            -0.14421439170837402,
+            1.752153992652893
+          ],
+          "face": 82179,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.038907527923584,
+          "point": [
+            -0.029703617095947266,
+            -0.13038158416748047,
+            1.7516326904296875
+          ],
+          "face": 13657,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.097816467285156,
+          "point": [
+            -0.04538619518280029,
+            -0.0736386775970459,
+            1.7494940757751465
+          ],
+          "face": 24959,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.078000545501709,
+          "point": [
+            -0.03242921829223633,
+            -0.08868670463562012,
+            1.8010599613189697
+          ],
+          "face": 25914,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.140224456787109,
+          "point": [
+            -0.04899442195892334,
+            -0.028750896453857422,
+            1.798801064491272
+          ],
+          "face": 43990,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.356189727783203,
+          "point": [
+            -0.10648846626281738,
+            0.17927312850952148,
+            1.7909610271453857
+          ],
+          "face": 14730,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.081055164337158,
+          "point": [
+            -0.03316044807434082,
+            -0.08604097366333008,
+            1.7924747467041016
+          ],
+          "face": 25912,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.142298698425293,
+          "point": [
+            -0.04946458339691162,
+            -0.027049541473388672,
+            1.79025137424469
+          ],
+          "face": 43918,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.348903179168701,
+          "point": [
+            -0.10446667671203613,
+            0.17195796966552734,
+            1.7827510833740234
+          ],
+          "face": 14933,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.084263324737549,
+          "point": [
+            -0.03393244743347168,
+            -0.08324742317199707,
+            1.783883810043335
+          ],
+          "face": 26020,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.13340950012207,
+          "point": [
+            -0.047016143798828125,
+            -0.03590846061706543,
+            1.782099723815918
+          ],
+          "face": 8438,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.353579521179199,
+          "point": [
+            -0.105629563331604,
+            0.17616558074951172,
+            1.7741069793701172
+          ],
+          "face": 14944,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.087658405303955,
+          "point": [
+            -0.034754276275634766,
+            -0.08027434349060059,
+            1.7752861976623535
+          ],
+          "face": 25966,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.113270282745361,
+          "point": [
+            -0.0415726900100708,
+            -0.05560421943664551,
+            1.7743563652038574
+          ],
+          "face": 17146,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1184563636779785,
+          "point": [
+            -0.04295337200164795,
+            -0.05060863494873047,
+            1.7741681337356567
+          ],
+          "face": 8436,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.359314918518066,
+          "point": [
+            -0.10707449913024902,
+            0.18139314651489258,
+            1.765424370765686
+          ],
+          "face": 14765,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.090670108795166,
+          "point": [
+            -0.035474181175231934,
+            -0.07766985893249512,
+            1.76670241355896
+          ],
+          "face": 25969,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.092139720916748,
+          "point": [
+            -0.0358654260635376,
+            -0.07625436782836914,
+            1.7666490077972412
+          ],
+          "face": 17385,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1025285720825195,
+          "point": [
+            -0.03863120079040527,
+            -0.06624746322631836,
+            1.7662718296051025
+          ],
+          "face": 8431,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.364828109741211,
+          "point": [
+            -0.10846030712127686,
+            0.18640708923339844,
+            1.7567497491836548
+          ],
+          "face": 14777,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.079489231109619,
+          "point": [
+            -0.03241562843322754,
+            -0.08873629570007324,
+            1.7586338520050049
+          ],
+          "face": 17587,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.086033821105957,
+          "point": [
+            -0.03415787220001221,
+            -0.08243227005004883,
+            1.7583962678909302
+          ],
+          "face": 7610,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.092384338378906,
+          "point": [
+            -0.03584849834442139,
+            -0.07631516456604004,
+            1.7581658363342285
+          ],
+          "face": 160,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        406,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.022112846374512,
+          "point": [
+            -0.017058968544006348,
+            -0.14429974555969238,
+            1.7522423267364502
+          ],
+          "face": 82560,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.023900508880615,
+          "point": [
+            -0.017534852027893066,
+            -0.1425778865814209,
+            1.7521774768829346
+          ],
+          "face": 5995,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.040706157684326,
+          "point": [
+            -0.022008776664733887,
+            -0.1263902187347412,
+            1.7515673637390137
+          ],
+          "face": 13648,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.092830181121826,
+          "point": [
+            -0.03588521480560303,
+            -0.07618284225463867,
+            1.7496751546859741
+          ],
+          "face": 143,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.07004451751709,
+          "point": [
+            -0.02213764190673828,
+            -0.09409093856811523,
+            1.8013486862182617
+          ],
+          "face": 25287,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.141029357910156,
+          "point": [
+            -0.04103517532348633,
+            -0.025716304779052734,
+            1.798771858215332
+          ],
+          "face": 43998,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.356120586395264,
+          "point": [
+            -0.09829652309417725,
+            0.18146562576293945,
+            1.7909635305404663
+          ],
+          "face": 14543,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.074159622192383,
+          "point": [
+            -0.023151159286499023,
+            -0.0904238224029541,
+            1.7927249670028687
+          ],
+          "face": 25268,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.141724109649658,
+          "point": [
+            -0.04113805294036865,
+            -0.025343656539916992,
+            1.7902722358703613
+          ],
+          "face": 43937,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.351108074188232,
+          "point": [
+            -0.09688007831573486,
+            0.17634105682373047,
+            1.7826710939407349
+          ],
+          "face": 14550,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.077809810638428,
+          "point": [
+            -0.024040818214416504,
+            -0.0872044563293457,
+            1.7841181755065918
+          ],
+          "face": 25255,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.122126579284668,
+          "point": [
+            -0.03583884239196777,
+            -0.04451727867126465,
+            1.7825093269348145
+          ],
+          "face": 16984,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.132177829742432,
+          "point": [
+            -0.03851461410522461,
+            -0.0348355770111084,
+            1.7821444272994995
+          ],
+          "face": 9221,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.355964183807373,
+          "point": [
+            -0.09809088706970215,
+            0.18072175979614258,
+            1.7740204334259033
+          ],
+          "face": 14563,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.081424713134766,
+          "point": [
+            -0.024921178817749023,
+            -0.08401942253112793,
+            1.775512456893921
+          ],
+          "face": 25219,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.100475311279297,
+          "point": [
+            -0.02999281883239746,
+            -0.06566929817199707,
+            1.7748208045959473
+          ],
+          "face": 17262,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.117082595825195,
+          "point": [
+            -0.034414052963256836,
+            -0.049672842025756836,
+            1.774217963218689
+          ],
+          "face": 9223,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.361242294311523,
+          "point": [
+            -0.09941399097442627,
+            0.18550872802734375,
+            1.7653543949127197
+          ],
+          "face": 14575,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.083568572998047,
+          "point": [
+            -0.025410056114196777,
+            -0.08225107192993164,
+            1.7669601440429688
+          ],
+          "face": 17462,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.0848894119262695,
+          "point": [
+            -0.025761723518371582,
+            -0.0809786319732666,
+            1.7669122219085693
+          ],
+          "face": 25221,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.100893020629883,
+          "point": [
+            -0.030022144317626953,
+            -0.06556367874145508,
+            1.7663311958312988
+          ],
+          "face": 7704,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.366410732269287,
+          "point": [
+            -0.1007080078125,
+            0.19019079208374023,
+            1.7566922903060913
+          ],
+          "face": 14394,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.069396495819092,
+          "point": [
+            -0.021555185317993164,
+            -0.09619855880737305,
+            1.759000301361084
+          ],
+          "face": 17662,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.0790557861328125,
+          "point": [
+            -0.024126648902893066,
+            -0.08689451217651367,
+            1.7586495876312256
+          ],
+          "face": 18061,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 35
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.087352275848389,
+          "point": [
+            -0.02633535861968994,
+            -0.0789029598236084,
+            1.7583484649658203
+          ],
+          "face": 25182,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        422,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.019997596740723,
+          "point": [
+            -0.00832223892211914,
+            -0.14407801628112793,
+            1.752319097518921
+          ],
+          "face": 82946,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.030943393707275,
+          "point": [
+            -0.011236190795898438,
+            -0.13353466987609863,
+            1.7519217729568481
+          ],
+          "face": 14097,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.0671706199646,
+          "point": [
+            -0.020880579948425293,
+            -0.09863972663879395,
+            1.750606656074524
+          ],
+          "face": 7715,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.088501453399658,
+          "point": [
+            -0.02655923366546631,
+            -0.07809329032897949,
+            1.749832272529602
+          ],
+          "face": 25145,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.062842845916748,
+          "point": [
+            -0.01204681396484375,
+            -0.09876894950866699,
+            1.8016102313995361
+          ],
+          "face": 25335,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.139719486236572,
+          "point": [
+            -0.03251290321350098,
+            -0.02471923828125,
+            1.7988194227218628
+          ],
+          "face": 43993,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.355449199676514,
+          "point": [
+            -0.08994424343109131,
+            0.18307781219482422,
+            1.7909878492355347
+          ],
+          "face": 14161,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.067033767700195,
+          "point": [
+            -0.013080477714538574,
+            -0.09502887725830078,
+            1.7929836511611938
+          ],
+          "face": 25437,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.14014196395874,
+          "point": [
+            -0.032543301582336426,
+            -0.024608850479125977,
+            1.7903296947479248
+          ],
+          "face": 43931,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.1401567459106445,
+          "point": [
+            -0.0325472354888916,
+            -0.024594545364379883,
+            1.7903292179107666
+          ],
+          "face": 16744,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.353013038635254,
+          "point": [
+            -0.08921360969543457,
+            0.1804347038269043,
+            1.7826019525527954
+          ],
+          "face": 14170,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.07173490524292,
+          "point": [
+            -0.014250040054321289,
+            -0.09079718589782715,
+            1.7843387126922607
+          ],
+          "face": 25394,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.113948822021484,
+          "point": [
+            -0.02548813819885254,
+            -0.05013537406921387,
+            1.782806158065796
+          ],
+          "face": 17021,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.130612850189209,
+          "point": [
+            -0.029924511909484863,
+            -0.03408408164978027,
+            1.7822012901306152
+          ],
+          "face": 9216,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.357686996459961,
+          "point": [
+            -0.09037590026855469,
+            0.18464040756225586,
+            1.7739579677581787
+          ],
+          "face": 14181,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.076335430145264,
+          "point": [
+            -0.015392780303955078,
+            -0.08666276931762695,
+            1.7756972312927246
+          ],
+          "face": 25496,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.094794273376465,
+          "point": [
+            -0.020306825637817383,
+            -0.06888270378112793,
+            1.7750270366668701
+          ],
+          "face": 17300,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1153059005737305,
+          "point": [
+            -0.02576744556427002,
+            -0.04912543296813965,
+            1.774282455444336
+          ],
+          "face": 9224,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.362614631652832,
+          "point": [
+            -0.0916057825088501,
+            0.18908977508544922,
+            1.7653045654296875
+          ],
+          "face": 14192,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.0786452293396,
+          "point": [
+            -0.01592576503753662,
+            -0.08473443984985352,
+            1.7671388387680054
+          ],
+          "face": 17500,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.080323696136475,
+          "point": [
+            -0.01637256145477295,
+            -0.08311772346496582,
+            1.767077922821045
+          ],
+          "face": 25499,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.098845481872559,
+          "point": [
+            -0.021303415298461914,
+            -0.065277099609375,
+            1.7664055824279785
+          ],
+          "face": 7697,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.367502212524414,
+          "point": [
+            -0.09282505512237549,
+            0.19350099563598633,
+            1.756652593612671
+          ],
+          "face": 14204,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.064680099487305,
+          "point": [
+            -0.012125968933105469,
+            -0.09848284721374512,
+            1.759171485900879
+          ],
+          "face": 17660,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.074059009552002,
+          "point": [
+            -0.014622807502746582,
+            -0.08944869041442871,
+            1.7588310241699219
+          ],
+          "face": 3431,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 35
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.083192348480225,
+          "point": [
+            -0.017054319381713867,
+            -0.08065128326416016,
+            1.7584995031356812
+          ],
+          "face": 25503,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        438,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.017378330230713,
+          "point": [
+            0.0005487203598022461,
+            -0.14434218406677246,
+            1.7524142265319824
+          ],
+          "face": 83330,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.054072856903076,
+          "point": [
+            -0.009220123291015625,
+            -0.10899710655212402,
+            1.7510820627212524
+          ],
+          "face": 17821,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.064739227294922,
+          "point": [
+            -0.012059688568115234,
+            -0.09872293472290039,
+            1.7506948709487915
+          ],
+          "face": 7714,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.084791660308838,
+          "point": [
+            -0.01739799976348877,
+            -0.0794076919555664,
+            1.7499669790267944
+          ],
+          "face": 5627,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.0600266456604,
+          "point": [
+            -0.0031235218048095703,
+            -0.09922242164611816,
+            1.8017123937606812
+          ],
+          "face": 54540,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.138430118560791,
+          "point": [
+            -0.02399599552154541,
+            -0.023701906204223633,
+            1.7988661527633667
+          ],
+          "face": 43995,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.354854106903076,
+          "point": [
+            -0.081612229347229,
+            0.18476390838623047,
+            1.7910094261169434
+          ],
+          "face": 13778,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.063841342926025,
+          "point": [
+            -0.004057049751281738,
+            -0.09584450721740723,
+            1.7930996417999268
+          ],
+          "face": 54632,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.131267547607422,
+          "point": [
+            -0.022007226943969727,
+            -0.03089761734008789,
+            1.790651798248291
+          ],
+          "face": 16781,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.138558387756348,
+          "point": [
+            -0.023948192596435547,
+            -0.023874998092651367,
+            1.7903871536254883
+          ],
+          "face": 43930,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.354420185089111,
+          "point": [
+            -0.08141469955444336,
+            0.18404912948608398,
+            1.7825508117675781
+          ],
+          "face": 13789,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.068234443664551,
+          "point": [
+            -0.005144596099853516,
+            -0.09190964698791504,
+            1.7844657897949219
+          ],
+          "face": 25429,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.109055519104004,
+          "point": [
+            -0.016011953353881836,
+            -0.05258965492248535,
+            1.7829838991165161
+          ],
+          "face": 17059,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.12904691696167,
+          "point": [
+            -0.021334052085876465,
+            -0.03333330154418945,
+            1.782258152961731
+          ],
+          "face": 9218,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.358811378479004,
+          "point": [
+            -0.08250164985656738,
+            0.18798255920410156,
+            1.7739170789718628
+          ],
+          "face": 13798,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.072932243347168,
+          "point": [
+            -0.006313204765319824,
+            -0.08768153190612793,
+            1.7758207321166992
+          ],
+          "face": 25424,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.090976238250732,
+          "point": [
+            -0.011116862297058105,
+            -0.07030105590820312,
+            1.7751656770706177
+          ],
+          "face": 17299,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.113526344299316,
+          "point": [
+            -0.0171201229095459,
+            -0.048580169677734375,
+            1.7743470668792725
+          ],
+          "face": 9225,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.363457679748535,
+          "point": [
+            -0.08365654945373535,
+            0.19216108322143555,
+            1.765273928642273
+          ],
+          "face": 13810,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.075860977172852,
+          "point": [
+            -0.007010936737060547,
+            -0.08515715599060059,
+            1.7672399282455444
+          ],
+          "face": 17498,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.077023506164551,
+          "point": [
+            -0.007320404052734375,
+            -0.08403730392456055,
+            1.7671977281570435
+          ],
+          "face": 25449,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.096790790557861,
+          "point": [
+            -0.012582898139953613,
+            -0.06499695777893066,
+            1.7664802074432373
+          ],
+          "face": 7696,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.368135929107666,
+          "point": [
+            -0.08482015132904053,
+            0.19637060165405273,
+            1.7566297054290771
+          ],
+          "face": 13821,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.062470436096191,
+          "point": [
+            -0.003364086151123047,
+            -0.09835195541381836,
+            1.7592517137527466
+          ],
+          "face": 17657,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.079284191131592,
+          "point": [
+            -0.007840275764465332,
+            -0.08215641975402832,
+            1.7586413621902466
+          ],
+          "face": 7716,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.079984188079834,
+          "point": [
+            -0.008026599884033203,
+            -0.0814821720123291,
+            1.7586159706115723
+          ],
+          "face": 25452,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        454,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.01438570022583,
+          "point": [
+            0.009518980979919434,
+            -0.14496564865112305,
+            1.7525228261947632
+          ],
+          "face": 83714,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.016373157501221,
+          "point": [
+            0.008989810943603516,
+            -0.1430511474609375,
+            1.752450704574585
+          ],
+          "face": 27955,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.026572227478027,
+          "point": [
+            0.006274700164794922,
+            -0.13322710990905762,
+            1.7520804405212402
+          ],
+          "face": 14497,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.08176326751709,
+          "point": [
+            -0.00841820240020752,
+            -0.08006548881530762,
+            1.7500768899917603
+          ],
+          "face": 5596,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.059004783630371,
+          "point": [
+            0.005322098731994629,
+            -0.09794783592224121,
+            1.8017494678497314
+          ],
+          "face": 54541,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.137151718139648,
+          "point": [
+            -0.015482068061828613,
+            -0.022674560546875,
+            1.7989126443862915
+          ],
+          "face": 43995,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.1555256843566895,
+          "point": [
+            -0.02037358283996582,
+            -0.0049762725830078125,
+            1.7982455492019653
+          ],
+          "face": 16462,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.354408264160156,
+          "point": [
+            -0.07331991195678711,
+            0.18659305572509766,
+            1.7910256385803223
+          ],
+          "face": 13588,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.062681198120117,
+          "point": [
+            0.004425406455993652,
+            -0.09470319747924805,
+            1.7931417226791382
+          ],
+          "face": 54610,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.126621723175049,
+          "point": [
+            -0.012596845626831055,
+            -0.033113956451416016,
+            1.7908204793930054
+          ],
+          "face": 16819,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1369733810424805,
+          "point": [
+            -0.015352606773376465,
+            -0.02314281463623047,
+            1.7904447317123413
+          ],
+          "face": 43930,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.355237007141113,
+          "point": [
+            -0.07345855236053467,
+            0.18709468841552734,
+            1.7825212478637695
+          ],
+          "face": 13599,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.066733360290527,
+          "point": [
+            0.0034286975860595703,
+            -0.09109663963317871,
+            1.7845202684402466
+          ],
+          "face": 54591,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.106534004211426,
+          "point": [
+            -0.00716710090637207,
+            -0.052759647369384766,
+            1.7830753326416016
+          ],
+          "face": 17058,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.127481460571289,
+          "point": [
+            -0.012743711471557617,
+            -0.03258228302001953,
+            1.7823148965835571
+          ],
+          "face": 9228,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.359384059906006,
+          "point": [
+            -0.07448053359985352,
+            0.19079303741455078,
+            1.773896336555481
+          ],
+          "face": 13608,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.071039199829102,
+          "point": [
+            0.0023643970489501953,
+            -0.08724617958068848,
+            1.77588951587677
+          ],
+          "face": 54615,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.089008808135986,
+          "point": [
+            -0.0024194717407226562,
+            -0.06993746757507324,
+            1.7752370834350586
+          ],
+          "face": 17297,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.111743927001953,
+          "point": [
+            -0.008471965789794922,
+            -0.04803824424743652,
+            1.7744117975234985
+          ],
+          "face": 9226,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.363812446594238,
+          "point": [
+            -0.0755774974822998,
+            0.1947612762451172,
+            1.7652610540390015
+          ],
+          "face": 13426,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.073251247406006,
+          "point": [
+            0.0018573999404907227,
+            -0.08541226387023926,
+            1.7673346996307373
+          ],
+          "face": 17496,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.074899196624756,
+          "point": [
+            0.0014187097549438477,
+            -0.08382487297058105,
+            1.7672748565673828
+          ],
+          "face": 54660,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.094674587249756,
+          "point": [
+            -0.0038459300994873047,
+            -0.06477665901184082,
+            1.766556978225708
+          ],
+          "face": 29657,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.368332386016846,
+          "point": [
+            -0.076698899269104,
+            0.19881868362426758,
+            1.756622552871704
+          ],
+          "face": 13438,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.0602803230285645,
+          "point": [
+            0.005392551422119141,
+            -0.09820270538330078,
+            1.759331226348877
+          ],
+          "face": 17655,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.076895236968994,
+          "point": [
+            0.0009692907333374023,
+            -0.0821988582611084,
+            1.75872802734375
+          ],
+          "face": 29675,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.077731132507324,
+          "point": [
+            0.0007467269897460938,
+            -0.08139348030090332,
+            1.758697748184204
+          ],
+          "face": 54657,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        470,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.011720180511475,
+          "point": [
+            0.018402099609375,
+            -0.14527440071105957,
+            1.7526196241378784
+          ],
+          "face": 84101,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.012176513671875,
+          "point": [
+            0.018280625343322754,
+            -0.1448347568511963,
+            1.7526030540466309
+          ],
+          "face": 28181,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.0515241622924805,
+          "point": [
+            0.007805585861206055,
+            -0.1069340705871582,
+            1.7511746883392334
+          ],
+          "face": 17810,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.079428672790527,
+          "point": [
+            0.00037682056427001953,
+            -0.08005547523498535,
+            1.7501616477966309
+          ],
+          "face": 34790,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        690
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.061201095581055,
+          "point": [
+            0.012910842895507812,
+            -0.09357309341430664,
+            1.8016698360443115
+          ],
+          "face": 54449,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.1358723640441895,
+          "point": [
+            -0.006968021392822266,
+            -0.02164769172668457,
+            1.7989590167999268
+          ],
+          "face": 44003,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.149234294891357,
+          "point": [
+            -0.010525226593017578,
+            -0.00877690315246582,
+            1.7984739542007446
+          ],
+          "face": 16499,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.353791236877441,
+          "point": [
+            -0.06498217582702637,
+            0.18825817108154297,
+            1.7910480499267578
+          ],
+          "face": 13207,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        706
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.0641608238220215,
+          "point": [
+            0.012205004692077637,
+            -0.0910189151763916,
+            1.7930879592895508
+          ],
+          "face": 54462,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.124833106994629,
+          "point": [
+            -0.003947138786315918,
+            -0.0325775146484375,
+            1.7908854484558105
+          ],
+          "face": 16817,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.135403156280518,
+          "point": [
+            -0.006761074066162109,
+            -0.022396087646484375,
+            1.7905017137527466
+          ],
+          "face": 43942,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.355474472045898,
+          "point": [
+            -0.06534826755523682,
+            0.18958282470703125,
+            1.7825125455856323
+          ],
+          "face": 13215,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        722
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.06723690032959,
+          "point": [
+            0.011468052864074707,
+            -0.08835244178771973,
+            1.7845020294189453
+          ],
+          "face": 54480,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.103656768798828,
+          "point": [
+            0.0017724037170410156,
+            -0.05327177047729492,
+            1.7831798791885376
+          ],
+          "face": 17056,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.125767707824707,
+          "point": [
+            -0.004113912582397461,
+            -0.031973838806152344,
+            1.7823771238327026
+          ],
+          "face": 31183,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.3594231605529785,
+          "point": [
+            -0.06631743907928467,
+            0.19308996200561523,
+            1.7738949060440063
+          ],
+          "face": 13224,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        738
+      ],
+      "visibleHits": [
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.0705437660217285,
+          "point": [
+            0.010669708251953125,
+            -0.0854642391204834,
+            1.7759075164794922
+          ],
+          "face": 54431,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.08670711517334,
+          "point": [
+            0.006366729736328125,
+            -0.06989526748657227,
+            1.7753206491470337
+          ],
+          "face": 17296,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.109249114990234,
+          "point": [
+            0.0003656148910522461,
+            -0.048182010650634766,
+            1.7745023965835571
+          ],
+          "face": 31185,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.36368989944458,
+          "point": [
+            -0.06737136840820312,
+            0.19690275192260742,
+            1.7652654647827148
+          ],
+          "face": 13236,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        754
+      ],
+      "visibleHits": [
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.072180271148682,
+          "point": [
+            0.010315895080566406,
+            -0.08418440818786621,
+            1.7673735618591309
+          ],
+          "face": 17494,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.073825359344482,
+          "point": [
+            0.009878039360046387,
+            -0.08259987831115723,
+            1.767313838005066
+          ],
+          "face": 54415,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.091948509216309,
+          "point": [
+            0.005053281784057617,
+            -0.06514310836791992,
+            1.7666559219360352
+          ],
+          "face": 29652,
+          "material": "Krag_InnerMouth_v9k",
+          "sourceFaceSet": 7
+        },
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.368108749389648,
+          "point": [
+            -0.06846582889556885,
+            0.20086240768432617,
+            1.7566306591033936
+          ],
+          "face": 13247,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        770
+      ],
+      "visibleHits": [
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.013948917388916,
+          "point": [
+            0.02590024471282959,
+            -0.14057111740112305,
+            1.761013150215149
+          ],
+          "face": 29139,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.0602521896362305,
+          "point": [
+            0.013573408126831055,
+            -0.09597063064575195,
+            1.759332299232483
+          ],
+          "face": 17652,
+          "material": "Krag_OralTongue",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.076331615447998,
+          "point": [
+            0.009292840957641602,
+            -0.08048248291015625,
+            1.7587485313415527
+          ],
+          "face": 54440,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    },
+    {
+      "pixel": [
+        486,
+        786
+      ],
+      "visibleHits": [
+        {
+          "object": "Scarf",
+          "module": "Scarf",
+          "distance": 4.009365081787109,
+          "point": [
+            0.027202606201171875,
+            -0.14528346061706543,
+            1.7527050971984863
+          ],
+          "face": 84486,
+          "material": "Krag_DesertCanvas",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Head",
+          "module": "Head",
+          "distance": 4.010557174682617,
+          "point": [
+            0.026885271072387695,
+            -0.1441352367401123,
+            1.7526618242263794
+          ],
+          "face": 28949,
+          "material": "Krag_FacialSkin",
+          "sourceFaceSet": 24
+        },
+        {
+          "object": "MouthInterior",
+          "module": "MouthInterior",
+          "distance": 4.025352954864502,
+          "point": [
+            0.02294635772705078,
+            -0.1298835277557373,
+            1.7521246671676636
+          ],
+          "face": 14857,
+          "material": "Krag_DentalEnamel",
+          "sourceFaceSet": null
+        },
+        {
+          "object": "Body",
+          "module": "Body",
+          "distance": 4.077742576599121,
+          "point": [
+            0.008999228477478027,
+            -0.07942032814025879,
+            1.7502228021621704
+          ],
+          "face": 34803,
+          "material": "Krag_SandstoneSkin",
+          "sourceFaceSet": null
+        }
+      ]
+    }
+  ],
+  "sourceUnchanged": true
+}

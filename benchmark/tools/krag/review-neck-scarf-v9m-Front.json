@@ -1,0 +1,27 @@
+{
+  "name": "krag-review-neck-scarf-v9m-Front",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_NeckScarf_v9m_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9h-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Front",
+    "--tag",
+    "v9m-neck-scarf",
+    "--neutral-light"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-neck-scarf-v9m-Front.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-neck-scarf-v9m-Front.stderr.log",
+  "maxPrivateGB": 8
+}

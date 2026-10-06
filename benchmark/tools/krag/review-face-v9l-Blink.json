@@ -1,0 +1,32 @@
+{
+  "name": "krag-review-face-v9l-Blink",
+  "executable": "D:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "arguments": [
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "2",
+    "--python",
+    "D:\\Dev\\Krag-Kings\\benchmark\\tools\\krag\\review_krag.py",
+    "--",
+    "--source",
+    "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\Krag_FacialPlanes_v9l_WIP.blend",
+    "--contract",
+    "D:\\Dev\\Krag-Kings\\benchmark\\local\\candidates\\krag-v9h-source\\krag_asset_contract.json",
+    "--view",
+    "Natural_Head",
+    "--tag",
+    "v9l-facial-planes",
+    "--neutral-light",
+    "--clip",
+    "FacePerformance",
+    "--frame",
+    "21",
+    "--keep-pose"
+  ],
+  "workingDirectory": "D:\\Dev\\Krag-Kings",
+  "stdout": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-face-v9l-Blink.stdout.log",
+  "stderr": "D:\\Dev\\Krag-Kings\\benchmark\\art\\krag\\krag-review-face-v9l-Blink.stderr.log",
+  "maxPrivateGB": 8
+}

@@ -1,0 +1,106 @@
+{
+  "status": "Actual isolated source and first OpenMouth render fail assembled-mouth review; all-mesh rays now identify duplicate Body neck as the major occluder",
+  "source": {
+    "path": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+    "sha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+    "bytes": 142216329
+  },
+  "artisticAcceptance": false,
+  "mouthAcceptance": false,
+  "sharedPromotion": false,
+  "artifacts": [
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9ka-mouth-pose-fit.png",
+      "sha256": "2a06e73f3af62cb50395a3f19a93be011b7522f430f73dca5839d1fe656cf6a2",
+      "bytes": 1252575
+    },
+    {
+      "path": "benchmark/art/krag/renders/Krag_Natural_Head_FacePerformance_f146_v9ka-mouth-pose-fit.meta.json",
+      "sha256": "1169f41cb6b9ca1d1b4a74816036cf9053f3d5ff98b6da1d560e87fbdb123bb9",
+      "bytes": 590
+    },
+    {
+      "path": "benchmark/art/krag/mouth-pose-fit-v9ka.json",
+      "sha256": "018d05e91823d473cce1cfdc5b6be472d133533f7c5f9d46e5fa24dba7d95412",
+      "bytes": 2250
+    },
+    {
+      "path": "benchmark/art/krag/v9ka-mouth-pose-fit-prepared.json",
+      "sha256": "b337993a803155c864a9dfd4de4135c9b3d2d4d644b2fd4e0ce7db72b20f1032",
+      "bytes": 1737
+    },
+    {
+      "path": "benchmark/art/krag/anatomy-study/mouth-scene-overlap-v9ka.json",
+      "sha256": "4659cf9cc9c82582862cd173f3327a225d73ddad5f54773133bc9047aabf732b",
+      "bytes": 100309
+    },
+    {
+      "path": "benchmark/tools/krag/v9k_wip/build_mouth_pose_fit_v9ka.py",
+      "sha256": "aa9d7a5f96ab39abef17b33f0e827d1a59d41739d84036723d40f6e5f135d4b2",
+      "bytes": 10683
+    },
+    {
+      "path": "benchmark/tools/krag/v9k_wip/semantic_jaw_v4.py",
+      "sha256": "b02f88782fd97566353ebe822a8afee022a78ecd70750218b2b671eceb685c52",
+      "bytes": 7808
+    },
+    {
+      "path": "benchmark/tools/krag/v9m_wip/audit_mouth_scene.py",
+      "sha256": "3c4c3bb47898094bda527151068900fa5b2fa779f671b208d9aedf28be54bbfa",
+      "bytes": 3309
+    }
+  ],
+  "telemetry": [
+    {
+      "path": "benchmark/local/krag-build-mouth-v9ka-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1110.0,
+      "minimumAvailableMB": 11214.0
+    },
+    {
+      "path": "benchmark/local/krag-review-mouth-v9ka-OpenMouth-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 2180.0,
+      "minimumAvailableMB": 10107.0
+    },
+    {
+      "path": "benchmark/local/krag-audit-mouth-scene-v9ka-memory.csv",
+      "guardExitCode": 0,
+      "peakPrivateMB": 1146.0,
+      "minimumAvailableMB": 10025.0
+    }
+  ],
+  "numericalSourceResults": {
+    "canonicalJawDegrees": 23.0,
+    "driverWeight": 0.9199998378753662,
+    "targetIncisalClearanceMeters": 0.0055,
+    "openingDepthMeters": 0.06971590173566677,
+    "maximumStoredCorrectiveMeters": 0.014610138480558267,
+    "actualCanonicalRimErrorMaximumMeters": 2.2023016057857285e-07,
+    "harmonicIterations": [
+      107,
+      104,
+      105
+    ]
+  },
+  "observedImprovements": [
+    "More fitted lower crowns are visible",
+    "Oral bag now has an independent affine fit and wet dark material",
+    "Actual pure-Jaw lower rim matches the fitted dental arc within the unchanged numerical gate"
+  ],
+  "failedChecks": [
+    "Duplicate Body neck skin appears inside the oral opening on 40 sampled first-hit portrait rays",
+    "Seven sampled first-hit rays are Scarf; high rigid collar obscures lowered chin/lip",
+    "Lip appears detached against the scarf; the assembled open mouth is not accepted",
+    "Facial planes and plain yellow irises remain too smooth and toy-like; old garment/armor construction still fails concept likeness"
+  ],
+  "stoppedViews": [
+    "Neutral",
+    "OpenProfile"
+  ],
+  "next": [
+    "Remove only concealed duplicated Body neck faces while preserving vertex/shape data and rig bind",
+    "Replace high rigid collar with a physically settled broad asymmetric cloth sheet and inspect actual open-mouth/profile/front",
+    "Then improve larger facial planes and actual iris detail before material/export acceptance"
+  ]
+}

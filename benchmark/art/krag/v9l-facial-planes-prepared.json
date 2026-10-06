@@ -1,0 +1,68 @@
+{
+  "status": "Prepared frozen facial-plane/ocular study; not generated",
+  "input": {
+    "source": "benchmark/art/krag/Krag_MouthPoseFit_v9ka_WIP.blend",
+    "sha256": "3639a7fbbba1b81d5749658ba6db924020fbe6ea1e47cfd71c445cd05f04a297",
+    "mouthVisualAcceptance": "First OpenMouth review still running when prepared"
+  },
+  "recipe": [
+    {
+      "path": "benchmark/tools/krag/v9l_wip/anatomical_planes.py",
+      "sha256": "dd481e93d68e391b4208e7cfbc0466f5f2affcb3b963e9397d07cec1a49405b2"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/build_face_study.py",
+      "sha256": "b49e97408dfd81368a315e36ae3acd61b2da04488162e86e1e0572e58d7dd075"
+    },
+    {
+      "path": "benchmark/tools/krag/v9l_wip/ocular_surface.py",
+      "sha256": "fd3e1642a175162061864eea4a1eaa5fde3fd3112fcb0aa498f2b851247b8dd6"
+    },
+    {
+      "path": "benchmark/tools/krag/v9i_wip/face_relief.py",
+      "sha256": "a40566f93270a65c9d1c6465766972f29579cfd24490015cf6968793c083e0f4"
+    },
+    {
+      "path": "benchmark/tools/krag/krag_iris_material.py",
+      "sha256": "358bce48f4fe88d3c21eb390759e2e8197dcc7fe39f03932c288d6cf7d963804"
+    },
+    {
+      "path": "benchmark/tools/krag/v9j_wip/dental_arch.py",
+      "sha256": "6318e2e730c75ae8006c990155af68584fb5c2d2fb7599e8eea31c5bca5afeca"
+    },
+    {
+      "path": "benchmark/tools/krag/build-face-v9l-job.json",
+      "sha256": "2387e1d7f763a17db643036e667629674587aaa87ccf31a75ba4e21b34e86343"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9l-Blink.json",
+      "sha256": "2db50d6da2f2a041c414a9fe00cc2462e272d570bbcffa111edb6c2f1c2aded0"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9l-Front.json",
+      "sha256": "3168d1f615d2cb3e6da63dcd5e591b4a80ddd463b46db2faf2ebd3b5887490e3"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9l-Head.json",
+      "sha256": "e2573eb3e894c880e444e2bad77eb24d4266cd20286b2e987b36645f212287aa"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9l-HeadSide.json",
+      "sha256": "c6143731d2e0858ca381c196c0c7bf81b8056ad85284e371ed27c482df6cb7d5"
+    },
+    {
+      "path": "benchmark/tools/krag/review-face-v9l-OpenMouth.json",
+      "sha256": "1cc9c6a0a9c25515e386cb50fcc549da30529d4770da6887e3ed3406859f9fd1"
+    }
+  ],
+  "reviewOrder": [
+    "HeadSide",
+    "Head",
+    "Front",
+    "Blink",
+    "OpenMouth"
+  ],
+  "stopEarlyIf": "Pointed profile, ocular clipping or other structural failure",
+  "artisticAcceptance": false,
+  "sharedMutation": false
+}
