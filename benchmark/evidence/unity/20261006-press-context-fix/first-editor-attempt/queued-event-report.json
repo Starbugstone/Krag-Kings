@@ -1,0 +1,29 @@
+{
+    "completed": false,
+    "nativeWindowsInputSent": false,
+    "artisticAcceptance": false,
+    "startedUtc": "2026-10-06T10:01:14.9802183Z",
+    "finishedUtc": "2026-10-06T10:01:15.0943241Z",
+    "error": "System.InvalidOperationException: Queued input regression failed: LeftShift released in the same update retains Walk and press cursor\r\n  at KragKings.Editor.DemoPressContextCheck+<>c__DisplayClass3_0.<Run>g__Check|5 (System.String name, System.Boolean[] expected, UnityEngine.Vector2[] positions, System.Boolean expectOldPollingFailure) [0x000f6] in D:\\Dev\\Krag-Kings\\benchmark\\unity\\Assets\\Benchmark\\Editor\\DemoPressContextCheck.cs:68 \r\n  at KragKings.Editor.DemoPressContextCheck.Run () [0x00187] in D:\\Dev\\Krag-Kings\\benchmark\\unity\\Assets\\Benchmark\\Editor\\DemoPressContextCheck.cs:72 ",
+    "inputSystemVersion": "1.19.0",
+    "checks": [
+        {
+            "name": "LeftShift released in the same update retains Walk and press cursor",
+            "passed": false,
+            "finalShift": false,
+            "finalPressedThisFrame": false,
+            "retained": [
+                {
+                    "position": {
+                        "x": 100.0,
+                        "y": 200.0
+                    },
+                    "walk": true,
+                    "mouseDeviceId": 2,
+                    "eventId": 4,
+                    "eventTime": 0.21018839999999984
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+﻿{
+    "inputSystemPackage":  "1.19.0",
+    "caseCount":  5,
+    "nativeInputSent":  false,
+    "actualUnityRuntimeExecuted":  false,
+    "gameplayCodeChanged":  false,
+    "passed":  true,
+    "fixtureSha256":  "af6e1748408f7a8e17e881dcaed2d6f02fecd8f1d9a8b3e36cf6e159aebe5679",
+    "scope":  "Source-derived digital button/event-order fixture",
+    "limits":  "Uses the exact extracted UpdateWasPressed method with minimal value/device stubs; it does not execute the Unity Input System event backend.",
+    "assumption":  "Button frame tracking already initialized by prior polls, as in the warmed demo.",
+    "checkedUtc":  "2026-10-06T09:46:50.5117350Z",
+    "cases":  [
+                  {
+                      "name":  "Left Shift released in same update",
+                      "pollingEmitsMove":  true,
+                      "pollingWalk":  false,
+                      "queued":  [
+                                     {
+                                         "walk":  true,
+                                         "x":  100,
+                                         "y":  200
+                                     }
+                                 ],
+                      "passed":  true
+                  },
+                  {
+                      "name":  "Right Shift released in same update",
+                      "pollingEmitsMove":  true,
+                      "pollingWalk":  false,
+                      "queued":  [
+                                     {
+                                         "walk":  true,
+                                         "x":  100,
+                                         "y":  200
+                                     }
+                                 ],
+                      "passed":  true
+                  },
+                  {
+                      "name":  "Three presses in one update preserve Walk/Run/Walk",
+                      "pollingEmitsMove":  true,
+                      "pollingWalk":  false,
+                      "queued":  [
+                                     {
+                                         "walk":  true,
+                                         "x":  100,
+                                         "y":  200
+                                     },
+                                     {
+                                         "walk":  false,
+                                         "x":  300,
+                                         "y":  400
+                                     },
+                                     {
+                                         "walk":  true,
+                                         "x":  500,
+                                         "y":  600
+                                     }
+                                 ],
+                      "passed":  true
+                  },
+                  {
+                      "name":  "Button delta uses prior pointer; later motion does not change queued target",
+                      "pollingEmitsMove":  true,
+                      "pollingWalk":  false,
+                      "queued":  [
+                                     {
+                                         "walk":  true,
+                                         "x":  25,
+                                         "y":  50
+                                     }
+                                 ],
+                      "passed":  true
+                  },
+                  {
+                      "name":  "Focus loss clears pending intent and held-state model",
+                      "pollingEmitsMove":  true,
+                      "pollingWalk":  false,
+                      "queued":  [
+
+                                 ],
+                      "passed":  true
+                  }
+              ]
+}

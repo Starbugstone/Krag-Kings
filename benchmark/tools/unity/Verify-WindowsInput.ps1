@@ -1,7 +1,8 @@
 param(
     [Parameter(Mandatory=$true)][int]$DemoProcessId,
     [Parameter(Mandatory=$true)][string]$EvidencePath,
-    [string]$WindowHelperPath=(Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
+    [string]$WindowHelperPath=(Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1'),
+    [switch]$ModifierOnly
 )
 $ErrorActionPreference='Stop'
 . $WindowHelperPath
@@ -13,6 +14,7 @@ public static class DemoInput {
  [StructLayout(LayoutKind.Sequential)] public struct RECT { public int Left,Top,Right,Bottom; }
  [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
  [DllImport("user32.dll")] public static extern IntPtr GetForegroundWindow();
+ [DllImport("user32.dll")] public static extern short GetAsyncKeyState(int key);
  [DllImport("user32.dll")] public static extern bool ClientToScreen(IntPtr h,ref POINT p);
  [DllImport("user32.dll")] public static extern bool GetClientRect(IntPtr h,out RECT r);
  [DllImport("user32.dll")] public static extern bool SetCursorPos(int x,int y);
@@ -30,15 +32,16 @@ public static class DemoInput {
   var input=new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=(ushort)(scan & 0xFFu),flags=flags}}};
   if(SendInput(1,new[]{input},Marshal.SizeOf(typeof(INPUT)))!=1)throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());
  }
- public static void SendQuickWalkClick() {
-  var inputs=new[]{
-   new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=0x2A,flags=8}}},
+ public static void SendQuickMoveClick(ushort shiftScan) {
+  var inputs=new System.Collections.Generic.List<INPUT>();
+  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=shiftScan,flags=8}}});
+  inputs.AddRange(new[]{
    new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=8}}},
-   new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=16}}},
-   new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=0x2A,flags=10}}}
-  };
-  uint sent=SendInput((uint)inputs.Length,inputs,Marshal.SizeOf(typeof(INPUT)));
-  if(sent!=inputs.Length){SendScan(0x2A,true);throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());}
+   new INPUT {type=0,value=new INPUTUNION {mouse=new MOUSEINPUT {flags=16}}}
+  });
+  if(shiftScan!=0)inputs.Add(new INPUT {type=1,value=new INPUTUNION {key=new KEYBDINPUT {scan=shiftScan,flags=10}}});
+  uint sent=SendInput((uint)inputs.Count,inputs.ToArray(),Marshal.SizeOf(typeof(INPUT)));
+  if(sent!=inputs.Count){if(shiftScan!=0)SendScan(shiftScan,true);throw new System.ComponentModel.Win32Exception(Marshal.GetLastWin32Error());}
  }
 }
 '@
@@ -61,8 +64,22 @@ function Read-Probe {
     throw "Cannot read runtime input probe at $probePath : $lastError"
 }
 function Focus-Demo {
-    try {$windowLease.AssertForeground()}
+    try {
+        $windowLease.AssertForeground()
+        foreach($key in @(0x5B,0x5C,0xA2,0xA3,0xA4,0xA5)) {
+            if(([int][DemoInput]::GetAsyncKeyState($key) -band 0x8000) -ne 0){throw 'An external Windows/Ctrl/Alt modifier is held; stopped before sending test input.'}
+        }
+    }
     catch {try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
+}
+function Record-InputEdge([string]$Kind,$Detail) {
+    $front=[DemoInput]::GetForegroundWindow();$owner=[uint32]0
+    $null=[DemoInput]::GetWindowThreadProcessId($front,[ref]$owner)
+    $modifiers=[ordered]@{}
+    foreach($key in @(0xA0,0xA1,0xA2,0xA3,0xA4,0xA5,0x5B,0x5C)) {
+        $modifiers[('0x{0:X2}' -f $key)]=(([int][DemoInput]::GetAsyncKeyState($key) -band 0x8000) -ne 0)
+    }
+    $inputEdges.Add(@{utc=[DateTime]::UtcNow.ToString('o');kind=$Kind;detail=$Detail;foregroundHwnd=$front.ToInt64();foregroundPid=$owner;modifiers=$modifiers})
 }
 function Send-Key([byte]$Key,[bool]$Up=$false) {
     # Raw-input consumers need a real scan code, including the extended flag
@@ -75,9 +92,12 @@ function Send-Key([byte]$Key,[bool]$Up=$false) {
     # This host's French layout returns 0x47/0x4D without E0 even for type 4.
     # Navigation keys must remain distinct from the numeric keypad.
     if(($Key -ge 0x21 -and $Key -le 0x28) -or $Key -eq 0x2D -or $Key -eq 0x2E){$scan=$scan -bor 0xE000}
+    if(-not $Up){Focus-Demo}
+    Record-InputEdge 'KeyBefore' @{virtualKey=$Key;scan=$scan;up=$Up}
     [DemoInput]::SendScan($scan,$Up)
+    Record-InputEdge 'KeyAfter' @{virtualKey=$Key;scan=$scan;up=$Up}
 }
-function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWalk=$false) {
+function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWalk=$false,[uint16]$QuickShiftScan=0x2A) {
     Focus-Demo
     $probe=Read-Probe
     $rect=New-Object DemoInput+RECT
@@ -91,8 +111,11 @@ function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWa
     Start-Sleep -Milliseconds 60
     $pointerEvidence.Add($windowLease.AssertPointer())
     if($QuickWalk){
-        if(-not $Right -or -not $Walk){throw 'The immediate modifier probe requires Shift + right click.'}
-        [DemoInput]::SendQuickWalkClick()
+        if(-not $Right -or $Walk -ne ($QuickShiftScan -ne 0)){throw 'The immediate movement probe requires a consistent Shift mode.'}
+        Focus-Demo
+        Record-InputEdge 'ImmediateMoveBefore' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0}
+        [DemoInput]::SendQuickMoveClick($QuickShiftScan)
+        Record-InputEdge 'ImmediateMoveAfter' @{shiftScan=$QuickShiftScan;pressPosition=$ScreenPoint;requestedHoldMilliseconds=0}
         return
     }
     $down=if($Right){8}else{2};$up=if($Right){16}else{4}
@@ -100,16 +123,15 @@ function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWa
     try {
         [DemoInput]::mouse_event($down,0,0,0,[UIntPtr]::Zero)
         Start-Sleep -Milliseconds 100
-        [DemoInput]::mouse_event($up,0,0,0,[UIntPtr]::Zero)
     } finally {
+        [DemoInput]::mouse_event($up,0,0,0,[UIntPtr]::Zero)
         if($Walk){Send-Key 0xA0 $true}
     }
 }
 function Press-Key([byte]$Key) {
     Focus-Demo
     Send-Key $Key
-    Start-Sleep -Milliseconds 90
-    Send-Key $Key $true
+    try {Start-Sleep -Milliseconds 90} finally {Send-Key $Key $true}
 }
 function Zoom-ForMove {
     # Repeated traversals spread the pair apart. Four fixed notches can leave
@@ -140,6 +162,8 @@ $checks=[System.Collections.Generic.List[string]]::new()
 $failures=[System.Collections.Generic.List[string]]::new()
 $pointerEvidence=[System.Collections.Generic.List[object]]::new()
 $cameraObservations=[System.Collections.Generic.List[object]]::new()
+$inputEdges=[System.Collections.Generic.List[object]]::new()
+$modifierObservations=[System.Collections.Generic.List[object]]::new()
 $windowLease=$null
 try {
     $initial=Read-Probe
@@ -148,6 +172,27 @@ try {
     $null=Wait-Probe {param($p) $p.frame -ge 120} 'Runtime did not finish initial rendered-frame warmup' 45
     $demo.Refresh();$window=$demo.MainWindowHandle
     $windowLease=[KKOwnedWindowLease]::Acquire($window,[uint32]$demo.Id)
+    if($ModifierOnly) {
+        if(-not $initial.PSObject.Properties['movePressCount']){throw 'This package does not expose the press-context queue probe; build the authorized fix first.'}
+        Press-Key 0x24
+        $null=Wait-Probe {param($p) [Math]::Abs($p.cameraYaw-165) -lt .1 -and [Math]::Abs($p.cameraDistance-6.4) -lt .1} 'Home reset was not observed'
+        $probe=Read-Probe
+        Click-World ($probe.units | Where-Object species -eq 'Krag').screen $false
+        $null=Wait-Probe {param($p) $p.selected -eq 'Krag'} 'Focused modifier probe could not select Krag'
+        foreach($case in @(@{name='RightShift';scan=0x36},@{name='Unmodified after RightShift';scan=0},@{name='LeftShift';scan=0x2A},@{name='Unmodified after LeftShift';scan=0})) {
+            $null=Wait-Probe {param($p) -not $p.moving -and $p.action -eq 'Idle'} 'Previous focused movement did not settle' 12
+            Zoom-ForMove
+            $before=Read-Probe;$target=$before.moveScreen;$expectedWalk=$case.scan -ne 0
+            Click-World $target $true $expectedWalk $true ([uint16]$case.scan)
+            $after=Wait-Probe {param($p) $p.movePressCount -gt $before.movePressCount} ($case.name+' immediate press was not dispatched')
+            $modifierObservations.Add(@{name=$case.name;before=$before;after=$after;target=$target;requestedHoldMilliseconds=0})
+            if($after.movePressCount -ne $before.movePressCount+1 -or -not $after.movePressAccepted -or $after.movePress.walk -ne $expectedWalk){throw ($case.name+' did not retain exactly one accepted press with the expected modifier')}
+            if([Math]::Abs($after.movePress.position.x-$target.x) -gt 2 -or [Math]::Abs($after.movePress.position.y-$target.y) -gt 2){throw ($case.name+' captured pointer differs from the actual projected destination')}
+            $null=Wait-Probe {param($p) $p.moving -and $p.walking -eq $expectedWalk -and $p.action -eq $(if($expectedWalk){'Walk'}else{'Run'})} ($case.name+' did not produce the expected movement clip')
+            $null=Wait-Probe {param($p) -not $p.moving -and $p.action -eq 'Idle'} ($case.name+' movement did not finish') 12
+            $checks.Add($case.name+' zero-hold native batch retained cursor/modifier and completed movement')
+        }
+    } else {
     Press-Key 0x24
     Start-Sleep -Milliseconds 200
     $probe=Read-Probe
@@ -249,9 +294,10 @@ try {
     Start-Sleep -Milliseconds 300
     Press-Key 0x7B # F12 is the game's own capture path.
     $checks.Add('F12 capture input sent; output image must be inspected separately')
+    }
 } catch { $failures.Add($_.Exception.Message) }
 finally {if($windowLease){try{$windowLease.Dispose()}catch{$failures.Add($_.Exception.Message)}}}
-@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());cameraObservations=@($cameraObservations.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
-    ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
+@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;modifierOnly=[bool]$ModifierOnly;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());cameraObservations=@($cameraObservations.ToArray());inputEdges=@($inputEdges.ToArray());modifierObservations=@($modifierObservations.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
+    ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
 if($failures.Count){throw ($failures -join '; ')}
 Write-Output 'WINDOWS_INPUT_VERIFICATION_PASS'

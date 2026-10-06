@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([ValidateSet('Full','Balanced')][string]$Quality='Balanced')
+param([ValidateSet('Full','Balanced')][string]$Quality='Balanced',[switch]$ModifierOnly)
 $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
 $executable=Join-Path $repo 'benchmark\builds\Unity\KragKings-Unity.exe'
@@ -8,7 +8,7 @@ $run=Join-Path $repo ('benchmark\local\evidence\unity-native-input\'+(Get-Date -
 New-Item -ItemType Directory $run|Out-Null
 $stdout=Join-Path $run 'launcher-stdout.log'
 $stderr=Join-Path $run 'launcher-stderr.log'
-$report=[ordered]@{engine='Unity';quality=$Quality;startedUtc=[DateTime]::UtcNow.ToString('o');completed=$false;artisticAcceptance=$false;performanceMeasurement=$false}
+$report=[ordered]@{engine='Unity';quality=$Quality;modifierOnly=[bool]$ModifierOnly;startedUtc=[DateTime]::UtcNow.ToString('o');completed=$false;artisticAcceptance=$false;performanceMeasurement=$false}
 $launcher=$null;$game=$null;$evidence=$null
 try {
     $script=Join-Path $PSScriptRoot 'Run-Demo.ps1'
@@ -39,7 +39,7 @@ try {
     $windowHelper=Join-Path $run 'executed-OwnedGameWindow.ps1'
     Copy-Item (Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1') $windowHelper
     $report.windowHelperSha256=(Get-FileHash $windowHelper -Algorithm SHA256).Hash.ToLower()
-    & $verifier -DemoProcessId $game.Id -EvidencePath $evidence -WindowHelperPath $windowHelper
+    & $verifier -DemoProcessId $game.Id -EvidencePath $evidence -WindowHelperPath $windowHelper -ModifierOnly:$ModifierOnly
     $inputResult=Get-Content (Join-Path $evidence 'windows-input-verification.json') -Raw|ConvertFrom-Json
     if(@($inputResult.failures).Count -ne 0){throw 'Native input checks failed; preserve the report.'}
     $report.buildGuid=$inputResult.buildGuid;$report.contentFingerprint=$inputResult.contentFingerprint

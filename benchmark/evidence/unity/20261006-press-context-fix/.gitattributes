@@ -1,0 +1,4 @@
+# Preserve original event-check evidence bytes and recorded hashes.
+**/*.json -text whitespace=cr-at-eol
+**/*.csv -text whitespace=cr-at-eol
+**/*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

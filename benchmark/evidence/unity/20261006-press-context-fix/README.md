@@ -1,0 +1,15 @@
+# Unity press-time movement context — source correction
+
+The existing Windows build `c394a9ba909b477fb315daa0072f83c7` is unchanged. Its foreground-interrupted native run is separate evidence; it did not reach the quick-Shift checks and does not prove their behavior.
+
+The installed Input System 1.19.0 invokes `onEvent` before applying an event to device state. The former scene code read `wasPressedThisFrame`, the current cursor and current Shift state during `Update`; a later release/motion can replace the context of an earlier click. The five-case [source-derived fixture](source-fixture/result.json) uses the exact installed `UpdateWasPressed` method with minimal device/value stubs. It is explicitly **not** a native Unity result.
+
+The source correction retains each rising right-button event's cursor and left/right Shift state in order. Scene Update consumes those commands. Focus/pause, disable, reset and device removal clear pending intent. No game movement or raycasting runs inside the input callback. The input probe records the retained context and dispatch result for native verification.
+
+The [first real queued-event attempt](first-editor-attempt/queued-event-report.json) ran the installed Input System with temporary devices in batch edit mode. It retained one correct `Walk=true` command at `(100,200)` after Shift was released and the pointer moved to `(900,950)`. The check nevertheless failed because it also required the old `wasPressedThisFrame` poll to return true; it returned false. The remaining checks and Windows build **did not run**. Guard/process exit was 1. The old package was preserved in a hash-verified local archive (173 files).
+
+Installed `InputManager.defaultUpdateType` chooses Editor outside play mode; `FlipBuffersForDeviceIfNecessary` swaps editor buffers per event and returns before updating the player step count. The old-poll expectation was inappropriate as a pass requirement for retained intent. The corrected check records that poll, update type and count as diagnostics while strictly asserting released Shift, command order and captured positions. It also checks duplicate held-button reports, reset/removal clearing, inactive capture, and reactivation without inherited Shift. Eight corrected cases are prepared; their real execution remains pending.
+
+Both runtime and Editor sources compile using the cached project compiler/references. The prepared native helper has a focused `-ModifierOnly` path with zero-hold Right Shift, ordinary, Left Shift, ordinary batches. It asserts one accepted command, actual projected cursor, Walk/Run and completion; it records key edges/foreground/modifiers and aborts before new input if foreground or external Windows/Ctrl/Alt state conflicts. It has passed PowerShell parsing and C# helper compilation only. No new native input was sent.
+
+All raw first-attempt artifacts and its exact executed sources remain immutable below this directory. These checks do not establish new character/motion integration, visual acceptance, or a completed new Windows build.

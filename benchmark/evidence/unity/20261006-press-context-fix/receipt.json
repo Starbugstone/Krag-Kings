@@ -1,0 +1,97 @@
+{
+  "capturedUtc": "2026-10-06T10:08:26.205081+00:00",
+  "status": "Corrected source compiles; next real event check and Windows build pending",
+  "nativeWindowsInputSent": false,
+  "files": {
+    "source-fixture/result.json": {
+      "source": "benchmark/local/evidence/unity-press-context-source-audit/result.json",
+      "sha256": "32b635c5ae127e1e764b7a227f8f10b08c67272f1e8ff982e69b4f8a816ff91c",
+      "bytes": 3846
+    },
+    "source-fixture/source-hashes.json": {
+      "source": "benchmark/local/evidence/unity-press-context-source-audit/source-hashes.json",
+      "sha256": "b729b665ad23fa4ade80a1eba28e27ad7924c61d4c8d400af5fc10ad2a6c01c9",
+      "bytes": 850
+    },
+    "source-fixture/PressContextSourceAudit.cs": {
+      "source": "benchmark/local/evidence/unity-press-context-source-audit/PressContextSourceAudit.cs",
+      "sha256": "af6e1748408f7a8e17e881dcaed2d6f02fecd8f1d9a8b3e36cf6e159aebe5679",
+      "bytes": 4039
+    },
+    "source-fixture/extracted-UpdateWasPressed.cs.txt": {
+      "source": "benchmark/local/evidence/unity-press-context-source-audit/extracted-UpdateWasPressed.cs.txt",
+      "sha256": "99f2d73c149ba9f874979b827a484bea973883ade8a98e37fc4fde681b00f949",
+      "bytes": 470
+    },
+    "source-fixture/run.ps1": {
+      "source": "benchmark/local/evidence/unity-press-context-source-audit/run.ps1",
+      "sha256": "1abbf595da82468b22c82d8dbf1a6904b4081c903fad3b18f9ceb6b193c8a310",
+      "bytes": 922
+    },
+    "first-editor-attempt/queued-event-report.json": {
+      "source": "benchmark/local/evidence/unity-press-context-build/queued-event-report.json",
+      "sha256": "2387a24ef69b969272c213b17f2a9193fa99ed651e19b38f5c21270ba2a854c2",
+      "bytes": 1463
+    },
+    "first-editor-attempt/result.json": {
+      "source": "benchmark/local/evidence/unity-press-context-build/result.json",
+      "sha256": "bfe086aff34abe60e142f6e74b8c13b2571730199f8bfdadf705d4ccdabb4918",
+      "bytes": 513
+    },
+    "first-editor-attempt/editor.log": {
+      "source": "benchmark/local/evidence/unity-press-context-build/editor.log",
+      "sha256": "b8176da806856274ac23d915fcff7848eb235750ccd978addae515ddd4cd61db",
+      "bytes": 35340
+    },
+    "first-editor-attempt/guard.log": {
+      "source": "benchmark/local/evidence/unity-press-context-build/guard.log",
+      "sha256": "040e86eb4b7a157743ae153faa596e013a5284c8e60103bb75544f65e5c5ce48",
+      "bytes": 218
+    },
+    "first-editor-attempt/memory.csv": {
+      "source": "benchmark/local/evidence/unity-press-context-build/memory.csv",
+      "sha256": "24027a9cb35f164f48df906c5f0b5c8d06ec9845105b2adfd4f7e9fa085a9632",
+      "bytes": 1152
+    },
+    "first-editor-attempt/job.json": {
+      "source": "benchmark/local/evidence/unity-press-context-build/job.json",
+      "sha256": "0e0e6bf154ad5c5875dea272cf11212346b06e1d30b2211f9ec3f9f99db8cdcf",
+      "bytes": 1078
+    },
+    "first-editor-attempt/run.ps1": {
+      "source": "benchmark/local/evidence/unity-press-context-build/run.ps1",
+      "sha256": "f28e5de68ccb38b46de461b4d43c1bffd96c00ac071fbb8dfc5af7e6ce3eb8fe",
+      "bytes": 1763
+    },
+    "first-editor-attempt/plan.json": {
+      "source": "benchmark/local/evidence/unity-press-context-build/plan.json",
+      "sha256": "2011ee6993c24e0bf28280bf260c9f8ae1886334ec44c63265951e80666d92f5",
+      "bytes": 40502
+    },
+    "first-editor-attempt/executed-source/Editor/DemoPressContextCheck.cs": {
+      "source": "benchmark/local/evidence/unity-press-context-build/frozen-source/benchmark/unity/Assets/Benchmark/Editor/DemoPressContextCheck.cs",
+      "sha256": "56be462d0405d66392059f8569634547784c7c680610ead73627e86bae3c4490",
+      "bytes": 6815
+    },
+    "first-editor-attempt/executed-source/Scripts/DemoMovePressQueue.cs": {
+      "source": "benchmark/local/evidence/unity-press-context-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoMovePressQueue.cs",
+      "sha256": "1624ea20ded56934b6dd50387913251e2f7b8eb0549d2012bb306d44e9546a14",
+      "bytes": 2743
+    },
+    "first-editor-attempt/executed-source/Scripts/DemoScene.cs": {
+      "source": "benchmark/local/evidence/unity-press-context-build/frozen-source/benchmark/unity/Assets/Benchmark/Scripts/DemoScene.cs",
+      "sha256": "6ac0f964284a64dacf80be0181faf274791ba7682f618bf567976db6043c2c8f",
+      "bytes": 37258
+    },
+    "corrected-source-compile/Assembly-CSharp.log": {
+      "source": "benchmark/local/unity-source-check/Assembly-CSharp.log",
+      "sha256": "6a55aac5baf42ee3af122ea0686e0bff27e9c5e79f313ad7b593437d5e7ea0de",
+      "bytes": 1256
+    },
+    "corrected-source-compile/Assembly-CSharp-Editor.log": {
+      "source": "benchmark/local/unity-source-check/Assembly-CSharp-Editor.log",
+      "sha256": "ee44127585a2f1a55e3533859f396d4002a090c49285b03eb257304fe8d89dd7",
+      "bytes": 1742
+    }
+  }
+}

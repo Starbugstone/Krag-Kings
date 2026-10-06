@@ -1,0 +1,14 @@
+internal void UpdateWasPressed()
+        {
+            var isNowPressed = IsValueConsideredPressed(value);
+
+            if (m_LastUpdateWasPress != isNowPressed)
+            {
+                if (isNowPressed)
+                    m_UpdateCountLastPressed = device.m_CurrentUpdateStepCount;
+                else
+                    m_UpdateCountLastReleased = device.m_CurrentUpdateStepCount;
+
+                m_LastUpdateWasPress = isNowPressed;
+            }
+        }
