@@ -61,8 +61,7 @@ function Read-Probe {
     throw "Cannot read runtime input probe at $probePath : $lastError"
 }
 function Focus-Demo {
-    try {$windowLease.AssertForeground()}
-    catch {try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
+    $windowLease.AssertForeground()
 }
 function Send-Key([byte]$Key,[bool]$Up=$false) {
     # Raw-input consumers need a real scan code, including the extended flag

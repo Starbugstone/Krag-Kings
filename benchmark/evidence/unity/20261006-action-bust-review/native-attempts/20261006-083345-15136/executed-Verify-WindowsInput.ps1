@@ -1,10 +1,8 @@
 param(
     [Parameter(Mandatory=$true)][int]$DemoProcessId,
-    [Parameter(Mandatory=$true)][string]$EvidencePath,
-    [string]$WindowHelperPath=(Join-Path $PSScriptRoot '..\capture\OwnedGameWindow.ps1')
+    [Parameter(Mandatory=$true)][string]$EvidencePath
 )
 $ErrorActionPreference='Stop'
-. $WindowHelperPath
 Add-Type -AssemblyName System.Drawing
 Add-Type @'
 using System;using System.Runtime.InteropServices;
@@ -61,8 +59,9 @@ function Read-Probe {
     throw "Cannot read runtime input probe at $probePath : $lastError"
 }
 function Focus-Demo {
-    try {$windowLease.AssertForeground()}
-    catch {try{$pointerEvidence.Add($windowLease.InspectPointer())}catch{};throw}
+    [DemoInput]::SetForegroundWindow($window)|Out-Null
+    Start-Sleep -Milliseconds 150
+    if([DemoInput]::GetForegroundWindow() -ne $window){throw 'Demo did not receive focus; no input sent to another application.'}
 }
 function Send-Key([byte]$Key,[bool]$Up=$false) {
     # Raw-input consumers need a real scan code, including the extended flag
@@ -88,8 +87,6 @@ function Click-World($ScreenPoint,[bool]$Right,[bool]$Walk=$false,[bool]$QuickWa
     if($ScreenPoint.z -le 0 -or $point.X -lt 0 -or $point.Y -lt 0 -or $point.X -ge $rect.Right -or $point.Y -ge $rect.Bottom){throw 'Projected click falls outside the game client.'}
     [DemoInput]::ClientToScreen($window,[ref]$point)|Out-Null
     [DemoInput]::SetCursorPos($point.X,$point.Y)|Out-Null
-    Start-Sleep -Milliseconds 60
-    $pointerEvidence.Add($windowLease.AssertPointer())
     if($QuickWalk){
         if(-not $Right -or -not $Walk){throw 'The immediate modifier probe requires Shift + right click.'}
         [DemoInput]::SendQuickWalkClick()
@@ -138,15 +135,11 @@ function Wait-Probe([scriptblock]$Predicate,[string]$Failure,[int]$Seconds=5) {
 }
 $checks=[System.Collections.Generic.List[string]]::new()
 $failures=[System.Collections.Generic.List[string]]::new()
-$pointerEvidence=[System.Collections.Generic.List[object]]::new()
-$windowLease=$null
 try {
     $initial=Read-Probe
     # Startup shader work can stall the first rendered frames. Never enqueue
     # the opening sequence against a stale projection/selection snapshot.
     $null=Wait-Probe {param($p) $p.frame -ge 120} 'Runtime did not finish initial rendered-frame warmup' 45
-    $demo.Refresh();$window=$demo.MainWindowHandle
-    $windowLease=[KKOwnedWindowLease]::Acquire($window,[uint32]$demo.Id)
     Press-Key 0x24
     Start-Sleep -Milliseconds 200
     $probe=Read-Probe
@@ -171,7 +164,6 @@ try {
     $point.X=[int]($rect.Right*.5);$point.Y=[int]($rect.Bottom*.5)
     [DemoInput]::ClientToScreen($window,[ref]$point)|Out-Null
     [DemoInput]::SetCursorPos($point.X,$point.Y)|Out-Null
-    $pointerEvidence.Add($windowLease.AssertPointer())
     [DemoInput]::mouse_event(0x20,0,0,0,[UIntPtr]::Zero)
     try {
         for($step=0;$step -lt 4;$step++){
@@ -245,8 +237,7 @@ try {
     Press-Key 0x7B # F12 is the game's own capture path.
     $checks.Add('F12 capture input sent; output image must be inspected separately')
 } catch { $failures.Add($_.Exception.Message) }
-finally {if($windowLease){try{$windowLease.Dispose()}catch{$failures.Add($_.Exception.Message)}}}
-@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures);pointerGuards=@($pointerEvidence.ToArray());windowLeaseRestored=($windowLease -and $windowLease.Restored)} |
+@{timestamp=(Get-Date).ToString('o');processId=$DemoProcessId;buildGuid=$initial.buildGuid;contentFingerprint=$initial.contentFingerprint;keyboardLayout=$initial.keyboardLayout;physicalAKeyLabel=$initial.physicalAKeyLabel;checks=@($checks);failures=@($failures)} |
     ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 (Join-Path $EvidencePath 'windows-input-verification.json')
 if($failures.Count){throw ($failures -join '; ')}
 Write-Output 'WINDOWS_INPUT_VERIFICATION_PASS'

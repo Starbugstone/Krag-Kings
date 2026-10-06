@@ -2,6 +2,12 @@
 
 Work in progress. This directory contains the shared asset pipeline and separate Windows Unity HDRP and Unreal projects. Neither demo is accepted as complete until the actual packaged application and imported character likeness have been checked.
 
+## Latest execution checkpoint
+
+Unity build `c394a9ba909b477fb315daa0072f83c7` passes 17 functional checks and has an [actual widened-action review](evidence/unity/20261006-action-bust-review/README.md). Krag's raised shooting arm and weapon fit the inspected view. Native input verification remains incomplete; the preserved attempts distinguish test framing, startup timing and lost foreground. No current Unity quick-Shift defect has been proven. Older videos/timings below belong to their recorded earlier builds.
+
+Unreal's packaged orbit fix has actual native evidence, but the [next modifier test](unreal/evidence/native-input-modifier-failure/) found that a quick Shift release can change intended walking into running. Its press-time modifier fix is prepared for native compile/package verification. Neither full native suite nor character likeness is accepted yet. The newer Krag/Nib Blender studies remain separate from both engine asset sets.
+
 ## Shared contract
 
 - Editable Blender sources live in `art/`; reproducible asset scripts in `tools/`.

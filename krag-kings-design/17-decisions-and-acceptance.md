@@ -37,6 +37,9 @@
 | D27 | Nib fur follows the concept: fuller head/ear fur, fine facial/body fuzz and visible mottled skin. Keep realistic runtime fur responsive on the reference machine and provide denser editable Blender cinematic masters for the furry Nib and muscular Krag. |
 | D28 | Optimize each engine for the best feasible balance of satisfying visuals and fluid framerate; the user authorizes measured sacrifices rather than requiring all rendering features at maximum. Preserve concept identity and report quality/resolution tradeoffs. |
 | D29 | Final evidence includes screenshots and a demo video from each actual running engine, showing movement, render quality, animations/faces, camera inspection and different models. Capture separately from performance measurements. |
+| D30 | Correct the current strange arm orientation and cartoony appearance. Both humanoid species need smooth, natural human-like joint motion; Krag muscles must form coherent anatomy. Krag mouth opening must look normal, and the metal jaw must not clip retained jaw tissue. Validate actual movement and open-mouth frames, including bionic variants, in both engines. |
+| D31 | Nib ears must support subtle independent twitching with natural base deformation, accompanying facial and action animation. |
+| D32 | Whole-body natural animation: the torso must not stay rigid during movement. Coordinate pelvis/spine/shoulders/head/arms with foot contact and weight transfer, and provide breathing/weight-shift idle animation when stationary. Preserve species weight/personality. |
 
 ## 2. Resolved follow-up questions
 

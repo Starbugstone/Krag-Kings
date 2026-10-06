@@ -1,0 +1,27 @@
+{
+    "checks":  [
+
+               ],
+    "processId":  16156,
+    "physicalAKeyLabel":  "Q",
+    "keyboardLayout":  "0000040C",
+    "failures":  [
+                     "Exception lors de l\u0027appel de « AssertForeground » avec « 0 » argument(s) : « Game does not own foreground; stopped without sending input to another application. »"
+                 ],
+    "windowLeaseRestored":  true,
+    "timestamp":  "2026-10-06T08:35:03.6019547+02:00",
+    "pointerGuards":  [
+                          {
+                              "gameHwnd":  1837634,
+                              "foregroundHwnd":  1837634,
+                              "pointerHwnd":  1837634,
+                              "gamePid":  16156,
+                              "foregroundPid":  16156,
+                              "pointerPid":  16156,
+                              "x":  1276,
+                              "y":  588
+                          }
+                      ],
+    "contentFingerprint":  "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+    "buildGuid":  "c394a9ba909b477fb315daa0072f83c7"
+}

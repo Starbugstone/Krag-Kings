@@ -1,0 +1,218 @@
+{
+  "engine": "Unity 6000.4.4f1 HDRP",
+  "buildGuid": "c394a9ba909b477fb315daa0072f83c7",
+  "contentFingerprint": "07aec9123d923b67e4243380b6f0b283992aac70a9ec2c68bcd4865cce1202d1",
+  "functionalChecksPassed": 17,
+  "functionalFailures": [],
+  "reviewExitCode": 0,
+  "reviewResolution": [
+    1920,
+    1080
+  ],
+  "quality": "Balanced",
+  "reviewedImages": [
+    "Unity-Natural-Pair.png",
+    "Krag-Shoot-Expression.png",
+    "Krag-Melee-Expression.png",
+    "Krag-Hit-Expression.png",
+    "Nib-Shoot-Expression.png"
+  ],
+  "findings": [
+    "Wider Krag action view retains raised shooting arm and whole weapon in the inspected shot.",
+    "Krag action face and upper body are visible; other unit can appear cropped at edge in close-up.",
+    "Nib HUD correctly states restoration-only bionics.",
+    "Old shared character geometry remains: Krag open grip/axillary deformation, rudimentary weapon, facial planes and cloth fail.",
+    "Nib skin, fur, clothing and face remain below concept likeness."
+  ],
+  "nativeInputComplete": false,
+  "nativeInputFindings": [
+    "First attempt passed ten native checks before added third movement destination projected offscreen. No quick-Shift event was sent.",
+    "Second attempt sent opening inputs during initial rendering stalls; Krag Shoot and Nib selection were observed out of intended order.",
+    "Later attempts stopped for lost foreground. Last probe records leftAlt, which the test does not send. External focus-change cause is not established.",
+    "All four coordinators closed their own game and reported launcher exit 0; no full native suite pass claimed."
+  ],
+  "artisticAcceptance": false,
+  "performanceMeasurement": false,
+  "artifacts": [
+    {
+      "path": "Krag-Expression.png",
+      "sha256": "d21115bb962e2262c9a475a2e3910533374dc05584605f48326fe3d55d5cf233",
+      "bytes": 1944672
+    },
+    {
+      "path": "Krag-Hit-Expression.png",
+      "sha256": "9484f05c90c3ef86ed338bb73acac688838cfab244a8666490840ff81216021b",
+      "bytes": 2002640
+    },
+    {
+      "path": "Krag-Melee-Expression.png",
+      "sha256": "9be4c77c1be29fc547f26a5e3d9c5776e6058cba26c943823ca726c51a6cf71b",
+      "bytes": 1969423
+    },
+    {
+      "path": "Krag-Portrait.png",
+      "sha256": "67d35e378ba839a983c22ac90e206582438cbd9bcc929b5b37f51e135f805fc4",
+      "bytes": 1925600
+    },
+    {
+      "path": "Krag-Shoot-Expression.png",
+      "sha256": "c38cb8f2ae3263766f40c02080e6e16e658ea8feb98e38175b30e2294a39921b",
+      "bytes": 1997457
+    },
+    {
+      "path": "Nib-Expression.png",
+      "sha256": "d29d11aa2cd4ca3dd6fd3baa5e5c24a48253206fe8febcdee7f21e5b2fc2c67d",
+      "bytes": 2006434
+    },
+    {
+      "path": "Nib-Hit-Expression.png",
+      "sha256": "d7511dcc33a43686a7fc9d3e9ccff05e03e8b9dd03474711b72fb6570b56de90",
+      "bytes": 1998866
+    },
+    {
+      "path": "Nib-Melee-Expression.png",
+      "sha256": "3a16a1aa11807f7d212159bc38223a156c212be66a8060fe44059652c6ef92ec",
+      "bytes": 1988634
+    },
+    {
+      "path": "Nib-Portrait.png",
+      "sha256": "8bfd4e58292bdef403087fa9e14f5792df1ee536a2dea6c7f0fb58e8ff086ac3",
+      "bytes": 2005228
+    },
+    {
+      "path": "Nib-Shoot-Expression.png",
+      "sha256": "9ea7de9c8cb0bc776a5d7ff6298ac3958b3e873d5b4a3dcb2e3fcb6da60fd809",
+      "bytes": 1986223
+    },
+    {
+      "path": "Unity-Natural-Pair.png",
+      "sha256": "0f3ca10985f292be514be9d52eee672675f845e3489ed8be2ad563b09675280e",
+      "bytes": 2422212
+    },
+    {
+      "path": "build.log",
+      "sha256": "c3faac81e2118ac1c52aeb5a64aa489a08ad245129e96d31c1df789bea54da3c",
+      "bytes": 587127
+    },
+    {
+      "path": "native-attempts/20261006-082559-15736/executed-Verify-WindowsInput.ps1",
+      "sha256": "4638ad24765515c39230c49440cfd7986d2d833cb5998eeb735e51b26f685f36",
+      "bytes": 13769
+    },
+    {
+      "path": "native-attempts/20261006-082559-15736/input-probe.json",
+      "sha256": "8ee820a52c246a070cd9c519bf0e4de7304e3c1f1011e7cb0d9bb59539475865",
+      "bytes": 1006
+    },
+    {
+      "path": "native-attempts/20261006-082559-15736/native-input-result.json",
+      "sha256": "83f239c452429b588afac29a8534a2282ac6b6455250d12b0162d902b5eb5874",
+      "bytes": 752
+    },
+    {
+      "path": "native-attempts/20261006-082559-15736/windows-input-verification.json",
+      "sha256": "2e38faeb41ef0330df929f097ef3f9c48fc11b9a864432d283c72af04cc05876",
+      "bytes": 1206
+    },
+    {
+      "path": "native-attempts/20261006-083243-18644/executed-Verify-WindowsInput.ps1",
+      "sha256": "63d09b0f9bd5ba1d247480f3f8c320913ce60d508e908577c0ca5e26966c9f36",
+      "bytes": 14301
+    },
+    {
+      "path": "native-attempts/20261006-083243-18644/input-probe.json",
+      "sha256": "8ff70896067d2b9ad6c40f763e56644fbb0e13f2a512cc78a52f4fd35a961cec",
+      "bytes": 1016
+    },
+    {
+      "path": "native-attempts/20261006-083243-18644/native-input-result.json",
+      "sha256": "7f4152f215e6191a3bb461bd19347d6c4def6b61c76c5048c89be594b60013eb",
+      "bytes": 778
+    },
+    {
+      "path": "native-attempts/20261006-083243-18644/windows-input-verification.json",
+      "sha256": "f6d7a1622dc4e1910ca55de7e8f20e6c51c94f6c2152e23313f13143e9d3581c",
+      "bytes": 469
+    },
+    {
+      "path": "native-attempts/20261006-083345-15136/executed-Verify-WindowsInput.ps1",
+      "sha256": "80983b53aeb01483a8fbf6b33fe23e0e0dcec5a6002bf98ed7ebcc3c7352a70a",
+      "bytes": 14881
+    },
+    {
+      "path": "native-attempts/20261006-083345-15136/input-probe.json",
+      "sha256": "8cd2fd51c3af80fa4d9b6a3537cc2f2dabb59751e34088802350dfe737e40285",
+      "bytes": 1001
+    },
+    {
+      "path": "native-attempts/20261006-083345-15136/native-input-result.json",
+      "sha256": "b0f0cd42741c98cd15702899d59e87d44a282a4f4c42b218076b0e374aa85a6d",
+      "bytes": 771
+    },
+    {
+      "path": "native-attempts/20261006-083345-15136/windows-input-verification.json",
+      "sha256": "d72659c75cfe3d5740af65802822bb2f7881b44227ff52e7a09b8a592f5960d7",
+      "bytes": 462
+    },
+    {
+      "path": "native-attempts/20261006-083452-11564/executed-OwnedGameWindow.ps1",
+      "sha256": "022a1f1a3be3c1cba9907401e5c062907710d09d486d4d30a33e49d0fc8e9512",
+      "bytes": 5529
+    },
+    {
+      "path": "native-attempts/20261006-083452-11564/executed-Verify-WindowsInput.ps1",
+      "sha256": "19ec907c8173f3d505e897bc9627ae6b9abffa65df2a4328508636629462ba77",
+      "bytes": 15364
+    },
+    {
+      "path": "native-attempts/20261006-083452-11564/input-probe.json",
+      "sha256": "f951f41dd38e1c3a76fc8bc710a65f4d91d87d51cd6f2c2ae0d9e59acc569f0e",
+      "bytes": 1014
+    },
+    {
+      "path": "native-attempts/20261006-083452-11564/native-input-result.json",
+      "sha256": "9c5a41d173ec876944a3dec754a0f1c27c9b57412b17dde1cb1363b12b13f28c",
+      "bytes": 981
+    },
+    {
+      "path": "native-attempts/20261006-083452-11564/windows-input-verification.json",
+      "sha256": "c2daa21d48cfd0f0c7472258b71f9cacf32b998d41a477206806d2e16743548c",
+      "bytes": 1119
+    },
+    {
+      "path": "player.log",
+      "sha256": "c188bf4d003e671f25e2112dbacd9456326586c8fa9d2ac95d57137b0cf89634",
+      "bytes": 2010
+    },
+    {
+      "path": "run-conditions.json",
+      "sha256": "ac1b82a0481bf7ad2d30fb33a8d21d82a25af21d84a1a96c84966d9785147e79",
+      "bytes": 619
+    },
+    {
+      "path": "unity-batch-memory.csv",
+      "sha256": "ae20970c220715a3c93766e355367958a5d9fce8a1bc935c800b2b4be6e8aa95",
+      "bytes": 2070
+    },
+    {
+      "path": "unity-runtime-review-gpu.csv",
+      "sha256": "a1327ed2baf3c4583b0f86cb483237966ed801cb9e4fa75b7bbe0420406089ae",
+      "bytes": 1352
+    },
+    {
+      "path": "unity-runtime-review-memory.csv",
+      "sha256": "0e7707122828b566785aa5bdab2234b37d9b6eb5e6e4d5fb9d4a5e543f02d3f5",
+      "bytes": 1040
+    },
+    {
+      "path": "verification-player.log",
+      "sha256": "188f56b5c7b6b7b8d6349cb311d2101c14aba4165400f9ccb9fe50f32a6dfd1f",
+      "bytes": 1940
+    },
+    {
+      "path": "verification.json",
+      "sha256": "2a87d11f9bab994ec23ab465dcd7a47ae5e35f9ef2f8268bc98ad899347d893b",
+      "bytes": 18239
+    }
+  ]
+}
